@@ -5,6 +5,8 @@
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "teamSize": 2,
    "numFails": 0,
    "proposals": [
     {
@@ -25,26 +27,29 @@
    "team": [
     "ANGELA",
     "ARCHIT"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2
+   ]
   },
   {
+   "team": [
+    "CHIRAG",
+    "ANUJ",
+    "ARCHIT"
+   ],
    "failsRequired": 1,
    "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
-     "votes": [
-      "ARCHIT"
-     ],
      "state": "REJECTED",
      "team": [
       "ARCHIT",
       "ROSHAN",
       "ANUJ"
      ],
-     "proposer": "ARCHIT"
+     "proposer": "ARCHIT",
+     "votes": [
+      "ARCHIT"
+     ]
     },
     {
      "state": "REJECTED",
@@ -74,14 +79,14 @@
      ]
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "CHIRAG",
-    "ANUJ",
-    "ARCHIT"
-   ]
+   "state": "FAIL"
   },
   {
+   "state": "SUCCESS",
+   "team": [
+    "ANUJ",
+    "ROSHAN"
+   ],
    "failsRequired": 1,
    "teamSize": 2,
    "numFails": 0,
@@ -98,7 +103,6 @@
      "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "team": [
       "ANGELA",
       "ROSHAN"
@@ -106,21 +110,27 @@
      "proposer": "ANGELA",
      "votes": [
       "ANGELA"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "ANGELA",
+      "ARCHIT"
+     ],
      "state": "REJECTED",
      "team": [
       "ARCHIT",
       "ANGELA"
      ],
-     "proposer": "ARCHIT",
-     "votes": [
-      "ANGELA",
-      "ARCHIT"
-     ]
+     "proposer": "ARCHIT"
     },
     {
+     "team": [
+      "ANUJ",
+      "ROSHAN"
+     ],
+     "proposer": "ANUJ",
      "votes": [
       "ARCHIT",
       "CHIRAG",
@@ -128,37 +138,25 @@
       "ANUJ",
       "ANGELA"
      ],
-     "state": "APPROVED",
-     "team": [
-      "ANUJ",
-      "ROSHAN"
-     ],
-     "proposer": "ANUJ"
+     "state": "APPROVED"
     }
-   ],
-   "state": "SUCCESS",
-   "team": [
-    "ANUJ",
-    "ROSHAN"
    ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
+     "votes": [
+      "ANUJ",
+      "CHIRAG"
+     ],
+     "state": "REJECTED",
      "team": [
       "CHIRAG",
       "ANUJ",
       "ANGELA"
      ],
-     "proposer": "CHIRAG",
-     "votes": [
-      "ANUJ",
-      "CHIRAG"
-     ],
-     "state": "REJECTED"
+     "proposer": "CHIRAG"
     },
     {
      "state": "REJECTED",
@@ -187,18 +185,18 @@
      ]
     },
     {
+     "votes": [
+      "ARCHIT",
+      "CHIRAG",
+      "ROSHAN"
+     ],
      "state": "APPROVED",
      "team": [
       "ARCHIT",
       "ANGELA",
       "ROSHAN"
      ],
-     "proposer": "ARCHIT",
-     "votes": [
-      "ARCHIT",
-      "CHIRAG",
-      "ROSHAN"
-     ]
+     "proposer": "ARCHIT"
     }
    ],
    "state": "FAIL",
@@ -206,45 +204,76 @@
     "ARCHIT",
     "ANGELA",
     "ROSHAN"
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
-   "proposals": [
-    {
-     "team": [
-      "ANUJ",
-      "ANGELA",
-      "ARCHIT"
-     ],
-     "proposer": "ANUJ",
-     "votes": [
-      "ANUJ",
-      "ANGELA",
-      "ARCHIT"
-     ],
-     "state": "APPROVED"
-    }
-   ],
    "state": "SUCCESS",
    "team": [
     "ANUJ",
     "ANGELA",
     "ARCHIT"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0,
+   "proposals": [
+    {
+     "votes": [
+      "ANUJ",
+      "ANGELA",
+      "ARCHIT"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "ANUJ",
+      "ANGELA",
+      "ARCHIT"
+     ],
+     "proposer": "ANUJ"
+    }
    ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1584930408,
+  "_nanoseconds": 810798000
+ },
  "outcome": {
+  "votes": [
+   {
+    "ARCHIT": true,
+    "ANGELA": true
+   },
+   {
+    "ANUJ": true,
+    "ARCHIT": true,
+    "CHIRAG": false
+   },
+   {
+    "ROSHAN": true,
+    "ANUJ": true
+   },
+   {
+    "ARCHIT": true,
+    "ROSHAN": false,
+    "ANGELA": true
+   },
+   {
+    "ANUJ": true,
+    "ANGELA": true,
+    "ARCHIT": true
+   }
+  ],
   "message": "Merlin assassinated",
   "assassinated": "ANUJ",
   "state": "EVIL_WIN",
   "roles": [
    {
+    "role": "EVIL MINION",
     "name": "ROSHAN",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "assassin": true
    },
    {
     "name": "ANUJ",
@@ -252,67 +281,42 @@
     "role": "MERLIN"
    },
    {
+    "assassin": false,
     "role": "PERCIVAL",
-    "name": "ANGELA",
+    "name": "ANGELA"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "ARCHIT",
     "assassin": false
    },
    {
-    "name": "ARCHIT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
+    "role": "MORGANA",
     "name": "CHIRAG",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ],
-  "votes": [
-   {
-    "ANGELA": true,
-    "ARCHIT": true
-   },
-   {
-    "CHIRAG": false,
-    "ANUJ": true,
-    "ARCHIT": true
-   },
-   {
-    "ROSHAN": true,
-    "ANUJ": true
-   },
-   {
-    "ROSHAN": false,
-    "ANGELA": true,
-    "ARCHIT": true
-   },
-   {
-    "ANUJ": true,
-    "ANGELA": true,
-    "ARCHIT": true
+    "assassin": false
    }
   ]
  },
  "players": [
   {
-   "uid": "0TslBw4c1ldSK5HxvBQawh1v9ya2",
-   "name": "ROSHAN"
+   "name": "ROSHAN",
+   "uid": "0TslBw4c1ldSK5HxvBQawh1v9ya2"
   },
   {
    "name": "ANGELA",
    "uid": "UYfe5G3DIfQlJAVA4IRUhQpEBK72"
   },
   {
-   "uid": "Q1VcmH3AXaaIK5jsu3OvYdKK0eJ2",
-   "name": "ARCHIT"
+   "name": "ARCHIT",
+   "uid": "Q1VcmH3AXaaIK5jsu3OvYdKK0eJ2"
   },
   {
    "name": "ANUJ",
    "uid": "5tH6ccVA9ZeuK313wkz7sG7bxXq1"
   },
   {
-   "uid": "vhLDwUTKPJPRVkT825mgo0RcxjA2",
-   "name": "CHIRAG"
+   "name": "CHIRAG",
+   "uid": "vhLDwUTKPJPRVkT825mgo0RcxjA2"
   }
  ]
 }

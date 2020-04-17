@@ -1,13 +1,17 @@
 {
+ "timeFinished": {
+  "_seconds": 1585965479,
+  "_nanoseconds": 233309000
+ },
  "outcome": {
   "message": "Three failed missions",
   "assassinated": null,
   "state": "EVIL_WIN",
   "roles": [
    {
+    "name": "RYAN",
     "assassin": false,
-    "role": "MORGANA",
-    "name": "RYAN"
+    "role": "MORGANA"
    },
    {
     "name": "JESS",
@@ -15,24 +19,24 @@
     "role": "EVIL MINION"
    },
    {
+    "role": "EVIL MINION",
     "name": "TORI",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "assassin": false
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "JACOB",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "CLWNDRGN",
-    "assassin": false
-   },
-   {
     "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "CLWNDRGN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
     "role": "PERCIVAL",
-    "name": "JAKE"
+    "name": "JAKE",
+    "assassin": false
    },
    {
     "assassin": false,
@@ -47,9 +51,9 @@
   ],
   "votes": [
    {
+    "JACOB": true,
     "CLWNDRGN": true,
-    "JOHN": true,
-    "JACOB": true
+    "JOHN": true
    },
    {
     "CLWNDRGN": true,
@@ -58,17 +62,17 @@
     "RYAN": false
    },
    {
-    "JOHN": true,
-    "JAKE": true,
     "JESS": false,
-    "JACOB": true
+    "JACOB": true,
+    "JOHN": true,
+    "JAKE": true
    },
    {
+    "JAKE": true,
+    "KILLERKELS": true,
     "RYAN": false,
     "TORI": false,
-    "JACOB": true,
-    "JAKE": true,
-    "KILLERKELS": true
+    "JACOB": true
    }
   ]
  },
@@ -86,16 +90,16 @@
    "uid": "wzbGHiYUirfHfewgLKBSNxQSnD42"
   },
   {
-   "uid": "BW4XDxZ07Fc05QRdwJoWrQM0E772",
-   "name": "JESS"
+   "name": "JESS",
+   "uid": "BW4XDxZ07Fc05QRdwJoWrQM0E772"
   },
   {
    "name": "RYAN",
    "uid": "VrkK7kYBUJQEhyw878HTRVXj9Z92"
   },
   {
-   "name": "JACOB",
-   "uid": "rsAXHWMFR5cUY2qe03dK93dfpSx2"
+   "uid": "rsAXHWMFR5cUY2qe03dK93dfpSx2",
+   "name": "JACOB"
   },
   {
    "name": "JAKE",
@@ -112,12 +116,6 @@
  },
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "JACOB",
-    "CLWNDRGN",
-    "JOHN"
-   ],
    "failsRequired": 1,
    "teamSize": 3,
    "numFails": 0,
@@ -141,6 +139,12 @@
      ],
      "proposer": "JACOB"
     }
+   ],
+   "state": "SUCCESS",
+   "team": [
+    "JACOB",
+    "CLWNDRGN",
+    "JOHN"
    ]
   },
   {
@@ -156,6 +160,7 @@
    "numFails": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "JAKE",
       "CLWNDRGN",
@@ -167,10 +172,15 @@
       "JAKE",
       "KILLERKELS",
       "RYAN"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "votes": [
+      "JOHN",
+      "RYAN",
+      "JACOB",
+      "CLWNDRGN"
+     ],
      "state": "REJECTED",
      "team": [
       "CLWNDRGN",
@@ -178,15 +188,10 @@
       "JAKE",
       "JOHN"
      ],
-     "proposer": "JOHN",
-     "votes": [
-      "JOHN",
-      "RYAN",
-      "JACOB",
-      "CLWNDRGN"
-     ]
+     "proposer": "JOHN"
     },
     {
+     "state": "APPROVED",
      "team": [
       "JOHN",
       "RYAN",
@@ -201,24 +206,14 @@
       "RYAN",
       "JESS",
       "TORI"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ]
   },
   {
-   "state": "FAIL",
-   "team": [
-    "JESS",
-    "JOHN",
-    "JAKE",
-    "JACOB"
-   ],
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "TORI",
       "JESS",
@@ -231,8 +226,7 @@
       "TORI",
       "CLWNDRGN",
       "KILLERKELS"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "team": [
@@ -266,10 +260,19 @@
       "JACOB"
      ]
     }
-   ]
+   ],
+   "state": "FAIL",
+   "team": [
+    "JESS",
+    "JOHN",
+    "JAKE",
+    "JACOB"
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 1
   },
   {
-   "state": "FAIL",
    "team": [
     "RYAN",
     "KILLERKELS",
@@ -282,7 +285,6 @@
    "numFails": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "RYAN",
       "KILLERKELS",
@@ -298,16 +300,18 @@
       "JACOB",
       "JAKE",
       "KILLERKELS"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "state": "FAIL"
   },
   {
-   "team": [],
-   "proposals": [],
    "teamSize": 5,
    "failsRequired": 1,
-   "state": "PENDING"
+   "state": "PENDING",
+   "team": [],
+   "proposals": []
   }
  ]
 }

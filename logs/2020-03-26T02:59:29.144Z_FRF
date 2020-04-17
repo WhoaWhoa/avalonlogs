@@ -5,9 +5,6 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 1,
    "proposals": [
     {
      "state": "REJECTED",
@@ -48,6 +45,7 @@
      ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "DAN",
       "NIKOLAI"
@@ -60,63 +58,59 @@
       "OWEN",
       "DAN",
       "NIKOLAI"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "state": "FAIL",
    "team": [
     "DAN",
     "NIKOLAI"
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 1
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "KEN",
-    "DAN",
-    "OWEN"
-   ],
    "failsRequired": 1,
    "teamSize": 3,
    "numFails": 0,
    "proposals": [
     {
+     "votes": [],
+     "state": "REJECTED",
      "team": [
       "OWEN",
       "KEN",
       "KERRAN"
      ],
-     "proposer": "OWEN",
-     "votes": [],
-     "state": "REJECTED"
+     "proposer": "OWEN"
     },
     {
+     "votes": [
+      "KERRAN",
+      "OWEN"
+     ],
      "state": "REJECTED",
      "team": [
       "KERRAN",
       "OWEN",
       "KEN"
      ],
-     "proposer": "KERRAN",
-     "votes": [
-      "KERRAN",
-      "OWEN"
-     ]
+     "proposer": "KERRAN"
     },
     {
-     "votes": [
-      "KERRAN",
-      "NIKHIL",
-      "JET"
-     ],
      "state": "REJECTED",
      "team": [
       "NIKHIL",
       "KEN",
       "KERRAN"
      ],
-     "proposer": "NIKHIL"
+     "proposer": "NIKHIL",
+     "votes": [
+      "KERRAN",
+      "NIKHIL",
+      "JET"
+     ]
     },
     {
      "state": "REJECTED",
@@ -147,9 +141,33 @@
      ],
      "state": "APPROVED"
     }
+   ],
+   "state": "SUCCESS",
+   "team": [
+    "KEN",
+    "DAN",
+    "OWEN"
    ]
   },
   {
+   "proposals": [
+    {
+     "votes": [
+      "KERRAN",
+      "OWEN",
+      "KEN",
+      "DAN",
+      "NIKHIL"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "DAN",
+      "KEN",
+      "OWEN"
+     ],
+     "proposer": "DAN"
+    }
+   ],
    "state": "FAIL",
    "team": [
     "DAN",
@@ -158,25 +176,7 @@
    ],
    "failsRequired": 1,
    "teamSize": 3,
-   "numFails": 1,
-   "proposals": [
-    {
-     "team": [
-      "DAN",
-      "KEN",
-      "OWEN"
-     ],
-     "proposer": "DAN",
-     "votes": [
-      "KERRAN",
-      "OWEN",
-      "KEN",
-      "DAN",
-      "NIKHIL"
-     ],
-     "state": "APPROVED"
-    }
-   ]
+   "numFails": 1
   },
   {
    "state": "SUCCESS",
@@ -218,7 +218,6 @@
      ]
     },
     {
-     "state": "REJECTED",
      "team": [
       "JET",
       "OWEN",
@@ -229,17 +228,10 @@
      "votes": [
       "KERRAN",
       "JET"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "NIKHIL",
-      "OWEN",
-      "KERRAN",
-      "JET"
-     ],
-     "proposer": "NIKHIL",
      "votes": [
       "NIKHIL",
       "JET",
@@ -247,17 +239,31 @@
       "OWEN",
       "KEN",
       "DAN"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "NIKHIL",
+      "OWEN",
+      "KERRAN",
+      "JET"
+     ],
+     "proposer": "NIKHIL"
     }
    ]
   },
   {
+   "state": "FAIL",
+   "team": [
+    "JET",
+    "OWEN",
+    "KERRAN",
+    "NIKHIL"
+   ],
    "failsRequired": 1,
    "teamSize": 4,
    "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "OWEN",
       "KERRAN",
@@ -267,7 +273,8 @@
      "proposer": "NIKOLAI",
      "votes": [
       "NIKOLAI"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -296,27 +303,20 @@
      "state": "REJECTED"
     },
     {
-     "votes": [
-      "JET",
-      "KEN"
-     ],
-     "state": "REJECTED",
      "team": [
       "JET",
       "KERRAN",
       "NIKHIL",
       "KEN"
      ],
-     "proposer": "JET"
+     "proposer": "JET",
+     "votes": [
+      "JET",
+      "KEN"
+     ],
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "NIKHIL",
-      "JET",
-      "KERRAN",
-      "OWEN",
-      "DAN"
-     ],
      "state": "APPROVED",
      "team": [
       "JET",
@@ -324,18 +324,22 @@
       "KERRAN",
       "NIKHIL"
      ],
-     "proposer": "OWEN"
+     "proposer": "OWEN",
+     "votes": [
+      "NIKHIL",
+      "JET",
+      "KERRAN",
+      "OWEN",
+      "DAN"
+     ]
     }
-   ],
-   "state": "FAIL",
-   "team": [
-    "JET",
-    "OWEN",
-    "KERRAN",
-    "NIKHIL"
    ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585192860,
+  "_nanoseconds": 82397000
+ },
  "outcome": {
   "message": "Three failed missions",
   "assassinated": null,
@@ -347,24 +351,24 @@
     "name": "NIKHIL"
    },
    {
+    "name": "JET",
     "assassin": false,
-    "role": "MERLIN",
-    "name": "JET"
-   },
-   {
-    "name": "KERRAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "MERLIN"
    },
    {
     "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "KERRAN"
+   },
+   {
     "role": "EVIL MINION",
-    "name": "OWEN"
+    "name": "OWEN",
+    "assassin": false
    },
    {
+    "assassin": false,
     "role": "PERCIVAL",
-    "name": "KEN",
-    "assassin": false
+    "name": "KEN"
    },
    {
     "assassin": false,
@@ -372,9 +376,9 @@
     "name": "DAN"
    },
    {
+    "assassin": true,
     "role": "EVIL MINION",
-    "name": "NIKOLAI",
-    "assassin": true
+    "name": "NIKOLAI"
    }
   ],
   "votes": [
@@ -388,15 +392,15 @@
     "DAN": true
    },
    {
+    "DAN": false,
     "OWEN": true,
-    "KEN": true,
-    "DAN": false
+    "KEN": true
    },
    {
-    "KERRAN": true,
     "OWEN": true,
     "NIKHIL": true,
-    "JET": true
+    "JET": true,
+    "KERRAN": true
    },
    {
     "OWEN": false,
@@ -416,20 +420,20 @@
    "uid": "gyiwwU0P58ahYttcfegeM0n4fi33"
   },
   {
-   "uid": "qR5nuybAoccU1CGPIv3LK8LuYsV2",
-   "name": "OWEN"
+   "name": "OWEN",
+   "uid": "qR5nuybAoccU1CGPIv3LK8LuYsV2"
   },
   {
    "name": "KERRAN",
    "uid": "TF7eIJHQBVT0qNw8571osrNZq6j1"
   },
   {
-   "uid": "jxOWMCCcPpM8Hj0Wh6pphDmQRTj2",
-   "name": "NIKHIL"
+   "name": "NIKHIL",
+   "uid": "jxOWMCCcPpM8Hj0Wh6pphDmQRTj2"
   },
   {
-   "uid": "zFPa9mnjFKeS6Hde2OsU7Wut3QH3",
-   "name": "NIKOLAI"
+   "name": "NIKOLAI",
+   "uid": "zFPa9mnjFKeS6Hde2OsU7Wut3QH3"
   },
   {
    "name": "KEN",

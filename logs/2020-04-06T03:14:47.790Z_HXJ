@@ -5,9 +5,18 @@
  },
  "missions": [
   {
+   "state": "FAIL",
+   "team": [
+    "SIM",
+    "TIAN",
+    "NGO"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "SIM",
       "TIAN",
@@ -24,25 +33,24 @@
       "MEL",
       "TIAN",
       "NAYEF"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "state": "FAIL",
-   "team": [
-    "SIM",
-    "TIAN",
-    "NGO"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3
+   ]
   },
   {
+   "state": "SUCCESS",
+   "team": [
+    "SJ",
+    "TIAN",
+    "JASON",
+    "TUB"
+   ],
    "failsRequired": 1,
    "teamSize": 4,
    "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "SJ",
       "TIAN",
@@ -60,25 +68,14 @@
       "TIAN",
       "NAYEF",
       "TUB"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "state": "SUCCESS",
-   "team": [
-    "SJ",
-    "TIAN",
-    "JASON",
-    "TUB"
    ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "NGO",
       "TIAN",
@@ -89,9 +86,11 @@
      "votes": [
       "NGO",
       "NAYEF"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "team": [
       "TUB",
       "SJ",
@@ -108,8 +107,7 @@
       "NGO",
       "MAX",
       "JASON"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "state": "SUCCESS",
@@ -118,7 +116,9 @@
     "SJ",
     "TIAN",
     "JASON"
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 4
   },
   {
    "failsRequired": 2,
@@ -126,15 +126,6 @@
    "numFails": 2,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "SJ",
-      "TIAN",
-      "TUB",
-      "MAX",
-      "JASON"
-     ],
-     "proposer": "MAX",
      "votes": [
       "JASON",
       "SIM",
@@ -144,7 +135,16 @@
       "TUB",
       "NGO",
       "MAX"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "SJ",
+      "TIAN",
+      "TUB",
+      "MAX",
+      "JASON"
+     ],
+     "proposer": "MAX"
     }
    ],
    "state": "FAIL",
@@ -157,14 +157,6 @@
    ]
   },
   {
-   "state": "FAIL",
-   "team": [
-    "NAYEF",
-    "JASON",
-    "NGO",
-    "SIM",
-    "TUB"
-   ],
    "failsRequired": 1,
    "teamSize": 5,
    "numFails": 1,
@@ -186,15 +178,6 @@
      "proposer": "JASON"
     },
     {
-     "votes": [
-      "JASON",
-      "SJ",
-      "MEL",
-      "TIAN",
-      "NAYEF",
-      "TUB",
-      "NGO"
-     ],
      "state": "APPROVED",
      "team": [
       "NAYEF",
@@ -203,11 +186,32 @@
       "SIM",
       "TUB"
      ],
-     "proposer": "NAYEF"
+     "proposer": "NAYEF",
+     "votes": [
+      "JASON",
+      "SJ",
+      "MEL",
+      "TIAN",
+      "NAYEF",
+      "TUB",
+      "NGO"
+     ]
     }
+   ],
+   "state": "FAIL",
+   "team": [
+    "NAYEF",
+    "JASON",
+    "NGO",
+    "SIM",
+    "TUB"
    ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1586143651,
+  "_nanoseconds": 644618000
+ },
  "outcome": {
   "votes": [
    {
@@ -222,24 +226,24 @@
     "JASON": true
    },
    {
-    "SJ": true,
     "TIAN": true,
+    "TUB": true,
+    "JASON": true,
+    "SJ": true
+   },
+   {
+    "MAX": true,
+    "SJ": false,
+    "TIAN": false,
     "TUB": true,
     "JASON": true
    },
    {
-    "TIAN": false,
-    "TUB": true,
-    "JASON": true,
-    "MAX": true,
-    "SJ": false
-   },
-   {
-    "TUB": true,
-    "JASON": true,
     "NGO": true,
     "SIM": true,
-    "NAYEF": false
+    "NAYEF": false,
+    "TUB": true,
+    "JASON": true
    }
   ],
   "message": "Three failed missions",
@@ -252,19 +256,19 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "role": "PERCIVAL",
     "name": "NGO",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "MAX",
     "assassin": false
    },
    {
     "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "JASON"
+    "name": "MAX"
+   },
+   {
+    "name": "JASON",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
@@ -272,9 +276,9 @@
     "name": "SIM"
    },
    {
-    "name": "SJ",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "SJ"
    },
    {
     "assassin": false,
@@ -282,9 +286,9 @@
     "name": "MEL"
    },
    {
-    "assassin": false,
     "role": "MORDRED",
-    "name": "TIAN"
+    "name": "TIAN",
+    "assassin": false
    },
    {
     "assassin": true,
@@ -295,28 +299,28 @@
  },
  "players": [
   {
-   "name": "MEL",
-   "uid": "k6CaqQrjkrgvSHi2wi84UfsXF3j1"
+   "uid": "k6CaqQrjkrgvSHi2wi84UfsXF3j1",
+   "name": "MEL"
   },
   {
-   "name": "SJ",
-   "uid": "khzRyHAH5zbpS3VWr4J2CnhGD4J3"
+   "uid": "khzRyHAH5zbpS3VWr4J2CnhGD4J3",
+   "name": "SJ"
   },
   {
-   "uid": "tLOkxkxEIxVF0KLjeP07bwOmE0l2",
-   "name": "SIM"
+   "name": "SIM",
+   "uid": "tLOkxkxEIxVF0KLjeP07bwOmE0l2"
   },
   {
-   "uid": "PUwpSIC1KBOQmWfB6lP5OJyVky42",
-   "name": "TIAN"
+   "name": "TIAN",
+   "uid": "PUwpSIC1KBOQmWfB6lP5OJyVky42"
   },
   {
-   "name": "NGO",
-   "uid": "1SMXxvRzbIc9faR1C7TCR5UPnC43"
+   "uid": "1SMXxvRzbIc9faR1C7TCR5UPnC43",
+   "name": "NGO"
   },
   {
-   "name": "TUB",
-   "uid": "FxfEQSa9AmhvRzp2LZ3oBnbVw2x2"
+   "uid": "FxfEQSa9AmhvRzp2LZ3oBnbVw2x2",
+   "name": "TUB"
   },
   {
    "name": "MAX",

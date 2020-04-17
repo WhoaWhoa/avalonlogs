@@ -15,6 +15,7 @@
    "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "CLAPIKA",
       "DUNG"
@@ -25,8 +26,7 @@
       "CLAPIKA",
       "DUNG",
       "CHYNIE"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ]
   },
@@ -42,6 +42,7 @@
    "numFails": 0,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "DUNG",
       "HUONGPHAM",
@@ -51,10 +52,10 @@
      "votes": [
       "HUONGPHAM",
       "DUNG"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "REJECTED",
      "team": [
       "THANHTRAN",
       "CLAPIKA",
@@ -63,8 +64,7 @@
      "proposer": "THANHTRAN",
      "votes": [
       "THANHTRAN"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "APPROVED",
@@ -90,7 +90,6 @@
    "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "CLAPIKA",
       "DUNG",
@@ -103,7 +102,8 @@
       "HUONGPHAM",
       "DUNG",
       "RAINY"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "state": "FAIL",
@@ -134,31 +134,31 @@
      "proposer": "CHYNIE"
     },
     {
-     "team": [
-      "CHYNIE",
-      "THANHTRAN",
-      "RAINY"
-     ],
-     "proposer": "CLAPIKA",
      "votes": [
       "THANHTRAN",
       "CLAPIKA",
       "CHYNIE"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "team": [
+      "CHYNIE",
+      "THANHTRAN",
+      "RAINY"
+     ],
+     "proposer": "CLAPIKA"
     },
     {
-     "votes": [
-      "HUONGPHAM",
-      "THANHTRAN"
-     ],
-     "state": "REJECTED",
      "team": [
       "HUONGPHAM",
       "THANHTRAN",
       "RAINY"
      ],
-     "proposer": "HUONGPHAM"
+     "proposer": "HUONGPHAM",
+     "votes": [
+      "HUONGPHAM",
+      "THANHTRAN"
+     ],
+     "state": "REJECTED"
     },
     {
      "state": "REJECTED",
@@ -175,6 +175,12 @@
      ]
     },
     {
+     "team": [
+      "DUNG",
+      "RAINY",
+      "HUONGPHAM"
+     ],
+     "proposer": "DUNG",
      "votes": [
       "DUNG",
       "CHYNIE",
@@ -183,13 +189,7 @@
       "CLAPIKA",
       "HUONGPHAM"
      ],
-     "state": "APPROVED",
-     "team": [
-      "DUNG",
-      "RAINY",
-      "HUONGPHAM"
-     ],
-     "proposer": "DUNG"
+     "state": "APPROVED"
     }
    ],
    "state": "FAIL",
@@ -200,10 +200,11 @@
    ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 4,
    "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "RAINY",
       "CHYNIE",
@@ -216,7 +217,8 @@
       "CHYNIE",
       "THANHTRAN",
       "RAINY"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "state": "FAIL",
@@ -225,21 +227,56 @@
     "CHYNIE",
     "CLAPIKA",
     "THANHTRAN"
-   ],
-   "failsRequired": 1,
-   "teamSize": 4
+   ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585625360,
+  "_nanoseconds": 256822000
+ },
  "outcome": {
-  "votes": [
+  "state": "EVIL_WIN",
+  "roles": [
    {
-    "CLAPIKA": true,
-    "DUNG": true
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "HUONGPHAM"
    },
    {
+    "role": "EVIL MINION",
+    "name": "DUNG",
+    "assassin": true
+   },
+   {
+    "role": "MERLIN",
+    "name": "CHYNIE",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "THANHTRAN"
+   },
+   {
+    "name": "RAINY",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "name": "CLAPIKA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "votes": [
+   {
     "DUNG": true,
-    "CHYNIE": true,
     "CLAPIKA": true
+   },
+   {
+    "CHYNIE": true,
+    "CLAPIKA": true,
+    "DUNG": true
    },
    {
     "RAINY": false,
@@ -253,56 +290,23 @@
     "DUNG": false
    },
    {
-    "CHYNIE": true,
-    "CLAPIKA": true,
     "THANHTRAN": true,
-    "RAINY": false
+    "RAINY": false,
+    "CHYNIE": true,
+    "CLAPIKA": true
    }
   ],
   "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "HUONGPHAM",
-    "assassin": false
-   },
-   {
-    "name": "DUNG",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "CHYNIE"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "THANHTRAN",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "name": "RAINY",
-    "assassin": false
-   },
-   {
-    "name": "CLAPIKA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ]
+  "assassinated": null
  },
  "players": [
   {
-   "name": "CHYNIE",
-   "uid": "xYAUGUHbU3Qhfi491s2vgNfCrk03"
+   "uid": "xYAUGUHbU3Qhfi491s2vgNfCrk03",
+   "name": "CHYNIE"
   },
   {
-   "name": "CLAPIKA",
-   "uid": "ZO2D0PMpEtcev2jtKKtKVa5vysZ2"
+   "uid": "ZO2D0PMpEtcev2jtKKtKVa5vysZ2",
+   "name": "CLAPIKA"
   },
   {
    "name": "HUONGPHAM",
@@ -313,8 +317,8 @@
    "uid": "rX7dgvEovTPPRzGcYHopBrO21l22"
   },
   {
-   "name": "DUNG",
-   "uid": "oheBxgoRjCRmgQWh0B3a4G9RsMp2"
+   "uid": "oheBxgoRjCRmgQWh0B3a4G9RsMp2",
+   "name": "DUNG"
   },
   {
    "name": "RAINY",

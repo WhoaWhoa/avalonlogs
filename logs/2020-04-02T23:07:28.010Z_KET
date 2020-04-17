@@ -13,8 +13,8 @@
    "uid": "WW9UDSJTWjcv5IEHdIzn4W3pC0F3"
   },
   {
-   "name": "MICHELLE",
-   "uid": "NRa4Y5BvIRUu0NJtNcgsbihHeRV2"
+   "uid": "NRa4Y5BvIRUu0NJtNcgsbihHeRV2",
+   "name": "MICHELLE"
   },
   {
    "name": "THOMAS",
@@ -27,29 +27,29 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "DAVID",
+      "THOMAS"
+     ],
+     "proposer": "THOMAS",
      "votes": [
       "DIANA",
       "DAVID",
       "THOMAS"
      ],
-     "state": "APPROVED",
-     "team": [
-      "DAVID",
-      "THOMAS"
-     ],
-     "proposer": "THOMAS"
+     "state": "APPROVED"
     }
    ],
    "state": "SUCCESS",
    "team": [
     "DAVID",
     "THOMAS"
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 0
   },
   {
    "failsRequired": 1,
@@ -57,18 +57,18 @@
    "numFails": 1,
    "proposals": [
     {
+     "votes": [
+      "DAVID",
+      "THOMAS",
+      "DIANA"
+     ],
      "state": "APPROVED",
      "team": [
       "THOMAS",
       "DAVID",
       "DIANA"
      ],
-     "proposer": "DIANA",
-     "votes": [
-      "DAVID",
-      "THOMAS",
-      "DIANA"
-     ]
+     "proposer": "DIANA"
     }
    ],
    "state": "FAIL",
@@ -79,34 +79,35 @@
    ]
   },
   {
-   "proposals": [
-    {
-     "votes": [
-      "DIANA",
-      "CHRIS",
-      "DAVID"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "DAVID",
-      "CHRIS"
-     ],
-     "proposer": "DAVID"
-    }
-   ],
-   "state": "SUCCESS",
    "team": [
     "DAVID",
     "CHRIS"
    ],
    "failsRequired": 1,
    "teamSize": 2,
-   "numFails": 0
+   "numFails": 0,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "team": [
+      "DAVID",
+      "CHRIS"
+     ],
+     "proposer": "DAVID",
+     "votes": [
+      "DIANA",
+      "CHRIS",
+      "DAVID"
+     ]
+    }
+   ],
+   "state": "SUCCESS"
   },
   {
    "numFails": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "DAVID",
       "DIANA",
@@ -116,8 +117,7 @@
      "votes": [
       "DAVID",
       "CHRIS"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "team": [
@@ -144,8 +144,18 @@
    "teamSize": 3
   },
   {
+   "state": "FAIL",
+   "team": [
+    "CHRIS",
+    "DAVID",
+    "THOMAS"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "CHRIS",
       "DAVID",
@@ -156,49 +166,16 @@
       "CHRIS",
       "DAVID",
       "THOMAS"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "state": "FAIL",
-   "team": [
-    "CHRIS",
-    "DAVID",
-    "THOMAS"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1
+   ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585869264,
+  "_nanoseconds": 427328000
+ },
  "outcome": {
-  "votes": [
-   {
-    "DAVID": true,
-    "THOMAS": true
-   },
-   {
-    "THOMAS": false,
-    "DIANA": true,
-    "DAVID": true
-   },
-   {
-    "CHRIS": true,
-    "DAVID": true
-   },
-   {
-    "MICHELLE": true,
-    "THOMAS": false,
-    "DIANA": true
-   },
-   {
-    "THOMAS": false,
-    "CHRIS": true,
-    "DAVID": true
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null,
   "state": "EVIL_WIN",
   "roles": [
    {
@@ -212,9 +189,9 @@
     "name": "MICHELLE"
    },
    {
+    "assassin": true,
     "role": "MORDRED",
-    "name": "THOMAS",
-    "assassin": true
+    "name": "THOMAS"
    },
    {
     "assassin": false,
@@ -222,10 +199,37 @@
     "name": "DIANA"
    },
    {
+    "name": "CHRIS",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "CHRIS"
+    "role": "LOYAL FOLLOWER"
    }
-  ]
+  ],
+  "votes": [
+   {
+    "DAVID": true,
+    "THOMAS": true
+   },
+   {
+    "DAVID": true,
+    "THOMAS": false,
+    "DIANA": true
+   },
+   {
+    "DAVID": true,
+    "CHRIS": true
+   },
+   {
+    "MICHELLE": true,
+    "THOMAS": false,
+    "DIANA": true
+   },
+   {
+    "CHRIS": true,
+    "DAVID": true,
+    "THOMAS": false
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null
  }
 }

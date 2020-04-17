@@ -5,26 +5,30 @@
  },
  "missions": [
   {
+   "team": [
+    "GOOD",
+    "HARRISON",
+    "SHAAN"
+   ],
    "failsRequired": 1,
    "teamSize": 3,
    "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "SHAAN",
-      "HARRISON",
-      "GOOD"
-     ],
-     "proposer": "HARRISON",
      "votes": [
       "GOOD",
       "SHAAN",
       "ERIC"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "team": [
+      "SHAAN",
+      "HARRISON",
+      "GOOD"
+     ],
+     "proposer": "HARRISON"
     },
     {
-     "state": "APPROVED",
      "team": [
       "GOOD",
       "HARRISON",
@@ -37,22 +41,16 @@
       "MASON",
       "ERIC",
       "GOOD"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "GOOD",
-    "HARRISON",
-    "SHAAN"
-   ]
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "GOOD",
       "NGO",
@@ -67,8 +65,7 @@
       "GOOD",
       "NGO",
       "SHAAN"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "state": "SUCCESS",
@@ -77,21 +74,23 @@
     "NGO",
     "SHAAN",
     "HARRISON"
-   ]
-  },
-  {
-   "state": "FAIL",
-   "team": [
-    "NGO",
-    "GOOD",
-    "SHAAN",
-    "HARRISON"
    ],
    "failsRequired": 1,
    "teamSize": 4,
+   "numFails": 0
+  },
+  {
    "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "NGO",
+      "GOOD",
+      "SHAAN",
+      "HARRISON"
+     ],
+     "proposer": "JOHNKEYNES",
      "votes": [
       "NGO",
       "JOHNKEYNES",
@@ -100,17 +99,18 @@
       "MASON",
       "ERIC",
       "GOOD"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "NGO",
-      "GOOD",
-      "SHAAN",
-      "HARRISON"
-     ],
-     "proposer": "JOHNKEYNES"
+     ]
     }
-   ]
+   ],
+   "state": "FAIL",
+   "team": [
+    "NGO",
+    "GOOD",
+    "SHAAN",
+    "HARRISON"
+   ],
+   "failsRequired": 1,
+   "teamSize": 4
   },
   {
    "failsRequired": 2,
@@ -118,6 +118,7 @@
    "numFails": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "GOOD",
       "NGO",
@@ -133,8 +134,7 @@
       "SAM",
       "NGO",
       "STEVE"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "state": "FAIL",
@@ -180,55 +180,11 @@
    ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1586125962,
+  "_nanoseconds": 918877000
+ },
  "outcome": {
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "name": "SAM",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "NGO"
-   },
-   {
-    "name": "JOHNKEYNES",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SHAAN"
-   },
-   {
-    "name": "STEVE",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "HARRISON"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "MASON",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ERIC"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "GOOD"
-   }
-  ],
   "votes": [
    {
     "SHAAN": true,
@@ -242,10 +198,10 @@
     "SHAAN": true
    },
    {
-    "NGO": true,
-    "SHAAN": true,
     "GOOD": true,
-    "HARRISON": false
+    "HARRISON": false,
+    "NGO": true,
+    "SHAAN": true
    },
    {
     "NGO": false,
@@ -263,7 +219,55 @@
    }
   ],
   "message": "Three failed missions",
-  "assassinated": null
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "name": "SAM",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "NGO",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "name": "JOHNKEYNES",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "SHAAN"
+   },
+   {
+    "name": "STEVE",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "HARRISON",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MASON",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ERIC"
+   },
+   {
+    "role": "MERLIN",
+    "name": "GOOD",
+    "assassin": false
+   }
+  ]
  },
  "players": [
   {
@@ -283,8 +287,8 @@
    "uid": "664jU9NeapbKK3lHbTNgzsil1pS2"
   },
   {
-   "uid": "tfAxVUGMIMWlEpSwv97Ds7iefTF3",
-   "name": "SAM"
+   "name": "SAM",
+   "uid": "tfAxVUGMIMWlEpSwv97Ds7iefTF3"
   },
   {
    "name": "ERIC",

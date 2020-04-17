@@ -5,16 +5,10 @@
  },
  "missions": [
   {
-   "team": [
-    "CONNIE",
-    "MICHELLE",
-    "DIANA"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "TIM",
       "DAVID",
@@ -26,10 +20,10 @@
       "CHRIS",
       "TIM",
       "DAVID"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "CONNIE",
       "MICHELLE",
@@ -43,13 +37,26 @@
       "MICHELLE",
       "CONNIE",
       "DIANA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "CONNIE",
+    "MICHELLE",
+    "DIANA"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
+   "state": "FAIL",
+   "team": [
+    "DIANA",
+    "CHRIS",
+    "MICHELLE",
+    "CONNIE"
+   ],
    "failsRequired": 1,
    "teamSize": 4,
    "numFails": 1,
@@ -88,25 +95,9 @@
      ],
      "proposer": "DIANA"
     }
-   ],
-   "state": "FAIL",
-   "team": [
-    "DIANA",
-    "CHRIS",
-    "MICHELLE",
-    "CONNIE"
    ]
   },
   {
-   "team": [
-    "MICHELLE",
-    "CONNIE",
-    "DIANA",
-    "TIM"
-   ],
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -122,10 +113,6 @@
      "proposer": "DAVID"
     },
     {
-     "votes": [
-      "CHRIS",
-      "DAVID"
-     ],
      "state": "REJECTED",
      "team": [
       "CHRIS",
@@ -133,10 +120,13 @@
       "TIM",
       "CONNIE"
      ],
-     "proposer": "CHRIS"
+     "proposer": "CHRIS",
+     "votes": [
+      "CHRIS",
+      "DAVID"
+     ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "MICHELLE",
       "CONNIE",
@@ -150,13 +140,22 @@
       "MICHELLE",
       "CONNIE",
       "DIANA"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "MICHELLE",
+    "CONNIE",
+    "DIANA",
+    "TIM"
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 0
   },
   {
-   "state": "FAIL",
    "team": [
     "THOMAS",
     "DIANA",
@@ -186,7 +185,8 @@
       "DIANA"
      ]
     }
-   ]
+   ],
+   "state": "FAIL"
   },
   {
    "failsRequired": 1,
@@ -194,6 +194,7 @@
    "numFails": 0,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "TIM",
       "DAVID",
@@ -207,11 +208,9 @@
       "CONNIE",
       "CHRIS",
       "TIM"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "CONNIE",
       "MICHELLE",
@@ -227,7 +226,8 @@
       "TIM",
       "DAVID",
       "MICHELLE"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "state": "SUCCESS",
@@ -240,6 +240,10 @@
    ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585875892,
+  "_nanoseconds": 21801000
+ },
  "outcome": {
   "votes": [
    {
@@ -254,24 +258,24 @@
     "CHRIS": true
    },
    {
-    "MICHELLE": true,
-    "TIM": true,
     "CONNIE": true,
-    "DIANA": true
-   },
-   {
-    "CONNIE": true,
-    "DIANA": false,
-    "MICHELLE": true,
-    "TIM": true,
-    "THOMAS": false
-   },
-   {
-    "CONNIE": true,
-    "CHRIS": true,
-    "DAVID": true,
+    "DIANA": true,
     "MICHELLE": true,
     "TIM": true
+   },
+   {
+    "MICHELLE": true,
+    "TIM": true,
+    "THOMAS": false,
+    "CONNIE": true,
+    "DIANA": false
+   },
+   {
+    "DAVID": true,
+    "MICHELLE": true,
+    "TIM": true,
+    "CONNIE": true,
+    "CHRIS": true
    }
   ],
   "message": "Merlin assassinated",
@@ -279,9 +283,9 @@
   "state": "EVIL_WIN",
   "roles": [
    {
-    "name": "DAVID",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "DAVID"
    },
    {
     "assassin": false,
@@ -294,29 +298,29 @@
     "name": "CONNIE"
    },
    {
-    "role": "MORDRED",
     "name": "DIANA",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "name": "CHRIS",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "TIM",
     "assassin": false
    },
    {
     "assassin": false,
-    "role": "MERLIN",
-    "name": "CHRIS"
+    "role": "MORGANA",
+    "name": "THOMAS"
    },
    {
-    "name": "TIM",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "THOMAS",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
+    "assassin": true,
     "role": "EVIL MINION",
-    "name": "BERT",
-    "assassin": true
+    "name": "BERT"
    }
   ]
  },
@@ -334,8 +338,8 @@
    "uid": "WW9UDSJTWjcv5IEHdIzn4W3pC0F3"
   },
   {
-   "name": "MICHELLE",
-   "uid": "NRa4Y5BvIRUu0NJtNcgsbihHeRV2"
+   "uid": "NRa4Y5BvIRUu0NJtNcgsbihHeRV2",
+   "name": "MICHELLE"
   },
   {
    "name": "THOMAS",
@@ -346,12 +350,12 @@
    "uid": "EZ6man5jV1Ws1fTtrxeAIajz8ky2"
   },
   {
-   "uid": "nDW0mIuS9idaEFCyUTBMi9vFZC22",
-   "name": "CONNIE"
+   "name": "CONNIE",
+   "uid": "nDW0mIuS9idaEFCyUTBMi9vFZC22"
   },
   {
-   "uid": "eCKmhiK0TkYGWHSphHGtFfli6Wt2",
-   "name": "BERT"
+   "name": "BERT",
+   "uid": "eCKmhiK0TkYGWHSphHGtFfli6Wt2"
   }
  ]
 }

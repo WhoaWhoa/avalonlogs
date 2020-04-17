@@ -1,61 +1,4 @@
 {
- "outcome": {
-  "votes": [
-   {
-    "MIKE": true,
-    "ALI": true
-   },
-   {
-    "SHAL": true,
-    "LUKE": true,
-    "MIKE": true
-   },
-   {
-    "SHAL": true,
-    "TOM": false
-   },
-   {
-    "ALI": false,
-    "LUKE": true,
-    "MIKE": true
-   },
-   {
-    "ALI": false,
-    "TOM": false,
-    "MIKE": true
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "ALI"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "SHAL"
-   },
-   {
-    "name": "LUKE",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "TOM"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MIKE"
-   }
-  ]
- },
  "players": [
   {
    "name": "ALI",
@@ -74,8 +17,8 @@
    "uid": "aYEahPET64VFURINapHmIYRK3MC3"
   },
   {
-   "name": "MIKE",
-   "uid": "rQgUg5Y3QGSjd2Snb9Upj6byABl2"
+   "uid": "rQgUg5Y3QGSjd2Snb9Upj6byABl2",
+   "name": "MIKE"
   }
  ],
  "timeCreated": {
@@ -84,14 +27,16 @@
  },
  "missions": [
   {
+   "state": "SUCCESS",
+   "team": [
+    "ALI",
+    "MIKE"
+   ],
+   "failsRequired": 1,
+   "teamSize": 2,
    "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "ALI",
-      "MIKE"
-     ],
-     "proposer": "ALI",
      "votes": [
       "TOM",
       "MIKE",
@@ -99,26 +44,16 @@
       "SHAL",
       "LUKE"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "ALI",
+      "MIKE"
+     ],
+     "proposer": "ALI"
     }
-   ],
-   "state": "SUCCESS",
-   "team": [
-    "ALI",
-    "MIKE"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2
+   ]
   },
   {
-   "team": [
-    "LUKE",
-    "SHAL",
-    "MIKE"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
@@ -136,19 +71,23 @@
      ]
     }
    ],
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "LUKE",
+    "SHAL",
+    "MIKE"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0
   },
   {
-   "state": "FAIL",
-   "team": [
-    "SHAL",
-    "TOM"
-   ],
    "failsRequired": 1,
    "teamSize": 2,
    "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "SHAL",
       "TOM"
@@ -159,23 +98,22 @@
       "MIKE",
       "SHAL",
       "LUKE"
-     ],
-     "state": "APPROVED"
+     ]
     }
+   ],
+   "state": "FAIL",
+   "team": [
+    "SHAL",
+    "TOM"
    ]
   },
   {
-   "state": "FAIL",
-   "team": [
-    "ALI",
-    "LUKE",
-    "MIKE"
-   ],
    "failsRequired": 1,
    "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "LUKE",
       "TOM",
@@ -185,32 +123,31 @@
      "votes": [
       "TOM",
       "MIKE"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "votes": [
-      "ALI",
-      "LUKE",
-      "MIKE"
-     ],
      "state": "APPROVED",
      "team": [
       "ALI",
       "LUKE",
       "MIKE"
      ],
-     "proposer": "MIKE"
+     "proposer": "MIKE",
+     "votes": [
+      "ALI",
+      "LUKE",
+      "MIKE"
+     ]
     }
-   ]
-  },
-  {
+   ],
    "state": "FAIL",
    "team": [
     "ALI",
-    "MIKE",
-    "TOM"
-   ],
+    "LUKE",
+    "MIKE"
+   ]
+  },
+  {
    "failsRequired": 1,
    "teamSize": 3,
    "numFails": 2,
@@ -230,7 +167,74 @@
      ],
      "proposer": "ALI"
     }
+   ],
+   "state": "FAIL",
+   "team": [
+    "ALI",
+    "MIKE",
+    "TOM"
    ]
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1585975631,
+  "_nanoseconds": 737011000
+ },
+ "outcome": {
+  "message": "Three failed missions",
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "ALI"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "SHAL"
+   },
+   {
+    "role": "MERLIN",
+    "name": "LUKE",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "TOM"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MIKE",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "ALI": true,
+    "MIKE": true
+   },
+   {
+    "MIKE": true,
+    "SHAL": true,
+    "LUKE": true
+   },
+   {
+    "SHAL": true,
+    "TOM": false
+   },
+   {
+    "ALI": false,
+    "LUKE": true,
+    "MIKE": true
+   },
+   {
+    "ALI": false,
+    "TOM": false,
+    "MIKE": true
+   }
+  ]
+ }
 }

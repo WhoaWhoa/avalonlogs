@@ -5,8 +5,6 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
    "proposals": [
     {
@@ -34,21 +32,15 @@
     "LIV",
     "MAC",
     "DONN"
-   ]
-  },
-  {
-   "state": "FAIL",
-   "team": [
-    "LILA",
-    "DONN",
-    "LIV",
-    "MAC"
    ],
    "failsRequired": 1,
-   "teamSize": 4,
+   "teamSize": 3
+  },
+  {
    "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "LILA",
       "DONN",
@@ -64,23 +56,23 @@
       "LILA",
       "HAYNES",
       "RODBOD"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ]
-  },
-  {
+   ],
+   "state": "FAIL",
    "team": [
-    "MAC",
-    "LIV",
     "LILA",
-    "RODBOD"
+    "DONN",
+    "LIV",
+    "MAC"
    ],
    "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 1,
+   "teamSize": 4
+  },
+  {
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "MAC",
       "LIV",
@@ -98,26 +90,27 @@
       "DONN",
       "MADI",
       "MAC"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "FAIL"
+   "state": "FAIL",
+   "team": [
+    "MAC",
+    "LIV",
+    "LILA",
+    "RODBOD"
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 1
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "MADI",
-    "VISION",
-    "LILA",
-    "LIV",
-    "DONN"
-   ],
    "failsRequired": 2,
    "teamSize": 5,
    "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "MADI",
       "VISION",
@@ -134,12 +127,20 @@
       "LILA",
       "HAYNES",
       "RODBOD"
-     ],
-     "state": "APPROVED"
+     ]
     }
+   ],
+   "state": "SUCCESS",
+   "team": [
+    "MADI",
+    "VISION",
+    "LILA",
+    "LIV",
+    "DONN"
    ]
   },
   {
+   "state": "FAIL",
    "team": [
     "HAYNES",
     "VISION",
@@ -152,6 +153,14 @@
    "numFails": 2,
    "proposals": [
     {
+     "team": [
+      "HAYNES",
+      "VISION",
+      "DONN",
+      "MADI",
+      "TORCH"
+     ],
+     "proposer": "TORCH",
      "votes": [
       "RODBOD",
       "DONN",
@@ -160,54 +169,16 @@
       "LILA",
       "HAYNES"
      ],
-     "state": "APPROVED",
-     "team": [
-      "HAYNES",
-      "VISION",
-      "DONN",
-      "MADI",
-      "TORCH"
-     ],
-     "proposer": "TORCH"
+     "state": "APPROVED"
     }
-   ],
-   "state": "FAIL"
+   ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585973717,
+  "_nanoseconds": 238397000
+ },
  "outcome": {
-  "votes": [
-   {
-    "LIV": true,
-    "DONN": true,
-    "MAC": true
-   },
-   {
-    "LIV": true,
-    "LILA": true,
-    "DONN": false,
-    "MAC": true
-   },
-   {
-    "LIV": true,
-    "LILA": true,
-    "RODBOD": false,
-    "MAC": true
-   },
-   {
-    "MADI": true,
-    "VISION": true,
-    "LIV": true,
-    "LILA": true,
-    "DONN": false
-   },
-   {
-    "VISION": true,
-    "TORCH": false,
-    "DONN": false,
-    "HAYNES": true,
-    "MADI": true
-   }
-  ],
   "message": "Three failed missions",
   "assassinated": null,
   "state": "EVIL_WIN",
@@ -218,14 +189,14 @@
     "assassin": false
    },
    {
-    "name": "LIV",
     "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "LIV"
    },
    {
-    "assassin": false,
     "role": "OBERON",
-    "name": "DONN"
+    "name": "DONN",
+    "assassin": false
    },
    {
     "role": "MERLIN",
@@ -233,9 +204,9 @@
     "assassin": false
    },
    {
+    "name": "MAC",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MAC"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": true,
@@ -248,14 +219,47 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "HAYNES",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "HAYNES"
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "role": "MORGANA",
-    "name": "RODBOD"
+    "name": "RODBOD",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "MAC": true,
+    "LIV": true,
+    "DONN": true
+   },
+   {
+    "LIV": true,
+    "LILA": true,
+    "DONN": false,
+    "MAC": true
+   },
+   {
+    "RODBOD": false,
+    "MAC": true,
+    "LIV": true,
+    "LILA": true
+   },
+   {
+    "MADI": true,
+    "VISION": true,
+    "LIV": true,
+    "LILA": true,
+    "DONN": false
+   },
+   {
+    "HAYNES": true,
+    "MADI": true,
+    "VISION": true,
+    "TORCH": false,
+    "DONN": false
    }
   ]
  },

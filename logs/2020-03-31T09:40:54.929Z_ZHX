@@ -1,11 +1,36 @@
 {
+ "players": [
+  {
+   "uid": "1GMC7SE96Na5V2t36uKsrKm2Szf2",
+   "name": "JONATHAN"
+  },
+  {
+   "name": "JOHNSTER",
+   "uid": "W5NU6dz23sNw8r7l9LGdhSG8E142"
+  },
+  {
+   "name": "ASH",
+   "uid": "bDw1TZ74r4UZvIBf4RV82vP1br23"
+  },
+  {
+   "name": "JUNHWI",
+   "uid": "anusK7O4UXcjMWEb4h4A0HH70rq2"
+  },
+  {
+   "name": "MOO",
+   "uid": "8jE1MDlq1SYovwqYQbEObfBSNSG3"
+  },
+  {
+   "name": "MINCHUL",
+   "uid": "XLNrQ1T60CPT8dZRBZM1aYbbv3B3"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1585647654,
   "_nanoseconds": 929000000
  },
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "JUNHWI",
     "JONATHAN"
@@ -15,11 +40,6 @@
    "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "JUNHWI",
-      "JONATHAN"
-     ],
-     "proposer": "JOHNSTER",
      "votes": [
       "MOO",
       "ASH",
@@ -28,9 +48,15 @@
       "JONATHAN",
       "JUNHWI"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "JUNHWI",
+      "JONATHAN"
+     ],
+     "proposer": "JOHNSTER"
     }
-   ]
+   ],
+   "state": "SUCCESS"
   },
   {
    "failsRequired": 1,
@@ -62,12 +88,6 @@
    ]
   },
   {
-   "team": [
-    "JUNHWI",
-    "JONATHAN",
-    "MINCHUL",
-    "MOO"
-   ],
    "failsRequired": 1,
    "teamSize": 4,
    "numFails": 0,
@@ -89,18 +109,15 @@
      ]
     }
    ],
-   "state": "SUCCESS"
-  },
-  {
-   "state": "FAIL",
+   "state": "SUCCESS",
    "team": [
     "JUNHWI",
+    "JONATHAN",
     "MINCHUL",
     "MOO"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
+   ]
+  },
+  {
    "proposals": [
     {
      "votes": [
@@ -117,9 +134,19 @@
      ],
      "proposer": "MOO"
     }
-   ]
+   ],
+   "state": "FAIL",
+   "team": [
+    "JUNHWI",
+    "MINCHUL",
+    "MOO"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 1
   },
   {
+   "state": "FAIL",
    "team": [
     "JONATHAN",
     "JUNHWI",
@@ -131,6 +158,11 @@
    "numFails": 1,
    "proposals": [
     {
+     "votes": [
+      "MINCHUL",
+      "JUNHWI",
+      "MOO"
+     ],
      "state": "REJECTED",
      "team": [
       "MINCHUL",
@@ -138,14 +170,14 @@
       "MOO",
       "JONATHAN"
      ],
-     "proposer": "MINCHUL",
-     "votes": [
-      "MINCHUL",
-      "JUNHWI",
-      "MOO"
-     ]
+     "proposer": "MINCHUL"
     },
     {
+     "votes": [
+      "JONATHAN",
+      "MOO",
+      "ASH"
+     ],
      "state": "REJECTED",
      "team": [
       "JONATHAN",
@@ -153,12 +185,7 @@
       "MOO",
       "MINCHUL"
      ],
-     "proposer": "JONATHAN",
-     "votes": [
-      "JONATHAN",
-      "MOO",
-      "ASH"
-     ]
+     "proposer": "JONATHAN"
     },
     {
      "state": "REJECTED",
@@ -176,7 +203,6 @@
      ]
     },
     {
-     "state": "REJECTED",
      "team": [
       "ASH",
       "JUNHWI",
@@ -186,7 +212,8 @@
      "proposer": "ASH",
      "votes": [
       "ASH"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "state": "APPROVED",
@@ -205,41 +232,14 @@
       "MINCHUL"
      ]
     }
-   ],
-   "state": "FAIL"
+   ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585649327,
+  "_nanoseconds": 166937000
+ },
  "outcome": {
-  "votes": [
-   {
-    "JONATHAN": true,
-    "JUNHWI": true
-   },
-   {
-    "ASH": false,
-    "MINCHUL": true,
-    "JUNHWI": true
-   },
-   {
-    "MINCHUL": true,
-    "JONATHAN": true,
-    "JUNHWI": true,
-    "MOO": true
-   },
-   {
-    "JUNHWI": true,
-    "MOO": false,
-    "MINCHUL": true
-   },
-   {
-    "MINCHUL": true,
-    "JONATHAN": true,
-    "JUNHWI": true,
-    "MOO": false
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null,
   "state": "EVIL_WIN",
   "roles": [
    {
@@ -248,14 +248,14 @@
     "role": "EVIL MINION"
    },
    {
+    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "JOHNSTER",
-    "assassin": false
+    "name": "JOHNSTER"
    },
    {
-    "name": "MINCHUL",
     "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "MINCHUL"
    },
    {
     "assassin": false,
@@ -272,32 +272,36 @@
     "assassin": false,
     "role": "MORDRED"
    }
-  ]
- },
- "players": [
-  {
-   "name": "JONATHAN",
-   "uid": "1GMC7SE96Na5V2t36uKsrKm2Szf2"
-  },
-  {
-   "name": "JOHNSTER",
-   "uid": "W5NU6dz23sNw8r7l9LGdhSG8E142"
-  },
-  {
-   "name": "ASH",
-   "uid": "bDw1TZ74r4UZvIBf4RV82vP1br23"
-  },
-  {
-   "uid": "anusK7O4UXcjMWEb4h4A0HH70rq2",
-   "name": "JUNHWI"
-  },
-  {
-   "uid": "8jE1MDlq1SYovwqYQbEObfBSNSG3",
-   "name": "MOO"
-  },
-  {
-   "uid": "XLNrQ1T60CPT8dZRBZM1aYbbv3B3",
-   "name": "MINCHUL"
-  }
- ]
+  ],
+  "votes": [
+   {
+    "JONATHAN": true,
+    "JUNHWI": true
+   },
+   {
+    "ASH": false,
+    "MINCHUL": true,
+    "JUNHWI": true
+   },
+   {
+    "JONATHAN": true,
+    "JUNHWI": true,
+    "MOO": true,
+    "MINCHUL": true
+   },
+   {
+    "JUNHWI": true,
+    "MOO": false,
+    "MINCHUL": true
+   },
+   {
+    "MINCHUL": true,
+    "JONATHAN": true,
+    "JUNHWI": true,
+    "MOO": false
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null
+ }
 }

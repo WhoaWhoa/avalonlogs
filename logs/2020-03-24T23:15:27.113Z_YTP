@@ -1,4 +1,72 @@
 {
+ "timeFinished": {
+  "_seconds": 1585092658,
+  "_nanoseconds": 266684000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "STEVE": true,
+    "BRIAN": false
+   },
+   {
+    "JAMES": true,
+    "DOM": true,
+    "ROCIO": true
+   },
+   {
+    "ROCIO": true,
+    "JAMES": true,
+    "DOM": true
+   },
+   {
+    "ROCIO": true,
+    "JAMES": true,
+    "BRIAN": false,
+    "DOM": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "ROCIO",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "HADES"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "ROCIO"
+   },
+   {
+    "name": "DOM",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "OBERON",
+    "name": "STEVE"
+   },
+   {
+    "name": "JAMES",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "BRIAN"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "TYLER"
+   }
+  ]
+ },
  "players": [
   {
    "name": "ROCIO",
@@ -9,20 +77,20 @@
    "uid": "JGCLVetGepXx4rLnxA33ErZRAXB2"
   },
   {
-   "name": "JAMES",
-   "uid": "4tiW5XQh0rfcOTjxs6o41l18uch1"
+   "uid": "4tiW5XQh0rfcOTjxs6o41l18uch1",
+   "name": "JAMES"
   },
   {
    "name": "DOM",
    "uid": "VWM1WaKq6wOmGr3Am8DNBFq4PXB3"
   },
   {
-   "name": "BRIAN",
-   "uid": "YckS9udxtgcpWUfqj3t66QdVZmi1"
+   "uid": "YckS9udxtgcpWUfqj3t66QdVZmi1",
+   "name": "BRIAN"
   },
   {
-   "name": "STEVE",
-   "uid": "SRmi8qkCH0a2XeZk9QAeO26m3eY2"
+   "uid": "SRmi8qkCH0a2XeZk9QAeO26m3eY2",
+   "name": "STEVE"
   },
   {
    "name": "HADES",
@@ -37,16 +105,16 @@
   {
    "proposals": [
     {
+     "votes": [
+      "ROCIO",
+      "TYLER"
+     ],
      "state": "REJECTED",
      "team": [
       "ROCIO",
       "TYLER"
      ],
-     "proposer": "ROCIO",
-     "votes": [
-      "ROCIO",
-      "TYLER"
-     ]
+     "proposer": "ROCIO"
     },
     {
      "state": "REJECTED",
@@ -61,16 +129,16 @@
      ]
     },
     {
-     "votes": [
-      "STEVE",
-      "JAMES"
-     ],
-     "state": "REJECTED",
      "team": [
       "JAMES",
       "STEVE"
      ],
-     "proposer": "JAMES"
+     "proposer": "JAMES",
+     "votes": [
+      "STEVE",
+      "JAMES"
+     ],
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -84,12 +152,6 @@
      "proposer": "DOM"
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "BRIAN",
-      "STEVE"
-     ],
-     "proposer": "BRIAN",
      "votes": [
       "HADES",
       "ROCIO",
@@ -98,7 +160,13 @@
       "JAMES",
       "BRIAN",
       "TYLER"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "BRIAN",
+      "STEVE"
+     ],
+     "proposer": "BRIAN"
     }
    ],
    "state": "FAIL",
@@ -111,8 +179,12 @@
    "numFails": 1
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "BRIAN",
       "STEVE",
@@ -121,8 +193,7 @@
      "proposer": "STEVE",
      "votes": [
       "STEVE"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "REJECTED",
@@ -135,6 +206,7 @@
      "votes": []
     },
     {
+     "state": "REJECTED",
      "team": [
       "ROCIO",
       "TYLER",
@@ -144,10 +216,10 @@
      "votes": [
       "BRIAN",
       "TYLER"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "REJECTED",
      "team": [
       "TYLER",
       "DOM",
@@ -158,8 +230,7 @@
       "BRIAN",
       "TYLER",
       "DOM"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "APPROVED",
@@ -185,15 +256,14 @@
     "JAMES",
     "DOM",
     "ROCIO"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0
+   ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "DOM",
       "JAMES",
@@ -206,7 +276,8 @@
       "ROCIO",
       "DOM",
       "JAMES"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "state": "SUCCESS",
@@ -214,29 +285,14 @@
     "DOM",
     "JAMES",
     "ROCIO"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0
+   ]
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "ROCIO",
-    "JAMES",
-    "DOM",
-    "BRIAN"
-   ],
    "failsRequired": 2,
    "teamSize": 4,
    "numFails": 1,
    "proposals": [
     {
-     "votes": [
-      "HADES",
-      "STEVE",
-      "BRIAN"
-     ],
      "state": "REJECTED",
      "team": [
       "BRIAN",
@@ -244,7 +300,12 @@
       "STEVE",
       "DOM"
      ],
-     "proposer": "BRIAN"
+     "proposer": "BRIAN",
+     "votes": [
+      "HADES",
+      "STEVE",
+      "BRIAN"
+     ]
     },
     {
      "votes": [
@@ -261,21 +322,29 @@
      "proposer": "STEVE"
     },
     {
+     "votes": [
+      "BRIAN",
+      "HADES",
+      "STEVE"
+     ],
+     "state": "REJECTED",
      "team": [
       "HADES",
       "STEVE",
       "BRIAN",
       "ROCIO"
      ],
-     "proposer": "HADES",
-     "votes": [
-      "BRIAN",
-      "HADES",
-      "STEVE"
-     ],
-     "state": "REJECTED"
+     "proposer": "HADES"
     },
     {
+     "state": "APPROVED",
+     "team": [
+      "ROCIO",
+      "JAMES",
+      "DOM",
+      "BRIAN"
+     ],
+     "proposer": "ROCIO",
      "votes": [
       "HADES",
       "ROCIO",
@@ -284,88 +353,23 @@
       "JAMES",
       "BRIAN",
       "TYLER"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "ROCIO",
-      "JAMES",
-      "DOM",
-      "BRIAN"
-     ],
-     "proposer": "ROCIO"
+     ]
     }
+   ],
+   "state": "SUCCESS",
+   "team": [
+    "ROCIO",
+    "JAMES",
+    "DOM",
+    "BRIAN"
    ]
   },
   {
-   "team": [],
-   "proposals": [],
    "teamSize": 4,
    "failsRequired": 1,
-   "state": "PENDING"
+   "state": "PENDING",
+   "team": [],
+   "proposals": []
   }
- ],
- "outcome": {
-  "message": "Merlin assassinated",
-  "assassinated": "ROCIO",
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "role": "MORGANA",
-    "name": "HADES",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "ROCIO"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "DOM",
-    "assassin": false
-   },
-   {
-    "name": "STEVE",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JAMES"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "BRIAN",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "TYLER"
-   }
-  ],
-  "votes": [
-   {
-    "STEVE": true,
-    "BRIAN": false
-   },
-   {
-    "ROCIO": true,
-    "JAMES": true,
-    "DOM": true
-   },
-   {
-    "JAMES": true,
-    "DOM": true,
-    "ROCIO": true
-   },
-   {
-    "ROCIO": true,
-    "JAMES": true,
-    "BRIAN": false,
-    "DOM": true
-   }
-  ]
- }
+ ]
 }

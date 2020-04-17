@@ -5,7 +5,6 @@
  },
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "SLANKET",
     "FUITGUMMY"
@@ -15,6 +14,7 @@
    "numFails": 0,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "MONUTS",
       "FUITGUMMY"
@@ -24,48 +24,46 @@
       "VCR",
       "MONUTS",
       "FUITGUMMY"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "votes": [
-      "MONUTS",
-      "NICOLAS"
-     ],
      "state": "REJECTED",
      "team": [
       "SLANKET",
       "NICOLAS"
      ],
-     "proposer": "MONUTS"
-    },
-    {
-     "state": "REJECTED",
-     "team": [
-      "VCR",
-      "FUITGUMMY"
-     ],
-     "proposer": "VCR",
+     "proposer": "MONUTS",
      "votes": [
-      "FUITGUMMY",
-      "VCR",
-      "MONUTS"
+      "MONUTS",
+      "NICOLAS"
      ]
     },
     {
      "votes": [
       "FUITGUMMY",
-      "NICOLAS"
+      "VCR",
+      "MONUTS"
      ],
      "state": "REJECTED",
+     "team": [
+      "VCR",
+      "FUITGUMMY"
+     ],
+     "proposer": "VCR"
+    },
+    {
      "team": [
       "NICOLAS",
       "FUITGUMMY"
      ],
-     "proposer": "NICOLAS"
+     "proposer": "NICOLAS",
+     "votes": [
+      "FUITGUMMY",
+      "NICOLAS"
+     ],
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
      "team": [
       "SLANKET",
       "FUITGUMMY"
@@ -78,19 +76,13 @@
       "DICKSON",
       "NICOLAS",
       "SLANKET"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "state": "SUCCESS"
   },
   {
-   "state": "FAIL",
-   "team": [
-    "SLANKET",
-    "FUITGUMMY",
-    "MONUTS"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
@@ -108,14 +100,22 @@
      ],
      "state": "APPROVED"
     }
-   ]
+   ],
+   "state": "FAIL",
+   "team": [
+    "SLANKET",
+    "FUITGUMMY",
+    "MONUTS"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 0,
    "proposals": [
     {
-     "votes": [
-      "MONUTS"
-     ],
      "state": "REJECTED",
      "team": [
       "SLANKET",
@@ -123,13 +123,12 @@
       "VCR",
       "MONUTS"
      ],
-     "proposer": "DICKSON"
+     "proposer": "DICKSON",
+     "votes": [
+      "MONUTS"
+     ]
     },
     {
-     "votes": [
-      "MONUTS",
-      "DICKSON"
-     ],
      "state": "REJECTED",
      "team": [
       "NICOLAS",
@@ -137,7 +136,11 @@
       "FUITGUMMY",
       "DICKSON"
      ],
-     "proposer": "MONUTS"
+     "proposer": "MONUTS",
+     "votes": [
+      "MONUTS",
+      "DICKSON"
+     ]
     },
     {
      "state": "APPROVED",
@@ -163,15 +166,9 @@
     "FUITGUMMY",
     "DICKSON",
     "VCR"
-   ],
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 0
+   ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
      "state": "REJECTED",
@@ -207,17 +204,59 @@
     "SLANKET",
     "FUITGUMMY",
     "DICKSON"
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0
   },
   {
+   "proposals": [],
    "teamSize": 4,
    "failsRequired": 1,
    "state": "PENDING",
-   "team": [],
-   "proposals": []
+   "team": []
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585193200,
+  "_nanoseconds": 60179000
+ },
  "outcome": {
+  "message": "Three successful missions",
+  "assassinated": "VCR",
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "VCR"
+   },
+   {
+    "role": "MORGANA",
+    "name": "MONUTS",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "DICKSON",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "name": "SLANKET",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "NICOLAS",
+    "assassin": true
+   },
+   {
+    "name": "FUITGUMMY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
   "votes": [
    {
     "FUITGUMMY": true,
@@ -229,61 +268,26 @@
     "MONUTS": false
    },
    {
-    "SLANKET": true,
     "VCR": true,
     "DICKSON": true,
-    "FUITGUMMY": true
-   },
-   {
     "FUITGUMMY": true,
-    "SLANKET": true,
-    "DICKSON": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "VCR",
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "name": "VCR",
-    "assassin": false,
-    "role": "PERCIVAL"
+    "SLANKET": true
    },
    {
-    "role": "MORGANA",
-    "name": "MONUTS",
-    "assassin": false
-   },
-   {
-    "name": "DICKSON",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SLANKET",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "NICOLAS",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "FUITGUMMY"
+    "DICKSON": true,
+    "FUITGUMMY": true,
+    "SLANKET": true
    }
   ]
  },
  "players": [
   {
-   "uid": "5fRJchdQRihmaYAowJu40J0iVIv1",
-   "name": "NICOLAS"
+   "name": "NICOLAS",
+   "uid": "5fRJchdQRihmaYAowJu40J0iVIv1"
   },
   {
-   "name": "SLANKET",
-   "uid": "rFoLjnY1O9dKi8iMx6xE1Oo0g292"
+   "uid": "rFoLjnY1O9dKi8iMx6xE1Oo0g292",
+   "name": "SLANKET"
   },
   {
    "name": "FUITGUMMY",
@@ -298,8 +302,8 @@
    "uid": "n8TY5m2F4pZxlRXXSjbhtQjaULD2"
   },
   {
-   "name": "VCR",
-   "uid": "W1J5paMqKTTrO6t9ESJF46Qv04p2"
+   "uid": "W1J5paMqKTTrO6t9ESJF46Qv04p2",
+   "name": "VCR"
   }
  ]
 }

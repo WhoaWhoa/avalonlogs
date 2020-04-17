@@ -5,8 +5,16 @@
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "PETE",
+      "HAYLEY"
+     ],
+     "proposer": "HAYLEY",
      "votes": [
       "ERIN",
       "JOSEPH",
@@ -14,27 +22,16 @@
       "PETE",
       "HAYLEY"
      ],
-     "state": "APPROVED",
-     "team": [
-      "PETE",
-      "HAYLEY"
-     ],
-     "proposer": "HAYLEY"
+     "state": "APPROVED"
     }
    ],
    "state": "SUCCESS",
    "team": [
     "PETE",
     "HAYLEY"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0
+   ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -58,38 +55,48 @@
     "CLAMMY",
     "PHIL",
     "HAYLEY"
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0
   },
   {
-   "team": [
-    "HAYLEY",
-    "PHIL",
-    "CLAMMY"
-   ],
    "failsRequired": 1,
    "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
-     "votes": [
-      "JOSEPH",
-      "ED",
-      "CLAMMY",
-      "PHIL",
-      "ERIN"
-     ],
      "state": "APPROVED",
      "team": [
       "HAYLEY",
       "PHIL",
       "CLAMMY"
      ],
-     "proposer": "CLAMMY"
+     "proposer": "CLAMMY",
+     "votes": [
+      "JOSEPH",
+      "ED",
+      "CLAMMY",
+      "PHIL",
+      "ERIN"
+     ]
     }
    ],
-   "state": "FAIL"
+   "state": "FAIL",
+   "team": [
+    "HAYLEY",
+    "PHIL",
+    "CLAMMY"
+   ]
   },
   {
+   "state": "FAIL",
+   "team": [
+    "ED",
+    "PHIL",
+    "PETE",
+    "ERIN"
+   ],
    "failsRequired": 2,
    "teamSize": 4,
    "numFails": 2,
@@ -111,28 +118,14 @@
       "PETE"
      ]
     }
-   ],
-   "state": "FAIL",
-   "team": [
-    "ED",
-    "PHIL",
-    "PETE",
-    "ERIN"
    ]
   },
   {
-   "team": [
-    "PETE",
-    "PHIL",
-    "CLAMMY",
-    "JOSEPH"
-   ],
    "failsRequired": 1,
    "teamSize": 4,
    "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "PETE",
       "PHIL",
@@ -145,24 +138,65 @@
       "ERIN",
       "JOSEPH",
       "PETE"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "PETE",
+    "PHIL",
+    "CLAMMY",
+    "JOSEPH"
+   ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585493957,
+  "_nanoseconds": 378066000
+ },
  "outcome": {
+  "votes": [
+   {
+    "HAYLEY": true,
+    "PETE": true
+   },
+   {
+    "PHIL": true,
+    "HAYLEY": true,
+    "CLAMMY": true
+   },
+   {
+    "PHIL": true,
+    "HAYLEY": false,
+    "CLAMMY": true
+   },
+   {
+    "ED": false,
+    "PHIL": true,
+    "ERIN": false,
+    "PETE": true
+   },
+   {
+    "JOSEPH": true,
+    "CLAMMY": true,
+    "PHIL": true,
+    "PETE": true
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "PHIL",
   "state": "GOOD_WIN",
   "roles": [
    {
-    "role": "PERCIVAL",
     "name": "JOSEPH",
-    "assassin": false
+    "assassin": false,
+    "role": "PERCIVAL"
    },
    {
-    "name": "ED",
     "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "ED"
    },
    {
     "assassin": false,
@@ -175,51 +209,21 @@
     "name": "HAYLEY"
    },
    {
+    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "CLAMMY",
-    "assassin": false
+    "name": "CLAMMY"
    },
    {
-    "name": "PHIL",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "PHIL"
    },
    {
     "name": "ERIN",
     "assassin": false,
     "role": "MORGANA"
    }
-  ],
-  "votes": [
-   {
-    "PETE": true,
-    "HAYLEY": true
-   },
-   {
-    "HAYLEY": true,
-    "CLAMMY": true,
-    "PHIL": true
-   },
-   {
-    "PHIL": true,
-    "HAYLEY": false,
-    "CLAMMY": true
-   },
-   {
-    "PHIL": true,
-    "ERIN": false,
-    "PETE": true,
-    "ED": false
-   },
-   {
-    "PHIL": true,
-    "PETE": true,
-    "JOSEPH": true,
-    "CLAMMY": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "PHIL"
+  ]
  },
  "players": [
   {
@@ -227,16 +231,16 @@
    "uid": "hRvi0wwBTfNVJqQHgUZVtHuv8kG3"
   },
   {
-   "uid": "7Pps76fURphfToGkJRWKhM48AJC3",
-   "name": "ERIN"
+   "name": "ERIN",
+   "uid": "7Pps76fURphfToGkJRWKhM48AJC3"
   },
   {
    "name": "PETE",
    "uid": "dZEEUj6awJcOobY8dDWzu6jyZqn2"
   },
   {
-   "uid": "AVrDDZtySveFetGLpQv8Rbzq1D52",
-   "name": "ED"
+   "name": "ED",
+   "uid": "AVrDDZtySveFetGLpQv8Rbzq1D52"
   },
   {
    "name": "JOSEPH",

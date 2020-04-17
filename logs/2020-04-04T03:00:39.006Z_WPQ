@@ -1,63 +1,4 @@
 {
- "outcome": {
-  "votes": [
-   {
-    "SHARON": true,
-    "CAITLIN": true
-   },
-   {
-    "MARK": true,
-    "BRETT": true,
-    "DAN": true
-   },
-   {
-    "CAITLIN": true,
-    "MARK": false,
-    "SHARON": true,
-    "DAN": true
-   },
-   {
-    "BRETT": true,
-    "DAN": true,
-    "MARK": false
-   }
-  ],
-  "message": "Five team proposals in a row rejected",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "MARK",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "CAITLIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "SHARON",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "name": "ALI",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "BRETT"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "DAN",
-    "assassin": false
-   }
-  ]
- },
  "players": [
   {
    "name": "CAITLIN",
@@ -68,8 +9,8 @@
    "uid": "tWxpViM7VZdcNG0WGfLcAlsWGR82"
   },
   {
-   "name": "MARK",
-   "uid": "MbsBdihI2MX8KsTY63ypwiyGK7d2"
+   "uid": "MbsBdihI2MX8KsTY63ypwiyGK7d2",
+   "name": "MARK"
   },
   {
    "name": "DAN",
@@ -90,12 +31,6 @@
  },
  "missions": [
   {
-   "team": [
-    "CAITLIN",
-    "SHARON"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0,
    "proposals": [
     {
@@ -114,7 +49,13 @@
      ]
     }
    ],
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "CAITLIN",
+    "SHARON"
+   ],
+   "failsRequired": 1,
+   "teamSize": 2
   },
   {
    "failsRequired": 1,
@@ -135,6 +76,7 @@
      ]
     },
     {
+     "state": "REJECTED",
      "team": [
       "ALI",
       "MARK",
@@ -143,23 +85,22 @@
      "proposer": "MARK",
      "votes": [
       "MARK"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "votes": [
-      "BRETT",
-      "DAN",
-      "MARK",
-      "SHARON"
-     ],
      "state": "APPROVED",
      "team": [
       "BRETT",
       "DAN",
       "MARK"
      ],
-     "proposer": "DAN"
+     "proposer": "DAN",
+     "votes": [
+      "BRETT",
+      "DAN",
+      "MARK",
+      "SHARON"
+     ]
     }
    ],
    "state": "SUCCESS",
@@ -170,39 +111,6 @@
    ]
   },
   {
-   "proposals": [
-    {
-     "votes": [
-      "BRETT",
-      "MARK"
-     ],
-     "state": "REJECTED",
-     "team": [
-      "ALI",
-      "MARK",
-      "DAN",
-      "BRETT"
-     ],
-     "proposer": "BRETT"
-    },
-    {
-     "votes": [
-      "DAN",
-      "MARK",
-      "CAITLIN",
-      "SHARON"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "SHARON",
-      "MARK",
-      "DAN",
-      "CAITLIN"
-     ],
-     "proposer": "SHARON"
-    }
-   ],
-   "state": "FAIL",
    "team": [
     "SHARON",
     "MARK",
@@ -211,7 +119,40 @@
    ],
    "failsRequired": 1,
    "teamSize": 4,
-   "numFails": 1
+   "numFails": 1,
+   "proposals": [
+    {
+     "team": [
+      "ALI",
+      "MARK",
+      "DAN",
+      "BRETT"
+     ],
+     "proposer": "BRETT",
+     "votes": [
+      "BRETT",
+      "MARK"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "state": "APPROVED",
+     "team": [
+      "SHARON",
+      "MARK",
+      "DAN",
+      "CAITLIN"
+     ],
+     "proposer": "SHARON",
+     "votes": [
+      "DAN",
+      "MARK",
+      "CAITLIN",
+      "SHARON"
+     ]
+    }
+   ],
+   "state": "FAIL"
   },
   {
    "failsRequired": 1,
@@ -219,13 +160,6 @@
    "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "MARK",
-      "DAN",
-      "BRETT"
-     ],
-     "proposer": "CAITLIN",
      "votes": [
       "BRETT",
       "DAN",
@@ -233,7 +167,14 @@
       "CAITLIN",
       "SHARON",
       "ALI"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "MARK",
+      "DAN",
+      "BRETT"
+     ],
+     "proposer": "CAITLIN"
     }
    ],
    "state": "FAIL",
@@ -244,6 +185,9 @@
    ]
   },
   {
+   "teamSize": 4,
+   "failsRequired": 1,
+   "state": "PENDING",
    "team": [],
    "proposals": [
     {
@@ -261,6 +205,7 @@
      ]
     },
     {
+     "state": "REJECTED",
      "team": [
       "ALI",
       "BRETT",
@@ -271,8 +216,7 @@
      "votes": [
       "BRETT",
       "MARK"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "REJECTED",
@@ -290,10 +234,6 @@
      ]
     },
     {
-     "votes": [
-      "BRETT",
-      "MARK"
-     ],
      "state": "REJECTED",
      "team": [
       "MARK",
@@ -301,9 +241,14 @@
       "SHARON",
       "ALI"
      ],
-     "proposer": "BRETT"
+     "proposer": "BRETT",
+     "votes": [
+      "BRETT",
+      "MARK"
+     ]
     },
     {
+     "state": "REJECTED",
      "team": [
       "SHARON",
       "DAN",
@@ -315,13 +260,72 @@
       "SHARON",
       "ALI",
       "CAITLIN"
-     ],
-     "state": "REJECTED"
+     ]
     }
-   ],
-   "teamSize": 4,
-   "failsRequired": 1,
-   "state": "PENDING"
+   ]
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1585971713,
+  "_nanoseconds": 264068000
+ },
+ "outcome": {
+  "message": "Five team proposals in a row rejected",
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "MARK"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "CAITLIN"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "SHARON"
+   },
+   {
+    "name": "ALI",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "BRETT"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "DAN"
+   }
+  ],
+  "votes": [
+   {
+    "CAITLIN": true,
+    "SHARON": true
+   },
+   {
+    "BRETT": true,
+    "DAN": true,
+    "MARK": true
+   },
+   {
+    "DAN": true,
+    "CAITLIN": true,
+    "MARK": false,
+    "SHARON": true
+   },
+   {
+    "BRETT": true,
+    "DAN": true,
+    "MARK": false
+   }
+  ]
+ }
 }

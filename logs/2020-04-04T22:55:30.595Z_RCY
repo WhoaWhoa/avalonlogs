@@ -5,11 +5,6 @@
  },
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "MARKUS",
-    "STEFAN"
-   ],
    "failsRequired": 1,
    "teamSize": 2,
    "numFails": 0,
@@ -30,6 +25,11 @@
       "MARKUS"
      ]
     }
+   ],
+   "state": "SUCCESS",
+   "team": [
+    "MARKUS",
+    "STEFAN"
    ]
   },
   {
@@ -38,6 +38,7 @@
    "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "MARKUS",
       "STEFAN",
@@ -51,8 +52,7 @@
       "MARKUS",
       "CHRISTOPH",
       "STEFAN"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "state": "FAIL",
@@ -63,11 +63,19 @@
    ]
   },
   {
+   "state": "FAIL",
+   "team": [
+    "ALEX",
+    "CHRISTOPH",
+    "DAVID",
+    "MARKUS"
+   ],
    "failsRequired": 1,
    "teamSize": 4,
    "numFails": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "PHINE",
       "DAVID",
@@ -78,10 +86,16 @@
      "votes": [
       "ALEX",
       "STEFAN"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "team": [
+      "ALEX",
+      "CHRISTOPH",
+      "DAVID",
+      "MARKUS"
+     ],
+     "proposer": "ALEX",
      "votes": [
       "CHRISTOPH",
       "STEFAN",
@@ -89,39 +103,28 @@
       "PHINE",
       "MARKUS"
      ],
-     "state": "APPROVED",
-     "team": [
-      "ALEX",
-      "CHRISTOPH",
-      "DAVID",
-      "MARKUS"
-     ],
-     "proposer": "ALEX"
+     "state": "APPROVED"
     }
-   ],
-   "state": "FAIL",
-   "team": [
-    "ALEX",
-    "CHRISTOPH",
-    "DAVID",
-    "MARKUS"
    ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
+     "votes": [
+      "ALEX",
+      "CHRISTOPH",
+      "STEFAN"
+     ],
      "state": "REJECTED",
      "team": [
       "CHRISTOPH",
       "DAVID",
       "ALEX"
      ],
-     "proposer": "CHRISTOPH",
-     "votes": [
-      "ALEX",
-      "CHRISTOPH",
-      "STEFAN"
-     ]
+     "proposer": "CHRISTOPH"
     },
     {
      "state": "REJECTED",
@@ -138,6 +141,7 @@
      ]
     },
     {
+     "state": "REJECTED",
      "team": [
       "DAVID",
       "MARKUS",
@@ -148,10 +152,10 @@
       "DAVID",
       "PHINE",
       "MARKUS"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "PHINE",
       "ALEX",
@@ -165,8 +169,7 @@
       "DAVID",
       "ALEX",
       "PHINE"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "state": "SUCCESS",
@@ -174,13 +177,9 @@
     "PHINE",
     "ALEX",
     "DAVID"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0
+   ]
   },
   {
-   "state": "FAIL",
    "team": [
     "PHINE",
     "DAVID",
@@ -192,7 +191,6 @@
    "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "ALEX",
       "DAVID",
@@ -202,15 +200,10 @@
      "proposer": "STEFAN",
      "votes": [
       "STEFAN"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "ALEX",
-      "PHINE",
-      "CHRISTOPH",
-      "STEFAN"
-     ],
      "state": "APPROVED",
      "team": [
       "PHINE",
@@ -218,54 +211,32 @@
       "ALEX",
       "CHRISTOPH"
      ],
-     "proposer": "ALEX"
+     "proposer": "ALEX",
+     "votes": [
+      "ALEX",
+      "PHINE",
+      "CHRISTOPH",
+      "STEFAN"
+     ]
     }
-   ]
+   ],
+   "state": "FAIL"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1586042179,
+  "_nanoseconds": 348810000
+ },
  "outcome": {
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ALEX"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "PHINE"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "MARKUS"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "CHRISTOPH"
-   },
-   {
-    "role": "MORGANA",
-    "name": "STEFAN",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "DAVID"
-   }
-  ],
   "votes": [
    {
     "STEFAN": true,
     "MARKUS": true
    },
    {
-    "STEFAN": false,
     "PHINE": true,
-    "MARKUS": true
+    "MARKUS": true,
+    "STEFAN": false
    },
    {
     "MARKUS": true,
@@ -279,14 +250,47 @@
     "PHINE": true
    },
    {
-    "CHRISTOPH": false,
     "DAVID": true,
     "ALEX": true,
-    "PHINE": true
+    "PHINE": true,
+    "CHRISTOPH": false
    }
   ],
   "message": "Three failed missions",
-  "assassinated": null
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "ALEX",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "PHINE"
+   },
+   {
+    "name": "MARKUS",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "CHRISTOPH"
+   },
+   {
+    "role": "MORGANA",
+    "name": "STEFAN",
+    "assassin": false
+   },
+   {
+    "name": "DAVID",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ]
  },
  "players": [
   {
@@ -294,20 +298,20 @@
    "uid": "ZwjCX6DsixguMBqTV6SpcLVlAu33"
   },
   {
-   "uid": "S4E8kMvBbrYBSVkPxQLL5DalskZ2",
-   "name": "CHRISTOPH"
+   "name": "CHRISTOPH",
+   "uid": "S4E8kMvBbrYBSVkPxQLL5DalskZ2"
   },
   {
-   "name": "DAVID",
-   "uid": "DbB6qPMbHlTxKxU9D3MvW0sjwgQ2"
+   "uid": "DbB6qPMbHlTxKxU9D3MvW0sjwgQ2",
+   "name": "DAVID"
   },
   {
    "name": "MARKUS",
    "uid": "s7gLDw1QYXNCSfNwjfm4U4f9nJJ2"
   },
   {
-   "uid": "m57kw0OfLNTn6prjumvcPTzZNcu1",
-   "name": "PHINE"
+   "name": "PHINE",
+   "uid": "m57kw0OfLNTn6prjumvcPTzZNcu1"
   },
   {
    "uid": "VLMY701tRgRWD7ZQZ2ORFsSOvgp1",

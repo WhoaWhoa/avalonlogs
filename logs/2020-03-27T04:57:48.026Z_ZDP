@@ -5,8 +5,12 @@
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "DEANMA",
       "J"
@@ -15,8 +19,7 @@
      "votes": [
       "WILL",
       "DEANMA"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "REJECTED",
@@ -44,18 +47,24 @@
      "state": "REJECTED"
     },
     {
-     "team": [
-      "SAYEMIN",
-      "DEANMA"
-     ],
-     "proposer": "NOBODY",
      "votes": [
       "DEANMA",
       "WILL"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "team": [
+      "SAYEMIN",
+      "DEANMA"
+     ],
+     "proposer": "NOBODY"
     },
     {
+     "state": "APPROVED",
+     "team": [
+      "SAYEMIN",
+      "SHIRLEEN"
+     ],
+     "proposer": "SAYEMIN",
      "votes": [
       "SAYEMIN",
       "J",
@@ -63,68 +72,63 @@
       "MASNUN",
       "DEANMA",
       "WILL"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "SAYEMIN",
-      "SHIRLEEN"
-     ],
-     "proposer": "SAYEMIN"
+     ]
     }
    ],
    "state": "SUCCESS",
    "team": [
     "SAYEMIN",
     "SHIRLEEN"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0
+   ]
   },
   {
-   "team": [
-    "SAYEMIN",
-    "SHIRLEEN",
-    "WILL"
-   ],
    "failsRequired": 1,
    "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "SAYEMIN",
-      "SHIRLEEN",
-      "WILL"
-     ],
-     "proposer": "SHIRLEEN",
      "votes": [
       "WILL",
       "J",
       "SHIRLEEN",
       "DEANMA"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "SAYEMIN",
+      "SHIRLEEN",
+      "WILL"
+     ],
+     "proposer": "SHIRLEEN"
     }
    ],
-   "state": "FAIL"
+   "state": "FAIL",
+   "team": [
+    "SAYEMIN",
+    "SHIRLEEN",
+    "WILL"
+   ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
+     "votes": [
+      "DEANMA",
+      "WILL"
+     ],
      "state": "REJECTED",
      "team": [
       "MASNUN",
       "DEANMA",
       "WILL"
      ],
-     "proposer": "WILL",
-     "votes": [
-      "DEANMA",
-      "WILL"
-     ]
+     "proposer": "WILL"
     },
     {
+     "state": "APPROVED",
      "team": [
       "DEANMA",
       "MASNUN",
@@ -136,8 +140,7 @@
       "SAYEMIN",
       "J",
       "DEANMA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "state": "FAIL",
@@ -145,10 +148,7 @@
     "DEANMA",
     "MASNUN",
     "NOBODY"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1
+   ]
   },
   {
    "failsRequired": 2,
@@ -156,7 +156,6 @@
    "numFails": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "MASNUN",
       "J",
@@ -170,7 +169,8 @@
       "DEANMA",
       "WILL",
       "SAYEMIN"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "state": "FAIL",
@@ -182,13 +182,17 @@
    ]
   },
   {
-   "team": [],
-   "proposals": [],
    "teamSize": 4,
    "failsRequired": 1,
-   "state": "PENDING"
+   "state": "PENDING",
+   "team": [],
+   "proposals": []
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585285855,
+  "_nanoseconds": 470443000
+ },
  "outcome": {
   "votes": [
    {
@@ -196,20 +200,20 @@
     "SAYEMIN": true
    },
    {
+    "SAYEMIN": false,
     "WILL": true,
-    "SHIRLEEN": true,
-    "SAYEMIN": false
-   },
-   {
-    "NOBODY": true,
-    "MASNUN": true,
-    "DEANMA": false
+    "SHIRLEEN": true
    },
    {
     "MASNUN": true,
     "DEANMA": false,
+    "NOBODY": true
+   },
+   {
+    "DEANMA": false,
     "SAYEMIN": false,
-    "J": false
+    "J": false,
+    "MASNUN": true
    }
   ],
   "message": "Three failed missions",
@@ -217,14 +221,14 @@
   "state": "EVIL_WIN",
   "roles": [
    {
-    "assassin": false,
     "role": "MORGANA",
-    "name": "SAYEMIN"
+    "name": "SAYEMIN",
+    "assassin": false
    },
    {
+    "name": "J",
     "assassin": true,
-    "role": "MORDRED",
-    "name": "J"
+    "role": "MORDRED"
    },
    {
     "assassin": false,
@@ -237,9 +241,9 @@
     "name": "MASNUN"
    },
    {
+    "name": "DEANMA",
     "assassin": false,
-    "role": "OBERON",
-    "name": "DEANMA"
+    "role": "OBERON"
    },
    {
     "assassin": false,
@@ -247,9 +251,9 @@
     "name": "WILL"
    },
    {
-    "name": "NOBODY",
     "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "name": "NOBODY"
    }
   ]
  },
@@ -259,8 +263,8 @@
    "uid": "yNEvLMhSoFOMSvi8DetazRjaguw1"
   },
   {
-   "name": "J",
-   "uid": "pTcPSsOdAxQaTa6s5tj8s6DIIak1"
+   "uid": "pTcPSsOdAxQaTa6s5tj8s6DIIak1",
+   "name": "J"
   },
   {
    "name": "MASNUN",
@@ -275,12 +279,12 @@
    "uid": "lUL52ZuzIcdrAE4sPzfIg9Ax6nE3"
   },
   {
-   "uid": "m4HYuAScKdT8X9LSy0g1LnAv0Je2",
-   "name": "SHIRLEEN"
+   "name": "SHIRLEEN",
+   "uid": "m4HYuAScKdT8X9LSy0g1LnAv0Je2"
   },
   {
-   "uid": "WUubnvfHiVOt1A07p3ExmmCyiN23",
-   "name": "WILL"
+   "name": "WILL",
+   "uid": "WUubnvfHiVOt1A07p3ExmmCyiN23"
   }
  ]
 }

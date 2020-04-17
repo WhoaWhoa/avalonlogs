@@ -5,12 +5,6 @@
  },
  "missions": [
   {
-   "team": [
-    "MOO",
-    "WOOF"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 1,
    "proposals": [
     {
@@ -27,6 +21,7 @@
      ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "MOO",
       "WOOF"
@@ -37,25 +32,23 @@
       "WOOF",
       "MOO",
       "OINK"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "FAIL"
+   "state": "FAIL",
+   "team": [
+    "MOO",
+    "WOOF"
+   ],
+   "failsRequired": 1,
+   "teamSize": 2
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "OINK",
-    "TOM",
-    "DUCK"
-   ],
    "failsRequired": 1,
    "teamSize": 3,
    "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "YDALOBBY",
       "DUCK",
@@ -64,9 +57,11 @@
      "proposer": "YDALOBBY",
      "votes": [
       "MOO"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
      "team": [
       "TOM",
       "YDALOBBY",
@@ -77,8 +72,7 @@
       "TOM",
       "WOOF",
       "YDALOBBY"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "votes": [
@@ -96,6 +90,12 @@
      ],
      "proposer": "OINK"
     }
+   ],
+   "state": "SUCCESS",
+   "team": [
+    "OINK",
+    "TOM",
+    "DUCK"
    ]
   },
   {
@@ -111,6 +111,9 @@
    "numFails": 1,
    "proposals": [
     {
+     "votes": [
+      "WOOF"
+     ],
      "state": "REJECTED",
      "team": [
       "WOOF",
@@ -118,10 +121,7 @@
       "DUCK",
       "YDALOBBY"
      ],
-     "proposer": "WOOF",
-     "votes": [
-      "WOOF"
-     ]
+     "proposer": "WOOF"
     },
     {
      "state": "REJECTED",
@@ -138,18 +138,18 @@
      ]
     },
     {
-     "votes": [
-      "WOOF",
-      "DUCK"
-     ],
-     "state": "REJECTED",
      "team": [
       "YDALOBBY",
       "TOM",
       "WOOF",
       "OINK"
      ],
-     "proposer": "MOO"
+     "proposer": "MOO",
+     "votes": [
+      "WOOF",
+      "DUCK"
+     ],
+     "state": "REJECTED"
     },
     {
      "state": "REJECTED",
@@ -166,7 +166,6 @@
      ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "TOM",
       "WOOF",
@@ -181,7 +180,8 @@
       "YDALOBBY",
       "OINK",
       "TOM"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ]
   },
@@ -205,19 +205,20 @@
      ]
     },
     {
-     "votes": [
-      "YDALOBBY",
-      "WOOF"
-     ],
      "state": "REJECTED",
      "team": [
       "WOOF",
       "OINK",
       "DUCK"
      ],
-     "proposer": "WOOF"
+     "proposer": "WOOF",
+     "votes": [
+      "YDALOBBY",
+      "WOOF"
+     ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "MOO",
       "DUCK",
@@ -230,8 +231,7 @@
       "DUCK",
       "YDALOBBY",
       "OINK"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "state": "SUCCESS",
@@ -254,6 +254,12 @@
    "numFails": 1,
    "proposals": [
     {
+     "votes": [
+      "DUCK",
+      "OINK",
+      "TOM",
+      "MOO"
+     ],
      "state": "APPROVED",
      "team": [
       "MOO",
@@ -261,18 +267,44 @@
       "TOM",
       "OINK"
      ],
-     "proposer": "MOO",
-     "votes": [
-      "DUCK",
-      "OINK",
-      "TOM",
-      "MOO"
-     ]
+     "proposer": "MOO"
     }
    ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1584756898,
+  "_nanoseconds": 374256000
+ },
  "outcome": {
+  "votes": [
+   {
+    "WOOF": false,
+    "MOO": true
+   },
+   {
+    "OINK": true,
+    "DUCK": true,
+    "TOM": true
+   },
+   {
+    "WOOF": true,
+    "MOO": true,
+    "TOM": false,
+    "OINK": true
+   },
+   {
+    "OINK": true,
+    "MOO": true,
+    "DUCK": true
+   },
+   {
+    "MOO": true,
+    "DUCK": true,
+    "TOM": false,
+    "OINK": true
+   }
+  ],
   "message": "Three failed missions",
   "assassinated": null,
   "state": "EVIL_WIN",
@@ -283,19 +315,19 @@
     "name": "DUCK"
    },
    {
+    "name": "YDALOBBY",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "YDALOBBY"
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "role": "PERCIVAL",
-    "name": "OINK"
+    "name": "OINK",
+    "assassin": false
    },
    {
+    "name": "TOM",
     "assassin": true,
-    "role": "MORDRED",
-    "name": "TOM"
+    "role": "MORDRED"
    },
    {
     "assassin": false,
@@ -307,56 +339,28 @@
     "assassin": false,
     "role": "LOYAL FOLLOWER"
    }
-  ],
-  "votes": [
-   {
-    "WOOF": false,
-    "MOO": true
-   },
-   {
-    "DUCK": true,
-    "TOM": true,
-    "OINK": true
-   },
-   {
-    "OINK": true,
-    "WOOF": true,
-    "MOO": true,
-    "TOM": false
-   },
-   {
-    "MOO": true,
-    "DUCK": true,
-    "OINK": true
-   },
-   {
-    "MOO": true,
-    "DUCK": true,
-    "TOM": false,
-    "OINK": true
-   }
   ]
  },
  "players": [
   {
-   "name": "DUCK",
-   "uid": "vzcJsPYQmchAv2DoYIs2TNCc1rc2"
+   "uid": "vzcJsPYQmchAv2DoYIs2TNCc1rc2",
+   "name": "DUCK"
   },
   {
    "name": "MOO",
    "uid": "tmhwZixCHlRHRSLMRv2Jr4lFGZ93"
   },
   {
-   "uid": "VuwdYa7g6PMj728TJnhs7iXoQvQ2",
-   "name": "YDALOBBY"
+   "name": "YDALOBBY",
+   "uid": "VuwdYa7g6PMj728TJnhs7iXoQvQ2"
   },
   {
    "name": "TOM",
    "uid": "cWGyFuici8e5qrjT4oi9CAe6XKS2"
   },
   {
-   "name": "OINK",
-   "uid": "ajLCICKFgOQDgmGmuqkXzIP5Sz23"
+   "uid": "ajLCICKFgOQDgmGmuqkXzIP5Sz23",
+   "name": "OINK"
   },
   {
    "name": "WOOF",

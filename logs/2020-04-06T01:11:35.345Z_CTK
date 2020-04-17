@@ -1,4 +1,30 @@
 {
+ "players": [
+  {
+   "name": "CRAIG",
+   "uid": "S0hyXdfkKiO8ldnjw1fkdDNfPYo1"
+  },
+  {
+   "uid": "toh2RWFdIXdrXa639JZ7PkTez7j1",
+   "name": "AARON"
+  },
+  {
+   "uid": "SPUr44StJCatwplCxrRHFBs6BNC2",
+   "name": "POLLACK"
+  },
+  {
+   "uid": "Qy7QWXGWbIMiF4Uy8DDvnwkIYHD3",
+   "name": "ED"
+  },
+  {
+   "name": "LINDSAY",
+   "uid": "zOlHDUyNQ9T1QVeAI5ZwSdeqN9V2"
+  },
+  {
+   "name": "MARC",
+   "uid": "3aWCzYi6a7RiezwgiNt96krtXoa2"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1586135495,
   "_nanoseconds": 345000000
@@ -28,19 +54,20 @@
      "proposer": "AARON"
     },
     {
-     "votes": [
-      "MARC",
-      "LINDSAY",
-      "POLLACK"
-     ],
      "state": "REJECTED",
      "team": [
       "LINDSAY",
       "MARC"
      ],
-     "proposer": "POLLACK"
+     "proposer": "POLLACK",
+     "votes": [
+      "MARC",
+      "LINDSAY",
+      "POLLACK"
+     ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "AARON",
       "ED"
@@ -51,8 +78,7 @@
       "ED",
       "AARON",
       "POLLACK"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ]
   },
@@ -112,39 +138,42 @@
    "state": "FAIL"
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 1,
-   "proposals": [
-    {
-     "team": [
-      "AARON",
-      "ED",
-      "MARC",
-      "POLLACK"
-     ],
-     "proposer": "AARON",
-     "votes": [
-      "AARON",
-      "LINDSAY",
-      "POLLACK",
-      "ED"
-     ],
-     "state": "APPROVED"
-    }
-   ],
    "state": "FAIL",
    "team": [
     "AARON",
     "ED",
     "MARC",
     "POLLACK"
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 1,
+   "proposals": [
+    {
+     "votes": [
+      "AARON",
+      "LINDSAY",
+      "POLLACK",
+      "ED"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "AARON",
+      "ED",
+      "MARC",
+      "POLLACK"
+     ],
+     "proposer": "AARON"
+    }
    ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
    "numFails": 2,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "POLLACK",
       "LINDSAY",
@@ -155,34 +184,33 @@
       "LINDSAY",
       "POLLACK",
       "MARC"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "votes": [
+      "ED"
+     ],
      "state": "REJECTED",
      "team": [
       "ED",
       "AARON",
       "CRAIG"
      ],
-     "proposer": "ED",
-     "votes": [
-      "ED"
-     ]
+     "proposer": "ED"
     },
     {
-     "votes": [
-      "MARC",
-      "AARON",
-      "LINDSAY"
-     ],
      "state": "REJECTED",
      "team": [
       "LINDSAY",
       "MARC",
       "AARON"
      ],
-     "proposer": "LINDSAY"
+     "proposer": "LINDSAY",
+     "votes": [
+      "MARC",
+      "AARON",
+      "LINDSAY"
+     ]
     },
     {
      "team": [
@@ -205,9 +233,7 @@
     "LINDSAY",
     "MARC",
     "CRAIG"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3
+   ]
   },
   {
    "proposals": [],
@@ -217,11 +243,48 @@
    "team": []
   }
  ],
+ "timeFinished": {
+  "_seconds": 1586136264,
+  "_nanoseconds": 495722000
+ },
  "outcome": {
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "name": "ED",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "AARON"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "LINDSAY",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "POLLACK"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "CRAIG"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "MARC"
+   }
+  ],
   "votes": [
    {
-    "AARON": true,
-    "ED": true
+    "ED": true,
+    "AARON": true
    },
    {
     "MARC": false,
@@ -241,65 +304,6 @@
    }
   ],
   "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "ED"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "AARON",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "LINDSAY"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "POLLACK",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "CRAIG"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "MARC"
-   }
-  ]
- },
- "players": [
-  {
-   "name": "CRAIG",
-   "uid": "S0hyXdfkKiO8ldnjw1fkdDNfPYo1"
-  },
-  {
-   "name": "AARON",
-   "uid": "toh2RWFdIXdrXa639JZ7PkTez7j1"
-  },
-  {
-   "name": "POLLACK",
-   "uid": "SPUr44StJCatwplCxrRHFBs6BNC2"
-  },
-  {
-   "uid": "Qy7QWXGWbIMiF4Uy8DDvnwkIYHD3",
-   "name": "ED"
-  },
-  {
-   "name": "LINDSAY",
-   "uid": "zOlHDUyNQ9T1QVeAI5ZwSdeqN9V2"
-  },
-  {
-   "name": "MARC",
-   "uid": "3aWCzYi6a7RiezwgiNt96krtXoa2"
-  }
- ]
+  "assassinated": null
+ }
 }

@@ -5,10 +5,11 @@
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "teamSize": 2,
    "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "BIGDUMB",
       "JEFFBEZOS"
@@ -18,35 +19,17 @@
       "MOMYA",
       "JEFFBEZOS",
       "BIGDUMB"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "state": "FAIL",
    "team": [
     "BIGDUMB",
     "JEFFBEZOS"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2
+   ]
   },
   {
-   "numFails": 1,
-   "proposals": [
-    {
-     "team": [
-      "MATTY",
-      "BIGDUMB",
-      "MOMYA"
-     ],
-     "proposer": "MATTY",
-     "votes": [
-      "MOMYA",
-      "MATTY",
-      "BIGDUMB"
-     ],
-     "state": "APPROVED"
-    }
-   ],
    "state": "FAIL",
    "team": [
     "MATTY",
@@ -54,14 +37,29 @@
     "MOMYA"
    ],
    "failsRequired": 1,
-   "teamSize": 3
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0,
+   "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
+     "votes": [
+      "MOMYA",
+      "MATTY",
+      "BIGDUMB"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "MATTY",
+      "BIGDUMB",
+      "MOMYA"
+     ],
+     "proposer": "MATTY"
+    }
+   ]
+  },
+  {
+   "proposals": [
+    {
+     "state": "APPROVED",
      "team": [
       "MOMYA",
       "JEFFBEZOS"
@@ -73,20 +71,19 @@
       "JEFFBEZOS",
       "MATTY",
       "BIGDUMB"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "state": "SUCCESS",
    "team": [
     "MOMYA",
     "JEFFBEZOS"
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -102,19 +99,19 @@
      "state": "REJECTED"
     },
     {
-     "votes": [
-      "MATTY",
-      "BIGDUMB",
-      "MOMYA",
-      "JEFFBEZOS"
-     ],
      "state": "APPROVED",
      "team": [
       "MOMYA",
       "JEFFBEZOS",
       "MATTY"
      ],
-     "proposer": "MOMYA"
+     "proposer": "MOMYA",
+     "votes": [
+      "MATTY",
+      "BIGDUMB",
+      "MOMYA",
+      "JEFFBEZOS"
+     ]
     }
    ],
    "state": "SUCCESS",
@@ -122,7 +119,10 @@
     "MOMYA",
     "JEFFBEZOS",
     "MATTY"
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0
   },
   {
    "state": "SUCCESS",
@@ -136,18 +136,19 @@
    "numFails": 0,
    "proposals": [
     {
-     "votes": [
-      "BIGDUMB"
-     ],
      "state": "REJECTED",
      "team": [
       "MOMYA",
       "BIGDUMB",
       "MATTY"
      ],
-     "proposer": "BIGDUMB"
+     "proposer": "BIGDUMB",
+     "votes": [
+      "BIGDUMB"
+     ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "MATTY",
       "JEFFBEZOS",
@@ -158,45 +159,20 @@
       "MATTY",
       "MOMYA",
       "JEFFBEZOS"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585625728,
+  "_nanoseconds": 108580000
+ },
  "outcome": {
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "MOMYA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MERLIN",
-    "name": "JEFFBEZOS",
-    "assassin": false
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "MATTY",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "BIGDUMB"
-   },
-   {
-    "name": "JERRY",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ],
   "votes": [
    {
-    "JEFFBEZOS": true,
-    "BIGDUMB": false
+    "BIGDUMB": false,
+    "JEFFBEZOS": true
    },
    {
     "MOMYA": true,
@@ -219,12 +195,40 @@
    }
   ],
   "message": "Merlin assassinated",
-  "assassinated": "JEFFBEZOS"
+  "assassinated": "JEFFBEZOS",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MOMYA"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "JEFFBEZOS"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "MATTY"
+   },
+   {
+    "name": "BIGDUMB",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "JERRY"
+   }
+  ]
  },
  "players": [
   {
-   "uid": "WZoZlTOGCKRi2v2lsulVyl1Vs673",
-   "name": "MATTY"
+   "name": "MATTY",
+   "uid": "WZoZlTOGCKRi2v2lsulVyl1Vs673"
   },
   {
    "name": "JEFFBEZOS",

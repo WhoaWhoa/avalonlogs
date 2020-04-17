@@ -1,14 +1,18 @@
 {
+ "timeFinished": {
+  "_seconds": 1586050034,
+  "_nanoseconds": 539540000
+ },
  "outcome": {
   "votes": [
    {
-    "GRACE": true,
-    "JOHN": true
+    "JOHN": true,
+    "GRACE": true
    },
    {
+    "GRACE": false,
     "LAUREN": true,
-    "JOHN": true,
-    "GRACE": false
+    "JOHN": true
    },
    {
     "SUZI": true,
@@ -33,19 +37,19 @@
   "state": "EVIL_WIN",
   "roles": [
    {
-    "name": "SUZI",
     "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "SUZI"
    },
    {
-    "name": "JACK",
     "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "JACK"
    },
    {
+    "name": "JOHN",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JOHN"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "JACKISLAME",
@@ -53,9 +57,9 @@
     "role": "MERLIN"
    },
    {
-    "assassin": false,
     "role": "MORGANA",
-    "name": "GRACE"
+    "name": "GRACE",
+    "assassin": false
    },
    {
     "role": "LOYAL FOLLOWER",
@@ -74,12 +78,12 @@
    "name": "JOHN"
   },
   {
-   "uid": "qmVhGH90D5Ww2PbJ786o10HwFTO2",
-   "name": "LAUREN"
+   "name": "LAUREN",
+   "uid": "qmVhGH90D5Ww2PbJ786o10HwFTO2"
   },
   {
-   "uid": "YHHvIsdf2BZnRqGEMdGZSwPWbn23",
-   "name": "SUZI"
+   "name": "SUZI",
+   "uid": "YHHvIsdf2BZnRqGEMdGZSwPWbn23"
   },
   {
    "name": "GRACE",
@@ -96,12 +100,15 @@
  },
  "missions": [
   {
+   "team": [
+    "GRACE",
+    "JOHN"
+   ],
    "failsRequired": 1,
    "teamSize": 2,
    "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "GRACE",
       "JOHN"
@@ -114,25 +121,15 @@
       "JACKISLAME",
       "GRACE",
       "LAUREN"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "GRACE",
-    "JOHN"
-   ]
+   "state": "SUCCESS"
   },
   {
-   "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "JOHN",
-      "GRACE",
-      "LAUREN"
-     ],
-     "proposer": "LAUREN",
      "votes": [
       "SUZI",
       "JOHN",
@@ -140,7 +137,13 @@
       "GRACE",
       "LAUREN"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "JOHN",
+      "GRACE",
+      "LAUREN"
+     ],
+     "proposer": "LAUREN"
     }
    ],
    "state": "FAIL",
@@ -150,22 +153,13 @@
     "LAUREN"
    ],
    "failsRequired": 1,
-   "teamSize": 3
+   "teamSize": 3,
+   "numFails": 1
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "JACK",
-    "JOHN",
-    "LAUREN",
-    "SUZI"
-   ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "JOHN",
       "SUZI",
@@ -173,7 +167,8 @@
       "LAUREN"
      ],
      "proposer": "SUZI",
-     "votes": []
+     "votes": [],
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -205,32 +200,33 @@
      "state": "REJECTED"
     },
     {
-     "team": [
-      "JACK",
-      "JOHN",
-      "LAUREN",
-      "SUZI"
-     ],
-     "proposer": "JACK",
      "votes": [
       "LAUREN",
       "JACK",
       "JOHN",
       "GRACE"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "JACK",
+      "JOHN",
+      "LAUREN",
+      "SUZI"
+     ],
+     "proposer": "JACK"
     }
-   ]
-  },
-  {
-   "state": "FAIL",
+   ],
+   "state": "SUCCESS",
    "team": [
-    "LAUREN",
+    "JACK",
     "JOHN",
-    "JACK"
+    "LAUREN",
+    "SUZI"
    ],
    "failsRequired": 1,
-   "teamSize": 3,
+   "teamSize": 4
+  },
+  {
    "numFails": 1,
    "proposals": [
     {
@@ -263,21 +259,20 @@
       "LAUREN"
      ]
     }
-   ]
-  },
-  {
+   ],
+   "state": "FAIL",
    "team": [
-    "JACKISLAME",
-    "SUZI",
     "LAUREN",
-    "JOHN"
+    "JOHN",
+    "JACK"
    ],
    "failsRequired": 1,
-   "teamSize": 4,
+   "teamSize": 3
+  },
+  {
    "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "JOHN",
       "SUZI",
@@ -289,20 +284,21 @@
       "SUZI",
       "JACK",
       "GRACE"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "GRACE"
+     ],
+     "state": "REJECTED",
      "team": [
       "JACK",
       "JOHN",
       "SUZI",
       "JACKISLAME"
      ],
-     "proposer": "GRACE",
-     "votes": [
-      "GRACE"
-     ],
-     "state": "REJECTED"
+     "proposer": "GRACE"
     },
     {
      "state": "APPROVED",
@@ -321,7 +317,15 @@
      ]
     }
    ],
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "JACKISLAME",
+    "SUZI",
+    "LAUREN",
+    "JOHN"
+   ],
+   "failsRequired": 1,
+   "teamSize": 4
   }
  ]
 }

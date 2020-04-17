@@ -5,9 +5,11 @@
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "LEO",
       "MATT"
@@ -16,30 +18,31 @@
      "votes": [
       "MATT",
       "EHSAN"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "ERIC"
+     ],
      "state": "REJECTED",
      "team": [
       "ERIC",
       "ALAN"
      ],
-     "proposer": "ERIC",
-     "votes": [
-      "ERIC"
-     ]
+     "proposer": "ERIC"
     },
     {
-     "votes": [
-      "EHSAN",
-      "MATT"
-     ],
      "state": "REJECTED",
      "team": [
       "MATT",
       "LEO"
      ],
-     "proposer": "MATT"
+     "proposer": "MATT",
+     "votes": [
+      "EHSAN",
+      "MATT"
+     ]
     },
     {
      "state": "REJECTED",
@@ -53,59 +56,55 @@
      ]
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "ALAN",
-      "LEO"
-     ],
-     "proposer": "ALAN",
      "votes": [
       "MATT",
       "EHSAN",
       "ALAN",
       "LEO"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "ALAN",
+      "LEO"
+     ],
+     "proposer": "ALAN"
     }
    ],
    "state": "FAIL",
    "team": [
     "ALAN",
     "LEO"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 1
+   ]
   },
   {
-   "numFails": 0,
    "proposals": [
     {
-     "votes": [
-      "EHSAN",
-      "ALAN"
-     ],
      "state": "REJECTED",
      "team": [
       "EHSAN",
       "ERIC",
       "ALAN"
      ],
-     "proposer": "EHSAN"
+     "proposer": "EHSAN",
+     "votes": [
+      "EHSAN",
+      "ALAN"
+     ]
     },
     {
+     "team": [
+      "ALAN",
+      "EHSAN",
+      "ERIC"
+     ],
+     "proposer": "ERIC",
      "votes": [
       "LEO",
       "ERIC",
       "EHSAN",
       "ALAN"
      ],
-     "state": "APPROVED",
-     "team": [
-      "ALAN",
-      "EHSAN",
-      "ERIC"
-     ],
-     "proposer": "ERIC"
+     "state": "APPROVED"
     }
    ],
    "state": "SUCCESS",
@@ -115,22 +114,23 @@
     "ERIC"
    ],
    "failsRequired": 1,
-   "teamSize": 3
+   "teamSize": 3,
+   "numFails": 0
   },
   {
    "proposals": [
     {
+     "votes": [
+      "LEO",
+      "EHSAN",
+      "ALAN"
+     ],
      "state": "APPROVED",
      "team": [
       "ERIC",
       "ALAN"
      ],
-     "proposer": "MATT",
-     "votes": [
-      "LEO",
-      "EHSAN",
-      "ALAN"
-     ]
+     "proposer": "MATT"
     }
    ],
    "state": "SUCCESS",
@@ -143,25 +143,30 @@
    "numFails": 0
   },
   {
+   "state": "FAIL",
+   "team": [
+    "MATT",
+    "ALAN",
+    "ERIC"
+   ],
    "failsRequired": 1,
    "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
-     "votes": [
-      "LEO",
-      "EHSAN"
-     ],
-     "state": "REJECTED",
      "team": [
       "LEO",
       "ALAN",
       "ERIC"
      ],
-     "proposer": "LEO"
+     "proposer": "LEO",
+     "votes": [
+      "LEO",
+      "EHSAN"
+     ],
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
      "team": [
       "MATT",
       "ALAN",
@@ -173,14 +178,9 @@
       "MATT",
       "EHSAN",
       "ALAN"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "state": "FAIL",
-   "team": [
-    "MATT",
-    "ALAN",
-    "ERIC"
    ]
   },
   {
@@ -224,45 +224,24 @@
    ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585160324,
+  "_nanoseconds": 499620000
+ },
  "outcome": {
-  "votes": [
-   {
-    "LEO": false,
-    "ALAN": true
-   },
-   {
-    "ERIC": true,
-    "EHSAN": true,
-    "ALAN": true
-   },
-   {
-    "ERIC": true,
-    "ALAN": true
-   },
-   {
-    "ALAN": true,
-    "ERIC": true,
-    "MATT": false
-   },
-   {
-    "ERIC": true,
-    "EHSAN": true,
-    "ALAN": true
-   }
-  ],
   "message": "Merlin assassinated",
   "assassinated": "ERIC",
   "state": "EVIL_WIN",
   "roles": [
    {
+    "name": "LEO",
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "LEO"
+    "role": "EVIL MINION"
    },
    {
+    "role": "MERLIN",
     "name": "ERIC",
-    "assassin": false,
-    "role": "MERLIN"
+    "assassin": false
    },
    {
     "name": "MATT",
@@ -270,25 +249,50 @@
     "role": "MORDRED"
    },
    {
+    "name": "EHSAN",
     "assassin": false,
-    "role": "PERCIVAL",
-    "name": "EHSAN"
+    "role": "PERCIVAL"
    },
    {
     "role": "LOYAL FOLLOWER",
     "name": "ALAN",
     "assassin": false
    }
+  ],
+  "votes": [
+   {
+    "ALAN": true,
+    "LEO": false
+   },
+   {
+    "ERIC": true,
+    "EHSAN": true,
+    "ALAN": true
+   },
+   {
+    "ERIC": true,
+    "ALAN": true
+   },
+   {
+    "ERIC": true,
+    "MATT": false,
+    "ALAN": true
+   },
+   {
+    "EHSAN": true,
+    "ALAN": true,
+    "ERIC": true
+   }
   ]
  },
  "players": [
   {
-   "name": "MATT",
-   "uid": "3aqD1zWCcQfTi5Y0LoBvVDCQ1jH3"
+   "uid": "3aqD1zWCcQfTi5Y0LoBvVDCQ1jH3",
+   "name": "MATT"
   },
   {
-   "uid": "jZQnpFuXamNijYISz7zZMXYLnPy2",
-   "name": "LEO"
+   "name": "LEO",
+   "uid": "jZQnpFuXamNijYISz7zZMXYLnPy2"
   },
   {
    "name": "ALAN",
@@ -299,8 +303,8 @@
    "uid": "dxTNhOoP8CNQNDFWPCzCXKJnL482"
   },
   {
-   "name": "ERIC",
-   "uid": "bzImrnm4UicpQLFcMWNA23XRYMt1"
+   "uid": "bzImrnm4UicpQLFcMWNA23XRYMt1",
+   "name": "ERIC"
   }
  ]
 }

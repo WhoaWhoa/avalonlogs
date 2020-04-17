@@ -1,69 +1,4 @@
 {
- "outcome": {
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "NAS",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "STEVE",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "JOVI"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "BRIAN"
-   },
-   {
-    "name": "DAVIDF",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ANA"
-   }
-  ],
-  "votes": [
-   {
-    "JOVI": true,
-    "NAS": false
-   },
-   {
-    "JOVI": true,
-    "BRIAN": true,
-    "DAVIDF": true
-   },
-   {
-    "DAVIDF": true,
-    "ANA": true,
-    "JOVI": true,
-    "BRIAN": true
-   },
-   {
-    "DAVIDF": true,
-    "JOVI": false,
-    "BRIAN": true
-   },
-   {
-    "DAVIDF": true,
-    "ANA": true,
-    "STEVE": true,
-    "BRIAN": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "DAVIDF"
- },
  "players": [
   {
    "name": "JOVI",
@@ -96,9 +31,16 @@
  },
  "missions": [
   {
+   "team": [
+    "NAS",
+    "JOVI"
+   ],
+   "failsRequired": 1,
+   "teamSize": 2,
    "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "NAS",
       "JOVI"
@@ -110,24 +52,15 @@
       "JOVI",
       "DAVIDF",
       "ANA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "NAS",
-    "JOVI"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2
+   "state": "FAIL"
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "STEVE",
       "DAVIDF",
@@ -136,24 +69,23 @@
      "proposer": "STEVE",
      "votes": [
       "STEVE"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "BRIAN",
-      "JOVI",
-      "DAVIDF"
-     ],
-     "proposer": "DAVIDF",
      "votes": [
       "DAVIDF",
       "NAS",
       "STEVE",
       "JOVI",
       "BRIAN"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "BRIAN",
+      "JOVI",
+      "DAVIDF"
+     ],
+     "proposer": "DAVIDF"
     }
    ],
    "state": "SUCCESS",
@@ -161,18 +93,12 @@
     "BRIAN",
     "JOVI",
     "DAVIDF"
-   ]
-  },
-  {
-   "state": "SUCCESS",
-   "team": [
-    "JOVI",
-    "DAVIDF",
-    "ANA",
-    "BRIAN"
    ],
    "failsRequired": 1,
-   "teamSize": 4,
+   "teamSize": 3,
+   "numFails": 0
+  },
+  {
    "numFails": 0,
    "proposals": [
     {
@@ -207,14 +133,35 @@
       "NAS"
      ]
     }
-   ]
+   ],
+   "state": "SUCCESS",
+   "team": [
+    "JOVI",
+    "DAVIDF",
+    "ANA",
+    "BRIAN"
+   ],
+   "failsRequired": 1,
+   "teamSize": 4
   },
   {
+   "state": "FAIL",
+   "team": [
+    "JOVI",
+    "BRIAN",
+    "DAVIDF"
+   ],
    "failsRequired": 1,
    "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
+     "team": [
+      "JOVI",
+      "BRIAN",
+      "DAVIDF"
+     ],
+     "proposer": "JOVI",
      "votes": [
       "DAVIDF",
       "ANA",
@@ -222,20 +169,8 @@
       "JOVI",
       "BRIAN"
      ],
-     "state": "APPROVED",
-     "team": [
-      "JOVI",
-      "BRIAN",
-      "DAVIDF"
-     ],
-     "proposer": "JOVI"
+     "state": "APPROVED"
     }
-   ],
-   "state": "FAIL",
-   "team": [
-    "JOVI",
-    "BRIAN",
-    "DAVIDF"
    ]
   },
   {
@@ -264,6 +199,10 @@
      ]
     },
     {
+     "votes": [
+      "NAS",
+      "STEVE"
+     ],
      "state": "REJECTED",
      "team": [
       "STEVE",
@@ -271,19 +210,9 @@
       "JOVI",
       "ANA"
      ],
-     "proposer": "STEVE",
-     "votes": [
-      "NAS",
-      "STEVE"
-     ]
+     "proposer": "STEVE"
     },
     {
-     "votes": [
-      "DAVIDF",
-      "ANA",
-      "STEVE",
-      "BRIAN"
-     ],
      "state": "APPROVED",
      "team": [
       "STEVE",
@@ -291,9 +220,84 @@
       "BRIAN",
       "ANA"
      ],
-     "proposer": "DAVIDF"
+     "proposer": "DAVIDF",
+     "votes": [
+      "DAVIDF",
+      "ANA",
+      "STEVE",
+      "BRIAN"
+     ]
     }
    ]
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1584920803,
+  "_nanoseconds": 246439000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "NAS": false,
+    "JOVI": true
+   },
+   {
+    "DAVIDF": true,
+    "JOVI": true,
+    "BRIAN": true
+   },
+   {
+    "DAVIDF": true,
+    "ANA": true,
+    "JOVI": true,
+    "BRIAN": true
+   },
+   {
+    "DAVIDF": true,
+    "JOVI": false,
+    "BRIAN": true
+   },
+   {
+    "BRIAN": true,
+    "DAVIDF": true,
+    "ANA": true,
+    "STEVE": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "DAVIDF",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "NAS"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "STEVE"
+   },
+   {
+    "name": "JOVI",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "BRIAN"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "DAVIDF"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ANA"
+   }
+  ]
+ }
 }
