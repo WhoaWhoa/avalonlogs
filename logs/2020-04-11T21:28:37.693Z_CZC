@@ -1,26 +1,4 @@
 {
- "players": [
-  {
-   "uid": "W4g2XHU3dyNLAGGoGw1Y3JcRqUy2",
-   "name": "ALICE"
-  },
-  {
-   "uid": "ykQCb6TNSXYfLhPBoeWrYDpdIZD3",
-   "name": "JIN"
-  },
-  {
-   "name": "BAO",
-   "uid": "j6jM87UGcrMkqMKeJSYTZ0FwBVS2"
-  },
-  {
-   "uid": "2HoOALMYQEScZBMnIrZVPv7vAJi1",
-   "name": "ALLISON"
-  },
-  {
-   "name": "QIAN",
-   "uid": "3V7Sr3fjWOZ9NZ3qSCrjghnGOd63"
-  }
- ],
  "timeCreated": {
   "_seconds": 1586640517,
   "_nanoseconds": 693000000
@@ -33,7 +11,7 @@
       "ALICE",
       "JIN"
      ],
-     "proposer": "BAO",
+     "state": "APPROVED",
      "votes": [
       "QIAN",
       "ALLISON",
@@ -41,22 +19,21 @@
       "BAO",
       "JIN"
      ],
-     "state": "APPROVED"
+     "proposer": "BAO"
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "ALICE",
     "JIN"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0
+   "numFails": 0,
+   "teamSize": 2
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -66,15 +43,16 @@
       "BAO",
       "JIN"
      ],
-     "state": "APPROVED",
+     "proposer": "ALLISON",
      "team": [
       "BAO",
       "ALLISON",
       "JIN"
      ],
-     "proposer": "ALLISON"
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "BAO",
@@ -83,50 +61,50 @@
    ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "ALICE",
+    "JIN"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "ALICE",
-      "JIN"
-     ],
-     "proposer": "QIAN",
      "votes": [
       "ALLISON",
       "ALICE",
       "BAO",
       "JIN",
       "QIAN"
+     ],
+     "proposer": "QIAN",
+     "team": [
+      "ALICE",
+      "JIN"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "ALICE",
-    "JIN"
-   ]
+   "failsRequired": 1
   },
   {
+   "state": "SUCCESS",
    "team": [
     "ALICE",
     "JIN",
     "BAO"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "ALICE",
      "team": [
       "ALICE",
       "JIN",
       "BAO"
      ],
-     "proposer": "ALICE",
+     "state": "APPROVED",
      "votes": [
       "ALLISON",
       "ALICE",
@@ -135,49 +113,24 @@
      ]
     }
    ],
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
-   "state": "PENDING",
    "team": [],
-   "proposals": []
+   "teamSize": 3,
+   "state": "PENDING",
+   "proposals": [],
+   "failsRequired": 1
   }
  ],
- "timeFinished": {
-  "_seconds": 1586640892,
-  "_nanoseconds": 803663000
- },
  "outcome": {
-  "votes": [
-   {
-    "ALICE": true,
-    "JIN": true
-   },
-   {
-    "ALLISON": false,
-    "BAO": true,
-    "JIN": true
-   },
-   {
-    "ALICE": true,
-    "JIN": true
-   },
-   {
-    "ALICE": true,
-    "BAO": true,
-    "JIN": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "JIN",
   "state": "GOOD_WIN",
+  "assassinated": "JIN",
   "roles": [
    {
+    "name": "ALLISON",
     "assassin": false,
-    "role": "MORGANA",
-    "name": "ALLISON"
+    "role": "MORGANA"
    },
    {
     "name": "ALICE",
@@ -190,15 +143,62 @@
     "role": "PERCIVAL"
    },
    {
+    "name": "JIN",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JIN"
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "QIAN",
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "QIAN"
+    "role": "EVIL MINION"
    }
-  ]
- }
+  ],
+  "votes": [
+   {
+    "ALICE": true,
+    "JIN": true
+   },
+   {
+    "ALLISON": false,
+    "JIN": true,
+    "BAO": true
+   },
+   {
+    "ALICE": true,
+    "JIN": true
+   },
+   {
+    "BAO": true,
+    "ALICE": true,
+    "JIN": true
+   }
+  ],
+  "message": "Three successful missions"
+ },
+ "timeFinished": {
+  "_seconds": 1586640892,
+  "_nanoseconds": 803663000
+ },
+ "players": [
+  {
+   "uid": "W4g2XHU3dyNLAGGoGw1Y3JcRqUy2",
+   "name": "ALICE"
+  },
+  {
+   "name": "JIN",
+   "uid": "ykQCb6TNSXYfLhPBoeWrYDpdIZD3"
+  },
+  {
+   "uid": "j6jM87UGcrMkqMKeJSYTZ0FwBVS2",
+   "name": "BAO"
+  },
+  {
+   "uid": "2HoOALMYQEScZBMnIrZVPv7vAJi1",
+   "name": "ALLISON"
+  },
+  {
+   "uid": "3V7Sr3fjWOZ9NZ3qSCrjghnGOd63",
+   "name": "QIAN"
+  }
+ ]
 }

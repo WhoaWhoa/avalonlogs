@@ -6,11 +6,15 @@
     "BARWELL",
     "ALICE"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "BARWELL",
+      "ALICE"
+     ],
+     "state": "APPROVED",
      "votes": [
       "ANDY",
       "ALICE",
@@ -18,79 +22,75 @@
       "CAITLIN",
       "TODD"
      ],
-     "state": "APPROVED",
-     "team": [
-      "BARWELL",
-      "ALICE"
-     ],
      "proposer": "TODD"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
+   "state": "FAIL",
    "team": [
     "ANDY",
     "ALICE",
     "CAITLIN"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
+     "votes": [
+      "ANDY"
+     ],
+     "proposer": "ALICE",
      "team": [
       "ANDY",
       "CAITLIN",
       "TODD"
-     ],
-     "proposer": "ALICE",
-     "votes": [
-      "ANDY"
      ],
      "state": "REJECTED"
     },
     {
      "state": "APPROVED",
-     "team": [
-      "ANDY",
-      "ALICE",
-      "CAITLIN"
-     ],
-     "proposer": "BARWELL",
      "votes": [
       "ANDY",
       "ALICE",
       "CAITLIN",
       "TODD"
+     ],
+     "proposer": "BARWELL",
+     "team": [
+      "ANDY",
+      "ALICE",
+      "CAITLIN"
      ]
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
    "team": [
     "BARWELL",
     "TODD"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "BARWELL",
-      "TODD"
-     ],
-     "proposer": "ANDY",
      "votes": [
       "ANDY",
       "ALICE",
       "CAITLIN"
      ],
+     "proposer": "ANDY",
+     "team": [
+      "BARWELL",
+      "TODD"
+     ],
      "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
    "state": "FAIL",
@@ -99,31 +99,30 @@
     "ALICE",
     "BARWELL"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "ALICE",
       "CAITLIN"
      ],
-     "state": "REJECTED",
+     "proposer": "CAITLIN",
      "team": [
       "TODD",
       "BARWELL",
       "CAITLIN"
-     ],
-     "proposer": "CAITLIN"
+     ]
     },
     {
-     "state": "APPROVED",
+     "proposer": "TODD",
      "team": [
       "TODD",
       "ALICE",
       "BARWELL"
      ],
-     "proposer": "TODD",
+     "state": "APPROVED",
      "votes": [
       "ANDY",
       "ALICE",
@@ -131,51 +130,53 @@
       "TODD"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "team": [
+    "CAITLIN",
+    "TODD",
+    "ALICE"
+   ],
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "ALICE",
      "team": [
       "ANDY",
       "CAITLIN",
       "BARWELL"
      ],
-     "proposer": "ALICE",
+     "state": "REJECTED",
      "votes": [
       "ANDY",
       "ALICE"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "votes": [
-      "ANDY",
-      "ALICE",
-      "BARWELL"
-     ],
-     "state": "APPROVED",
      "team": [
       "CAITLIN",
       "TODD",
       "ALICE"
      ],
+     "state": "APPROVED",
+     "votes": [
+      "ANDY",
+      "ALICE",
+      "BARWELL"
+     ],
      "proposer": "BARWELL"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "CAITLIN",
-    "TODD",
-    "ALICE"
-   ]
+   "failsRequired": 1,
+   "state": "SUCCESS"
   }
  ],
  "outcome": {
   "state": "EVIL_WIN",
+  "assassinated": "CAITLIN",
   "roles": [
    {
     "name": "ANDY",
@@ -183,19 +184,19 @@
     "role": "EVIL MINION"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "ALICE",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "BARWELL"
-   },
-   {
     "assassin": false,
-    "role": "MERLIN",
-    "name": "CAITLIN"
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "BARWELL",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "CAITLIN",
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
     "name": "TODD",
@@ -205,8 +206,8 @@
   ],
   "votes": [
    {
-    "ALICE": true,
-    "BARWELL": true
+    "BARWELL": true,
+    "ALICE": true
    },
    {
     "ANDY": false,
@@ -214,54 +215,53 @@
     "CAITLIN": true
    },
    {
-    "BARWELL": true,
-    "TODD": true
+    "TODD": true,
+    "BARWELL": true
+   },
+   {
+    "TODD": true,
+    "BARWELL": false,
+    "ALICE": true
    },
    {
     "TODD": true,
     "ALICE": true,
-    "BARWELL": false
-   },
-   {
-    "ALICE": true,
-    "CAITLIN": true,
-    "TODD": true
+    "CAITLIN": true
    }
   ],
-  "message": "Merlin assassinated",
-  "assassinated": "CAITLIN"
+  "message": "Merlin assassinated"
  },
  "players": [
   {
-   "name": "CAITLIN",
-   "uid": "vpfGqtxejjXWS1COxi4YEkOVz3U2"
+   "uid": "vpfGqtxejjXWS1COxi4YEkOVz3U2",
+   "name": "CAITLIN"
   },
   {
-   "uid": "vKr7qhoIrGOSWFOdMr5lNLyuzzn1",
-   "name": "TODD"
+   "name": "TODD",
+   "uid": "vKr7qhoIrGOSWFOdMr5lNLyuzzn1"
   },
   {
    "name": "ALICE",
    "uid": "KG767dfSgmOaacKmolfrfWTOGGr2"
   },
   {
-   "name": "BARWELL",
-   "uid": "j0ZOuvzQF8SL5PkhOrNsA74xYZp2"
+   "uid": "j0ZOuvzQF8SL5PkhOrNsA74xYZp2",
+   "name": "BARWELL"
   },
   {
-   "name": "ANDY",
-   "uid": "hBQAWZAci4XhPZaJCFlzS2JSOfg2"
+   "uid": "hBQAWZAci4XhPZaJCFlzS2JSOfg2",
+   "name": "ANDY"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1587064995,
+  "_nanoseconds": 888175000
+ },
  "options": {
   "inGameLog": false
  },
  "timeCreated": {
   "_seconds": 1587064170,
   "_nanoseconds": 71000000
- },
- "timeFinished": {
-  "_seconds": 1587064995,
-  "_nanoseconds": 888175000
  }
 }

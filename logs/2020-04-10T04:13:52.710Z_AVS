@@ -1,47 +1,17 @@
 {
- "timeFinished": {
-  "_seconds": 1586492631,
-  "_nanoseconds": 448943000
- },
  "outcome": {
-  "votes": [
-   {
-    "CORONA": true,
-    "BOB": true
-   },
-   {
-    "MOHSIN": true,
-    "CORONA": false,
-    "BOB": true
-   },
-   {
-    "BOB": true,
-    "CORONA": false
-   },
-   {
-    "SZEHEI": true,
-    "DAYLON": true,
-    "MOHSIN": true
-   },
-   {
-    "DAYLON": true,
-    "MOHSIN": true,
-    "SZEHEI": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "SZEHEI",
   "state": "EVIL_WIN",
+  "assassinated": "SZEHEI",
   "roles": [
    {
+    "name": "DAYLON",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "DAYLON"
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "PERCIVAL",
     "name": "MOHSIN",
-    "assassin": false
+    "assassin": false,
+    "role": "PERCIVAL"
    },
    {
     "name": "SZEHEI",
@@ -49,25 +19,55 @@
     "role": "MERLIN"
    },
    {
+    "name": "CORONA",
     "assassin": false,
-    "role": "MORGANA",
-    "name": "CORONA"
+    "role": "MORGANA"
    },
    {
     "name": "BOB",
     "assassin": true,
     "role": "EVIL MINION"
    }
-  ]
+  ],
+  "votes": [
+   {
+    "BOB": true,
+    "CORONA": true
+   },
+   {
+    "CORONA": false,
+    "BOB": true,
+    "MOHSIN": true
+   },
+   {
+    "BOB": true,
+    "CORONA": false
+   },
+   {
+    "MOHSIN": true,
+    "DAYLON": true,
+    "SZEHEI": true
+   },
+   {
+    "MOHSIN": true,
+    "DAYLON": true,
+    "SZEHEI": true
+   }
+  ],
+  "message": "Merlin assassinated"
+ },
+ "timeFinished": {
+  "_seconds": 1586492631,
+  "_nanoseconds": 448943000
  },
  "players": [
   {
-   "name": "DAYLON",
-   "uid": "y77wydu6uEMdgJWSm2K2k2MT1mu2"
+   "uid": "y77wydu6uEMdgJWSm2K2k2MT1mu2",
+   "name": "DAYLON"
   },
   {
-   "name": "SZEHEI",
-   "uid": "IC3aLrQlj0Y4AKYdjUUSepAGyj32"
+   "uid": "IC3aLrQlj0Y4AKYdjUUSepAGyj32",
+   "name": "SZEHEI"
   },
   {
    "name": "BOB",
@@ -78,8 +78,8 @@
    "uid": "VITmZDG0lYQEq8CgNXBxUprmx713"
   },
   {
-   "name": "MOHSIN",
-   "uid": "Dp7YvXxrdsS4QKhx6I2Gjzi8OSy2"
+   "uid": "Dp7YvXxrdsS4QKhx6I2Gjzi8OSy2",
+   "name": "MOHSIN"
   }
  ],
  "timeCreated": {
@@ -88,91 +88,95 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "team": [
+    "BOB",
+    "CORONA"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "BOB",
       "CORONA"
      ],
-     "proposer": "BOB",
+     "state": "APPROVED",
      "votes": [
       "SZEHEI",
       "CORONA",
       "BOB",
       "MOHSIN"
-     ]
+     ],
+     "proposer": "BOB"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "BOB",
-    "CORONA"
-   ]
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
    "team": [
     "BOB",
     "CORONA",
     "MOHSIN"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "BOB",
+      "CORONA",
+      "MOHSIN"
+     ],
+     "state": "APPROVED",
      "votes": [
       "MOHSIN",
       "SZEHEI",
       "CORONA"
      ],
-     "state": "APPROVED",
-     "team": [
-      "BOB",
-      "CORONA",
-      "MOHSIN"
-     ],
      "proposer": "CORONA"
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "state": "FAIL",
+   "team": [
+    "BOB",
+    "CORONA"
+   ],
    "numFails": 1,
+   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "CORONA",
-      "MOHSIN"
-     ],
-     "proposer": "MOHSIN",
+     "state": "REJECTED",
      "votes": [
       "MOHSIN",
       "CORONA"
      ],
-     "state": "REJECTED"
+     "proposer": "MOHSIN",
+     "team": [
+      "CORONA",
+      "MOHSIN"
+     ]
     },
     {
-     "state": "REJECTED",
+     "votes": [],
+     "proposer": "DAYLON",
      "team": [
       "DAYLON",
       "BOB"
      ],
-     "proposer": "DAYLON",
-     "votes": []
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
+     "proposer": "SZEHEI",
      "team": [
       "BOB",
       "CORONA"
      ],
-     "proposer": "SZEHEI",
+     "state": "APPROVED",
      "votes": [
       "SZEHEI",
       "CORONA",
@@ -180,92 +184,88 @@
      ]
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "BOB",
-    "CORONA"
-   ]
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
    "team": [
     "MOHSIN",
     "DAYLON",
     "SZEHEI"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
-    {
-     "team": [
-      "CORONA",
-      "MOHSIN",
-      "DAYLON"
-     ],
-     "proposer": "BOB",
-     "votes": [
-      "BOB"
-     ],
-     "state": "REJECTED"
-    },
     {
      "state": "REJECTED",
+     "votes": [
+      "BOB"
+     ],
+     "proposer": "BOB",
+     "team": [
+      "CORONA",
+      "MOHSIN",
+      "DAYLON"
+     ]
+    },
+    {
      "team": [
       "CORONA",
       "MOHSIN",
       "DAYLON"
      ],
-     "proposer": "CORONA",
+     "state": "REJECTED",
      "votes": [
       "CORONA",
       "BOB"
-     ]
+     ],
+     "proposer": "CORONA"
     },
     {
-     "state": "APPROVED",
      "team": [
       "MOHSIN",
       "DAYLON",
       "SZEHEI"
      ],
-     "proposer": "MOHSIN",
+     "state": "APPROVED",
      "votes": [
       "BOB",
       "DAYLON",
       "MOHSIN",
       "SZEHEI"
-     ]
-    }
-   ]
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "DAYLON",
-      "SZEHEI",
-      "MOHSIN"
      ],
-     "proposer": "DAYLON",
-     "votes": [
-      "SZEHEI",
-      "BOB",
-      "DAYLON",
-      "MOHSIN"
-     ]
+     "proposer": "MOHSIN"
     }
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS"
+  },
+  {
    "state": "SUCCESS",
    "team": [
     "DAYLON",
     "SZEHEI",
     "MOHSIN"
-   ]
+   ],
+   "numFails": 0,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "SZEHEI",
+      "BOB",
+      "DAYLON",
+      "MOHSIN"
+     ],
+     "proposer": "DAYLON",
+     "team": [
+      "DAYLON",
+      "SZEHEI",
+      "MOHSIN"
+     ]
+    }
+   ],
+   "failsRequired": 1
   }
  ]
 }

@@ -1,13 +1,16 @@
 {
- "timeCreated": {
-  "_seconds": 1585893790,
-  "_nanoseconds": 143000000
- },
  "missions": [
   {
+   "state": "SUCCESS",
+   "team": [
+    "ANOOVA",
+    "AMALICIOUS"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "AMALICIOUS",
       "ANOOVA",
@@ -15,63 +18,61 @@
       "JISHAREJI",
       "KESHAV"
      ],
-     "state": "APPROVED",
+     "proposer": "ANOOVA",
      "team": [
       "ANOOVA",
       "AMALICIOUS"
-     ],
-     "proposer": "ANOOVA"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "ANOOVA",
-    "AMALICIOUS"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2
+   "failsRequired": 1
   },
   {
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "KESHAV",
       "ANOOVA",
       "AMALICIOUS"
      ],
-     "proposer": "KESHAV",
+     "state": "APPROVED",
      "votes": [
       "JISHAREJI",
       "KESHAV",
       "ANOOVA",
       "SHWETA"
-     ]
+     ],
+     "proposer": "KESHAV"
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "KESHAV",
     "ANOOVA",
     "AMALICIOUS"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0
+   "numFails": 0,
+   "teamSize": 3
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "state": "FAIL",
+   "team": [
+    "AMALICIOUS",
+    "ANOOVA",
+    "KESHAV"
+   ],
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "JISHAREJI",
      "team": [
       "AMALICIOUS",
       "ANOOVA",
       "KESHAV"
      ],
-     "proposer": "JISHAREJI",
+     "state": "APPROVED",
      "votes": [
       "KUSH",
       "AMALICIOUS",
@@ -81,19 +82,21 @@
      ]
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "AMALICIOUS",
-    "ANOOVA",
-    "KESHAV"
-   ]
+   "failsRequired": 1
   },
   {
-   "failsRequired": 2,
-   "teamSize": 4,
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "HELLO",
+     "team": [
+      "HELLO",
+      "KUSH",
+      "SHWETA",
+      "JISHAREJI"
+     ],
+     "state": "APPROVED",
      "votes": [
       "SHWETA",
       "JISHAREJI",
@@ -102,17 +105,10 @@
       "KUSH",
       "AMALICIOUS",
       "ANOOVA"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "HELLO",
-      "KUSH",
-      "SHWETA",
-      "JISHAREJI"
-     ],
-     "proposer": "HELLO"
+     ]
     }
    ],
+   "failsRequired": 2,
    "state": "SUCCESS",
    "team": [
     "HELLO",
@@ -122,48 +118,22 @@
    ]
   },
   {
-   "teamSize": 4,
+   "proposals": [],
    "failsRequired": 1,
-   "state": "PENDING",
    "team": [],
-   "proposals": []
+   "teamSize": 4,
+   "state": "PENDING"
   }
  ],
- "timeFinished": {
-  "_seconds": 1585894865,
-  "_nanoseconds": 936502000
- },
  "outcome": {
-  "votes": [
-   {
-    "AMALICIOUS": true,
-    "ANOOVA": true
-   },
-   {
-    "KESHAV": true,
-    "AMALICIOUS": true,
-    "ANOOVA": true
-   },
-   {
-    "KESHAV": false,
-    "AMALICIOUS": true,
-    "ANOOVA": true
-   },
-   {
-    "KUSH": true,
-    "JISHAREJI": true,
-    "SHWETA": true,
-    "HELLO": true
-   }
-  ],
   "message": "Merlin assassinated",
-  "assassinated": "SHWETA",
   "state": "EVIL_WIN",
+  "assassinated": "SHWETA",
   "roles": [
    {
-    "role": "MORGANA",
     "name": "KESHAV",
-    "assassin": false
+    "assassin": false,
+    "role": "MORGANA"
    },
    {
     "name": "HELLO",
@@ -171,36 +141,62 @@
     "role": "PERCIVAL"
    },
    {
-    "role": "LOYAL FOLLOWER",
-    "name": "KUSH",
-    "assassin": false
-   },
-   {
     "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "AMALICIOUS"
+    "name": "KUSH"
    },
    {
+    "name": "AMALICIOUS",
     "assassin": false,
-    "role": "EVIL MINION",
-    "name": "ANOOVA"
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MERLIN",
+    "name": "ANOOVA",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
     "name": "SHWETA",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
+    "name": "JISHAREJI",
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "JISHAREJI"
+    "role": "EVIL MINION"
+   }
+  ],
+  "votes": [
+   {
+    "ANOOVA": true,
+    "AMALICIOUS": true
+   },
+   {
+    "ANOOVA": true,
+    "AMALICIOUS": true,
+    "KESHAV": true
+   },
+   {
+    "AMALICIOUS": true,
+    "KESHAV": false,
+    "ANOOVA": true
+   },
+   {
+    "KUSH": true,
+    "SHWETA": true,
+    "JISHAREJI": true,
+    "HELLO": true
    }
   ]
  },
+ "timeFinished": {
+  "_seconds": 1585894865,
+  "_nanoseconds": 936502000
+ },
  "players": [
   {
-   "uid": "sssKhfz7a9MFk0PWViXgO98omJ22",
-   "name": "HELLO"
+   "name": "HELLO",
+   "uid": "sssKhfz7a9MFk0PWViXgO98omJ22"
   },
   {
    "name": "KUSH",
@@ -211,20 +207,24 @@
    "uid": "ejFnZmLieSOxys5nXfyfP3BoCaz2"
   },
   {
-   "name": "AMALICIOUS",
-   "uid": "Rczd91ROoBZnNxaHZHByBOkQ0T73"
+   "uid": "Rczd91ROoBZnNxaHZHByBOkQ0T73",
+   "name": "AMALICIOUS"
   },
   {
-   "name": "ANOOVA",
-   "uid": "ul6RVxxcMxckjMIsd1FtPsVcKbA3"
+   "uid": "ul6RVxxcMxckjMIsd1FtPsVcKbA3",
+   "name": "ANOOVA"
   },
   {
-   "name": "KESHAV",
-   "uid": "gV9hjrfmHhXXtZ7fK609y1JqSpt1"
+   "uid": "gV9hjrfmHhXXtZ7fK609y1JqSpt1",
+   "name": "KESHAV"
   },
   {
-   "name": "JISHAREJI",
-   "uid": "8oiy2rFL9wOd2kxd6tPZDmLYEWt2"
+   "uid": "8oiy2rFL9wOd2kxd6tPZDmLYEWt2",
+   "name": "JISHAREJI"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1585893790,
+  "_nanoseconds": 143000000
+ }
 }

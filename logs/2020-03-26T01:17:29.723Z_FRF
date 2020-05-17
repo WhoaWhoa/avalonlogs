@@ -1,13 +1,9 @@
 {
- "timeFinished": {
-  "_seconds": 1585187328,
-  "_nanoseconds": 977961000
- },
  "outcome": {
   "votes": [
    {
-    "DAN": true,
-    "ALEX": true
+    "ALEX": true,
+    "DAN": true
    },
    {
     "ALEX": false,
@@ -15,20 +11,20 @@
     "OWEN": true
    },
    {
-    "DAN": true,
+    "ALEX": false,
     "KERRAN": true,
-    "ALEX": false
+    "DAN": true
    },
    {
-    "OWEN": true,
-    "ANIN": false,
+    "KERRAN": false,
     "DAN": true,
-    "KERRAN": false
+    "OWEN": true,
+    "ANIN": false
    }
   ],
   "message": "Three failed missions",
-  "assassinated": null,
   "state": "EVIL_WIN",
+  "assassinated": null,
   "roles": [
    {
     "name": "JET",
@@ -36,45 +32,49 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MORGANA",
     "name": "KERRAN",
-    "assassin": false
-   },
-   {
     "assassin": false,
-    "role": "MERLIN",
-    "name": "OWEN"
+    "role": "MORGANA"
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "name": "OWEN",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
     "name": "KEN",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "ALEX",
     "assassin": true,
+    "role": "EVIL MINION",
+    "name": "ALEX"
+   },
+   {
+    "name": "ANIN",
+    "assassin": false,
     "role": "EVIL MINION"
    },
    {
     "assassin": false,
-    "role": "EVIL MINION",
-    "name": "ANIN"
-   },
-   {
-    "name": "DAN",
-    "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "DAN"
    }
   ]
  },
+ "timeFinished": {
+  "_seconds": 1585187328,
+  "_nanoseconds": 977961000
+ },
  "players": [
   {
-   "name": "KEN",
-   "uid": "qHZf7NHEVia8tmuVEVXQNgIFvFr2"
+   "uid": "qHZf7NHEVia8tmuVEVXQNgIFvFr2",
+   "name": "KEN"
   },
   {
-   "name": "DAN",
-   "uid": "cJtj9t3BMWhqXlSBklZPkT209KR2"
+   "uid": "cJtj9t3BMWhqXlSBklZPkT209KR2",
+   "name": "DAN"
   },
   {
    "uid": "GnwQ0bTmgmh1EQyNUkmhNymEjDQ2",
@@ -85,16 +85,16 @@
    "name": "JET"
   },
   {
-   "name": "ANIN",
-   "uid": "Lz8eeZidlbN3vvvxPLmbTRBW7TF2"
+   "uid": "Lz8eeZidlbN3vvvxPLmbTRBW7TF2",
+   "name": "ANIN"
   },
   {
-   "name": "OWEN",
-   "uid": "qR5nuybAoccU1CGPIv3LK8LuYsV2"
+   "uid": "qR5nuybAoccU1CGPIv3LK8LuYsV2",
+   "name": "OWEN"
   },
   {
-   "name": "KERRAN",
-   "uid": "TF7eIJHQBVT0qNw8571osrNZq6j1"
+   "uid": "TF7eIJHQBVT0qNw8571osrNZq6j1",
+   "name": "KERRAN"
   }
  ],
  "timeCreated": {
@@ -103,65 +103,69 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "DAN",
+    "ALEX"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "DAN",
       "ANIN"
      ],
-     "proposer": "ANIN",
+     "state": "REJECTED",
      "votes": [
       "ANIN",
       "DAN",
       "JET"
-     ]
+     ],
+     "proposer": "ANIN"
     },
     {
      "state": "REJECTED",
-     "team": [
+     "votes": [
       "KERRAN",
       "JET"
      ],
      "proposer": "OWEN",
-     "votes": [
+     "team": [
       "KERRAN",
       "JET"
      ]
     },
     {
-     "team": [
-      "KERRAN",
+     "votes": [
+      "JET",
       "DAN"
      ],
      "proposer": "KERRAN",
-     "votes": [
-      "JET",
+     "team": [
+      "KERRAN",
       "DAN"
      ],
      "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "JET",
       "OWEN"
      ],
-     "state": "REJECTED",
+     "proposer": "KEN",
      "team": [
       "OWEN",
       "DAN"
-     ],
-     "proposer": "KEN"
+     ]
     },
     {
      "team": [
       "DAN",
       "ALEX"
      ],
-     "proposer": "DAN",
+     "state": "APPROVED",
      "votes": [
       "OWEN",
       "KEN",
@@ -171,32 +175,27 @@
       "JET",
       "KERRAN"
      ],
-     "state": "APPROVED"
+     "proposer": "DAN"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "DAN",
-    "ALEX"
-   ]
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "JET",
+      "DAN"
+     ],
+     "proposer": "ALEX",
      "team": [
       "ALEX",
       "DAN",
       "OWEN"
      ],
-     "proposer": "ALEX",
-     "votes": [
-      "JET",
-      "DAN"
-     ]
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -204,16 +203,17 @@
       "ALEX",
       "DAN"
      ],
-     "proposer": "JET",
+     "state": "APPROVED",
      "votes": [
       "JET",
       "KEN",
       "ALEX",
       "DAN"
      ],
-     "state": "APPROVED"
+     "proposer": "JET"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "OWEN",
@@ -222,66 +222,64 @@
    ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
    "proposals": [
     {
      "state": "REJECTED",
-     "team": [
-      "ANIN",
-      "OWEN",
-      "KERRAN"
-     ],
-     "proposer": "ANIN",
      "votes": [
       "KERRAN",
       "OWEN",
       "JET"
+     ],
+     "proposer": "ANIN",
+     "team": [
+      "ANIN",
+      "OWEN",
+      "KERRAN"
      ]
     },
     {
-     "state": "REJECTED",
      "team": [
       "JET",
       "OWEN",
       "KERRAN"
      ],
-     "proposer": "OWEN",
+     "state": "REJECTED",
      "votes": [
       "KERRAN",
       "JET"
-     ]
+     ],
+     "proposer": "OWEN"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "JET",
       "KERRAN",
       "DAN"
      ],
-     "state": "REJECTED",
+     "proposer": "KERRAN",
      "team": [
       "KERRAN",
       "DAN",
       "ALEX"
-     ],
-     "proposer": "KERRAN"
+     ]
     },
     {
-     "votes": [
-      "KEN",
-      "ANIN",
-      "JET"
-     ],
-     "state": "REJECTED",
+     "proposer": "KEN",
      "team": [
       "ALEX",
       "KEN",
       "ANIN"
      ],
-     "proposer": "KEN"
+     "state": "REJECTED",
+     "votes": [
+      "KEN",
+      "ANIN",
+      "JET"
+     ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "KEN",
       "ALEX",
@@ -290,89 +288,90 @@
       "JET",
       "KERRAN"
      ],
-     "state": "APPROVED",
+     "proposer": "DAN",
      "team": [
       "DAN",
       "ALEX",
       "KERRAN"
-     ],
-     "proposer": "DAN"
+     ]
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "DAN",
     "ALEX",
     "KERRAN"
-   ]
+   ],
+   "numFails": 1,
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
    "team": [
     "KERRAN",
     "ANIN",
     "DAN",
     "OWEN"
    ],
-   "failsRequired": 2,
-   "teamSize": 4,
    "numFails": 2,
+   "teamSize": 4,
    "proposals": [
     {
      "votes": [],
-     "state": "REJECTED",
+     "proposer": "ALEX",
      "team": [
       "ALEX",
       "OWEN",
       "KEN",
       "ANIN"
      ],
-     "proposer": "ALEX"
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "JET"
+     ],
+     "proposer": "JET",
      "team": [
       "ALEX",
       "JET",
       "OWEN",
       "KERRAN"
      ],
-     "proposer": "JET",
-     "votes": [
-      "JET"
-     ],
      "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
+     "votes": [
+      "KEN",
+      "ANIN",
+      "JET"
+     ],
+     "proposer": "ANIN",
      "team": [
       "ANIN",
       "ALEX",
       "KEN",
       "JET"
      ],
-     "proposer": "ANIN",
-     "votes": [
-      "KEN",
-      "ANIN",
-      "JET"
-     ]
+     "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "OWEN",
       "DAN",
       "JET"
      ],
-     "state": "REJECTED",
+     "proposer": "OWEN",
      "team": [
       "KEN",
       "JET",
       "ANIN",
       "OWEN"
-     ],
-     "proposer": "OWEN"
+     ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "DAN",
       "JET",
@@ -380,23 +379,24 @@
       "ALEX",
       "ANIN"
      ],
-     "state": "APPROVED",
+     "proposer": "KERRAN",
      "team": [
       "KERRAN",
       "ANIN",
       "DAN",
       "OWEN"
-     ],
-     "proposer": "KERRAN"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 2,
+   "state": "FAIL"
   },
   {
-   "team": [],
-   "proposals": [],
-   "teamSize": 4,
    "failsRequired": 1,
-   "state": "PENDING"
+   "team": [],
+   "teamSize": 4,
+   "state": "PENDING",
+   "proposals": []
   }
  ]
 }

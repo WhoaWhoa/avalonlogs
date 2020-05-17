@@ -1,115 +1,4 @@
 {
- "timeFinished": {
-  "_seconds": 1586399454,
-  "_nanoseconds": 197407000
- },
- "outcome": {
-  "message": "Merlin assassinated",
-  "assassinated": "ETHAN",
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "EDISON"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "ADRIAN"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "SAM"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "THOMSON"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "OZAK",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "KELVIN",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "ETHAN"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "ASTON"
-   }
-  ],
-  "votes": [
-   {
-    "OZAK": true,
-    "KELVIN": true,
-    "THOMSON": true
-   },
-   {
-    "THOMSON": true,
-    "OZAK": true,
-    "ADRIAN": true,
-    "KELVIN": true
-   },
-   {
-    "OZAK": true,
-    "ADRIAN": true,
-    "KELVIN": true,
-    "SAM": false
-   },
-   {
-    "ETHAN": true,
-    "ASTON": true,
-    "THOMSON": true,
-    "OZAK": true,
-    "ADRIAN": true
-   }
-  ]
- },
- "players": [
-  {
-   "name": "KELVIN",
-   "uid": "tQpgKDFOxBgz3AqqpGqocau1S0a2"
-  },
-  {
-   "uid": "jYAPv4IuMHcFuPCIWvpnB8CS0Nw2",
-   "name": "ADRIAN"
-  },
-  {
-   "name": "SAM",
-   "uid": "PyFnZWgR6pYN1SgJ1k5nRikqbIq2"
-  },
-  {
-   "name": "ETHAN",
-   "uid": "Y77Unrq5prgSaHEAzueTO5x9pAF3"
-  },
-  {
-   "name": "EDISON",
-   "uid": "1jHHwUGEfQTY3fFz6iZTZXiiXI33"
-  },
-  {
-   "name": "ASTON",
-   "uid": "mzNKoIt7o2gmdzkxYu68nXIRrJi2"
-  },
-  {
-   "uid": "O78yb4V9GnNff9YuBn8IRotwtf02",
-   "name": "THOMSON"
-  },
-  {
-   "name": "OZAK",
-   "uid": "7XBU8o6LckeoqhWNlVbApmb9Whk1"
-  }
- ],
  "timeCreated": {
   "_seconds": 1586398557,
   "_nanoseconds": 570000000
@@ -122,17 +11,10 @@
     "OZAK",
     "THOMSON"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "KELVIN",
-      "OZAK",
-      "THOMSON"
-     ],
-     "proposer": "KELVIN",
      "votes": [
       "OZAK",
       "KELVIN",
@@ -143,9 +25,16 @@
       "SAM",
       "THOMSON"
      ],
+     "proposer": "KELVIN",
+     "team": [
+      "KELVIN",
+      "OZAK",
+      "THOMSON"
+     ],
      "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
    "state": "SUCCESS",
@@ -155,19 +44,17 @@
     "THOMSON",
     "OZAK"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "KELVIN",
       "ADRIAN",
       "THOMSON",
       "OZAK"
      ],
-     "proposer": "ADRIAN",
+     "state": "APPROVED",
      "votes": [
       "OZAK",
       "KELVIN",
@@ -177,20 +64,22 @@
       "ADRIAN",
       "SAM",
       "THOMSON"
-     ]
+     ],
+     "proposer": "ADRIAN"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
+   "state": "FAIL",
    "team": [
     "KELVIN",
     "ADRIAN",
     "SAM",
     "OZAK"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -199,7 +88,7 @@
       "SAM",
       "OZAK"
      ],
-     "proposer": "SAM",
+     "state": "APPROVED",
      "votes": [
       "ETHAN",
       "ASTON",
@@ -209,22 +98,23 @@
       "OZAK",
       "KELVIN"
      ],
-     "state": "APPROVED"
+     "proposer": "SAM"
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "failsRequired": 2,
-   "teamSize": 5,
+   "team": [
+    "ASTON",
+    "OZAK",
+    "THOMSON",
+    "ADRIAN",
+    "ETHAN"
+   ],
    "numFails": 0,
+   "teamSize": 5,
    "proposals": [
     {
-     "votes": [
-      "ETHAN",
-      "SAM"
-     ],
-     "state": "REJECTED",
      "team": [
       "ETHAN",
       "KELVIN",
@@ -232,10 +122,14 @@
       "SAM",
       "THOMSON"
      ],
+     "state": "REJECTED",
+     "votes": [
+      "ETHAN",
+      "SAM"
+     ],
      "proposer": "ETHAN"
     },
     {
-     "state": "REJECTED",
      "team": [
       "KELVIN",
       "ADRIAN",
@@ -243,21 +137,13 @@
       "OZAK",
       "EDISON"
      ],
-     "proposer": "EDISON",
+     "state": "REJECTED",
      "votes": [
       "EDISON"
-     ]
+     ],
+     "proposer": "EDISON"
     },
     {
-     "votes": [
-      "ETHAN",
-      "ASTON",
-      "EDISON",
-      "THOMSON",
-      "OZAK",
-      "KELVIN"
-     ],
-     "state": "APPROVED",
      "team": [
       "ASTON",
       "OZAK",
@@ -265,24 +151,138 @@
       "ADRIAN",
       "ETHAN"
      ],
+     "state": "APPROVED",
+     "votes": [
+      "ETHAN",
+      "ASTON",
+      "EDISON",
+      "THOMSON",
+      "OZAK",
+      "KELVIN"
+     ],
      "proposer": "ASTON"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "ASTON",
-    "OZAK",
-    "THOMSON",
-    "ADRIAN",
-    "ETHAN"
-   ]
+   "failsRequired": 2,
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 5,
+   "proposals": [],
    "failsRequired": 1,
-   "state": "PENDING",
    "team": [],
-   "proposals": []
+   "teamSize": 5,
+   "state": "PENDING"
+  }
+ ],
+ "outcome": {
+  "votes": [
+   {
+    "OZAK": true,
+    "THOMSON": true,
+    "KELVIN": true
+   },
+   {
+    "ADRIAN": true,
+    "THOMSON": true,
+    "KELVIN": true,
+    "OZAK": true
+   },
+   {
+    "OZAK": true,
+    "ADRIAN": true,
+    "SAM": false,
+    "KELVIN": true
+   },
+   {
+    "OZAK": true,
+    "ADRIAN": true,
+    "ASTON": true,
+    "ETHAN": true,
+    "THOMSON": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
+  "assassinated": "ETHAN",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "EDISON"
+   },
+   {
+    "name": "ADRIAN",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "SAM",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "name": "THOMSON",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "OZAK",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "KELVIN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "ETHAN"
+   },
+   {
+    "name": "ASTON",
+    "assassin": false,
+    "role": "PERCIVAL"
+   }
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1586399454,
+  "_nanoseconds": 197407000
+ },
+ "players": [
+  {
+   "uid": "tQpgKDFOxBgz3AqqpGqocau1S0a2",
+   "name": "KELVIN"
+  },
+  {
+   "name": "ADRIAN",
+   "uid": "jYAPv4IuMHcFuPCIWvpnB8CS0Nw2"
+  },
+  {
+   "uid": "PyFnZWgR6pYN1SgJ1k5nRikqbIq2",
+   "name": "SAM"
+  },
+  {
+   "name": "ETHAN",
+   "uid": "Y77Unrq5prgSaHEAzueTO5x9pAF3"
+  },
+  {
+   "name": "EDISON",
+   "uid": "1jHHwUGEfQTY3fFz6iZTZXiiXI33"
+  },
+  {
+   "uid": "mzNKoIt7o2gmdzkxYu68nXIRrJi2",
+   "name": "ASTON"
+  },
+  {
+   "name": "THOMSON",
+   "uid": "O78yb4V9GnNff9YuBn8IRotwtf02"
+  },
+  {
+   "name": "OZAK",
+   "uid": "7XBU8o6LckeoqhWNlVbApmb9Whk1"
   }
  ]
 }

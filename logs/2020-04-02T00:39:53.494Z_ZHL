@@ -1,17 +1,13 @@
 {
- "timeFinished": {
-  "_seconds": 1585788868,
-  "_nanoseconds": 485729000
- },
  "outcome": {
   "message": "Three successful missions",
-  "assassinated": "TIM",
   "state": "GOOD_WIN",
+  "assassinated": "TIM",
   "roles": [
    {
+    "name": "JORDAN",
     "assassin": false,
-    "role": "EVIL MINION",
-    "name": "JORDAN"
+    "role": "EVIL MINION"
    },
    {
     "name": "KEVIN",
@@ -24,19 +20,19 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "EMILY",
     "assassin": false,
-    "role": "MERLIN",
-    "name": "EMILY"
+    "role": "MERLIN"
    },
    {
+    "name": "ERIC",
     "assassin": false,
-    "role": "PERCIVAL",
-    "name": "ERIC"
+    "role": "PERCIVAL"
    },
    {
+    "name": "BLAYDE",
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "BLAYDE"
+    "role": "EVIL MINION"
    },
    {
     "assassin": false,
@@ -50,28 +46,32 @@
     "EMILY": true
    },
    {
-    "JORDAN": false,
-    "TIM": true,
-    "BLAYDE": true
-   },
-   {
-    "KEVIN": true,
+    "BLAYDE": true,
     "TIM": true,
     "JORDAN": false
    },
    {
-    "KEVIN": true,
-    "ERIC": true,
     "TIM": true,
-    "EMILY": true
+    "JORDAN": false,
+    "KEVIN": true
    },
    {
     "KEVIN": true,
+    "EMILY": true,
+    "ERIC": true,
+    "TIM": true
+   },
+   {
     "ERIC": true,
     "TIM": true,
+    "KEVIN": true,
     "EMILY": true
    }
   ]
+ },
+ "timeFinished": {
+  "_seconds": 1585788868,
+  "_nanoseconds": 485729000
  },
  "players": [
   {
@@ -79,24 +79,24 @@
    "name": "JORDAN"
   },
   {
-   "name": "TIM",
-   "uid": "LFhha6pI3PUI6Mv1pRL8ZfLSITn2"
+   "uid": "LFhha6pI3PUI6Mv1pRL8ZfLSITn2",
+   "name": "TIM"
   },
   {
    "name": "BLAYDE",
    "uid": "0ifjrL2pANM9IUk0UXCPGckXaMf1"
   },
   {
-   "name": "KEVIN",
-   "uid": "vfTPSJkcUEa23cQuOV1FDWvm02z1"
+   "uid": "vfTPSJkcUEa23cQuOV1FDWvm02z1",
+   "name": "KEVIN"
   },
   {
-   "uid": "5RXeJkvibWZyZl4pAnxFbqTAhIq2",
-   "name": "EMILY"
+   "name": "EMILY",
+   "uid": "5RXeJkvibWZyZl4pAnxFbqTAhIq2"
   },
   {
-   "name": "DOUGLAS",
-   "uid": "47fpm11OT7MCNPTVx0UFqoJvPkf1"
+   "uid": "47fpm11OT7MCNPTVx0UFqoJvPkf1",
+   "name": "DOUGLAS"
   },
   {
    "name": "ERIC",
@@ -109,47 +109,51 @@
  },
  "missions": [
   {
+   "team": [
+    "JORDAN",
+    "EMILY"
+   ],
+   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "JORDAN",
+     "team": [
+      "JORDAN",
+      "EMILY"
+     ],
+     "state": "APPROVED",
      "votes": [
       "ERIC",
       "DOUGLAS",
       "JORDAN",
       "TIM",
       "EMILY"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "JORDAN",
-      "EMILY"
-     ],
-     "proposer": "JORDAN"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "JORDAN",
-    "EMILY"
-   ],
    "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "team": [
+    "BLAYDE",
+    "TIM",
+    "JORDAN"
+   ],
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "JORDAN",
-      "KEVIN"
-     ],
-     "state": "REJECTED",
      "team": [
       "KEVIN",
       "DOUGLAS",
       "ERIC"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "JORDAN",
+      "KEVIN"
      ],
      "proposer": "TIM"
     },
@@ -159,7 +163,7 @@
       "TIM",
       "JORDAN"
      ],
-     "proposer": "BLAYDE",
+     "state": "APPROVED",
      "votes": [
       "KEVIN",
       "TIM",
@@ -167,15 +171,11 @@
       "DOUGLAS",
       "JORDAN"
      ],
-     "state": "APPROVED"
+     "proposer": "BLAYDE"
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "BLAYDE",
-    "TIM",
-    "JORDAN"
-   ]
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
    "state": "FAIL",
@@ -184,37 +184,28 @@
     "KEVIN",
     "JORDAN"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "DOUGLAS",
-      "JORDAN",
-      "KEVIN",
-      "TIM"
-     ],
-     "state": "APPROVED",
+     "proposer": "KEVIN",
      "team": [
       "TIM",
       "KEVIN",
       "JORDAN"
      ],
-     "proposer": "KEVIN"
+     "state": "APPROVED",
+     "votes": [
+      "DOUGLAS",
+      "JORDAN",
+      "KEVIN",
+      "TIM"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "team": [
-    "EMILY",
-    "ERIC",
-    "TIM",
-    "KEVIN"
-   ],
-   "failsRequired": 2,
-   "teamSize": 4,
-   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -223,7 +214,7 @@
       "TIM",
       "KEVIN"
      ],
-     "proposer": "EMILY",
+     "state": "APPROVED",
      "votes": [
       "ERIC",
       "BLAYDE",
@@ -231,10 +222,19 @@
       "TIM",
       "EMILY"
      ],
-     "state": "APPROVED"
+     "proposer": "EMILY"
     }
    ],
-   "state": "SUCCESS"
+   "failsRequired": 2,
+   "state": "SUCCESS",
+   "team": [
+    "EMILY",
+    "ERIC",
+    "TIM",
+    "KEVIN"
+   ],
+   "numFails": 0,
+   "teamSize": 4
   },
   {
    "team": [
@@ -243,9 +243,8 @@
     "EMILY",
     "ERIC"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -254,22 +253,22 @@
       "TIM",
       "KEVIN"
      ],
-     "proposer": "DOUGLAS",
+     "state": "REJECTED",
      "votes": [
       "BLAYDE",
       "DOUGLAS"
      ],
-     "state": "REJECTED"
+     "proposer": "DOUGLAS"
     },
     {
-     "state": "APPROVED",
+     "proposer": "ERIC",
      "team": [
       "TIM",
       "KEVIN",
       "EMILY",
       "ERIC"
      ],
-     "proposer": "ERIC",
+     "state": "APPROVED",
      "votes": [
       "KEVIN",
       "TIM",
@@ -279,6 +278,7 @@
      ]
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS"
   }
  ]

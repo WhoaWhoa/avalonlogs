@@ -1,47 +1,15 @@
 {
- "players": [
-  {
-   "uid": "KNKrAK0oWFMkjerSO4pwHCXkLcF3",
-   "name": "JOSH"
-  },
-  {
-   "name": "BIS",
-   "uid": "8l8QpzY6uYVil2rhymgVb8nvdz22"
-  },
-  {
-   "name": "SHART",
-   "uid": "ChngfSOiOxgRx96m7iMy6D3Rp2a2"
-  },
-  {
-   "uid": "4XAWx4jU8tZnSIyqapI1tsxr4Vk2",
-   "name": "KENNY"
-  },
-  {
-   "name": "DREB",
-   "uid": "BWEUkbpmL5UIjIV0gmyGKLvfnLy2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585933657,
-  "_nanoseconds": 133000000
- },
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "JOSH",
     "KENNY"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "JOSH",
-      "KENNY"
-     ],
-     "proposer": "BIS",
+     "state": "APPROVED",
      "votes": [
       "KENNY",
       "JOSH",
@@ -49,23 +17,34 @@
       "SHART",
       "BIS"
      ],
-     "state": "APPROVED"
+     "proposer": "BIS",
+     "team": [
+      "JOSH",
+      "KENNY"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "state": "FAIL",
+   "team": [
+    "BIS",
+    "SHART",
+    "DREB"
+   ],
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "SHART",
      "team": [
       "BIS",
       "SHART",
       "DREB"
      ],
-     "proposer": "SHART",
+     "state": "APPROVED",
      "votes": [
       "KENNY",
       "JOSH",
@@ -75,39 +54,34 @@
      ]
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "BIS",
-    "SHART",
-    "DREB"
-   ]
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "BIS",
+    "JOSH"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "KENNY",
      "team": [
       "BIS",
       "JOSH"
      ],
-     "proposer": "KENNY",
+     "state": "APPROVED",
      "votes": [
       "KENNY",
       "JOSH",
       "DREB",
       "SHART",
       "BIS"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "BIS",
-    "JOSH"
-   ]
+   "failsRequired": 1
   },
   {
    "state": "SUCCESS",
@@ -116,52 +90,70 @@
     "JOSH",
     "KENNY"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "DREB",
       "JOSH",
       "KENNY"
      ],
-     "proposer": "DREB",
+     "state": "APPROVED",
      "votes": [
       "DREB",
       "SHART",
       "BIS",
       "KENNY",
       "JOSH"
-     ]
+     ],
+     "proposer": "DREB"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "teamSize": 3,
+   "proposals": [],
    "failsRequired": 1,
-   "state": "PENDING",
    "team": [],
-   "proposals": []
+   "teamSize": 3,
+   "state": "PENDING"
   }
  ],
- "timeFinished": {
-  "_seconds": 1585933938,
-  "_nanoseconds": 198639000
- },
  "outcome": {
-  "state": "GOOD_WIN",
-  "roles": [
+  "votes": [
    {
-    "role": "PERCIVAL",
-    "name": "KENNY",
-    "assassin": false
+    "KENNY": true,
+    "JOSH": true
    },
    {
+    "BIS": true,
+    "SHART": false,
+    "DREB": true
+   },
+   {
+    "JOSH": true,
+    "BIS": true
+   },
+   {
+    "DREB": true,
+    "KENNY": true,
+    "JOSH": true
+   }
+  ],
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "assassinated": "BIS",
+  "roles": [
+   {
+    "name": "KENNY",
     "assassin": false,
-    "role": "MORGANA",
-    "name": "JOSH"
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "JOSH",
+    "assassin": false,
+    "role": "MORGANA"
    },
    {
     "name": "DREB",
@@ -174,32 +166,40 @@
     "role": "EVIL MINION"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "BIS",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    }
-  ],
-  "votes": [
-   {
-    "KENNY": true,
-    "JOSH": true
-   },
-   {
-    "DREB": true,
-    "SHART": false,
-    "BIS": true
-   },
-   {
-    "JOSH": true,
-    "BIS": true
-   },
-   {
-    "KENNY": true,
-    "JOSH": true,
-    "DREB": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "BIS"
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1585933938,
+  "_nanoseconds": 198639000
+ },
+ "players": [
+  {
+   "name": "JOSH",
+   "uid": "KNKrAK0oWFMkjerSO4pwHCXkLcF3"
+  },
+  {
+   "uid": "8l8QpzY6uYVil2rhymgVb8nvdz22",
+   "name": "BIS"
+  },
+  {
+   "uid": "ChngfSOiOxgRx96m7iMy6D3Rp2a2",
+   "name": "SHART"
+  },
+  {
+   "name": "KENNY",
+   "uid": "4XAWx4jU8tZnSIyqapI1tsxr4Vk2"
+  },
+  {
+   "uid": "BWEUkbpmL5UIjIV0gmyGKLvfnLy2",
+   "name": "DREB"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1585933657,
+  "_nanoseconds": 133000000
  }
 }

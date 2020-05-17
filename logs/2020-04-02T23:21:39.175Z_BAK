@@ -5,7 +5,6 @@
  },
  "missions": [
   {
-   "numFails": 1,
    "proposals": [
     {
      "team": [
@@ -13,7 +12,7 @@
       "ALEX",
       "ISABEL"
      ],
-     "proposer": "KAREN",
+     "state": "APPROVED",
      "votes": [
       "ELLEN",
       "ALEX",
@@ -23,16 +22,17 @@
       "KAREN",
       "KIM"
      ],
-     "state": "APPROVED"
+     "proposer": "KAREN"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "KAREN",
     "ALEX",
     "ISABEL"
    ],
-   "failsRequired": 1,
+   "numFails": 1,
    "teamSize": 3
   },
   {
@@ -43,19 +43,11 @@
     "JOHN",
     "JIMMY"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "ALEX",
-      "ELLEN",
-      "JOHN",
-      "JIMMY"
-     ],
-     "proposer": "JIMMY",
      "votes": [
       "ALEX",
       "JOHN",
@@ -64,9 +56,17 @@
       "KAREN",
       "JIMMY",
       "KIM"
+     ],
+     "proposer": "JIMMY",
+     "team": [
+      "ALEX",
+      "ELLEN",
+      "JOHN",
+      "JIMMY"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
    "state": "SUCCESS",
@@ -76,11 +76,11 @@
     "ALEX",
     "KIM"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "KIM",
       "ELLEN",
@@ -90,32 +90,30 @@
       "KAREN",
       "JIMMY"
      ],
-     "state": "APPROVED",
+     "proposer": "JOHN",
      "team": [
       "JIMMY",
       "JOHN",
       "ALEX",
       "KIM"
-     ],
-     "proposer": "JOHN"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "failsRequired": 2,
-   "teamSize": 5,
+   "team": [
+    "ALEX",
+    "JOHN",
+    "JIMMY",
+    "KIM",
+    "ELLEN"
+   ],
    "numFails": 0,
+   "teamSize": 5,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "ALEX",
-      "JOHN",
-      "JIMMY",
-      "KIM",
-      "ELLEN"
-     ],
-     "proposer": "ALEX",
      "votes": [
       "KIM",
       "ELLEN",
@@ -123,60 +121,32 @@
       "JOHN",
       "KAREN",
       "JIMMY"
+     ],
+     "proposer": "ALEX",
+     "team": [
+      "ALEX",
+      "JOHN",
+      "JIMMY",
+      "KIM",
+      "ELLEN"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "ALEX",
-    "JOHN",
-    "JIMMY",
-    "KIM",
-    "ELLEN"
-   ]
+   "failsRequired": 2,
+   "state": "SUCCESS"
   },
   {
    "teamSize": 5,
-   "failsRequired": 1,
    "state": "PENDING",
-   "team": [],
-   "proposals": []
+   "proposals": [],
+   "failsRequired": 1,
+   "team": []
   }
  ],
- "timeFinished": {
-  "_seconds": 1585870925,
-  "_nanoseconds": 92665000
- },
  "outcome": {
-  "votes": [
-   {
-    "KAREN": false,
-    "ALEX": true,
-    "ISABEL": true
-   },
-   {
-    "ALEX": true,
-    "JIMMY": true,
-    "JOHN": true,
-    "ELLEN": true
-   },
-   {
-    "ALEX": true,
-    "JIMMY": true,
-    "KIM": true,
-    "JOHN": true
-   },
-   {
-    "ALEX": true,
-    "JIMMY": true,
-    "KIM": true,
-    "JOHN": true,
-    "ELLEN": true
-   }
-  ],
   "message": "Three successful missions",
-  "assassinated": "JOHN",
   "state": "GOOD_WIN",
+  "assassinated": "JOHN",
   "roles": [
    {
     "name": "JOHN",
@@ -184,14 +154,14 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "JONO",
     "assassin": false,
-    "role": "MORDRED",
-    "name": "JONO"
+    "role": "MORDRED"
    },
    {
+    "name": "ISABEL",
     "assassin": false,
-    "role": "MERLIN",
-    "name": "ISABEL"
+    "role": "MERLIN"
    },
    {
     "name": "KAREN",
@@ -199,9 +169,9 @@
     "role": "EVIL MINION"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "JIMMY",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "KIM",
@@ -209,21 +179,51 @@
     "role": "EVIL MINION"
    },
    {
-    "name": "ELLEN",
     "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "ELLEN"
    },
    {
+    "name": "ALEX",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ALEX"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "KEVIN",
     "assassin": false,
     "role": "LOYAL FOLLOWER"
    }
+  ],
+  "votes": [
+   {
+    "ISABEL": true,
+    "ALEX": true,
+    "KAREN": false
+   },
+   {
+    "ELLEN": true,
+    "JIMMY": true,
+    "ALEX": true,
+    "JOHN": true
+   },
+   {
+    "JOHN": true,
+    "KIM": true,
+    "JIMMY": true,
+    "ALEX": true
+   },
+   {
+    "JOHN": true,
+    "KIM": true,
+    "ELLEN": true,
+    "JIMMY": true,
+    "ALEX": true
+   }
   ]
+ },
+ "timeFinished": {
+  "_seconds": 1585870925,
+  "_nanoseconds": 92665000
  },
  "players": [
   {
@@ -235,24 +235,24 @@
    "uid": "mKRHSdAI67aMae7RUWeiCfKMSvc2"
   },
   {
-   "name": "JOHN",
-   "uid": "TIuhZf7MDVfSXA3sCwLZqVEbFkR2"
+   "uid": "TIuhZf7MDVfSXA3sCwLZqVEbFkR2",
+   "name": "JOHN"
   },
   {
-   "name": "ALEX",
-   "uid": "OfSnvCcZe5anEUWFdUqNf9PvnUK2"
+   "uid": "OfSnvCcZe5anEUWFdUqNf9PvnUK2",
+   "name": "ALEX"
   },
   {
-   "name": "KEVIN",
-   "uid": "A4b62HJDANYXomWcxHAGBDw4Fs13"
+   "uid": "A4b62HJDANYXomWcxHAGBDw4Fs13",
+   "name": "KEVIN"
   },
   {
-   "name": "ISABEL",
-   "uid": "ohDZ9CKryxQGcPY3PIDpMdFsjs52"
+   "uid": "ohDZ9CKryxQGcPY3PIDpMdFsjs52",
+   "name": "ISABEL"
   },
   {
-   "uid": "tbMyQmKrTRMhdTVPWhyPZYzW4h02",
-   "name": "ELLEN"
+   "name": "ELLEN",
+   "uid": "tbMyQmKrTRMhdTVPWhyPZYzW4h02"
   },
   {
    "name": "JONO",

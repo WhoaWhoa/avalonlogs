@@ -3,6 +3,13 @@
   "_seconds": 1587002991,
   "_nanoseconds": 208431000
  },
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1587002040,
+  "_nanoseconds": 131000000
+ },
  "missions": [
   {
    "state": "SUCCESS",
@@ -10,11 +17,11 @@
     "KELVIN",
     "SAM"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "ETHAN",
       "ASTON",
@@ -23,18 +30,19 @@
       "THOMSON",
       "KELVIN"
      ],
-     "state": "APPROVED",
+     "proposer": "KELVIN",
      "team": [
       "KELVIN",
       "SAM"
-     ],
-     "proposer": "KELVIN"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "SAM",
       "THOMSON",
@@ -43,39 +51,43 @@
       "ASTON",
       "ADRIAN"
      ],
-     "state": "APPROVED",
+     "proposer": "ADRIAN",
      "team": [
       "KELVIN",
       "SAM",
       "ASTON"
-     ],
-     "proposer": "ADRIAN"
+     ]
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "KELVIN",
     "SAM",
     "ASTON"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0
+   "numFails": 0,
+   "teamSize": 3
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
+   "state": "FAIL",
+   "team": [
+    "SAM",
+    "KELVIN",
+    "ASTON",
+    "THOMSON"
+   ],
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "SAM",
       "KELVIN",
       "ASTON",
       "THOMSON"
      ],
-     "proposer": "THOMSON",
+     "state": "APPROVED",
      "votes": [
       "ADRIAN",
       "SAM",
@@ -83,16 +95,11 @@
       "KELVIN",
       "ETHAN",
       "ASTON"
-     ]
+     ],
+     "proposer": "THOMSON"
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "SAM",
-    "KELVIN",
-    "ASTON",
-    "THOMSON"
-   ]
+   "failsRequired": 1
   },
   {
    "team": [
@@ -100,30 +107,23 @@
     "KELVIN",
     "THOMSON"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "ASTON",
       "ADRIAN",
       "KELVIN"
      ],
-     "proposer": "ASTON",
+     "state": "REJECTED",
      "votes": [
       "ETHAN"
-     ]
+     ],
+     "proposer": "ASTON"
     },
     {
      "state": "APPROVED",
-     "team": [
-      "ETHAN",
-      "KELVIN",
-      "THOMSON"
-     ],
-     "proposer": "ETHAN",
      "votes": [
       "ETHAN",
       "ASTON",
@@ -131,9 +131,16 @@
       "SAM",
       "THOMSON",
       "KELVIN"
+     ],
+     "proposer": "ETHAN",
+     "team": [
+      "ETHAN",
+      "KELVIN",
+      "THOMSON"
      ]
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL"
   },
   {
@@ -144,34 +151,25 @@
     "ASTON",
     "THOMSON"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "KELVIN",
+      "ETHAN",
+      "SAM"
+     ],
+     "proposer": "SAM",
      "team": [
       "SAM",
       "KELVIN",
       "ASTON",
       "ETHAN"
      ],
-     "proposer": "SAM",
-     "votes": [
-      "KELVIN",
-      "ETHAN",
-      "SAM"
-     ]
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "KELVIN",
-      "SAM",
-      "ASTON",
-      "THOMSON"
-     ],
-     "proposer": "KELVIN",
      "votes": [
       "KELVIN",
       "ETHAN",
@@ -179,28 +177,38 @@
       "ADRIAN",
       "SAM",
       "THOMSON"
-     ]
+     ],
+     "proposer": "KELVIN",
+     "team": [
+      "KELVIN",
+      "SAM",
+      "ASTON",
+      "THOMSON"
+     ],
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1
   }
  ],
  "outcome": {
   "state": "EVIL_WIN",
+  "assassinated": null,
   "roles": [
    {
+    "name": "SAM",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SAM"
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MORDRED",
     "name": "THOMSON",
-    "assassin": true
+    "assassin": true,
+    "role": "MORDRED"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "KELVIN",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "ETHAN",
@@ -213,9 +221,9 @@
     "role": "MERLIN"
    },
    {
+    "name": "ADRIAN",
     "assassin": false,
-    "role": "PERCIVAL",
-    "name": "ADRIAN"
+    "role": "PERCIVAL"
    }
   ],
   "votes": [
@@ -224,9 +232,9 @@
     "KELVIN": true
    },
    {
-    "KELVIN": true,
     "SAM": true,
-    "ASTON": true
+    "ASTON": true,
+    "KELVIN": true
    },
    {
     "SAM": true,
@@ -235,19 +243,18 @@
     "KELVIN": true
    },
    {
-    "KELVIN": true,
     "ETHAN": true,
-    "THOMSON": false
+    "THOMSON": false,
+    "KELVIN": true
    },
    {
-    "KELVIN": true,
     "SAM": true,
     "ASTON": true,
-    "THOMSON": false
+    "THOMSON": false,
+    "KELVIN": true
    }
   ],
-  "message": "Three failed missions",
-  "assassinated": null
+  "message": "Three failed missions"
  },
  "players": [
   {
@@ -259,8 +266,8 @@
    "uid": "PyFnZWgR6pYN1SgJ1k5nRikqbIq2"
   },
   {
-   "name": "KELVIN",
-   "uid": "tQpgKDFOxBgz3AqqpGqocau1S0a2"
+   "uid": "tQpgKDFOxBgz3AqqpGqocau1S0a2",
+   "name": "KELVIN"
   },
   {
    "name": "ADRIAN",
@@ -274,12 +281,5 @@
    "name": "ASTON",
    "uid": "mzNKoIt7o2gmdzkxYu68nXIRrJi2"
   }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587002040,
-  "_nanoseconds": 131000000
- }
+ ]
 }

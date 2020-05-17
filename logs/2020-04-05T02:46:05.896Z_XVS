@@ -1,13 +1,38 @@
 {
- "timeFinished": {
-  "_seconds": 1586055273,
-  "_nanoseconds": 280847000
- },
  "outcome": {
+  "state": "GOOD_WIN",
+  "assassinated": "EW",
+  "roles": [
+   {
+    "name": "CHRIZZINE",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "GLORIA",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "EW",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "FORKY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "VIRUS",
+    "assassin": true,
+    "role": "EVIL MINION"
+   }
+  ],
   "votes": [
    {
-    "CHRIZZINE": true,
-    "VIRUS": true
+    "VIRUS": true,
+    "CHRIZZINE": true
    },
    {
     "FORKY": true,
@@ -15,8 +40,8 @@
     "CHRIZZINE": false
    },
    {
-    "EW": true,
-    "GLORIA": true
+    "GLORIA": true,
+    "EW": true
    },
    {
     "GLORIA": true,
@@ -25,40 +50,15 @@
    },
    {
     "GLORIA": true,
-    "EW": true,
-    "FORKY": true
+    "FORKY": true,
+    "EW": true
    }
   ],
-  "message": "Three successful missions",
-  "assassinated": "EW",
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "role": "MORGANA",
-    "name": "CHRIZZINE",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "GLORIA"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "EW",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "FORKY"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "VIRUS"
-   }
-  ]
+  "message": "Three successful missions"
+ },
+ "timeFinished": {
+  "_seconds": 1586055273,
+  "_nanoseconds": 280847000
  },
  "players": [
   {
@@ -78,8 +78,8 @@
    "uid": "blO3cbthEHYMrrcOduALQoWBPXZ2"
   },
   {
-   "name": "VIRUS",
-   "uid": "tySOxcvJyNYXdaqdKp6kMGz5dFZ2"
+   "uid": "tySOxcvJyNYXdaqdKp6kMGz5dFZ2",
+   "name": "VIRUS"
   }
  ],
  "timeCreated": {
@@ -88,31 +88,31 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "team": [
+    "VIRUS",
+    "CHRIZZINE"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "VIRUS",
-      "CHRIZZINE"
-     ],
-     "proposer": "EW",
      "votes": [
       "GLORIA",
       "EW",
       "FORKY",
       "VIRUS",
       "CHRIZZINE"
+     ],
+     "proposer": "EW",
+     "team": [
+      "VIRUS",
+      "CHRIZZINE"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "VIRUS",
-    "CHRIZZINE"
-   ]
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
    "state": "FAIL",
@@ -121,52 +121,52 @@
     "CHRIZZINE",
     "FORKY"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 2,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "VIRUS",
-      "CHRIZZINE",
-      "FORKY"
-     ],
-     "proposer": "VIRUS",
      "votes": [
       "GLORIA",
       "EW",
       "FORKY",
       "VIRUS"
-     ]
+     ],
+     "proposer": "VIRUS",
+     "team": [
+      "VIRUS",
+      "CHRIZZINE",
+      "FORKY"
+     ],
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "GLORIA",
+    "EW"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "GLORIA",
-      "EW"
-     ],
-     "proposer": "GLORIA",
      "votes": [
       "CHRIZZINE",
       "GLORIA",
       "FORKY",
       "VIRUS"
-     ]
+     ],
+     "proposer": "GLORIA",
+     "team": [
+      "GLORIA",
+      "EW"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "GLORIA",
-    "EW"
-   ]
+   "failsRequired": 1
   },
   {
    "team": [
@@ -174,37 +174,35 @@
     "EW",
     "VIRUS"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "GLORIA",
-      "EW",
-      "VIRUS"
-     ],
-     "proposer": "CHRIZZINE",
+     "state": "APPROVED",
      "votes": [
       "EW",
       "VIRUS",
       "CHRIZZINE"
      ],
-     "state": "APPROVED"
+     "proposer": "CHRIZZINE",
+     "team": [
+      "GLORIA",
+      "EW",
+      "VIRUS"
+     ]
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL"
   },
   {
-   "state": "SUCCESS",
    "team": [
     "GLORIA",
     "FORKY",
     "EW"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -212,15 +210,17 @@
       "FORKY",
       "GLORIA"
      ],
-     "state": "APPROVED",
+     "proposer": "FORKY",
      "team": [
       "GLORIA",
       "FORKY",
       "EW"
      ],
-     "proposer": "FORKY"
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS"
   }
  ]
 }

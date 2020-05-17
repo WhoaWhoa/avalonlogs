@@ -5,9 +5,13 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "team": [
+    "SOONG",
+    "KALE",
+    "ALEXX"
+   ],
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -15,7 +19,7 @@
       "KALE",
       "ALEXX"
      ],
-     "proposer": "SOONG",
+     "state": "APPROVED",
      "votes": [
       "ALEXX",
       "KALE",
@@ -26,15 +30,11 @@
       "ANDREA",
       "JADANCE"
      ],
-     "state": "APPROVED"
+     "proposer": "SOONG"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "SOONG",
-    "KALE",
-    "ALEXX"
-   ]
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
    "team": [
@@ -43,19 +43,18 @@
     "ALEXX",
     "JADANCE"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "KALE",
      "team": [
       "KALE",
       "SOONG",
       "ALEXX",
       "JADANCE"
      ],
-     "proposer": "KALE",
+     "state": "APPROVED",
      "votes": [
       "SOONG",
       "MEGAN",
@@ -67,12 +66,18 @@
      ]
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
+   "team": [
+    "ANDREA",
+    "SRA",
+    "MEGAN",
+    "KALE"
+   ],
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -83,23 +88,18 @@
       "JADANCE",
       "KALE"
      ],
-     "state": "APPROVED",
+     "proposer": "ANDREA",
      "team": [
       "ANDREA",
       "SRA",
       "MEGAN",
       "KALE"
      ],
-     "proposer": "ANDREA"
+     "state": "APPROVED"
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "ANDREA",
-    "SRA",
-    "MEGAN",
-    "KALE"
-   ]
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
    "state": "FAIL",
@@ -110,12 +110,10 @@
     "NOELLE",
     "SOONG"
    ],
-   "failsRequired": 2,
-   "teamSize": 5,
    "numFails": 2,
+   "teamSize": 5,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "MEGAN",
       "KALE",
@@ -123,22 +121,30 @@
       "NOELLE",
       "SOONG"
      ],
-     "proposer": "MEGAN",
+     "state": "APPROVED",
      "votes": [
       "ANDREA",
       "ALEXX",
       "KALE",
       "NOELLE",
       "SOONG"
-     ]
+     ],
+     "proposer": "MEGAN"
     }
-   ]
+   ],
+   "failsRequired": 2
   },
   {
-   "numFails": 2,
    "proposals": [
     {
-     "state": "APPROVED",
+     "votes": [
+      "NOELLE",
+      "MEGAN",
+      "ANDREA",
+      "ALEXX",
+      "KALE"
+     ],
+     "proposer": "NOELLE",
      "team": [
       "NOELLE",
       "ALEXX",
@@ -146,16 +152,10 @@
       "JADANCE",
       "KALE"
      ],
-     "proposer": "NOELLE",
-     "votes": [
-      "NOELLE",
-      "MEGAN",
-      "ANDREA",
-      "ALEXX",
-      "KALE"
-     ]
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "NOELLE",
@@ -164,38 +164,34 @@
     "JADANCE",
     "KALE"
    ],
-   "failsRequired": 1,
+   "numFails": 2,
    "teamSize": 5
   }
  ],
- "timeFinished": {
-  "_seconds": 1586009391,
-  "_nanoseconds": 21682000
- },
  "outcome": {
   "message": "Three failed missions",
-  "assassinated": null,
   "state": "EVIL_WIN",
+  "assassinated": null,
   "roles": [
+   {
+    "name": "KALE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "SRA",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "NOELLE",
+    "assassin": true,
+    "role": "MORDRED"
+   },
    {
     "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "KALE"
-   },
-   {
-    "role": "MERLIN",
-    "name": "SRA",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "name": "NOELLE",
-    "assassin": true
-   },
-   {
-    "name": "SOONG",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "SOONG"
    },
    {
     "name": "MEGAN",
@@ -208,74 +204,78 @@
     "role": "OBERON"
    },
    {
+    "name": "JADANCE",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JADANCE"
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "ALEXX",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "ALEXX"
    }
   ],
   "votes": [
    {
     "KALE": true,
-    "SOONG": true,
-    "ALEXX": true
+    "ALEXX": true,
+    "SOONG": true
    },
    {
     "KALE": true,
+    "ALEXX": true,
     "JADANCE": true,
-    "SOONG": true,
-    "ALEXX": true
+    "SOONG": true
    },
    {
     "SRA": true,
+    "KALE": true,
     "ANDREA": false,
-    "MEGAN": true,
-    "KALE": true
+    "MEGAN": true
    },
    {
     "NOELLE": false,
-    "SOONG": true,
-    "MEGAN": true,
+    "KALE": true,
     "ALEXX": false,
-    "KALE": true
+    "MEGAN": true,
+    "SOONG": true
    },
    {
-    "MEGAN": true,
-    "ALEXX": false,
+    "NOELLE": false,
     "KALE": true,
+    "ALEXX": false,
     "JADANCE": true,
-    "NOELLE": false
+    "MEGAN": true
    }
   ]
  },
+ "timeFinished": {
+  "_seconds": 1586009391,
+  "_nanoseconds": 21682000
+ },
  "players": [
   {
-   "name": "ANDREA",
-   "uid": "GpxSDtzqIbhHb4R4OYcadBAJSc23"
+   "uid": "GpxSDtzqIbhHb4R4OYcadBAJSc23",
+   "name": "ANDREA"
   },
   {
-   "name": "MEGAN",
-   "uid": "ZbcSPrZR2sVQ7N7yZ0vDGHLcC2g2"
+   "uid": "ZbcSPrZR2sVQ7N7yZ0vDGHLcC2g2",
+   "name": "MEGAN"
   },
   {
-   "name": "NOELLE",
-   "uid": "mJv6WTS9XMfAGMSVNczYWHjaPPP2"
+   "uid": "mJv6WTS9XMfAGMSVNczYWHjaPPP2",
+   "name": "NOELLE"
   },
   {
-   "name": "SRA",
-   "uid": "cFjm0kZ1b4Rb54bmNNWoAih9NN22"
+   "uid": "cFjm0kZ1b4Rb54bmNNWoAih9NN22",
+   "name": "SRA"
   },
   {
    "name": "JADANCE",
    "uid": "3CTt7TbdEEfY4Y8jOEAWanE2iEA3"
   },
   {
-   "uid": "3vP863IslSXpOtrXGrxC6hWMFMP2",
-   "name": "ALEXX"
+   "name": "ALEXX",
+   "uid": "3vP863IslSXpOtrXGrxC6hWMFMP2"
   },
   {
    "name": "SOONG",

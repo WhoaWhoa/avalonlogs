@@ -5,9 +5,12 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "team": [
+    "CHRIS",
+    "DIANA"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
      "votes": [
@@ -18,23 +21,33 @@
       "TIM",
       "DAVID"
      ],
-     "state": "APPROVED",
+     "proposer": "CHRIS",
      "team": [
       "CHRIS",
       "DIANA"
      ],
-     "proposer": "CHRIS"
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "CHRIS",
-    "DIANA"
-   ]
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
+   "team": [
+    "CHRIS",
+    "DIANA",
+    "MICHELLE"
+   ],
+   "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "CHRIS",
+      "DIANA",
+      "MICHELLE"
+     ],
+     "state": "APPROVED",
      "votes": [
       "MICHELLE",
       "DIANA",
@@ -42,24 +55,11 @@
       "STEPHAN",
       "TIM"
      ],
-     "state": "APPROVED",
-     "team": [
-      "CHRIS",
-      "DIANA",
-      "MICHELLE"
-     ],
      "proposer": "DIANA"
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "CHRIS",
-    "DIANA",
-    "MICHELLE"
-   ],
    "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1
+   "state": "FAIL"
   },
   {
    "team": [
@@ -68,9 +68,8 @@
     "TIM",
     "STEPHAN"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -79,98 +78,96 @@
       "MICHELLE",
       "DIANA"
      ],
-     "state": "APPROVED",
+     "proposer": "MICHELLE",
      "team": [
       "MICHELLE",
       "DIANA",
       "TIM",
       "STEPHAN"
      ],
-     "proposer": "MICHELLE"
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL"
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "state": "SUCCESS",
+   "team": [
+    "DIANA",
+    "CHRIS",
+    "TIM"
+   ],
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "DIANA",
-      "CHRIS",
-      "TIM"
-     ],
-     "proposer": "TIM",
      "votes": [
       "DIANA",
       "CHRIS",
       "STEPHAN",
       "TIM",
       "DAVID"
+     ],
+     "proposer": "TIM",
+     "team": [
+      "DIANA",
+      "CHRIS",
+      "TIM"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "DIANA",
-    "CHRIS",
-    "TIM"
-   ]
+   "failsRequired": 1
   },
   {
-   "team": [
-    "DAVID",
-    "DIANA",
-    "CHRIS",
-    "TIM"
-   ],
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "STEPHAN",
       "DIANA",
       "CHRIS",
       "DAVID"
      ],
-     "proposer": "STEPHAN",
+     "state": "REJECTED",
      "votes": [
       "STEPHAN"
-     ]
+     ],
+     "proposer": "STEPHAN"
     },
     {
-     "state": "APPROVED",
+     "votes": [
+      "DIANA",
+      "CHRIS",
+      "STEPHAN",
+      "TIM",
+      "DAVID"
+     ],
+     "proposer": "DAVID",
      "team": [
       "DAVID",
       "DIANA",
       "CHRIS",
       "TIM"
      ],
-     "proposer": "DAVID",
-     "votes": [
-      "DIANA",
-      "CHRIS",
-      "STEPHAN",
-      "TIM",
-      "DAVID"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS"
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "DAVID",
+    "DIANA",
+    "CHRIS",
+    "TIM"
+   ],
+   "numFails": 0,
+   "teamSize": 4
   }
  ],
- "timeFinished": {
-  "_seconds": 1585616809,
-  "_nanoseconds": 179261000
- },
  "outcome": {
   "state": "EVIL_WIN",
+  "assassinated": "TIM",
   "roles": [
    {
     "assassin": false,
@@ -178,9 +175,9 @@
     "name": "DIANA"
    },
    {
+    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "CHRIS",
-    "assassin": false
+    "name": "CHRIS"
    },
    {
     "name": "STEPHAN",
@@ -198,41 +195,44 @@
     "role": "PERCIVAL"
    },
    {
-    "name": "MICHELLE",
     "assassin": true,
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "name": "MICHELLE"
    }
   ],
   "votes": [
    {
-    "CHRIS": true,
-    "DIANA": true
-   },
-   {
-    "CHRIS": true,
-    "MICHELLE": false,
-    "DIANA": true
-   },
-   {
-    "STEPHAN": false,
-    "MICHELLE": true,
-    "TIM": true,
-    "DIANA": true
-   },
-   {
-    "TIM": true,
     "DIANA": true,
     "CHRIS": true
    },
    {
-    "DIANA": true,
+    "MICHELLE": false,
     "CHRIS": true,
+    "DIANA": true
+   },
+   {
+    "MICHELLE": true,
+    "STEPHAN": false,
+    "TIM": true,
+    "DIANA": true
+   },
+   {
+    "CHRIS": true,
+    "TIM": true,
+    "DIANA": true
+   },
+   {
     "DAVID": true,
-    "TIM": true
+    "CHRIS": true,
+    "TIM": true,
+    "DIANA": true
    }
   ],
-  "message": "Merlin assassinated",
-  "assassinated": "TIM"
+  "message": "Merlin assassinated"
+ },
+ "timeFinished": {
+  "_seconds": 1585616809,
+  "_nanoseconds": 179261000
  },
  "players": [
   {
@@ -240,24 +240,24 @@
    "uid": "WW9UDSJTWjcv5IEHdIzn4W3pC0F3"
   },
   {
-   "name": "DIANA",
-   "uid": "xfeWamKVLFheiWITES5u0VW6EC13"
+   "uid": "xfeWamKVLFheiWITES5u0VW6EC13",
+   "name": "DIANA"
   },
   {
-   "uid": "NRa4Y5BvIRUu0NJtNcgsbihHeRV2",
-   "name": "MICHELLE"
+   "name": "MICHELLE",
+   "uid": "NRa4Y5BvIRUu0NJtNcgsbihHeRV2"
   },
   {
-   "uid": "EZ6man5jV1Ws1fTtrxeAIajz8ky2",
-   "name": "TIM"
+   "name": "TIM",
+   "uid": "EZ6man5jV1Ws1fTtrxeAIajz8ky2"
   },
   {
-   "name": "STEPHAN",
-   "uid": "M9vxQxeQSFRkcnaRzCdRXSNSNTE2"
+   "uid": "M9vxQxeQSFRkcnaRzCdRXSNSNTE2",
+   "name": "STEPHAN"
   },
   {
-   "uid": "UQJFUagMgcQ2aPTmCXk2tN18Gp73",
-   "name": "DAVID"
+   "name": "DAVID",
+   "uid": "UQJFUagMgcQ2aPTmCXk2tN18Gp73"
   }
  ]
 }

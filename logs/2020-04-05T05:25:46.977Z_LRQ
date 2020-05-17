@@ -1,4 +1,72 @@
 {
+ "outcome": {
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "assassinated": "IVANA",
+  "roles": [
+   {
+    "name": "ED",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "SNIFFSNIFF",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "IVANA"
+   },
+   {
+    "name": "TEDRA",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "JERRY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "BECKA",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "ANDREW",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ],
+  "votes": [
+   {
+    "ED": true,
+    "ANDREW": true
+   },
+   {
+    "ED": true,
+    "ANDREW": true,
+    "BECKA": true
+   },
+   {
+    "ED": true,
+    "ANDREW": true,
+    "BECKA": false
+   },
+   {
+    "ANDREW": true,
+    "BECKA": true,
+    "IVANA": true,
+    "ED": true
+   }
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1586064855,
+  "_nanoseconds": 373197000
+ },
  "players": [
   {
    "name": "ANDREW",
@@ -9,8 +77,8 @@
    "name": "BECKA"
   },
   {
-   "uid": "D9eyIeYgvdN0KSNHDVVHmcVEMy73",
-   "name": "ED"
+   "name": "ED",
+   "uid": "D9eyIeYgvdN0KSNHDVVHmcVEMy73"
   },
   {
    "uid": "hiClTskdZpbRjdMU5xI3RHpqU9U2",
@@ -21,12 +89,12 @@
    "uid": "fHLM0Y9FTbbLR4UUV7FFxj6LYJY2"
   },
   {
-   "name": "TEDRA",
-   "uid": "qF4O3Y0Jcqe76aahJ1Dd8FHxob43"
+   "uid": "qF4O3Y0Jcqe76aahJ1Dd8FHxob43",
+   "name": "TEDRA"
   },
   {
-   "name": "JERRY",
-   "uid": "z1MiuShCdWgGxn5CsIusrXaSxHI2"
+   "uid": "z1MiuShCdWgGxn5CsIusrXaSxHI2",
+   "name": "JERRY"
   }
  ],
  "timeCreated": {
@@ -35,15 +103,20 @@
  },
  "missions": [
   {
+   "state": "SUCCESS",
    "team": [
     "ED",
     "ANDREW"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "ED",
+      "ANDREW"
+     ],
+     "state": "APPROVED",
      "votes": [
       "TEDRA",
       "JERRY",
@@ -53,29 +126,27 @@
       "SNIFFSNIFF",
       "IVANA"
      ],
-     "state": "APPROVED",
-     "team": [
-      "ED",
-      "ANDREW"
-     ],
      "proposer": "ANDREW"
     }
    ],
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "team": [
+    "ANDREW",
+    "BECKA",
+    "ED"
+   ],
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "ANDREW",
       "BECKA",
       "ED"
      ],
-     "proposer": "BECKA",
+     "state": "APPROVED",
      "votes": [
       "BECKA",
       "ANDREW",
@@ -84,61 +155,29 @@
       "IVANA",
       "TEDRA",
       "JERRY"
-     ]
+     ],
+     "proposer": "BECKA"
     }
    ],
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "state": "SUCCESS"
+  },
+  {
    "team": [
     "ANDREW",
     "BECKA",
     "ED"
-   ]
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 3,
+   ],
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "ED",
-      "SNIFFSNIFF",
-      "IVANA",
-      "TEDRA",
-      "JERRY",
-      "BECKA",
-      "ANDREW"
-     ],
-     "state": "APPROVED",
      "team": [
       "ANDREW",
       "BECKA",
       "ED"
      ],
-     "proposer": "ED"
-    }
-   ],
-   "state": "FAIL",
-   "team": [
-    "ANDREW",
-    "BECKA",
-    "ED"
-   ]
-  },
-  {
-   "failsRequired": 2,
-   "teamSize": 4,
-   "numFails": 0,
-   "proposals": [
-    {
      "state": "APPROVED",
-     "team": [
-      "IVANA",
-      "ED",
-      "BECKA",
-      "ANDREW"
-     ],
-     "proposer": "IVANA",
      "votes": [
       "ED",
       "SNIFFSNIFF",
@@ -147,91 +186,52 @@
       "JERRY",
       "BECKA",
       "ANDREW"
-     ]
+     ],
+     "proposer": "ED"
     }
    ],
+   "failsRequired": 1,
+   "state": "FAIL"
+  },
+  {
+   "proposals": [
+    {
+     "team": [
+      "IVANA",
+      "ED",
+      "BECKA",
+      "ANDREW"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "ED",
+      "SNIFFSNIFF",
+      "IVANA",
+      "TEDRA",
+      "JERRY",
+      "BECKA",
+      "ANDREW"
+     ],
+     "proposer": "IVANA"
+    }
+   ],
+   "failsRequired": 2,
    "state": "SUCCESS",
    "team": [
     "IVANA",
     "ED",
     "BECKA",
     "ANDREW"
-   ]
+   ],
+   "numFails": 0,
+   "teamSize": 4
   },
   {
    "team": [],
-   "proposals": [],
    "teamSize": 4,
-   "failsRequired": 1,
-   "state": "PENDING"
+   "state": "PENDING",
+   "proposals": [],
+   "failsRequired": 1
   }
- ],
- "timeFinished": {
-  "_seconds": 1586064855,
-  "_nanoseconds": 373197000
- },
- "outcome": {
-  "votes": [
-   {
-    "ANDREW": true,
-    "ED": true
-   },
-   {
-    "ANDREW": true,
-    "BECKA": true,
-    "ED": true
-   },
-   {
-    "ANDREW": true,
-    "BECKA": false,
-    "ED": true
-   },
-   {
-    "IVANA": true,
-    "ANDREW": true,
-    "BECKA": true,
-    "ED": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "IVANA",
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "ED"
-   },
-   {
-    "name": "SNIFFSNIFF",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "IVANA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "TEDRA"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JERRY"
-   },
-   {
-    "name": "BECKA",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "MERLIN",
-    "name": "ANDREW",
-    "assassin": false
-   }
-  ]
- }
+ ]
 }

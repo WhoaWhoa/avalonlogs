@@ -1,4 +1,72 @@
 {
+ "outcome": {
+  "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
+  "assassinated": "PAPAFORMAN",
+  "roles": [
+   {
+    "name": "GRACE",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "LAUREN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "SUZI",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "GRAEME",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "JACK",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "JOHN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "PAPAFORMAN",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ],
+  "votes": [
+   {
+    "GRAEME": true,
+    "PAPAFORMAN": true
+   },
+   {
+    "GRAEME": true,
+    "PAPAFORMAN": true,
+    "JACK": false
+   },
+   {
+    "JACK": true,
+    "PAPAFORMAN": true,
+    "LAUREN": true
+   },
+   {
+    "GRAEME": true,
+    "PAPAFORMAN": true,
+    "LAUREN": true,
+    "JACK": false
+   }
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1586053044,
+  "_nanoseconds": 252736000
+ },
  "players": [
   {
    "uid": "BpVSg7CRg1aZv9so7JIsVSbKzr72",
@@ -13,12 +81,12 @@
    "name": "LAUREN"
   },
   {
-   "name": "SUZI",
-   "uid": "YHHvIsdf2BZnRqGEMdGZSwPWbn23"
+   "uid": "YHHvIsdf2BZnRqGEMdGZSwPWbn23",
+   "name": "SUZI"
   },
   {
-   "name": "GRAEME",
-   "uid": "4X2HvbND0TSzCaOEy1NSqFHnYqz1"
+   "uid": "4X2HvbND0TSzCaOEy1NSqFHnYqz1",
+   "name": "GRAEME"
   },
   {
    "name": "GRACE",
@@ -35,16 +103,14 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "team": [
+    "PAPAFORMAN",
+    "GRAEME"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "PAPAFORMAN",
-      "GRAEME"
-     ],
-     "proposer": "PAPAFORMAN",
      "votes": [
       "SUZI",
       "GRAEME",
@@ -54,24 +120,26 @@
       "GRACE",
       "LAUREN"
      ],
+     "proposer": "PAPAFORMAN",
+     "team": [
+      "PAPAFORMAN",
+      "GRAEME"
+     ],
      "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "PAPAFORMAN",
-    "GRAEME"
-   ]
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
    "team": [
     "JACK",
     "PAPAFORMAN",
     "GRAEME"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -79,7 +147,7 @@
       "PAPAFORMAN",
       "GRAEME"
      ],
-     "proposer": "JACK",
+     "state": "APPROVED",
      "votes": [
       "SUZI",
       "GRAEME",
@@ -88,89 +156,55 @@
       "GRACE",
       "LAUREN"
      ],
-     "state": "APPROVED"
+     "proposer": "JACK"
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "team": [
-      "JOHN",
-      "JACK",
-      "SUZI"
-     ],
-     "proposer": "JOHN",
-     "votes": [
-      "JOHN",
-      "GRACE",
-      "SUZI"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "team": [
-      "JACK",
-      "LAUREN",
-      "PAPAFORMAN"
-     ],
-     "proposer": "LAUREN",
-     "votes": [
-      "JACK",
-      "JOHN",
-      "GRACE",
-      "LAUREN",
-      "SUZI"
-     ]
-    }
-   ],
    "state": "SUCCESS",
    "team": [
     "JACK",
     "LAUREN",
     "PAPAFORMAN"
-   ]
-  },
-  {
+   ],
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
      "state": "REJECTED",
-     "team": [
-      "LAUREN",
-      "JACK",
-      "PAPAFORMAN",
-      "SUZI"
-     ],
-     "proposer": "SUZI",
      "votes": [
       "JOHN",
       "GRACE",
-      "LAUREN"
+      "SUZI"
+     ],
+     "proposer": "JOHN",
+     "team": [
+      "JOHN",
+      "JACK",
+      "SUZI"
      ]
     },
     {
-     "votes": [
+     "team": [
+      "JACK",
       "LAUREN",
-      "SUZI",
-      "GRAEME",
-      "JOHN",
       "PAPAFORMAN"
      ],
      "state": "APPROVED",
-     "team": [
-      "GRAEME",
+     "votes": [
       "JACK",
-      "PAPAFORMAN",
-      "LAUREN"
+      "JOHN",
+      "GRACE",
+      "LAUREN",
+      "SUZI"
      ],
-     "proposer": "GRAEME"
+     "proposer": "LAUREN"
     }
    ],
+   "failsRequired": 1
+  },
+  {
    "state": "SUCCESS",
    "team": [
     "GRAEME",
@@ -178,84 +212,50 @@
     "PAPAFORMAN",
     "LAUREN"
    ],
-   "failsRequired": 2,
+   "numFails": 1,
    "teamSize": 4,
-   "numFails": 1
+   "proposals": [
+    {
+     "votes": [
+      "JOHN",
+      "GRACE",
+      "LAUREN"
+     ],
+     "proposer": "SUZI",
+     "team": [
+      "LAUREN",
+      "JACK",
+      "PAPAFORMAN",
+      "SUZI"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "team": [
+      "GRAEME",
+      "JACK",
+      "PAPAFORMAN",
+      "LAUREN"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "LAUREN",
+      "SUZI",
+      "GRAEME",
+      "JOHN",
+      "PAPAFORMAN"
+     ],
+     "proposer": "GRAEME"
+    }
+   ],
+   "failsRequired": 2
   },
   {
    "team": [],
-   "proposals": [],
    "teamSize": 4,
-   "failsRequired": 1,
-   "state": "PENDING"
+   "state": "PENDING",
+   "proposals": [],
+   "failsRequired": 1
   }
- ],
- "timeFinished": {
-  "_seconds": 1586053044,
-  "_nanoseconds": 252736000
- },
- "outcome": {
-  "votes": [
-   {
-    "GRAEME": true,
-    "PAPAFORMAN": true
-   },
-   {
-    "GRAEME": true,
-    "JACK": false,
-    "PAPAFORMAN": true
-   },
-   {
-    "JACK": true,
-    "LAUREN": true,
-    "PAPAFORMAN": true
-   },
-   {
-    "GRAEME": true,
-    "JACK": false,
-    "LAUREN": true,
-    "PAPAFORMAN": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "PAPAFORMAN",
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "GRACE",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "LAUREN"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "SUZI"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "GRAEME",
-    "assassin": false
-   },
-   {
-    "name": "JACK",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JOHN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "PAPAFORMAN"
-   }
-  ]
- }
+ ]
 }

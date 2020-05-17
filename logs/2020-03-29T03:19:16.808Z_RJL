@@ -5,14 +5,20 @@
  },
  "missions": [
   {
+   "state": "FAIL",
+   "team": [
+    "WALKER",
+    "LAURA"
+   ],
    "numFails": 1,
+   "teamSize": 2,
    "proposals": [
     {
      "team": [
       "WALKER",
       "LAURA"
      ],
-     "proposer": "WALKER",
+     "state": "APPROVED",
      "votes": [
       "WALKER",
       "NIGEL",
@@ -22,103 +28,97 @@
       "LAURA",
       "AUDREY"
      ],
-     "state": "APPROVED"
+     "proposer": "WALKER"
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "WALKER",
-    "LAURA"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2
+   "failsRequired": 1
   },
   {
-   "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "LAURA",
-      "NIKI",
-      "AUDREY"
-     ],
-     "proposer": "LAURA",
      "votes": [
       "NIKI",
       "LAURA",
       "AUDREY",
       "WALKER"
      ],
+     "proposer": "LAURA",
+     "team": [
+      "LAURA",
+      "NIKI",
+      "AUDREY"
+     ],
      "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "LAURA",
     "NIKI",
     "AUDREY"
    ],
-   "failsRequired": 1,
+   "numFails": 1,
    "teamSize": 3
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "state": "SUCCESS",
+   "team": [
+    "JEFF",
+    "NIGEL",
+    "CARL"
+   ],
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "JEFF",
-      "NIGEL",
-      "CARL"
-     ],
-     "proposer": "AUDREY",
      "votes": [
       "CARL",
       "NIKI",
       "AUDREY",
       "WALKER",
       "NIGEL"
+     ],
+     "proposer": "AUDREY",
+     "team": [
+      "JEFF",
+      "NIGEL",
+      "CARL"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "JEFF",
-    "NIGEL",
-    "CARL"
-   ]
+   "failsRequired": 1
   },
   {
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "NIGEL",
-      "CARL",
-      "JEFF",
-      "LAURA"
-     ],
-     "proposer": "JEFF",
      "votes": [
       "NIKI",
       "AUDREY",
       "WALKER",
       "JEFF"
      ],
+     "proposer": "JEFF",
+     "team": [
+      "NIGEL",
+      "CARL",
+      "JEFF",
+      "LAURA"
+     ],
      "state": "APPROVED"
     }
    ],
+   "failsRequired": 2,
    "state": "SUCCESS",
    "team": [
     "NIGEL",
     "CARL",
     "JEFF",
     "LAURA"
-   ],
-   "failsRequired": 2,
-   "teamSize": 4
+   ]
   },
   {
    "team": [
@@ -127,9 +127,8 @@
     "JEFF",
     "NIKI"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -138,7 +137,7 @@
       "JEFF",
       "NIKI"
      ],
-     "proposer": "NIGEL",
+     "state": "APPROVED",
      "votes": [
       "CARL",
       "NIKI",
@@ -148,85 +147,86 @@
       "NIGEL",
       "JEFF"
      ],
-     "state": "APPROVED"
+     "proposer": "NIGEL"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL"
   }
  ],
+ "outcome": {
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "roles": [
+   {
+    "name": "CARL",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "NIKI",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "LAURA",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "AUDREY",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "WALKER",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "NIGEL",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "name": "JEFF",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "votes": [
+   {
+    "LAURA": true,
+    "WALKER": false
+   },
+   {
+    "NIKI": true,
+    "LAURA": true,
+    "AUDREY": false
+   },
+   {
+    "JEFF": true,
+    "CARL": true,
+    "NIGEL": true
+   },
+   {
+    "JEFF": true,
+    "CARL": true,
+    "NIGEL": true,
+    "LAURA": true
+   },
+   {
+    "NIGEL": false,
+    "NIKI": true,
+    "JEFF": true,
+    "CARL": true
+   }
+  ]
+ },
  "timeFinished": {
   "_seconds": 1585452753,
   "_nanoseconds": 658413000
- },
- "outcome": {
-  "votes": [
-   {
-    "WALKER": false,
-    "LAURA": true
-   },
-   {
-    "AUDREY": false,
-    "LAURA": true,
-    "NIKI": true
-   },
-   {
-    "CARL": true,
-    "NIGEL": true,
-    "JEFF": true
-   },
-   {
-    "CARL": true,
-    "NIGEL": true,
-    "JEFF": true,
-    "LAURA": true
-   },
-   {
-    "CARL": true,
-    "NIGEL": false,
-    "NIKI": true,
-    "JEFF": true
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "CARL"
-   },
-   {
-    "role": "MERLIN",
-    "name": "NIKI",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "LAURA"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "AUDREY",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "WALKER",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "NIGEL"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "JEFF",
-    "assassin": false
-   }
-  ]
  },
  "players": [
   {
@@ -234,28 +234,28 @@
    "name": "NIGEL"
   },
   {
-   "name": "CARL",
-   "uid": "pXtvGj9rVth15svpr2JgbxoOF2v1"
+   "uid": "pXtvGj9rVth15svpr2JgbxoOF2v1",
+   "name": "CARL"
   },
   {
-   "name": "NIKI",
-   "uid": "qy500PYGGFYrccUzWpCNhaOvssR2"
+   "uid": "qy500PYGGFYrccUzWpCNhaOvssR2",
+   "name": "NIKI"
   },
   {
-   "name": "WALKER",
-   "uid": "KQ6CAvEFXeUnyTqHpokvrSzwYbx1"
+   "uid": "KQ6CAvEFXeUnyTqHpokvrSzwYbx1",
+   "name": "WALKER"
   },
   {
-   "name": "LAURA",
-   "uid": "OGEkIrBTuGMFQGh5qi0BSlZczTc2"
+   "uid": "OGEkIrBTuGMFQGh5qi0BSlZczTc2",
+   "name": "LAURA"
   },
   {
-   "uid": "UoslXRO7vaefHq19QAlBoIxYoAt1",
-   "name": "AUDREY"
+   "name": "AUDREY",
+   "uid": "UoslXRO7vaefHq19QAlBoIxYoAt1"
   },
   {
-   "name": "JEFF",
-   "uid": "bYzgcJ3LUESk0lJyH2zm8nD8oxh1"
+   "uid": "bYzgcJ3LUESk0lJyH2zm8nD8oxh1",
+   "name": "JEFF"
   }
  ]
 }

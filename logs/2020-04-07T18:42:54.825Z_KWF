@@ -1,20 +1,76 @@
 {
+ "outcome": {
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "assassinated": "MATT",
+  "roles": [
+   {
+    "name": "LEOCIVAL",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "LUKE"
+   },
+   {
+    "name": "ERIC",
+    "assassin": false,
+    "role": "OBERON"
+   },
+   {
+    "name": "MATT",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ALAN",
+    "assassin": true,
+    "role": "EVIL MINION"
+   }
+  ],
+  "votes": [
+   {
+    "MATT": true,
+    "ALAN": true
+   },
+   {
+    "ALAN": false,
+    "MATT": true,
+    "ERIC": false
+   },
+   {
+    "MATT": true,
+    "LEOCIVAL": true
+   },
+   {
+    "LUKE": true,
+    "MATT": true,
+    "LEOCIVAL": true
+   }
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1586285218,
+  "_nanoseconds": 962436000
+ },
  "players": [
   {
-   "name": "MATT",
-   "uid": "gmAei7NP3veDkxiZibTLkaDhSaD2"
+   "uid": "gmAei7NP3veDkxiZibTLkaDhSaD2",
+   "name": "MATT"
   },
   {
    "name": "ERIC",
    "uid": "TxfOTxKECeYBKApBqR2Lttgjat13"
   },
   {
-   "name": "LUKE",
-   "uid": "NxyKET0TjCNbsHhI70CETBPWAwX2"
+   "uid": "NxyKET0TjCNbsHhI70CETBPWAwX2",
+   "name": "LUKE"
   },
   {
-   "name": "LEOCIVAL",
-   "uid": "GMkNjegOxGhnSMc3KwhWV0AKS4Q2"
+   "uid": "GMkNjegOxGhnSMc3KwhWV0AKS4Q2",
+   "name": "LEOCIVAL"
   },
   {
    "name": "ALAN",
@@ -27,55 +83,58 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "team": [
+    "MATT",
+    "ALAN"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "votes": [
+     "team": [
       "MATT",
       "ALAN"
      ],
      "state": "REJECTED",
-     "team": [
+     "votes": [
       "MATT",
       "ALAN"
      ],
      "proposer": "MATT"
     },
     {
-     "state": "REJECTED",
+     "votes": [
+      "ALAN"
+     ],
+     "proposer": "ERIC",
      "team": [
       "ERIC",
       "ALAN"
      ],
-     "proposer": "ERIC",
-     "votes": [
-      "ALAN"
-     ]
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
+     "votes": [
+      "ERIC"
+     ],
+     "proposer": "LUKE",
      "team": [
       "LUKE",
       "ERIC"
      ],
-     "proposer": "LUKE",
-     "votes": [
-      "ERIC"
-     ]
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "team": [
       "LEOCIVAL",
       "LUKE"
      ],
-     "proposer": "LEOCIVAL",
+     "state": "REJECTED",
      "votes": [
       "MATT",
       "LUKE"
-     ]
+     ],
+     "proposer": "LEOCIVAL"
     },
     {
      "votes": [
@@ -85,174 +144,115 @@
       "LEOCIVAL",
       "LUKE"
      ],
-     "state": "APPROVED",
+     "proposer": "ALAN",
      "team": [
       "MATT",
       "ALAN"
      ],
-     "proposer": "ALAN"
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "MATT",
-    "ALAN"
-   ]
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 2,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "team": [
-      "MATT",
-      "ALAN",
-      "LEOCIVAL"
-     ],
-     "proposer": "MATT",
-     "votes": [
-      "ALAN",
-      "MATT"
-     ]
-    },
-    {
-     "votes": [
-      "ALAN",
-      "ERIC",
-      "MATT"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "ERIC",
-      "MATT",
-      "ALAN"
-     ],
-     "proposer": "ERIC"
-    }
-   ],
    "state": "FAIL",
    "team": [
     "ERIC",
     "MATT",
     "ALAN"
-   ]
+   ],
+   "numFails": 2,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "votes": [
+      "ALAN",
+      "MATT"
+     ],
+     "proposer": "MATT",
+     "team": [
+      "MATT",
+      "ALAN",
+      "LEOCIVAL"
+     ]
+    },
+    {
+     "team": [
+      "ERIC",
+      "MATT",
+      "ALAN"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "ALAN",
+      "ERIC",
+      "MATT"
+     ],
+     "proposer": "ERIC"
+    }
+   ],
+   "failsRequired": 1
   },
   {
+   "proposals": [
+    {
+     "team": [
+      "LEOCIVAL",
+      "MATT"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "LEOCIVAL",
+      "LUKE",
+      "MATT"
+     ],
+     "proposer": "LUKE"
+    }
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "LEOCIVAL",
     "MATT"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "LEOCIVAL",
-      "MATT"
-     ],
-     "proposer": "LUKE",
-     "votes": [
-      "LEOCIVAL",
-      "LUKE",
-      "MATT"
-     ]
-    }
-   ],
-   "state": "SUCCESS"
+   "teamSize": 2
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
-   "proposals": [
-    {
-     "votes": [
-      "LEOCIVAL",
-      "LUKE",
-      "MATT"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "LEOCIVAL",
-      "MATT",
-      "LUKE"
-     ],
-     "proposer": "LEOCIVAL"
-    }
-   ],
    "state": "SUCCESS",
    "team": [
     "LEOCIVAL",
     "MATT",
     "LUKE"
-   ]
+   ],
+   "numFails": 0,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "votes": [
+      "LEOCIVAL",
+      "LUKE",
+      "MATT"
+     ],
+     "proposer": "LEOCIVAL",
+     "team": [
+      "LEOCIVAL",
+      "MATT",
+      "LUKE"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "failsRequired": 1
   },
   {
-   "proposals": [],
+   "team": [],
    "teamSize": 3,
-   "failsRequired": 1,
    "state": "PENDING",
-   "team": []
+   "proposals": [],
+   "failsRequired": 1
   }
- ],
- "timeFinished": {
-  "_seconds": 1586285218,
-  "_nanoseconds": 962436000
- },
- "outcome": {
-  "votes": [
-   {
-    "MATT": true,
-    "ALAN": true
-   },
-   {
-    "ERIC": false,
-    "MATT": true,
-    "ALAN": false
-   },
-   {
-    "LEOCIVAL": true,
-    "MATT": true
-   },
-   {
-    "LEOCIVAL": true,
-    "LUKE": true,
-    "MATT": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "MATT",
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "LEOCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "LUKE"
-   },
-   {
-    "assassin": false,
-    "role": "OBERON",
-    "name": "ERIC"
-   },
-   {
-    "name": "MATT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "ALAN"
-   }
-  ]
- }
+ ]
 }

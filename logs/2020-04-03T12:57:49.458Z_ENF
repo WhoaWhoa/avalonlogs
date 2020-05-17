@@ -1,42 +1,5 @@
 {
- "timeFinished": {
-  "_seconds": 1585921146,
-  "_nanoseconds": 537135000
- },
  "outcome": {
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "LOCTRI"
-   },
-   {
-    "name": "JAS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MERLIN",
-    "name": "RICHARD",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "KAT"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "RYANHEART",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ERAJ"
-   }
-  ],
   "votes": [
    {
     "KAT": true,
@@ -44,14 +7,14 @@
    },
    {
     "ERAJ": true,
-    "LOCTRI": false,
-    "RICHARD": true
+    "RICHARD": true,
+    "LOCTRI": false
    },
    {
-    "JAS": true,
-    "KAT": false,
+    "ERAJ": true,
     "RYANHEART": true,
-    "ERAJ": true
+    "KAT": false,
+    "JAS": true
    },
    {
     "JAS": true,
@@ -60,13 +23,50 @@
    },
    {
     "JAS": true,
+    "ERAJ": true,
     "RICHARD": true,
-    "RYANHEART": true,
-    "ERAJ": true
+    "RYANHEART": true
    }
   ],
   "message": "Three successful missions",
-  "assassinated": "RYANHEART"
+  "state": "GOOD_WIN",
+  "assassinated": "RYANHEART",
+  "roles": [
+   {
+    "name": "LOCTRI",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "name": "JAS",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "RICHARD",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "KAT",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "RYANHEART",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "ERAJ",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1585921146,
+  "_nanoseconds": 537135000
  },
  "players": [
   {
@@ -74,20 +74,20 @@
    "uid": "n881TP9mNnQgKkCqYU0kOFkVh9u1"
   },
   {
-   "name": "ERAJ",
-   "uid": "RlCBCQnibneBjkSDgQ3KfXpYbA52"
+   "uid": "RlCBCQnibneBjkSDgQ3KfXpYbA52",
+   "name": "ERAJ"
   },
   {
    "name": "JAS",
    "uid": "LmEFFBf3KzeOcfVwQhkfFAMFzEt1"
   },
   {
-   "name": "KAT",
-   "uid": "WHhFQY87aIht0n4nLhFDWjsrBfn2"
+   "uid": "WHhFQY87aIht0n4nLhFDWjsrBfn2",
+   "name": "KAT"
   },
   {
-   "name": "RYANHEART",
-   "uid": "lKg5QVMrxBVnKo3mNjtj6kg8vaF2"
+   "uid": "lKg5QVMrxBVnKo3mNjtj6kg8vaF2",
+   "name": "RYANHEART"
   },
   {
    "uid": "chLDTr7Jg9PBszhDIVlJZcrYF523",
@@ -100,16 +100,16 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "RYANHEART",
+    "KAT"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "RYANHEART",
-      "KAT"
-     ],
-     "proposer": "RYANHEART",
+     "state": "APPROVED",
      "votes": [
       "KAT",
       "RYANHEART",
@@ -118,19 +118,16 @@
       "JAS",
       "RICHARD"
      ],
-     "state": "APPROVED"
+     "proposer": "RYANHEART",
+     "team": [
+      "RYANHEART",
+      "KAT"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "RYANHEART",
-    "KAT"
-   ]
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
    "proposals": [
     {
      "votes": [
@@ -141,50 +138,53 @@
       "RICHARD",
       "KAT"
      ],
-     "state": "APPROVED",
+     "proposer": "LOCTRI",
      "team": [
       "ERAJ",
       "RICHARD",
       "LOCTRI"
      ],
-     "proposer": "LOCTRI"
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "ERAJ",
     "RICHARD",
     "LOCTRI"
-   ]
+   ],
+   "numFails": 1,
+   "teamSize": 3
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
+   "state": "FAIL",
+   "team": [
+    "ERAJ",
+    "JAS",
+    "KAT",
+    "RYANHEART"
+   ],
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "KAT",
+      "LOCTRI",
+      "RICHARD"
+     ],
+     "proposer": "RICHARD",
      "team": [
       "RICHARD",
       "ERAJ",
       "JAS",
       "RYANHEART"
      ],
-     "proposer": "RICHARD",
-     "votes": [
-      "KAT",
-      "LOCTRI",
-      "RICHARD"
-     ]
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "ERAJ",
-      "JAS",
-      "KAT",
-      "RYANHEART"
-     ],
-     "proposer": "ERAJ",
+     "state": "APPROVED",
      "votes": [
       "KAT",
       "RYANHEART",
@@ -192,58 +192,57 @@
       "LOCTRI",
       "JAS"
      ],
+     "proposer": "ERAJ",
+     "team": [
+      "ERAJ",
+      "JAS",
+      "KAT",
+      "RYANHEART"
+     ]
+    }
+   ],
+   "failsRequired": 1
+  },
+  {
+   "team": [
+    "JAS",
+    "RICHARD",
+    "RYANHEART"
+   ],
+   "numFails": 0,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "votes": [
+      "KAT",
+      "RYANHEART",
+      "LOCTRI",
+      "JAS",
+      "RICHARD"
+     ],
+     "proposer": "JAS",
+     "team": [
+      "JAS",
+      "RICHARD",
+      "RYANHEART"
+     ],
      "state": "APPROVED"
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "ERAJ",
-    "JAS",
-    "KAT",
-    "RYANHEART"
-   ]
-  },
-  {
-   "team": [
-    "JAS",
-    "RICHARD",
-    "RYANHEART"
-   ],
    "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "JAS",
-      "RICHARD",
-      "RYANHEART"
-     ],
-     "proposer": "JAS",
-     "votes": [
-      "KAT",
-      "RYANHEART",
-      "LOCTRI",
-      "JAS",
-      "RICHARD"
-     ]
-    }
-   ],
    "state": "SUCCESS"
   },
   {
+   "team": [
+    "RICHARD",
+    "ERAJ",
+    "JAS",
+    "RYANHEART"
+   ],
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "RICHARD",
-      "ERAJ",
-      "JAS",
-      "RYANHEART"
-     ],
-     "proposer": "KAT",
      "votes": [
       "KAT",
       "RYANHEART",
@@ -251,18 +250,19 @@
       "LOCTRI",
       "JAS",
       "RICHARD"
-     ]
+     ],
+     "proposer": "KAT",
+     "team": [
+      "RICHARD",
+      "ERAJ",
+      "JAS",
+      "RYANHEART"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "RICHARD",
-    "ERAJ",
-    "JAS",
-    "RYANHEART"
-   ],
    "failsRequired": 1,
-   "teamSize": 4
+   "state": "SUCCESS"
   }
  ]
 }

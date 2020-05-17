@@ -1,18 +1,22 @@
 {
- "timeCreated": {
-  "_seconds": 1586036063,
-  "_nanoseconds": 276000000
- },
  "missions": [
   {
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "MARKUS",
+    "PHINI"
+   ],
+   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "MARKUS",
      "team": [
       "MARKUS",
       "PHINI"
      ],
-     "proposer": "MARKUS",
+     "state": "APPROVED",
      "votes": [
       "MARKUS",
       "CHRISTOPH",
@@ -22,26 +26,19 @@
       "ALEX"
      ]
     }
-   ],
+   ]
+  },
+  {
    "state": "SUCCESS",
    "team": [
     "MARKUS",
-    "PHINI"
+    "PHINI",
+    "DAVID"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0
-  },
-  {
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "MARKUS",
-      "PHINI",
-      "DAVID"
-     ],
-     "proposer": "ALEX",
      "votes": [
       "CHRISTOPH",
       "STEFAN",
@@ -50,38 +47,29 @@
       "ALEX",
       "MARKUS"
      ],
+     "proposer": "ALEX",
+     "team": [
+      "MARKUS",
+      "PHINI",
+      "DAVID"
+     ],
      "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "MARKUS",
-    "PHINI",
-    "DAVID"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
+   "state": "FAIL",
    "team": [
     "MARKUS",
     "ALEX",
     "PHINI",
     "DAVID"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "MARKUS",
-      "ALEX",
-      "PHINI",
-      "DAVID"
-     ],
-     "proposer": "DAVID",
      "votes": [
       "ALEX",
       "MARKUS",
@@ -89,88 +77,69 @@
       "STEFAN",
       "DAVID",
       "PHINI"
-     ]
+     ],
+     "proposer": "DAVID",
+     "team": [
+      "MARKUS",
+      "ALEX",
+      "PHINI",
+      "DAVID"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "team": [
+    "PHINI",
+    "DAVID",
+    "MARKUS"
+   ],
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "PHINI",
       "DAVID",
       "MARKUS"
      ],
-     "proposer": "STEFAN",
+     "state": "APPROVED",
      "votes": [
       "MARKUS",
       "STEFAN",
       "DAVID",
       "PHINI",
       "ALEX"
-     ]
+     ],
+     "proposer": "STEFAN"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "PHINI",
-    "DAVID",
-    "MARKUS"
-   ]
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 4,
    "failsRequired": 1,
-   "state": "PENDING",
    "team": [],
+   "teamSize": 4,
+   "state": "PENDING",
    "proposals": []
   }
  ],
- "timeFinished": {
-  "_seconds": 1586036889,
-  "_nanoseconds": 757385000
- },
  "outcome": {
-  "votes": [
-   {
-    "MARKUS": true,
-    "PHINI": true
-   },
-   {
-    "DAVID": true,
-    "MARKUS": true,
-    "PHINI": true
-   },
-   {
-    "PHINI": true,
-    "DAVID": true,
-    "ALEX": false,
-    "MARKUS": true
-   },
-   {
-    "PHINI": true,
-    "DAVID": true,
-    "MARKUS": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "PHINI",
   "state": "GOOD_WIN",
+  "assassinated": "PHINI",
   "roles": [
    {
+    "name": "PHINI",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "PHINI"
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "ALEX",
     "assassin": false,
-    "role": "MORGANA",
-    "name": "ALEX"
+    "role": "MORGANA"
    },
    {
     "name": "MARKUS",
@@ -178,21 +147,48 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "assassin": true,
     "role": "EVIL MINION",
-    "name": "CHRISTOPH",
-    "assassin": true
+    "name": "CHRISTOPH"
    },
    {
+    "name": "STEFAN",
     "assassin": false,
-    "role": "MERLIN",
-    "name": "STEFAN"
+    "role": "MERLIN"
    },
    {
+    "name": "DAVID",
     "assassin": false,
-    "role": "PERCIVAL",
-    "name": "DAVID"
+    "role": "PERCIVAL"
    }
-  ]
+  ],
+  "votes": [
+   {
+    "MARKUS": true,
+    "PHINI": true
+   },
+   {
+    "MARKUS": true,
+    "PHINI": true,
+    "DAVID": true
+   },
+   {
+    "MARKUS": true,
+    "ALEX": false,
+    "PHINI": true,
+    "DAVID": true
+   },
+   {
+    "PHINI": true,
+    "DAVID": true,
+    "MARKUS": true
+   }
+  ],
+  "message": "Three successful missions"
+ },
+ "timeFinished": {
+  "_seconds": 1586036889,
+  "_nanoseconds": 757385000
  },
  "players": [
   {
@@ -208,16 +204,20 @@
    "name": "ALEX"
   },
   {
-   "name": "DAVID",
-   "uid": "DbB6qPMbHlTxKxU9D3MvW0sjwgQ2"
+   "uid": "DbB6qPMbHlTxKxU9D3MvW0sjwgQ2",
+   "name": "DAVID"
   },
   {
-   "name": "STEFAN",
-   "uid": "VLMY701tRgRWD7ZQZ2ORFsSOvgp1"
+   "uid": "VLMY701tRgRWD7ZQZ2ORFsSOvgp1",
+   "name": "STEFAN"
   },
   {
    "name": "PHINI",
    "uid": "m57kw0OfLNTn6prjumvcPTzZNcu1"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1586036063,
+  "_nanoseconds": 276000000
+ }
 }

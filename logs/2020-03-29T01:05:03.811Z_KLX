@@ -3,70 +3,6 @@
   "_seconds": 1585444870,
   "_nanoseconds": 260603000
  },
- "outcome": {
-  "votes": [
-   {
-    "GARRETT": true,
-    "STEVE": true
-   },
-   {
-    "GARRETT": false,
-    "SAM": true,
-    "JWEEZY": true
-   },
-   {
-    "MICHAEL": false,
-    "JWEEZY": true,
-    "CHELSEA": true
-   },
-   {
-    "CHELSEA": true,
-    "GARY": false,
-    "MICHAEL": false,
-    "SAM": true
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "JWEEZY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "CHELSEA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SAM"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "STEVE"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "GARY"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "MICHAEL"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "GARRETT"
-   }
-  ]
- },
  "players": [
   {
    "uid": "SNVBXd3vENOilHwKVR4QIqAEOWT2",
@@ -77,16 +13,16 @@
    "name": "STEVE"
   },
   {
-   "name": "GARY",
-   "uid": "Ej5uModg5daO2M0dBJhqduNoqhi2"
+   "uid": "Ej5uModg5daO2M0dBJhqduNoqhi2",
+   "name": "GARY"
   },
   {
-   "uid": "djwI2SZleWYwvnmNKvDiPWXNcm12",
-   "name": "SAM"
+   "name": "SAM",
+   "uid": "djwI2SZleWYwvnmNKvDiPWXNcm12"
   },
   {
-   "name": "CHELSEA",
-   "uid": "AA7lhvFN7uRyg65h79VQzeHULOI2"
+   "uid": "AA7lhvFN7uRyg65h79VQzeHULOI2",
+   "name": "CHELSEA"
   },
   {
    "uid": "tdCXt58JUEP1sG1fBLvDwc49o4z1",
@@ -104,16 +40,15 @@
  "missions": [
   {
    "failsRequired": 1,
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "GARRETT",
+    "STEVE"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "GARRETT",
-      "STEVE"
-     ],
-     "proposer": "STEVE",
      "votes": [
       "MICHAEL",
       "GARRETT",
@@ -121,24 +56,17 @@
       "SAM",
       "STEVE",
       "GARY"
-     ]
+     ],
+     "proposer": "STEVE",
+     "team": [
+      "GARRETT",
+      "STEVE"
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "state": "SUCCESS",
-   "team": [
-    "GARRETT",
-    "STEVE"
    ]
   },
   {
-   "team": [
-    "GARRETT",
-    "JWEEZY",
-    "SAM"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
    "proposals": [
     {
      "votes": [
@@ -147,49 +75,55 @@
       "GARRETT",
       "JWEEZY"
      ],
-     "state": "APPROVED",
+     "proposer": "GARY",
      "team": [
       "GARRETT",
       "JWEEZY",
       "SAM"
      ],
-     "proposer": "GARY"
+     "state": "APPROVED"
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "GARRETT",
+    "JWEEZY",
+    "SAM"
+   ],
+   "numFails": 1,
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
    "team": [
     "CHELSEA",
     "MICHAEL",
     "JWEEZY"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "GARY",
-      "GARRETT"
-     ],
-     "state": "REJECTED",
      "team": [
       "STEVE",
       "GARRETT",
       "GARY"
      ],
+     "state": "REJECTED",
+     "votes": [
+      "GARY",
+      "GARRETT"
+     ],
      "proposer": "SAM"
     },
     {
-     "state": "APPROVED",
+     "proposer": "CHELSEA",
      "team": [
       "CHELSEA",
       "MICHAEL",
       "JWEEZY"
      ],
-     "proposer": "CHELSEA",
+     "state": "APPROVED",
      "votes": [
       "JWEEZY",
       "CHELSEA",
@@ -199,75 +133,141 @@
       "MICHAEL"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
-   "state": "FAIL",
    "team": [
     "CHELSEA",
     "GARY",
     "SAM",
     "MICHAEL"
    ],
-   "failsRequired": 2,
-   "teamSize": 4,
    "numFails": 2,
+   "teamSize": 4,
    "proposals": [
     {
      "state": "REJECTED",
+     "votes": [
+      "GARRETT",
+      "JWEEZY"
+     ],
+     "proposer": "GARRETT",
      "team": [
       "GARY",
       "STEVE",
       "SAM",
       "MICHAEL"
-     ],
-     "proposer": "GARRETT",
-     "votes": [
-      "GARRETT",
-      "JWEEZY"
      ]
     },
     {
+     "state": "REJECTED",
      "votes": [
       "JWEEZY",
       "GARY",
       "GARRETT"
      ],
-     "state": "REJECTED",
+     "proposer": "JWEEZY",
      "team": [
       "JWEEZY",
       "GARRETT",
       "MICHAEL",
       "CHELSEA"
-     ],
-     "proposer": "JWEEZY"
+     ]
     },
     {
-     "state": "APPROVED",
+     "votes": [
+      "SAM",
+      "GARY",
+      "MICHAEL",
+      "GARRETT",
+      "JWEEZY",
+      "CHELSEA"
+     ],
+     "proposer": "MICHAEL",
      "team": [
       "CHELSEA",
       "GARY",
       "SAM",
       "MICHAEL"
      ],
-     "proposer": "MICHAEL",
-     "votes": [
-      "SAM",
-      "GARY",
-      "MICHAEL",
-      "GARRETT",
-      "JWEEZY",
-      "CHELSEA"
-     ]
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 2,
+   "state": "FAIL"
   },
   {
-   "proposals": [],
    "teamSize": 4,
-   "failsRequired": 1,
    "state": "PENDING",
+   "proposals": [],
+   "failsRequired": 1,
    "team": []
   }
- ]
+ ],
+ "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "roles": [
+   {
+    "name": "JWEEZY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "CHELSEA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "SAM",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "STEVE",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "GARY"
+   },
+   {
+    "name": "MICHAEL",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "GARRETT",
+    "assassin": false,
+    "role": "EVIL MINION"
+   }
+  ],
+  "votes": [
+   {
+    "GARRETT": true,
+    "STEVE": true
+   },
+   {
+    "SAM": true,
+    "GARRETT": false,
+    "JWEEZY": true
+   },
+   {
+    "JWEEZY": true,
+    "MICHAEL": false,
+    "CHELSEA": true
+   },
+   {
+    "MICHAEL": false,
+    "SAM": true,
+    "CHELSEA": true,
+    "GARY": false
+   }
+  ],
+  "message": "Three failed missions"
+ }
 }

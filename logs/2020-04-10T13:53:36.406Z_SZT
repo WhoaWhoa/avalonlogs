@@ -1,4 +1,60 @@
 {
+ "outcome": {
+  "votes": [
+   {
+    "ED": false,
+    "AUBREY": true
+   },
+   {
+    "GRACE": false,
+    "AUBREY": true,
+    "P": true
+   },
+   {
+    "HHH": true,
+    "P": true
+   },
+   {
+    "HHH": true,
+    "P": true,
+    "ED": false
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "roles": [
+   {
+    "name": "GRACE",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "AUBREY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "HHH",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "P"
+   },
+   {
+    "name": "ED",
+    "assassin": true,
+    "role": "EVIL MINION"
+   }
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1586527334,
+  "_nanoseconds": 120815000
+ },
  "players": [
   {
    "name": "AUBREY",
@@ -9,16 +65,16 @@
    "uid": "S52UJKLk3lTuFA93ERPdUgXWNXu2"
   },
   {
-   "name": "P",
-   "uid": "PfQNMfQpc5N6a0dPdHlNAZCYpbI2"
+   "uid": "PfQNMfQpc5N6a0dPdHlNAZCYpbI2",
+   "name": "P"
   },
   {
-   "name": "ED",
-   "uid": "r2d3R720TEf6wpUWKGC1KWcx78R2"
+   "uid": "r2d3R720TEf6wpUWKGC1KWcx78R2",
+   "name": "ED"
   },
   {
-   "name": "GRACE",
-   "uid": "QPhnof2RTrPLnd5FDifij7Y9Pi62"
+   "uid": "QPhnof2RTrPLnd5FDifij7Y9Pi62",
+   "name": "GRACE"
   }
  ],
  "timeCreated": {
@@ -27,16 +83,20 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "state": "FAIL",
+   "team": [
+    "ED",
+    "AUBREY"
+   ],
    "numFails": 1,
+   "teamSize": 2,
    "proposals": [
     {
      "team": [
       "ED",
       "AUBREY"
      ],
-     "proposer": "ED",
+     "state": "APPROVED",
      "votes": [
       "AUBREY",
       "HHH",
@@ -44,62 +104,67 @@
       "ED",
       "GRACE"
      ],
-     "state": "APPROVED"
+     "proposer": "ED"
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "ED",
-    "AUBREY"
-   ]
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "team": [
+    "AUBREY",
+    "GRACE",
+    "P"
+   ],
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "GRACE",
+     "team": [
+      "AUBREY",
+      "GRACE",
+      "P"
+     ],
+     "state": "APPROVED",
      "votes": [
       "ED",
       "GRACE",
       "AUBREY",
       "HHH",
       "P"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "AUBREY",
-      "GRACE",
-      "P"
-     ],
-     "proposer": "GRACE"
+     ]
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "AUBREY",
-    "GRACE",
-    "P"
-   ]
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "P",
+    "HHH"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "AUBREY",
      "team": [
       "AUBREY",
       "HHH"
      ],
-     "proposer": "AUBREY",
+     "state": "REJECTED",
      "votes": [
       "AUBREY",
       "HHH"
      ]
     },
     {
+     "team": [
+      "P",
+      "HHH"
+     ],
+     "state": "APPROVED",
      "votes": [
       "P",
       "ED",
@@ -107,19 +172,10 @@
       "AUBREY",
       "HHH"
      ],
-     "state": "APPROVED",
-     "team": [
-      "P",
-      "HHH"
-     ],
      "proposer": "HHH"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "P",
-    "HHH"
-   ]
+   "failsRequired": 1
   },
   {
    "team": [
@@ -127,9 +183,8 @@
     "HHH",
     "ED"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -137,80 +192,25 @@
       "HHH",
       "ED"
      ],
-     "proposer": "P",
+     "state": "APPROVED",
      "votes": [
       "P",
       "ED",
       "GRACE",
       "AUBREY"
      ],
-     "state": "APPROVED"
+     "proposer": "P"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL"
   },
   {
-   "proposals": [],
-   "teamSize": 3,
-   "failsRequired": 1,
    "state": "PENDING",
-   "team": []
+   "proposals": [],
+   "failsRequired": 1,
+   "team": [],
+   "teamSize": 3
   }
- ],
- "timeFinished": {
-  "_seconds": 1586527334,
-  "_nanoseconds": 120815000
- },
- "outcome": {
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "GRACE"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "AUBREY"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "HHH"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "P"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "ED"
-   }
-  ],
-  "votes": [
-   {
-    "ED": false,
-    "AUBREY": true
-   },
-   {
-    "P": true,
-    "GRACE": false,
-    "AUBREY": true
-   },
-   {
-    "HHH": true,
-    "P": true
-   },
-   {
-    "P": true,
-    "ED": false,
-    "HHH": true
-   }
-  ]
- }
+ ]
 }

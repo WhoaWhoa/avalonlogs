@@ -1,34 +1,8 @@
 {
- "timeFinished": {
-  "_seconds": 1584838179,
-  "_nanoseconds": 443206000
- },
  "outcome": {
-  "votes": [
-   {
-    "MAMMOTHMAN": true,
-    "BUDLITE": true
-   },
-   {
-    "MAMMOTHMAN": true,
-    "SSEJ": false,
-    "SID": true
-   },
-   {
-    "BUDLITE": true,
-    "SSEJ": false,
-    "SID": true,
-    "FNU": true
-   },
-   {
-    "VILGIRL": false,
-    "BUDLITE": true,
-    "SID": true
-   }
-  ],
   "message": "Three failed missions",
-  "assassinated": null,
   "state": "EVIL_WIN",
+  "assassinated": null,
   "roles": [
    {
     "name": "FNU",
@@ -41,9 +15,9 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "VILGIRL",
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "VILGIRL"
+    "role": "EVIL MINION"
    },
    {
     "name": "BUDLITE",
@@ -51,21 +25,47 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "SSEJ",
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "SSEJ"
+    "role": "EVIL MINION"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "SID",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "votes": [
+   {
+    "BUDLITE": true,
+    "MAMMOTHMAN": true
+   },
+   {
+    "SSEJ": false,
+    "SID": true,
+    "MAMMOTHMAN": true
+   },
+   {
+    "SSEJ": false,
+    "FNU": true,
+    "SID": true,
+    "BUDLITE": true
+   },
+   {
+    "BUDLITE": true,
+    "SID": true,
+    "VILGIRL": false
    }
   ]
  },
+ "timeFinished": {
+  "_seconds": 1584838179,
+  "_nanoseconds": 443206000
+ },
  "players": [
   {
-   "name": "BUDLITE",
-   "uid": "e7ljsJSWRCXaRq58zpZFjgGc30m2"
+   "uid": "e7ljsJSWRCXaRq58zpZFjgGc30m2",
+   "name": "BUDLITE"
   },
   {
    "name": "MAMMOTHMAN",
@@ -76,16 +76,16 @@
    "uid": "tUfEtieUStZlLrqfO8C95QRXX2y2"
   },
   {
-   "name": "VILGIRL",
-   "uid": "pf94okvGK8chpe95ZZwaVkXRwVJ2"
+   "uid": "pf94okvGK8chpe95ZZwaVkXRwVJ2",
+   "name": "VILGIRL"
   },
   {
-   "name": "SID",
-   "uid": "jU8vwMyeqENIXydrKD3vz6zwP132"
+   "uid": "jU8vwMyeqENIXydrKD3vz6zwP132",
+   "name": "SID"
   },
   {
-   "name": "FNU",
-   "uid": "22ylQ4iZH0NLlNNynT8CR6TfbFn1"
+   "uid": "22ylQ4iZH0NLlNNynT8CR6TfbFn1",
+   "name": "FNU"
   }
  ],
  "timeCreated": {
@@ -94,30 +94,30 @@
  },
  "missions": [
   {
+   "state": "SUCCESS",
+   "team": [
+    "BUDLITE",
+    "MAMMOTHMAN"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "BUDLITE",
-      "MAMMOTHMAN"
-     ],
-     "proposer": "BUDLITE",
      "votes": [
       "MAMMOTHMAN",
       "BUDLITE",
       "SSEJ",
       "SID"
      ],
+     "proposer": "BUDLITE",
+     "team": [
+      "BUDLITE",
+      "MAMMOTHMAN"
+     ],
      "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "BUDLITE",
-    "MAMMOTHMAN"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2
+   "failsRequired": 1
   },
   {
    "team": [
@@ -125,11 +125,16 @@
     "SID",
     "SSEJ"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "MAMMOTHMAN",
+      "SID",
+      "SSEJ"
+     ],
+     "state": "APPROVED",
      "votes": [
       "BUDLITE",
       "SSEJ",
@@ -137,27 +142,22 @@
       "MAMMOTHMAN",
       "VILGIRL"
      ],
-     "state": "APPROVED",
-     "team": [
-      "MAMMOTHMAN",
-      "SID",
-      "SSEJ"
-     ],
      "proposer": "MAMMOTHMAN"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL"
   },
   {
+   "state": "FAIL",
    "team": [
     "FNU",
     "SSEJ",
     "BUDLITE",
     "SID"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -167,17 +167,17 @@
       "SSEJ",
       "SID"
      ],
-     "state": "APPROVED",
+     "proposer": "SSEJ",
      "team": [
       "FNU",
       "SSEJ",
       "BUDLITE",
       "SID"
      ],
-     "proposer": "SSEJ"
+     "state": "APPROVED"
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
    "state": "FAIL",
@@ -186,48 +186,48 @@
     "BUDLITE",
     "VILGIRL"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "BUDLITE",
+      "SID",
+      "VILGIRL"
+     ],
+     "proposer": "VILGIRL",
      "team": [
       "SID",
       "FNU",
       "BUDLITE"
      ],
-     "proposer": "VILGIRL",
-     "votes": [
-      "BUDLITE",
-      "SID",
-      "VILGIRL"
-     ]
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
      "team": [
       "SID",
       "BUDLITE",
       "VILGIRL"
      ],
-     "proposer": "SID",
+     "state": "APPROVED",
      "votes": [
       "MAMMOTHMAN",
       "VILGIRL",
       "BUDLITE",
       "SID",
       "FNU"
-     ]
+     ],
+     "proposer": "SID"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "teamSize": 4,
-   "failsRequired": 1,
-   "state": "PENDING",
    "team": [],
-   "proposals": []
+   "teamSize": 4,
+   "state": "PENDING",
+   "proposals": [],
+   "failsRequired": 1
   }
  ]
 }

@@ -1,46 +1,22 @@
 {
- "timeFinished": {
-  "_seconds": 1585879384,
-  "_nanoseconds": 237485000
- },
  "outcome": {
-  "votes": [
-   {
-    "KAI": true,
-    "CY": true,
-    "GAMEOVER": true
-   },
-   {
-    "KAI": true,
-    "CY": true,
-    "GAMEOVER": true,
-    "MARCH": true
-   },
-   {
-    "MARCH": true,
-    "KAI": true,
-    "CY": true,
-    "GAMEOVER": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "ALYSON",
   "state": "EVIL_WIN",
+  "assassinated": "ALYSON",
   "roles": [
    {
+    "name": "KAI",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "KAI"
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "CY",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "CY"
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "SEB",
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "SEB"
+    "role": "EVIL MINION"
    },
    {
     "name": "JIMBOTECH",
@@ -48,9 +24,9 @@
     "role": "EVIL MINION"
    },
    {
-    "role": "EVIL MINION",
     "name": "JESSE",
-    "assassin": false
+    "assassin": false,
+    "role": "EVIL MINION"
    },
    {
     "name": "GAMEOVER",
@@ -58,49 +34,73 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MERLIN",
     "name": "ALYSON",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
     "name": "MARCH",
     "assassin": false,
     "role": "LOYAL FOLLOWER"
    }
-  ]
+  ],
+  "votes": [
+   {
+    "CY": true,
+    "GAMEOVER": true,
+    "KAI": true
+   },
+   {
+    "GAMEOVER": true,
+    "MARCH": true,
+    "KAI": true,
+    "CY": true
+   },
+   {
+    "CY": true,
+    "GAMEOVER": true,
+    "MARCH": true,
+    "KAI": true
+   }
+  ],
+  "message": "Merlin assassinated"
+ },
+ "timeFinished": {
+  "_seconds": 1585879384,
+  "_nanoseconds": 237485000
  },
  "players": [
   {
-   "name": "KAI",
-   "uid": "oo4zea3r72QJuoGGAqgxu2RkV4k1"
+   "uid": "oo4zea3r72QJuoGGAqgxu2RkV4k1",
+   "name": "KAI"
   },
   {
-   "name": "SEB",
-   "uid": "rsBkz6A8jUTrZDpm9wNgXPJEJSZ2"
+   "uid": "rsBkz6A8jUTrZDpm9wNgXPJEJSZ2",
+   "name": "SEB"
   },
   {
-   "name": "MARCH",
-   "uid": "zdP8gERmvRQ3iRsj32yLgRnifkA2"
+   "uid": "zdP8gERmvRQ3iRsj32yLgRnifkA2",
+   "name": "MARCH"
   },
   {
-   "name": "ALYSON",
-   "uid": "KGEeovUSZxQy9Ee8SPaCM6lLEls2"
+   "uid": "KGEeovUSZxQy9Ee8SPaCM6lLEls2",
+   "name": "ALYSON"
   },
   {
-   "name": "JIMBOTECH",
-   "uid": "8FdxDiRy0fcAIbPxWTfeIc5WI5E3"
+   "uid": "8FdxDiRy0fcAIbPxWTfeIc5WI5E3",
+   "name": "JIMBOTECH"
   },
   {
-   "name": "JESSE",
-   "uid": "TtQknB1DQweiPJaIon3kZkmy6Os2"
+   "uid": "TtQknB1DQweiPJaIon3kZkmy6Os2",
+   "name": "JESSE"
   },
   {
    "name": "CY",
    "uid": "mGEz3FSlSEVWyar1YQSvJbYkT7T2"
   },
   {
-   "name": "GAMEOVER",
-   "uid": "Mnu8PnZS7SMHjKQ4OUenn3pO0zy1"
+   "uid": "Mnu8PnZS7SMHjKQ4OUenn3pO0zy1",
+   "name": "GAMEOVER"
   }
  ],
  "timeCreated": {
@@ -109,9 +109,6 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -119,7 +116,7 @@
       "GAMEOVER",
       "CY"
      ],
-     "proposer": "KAI",
+     "state": "APPROVED",
      "votes": [
       "SEB",
       "JIMBOTECH",
@@ -127,15 +124,18 @@
       "ALYSON",
       "MARCH"
      ],
-     "state": "APPROVED"
+     "proposer": "KAI"
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "KAI",
     "GAMEOVER",
     "CY"
-   ]
+   ],
+   "numFails": 0,
+   "teamSize": 3
   },
   {
    "state": "SUCCESS",
@@ -145,44 +145,45 @@
     "GAMEOVER",
     "MARCH"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "SEB",
      "team": [
       "KAI",
       "JIMBOTECH",
       "GAMEOVER",
       "SEB"
      ],
-     "proposer": "SEB",
+     "state": "REJECTED",
      "votes": [
       "ALYSON",
       "SEB"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "APPROVED",
+     "votes": [
+      "KAI",
+      "CY",
+      "GAMEOVER",
+      "ALYSON",
+      "MARCH"
+     ],
+     "proposer": "MARCH",
      "team": [
       "KAI",
       "CY",
       "GAMEOVER",
       "MARCH"
      ],
-     "proposer": "MARCH",
-     "votes": [
-      "KAI",
-      "CY",
-      "GAMEOVER",
-      "ALYSON",
-      "MARCH"
-     ]
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "KAI",
@@ -190,60 +191,52 @@
     "GAMEOVER",
     "MARCH"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "KAI",
       "MARCH",
       "ALYSON",
       "CY"
      ],
-     "proposer": "ALYSON",
+     "state": "REJECTED",
      "votes": [
       "KAI",
       "ALYSON"
-     ]
+     ],
+     "proposer": "ALYSON"
     },
     {
      "state": "REJECTED",
+     "votes": [
+      "JIMBOTECH",
+      "JESSE"
+     ],
+     "proposer": "JIMBOTECH",
      "team": [
       "KAI",
       "MARCH",
       "CY",
       "JESSE"
-     ],
-     "proposer": "JIMBOTECH",
-     "votes": [
-      "JIMBOTECH",
-      "JESSE"
      ]
     },
     {
-     "state": "REJECTED",
+     "votes": [
+      "JIMBOTECH",
+      "JESSE"
+     ],
+     "proposer": "JESSE",
      "team": [
       "CY",
       "KAI",
       "JESSE",
       "MARCH"
      ],
-     "proposer": "JESSE",
-     "votes": [
-      "JIMBOTECH",
-      "JESSE"
-     ]
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "KAI",
-      "CY",
-      "GAMEOVER",
-      "MARCH"
-     ],
-     "proposer": "CY",
      "votes": [
       "GAMEOVER",
       "ALYSON",
@@ -251,23 +244,30 @@
       "KAI",
       "CY"
      ],
+     "proposer": "CY",
+     "team": [
+      "KAI",
+      "CY",
+      "GAMEOVER",
+      "MARCH"
+     ],
      "state": "APPROVED"
     }
    ]
   },
   {
-   "team": [],
-   "proposals": [],
-   "teamSize": 5,
    "failsRequired": 2,
-   "state": "PENDING"
+   "team": [],
+   "teamSize": 5,
+   "state": "PENDING",
+   "proposals": []
   },
   {
    "team": [],
-   "proposals": [],
    "teamSize": 5,
-   "failsRequired": 1,
-   "state": "PENDING"
+   "state": "PENDING",
+   "proposals": [],
+   "failsRequired": 1
   }
  ]
 }

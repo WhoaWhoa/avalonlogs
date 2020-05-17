@@ -5,21 +5,15 @@
  },
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "LOC",
     "ERAJ"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "LOC",
-      "ERAJ"
-     ],
-     "proposer": "ERAJ",
+     "state": "APPROVED",
      "votes": [
       "JAS",
       "REIN",
@@ -27,12 +21,25 @@
       "ERAJ",
       "DICK"
      ],
-     "state": "APPROVED"
+     "proposer": "ERAJ",
+     "team": [
+      "LOC",
+      "ERAJ"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
+   "team": [
+    "REIN",
+    "LOC",
+    "DICK"
+   ],
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -40,7 +47,7 @@
       "LOC",
       "DICK"
      ],
-     "proposer": "LOC",
+     "state": "APPROVED",
      "votes": [
       "ERAJ",
       "DICK",
@@ -48,146 +55,110 @@
       "REIN",
       "LOC"
      ],
-     "state": "APPROVED"
+     "proposer": "LOC"
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "REIN",
-    "LOC",
-    "DICK"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0,
-   "proposals": [
-    {
-     "team": [
-      "DICK",
-      "ERAJ"
-     ],
-     "proposer": "DICK",
-     "votes": [
-      "JAS",
-      "REIN",
-      "LOC",
-      "ERAJ",
-      "DICK"
-     ],
-     "state": "APPROVED"
-    }
-   ],
    "state": "SUCCESS",
    "team": [
     "DICK",
     "ERAJ"
-   ]
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
+   ],
+   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "JAS",
-      "ERAJ",
-      "DICK"
-     ],
-     "proposer": "JAS",
      "votes": [
-      "DICK",
       "JAS",
       "REIN",
       "LOC",
+      "ERAJ",
+      "DICK"
+     ],
+     "proposer": "DICK",
+     "team": [
+      "DICK",
       "ERAJ"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1
+  },
+  {
    "state": "FAIL",
    "team": [
     "JAS",
     "ERAJ",
     "DICK"
-   ]
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 3,
+   ],
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "JAS",
+      "ERAJ",
+      "DICK"
+     ],
      "state": "APPROVED",
+     "votes": [
+      "DICK",
+      "JAS",
+      "REIN",
+      "LOC",
+      "ERAJ"
+     ],
+     "proposer": "JAS"
+    }
+   ],
+   "failsRequired": 1
+  },
+  {
+   "proposals": [
+    {
      "team": [
       "REIN",
       "ERAJ",
       "DICK"
      ],
-     "proposer": "REIN",
+     "state": "APPROVED",
      "votes": [
       "ERAJ",
       "DICK",
       "JAS",
       "REIN"
-     ]
+     ],
+     "proposer": "REIN"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "REIN",
     "ERAJ",
     "DICK"
-   ]
+   ],
+   "numFails": 1,
+   "teamSize": 3
   }
  ],
- "timeFinished": {
-  "_seconds": 1586440721,
-  "_nanoseconds": 388111000
- },
  "outcome": {
-  "votes": [
-   {
-    "ERAJ": true,
-    "LOC": true
-   },
-   {
-    "REIN": false,
-    "LOC": true,
-    "DICK": true
-   },
-   {
-    "DICK": true,
-    "ERAJ": true
-   },
-   {
-    "JAS": false,
-    "ERAJ": true,
-    "DICK": true
-   },
-   {
-    "ERAJ": true,
-    "DICK": true,
-    "REIN": false
-   }
-  ],
   "message": "Three failed missions",
-  "assassinated": null,
   "state": "EVIL_WIN",
+  "assassinated": null,
   "roles": [
    {
-    "role": "MORDRED",
     "name": "JAS",
-    "assassin": true
+    "assassin": true,
+    "role": "MORDRED"
    },
    {
+    "name": "REIN",
     "assassin": false,
-    "role": "MORGANA",
-    "name": "REIN"
+    "role": "MORGANA"
    },
    {
     "name": "LOC",
@@ -195,21 +166,50 @@
     "role": "MERLIN"
    },
    {
+    "name": "ERAJ",
     "assassin": false,
-    "role": "PERCIVAL",
-    "name": "ERAJ"
+    "role": "PERCIVAL"
    },
    {
+    "name": "DICK",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "DICK"
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "votes": [
+   {
+    "ERAJ": true,
+    "LOC": true
+   },
+   {
+    "DICK": true,
+    "REIN": false,
+    "LOC": true
+   },
+   {
+    "DICK": true,
+    "ERAJ": true
+   },
+   {
+    "DICK": true,
+    "JAS": false,
+    "ERAJ": true
+   },
+   {
+    "DICK": true,
+    "ERAJ": true,
+    "REIN": false
    }
   ]
  },
+ "timeFinished": {
+  "_seconds": 1586440721,
+  "_nanoseconds": 388111000
+ },
  "players": [
   {
-   "name": "DICK",
-   "uid": "V04CoYy44BSCP1ZuWNXTeNfiUAc2"
+   "uid": "V04CoYy44BSCP1ZuWNXTeNfiUAc2",
+   "name": "DICK"
   },
   {
    "uid": "NG1xmdjlqYV7bnb2ATuiUp4AQB53",
@@ -220,12 +220,12 @@
    "uid": "HOpbFkpeWyTiLmOOfbKzfjUkpLF3"
   },
   {
-   "uid": "57fOUCEiN1Qzb9urObr0vheOHB32",
-   "name": "ERAJ"
+   "name": "ERAJ",
+   "uid": "57fOUCEiN1Qzb9urObr0vheOHB32"
   },
   {
-   "uid": "aDJx4bobm4WBZGlfm1oaTKVwtkw2",
-   "name": "LOC"
+   "name": "LOC",
+   "uid": "aDJx4bobm4WBZGlfm1oaTKVwtkw2"
   }
  ]
 }

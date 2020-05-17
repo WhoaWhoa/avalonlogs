@@ -1,20 +1,24 @@
 {
+ "timeFinished": {
+  "_seconds": 1586757200,
+  "_nanoseconds": 591615000
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1586756123,
+  "_nanoseconds": 810000000
+ },
  "missions": [
   {
-   "team": [
-    "DIVERSE",
-    "FELICIA"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0,
    "proposals": [
     {
      "team": [
       "DIVERSE",
       "FELICIA"
      ],
-     "proposer": "DIVERSE",
+     "state": "APPROVED",
      "votes": [
       "KEVIN",
       "FELICIA",
@@ -22,15 +26,19 @@
       "WILLIAM",
       "NEVIN"
      ],
-     "state": "APPROVED"
+     "proposer": "DIVERSE"
     }
    ],
-   "state": "SUCCESS"
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "DIVERSE",
+    "FELICIA"
+   ],
+   "numFails": 0,
+   "teamSize": 2
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
    "proposals": [
     {
      "team": [
@@ -38,31 +46,34 @@
       "DIVERSE",
       "FELICIA"
      ],
-     "proposer": "WILLIAM",
+     "state": "APPROVED",
      "votes": [
       "KEVIN",
       "FELICIA",
       "DIVERSE",
       "WILLIAM"
      ],
-     "state": "APPROVED"
+     "proposer": "WILLIAM"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "WILLIAM",
     "DIVERSE",
     "FELICIA"
-   ]
+   ],
+   "numFails": 1,
+   "teamSize": 3
   },
   {
+   "state": "SUCCESS",
    "team": [
     "NEVIN",
     "WILLIAM"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
      "votes": [
@@ -71,15 +82,15 @@
       "DIVERSE",
       "WILLIAM"
      ],
-     "state": "APPROVED",
+     "proposer": "NEVIN",
      "team": [
       "NEVIN",
       "WILLIAM"
      ],
-     "proposer": "NEVIN"
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
    "team": [
@@ -87,9 +98,8 @@
     "NEVIN",
     "KEVIN"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -97,15 +107,16 @@
       "KEVIN",
       "FELICIA"
      ],
-     "state": "APPROVED",
+     "proposer": "KEVIN",
      "team": [
       "WILLIAM",
       "NEVIN",
       "KEVIN"
      ],
-     "proposer": "KEVIN"
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL"
   },
   {
@@ -115,22 +126,21 @@
     "WILLIAM",
     "NEVIN"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "FELICIA",
       "NEVIN",
       "DIVERSE"
      ],
-     "proposer": "FELICIA",
+     "state": "REJECTED",
      "votes": [
       "KEVIN",
       "FELICIA"
-     ]
+     ],
+     "proposer": "FELICIA"
     },
     {
      "team": [
@@ -138,58 +148,29 @@
       "WILLIAM",
       "NEVIN"
      ],
-     "proposer": "DIVERSE",
+     "state": "APPROVED",
      "votes": [
       "NEVIN",
       "KEVIN",
       "DIVERSE",
       "WILLIAM"
      ],
-     "state": "APPROVED"
+     "proposer": "DIVERSE"
     }
-   ]
+   ],
+   "failsRequired": 1
   }
  ],
  "outcome": {
-  "message": "Merlin assassinated",
-  "assassinated": "DIVERSE",
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "KEVIN"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "FELICIA"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "DIVERSE"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "WILLIAM",
-    "assassin": false
-   },
-   {
-    "name": "NEVIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
   "votes": [
    {
     "FELICIA": true,
     "DIVERSE": true
    },
    {
+    "WILLIAM": true,
     "FELICIA": false,
-    "DIVERSE": true,
-    "WILLIAM": true
+    "DIVERSE": true
    },
    {
     "WILLIAM": true,
@@ -201,43 +182,62 @@
     "NEVIN": true
    },
    {
-    "DIVERSE": true,
     "WILLIAM": true,
-    "NEVIN": true
+    "NEVIN": true,
+    "DIVERSE": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
+  "assassinated": "DIVERSE",
+  "roles": [
+   {
+    "name": "KEVIN",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "FELICIA",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "DIVERSE"
+   },
+   {
+    "name": "WILLIAM",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "NEVIN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    }
   ]
  },
  "players": [
   {
-   "name": "FELICIA",
-   "uid": "Ieah7NTyyyeGB5xgZ6Ib5ke0ynU2"
+   "uid": "Ieah7NTyyyeGB5xgZ6Ib5ke0ynU2",
+   "name": "FELICIA"
   },
   {
    "uid": "z5cYIDdSiKgkNCtaaFStokEPxbZ2",
    "name": "DIVERSE"
   },
   {
-   "name": "WILLIAM",
-   "uid": "QftW8nLLnxMrPyoIUlfFkN2QrNq1"
+   "uid": "QftW8nLLnxMrPyoIUlfFkN2QrNq1",
+   "name": "WILLIAM"
   },
   {
    "uid": "imN1n6zwnabEtwlUkv5EC46Sbp82",
    "name": "NEVIN"
   },
   {
-   "name": "KEVIN",
-   "uid": "OJTdONshH7Yy5pLOHF7KNT62Ou13"
+   "uid": "OJTdONshH7Yy5pLOHF7KNT62Ou13",
+   "name": "KEVIN"
   }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1586756123,
-  "_nanoseconds": 810000000
- },
- "timeFinished": {
-  "_seconds": 1586757200,
-  "_nanoseconds": 591615000
- }
+ ]
 }

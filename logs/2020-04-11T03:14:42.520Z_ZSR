@@ -1,40 +1,7 @@
 {
- "timeFinished": {
-  "_seconds": 1586575418,
-  "_nanoseconds": 219055000
- },
  "outcome": {
-  "votes": [
-   {
-    "ZSR": true,
-    "COVIDPAT": true
-   },
-   {
-    "KAYLA": true,
-    "ZSR": true,
-    "COVIDPAT": true
-   },
-   {
-    "KAYLA": true,
-    "ZSR": true,
-    "HEATHER": false,
-    "COVIDPAT": true
-   },
-   {
-    "ZSR": true,
-    "TAY": false,
-    "COVIDPAT": true
-   },
-   {
-    "KAYLA": true,
-    "KATIE": true,
-    "ZSR": true,
-    "COVIDPAT": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "KATIE",
   "state": "EVIL_WIN",
+  "assassinated": "KATIE",
   "roles": [
    {
     "name": "ZSR",
@@ -42,14 +9,14 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "EVIL MINION",
     "name": "TAY",
-    "assassin": false
+    "assassin": false,
+    "role": "EVIL MINION"
    },
    {
-    "role": "MERLIN",
     "name": "KATIE",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
     "name": "HEATHER",
@@ -57,16 +24,49 @@
     "role": "EVIL MINION"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "COVIDPAT",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "KAYLA",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "KAYLA"
+    "role": "LOYAL FOLLOWER"
    }
-  ]
+  ],
+  "votes": [
+   {
+    "COVIDPAT": true,
+    "ZSR": true
+   },
+   {
+    "COVIDPAT": true,
+    "ZSR": true,
+    "KAYLA": true
+   },
+   {
+    "HEATHER": false,
+    "COVIDPAT": true,
+    "ZSR": true,
+    "KAYLA": true
+   },
+   {
+    "ZSR": true,
+    "TAY": false,
+    "COVIDPAT": true
+   },
+   {
+    "KATIE": true,
+    "COVIDPAT": true,
+    "ZSR": true,
+    "KAYLA": true
+   }
+  ],
+  "message": "Merlin assassinated"
+ },
+ "timeFinished": {
+  "_seconds": 1586575418,
+  "_nanoseconds": 219055000
  },
  "players": [
   {
@@ -78,20 +78,20 @@
    "name": "KATIE"
   },
   {
-   "uid": "5FMdzyrTo7VSj0wRoMm5IgynvO93",
-   "name": "COVIDPAT"
+   "name": "COVIDPAT",
+   "uid": "5FMdzyrTo7VSj0wRoMm5IgynvO93"
   },
   {
-   "uid": "JlUukJkt3zWgvo6O8uWYdL3yauZ2",
-   "name": "HEATHER"
+   "name": "HEATHER",
+   "uid": "JlUukJkt3zWgvo6O8uWYdL3yauZ2"
   },
   {
    "name": "KAYLA",
    "uid": "sESsh4a9r0SLSCwf0nCH60BvImH2"
   },
   {
-   "name": "ZSR",
-   "uid": "OjsOuEH8gpZtWmUkDsOyNOYGIOa2"
+   "uid": "OjsOuEH8gpZtWmUkDsOyNOYGIOa2",
+   "name": "ZSR"
   }
  ],
  "timeCreated": {
@@ -100,46 +100,54 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "COVIDPAT",
-      "ZSR"
-     ],
-     "proposer": "COVIDPAT",
      "votes": [
       "KATIE",
       "COVIDPAT",
       "KAYLA",
       "ZSR"
-     ]
+     ],
+     "proposer": "COVIDPAT",
+     "team": [
+      "COVIDPAT",
+      "ZSR"
+     ],
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "COVIDPAT",
     "ZSR"
-   ]
+   ],
+   "numFails": 0,
+   "teamSize": 2
   },
   {
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "COVIDPAT",
+    "ZSR",
+    "KAYLA"
+   ],
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "HEATHER",
+      "KAYLA"
+     ],
+     "proposer": "HEATHER",
      "team": [
       "HEATHER",
       "KAYLA",
       "KATIE"
      ],
-     "proposer": "HEATHER",
-     "votes": [
-      "HEATHER",
-      "KAYLA"
-     ]
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -147,7 +155,7 @@
       "ZSR",
       "KAYLA"
      ],
-     "proposer": "KAYLA",
+     "state": "APPROVED",
      "votes": [
       "HEATHER",
       "COVIDPAT",
@@ -155,30 +163,21 @@
       "ZSR",
       "KATIE"
      ],
-     "state": "APPROVED"
+     "proposer": "KAYLA"
     }
-   ],
-   "state": "SUCCESS",
-   "team": [
-    "COVIDPAT",
-    "ZSR",
-    "KAYLA"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3
+   ]
   },
   {
-   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "ZSR",
      "team": [
       "COVIDPAT",
       "KAYLA",
       "HEATHER",
       "ZSR"
      ],
-     "proposer": "ZSR",
+     "state": "APPROVED",
      "votes": [
       "ZSR",
       "TAY",
@@ -187,6 +186,7 @@
      ]
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "COVIDPAT",
@@ -194,11 +194,19 @@
     "HEATHER",
     "ZSR"
    ],
-   "failsRequired": 1,
+   "numFails": 1,
    "teamSize": 4
   },
   {
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "TAY",
+    "COVIDPAT",
+    "ZSR"
+   ],
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -206,24 +214,16 @@
       "COVIDPAT",
       "ZSR"
      ],
-     "proposer": "TAY",
+     "state": "APPROVED",
      "votes": [
       "TAY",
       "COVIDPAT",
       "KAYLA",
       "ZSR"
      ],
-     "state": "APPROVED"
+     "proposer": "TAY"
     }
-   ],
-   "state": "FAIL",
-   "team": [
-    "TAY",
-    "COVIDPAT",
-    "ZSR"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3
+   ]
   },
   {
    "team": [
@@ -232,27 +232,27 @@
     "KAYLA",
     "ZSR"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "KATIE",
-      "COVIDPAT",
-      "KAYLA",
-      "ZSR"
-     ],
-     "proposer": "KATIE",
      "votes": [
       "ZSR",
       "KATIE",
       "COVIDPAT",
       "KAYLA"
      ],
+     "proposer": "KATIE",
+     "team": [
+      "KATIE",
+      "COVIDPAT",
+      "KAYLA",
+      "ZSR"
+     ],
      "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS"
   }
  ]

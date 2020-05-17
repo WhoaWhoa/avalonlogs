@@ -1,16 +1,19 @@
 {
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "team": [
+    "HP",
+    "ANNA"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
      "team": [
       "HP",
       "ANNA"
      ],
-     "proposer": "HP",
+     "state": "APPROVED",
      "votes": [
       "ANNA",
       "HP",
@@ -18,24 +21,21 @@
       "TOM",
       "EM"
      ],
-     "state": "APPROVED"
+     "proposer": "HP"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "HP",
-    "ANNA"
-   ]
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
+   "state": "SUCCESS",
    "team": [
     "HP",
     "TOM",
     "ANNA"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -43,48 +43,48 @@
       "TOM",
       "ANNA"
      ],
-     "proposer": "TOM",
+     "state": "APPROVED",
      "votes": [
       "ANNA",
       "HP",
       "ELEH",
       "TOM"
      ],
-     "state": "APPROVED"
+     "proposer": "TOM"
     }
    ],
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
-   "numFails": 1,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "ANGOOOSE",
-      "EM",
-      "TOM",
-      "HP"
-     ],
-     "proposer": "EM",
-     "votes": [
-      "ANNA",
-      "ELEH",
-      "TOM",
-      "ANGOOOSE",
-      "EM"
-     ]
-    }
-   ],
-   "state": "FAIL",
    "team": [
     "ANGOOOSE",
     "EM",
     "TOM",
     "HP"
    ],
+   "numFails": 1,
+   "teamSize": 4,
+   "proposals": [
+    {
+     "team": [
+      "ANGOOOSE",
+      "EM",
+      "TOM",
+      "HP"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "ANNA",
+      "ELEH",
+      "TOM",
+      "ANGOOOSE",
+      "EM"
+     ],
+     "proposer": "EM"
+    }
+   ],
    "failsRequired": 1,
-   "teamSize": 4
+   "state": "FAIL"
   },
   {
    "team": [
@@ -92,41 +92,41 @@
     "ELEH",
     "ANGOOOSE"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "state": "REJECTED",
-     "team": [
+     "votes": [
       "ANNA",
       "HP",
       "ANGOOOSE"
      ],
      "proposer": "ANNA",
-     "votes": [
+     "team": [
       "ANNA",
       "HP",
       "ANGOOOSE"
      ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "HP",
       "ELEH",
       "ANGOOOSE"
      ],
-     "proposer": "ELEH",
+     "state": "APPROVED",
      "votes": [
       "ELEH",
       "TOM",
       "ANGOOOSE",
       "ANNA",
       "HP"
-     ]
+     ],
+     "proposer": "ELEH"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL"
   },
   {
@@ -136,62 +136,61 @@
     "ANNA",
     "ELEH"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 2,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "HP",
       "ANGOOOSE",
       "ANNA",
       "TOM"
      ],
-     "proposer": "ANGOOOSE",
+     "state": "REJECTED",
      "votes": [
       "ANGOOOSE"
-     ]
+     ],
+     "proposer": "ANGOOOSE"
     },
     {
-     "votes": [
-      "ELEH",
-      "TOM",
-      "ANNA",
-      "HP"
-     ],
-     "state": "APPROVED",
      "team": [
       "HP",
       "TOM",
       "ANNA",
       "ELEH"
      ],
+     "state": "APPROVED",
+     "votes": [
+      "ELEH",
+      "TOM",
+      "ANNA",
+      "HP"
+     ],
      "proposer": "HP"
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL"
   }
  ],
  "outcome": {
-  "message": "Three failed missions",
-  "assassinated": null,
   "state": "EVIL_WIN",
+  "assassinated": null,
   "roles": [
    {
-    "role": "LOYAL FOLLOWER",
-    "name": "ANNA",
-    "assassin": false
-   },
-   {
     "assassin": false,
-    "role": "PERCIVAL",
-    "name": "HP"
+    "role": "LOYAL FOLLOWER",
+    "name": "ANNA"
    },
    {
-    "role": "MORDRED",
+    "name": "HP",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
     "name": "ELEH",
-    "assassin": true
+    "assassin": true,
+    "role": "MORDRED"
    },
    {
     "assassin": false,
@@ -199,44 +198,45 @@
     "name": "TOM"
    },
    {
+    "name": "ANGOOOSE",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ANGOOOSE"
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "EM",
     "assassin": false,
-    "role": "MERLIN",
-    "name": "EM"
+    "role": "MERLIN"
    }
   ],
   "votes": [
    {
+    "HP": true,
+    "ANNA": true
+   },
+   {
+    "TOM": true,
     "ANNA": true,
     "HP": true
    },
    {
-    "ANNA": true,
-    "HP": true,
-    "TOM": true
-   },
-   {
-    "ANGOOOSE": true,
-    "HP": true,
     "EM": true,
+    "HP": true,
+    "ANGOOOSE": true,
     "TOM": false
    },
    {
-    "ANGOOOSE": true,
     "HP": true,
+    "ANGOOOSE": true,
     "ELEH": false
    },
    {
-    "ANNA": true,
-    "HP": true,
     "ELEH": false,
-    "TOM": false
+    "TOM": false,
+    "ANNA": true,
+    "HP": true
    }
-  ]
+  ],
+  "message": "Three failed missions"
  },
  "players": [
   {
@@ -248,31 +248,31 @@
    "uid": "p77jTIdrcKeIntD6HbDl0ZDpiQx2"
   },
   {
-   "name": "EM",
-   "uid": "q7Hc5ZxprocXH4PMYLLm6N1NZWw1"
+   "uid": "q7Hc5ZxprocXH4PMYLLm6N1NZWw1",
+   "name": "EM"
   },
   {
-   "name": "ANNA",
-   "uid": "KwkjBurWakhREmvyWDjRi3d2ti32"
+   "uid": "KwkjBurWakhREmvyWDjRi3d2ti32",
+   "name": "ANNA"
   },
   {
    "uid": "xmr2nY37CEN53IjutRHaQdP1BkY2",
    "name": "ELEH"
   },
   {
-   "name": "ANGOOOSE",
-   "uid": "aHK4G29y7WPRTYwAKQXPhjvoRCr1"
+   "uid": "aHK4G29y7WPRTYwAKQXPhjvoRCr1",
+   "name": "ANGOOOSE"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1586898944,
+  "_nanoseconds": 938783000
+ },
  "options": {
   "inGameLog": false
  },
  "timeCreated": {
   "_seconds": 1586898321,
   "_nanoseconds": 208000000
- },
- "timeFinished": {
-  "_seconds": 1586898944,
-  "_nanoseconds": 938783000
  }
 }

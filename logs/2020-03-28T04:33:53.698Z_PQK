@@ -1,4 +1,65 @@
 {
+ "outcome": {
+  "state": "GOOD_WIN",
+  "assassinated": "SANG",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MORDRED",
+    "name": "PRUDHVI"
+   },
+   {
+    "name": "SANG",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ADI",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "BROTHER",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "NEHA"
+   }
+  ],
+  "votes": [
+   {
+    "PRUDHVI": true,
+    "BROTHER": true
+   },
+   {
+    "PRUDHVI": true,
+    "BROTHER": true,
+    "ADI": true
+   },
+   {
+    "PRUDHVI": false,
+    "SANG": true
+   },
+   {
+    "BROTHER": false,
+    "ADI": true,
+    "PRUDHVI": false
+   },
+   {
+    "SANG": true,
+    "NEHA": true,
+    "ADI": true
+   }
+  ],
+  "message": "Three successful missions"
+ },
+ "timeFinished": {
+  "_seconds": 1585370595,
+  "_nanoseconds": 898193000
+ },
  "players": [
   {
    "name": "ADI",
@@ -27,82 +88,28 @@
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "PRUDHVI",
     "BROTHER"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "BROTHER",
       "PRUDHVI",
       "SANG"
      ],
-     "state": "APPROVED",
+     "proposer": "PRUDHVI",
      "team": [
       "PRUDHVI",
       "BROTHER"
-     ],
-     "proposer": "PRUDHVI"
-    }
-   ],
-   "state": "SUCCESS"
-  },
-  {
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "BROTHER",
-      "PRUDHVI",
-      "ADI"
-     ],
-     "proposer": "ADI",
-     "votes": [
-      "PRUDHVI",
-      "SANG",
-      "ADI",
-      "BROTHER",
-      "NEHA"
      ]
     }
-   ],
-   "state": "SUCCESS",
-   "team": [
-    "BROTHER",
-    "PRUDHVI",
-    "ADI"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 1,
-   "proposals": [
-    {
-     "team": [
-      "SANG",
-      "PRUDHVI"
-     ],
-     "proposer": "SANG",
-     "votes": [
-      "NEHA",
-      "PRUDHVI",
-      "SANG"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "state": "FAIL",
-   "team": [
-    "SANG",
-    "PRUDHVI"
    ]
   },
   {
@@ -111,31 +118,85 @@
     "PRUDHVI",
     "ADI"
    ],
-   "failsRequired": 1,
+   "numFails": 0,
    "teamSize": 3,
-   "numFails": 2,
    "proposals": [
     {
-     "state": "REJECTED",
+     "team": [
+      "BROTHER",
+      "PRUDHVI",
+      "ADI"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "PRUDHVI",
+      "SANG",
+      "ADI",
+      "BROTHER",
+      "NEHA"
+     ],
+     "proposer": "ADI"
+    }
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS"
+  },
+  {
+   "team": [
+    "SANG",
+    "PRUDHVI"
+   ],
+   "numFails": 1,
+   "teamSize": 2,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "NEHA",
+      "PRUDHVI",
+      "SANG"
+     ],
+     "proposer": "SANG",
+     "team": [
+      "SANG",
+      "PRUDHVI"
+     ]
+    }
+   ],
+   "failsRequired": 1,
+   "state": "FAIL"
+  },
+  {
+   "state": "FAIL",
+   "team": [
+    "BROTHER",
+    "PRUDHVI",
+    "ADI"
+   ],
+   "numFails": 2,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "proposer": "NEHA",
      "team": [
       "NEHA",
       "ADI",
       "PRUDHVI"
      ],
-     "proposer": "NEHA",
+     "state": "REJECTED",
      "votes": [
       "NEHA",
       "PRUDHVI"
      ]
     },
     {
-     "state": "APPROVED",
+     "proposer": "BROTHER",
      "team": [
       "BROTHER",
       "PRUDHVI",
       "ADI"
      ],
-     "proposer": "BROTHER",
+     "state": "APPROVED",
      "votes": [
       "BROTHER",
       "PRUDHVI",
@@ -143,107 +204,46 @@
      ]
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
+   "proposals": [
+    {
+     "team": [
+      "BROTHER",
+      "NEHA",
+      "PRUDHVI"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "PRUDHVI"
+     ],
+     "proposer": "PRUDHVI"
+    },
+    {
+     "state": "APPROVED",
+     "votes": [
+      "NEHA",
+      "SANG",
+      "ADI"
+     ],
+     "proposer": "ADI",
+     "team": [
+      "ADI",
+      "SANG",
+      "NEHA"
+     ]
+    }
+   ],
+   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "ADI",
     "SANG",
     "NEHA"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "team": [
-      "BROTHER",
-      "NEHA",
-      "PRUDHVI"
-     ],
-     "proposer": "PRUDHVI",
-     "votes": [
-      "PRUDHVI"
-     ]
-    },
-    {
-     "team": [
-      "ADI",
-      "SANG",
-      "NEHA"
-     ],
-     "proposer": "ADI",
-     "votes": [
-      "NEHA",
-      "SANG",
-      "ADI"
-     ],
-     "state": "APPROVED"
-    }
-   ]
+   "teamSize": 3
   }
- ],
- "timeFinished": {
-  "_seconds": 1585370595,
-  "_nanoseconds": 898193000
- },
- "outcome": {
-  "votes": [
-   {
-    "BROTHER": true,
-    "PRUDHVI": true
-   },
-   {
-    "BROTHER": true,
-    "PRUDHVI": true,
-    "ADI": true
-   },
-   {
-    "PRUDHVI": false,
-    "SANG": true
-   },
-   {
-    "BROTHER": false,
-    "PRUDHVI": false,
-    "ADI": true
-   },
-   {
-    "NEHA": true,
-    "SANG": true,
-    "ADI": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "SANG",
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "role": "MORDRED",
-    "name": "PRUDHVI",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "SANG",
-    "assassin": false
-   },
-   {
-    "name": "ADI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "BROTHER",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "MERLIN",
-    "name": "NEHA",
-    "assassin": false
-   }
-  ]
- }
+ ]
 }

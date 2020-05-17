@@ -1,8 +1,4 @@
 {
- "timeFinished": {
-  "_seconds": 1585099016,
-  "_nanoseconds": 681731000
- },
  "outcome": {
   "votes": [
    {
@@ -10,35 +6,35 @@
     "JOE": true
    },
    {
+    "JOE": false,
     "NOELIA": true,
-    "NAS": true,
-    "JOE": false
+    "NAS": true
    },
    {
-    "PABLORI": true,
     "JOE": false,
+    "PABLORI": true,
     "IDO": false,
     "STEVE": true
    },
    {
-    "IDO": false,
     "PABLORI": true,
+    "IDO": false,
     "NAS": true
    }
   ],
   "message": "Three failed missions",
-  "assassinated": null,
   "state": "EVIL_WIN",
+  "assassinated": null,
   "roles": [
    {
+    "name": "STEVE",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "STEVE"
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "NOELIA",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "NOELIA"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "NAS",
@@ -46,21 +42,25 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "PABLORI",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "JOE",
-    "assassin": false
-   },
-   {
     "assassin": false,
-    "role": "EVIL MINION",
-    "name": "IDO"
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JOE",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "IDO",
+    "assassin": false,
+    "role": "EVIL MINION"
    }
   ]
+ },
+ "timeFinished": {
+  "_seconds": 1585099016,
+  "_nanoseconds": 681731000
  },
  "players": [
   {
@@ -76,16 +76,16 @@
    "name": "STEVE"
   },
   {
-   "name": "IDO",
-   "uid": "xktobEw95VdYv7fAUX53tMzb0Ku1"
+   "uid": "xktobEw95VdYv7fAUX53tMzb0Ku1",
+   "name": "IDO"
   },
   {
-   "name": "JOE",
-   "uid": "N1YRFmbhpdXZfnWqoW39tAskQcI2"
+   "uid": "N1YRFmbhpdXZfnWqoW39tAskQcI2",
+   "name": "JOE"
   },
   {
-   "name": "NOELIA",
-   "uid": "o0dtbxry0OevmL3AsMPPGKHrodJ3"
+   "uid": "o0dtbxry0OevmL3AsMPPGKHrodJ3",
+   "name": "NOELIA"
   }
  ],
  "timeCreated": {
@@ -94,15 +94,14 @@
  },
  "missions": [
   {
+   "team": [
+    "NOELIA",
+    "JOE"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "NOELIA",
-      "JOE"
-     ],
-     "proposer": "NOELIA",
      "votes": [
       "NOELIA",
       "NAS",
@@ -110,28 +109,35 @@
       "JOE",
       "IDO",
       "STEVE"
-     ]
+     ],
+     "proposer": "NOELIA",
+     "team": [
+      "NOELIA",
+      "JOE"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "NOELIA",
-    "JOE"
-   ],
    "failsRequired": 1,
-   "teamSize": 2
+   "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
    "team": [
     "NAS",
     "JOE",
     "NOELIA"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "NAS",
+      "JOE",
+      "NOELIA"
+     ],
+     "state": "APPROVED",
      "votes": [
       "NOELIA",
       "NAS",
@@ -139,61 +145,59 @@
       "IDO",
       "STEVE"
      ],
-     "state": "APPROVED",
-     "team": [
-      "NAS",
-      "JOE",
-      "NOELIA"
-     ],
      "proposer": "NAS"
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 2,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "PABLORI",
-      "STEVE",
-      "IDO",
-      "JOE"
-     ],
-     "proposer": "PABLORI",
-     "votes": [
-      "NOELIA",
-      "NAS",
-      "PABLORI",
-      "JOE",
-      "IDO"
-     ]
-    }
-   ],
    "state": "FAIL",
    "team": [
     "PABLORI",
     "STEVE",
     "IDO",
     "JOE"
-   ]
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
+   ],
+   "numFails": 2,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
+     "team": [
+      "PABLORI",
+      "STEVE",
+      "IDO",
+      "JOE"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "NOELIA",
+      "NAS",
+      "PABLORI",
+      "JOE",
+      "IDO"
+     ],
+     "proposer": "PABLORI"
+    }
+   ],
+   "failsRequired": 1
+  },
+  {
+   "team": [
+    "IDO",
+    "PABLORI",
+    "NAS"
+   ],
+   "numFails": 1,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "proposer": "STEVE",
      "team": [
       "NAS",
       "STEVE",
       "IDO"
      ],
-     "proposer": "STEVE",
+     "state": "REJECTED",
      "votes": [
       "JOE",
       "IDO",
@@ -201,33 +205,29 @@
      ]
     },
     {
-     "team": [
-      "IDO",
-      "PABLORI",
-      "NAS"
-     ],
-     "proposer": "IDO",
+     "state": "APPROVED",
      "votes": [
       "JOE",
       "IDO",
       "NOELIA",
       "PABLORI"
      ],
-     "state": "APPROVED"
+     "proposer": "IDO",
+     "team": [
+      "IDO",
+      "PABLORI",
+      "NAS"
+     ]
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "IDO",
-    "PABLORI",
-    "NAS"
-   ]
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
-   "team": [],
    "proposals": [],
-   "teamSize": 4,
    "failsRequired": 1,
+   "team": [],
+   "teamSize": 4,
    "state": "PENDING"
   }
  ]

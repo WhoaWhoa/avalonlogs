@@ -1,4 +1,81 @@
 {
+ "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MARCH"
+   },
+   {
+    "name": "KAI",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "CY"
+   },
+   {
+    "name": "SEB",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "JIMBOTECH",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JESSE",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "GAMEOVER",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ALYSON",
+    "assassin": false,
+    "role": "EVIL MINION"
+   }
+  ],
+  "votes": [
+   {
+    "CY": true,
+    "JESSE": false,
+    "ALYSON": true
+   },
+   {
+    "GAMEOVER": true,
+    "JESSE": true,
+    "SEB": true,
+    "CY": true
+   },
+   {
+    "JIMBOTECH": true,
+    "JESSE": false,
+    "MARCH": true,
+    "KAI": true
+   },
+   {
+    "CY": true,
+    "JESSE": false,
+    "GAMEOVER": true,
+    "MARCH": true,
+    "SEB": false
+   }
+  ],
+  "message": "Three failed missions"
+ },
+ "timeFinished": {
+  "_seconds": 1585878695,
+  "_nanoseconds": 844013000
+ },
  "players": [
   {
    "name": "KAI",
@@ -9,20 +86,20 @@
    "uid": "rsBkz6A8jUTrZDpm9wNgXPJEJSZ2"
   },
   {
-   "name": "MARCH",
-   "uid": "zdP8gERmvRQ3iRsj32yLgRnifkA2"
+   "uid": "zdP8gERmvRQ3iRsj32yLgRnifkA2",
+   "name": "MARCH"
   },
   {
-   "name": "ALYSON",
-   "uid": "KGEeovUSZxQy9Ee8SPaCM6lLEls2"
+   "uid": "KGEeovUSZxQy9Ee8SPaCM6lLEls2",
+   "name": "ALYSON"
   },
   {
-   "uid": "8FdxDiRy0fcAIbPxWTfeIc5WI5E3",
-   "name": "JIMBOTECH"
+   "name": "JIMBOTECH",
+   "uid": "8FdxDiRy0fcAIbPxWTfeIc5WI5E3"
   },
   {
-   "uid": "TtQknB1DQweiPJaIon3kZkmy6Os2",
-   "name": "JESSE"
+   "name": "JESSE",
+   "uid": "TtQknB1DQweiPJaIon3kZkmy6Os2"
   },
   {
    "name": "CY",
@@ -39,17 +116,17 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "state": "FAIL",
+   "team": [
+    "ALYSON",
+    "JESSE",
+    "CY"
+   ],
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "ALYSON",
-      "JESSE",
-      "CY"
-     ],
-     "proposer": "GAMEOVER",
+     "state": "APPROVED",
      "votes": [
       "JIMBOTECH",
       "JESSE",
@@ -57,35 +134,34 @@
       "ALYSON",
       "MARCH"
      ],
-     "state": "APPROVED"
+     "proposer": "GAMEOVER",
+     "team": [
+      "ALYSON",
+      "JESSE",
+      "CY"
+     ]
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "ALYSON",
-    "JESSE",
-    "CY"
-   ]
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
      "state": "REJECTED",
-     "team": [
-      "KAI",
-      "MARCH",
-      "JIMBOTECH",
-      "SEB"
-     ],
-     "proposer": "KAI",
      "votes": [
       "JIMBOTECH",
       "JESSE",
       "ALYSON",
       "MARCH"
+     ],
+     "proposer": "KAI",
+     "team": [
+      "KAI",
+      "MARCH",
+      "JIMBOTECH",
+      "SEB"
      ]
     },
     {
@@ -95,7 +171,7 @@
       "SEB",
       "CY"
      ],
-     "proposer": "SEB",
+     "state": "APPROVED",
      "votes": [
       "JIMBOTECH",
       "JESSE",
@@ -104,9 +180,10 @@
       "MARCH",
       "SEB"
      ],
-     "state": "APPROVED"
+     "proposer": "SEB"
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "JESSE",
@@ -116,90 +193,52 @@
    ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 1,
-   "proposals": [
-    {
-     "team": [
-      "GAMEOVER",
-      "CY",
-      "JESSE",
-      "SEB"
-     ],
-     "proposer": "MARCH",
-     "votes": [
-      "ALYSON",
-      "MARCH",
-      "JIMBOTECH"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "votes": [
-      "JIMBOTECH",
-      "JESSE",
-      "GAMEOVER",
-      "ALYSON",
-      "MARCH"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "KAI",
-      "JESSE",
-      "JIMBOTECH",
-      "MARCH"
-     ],
-     "proposer": "ALYSON"
-    }
-   ],
-   "state": "FAIL",
    "team": [
     "KAI",
     "JESSE",
     "JIMBOTECH",
     "MARCH"
-   ]
-  },
-  {
-   "numFails": 2,
+   ],
+   "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "ALYSON",
+      "MARCH",
+      "JIMBOTECH"
+     ],
+     "proposer": "MARCH",
      "team": [
-      "JIMBOTECH",
-      "JESSE",
+      "GAMEOVER",
       "CY",
-      "KAI",
+      "JESSE",
       "SEB"
      ],
-     "proposer": "JIMBOTECH",
-     "votes": [
-      "ALYSON",
-      "SEB",
-      "JIMBOTECH",
-      "JESSE"
-     ]
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
      "team": [
+      "KAI",
       "JESSE",
-      "SEB",
-      "MARCH",
-      "GAMEOVER",
-      "CY"
+      "JIMBOTECH",
+      "MARCH"
      ],
-     "proposer": "JESSE",
+     "state": "APPROVED",
      "votes": [
+      "JIMBOTECH",
       "JESSE",
+      "GAMEOVER",
       "ALYSON",
-      "MARCH",
-      "SEB",
-      "JIMBOTECH"
-     ]
+      "MARCH"
+     ],
+     "proposer": "ALYSON"
     }
    ],
+   "failsRequired": 1,
+   "state": "FAIL"
+  },
+  {
    "state": "FAIL",
    "team": [
     "JESSE",
@@ -208,92 +247,53 @@
     "GAMEOVER",
     "CY"
    ],
-   "failsRequired": 2,
-   "teamSize": 5
+   "numFails": 2,
+   "teamSize": 5,
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "votes": [
+      "ALYSON",
+      "SEB",
+      "JIMBOTECH",
+      "JESSE"
+     ],
+     "proposer": "JIMBOTECH",
+     "team": [
+      "JIMBOTECH",
+      "JESSE",
+      "CY",
+      "KAI",
+      "SEB"
+     ]
+    },
+    {
+     "team": [
+      "JESSE",
+      "SEB",
+      "MARCH",
+      "GAMEOVER",
+      "CY"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "JESSE",
+      "ALYSON",
+      "MARCH",
+      "SEB",
+      "JIMBOTECH"
+     ],
+     "proposer": "JESSE"
+    }
+   ],
+   "failsRequired": 2
   },
   {
-   "team": [],
    "proposals": [],
-   "teamSize": 5,
    "failsRequired": 1,
+   "team": [],
+   "teamSize": 5,
    "state": "PENDING"
   }
- ],
- "timeFinished": {
-  "_seconds": 1585878695,
-  "_nanoseconds": 844013000
- },
- "outcome": {
-  "votes": [
-   {
-    "JESSE": false,
-    "CY": true,
-    "ALYSON": true
-   },
-   {
-    "JESSE": true,
-    "CY": true,
-    "GAMEOVER": true,
-    "SEB": true
-   },
-   {
-    "KAI": true,
-    "JESSE": false,
-    "MARCH": true,
-    "JIMBOTECH": true
-   },
-   {
-    "JESSE": false,
-    "CY": true,
-    "GAMEOVER": true,
-    "SEB": false,
-    "MARCH": true
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "MARCH",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "KAI"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "CY"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "SEB",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JIMBOTECH"
-   },
-   {
-    "name": "JESSE",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "GAMEOVER"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "ALYSON"
-   }
-  ]
- }
+ ]
 }

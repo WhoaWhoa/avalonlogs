@@ -5,17 +5,21 @@
  },
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "INGO",
     "MARKUS",
     "CHRISTOPH"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "INGO",
+      "MARKUS",
+      "CHRISTOPH"
+     ],
+     "state": "APPROVED",
      "votes": [
       "STEFAN",
       "INGO",
@@ -26,37 +30,16 @@
       "NICK",
       "CHRISTOPH"
      ],
-     "state": "APPROVED",
-     "team": [
-      "INGO",
-      "MARKUS",
-      "CHRISTOPH"
-     ],
      "proposer": "PATRICK"
     }
-   ]
-  },
-  {
-   "state": "FAIL",
-   "team": [
-    "STEFAN",
-    "NICK",
-    "FLO",
-    "PATRICK"
    ],
    "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 1,
+   "state": "SUCCESS"
+  },
+  {
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "STEFAN",
-      "NICK",
-      "FLO",
-      "PATRICK"
-     ],
-     "proposer": "FLO",
      "votes": [
       "INGO",
       "FLO",
@@ -66,29 +49,53 @@
       "NICK",
       "CHRISTOPH",
       "STEFAN"
+     ],
+     "proposer": "FLO",
+     "team": [
+      "STEFAN",
+      "NICK",
+      "FLO",
+      "PATRICK"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "STEFAN",
+    "NICK",
+    "FLO",
+    "PATRICK"
+   ],
+   "numFails": 1,
+   "teamSize": 4
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
+   "state": "SUCCESS",
+   "team": [
+    "PATRICK",
+    "MARKUS",
+    "INGO",
+    "CHRISTOPH"
+   ],
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "STEFAN",
       "NICK",
       "FLO",
       "MARKUS"
      ],
-     "proposer": "MALTE",
+     "state": "REJECTED",
      "votes": [
       "MALTE"
-     ]
+     ],
+     "proposer": "MALTE"
     },
     {
+     "state": "APPROVED",
      "votes": [
       "MARKUS",
       "NICK",
@@ -99,23 +106,16 @@
       "MALTE",
       "PATRICK"
      ],
-     "state": "APPROVED",
+     "proposer": "MARKUS",
      "team": [
       "PATRICK",
       "MARKUS",
       "INGO",
       "CHRISTOPH"
-     ],
-     "proposer": "MARKUS"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "PATRICK",
-    "MARKUS",
-    "INGO",
-    "CHRISTOPH"
-   ]
+   "failsRequired": 1
   },
   {
    "team": [
@@ -125,12 +125,10 @@
     "INGO",
     "NICK"
    ],
-   "failsRequired": 2,
-   "teamSize": 5,
    "numFails": 0,
+   "teamSize": 5,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "CHRISTOPH",
       "PATRICK",
@@ -138,7 +136,7 @@
       "INGO",
       "NICK"
      ],
-     "proposer": "NICK",
+     "state": "APPROVED",
      "votes": [
       "MALTE",
       "PATRICK",
@@ -147,124 +145,126 @@
       "CHRISTOPH",
       "INGO",
       "FLO"
-     ]
+     ],
+     "proposer": "NICK"
     }
    ],
+   "failsRequired": 2,
    "state": "SUCCESS"
   },
   {
    "team": [],
-   "proposals": [],
    "teamSize": 5,
-   "failsRequired": 1,
-   "state": "PENDING"
+   "state": "PENDING",
+   "proposals": [],
+   "failsRequired": 1
   }
  ],
- "timeFinished": {
-  "_seconds": 1586643921,
-  "_nanoseconds": 311711000
- },
  "outcome": {
+  "votes": [
+   {
+    "INGO": true,
+    "MARKUS": true,
+    "CHRISTOPH": true
+   },
+   {
+    "PATRICK": true,
+    "FLO": false,
+    "NICK": true,
+    "STEFAN": true
+   },
+   {
+    "MARKUS": true,
+    "CHRISTOPH": true,
+    "PATRICK": true,
+    "INGO": true
+   },
+   {
+    "INGO": true,
+    "NICK": true,
+    "MARKUS": true,
+    "CHRISTOPH": true,
+    "PATRICK": true
+   }
+  ],
   "message": "Three successful missions",
-  "assassinated": "CHRISTOPH",
   "state": "GOOD_WIN",
+  "assassinated": "CHRISTOPH",
   "roles": [
    {
-    "role": "MORGANA",
     "name": "MALTE",
-    "assassin": false
+    "assassin": false,
+    "role": "MORGANA"
    },
    {
-    "role": "PERCIVAL",
     "name": "PATRICK",
-    "assassin": false
-   },
-   {
     "assassin": false,
-    "role": "MERLIN",
-    "name": "MARKUS"
+    "role": "PERCIVAL"
    },
    {
+    "name": "MARKUS",
     "assassin": false,
-    "role": "OBERON",
-    "name": "NICK"
+    "role": "MERLIN"
    },
    {
-    "role": "LOYAL FOLLOWER",
-    "name": "CHRISTOPH",
-    "assassin": false
+    "name": "NICK",
+    "assassin": false,
+    "role": "OBERON"
    },
    {
     "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "STEFAN"
+    "name": "CHRISTOPH"
    },
    {
-    "name": "INGO",
+    "name": "STEFAN",
     "assassin": false,
     "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "INGO"
    },
    {
     "name": "FLO",
     "assassin": true,
     "role": "MORDRED"
    }
-  ],
-  "votes": [
-   {
-    "MARKUS": true,
-    "CHRISTOPH": true,
-    "INGO": true
-   },
-   {
-    "PATRICK": true,
-    "NICK": true,
-    "STEFAN": true,
-    "FLO": false
-   },
-   {
-    "CHRISTOPH": true,
-    "INGO": true,
-    "PATRICK": true,
-    "MARKUS": true
-   },
-   {
-    "PATRICK": true,
-    "MARKUS": true,
-    "NICK": true,
-    "CHRISTOPH": true,
-    "INGO": true
-   }
   ]
+ },
+ "timeFinished": {
+  "_seconds": 1586643921,
+  "_nanoseconds": 311711000
  },
  "players": [
   {
-   "name": "CHRISTOPH",
-   "uid": "Tzfj8KypC2NvafKDnRgrbYdDtk42"
+   "uid": "Tzfj8KypC2NvafKDnRgrbYdDtk42",
+   "name": "CHRISTOPH"
   },
   {
    "uid": "PYYzqvbAyGeFXfpEIFus8sRMaWP2",
    "name": "PATRICK"
   },
   {
-   "name": "FLO",
-   "uid": "mE50n7MxHZMc2vLpFB0D8hY8bTD3"
+   "uid": "mE50n7MxHZMc2vLpFB0D8hY8bTD3",
+   "name": "FLO"
   },
   {
-   "name": "MALTE",
-   "uid": "1CdXWvea3SgisHfcWq2mpkOhQwE3"
+   "uid": "1CdXWvea3SgisHfcWq2mpkOhQwE3",
+   "name": "MALTE"
   },
   {
-   "name": "MARKUS",
-   "uid": "mRt3Q8chi3VkwBRXnqGZqf8l0gj2"
+   "uid": "mRt3Q8chi3VkwBRXnqGZqf8l0gj2",
+   "name": "MARKUS"
   },
   {
-   "name": "NICK",
-   "uid": "ll5oFF9hc8dAFIbkDAPDKoR7fil2"
+   "uid": "ll5oFF9hc8dAFIbkDAPDKoR7fil2",
+   "name": "NICK"
   },
   {
-   "uid": "vVd0Puuj52doSnLo6hThDUAAKLz1",
-   "name": "STEFAN"
+   "name": "STEFAN",
+   "uid": "vVd0Puuj52doSnLo6hThDUAAKLz1"
   },
   {
    "uid": "ACKpLvD5HMNJPjbaoVuC4C7gdNA2",

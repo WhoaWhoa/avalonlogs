@@ -1,25 +1,22 @@
 {
- "timeFinished": {
-  "_seconds": 1586436467,
-  "_nanoseconds": 496479000
- },
  "outcome": {
   "state": "GOOD_WIN",
+  "assassinated": "JINGLES",
   "roles": [
    {
+    "assassin": true,
     "role": "EVIL MINION",
-    "name": "FAV",
-    "assassin": true
+    "name": "FAV"
    },
    {
+    "name": "KIM",
     "assassin": false,
-    "role": "EVIL MINION",
-    "name": "KIM"
+    "role": "EVIL MINION"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "BRICK",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "JINGLES",
@@ -27,46 +24,49 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "assassin": false,
     "role": "MERLIN",
-    "name": "VENICE",
-    "assassin": false
+    "name": "VENICE"
    },
    {
+    "name": "VETO",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "VETO"
+    "role": "LOYAL FOLLOWER"
    }
   ],
   "votes": [
    {
-    "FAV": true,
+    "VETO": true,
+    "FAV": true
+   },
+   {
+    "FAV": false,
+    "JINGLES": true,
+    "VENICE": true
+   },
+   {
+    "VETO": true,
+    "FAV": false,
+    "KIM": false,
+    "BRICK": true
+   },
+   {
+    "JINGLES": true,
+    "BRICK": true,
     "VETO": true
    },
    {
     "JINGLES": true,
     "VENICE": true,
-    "FAV": false
-   },
-   {
-    "FAV": false,
-    "VETO": true,
-    "KIM": false,
-    "BRICK": true
-   },
-   {
-    "VETO": true,
-    "JINGLES": true,
-    "BRICK": true
-   },
-   {
-    "VENICE": true,
-    "VETO": true,
-    "JINGLES": true,
-    "BRICK": true
+    "BRICK": true,
+    "VETO": true
    }
   ],
-  "message": "Three successful missions",
-  "assassinated": "JINGLES"
+  "message": "Three successful missions"
+ },
+ "timeFinished": {
+  "_seconds": 1586436467,
+  "_nanoseconds": 496479000
  },
  "players": [
   {
@@ -78,12 +78,12 @@
    "uid": "FX5ZFGWaoONTjIHhGTgMEvgjeGq1"
   },
   {
-   "name": "VETO",
-   "uid": "EB07BNXSbIeTWCK8MT2eHL3a0Tc2"
+   "uid": "EB07BNXSbIeTWCK8MT2eHL3a0Tc2",
+   "name": "VETO"
   },
   {
-   "name": "FAV",
-   "uid": "2vvZiTiCTqTKeBLKXocdOJ71Jrx2"
+   "uid": "2vvZiTiCTqTKeBLKXocdOJ71Jrx2",
+   "name": "FAV"
   },
   {
    "name": "VENICE",
@@ -100,37 +100,41 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "FAV",
+      "VETO"
+     ],
+     "state": "APPROVED",
      "votes": [
       "FAV",
       "KIM",
       "BRICK",
       "JINGLES",
       "VENICE",
-      "VETO"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "FAV",
       "VETO"
      ],
      "proposer": "FAV"
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "FAV",
     "VETO"
-   ]
+   ],
+   "numFails": 0,
+   "teamSize": 2
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "team": [
+    "VENICE",
+    "FAV",
+    "JINGLES"
+   ],
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -141,115 +145,78 @@
       "VENICE",
       "VETO"
      ],
-     "state": "APPROVED",
+     "proposer": "VENICE",
      "team": [
       "VENICE",
       "FAV",
       "JINGLES"
      ],
-     "proposer": "VENICE"
+     "state": "APPROVED"
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "VENICE",
-    "FAV",
-    "JINGLES"
-   ]
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
+   "team": [
+    "BRICK",
+    "FAV",
+    "VETO",
+    "KIM"
+   ],
    "numFails": 2,
+   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "BRICK",
-      "FAV",
-      "VETO",
-      "KIM"
-     ],
-     "proposer": "BRICK",
+     "state": "APPROVED",
      "votes": [
       "BRICK",
       "JINGLES",
       "VETO",
       "FAV"
      ],
-     "state": "APPROVED"
-    }
-   ],
-   "state": "FAIL",
-   "team": [
-    "BRICK",
-    "FAV",
-    "VETO",
-    "KIM"
-   ]
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
-   "proposals": [
-    {
-     "state": "APPROVED",
+     "proposer": "BRICK",
      "team": [
-      "JINGLES",
       "BRICK",
-      "VETO"
-     ],
-     "proposer": "JINGLES",
-     "votes": [
-      "KIM",
-      "JINGLES",
-      "BRICK",
-      "VENICE",
-      "VETO"
+      "FAV",
+      "VETO",
+      "KIM"
      ]
     }
    ],
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "state": "FAIL"
+  },
+  {
    "team": [
     "JINGLES",
     "BRICK",
     "VETO"
-   ]
-  },
-  {
+   ],
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "JINGLES",
-      "FAV",
-      "KIM",
-      "BRICK"
+      "BRICK",
+      "VETO"
      ],
-     "proposer": "KIM",
-     "votes": [
-      "FAV",
-      "KIM"
-     ]
-    },
-    {
      "state": "APPROVED",
-     "team": [
-      "JINGLES",
-      "BRICK",
-      "VETO",
-      "VENICE"
-     ],
-     "proposer": "VETO",
      "votes": [
       "KIM",
-      "BRICK",
       "JINGLES",
+      "BRICK",
       "VENICE",
       "VETO"
-     ]
+     ],
+     "proposer": "JINGLES"
     }
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS"
+  },
+  {
    "state": "SUCCESS",
    "team": [
     "JINGLES",
@@ -257,9 +224,42 @@
     "VETO",
     "VENICE"
    ],
-   "failsRequired": 1,
+   "numFails": 0,
    "teamSize": 4,
-   "numFails": 0
+   "proposals": [
+    {
+     "votes": [
+      "FAV",
+      "KIM"
+     ],
+     "proposer": "KIM",
+     "team": [
+      "JINGLES",
+      "FAV",
+      "KIM",
+      "BRICK"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "state": "APPROVED",
+     "votes": [
+      "KIM",
+      "BRICK",
+      "JINGLES",
+      "VENICE",
+      "VETO"
+     ],
+     "proposer": "VETO",
+     "team": [
+      "JINGLES",
+      "BRICK",
+      "VETO",
+      "VENICE"
+     ]
+    }
+   ],
+   "failsRequired": 1
   }
  ]
 }

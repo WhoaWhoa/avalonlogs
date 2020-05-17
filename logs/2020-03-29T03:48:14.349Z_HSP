@@ -3,83 +3,26 @@
   "_seconds": 1585454415,
   "_nanoseconds": 900360000
  },
- "outcome": {
-  "votes": [
-   {
-    "DENNIS": true,
-    "MAXWELL": true
-   },
-   {
-    "MAXWELL": true,
-    "FRANK": true,
-    "DENNIS": true
-   },
-   {
-    "BILLY": false,
-    "MAXWELL": true
-   },
-   {
-    "MAXWELL": true,
-    "FRANK": false,
-    "MARLENA": true
-   },
-   {
-    "DENNIS": true,
-    "MAXWELL": true,
-    "MARLENA": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "DENNIS",
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "MARLENA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "MERLIN",
-    "name": "DENNIS",
-    "assassin": false
-   },
-   {
-    "role": "MORGANA",
-    "name": "BILLY",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "MAXWELL",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "FRANK"
-   }
-  ]
- },
  "players": [
   {
-   "name": "MAXWELL",
-   "uid": "0byXDGR8cCYA6HivK6cA3Kbox5X2"
+   "uid": "0byXDGR8cCYA6HivK6cA3Kbox5X2",
+   "name": "MAXWELL"
   },
   {
-   "name": "MARLENA",
-   "uid": "zQAUJVBblbMmOKRpbvkV5EW4zT22"
+   "uid": "zQAUJVBblbMmOKRpbvkV5EW4zT22",
+   "name": "MARLENA"
   },
   {
-   "name": "DENNIS",
-   "uid": "BHB7oL1kiEeVaSdWmwho6xffhvh1"
+   "uid": "BHB7oL1kiEeVaSdWmwho6xffhvh1",
+   "name": "DENNIS"
   },
   {
-   "uid": "dT418gaLXfdivgm7AnPmq1VWO7g1",
-   "name": "FRANK"
+   "name": "FRANK",
+   "uid": "dT418gaLXfdivgm7AnPmq1VWO7g1"
   },
   {
-   "uid": "MdkkBi0cThPNFOpTUy93vfAGCRE2",
-   "name": "BILLY"
+   "name": "BILLY",
+   "uid": "MdkkBi0cThPNFOpTUy93vfAGCRE2"
   }
  ],
  "timeCreated": {
@@ -88,14 +31,12 @@
  },
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "DENNIS",
     "MAXWELL"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
      "votes": [
@@ -104,28 +45,35 @@
       "MARLENA",
       "DENNIS"
      ],
-     "state": "APPROVED",
+     "proposer": "DENNIS",
      "team": [
       "DENNIS",
       "MAXWELL"
      ],
-     "proposer": "DENNIS"
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "state": "SUCCESS",
+   "team": [
+    "MAXWELL",
+    "DENNIS",
+    "FRANK"
+   ],
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "FRANK",
      "team": [
       "MAXWELL",
       "DENNIS",
       "FRANK"
      ],
-     "proposer": "FRANK",
+     "state": "APPROVED",
      "votes": [
       "DENNIS",
       "BILLY",
@@ -135,29 +83,22 @@
      ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "MAXWELL",
-    "DENNIS",
-    "FRANK"
-   ]
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
    "team": [
     "MAXWELL",
     "BILLY"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 1,
+   "teamSize": 2,
    "proposals": [
     {
      "team": [
       "MAXWELL",
       "BILLY"
      ],
-     "proposer": "BILLY",
+     "state": "APPROVED",
      "votes": [
       "MAXWELL",
       "FRANK",
@@ -165,64 +106,123 @@
       "DENNIS",
       "BILLY"
      ],
-     "state": "APPROVED"
-    }
-   ]
-  },
-  {
-   "proposals": [
-    {
-     "team": [
-      "MAXWELL",
-      "FRANK",
-      "MARLENA"
-     ],
-     "proposer": "MAXWELL",
-     "votes": [
-      "FRANK",
-      "MARLENA",
-      "BILLY",
-      "MAXWELL"
-     ],
-     "state": "APPROVED"
+     "proposer": "BILLY"
     }
    ],
+   "failsRequired": 1,
+   "state": "FAIL"
+  },
+  {
    "state": "FAIL",
    "team": [
     "MAXWELL",
     "FRANK",
     "MARLENA"
    ],
-   "failsRequired": 1,
+   "numFails": 1,
    "teamSize": 3,
-   "numFails": 1
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "DENNIS",
-      "MAXWELL",
-      "MARLENA"
-     ],
-     "proposer": "MARLENA",
      "votes": [
-      "DENNIS",
+      "FRANK",
+      "MARLENA",
+      "BILLY",
+      "MAXWELL"
+     ],
+     "proposer": "MAXWELL",
+     "team": [
       "MAXWELL",
+      "FRANK",
       "MARLENA"
      ]
     }
    ],
+   "failsRequired": 1
+  },
+  {
    "state": "SUCCESS",
    "team": [
     "DENNIS",
     "MAXWELL",
     "MARLENA"
-   ]
+   ],
+   "numFails": 0,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "votes": [
+      "DENNIS",
+      "MAXWELL",
+      "MARLENA"
+     ],
+     "proposer": "MARLENA",
+     "team": [
+      "DENNIS",
+      "MAXWELL",
+      "MARLENA"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "failsRequired": 1
   }
- ]
+ ],
+ "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": "DENNIS",
+  "roles": [
+   {
+    "name": "MARLENA",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "DENNIS",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "BILLY",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "MAXWELL",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "FRANK",
+    "assassin": true,
+    "role": "EVIL MINION"
+   }
+  ],
+  "votes": [
+   {
+    "MAXWELL": true,
+    "DENNIS": true
+   },
+   {
+    "MAXWELL": true,
+    "DENNIS": true,
+    "FRANK": true
+   },
+   {
+    "MAXWELL": true,
+    "BILLY": false
+   },
+   {
+    "FRANK": false,
+    "MARLENA": true,
+    "MAXWELL": true
+   },
+   {
+    "DENNIS": true,
+    "MARLENA": true,
+    "MAXWELL": true
+   }
+  ],
+  "message": "Merlin assassinated"
+ }
 }

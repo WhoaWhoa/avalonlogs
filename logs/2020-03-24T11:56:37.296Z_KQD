@@ -6,15 +6,20 @@
  "missions": [
   {
    "failsRequired": 1,
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "ALEULER",
+    "VMVV"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
      "team": [
       "ALEULER",
       "VMVV"
      ],
-     "proposer": "ALEULER",
+     "state": "APPROVED",
      "votes": [
       "ZHERTASH",
       "VMVV",
@@ -24,85 +29,79 @@
       "ALEULER",
       "POGS"
      ],
-     "state": "APPROVED"
+     "proposer": "ALEULER"
     }
-   ],
-   "state": "SUCCESS",
-   "team": [
-    "ALEULER",
-    "VMVV"
    ]
   },
   {
-   "state": "SUCCESS",
    "team": [
     "VMVV",
     "TON",
     "PRIME"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "VMVV",
       "TON",
       "PRIME"
      ],
-     "proposer": "PRIME",
-     "votes": [
-      "JEROME",
-      "PRIME",
-      "TON",
-      "ZHERTASH"
-     ]
-    }
-   ]
-  },
-  {
-   "proposals": [
-    {
-     "votes": [
-      "JEROME",
-      "TON",
-      "PRIME",
-      "POGS",
-      "ZHERTASH"
-     ],
      "state": "APPROVED",
-     "team": [
+     "votes": [
       "JEROME",
-      "POGS",
-      "TON"
+      "PRIME",
+      "TON",
+      "ZHERTASH"
      ],
-     "proposer": "JEROME"
+     "proposer": "PRIME"
     }
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS"
+  },
+  {
    "state": "FAIL",
    "team": [
     "JEROME",
     "POGS",
     "TON"
    ],
-   "failsRequired": 1,
+   "numFails": 1,
    "teamSize": 3,
-   "numFails": 1
+   "proposals": [
+    {
+     "votes": [
+      "JEROME",
+      "TON",
+      "PRIME",
+      "POGS",
+      "ZHERTASH"
+     ],
+     "proposer": "JEROME",
+     "team": [
+      "JEROME",
+      "POGS",
+      "TON"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
    "team": [
     "PRIME",
     "VMVV",
     "TON",
     "ALEULER"
    ],
-   "failsRequired": 2,
-   "teamSize": 4,
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "ALEULER",
       "POGS",
@@ -110,41 +109,62 @@
       "PRIME",
       "TON"
      ],
-     "state": "APPROVED",
+     "proposer": "POGS",
      "team": [
       "PRIME",
       "VMVV",
       "TON",
       "ALEULER"
-     ],
-     "proposer": "POGS"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 2,
+   "state": "SUCCESS"
   },
   {
-   "proposals": [],
-   "teamSize": 4,
    "failsRequired": 1,
+   "team": [],
+   "teamSize": 4,
    "state": "PENDING",
-   "team": []
+   "proposals": []
   }
  ],
- "timeFinished": {
-  "_seconds": 1585051812,
-  "_nanoseconds": 185821000
- },
  "outcome": {
-  "state": "GOOD_WIN",
-  "roles": [
+  "votes": [
    {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "VMVV"
+    "ALEULER": true,
+    "VMVV": true
    },
    {
-    "name": "JEROME",
+    "TON": true,
+    "VMVV": true,
+    "PRIME": true
+   },
+   {
+    "JEROME": true,
+    "POGS": false,
+    "TON": true
+   },
+   {
+    "PRIME": true,
+    "TON": true,
+    "ALEULER": true,
+    "VMVV": false
+   }
+  ],
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "assassinated": "ALEULER",
+  "roles": [
+   {
+    "name": "VMVV",
     "assassin": false,
-    "role": "MERLIN"
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "JEROME"
    },
    {
     "name": "TON",
@@ -157,74 +177,54 @@
     "name": "PRIME"
    },
    {
+    "name": "ALEULER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ALEULER"
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MORGANA",
     "name": "POGS",
-    "assassin": false
-   },
-   {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ZHERTASH"
+    "role": "MORGANA"
+   },
+   {
+    "name": "ZHERTASH",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    }
-  ],
-  "votes": [
-   {
-    "VMVV": true,
-    "ALEULER": true
-   },
-   {
-    "PRIME": true,
-    "TON": true,
-    "VMVV": true
-   },
-   {
-    "POGS": false,
-    "JEROME": true,
-    "TON": true
-   },
-   {
-    "VMVV": false,
-    "ALEULER": true,
-    "PRIME": true,
-    "TON": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "ALEULER"
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1585051812,
+  "_nanoseconds": 185821000
  },
  "players": [
   {
-   "uid": "wPmrrg8nF7ZezeUXp60AR1VTXa93",
-   "name": "ALEULER"
+   "name": "ALEULER",
+   "uid": "wPmrrg8nF7ZezeUXp60AR1VTXa93"
   },
   {
-   "name": "PRIME",
-   "uid": "izmxCevjJ8U4El6b8BXvlF8hE9k1"
+   "uid": "izmxCevjJ8U4El6b8BXvlF8hE9k1",
+   "name": "PRIME"
   },
   {
-   "name": "JEROME",
-   "uid": "UanUUHdngnS5wS24i4j9X7fDNIh1"
+   "uid": "UanUUHdngnS5wS24i4j9X7fDNIh1",
+   "name": "JEROME"
   },
   {
-   "name": "POGS",
-   "uid": "J5qmdKkmu7awVrn8LRL36ZEevEo1"
+   "uid": "J5qmdKkmu7awVrn8LRL36ZEevEo1",
+   "name": "POGS"
   },
   {
-   "name": "TON",
-   "uid": "FcsT0njDsZQOaD0sMHhSJZjFSgp1"
+   "uid": "FcsT0njDsZQOaD0sMHhSJZjFSgp1",
+   "name": "TON"
   },
   {
-   "name": "VMVV",
-   "uid": "WJA0WlHnlGWzF6zB4oSkDUsM3wB2"
+   "uid": "WJA0WlHnlGWzF6zB4oSkDUsM3wB2",
+   "name": "VMVV"
   },
   {
-   "name": "ZHERTASH",
-   "uid": "rGjisckNrfdbn00Ax7OGk7JS6Yw2"
+   "uid": "rGjisckNrfdbn00Ax7OGk7JS6Yw2",
+   "name": "ZHERTASH"
   }
  ]
 }

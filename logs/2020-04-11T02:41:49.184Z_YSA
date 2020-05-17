@@ -1,32 +1,50 @@
 {
- "timeFinished": {
-  "_seconds": 1586573238,
-  "_nanoseconds": 873807000
- },
  "outcome": {
+  "votes": [
+   {
+    "JACK": true,
+    "TARA": true
+   },
+   {
+    "JACK": true,
+    "ALI": true,
+    "SARAH": true
+   },
+   {
+    "ALI": true,
+    "SARAH": true,
+    "TOM": false,
+    "JACK": true
+   },
+   {
+    "SARAH": true,
+    "JACK": true,
+    "TARA": true
+   }
+  ],
   "message": "Merlin assassinated",
-  "assassinated": "SARAH",
   "state": "EVIL_WIN",
+  "assassinated": "SARAH",
   "roles": [
    {
+    "assassin": false,
     "role": "MORGANA",
-    "name": "SHAL",
-    "assassin": false
+    "name": "SHAL"
    },
    {
+    "name": "TOM",
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "TOM"
+    "role": "EVIL MINION"
    },
    {
-    "role": "MERLIN",
     "name": "SARAH",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "TARA",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "ALI",
@@ -38,29 +56,11 @@
     "assassin": false,
     "role": "PERCIVAL"
    }
-  ],
-  "votes": [
-   {
-    "JACK": true,
-    "TARA": true
-   },
-   {
-    "SARAH": true,
-    "JACK": true,
-    "ALI": true
-   },
-   {
-    "TOM": false,
-    "SARAH": true,
-    "JACK": true,
-    "ALI": true
-   },
-   {
-    "SARAH": true,
-    "JACK": true,
-    "TARA": true
-   }
   ]
+ },
+ "timeFinished": {
+  "_seconds": 1586573238,
+  "_nanoseconds": 873807000
  },
  "players": [
   {
@@ -68,8 +68,8 @@
    "uid": "DBmJbVJuI3gk5sq6JN0gM9aMNUX2"
   },
   {
-   "name": "SARAH",
-   "uid": "Sm6NsXXQGAgOlvNailJabw4sbvE2"
+   "uid": "Sm6NsXXQGAgOlvNailJabw4sbvE2",
+   "name": "SARAH"
   },
   {
    "uid": "PtnYZP937Yaj3BRoOoEibJKvmNq1",
@@ -80,12 +80,12 @@
    "uid": "NIAmvvfK4pNNBRZTyluXo7elAnh2"
   },
   {
-   "name": "JACK",
-   "uid": "Yc8SPVfUNcXHAbYoCC1bjj9yQTA2"
+   "uid": "Yc8SPVfUNcXHAbYoCC1bjj9yQTA2",
+   "name": "JACK"
   },
   {
-   "name": "ALI",
-   "uid": "V4YW5XjlPFg1Pj87mv5zDhwWJEO2"
+   "uid": "V4YW5XjlPFg1Pj87mv5zDhwWJEO2",
+   "name": "ALI"
   }
  ],
  "timeCreated": {
@@ -94,15 +94,19 @@
  },
  "missions": [
   {
+   "team": [
+    "JACK",
+    "TARA"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "JACK",
       "TARA"
      ],
-     "proposer": "JACK",
+     "state": "APPROVED",
      "votes": [
       "TARA",
       "ALI",
@@ -110,16 +114,12 @@
       "SHAL",
       "TOM",
       "SARAH"
-     ]
+     ],
+     "proposer": "JACK"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "JACK",
-    "TARA"
-   ],
    "failsRequired": 1,
-   "teamSize": 2
+   "state": "SUCCESS"
   },
   {
    "team": [
@@ -127,17 +127,10 @@
     "JACK",
     "SARAH"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "ALI",
-      "JACK",
-      "SARAH"
-     ],
-     "proposer": "ALI",
      "votes": [
       "SARAH",
       "ALI",
@@ -145,31 +138,19 @@
       "SHAL",
       "TOM"
      ],
+     "proposer": "ALI",
+     "team": [
+      "ALI",
+      "JACK",
+      "SARAH"
+     ],
      "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS"
   },
   {
-   "numFails": 1,
-   "proposals": [
-    {
-     "votes": [
-      "SHAL",
-      "TOM",
-      "ALI",
-      "JACK"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "TOM",
-      "SARAH",
-      "ALI",
-      "JACK"
-     ],
-     "proposer": "TOM"
-    }
-   ],
    "state": "FAIL",
    "team": [
     "TOM",
@@ -177,21 +158,37 @@
     "ALI",
     "JACK"
    ],
-   "failsRequired": 1,
-   "teamSize": 4
-  },
-  {
-   "state": "SUCCESS",
-   "team": [
-    "SARAH",
-    "TARA",
-    "JACK"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
+   "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
+     "votes": [
+      "SHAL",
+      "TOM",
+      "ALI",
+      "JACK"
+     ],
+     "proposer": "TOM",
+     "team": [
+      "TOM",
+      "SARAH",
+      "ALI",
+      "JACK"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "failsRequired": 1
+  },
+  {
+   "proposals": [
+    {
+     "team": [
+      "SARAH",
+      "TARA",
+      "JACK"
+     ],
+     "state": "APPROVED",
      "votes": [
       "TARA",
       "ALI",
@@ -199,22 +196,25 @@
       "SHAL",
       "SARAH"
      ],
-     "state": "APPROVED",
-     "team": [
-      "SARAH",
-      "TARA",
-      "JACK"
-     ],
      "proposer": "SARAH"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "SARAH",
+    "TARA",
+    "JACK"
+   ],
+   "numFails": 0,
+   "teamSize": 3
   },
   {
-   "teamSize": 4,
-   "failsRequired": 1,
-   "state": "PENDING",
    "team": [],
-   "proposals": []
+   "teamSize": 4,
+   "state": "PENDING",
+   "proposals": [],
+   "failsRequired": 1
   }
  ]
 }

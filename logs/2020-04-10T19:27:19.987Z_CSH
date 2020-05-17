@@ -1,28 +1,91 @@
 {
+ "outcome": {
+  "roles": [
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "IVAN"
+   },
+   {
+    "name": "OLESIA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ELENA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "DIMARO",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "IMAFF",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ALEX",
+    "assassin": false,
+    "role": "EVIL MINION"
+   }
+  ],
+  "votes": [
+   {
+    "OLESIA": true,
+    "ALEX": false
+   },
+   {
+    "DIMARO": true,
+    "IVAN": true,
+    "IMAFF": true
+   },
+   {
+    "IVAN": false,
+    "IMAFF": true,
+    "ELENA": true,
+    "DIMARO": true
+   },
+   {
+    "DIMARO": true,
+    "IVAN": false,
+    "IMAFF": true
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "assassinated": null
+ },
+ "timeFinished": {
+  "_seconds": 1586547061,
+  "_nanoseconds": 168335000
+ },
  "players": [
   {
-   "name": "IMAFF",
-   "uid": "iRt1pgFfT1cusxhGqwmFxgxFMjD2"
+   "uid": "iRt1pgFfT1cusxhGqwmFxgxFMjD2",
+   "name": "IMAFF"
   },
   {
-   "name": "IVAN",
-   "uid": "Ep0SzZgPv8MNM5Zs7wxKOSpOfqS2"
+   "uid": "Ep0SzZgPv8MNM5Zs7wxKOSpOfqS2",
+   "name": "IVAN"
   },
   {
-   "uid": "cvzyLysqSJOYELcrWJMy3rnQrDT2",
-   "name": "DIMARO"
+   "name": "DIMARO",
+   "uid": "cvzyLysqSJOYELcrWJMy3rnQrDT2"
   },
   {
-   "uid": "tG6AJtC4cHhOc1dvIIBdsPLTlpo2",
-   "name": "ELENA"
+   "name": "ELENA",
+   "uid": "tG6AJtC4cHhOc1dvIIBdsPLTlpo2"
   },
   {
    "name": "OLESIA",
    "uid": "Da8ks9CwTghNuduCUDN4eyPY57m2"
   },
   {
-   "name": "ALEX",
-   "uid": "a1WccF5BG3ckRDB8uT4Sdnuz7Kb2"
+   "uid": "a1WccF5BG3ckRDB8uT4Sdnuz7Kb2",
+   "name": "ALEX"
   }
  ],
  "timeCreated": {
@@ -31,30 +94,30 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
+   "state": "FAIL",
+   "team": [
+    "ALEX",
+    "OLESIA"
+   ],
    "numFails": 1,
+   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "ALEX",
-      "OLESIA"
-     ],
-     "proposer": "ALEX",
      "votes": [
       "ALEX",
       "IVAN",
       "OLESIA",
       "ELENA"
+     ],
+     "proposer": "ALEX",
+     "team": [
+      "ALEX",
+      "OLESIA"
      ]
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "ALEX",
-    "OLESIA"
-   ]
+   "failsRequired": 1
   },
   {
    "team": [
@@ -62,18 +125,11 @@
     "DIMARO",
     "IVAN"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "IMAFF",
-      "DIMARO",
-      "IVAN"
-     ],
-     "proposer": "IMAFF",
      "votes": [
       "DIMARO",
       "IMAFF",
@@ -81,9 +137,16 @@
       "IVAN",
       "OLESIA",
       "ELENA"
+     ],
+     "proposer": "IMAFF",
+     "team": [
+      "IMAFF",
+      "DIMARO",
+      "IVAN"
      ]
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS"
   },
   {
@@ -94,19 +157,11 @@
     "DIMARO",
     "ELENA"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "IMAFF",
-      "IVAN",
-      "DIMARO",
-      "ELENA"
-     ],
-     "proposer": "IVAN",
      "votes": [
       "ALEX",
       "IVAN",
@@ -114,19 +169,19 @@
       "ELENA",
       "DIMARO",
       "IMAFF"
+     ],
+     "proposer": "IVAN",
+     "team": [
+      "IMAFF",
+      "IVAN",
+      "DIMARO",
+      "ELENA"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "team": [
-    "IMAFF",
-    "IVAN",
-    "DIMARO"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
    "proposals": [
     {
      "team": [
@@ -134,87 +189,32 @@
       "IVAN",
       "DIMARO"
      ],
-     "proposer": "DIMARO",
+     "state": "APPROVED",
      "votes": [
       "DIMARO",
       "IMAFF",
       "IVAN",
       "OLESIA"
      ],
-     "state": "APPROVED"
+     "proposer": "DIMARO"
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "IMAFF",
+    "IVAN",
+    "DIMARO"
+   ],
+   "numFails": 1,
+   "teamSize": 3
   },
   {
-   "teamSize": 4,
-   "failsRequired": 1,
    "state": "PENDING",
+   "proposals": [],
+   "failsRequired": 1,
    "team": [],
-   "proposals": []
+   "teamSize": 4
   }
- ],
- "timeFinished": {
-  "_seconds": 1586547061,
-  "_nanoseconds": 168335000
- },
- "outcome": {
-  "votes": [
-   {
-    "ALEX": false,
-    "OLESIA": true
-   },
-   {
-    "IVAN": true,
-    "IMAFF": true,
-    "DIMARO": true
-   },
-   {
-    "IVAN": false,
-    "IMAFF": true,
-    "DIMARO": true,
-    "ELENA": true
-   },
-   {
-    "IVAN": false,
-    "IMAFF": true,
-    "DIMARO": true
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "name": "IVAN",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "OLESIA",
-    "assassin": false
-   },
-   {
-    "name": "ELENA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "DIMARO"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "IMAFF"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "ALEX",
-    "assassin": false
-   }
-  ]
- }
+ ]
 }

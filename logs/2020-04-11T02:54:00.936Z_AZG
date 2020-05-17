@@ -1,4 +1,65 @@
 {
+ "outcome": {
+  "state": "GOOD_WIN",
+  "assassinated": "PHIL",
+  "roles": [
+   {
+    "name": "ERIC",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "BECKY",
+    "assassin": false,
+    "role": "OBERON"
+   },
+   {
+    "name": "MCMURRAY",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "JEN",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "PHIL",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "votes": [
+   {
+    "ERIC": true,
+    "JEN": true
+   },
+   {
+    "JEN": false,
+    "MCMURRAY": true,
+    "PHIL": true
+   },
+   {
+    "JEN": false,
+    "ERIC": true
+   },
+   {
+    "ERIC": true,
+    "MCMURRAY": true,
+    "PHIL": true
+   },
+   {
+    "PHIL": true,
+    "ERIC": true,
+    "MCMURRAY": true
+   }
+  ],
+  "message": "Three successful missions"
+ },
+ "timeFinished": {
+  "_seconds": 1586574114,
+  "_nanoseconds": 76239000
+ },
  "players": [
   {
    "name": "MCMURRAY",
@@ -13,12 +74,12 @@
    "uid": "ZW0ekY1ChrggcLyV7vIT4jIzqDK2"
   },
   {
-   "name": "JEN",
-   "uid": "Lo4LPXdpt4bXK6ct1LHpof4mjMy2"
+   "uid": "Lo4LPXdpt4bXK6ct1LHpof4mjMy2",
+   "name": "JEN"
   },
   {
-   "name": "ERIC",
-   "uid": "AaRnndDTQdS6R22YluoLtMFNFDw2"
+   "uid": "AaRnndDTQdS6R22YluoLtMFNFDw2",
+   "name": "ERIC"
   }
  ],
  "timeCreated": {
@@ -27,71 +88,71 @@
  },
  "missions": [
   {
+   "state": "SUCCESS",
+   "team": [
+    "ERIC",
+    "JEN"
+   ],
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "ERIC",
       "JEN"
      ],
-     "proposer": "ERIC",
+     "state": "APPROVED",
      "votes": [
       "ERIC",
       "BECKY",
       "MCMURRAY",
       "JEN",
       "PHIL"
-     ]
+     ],
+     "proposer": "ERIC"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "ERIC",
-    "JEN"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
    "team": [
     "PHIL",
     "MCMURRAY",
     "JEN"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "ERIC",
-      "PHIL",
-      "MCMURRAY"
-     ],
-     "proposer": "MCMURRAY",
+     "state": "REJECTED",
      "votes": [
       "MCMURRAY",
       "PHIL"
      ],
-     "state": "REJECTED"
+     "proposer": "MCMURRAY",
+     "team": [
+      "ERIC",
+      "PHIL",
+      "MCMURRAY"
+     ]
     },
     {
-     "team": [
-      "PHIL",
-      "MCMURRAY",
-      "JEN"
-     ],
-     "proposer": "PHIL",
+     "state": "APPROVED",
      "votes": [
       "MCMURRAY",
       "JEN",
       "PHIL"
      ],
-     "state": "APPROVED"
+     "proposer": "PHIL",
+     "team": [
+      "PHIL",
+      "MCMURRAY",
+      "JEN"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
    "state": "FAIL",
@@ -99,151 +160,90 @@
     "ERIC",
     "JEN"
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 1,
+   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "ERIC",
-      "JEN"
-     ],
-     "proposer": "BECKY",
      "votes": [
       "ERIC",
       "BECKY",
       "JEN"
-     ]
-    }
-   ]
-  },
-  {
-   "numFails": 0,
-   "proposals": [
-    {
-     "team": [
-      "JEN",
-      "PHIL",
-      "MCMURRAY"
      ],
-     "proposer": "JEN",
-     "votes": [
-      "JEN"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "state": "APPROVED",
+     "proposer": "BECKY",
      "team": [
       "ERIC",
-      "PHIL",
-      "MCMURRAY"
-     ],
-     "proposer": "ERIC",
-     "votes": [
-      "ERIC",
-      "MCMURRAY",
       "JEN"
      ]
     }
    ],
-   "state": "SUCCESS",
+   "failsRequired": 1
+  },
+  {
    "team": [
     "ERIC",
     "PHIL",
     "MCMURRAY"
    ],
-   "failsRequired": 1,
-   "teamSize": 3
-  },
-  {
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
-      "MCMURRAY",
+      "JEN",
       "PHIL",
-      "ERIC"
+      "MCMURRAY"
      ],
-     "proposer": "MCMURRAY",
+     "state": "REJECTED",
+     "votes": [
+      "JEN"
+     ],
+     "proposer": "JEN"
+    },
+    {
+     "proposer": "ERIC",
+     "team": [
+      "ERIC",
+      "PHIL",
+      "MCMURRAY"
+     ],
+     "state": "APPROVED",
      "votes": [
       "ERIC",
       "MCMURRAY",
-      "PHIL"
-     ],
-     "state": "APPROVED"
+      "JEN"
+     ]
     }
    ],
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "state": "SUCCESS"
+  },
+  {
    "team": [
     "MCMURRAY",
     "PHIL",
     "ERIC"
    ],
-   "failsRequired": 1,
+   "numFails": 0,
    "teamSize": 3,
-   "numFails": 0
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "ERIC",
+      "MCMURRAY",
+      "PHIL"
+     ],
+     "proposer": "MCMURRAY",
+     "team": [
+      "MCMURRAY",
+      "PHIL",
+      "ERIC"
+     ]
+    }
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS"
   }
- ],
- "timeFinished": {
-  "_seconds": 1586574114,
-  "_nanoseconds": 76239000
- },
- "outcome": {
-  "message": "Three successful missions",
-  "assassinated": "PHIL",
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "name": "ERIC",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "OBERON",
-    "name": "BECKY",
-    "assassin": false
-   },
-   {
-    "name": "MCMURRAY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "JEN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "PHIL",
-    "assassin": false
-   }
-  ],
-  "votes": [
-   {
-    "JEN": true,
-    "ERIC": true
-   },
-   {
-    "MCMURRAY": true,
-    "JEN": false,
-    "PHIL": true
-   },
-   {
-    "JEN": false,
-    "ERIC": true
-   },
-   {
-    "MCMURRAY": true,
-    "PHIL": true,
-    "ERIC": true
-   },
-   {
-    "MCMURRAY": true,
-    "PHIL": true,
-    "ERIC": true
-   }
-  ]
- }
+ ]
 }
