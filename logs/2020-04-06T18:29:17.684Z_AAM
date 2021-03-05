@@ -1,16 +1,46 @@
 {
+ "players": [
+  {
+   "uid": "B5B2aTKfkzY5qHEApaW9SElNVzu2",
+   "name": "ANDREAS"
+  },
+  {
+   "name": "XRISTOS",
+   "uid": "MO1l4uBVTwg7VNjdHBHJLFhPLIq2"
+  },
+  {
+   "uid": "7ppnR3ChMBhSTgN8cb0CS8H0zM02",
+   "name": "SEVASTI"
+  },
+  {
+   "name": "TILEMACHOS",
+   "uid": "4U1RjnYW6uMCdApvdu1BtdvzkNH3"
+  },
+  {
+   "uid": "93XqeWbCjoNMseX3eK74yCOhXdA2",
+   "name": "KATERINA"
+  },
+  {
+   "name": "MINAS",
+   "uid": "vQFBMIaJ1YY9tlV1k9YSM4QxQR83"
+  },
+  {
+   "name": "SAVVOS",
+   "uid": "3crLlOM5r9YDpclGP3vDecpLiV22"
+  }
+ ],
  "missions": [
   {
+   "failsRequired": 1,
+   "teamSize": 2,
    "state": "SUCCESS",
    "team": [
     "TILEMACHOS",
     "SAVVOS"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "TILEMACHOS",
      "votes": [
       "SEVASTI",
       "TILEMACHOS",
@@ -18,28 +48,33 @@
       "SAVVOS",
       "KATERINA"
      ],
-     "proposer": "TILEMACHOS",
      "team": [
       "TILEMACHOS",
       "SAVVOS"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "numFails": 0
   },
   {
    "failsRequired": 1,
+   "teamSize": 3,
    "state": "SUCCESS",
    "team": [
     "SAVVOS",
     "KATERINA",
     "TILEMACHOS"
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "SAVVOS",
+      "KATERINA",
+      "TILEMACHOS"
+     ],
+     "proposer": "KATERINA",
      "votes": [
       "MINAS",
       "XRISTOS",
@@ -48,19 +83,12 @@
       "KATERINA",
       "SEVASTI",
       "TILEMACHOS"
-     ],
-     "proposer": "KATERINA",
-     "team": [
-      "SAVVOS",
-      "KATERINA",
-      "TILEMACHOS"
      ]
     }
-   ]
+   ],
+   "numFails": 0
   },
   {
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -68,28 +96,37 @@
       "TILEMACHOS",
       "MINAS"
      ],
-     "state": "APPROVED",
      "votes": [
       "SEVASTI",
       "TILEMACHOS",
       "MINAS",
       "SAVVOS"
      ],
+     "state": "APPROVED",
      "proposer": "MINAS"
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "SAVVOS",
     "TILEMACHOS",
     "MINAS"
-   ]
+   ],
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3
   },
   {
+   "state": "SUCCESS",
+   "team": [
+    "KATERINA",
+    "SAVVOS",
+    "XRISTOS",
+    "ANDREAS"
+   ],
+   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "SAVVOS",
       "KATERINA",
@@ -102,47 +139,63 @@
       "SAVVOS",
       "XRISTOS",
       "ANDREAS"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 2,
-   "state": "SUCCESS",
-   "team": [
-    "KATERINA",
-    "SAVVOS",
-    "XRISTOS",
-    "ANDREAS"
-   ],
-   "numFails": 1,
    "teamSize": 4
   },
   {
-   "teamSize": 4,
-   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1,
-   "team": []
+   "state": "PENDING",
+   "teamSize": 4,
+   "team": [],
+   "failsRequired": 1
   }
  ],
+ "timeCreated": {
+  "_seconds": 1586197757,
+  "_nanoseconds": 684000000
+ },
  "outcome": {
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "MINAS",
+  "votes": [
+   {
+    "TILEMACHOS": true,
+    "SAVVOS": true
+   },
+   {
+    "SAVVOS": true,
+    "KATERINA": true,
+    "TILEMACHOS": true
+   },
+   {
+    "SAVVOS": false,
+    "MINAS": true,
+    "TILEMACHOS": true
+   },
+   {
+    "XRISTOS": true,
+    "KATERINA": true,
+    "ANDREAS": true,
+    "SAVVOS": false
+   }
+  ],
   "roles": [
    {
     "name": "SEVASTI",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "TILEMACHOS",
-    "assassin": false,
-    "role": "OBERON"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
     "assassin": false,
+    "role": "OBERON",
+    "name": "TILEMACHOS"
+   },
+   {
+    "name": "MINAS",
     "role": "PERCIVAL",
-    "name": "MINAS"
+    "assassin": false
    },
    {
     "name": "XRISTOS",
@@ -151,13 +204,13 @@
    },
    {
     "name": "SAVVOS",
-    "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "assassin": false
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "ANDREAS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
     "name": "KATERINA",
@@ -165,65 +218,12 @@
     "role": "LOYAL FOLLOWER"
    }
   ],
-  "votes": [
-   {
-    "TILEMACHOS": true,
-    "SAVVOS": true
-   },
-   {
-    "KATERINA": true,
-    "SAVVOS": true,
-    "TILEMACHOS": true
-   },
-   {
-    "SAVVOS": false,
-    "TILEMACHOS": true,
-    "MINAS": true
-   },
-   {
-    "KATERINA": true,
-    "ANDREAS": true,
-    "XRISTOS": true,
-    "SAVVOS": false
-   }
-  ]
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "assassinated": "MINAS"
  },
  "timeFinished": {
   "_seconds": 1586198249,
   "_nanoseconds": 882644000
- },
- "players": [
-  {
-   "uid": "B5B2aTKfkzY5qHEApaW9SElNVzu2",
-   "name": "ANDREAS"
-  },
-  {
-   "uid": "MO1l4uBVTwg7VNjdHBHJLFhPLIq2",
-   "name": "XRISTOS"
-  },
-  {
-   "uid": "7ppnR3ChMBhSTgN8cb0CS8H0zM02",
-   "name": "SEVASTI"
-  },
-  {
-   "uid": "4U1RjnYW6uMCdApvdu1BtdvzkNH3",
-   "name": "TILEMACHOS"
-  },
-  {
-   "name": "KATERINA",
-   "uid": "93XqeWbCjoNMseX3eK74yCOhXdA2"
-  },
-  {
-   "name": "MINAS",
-   "uid": "vQFBMIaJ1YY9tlV1k9YSM4QxQR83"
-  },
-  {
-   "name": "SAVVOS",
-   "uid": "3crLlOM5r9YDpclGP3vDecpLiV22"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586197757,
-  "_nanoseconds": 684000000
  }
 }

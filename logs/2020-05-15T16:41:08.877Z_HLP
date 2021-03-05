@@ -1,27 +1,20 @@
 {
- "timeFinished": {
-  "_seconds": 1589561214,
-  "_nanoseconds": 631000000
- },
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1589560868,
   "_nanoseconds": 877000000
  },
+ "timeFinished": {
+  "_seconds": 1589561214,
+  "_nanoseconds": 631000000
+ },
  "missions": [
   {
    "state": "SUCCESS",
-   "team": [
-    "JUDE",
-    "NORBERT",
-    "CHARLES"
-   ],
    "numFails": 0,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "CHARLES",
      "team": [
       "JUDE",
       "NORBERT",
@@ -35,15 +28,24 @@
       "JUDE",
       "NORBERT",
       "CHARLES"
-     ],
-     "proposer": "CHARLES"
+     ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "team": [
+    "JUDE",
+    "NORBERT",
+    "CHARLES"
+   ]
   },
   {
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "ADRIAN",
      "votes": [
       "TINOTIN",
       "CHIZ",
@@ -53,46 +55,35 @@
       "IVAN",
       "CHARLES"
      ],
-     "proposer": "ADRIAN",
      "team": [
       "JUDE",
       "NORBERT",
       "CHARLES",
       "ADRIAN"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
+   "teamSize": 4,
    "team": [
     "JUDE",
     "NORBERT",
     "CHARLES",
     "ADRIAN"
-   ],
-   "numFails": 0,
-   "teamSize": 4
+   ]
   },
   {
-   "state": "FAIL",
+   "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "CHARMY",
     "ADRIAN",
     "JUDE",
     "NORBERT"
    ],
-   "numFails": 1,
-   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "CHARMY",
-      "ADRIAN",
-      "JUDE",
-      "NORBERT"
-     ],
-     "state": "APPROVED",
      "votes": [
       "CHARMY",
       "JUDE",
@@ -102,13 +93,18 @@
       "CHIZ",
       "ADRIAN"
      ],
-     "proposer": "CHARMY"
+     "team": [
+      "CHARMY",
+      "ADRIAN",
+      "JUDE",
+      "NORBERT"
+     ],
+     "proposer": "CHARMY",
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "state": "SUCCESS",
    "team": [
     "IVAN",
     "CHARMY",
@@ -116,11 +112,10 @@
     "TINOTIN",
     "ADRIAN"
    ],
-   "numFails": 0,
-   "teamSize": 5,
+   "failsRequired": 2,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "IVAN",
      "votes": [
       "IVAN",
       "CHARLES",
@@ -128,7 +123,7 @@
       "CHIZ",
       "NORBERT"
      ],
-     "proposer": "IVAN",
+     "state": "APPROVED",
      "team": [
       "IVAN",
       "CHARMY",
@@ -138,29 +133,58 @@
      ]
     }
    ],
-   "failsRequired": 2
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 5
   },
   {
-   "team": [],
-   "teamSize": 5,
    "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
+   "teamSize": 5,
+   "failsRequired": 1,
+   "team": []
   }
  ],
  "outcome": {
+  "message": "Merlin assassinated",
   "state": "EVIL_WIN",
   "assassinated": "IVAN",
+  "votes": [
+   {
+    "JUDE": true,
+    "NORBERT": true,
+    "CHARLES": true
+   },
+   {
+    "CHARLES": true,
+    "JUDE": true,
+    "NORBERT": true,
+    "ADRIAN": true
+   },
+   {
+    "ADRIAN": true,
+    "NORBERT": true,
+    "JUDE": false,
+    "CHARMY": true
+   },
+   {
+    "ADRIAN": true,
+    "CHARMY": true,
+    "TINOTIN": true,
+    "NORBERT": true,
+    "IVAN": true
+   }
+  ],
   "roles": [
    {
+    "role": "EVIL MINION",
     "name": "JUDE",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "assassin": false
    },
    {
     "name": "NORBERT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "name": "IVAN",
@@ -168,18 +192,18 @@
     "role": "MERLIN"
    },
    {
+    "role": "EVIL MINION",
     "name": "CHARLES",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "assassin": false
    },
    {
-    "name": "CHIZ",
     "assassin": true,
+    "name": "CHIZ",
     "role": "EVIL MINION"
    },
    {
-    "name": "TINOTIN",
     "assassin": false,
+    "name": "TINOTIN",
     "role": "LOYAL FOLLOWER"
    },
    {
@@ -189,37 +213,10 @@
    },
    {
     "name": "CHARMY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    }
-  ],
-  "votes": [
-   {
-    "CHARLES": true,
-    "JUDE": true,
-    "NORBERT": true
-   },
-   {
-    "CHARLES": true,
-    "JUDE": true,
-    "ADRIAN": true,
-    "NORBERT": true
-   },
-   {
-    "CHARMY": true,
-    "JUDE": false,
-    "ADRIAN": true,
-    "NORBERT": true
-   },
-   {
-    "TINOTIN": true,
-    "ADRIAN": true,
-    "NORBERT": true,
-    "IVAN": true,
-    "CHARMY": true
-   }
-  ],
-  "message": "Merlin assassinated"
+  ]
  },
  "players": [
   {
@@ -231,8 +228,8 @@
    "name": "CHARMY"
   },
   {
-   "uid": "OEKjRCrUhHa7VDl0bQGhklAPHT33",
-   "name": "IVAN"
+   "name": "IVAN",
+   "uid": "OEKjRCrUhHa7VDl0bQGhklAPHT33"
   },
   {
    "uid": "iZPi9EAoYUNpXYB2BRrGvbMlNS53",
@@ -254,5 +251,8 @@
    "uid": "AL0epHzptDRHZwdkRhTqKsNBXId2",
    "name": "CHARLES"
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ }
 }

@@ -1,34 +1,66 @@
 {
- "players": [
-  {
-   "uid": "5Nl0zBHVy1V9rmkYhtGINyXaWaj1",
-   "name": "ADAM"
-  },
-  {
-   "uid": "0v9dXMc3kvZ2yKoL8dZuHeRAl3d2",
-   "name": "AFFINE"
-  },
-  {
-   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2",
-   "name": "GOODWIN"
-  },
-  {
-   "name": "KEVIN",
-   "uid": "vqE0w9LGvkdAjV6gzyE9aUephJi1"
-  },
-  {
-   "uid": "zbmVWflTTrfBLHCGFWZsGfzu5YR2",
-   "name": "KLAUDIA"
-  },
-  {
-   "uid": "V3CYobIAZwWneimGk4cLt7fQYEB3",
-   "name": "NIKHIL"
-  },
-  {
-   "name": "LIONHAT",
-   "uid": "N2eGAYseOoexJ5gjmpWtb0tXdYI3"
-  }
- ],
+ "outcome": {
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "name": "KEVIN",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "name": "AFFINE",
+    "assassin": false,
+    "role": "OBERON"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "KLAUDIA"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "GOODWIN"
+   },
+   {
+    "name": "NIKHIL",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "ADAM"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "LIONHAT"
+   }
+  ],
+  "votes": [
+   {
+    "ADAM": true,
+    "KEVIN": true
+   },
+   {
+    "KEVIN": true,
+    "KLAUDIA": true,
+    "GOODWIN": true
+   },
+   {
+    "GOODWIN": true,
+    "KLAUDIA": true,
+    "KEVIN": true
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "GOODWIN"
+ },
+ "timeCreated": {
+  "_seconds": 1588908750,
+  "_nanoseconds": 362000000
+ },
  "timeFinished": {
   "_seconds": 1588909570,
   "_nanoseconds": 51000000
@@ -36,42 +68,31 @@
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1588908750,
-  "_nanoseconds": 362000000
- },
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "KEVIN",
-    "ADAM"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "proposer": "KEVIN",
+     "state": "REJECTED",
+     "votes": [
+      "GOODWIN"
+     ],
      "team": [
       "KEVIN",
       "GOODWIN"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "GOODWIN"
-     ]
+     "proposer": "KEVIN"
     },
     {
-     "votes": [
-      "LIONHAT",
-      "KLAUDIA"
-     ],
-     "proposer": "KLAUDIA",
      "team": [
       "KLAUDIA",
       "NIKHIL"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "LIONHAT",
+      "KLAUDIA"
+     ],
+     "proposer": "KLAUDIA"
     },
     {
      "state": "REJECTED",
@@ -97,7 +118,6 @@
      ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "AFFINE",
       "KLAUDIA",
@@ -108,46 +128,60 @@
       "KEVIN"
      ],
      "proposer": "ADAM",
+     "state": "APPROVED",
      "team": [
       "KEVIN",
       "ADAM"
      ]
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "KEVIN",
+    "ADAM"
+   ]
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "KLAUDIA",
+    "KEVIN",
+    "GOODWIN"
+   ],
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "AFFINE",
      "team": [
       "ADAM",
       "AFFINE",
       "KEVIN"
      ],
-     "state": "REJECTED",
      "votes": [
       "AFFINE"
-     ],
-     "proposer": "AFFINE"
+     ]
     },
     {
      "votes": [],
-     "proposer": "GOODWIN",
      "team": [
       "GOODWIN",
       "LIONHAT",
       "AFFINE"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "GOODWIN"
     },
     {
      "proposer": "KEVIN",
+     "state": "REJECTED",
      "team": [
       "ADAM",
       "KEVIN",
       "GOODWIN"
      ],
-     "state": "REJECTED",
      "votes": [
       "GOODWIN",
       "KEVIN"
@@ -169,46 +203,31 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "KLAUDIA",
-    "KEVIN",
-    "GOODWIN"
-   ],
    "numFails": 0,
-   "teamSize": 3
+   "teamSize": 3,
+   "state": "SUCCESS"
   },
   {
-   "team": [
-    "KEVIN",
-    "GOODWIN",
-    "KLAUDIA"
-   ],
+   "failsRequired": 1,
    "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "KLAUDIA",
-      "KEVIN",
-      "GOODWIN"
-     ],
      "state": "REJECTED",
+     "proposer": "NIKHIL",
      "votes": [
       "KEVIN",
       "GOODWIN",
       "ADAM"
      ],
-     "proposer": "NIKHIL"
+     "team": [
+      "KLAUDIA",
+      "KEVIN",
+      "GOODWIN"
+     ]
     },
     {
-     "team": [
-      "KEVIN",
-      "GOODWIN",
-      "KLAUDIA"
-     ],
-     "state": "APPROVED",
      "votes": [
       "KLAUDIA",
       "GOODWIN",
@@ -216,83 +235,64 @@
       "LIONHAT",
       "KEVIN"
      ],
-     "proposer": "LIONHAT"
+     "proposer": "LIONHAT",
+     "team": [
+      "KEVIN",
+      "GOODWIN",
+      "KLAUDIA"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "KEVIN",
+    "GOODWIN",
+    "KLAUDIA"
+   ]
   },
   {
+   "teamSize": 4,
+   "state": "PENDING",
    "team": [],
-   "teamSize": 4,
-   "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 2
+   "failsRequired": 2,
+   "proposals": []
   },
   {
+   "failsRequired": 1,
+   "proposals": [],
    "teamSize": 4,
    "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 1,
    "team": []
   }
  ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "GOODWIN",
-  "roles": [
-   {
-    "name": "KEVIN",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "OBERON",
-    "name": "AFFINE"
-   },
-   {
-    "name": "KLAUDIA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "GOODWIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "NIKHIL",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ADAM",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "LIONHAT",
-    "assassin": false,
-    "role": "PERCIVAL"
-   }
-  ],
-  "votes": [
-   {
-    "ADAM": true,
-    "KEVIN": true
-   },
-   {
-    "KEVIN": true,
-    "GOODWIN": true,
-    "KLAUDIA": true
-   },
-   {
-    "KLAUDIA": true,
-    "KEVIN": true,
-    "GOODWIN": true
-   }
-  ],
-  "message": "Three successful missions"
- }
+ "players": [
+  {
+   "uid": "5Nl0zBHVy1V9rmkYhtGINyXaWaj1",
+   "name": "ADAM"
+  },
+  {
+   "name": "AFFINE",
+   "uid": "0v9dXMc3kvZ2yKoL8dZuHeRAl3d2"
+  },
+  {
+   "name": "GOODWIN",
+   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2"
+  },
+  {
+   "uid": "vqE0w9LGvkdAjV6gzyE9aUephJi1",
+   "name": "KEVIN"
+  },
+  {
+   "name": "KLAUDIA",
+   "uid": "zbmVWflTTrfBLHCGFWZsGfzu5YR2"
+  },
+  {
+   "name": "NIKHIL",
+   "uid": "V3CYobIAZwWneimGk4cLt7fQYEB3"
+  },
+  {
+   "name": "LIONHAT",
+   "uid": "N2eGAYseOoexJ5gjmpWtb0tXdYI3"
+  }
+ ]
 }

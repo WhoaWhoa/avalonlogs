@@ -1,20 +1,61 @@
 {
+ "players": [
+  {
+   "name": "PRAGS",
+   "uid": "6liQ1s10QDQ5Cep7mGWymo2H2El1"
+  },
+  {
+   "name": "SHNEE",
+   "uid": "V0pfSqHPf1O5kH6tixFxHeT8Nr33"
+  },
+  {
+   "name": "DIDU",
+   "uid": "tIbMUqNPl2X1anIRbb2ktWPlDnm1"
+  },
+  {
+   "uid": "OJ2aahgab5hkSCIq4CorVXf5uxR2",
+   "name": "SAK"
+  },
+  {
+   "uid": "2As9eBqcXVaBX13dxFK0aTtDqG13",
+   "name": "SAND"
+  },
+  {
+   "uid": "iUnWigHQO6WmrwpepddH5yR7Wbj2",
+   "name": "ROIN"
+  },
+  {
+   "name": "SHOCK",
+   "uid": "zm0sgYcPPgavWNgH4r59xPRfKhv1"
+  },
+  {
+   "name": "RAM",
+   "uid": "FpQQA9UlseRq1FyackPtijhwi8Q2"
+  },
+  {
+   "uid": "dDxX44AEIvUpNMG39SYrv5R2L9A3",
+   "name": "SHU"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586584191,
+  "_nanoseconds": 993407000
+ },
  "timeCreated": {
   "_seconds": 1586581040,
   "_nanoseconds": 116000000
  },
  "missions": [
   {
-   "team": [
-    "PRAGS",
-    "DIDU",
-    "RAM"
-   ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "PRAGS",
+      "DIDU",
+      "RAM"
+     ],
      "votes": [
       "SAK",
       "DIDU",
@@ -23,30 +64,28 @@
       "RAM",
       "PRAGS"
      ],
-     "proposer": "DIDU",
-     "team": [
-      "PRAGS",
-      "DIDU",
-      "RAM"
-     ]
+     "state": "APPROVED",
+     "proposer": "DIDU"
     }
    ],
+   "numFails": 0,
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "PRAGS",
+    "DIDU",
+    "RAM"
+   ]
   },
   {
-   "state": "SUCCESS",
    "team": [
     "PRAGS",
     "DIDU",
     "RAM",
     "SAK"
    ],
-   "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "SAK",
      "votes": [
       "SHNEE",
       "SAND",
@@ -58,18 +97,23 @@
       "RAM",
       "PRAGS"
      ],
-     "proposer": "SAK",
      "team": [
       "PRAGS",
       "DIDU",
       "RAM",
       "SAK"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "SAND",
     "SAK",
@@ -96,11 +140,10 @@
      ],
      "proposer": "SAND"
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
+   "teamSize": 5,
    "team": [
     "PRAGS",
     "SAK",
@@ -108,8 +151,8 @@
     "SAND",
     "ROIN"
    ],
+   "state": "SUCCESS",
    "numFails": 1,
-   "teamSize": 5,
    "proposals": [
     {
      "votes": [
@@ -119,7 +162,6 @@
       "ROIN",
       "RAM"
      ],
-     "proposer": "ROIN",
      "team": [
       "PRAGS",
       "SAK",
@@ -127,59 +169,82 @@
       "SAND",
       "ROIN"
      ],
+     "proposer": "ROIN",
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 2,
-   "state": "SUCCESS"
+   "failsRequired": 2
   },
   {
-   "team": [],
-   "teamSize": 5,
    "state": "PENDING",
    "proposals": [],
+   "teamSize": 5,
+   "team": [],
    "failsRequired": 1
   }
  ],
  "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "PRAGS",
+  "votes": [
+   {
+    "DIDU": true,
+    "RAM": true,
+    "PRAGS": true
+   },
+   {
+    "RAM": true,
+    "SAK": true,
+    "PRAGS": true,
+    "DIDU": true
+   },
+   {
+    "DIDU": true,
+    "SAK": true,
+    "SAND": false,
+    "RAM": true
+   },
+   {
+    "PRAGS": true,
+    "SAND": false,
+    "SAK": true,
+    "ROIN": true,
+    "DIDU": true
+   }
+  ],
   "roles": [
    {
+    "assassin": false,
     "name": "SHNEE",
-    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "SAND",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "SAND"
    },
    {
+    "assassin": false,
     "name": "SAK",
-    "assassin": false,
     "role": "PERCIVAL"
-   },
-   {
-    "name": "DIDU",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "SHOCK"
+    "name": "DIDU"
    },
    {
-    "name": "SHU",
     "assassin": false,
-    "role": "MORDRED"
+    "name": "SHOCK",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MORDRED",
+    "name": "SHU",
+    "assassin": false
    },
    {
     "name": "ROIN",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
     "name": "RAM",
@@ -188,77 +253,12 @@
    },
    {
     "assassin": false,
-    "role": "MERLIN",
-    "name": "PRAGS"
+    "name": "PRAGS",
+    "role": "MERLIN"
    }
   ],
-  "votes": [
-   {
-    "RAM": true,
-    "PRAGS": true,
-    "DIDU": true
-   },
-   {
-    "RAM": true,
-    "PRAGS": true,
-    "SAK": true,
-    "DIDU": true
-   },
-   {
-    "SAK": true,
-    "SAND": false,
-    "DIDU": true,
-    "RAM": true
-   },
-   {
-    "PRAGS": true,
-    "SAK": true,
-    "SAND": false,
-    "DIDU": true,
-    "ROIN": true
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1586584191,
-  "_nanoseconds": 993407000
- },
- "players": [
-  {
-   "uid": "6liQ1s10QDQ5Cep7mGWymo2H2El1",
-   "name": "PRAGS"
-  },
-  {
-   "uid": "V0pfSqHPf1O5kH6tixFxHeT8Nr33",
-   "name": "SHNEE"
-  },
-  {
-   "uid": "tIbMUqNPl2X1anIRbb2ktWPlDnm1",
-   "name": "DIDU"
-  },
-  {
-   "name": "SAK",
-   "uid": "OJ2aahgab5hkSCIq4CorVXf5uxR2"
-  },
-  {
-   "uid": "2As9eBqcXVaBX13dxFK0aTtDqG13",
-   "name": "SAND"
-  },
-  {
-   "name": "ROIN",
-   "uid": "iUnWigHQO6WmrwpepddH5yR7Wbj2"
-  },
-  {
-   "uid": "zm0sgYcPPgavWNgH4r59xPRfKhv1",
-   "name": "SHOCK"
-  },
-  {
-   "uid": "FpQQA9UlseRq1FyackPtijhwi8Q2",
-   "name": "RAM"
-  },
-  {
-   "uid": "dDxX44AEIvUpNMG39SYrv5R2L9A3",
-   "name": "SHU"
-  }
- ]
+  "assassinated": "PRAGS",
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated"
+ }
 }

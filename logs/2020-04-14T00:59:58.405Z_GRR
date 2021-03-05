@@ -1,65 +1,153 @@
 {
- "timeFinished": {
-  "_seconds": 1586827160,
-  "_nanoseconds": 938735000
- },
  "options": {
   "inGameLog": false
  },
+ "players": [
+  {
+   "name": "STEVE",
+   "uid": "lHx01lkWR8RJbNr7VOto3YG3qz33"
+  },
+  {
+   "name": "BALOOFUCKS",
+   "uid": "czOixJNPkteOCFMrPgRUPwHhoEG3"
+  },
+  {
+   "name": "BAZZINATOR",
+   "uid": "2uxyhgQD5DeqCRt2aCQOJrrZMsI3"
+  },
+  {
+   "name": "SHAMIE",
+   "uid": "g5V5uYsuBZf5VaXCaBFr7ztMVjT2"
+  },
+  {
+   "name": "GRR",
+   "uid": "bc57tc4577QxMCvMAEy51dAezAw2"
+  },
+  {
+   "name": "JOE",
+   "uid": "X5XCx5dgjEZOZ8WF95vxhAj5Cnt1"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1586825998,
   "_nanoseconds": 405000000
  },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "SHAMIE": true,
+    "JOE": true
+   },
+   {
+    "BALOOFUCKS": true,
+    "JOE": true,
+    "SHAMIE": false
+   },
+   {
+    "GRR": true,
+    "SHAMIE": false,
+    "BALOOFUCKS": true,
+    "STEVE": true
+   },
+   {
+    "STEVE": true,
+    "BALOOFUCKS": true,
+    "GRR": true
+   },
+   {
+    "GRR": true,
+    "STEVE": true,
+    "BALOOFUCKS": true,
+    "BAZZINATOR": false
+   }
+  ],
+  "roles": [
+   {
+    "name": "GRR",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "BALOOFUCKS"
+   },
+   {
+    "name": "JOE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "STEVE",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "BAZZINATOR"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "SHAMIE",
+    "assassin": false
+   }
+  ],
+  "assassinated": null
+ },
  "missions": [
   {
    "state": "SUCCESS",
+   "teamSize": 2,
+   "failsRequired": 1,
    "team": [
     "JOE",
     "SHAMIE"
    ],
    "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "JOE",
+      "SHAMIE"
+     ],
+     "proposer": "JOE",
      "votes": [
       "BAZZINATOR",
       "SHAMIE",
       "GRR",
       "BALOOFUCKS",
       "JOE"
-     ],
-     "proposer": "JOE",
-     "team": [
-      "JOE",
-      "SHAMIE"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "FAIL",
    "team": [
     "BALOOFUCKS",
     "SHAMIE",
     "JOE"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "STEVE",
      "votes": [
       "BAZZINATOR",
       "SHAMIE",
       "BALOOFUCKS"
      ],
-     "proposer": "STEVE",
      "team": [
       "STEVE",
       "JOE",
       "SHAMIE"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -68,41 +156,32 @@
       "BALOOFUCKS",
       "JOE"
      ],
-     "proposer": "BALOOFUCKS",
+     "state": "APPROVED",
      "team": [
       "BALOOFUCKS",
       "SHAMIE",
       "JOE"
      ],
-     "state": "APPROVED"
+     "proposer": "BALOOFUCKS"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
-   "state": "FAIL",
-   "team": [
-    "SHAMIE",
-    "GRR",
-    "BALOOFUCKS",
-    "STEVE"
-   ],
-   "numFails": 1,
    "teamSize": 4,
    "proposals": [
     {
      "proposer": "BAZZINATOR",
+     "state": "REJECTED",
+     "votes": [
+      "BAZZINATOR",
+      "JOE"
+     ],
      "team": [
       "STEVE",
       "BAZZINATOR",
       "BALOOFUCKS",
       "GRR"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "BAZZINATOR",
-      "JOE"
      ]
     },
     {
@@ -123,20 +202,22 @@
      ]
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "team": [
+    "SHAMIE",
+    "GRR",
+    "BALOOFUCKS",
+    "STEVE"
+   ],
+   "state": "FAIL",
+   "numFails": 1
   },
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "STEVE",
-    "GRR",
-    "BALOOFUCKS"
-   ],
-   "numFails": 0,
    "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "GRR",
      "team": [
       "GRR",
       "BAZZINATOR",
@@ -147,17 +228,16 @@
       "GRR",
       "JOE",
       "BAZZINATOR"
-     ],
-     "proposer": "GRR"
+     ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "JOE",
       "BAZZINATOR",
       "GRR"
      ],
      "proposer": "JOE",
+     "state": "REJECTED",
      "team": [
       "SHAMIE",
       "JOE",
@@ -172,43 +252,47 @@
       "BAZZINATOR"
      ],
      "proposer": "STEVE",
+     "state": "APPROVED",
      "team": [
       "STEVE",
       "GRR",
       "BALOOFUCKS"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ]
+   ],
+   "team": [
+    "STEVE",
+    "GRR",
+    "BALOOFUCKS"
+   ],
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "STEVE",
     "BALOOFUCKS",
     "BAZZINATOR",
     "GRR"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "BALOOFUCKS",
-      "GRR",
-      "STEVE",
-      "BAZZINATOR"
-     ],
+     "proposer": "BALOOFUCKS",
      "state": "REJECTED",
      "votes": [
       "BAZZINATOR",
       "GRR",
       "BALOOFUCKS"
      ],
-     "proposer": "BALOOFUCKS"
+     "team": [
+      "BALOOFUCKS",
+      "GRR",
+      "STEVE",
+      "BAZZINATOR"
+     ]
     },
     {
-     "proposer": "BAZZINATOR",
      "team": [
       "STEVE",
       "BALOOFUCKS",
@@ -221,101 +305,17 @@
       "SHAMIE",
       "GRR",
       "BALOOFUCKS"
-     ]
+     ],
+     "proposer": "BAZZINATOR"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 4,
+   "state": "FAIL",
+   "numFails": 1
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "GRR"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "BALOOFUCKS"
-   },
-   {
-    "name": "JOE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "STEVE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "BAZZINATOR",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "SHAMIE",
-    "assassin": false,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "SHAMIE": true,
-    "JOE": true
-   },
-   {
-    "JOE": true,
-    "BALOOFUCKS": true,
-    "SHAMIE": false
-   },
-   {
-    "STEVE": true,
-    "SHAMIE": false,
-    "GRR": true,
-    "BALOOFUCKS": true
-   },
-   {
-    "GRR": true,
-    "BALOOFUCKS": true,
-    "STEVE": true
-   },
-   {
-    "GRR": true,
-    "BAZZINATOR": false,
-    "BALOOFUCKS": true,
-    "STEVE": true
-   }
-  ],
-  "message": "Three failed missions"
- },
- "players": [
-  {
-   "uid": "lHx01lkWR8RJbNr7VOto3YG3qz33",
-   "name": "STEVE"
-  },
-  {
-   "uid": "czOixJNPkteOCFMrPgRUPwHhoEG3",
-   "name": "BALOOFUCKS"
-  },
-  {
-   "uid": "2uxyhgQD5DeqCRt2aCQOJrrZMsI3",
-   "name": "BAZZINATOR"
-  },
-  {
-   "name": "SHAMIE",
-   "uid": "g5V5uYsuBZf5VaXCaBFr7ztMVjT2"
-  },
-  {
-   "name": "GRR",
-   "uid": "bc57tc4577QxMCvMAEy51dAezAw2"
-  },
-  {
-   "uid": "X5XCx5dgjEZOZ8WF95vxhAj5Cnt1",
-   "name": "JOE"
-  }
- ]
+ "timeFinished": {
+  "_seconds": 1586827160,
+  "_nanoseconds": 938735000
+ }
 }

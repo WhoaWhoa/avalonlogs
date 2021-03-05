@@ -1,34 +1,24 @@
 {
- "timeFinished": {
-  "_seconds": 1588122493,
-  "_nanoseconds": 571000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588121733,
-  "_nanoseconds": 813000000
- },
  "missions": [
   {
+   "teamSize": 3,
+   "numFails": 0,
    "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "JOE",
     "OOG",
     "WOOMY"
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "proposer": "JOE",
+     "state": "APPROVED",
      "team": [
       "JOE",
       "OOG",
       "WOOMY"
      ],
-     "state": "APPROVED",
      "votes": [
       "CAPTAIN",
       "WOOMY",
@@ -40,8 +30,7 @@
       "QK"
      ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
    "team": [
@@ -50,11 +39,18 @@
     "MARTIN",
     "GONZO"
    ],
+   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "WOOMY",
+      "OOG",
+      "MARTIN",
+      "GONZO"
+     ],
      "votes": [
       "MARTIN",
       "YANNI",
@@ -62,60 +58,48 @@
       "WOOMY",
       "GONZO"
      ],
-     "proposer": "WOOMY",
-     "team": [
-      "WOOMY",
-      "OOG",
-      "MARTIN",
-      "GONZO"
-     ]
+     "proposer": "WOOMY"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 4
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "YANNI",
-      "WOOMY",
-      "OOG",
-      "QK"
-     ],
-     "state": "REJECTED",
      "votes": [
       "QK",
       "CAPTAIN",
       "WOOMY",
       "GONZO"
      ],
-     "proposer": "QK"
+     "proposer": "QK",
+     "team": [
+      "YANNI",
+      "WOOMY",
+      "OOG",
+      "QK"
+     ],
+     "state": "REJECTED"
     },
     {
+     "proposer": "CAPTAIN",
+     "state": "REJECTED",
      "votes": [
       "QK",
       "CAPTAIN",
       "WOOMY",
       "MARTIN"
      ],
-     "proposer": "CAPTAIN",
      "team": [
       "OOG",
       "YANNI",
       "CAPTAIN",
       "QK"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "team": [
-      "WOOMY",
-      "OOG",
-      "MARTIN",
-      "GONZO"
-     ],
-     "state": "APPROVED",
      "votes": [
       "MARTIN",
       "YANNI",
@@ -123,30 +107,26 @@
       "CAPTAIN",
       "WOOMY"
      ],
-     "proposer": "YANNI"
+     "proposer": "YANNI",
+     "team": [
+      "WOOMY",
+      "OOG",
+      "MARTIN",
+      "GONZO"
+     ],
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "WOOMY",
     "OOG",
     "MARTIN",
     "GONZO"
    ],
-   "numFails": 1,
    "teamSize": 4
   },
   {
-   "team": [
-    "GONZO",
-    "YANNI",
-    "QK",
-    "WOOMY",
-    "OOG"
-   ],
-   "numFails": 0,
-   "teamSize": 5,
    "proposals": [
     {
      "votes": [
@@ -156,7 +136,6 @@
       "YANNI",
       "QK"
      ],
-     "proposer": "GONZO",
      "team": [
       "GONZO",
       "YANNI",
@@ -164,43 +143,80 @@
       "WOOMY",
       "OOG"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "GONZO"
     }
    ],
+   "numFails": 0,
+   "teamSize": 5,
+   "state": "SUCCESS",
    "failsRequired": 2,
-   "state": "SUCCESS"
+   "team": [
+    "GONZO",
+    "YANNI",
+    "QK",
+    "WOOMY",
+    "OOG"
+   ]
   },
   {
-   "failsRequired": 1,
+   "proposals": [],
    "team": [],
    "teamSize": 5,
-   "state": "PENDING",
-   "proposals": []
+   "failsRequired": 1,
+   "state": "PENDING"
   }
  ],
  "outcome": {
-  "state": "EVIL_WIN",
   "assassinated": "GONZO",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "WOOMY": true,
+    "OOG": true,
+    "JOE": true
+   },
+   {
+    "WOOMY": true,
+    "OOG": true,
+    "GONZO": true,
+    "MARTIN": true
+   },
+   {
+    "OOG": true,
+    "GONZO": true,
+    "WOOMY": true,
+    "MARTIN": false
+   },
+   {
+    "QK": true,
+    "OOG": true,
+    "YANNI": true,
+    "GONZO": true,
+    "WOOMY": true
+   }
+  ],
+  "message": "Merlin assassinated",
   "roles": [
    {
+    "role": "MORGANA",
     "name": "MARTIN",
-    "assassin": false,
-    "role": "MORGANA"
+    "assassin": false
    },
    {
-    "name": "JOE",
+    "role": "EVIL MINION",
     "assassin": false,
-    "role": "EVIL MINION"
+    "name": "JOE"
    },
    {
+    "assassin": false,
     "name": "OOG",
-    "assassin": false,
     "role": "PERCIVAL"
    },
    {
-    "name": "YANNI",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "YANNI"
    },
    {
     "name": "QK",
@@ -213,76 +229,60 @@
     "role": "EVIL MINION"
    },
    {
-    "assassin": false,
+    "name": "WOOMY",
     "role": "LOYAL FOLLOWER",
-    "name": "WOOMY"
+    "assassin": false
    },
    {
     "name": "GONZO",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    }
-  ],
-  "votes": [
-   {
-    "JOE": true,
-    "OOG": true,
-    "WOOMY": true
-   },
-   {
-    "MARTIN": true,
-    "WOOMY": true,
-    "GONZO": true,
-    "OOG": true
-   },
-   {
-    "WOOMY": true,
-    "GONZO": true,
-    "OOG": true,
-    "MARTIN": false
-   },
-   {
-    "WOOMY": true,
-    "YANNI": true,
-    "GONZO": true,
-    "OOG": true,
-    "QK": true
-   }
-  ],
-  "message": "Merlin assassinated"
+  ]
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1588122493,
+  "_nanoseconds": 571000000
+ },
+ "timeCreated": {
+  "_seconds": 1588121733,
+  "_nanoseconds": 813000000
  },
  "players": [
   {
-   "uid": "a9YTHJmyy9SoaDTIBumkavtYePC3",
-   "name": "OOG"
+   "name": "OOG",
+   "uid": "a9YTHJmyy9SoaDTIBumkavtYePC3"
   },
   {
-   "uid": "dWQdFo78PNYDnJi2XLgfadhBKll1",
-   "name": "JOE"
+   "name": "JOE",
+   "uid": "dWQdFo78PNYDnJi2XLgfadhBKll1"
   },
   {
-   "uid": "0PEFIaKzE3bJeyycZxHxxVq0sXx1",
-   "name": "WOOMY"
+   "name": "WOOMY",
+   "uid": "0PEFIaKzE3bJeyycZxHxxVq0sXx1"
   },
   {
-   "uid": "0G4AzY9hUCTTmucSO8L0SKCoWPi1",
-   "name": "QK"
+   "name": "QK",
+   "uid": "0G4AzY9hUCTTmucSO8L0SKCoWPi1"
   },
   {
-   "uid": "Rp7kO5Dm1sgWR2sjK0KOfUeiQbx1",
-   "name": "CAPTAIN"
+   "name": "CAPTAIN",
+   "uid": "Rp7kO5Dm1sgWR2sjK0KOfUeiQbx1"
   },
   {
-   "name": "YANNI",
-   "uid": "1EdiwvlkBYZbpQwhOB7QZbmfcC52"
+   "uid": "1EdiwvlkBYZbpQwhOB7QZbmfcC52",
+   "name": "YANNI"
   },
   {
    "name": "GONZO",
    "uid": "SiblZ0IgQTRvLaqTOmHmLMKGNFj1"
   },
   {
-   "name": "MARTIN",
-   "uid": "eyQls40kB5SKNfZQncS7GQEP0vH3"
+   "uid": "eyQls40kB5SKNfZQncS7GQEP0vH3",
+   "name": "MARTIN"
   }
  ]
 }

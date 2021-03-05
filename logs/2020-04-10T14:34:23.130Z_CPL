@@ -1,6 +1,43 @@
 {
+ "timeFinished": {
+  "_seconds": 1586529533,
+  "_nanoseconds": 292751000
+ },
+ "players": [
+  {
+   "uid": "nnPP02SUyWeF3gpWyfI8T9OzF053",
+   "name": "CPL"
+  },
+  {
+   "uid": "aDJx4bobm4WBZGlfm1oaTKVwtkw2",
+   "name": "LOC"
+  },
+  {
+   "uid": "9xvziqOuVSMznhIGczBkRjK1jO72",
+   "name": "MICHEL"
+  },
+  {
+   "name": "PERRY",
+   "uid": "5DYiPpm4MIhsr9IGXKijFcB0Gnq2"
+  },
+  {
+   "name": "WES",
+   "uid": "M2GRgkRti9aSFRdxOs2Inth39Vz1"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1586529263,
+  "_nanoseconds": 130000000
+ },
  "missions": [
   {
+   "state": "SUCCESS",
+   "teamSize": 2,
+   "team": [
+    "PERRY",
+    "WES"
+   ],
+   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -17,113 +54,105 @@
      "proposer": "PERRY"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "PERRY",
-    "WES"
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "MICHEL",
     "WES",
     "CPL"
    ],
-   "numFails": 1,
-   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
+     "votes": [
+      "PERRY",
+      "LOC",
+      "WES",
+      "CPL",
+      "MICHEL"
+     ],
      "team": [
       "MICHEL",
       "WES",
       "CPL"
      ],
-     "state": "APPROVED",
-     "votes": [
-      "PERRY",
-      "LOC",
-      "WES",
-      "CPL",
-      "MICHEL"
-     ],
      "proposer": "WES"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3
   },
   {
-   "team": [
-    "CPL",
-    "LOC"
-   ],
    "numFails": 0,
    "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "votes": [
+      "CPL",
+      "PERRY",
+      "LOC"
+     ],
      "team": [
       "CPL",
       "LOC"
      ],
-     "state": "APPROVED",
-     "votes": [
-      "CPL",
-      "PERRY",
-      "LOC"
-     ],
-     "proposer": "CPL"
+     "proposer": "CPL",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "CPL",
+    "LOC"
+   ],
+   "failsRequired": 1
   },
   {
+   "numFails": 1,
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "LOC",
     "CPL",
     "WES"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "LOC",
+      "CPL",
+      "WES"
+     ],
      "votes": [
       "WES",
       "CPL",
       "PERRY",
       "LOC"
      ],
-     "proposer": "LOC",
-     "team": [
-      "LOC",
-      "CPL",
-      "WES"
-     ],
-     "state": "APPROVED"
+     "proposer": "LOC"
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
+   "failsRequired": 1,
    "team": [
     "CPL",
     "LOC",
     "MICHEL"
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "CPL",
       "LOC",
       "MICHEL"
      ],
-     "state": "APPROVED",
      "votes": [
       "CPL",
       "MICHEL",
@@ -132,19 +161,18 @@
      "proposer": "MICHEL"
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0,
    "state": "SUCCESS"
   }
  ],
  "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
   "assassinated": "MICHEL",
   "roles": [
    {
+    "name": "PERRY",
     "assassin": false,
-    "role": "MORGANA",
-    "name": "PERRY"
+    "role": "MORGANA"
    },
    {
     "name": "LOC",
@@ -152,75 +180,47 @@
     "role": "PERCIVAL"
    },
    {
-    "name": "WES",
+    "role": "MORDRED",
     "assassin": true,
-    "role": "MORDRED"
+    "name": "WES"
    },
    {
-    "name": "CPL",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "CPL"
    },
    {
     "name": "MICHEL",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    }
   ],
+  "message": "Merlin assassinated",
   "votes": [
    {
-    "WES": true,
-    "PERRY": true
+    "PERRY": true,
+    "WES": true
    },
    {
     "CPL": true,
-    "WES": false,
-    "MICHEL": true
+    "MICHEL": true,
+    "WES": false
    },
    {
+    "CPL": true,
+    "LOC": true
+   },
+   {
+    "WES": false,
     "LOC": true,
     "CPL": true
    },
    {
-    "CPL": true,
-    "WES": false,
-    "LOC": true
-   },
-   {
+    "LOC": true,
     "MICHEL": true,
-    "CPL": true,
-    "LOC": true
+    "CPL": true
    }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1586529533,
-  "_nanoseconds": 292751000
- },
- "players": [
-  {
-   "name": "CPL",
-   "uid": "nnPP02SUyWeF3gpWyfI8T9OzF053"
-  },
-  {
-   "uid": "aDJx4bobm4WBZGlfm1oaTKVwtkw2",
-   "name": "LOC"
-  },
-  {
-   "name": "MICHEL",
-   "uid": "9xvziqOuVSMznhIGczBkRjK1jO72"
-  },
-  {
-   "uid": "5DYiPpm4MIhsr9IGXKijFcB0Gnq2",
-   "name": "PERRY"
-  },
-  {
-   "uid": "M2GRgkRti9aSFRdxOs2Inth39Vz1",
-   "name": "WES"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586529263,
-  "_nanoseconds": 130000000
+  ],
+  "state": "EVIL_WIN"
  }
 }

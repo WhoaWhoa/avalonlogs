@@ -10,11 +10,12 @@
     "CHRISTOPH",
     "PATRICK"
    ],
+   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "NICK",
      "votes": [
       "MARKUS",
       "NICK",
@@ -26,7 +27,6 @@
       "MALTE",
       "PATRICK"
      ],
-     "proposer": "NICK",
      "team": [
       "FLO",
       "CHRISTOPH",
@@ -35,42 +35,26 @@
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
-   "team": [
-    "MARKUS",
-    "KOLAR",
-    "MALTE",
-    "INGO"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "MALTE",
-      "PATRICK"
-     ],
-     "proposer": "KOLAR",
      "team": [
       "NICK",
       "FLO",
       "PATRICK",
       "CHRISTOPH"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "MALTE",
+      "PATRICK"
+     ],
+     "proposer": "KOLAR"
     },
     {
-     "proposer": "STEFAN",
-     "team": [
-      "MARKUS",
-      "KOLAR",
-      "MALTE",
-      "INGO"
-     ],
-     "state": "APPROVED",
      "votes": [
       "INGO",
       "FLO",
@@ -81,23 +65,38 @@
       "CHRISTOPH",
       "STEFAN",
       "KOLAR"
+     ],
+     "proposer": "STEFAN",
+     "state": "APPROVED",
+     "team": [
+      "MARKUS",
+      "KOLAR",
+      "MALTE",
+      "INGO"
      ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
+   "team": [
+    "MARKUS",
+    "KOLAR",
+    "MALTE",
+    "INGO"
+   ]
   },
   {
+   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "CHRISTOPH",
     "PATRICK",
     "FLO",
     "NICK"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "MALTE",
       "CHRISTOPH",
@@ -105,6 +104,7 @@
       "INGO"
      ],
      "proposer": "INGO",
+     "state": "REJECTED",
      "team": [
       "CHRISTOPH",
       "PATRICK",
@@ -113,6 +113,7 @@
      ]
     },
     {
+     "proposer": "CHRISTOPH",
      "team": [
       "CHRISTOPH",
       "PATRICK",
@@ -128,23 +129,15 @@
       "MARKUS",
       "NICK",
       "CHRISTOPH"
-     ],
-     "proposer": "CHRISTOPH"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "teamSize": 4
   },
   {
-   "team": [
-    "PATRICK",
-    "KOLAR",
-    "MALTE",
-    "FLO",
-    "CHRISTOPH"
-   ],
+   "state": "FAIL",
    "numFails": 2,
-   "teamSize": 5,
    "proposals": [
     {
      "votes": [
@@ -157,75 +150,83 @@
       "CHRISTOPH"
      ],
      "proposer": "PATRICK",
+     "state": "APPROVED",
      "team": [
       "PATRICK",
       "KOLAR",
       "MALTE",
       "FLO",
       "CHRISTOPH"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 2,
-   "state": "FAIL"
+   "team": [
+    "PATRICK",
+    "KOLAR",
+    "MALTE",
+    "FLO",
+    "CHRISTOPH"
+   ],
+   "teamSize": 5,
+   "failsRequired": 2
   },
   {
+   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1,
-   "team": [],
    "teamSize": 5,
-   "state": "PENDING"
+   "team": [],
+   "failsRequired": 1
   }
  ],
  "outcome": {
-  "state": "EVIL_WIN",
   "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
   "roles": [
    {
-    "assassin": true,
     "role": "MORDRED",
-    "name": "CHRISTOPH"
+    "name": "CHRISTOPH",
+    "assassin": true
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "STEFAN",
+    "assassin": false
+   },
+   {
     "assassin": false,
+    "name": "KOLAR",
     "role": "LOYAL FOLLOWER"
    },
    {
+    "role": "OBERON",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "KOLAR"
+    "name": "INGO"
    },
    {
-    "name": "INGO",
     "assassin": false,
-    "role": "OBERON"
-   },
-   {
     "name": "FLO",
-    "assassin": false,
     "role": "MORGANA"
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "MALTE"
+    "name": "MALTE",
+    "assassin": false
    },
    {
-    "name": "PATRICK",
     "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "PATRICK"
    },
    {
+    "assassin": false,
     "name": "MARKUS",
-    "assassin": false,
     "role": "MERLIN"
    },
    {
     "name": "NICK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    }
   ],
   "votes": [
@@ -242,19 +243,18 @@
    },
    {
     "CHRISTOPH": false,
-    "PATRICK": true,
     "FLO": true,
+    "PATRICK": true,
     "NICK": true
    },
    {
     "MALTE": true,
-    "FLO": false,
     "KOLAR": true,
-    "CHRISTOPH": false,
-    "PATRICK": true
+    "FLO": false,
+    "PATRICK": true,
+    "CHRISTOPH": false
    }
-  ],
-  "message": "Three failed missions"
+  ]
  },
  "timeFinished": {
   "_seconds": 1586638300,
@@ -266,36 +266,36 @@
    "name": "CHRISTOPH"
   },
   {
-   "uid": "PYYzqvbAyGeFXfpEIFus8sRMaWP2",
-   "name": "PATRICK"
+   "name": "PATRICK",
+   "uid": "PYYzqvbAyGeFXfpEIFus8sRMaWP2"
   },
   {
    "uid": "mE50n7MxHZMc2vLpFB0D8hY8bTD3",
    "name": "FLO"
   },
   {
-   "uid": "1CdXWvea3SgisHfcWq2mpkOhQwE3",
-   "name": "MALTE"
+   "name": "MALTE",
+   "uid": "1CdXWvea3SgisHfcWq2mpkOhQwE3"
   },
   {
    "name": "MARKUS",
    "uid": "mRt3Q8chi3VkwBRXnqGZqf8l0gj2"
   },
   {
-   "uid": "ll5oFF9hc8dAFIbkDAPDKoR7fil2",
-   "name": "NICK"
+   "name": "NICK",
+   "uid": "ll5oFF9hc8dAFIbkDAPDKoR7fil2"
   },
   {
-   "uid": "2BQcjWuUIxfKHkgKCRDeqBYLbcg2",
-   "name": "KOLAR"
+   "name": "KOLAR",
+   "uid": "2BQcjWuUIxfKHkgKCRDeqBYLbcg2"
   },
   {
-   "uid": "vVd0Puuj52doSnLo6hThDUAAKLz1",
-   "name": "STEFAN"
+   "name": "STEFAN",
+   "uid": "vVd0Puuj52doSnLo6hThDUAAKLz1"
   },
   {
-   "name": "INGO",
-   "uid": "ACKpLvD5HMNJPjbaoVuC4C7gdNA2"
+   "uid": "ACKpLvD5HMNJPjbaoVuC4C7gdNA2",
+   "name": "INGO"
   }
  ]
 }

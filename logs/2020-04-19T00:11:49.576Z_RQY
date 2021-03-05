@@ -7,77 +7,55 @@
     "role": "PERCIVAL"
    },
    {
-    "name": "FIONA",
     "assassin": false,
+    "name": "FIONA",
     "role": "MORGANA"
    },
    {
     "name": "VALERI",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
-    "name": "PATRICK",
     "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "PATRICK"
    },
    {
-    "name": "HALLAM",
     "assassin": false,
+    "name": "HALLAM",
     "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "FIONA": false,
-    "HALLAM": true
-   },
-   {
-    "HALLAM": true,
-    "PATRICK": false,
-    "SAM": true
-   },
-   {
-    "HALLAM": true,
-    "SAM": true
-   },
-   {
-    "VALERI": true,
-    "HALLAM": true,
-    "SAM": true
-   },
-   {
-    "VALERI": true,
-    "HALLAM": true,
-    "SAM": true
    }
   ],
   "message": "Merlin assassinated",
   "state": "EVIL_WIN",
+  "votes": [
+   {
+    "HALLAM": true,
+    "FIONA": false
+   },
+   {
+    "SAM": true,
+    "HALLAM": true,
+    "PATRICK": false
+   },
+   {
+    "SAM": true,
+    "HALLAM": true
+   },
+   {
+    "SAM": true,
+    "HALLAM": true,
+    "VALERI": true
+   },
+   {
+    "SAM": true,
+    "HALLAM": true,
+    "VALERI": true
+   }
+  ],
   "assassinated": "VALERI"
  },
- "players": [
-  {
-   "uid": "v3hq9fLMPMa57GtzdZ1mVuXhqWz1",
-   "name": "SAM"
-  },
-  {
-   "uid": "CkCaRBsCpwPuaKBRJ0f8FxZk0gh1",
-   "name": "HALLAM"
-  },
-  {
-   "name": "FIONA",
-   "uid": "8FsYM4XhXqMCsINfwIRX2xGGqYv1"
-  },
-  {
-   "uid": "hFjziC0uEgXVfcwNzAnmyvb2tb23",
-   "name": "VALERI"
-  },
-  {
-   "uid": "P1fRBIT3O2S7qtycQhNzmtWB8As1",
-   "name": "PATRICK"
-  }
- ],
  "timeFinished": {
   "_seconds": 1587255712,
   "_nanoseconds": 730000000
@@ -85,62 +63,84 @@
  "options": {
   "inGameLog": false
  },
+ "players": [
+  {
+   "uid": "v3hq9fLMPMa57GtzdZ1mVuXhqWz1",
+   "name": "SAM"
+  },
+  {
+   "name": "HALLAM",
+   "uid": "CkCaRBsCpwPuaKBRJ0f8FxZk0gh1"
+  },
+  {
+   "uid": "8FsYM4XhXqMCsINfwIRX2xGGqYv1",
+   "name": "FIONA"
+  },
+  {
+   "name": "VALERI",
+   "uid": "hFjziC0uEgXVfcwNzAnmyvb2tb23"
+  },
+  {
+   "uid": "P1fRBIT3O2S7qtycQhNzmtWB8As1",
+   "name": "PATRICK"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1587255109,
   "_nanoseconds": 576000000
  },
  "missions": [
   {
-   "state": "FAIL",
-   "team": [
-    "HALLAM",
-    "FIONA"
-   ],
-   "numFails": 1,
-   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "HALLAM",
      "votes": [
       "FIONA",
       "PATRICK",
       "HALLAM"
      ],
-     "proposer": "HALLAM",
+     "state": "APPROVED",
      "team": [
       "HALLAM",
       "FIONA"
      ]
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "team": [
+    "HALLAM",
+    "FIONA"
+   ],
+   "teamSize": 2,
+   "state": "FAIL",
+   "numFails": 1
   },
   {
-   "state": "FAIL",
    "team": [
     "SAM",
     "HALLAM",
     "PATRICK"
    ],
-   "numFails": 1,
    "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "SAM",
+      "HALLAM",
+      "PATRICK"
+     ],
      "votes": [
       "SAM",
       "FIONA",
       "PATRICK"
      ],
      "proposer": "FIONA",
-     "team": [
-      "SAM",
-      "HALLAM",
-      "PATRICK"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1
   },
   {
    "proposals": [
@@ -149,83 +149,76 @@
       "SAM",
       "VALERI"
      ],
-     "proposer": "VALERI",
+     "state": "REJECTED",
      "team": [
       "SAM",
       "VALERI"
      ],
-     "state": "REJECTED"
+     "proposer": "VALERI"
     },
     {
-     "team": [
-      "PATRICK",
-      "VALERI"
-     ],
      "state": "REJECTED",
+     "proposer": "PATRICK",
      "votes": [
       "PATRICK"
      ],
-     "proposer": "PATRICK"
+     "team": [
+      "PATRICK",
+      "VALERI"
+     ]
     },
     {
+     "proposer": "SAM",
      "team": [
       "HALLAM",
       "SAM"
      ],
-     "state": "APPROVED",
      "votes": [
       "SAM",
       "VALERI",
       "HALLAM"
      ],
-     "proposer": "SAM"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "HALLAM",
     "SAM"
    ],
-   "numFails": 0,
-   "teamSize": 2
+   "state": "SUCCESS",
+   "teamSize": 2,
+   "failsRequired": 1
   },
   {
+   "team": [
+    "SAM",
+    "HALLAM",
+    "VALERI"
+   ],
    "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "SAM",
+      "HALLAM",
+      "VALERI"
+     ],
      "state": "APPROVED",
      "votes": [
       "SAM",
       "VALERI",
       "HALLAM"
      ],
-     "proposer": "HALLAM",
-     "team": [
-      "SAM",
-      "HALLAM",
-      "VALERI"
-     ]
+     "proposer": "HALLAM"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "SAM",
-    "HALLAM",
-    "VALERI"
    ]
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "SAM",
-    "HALLAM",
-    "VALERI"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -234,29 +227,36 @@
       "VALERI"
      ],
      "state": "REJECTED",
+     "proposer": "FIONA",
      "votes": [
       "FIONA",
       "PATRICK"
-     ],
-     "proposer": "FIONA"
+     ]
     },
     {
+     "proposer": "VALERI",
      "votes": [
       "SAM",
       "VALERI",
       "PATRICK",
       "HALLAM"
      ],
-     "proposer": "VALERI",
+     "state": "APPROVED",
      "team": [
       "SAM",
       "HALLAM",
       "VALERI"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "team": [
+    "SAM",
+    "HALLAM",
+    "VALERI"
+   ],
+   "numFails": 0,
+   "teamSize": 3
   }
  ]
 }

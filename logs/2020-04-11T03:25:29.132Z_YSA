@@ -1,4 +1,8 @@
 {
+ "timeCreated": {
+  "_seconds": 1586575529,
+  "_nanoseconds": 132000000
+ },
  "outcome": {
   "votes": [
    {
@@ -12,19 +16,17 @@
    },
    {
     "JACK": true,
-    "TARA": true,
+    "SHAL": true,
     "TOM": false,
-    "SHAL": true
+    "TARA": true
    },
    {
-    "JACK": true,
     "TOM": false,
-    "SHAL": true
+    "SHAL": true,
+    "JACK": true
    }
   ],
   "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
   "roles": [
    {
     "name": "TARA",
@@ -32,77 +34,49 @@
     "role": "MERLIN"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "ALI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "name": "LUKE",
+    "role": "EVIL MINION",
     "assassin": true,
-    "role": "EVIL MINION"
+    "name": "LUKE"
    },
    {
-    "name": "JACK",
     "assassin": false,
+    "name": "JACK",
     "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
-    "role": "PERCIVAL",
-    "name": "SHAL"
+    "name": "SHAL",
+    "role": "PERCIVAL"
    },
    {
-    "name": "TOM",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "TOM"
    }
-  ]
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null
  },
  "timeFinished": {
   "_seconds": 1586575974,
   "_nanoseconds": 798431000
  },
- "players": [
-  {
-   "uid": "DBmJbVJuI3gk5sq6JN0gM9aMNUX2",
-   "name": "TOM"
-  },
-  {
-   "uid": "PtnYZP937Yaj3BRoOoEibJKvmNq1",
-   "name": "TARA"
-  },
-  {
-   "uid": "V4YW5XjlPFg1Pj87mv5zDhwWJEO2",
-   "name": "ALI"
-  },
-  {
-   "uid": "bwGw2zkFfeOH24CRKuunkNjFpOn1",
-   "name": "LUKE"
-  },
-  {
-   "name": "JACK",
-   "uid": "Yc8SPVfUNcXHAbYoCC1bjj9yQTA2"
-  },
-  {
-   "name": "SHAL",
-   "uid": "NIAmvvfK4pNNBRZTyluXo7elAnh2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586575529,
-  "_nanoseconds": 132000000
- },
  "missions": [
   {
    "state": "SUCCESS",
-   "team": [
-    "TARA",
-    "ALI"
-   ],
-   "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
+     "proposer": "TARA",
+     "team": [
+      "TARA",
+      "ALI"
+     ],
      "votes": [
       "TARA",
       "ALI",
@@ -111,17 +85,24 @@
       "SHAL",
       "TOM"
      ],
-     "proposer": "TARA",
-     "team": [
-      "TARA",
-      "ALI"
-     ],
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "TARA",
+    "ALI"
+   ],
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
+   "teamSize": 3,
+   "state": "FAIL",
+   "team": [
+    "ALI",
+    "TARA",
+    "LUKE"
+   ],
    "proposals": [
     {
      "votes": [
@@ -131,33 +112,19 @@
       "SHAL",
       "TOM"
      ],
-     "proposer": "ALI",
      "team": [
       "ALI",
       "TARA",
       "LUKE"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "ALI"
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "ALI",
-    "TARA",
-    "LUKE"
-   ],
-   "numFails": 1,
-   "teamSize": 3
+   "numFails": 1
   },
   {
-   "team": [
-    "JACK",
-    "SHAL",
-    "TARA",
-    "TOM"
-   ],
-   "numFails": 1,
    "teamSize": 4,
    "proposals": [
     {
@@ -176,13 +143,13 @@
     },
     {
      "proposer": "JACK",
+     "state": "APPROVED",
      "team": [
       "JACK",
       "SHAL",
       "TARA",
       "TOM"
      ],
-     "state": "APPROVED",
      "votes": [
       "TARA",
       "ALI",
@@ -192,42 +159,75 @@
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "JACK",
+    "SHAL",
+    "TARA",
+    "TOM"
+   ],
+   "state": "FAIL",
+   "numFails": 1
   },
   {
    "state": "FAIL",
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "SHAL",
     "TOM",
     "JACK"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "SHAL",
+      "TOM",
+      "JACK"
+     ],
      "votes": [
       "JACK",
       "SHAL",
       "TOM",
       "LUKE"
      ],
-     "proposer": "SHAL",
-     "team": [
-      "SHAL",
-      "TOM",
-      "JACK"
-     ]
+     "state": "APPROVED",
+     "proposer": "SHAL"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "team": [],
-   "teamSize": 4,
-   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
+   "state": "PENDING",
+   "team": [],
+   "failsRequired": 1,
+   "teamSize": 4
+  }
+ ],
+ "players": [
+  {
+   "name": "TOM",
+   "uid": "DBmJbVJuI3gk5sq6JN0gM9aMNUX2"
+  },
+  {
+   "name": "TARA",
+   "uid": "PtnYZP937Yaj3BRoOoEibJKvmNq1"
+  },
+  {
+   "name": "ALI",
+   "uid": "V4YW5XjlPFg1Pj87mv5zDhwWJEO2"
+  },
+  {
+   "name": "LUKE",
+   "uid": "bwGw2zkFfeOH24CRKuunkNjFpOn1"
+  },
+  {
+   "name": "JACK",
+   "uid": "Yc8SPVfUNcXHAbYoCC1bjj9yQTA2"
+  },
+  {
+   "uid": "NIAmvvfK4pNNBRZTyluXo7elAnh2",
+   "name": "SHAL"
   }
  ]
 }

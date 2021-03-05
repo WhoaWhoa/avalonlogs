@@ -3,55 +3,86 @@
   "_seconds": 1585788130,
   "_nanoseconds": 118592000
  },
- "players": [
-  {
-   "name": "KELVIN",
-   "uid": "nT71S6SUocgr40Las43Ra1X7LTF3"
-  },
-  {
-   "uid": "uOAShplm33Sm4Jf0zEyyrmMJ0hm1",
-   "name": "ASTON"
-  },
-  {
-   "uid": "tnKWkdR2l9Ssv2SbB4Jl1jfvNRs2",
-   "name": "NICHOLAS"
-  },
-  {
-   "name": "SAM",
-   "uid": "IgHTN0zhTSdrSy8UQIShbS1qtFc2"
-  },
-  {
-   "name": "THOMSON",
-   "uid": "PNxYt83wKtVYPSb6hzjb1fAv0O12"
-  },
-  {
-   "uid": "NiPctZkYl4NfERf1jQREzCS9l6q2",
-   "name": "ETHAN"
-  },
-  {
-   "name": "ADR",
-   "uid": "3ag3hq2fJhcP47haVWoQJessYnd2"
-  }
- ],
+ "outcome": {
+  "votes": [
+   {
+    "ASTON": true,
+    "KELVIN": true
+   },
+   {
+    "NICHOLAS": true,
+    "ETHAN": true,
+    "ASTON": true
+   },
+   {
+    "SAM": false,
+    "ASTON": true,
+    "KELVIN": true
+   },
+   {
+    "ASTON": true,
+    "ETHAN": false,
+    "KELVIN": true,
+    "NICHOLAS": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "ADR",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "SAM",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "THOMSON",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MERLIN",
+    "name": "KELVIN",
+    "assassin": false
+   },
+   {
+    "role": "OBERON",
+    "name": "ETHAN",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "NICHOLAS",
+    "assassin": false
+   },
+   {
+    "name": "ASTON",
+    "assassin": false,
+    "role": "PERCIVAL"
+   }
+  ],
+  "assassinated": "KELVIN",
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated"
+ },
  "timeCreated": {
   "_seconds": 1585787698,
   "_nanoseconds": 132000000
  },
  "missions": [
   {
-   "team": [
-    "ASTON",
-    "KELVIN"
-   ],
-   "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "ASTON",
       "KELVIN"
      ],
-     "state": "APPROVED",
      "votes": [
       "ETHAN",
       "NICHOLAS",
@@ -64,19 +95,16 @@
      "proposer": "ASTON"
     }
    ],
-   "failsRequired": 1,
+   "team": [
+    "ASTON",
+    "KELVIN"
+   ],
    "state": "SUCCESS"
   },
   {
-   "team": [
-    "NICHOLAS",
-    "ASTON",
-    "ETHAN"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "NICHOLAS",
      "votes": [
       "KELVIN",
       "ETHAN",
@@ -85,7 +113,6 @@
       "SAM",
       "THOMSON"
      ],
-     "proposer": "NICHOLAS",
      "team": [
       "NICHOLAS",
       "ASTON",
@@ -95,18 +122,22 @@
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "NICHOLAS",
+    "ASTON",
+    "ETHAN"
+   ],
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "numFails": 0
   },
   {
-   "team": [
-    "KELVIN",
-    "ASTON",
-    "SAM"
-   ],
-   "numFails": 1,
+   "state": "FAIL",
    "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "SAM",
      "votes": [
       "ADR",
       "SAM",
@@ -115,50 +146,41 @@
       "NICHOLAS",
       "ASTON"
      ],
-     "proposer": "SAM",
      "team": [
       "KELVIN",
       "ASTON",
       "SAM"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1,
+   "team": [
+    "KELVIN",
+    "ASTON",
+    "SAM"
+   ],
+   "failsRequired": 1
   },
   {
-   "team": [
-    "NICHOLAS",
-    "ETHAN",
-    "ASTON",
-    "KELVIN"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
+   "failsRequired": 2,
    "proposals": [
     {
-     "team": [
-      "THOMSON",
-      "NICHOLAS",
-      "ETHAN",
-      "SAM"
-     ],
-     "state": "REJECTED",
      "votes": [
       "ADR",
       "SAM",
       "THOMSON"
      ],
-     "proposer": "THOMSON"
-    },
-    {
+     "proposer": "THOMSON",
+     "state": "REJECTED",
      "team": [
+      "THOMSON",
       "NICHOLAS",
       "ETHAN",
-      "ASTON",
-      "KELVIN"
-     ],
+      "SAM"
+     ]
+    },
+    {
+     "proposer": "ETHAN",
      "state": "APPROVED",
      "votes": [
       "KELVIN",
@@ -167,82 +189,60 @@
       "ASTON",
       "SAM"
      ],
-     "proposer": "ETHAN"
+     "team": [
+      "NICHOLAS",
+      "ETHAN",
+      "ASTON",
+      "KELVIN"
+     ]
     }
    ],
-   "failsRequired": 2,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "NICHOLAS",
+    "ETHAN",
+    "ASTON",
+    "KELVIN"
+   ],
+   "numFails": 1,
+   "teamSize": 4
   },
   {
    "team": [],
+   "proposals": [],
    "teamSize": 4,
    "state": "PENDING",
-   "proposals": [],
    "failsRequired": 1
   }
  ],
- "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "KELVIN",
-  "roles": [
-   {
-    "name": "ADR",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "SAM",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "THOMSON",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "KELVIN",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "ETHAN",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "NICHOLAS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ASTON",
-    "assassin": false,
-    "role": "PERCIVAL"
-   }
-  ],
-  "votes": [
-   {
-    "ASTON": true,
-    "KELVIN": true
-   },
-   {
-    "NICHOLAS": true,
-    "ASTON": true,
-    "ETHAN": true
-   },
-   {
-    "SAM": false,
-    "ASTON": true,
-    "KELVIN": true
-   },
-   {
-    "NICHOLAS": true,
-    "ASTON": true,
-    "ETHAN": false,
-    "KELVIN": true
-   }
-  ]
- }
+ "players": [
+  {
+   "uid": "nT71S6SUocgr40Las43Ra1X7LTF3",
+   "name": "KELVIN"
+  },
+  {
+   "uid": "uOAShplm33Sm4Jf0zEyyrmMJ0hm1",
+   "name": "ASTON"
+  },
+  {
+   "uid": "tnKWkdR2l9Ssv2SbB4Jl1jfvNRs2",
+   "name": "NICHOLAS"
+  },
+  {
+   "uid": "IgHTN0zhTSdrSy8UQIShbS1qtFc2",
+   "name": "SAM"
+  },
+  {
+   "name": "THOMSON",
+   "uid": "PNxYt83wKtVYPSb6hzjb1fAv0O12"
+  },
+  {
+   "uid": "NiPctZkYl4NfERf1jQREzCS9l6q2",
+   "name": "ETHAN"
+  },
+  {
+   "uid": "3ag3hq2fJhcP47haVWoQJessYnd2",
+   "name": "ADR"
+  }
+ ]
 }

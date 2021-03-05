@@ -2,50 +2,141 @@
  "options": {
   "inGameLog": false
  },
+ "outcome": {
+  "state": "GOOD_WIN",
+  "assassinated": "KIM",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "TIM",
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "name": "EMILY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "KELSEY",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "PP",
+    "assassin": true
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "KIM"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "JERBEAR"
+   }
+  ],
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "KIM": true,
+    "PP": true
+   },
+   {
+    "KIM": true,
+    "EMILY": true,
+    "JERBEAR": false
+   },
+   {
+    "KELSEY": true,
+    "EMILY": true,
+    "TIM": true,
+    "KIM": true
+   },
+   {
+    "EMILY": true,
+    "KELSEY": true,
+    "KIM": true
+   }
+  ]
+ },
  "timeCreated": {
   "_seconds": 1587426126,
   "_nanoseconds": 986000000
  },
+ "timeFinished": {
+  "_seconds": 1587426873,
+  "_nanoseconds": 290000000
+ },
+ "players": [
+  {
+   "name": "KIM",
+   "uid": "RYQDmRtW13eb2qUYp9FYVhPO51O2"
+  },
+  {
+   "name": "TIM",
+   "uid": "oq2SOz3Nr4e8pEdu793UIinIHmG2"
+  },
+  {
+   "uid": "oTmk2ZkWMvPSYFXEv8Nuir8HrtM2",
+   "name": "EMILY"
+  },
+  {
+   "name": "JERBEAR",
+   "uid": "tohdiz2PmUhTifV5rjwg11Rmoql1"
+  },
+  {
+   "name": "KELSEY",
+   "uid": "S4eBsjHo1OOMCKiftZxwqjvjASs1"
+  },
+  {
+   "uid": "dQqnaON18nhJmUISyZj0wNKKqtg1",
+   "name": "PP"
+  }
+ ],
  "missions": [
   {
+   "teamSize": 2,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "PP",
+      "KIM",
+      "JERBEAR",
+      "EMILY",
+      "KELSEY"
+     ],
+     "team": [
+      "PP",
+      "KIM"
+     ],
+     "proposer": "PP"
+    }
+   ],
    "team": [
     "PP",
     "KIM"
    ],
    "numFails": 0,
-   "teamSize": 2,
-   "proposals": [
-    {
-     "team": [
-      "PP",
-      "KIM"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "PP",
-      "KIM",
-      "JERBEAR",
-      "EMILY",
-      "KELSEY"
-     ],
-     "proposer": "PP"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
    "team": [
     "KIM",
     "EMILY",
     "JERBEAR"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "KIM",
+      "EMILY",
+      "JERBEAR"
+     ],
      "votes": [
       "JERBEAR",
       "EMILY",
@@ -53,55 +144,54 @@
       "PP",
       "KIM"
      ],
-     "proposer": "KIM",
-     "team": [
-      "KIM",
-      "EMILY",
-      "JERBEAR"
-     ]
+     "proposer": "KIM"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3,
+   "state": "FAIL"
   },
   {
+   "numFails": 0,
    "proposals": [
     {
+     "proposer": "TIM",
      "team": [
       "TIM",
       "KELSEY",
       "KIM",
       "EMILY"
      ],
-     "state": "REJECTED",
      "votes": [
       "PP",
       "EMILY",
       "KELSEY"
      ],
-     "proposer": "TIM"
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "TIM",
-      "EMILY"
-     ],
-     "proposer": "EMILY",
      "team": [
       "EMILY",
       "TIM",
       "PP",
       "JERBEAR"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "TIM",
+      "EMILY"
+     ],
+     "proposer": "EMILY"
     },
     {
+     "state": "APPROVED",
      "team": [
       "TIM",
       "KIM",
       "KELSEY",
       "EMILY"
      ],
-     "state": "APPROVED",
      "votes": [
       "EMILY",
       "PP",
@@ -112,24 +202,18 @@
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "TIM",
     "KIM",
     "KELSEY",
     "EMILY"
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 4
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "KELSEY",
-    "EMILY",
-    "KIM"
-   ],
    "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 3,
    "proposals": [
     {
@@ -138,7 +222,7 @@
       "EMILY",
       "KIM"
      ],
-     "state": "APPROVED",
+     "proposer": "KELSEY",
      "votes": [
       "PP",
       "KIM",
@@ -146,106 +230,22 @@
       "EMILY",
       "KELSEY"
      ],
-     "proposer": "KELSEY"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "team": [
+    "KELSEY",
+    "EMILY",
+    "KIM"
+   ]
   },
   {
    "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1,
+   "teamSize": 4,
    "team": [],
-   "teamSize": 4
+   "failsRequired": 1
   }
- ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "KIM",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "TIM"
-   },
-   {
-    "name": "EMILY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "KELSEY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "PP",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "KIM",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JERBEAR",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ],
-  "votes": [
-   {
-    "KIM": true,
-    "PP": true
-   },
-   {
-    "JERBEAR": false,
-    "EMILY": true,
-    "KIM": true
-   },
-   {
-    "EMILY": true,
-    "KELSEY": true,
-    "KIM": true,
-    "TIM": true
-   },
-   {
-    "KELSEY": true,
-    "EMILY": true,
-    "KIM": true
-   }
-  ],
-  "message": "Three successful missions"
- },
- "players": [
-  {
-   "uid": "RYQDmRtW13eb2qUYp9FYVhPO51O2",
-   "name": "KIM"
-  },
-  {
-   "uid": "oq2SOz3Nr4e8pEdu793UIinIHmG2",
-   "name": "TIM"
-  },
-  {
-   "uid": "oTmk2ZkWMvPSYFXEv8Nuir8HrtM2",
-   "name": "EMILY"
-  },
-  {
-   "uid": "tohdiz2PmUhTifV5rjwg11Rmoql1",
-   "name": "JERBEAR"
-  },
-  {
-   "uid": "S4eBsjHo1OOMCKiftZxwqjvjASs1",
-   "name": "KELSEY"
-  },
-  {
-   "name": "PP",
-   "uid": "dQqnaON18nhJmUISyZj0wNKKqtg1"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1587426873,
-  "_nanoseconds": 290000000
- }
+ ]
 }

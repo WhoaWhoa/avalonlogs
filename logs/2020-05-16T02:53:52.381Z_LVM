@@ -1,45 +1,66 @@
 {
- "players": [
-  {
-   "uid": "HaAEQV3gHUPlbnHSvlcEkniugiN2",
-   "name": "JA"
-  },
-  {
-   "name": "GLEN",
-   "uid": "l62rUJeCMFM83Mp8BozMPVfVWUM2"
-  },
-  {
-   "name": "RACHELLE",
-   "uid": "PDSq2Dj7hJRONHEhbSVbMGRUnvu1"
-  },
-  {
-   "name": "LULU",
-   "uid": "EqvcQrucZWWXqUI232lMc8Uv4593"
-  },
-  {
-   "name": "SHIERA",
-   "uid": "tTWiCM2W3NbhmwBiPcG3P7YMOtH2"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1589597927,
-  "_nanoseconds": 38000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1589597632,
-  "_nanoseconds": 381000000
+ "outcome": {
+  "roles": [
+   {
+    "name": "JA",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "SHIERA",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "LULU",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "role": "MORDRED",
+    "name": "RACHELLE"
+   },
+   {
+    "name": "GLEN",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "GLEN": true,
+    "JA": true
+   },
+   {
+    "GLEN": true,
+    "SHIERA": true,
+    "RACHELLE": false
+   },
+   {
+    "RACHELLE": false,
+    "LULU": true
+   },
+   {
+    "LULU": true,
+    "GLEN": true,
+    "SHIERA": true
+   },
+   {
+    "LULU": true,
+    "SHIERA": true,
+    "GLEN": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "GLEN"
  },
  "missions": [
   {
-   "team": [
-    "JA",
-    "GLEN"
-   ],
    "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -56,19 +77,30 @@
      "proposer": "JA"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2,
+   "team": [
+    "JA",
+    "GLEN"
+   ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "FAIL",
+   "team": [
+    "GLEN",
+    "SHIERA",
+    "RACHELLE"
+   ],
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "GLEN",
      "team": [
       "GLEN",
       "SHIERA",
       "RACHELLE"
      ],
-     "state": "APPROVED",
      "votes": [
       "RACHELLE",
       "GLEN",
@@ -77,51 +109,35 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "GLEN",
-    "SHIERA",
-    "RACHELLE"
-   ],
-   "numFails": 1,
-   "teamSize": 3
+   "numFails": 1
   },
   {
-   "state": "FAIL",
-   "team": [
-    "LULU",
-    "RACHELLE"
-   ],
-   "numFails": 1,
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
       "LULU",
       "RACHELLE"
      ],
-     "state": "APPROVED",
      "votes": [
       "JA",
       "LULU",
       "RACHELLE",
       "GLEN"
      ],
-     "proposer": "RACHELLE"
+     "proposer": "RACHELLE",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "LULU",
+    "RACHELLE"
+   ],
+   "teamSize": 2,
+   "state": "FAIL",
+   "numFails": 1
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "GLEN",
-    "SHIERA",
-    "LULU"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -129,27 +145,34 @@
       "SHIERA",
       "LULU"
      ],
-     "state": "APPROVED",
      "votes": [
       "GLEN",
       "SHIERA",
       "LULU"
      ],
-     "proposer": "LULU"
+     "proposer": "LULU",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "failsRequired": 1,
+   "team": [
+    "GLEN",
+    "SHIERA",
+    "LULU"
+   ],
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
    "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "GLEN",
     "LULU",
     "SHIERA"
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -157,72 +180,49 @@
       "LULU",
       "SHIERA"
      ],
-     "state": "APPROVED",
      "votes": [
       "GLEN",
       "SHIERA",
       "LULU"
      ],
-     "proposer": "SHIERA"
+     "proposer": "SHIERA",
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "teamSize": 3
   }
  ],
- "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "GLEN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "JA"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "SHIERA"
-   },
-   {
-    "name": "LULU",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "RACHELLE",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "name": "GLEN",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "votes": [
-   {
-    "GLEN": true,
-    "JA": true
-   },
-   {
-    "RACHELLE": false,
-    "SHIERA": true,
-    "GLEN": true
-   },
-   {
-    "LULU": true,
-    "RACHELLE": false
-   },
-   {
-    "GLEN": true,
-    "SHIERA": true,
-    "LULU": true
-   },
-   {
-    "SHIERA": true,
-    "LULU": true,
-    "GLEN": true
-   }
-  ]
+ "options": {
+  "inGameLog": false
+ },
+ "players": [
+  {
+   "uid": "HaAEQV3gHUPlbnHSvlcEkniugiN2",
+   "name": "JA"
+  },
+  {
+   "name": "GLEN",
+   "uid": "l62rUJeCMFM83Mp8BozMPVfVWUM2"
+  },
+  {
+   "uid": "PDSq2Dj7hJRONHEhbSVbMGRUnvu1",
+   "name": "RACHELLE"
+  },
+  {
+   "uid": "EqvcQrucZWWXqUI232lMc8Uv4593",
+   "name": "LULU"
+  },
+  {
+   "name": "SHIERA",
+   "uid": "tTWiCM2W3NbhmwBiPcG3P7YMOtH2"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1589597927,
+  "_nanoseconds": 38000000
+ },
+ "timeCreated": {
+  "_seconds": 1589597632,
+  "_nanoseconds": 381000000
  }
 }

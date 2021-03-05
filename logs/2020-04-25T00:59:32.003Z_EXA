@@ -1,8 +1,99 @@
 {
+ "outcome": {
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "MADISON": true,
+    "EZRA": true
+   },
+   {
+    "BEN": true,
+    "EZRA": true,
+    "SAM": false
+   },
+   {
+    "TRAITOR": true,
+    "BEN": true,
+    "EZRA": true,
+    "MADISON": true
+   },
+   {
+    "MADISON": true,
+    "BEN": true,
+    "ALEXIS": false
+   },
+   {
+    "MADISON": true,
+    "EZRA": true,
+    "TRAITOR": true,
+    "BEN": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "MORGANA",
+    "name": "ALEXIS",
+    "assassin": false
+   },
+   {
+    "name": "SAM",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "BEN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "MADISON",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "TRAITOR",
+    "assassin": false
+   },
+   {
+    "name": "EZRA",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": "EZRA"
+ },
  "timeFinished": {
   "_seconds": 1587777180,
   "_nanoseconds": 961000000
  },
+ "players": [
+  {
+   "uid": "S56JnMQWPxdeVzmrFAMPMlVXeWx1",
+   "name": "ALEXIS"
+  },
+  {
+   "name": "MADISON",
+   "uid": "6ji7qI2QW5dtxhgFZJ2eYBVcKsL2"
+  },
+  {
+   "name": "BEN",
+   "uid": "XtYZvDdteXNZATCeHMvWqyFE39S2"
+  },
+  {
+   "name": "EZRA",
+   "uid": "Uns8jizFJ3U0iQSzyz3MosQUjev1"
+  },
+  {
+   "name": "SAM",
+   "uid": "GtyBet2MaATTBeDpYJqmKQKHl712"
+  },
+  {
+   "name": "TRAITOR",
+   "uid": "OiP8IVAVJrbQbVXaQ5wjZAYEKC42"
+  }
+ ],
  "options": {
   "inGameLog": false
  },
@@ -12,15 +103,14 @@
  },
  "missions": [
   {
-   "team": [
-    "MADISON",
-    "EZRA"
-   ],
    "numFails": 0,
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "MADISON",
+      "EZRA"
+     ],
      "votes": [
       "EZRA",
       "ALEXIS",
@@ -30,23 +120,26 @@
       "TRAITOR"
      ],
      "proposer": "MADISON",
-     "team": [
-      "MADISON",
-      "EZRA"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "MADISON",
+    "EZRA"
+   ],
+   "state": "SUCCESS",
+   "teamSize": 2
   },
   {
+   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "FAIL",
    "team": [
     "BEN",
     "SAM",
     "EZRA"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -64,21 +157,12 @@
      ],
      "proposer": "BEN"
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
-   "team": [
-    "MADISON",
-    "BEN",
-    "EZRA",
-    "TRAITOR"
-   ],
-   "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "EZRA",
      "team": [
       "MADISON",
       "BEN",
@@ -91,51 +175,58 @@
       "MADISON",
       "TRAITOR",
       "EZRA"
-     ],
-     "proposer": "EZRA"
+     ]
     }
    ],
+   "state": "SUCCESS",
+   "teamSize": 4,
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "MADISON",
+    "BEN",
+    "EZRA",
+    "TRAITOR"
+   ],
+   "numFails": 0
   },
   {
    "state": "FAIL",
-   "team": [
-    "ALEXIS",
-    "MADISON",
-    "BEN"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "TRAITOR",
-      "EZRA"
-     ],
-     "proposer": "SAM",
      "team": [
       "MADISON",
       "BEN",
       "EZRA"
-     ]
+     ],
+     "proposer": "SAM",
+     "votes": [
+      "TRAITOR",
+      "EZRA"
+     ],
+     "state": "REJECTED"
     },
     {
+     "team": [
+      "TRAITOR",
+      "EZRA",
+      "ALEXIS"
+     ],
      "votes": [
       "SAM",
       "TRAITOR",
       "ALEXIS"
      ],
      "proposer": "TRAITOR",
-     "team": [
-      "TRAITOR",
-      "EZRA",
-      "ALEXIS"
-     ],
      "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
+     "team": [
+      "ALEXIS",
+      "MADISON",
+      "BEN"
+     ],
      "votes": [
       "TRAITOR",
       "EZRA",
@@ -144,27 +235,24 @@
       "BEN",
       "MADISON"
      ],
-     "proposer": "ALEXIS",
-     "team": [
-      "ALEXIS",
-      "MADISON",
-      "BEN"
-     ],
-     "state": "APPROVED"
+     "proposer": "ALEXIS"
     }
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "teamSize": 3,
+   "team": [
+    "ALEXIS",
+    "MADISON",
+    "BEN"
+   ]
   },
   {
-   "state": "SUCCESS",
    "team": [
     "MADISON",
     "TRAITOR",
     "EZRA",
     "BEN"
    ],
-   "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -173,108 +261,20 @@
       "EZRA",
       "BEN"
      ],
-     "state": "APPROVED",
+     "proposer": "MADISON",
      "votes": [
       "SAM",
       "MADISON",
       "TRAITOR",
       "EZRA"
      ],
-     "proposer": "MADISON"
+     "state": "APPROVED"
     }
    ],
+   "teamSize": 4,
+   "numFails": 0,
+   "state": "SUCCESS",
    "failsRequired": 1
-  }
- ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": "EZRA",
-  "roles": [
-   {
-    "name": "ALEXIS",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "SAM",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "BEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MADISON"
-   },
-   {
-    "name": "TRAITOR",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "EZRA",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "votes": [
-   {
-    "EZRA": true,
-    "MADISON": true
-   },
-   {
-    "BEN": true,
-    "EZRA": true,
-    "SAM": false
-   },
-   {
-    "TRAITOR": true,
-    "BEN": true,
-    "EZRA": true,
-    "MADISON": true
-   },
-   {
-    "ALEXIS": false,
-    "BEN": true,
-    "MADISON": true
-   },
-   {
-    "MADISON": true,
-    "TRAITOR": true,
-    "BEN": true,
-    "EZRA": true
-   }
-  ],
-  "message": "Merlin assassinated"
- },
- "players": [
-  {
-   "uid": "S56JnMQWPxdeVzmrFAMPMlVXeWx1",
-   "name": "ALEXIS"
-  },
-  {
-   "name": "MADISON",
-   "uid": "6ji7qI2QW5dtxhgFZJ2eYBVcKsL2"
-  },
-  {
-   "uid": "XtYZvDdteXNZATCeHMvWqyFE39S2",
-   "name": "BEN"
-  },
-  {
-   "uid": "Uns8jizFJ3U0iQSzyz3MosQUjev1",
-   "name": "EZRA"
-  },
-  {
-   "name": "SAM",
-   "uid": "GtyBet2MaATTBeDpYJqmKQKHl712"
-  },
-  {
-   "name": "TRAITOR",
-   "uid": "OiP8IVAVJrbQbVXaQ5wjZAYEKC42"
   }
  ]
 }

@@ -3,18 +3,82 @@
   "_seconds": 1585967314,
   "_nanoseconds": 175170000
  },
+ "outcome": {
+  "votes": [
+   {
+    "JUSTIN": true,
+    "CARBON": true
+   },
+   {
+    "EUNICE": true,
+    "HAMRY": false,
+    "CARBON": true
+   },
+   {
+    "JUSTIN": true,
+    "HAMRY": true,
+    "PRJ": true
+   },
+   {
+    "EUNICE": true,
+    "HAMRY": false,
+    "JUSTIN": true,
+    "PRJ": true
+   }
+  ],
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "name": "ZZZ",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "role": "MERLIN",
+    "name": "CARBON",
+    "assassin": false
+   },
+   {
+    "name": "EUNICE",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "PRJ",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "HAMRY",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "MICHAEL",
+    "assassin": false
+   },
+   {
+    "name": "JUSTIN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "EUNICE"
+ },
  "players": [
   {
-   "uid": "gX0qMBV9PoPXFV6RxzkAScsVnvi1",
-   "name": "JUSTIN"
+   "name": "JUSTIN",
+   "uid": "gX0qMBV9PoPXFV6RxzkAScsVnvi1"
   },
   {
-   "uid": "n9TyNxK9NtYDdJ8ChiK0dbfc5kv1",
-   "name": "CARBON"
+   "name": "CARBON",
+   "uid": "n9TyNxK9NtYDdJ8ChiK0dbfc5kv1"
   },
   {
-   "uid": "1omxh2A7N7edZaqhuux9XeBaqEg2",
-   "name": "HAMRY"
+   "name": "HAMRY",
+   "uid": "1omxh2A7N7edZaqhuux9XeBaqEg2"
   },
   {
    "name": "PRJ",
@@ -39,14 +103,16 @@
  },
  "missions": [
   {
+   "numFails": 0,
    "team": [
     "CARBON",
     "JUSTIN"
    ],
-   "numFails": 0,
    "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "CARBON",
      "votes": [
       "CARBON",
       "EUNICE",
@@ -55,7 +121,6 @@
       "JUSTIN",
       "ZZZ"
      ],
-     "proposer": "CARBON",
      "team": [
       "CARBON",
       "JUSTIN"
@@ -63,8 +128,7 @@
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
    "team": [
@@ -72,8 +136,6 @@
     "HAMRY",
     "EUNICE"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -92,78 +154,82 @@
      "state": "APPROVED"
     }
    ],
+   "state": "FAIL",
    "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1,
+   "teamSize": 3
   },
   {
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "MICHAEL",
-      "JUSTIN",
-      "ZZZ",
-      "PRJ",
-      "HAMRY"
-     ],
      "proposer": "PRJ",
      "team": [
       "PRJ",
       "JUSTIN",
       "HAMRY"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "votes": [
+      "MICHAEL",
+      "JUSTIN",
+      "ZZZ",
+      "PRJ",
+      "HAMRY"
+     ]
     }
    ],
-   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "PRJ",
     "JUSTIN",
     "HAMRY"
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
+   "numFails": 1,
+   "teamSize": 4,
    "team": [
     "EUNICE",
     "PRJ",
     "HAMRY",
     "JUSTIN"
    ],
-   "numFails": 1,
-   "teamSize": 4,
+   "failsRequired": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "MICHAEL",
      "team": [
       "JUSTIN",
       "PRJ",
       "MICHAEL",
       "ZZZ"
      ],
-     "state": "REJECTED",
      "votes": [
       "PRJ",
       "HAMRY",
       "MICHAEL"
+     ],
+     "proposer": "MICHAEL",
+     "state": "REJECTED"
+    },
+    {
+     "votes": [
+      "MICHAEL"
+     ],
+     "proposer": "ZZZ",
+     "state": "REJECTED",
+     "team": [
+      "MICHAEL",
+      "HAMRY",
+      "JUSTIN",
+      "ZZZ"
      ]
     },
     {
-     "team": [
-      "MICHAEL",
-      "HAMRY",
-      "JUSTIN",
-      "ZZZ"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "MICHAEL"
-     ],
-     "proposer": "ZZZ"
-    },
-    {
+     "proposer": "EUNICE",
      "state": "APPROVED",
      "votes": [
       "JUSTIN",
@@ -173,7 +239,6 @@
       "PRJ",
       "HAMRY"
      ],
-     "proposer": "EUNICE",
      "team": [
       "EUNICE",
       "PRJ",
@@ -181,79 +246,14 @@
       "JUSTIN"
      ]
     }
-   ],
-   "failsRequired": 2
+   ]
   },
   {
+   "state": "PENDING",
+   "failsRequired": 1,
    "team": [],
    "teamSize": 4,
-   "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 1
+   "proposals": []
   }
- ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "EUNICE",
-  "roles": [
-   {
-    "name": "ZZZ",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "CARBON",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "EUNICE"
-   },
-   {
-    "name": "PRJ",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "HAMRY",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "MICHAEL",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JUSTIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "JUSTIN": true,
-    "CARBON": true
-   },
-   {
-    "EUNICE": true,
-    "CARBON": true,
-    "HAMRY": false
-   },
-   {
-    "HAMRY": true,
-    "PRJ": true,
-    "JUSTIN": true
-   },
-   {
-    "HAMRY": false,
-    "PRJ": true,
-    "EUNICE": true,
-    "JUSTIN": true
-   }
-  ],
-  "message": "Three successful missions"
- }
+ ]
 }

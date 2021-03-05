@@ -1,57 +1,92 @@
 {
- "timeFinished": {
-  "_seconds": 1586071746,
-  "_nanoseconds": 216566000
- },
- "players": [
-  {
-   "uid": "dH2DPRuS9hWV2pY5dOqeaE56IZl1",
-   "name": "BRANDON"
-  },
-  {
-   "uid": "u2kqc4FttudkHVUgmhHIGlUnfip2",
-   "name": "CHRISTINE"
-  },
-  {
-   "name": "DARWIN",
-   "uid": "61HlY5RU0yVz3CKtkPio4bXxBJk1"
-  },
-  {
-   "name": "KELLY",
-   "uid": "c17MIrU3Lkb7aSQKgF0XbIX1y9T2"
-  },
-  {
-   "uid": "yGTURxPlNpQWhCfNx16ITIoLOpk1",
-   "name": "MIRHA"
-  },
-  {
-   "uid": "tDeKlpHkkRZICRKUvtRZMLS09Bv1",
-   "name": "PETE"
-  },
-  {
-   "uid": "oRXD1cTF7ORZ5gPqU2s8lWU0Oc22",
-   "name": "RAMIE"
-  },
-  {
-   "uid": "MivC00JfcVZ7BXI9Mdvc4xwLAOF2",
-   "name": "WOODS"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586070876,
-  "_nanoseconds": 186000000
+ "outcome": {
+  "assassinated": null,
+  "votes": [
+   {
+    "WOODS": true,
+    "BRANDON": true,
+    "DARWIN": true
+   },
+   {
+    "CHRISTINE": true,
+    "KELLY": false,
+    "WOODS": true,
+    "DARWIN": true
+   },
+   {
+    "WOODS": true,
+    "DARWIN": true,
+    "RAMIE": true,
+    "BRANDON": false
+   },
+   {
+    "PETE": true,
+    "DARWIN": true,
+    "KELLY": true,
+    "CHRISTINE": true,
+    "MIRHA": true
+   },
+   {
+    "PETE": true,
+    "CHRISTINE": true,
+    "MIRHA": true,
+    "DARWIN": true,
+    "KELLY": false
+   }
+  ],
+  "roles": [
+   {
+    "name": "RAMIE",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "name": "PETE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "CHRISTINE",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "KELLY",
+    "role": "MORDRED"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "MIRHA"
+   },
+   {
+    "name": "DARWIN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "BRANDON"
+   },
+   {
+    "name": "WOODS",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions"
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "DARWIN",
     "BRANDON",
     "WOODS"
    ],
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
      "team": [
@@ -59,6 +94,7 @@
       "BRANDON",
       "WOODS"
      ],
+     "proposer": "BRANDON",
      "state": "APPROVED",
      "votes": [
       "RAMIE",
@@ -69,23 +105,17 @@
       "DARWIN",
       "BRANDON",
       "WOODS"
-     ],
-     "proposer": "BRANDON"
+     ]
     }
-   ]
+   ],
+   "teamSize": 3,
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
-   "team": [
-    "CHRISTINE",
-    "DARWIN",
-    "WOODS",
-    "KELLY"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "CHRISTINE",
      "votes": [
       "CHRISTINE",
       "KELLY",
@@ -96,28 +126,30 @@
       "RAMIE",
       "PETE"
      ],
-     "proposer": "CHRISTINE",
+     "state": "APPROVED",
      "team": [
       "CHRISTINE",
       "DARWIN",
       "WOODS",
       "KELLY"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
-  },
-  {
-   "state": "FAIL",
    "team": [
+    "CHRISTINE",
     "DARWIN",
     "WOODS",
-    "BRANDON",
-    "RAMIE"
+    "KELLY"
    ],
-   "numFails": 1,
+   "failsRequired": 1,
    "teamSize": 4,
+   "state": "FAIL",
+   "numFails": 1
+  },
+  {
+   "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
      "team": [
@@ -137,30 +169,20 @@
      "proposer": "DARWIN"
     }
    ],
-   "failsRequired": 1
+   "state": "FAIL",
+   "team": [
+    "DARWIN",
+    "WOODS",
+    "BRANDON",
+    "RAMIE"
+   ]
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "CHRISTINE",
-    "DARWIN",
-    "KELLY",
-    "MIRHA",
-    "PETE"
-   ],
-   "numFails": 0,
    "teamSize": 5,
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "KELLY",
-     "team": [
-      "CHRISTINE",
-      "DARWIN",
-      "KELLY",
-      "MIRHA",
-      "PETE"
-     ],
-     "state": "APPROVED",
      "votes": [
       "KELLY",
       "MIRHA",
@@ -170,12 +192,29 @@
       "RAMIE",
       "PETE",
       "CHRISTINE"
-     ]
+     ],
+     "team": [
+      "CHRISTINE",
+      "DARWIN",
+      "KELLY",
+      "MIRHA",
+      "PETE"
+     ],
+     "state": "APPROVED",
+     "proposer": "KELLY"
     }
    ],
-   "failsRequired": 2
+   "failsRequired": 2,
+   "team": [
+    "CHRISTINE",
+    "DARWIN",
+    "KELLY",
+    "MIRHA",
+    "PETE"
+   ]
   },
   {
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "DARWIN",
@@ -195,6 +234,7 @@
       "PETE",
       "CHRISTINE"
      ],
+     "proposer": "MIRHA",
      "state": "APPROVED",
      "votes": [
       "KELLY",
@@ -205,91 +245,51 @@
       "RAMIE",
       "PETE",
       "CHRISTINE"
-     ],
-     "proposer": "MIRHA"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   }
  ],
- "outcome": {
-  "roles": [
-   {
-    "name": "RAMIE",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "PETE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "CHRISTINE",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "KELLY"
-   },
-   {
-    "name": "MIRHA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "DARWIN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "BRANDON",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "WOODS"
-   }
-  ],
-  "votes": [
-   {
-    "BRANDON": true,
-    "DARWIN": true,
-    "WOODS": true
-   },
-   {
-    "WOODS": true,
-    "CHRISTINE": true,
-    "KELLY": false,
-    "DARWIN": true
-   },
-   {
-    "BRANDON": false,
-    "DARWIN": true,
-    "RAMIE": true,
-    "WOODS": true
-   },
-   {
-    "CHRISTINE": true,
-    "MIRHA": true,
-    "PETE": true,
-    "KELLY": true,
-    "DARWIN": true
-   },
-   {
-    "PETE": true,
-    "KELLY": false,
-    "DARWIN": true,
-    "CHRISTINE": true,
-    "MIRHA": true
-   }
-  ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null
+ "players": [
+  {
+   "name": "BRANDON",
+   "uid": "dH2DPRuS9hWV2pY5dOqeaE56IZl1"
+  },
+  {
+   "uid": "u2kqc4FttudkHVUgmhHIGlUnfip2",
+   "name": "CHRISTINE"
+  },
+  {
+   "name": "DARWIN",
+   "uid": "61HlY5RU0yVz3CKtkPio4bXxBJk1"
+  },
+  {
+   "name": "KELLY",
+   "uid": "c17MIrU3Lkb7aSQKgF0XbIX1y9T2"
+  },
+  {
+   "name": "MIRHA",
+   "uid": "yGTURxPlNpQWhCfNx16ITIoLOpk1"
+  },
+  {
+   "name": "PETE",
+   "uid": "tDeKlpHkkRZICRKUvtRZMLS09Bv1"
+  },
+  {
+   "name": "RAMIE",
+   "uid": "oRXD1cTF7ORZ5gPqU2s8lWU0Oc22"
+  },
+  {
+   "uid": "MivC00JfcVZ7BXI9Mdvc4xwLAOF2",
+   "name": "WOODS"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586071746,
+  "_nanoseconds": 216566000
+ },
+ "timeCreated": {
+  "_seconds": 1586070876,
+  "_nanoseconds": 186000000
  }
 }

@@ -1,25 +1,56 @@
 {
  "outcome": {
+  "votes": [
+   {
+    "JEREMY": true,
+    "JPB": true
+   },
+   {
+    "CORINNE": true,
+    "JEREMY": false,
+    "JPB": true
+   },
+   {
+    "NIKKI": false,
+    "JEREMY": false,
+    "STEPHEN": true,
+    "JASON": true
+   },
+   {
+    "STEPHEN": true,
+    "CORINNE": true,
+    "JPB": true
+   },
+   {
+    "JASON": true,
+    "CORINNE": true,
+    "STEPHEN": true,
+    "JPB": true
+   }
+  ],
+  "message": "Three missions succeeded",
+  "assassinated": null,
+  "state": "GOOD_WIN",
   "roles": [
    {
+    "name": "STEPHEN",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "STEPHEN"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
-    "role": "EVIL MINION",
-    "name": "JEREMY"
-   },
-   {
-    "name": "NIKKI",
-    "assassin": false,
+    "name": "JEREMY",
     "role": "EVIL MINION"
    },
    {
-    "name": "CORINNE",
+    "role": "EVIL MINION",
+    "name": "NIKKI",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "CORINNE"
    },
    {
     "name": "JPB",
@@ -27,46 +58,19 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "JASON",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "JASON"
    }
-  ],
-  "votes": [
-   {
-    "JEREMY": true,
-    "JPB": true
-   },
-   {
-    "JEREMY": false,
-    "CORINNE": true,
-    "JPB": true
-   },
-   {
-    "NIKKI": false,
-    "JASON": true,
-    "JEREMY": false,
-    "STEPHEN": true
-   },
-   {
-    "CORINNE": true,
-    "JPB": true,
-    "STEPHEN": true
-   },
-   {
-    "JPB": true,
-    "STEPHEN": true,
-    "JASON": true,
-    "CORINNE": true
-   }
-  ],
-  "message": "Three missions succeeded",
-  "state": "GOOD_WIN",
-  "assassinated": null
+  ]
  },
  "timeFinished": {
   "_seconds": 1585444503,
   "_nanoseconds": 766514000
+ },
+ "timeCreated": {
+  "_seconds": 1585444007,
+  "_nanoseconds": 327000000
  },
  "players": [
   {
@@ -78,12 +82,12 @@
    "uid": "J3HQERqsKUMmnsWa4igeHM3kdi13"
   },
   {
-   "uid": "mpdR5V36IDStY7k1O8PWVuSseyH2",
-   "name": "CORINNE"
+   "name": "CORINNE",
+   "uid": "mpdR5V36IDStY7k1O8PWVuSseyH2"
   },
   {
-   "name": "JEREMY",
-   "uid": "RpzRshTS2cbEus6YIgPGSqHpTvj1"
+   "uid": "RpzRshTS2cbEus6YIgPGSqHpTvj1",
+   "name": "JEREMY"
   },
   {
    "uid": "o3Sb1YSdRYOe6H6RGpxuQRJIRg23",
@@ -94,14 +98,19 @@
    "uid": "gor543FIZvX2LZl2yZCqtDCyPgy2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1585444007,
-  "_nanoseconds": 327000000
- },
  "missions": [
   {
+   "team": [
+    "JPB",
+    "JEREMY"
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "JPB",
      "votes": [
       "STEPHEN",
       "JEREMY",
@@ -110,21 +119,12 @@
       "JPB",
       "JASON"
      ],
-     "proposer": "JPB",
      "team": [
       "JPB",
       "JEREMY"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "JPB",
-    "JEREMY"
-   ],
-   "numFails": 0,
    "teamSize": 2
   },
   {
@@ -133,16 +133,9 @@
     "JEREMY",
     "JPB"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "proposer": "CORINNE",
-     "team": [
-      "CORINNE",
-      "JEREMY",
-      "JPB"
-     ],
      "state": "APPROVED",
      "votes": [
       "JEREMY",
@@ -151,78 +144,89 @@
       "JPB",
       "JASON",
       "STEPHEN"
+     ],
+     "team": [
+      "CORINNE",
+      "JEREMY",
+      "JPB"
      ]
     }
    ],
    "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3,
    "state": "FAIL"
   },
   {
+   "numFails": 2,
+   "state": "FAIL",
+   "teamSize": 4,
+   "proposals": [
+    {
+     "team": [
+      "JEREMY",
+      "STEPHEN",
+      "JASON",
+      "NIKKI"
+     ],
+     "proposer": "JEREMY",
+     "state": "APPROVED",
+     "votes": [
+      "JASON",
+      "JEREMY",
+      "NIKKI",
+      "CORINNE"
+     ]
+    }
+   ],
    "team": [
     "JEREMY",
     "STEPHEN",
     "JASON",
     "NIKKI"
    ],
-   "numFails": 2,
-   "teamSize": 4,
-   "proposals": [
-    {
-     "votes": [
-      "JASON",
-      "JEREMY",
-      "NIKKI",
-      "CORINNE"
-     ],
-     "proposer": "JEREMY",
-     "team": [
-      "JEREMY",
-      "STEPHEN",
-      "JASON",
-      "NIKKI"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
+   "teamSize": 3,
+   "team": [
+    "STEPHEN",
+    "JPB",
+    "CORINNE"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "JASON",
-      "CORINNE",
-      "JPB"
-     ],
-     "state": "REJECTED",
      "votes": [
       "CORINNE",
       "JASON",
       "STEPHEN"
      ],
-     "proposer": "JASON"
+     "team": [
+      "JASON",
+      "CORINNE",
+      "JPB"
+     ],
+     "proposer": "JASON",
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "JEREMY",
+      "NIKKI"
+     ],
      "team": [
       "CORINNE",
       "JPB",
       "JEREMY"
      ],
      "state": "REJECTED",
-     "votes": [
-      "JEREMY",
-      "NIKKI"
-     ],
      "proposer": "NIKKI"
     },
     {
-     "team": [
-      "STEPHEN",
-      "JPB",
-      "CORINNE"
-     ],
-     "state": "APPROVED",
+     "proposer": "STEPHEN",
      "votes": [
       "JASON",
       "STEPHEN",
@@ -230,29 +234,20 @@
       "CORINNE",
       "JPB"
      ],
-     "proposer": "STEPHEN"
+     "team": [
+      "STEPHEN",
+      "JPB",
+      "CORINNE"
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "STEPHEN",
-    "JPB",
-    "CORINNE"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   ]
   },
   {
+   "failsRequired": 1,
    "state": "SUCCESS",
-   "team": [
-    "CORINNE",
-    "JPB",
-    "STEPHEN",
-    "JASON"
-   ],
-   "numFails": 0,
    "teamSize": 4,
+   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -261,17 +256,22 @@
       "STEPHEN",
       "JASON"
      ],
-     "state": "APPROVED",
      "votes": [
       "CORINNE",
       "JPB",
       "JASON",
       "STEPHEN"
      ],
+     "state": "APPROVED",
      "proposer": "JPB"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "CORINNE",
+    "JPB",
+    "STEPHEN",
+    "JASON"
+   ]
   }
  ]
 }

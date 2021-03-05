@@ -1,12 +1,36 @@
 {
+ "players": [
+  {
+   "uid": "xktobEw95VdYv7fAUX53tMzb0Ku1",
+   "name": "IDO"
+  },
+  {
+   "uid": "Mlkq7mGszSga6WTayYuf5WN5r0o2",
+   "name": "MAX"
+  },
+  {
+   "uid": "RvCdx31U97Yz8GEQpVLXnliU19p1",
+   "name": "EVA"
+  },
+  {
+   "uid": "rg7FTyteDagVDJPg9o6VzOXqSZs2",
+   "name": "LOGAN"
+  },
+  {
+   "name": "JOE",
+   "uid": "ZZbaXEr38UQkXrmNBzVhW30DIAg2"
+  }
+ ],
  "missions": [
   {
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "IDO",
     "MAX"
    ],
-   "numFails": 1,
    "teamSize": 2,
+   "numFails": 1,
    "proposals": [
     {
      "state": "REJECTED",
@@ -14,18 +38,18 @@
       "EVA",
       "MAX"
      ],
-     "proposer": "IDO",
-     "team": [
-      "IDO",
-      "MAX"
-     ]
-    },
-    {
      "team": [
       "IDO",
       "MAX"
      ],
+     "proposer": "IDO"
+    },
+    {
      "state": "APPROVED",
+     "team": [
+      "IDO",
+      "MAX"
+     ],
      "votes": [
       "MAX",
       "IDO",
@@ -33,9 +57,7 @@
      ],
      "proposer": "MAX"
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
    "team": [
@@ -44,41 +66,41 @@
     "JOE"
    ],
    "numFails": 0,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "EVA",
      "votes": [
       "EVA",
       "JOE"
      ],
-     "proposer": "EVA",
      "team": [
       "JOE",
       "EVA",
       "MAX"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "votes": [
+      "IDO",
+      "LOGAN"
+     ],
      "team": [
       "EVA",
       "LOGAN",
       "IDO"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "IDO",
-      "LOGAN"
-     ],
-     "proposer": "LOGAN"
+     "proposer": "LOGAN",
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "team": [
       "MAX",
       "EVA",
       "JOE"
      ],
-     "state": "APPROVED",
      "votes": [
       "EVA",
       "MAX",
@@ -87,84 +109,89 @@
      "proposer": "JOE"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "teamSize": 3
   },
   {
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "IDO"
      ],
-     "proposer": "IDO",
      "team": [
       "IDO",
       "EVA"
      ],
-     "state": "REJECTED"
+     "proposer": "IDO"
     },
     {
-     "team": [
-      "EVA",
-      "JOE"
-     ],
-     "state": "APPROVED",
      "votes": [
       "MAX",
       "JOE",
       "IDO"
      ],
-     "proposer": "MAX"
+     "proposer": "MAX",
+     "team": [
+      "EVA",
+      "JOE"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "EVA",
     "JOE"
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   ]
   },
   {
+   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "EVA",
      "team": [
       "MAX",
       "JOE",
       "EVA"
      ],
-     "state": "APPROVED",
      "votes": [
       "EVA",
       "MAX",
       "JOE"
-     ]
+     ],
+     "proposer": "EVA",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS",
    "team": [
     "MAX",
     "JOE",
     "EVA"
    ],
-   "numFails": 0,
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
+   "proposals": [],
    "team": [],
-   "teamSize": 3,
    "state": "PENDING",
-   "proposals": []
+   "failsRequired": 1,
+   "teamSize": 3
   }
  ],
+ "timeCreated": {
+  "_seconds": 1585513181,
+  "_nanoseconds": 586000000
+ },
+ "timeFinished": {
+  "_seconds": 1585513505,
+  "_nanoseconds": 733385000
+ },
  "outcome": {
-  "message": "Three missions succeeded",
-  "state": "GOOD_WIN",
-  "assassinated": null,
   "roles": [
    {
     "name": "EVA",
@@ -182,65 +209,38 @@
     "name": "JOE"
    },
    {
-    "name": "IDO",
+    "role": "EVIL MINION",
     "assassin": false,
-    "role": "EVIL MINION"
+    "name": "IDO"
    },
    {
-    "name": "LOGAN",
+    "role": "EVIL MINION",
     "assassin": false,
-    "role": "EVIL MINION"
+    "name": "LOGAN"
    }
   ],
+  "assassinated": null,
+  "state": "GOOD_WIN",
+  "message": "Three missions succeeded",
   "votes": [
    {
     "MAX": true,
     "IDO": false
    },
    {
-    "JOE": true,
     "MAX": true,
-    "EVA": true
+    "EVA": true,
+    "JOE": true
    },
    {
-    "JOE": true,
-    "EVA": true
+    "EVA": true,
+    "JOE": true
    },
    {
-    "JOE": true,
     "MAX": true,
-    "EVA": true
+    "EVA": true,
+    "JOE": true
    }
   ]
- },
- "timeFinished": {
-  "_seconds": 1585513505,
-  "_nanoseconds": 733385000
- },
- "players": [
-  {
-   "name": "IDO",
-   "uid": "xktobEw95VdYv7fAUX53tMzb0Ku1"
-  },
-  {
-   "uid": "Mlkq7mGszSga6WTayYuf5WN5r0o2",
-   "name": "MAX"
-  },
-  {
-   "uid": "RvCdx31U97Yz8GEQpVLXnliU19p1",
-   "name": "EVA"
-  },
-  {
-   "uid": "rg7FTyteDagVDJPg9o6VzOXqSZs2",
-   "name": "LOGAN"
-  },
-  {
-   "uid": "ZZbaXEr38UQkXrmNBzVhW30DIAg2",
-   "name": "JOE"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585513181,
-  "_nanoseconds": 586000000
  }
 }

@@ -5,8 +5,8 @@
  },
  "players": [
   {
-   "uid": "rwged2YVJWg7YMDDM7OqXN1p1ob2",
-   "name": "JOYCE"
+   "name": "JOYCE",
+   "uid": "rwged2YVJWg7YMDDM7OqXN1p1ob2"
   },
   {
    "name": "JOLO",
@@ -25,28 +25,87 @@
    "uid": "1Xw7D4qzCAcHonaitNubh9ie5dp1"
   },
   {
-   "uid": "pn9biBt1ZRfw9snug6uAWQed5Db2",
-   "name": "ELINA"
+   "name": "ELINA",
+   "uid": "pn9biBt1ZRfw9snug6uAWQed5Db2"
   },
   {
-   "uid": "6uZWJA2WR0Zoh9ygMLXyHdA9AWD2",
-   "name": "KXT"
+   "name": "KXT",
+   "uid": "6uZWJA2WR0Zoh9ygMLXyHdA9AWD2"
   }
  ],
+ "outcome": {
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "ELINA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "JOLO"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "JOYCE"
+   },
+   {
+    "name": "SARAH",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "KXT"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "OWEN"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "TANYA"
+   }
+  ],
+  "votes": [
+   {
+    "KXT": true,
+    "TANYA": true
+   },
+   {
+    "JOYCE": true,
+    "SARAH": false,
+    "ELINA": true
+   },
+   {
+    "OWEN": false,
+    "ELINA": true,
+    "TANYA": true
+   },
+   {
+    "ELINA": true,
+    "SARAH": false,
+    "TANYA": true,
+    "JOLO": false
+   }
+  ]
+ },
  "timeCreated": {
   "_seconds": 1585966004,
   "_nanoseconds": 942000000
  },
  "missions": [
   {
-   "team": [
-    "TANYA",
-    "KXT"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "TANYA",
      "votes": [
       "JOYCE",
       "SARAH",
@@ -56,29 +115,35 @@
       "ELINA",
       "JOLO"
      ],
-     "proposer": "TANYA",
+     "state": "APPROVED",
      "team": [
       "TANYA",
       "KXT"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "TANYA",
+    "KXT"
+   ],
+   "numFails": 0,
+   "teamSize": 2
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "SARAH",
     "JOYCE",
     "ELINA"
    ],
-   "numFails": 1,
+   "state": "FAIL",
    "teamSize": 3,
+   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "SARAH",
      "state": "APPROVED",
      "votes": [
       "ELINA",
@@ -89,7 +154,6 @@
       "OWEN",
       "TANYA"
      ],
-     "proposer": "SARAH",
      "team": [
       "SARAH",
       "JOYCE",
@@ -99,16 +163,11 @@
    ]
   },
   {
-   "team": [
-    "ELINA",
-    "TANYA",
-    "OWEN"
-   ],
-   "numFails": 1,
    "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "ELINA",
      "votes": [
       "SARAH",
       "OWEN",
@@ -117,26 +176,26 @@
       "JOLO",
       "JOYCE"
      ],
-     "proposer": "ELINA",
      "team": [
       "ELINA",
       "TANYA",
       "OWEN"
-     ]
+     ],
+     "state": "APPROVED"
     }
+   ],
+   "team": [
+    "ELINA",
+    "TANYA",
+    "OWEN"
    ],
    "failsRequired": 1,
    "state": "FAIL"
   },
   {
-   "team": [
-    "JOLO",
-    "TANYA",
-    "ELINA",
-    "SARAH"
-   ],
    "numFails": 2,
    "teamSize": 4,
+   "failsRequired": 2,
    "proposals": [
     {
      "team": [
@@ -145,7 +204,6 @@
       "ELINA",
       "SARAH"
      ],
-     "state": "APPROVED",
      "votes": [
       "JOLO",
       "SARAH",
@@ -153,82 +211,24 @@
       "OWEN",
       "TANYA"
      ],
-     "proposer": "KXT"
+     "proposer": "KXT",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 2,
+   "team": [
+    "JOLO",
+    "TANYA",
+    "ELINA",
+    "SARAH"
+   ],
    "state": "FAIL"
   },
   {
-   "team": [],
    "teamSize": 4,
+   "failsRequired": 1,
    "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
+   "team": []
   }
- ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "ELINA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JOLO",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JOYCE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "SARAH"
-   },
-   {
-    "name": "KXT",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "OWEN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "TANYA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   }
-  ],
-  "votes": [
-   {
-    "TANYA": true,
-    "KXT": true
-   },
-   {
-    "SARAH": false,
-    "JOYCE": true,
-    "ELINA": true
-   },
-   {
-    "TANYA": true,
-    "ELINA": true,
-    "OWEN": false
-   },
-   {
-    "TANYA": true,
-    "ELINA": true,
-    "JOLO": false,
-    "SARAH": false
-   }
-  ],
-  "message": "Three failed missions"
- }
+ ]
 }

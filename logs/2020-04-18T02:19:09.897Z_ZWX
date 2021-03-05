@@ -1,23 +1,112 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "players": [
+  {
+   "name": "LOOSHIN",
+   "uid": "f5xWgMf1EOVo56SnuacCLng65UZ2"
+  },
+  {
+   "uid": "jI4Nrc022vP68I4OWEhCtUF7iZ23",
+   "name": "CHUBBS"
+  },
+  {
+   "name": "DANGUS",
+   "uid": "3GGbLPhM7DYF8EFQ7OKWjuv3jA52"
+  },
+  {
+   "name": "ADAM",
+   "uid": "AiOCffQzOPfjy2kBa5eOyaCb5Gz2"
+  },
+  {
+   "name": "JUSTDOUG",
+   "uid": "3pQ1j8h355RFlZUbw4jPXhH28tu2"
+  },
+  {
+   "name": "TOM",
+   "uid": "zTjNAe3m8sTuPSczvG3xDFrvSSA3"
+  }
+ ],
+ "outcome": {
+  "roles": [
+   {
+    "assassin": false,
+    "name": "LOOSHIN",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "CHUBBS"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "JUSTDOUG"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "TOM",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "DANGUS"
+   },
+   {
+    "assassin": false,
+    "name": "ADAM",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "votes": [
+   {
+    "LOOSHIN": true,
+    "TOM": true
+   },
+   {
+    "LOOSHIN": true,
+    "ADAM": true,
+    "CHUBBS": true
+   },
+   {
+    "TOM": false,
+    "DANGUS": false,
+    "CHUBBS": true,
+    "ADAM": true
+   },
+   {
+    "LOOSHIN": true,
+    "JUSTDOUG": true,
+    "ADAM": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "message": "Three missions succeeded",
+  "assassinated": null
+ },
  "timeFinished": {
   "_seconds": 1587177147,
   "_nanoseconds": 525000000
  },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587176349,
-  "_nanoseconds": 897000000
- },
  "missions": [
   {
+   "team": [
+    "TOM",
+    "LOOSHIN"
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
      "team": [
       "TOM",
       "LOOSHIN"
      ],
+     "proposer": "JUSTDOUG",
      "state": "APPROVED",
      "votes": [
       "TOM",
@@ -25,25 +114,13 @@
       "LOOSHIN",
       "CHUBBS",
       "JUSTDOUG"
-     ],
-     "proposer": "JUSTDOUG"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "TOM",
-    "LOOSHIN"
-   ],
-   "numFails": 0,
    "teamSize": 2
   },
   {
-   "team": [
-    "LOOSHIN",
-    "CHUBBS",
-    "ADAM"
-   ],
+   "failsRequired": 1,
    "numFails": 0,
    "teamSize": 3,
    "proposals": [
@@ -53,15 +130,19 @@
       "LOOSHIN"
      ],
      "proposer": "TOM",
+     "state": "REJECTED",
      "team": [
       "TOM",
       "CHUBBS",
       "LOOSHIN"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "APPROVED",
+     "team": [
+      "LOOSHIN",
+      "CHUBBS",
+      "ADAM"
+     ],
      "votes": [
       "TOM",
       "ADAM",
@@ -69,31 +150,30 @@
       "CHUBBS",
       "JUSTDOUG"
      ],
-     "proposer": "LOOSHIN",
-     "team": [
-      "LOOSHIN",
-      "CHUBBS",
-      "ADAM"
-     ]
+     "state": "APPROVED",
+     "proposer": "LOOSHIN"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "LOOSHIN",
+    "CHUBBS",
+    "ADAM"
+   ]
   },
   {
+   "numFails": 2,
    "failsRequired": 1,
-   "state": "FAIL",
+   "teamSize": 4,
    "team": [
     "DANGUS",
     "TOM",
     "CHUBBS",
     "ADAM"
    ],
-   "numFails": 2,
-   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "ADAM",
       "CHUBBS"
@@ -104,7 +184,8 @@
       "LOOSHIN",
       "ADAM",
       "DANGUS"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -114,27 +195,20 @@
       "ADAM"
      ],
      "state": "APPROVED",
+     "proposer": "DANGUS",
      "votes": [
       "TOM",
       "DANGUS",
       "ADAM",
       "CHUBBS"
-     ],
-     "proposer": "DANGUS"
+     ]
     }
    ]
   },
   {
-   "team": [
-    "ADAM",
-    "LOOSHIN",
-    "JUSTDOUG"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "ADAM",
      "team": [
       "ADAM",
       "LOOSHIN",
@@ -146,103 +220,29 @@
       "JUSTDOUG",
       "TOM",
       "ADAM"
-     ]
+     ],
+     "proposer": "ADAM"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "teamSize": 3,
+   "team": [
+    "ADAM",
+    "LOOSHIN",
+    "JUSTDOUG"
+   ]
   },
   {
-   "team": [],
    "teamSize": 4,
+   "team": [],
    "state": "PENDING",
    "proposals": [],
    "failsRequired": 1
   }
  ],
- "outcome": {
-  "message": "Three missions succeeded",
-  "state": "GOOD_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "LOOSHIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "CHUBBS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JUSTDOUG",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "TOM"
-   },
-   {
-    "name": "DANGUS",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ADAM",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "LOOSHIN": true,
-    "TOM": true
-   },
-   {
-    "ADAM": true,
-    "CHUBBS": true,
-    "LOOSHIN": true
-   },
-   {
-    "ADAM": true,
-    "CHUBBS": true,
-    "DANGUS": false,
-    "TOM": false
-   },
-   {
-    "LOOSHIN": true,
-    "JUSTDOUG": true,
-    "ADAM": true
-   }
-  ]
- },
- "players": [
-  {
-   "name": "LOOSHIN",
-   "uid": "f5xWgMf1EOVo56SnuacCLng65UZ2"
-  },
-  {
-   "name": "CHUBBS",
-   "uid": "jI4Nrc022vP68I4OWEhCtUF7iZ23"
-  },
-  {
-   "name": "DANGUS",
-   "uid": "3GGbLPhM7DYF8EFQ7OKWjuv3jA52"
-  },
-  {
-   "name": "ADAM",
-   "uid": "AiOCffQzOPfjy2kBa5eOyaCb5Gz2"
-  },
-  {
-   "uid": "3pQ1j8h355RFlZUbw4jPXhH28tu2",
-   "name": "JUSTDOUG"
-  },
-  {
-   "uid": "zTjNAe3m8sTuPSczvG3xDFrvSSA3",
-   "name": "TOM"
-  }
- ]
+ "timeCreated": {
+  "_seconds": 1587176349,
+  "_nanoseconds": 897000000
+ }
 }

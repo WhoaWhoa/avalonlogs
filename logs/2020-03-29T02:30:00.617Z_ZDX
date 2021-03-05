@@ -1,10 +1,12 @@
 {
  "outcome": {
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
   "roles": [
    {
     "name": "ANDREW",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
     "name": "JENNY",
@@ -12,9 +14,9 @@
     "role": "MERLIN"
    },
    {
+    "role": "MORDRED",
     "name": "SHIVI",
-    "assassin": false,
-    "role": "MORDRED"
+    "assassin": false
    },
    {
     "name": "ANNA",
@@ -22,13 +24,13 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "SCOTT",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "SCOTT"
    },
    {
-    "name": "ZDX",
     "assassin": false,
+    "name": "ZDX",
     "role": "PERCIVAL"
    },
    {
@@ -39,61 +41,59 @@
   ],
   "votes": [
    {
-    "ZDX": true,
-    "ANNA": true
+    "ANNA": true,
+    "ZDX": true
    },
    {
-    "RYANJIANG": true,
+    "ANNA": true,
     "ZDX": true,
-    "ANNA": true
+    "RYANJIANG": true
    },
    {
-    "RYANJIANG": true,
     "ZDX": true,
-    "ANNA": true
+    "ANNA": true,
+    "RYANJIANG": true
    }
   ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
   "assassinated": "ZDX"
  },
- "timeFinished": {
-  "_seconds": 1585449482,
-  "_nanoseconds": 640727000
+ "timeCreated": {
+  "_seconds": 1585449000,
+  "_nanoseconds": 617000000
  },
  "players": [
   {
-   "uid": "E1N7D9RLkxQH9AtqBRPvymtdwPv2",
-   "name": "SCOTT"
+   "name": "SCOTT",
+   "uid": "E1N7D9RLkxQH9AtqBRPvymtdwPv2"
   },
   {
-   "uid": "GqkRdXH8zDQsqJXRumZnsmsZvUn1",
-   "name": "ANDREW"
+   "name": "ANDREW",
+   "uid": "GqkRdXH8zDQsqJXRumZnsmsZvUn1"
   },
   {
-   "name": "RYANJIANG",
-   "uid": "PajOdSE56YYkVUu5hwFqkxbR2C72"
+   "uid": "PajOdSE56YYkVUu5hwFqkxbR2C72",
+   "name": "RYANJIANG"
   },
   {
-   "name": "ANNA",
-   "uid": "4cJd5Mag2HV1U5XcWciEkXDDlae2"
+   "uid": "4cJd5Mag2HV1U5XcWciEkXDDlae2",
+   "name": "ANNA"
   },
   {
    "uid": "x5gI57PR4OSrbIfZqt1j2o0Ic1k1",
    "name": "JENNY"
   },
   {
-   "uid": "EQPT8m12KbYuImq2XRbJyH7hpnG3",
-   "name": "SHIVI"
+   "name": "SHIVI",
+   "uid": "EQPT8m12KbYuImq2XRbJyH7hpnG3"
   },
   {
-   "name": "ZDX",
-   "uid": "CDrkkdrLjMVXhRWSwWjciWaxy5v1"
+   "uid": "CDrkkdrLjMVXhRWSwWjciWaxy5v1",
+   "name": "ZDX"
   }
  ],
- "timeCreated": {
-  "_seconds": 1585449000,
-  "_nanoseconds": 617000000
+ "timeFinished": {
+  "_seconds": 1585449482,
+  "_nanoseconds": 640727000
  },
  "missions": [
   {
@@ -103,41 +103,51 @@
    ],
    "numFails": 0,
    "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "SHIVI",
      "team": [
       "SHIVI",
       "ZDX"
      ],
-     "state": "REJECTED",
      "votes": [
       "SHIVI",
       "ZDX",
       "JENNY"
-     ]
+     ],
+     "proposer": "SHIVI",
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "JENNY",
-      "ANNA",
-      "ZDX",
-      "RYANJIANG"
-     ],
      "proposer": "ZDX",
      "team": [
       "ZDX",
       "ANNA"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "votes": [
+      "JENNY",
+      "ANNA",
+      "ZDX",
+      "RYANJIANG"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
+   "team": [
+    "RYANJIANG",
+    "ANNA",
+    "ZDX"
+   ],
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "SCOTT"
      ],
@@ -146,21 +156,20 @@
       "SCOTT",
       "RYANJIANG",
       "ANNA"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "team": [
-      "ANDREW",
-      "SCOTT",
-      "SHIVI"
-     ],
      "state": "REJECTED",
      "votes": [
       "ANDREW",
       "SCOTT"
      ],
-     "proposer": "ANDREW"
+     "proposer": "ANDREW",
+     "team": [
+      "ANDREW",
+      "SCOTT",
+      "SHIVI"
+     ]
     },
     {
      "votes": [
@@ -170,66 +179,57 @@
       "ANNA",
       "ZDX"
      ],
-     "proposer": "RYANJIANG",
      "team": [
       "RYANJIANG",
       "ANNA",
       "ZDX"
      ],
+     "proposer": "RYANJIANG",
      "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "RYANJIANG",
-    "ANNA",
-    "ZDX"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   ]
   },
   {
-   "numFails": 0,
    "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "ANNA",
-     "team": [
-      "RYANJIANG",
-      "ANNA",
-      "ZDX"
-     ],
-     "state": "APPROVED",
      "votes": [
       "ANNA",
       "ZDX",
       "RYANJIANG",
       "JENNY"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "RYANJIANG",
+      "ANNA",
+      "ZDX"
+     ],
+     "proposer": "ANNA"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "RYANJIANG",
     "ANNA",
     "ZDX"
-   ]
+   ],
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 4,
    "state": "PENDING",
+   "team": [],
    "proposals": [],
-   "failsRequired": 2,
-   "team": []
+   "teamSize": 4,
+   "failsRequired": 2
   },
   {
-   "proposals": [],
    "failsRequired": 1,
    "team": [],
+   "state": "PENDING",
    "teamSize": 4,
-   "state": "PENDING"
+   "proposals": []
   }
  ]
 }

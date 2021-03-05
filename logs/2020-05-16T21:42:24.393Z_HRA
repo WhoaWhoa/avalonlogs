@@ -1,4 +1,30 @@
 {
+ "players": [
+  {
+   "name": "ALISHA",
+   "uid": "SL1SWGfGKgbFR5j9EY8ACpZJ0pK2"
+  },
+  {
+   "uid": "OewWMpsmUNftybNbKze8SBZ37Q23",
+   "name": "SOPHEY"
+  },
+  {
+   "name": "CHRISTINE",
+   "uid": "GI3sRgKFRINiMosJ2UoqcE9kFZo2"
+  },
+  {
+   "uid": "LZmGnmKn30hbnSSR9fjqUCPHX4k2",
+   "name": "SARAH"
+  },
+  {
+   "uid": "aVCa22i9y2ZPbQMLszCe0qkjSXf1",
+   "name": "JESSE"
+  },
+  {
+   "name": "ANGELL",
+   "uid": "WRDiYfqIoLZLeBm3wOolbmfpFQj1"
+  }
+ ],
  "timeFinished": {
   "_seconds": 1589667051,
   "_nanoseconds": 619000000
@@ -10,17 +36,79 @@
   "_seconds": 1589665344,
   "_nanoseconds": 393000000
  },
+ "outcome": {
+  "votes": [
+   {
+    "ANGELL": true,
+    "CHRISTINE": true
+   },
+   {
+    "ANGELL": true,
+    "CHRISTINE": true,
+    "ALISHA": false
+   },
+   {
+    "ALISHA": false,
+    "SOPHEY": true,
+    "SARAH": true,
+    "CHRISTINE": true
+   },
+   {
+    "ANGELL": true,
+    "SOPHEY": true,
+    "JESSE": true
+   },
+   {
+    "SOPHEY": true,
+    "JESSE": true,
+    "ANGELL": true,
+    "CHRISTINE": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "SARAH",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "role": "MERLIN",
+    "name": "JESSE",
+    "assassin": false
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "SOPHEY",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "CHRISTINE",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "ANGELL",
+    "assassin": false
+   },
+   {
+    "name": "ALISHA",
+    "role": "EVIL MINION",
+    "assassin": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": "JESSE",
+  "message": "Merlin assassinated"
+ },
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "ANGELL",
-    "CHRISTINE"
-   ],
    "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "ANGELL",
      "votes": [
       "SOPHEY",
       "CHRISTINE",
@@ -29,27 +117,36 @@
       "SARAH",
       "JESSE"
      ],
-     "proposer": "ANGELL",
      "team": [
       "ANGELL",
       "CHRISTINE"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "team": [
+    "ANGELL",
+    "CHRISTINE"
+   ],
+   "state": "SUCCESS",
    "failsRequired": 1
   },
   {
+   "teamSize": 3,
    "team": [
     "ALISHA",
     "ANGELL",
     "CHRISTINE"
    ],
-   "numFails": 1,
-   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "ALISHA",
+      "ANGELL",
+      "CHRISTINE"
+     ],
+     "proposer": "ALISHA",
      "votes": [
       "ANGELL",
       "ALISHA",
@@ -58,51 +155,36 @@
       "SOPHEY",
       "CHRISTINE"
      ],
-     "proposer": "ALISHA",
-     "team": [
-      "ALISHA",
-      "ANGELL",
-      "CHRISTINE"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
-   "state": "FAIL",
-   "team": [
-    "CHRISTINE",
-    "SARAH",
-    "SOPHEY",
-    "ALISHA"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [
+      "JESSE",
+      "SOPHEY",
+      "CHRISTINE"
+     ],
      "proposer": "SOPHEY",
      "team": [
       "JESSE",
       "SOPHEY",
       "ANGELL",
       "CHRISTINE"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "JESSE",
-      "SOPHEY",
-      "CHRISTINE"
      ]
     },
     {
+     "proposer": "CHRISTINE",
      "votes": [
       "SOPHEY",
       "CHRISTINE",
       "ALISHA",
       "SARAH"
      ],
-     "proposer": "CHRISTINE",
      "team": [
       "CHRISTINE",
       "SARAH",
@@ -112,17 +194,25 @@
      "state": "APPROVED"
     }
    ],
+   "state": "FAIL",
+   "team": [
+    "CHRISTINE",
+    "SARAH",
+    "SOPHEY",
+    "ALISHA"
+   ],
+   "numFails": 1,
+   "teamSize": 4,
    "failsRequired": 1
   },
   {
    "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "JESSE",
     "ANGELL",
     "SOPHEY"
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -138,33 +228,26 @@
      "proposer": "SARAH"
     },
     {
-     "state": "APPROVED",
+     "team": [
+      "JESSE",
+      "ANGELL",
+      "SOPHEY"
+     ],
      "votes": [
       "JESSE",
       "SOPHEY",
       "CHRISTINE",
       "ANGELL"
      ],
-     "proposer": "JESSE",
-     "team": [
-      "JESSE",
-      "ANGELL",
-      "SOPHEY"
-     ]
+     "state": "APPROVED",
+     "proposer": "JESSE"
     }
    ],
+   "teamSize": 3,
    "failsRequired": 1
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "ANGELL",
-    "JESSE",
-    "CHRISTINE",
-    "SOPHEY"
-   ],
-   "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -173,108 +256,25 @@
       "CHRISTINE",
       "SOPHEY"
      ],
-     "state": "APPROVED",
+     "proposer": "ANGELL",
      "votes": [
       "JESSE",
       "SOPHEY",
       "CHRISTINE",
       "ANGELL"
      ],
-     "proposer": "ANGELL"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
-  }
- ],
- "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "JESSE",
-  "roles": [
-   {
-    "name": "SARAH",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "JESSE",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "SOPHEY",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "CHRISTINE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ANGELL",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ALISHA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "ANGELL": true,
-    "CHRISTINE": true
-   },
-   {
-    "ANGELL": true,
-    "CHRISTINE": true,
-    "ALISHA": false
-   },
-   {
-    "SARAH": true,
-    "SOPHEY": true,
-    "CHRISTINE": true,
-    "ALISHA": false
-   },
-   {
-    "JESSE": true,
-    "SOPHEY": true,
-    "ANGELL": true
-   },
-   {
-    "JESSE": true,
-    "SOPHEY": true,
-    "ANGELL": true,
-    "CHRISTINE": true
-   }
-  ]
- },
- "players": [
-  {
-   "uid": "SL1SWGfGKgbFR5j9EY8ACpZJ0pK2",
-   "name": "ALISHA"
-  },
-  {
-   "uid": "OewWMpsmUNftybNbKze8SBZ37Q23",
-   "name": "SOPHEY"
-  },
-  {
-   "name": "CHRISTINE",
-   "uid": "GI3sRgKFRINiMosJ2UoqcE9kFZo2"
-  },
-  {
-   "uid": "LZmGnmKn30hbnSSR9fjqUCPHX4k2",
-   "name": "SARAH"
-  },
-  {
-   "name": "JESSE",
-   "uid": "aVCa22i9y2ZPbQMLszCe0qkjSXf1"
-  },
-  {
-   "name": "ANGELL",
-   "uid": "WRDiYfqIoLZLeBm3wOolbmfpFQj1"
+   "teamSize": 4,
+   "failsRequired": 1,
+   "team": [
+    "ANGELL",
+    "JESSE",
+    "CHRISTINE",
+    "SOPHEY"
+   ],
+   "numFails": 0
   }
  ]
 }

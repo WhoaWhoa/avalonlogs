@@ -1,18 +1,19 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
   "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "LULU",
   "roles": [
    {
     "name": "LULU",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
-    "name": "JA",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "JA"
    },
    {
     "name": "SHIERA",
@@ -25,30 +26,32 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "GLEN",
     "assassin": false,
-    "role": "PERCIVAL",
-    "name": "GLEN"
+    "role": "PERCIVAL"
    },
    {
-    "name": "RACHELLE",
     "assassin": true,
+    "name": "RACHELLE",
     "role": "MORDRED"
    }
   ],
+  "assassinated": "LULU",
+  "state": "EVIL_WIN",
   "votes": [
    {
     "GLEN": true,
     "MASI": true
    },
    {
-    "SHIERA": true,
     "GLEN": true,
+    "SHIERA": true,
     "MASI": true
    },
    {
-    "MASI": true,
-    "SHIERA": true,
     "GLEN": true,
+    "SHIERA": true,
+    "MASI": true,
     "RACHELLE": false
    },
    {
@@ -68,8 +71,8 @@
    "uid": "l62rUJeCMFM83Mp8BozMPVfVWUM2"
   },
   {
-   "uid": "PDSq2Dj7hJRONHEhbSVbMGRUnvu1",
-   "name": "RACHELLE"
+   "name": "RACHELLE",
+   "uid": "PDSq2Dj7hJRONHEhbSVbMGRUnvu1"
   },
   {
    "uid": "EqvcQrucZWWXqUI232lMc8Uv4593",
@@ -84,23 +87,17 @@
    "name": "MASI"
   }
  ],
- "timeFinished": {
-  "_seconds": 1589603417,
-  "_nanoseconds": 569000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1589603016,
-  "_nanoseconds": 555000000
- },
  "missions": [
   {
+   "team": [
+    "GLEN",
+    "MASI"
+   ],
+   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "LULU",
       "JA",
@@ -113,28 +110,27 @@
      "team": [
       "GLEN",
       "MASI"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "GLEN",
-    "MASI"
-   ]
+   "teamSize": 2
   },
   {
-   "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "MASI",
     "GLEN",
     "SHIERA"
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "MASI",
+      "GLEN",
+      "SHIERA"
+     ],
      "votes": [
       "MASI",
       "GLEN",
@@ -142,25 +138,14 @@
       "LULU",
       "SHIERA"
      ],
-     "proposer": "MASI",
-     "team": [
-      "MASI",
-      "GLEN",
-      "SHIERA"
-     ],
-     "state": "APPROVED"
+     "proposer": "MASI"
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "team": [
-    "GLEN",
-    "SHIERA",
-    "MASI",
-    "RACHELLE"
-   ],
-   "numFails": 1,
    "teamSize": 4,
    "proposals": [
     {
@@ -170,15 +155,21 @@
       "SHIERA",
       "GLEN"
      ],
-     "proposer": "JA",
      "team": [
       "JA",
       "GLEN",
       "SHIERA",
       "MASI"
-     ]
+     ],
+     "proposer": "JA"
     },
     {
+     "team": [
+      "GLEN",
+      "SHIERA",
+      "MASI",
+      "RACHELLE"
+     ],
      "state": "APPROVED",
      "votes": [
       "JA",
@@ -187,42 +178,45 @@
       "GLEN",
       "RACHELLE"
      ],
-     "proposer": "GLEN",
-     "team": [
-      "GLEN",
-      "SHIERA",
-      "MASI",
-      "RACHELLE"
-     ]
+     "proposer": "GLEN"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "GLEN",
+    "SHIERA",
+    "MASI",
+    "RACHELLE"
+   ],
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "MASI",
     "GLEN",
     "LULU"
    ],
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "GLEN",
       "RACHELLE",
       "LULU"
      ],
-     "proposer": "RACHELLE",
      "team": [
       "LULU",
       "SHIERA",
       "GLEN"
-     ]
+     ],
+     "proposer": "RACHELLE",
+     "state": "REJECTED"
     },
     {
+     "proposer": "LULU",
      "state": "APPROVED",
      "votes": [
       "MASI",
@@ -231,7 +225,6 @@
       "LULU",
       "JA"
      ],
-     "proposer": "LULU",
      "team": [
       "MASI",
       "GLEN",
@@ -239,15 +232,22 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0
   },
   {
+   "proposals": [],
    "teamSize": 4,
    "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 1,
-   "team": []
+   "team": [],
+   "failsRequired": 1
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1589603417,
+  "_nanoseconds": 569000000
+ },
+ "timeCreated": {
+  "_seconds": 1589603016,
+  "_nanoseconds": 555000000
+ }
 }

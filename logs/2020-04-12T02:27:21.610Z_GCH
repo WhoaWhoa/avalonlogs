@@ -1,17 +1,46 @@
 {
+ "timeFinished": {
+  "_seconds": 1586660022,
+  "_nanoseconds": 137039000
+ },
+ "timeCreated": {
+  "_seconds": 1586658441,
+  "_nanoseconds": 610000000
+ },
+ "players": [
+  {
+   "uid": "hMyvLCmwHkSrIfCOJDjVh7YHxAs2",
+   "name": "MICHELLE"
+  },
+  {
+   "name": "THUY",
+   "uid": "LqYzt6RQCaXVsEbegSExM5aemtS2"
+  },
+  {
+   "uid": "PqlKVH7rnhfHzW40IjRJija97bF3",
+   "name": "EVA"
+  },
+  {
+   "uid": "0FozBcn9KQPk2JadFOgczDYPLJJ3",
+   "name": "GRACE"
+  },
+  {
+   "name": "SIMONE",
+   "uid": "dp0J2fUvQ9gj7wNGpwtQ37d6C222"
+  }
+ ],
  "outcome": {
   "state": "EVIL_WIN",
-  "assassinated": null,
   "roles": [
    {
+    "role": "LOYAL FOLLOWER",
     "name": "GRACE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
+    "role": "MORGANA",
     "name": "THUY",
-    "assassin": false,
-    "role": "MORGANA"
+    "assassin": false
    },
    {
     "name": "MICHELLE",
@@ -35,80 +64,50 @@
     "MICHELLE": false
    },
    {
-    "EVA": true,
     "MICHELLE": true,
+    "EVA": true,
     "THUY": true
    },
    {
-    "THUY": false,
-    "SIMONE": true
+    "SIMONE": true,
+    "THUY": false
    },
    {
-    "MICHELLE": false,
+    "EVA": true,
     "THUY": true,
-    "EVA": true
+    "MICHELLE": false
    }
   ],
+  "assassinated": null,
   "message": "Three failed missions"
- },
- "timeFinished": {
-  "_seconds": 1586660022,
-  "_nanoseconds": 137039000
- },
- "players": [
-  {
-   "uid": "hMyvLCmwHkSrIfCOJDjVh7YHxAs2",
-   "name": "MICHELLE"
-  },
-  {
-   "uid": "LqYzt6RQCaXVsEbegSExM5aemtS2",
-   "name": "THUY"
-  },
-  {
-   "uid": "PqlKVH7rnhfHzW40IjRJija97bF3",
-   "name": "EVA"
-  },
-  {
-   "uid": "0FozBcn9KQPk2JadFOgczDYPLJJ3",
-   "name": "GRACE"
-  },
-  {
-   "name": "SIMONE",
-   "uid": "dp0J2fUvQ9gj7wNGpwtQ37d6C222"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586658441,
-  "_nanoseconds": 610000000
  },
  "missions": [
   {
+   "numFails": 1,
    "team": [
     "MICHELLE",
     "GRACE"
    ],
-   "numFails": 1,
-   "teamSize": 2,
    "proposals": [
     {
-     "state": "REJECTED",
+     "team": [
+      "SIMONE",
+      "EVA"
+     ],
+     "proposer": "SIMONE",
      "votes": [
       "SIMONE",
       "MICHELLE"
      ],
-     "proposer": "SIMONE",
-     "team": [
-      "SIMONE",
-      "EVA"
-     ]
+     "state": "REJECTED"
     },
     {
-     "proposer": "MICHELLE",
      "team": [
       "MICHELLE",
       "GRACE"
      ],
      "state": "APPROVED",
+     "proposer": "MICHELLE",
      "votes": [
       "SIMONE",
       "GRACE",
@@ -118,92 +117,91 @@
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "teamSize": 2
   },
   {
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "MICHELLE",
-      "EVA",
-      "THUY"
-     ],
-     "state": "APPROVED",
+     "proposer": "THUY",
      "votes": [
       "THUY",
       "MICHELLE",
       "EVA"
      ],
-     "proposer": "THUY"
+     "team": [
+      "MICHELLE",
+      "EVA",
+      "THUY"
+     ],
+     "state": "APPROVED"
     }
    ],
+   "teamSize": 3,
+   "numFails": 0,
    "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "MICHELLE",
     "EVA",
     "THUY"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   ]
   },
   {
    "state": "FAIL",
-   "team": [
-    "THUY",
-    "SIMONE"
-   ],
    "numFails": 1,
-   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "EVA",
-      "THUY"
-     ],
      "state": "REJECTED",
      "votes": [
       "EVA",
       "MICHELLE"
      ],
-     "proposer": "EVA"
-    },
-    {
+     "proposer": "EVA",
      "team": [
       "EVA",
-      "GRACE"
-     ],
+      "THUY"
+     ]
+    },
+    {
      "state": "REJECTED",
      "votes": [
       "GRACE"
      ],
-     "proposer": "GRACE"
+     "proposer": "GRACE",
+     "team": [
+      "EVA",
+      "GRACE"
+     ]
     },
     {
+     "votes": [
+      "SIMONE",
+      "GRACE",
+      "THUY",
+      "MICHELLE"
+     ],
+     "state": "APPROVED",
      "team": [
       "THUY",
       "SIMONE"
      ],
-     "state": "APPROVED",
-     "votes": [
-      "SIMONE",
-      "GRACE",
-      "THUY",
-      "MICHELLE"
-     ],
      "proposer": "SIMONE"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "THUY",
+    "SIMONE"
+   ]
   },
   {
-   "state": "FAIL",
    "team": [
     "MICHELLE",
     "EVA",
     "THUY"
    ],
-   "numFails": 1,
    "teamSize": 3,
    "proposals": [
     {
@@ -213,15 +211,17 @@
       "MICHELLE",
       "EVA"
      ],
-     "proposer": "MICHELLE",
      "team": [
       "MICHELLE",
       "EVA",
       "THUY"
-     ]
+     ],
+     "proposer": "MICHELLE"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1
   },
   {
    "team": [],

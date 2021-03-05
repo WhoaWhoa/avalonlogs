@@ -1,7 +1,33 @@
 {
+ "timeCreated": {
+  "_seconds": 1586532361,
+  "_nanoseconds": 30000000
+ },
+ "players": [
+  {
+   "uid": "nnPP02SUyWeF3gpWyfI8T9OzF053",
+   "name": "CPL"
+  },
+  {
+   "name": "LOC",
+   "uid": "aDJx4bobm4WBZGlfm1oaTKVwtkw2"
+  },
+  {
+   "name": "MICHEL",
+   "uid": "9xvziqOuVSMznhIGczBkRjK1jO72"
+  },
+  {
+   "uid": "5DYiPpm4MIhsr9IGXKijFcB0Gnq2",
+   "name": "PERRY"
+  },
+  {
+   "name": "WES",
+   "uid": "M2GRgkRti9aSFRdxOs2Inth39Vz1"
+  }
+ ],
  "outcome": {
+  "message": "Merlin assassinated",
   "state": "EVIL_WIN",
-  "assassinated": "WES",
   "roles": [
    {
     "name": "PERRY",
@@ -19,14 +45,14 @@
     "role": "MERLIN"
    },
    {
-    "assassin": true,
+    "name": "CPL",
     "role": "MORDRED",
-    "name": "CPL"
+    "assassin": true
    },
    {
-    "assassin": false,
     "role": "PERCIVAL",
-    "name": "MICHEL"
+    "name": "MICHEL",
+    "assassin": false
    }
   ],
   "votes": [
@@ -40,46 +66,20 @@
     "MICHEL": true
    },
    {
-    "WES": true,
-    "MICHEL": true
-   },
-   {
-    "LOC": true,
     "MICHEL": true,
     "WES": true
+   },
+   {
+    "WES": true,
+    "LOC": true,
+    "MICHEL": true
    }
   ],
-  "message": "Merlin assassinated"
+  "assassinated": "WES"
  },
  "timeFinished": {
   "_seconds": 1586532823,
   "_nanoseconds": 475503000
- },
- "players": [
-  {
-   "uid": "nnPP02SUyWeF3gpWyfI8T9OzF053",
-   "name": "CPL"
-  },
-  {
-   "uid": "aDJx4bobm4WBZGlfm1oaTKVwtkw2",
-   "name": "LOC"
-  },
-  {
-   "name": "MICHEL",
-   "uid": "9xvziqOuVSMznhIGczBkRjK1jO72"
-  },
-  {
-   "uid": "5DYiPpm4MIhsr9IGXKijFcB0Gnq2",
-   "name": "PERRY"
-  },
-  {
-   "name": "WES",
-   "uid": "M2GRgkRti9aSFRdxOs2Inth39Vz1"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586532361,
-  "_nanoseconds": 30000000
  },
  "missions": [
   {
@@ -87,37 +87,35 @@
     "MICHEL",
     "LOC"
    ],
-   "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 2,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "MICHEL",
+      "LOC"
+     ],
+     "proposer": "MICHEL",
      "votes": [
       "PERRY",
       "LOC",
       "WES",
       "CPL",
       "MICHEL"
-     ],
-     "proposer": "MICHEL",
-     "team": [
-      "MICHEL",
-      "LOC"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "PERRY",
     "MICHEL",
     "LOC"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -125,6 +123,7 @@
       "MICHEL",
       "LOC"
      ],
+     "proposer": "PERRY",
      "state": "APPROVED",
      "votes": [
       "MICHEL",
@@ -132,19 +131,22 @@
       "LOC",
       "WES",
       "CPL"
-     ],
-     "proposer": "PERRY"
+     ]
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL"
   },
   {
+   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 2,
    "team": [
     "WES",
     "MICHEL"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
      "team": [
@@ -161,9 +163,7 @@
      ],
      "proposer": "WES"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
    "team": [
@@ -171,24 +171,23 @@
     "MICHEL",
     "WES"
    ],
+   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "REJECTED",
      "proposer": "CPL",
+     "votes": [
+      "PERRY",
+      "CPL"
+     ],
      "team": [
       "CPL",
       "MICHEL",
       "WES"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "PERRY",
-      "CPL"
      ]
     },
     {
-     "proposer": "LOC",
      "team": [
       "LOC",
       "MICHEL",
@@ -200,18 +199,19 @@
       "CPL",
       "MICHEL",
       "LOC"
-     ]
+     ],
+     "proposer": "LOC"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 3
   },
   {
-   "proposals": [],
-   "failsRequired": 1,
+   "state": "PENDING",
    "team": [],
    "teamSize": 3,
-   "state": "PENDING"
+   "proposals": [],
+   "failsRequired": 1
   }
  ]
 }

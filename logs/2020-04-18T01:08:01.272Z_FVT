@@ -1,12 +1,71 @@
 {
+ "players": [
+  {
+   "uid": "bvvILdEqYIddTt8jTPw5MEe0qGh1",
+   "name": "CLAIREBEAR"
+  },
+  {
+   "uid": "7hJdta38c8Qxv6BJIkk3C4X5Qis2",
+   "name": "ZIGGY"
+  },
+  {
+   "name": "FAITH",
+   "uid": "UGAnziMwiAfiWAch9VJ7b1GslVB3"
+  },
+  {
+   "uid": "30uQCWGWtfYmWOuvcCqZtwEHidh2",
+   "name": "ISAMAR"
+  },
+  {
+   "name": "RICKY",
+   "uid": "n43fiIaA1DSCU1kMnk0gOw4aJSp2"
+  },
+  {
+   "uid": "SfhiFl7OqtZR4QQTXXIZndCtcoj2",
+   "name": "SADMAN"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1587172081,
+  "_nanoseconds": 272000000
+ },
  "outcome": {
-  "state": "EVIL_WIN",
   "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "FAITH": true,
+    "CLAIREBEAR": true
+   },
+   {
+    "ISAMAR": true,
+    "ZIGGY": true,
+    "FAITH": false
+   },
+   {
+    "ISAMAR": true,
+    "RICKY": true,
+    "FAITH": false,
+    "SADMAN": true
+   },
+   {
+    "CLAIREBEAR": true,
+    "ISAMAR": true,
+    "RICKY": true
+   },
+   {
+    "RICKY": true,
+    "FAITH": false,
+    "CLAIREBEAR": true,
+    "ISAMAR": true
+   }
+  ],
   "roles": [
    {
-    "name": "RICKY",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "RICKY"
    },
    {
     "name": "ZIGGY",
@@ -20,8 +79,8 @@
    },
    {
     "name": "CLAIREBEAR",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "name": "SADMAN",
@@ -33,63 +92,8 @@
     "assassin": false,
     "role": "LOYAL FOLLOWER"
    }
-  ],
-  "votes": [
-   {
-    "CLAIREBEAR": true,
-    "FAITH": true
-   },
-   {
-    "FAITH": false,
-    "ISAMAR": true,
-    "ZIGGY": true
-   },
-   {
-    "ISAMAR": true,
-    "RICKY": true,
-    "FAITH": false,
-    "SADMAN": true
-   },
-   {
-    "ISAMAR": true,
-    "RICKY": true,
-    "CLAIREBEAR": true
-   },
-   {
-    "ISAMAR": true,
-    "RICKY": true,
-    "CLAIREBEAR": true,
-    "FAITH": false
-   }
-  ],
-  "message": "Three failed missions"
+  ]
  },
- "players": [
-  {
-   "uid": "bvvILdEqYIddTt8jTPw5MEe0qGh1",
-   "name": "CLAIREBEAR"
-  },
-  {
-   "name": "ZIGGY",
-   "uid": "7hJdta38c8Qxv6BJIkk3C4X5Qis2"
-  },
-  {
-   "name": "FAITH",
-   "uid": "UGAnziMwiAfiWAch9VJ7b1GslVB3"
-  },
-  {
-   "uid": "30uQCWGWtfYmWOuvcCqZtwEHidh2",
-   "name": "ISAMAR"
-  },
-  {
-   "uid": "n43fiIaA1DSCU1kMnk0gOw4aJSp2",
-   "name": "RICKY"
-  },
-  {
-   "uid": "SfhiFl7OqtZR4QQTXXIZndCtcoj2",
-   "name": "SADMAN"
-  }
- ],
  "timeFinished": {
   "_seconds": 1587173078,
   "_nanoseconds": 547000000
@@ -97,26 +101,18 @@
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1587172081,
-  "_nanoseconds": 272000000
- },
  "missions": [
   {
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "FAITH",
     "CLAIREBEAR"
    ],
-   "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "FAITH",
-      "CLAIREBEAR"
-     ],
-     "state": "APPROVED",
+     "proposer": "ZIGGY",
      "votes": [
       "SADMAN",
       "ISAMAR",
@@ -125,13 +121,16 @@
       "FAITH",
       "CLAIREBEAR"
      ],
-     "proposer": "ZIGGY"
+     "state": "APPROVED",
+     "team": [
+      "FAITH",
+      "CLAIREBEAR"
+     ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
-   "state": "FAIL",
    "team": [
     "ZIGGY",
     "FAITH",
@@ -150,27 +149,31 @@
       "RICKY",
       "ZIGGY"
      ],
-     "proposer": "FAITH",
      "team": [
       "ZIGGY",
       "FAITH",
       "ISAMAR"
-     ]
+     ],
+     "proposer": "FAITH"
     }
    ],
+   "state": "FAIL",
    "failsRequired": 1
   },
   {
    "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "FAITH",
+    "ISAMAR",
+    "RICKY",
+    "SADMAN"
+   ],
    "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "FAITH",
-      "ISAMAR",
-      "RICKY",
-      "SADMAN"
-     ],
+     "proposer": "ISAMAR",
      "state": "APPROVED",
      "votes": [
       "RICKY",
@@ -179,56 +182,52 @@
       "SADMAN",
       "ISAMAR"
      ],
-     "proposer": "ISAMAR"
+     "team": [
+      "FAITH",
+      "ISAMAR",
+      "RICKY",
+      "SADMAN"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "FAITH",
-    "ISAMAR",
-    "RICKY",
-    "SADMAN"
    ]
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "CLAIREBEAR",
-    "RICKY",
-    "ISAMAR"
-   ],
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "RICKY",
+     "team": [
+      "CLAIREBEAR",
+      "RICKY",
+      "ISAMAR"
+     ],
      "votes": [
       "CLAIREBEAR",
       "SADMAN",
       "ISAMAR",
       "RICKY",
       "FAITH"
-     ],
-     "proposer": "RICKY",
-     "team": [
-      "CLAIREBEAR",
-      "RICKY",
-      "ISAMAR"
      ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "CLAIREBEAR",
+    "RICKY",
+    "ISAMAR"
+   ]
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "CLAIREBEAR",
     "RICKY",
     "ISAMAR",
     "FAITH"
    ],
-   "numFails": 1,
    "teamSize": 4,
    "proposals": [
     {
@@ -247,23 +246,24 @@
      "proposer": "SADMAN"
     },
     {
-     "votes": [
-      "CLAIREBEAR",
-      "RICKY",
-      "ZIGGY",
-      "FAITH"
-     ],
-     "proposer": "CLAIREBEAR",
      "team": [
       "CLAIREBEAR",
       "RICKY",
       "ISAMAR",
       "FAITH"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "votes": [
+      "CLAIREBEAR",
+      "RICKY",
+      "ZIGGY",
+      "FAITH"
+     ],
+     "proposer": "CLAIREBEAR"
     }
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "state": "FAIL"
   }
  ]
 }

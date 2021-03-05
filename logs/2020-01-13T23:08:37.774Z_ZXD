@@ -3,10 +3,14 @@
   "_seconds": 1578958200,
   "_nanoseconds": 515970000
  },
+ "timeCreated": {
+  "_seconds": 1578956917,
+  "_nanoseconds": 774000000
+ },
  "players": [
   {
-   "uid": "GAjdrVzZbvT6VGgrTVm26ZVfFS43",
-   "name": "ADAM"
+   "name": "ADAM",
+   "uid": "GAjdrVzZbvT6VGgrTVm26ZVfFS43"
   },
   {
    "name": "MICHELLE",
@@ -17,17 +21,70 @@
    "uid": "W3B4ClKeEiYcSyDS53CxHqcRcsT2"
   },
   {
-   "uid": "ZW3dInEPhEaQJ05BmyQ3AKvnxmi1",
-   "name": "NJW"
+   "name": "NJW",
+   "uid": "ZW3dInEPhEaQJ05BmyQ3AKvnxmi1"
   },
   {
    "uid": "yhRgnsdC92dIMlBjl2Dxog9cpHA2",
    "name": "NICKNAME"
   }
  ],
- "timeCreated": {
-  "_seconds": 1578956917,
-  "_nanoseconds": 774000000
+ "outcome": {
+  "assassinated": "ROHAN",
+  "votes": [
+   {
+    "ADAM": true,
+    "NICKNAME": true
+   },
+   {
+    "ROHAN": true,
+    "MICHELLE": true,
+    "NJW": false
+   },
+   {
+    "NICKNAME": true,
+    "ROHAN": true
+   },
+   {
+    "ADAM": false,
+    "NICKNAME": true,
+    "ROHAN": true
+   },
+   {
+    "NICKNAME": true,
+    "ROHAN": true,
+    "MICHELLE": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "MICHELLE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "ADAM"
+   },
+   {
+    "assassin": false,
+    "name": "NICKNAME",
+    "role": "MERLIN"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "NJW",
+    "assassin": true
+   },
+   {
+    "name": "ROHAN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   }
+  ],
+  "message": "Three successful missions",
+  "state": "GOOD_WIN"
  },
  "missions": [
   {
@@ -36,36 +93,37 @@
     "NICKNAME",
     "ADAM"
    ],
+   "failsRequired": 1,
    "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
-     "proposer": "NJW",
+     "state": "APPROVED",
      "team": [
       "NICKNAME",
       "ADAM"
      ],
-     "state": "APPROVED",
      "votes": [
       "NJW",
       "ROHAN",
       "MICHELLE",
       "ADAM"
-     ]
+     ],
+     "proposer": "NJW"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "NICKNAME",
       "ROHAN",
       "MICHELLE"
      ],
      "proposer": "NICKNAME",
+     "state": "APPROVED",
      "team": [
       "MICHELLE",
       "ROHAN",
@@ -73,74 +131,68 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "MICHELLE",
     "ROHAN",
     "NJW"
    ],
    "numFails": 1,
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "ROHAN",
-    "NICKNAME"
-   ],
    "numFails": 0,
    "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "ADAM"
-     ],
-     "proposer": "ADAM",
      "team": [
       "ADAM",
       "MICHELLE"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "ADAM"
+     ],
+     "proposer": "ADAM"
     },
     {
-     "team": [
-      "NICKNAME",
-      "ROHAN"
-     ],
-     "state": "REJECTED",
      "votes": [
       "MICHELLE",
       "NICKNAME"
      ],
-     "proposer": "MICHELLE"
-    },
-    {
+     "proposer": "MICHELLE",
      "state": "REJECTED",
-     "votes": [
-      "ROHAN",
-      "ADAM"
-     ],
-     "proposer": "ROHAN",
      "team": [
-      "ROHAN",
-      "ADAM"
+      "NICKNAME",
+      "ROHAN"
      ]
     },
     {
      "team": [
+      "ROHAN",
+      "ADAM"
+     ],
+     "proposer": "ROHAN",
+     "votes": [
+      "ROHAN",
+      "ADAM"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "state": "REJECTED",
+     "proposer": "NJW",
+     "team": [
       "NJW",
       "MICHELLE"
      ],
-     "state": "REJECTED",
      "votes": [
       "NJW",
       "MICHELLE"
-     ],
-     "proposer": "NJW"
+     ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "NJW",
       "ROHAN",
@@ -148,6 +200,7 @@
       "ADAM",
       "NICKNAME"
      ],
+     "state": "APPROVED",
      "proposer": "NICKNAME",
      "team": [
       "ROHAN",
@@ -155,118 +208,65 @@
      ]
     }
    ],
-   "failsRequired": 1
-  },
-  {
-   "state": "FAIL",
+   "state": "SUCCESS",
    "team": [
-    "ADAM",
     "ROHAN",
     "NICKNAME"
-   ],
-   "numFails": 1,
+   ]
+  },
+  {
    "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "ADAM",
-      "ROHAN",
-      "NICKNAME"
-     ],
      "state": "APPROVED",
+     "proposer": "ADAM",
      "votes": [
       "NJW",
       "MICHELLE",
       "ADAM"
      ],
-     "proposer": "ADAM"
+     "team": [
+      "ADAM",
+      "ROHAN",
+      "NICKNAME"
+     ]
     }
    ],
-   "failsRequired": 1
-  },
-  {
+   "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
-    "MICHELLE",
+    "ADAM",
     "ROHAN",
     "NICKNAME"
-   ],
+   ]
+  },
+  {
+   "failsRequired": 1,
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "MICHELLE",
+     "state": "APPROVED",
      "team": [
       "MICHELLE",
       "ROHAN",
       "NICKNAME"
      ],
-     "state": "APPROVED",
      "votes": [
       "NICKNAME",
       "ROHAN",
       "MICHELLE"
-     ],
-     "proposer": "MICHELLE"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "team": [
+    "MICHELLE",
+    "ROHAN",
+    "NICKNAME"
+   ]
   }
- ],
- "outcome": {
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "ROHAN",
-  "roles": [
-   {
-    "name": "MICHELLE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ADAM",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "NICKNAME",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "NJW",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ROHAN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   }
-  ],
-  "votes": [
-   {
-    "NICKNAME": true,
-    "ADAM": true
-   },
-   {
-    "ROHAN": true,
-    "NJW": false,
-    "MICHELLE": true
-   },
-   {
-    "NICKNAME": true,
-    "ROHAN": true
-   },
-   {
-    "ROHAN": true,
-    "ADAM": false,
-    "NICKNAME": true
-   },
-   {
-    "NICKNAME": true,
-    "ROHAN": true,
-    "MICHELLE": true
-   }
-  ]
- }
+ ]
 }

@@ -1,34 +1,35 @@
 {
+ "timeFinished": {
+  "_seconds": 1585428322,
+  "_nanoseconds": 648943000
+ },
+ "timeCreated": {
+  "_seconds": 1585427842,
+  "_nanoseconds": 909000000
+ },
+ "players": [
+  {
+   "uid": "8o4za1fwINaYq0gHAGzMDs5nMgC2",
+   "name": "LEEEEEE"
+  },
+  {
+   "uid": "Ta8IImcpHUabE83DLwHsNJqh2Rn1",
+   "name": "TREEMAN"
+  },
+  {
+   "uid": "i1u7yejUaObuyYadhdceNR3jwBn2",
+   "name": "RO"
+  },
+  {
+   "uid": "FbUvgndtcrVvsbgeqA2nHgIv8mA3",
+   "name": "TRAVIS"
+  },
+  {
+   "name": "AUST",
+   "uid": "ghh9KSwSvGSBD9Bg3SF5xrYH3b92"
+  }
+ ],
  "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "TREEMAN",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "AUST",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "LEEEEEE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "TRAVIS",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "RO",
-    "assassin": false,
-    "role": "PERCIVAL"
-   }
-  ],
   "votes": [
    {
     "TRAVIS": true,
@@ -40,46 +41,45 @@
     "AUST": true
    },
    {
-    "AUST": true,
-    "TRAVIS": false
+    "TRAVIS": false,
+    "AUST": true
    },
    {
-    "RO": true,
+    "TREEMAN": false,
     "LEEEEEE": true,
-    "TREEMAN": false
+    "RO": true
    }
   ],
-  "message": "Three failed missions"
- },
- "timeFinished": {
-  "_seconds": 1585428322,
-  "_nanoseconds": 648943000
- },
- "players": [
-  {
-   "name": "LEEEEEE",
-   "uid": "8o4za1fwINaYq0gHAGzMDs5nMgC2"
-  },
-  {
-   "uid": "Ta8IImcpHUabE83DLwHsNJqh2Rn1",
-   "name": "TREEMAN"
-  },
-  {
-   "uid": "i1u7yejUaObuyYadhdceNR3jwBn2",
-   "name": "RO"
-  },
-  {
-   "name": "TRAVIS",
-   "uid": "FbUvgndtcrVvsbgeqA2nHgIv8mA3"
-  },
-  {
-   "uid": "ghh9KSwSvGSBD9Bg3SF5xrYH3b92",
-   "name": "AUST"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585427842,
-  "_nanoseconds": 909000000
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "role": "MORGANA",
+    "name": "TREEMAN",
+    "assassin": false
+   },
+   {
+    "name": "AUST",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "LEEEEEE",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "TRAVIS",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "RO",
+    "role": "PERCIVAL"
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN"
  },
  "missions": [
   {
@@ -88,10 +88,9 @@
     "TRAVIS"
    ],
    "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "TREEMAN",
       "AUST",
@@ -99,60 +98,61 @@
       "TRAVIS",
       "RO"
      ],
-     "proposer": "RO",
      "team": [
       "LEEEEEE",
       "TRAVIS"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "RO"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2,
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
    "team": [
     "LEEEEEE",
     "TRAVIS",
     "AUST"
    ],
    "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL",
    "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "TREEMAN",
-      "AUST",
-      "LEEEEEE",
-      "TRAVIS",
-      "RO"
-     ],
      "proposer": "TRAVIS",
      "team": [
       "LEEEEEE",
       "TRAVIS",
       "AUST"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "votes": [
+      "TREEMAN",
+      "AUST",
+      "LEEEEEE",
+      "TRAVIS",
+      "RO"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "state": "FAIL",
    "team": [
     "TRAVIS",
     "AUST"
    ],
    "numFails": 1,
-   "teamSize": 2,
    "proposals": [
     {
-     "proposer": "AUST",
      "team": [
       "TRAVIS",
       "AUST"
      ],
      "state": "APPROVED",
+     "proposer": "AUST",
      "votes": [
       "AUST",
       "TRAVIS",
@@ -161,42 +161,42 @@
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 2
   },
   {
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "LEEEEEE",
+      "TREEMAN",
+      "RO"
+     ],
      "votes": [
       "TREEMAN",
       "LEEEEEE",
       "TRAVIS",
       "RO"
      ],
-     "proposer": "LEEEEEE",
-     "team": [
-      "LEEEEEE",
-      "TREEMAN",
-      "RO"
-     ]
+     "state": "APPROVED",
+     "proposer": "LEEEEEE"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "LEEEEEE",
     "TREEMAN",
     "RO"
    ],
    "numFails": 1,
+   "state": "FAIL",
    "teamSize": 3
   },
   {
+   "state": "PENDING",
    "team": [],
    "teamSize": 3,
-   "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "proposals": []
   }
  ]
 }

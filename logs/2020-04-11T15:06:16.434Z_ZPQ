@@ -1,12 +1,88 @@
 {
+ "outcome": {
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "WC"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "ADDIE"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "BRAZZZ"
+   },
+   {
+    "name": "STEF",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "LEO"
+   },
+   {
+    "name": "CL",
+    "assassin": true,
+    "role": "MORDRED"
+   }
+  ],
+  "votes": [
+   {
+    "BRAZZZ": true,
+    "STEF": true
+   },
+   {
+    "CL": false,
+    "BRAZZZ": true,
+    "STEF": true
+   },
+   {
+    "STEF": true,
+    "CL": false,
+    "LEO": true,
+    "ADDIE": true
+   },
+   {
+    "STEF": true,
+    "CL": false,
+    "WC": false
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions"
+ },
  "timeCreated": {
   "_seconds": 1586617576,
   "_nanoseconds": 434000000
  },
+ "timeFinished": {
+  "_seconds": 1586618413,
+  "_nanoseconds": 133903000
+ },
  "missions": [
   {
+   "teamSize": 2,
+   "team": [
+    "STEF",
+    "BRAZZZ"
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "STEF",
+      "BRAZZZ"
+     ],
+     "proposer": "BRAZZZ",
      "votes": [
       "ADDIE",
       "BRAZZZ",
@@ -14,86 +90,80 @@
       "LEO",
       "CL"
      ],
-     "proposer": "BRAZZZ",
-     "team": [
+     "state": "APPROVED"
+    }
+   ]
+  },
+  {
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "votes": [
+      "ADDIE",
+      "BRAZZZ",
       "STEF",
-      "BRAZZZ"
+      "CL"
      ],
+     "team": [
+      "BRAZZZ",
+      "CL",
+      "STEF"
+     ],
+     "proposer": "CL",
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "STEF",
-    "BRAZZZ"
-   ],
-   "numFails": 0,
-   "teamSize": 2
-  },
-  {
+   "state": "FAIL",
    "team": [
     "BRAZZZ",
     "CL",
     "STEF"
    ],
-   "numFails": 1,
    "teamSize": 3,
-   "proposals": [
-    {
-     "votes": [
-      "ADDIE",
-      "BRAZZZ",
-      "STEF",
-      "CL"
-     ],
-     "proposer": "CL",
-     "team": [
-      "BRAZZZ",
-      "CL",
-      "STEF"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
-   "numFails": 1,
+   "state": "FAIL",
    "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "LEO",
      "team": [
       "LEO",
       "CL",
       "ADDIE",
       "STEF"
      ],
-     "state": "REJECTED",
      "votes": [
       "ADDIE",
       "LEO",
-      "CL"
-     ],
-     "proposer": "LEO"
-    },
-    {
-     "state": "REJECTED",
-     "votes": [
-      "STEF",
-      "LEO",
-      "CL"
-     ],
-     "proposer": "STEF",
-     "team": [
-      "STEF",
-      "LEO",
-      "ADDIE",
       "CL"
      ]
     },
     {
+     "team": [
+      "STEF",
+      "LEO",
+      "ADDIE",
+      "CL"
+     ],
+     "state": "REJECTED",
+     "proposer": "STEF",
+     "votes": [
+      "STEF",
+      "LEO",
+      "CL"
+     ]
+    },
+    {
+     "team": [
+      "STEF",
+      "ADDIE",
+      "LEO",
+      "CL"
+     ],
      "votes": [
       "ADDIE",
       "STEF",
@@ -101,17 +171,10 @@
       "CL"
      ],
      "proposer": "ADDIE",
-     "team": [
-      "STEF",
-      "ADDIE",
-      "LEO",
-      "CL"
-     ],
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
+   "numFails": 1,
    "team": [
     "STEF",
     "ADDIE",
@@ -120,27 +183,27 @@
    ]
   },
   {
+   "numFails": 2,
+   "teamSize": 3,
    "team": [
     "STEF",
     "CL",
     "WC"
    ],
-   "numFails": 2,
-   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "WC",
      "votes": [
       "LEO",
       "CL",
       "WC"
      ],
-     "proposer": "WC",
      "team": [
       "LEO",
       "CL",
       "WC"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -148,118 +211,55 @@
       "ADDIE",
       "STEF"
      ],
-     "state": "REJECTED",
      "votes": [
       "ADDIE",
       "BRAZZZ",
       "STEF"
      ],
+     "state": "REJECTED",
      "proposer": "BRAZZZ"
     },
     {
+     "proposer": "CL",
+     "votes": [
+      "LEO",
+      "CL",
+      "WC"
+     ],
      "team": [
       "CL",
       "WC",
       "LEO"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "LEO",
+     "state": "REJECTED"
+    },
+    {
+     "team": [
+      "STEF",
       "CL",
       "WC"
      ],
-     "proposer": "CL"
-    },
-    {
+     "state": "APPROVED",
      "votes": [
       "WC",
       "STEF",
       "LEO",
       "CL"
      ],
-     "proposer": "LEO",
-     "team": [
-      "STEF",
-      "CL",
-      "WC"
-     ],
-     "state": "APPROVED"
+     "proposer": "LEO"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
-   "state": "PENDING",
-   "proposals": [],
+   "teamSize": 4,
    "failsRequired": 1,
-   "team": [],
-   "teamSize": 4
+   "proposals": [],
+   "state": "PENDING",
+   "team": []
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "BRAZZZ": true,
-    "STEF": true
-   },
-   {
-    "CL": false,
-    "STEF": true,
-    "BRAZZZ": true
-   },
-   {
-    "CL": false,
-    "STEF": true,
-    "LEO": true,
-    "ADDIE": true
-   },
-   {
-    "CL": false,
-    "STEF": true,
-    "WC": false
-   }
-  ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "WC",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "ADDIE",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "BRAZZZ",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "STEF",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "LEO",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "CL",
-    "assassin": true,
-    "role": "MORDRED"
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1586618413,
-  "_nanoseconds": 133903000
- },
  "players": [
   {
    "uid": "SeupGISRjoSmUxPiGeO69mT6jQo1",
@@ -270,8 +270,8 @@
    "uid": "FbMLPUyhi6eCm1JjslPkxNRMiII3"
   },
   {
-   "uid": "I5FAzuqhD1WR6s6lObf29hvzknC3",
-   "name": "ADDIE"
+   "name": "ADDIE",
+   "uid": "I5FAzuqhD1WR6s6lObf29hvzknC3"
   },
   {
    "uid": "yV2L32NdWZS86KcOhQIZO519Gjv2",
@@ -282,8 +282,8 @@
    "name": "BRAZZZ"
   },
   {
-   "uid": "0ZtKEXpheKd695cbzeI8uCnjBm23",
-   "name": "CL"
+   "name": "CL",
+   "uid": "0ZtKEXpheKd695cbzeI8uCnjBm23"
   }
  ]
 }

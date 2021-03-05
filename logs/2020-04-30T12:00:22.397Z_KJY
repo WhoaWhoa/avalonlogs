@@ -1,55 +1,7 @@
 {
- "outcome": {
-  "roles": [
-   {
-    "name": "NEVIN",
-    "assassin": true,
-    "role": "MORGANA"
-   },
-   {
-    "name": "VIET",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SARAH"
-   },
-   {
-    "name": "ALLAN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "ANWAR",
-    "assassin": false,
-    "role": "OBERON"
-   }
-  ],
-  "votes": [
-   {
-    "SARAH": true,
-    "VIET": true
-   },
-   {
-    "ALLAN": true,
-    "ANWAR": true,
-    "VIET": true
-   },
-   {
-    "NEVIN": false,
-    "VIET": true
-   },
-   {
-    "ALLAN": true,
-    "SARAH": true,
-    "VIET": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "VIET"
+ "timeCreated": {
+  "_seconds": 1588248022,
+  "_nanoseconds": 397000000
  },
  "players": [
   {
@@ -61,44 +13,83 @@
    "uid": "b4rIuDPmu1RBhwViQ0XzOHsQjRp1"
   },
   {
-   "uid": "rvOeMl3TINOwztWyKxePZQx1u883",
-   "name": "ANWAR"
+   "name": "ANWAR",
+   "uid": "rvOeMl3TINOwztWyKxePZQx1u883"
   },
   {
-   "uid": "imN1n6zwnabEtwlUkv5EC46Sbp82",
-   "name": "NEVIN"
+   "name": "NEVIN",
+   "uid": "imN1n6zwnabEtwlUkv5EC46Sbp82"
   },
   {
    "uid": "SmgurBmcDkfVLLtyMTlpakGGvGf1",
    "name": "SARAH"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1588248725,
   "_nanoseconds": 778000000
  },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588248022,
-  "_nanoseconds": 397000000
+ "outcome": {
+  "roles": [
+   {
+    "assassin": true,
+    "name": "NEVIN",
+    "role": "MORGANA"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "VIET"
+   },
+   {
+    "assassin": false,
+    "name": "SARAH",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ALLAN",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "OBERON",
+    "name": "ANWAR"
+   }
+  ],
+  "votes": [
+   {
+    "VIET": true,
+    "SARAH": true
+   },
+   {
+    "VIET": true,
+    "ALLAN": true,
+    "ANWAR": true
+   },
+   {
+    "VIET": true,
+    "NEVIN": false
+   },
+   {
+    "VIET": true,
+    "SARAH": true,
+    "ALLAN": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": "VIET",
+  "message": "Merlin assassinated"
  },
  "missions": [
   {
-   "team": [
-    "VIET",
-    "SARAH"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "VIET",
-      "SARAH"
-     ],
      "state": "APPROVED",
+     "proposer": "VIET",
      "votes": [
       "SARAH",
       "ALLAN",
@@ -106,29 +97,33 @@
       "NEVIN",
       "VIET"
      ],
-     "proposer": "VIET"
+     "team": [
+      "VIET",
+      "SARAH"
+     ]
     }
    ],
+   "teamSize": 2,
    "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "VIET",
+    "SARAH"
+   ],
    "state": "SUCCESS"
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "VIET",
-    "ALLAN",
-    "ANWAR"
-   ],
-   "numFails": 0,
    "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "VIET",
       "ALLAN",
       "ANWAR"
      ],
-     "state": "APPROVED",
      "votes": [
       "VIET",
       "ALLAN",
@@ -137,44 +132,48 @@
      "proposer": "ALLAN"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "VIET",
+    "ALLAN",
+    "ANWAR"
+   ],
+   "numFails": 0
   },
   {
-   "team": [
-    "NEVIN",
-    "VIET"
-   ],
-   "numFails": 1,
-   "teamSize": 2,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [],
-     "proposer": "ANWAR",
      "team": [
       "SARAH",
       "NEVIN"
-     ]
+     ],
+     "proposer": "ANWAR",
+     "votes": [],
+     "state": "REJECTED"
     },
     {
+     "proposer": "NEVIN",
      "state": "APPROVED",
-     "votes": [
-      "SARAH",
+     "team": [
       "NEVIN",
       "VIET"
      ],
-     "proposer": "NEVIN",
-     "team": [
+     "votes": [
+      "SARAH",
       "NEVIN",
       "VIET"
      ]
     }
    ],
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 2,
    "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "NEVIN",
+    "VIET"
+   ]
   },
   {
-   "state": "SUCCESS",
    "team": [
     "VIET",
     "SARAH",
@@ -182,6 +181,8 @@
    ],
    "numFails": 0,
    "teamSize": 3,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
      "team": [
@@ -189,33 +190,32 @@
       "ANWAR",
       "ALLAN"
      ],
-     "state": "REJECTED",
      "votes": [
       "SARAH"
      ],
-     "proposer": "SARAH"
+     "proposer": "SARAH",
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "VIET",
-      "SARAH",
-      "ALLAN"
-     ],
      "state": "APPROVED",
+     "proposer": "VIET",
      "votes": [
       "SARAH",
       "NEVIN",
       "VIET"
      ],
-     "proposer": "VIET"
+     "team": [
+      "VIET",
+      "SARAH",
+      "ALLAN"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
    "team": [],
-   "teamSize": 3,
    "state": "PENDING",
+   "teamSize": 3,
    "proposals": [],
    "failsRequired": 1
   }

@@ -1,101 +1,76 @@
 {
- "players": [
-  {
-   "name": "EVAN",
-   "uid": "HqUfV8NE6fR6t5fQEqL9kpgLZpN2"
-  },
-  {
-   "uid": "1RM62XmX5eSdRi0UGX3X5ZeePQL2",
-   "name": "HUNG"
-  },
-  {
-   "uid": "wlFL2ag2ttRI6Iluzs06vyi3W9J2",
-   "name": "JEREMY"
-  },
-  {
-   "name": "JANNET",
-   "uid": "kXcUh46EGBWPNhRRVOPk8Iq8Y642"
-  },
-  {
-   "uid": "th9F3PWMG2VASoQviyQ8DI3nDyi2",
-   "name": "JOSE"
-  }
- ],
  "timeFinished": {
   "_seconds": 1588461428,
   "_nanoseconds": 711000000
  },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588460865,
-  "_nanoseconds": 332000000
- },
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "HUNG",
     "EVAN"
    ],
+   "state": "SUCCESS",
    "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "HUNG",
       "EVAN",
       "JANNET"
      ],
-     "proposer": "HUNG",
+     "state": "APPROVED",
      "team": [
       "HUNG",
       "EVAN"
-     ]
+     ],
+     "proposer": "HUNG"
     }
    ],
    "failsRequired": 1
   },
   {
-   "team": [
-    "JEREMY",
-    "HUNG",
-    "EVAN"
-   ],
    "numFails": 1,
-   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "votes": [
-      "JOSE",
-      "EVAN",
-      "HUNG"
-     ],
-     "proposer": "JEREMY",
      "team": [
       "JEREMY",
       "HUNG",
       "EVAN"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "votes": [
+      "JOSE",
+      "EVAN",
+      "HUNG"
+     ],
+     "proposer": "JEREMY"
     }
    ],
+   "team": [
+    "JEREMY",
+    "HUNG",
+    "EVAN"
+   ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "EVAN",
     "JANNET"
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "EVAN",
+      "JANNET"
+     ],
      "votes": [
       "EVAN",
       "JANNET",
@@ -103,28 +78,32 @@
       "JEREMY",
       "JOSE"
      ],
-     "proposer": "JANNET",
-     "team": [
-      "EVAN",
-      "JANNET"
-     ]
+     "state": "APPROVED",
+     "proposer": "JANNET"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "team": [
+    "EVAN",
+    "JANNET",
+    "JEREMY"
+   ],
+   "teamSize": 3,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "JOSE",
+     "votes": [
+      "HUNG"
+     ],
+     "state": "REJECTED",
      "team": [
       "JEREMY",
       "JANNET",
       "HUNG"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "HUNG"
-     ]
+     "proposer": "JOSE"
     },
     {
      "team": [
@@ -142,28 +121,62 @@
      "proposer": "EVAN"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "EVAN",
-    "JANNET",
-    "JEREMY"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
+   "state": "PENDING",
    "team": [],
    "teamSize": 3,
-   "state": "PENDING",
    "proposals": [],
    "failsRequired": 1
   }
  ],
+ "players": [
+  {
+   "name": "EVAN",
+   "uid": "HqUfV8NE6fR6t5fQEqL9kpgLZpN2"
+  },
+  {
+   "name": "HUNG",
+   "uid": "1RM62XmX5eSdRi0UGX3X5ZeePQL2"
+  },
+  {
+   "uid": "wlFL2ag2ttRI6Iluzs06vyi3W9J2",
+   "name": "JEREMY"
+  },
+  {
+   "uid": "kXcUh46EGBWPNhRRVOPk8Iq8Y642",
+   "name": "JANNET"
+  },
+  {
+   "uid": "th9F3PWMG2VASoQviyQ8DI3nDyi2",
+   "name": "JOSE"
+  }
+ ],
  "outcome": {
-  "message": "Merlin assassinated",
   "state": "EVIL_WIN",
   "assassinated": "JANNET",
+  "votes": [
+   {
+    "EVAN": true,
+    "HUNG": true
+   },
+   {
+    "EVAN": true,
+    "HUNG": false,
+    "JEREMY": true
+   },
+   {
+    "EVAN": true,
+    "JANNET": true
+   },
+   {
+    "JEREMY": true,
+    "EVAN": true,
+    "JANNET": true
+   }
+  ],
+  "message": "Merlin assassinated",
   "roles": [
    {
     "name": "JEREMY",
@@ -171,45 +184,32 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "JOSE",
     "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "JOSE"
+   },
+   {
+    "name": "EVAN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "EVAN"
-   },
-   {
-    "name": "JANNET",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "name": "JANNET"
    },
    {
     "name": "HUNG",
     "assassin": false,
     "role": "EVIL MINION"
    }
-  ],
-  "votes": [
-   {
-    "HUNG": true,
-    "EVAN": true
-   },
-   {
-    "HUNG": false,
-    "JEREMY": true,
-    "EVAN": true
-   },
-   {
-    "EVAN": true,
-    "JANNET": true
-   },
-   {
-    "JEREMY": true,
-    "EVAN": true,
-    "JANNET": true
-   }
   ]
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1588460865,
+  "_nanoseconds": 332000000
  }
 }

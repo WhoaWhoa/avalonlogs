@@ -1,4 +1,88 @@
 {
+ "outcome": {
+  "roles": [
+   {
+    "name": "LUCAS",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "EZRA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "ALEXIS"
+   },
+   {
+    "assassin": false,
+    "name": "SAM",
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "MARYLOVE"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "BEN"
+   },
+   {
+    "name": "MADISON",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "TRAITOR"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "votes": [
+   {
+    "EZRA": true,
+    "MARYLOVE": false,
+    "LUCAS": false
+   },
+   {
+    "MADISON": true,
+    "MARYLOVE": true,
+    "BEN": true,
+    "ALEXIS": true
+   },
+   {
+    "ALEXIS": false,
+    "MADISON": true,
+    "LUCAS": false,
+    "BEN": true
+   },
+   {
+    "SAM": true,
+    "BEN": true,
+    "TRAITOR": true,
+    "MADISON": true,
+    "ALEXIS": true
+   },
+   {
+    "TRAITOR": true,
+    "ALEXIS": false,
+    "LUCAS": false,
+    "MADISON": true,
+    "MARYLOVE": false
+   }
+  ],
+  "message": "Three failed missions"
+ },
+ "timeFinished": {
+  "_seconds": 1587774048,
+  "_nanoseconds": 890000000
+ },
  "missions": [
   {
    "proposals": [
@@ -13,103 +97,95 @@
       "MADISON"
      ],
      "proposer": "EZRA",
+     "state": "APPROVED",
      "team": [
       "MARYLOVE",
-      "LUCAS",
-      "EZRA"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "MARYLOVE",
-    "LUCAS",
-    "EZRA"
-   ],
-   "numFails": 2,
-   "teamSize": 3
-  },
-  {
-   "team": [
-    "ALEXIS",
-    "MADISON",
-    "BEN",
-    "MARYLOVE"
-   ],
-   "numFails": 0,
-   "teamSize": 4,
-   "proposals": [
-    {
-     "team": [
-      "ALEXIS",
-      "MADISON",
-      "BEN",
-      "MARYLOVE"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "ALEXIS",
-      "SAM",
-      "MARYLOVE",
-      "MADISON",
-      "LUCAS"
-     ],
-     "proposer": "MARYLOVE"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
-  },
-  {
-   "team": [
-    "ALEXIS",
-    "MADISON",
-    "BEN",
-    "LUCAS"
-   ],
-   "numFails": 2,
-   "teamSize": 4,
-   "proposals": [
-    {
-     "proposer": "LUCAS",
-     "team": [
-      "ALEXIS",
-      "MADISON",
-      "BEN",
-      "LUCAS"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "SAM",
-      "BEN",
-      "MADISON",
       "LUCAS",
       "EZRA"
      ]
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 2,
+   "team": [
+    "MARYLOVE",
+    "LUCAS",
+    "EZRA"
+   ],
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 0,
    "team": [
     "ALEXIS",
-    "TRAITOR",
-    "SAM",
     "MADISON",
-    "BEN"
+    "BEN",
+    "MARYLOVE"
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "ALEXIS",
+      "SAM",
+      "MARYLOVE",
+      "MADISON",
+      "LUCAS"
+     ],
+     "team": [
+      "ALEXIS",
+      "MADISON",
+      "BEN",
+      "MARYLOVE"
+     ],
+     "proposer": "MARYLOVE"
+    }
+   ]
+  },
+  {
+   "state": "FAIL",
+   "team": [
+    "ALEXIS",
+    "MADISON",
+    "BEN",
+    "LUCAS"
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 2,
+   "proposals": [
+    {
+     "votes": [
+      "SAM",
+      "BEN",
+      "MADISON",
+      "LUCAS",
+      "EZRA"
+     ],
+     "team": [
+      "ALEXIS",
+      "MADISON",
+      "BEN",
+      "LUCAS"
+     ],
+     "state": "APPROVED",
+     "proposer": "LUCAS"
+    }
+   ]
+  },
+  {
    "teamSize": 5,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "BEN",
       "TRAITOR"
      ],
-     "proposer": "SAM",
      "team": [
       "SAM",
       "TRAITOR",
@@ -117,16 +193,9 @@
       "BEN",
       "MARYLOVE"
      ],
-     "state": "REJECTED"
+     "proposer": "SAM"
     },
     {
-     "votes": [
-      "TRAITOR",
-      "LUCAS",
-      "EZRA",
-      "SAM"
-     ],
-     "proposer": "TRAITOR",
      "team": [
       "TRAITOR",
       "SAM",
@@ -134,9 +203,27 @@
       "BEN",
       "ALEXIS"
      ],
-     "state": "REJECTED"
+     "proposer": "TRAITOR",
+     "state": "REJECTED",
+     "votes": [
+      "TRAITOR",
+      "LUCAS",
+      "EZRA",
+      "SAM"
+     ]
     },
     {
+     "votes": [
+      "TRAITOR",
+      "LUCAS",
+      "EZRA",
+      "ALEXIS",
+      "SAM",
+      "MARYLOVE",
+      "BEN",
+      "MADISON"
+     ],
+     "state": "APPROVED",
      "proposer": "ALEXIS",
      "team": [
       "ALEXIS",
@@ -144,33 +231,31 @@
       "SAM",
       "MADISON",
       "BEN"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "TRAITOR",
-      "LUCAS",
-      "EZRA",
-      "ALEXIS",
-      "SAM",
-      "MARYLOVE",
-      "BEN",
-      "MADISON"
      ]
     }
    ],
+   "numFails": 0,
    "failsRequired": 2,
+   "team": [
+    "ALEXIS",
+    "TRAITOR",
+    "SAM",
+    "MADISON",
+    "BEN"
+   ],
    "state": "SUCCESS"
   },
   {
+   "team": [
+    "LUCAS",
+    "ALEXIS",
+    "MARYLOVE",
+    "MADISON",
+    "TRAITOR"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "MADISON",
-      "BEN",
-      "SAM",
-      "TRAITOR",
-      "EZRA"
-     ],
      "state": "REJECTED",
      "votes": [
       "EZRA",
@@ -178,10 +263,22 @@
       "BEN",
       "MADISON"
      ],
+     "team": [
+      "MADISON",
+      "BEN",
+      "SAM",
+      "TRAITOR",
+      "EZRA"
+     ],
      "proposer": "MADISON"
     },
     {
-     "proposer": "BEN",
+     "votes": [
+      "SAM",
+      "BEN",
+      "MADISON",
+      "EZRA"
+     ],
      "team": [
       "MADISON",
       "BEN",
@@ -189,13 +286,8 @@
       "SAM",
       "TRAITOR"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "SAM",
-      "BEN",
-      "MADISON",
-      "EZRA"
-     ]
+     "proposer": "BEN",
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -205,16 +297,17 @@
       "ALEXIS",
       "SAM"
      ],
+     "proposer": "EZRA",
      "state": "REJECTED",
      "votes": [
       "TRAITOR",
       "LUCAS",
       "EZRA",
       "ALEXIS"
-     ],
-     "proposer": "EZRA"
+     ]
     },
     {
+     "proposer": "MARYLOVE",
      "team": [
       "MARYLOVE",
       "ALEXIS",
@@ -222,25 +315,15 @@
       "SAM",
       "TRAITOR"
      ],
-     "state": "REJECTED",
      "votes": [
       "ALEXIS",
       "MARYLOVE",
       "MADISON",
       "LUCAS"
      ],
-     "proposer": "MARYLOVE"
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "LUCAS",
-      "ALEXIS",
-      "SAM",
-      "MARYLOVE",
-      "MADISON",
-      "TRAITOR"
-     ],
-     "proposer": "LUCAS",
      "team": [
       "LUCAS",
       "ALEXIS",
@@ -248,101 +331,26 @@
       "MADISON",
       "TRAITOR"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "LUCAS",
+     "votes": [
+      "LUCAS",
+      "ALEXIS",
+      "SAM",
+      "MARYLOVE",
+      "MADISON",
+      "TRAITOR"
+     ]
     }
    ],
-   "failsRequired": 1,
    "state": "FAIL",
-   "team": [
-    "LUCAS",
-    "ALEXIS",
-    "MARYLOVE",
-    "MADISON",
-    "TRAITOR"
-   ],
    "numFails": 3,
    "teamSize": 5
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "LUCAS",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "EZRA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ALEXIS",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "SAM",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "MARYLOVE",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "BEN",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "MADISON",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "TRAITOR",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "EZRA": true,
-    "MARYLOVE": false,
-    "LUCAS": false
-   },
-   {
-    "BEN": true,
-    "MADISON": true,
-    "ALEXIS": true,
-    "MARYLOVE": true
-   },
-   {
-    "LUCAS": false,
-    "BEN": true,
-    "MADISON": true,
-    "ALEXIS": false
-   },
-   {
-    "SAM": true,
-    "ALEXIS": true,
-    "TRAITOR": true,
-    "BEN": true,
-    "MADISON": true
-   },
-   {
-    "MADISON": true,
-    "ALEXIS": false,
-    "MARYLOVE": false,
-    "TRAITOR": true,
-    "LUCAS": false
-   }
-  ],
-  "message": "Three failed missions"
+ "timeCreated": {
+  "_seconds": 1587772683,
+  "_nanoseconds": 230000000
  },
  "players": [
   {
@@ -370,23 +378,15 @@
    "name": "LUCAS"
   },
   {
-   "uid": "GtyBet2MaATTBeDpYJqmKQKHl712",
-   "name": "SAM"
+   "name": "SAM",
+   "uid": "GtyBet2MaATTBeDpYJqmKQKHl712"
   },
   {
    "uid": "OiP8IVAVJrbQbVXaQ5wjZAYEKC42",
    "name": "TRAITOR"
   }
  ],
- "timeFinished": {
-  "_seconds": 1587774048,
-  "_nanoseconds": 890000000
- },
  "options": {
   "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587772683,
-  "_nanoseconds": 230000000
  }
 }

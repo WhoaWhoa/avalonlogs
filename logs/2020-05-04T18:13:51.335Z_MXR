@@ -3,18 +3,41 @@
   "_seconds": 1588616440,
   "_nanoseconds": 435000000
  },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588616031,
-  "_nanoseconds": 335000000
- },
+ "players": [
+  {
+   "uid": "b1H6y6VtbgPjiNdo0FFASI3Ys6v1",
+   "name": "SANGEETH"
+  },
+  {
+   "name": "SOMA",
+   "uid": "N7AFgtdY4igcBphXLcrNdeijltG3"
+  },
+  {
+   "name": "GRANDPA",
+   "uid": "nad3BBjEZpgAqeMSpZQm9fG5ie02"
+  },
+  {
+   "uid": "FRfQNQ5P1JcF7BIoaT421OF9v9P2",
+   "name": "GYM"
+  },
+  {
+   "name": "MILKYVIKY",
+   "uid": "GZMX2NijLtVJBHuUgNi7SkRcwyC2"
+  },
+  {
+   "uid": "aK0lNNcScZQYJ0IS1olNT00AA0Z2",
+   "name": "AKKULHARI"
+  }
+ ],
  "missions": [
   {
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "GRANDPA",
+      "MILKYVIKY"
+     ],
      "votes": [
       "GYM",
       "SANGEETH",
@@ -22,31 +45,19 @@
       "MILKYVIKY",
       "AKKULHARI"
      ],
-     "proposer": "MILKYVIKY",
-     "team": [
-      "GRANDPA",
-      "MILKYVIKY"
-     ]
+     "proposer": "MILKYVIKY"
     }
    ],
    "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 2,
    "state": "SUCCESS",
    "team": [
     "GRANDPA",
     "MILKYVIKY"
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   ]
   },
   {
-   "state": "FAIL",
-   "team": [
-    "AKKULHARI",
-    "GRANDPA",
-    "MILKYVIKY"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -64,9 +75,18 @@
      "proposer": "AKKULHARI"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "AKKULHARI",
+    "GRANDPA",
+    "MILKYVIKY"
+   ],
+   "numFails": 1,
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
+   "failsRequired": 1,
    "team": [
     "SANGEETH",
     "SOMA",
@@ -74,7 +94,6 @@
     "GYM"
    ],
    "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -85,28 +104,23 @@
       "GYM",
       "SANGEETH"
      ],
-     "proposer": "SANGEETH",
      "team": [
       "SANGEETH",
       "SOMA",
       "GRANDPA",
       "GYM"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "SANGEETH"
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 4,
    "state": "SUCCESS"
   },
   {
    "proposals": [
     {
-     "team": [
-      "SOMA",
-      "GRANDPA",
-      "SANGEETH"
-     ],
-     "state": "APPROVED",
+     "proposer": "SOMA",
      "votes": [
       "SOMA",
       "GRANDPA",
@@ -114,31 +128,38 @@
       "GYM",
       "SANGEETH"
      ],
-     "proposer": "SOMA"
+     "state": "APPROVED",
+     "team": [
+      "SOMA",
+      "GRANDPA",
+      "SANGEETH"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3,
    "team": [
     "SOMA",
     "GRANDPA",
     "SANGEETH"
    ],
-   "numFails": 1,
-   "teamSize": 3
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
    "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 4,
    "team": [
     "SANGEETH",
     "MILKYVIKY",
     "GYM",
     "SOMA"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "GRANDPA",
      "team": [
       "SANGEETH",
       "MILKYVIKY",
@@ -152,17 +173,44 @@
       "MILKYVIKY",
       "GYM",
       "SANGEETH"
-     ],
-     "proposer": "GRANDPA"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
   "assassinated": null,
+  "votes": [
+   {
+    "GRANDPA": true,
+    "MILKYVIKY": true
+   },
+   {
+    "AKKULHARI": true,
+    "GRANDPA": false,
+    "MILKYVIKY": true
+   },
+   {
+    "GRANDPA": true,
+    "GYM": true,
+    "SOMA": true,
+    "SANGEETH": true
+   },
+   {
+    "GRANDPA": false,
+    "SOMA": true,
+    "SANGEETH": true
+   },
+   {
+    "SANGEETH": false,
+    "MILKYVIKY": true,
+    "GYM": true,
+    "SOMA": true
+   }
+  ],
   "roles": [
    {
     "name": "GYM",
@@ -171,83 +219,35 @@
    },
    {
     "assassin": false,
-    "role": "MORGANA",
-    "name": "SANGEETH"
+    "name": "SANGEETH",
+    "role": "MORGANA"
    },
    {
-    "name": "SOMA",
     "assassin": false,
+    "name": "SOMA",
     "role": "PERCIVAL"
    },
    {
-    "name": "GRANDPA",
     "assassin": true,
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "name": "GRANDPA"
    },
    {
-    "name": "MILKYVIKY",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "MILKYVIKY"
    },
    {
-    "name": "AKKULHARI",
+    "role": "MERLIN",
     "assassin": false,
-    "role": "MERLIN"
+    "name": "AKKULHARI"
    }
   ],
-  "votes": [
-   {
-    "MILKYVIKY": true,
-    "GRANDPA": true
-   },
-   {
-    "AKKULHARI": true,
-    "MILKYVIKY": true,
-    "GRANDPA": false
-   },
-   {
-    "GYM": true,
-    "SANGEETH": true,
-    "GRANDPA": true,
-    "SOMA": true
-   },
-   {
-    "GRANDPA": false,
-    "SOMA": true,
-    "SANGEETH": true
-   },
-   {
-    "SOMA": true,
-    "GYM": true,
-    "SANGEETH": false,
-    "MILKYVIKY": true
-   }
-  ]
+  "state": "EVIL_WIN",
+  "message": "Three failed missions"
  },
- "players": [
-  {
-   "name": "SANGEETH",
-   "uid": "b1H6y6VtbgPjiNdo0FFASI3Ys6v1"
-  },
-  {
-   "name": "SOMA",
-   "uid": "N7AFgtdY4igcBphXLcrNdeijltG3"
-  },
-  {
-   "uid": "nad3BBjEZpgAqeMSpZQm9fG5ie02",
-   "name": "GRANDPA"
-  },
-  {
-   "uid": "FRfQNQ5P1JcF7BIoaT421OF9v9P2",
-   "name": "GYM"
-  },
-  {
-   "uid": "GZMX2NijLtVJBHuUgNi7SkRcwyC2",
-   "name": "MILKYVIKY"
-  },
-  {
-   "uid": "aK0lNNcScZQYJ0IS1olNT00AA0Z2",
-   "name": "AKKULHARI"
-  }
- ]
+ "timeCreated": {
+  "_seconds": 1588616031,
+  "_nanoseconds": 335000000
+ }
 }

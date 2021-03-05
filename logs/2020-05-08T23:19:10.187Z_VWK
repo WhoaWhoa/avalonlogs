@@ -3,23 +3,136 @@
   "_seconds": 1588981356,
   "_nanoseconds": 116000000
  },
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1588979950,
   "_nanoseconds": 187000000
  },
+ "outcome": {
+  "roles": [
+   {
+    "name": "ARIEL",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "JOHN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "name": "EMILY",
+    "assassin": false
+   },
+   {
+    "name": "JASON",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "CINDERELLA",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "CAT"
+   },
+   {
+    "role": "MORDRED",
+    "name": "ARTHUR",
+    "assassin": false
+   },
+   {
+    "name": "SHADOW",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "JOHN": true,
+    "JASON": true,
+    "ARIEL": true
+   },
+   {
+    "JASON": false,
+    "ARIEL": false,
+    "CAT": true,
+    "JOHN": true
+   },
+   {
+    "EMILY": true,
+    "CAT": true,
+    "ARTHUR": false,
+    "SHADOW": true
+   },
+   {
+    "SHADOW": true,
+    "CAT": true,
+    "EMILY": true,
+    "ARTHUR": true,
+    "CINDERELLA": true
+   },
+   {
+    "CAT": true,
+    "SHADOW": true,
+    "JOHN": true,
+    "EMILY": true,
+    "CINDERELLA": true
+   }
+  ],
+  "assassinated": "CAT"
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "players": [
+  {
+   "name": "ARIEL",
+   "uid": "KfUBmuXZaJdtH6Nr3Ic3mMOYcyx1"
+  },
+  {
+   "uid": "uIX9dxgdFQUvJ51zfOCpKNBdY4A3",
+   "name": "ARTHUR"
+  },
+  {
+   "uid": "q5Uta53BFXYKCFqUcs0bP2CNxqa2",
+   "name": "CAT"
+  },
+  {
+   "uid": "UOHPeS3Y66XNra9boWtWn2sUX2E3",
+   "name": "EMILY"
+  },
+  {
+   "name": "CINDERELLA",
+   "uid": "fu2ewVNS8XQCTjeNc9Ta9dVV3E62"
+  },
+  {
+   "uid": "UsktGR7oDtOtiiZ8t6VazKer61h1",
+   "name": "SHADOW"
+  },
+  {
+   "name": "JASON",
+   "uid": "tFTeBlXYcoUU1iGH4oMVC1EsyJ52"
+  },
+  {
+   "uid": "fPhTkYvHWTdj1hjPY9x2mnQkdHw2",
+   "name": "JOHN"
+  }
+ ],
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "JASON",
     "JOHN",
     "ARIEL"
    ],
+   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -28,6 +141,7 @@
       "ARIEL"
      ],
      "state": "APPROVED",
+     "proposer": "ARTHUR",
      "votes": [
       "CINDERELLA",
       "CAT",
@@ -36,23 +150,22 @@
       "ARIEL",
       "JOHN",
       "JASON"
-     ],
-     "proposer": "ARTHUR"
+     ]
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "team": [
-    "CAT",
-    "JASON",
-    "JOHN",
-    "ARIEL"
-   ],
-   "numFails": 2,
-   "teamSize": 4,
    "proposals": [
     {
+     "team": [
+      "CAT",
+      "JASON",
+      "JOHN",
+      "ARIEL"
+     ],
+     "proposer": "CAT",
      "state": "APPROVED",
      "votes": [
       "CAT",
@@ -63,27 +176,29 @@
       "EMILY",
       "JASON",
       "CINDERELLA"
-     ],
-     "proposer": "CAT",
-     "team": [
-      "CAT",
-      "JASON",
-      "JOHN",
-      "ARIEL"
      ]
     }
    ],
+   "numFails": 2,
+   "teamSize": 4,
    "failsRequired": 1,
+   "team": [
+    "CAT",
+    "JASON",
+    "JOHN",
+    "ARIEL"
+   ],
    "state": "FAIL"
   },
   {
-   "state": "FAIL",
    "team": [
     "SHADOW",
     "EMILY",
     "ARTHUR",
     "CAT"
    ],
+   "failsRequired": 1,
+   "state": "FAIL",
    "numFails": 1,
    "teamSize": 4,
    "proposals": [
@@ -98,36 +213,42 @@
       "JASON"
      ],
      "proposer": "EMILY",
+     "state": "APPROVED",
      "team": [
       "SHADOW",
       "EMILY",
       "ARTHUR",
       "CAT"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "numFails": 0,
-   "teamSize": 5,
+   "failsRequired": 2,
+   "team": [
+    "ARTHUR",
+    "EMILY",
+    "CINDERELLA",
+    "SHADOW",
+    "CAT"
+   ],
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "ARIEL",
       "JOHN",
       "JASON"
      ],
-     "proposer": "CINDERELLA",
      "team": [
       "CINDERELLA",
       "EMILY",
       "CAT",
       "JOHN",
       "ARIEL"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "CINDERELLA"
     },
     {
      "votes": [
@@ -139,6 +260,7 @@
       "EMILY",
       "JASON"
      ],
+     "state": "APPROVED",
      "proposer": "SHADOW",
      "team": [
       "ARTHUR",
@@ -146,19 +268,11 @@
       "CINDERELLA",
       "SHADOW",
       "CAT"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
-   "team": [
-    "ARTHUR",
-    "EMILY",
-    "CINDERELLA",
-    "SHADOW",
-    "CAT"
-   ]
+   "teamSize": 5,
+   "numFails": 0
   },
   {
    "team": [
@@ -168,26 +282,21 @@
     "SHADOW",
     "JOHN"
    ],
-   "numFails": 0,
-   "teamSize": 5,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [],
-     "proposer": "JASON",
      "team": [
       "EMILY",
       "CINDERELLA",
       "SHADOW",
       "JASON",
       "CAT"
-     ]
+     ],
+     "proposer": "JASON",
+     "votes": [],
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "JOHN"
-     ],
-     "proposer": "JOHN",
+     "state": "REJECTED",
      "team": [
       "JOHN",
       "SHADOW",
@@ -195,11 +304,12 @@
       "EMILY",
       "ARTHUR"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "JOHN"
+     ],
+     "proposer": "JOHN"
     },
     {
-     "votes": [],
-     "proposer": "ARIEL",
      "team": [
       "CAT",
       "EMILY",
@@ -207,6 +317,8 @@
       "SHADOW",
       "ARIEL"
      ],
+     "proposer": "ARIEL",
+     "votes": [],
      "state": "REJECTED"
     },
     {
@@ -217,18 +329,11 @@
       "JASON",
       "ARTHUR"
      ],
-     "state": "REJECTED",
      "votes": [],
+     "state": "REJECTED",
      "proposer": "ARTHUR"
     },
     {
-     "team": [
-      "CAT",
-      "EMILY",
-      "CINDERELLA",
-      "SHADOW",
-      "JOHN"
-     ],
      "state": "APPROVED",
      "votes": [
       "ARIEL",
@@ -238,125 +343,20 @@
       "CAT",
       "SHADOW"
      ],
-     "proposer": "CAT"
+     "proposer": "CAT",
+     "team": [
+      "CAT",
+      "EMILY",
+      "CINDERELLA",
+      "SHADOW",
+      "JOHN"
+     ]
     }
    ],
    "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 5,
    "state": "SUCCESS"
-  }
- ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "CAT",
-  "roles": [
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "ARIEL"
-   },
-   {
-    "name": "JOHN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "EMILY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "JASON",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "CINDERELLA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "CAT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "ARTHUR"
-   },
-   {
-    "name": "SHADOW",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "JOHN": true,
-    "JASON": true,
-    "ARIEL": true
-   },
-   {
-    "CAT": true,
-    "JOHN": true,
-    "JASON": false,
-    "ARIEL": false
-   },
-   {
-    "EMILY": true,
-    "SHADOW": true,
-    "CAT": true,
-    "ARTHUR": false
-   },
-   {
-    "EMILY": true,
-    "SHADOW": true,
-    "CAT": true,
-    "ARTHUR": true,
-    "CINDERELLA": true
-   },
-   {
-    "SHADOW": true,
-    "CAT": true,
-    "JOHN": true,
-    "CINDERELLA": true,
-    "EMILY": true
-   }
-  ],
-  "message": "Three successful missions"
- },
- "players": [
-  {
-   "name": "ARIEL",
-   "uid": "KfUBmuXZaJdtH6Nr3Ic3mMOYcyx1"
-  },
-  {
-   "name": "ARTHUR",
-   "uid": "uIX9dxgdFQUvJ51zfOCpKNBdY4A3"
-  },
-  {
-   "uid": "q5Uta53BFXYKCFqUcs0bP2CNxqa2",
-   "name": "CAT"
-  },
-  {
-   "uid": "UOHPeS3Y66XNra9boWtWn2sUX2E3",
-   "name": "EMILY"
-  },
-  {
-   "uid": "fu2ewVNS8XQCTjeNc9Ta9dVV3E62",
-   "name": "CINDERELLA"
-  },
-  {
-   "name": "SHADOW",
-   "uid": "UsktGR7oDtOtiiZ8t6VazKer61h1"
-  },
-  {
-   "uid": "tFTeBlXYcoUU1iGH4oMVC1EsyJ52",
-   "name": "JASON"
-  },
-  {
-   "name": "JOHN",
-   "uid": "fPhTkYvHWTdj1hjPY9x2mnQkdHw2"
   }
  ]
 }

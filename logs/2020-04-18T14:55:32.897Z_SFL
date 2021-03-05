@@ -1,25 +1,125 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1587222809,
   "_nanoseconds": 285000000
  },
- "options": {
-  "inGameLog": false
- },
+ "players": [
+  {
+   "uid": "LJ4Nyrv05KQ3qh7TLbMKC5vGnkW2",
+   "name": "NICK"
+  },
+  {
+   "uid": "zxU35ydSnVhkwlRUXEoYRVDW5Ow2",
+   "name": "KEVIN"
+  },
+  {
+   "uid": "0X0XTaaZsbZifJ9IyYnMbelky4g2",
+   "name": "SAM"
+  },
+  {
+   "uid": "VNzgvUy5j2X3e9Aw3C6IfBAPffk2",
+   "name": "PAIKO"
+  },
+  {
+   "name": "IVAN",
+   "uid": "Io5VSv6pC4NMJN8W89B5eaeEdmA3"
+  },
+  {
+   "uid": "cljVRE9ozLePJUWHXVcmfogW4Fj1",
+   "name": "SHYV"
+  },
+  {
+   "name": "SOL",
+   "uid": "ksC5BoXx46btdJTExjpoK4KIxGg2"
+  },
+  {
+   "name": "BUTCHER",
+   "uid": "o50lRVZbCCNo4vHMj3AmUcx4IK62"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1587221732,
   "_nanoseconds": 897000000
  },
+ "outcome": {
+  "message": "Three successful missions",
+  "assassinated": "KEVIN",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "SAM",
+    "assassin": false
+   },
+   {
+    "name": "KEVIN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "NICK",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "IVAN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "BUTCHER",
+    "assassin": false
+   },
+   {
+    "name": "PAIKO",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "assassin": false,
+    "name": "SOL"
+   },
+   {
+    "assassin": false,
+    "name": "SHYV",
+    "role": "MERLIN"
+   }
+  ],
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "PAIKO": true,
+    "SOL": true,
+    "SHYV": true
+   },
+   {
+    "BUTCHER": true,
+    "SHYV": true,
+    "KEVIN": true,
+    "SAM": true
+   },
+   {
+    "SAM": true,
+    "KEVIN": true,
+    "BUTCHER": true,
+    "SHYV": true
+   }
+  ]
+ },
  "missions": [
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "SOL",
     "SHYV",
     "PAIKO"
    ],
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
      "votes": [
@@ -27,12 +127,12 @@
       "SOL"
      ],
      "proposer": "PAIKO",
+     "state": "REJECTED",
      "team": [
       "PAIKO",
       "NICK",
       "KEVIN"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "team": [
@@ -40,28 +140,30 @@
       "SAM",
       "SOL"
      ],
+     "proposer": "IVAN",
      "state": "REJECTED",
      "votes": [
       "SOL"
-     ],
-     "proposer": "IVAN"
+     ]
     },
     {
      "state": "REJECTED",
+     "team": [
+      "SHYV",
+      "KEVIN",
+      "SAM"
+     ],
+     "proposer": "SHYV",
      "votes": [
       "SHYV",
       "KEVIN",
       "NICK",
       "IVAN"
-     ],
-     "proposer": "SHYV",
-     "team": [
-      "SHYV",
-      "KEVIN",
-      "SAM"
      ]
     },
     {
+     "state": "APPROVED",
+     "proposer": "SOL",
      "votes": [
       "NICK",
       "IVAN",
@@ -69,48 +171,52 @@
       "SOL",
       "SHYV"
      ],
-     "proposer": "SOL",
      "team": [
       "SOL",
       "SHYV",
       "PAIKO"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 0
   },
   {
+   "team": [
+    "SAM",
+    "SHYV",
+    "KEVIN",
+    "BUTCHER"
+   ],
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "SHYV",
       "SAM",
       "KEVIN",
       "BUTCHER"
      ],
-     "proposer": "BUTCHER",
      "team": [
       "BUTCHER",
       "SHYV",
       "KEVIN",
       "SAM"
      ],
-     "state": "REJECTED"
+     "proposer": "BUTCHER"
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "NICK",
-      "PAIKO",
-      "SOL"
-     ],
      "proposer": "NICK",
      "team": [
       "SOL",
       "PAIKO",
       "NICK",
       "SHYV"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "NICK",
+      "PAIKO",
+      "SOL"
      ]
     },
     {
@@ -129,7 +235,13 @@
      "proposer": "KEVIN"
     },
     {
-     "state": "APPROVED",
+     "proposer": "SAM",
+     "team": [
+      "SAM",
+      "SHYV",
+      "KEVIN",
+      "BUTCHER"
+     ],
      "votes": [
       "SAM",
       "KEVIN",
@@ -137,37 +249,21 @@
       "BUTCHER",
       "SHYV"
      ],
-     "proposer": "SAM",
-     "team": [
-      "SAM",
-      "SHYV",
-      "KEVIN",
-      "BUTCHER"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 4,
    "state": "SUCCESS",
-   "team": [
-    "SAM",
-    "SHYV",
-    "KEVIN",
-    "BUTCHER"
-   ],
-   "numFails": 0,
-   "teamSize": 4
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "SAM",
     "SHYV",
     "KEVIN",
     "BUTCHER"
    ],
-   "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -177,130 +273,34 @@
       "SAM",
       "KEVIN"
      ],
-     "proposer": "PAIKO",
+     "state": "APPROVED",
      "team": [
       "SAM",
       "SHYV",
       "KEVIN",
       "BUTCHER"
      ],
-     "state": "APPROVED"
+     "proposer": "PAIKO"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
+   "team": [],
+   "failsRequired": 2,
    "teamSize": 5,
    "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 2,
-   "team": []
+   "proposals": []
   },
   {
    "proposals": [],
    "failsRequired": 1,
-   "team": [],
    "teamSize": 5,
+   "team": [],
    "state": "PENDING"
-  }
- ],
- "outcome": {
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "KEVIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SAM"
-   },
-   {
-    "name": "KEVIN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "NICK",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "IVAN",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "BUTCHER",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "PAIKO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SOL",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "SHYV"
-   }
-  ],
-  "votes": [
-   {
-    "PAIKO": true,
-    "SHYV": true,
-    "SOL": true
-   },
-   {
-    "BUTCHER": true,
-    "SHYV": true,
-    "SAM": true,
-    "KEVIN": true
-   },
-   {
-    "BUTCHER": true,
-    "SHYV": true,
-    "SAM": true,
-    "KEVIN": true
-   }
-  ]
- },
- "players": [
-  {
-   "uid": "LJ4Nyrv05KQ3qh7TLbMKC5vGnkW2",
-   "name": "NICK"
-  },
-  {
-   "uid": "zxU35ydSnVhkwlRUXEoYRVDW5Ow2",
-   "name": "KEVIN"
-  },
-  {
-   "name": "SAM",
-   "uid": "0X0XTaaZsbZifJ9IyYnMbelky4g2"
-  },
-  {
-   "name": "PAIKO",
-   "uid": "VNzgvUy5j2X3e9Aw3C6IfBAPffk2"
-  },
-  {
-   "uid": "Io5VSv6pC4NMJN8W89B5eaeEdmA3",
-   "name": "IVAN"
-  },
-  {
-   "uid": "cljVRE9ozLePJUWHXVcmfogW4Fj1",
-   "name": "SHYV"
-  },
-  {
-   "uid": "ksC5BoXx46btdJTExjpoK4KIxGg2",
-   "name": "SOL"
-  },
-  {
-   "uid": "o50lRVZbCCNo4vHMj3AmUcx4IK62",
-   "name": "BUTCHER"
   }
  ]
 }

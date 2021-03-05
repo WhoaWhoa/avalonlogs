@@ -1,38 +1,39 @@
 {
+ "players": [
+  {
+   "name": "BERT",
+   "uid": "H18sk7GAsLfaXKim6lcmR2JdK7q1"
+  },
+  {
+   "name": "JS",
+   "uid": "9SEssQPgQJMMOAtupdHcCNoZgiq2"
+  },
+  {
+   "name": "YOUNGEST",
+   "uid": "5zkn80MuEthaNx8WDVECr1PwpKx1"
+  },
+  {
+   "uid": "75hvJ3YLkbfgwWxfACUvGGLedxU2",
+   "name": "JENNY"
+  },
+  {
+   "name": "LILX",
+   "uid": "EK4lIYvymiPc9E7qSiN58j3bRts2"
+  }
+ ],
  "outcome": {
-  "votes": [
-   {
-    "YOUNGEST": true,
-    "JS": false
-   },
-   {
-    "YOUNGEST": true,
-    "JENNY": true,
-    "BERT": true
-   },
-   {
-    "YOUNGEST": true,
-    "JENNY": true
-   },
-   {
-    "YOUNGEST": true,
-    "JENNY": true,
-    "BERT": true
-   }
-  ],
-  "message": "Three missions succeeded",
   "state": "GOOD_WIN",
   "assassinated": null,
   "roles": [
    {
-    "name": "JENNY",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "JENNY"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "YOUNGEST",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
     "name": "BERT",
@@ -45,44 +46,39 @@
     "role": "EVIL MINION"
    },
    {
-    "name": "JS",
     "assassin": false,
+    "name": "JS",
     "role": "EVIL MINION"
    }
-  ]
- },
- "players": [
-  {
-   "uid": "H18sk7GAsLfaXKim6lcmR2JdK7q1",
-   "name": "BERT"
-  },
-  {
-   "name": "JS",
-   "uid": "9SEssQPgQJMMOAtupdHcCNoZgiq2"
-  },
-  {
-   "uid": "5zkn80MuEthaNx8WDVECr1PwpKx1",
-   "name": "YOUNGEST"
-  },
-  {
-   "name": "JENNY",
-   "uid": "75hvJ3YLkbfgwWxfACUvGGLedxU2"
-  },
-  {
-   "uid": "EK4lIYvymiPc9E7qSiN58j3bRts2",
-   "name": "LILX"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1589066407,
-  "_nanoseconds": 201000000
- },
- "options": {
-  "inGameLog": false
+  ],
+  "votes": [
+   {
+    "YOUNGEST": true,
+    "JS": false
+   },
+   {
+    "YOUNGEST": true,
+    "BERT": true,
+    "JENNY": true
+   },
+   {
+    "JENNY": true,
+    "YOUNGEST": true
+   },
+   {
+    "YOUNGEST": true,
+    "BERT": true,
+    "JENNY": true
+   }
+  ],
+  "message": "Three missions succeeded"
  },
  "timeCreated": {
   "_seconds": 1589066062,
   "_nanoseconds": 271000000
+ },
+ "options": {
+  "inGameLog": false
  },
  "missions": [
   {
@@ -91,10 +87,12 @@
     "JS",
     "YOUNGEST"
    ],
-   "numFails": 1,
-   "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "JS",
+      "YOUNGEST"
+     ],
      "state": "APPROVED",
      "votes": [
       "BERT",
@@ -103,30 +101,25 @@
       "JENNY",
       "YOUNGEST"
      ],
-     "proposer": "JS",
-     "team": [
-      "JS",
-      "YOUNGEST"
-     ]
+     "proposer": "JS"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 2
   },
   {
+   "teamSize": 3,
    "team": [
     "YOUNGEST",
     "JENNY",
     "BERT"
    ],
+   "failsRequired": 1,
    "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "YOUNGEST",
-      "JENNY",
-      "BERT"
-     ],
      "state": "APPROVED",
      "votes": [
       "JENNY",
@@ -135,21 +128,30 @@
       "LILX",
       "JS"
      ],
-     "proposer": "YOUNGEST"
+     "proposer": "YOUNGEST",
+     "team": [
+      "YOUNGEST",
+      "JENNY",
+      "BERT"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
    "team": [
     "JENNY",
     "YOUNGEST"
    ],
+   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "JENNY",
+     "team": [
+      "JENNY",
+      "YOUNGEST"
+     ],
      "votes": [
       "YOUNGEST",
       "BERT",
@@ -157,64 +159,62 @@
       "JS",
       "JENNY"
      ],
-     "proposer": "JENNY",
-     "team": [
-      "JENNY",
-      "YOUNGEST"
-     ],
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "BERT",
-    "YOUNGEST",
-    "JENNY"
-   ],
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "LILX",
+     "state": "REJECTED",
      "votes": [
       "LILX",
       "JS"
      ],
-     "proposer": "LILX",
      "team": [
       "JENNY",
       "LILX",
       "BERT"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "BERT",
       "YOUNGEST",
       "JENNY"
      ],
-     "state": "APPROVED",
+     "proposer": "BERT",
      "votes": [
       "BERT",
       "LILX",
       "JENNY",
       "YOUNGEST"
-     ],
-     "proposer": "BERT"
+     ]
     }
    ],
+   "team": [
+    "BERT",
+    "YOUNGEST",
+    "JENNY"
+   ],
+   "teamSize": 3,
    "failsRequired": 1
   },
   {
-   "team": [],
-   "teamSize": 3,
+   "failsRequired": 1,
    "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
+   "teamSize": 3,
+   "team": []
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1589066407,
+  "_nanoseconds": 201000000
+ }
 }

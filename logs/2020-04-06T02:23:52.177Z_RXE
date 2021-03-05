@@ -1,22 +1,37 @@
 {
  "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "ANNI": false,
+    "MARK": true
+   },
+   {
+    "TRISTAN": true,
+    "ANNI": false,
+    "DARCI": true
+   },
+   {
+    "MARK": true,
+    "AIDAN": false,
+    "JEFF": true
+   }
+  ],
   "roles": [
    {
-    "name": "DARCI",
     "assassin": false,
+    "name": "DARCI",
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "JEFF",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "JEFF"
    },
    {
     "name": "MARK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "name": "NATHAN",
@@ -29,50 +44,31 @@
     "name": "AIDAN"
    },
    {
+    "role": "EVIL MINION",
     "name": "TRISTAN",
+    "assassin": false
+   },
+   {
+    "name": "ANNI",
     "assassin": false,
     "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "ANNI"
    }
   ],
-  "votes": [
-   {
-    "ANNI": false,
-    "MARK": true
-   },
-   {
-    "DARCI": true,
-    "TRISTAN": true,
-    "ANNI": false
-   },
-   {
-    "AIDAN": false,
-    "JEFF": true,
-    "MARK": true
-   }
-  ],
-  "message": "Three failed missions"
- },
- "timeFinished": {
-  "_seconds": 1586140151,
-  "_nanoseconds": 592846000
+  "state": "EVIL_WIN",
+  "assassinated": null
  },
  "players": [
   {
-   "uid": "mocxL0vb6jOVIpkc6ELm6ywJQrr2",
-   "name": "ANNI"
+   "name": "ANNI",
+   "uid": "mocxL0vb6jOVIpkc6ELm6ywJQrr2"
   },
   {
-   "uid": "22Gz3nBFJuTW5LmEzNzZ9TSnpOw1",
-   "name": "DARCI"
+   "name": "DARCI",
+   "uid": "22Gz3nBFJuTW5LmEzNzZ9TSnpOw1"
   },
   {
-   "uid": "MUe4udXfnqVQrrlATXcr46rPYFw1",
-   "name": "TRISTAN"
+   "name": "TRISTAN",
+   "uid": "MUe4udXfnqVQrrlATXcr46rPYFw1"
   },
   {
    "uid": "ZnYKtCtNFKYQTun5mqFP5z7KkMz1",
@@ -97,20 +93,21 @@
  },
  "missions": [
   {
-   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "ANNI",
     "MARK"
    ],
-   "numFails": 1,
    "teamSize": 2,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "TRISTAN",
      "team": [
       "ANNI",
       "MARK"
      ],
-     "state": "APPROVED",
      "votes": [
       "TRISTAN",
       "ANNI",
@@ -118,22 +115,16 @@
       "JEFF",
       "MARK",
       "NATHAN"
-     ],
-     "proposer": "TRISTAN"
+     ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 1
   },
   {
-   "team": [
-    "DARCI",
-    "TRISTAN",
-    "ANNI"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "AIDAN",
      "state": "APPROVED",
      "votes": [
       "MARK",
@@ -142,7 +133,6 @@
       "DARCI",
       "JEFF"
      ],
-     "proposer": "AIDAN",
      "team": [
       "DARCI",
       "TRISTAN",
@@ -150,19 +140,23 @@
      ]
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "DARCI",
+    "TRISTAN",
+    "ANNI"
+   ],
+   "numFails": 1,
    "state": "FAIL"
   },
   {
-   "team": [
-    "MARK",
-    "AIDAN",
-    "JEFF"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "MARK",
+      "AIDAN",
+      "JEFF"
+     ],
      "state": "APPROVED",
      "votes": [
       "MARK",
@@ -172,30 +166,36 @@
       "ANNI",
       "JEFF"
      ],
-     "proposer": "NATHAN",
-     "team": [
-      "MARK",
-      "AIDAN",
-      "JEFF"
-     ]
+     "proposer": "NATHAN"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
-  },
-  {
-   "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 2,
-   "team": [],
-   "teamSize": 4
+   "teamSize": 3,
+   "numFails": 1,
+   "team": [
+    "MARK",
+    "AIDAN",
+    "JEFF"
+   ],
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
    "teamSize": 4,
-   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1,
+   "failsRequired": 2,
+   "state": "PENDING",
    "team": []
+  },
+  {
+   "teamSize": 4,
+   "team": [],
+   "proposals": [],
+   "state": "PENDING",
+   "failsRequired": 1
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1586140151,
+  "_nanoseconds": 592846000
+ }
 }

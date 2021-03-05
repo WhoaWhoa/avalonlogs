@@ -1,72 +1,170 @@
 {
+ "players": [
+  {
+   "uid": "DBmJbVJuI3gk5sq6JN0gM9aMNUX2",
+   "name": "TOM"
+  },
+  {
+   "name": "SHAL",
+   "uid": "NIAmvvfK4pNNBRZTyluXo7elAnh2"
+  },
+  {
+   "name": "TARA",
+   "uid": "PtnYZP937Yaj3BRoOoEibJKvmNq1"
+  },
+  {
+   "uid": "V4YW5XjlPFg1Pj87mv5zDhwWJEO2",
+   "name": "ALI"
+  },
+  {
+   "name": "LUKE",
+   "uid": "bwGw2zkFfeOH24CRKuunkNjFpOn1"
+  },
+  {
+   "name": "JACK",
+   "uid": "Yc8SPVfUNcXHAbYoCC1bjj9yQTA2"
+  },
+  {
+   "name": "JOSEPH",
+   "uid": "vCbrc4fx8uTYQuh6hM5qhmT6sH52"
+  }
+ ],
+ "outcome": {
+  "roles": [
+   {
+    "name": "ALI",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "name": "LUKE",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "name": "JACK",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "SHAL",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "TOM",
+    "role": "OBERON"
+   },
+   {
+    "name": "JOSEPH",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "TARA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "TOM": true,
+    "SHAL": true
+   },
+   {
+    "ALI": true,
+    "SHAL": false,
+    "TARA": true
+   },
+   {
+    "TARA": true,
+    "JACK": false,
+    "TOM": true
+   },
+   {
+    "SHAL": false,
+    "LUKE": true,
+    "TARA": true,
+    "JOSEPH": true
+   },
+   {
+    "TARA": true,
+    "LUKE": true,
+    "SHAL": false,
+    "TOM": false
+   }
+  ]
+ },
  "timeCreated": {
   "_seconds": 1586576766,
   "_nanoseconds": 459000000
  },
+ "timeFinished": {
+  "_seconds": 1586577654,
+  "_nanoseconds": 447887000
+ },
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "SHAL",
     "TOM"
    ],
-   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "SHAL",
+      "TOM"
+     ],
+     "proposer": "SHAL",
      "votes": [
       "TOM",
       "TARA",
       "ALI",
       "LUKE",
       "SHAL"
-     ],
-     "proposer": "SHAL",
-     "team": [
-      "SHAL",
-      "TOM"
      ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
    "proposals": [
     {
-     "team": [
-      "TARA",
-      "SHAL",
-      "ALI"
-     ],
-     "state": "APPROVED",
      "votes": [
       "SHAL",
       "TOM",
       "JOSEPH",
       "ALI"
      ],
+     "team": [
+      "TARA",
+      "SHAL",
+      "ALI"
+     ],
+     "state": "APPROVED",
      "proposer": "TARA"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "TARA",
     "SHAL",
     "ALI"
    ],
+   "failsRequired": 1,
+   "teamSize": 3,
    "numFails": 1,
-   "teamSize": 3
+   "state": "FAIL"
   },
   {
-   "team": [
-    "JACK",
-    "TARA",
-    "TOM"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -74,22 +172,22 @@
       "JOSEPH",
       "JACK"
      ],
-     "state": "REJECTED",
      "votes": [
       "ALI",
       "JACK",
       "JOSEPH"
      ],
-     "proposer": "ALI"
+     "proposer": "ALI",
+     "state": "REJECTED"
     },
     {
+     "proposer": "LUKE",
      "state": "REJECTED",
      "votes": [
       "SHAL",
       "TOM",
       "LUKE"
      ],
-     "proposer": "LUKE",
      "team": [
       "LUKE",
       "JACK",
@@ -97,7 +195,6 @@
      ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "JACK",
       "SHAL",
@@ -106,6 +203,7 @@
       "ALI"
      ],
      "proposer": "JACK",
+     "state": "APPROVED",
      "team": [
       "JACK",
       "TARA",
@@ -113,12 +211,20 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "JACK",
+    "TARA",
+    "TOM"
+   ],
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3
   },
   {
+   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "SHAL",
       "JOSEPH",
@@ -132,22 +238,21 @@
       "TARA",
       "LUKE",
       "SHAL"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 2,
    "state": "SUCCESS",
+   "failsRequired": 2,
    "team": [
     "JOSEPH",
     "TARA",
     "LUKE",
     "SHAL"
    ],
-   "numFails": 1,
-   "teamSize": 4
+   "numFails": 1
   },
   {
+   "state": "FAIL",
    "team": [
     "LUKE",
     "TARA",
@@ -155,76 +260,74 @@
     "SHAL"
    ],
    "numFails": 2,
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "TOM",
       "JOSEPH",
       "LUKE",
       "SHAL"
      ],
-     "state": "REJECTED",
+     "proposer": "TOM",
      "votes": [
       "SHAL",
       "TOM",
       "JOSEPH"
-     ],
-     "proposer": "TOM"
-    },
-    {
-     "team": [
-      "LUKE",
-      "JOSEPH",
-      "TOM",
-      "SHAL"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "SHAL",
-      "TOM",
-      "JOSEPH"
-     ],
-     "proposer": "SHAL"
-    },
-    {
-     "votes": [
-      "JOSEPH",
-      "TARA",
-      "ALI"
-     ],
-     "proposer": "TARA",
-     "team": [
-      "TARA",
-      "ALI",
-      "JOSEPH",
-      "LUKE"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "proposer": "ALI",
-     "team": [
-      "ALI",
-      "JOSEPH",
-      "JACK",
-      "LUKE"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "ALI",
-      "JACK",
-      "SHAL"
      ]
     },
     {
      "team": [
       "LUKE",
+      "JOSEPH",
+      "TOM",
+      "SHAL"
+     ],
+     "votes": [
+      "SHAL",
+      "TOM",
+      "JOSEPH"
+     ],
+     "proposer": "SHAL",
+     "state": "REJECTED"
+    },
+    {
+     "team": [
+      "TARA",
+      "ALI",
+      "JOSEPH",
+      "LUKE"
+     ],
+     "proposer": "TARA",
+     "state": "REJECTED",
+     "votes": [
+      "JOSEPH",
+      "TARA",
+      "ALI"
+     ]
+    },
+    {
+     "state": "REJECTED",
+     "votes": [
+      "ALI",
+      "JACK",
+      "SHAL"
+     ],
+     "team": [
+      "ALI",
+      "JOSEPH",
+      "JACK",
+      "LUKE"
+     ],
+     "proposer": "ALI"
+    },
+    {
+     "team": [
+      "LUKE",
       "TARA",
       "TOM",
       "SHAL"
      ],
-     "state": "APPROVED",
      "votes": [
       "JACK",
       "SHAL",
@@ -232,115 +335,12 @@
       "TARA",
       "LUKE"
      ],
-     "proposer": "LUKE"
+     "proposer": "LUKE",
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
-  }
- ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "ALI",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "LUKE"
-   },
-   {
-    "name": "JACK",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "SHAL",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "TOM",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JOSEPH"
-   },
-   {
-    "name": "TARA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "SHAL": true,
-    "TOM": true
-   },
-   {
-    "SHAL": false,
-    "TARA": true,
-    "ALI": true
-   },
-   {
-    "JACK": false,
-    "TARA": true,
-    "TOM": true
-   },
-   {
-    "TARA": true,
-    "LUKE": true,
-    "JOSEPH": true,
-    "SHAL": false
-   },
-   {
-    "TOM": false,
-    "SHAL": false,
-    "TARA": true,
-    "LUKE": true
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1586577654,
-  "_nanoseconds": 447887000
- },
- "players": [
-  {
-   "uid": "DBmJbVJuI3gk5sq6JN0gM9aMNUX2",
-   "name": "TOM"
-  },
-  {
-   "name": "SHAL",
-   "uid": "NIAmvvfK4pNNBRZTyluXo7elAnh2"
-  },
-  {
-   "uid": "PtnYZP937Yaj3BRoOoEibJKvmNq1",
-   "name": "TARA"
-  },
-  {
-   "uid": "V4YW5XjlPFg1Pj87mv5zDhwWJEO2",
-   "name": "ALI"
-  },
-  {
-   "uid": "bwGw2zkFfeOH24CRKuunkNjFpOn1",
-   "name": "LUKE"
-  },
-  {
-   "name": "JACK",
-   "uid": "Yc8SPVfUNcXHAbYoCC1bjj9yQTA2"
-  },
-  {
-   "uid": "vCbrc4fx8uTYQuh6hM5qhmT6sH52",
-   "name": "JOSEPH"
+   "teamSize": 4
   }
  ]
 }

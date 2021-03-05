@@ -1,16 +1,95 @@
 {
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "PETER": true,
+    "PAVI": true
+   },
+   {
+    "PAVI": true,
+    "VORTIGEN": true,
+    "PETER": false
+   },
+   {
+    "HRISTO": false,
+    "VORTIGEN": true,
+    "RADO": true,
+    "ROSEN": true
+   },
+   {
+    "RADO": true,
+    "HRISTO": false,
+    "PAVI": true
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "HRISTO",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "PAVI",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "PETER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "VORTIGEN"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "RADO"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ROSEN"
+   }
+  ]
+ },
  "timeCreated": {
   "_seconds": 1585940961,
   "_nanoseconds": 128000000
  },
  "missions": [
   {
+   "proposals": [
+    {
+     "team": [
+      "PAVI",
+      "PETER"
+     ],
+     "votes": [
+      "HRISTO",
+      "PAVI",
+      "PETER",
+      "VORTIGEN"
+     ],
+     "state": "APPROVED",
+     "proposer": "PAVI"
+    }
+   ],
+   "teamSize": 2,
    "team": [
     "PAVI",
     "PETER"
    ],
-   "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0
+  },
+  {
    "proposals": [
     {
      "votes": [
@@ -19,68 +98,49 @@
       "PETER",
       "VORTIGEN"
      ],
-     "proposer": "PAVI",
      "team": [
-      "PAVI",
-      "PETER"
+      "PETER",
+      "VORTIGEN",
+      "PAVI"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "PETER"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
-  },
-  {
    "state": "FAIL",
    "team": [
     "PETER",
     "VORTIGEN",
     "PAVI"
    ],
-   "numFails": 1,
    "teamSize": 3,
-   "proposals": [
-    {
-     "votes": [
-      "HRISTO",
-      "PAVI",
-      "PETER",
-      "VORTIGEN"
-     ],
-     "proposer": "PETER",
-     "team": [
-      "PETER",
-      "VORTIGEN",
-      "PAVI"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
+   "teamSize": 4,
+   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "HRISTO",
     "RADO",
     "ROSEN",
     "VORTIGEN"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "votes": [
+      "ROSEN",
+      "PETER"
+     ],
+     "proposer": "RADO",
      "team": [
       "RADO",
       "ROSEN",
       "PAVI",
       "PETER"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "ROSEN",
-      "PETER"
-     ],
-     "proposer": "RADO"
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -89,15 +149,22 @@
       "PETER"
      ],
      "proposer": "ROSEN",
+     "state": "REJECTED",
      "team": [
       "RADO",
       "ROSEN",
       "PAVI",
       "HRISTO"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "proposer": "VORTIGEN",
+     "team": [
+      "HRISTO",
+      "RADO",
+      "ROSEN",
+      "VORTIGEN"
+     ],
      "state": "APPROVED",
      "votes": [
       "RADO",
@@ -106,134 +173,63 @@
       "PAVI",
       "PETER",
       "VORTIGEN"
-     ],
-     "proposer": "VORTIGEN",
-     "team": [
-      "HRISTO",
-      "RADO",
-      "ROSEN",
-      "VORTIGEN"
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
-   "team": [
-    "HRISTO",
-    "RADO",
-    "PAVI"
-   ],
    "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "ROSEN",
       "HRISTO",
       "PAVI",
       "PETER"
      ],
-     "proposer": "HRISTO",
+     "state": "APPROVED",
      "team": [
       "HRISTO",
       "RADO",
       "PAVI"
-     ]
+     ],
+     "proposer": "HRISTO"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3,
+   "team": [
+    "HRISTO",
+    "RADO",
+    "PAVI"
+   ],
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
-   "proposals": [],
-   "failsRequired": 1,
    "team": [],
+   "failsRequired": 1,
+   "proposals": [],
    "teamSize": 4,
    "state": "PENDING"
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "HRISTO",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "PAVI"
-   },
-   {
-    "name": "PETER",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "VORTIGEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "RADO",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "ROSEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "PETER": true,
-    "PAVI": true
-   },
-   {
-    "PETER": false,
-    "PAVI": true,
-    "VORTIGEN": true
-   },
-   {
-    "ROSEN": true,
-    "VORTIGEN": true,
-    "RADO": true,
-    "HRISTO": false
-   },
-   {
-    "PAVI": true,
-    "RADO": true,
-    "HRISTO": false
-   }
-  ],
-  "message": "Three failed missions"
- },
- "timeFinished": {
-  "_seconds": 1585941794,
-  "_nanoseconds": 712214000
- },
  "players": [
   {
-   "uid": "kYEYMpBbnJapqjWpikK9HaU2G633",
-   "name": "HRISTO"
+   "name": "HRISTO",
+   "uid": "kYEYMpBbnJapqjWpikK9HaU2G633"
   },
   {
-   "uid": "0ZujOZQKomNa5SzR586jybWCuxk2",
-   "name": "PAVI"
+   "name": "PAVI",
+   "uid": "0ZujOZQKomNa5SzR586jybWCuxk2"
   },
   {
-   "uid": "4hIT4X2PpEhyzfnriL9eDsRmol83",
-   "name": "PETER"
+   "name": "PETER",
+   "uid": "4hIT4X2PpEhyzfnriL9eDsRmol83"
   },
   {
-   "uid": "Yd5UcLTMSuZm7fkp9vNa2ob6iek2",
-   "name": "RADO"
+   "name": "RADO",
+   "uid": "Yd5UcLTMSuZm7fkp9vNa2ob6iek2"
   },
   {
    "uid": "39FfnO2UBGWjZ2gNYYYVCkkZ4sz1",
@@ -243,5 +239,9 @@
    "name": "VORTIGEN",
    "uid": "KLGRZnI4KLguDdpgK82zcaymxs93"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1585941794,
+  "_nanoseconds": 712214000
+ }
 }

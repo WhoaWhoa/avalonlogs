@@ -1,16 +1,102 @@
 {
+ "timeCreated": {
+  "_seconds": 1585431697,
+  "_nanoseconds": 2000000
+ },
+ "outcome": {
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "role": "MERLIN",
+    "name": "ADRI",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JAMIE",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "STEPH"
+   },
+   {
+    "assassin": false,
+    "name": "CHARLOTTE",
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "IRIS"
+   },
+   {
+    "name": "ALBERT",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "OBERON",
+    "name": "IZ",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "name": "BBN",
+    "assassin": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "ALBERT",
+  "votes": [
+   {
+    "IZ": true,
+    "JAMIE": true,
+    "CHARLOTTE": true
+   },
+   {
+    "JAMIE": true,
+    "CHARLOTTE": true,
+    "ALBERT": true,
+    "IZ": false
+   },
+   {
+    "IRIS": true,
+    "ADRI": true,
+    "JAMIE": true,
+    "CHARLOTTE": true
+   },
+   {
+    "CHARLOTTE": true,
+    "JAMIE": true,
+    "BBN": false,
+    "IRIS": false,
+    "ADRI": true
+   },
+   {
+    "STEPH": true,
+    "CHARLOTTE": true,
+    "ADRI": true,
+    "ALBERT": true,
+    "JAMIE": true
+   }
+  ]
+ },
  "missions": [
   {
-   "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "JAMIE",
     "CHARLOTTE",
     "IZ"
    ],
    "numFails": 0,
-   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "ADRI",
       "JAMIE",
@@ -25,15 +111,23 @@
       "JAMIE",
       "CHARLOTTE",
       "IZ"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "ALBERT",
+      "JAMIE",
+      "CHARLOTTE",
+      "IZ"
+     ],
+     "proposer": "ALBERT",
      "votes": [
       "STEPH",
       "CHARLOTTE",
@@ -41,40 +135,25 @@
       "IZ",
       "ADRI",
       "JAMIE"
-     ],
-     "proposer": "ALBERT",
-     "team": [
-      "ALBERT",
-      "JAMIE",
-      "CHARLOTTE",
-      "IZ"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
+   "numFails": 1,
    "team": [
     "ALBERT",
     "JAMIE",
     "CHARLOTTE",
     "IZ"
    ],
-   "numFails": 1,
-   "teamSize": 4
+   "state": "FAIL"
   },
   {
-   "team": [
-    "CHARLOTTE",
-    "ADRI",
-    "IRIS",
-    "JAMIE"
-   ],
-   "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 4,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "CHARLOTTE",
       "IRIS",
@@ -82,29 +161,28 @@
       "IZ",
       "ADRI"
      ],
-     "proposer": "ADRI",
      "team": [
       "CHARLOTTE",
       "ADRI",
       "IRIS",
       "JAMIE"
-     ]
-    }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
-  },
-  {
-   "proposals": [
-    {
-     "team": [
-      "JAMIE",
-      "CHARLOTTE",
-      "BBN",
-      "IRIS",
-      "ADRI"
      ],
      "state": "APPROVED",
+     "proposer": "ADRI"
+    }
+   ],
+   "team": [
+    "CHARLOTTE",
+    "ADRI",
+    "IRIS",
+    "JAMIE"
+   ]
+  },
+  {
+   "failsRequired": 2,
+   "state": "FAIL",
+   "proposals": [
+    {
      "votes": [
       "ADRI",
       "JAMIE",
@@ -115,11 +193,17 @@
       "IZ",
       "BBN"
      ],
-     "proposer": "IRIS"
+     "proposer": "IRIS",
+     "state": "APPROVED",
+     "team": [
+      "JAMIE",
+      "CHARLOTTE",
+      "BBN",
+      "IRIS",
+      "ADRI"
+     ]
     }
    ],
-   "failsRequired": 2,
-   "state": "FAIL",
    "team": [
     "JAMIE",
     "CHARLOTTE",
@@ -127,21 +211,19 @@
     "IRIS",
     "ADRI"
    ],
-   "numFails": 2,
-   "teamSize": 5
+   "teamSize": 5,
+   "numFails": 2
   },
   {
-   "team": [
-    "ADRI",
-    "JAMIE",
-    "CHARLOTTE",
-    "STEPH",
-    "ALBERT"
-   ],
-   "numFails": 0,
-   "teamSize": 5,
    "proposals": [
     {
+     "team": [
+      "ADRI",
+      "JAMIE",
+      "CHARLOTTE",
+      "STEPH",
+      "ALBERT"
+     ],
      "votes": [
       "ALBERT",
       "BBN",
@@ -151,140 +233,58 @@
       "CHARLOTTE"
      ],
      "proposer": "JAMIE",
-     "team": [
-      "ADRI",
-      "JAMIE",
-      "CHARLOTTE",
-      "STEPH",
-      "ALBERT"
-     ],
      "state": "APPROVED"
     }
    ],
+   "teamSize": 5,
+   "state": "SUCCESS",
+   "team": [
+    "ADRI",
+    "JAMIE",
+    "CHARLOTTE",
+    "STEPH",
+    "ALBERT"
+   ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "JAMIE": true,
-    "CHARLOTTE": true,
-    "IZ": true
-   },
-   {
-    "JAMIE": true,
-    "CHARLOTTE": true,
-    "IZ": false,
-    "ALBERT": true
-   },
-   {
-    "IRIS": true,
-    "ADRI": true,
-    "JAMIE": true,
-    "CHARLOTTE": true
-   },
-   {
-    "CHARLOTTE": true,
-    "BBN": false,
-    "IRIS": false,
-    "ADRI": true,
-    "JAMIE": true
-   },
-   {
-    "ADRI": true,
-    "JAMIE": true,
-    "CHARLOTTE": true,
-    "ALBERT": true,
-    "STEPH": true
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "ALBERT",
-  "roles": [
-   {
-    "name": "ADRI",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "JAMIE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "STEPH",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "CHARLOTTE",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "IRIS",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "ALBERT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "OBERON",
-    "name": "IZ"
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "BBN"
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1585432640,
-  "_nanoseconds": 719047000
- },
  "players": [
   {
    "name": "JAMIE",
    "uid": "KAx097sKiKWOxlRJ8ROFp2gQG3f1"
   },
   {
-   "name": "CHARLOTTE",
-   "uid": "pje7V4X9XseKpnKmSsKO3lSjZOl2"
+   "uid": "pje7V4X9XseKpnKmSsKO3lSjZOl2",
+   "name": "CHARLOTTE"
   },
   {
-   "name": "BBN",
-   "uid": "mZAK8kVbllZ2jafoz3vTThvVrZ83"
+   "uid": "mZAK8kVbllZ2jafoz3vTThvVrZ83",
+   "name": "BBN"
   },
   {
    "uid": "fSD2uXmo96cSqaUUU7snPINxEOm1",
    "name": "STEPH"
   },
   {
-   "uid": "Ww1NlAT9RnM2n7Km2QwoY8ps6AP2",
-   "name": "IZ"
+   "name": "IZ",
+   "uid": "Ww1NlAT9RnM2n7Km2QwoY8ps6AP2"
   },
   {
    "uid": "gcQTbtQBpjfF96GdMKN2K9XNn702",
    "name": "ALBERT"
   },
   {
-   "uid": "ekOj5d7umPgNChUO0cCMDgMQiR53",
-   "name": "ADRI"
+   "name": "ADRI",
+   "uid": "ekOj5d7umPgNChUO0cCMDgMQiR53"
   },
   {
    "name": "IRIS",
    "uid": "Y7EriPik7PhcFKqVoQI7xiw1LS22"
   }
  ],
- "timeCreated": {
-  "_seconds": 1585431697,
-  "_nanoseconds": 2000000
+ "timeFinished": {
+  "_seconds": 1585432640,
+  "_nanoseconds": 719047000
  }
 }

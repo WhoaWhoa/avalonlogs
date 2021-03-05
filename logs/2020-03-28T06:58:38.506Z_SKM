@@ -1,61 +1,4 @@
 {
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": "ENTROPY",
-  "roles": [
-   {
-    "name": "ANDREW",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ALEXLI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ADITYA",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "TIL",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "ENTROPY",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "votes": [
-   {
-    "ALEXLI": true,
-    "ENTROPY": true
-   },
-   {
-    "ALEXLI": true,
-    "ENTROPY": true,
-    "ANDREW": false
-   },
-   {
-    "TIL": true,
-    "ANDREW": false
-   },
-   {
-    "ALEXLI": true,
-    "TIL": true,
-    "ENTROPY": true
-   },
-   {
-    "TIL": true,
-    "ENTROPY": true,
-    "ALEXLI": true
-   }
-  ],
-  "message": "Merlin assassinated"
- },
  "timeFinished": {
   "_seconds": 1585379297,
   "_nanoseconds": 16080000
@@ -66,12 +9,12 @@
    "name": "ALEXLI"
   },
   {
-   "name": "ANDREW",
-   "uid": "cO1kPU2MdmZPbybl2xvDBdAKwoF2"
+   "uid": "cO1kPU2MdmZPbybl2xvDBdAKwoF2",
+   "name": "ANDREW"
   },
   {
-   "uid": "JVgmBXTqdsgL9JTXijLyTjDLX0K2",
-   "name": "TIL"
+   "name": "TIL",
+   "uid": "JVgmBXTqdsgL9JTXijLyTjDLX0K2"
   },
   {
    "name": "ADITYA",
@@ -82,20 +25,68 @@
    "name": "ENTROPY"
   }
  ],
- "timeCreated": {
-  "_seconds": 1585378718,
-  "_nanoseconds": 506000000
+ "outcome": {
+  "votes": [
+   {
+    "ENTROPY": true,
+    "ALEXLI": true
+   },
+   {
+    "ANDREW": false,
+    "ENTROPY": true,
+    "ALEXLI": true
+   },
+   {
+    "ANDREW": false,
+    "TIL": true
+   },
+   {
+    "ENTROPY": true,
+    "TIL": true,
+    "ALEXLI": true
+   },
+   {
+    "TIL": true,
+    "ALEXLI": true,
+    "ENTROPY": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "ANDREW"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "ALEXLI",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "ADITYA",
+    "role": "MORGANA"
+   },
+   {
+    "name": "TIL",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "ENTROPY"
+   }
+  ],
+  "assassinated": "ENTROPY"
  },
  "missions": [
   {
-   "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "ALEXLI",
-      "ENTROPY"
-     ],
      "state": "APPROVED",
      "votes": [
       "ANDREW",
@@ -103,11 +94,16 @@
       "TIL",
       "ENTROPY"
      ],
-     "proposer": "ALEXLI"
+     "proposer": "ALEXLI",
+     "team": [
+      "ALEXLI",
+      "ENTROPY"
+     ]
     }
    ],
+   "teamSize": 2,
+   "numFails": 0,
    "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "ALEXLI",
     "ENTROPY"
@@ -120,16 +116,10 @@
     "ENTROPY",
     "ALEXLI"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "ANDREW",
-      "ENTROPY",
-      "ALEXLI"
-     ],
      "state": "APPROVED",
+     "proposer": "ANDREW",
      "votes": [
       "ALEXLI",
       "ADITYA",
@@ -137,103 +127,113 @@
       "ENTROPY",
       "ANDREW"
      ],
-     "proposer": "ANDREW"
+     "team": [
+      "ANDREW",
+      "ENTROPY",
+      "ALEXLI"
+     ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
+   "teamSize": 2,
    "state": "FAIL",
+   "numFails": 1,
    "team": [
     "ANDREW",
     "TIL"
    ],
-   "numFails": 1,
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "TIL",
+     "state": "APPROVED",
+     "team": [
+      "ANDREW",
+      "TIL"
+     ],
      "votes": [
       "ADITYA",
       "TIL",
       "ENTROPY",
       "ANDREW"
-     ],
-     "proposer": "TIL",
-     "team": [
-      "ANDREW",
-      "TIL"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "failsRequired": 1,
    "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "ENTROPY",
     "ALEXLI",
     "TIL"
    ],
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "votes": [
       "ADITYA"
      ],
-     "proposer": "ADITYA",
      "team": [
       "ADITYA",
       "TIL",
       "ANDREW"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "ADITYA"
     },
     {
      "proposer": "ENTROPY",
-     "team": [
-      "ENTROPY",
-      "ALEXLI",
-      "TIL"
-     ],
-     "state": "APPROVED",
      "votes": [
       "TIL",
       "ENTROPY",
       "ALEXLI"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "ENTROPY",
+      "ALEXLI",
+      "TIL"
      ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "team": [
-    "ALEXLI",
-    "TIL",
-    "ENTROPY"
-   ],
-   "numFails": 0,
    "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "ALEXLI",
+      "TIL",
+      "ENTROPY"
+     ],
      "votes": [
       "ALEXLI",
       "TIL",
       "ENTROPY",
       "ANDREW"
      ],
-     "proposer": "ALEXLI",
-     "team": [
-      "ALEXLI",
-      "TIL",
-      "ENTROPY"
-     ],
-     "state": "APPROVED"
+     "proposer": "ALEXLI"
     }
    ],
-   "failsRequired": 1,
+   "team": [
+    "ALEXLI",
+    "TIL",
+    "ENTROPY"
+   ],
    "state": "SUCCESS"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1585378718,
+  "_nanoseconds": 506000000
+ }
 }

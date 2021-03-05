@@ -1,43 +1,41 @@
 {
  "outcome": {
   "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "YABOINATE",
   "roles": [
    {
-    "name": "LAUREN",
+    "role": "MERLIN",
     "assassin": false,
-    "role": "MERLIN"
+    "name": "LAUREN"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "YABOINATE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
+    "role": "MORGANA",
     "name": "JEFF",
-    "assassin": false,
-    "role": "MORGANA"
+    "assassin": false
    },
    {
-    "name": "FISH",
     "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "FISH"
    },
    {
+    "assassin": false,
     "name": "ALEX",
-    "assassin": false,
     "role": "OBERON"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "MOHAMMAD",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "name": "IAN",
     "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "IAN"
    }
   ],
   "votes": [
@@ -51,27 +49,202 @@
     "FISH": true
    },
    {
-    "IAN": false,
+    "ALEX": false,
     "FISH": true,
-    "ALEX": false
+    "IAN": false
    },
    {
-    "YABOINATE": true,
-    "MOHAMMAD": true,
     "JEFF": true,
-    "LAUREN": true
-   },
-   {
-    "FISH": true,
     "YABOINATE": true,
     "MOHAMMAD": true,
     "LAUREN": true
+   },
+   {
+    "YABOINATE": true,
+    "FISH": true,
+    "LAUREN": true,
+    "MOHAMMAD": true
    }
-  ]
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "YABOINATE"
  },
+ "missions": [
+  {
+   "teamSize": 2,
+   "failsRequired": 1,
+   "team": [
+    "MOHAMMAD",
+    "IAN"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "proposals": [
+    {
+     "votes": [
+      "YABOINATE",
+      "JEFF",
+      "FISH",
+      "ALEX",
+      "IAN",
+      "LAUREN"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "MOHAMMAD",
+      "IAN"
+     ],
+     "proposer": "MOHAMMAD"
+    }
+   ]
+  },
+  {
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1,
+   "proposals": [
+    {
+     "team": [
+      "JEFF",
+      "MOHAMMAD",
+      "FISH"
+     ],
+     "proposer": "JEFF",
+     "state": "APPROVED",
+     "votes": [
+      "IAN",
+      "YABOINATE",
+      "JEFF",
+      "FISH",
+      "ALEX",
+      "MOHAMMAD"
+     ]
+    }
+   ],
+   "teamSize": 3,
+   "team": [
+    "JEFF",
+    "MOHAMMAD",
+    "FISH"
+   ]
+  },
+  {
+   "team": [
+    "FISH",
+    "ALEX",
+    "IAN"
+   ],
+   "proposals": [
+    {
+     "votes": [
+      "JEFF",
+      "FISH",
+      "ALEX",
+      "MOHAMMAD",
+      "IAN"
+     ],
+     "team": [
+      "FISH",
+      "ALEX",
+      "IAN"
+     ],
+     "state": "APPROVED",
+     "proposer": "IAN"
+    }
+   ],
+   "numFails": 2,
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "FAIL"
+  },
+  {
+   "numFails": 0,
+   "teamSize": 4,
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "LAUREN",
+      "YABOINATE",
+      "JEFF",
+      "FISH",
+      "ALEX",
+      "MOHAMMAD",
+      "IAN"
+     ],
+     "team": [
+      "LAUREN",
+      "YABOINATE",
+      "JEFF",
+      "MOHAMMAD"
+     ],
+     "proposer": "LAUREN"
+    }
+   ],
+   "team": [
+    "LAUREN",
+    "YABOINATE",
+    "JEFF",
+    "MOHAMMAD"
+   ],
+   "failsRequired": 2
+  },
+  {
+   "team": [
+    "FISH",
+    "YABOINATE",
+    "MOHAMMAD",
+    "LAUREN"
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 4,
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "votes": [
+      "FISH",
+      "LAUREN",
+      "YABOINATE"
+     ],
+     "team": [
+      "YABOINATE",
+      "LAUREN",
+      "FISH",
+      "MOHAMMAD"
+     ],
+     "proposer": "YABOINATE",
+     "state": "REJECTED"
+    },
+    {
+     "state": "APPROVED",
+     "votes": [
+      "YABOINATE",
+      "JEFF",
+      "FISH",
+      "ALEX",
+      "MOHAMMAD",
+      "LAUREN"
+     ],
+     "team": [
+      "FISH",
+      "YABOINATE",
+      "MOHAMMAD",
+      "LAUREN"
+     ],
+     "proposer": "FISH"
+    }
+   ]
+  }
+ ],
  "timeFinished": {
   "_seconds": 1586064960,
   "_nanoseconds": 55863000
+ },
+ "timeCreated": {
+  "_seconds": 1586063585,
+  "_nanoseconds": 464000000
  },
  "players": [
   {
@@ -79,8 +252,8 @@
    "uid": "6b0fbKwQdgavvvK84HPuShapRVg2"
   },
   {
-   "uid": "G8rvG5lm8uhXWThxGuaCwwpDE5y1",
-   "name": "LAUREN"
+   "name": "LAUREN",
+   "uid": "G8rvG5lm8uhXWThxGuaCwwpDE5y1"
   },
   {
    "name": "YABOINATE",
@@ -95,185 +268,12 @@
    "uid": "0rBeFXC9VTQCw4xHdNFyE0KWF8I3"
   },
   {
-   "name": "MOHAMMAD",
-   "uid": "9eaRTj5gVAO5b2F1N4qY9VahUQs2"
+   "uid": "9eaRTj5gVAO5b2F1N4qY9VahUQs2",
+   "name": "MOHAMMAD"
   },
   {
    "uid": "95TkkPobvGOENRrLsc90tycVjuV2",
    "name": "JEFF"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586063585,
-  "_nanoseconds": 464000000
- },
- "missions": [
-  {
-   "team": [
-    "MOHAMMAD",
-    "IAN"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
-   "proposals": [
-    {
-     "team": [
-      "MOHAMMAD",
-      "IAN"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "YABOINATE",
-      "JEFF",
-      "FISH",
-      "ALEX",
-      "IAN",
-      "LAUREN"
-     ],
-     "proposer": "MOHAMMAD"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
-  },
-  {
-   "state": "FAIL",
-   "team": [
-    "JEFF",
-    "MOHAMMAD",
-    "FISH"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
-   "proposals": [
-    {
-     "team": [
-      "JEFF",
-      "MOHAMMAD",
-      "FISH"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "IAN",
-      "YABOINATE",
-      "JEFF",
-      "FISH",
-      "ALEX",
-      "MOHAMMAD"
-     ],
-     "proposer": "JEFF"
-    }
-   ],
-   "failsRequired": 1
-  },
-  {
-   "proposals": [
-    {
-     "votes": [
-      "JEFF",
-      "FISH",
-      "ALEX",
-      "MOHAMMAD",
-      "IAN"
-     ],
-     "proposer": "IAN",
-     "team": [
-      "FISH",
-      "ALEX",
-      "IAN"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "FISH",
-    "ALEX",
-    "IAN"
-   ],
-   "numFails": 2,
-   "teamSize": 3
-  },
-  {
-   "numFails": 0,
-   "teamSize": 4,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "LAUREN",
-      "YABOINATE",
-      "JEFF",
-      "FISH",
-      "ALEX",
-      "MOHAMMAD",
-      "IAN"
-     ],
-     "proposer": "LAUREN",
-     "team": [
-      "LAUREN",
-      "YABOINATE",
-      "JEFF",
-      "MOHAMMAD"
-     ]
-    }
-   ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
-   "team": [
-    "LAUREN",
-    "YABOINATE",
-    "JEFF",
-    "MOHAMMAD"
-   ]
-  },
-  {
-   "team": [
-    "FISH",
-    "YABOINATE",
-    "MOHAMMAD",
-    "LAUREN"
-   ],
-   "numFails": 0,
-   "teamSize": 4,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "votes": [
-      "FISH",
-      "LAUREN",
-      "YABOINATE"
-     ],
-     "proposer": "YABOINATE",
-     "team": [
-      "YABOINATE",
-      "LAUREN",
-      "FISH",
-      "MOHAMMAD"
-     ]
-    },
-    {
-     "team": [
-      "FISH",
-      "YABOINATE",
-      "MOHAMMAD",
-      "LAUREN"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "YABOINATE",
-      "JEFF",
-      "FISH",
-      "ALEX",
-      "MOHAMMAD",
-      "LAUREN"
-     ],
-     "proposer": "FISH"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
   }
  ]
 }

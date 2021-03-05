@@ -2,25 +2,113 @@
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1587784758,
-  "_nanoseconds": 496000000
+ "timeFinished": {
+  "_seconds": 1587786006,
+  "_nanoseconds": 108000000
  },
+ "outcome": {
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "JACK": true,
+    "DREW": true
+   },
+   {
+    "JACK": true,
+    "DREW": true,
+    "KEELY": false
+   },
+   {
+    "ZACH": true,
+    "JACK": true,
+    "GABRIEL": false,
+    "MIA": true
+   },
+   {
+    "ZACH": true,
+    "MIA": true,
+    "JACK": true
+   },
+   {
+    "DREW": true,
+    "ZACH": true,
+    "JACK": true,
+    "MIA": true
+   }
+  ],
+  "message": "Three missions succeeded",
+  "assassinated": null,
+  "roles": [
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "KEELY"
+   },
+   {
+    "name": "JACK",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MIA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ZACH"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "GABRIEL"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "DREW",
+    "assassin": false
+   }
+  ]
+ },
+ "players": [
+  {
+   "name": "DREW",
+   "uid": "WNEw31ozPgP0GMZ3QUAX3OHAaNs1"
+  },
+  {
+   "uid": "QHALhuNITTbLL7Ru6jCas34cuds2",
+   "name": "JACK"
+  },
+  {
+   "uid": "Fvg4NFuwQmXk6mobXKoZB8DXEsm2",
+   "name": "GABRIEL"
+  },
+  {
+   "name": "KEELY",
+   "uid": "XQzt5qzZqHSCNqXXhJowDs5Ngmt2"
+  },
+  {
+   "uid": "XD6BTVTIvXfXOxb4kKHP9XYk0HY2",
+   "name": "MIA"
+  },
+  {
+   "name": "ZACH",
+   "uid": "bH4tIAsGmEO9QIrWbxqrS211mdW2"
+  }
+ ],
  "missions": [
   {
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "JACK",
     "DREW"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
      "proposer": "JACK",
-     "team": [
-      "JACK",
-      "DREW"
-     ],
      "state": "APPROVED",
      "votes": [
       "JACK",
@@ -29,38 +117,41 @@
       "GABRIEL",
       "DREW",
       "KEELY"
+     ],
+     "team": [
+      "JACK",
+      "DREW"
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2
   },
   {
-   "state": "FAIL",
    "team": [
     "DREW",
     "JACK",
     "KEELY"
    ],
-   "numFails": 1,
+   "state": "FAIL",
    "teamSize": 3,
+   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "KEELY",
       "MIA",
       "ZACH"
      ],
-     "state": "REJECTED",
+     "proposer": "GABRIEL",
      "votes": [
       "ZACH",
       "GABRIEL",
       "KEELY"
-     ],
-     "proposer": "GABRIEL"
+     ]
     },
     {
-     "proposer": "KEELY",
      "team": [
       "DREW",
       "JACK",
@@ -74,79 +165,73 @@
       "KEELY",
       "JACK",
       "MIA"
-     ]
+     ],
+     "proposer": "KEELY"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "team": [
-    "ZACH",
-    "GABRIEL",
-    "MIA",
-    "JACK"
-   ],
+   "state": "FAIL",
    "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
+     "votes": [
+      "ZACH",
+      "GABRIEL",
+      "DREW",
+      "KEELY",
+      "JACK",
+      "MIA"
+     ],
      "team": [
       "ZACH",
       "GABRIEL",
       "MIA",
       "JACK"
      ],
-     "state": "APPROVED",
-     "votes": [
-      "ZACH",
-      "GABRIEL",
-      "DREW",
-      "KEELY",
-      "JACK",
-      "MIA"
-     ],
      "proposer": "MIA"
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "ZACH",
+    "GABRIEL",
+    "MIA",
+    "JACK"
+   ],
+   "teamSize": 4
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "JACK",
-    "ZACH",
-    "MIA"
-   ],
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "DREW",
-      "JACK",
-      "ZACH"
-     ],
-     "state": "REJECTED",
      "votes": [
       "DREW",
       "ZACH"
      ],
-     "proposer": "ZACH"
+     "proposer": "ZACH",
+     "state": "REJECTED",
+     "team": [
+      "DREW",
+      "JACK",
+      "ZACH"
+     ]
     },
     {
+     "state": "REJECTED",
+     "proposer": "DREW",
      "team": [
       "JACK",
       "ZACH",
       "GABRIEL"
      ],
-     "state": "REJECTED",
      "votes": [
       "GABRIEL",
       "DREW",
       "KEELY"
-     ],
-     "proposer": "DREW"
+     ]
     },
     {
      "votes": [
@@ -164,44 +249,43 @@
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "JACK",
+    "ZACH",
+    "MIA"
+   ]
   },
   {
-   "team": [
-    "MIA",
-    "ZACH",
-    "DREW",
-    "JACK"
-   ],
-   "numFails": 0,
    "teamSize": 4,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "GABRIEL"
      ],
-     "proposer": "GABRIEL",
      "team": [
       "JACK",
       "ZACH",
       "MIA",
       "KEELY"
      ],
-     "state": "REJECTED"
+     "proposer": "GABRIEL"
     },
     {
+     "proposer": "KEELY",
      "votes": [
       "KEELY",
       "GABRIEL"
      ],
-     "proposer": "KEELY",
+     "state": "REJECTED",
      "team": [
       "JACK",
       "ZACH",
       "MIA",
       "KEELY"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "team": [
@@ -211,112 +295,28 @@
       "JACK"
      ],
      "state": "APPROVED",
+     "proposer": "MIA",
      "votes": [
       "JACK",
       "MIA",
       "ZACH",
       "DREW"
-     ],
-     "proposer": "MIA"
+     ]
     }
    ],
+   "state": "SUCCESS",
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "team": [
+    "MIA",
+    "ZACH",
+    "DREW",
+    "JACK"
+   ]
   }
  ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "KEELY",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JACK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MIA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ZACH",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "GABRIEL",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "DREW",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "DREW": true,
-    "JACK": true
-   },
-   {
-    "DREW": true,
-    "JACK": true,
-    "KEELY": false
-   },
-   {
-    "GABRIEL": false,
-    "ZACH": true,
-    "MIA": true,
-    "JACK": true
-   },
-   {
-    "JACK": true,
-    "ZACH": true,
-    "MIA": true
-   },
-   {
-    "ZACH": true,
-    "MIA": true,
-    "JACK": true,
-    "DREW": true
-   }
-  ],
-  "message": "Three missions succeeded"
- },
- "players": [
-  {
-   "uid": "WNEw31ozPgP0GMZ3QUAX3OHAaNs1",
-   "name": "DREW"
-  },
-  {
-   "name": "JACK",
-   "uid": "QHALhuNITTbLL7Ru6jCas34cuds2"
-  },
-  {
-   "uid": "Fvg4NFuwQmXk6mobXKoZB8DXEsm2",
-   "name": "GABRIEL"
-  },
-  {
-   "uid": "XQzt5qzZqHSCNqXXhJowDs5Ngmt2",
-   "name": "KEELY"
-  },
-  {
-   "name": "MIA",
-   "uid": "XD6BTVTIvXfXOxb4kKHP9XYk0HY2"
-  },
-  {
-   "uid": "bH4tIAsGmEO9QIrWbxqrS211mdW2",
-   "name": "ZACH"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1587786006,
-  "_nanoseconds": 108000000
+ "timeCreated": {
+  "_seconds": 1587784758,
+  "_nanoseconds": 496000000
  }
 }

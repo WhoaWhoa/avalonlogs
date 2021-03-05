@@ -1,22 +1,70 @@
 {
+ "players": [
+  {
+   "uid": "nnPP02SUyWeF3gpWyfI8T9OzF053",
+   "name": "CPL"
+  },
+  {
+   "name": "LEANNE",
+   "uid": "XCRpqevJAFOhBbTSFqfqWHQKplS2"
+  },
+  {
+   "name": "LOC",
+   "uid": "aDJx4bobm4WBZGlfm1oaTKVwtkw2"
+  },
+  {
+   "name": "MICHEL",
+   "uid": "9xvziqOuVSMznhIGczBkRjK1jO72"
+  },
+  {
+   "name": "PERRY",
+   "uid": "5DYiPpm4MIhsr9IGXKijFcB0Gnq2"
+  },
+  {
+   "name": "WES",
+   "uid": "M2GRgkRti9aSFRdxOs2Inth39Vz1"
+  }
+ ],
  "outcome": {
-  "message": "Three successful missions",
   "state": "GOOD_WIN",
+  "votes": [
+   {
+    "LOC": true,
+    "WES": true
+   },
+   {
+    "CPL": true,
+    "LOC": true,
+    "WES": true
+   },
+   {
+    "WES": false,
+    "LOC": true,
+    "CPL": true,
+    "PERRY": true
+   },
+   {
+    "WES": true,
+    "MICHEL": true,
+    "PERRY": true
+   }
+  ],
+  "message": "Three successful missions",
   "assassinated": "LEANNE",
   "roles": [
    {
     "name": "PERRY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
-    "name": "CPL",
     "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "name": "CPL"
    },
    {
+    "assassin": false,
     "name": "MICHEL",
-    "assassin": false,
     "role": "MORGANA"
    },
    {
@@ -25,83 +73,33 @@
     "role": "PERCIVAL"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "LEANNE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "name": "WES",
     "assassin": true,
+    "name": "WES",
     "role": "MORDRED"
-   }
-  ],
-  "votes": [
-   {
-    "LOC": true,
-    "WES": true
-   },
-   {
-    "LOC": true,
-    "CPL": true,
-    "WES": true
-   },
-   {
-    "PERRY": true,
-    "LOC": true,
-    "CPL": true,
-    "WES": false
-   },
-   {
-    "WES": true,
-    "PERRY": true,
-    "MICHEL": true
    }
   ]
  },
- "timeFinished": {
-  "_seconds": 1586527416,
-  "_nanoseconds": 119183000
- },
- "players": [
-  {
-   "uid": "nnPP02SUyWeF3gpWyfI8T9OzF053",
-   "name": "CPL"
-  },
-  {
-   "uid": "XCRpqevJAFOhBbTSFqfqWHQKplS2",
-   "name": "LEANNE"
-  },
-  {
-   "name": "LOC",
-   "uid": "aDJx4bobm4WBZGlfm1oaTKVwtkw2"
-  },
-  {
-   "uid": "9xvziqOuVSMznhIGczBkRjK1jO72",
-   "name": "MICHEL"
-  },
-  {
-   "name": "PERRY",
-   "uid": "5DYiPpm4MIhsr9IGXKijFcB0Gnq2"
-  },
-  {
-   "uid": "M2GRgkRti9aSFRdxOs2Inth39Vz1",
-   "name": "WES"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586526749,
-  "_nanoseconds": 619000000
- },
  "missions": [
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "LOC",
     "WES"
    ],
-   "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "team": [
+      "LOC",
+      "WES"
+     ],
+     "proposer": "LOC",
      "state": "APPROVED",
      "votes": [
       "LOC",
@@ -109,25 +107,18 @@
       "WES",
       "PERRY",
       "CPL"
-     ],
-     "proposer": "LOC",
-     "team": [
-      "LOC",
-      "WES"
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2
   },
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "WES",
     "LOC",
     "CPL"
    ],
-   "numFails": 0,
    "teamSize": 3,
    "proposals": [
     {
@@ -147,12 +138,16 @@
      ]
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
+   "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "PERRY",
      "votes": [
       "PERRY",
       "CPL",
@@ -160,7 +155,6 @@
       "LEANNE",
       "WES"
      ],
-     "proposer": "PERRY",
      "team": [
       "CPL",
       "LOC",
@@ -170,25 +164,22 @@
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "CPL",
     "LOC",
     "PERRY",
     "WES"
    ],
-   "numFails": 1,
-   "teamSize": 4
+   "state": "FAIL"
   },
   {
+   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "WES",
-      "PERRY",
-      "MICHEL"
-     ],
-     "state": "APPROVED",
+     "proposer": "WES",
      "votes": [
       "LEANNE",
       "WES",
@@ -196,25 +187,34 @@
       "MICHEL",
       "LOC"
      ],
-     "proposer": "WES"
+     "state": "APPROVED",
+     "team": [
+      "WES",
+      "PERRY",
+      "MICHEL"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "WES",
     "PERRY",
     "MICHEL"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   ]
   },
   {
-   "team": [],
-   "teamSize": 4,
    "state": "PENDING",
+   "failsRequired": 1,
    "proposals": [],
-   "failsRequired": 1
+   "teamSize": 4,
+   "team": []
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1586526749,
+  "_nanoseconds": 619000000
+ },
+ "timeFinished": {
+  "_seconds": 1586527416,
+  "_nanoseconds": 119183000
+ }
 }

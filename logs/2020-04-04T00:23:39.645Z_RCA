@@ -1,90 +1,251 @@
 {
  "outcome": {
   "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "SHADOW",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "EMILY"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "HUMMUS"
-   },
-   {
-    "name": "MANOLYA",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "CAT",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "RCA",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "CINDY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SHADOW",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "KARAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ARIEL",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JOHN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
   "votes": [
    {
+    "JOHN": true,
     "KARAN": true,
-    "EMILY": true,
-    "JOHN": true
+    "EMILY": true
    },
    {
     "JOHN": true,
     "KARAN": true,
-    "EMILY": true,
-    "SHADOW": true
+    "SHADOW": true,
+    "EMILY": true
    },
    {
-    "KARAN": true,
     "EMILY": true,
+    "KARAN": true,
     "ARIEL": false,
     "JOHN": true
    },
    {
+    "KARAN": true,
     "EMILY": true,
     "RCA": false,
-    "CINDY": true,
     "JOHN": true,
-    "KARAN": true
+    "CINDY": true
    }
-  ]
+  ],
+  "assassinated": "SHADOW",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "EMILY"
+   },
+   {
+    "name": "HUMMUS",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "role": "MERLIN",
+    "name": "MANOLYA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "CAT"
+   },
+   {
+    "role": "MORDRED",
+    "name": "RCA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "CINDY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "OBERON",
+    "name": "SHADOW"
+   },
+   {
+    "name": "KARAN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "ARIEL",
+    "assassin": true
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JOHN",
+    "assassin": false
+   }
+  ],
+  "state": "GOOD_WIN"
  },
+ "missions": [
+  {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0,
+   "team": [
+    "EMILY",
+    "KARAN",
+    "JOHN"
+   ],
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "proposer": "RCA",
+     "state": "APPROVED",
+     "votes": [
+      "KARAN",
+      "JOHN",
+      "EMILY",
+      "HUMMUS",
+      "CAT",
+      "RCA"
+     ],
+     "team": [
+      "EMILY",
+      "KARAN",
+      "JOHN"
+     ]
+    }
+   ]
+  },
+  {
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "EMILY",
+      "MANOLYA",
+      "RCA",
+      "SHADOW",
+      "ARIEL",
+      "JOHN"
+     ],
+     "team": [
+      "SHADOW",
+      "EMILY",
+      "JOHN",
+      "KARAN"
+     ],
+     "proposer": "SHADOW"
+    }
+   ],
+   "teamSize": 4,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "team": [
+    "SHADOW",
+    "EMILY",
+    "JOHN",
+    "KARAN"
+   ],
+   "failsRequired": 1
+  },
+  {
+   "state": "FAIL",
+   "teamSize": 4,
+   "numFails": 1,
+   "proposals": [
+    {
+     "proposer": "ARIEL",
+     "votes": [
+      "MANOLYA",
+      "CAT",
+      "RCA",
+      "SHADOW",
+      "KARAN",
+      "ARIEL",
+      "JOHN",
+      "EMILY"
+     ],
+     "team": [
+      "ARIEL",
+      "EMILY",
+      "JOHN",
+      "KARAN"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "failsRequired": 1,
+   "team": [
+    "ARIEL",
+    "EMILY",
+    "JOHN",
+    "KARAN"
+   ]
+  },
+  {
+   "state": "SUCCESS",
+   "team": [
+    "EMILY",
+    "JOHN",
+    "KARAN",
+    "CINDY",
+    "RCA"
+   ],
+   "failsRequired": 2,
+   "numFails": 1,
+   "teamSize": 5,
+   "proposals": [
+    {
+     "team": [
+      "CAT",
+      "HUMMUS",
+      "JOHN",
+      "KARAN",
+      "EMILY"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "RCA",
+      "SHADOW",
+      "ARIEL",
+      "JOHN",
+      "CAT"
+     ],
+     "proposer": "CAT"
+    },
+    {
+     "state": "APPROVED",
+     "team": [
+      "EMILY",
+      "JOHN",
+      "KARAN",
+      "CINDY",
+      "RCA"
+     ],
+     "votes": [
+      "MANOLYA",
+      "RCA",
+      "KARAN",
+      "ARIEL",
+      "JOHN",
+      "EMILY"
+     ],
+     "proposer": "CINDY"
+    }
+   ]
+  },
+  {
+   "proposals": [],
+   "state": "PENDING",
+   "failsRequired": 1,
+   "teamSize": 5,
+   "team": []
+  }
+ ],
  "timeFinished": {
   "_seconds": 1585960628,
   "_nanoseconds": 878668000
+ },
+ "timeCreated": {
+  "_seconds": 1585959819,
+  "_nanoseconds": 645000000
  },
  "players": [
   {
@@ -92,28 +253,28 @@
    "uid": "iHW8Z689RZg2KAsSXNXkMFaRfdV2"
   },
   {
-   "name": "CAT",
-   "uid": "agMo67tDZdcIFWh52plIyja1vVS2"
+   "uid": "agMo67tDZdcIFWh52plIyja1vVS2",
+   "name": "CAT"
   },
   {
-   "uid": "aEX6xgzhwtVbph6thNMQfwsW8y83",
-   "name": "CINDY"
+   "name": "CINDY",
+   "uid": "aEX6xgzhwtVbph6thNMQfwsW8y83"
   },
   {
-   "uid": "MOo1wYSvkbM5HSDr8YGSX6KF9Iz1",
-   "name": "EMILY"
+   "name": "EMILY",
+   "uid": "MOo1wYSvkbM5HSDr8YGSX6KF9Iz1"
   },
   {
-   "name": "HUMMUS",
-   "uid": "PHfMXRMMsYWH8U3mtIJZRyCBava2"
+   "uid": "PHfMXRMMsYWH8U3mtIJZRyCBava2",
+   "name": "HUMMUS"
   },
   {
-   "name": "JOHN",
-   "uid": "3cB4dWP4BvV3riosyV7MZq5Zb3J3"
+   "uid": "3cB4dWP4BvV3riosyV7MZq5Zb3J3",
+   "name": "JOHN"
   },
   {
-   "uid": "INcyfUXIE7fGwkk5uo7qQBbJPm22",
-   "name": "KARAN"
+   "name": "KARAN",
+   "uid": "INcyfUXIE7fGwkk5uo7qQBbJPm22"
   },
   {
    "name": "MANOLYA",
@@ -124,169 +285,8 @@
    "name": "RCA"
   },
   {
-   "name": "SHADOW",
-   "uid": "9JBTsVG2pSZTRLMXPCrm6gvSEpE2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585959819,
-  "_nanoseconds": 645000000
- },
- "missions": [
-  {
-   "state": "SUCCESS",
-   "team": [
-    "EMILY",
-    "KARAN",
-    "JOHN"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "KARAN",
-      "JOHN",
-      "EMILY",
-      "HUMMUS",
-      "CAT",
-      "RCA"
-     ],
-     "proposer": "RCA",
-     "team": [
-      "EMILY",
-      "KARAN",
-      "JOHN"
-     ]
-    }
-   ],
-   "failsRequired": 1
-  },
-  {
-   "team": [
-    "SHADOW",
-    "EMILY",
-    "JOHN",
-    "KARAN"
-   ],
-   "numFails": 0,
-   "teamSize": 4,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "EMILY",
-      "MANOLYA",
-      "RCA",
-      "SHADOW",
-      "ARIEL",
-      "JOHN"
-     ],
-     "proposer": "SHADOW",
-     "team": [
-      "SHADOW",
-      "EMILY",
-      "JOHN",
-      "KARAN"
-     ]
-    }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
-  },
-  {
-   "state": "FAIL",
-   "team": [
-    "ARIEL",
-    "EMILY",
-    "JOHN",
-    "KARAN"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
-   "proposals": [
-    {
-     "team": [
-      "ARIEL",
-      "EMILY",
-      "JOHN",
-      "KARAN"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "MANOLYA",
-      "CAT",
-      "RCA",
-      "SHADOW",
-      "KARAN",
-      "ARIEL",
-      "JOHN",
-      "EMILY"
-     ],
-     "proposer": "ARIEL"
-    }
-   ],
-   "failsRequired": 1
-  },
-  {
-   "numFails": 1,
-   "teamSize": 5,
-   "proposals": [
-    {
-     "votes": [
-      "RCA",
-      "SHADOW",
-      "ARIEL",
-      "JOHN",
-      "CAT"
-     ],
-     "proposer": "CAT",
-     "team": [
-      "CAT",
-      "HUMMUS",
-      "JOHN",
-      "KARAN",
-      "EMILY"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "state": "APPROVED",
-     "votes": [
-      "MANOLYA",
-      "RCA",
-      "KARAN",
-      "ARIEL",
-      "JOHN",
-      "EMILY"
-     ],
-     "proposer": "CINDY",
-     "team": [
-      "EMILY",
-      "JOHN",
-      "KARAN",
-      "CINDY",
-      "RCA"
-     ]
-    }
-   ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
-   "team": [
-    "EMILY",
-    "JOHN",
-    "KARAN",
-    "CINDY",
-    "RCA"
-   ]
-  },
-  {
-   "failsRequired": 1,
-   "team": [],
-   "teamSize": 5,
-   "state": "PENDING",
-   "proposals": []
+   "uid": "9JBTsVG2pSZTRLMXPCrm6gvSEpE2",
+   "name": "SHADOW"
   }
  ]
 }

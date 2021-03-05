@@ -1,45 +1,7 @@
 {
  "outcome": {
   "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
   "assassinated": "RENZO",
-  "roles": [
-   {
-    "name": "FABIO",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "PEYPEYMO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "AYS"
-   },
-   {
-    "name": "NINA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "RENZO",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "NINOBICEPS"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "CHASE"
-   }
-  ],
   "votes": [
    {
     "AYS": true,
@@ -47,21 +9,59 @@
    },
    {
     "NINA": true,
-    "AYS": true,
-    "CHASE": false
+    "CHASE": false,
+    "AYS": true
    },
    {
     "FABIO": true,
-    "PEYPEYMO": true,
-    "NINA": true
+    "NINA": true,
+    "PEYPEYMO": true
    },
    {
-    "NINOBICEPS": true,
     "NINA": true,
     "RENZO": true,
-    "AYS": false
+    "AYS": false,
+    "NINOBICEPS": true
    }
-  ]
+  ],
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "name": "FABIO",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "PEYPEYMO"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "AYS"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "NINA",
+    "assassin": false
+   },
+   {
+    "name": "RENZO",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "NINOBICEPS",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "CHASE"
+   }
+  ],
+  "state": "EVIL_WIN"
  },
  "timeFinished": {
   "_seconds": 1585409708,
@@ -81,8 +81,8 @@
    "name": "FABIO"
   },
   {
-   "uid": "8eNZhPXdVJhd6lMplw2Jwplkynf2",
-   "name": "NINOBICEPS"
+   "name": "NINOBICEPS",
+   "uid": "8eNZhPXdVJhd6lMplw2Jwplkynf2"
   },
   {
    "uid": "6Tua5gVYZcbecoQ1b3vPohzrVaP2",
@@ -97,22 +97,22 @@
    "uid": "S0GAAxxuVOUOQB3ps8azZJuF3kN2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1585408879,
-  "_nanoseconds": 234000000
- },
  "missions": [
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "NINA",
     "AYS"
    ],
    "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "NINA",
+      "AYS"
+     ],
      "votes": [
       "FABIO",
       "PEYPEYMO",
@@ -122,31 +122,16 @@
       "NINOBICEPS",
       "CHASE"
      ],
-     "proposer": "PEYPEYMO",
-     "team": [
-      "NINA",
-      "AYS"
-     ],
-     "state": "APPROVED"
+     "proposer": "PEYPEYMO"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "team": [
-    "AYS",
-    "CHASE",
-    "NINA"
-   ],
    "numFails": 1,
-   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "AYS",
-      "CHASE",
-      "NINA"
-     ],
-     "state": "APPROVED",
      "votes": [
       "AYS",
       "NINA",
@@ -156,15 +141,27 @@
       "FABIO",
       "PEYPEYMO"
      ],
+     "team": [
+      "AYS",
+      "CHASE",
+      "NINA"
+     ],
+     "state": "APPROVED",
      "proposer": "AYS"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "AYS",
+    "CHASE",
+    "NINA"
+   ],
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
    "proposals": [
     {
+     "proposer": "CHASE",
      "team": [
       "PEYPEYMO",
       "NINA",
@@ -176,23 +173,39 @@
       "CHASE",
       "FABIO",
       "AYS"
-     ],
-     "proposer": "CHASE"
+     ]
     }
    ],
-   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "PEYPEYMO",
     "NINA",
     "FABIO"
    ],
-   "numFails": 0,
-   "teamSize": 3
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
+   "numFails": 1,
+   "failsRequired": 2,
+   "team": [
+    "AYS",
+    "NINOBICEPS",
+    "RENZO",
+    "NINA"
+   ],
+   "teamSize": 4,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "team": [
+      "AYS",
+      "NINOBICEPS",
+      "RENZO",
+      "NINA"
+     ],
+     "proposer": "FABIO",
      "state": "APPROVED",
      "votes": [
       "FABIO",
@@ -202,33 +215,20 @@
       "RENZO",
       "NINOBICEPS",
       "CHASE"
-     ],
-     "proposer": "FABIO",
-     "team": [
-      "AYS",
-      "NINOBICEPS",
-      "RENZO",
-      "NINA"
      ]
     }
-   ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
-   "team": [
-    "AYS",
-    "NINOBICEPS",
-    "RENZO",
-    "NINA"
-   ],
-   "numFails": 1,
-   "teamSize": 4
+   ]
   },
   {
-   "proposals": [],
    "failsRequired": 1,
-   "team": [],
    "teamSize": 4,
-   "state": "PENDING"
+   "team": [],
+   "state": "PENDING",
+   "proposals": []
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1585408879,
+  "_nanoseconds": 234000000
+ }
 }

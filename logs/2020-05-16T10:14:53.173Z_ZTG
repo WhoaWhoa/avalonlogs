@@ -5,19 +5,14 @@
  },
  "missions": [
   {
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "TIM",
     "EME"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "TIM",
-      "EME"
-     ],
-     "state": "APPROVED",
      "votes": [
       "CALEB",
       "CHERYL",
@@ -26,15 +21,34 @@
       "EME",
       "HANNAH"
      ],
-     "proposer": "TIM"
+     "proposer": "TIM",
+     "team": [
+      "TIM",
+      "EME"
+     ],
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "JAZ",
+    "TIM",
+    "EME"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "JAZ",
+      "TIM",
+      "EME"
+     ],
      "state": "APPROVED",
      "votes": [
       "EME",
@@ -44,23 +58,9 @@
       "JAZ",
       "TIM"
      ],
-     "proposer": "JAZ",
-     "team": [
-      "JAZ",
-      "TIM",
-      "EME"
-     ]
+     "proposer": "JAZ"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "JAZ",
-    "TIM",
-    "EME"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   ]
   },
   {
    "state": "FAIL",
@@ -70,6 +70,7 @@
     "JAZ",
     "TIM"
    ],
+   "failsRequired": 1,
    "numFails": 1,
    "teamSize": 4,
    "proposals": [
@@ -80,17 +81,16 @@
       "CHERYL",
       "TIM"
      ],
-     "proposer": "HANNAH",
      "team": [
       "CALEB",
       "HANNAH",
       "JAZ",
       "TIM"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "HANNAH"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
    "team": [
@@ -102,86 +102,51 @@
    "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "CALEB",
-      "EME",
-      "CHERYL"
-     ],
      "state": "REJECTED",
      "votes": [
       "HANNAH",
       "CALEB",
       "CHERYL"
      ],
-     "proposer": "CALEB"
+     "proposer": "CALEB",
+     "team": [
+      "CALEB",
+      "EME",
+      "CHERYL"
+     ]
     },
     {
-     "votes": [
-      "HANNAH",
-      "CHERYL",
-      "JAZ",
-      "TIM"
-     ],
+     "state": "APPROVED",
      "proposer": "CHERYL",
      "team": [
       "JAZ",
       "TIM",
       "CHERYL"
      ],
-     "state": "APPROVED"
+     "votes": [
+      "HANNAH",
+      "CHERYL",
+      "JAZ",
+      "TIM"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
-   "proposals": [],
-   "failsRequired": 1,
+   "state": "PENDING",
    "team": [],
    "teamSize": 4,
-   "state": "PENDING"
+   "proposals": [],
+   "failsRequired": 1
   }
  ],
  "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "JAZ",
-  "roles": [
-   {
-    "name": "JAZ",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "TIM",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "EME"
-   },
-   {
-    "name": "HANNAH",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "CALEB",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "CHERYL",
-    "assassin": true,
-    "role": "MORDRED"
-   }
-  ],
   "votes": [
    {
-    "EME": true,
-    "TIM": true
+    "TIM": true,
+    "EME": true
    },
    {
     "EME": true,
@@ -190,29 +155,64 @@
    },
    {
     "JAZ": true,
-    "HANNAH": true,
+    "TIM": true,
     "CALEB": false,
-    "TIM": true
+    "HANNAH": true
    },
    {
     "TIM": true,
-    "CHERYL": true,
-    "JAZ": true
+    "JAZ": true,
+    "CHERYL": true
    }
-  ]
+  ],
+  "roles": [
+   {
+    "name": "JAZ",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "name": "TIM",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "EME",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "HANNAH",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "CALEB",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "MORDRED",
+    "name": "CHERYL"
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "JAZ",
+  "state": "EVIL_WIN"
  },
  "players": [
   {
-   "uid": "SHeNhkc9WyWPHlB3dMHsiObUW5B2",
-   "name": "CHERYL"
+   "name": "CHERYL",
+   "uid": "SHeNhkc9WyWPHlB3dMHsiObUW5B2"
   },
   {
    "name": "EME",
    "uid": "0a3qo3qu0lRir4oAlZ6nKylSiuf1"
   },
   {
-   "name": "TIM",
-   "uid": "noup2UhfhPZ5CpTVkPwCtzWlw8k2"
+   "uid": "noup2UhfhPZ5CpTVkPwCtzWlw8k2",
+   "name": "TIM"
   },
   {
    "name": "JAZ",

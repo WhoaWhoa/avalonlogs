@@ -1,24 +1,75 @@
 {
+ "outcome": {
+  "assassinated": null,
+  "votes": [
+   {
+    "BARRETT": true,
+    "TRACE": true
+   },
+   {
+    "TRACE": false,
+    "BARRETT": true,
+    "DELANEY": true
+   },
+   {
+    "TRACE": true,
+    "BARRETT": true
+   },
+   {
+    "DYLAN": false,
+    "TRACE": true,
+    "BARRETT": true
+   },
+   {
+    "TRACE": false,
+    "KAY": true,
+    "BARRETT": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "KAY",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "DELANEY",
+    "assassin": false
+   },
+   {
+    "name": "BARRETT",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "DYLAN",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "MORDRED",
+    "name": "TRACE",
+    "assassin": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions"
+ },
  "missions": [
   {
-   "team": [
-    "TRACE",
-    "BARRETT"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
      "team": [
       "DYLAN",
       "BARRETT"
      ],
-     "state": "REJECTED",
      "votes": [
       "BARRETT",
       "KAY"
      ],
-     "proposer": "KAY"
+     "proposer": "KAY",
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -35,8 +86,14 @@
      "proposer": "BARRETT"
     }
    ],
+   "team": [
+    "TRACE",
+    "BARRETT"
+   ],
+   "teamSize": 2,
+   "state": "SUCCESS",
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0
   },
   {
    "team": [
@@ -45,40 +102,37 @@
     "TRACE"
    ],
    "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL",
    "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "KAY",
-      "DELANEY",
-      "TRACE"
-     ],
-     "proposer": "DELANEY",
      "team": [
       "DELANEY",
       "BARRETT",
       "TRACE"
      ],
-     "state": "APPROVED"
+     "proposer": "DELANEY",
+     "state": "APPROVED",
+     "votes": [
+      "KAY",
+      "DELANEY",
+      "TRACE"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "TRACE",
     "BARRETT"
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "TRACE",
-      "BARRETT"
-     ],
      "state": "APPROVED",
      "votes": [
       "BARRETT",
@@ -86,66 +140,29 @@
       "TRACE",
       "KAY"
      ],
-     "proposer": "TRACE"
-    }
-   ],
-   "failsRequired": 1
-  },
-  {
-   "proposals": [
-    {
-     "votes": [
-      "KAY",
-      "BARRETT",
-      "DYLAN",
-      "TRACE"
-     ],
-     "proposer": "DYLAN",
      "team": [
       "TRACE",
-      "BARRETT",
-      "DYLAN"
+      "BARRETT"
      ],
-     "state": "APPROVED"
+     "proposer": "TRACE"
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
+   ]
+  },
+  {
    "team": [
     "TRACE",
     "BARRETT",
     "DYLAN"
    ],
-   "numFails": 1,
-   "teamSize": 3
-  },
-  {
-   "team": [
-    "BARRETT",
-    "TRACE",
-    "KAY"
-   ],
-   "numFails": 1,
+   "failsRequired": 1,
    "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "KAY"
-     ],
-     "proposer": "KAY",
+     "proposer": "DYLAN",
      "team": [
-      "KAY",
-      "DYLAN",
-      "TRACE"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "proposer": "BARRETT",
-     "team": [
-      "BARRETT",
       "TRACE",
-      "KAY"
+      "BARRETT",
+      "DYLAN"
      ],
      "state": "APPROVED",
      "votes": [
@@ -156,93 +173,76 @@
      ]
     }
    ],
+   "state": "FAIL",
+   "numFails": 1
+  },
+  {
+   "numFails": 1,
+   "state": "FAIL",
+   "team": [
+    "BARRETT",
+    "TRACE",
+    "KAY"
+   ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3,
+   "proposals": [
+    {
+     "votes": [
+      "KAY"
+     ],
+     "team": [
+      "KAY",
+      "DYLAN",
+      "TRACE"
+     ],
+     "proposer": "KAY",
+     "state": "REJECTED"
+    },
+    {
+     "state": "APPROVED",
+     "votes": [
+      "KAY",
+      "BARRETT",
+      "DYLAN",
+      "TRACE"
+     ],
+     "team": [
+      "BARRETT",
+      "TRACE",
+      "KAY"
+     ],
+     "proposer": "BARRETT"
+    }
+   ]
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "KAY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "DELANEY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "BARRETT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "DYLAN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "TRACE",
-    "assassin": true,
-    "role": "MORDRED"
-   }
-  ],
-  "votes": [
-   {
-    "TRACE": true,
-    "BARRETT": true
-   },
-   {
-    "TRACE": false,
-    "DELANEY": true,
-    "BARRETT": true
-   },
-   {
-    "TRACE": true,
-    "BARRETT": true
-   },
-   {
-    "TRACE": true,
-    "DYLAN": false,
-    "BARRETT": true
-   },
-   {
-    "TRACE": false,
-    "KAY": true,
-    "BARRETT": true
-   }
-  ],
-  "message": "Three failed missions"
- },
- "timeFinished": {
-  "_seconds": 1584837241,
-  "_nanoseconds": 957440000
- },
  "players": [
   {
-   "uid": "nWeOa9zvOOMlVQb6oJflRNpcFRB2",
-   "name": "DYLAN"
+   "name": "DYLAN",
+   "uid": "nWeOa9zvOOMlVQb6oJflRNpcFRB2"
   },
   {
    "uid": "OBW5VvybdCcFpphYr6Wngvx1HZ52",
    "name": "KAY"
   },
   {
-   "uid": "KU8oaufqacVm4TYqVzQzsxnHoee2",
-   "name": "BARRETT"
+   "name": "BARRETT",
+   "uid": "KU8oaufqacVm4TYqVzQzsxnHoee2"
   },
   {
    "name": "DELANEY",
    "uid": "OGvZ2GuTcphVkNWlPHPTkYPUYex1"
   },
   {
-   "uid": "lkxYgJKMw7dTCvo03Yi0N5eHoI72",
-   "name": "TRACE"
+   "name": "TRACE",
+   "uid": "lkxYgJKMw7dTCvo03Yi0N5eHoI72"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1584837241,
+  "_nanoseconds": 957440000
+ },
  "timeCreated": {
   "_seconds": 1584836585,
   "_nanoseconds": 256000000

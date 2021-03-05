@@ -3,21 +3,20 @@
   "_seconds": 1586037025,
   "_nanoseconds": 993000000
  },
+ "timeFinished": {
+  "_seconds": 1586037906,
+  "_nanoseconds": 345124000
+ },
  "missions": [
   {
-   "team": [
-    "MARKUS",
-    "PHINI"
-   ],
-   "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "DAVID",
       "MARKUS"
      ],
-     "state": "REJECTED",
      "votes": [
       "DAVID",
       "CHRISTOPH"
@@ -25,39 +24,47 @@
      "proposer": "DAVID"
     },
     {
-     "team": [
-      "MARKUS",
-      "PHINI"
-     ],
      "state": "APPROVED",
+     "proposer": "MARKUS",
      "votes": [
       "ALEX",
       "MARKUS",
       "CHRISTOPH",
       "PHINI"
      ],
-     "proposer": "MARKUS"
+     "team": [
+      "MARKUS",
+      "PHINI"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "team": [
+    "MARKUS",
+    "PHINI"
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
+   "teamSize": 3,
+   "numFails": 2,
+   "failsRequired": 1,
    "team": [
     "PHINI",
     "MARKUS",
     "ALEX"
    ],
-   "numFails": 2,
-   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "PHINI",
+     "state": "APPROVED",
      "team": [
       "PHINI",
       "MARKUS",
       "ALEX"
      ],
-     "state": "APPROVED",
      "votes": [
       "DAVID",
       "PHINI",
@@ -65,14 +72,13 @@
       "MARKUS",
       "CHRISTOPH",
       "STEFAN"
-     ],
-     "proposer": "PHINI"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
+   "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "CHRISTOPH",
     "DAVID",
@@ -80,79 +86,70 @@
     "PHINI"
    ],
    "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "CHRISTOPH",
+      "DAVID",
+      "STEFAN",
+      "PHINI"
+     ],
+     "proposer": "STEFAN",
      "votes": [
       "CHRISTOPH",
       "STEFAN",
       "DAVID",
       "PHINI",
       "ALEX"
-     ],
-     "proposer": "STEFAN",
-     "team": [
-      "CHRISTOPH",
-      "DAVID",
-      "STEFAN",
-      "PHINI"
      ]
     }
    ],
-   "failsRequired": 1,
    "state": "FAIL"
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "CHRISTOPH",
-    "DAVID",
-    "STEFAN"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
       "ALEX",
       "PHINI"
      ],
-     "proposer": "ALEX",
+     "state": "REJECTED",
      "team": [
       "ALEX",
       "CHRISTOPH",
       "DAVID"
      ],
-     "state": "REJECTED"
+     "proposer": "ALEX"
     },
     {
-     "proposer": "CHRISTOPH",
+     "state": "APPROVED",
      "team": [
       "CHRISTOPH",
       "DAVID",
       "STEFAN"
      ],
-     "state": "APPROVED",
      "votes": [
       "DAVID",
       "ALEX",
       "MARKUS",
       "CHRISTOPH",
       "STEFAN"
-     ]
+     ],
+     "proposer": "CHRISTOPH"
     }
    ],
-   "failsRequired": 1
-  },
-  {
+   "numFails": 0,
    "team": [
     "CHRISTOPH",
     "DAVID",
-    "STEFAN",
-    "MARKUS"
+    "STEFAN"
    ],
-   "numFails": 0,
+   "teamSize": 3
+  },
+  {
    "teamSize": 4,
    "proposals": [
     {
@@ -163,34 +160,68 @@
       "MARKUS"
      ],
      "state": "APPROVED",
+     "proposer": "DAVID",
      "votes": [
       "MARKUS",
       "CHRISTOPH",
       "STEFAN",
       "DAVID",
       "PHINI"
-     ],
-     "proposer": "DAVID"
+     ]
     }
    ],
+   "state": "SUCCESS",
+   "numFails": 0,
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "CHRISTOPH",
+    "DAVID",
+    "STEFAN",
+    "MARKUS"
+   ]
   }
  ],
  "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
   "assassinated": "MARKUS",
+  "votes": [
+   {
+    "MARKUS": true,
+    "PHINI": true
+   },
+   {
+    "PHINI": false,
+    "ALEX": false,
+    "MARKUS": true
+   },
+   {
+    "CHRISTOPH": true,
+    "DAVID": true,
+    "STEFAN": true,
+    "PHINI": false
+   },
+   {
+    "CHRISTOPH": true,
+    "STEFAN": true,
+    "DAVID": true
+   },
+   {
+    "MARKUS": true,
+    "DAVID": true,
+    "STEFAN": true,
+    "CHRISTOPH": true
+   }
+  ],
+  "state": "EVIL_WIN",
   "roles": [
    {
     "name": "DAVID",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
-    "name": "PHINI",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "PHINI"
    },
    {
     "assassin": true,
@@ -199,52 +230,21 @@
    },
    {
     "name": "MARKUS",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
-    "name": "CHRISTOPH",
+    "role": "PERCIVAL",
     "assassin": false,
-    "role": "PERCIVAL"
+    "name": "CHRISTOPH"
    },
    {
+    "assassin": false,
     "name": "STEFAN",
-    "assassin": false,
     "role": "LOYAL FOLLOWER"
    }
   ],
-  "votes": [
-   {
-    "MARKUS": true,
-    "PHINI": true
-   },
-   {
-    "MARKUS": true,
-    "ALEX": false,
-    "PHINI": false
-   },
-   {
-    "STEFAN": true,
-    "CHRISTOPH": true,
-    "PHINI": false,
-    "DAVID": true
-   },
-   {
-    "DAVID": true,
-    "STEFAN": true,
-    "CHRISTOPH": true
-   },
-   {
-    "DAVID": true,
-    "STEFAN": true,
-    "MARKUS": true,
-    "CHRISTOPH": true
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1586037906,
-  "_nanoseconds": 345124000
+  "message": "Merlin assassinated"
  },
  "players": [
   {
@@ -260,16 +260,16 @@
    "uid": "DbB6qPMbHlTxKxU9D3MvW0sjwgQ2"
   },
   {
-   "uid": "s7gLDw1QYXNCSfNwjfm4U4f9nJJ2",
-   "name": "MARKUS"
+   "name": "MARKUS",
+   "uid": "s7gLDw1QYXNCSfNwjfm4U4f9nJJ2"
   },
   {
    "name": "PHINI",
    "uid": "m57kw0OfLNTn6prjumvcPTzZNcu1"
   },
   {
-   "name": "STEFAN",
-   "uid": "VLMY701tRgRWD7ZQZ2ORFsSOvgp1"
+   "uid": "VLMY701tRgRWD7ZQZ2ORFsSOvgp1",
+   "name": "STEFAN"
   }
  ]
 }

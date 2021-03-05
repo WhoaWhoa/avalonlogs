@@ -1,8 +1,111 @@
 {
+ "outcome": {
+  "votes": [
+   {
+    "ANDREW": true,
+    "EMILY": true
+   },
+   {
+    "EMILY": true,
+    "IVANA": false,
+    "ANDREW": true
+   },
+   {
+    "TEDRA": true,
+    "ED": true,
+    "BECKA": false
+   },
+   {
+    "EMILY": true,
+    "SNIFFSNIFF": true,
+    "ANDREW": true,
+    "ED": true
+   },
+   {
+    "ED": true,
+    "ANDREW": true,
+    "EMILY": true,
+    "SNIFFSNIFF": false
+   }
+  ],
+  "roles": [
+   {
+    "name": "TEDRA",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "name": "BECKA",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "ANDREW"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ED"
+   },
+   {
+    "name": "SNIFFSNIFF",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "IVANA",
+    "assassin": true
+   },
+   {
+    "name": "EMILY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "assassinated": null
+ },
+ "players": [
+  {
+   "name": "ANDREW",
+   "uid": "LELyEKUjXNe9ajl1gZMrf2dNaNk2"
+  },
+  {
+   "name": "BECKA",
+   "uid": "HooE43lDYxOxTwCHHVhYq9wyOtt1"
+  },
+  {
+   "name": "ED",
+   "uid": "D9eyIeYgvdN0KSNHDVVHmcVEMy73"
+  },
+  {
+   "name": "IVANA",
+   "uid": "hiClTskdZpbRjdMU5xI3RHpqU9U2"
+  },
+  {
+   "name": "SNIFFSNIFF",
+   "uid": "fHLM0Y9FTbbLR4UUV7FFxj6LYJY2"
+  },
+  {
+   "name": "TEDRA",
+   "uid": "qF4O3Y0Jcqe76aahJ1Dd8FHxob43"
+  },
+  {
+   "name": "EMILY",
+   "uid": "G1G8tEVu7kPjU1VVay0eMD889823"
+  }
+ ],
  "missions": [
   {
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "EMILY",
      "votes": [
       "BECKA",
       "ANDREW",
@@ -12,39 +115,35 @@
       "EMILY",
       "TEDRA"
      ],
-     "proposer": "EMILY",
      "team": [
       "ANDREW",
       "EMILY"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "numFails": 0,
+   "teamSize": 2,
    "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "ANDREW",
     "EMILY"
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   ]
   },
   {
+   "state": "FAIL",
    "team": [
     "EMILY",
     "IVANA",
     "ANDREW"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "EMILY",
       "IVANA",
       "ANDREW"
      ],
-     "state": "APPROVED",
      "votes": [
       "TEDRA",
       "BECKA",
@@ -58,12 +157,27 @@
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1,
+   "teamSize": 3
   },
   {
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "BECKA",
+    "ED",
+    "TEDRA"
+   ],
+   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "BECKA",
+      "ED",
+      "TEDRA"
+     ],
      "votes": [
       "ED",
       "SNIFFSNIFF",
@@ -73,36 +187,21 @@
       "BECKA",
       "ANDREW"
      ],
-     "proposer": "BECKA",
-     "team": [
-      "BECKA",
-      "ED",
-      "TEDRA"
-     ]
+     "proposer": "BECKA"
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "BECKA",
-    "ED",
-    "TEDRA"
-   ],
-   "numFails": 1,
-   "teamSize": 3
+   ]
   },
   {
+   "failsRequired": 2,
    "team": [
     "ED",
     "ANDREW",
     "EMILY",
     "SNIFFSNIFF"
    ],
-   "numFails": 0,
    "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "IVANA",
       "EMILY",
@@ -112,27 +211,21 @@
       "ED",
       "SNIFFSNIFF"
      ],
-     "proposer": "ED",
      "team": [
       "ED",
       "ANDREW",
       "EMILY",
       "SNIFFSNIFF"
-     ]
+     ],
+     "proposer": "ED",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 2,
+   "numFails": 0,
    "state": "SUCCESS"
   },
   {
-   "team": [
-    "ANDREW",
-    "ED",
-    "SNIFFSNIFF",
-    "EMILY"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
      "team": [
@@ -153,116 +246,23 @@
      "proposer": "IVANA"
     }
    ],
+   "team": [
+    "ANDREW",
+    "ED",
+    "SNIFFSNIFF",
+    "EMILY"
+   ],
    "failsRequired": 1,
-   "state": "FAIL"
-  }
- ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "TEDRA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "BECKA",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ANDREW",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "ED",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "SNIFFSNIFF"
-   },
-   {
-    "name": "IVANA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "EMILY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "EMILY": true,
-    "ANDREW": true
-   },
-   {
-    "ANDREW": true,
-    "EMILY": true,
-    "IVANA": false
-   },
-   {
-    "BECKA": false,
-    "ED": true,
-    "TEDRA": true
-   },
-   {
-    "ED": true,
-    "ANDREW": true,
-    "SNIFFSNIFF": true,
-    "EMILY": true
-   },
-   {
-    "EMILY": true,
-    "ED": true,
-    "ANDREW": true,
-    "SNIFFSNIFF": false
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1586064161,
-  "_nanoseconds": 872608000
- },
- "players": [
-  {
-   "name": "ANDREW",
-   "uid": "LELyEKUjXNe9ajl1gZMrf2dNaNk2"
-  },
-  {
-   "uid": "HooE43lDYxOxTwCHHVhYq9wyOtt1",
-   "name": "BECKA"
-  },
-  {
-   "uid": "D9eyIeYgvdN0KSNHDVVHmcVEMy73",
-   "name": "ED"
-  },
-  {
-   "name": "IVANA",
-   "uid": "hiClTskdZpbRjdMU5xI3RHpqU9U2"
-  },
-  {
-   "name": "SNIFFSNIFF",
-   "uid": "fHLM0Y9FTbbLR4UUV7FFxj6LYJY2"
-  },
-  {
-   "name": "TEDRA",
-   "uid": "qF4O3Y0Jcqe76aahJ1Dd8FHxob43"
-  },
-  {
-   "name": "EMILY",
-   "uid": "G1G8tEVu7kPjU1VVay0eMD889823"
+   "numFails": 1,
+   "teamSize": 4
   }
  ],
  "timeCreated": {
   "_seconds": 1586063838,
   "_nanoseconds": 507000000
+ },
+ "timeFinished": {
+  "_seconds": 1586064161,
+  "_nanoseconds": 872608000
  }
 }

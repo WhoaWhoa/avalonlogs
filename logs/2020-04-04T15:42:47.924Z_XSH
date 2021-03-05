@@ -1,23 +1,68 @@
 {
+ "players": [
+  {
+   "uid": "3vP863IslSXpOtrXGrxC6hWMFMP2",
+   "name": "ALEXX"
+  },
+  {
+   "name": "ANDREA",
+   "uid": "GpxSDtzqIbhHb4R4OYcadBAJSc23"
+  },
+  {
+   "uid": "3CTt7TbdEEfY4Y8jOEAWanE2iEA3",
+   "name": "JADANCE"
+  },
+  {
+   "name": "KALE",
+   "uid": "TzNPEoZgIeYof1w6rHFUL0EdseW2"
+  },
+  {
+   "name": "MEGAN",
+   "uid": "ZbcSPrZR2sVQ7N7yZ0vDGHLcC2g2"
+  },
+  {
+   "uid": "cyFzIuKxRxP5MEmGy4s1LVlfTE82",
+   "name": "NICOLE"
+  },
+  {
+   "uid": "mJv6WTS9XMfAGMSVNczYWHjaPPP2",
+   "name": "NOELLE"
+  },
+  {
+   "name": "SOONG",
+   "uid": "hdVRSP4WmmXsPqLkXbbjfNxdiOx2"
+  },
+  {
+   "name": "SRA",
+   "uid": "cFjm0kZ1b4Rb54bmNNWoAih9NN22"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1586014967,
+  "_nanoseconds": 924000000
+ },
+ "timeFinished": {
+  "_seconds": 1586015308,
+  "_nanoseconds": 538533000
+ },
  "missions": [
   {
-   "failsRequired": 1,
    "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "MEGAN",
     "NICOLE",
     "NOELLE"
    ],
-   "numFails": 0,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "MEGAN",
       "NICOLE",
       "NOELLE"
      ],
-     "state": "APPROVED",
      "votes": [
       "ANDREA",
       "JADANCE",
@@ -31,27 +76,29 @@
      ],
      "proposer": "MEGAN"
     }
-   ]
+   ],
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 4,
    "team": [
     "MEGAN",
     "NICOLE",
     "NOELLE",
     "SOONG"
    ],
+   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "MEGAN",
       "NICOLE",
       "NOELLE",
       "SOONG"
      ],
-     "state": "APPROVED",
      "votes": [
       "NOELLE",
       "SOONG",
@@ -65,13 +112,17 @@
      ],
      "proposer": "NICOLE"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "team": [
+    "MEGAN",
+    "NICOLE",
+    "NOELLE",
+    "SOONG"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "ANDREA",
       "JADANCE",
@@ -82,29 +133,35 @@
       "SOONG",
       "MEGAN"
      ],
-     "proposer": "NOELLE",
      "team": [
       "MEGAN",
       "NICOLE",
       "NOELLE",
       "SOONG"
-     ]
+     ],
+     "proposer": "NOELLE",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "MEGAN",
-    "NICOLE",
-    "NOELLE",
-    "SOONG"
-   ],
    "numFails": 1,
-   "teamSize": 4
+   "teamSize": 4,
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
+   "numFails": 1,
+   "team": [
+    "SOONG",
+    "SRA",
+    "MEGAN",
+    "NICOLE",
+    "NOELLE"
+   ],
+   "state": "SUCCESS",
+   "teamSize": 5,
    "proposals": [
     {
+     "proposer": "SOONG",
      "team": [
       "SOONG",
       "SRA",
@@ -122,33 +179,48 @@
       "KALE",
       "SRA",
       "NOELLE"
-     ],
-     "proposer": "SOONG"
+     ]
     }
    ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
-   "team": [
-    "SOONG",
-    "SRA",
-    "MEGAN",
-    "NICOLE",
-    "NOELLE"
-   ],
-   "numFails": 1,
-   "teamSize": 5
+   "failsRequired": 2
   },
   {
    "team": [],
-   "teamSize": 5,
    "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 5
   }
  ],
  "outcome": {
   "state": "GOOD_WIN",
-  "assassinated": "NICOLE",
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "MEGAN": true,
+    "NICOLE": true,
+    "NOELLE": true
+   },
+   {
+    "MEGAN": true,
+    "NOELLE": true,
+    "NICOLE": true,
+    "SOONG": true
+   },
+   {
+    "SOONG": true,
+    "NOELLE": false,
+    "MEGAN": true,
+    "NICOLE": true
+   },
+   {
+    "SOONG": true,
+    "NOELLE": false,
+    "MEGAN": true,
+    "NICOLE": true,
+    "SRA": true
+   }
+  ],
   "roles": [
    {
     "name": "ANDREA",
@@ -156,118 +228,46 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "JADANCE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ALEXX",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "NICOLE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "KALE"
-   },
-   {
     "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "SRA"
+    "name": "JADANCE"
    },
    {
-    "name": "NOELLE",
+    "assassin": false,
+    "role": "OBERON",
+    "name": "ALEXX"
+   },
+   {
+    "assassin": false,
+    "name": "NICOLE",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "KALE",
+    "role": "MORGANA"
+   },
+   {
+    "name": "SRA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
     "assassin": true,
+    "name": "NOELLE",
     "role": "MORDRED"
    },
    {
-    "name": "SOONG",
     "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "SOONG"
    },
    {
-    "name": "MEGAN",
     "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "name": "MEGAN"
    }
   ],
-  "votes": [
-   {
-    "NICOLE": true,
-    "NOELLE": true,
-    "MEGAN": true
-   },
-   {
-    "NICOLE": true,
-    "NOELLE": true,
-    "MEGAN": true,
-    "SOONG": true
-   },
-   {
-    "MEGAN": true,
-    "SOONG": true,
-    "NICOLE": true,
-    "NOELLE": false
-   },
-   {
-    "MEGAN": true,
-    "SOONG": true,
-    "SRA": true,
-    "NICOLE": true,
-    "NOELLE": false
-   }
-  ],
-  "message": "Three successful missions"
- },
- "timeFinished": {
-  "_seconds": 1586015308,
-  "_nanoseconds": 538533000
- },
- "players": [
-  {
-   "uid": "3vP863IslSXpOtrXGrxC6hWMFMP2",
-   "name": "ALEXX"
-  },
-  {
-   "uid": "GpxSDtzqIbhHb4R4OYcadBAJSc23",
-   "name": "ANDREA"
-  },
-  {
-   "uid": "3CTt7TbdEEfY4Y8jOEAWanE2iEA3",
-   "name": "JADANCE"
-  },
-  {
-   "uid": "TzNPEoZgIeYof1w6rHFUL0EdseW2",
-   "name": "KALE"
-  },
-  {
-   "name": "MEGAN",
-   "uid": "ZbcSPrZR2sVQ7N7yZ0vDGHLcC2g2"
-  },
-  {
-   "name": "NICOLE",
-   "uid": "cyFzIuKxRxP5MEmGy4s1LVlfTE82"
-  },
-  {
-   "uid": "mJv6WTS9XMfAGMSVNczYWHjaPPP2",
-   "name": "NOELLE"
-  },
-  {
-   "uid": "hdVRSP4WmmXsPqLkXbbjfNxdiOx2",
-   "name": "SOONG"
-  },
-  {
-   "uid": "cFjm0kZ1b4Rb54bmNNWoAih9NN22",
-   "name": "SRA"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586014967,
-  "_nanoseconds": 924000000
+  "assassinated": "NICOLE"
  }
 }

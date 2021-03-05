@@ -2,21 +2,120 @@
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1588550610,
-  "_nanoseconds": 818000000
+ "players": [
+  {
+   "uid": "yFVB9oNaddS93y4hpO1S314w82C2",
+   "name": "ILEANA"
+  },
+  {
+   "name": "ANDO",
+   "uid": "4vdT8BngnibQXuzlx5HqpJyzosj1"
+  },
+  {
+   "name": "SEBI",
+   "uid": "Xh9HNJQ6iNXSRyUyMR1wYBNZ6Wi1"
+  },
+  {
+   "uid": "VREjPH4zDhRSWigHyRdH5dGb2yC2",
+   "name": "DANNY"
+  },
+  {
+   "uid": "ZedDrWV22CYniOYkQRHf52zRqIB2",
+   "name": "NADYA"
+  },
+  {
+   "name": "LUIS",
+   "uid": "LBAS3mtSCxfF8xPPGrJeXlV3nE03"
+  },
+  {
+   "name": "QUIQUE",
+   "uid": "4zVYaPmujigikHbMGFHmTQrs3VY2"
+  },
+  {
+   "uid": "RiV3O6zpeZU4ZQMGqHZcOENiPXi2",
+   "name": "ALEXANDRA"
+  }
+ ],
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "QUIQUE": true,
+    "ANDO": true,
+    "LUIS": true
+   },
+   {
+    "QUIQUE": true,
+    "NADYA": true,
+    "DANNY": false,
+    "SEBI": true
+   },
+   {
+    "ANDO": true,
+    "LUIS": false,
+    "QUIQUE": true,
+    "DANNY": false
+   },
+   {
+    "ILEANA": true,
+    "LUIS": false,
+    "DANNY": false,
+    "QUIQUE": true,
+    "ALEXANDRA": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "ALEXANDRA",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "SEBI"
+   },
+   {
+    "name": "ILEANA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ANDO",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "LUIS"
+   },
+   {
+    "name": "QUIQUE",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "NADYA"
+   },
+   {
+    "name": "DANNY",
+    "assassin": false,
+    "role": "EVIL MINION"
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null
  },
  "missions": [
   {
-   "team": [
-    "ANDO",
-    "LUIS",
-    "QUIQUE"
-   ],
-   "numFails": 0,
    "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "SEBI",
      "team": [
       "ANDO",
       "LUIS",
@@ -32,24 +131,27 @@
       "DANNY",
       "ALEXANDRA",
       "SEBI"
-     ],
-     "proposer": "SEBI"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "ANDO",
+    "LUIS",
+    "QUIQUE"
+   ],
+   "numFails": 0
   },
   {
-   "team": [
-    "DANNY",
-    "QUIQUE",
-    "SEBI",
-    "NADYA"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "DANNY",
+     "team": [
+      "DANNY",
+      "QUIQUE",
+      "SEBI",
+      "NADYA"
+     ],
      "votes": [
       "DANNY",
       "ALEXANDRA",
@@ -58,55 +160,46 @@
       "QUIQUE",
       "NADYA"
      ],
-     "proposer": "DANNY",
-     "team": [
-      "DANNY",
-      "QUIQUE",
-      "SEBI",
-      "NADYA"
-     ],
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "DANNY",
+    "QUIQUE",
+    "SEBI",
+    "NADYA"
+   ],
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 4,
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "LUIS",
     "DANNY",
     "ANDO",
     "QUIQUE"
    ],
-   "numFails": 2,
-   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "NADYA",
      "team": [
       "SEBI",
       "QUIQUE",
       "LUIS",
       "DANNY"
      ],
-     "state": "REJECTED",
      "votes": [
       "SEBI",
       "ANDO",
       "LUIS",
       "NADYA"
-     ],
-     "proposer": "NADYA"
+     ]
     },
     {
-     "proposer": "LUIS",
-     "team": [
-      "LUIS",
-      "DANNY",
-      "ANDO",
-      "QUIQUE"
-     ],
      "state": "APPROVED",
      "votes": [
       "ILEANA",
@@ -116,9 +209,19 @@
       "DANNY",
       "ALEXANDRA",
       "SEBI"
+     ],
+     "proposer": "LUIS",
+     "team": [
+      "LUIS",
+      "DANNY",
+      "ANDO",
+      "QUIQUE"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 2,
+   "teamSize": 4
   },
   {
    "state": "FAIL",
@@ -141,133 +244,30 @@
       "QUIQUE"
      ],
      "state": "APPROVED",
+     "proposer": "QUIQUE",
      "votes": [
       "DANNY",
       "ALEXANDRA",
       "LUIS",
       "QUIQUE",
       "NADYA"
-     ],
-     "proposer": "QUIQUE"
+     ]
     }
    ],
    "failsRequired": 2
   },
   {
    "team": [],
-   "teamSize": 5,
+   "failsRequired": 1,
    "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 1
+   "teamSize": 5,
+   "proposals": []
   }
  ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "ALEXANDRA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SEBI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ILEANA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "ANDO"
-   },
-   {
-    "name": "LUIS",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "QUIQUE"
-   },
-   {
-    "name": "NADYA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "DANNY",
-    "assassin": false,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "LUIS": true,
-    "QUIQUE": true,
-    "ANDO": true
-   },
-   {
-    "QUIQUE": true,
-    "NADYA": true,
-    "SEBI": true,
-    "DANNY": false
-   },
-   {
-    "LUIS": false,
-    "DANNY": false,
-    "QUIQUE": true,
-    "ANDO": true
-   },
-   {
-    "ILEANA": true,
-    "LUIS": false,
-    "DANNY": false,
-    "ALEXANDRA": true,
-    "QUIQUE": true
-   }
-  ]
+ "timeCreated": {
+  "_seconds": 1588550610,
+  "_nanoseconds": 818000000
  },
- "players": [
-  {
-   "name": "ILEANA",
-   "uid": "yFVB9oNaddS93y4hpO1S314w82C2"
-  },
-  {
-   "uid": "4vdT8BngnibQXuzlx5HqpJyzosj1",
-   "name": "ANDO"
-  },
-  {
-   "name": "SEBI",
-   "uid": "Xh9HNJQ6iNXSRyUyMR1wYBNZ6Wi1"
-  },
-  {
-   "uid": "VREjPH4zDhRSWigHyRdH5dGb2yC2",
-   "name": "DANNY"
-  },
-  {
-   "uid": "ZedDrWV22CYniOYkQRHf52zRqIB2",
-   "name": "NADYA"
-  },
-  {
-   "uid": "LBAS3mtSCxfF8xPPGrJeXlV3nE03",
-   "name": "LUIS"
-  },
-  {
-   "uid": "4zVYaPmujigikHbMGFHmTQrs3VY2",
-   "name": "QUIQUE"
-  },
-  {
-   "name": "ALEXANDRA",
-   "uid": "RiV3O6zpeZU4ZQMGqHZcOENiPXi2"
-  }
- ],
  "timeFinished": {
   "_seconds": 1588551197,
   "_nanoseconds": 769000000

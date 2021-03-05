@@ -1,4 +1,82 @@
 {
+ "outcome": {
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "MAFAZLA": true,
+    "MK": true
+   },
+   {
+    "SAAD": false,
+    "MK": true,
+    "MAFAZLA": true
+   },
+   {
+    "MK": true,
+    "ZAIN": false
+   },
+   {
+    "ZAIN": false,
+    "SAAD": false,
+    "RAHUL": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "RAHUL",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "SAAD"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "ZAIN"
+   },
+   {
+    "name": "MK",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MAFAZLA",
+    "assassin": false
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1589149029,
+  "_nanoseconds": 613000000
+ },
+ "players": [
+  {
+   "name": "SAAD",
+   "uid": "X2mcyKLMPMQhWx17AwSBOdLjAr63"
+  },
+  {
+   "name": "MAFAZLA",
+   "uid": "aZqL41Bbh3RbhHBKbl58qifvaV23"
+  },
+  {
+   "uid": "Nl3X1bQKg2UiLz2f9LXhdaymPOj2",
+   "name": "MK"
+  },
+  {
+   "name": "RAHUL",
+   "uid": "7QifjUCY46TIhGd8uMfK41WSrIo1"
+  },
+  {
+   "name": "ZAIN",
+   "uid": "EizqnPS6PpbD6SLC66oODsd8jHN2"
+  }
+ ],
  "timeFinished": {
   "_seconds": 1589149788,
   "_nanoseconds": 829000000
@@ -6,80 +84,76 @@
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1589149029,
-  "_nanoseconds": 613000000
- },
  "missions": [
   {
    "state": "SUCCESS",
-   "team": [
-    "MAFAZLA",
-    "MK"
-   ],
    "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "MAFAZLA",
-      "MK"
-     ],
-     "state": "APPROVED",
      "votes": [
       "ZAIN",
       "MK",
       "MAFAZLA"
      ],
-     "proposer": "MAFAZLA"
+     "proposer": "MAFAZLA",
+     "state": "APPROVED",
+     "team": [
+      "MAFAZLA",
+      "MK"
+     ]
     }
+   ],
+   "team": [
+    "MAFAZLA",
+    "MK"
    ],
    "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 3,
+   "numFails": 1,
    "team": [
     "MK",
     "MAFAZLA",
     "SAAD"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "MK",
-     "team": [
-      "MK",
-      "MAFAZLA",
-      "SAAD"
-     ],
      "state": "APPROVED",
+     "proposer": "MK",
      "votes": [
       "RAHUL",
       "SAAD",
       "MK"
+     ],
+     "team": [
+      "MK",
+      "MAFAZLA",
+      "SAAD"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
-   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 2,
    "team": [
     "ZAIN",
     "MK"
    ],
-   "numFails": 1,
-   "teamSize": 2,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "SAAD",
-      "ZAIN"
-     ],
      "state": "REJECTED",
      "votes": [
       "RAHUL"
+     ],
+     "team": [
+      "SAAD",
+      "ZAIN"
      ],
      "proposer": "RAHUL"
     },
@@ -90,36 +164,45 @@
       "MK",
       "MAFAZLA"
      ],
-     "proposer": "ZAIN",
      "team": [
       "ZAIN",
       "MK"
-     ]
+     ],
+     "proposer": "ZAIN"
     }
    ],
    "failsRequired": 1
   },
   {
+   "state": "FAIL",
+   "teamSize": 3,
+   "numFails": 2,
+   "team": [
+    "SAAD",
+    "RAHUL",
+    "ZAIN"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [],
-     "proposer": "SAAD",
+     "state": "REJECTED",
      "team": [
       "SAAD",
       "MAFAZLA",
       "ZAIN"
      ],
-     "state": "REJECTED"
+     "proposer": "SAAD",
+     "votes": []
     },
     {
      "state": "REJECTED",
      "votes": [],
-     "proposer": "MAFAZLA",
      "team": [
       "MK",
       "MAFAZLA",
       "SAAD"
-     ]
+     ],
+     "proposer": "MAFAZLA"
     },
     {
      "team": [
@@ -135,110 +218,27 @@
      "proposer": "MK"
     },
     {
-     "team": [
-      "SAAD",
-      "RAHUL",
-      "ZAIN"
-     ],
-     "state": "APPROVED",
+     "proposer": "RAHUL",
      "votes": [
       "RAHUL",
       "SAAD",
       "ZAIN"
      ],
-     "proposer": "RAHUL"
+     "state": "APPROVED",
+     "team": [
+      "SAAD",
+      "RAHUL",
+      "ZAIN"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "SAAD",
-    "RAHUL",
-    "ZAIN"
-   ],
-   "numFails": 2,
-   "teamSize": 3
+   ]
   },
   {
-   "proposals": [],
-   "failsRequired": 1,
-   "team": [],
+   "state": "PENDING",
    "teamSize": 3,
-   "state": "PENDING"
-  }
- ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "RAHUL"
-   },
-   {
-    "name": "SAAD",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ZAIN",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "MK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MAFAZLA"
-   }
-  ],
-  "votes": [
-   {
-    "MAFAZLA": true,
-    "MK": true
-   },
-   {
-    "MK": true,
-    "SAAD": false,
-    "MAFAZLA": true
-   },
-   {
-    "ZAIN": false,
-    "MK": true
-   },
-   {
-    "ZAIN": false,
-    "RAHUL": true,
-    "SAAD": false
-   }
-  ]
- },
- "players": [
-  {
-   "name": "SAAD",
-   "uid": "X2mcyKLMPMQhWx17AwSBOdLjAr63"
-  },
-  {
-   "uid": "aZqL41Bbh3RbhHBKbl58qifvaV23",
-   "name": "MAFAZLA"
-  },
-  {
-   "name": "MK",
-   "uid": "Nl3X1bQKg2UiLz2f9LXhdaymPOj2"
-  },
-  {
-   "uid": "7QifjUCY46TIhGd8uMfK41WSrIo1",
-   "name": "RAHUL"
-  },
-  {
-   "uid": "EizqnPS6PpbD6SLC66oODsd8jHN2",
-   "name": "ZAIN"
+   "team": [],
+   "failsRequired": 1,
+   "proposals": []
   }
  ]
 }

@@ -10,22 +10,112 @@
   "_seconds": 1588301843,
   "_nanoseconds": 677000000
  },
+ "players": [
+  {
+   "uid": "9c9NGzycawRKrKBEs335OQpfvxu2",
+   "name": "BHATLA"
+  },
+  {
+   "name": "SACRO",
+   "uid": "zzdHqS5L3STQcKA3Xzg95mCtyER2"
+  },
+  {
+   "uid": "d3A3JNEfrfYKhVFnKAkjtTZBKVD2",
+   "name": "NIHAL"
+  },
+  {
+   "uid": "fBWTEJviSBQsOp5kV0JVgKqI5aQ2",
+   "name": "VIPIN"
+  },
+  {
+   "name": "PAULA",
+   "uid": "Nhgq7zGelqdXlzZrV9EgbTulZxc2"
+  },
+  {
+   "uid": "MyN4YLaFSNhCYlJ5NpT1P4T3X9n2",
+   "name": "VINEET"
+  },
+  {
+   "uid": "jeTT4rN5xthZuBUiR4lH0KZKfAk2",
+   "name": "VIK"
+  }
+ ],
+ "outcome": {
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "BHATLA": true,
+    "VIPIN": true
+   },
+   {
+    "BHATLA": true,
+    "VIK": true,
+    "VIPIN": false
+   },
+   {
+    "BHATLA": true,
+    "VINEET": true,
+    "SACRO": false
+   },
+   {
+    "VINEET": true,
+    "SACRO": true,
+    "VIK": true,
+    "PAULA": true
+   },
+   {
+    "NIHAL": false,
+    "VINEET": true,
+    "PAULA": true,
+    "SACRO": false
+   }
+  ],
+  "assassinated": null,
+  "roles": [
+   {
+    "name": "VIK",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "VINEET",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "BHATLA"
+   },
+   {
+    "name": "NIHAL",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "SACRO",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "PAULA"
+   },
+   {
+    "assassin": false,
+    "name": "VIPIN",
+    "role": "MORGANA"
+   }
+  ]
+ },
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "VIPIN",
-    "BHATLA"
-   ],
-   "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "VIPIN",
-      "BHATLA"
-     ],
-     "state": "APPROVED",
      "votes": [
       "VIK",
       "VINEET",
@@ -35,19 +125,22 @@
       "PAULA",
       "VIPIN"
      ],
-     "proposer": "VINEET"
+     "proposer": "VINEET",
+     "team": [
+      "VIPIN",
+      "BHATLA"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "VIPIN",
+    "BHATLA"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
-   "team": [
-    "BHATLA",
-    "VIPIN",
-    "VIK"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
@@ -68,12 +161,19 @@
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "numFails": 1,
+   "team": [
+    "BHATLA",
+    "VIPIN",
+    "VIK"
+   ],
+   "teamSize": 3
   },
   {
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "SACRO",
       "PAULA",
@@ -82,6 +182,7 @@
       "BHATLA"
      ],
      "proposer": "BHATLA",
+     "state": "APPROVED",
      "team": [
       "SACRO",
       "BHATLA",
@@ -89,15 +190,14 @@
      ]
     }
    ],
+   "numFails": 1,
+   "teamSize": 3,
    "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "SACRO",
     "BHATLA",
     "VINEET"
-   ],
-   "numFails": 1,
-   "teamSize": 3
+   ]
   },
   {
    "state": "SUCCESS",
@@ -107,17 +207,8 @@
     "VINEET",
     "VIK"
    ],
-   "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "SACRO",
-      "PAULA",
-      "VINEET",
-      "VIK"
-     ],
-     "state": "APPROVED",
      "votes": [
       "SACRO",
       "PAULA",
@@ -125,24 +216,32 @@
       "VINEET",
       "BHATLA"
      ],
+     "state": "APPROVED",
+     "team": [
+      "SACRO",
+      "PAULA",
+      "VINEET",
+      "VIK"
+     ],
      "proposer": "SACRO"
     }
    ],
-   "failsRequired": 2
+   "teamSize": 4,
+   "failsRequired": 2,
+   "numFails": 0
   },
   {
-   "state": "FAIL",
+   "teamSize": 4,
    "team": [
     "NIHAL",
     "SACRO",
     "PAULA",
     "VINEET"
    ],
+   "state": "FAIL",
    "numFails": 2,
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "NIHAL",
       "SACRO",
@@ -157,110 +256,11 @@
       "SACRO",
       "PAULA",
       "VINEET"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1
-  }
- ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "VIK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "VINEET",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "BHATLA"
-   },
-   {
-    "name": "NIHAL",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "SACRO",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "PAULA"
-   },
-   {
-    "name": "VIPIN",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ],
-  "votes": [
-   {
-    "BHATLA": true,
-    "VIPIN": true
-   },
-   {
-    "BHATLA": true,
-    "VIK": true,
-    "VIPIN": false
-   },
-   {
-    "BHATLA": true,
-    "VINEET": true,
-    "SACRO": false
-   },
-   {
-    "VIK": true,
-    "VINEET": true,
-    "SACRO": true,
-    "PAULA": true
-   },
-   {
-    "NIHAL": false,
-    "PAULA": true,
-    "VINEET": true,
-    "SACRO": false
-   }
-  ]
- },
- "players": [
-  {
-   "name": "BHATLA",
-   "uid": "9c9NGzycawRKrKBEs335OQpfvxu2"
-  },
-  {
-   "name": "SACRO",
-   "uid": "zzdHqS5L3STQcKA3Xzg95mCtyER2"
-  },
-  {
-   "uid": "d3A3JNEfrfYKhVFnKAkjtTZBKVD2",
-   "name": "NIHAL"
-  },
-  {
-   "uid": "fBWTEJviSBQsOp5kV0JVgKqI5aQ2",
-   "name": "VIPIN"
-  },
-  {
-   "name": "PAULA",
-   "uid": "Nhgq7zGelqdXlzZrV9EgbTulZxc2"
-  },
-  {
-   "name": "VINEET",
-   "uid": "MyN4YLaFSNhCYlJ5NpT1P4T3X9n2"
-  },
-  {
-   "uid": "jeTT4rN5xthZuBUiR4lH0KZKfAk2",
-   "name": "VIK"
   }
  ]
 }

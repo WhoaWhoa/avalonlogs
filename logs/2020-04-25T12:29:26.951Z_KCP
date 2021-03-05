@@ -3,25 +3,11 @@
   "_seconds": 1587818354,
   "_nanoseconds": 827000000
  },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587817766,
-  "_nanoseconds": 951000000
- },
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "G",
-    "AMELIA"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "JAMIE",
       "G",
@@ -29,14 +15,21 @@
       "AMELIA",
       "EMMA"
      ],
-     "proposer": "G",
      "team": [
       "G",
       "AMELIA"
-     ]
+     ],
+     "proposer": "G",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "numFails": 0,
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "G",
+    "AMELIA"
+   ]
   },
   {
    "proposals": [
@@ -48,15 +41,16 @@
       "AMELIA",
       "EMMA"
      ],
-     "proposer": "AMELIA",
      "team": [
       "G",
       "JAMIE",
       "AMELIA"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "AMELIA"
     }
    ],
+   "numFails": 1,
    "failsRequired": 1,
    "state": "FAIL",
    "team": [
@@ -64,81 +58,80 @@
     "JAMIE",
     "AMELIA"
    ],
-   "numFails": 1,
    "teamSize": 3
   },
   {
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "MELODY",
     "AMELIA"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "MELODY",
+      "AMELIA"
+     ],
+     "proposer": "MELODY",
      "state": "APPROVED",
      "votes": [
       "MELODY",
       "AMELIA",
       "EMMA"
-     ],
-     "proposer": "MELODY",
-     "team": [
-      "MELODY",
-      "AMELIA"
      ]
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 2,
    "state": "SUCCESS"
   },
   {
-   "proposals": [
-    {
-     "votes": [
-      "G",
-      "EMMA"
-     ],
-     "proposer": "EMMA",
-     "team": [
-      "AMELIA",
-      "JAMIE",
-      "G"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "team": [
-      "AMELIA",
-      "MELODY",
-      "JAMIE"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "JAMIE",
-      "G",
-      "MELODY",
-      "AMELIA"
-     ],
-     "proposer": "JAMIE"
-    }
-   ],
    "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "AMELIA",
     "MELODY",
     "JAMIE"
    ],
-   "numFails": 0,
-   "teamSize": 3
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "proposals": [
+    {
+     "proposer": "EMMA",
+     "state": "REJECTED",
+     "team": [
+      "AMELIA",
+      "JAMIE",
+      "G"
+     ],
+     "votes": [
+      "G",
+      "EMMA"
+     ]
+    },
+    {
+     "votes": [
+      "JAMIE",
+      "G",
+      "MELODY",
+      "AMELIA"
+     ],
+     "team": [
+      "AMELIA",
+      "MELODY",
+      "JAMIE"
+     ],
+     "proposer": "JAMIE",
+     "state": "APPROVED"
+    }
+   ],
+   "numFails": 0
   },
   {
    "proposals": [],
-   "failsRequired": 1,
-   "team": [],
+   "state": "PENDING",
    "teamSize": 3,
-   "state": "PENDING"
+   "team": [],
+   "failsRequired": 1
   }
  ],
  "outcome": {
@@ -148,13 +141,13 @@
     "AMELIA": true
    },
    {
-    "G": false,
     "AMELIA": true,
-    "JAMIE": true
+    "JAMIE": true,
+    "G": false
    },
    {
-    "AMELIA": true,
-    "MELODY": true
+    "MELODY": true,
+    "AMELIA": true
    },
    {
     "AMELIA": true,
@@ -162,41 +155,41 @@
     "MELODY": true
    }
   ],
-  "message": "Three successful missions",
   "state": "GOOD_WIN",
-  "assassinated": "MELODY",
+  "message": "Three successful missions",
   "roles": [
    {
-    "name": "JAMIE",
     "assassin": false,
+    "name": "JAMIE",
     "role": "PERCIVAL"
    },
    {
-    "name": "G",
     "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "G"
+   },
+   {
+    "name": "MELODY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MELODY"
+    "role": "MERLIN",
+    "name": "AMELIA"
    },
    {
-    "name": "AMELIA",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "EMMA",
     "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "EMMA"
    }
-  ]
+  ],
+  "assassinated": "MELODY"
  },
  "players": [
   {
-   "name": "JAMIE",
-   "uid": "IRkOwmZJdhYaHORQ984L4iPTMia2"
+   "uid": "IRkOwmZJdhYaHORQ984L4iPTMia2",
+   "name": "JAMIE"
   },
   {
    "name": "G",
@@ -211,8 +204,15 @@
    "name": "MELODY"
   },
   {
-   "name": "EMMA",
-   "uid": "EgWH5ppIIVgrWRsaHV1eoM7bbeq1"
+   "uid": "EgWH5ppIIVgrWRsaHV1eoM7bbeq1",
+   "name": "EMMA"
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1587817766,
+  "_nanoseconds": 951000000
+ }
 }

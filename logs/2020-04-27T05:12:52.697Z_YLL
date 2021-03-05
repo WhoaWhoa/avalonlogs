@@ -1,12 +1,93 @@
 {
+ "outcome": {
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "name": "CHRIS",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "KAYLA",
+    "role": "MORGANA"
+   },
+   {
+    "name": "VLADIMIR",
+    "assassin": false,
+    "role": "OBERON"
+   },
+   {
+    "name": "RAUL",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "name": "BEN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "NOAH",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "name": "YLL",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ],
+  "assassinated": null,
+  "votes": [
+   {
+    "NOAH": true,
+    "CHRIS": true
+   },
+   {
+    "RAUL": true,
+    "CHRIS": true,
+    "NOAH": true
+   },
+   {
+    "CHRIS": true,
+    "NOAH": false,
+    "KAYLA": true
+   },
+   {
+    "RAUL": true,
+    "VLADIMIR": false,
+    "BEN": true,
+    "KAYLA": false
+   },
+   {
+    "YLL": true,
+    "NOAH": false,
+    "VLADIMIR": false,
+    "RAUL": true
+   }
+  ],
+  "message": "Three failed missions"
+ },
+ "timeCreated": {
+  "_seconds": 1587964372,
+  "_nanoseconds": 697000000
+ },
+ "timeFinished": {
+  "_seconds": 1587965287,
+  "_nanoseconds": 381000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
    "uid": "ThdIVouIYXSExHJuJ4KyrXiJN992",
    "name": "BEN"
   },
   {
-   "uid": "JTmWSt8JwGNIE3Uu13VmPuXB4bJ2",
-   "name": "RAUL"
+   "name": "RAUL",
+   "uid": "JTmWSt8JwGNIE3Uu13VmPuXB4bJ2"
   },
   {
    "uid": "m2DacKeT5HhaYvnxyQPNOSdaybi2",
@@ -29,27 +110,17 @@
    "uid": "P0rxhWN8m9R946J2dp7tAdLxKwH3"
   }
  ],
- "timeFinished": {
-  "_seconds": 1587965287,
-  "_nanoseconds": 381000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587964372,
-  "_nanoseconds": 697000000
- },
  "missions": [
   {
+   "team": [
+    "CHRIS",
+    "NOAH"
+   ],
    "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "CHRIS",
-      "NOAH"
-     ],
      "state": "APPROVED",
      "votes": [
       "NOAH",
@@ -58,17 +129,25 @@
       "RAUL",
       "BEN"
      ],
-     "proposer": "YLL"
+     "proposer": "YLL",
+     "team": [
+      "CHRIS",
+      "NOAH"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "CHRIS",
-    "NOAH"
-   ]
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "team": [
+    "NOAH",
+    "CHRIS",
+    "RAUL"
+   ],
    "proposals": [
     {
      "team": [
@@ -87,28 +166,14 @@
      ],
      "proposer": "NOAH"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "NOAH",
-    "CHRIS",
-    "RAUL"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   ]
   },
   {
-   "state": "FAIL",
-   "team": [
-    "KAYLA",
-    "NOAH",
-    "CHRIS"
-   ],
-   "numFails": 1,
    "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "KAYLA",
      "votes": [
       "CHRIS",
       "KAYLA",
@@ -118,63 +183,69 @@
       "NOAH",
       "YLL"
      ],
-     "proposer": "KAYLA",
+     "state": "APPROVED",
      "team": [
       "KAYLA",
       "NOAH",
       "CHRIS"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 1,
+   "team": [
+    "KAYLA",
+    "NOAH",
+    "CHRIS"
+   ]
   },
   {
-   "state": "FAIL",
+   "failsRequired": 2,
+   "numFails": 2,
    "team": [
     "BEN",
     "VLADIMIR",
     "RAUL",
     "KAYLA"
    ],
-   "numFails": 2,
    "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
-     "votes": [
-      "CHRIS",
-      "VLADIMIR",
-      "NOAH"
-     ],
-     "proposer": "VLADIMIR",
      "team": [
       "VLADIMIR",
       "CHRIS",
       "NOAH",
       "RAUL"
      ],
+     "proposer": "VLADIMIR",
+     "votes": [
+      "CHRIS",
+      "VLADIMIR",
+      "NOAH"
+     ],
      "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "team": [
       "BEN",
       "VLADIMIR",
       "RAUL",
       "KAYLA"
      ],
-     "state": "APPROVED",
+     "proposer": "BEN",
      "votes": [
       "KAYLA",
       "BEN",
       "NOAH",
       "YLL"
-     ],
-     "proposer": "BEN"
+     ]
     }
-   ],
-   "failsRequired": 2
+   ]
   },
   {
+   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -185,95 +256,24 @@
       "YLL"
      ],
      "proposer": "RAUL",
+     "state": "APPROVED",
      "team": [
       "RAUL",
       "YLL",
       "VLADIMIR",
       "NOAH"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "failsRequired": 1,
+   "numFails": 2,
    "state": "FAIL",
    "team": [
     "RAUL",
     "YLL",
     "VLADIMIR",
     "NOAH"
-   ],
-   "numFails": 2,
-   "teamSize": 4
+   ]
   }
- ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "CHRIS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "KAYLA",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "VLADIMIR",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "RAUL",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "BEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "NOAH",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "YLL"
-   }
-  ],
-  "votes": [
-   {
-    "NOAH": true,
-    "CHRIS": true
-   },
-   {
-    "CHRIS": true,
-    "RAUL": true,
-    "NOAH": true
-   },
-   {
-    "CHRIS": true,
-    "KAYLA": true,
-    "NOAH": false
-   },
-   {
-    "VLADIMIR": false,
-    "BEN": true,
-    "RAUL": true,
-    "KAYLA": false
-   },
-   {
-    "YLL": true,
-    "VLADIMIR": false,
-    "RAUL": true,
-    "NOAH": false
-   }
-  ],
-  "message": "Three failed missions"
- }
+ ]
 }

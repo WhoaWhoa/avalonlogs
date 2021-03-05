@@ -1,34 +1,4 @@
 {
- "players": [
-  {
-   "name": "ABHIJIT",
-   "uid": "EccvBFC0axSC6fAdNR0WC6sNsB33"
-  },
-  {
-   "uid": "Pa6KAo5eTqbbBBnXRhINPBlDeuA2",
-   "name": "ZOE"
-  },
-  {
-   "name": "SHALINI",
-   "uid": "1a39B6jeWahIjAARYBB4qtW3JnB2"
-  },
-  {
-   "uid": "QEtFyQGRV0Qpp08ktC3QJFqEkdi2",
-   "name": "AVALON"
-  },
-  {
-   "name": "JAZZY",
-   "uid": "TIdguCvDFEalAtSpGP5Aabr3Xd13"
-  },
-  {
-   "name": "NAV",
-   "uid": "la0SjG0w9TRnRl9OopPYEcgMejA3"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1586981164,
-  "_nanoseconds": 810447000
- },
  "options": {
   "inGameLog": false
  },
@@ -38,13 +8,14 @@
  },
  "missions": [
   {
+   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "SHALINI",
       "AVALON"
      ],
-     "state": "APPROVED",
      "votes": [
       "SHALINI",
       "ABHIJIT",
@@ -62,14 +33,19 @@
     "SHALINI",
     "AVALON"
    ],
-   "numFails": 0,
-   "teamSize": 2
+   "numFails": 0
   },
   {
    "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "AVALON",
+      "SHALINI",
+      "NAV"
+     ],
+     "proposer": "AVALON",
+     "state": "APPROVED",
      "votes": [
       "JAZZY",
       "NAV",
@@ -77,33 +53,27 @@
       "ZOE",
       "SHALINI",
       "ABHIJIT"
-     ],
-     "proposer": "AVALON",
-     "team": [
-      "AVALON",
-      "SHALINI",
-      "NAV"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "AVALON",
     "SHALINI",
     "NAV"
-   ]
+   ],
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
+   "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "ABHIJIT",
     "ZOE",
     "SHALINI",
     "JAZZY"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -112,27 +82,27 @@
       "ABHIJIT",
       "SHALINI"
      ],
-     "state": "REJECTED",
      "votes": [
       "SHALINI",
       "JAZZY",
       "ZOE"
      ],
-     "proposer": "JAZZY"
+     "proposer": "JAZZY",
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "SHALINI",
       "JAZZY"
      ],
-     "proposer": "NAV",
      "team": [
       "NAV",
       "SHALINI",
       "ZOE",
       "JAZZY"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "NAV"
     },
     {
      "team": [
@@ -141,6 +111,7 @@
       "SHALINI",
       "JAZZY"
      ],
+     "proposer": "ABHIJIT",
      "state": "APPROVED",
      "votes": [
       "ABHIJIT",
@@ -149,11 +120,10 @@
       "AVALON",
       "ZOE",
       "SHALINI"
-     ],
-     "proposer": "ABHIJIT"
+     ]
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 4,
    "state": "FAIL"
   },
   {
@@ -162,40 +132,61 @@
     "SHALINI",
     "JAZZY"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "ZOE",
-      "SHALINI",
-      "JAZZY"
-     ],
-     "state": "APPROVED",
      "votes": [
       "JAZZY",
       "NAV",
       "ZOE",
       "SHALINI"
      ],
+     "team": [
+      "ZOE",
+      "SHALINI",
+      "JAZZY"
+     ],
+     "state": "APPROVED",
      "proposer": "ZOE"
     }
    ],
    "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3,
    "state": "FAIL"
   },
   {
-   "failsRequired": 1,
+   "state": "PENDING",
+   "proposals": [],
    "team": [],
    "teamSize": 4,
-   "state": "PENDING",
-   "proposals": []
+   "failsRequired": 1
   }
  ],
  "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
   "assassinated": null,
+  "votes": [
+   {
+    "SHALINI": true,
+    "AVALON": true
+   },
+   {
+    "AVALON": true,
+    "NAV": false,
+    "SHALINI": true
+   },
+   {
+    "SHALINI": true,
+    "ABHIJIT": true,
+    "ZOE": true,
+    "JAZZY": false
+   },
+   {
+    "SHALINI": true,
+    "ZOE": true,
+    "JAZZY": false
+   }
+  ],
+  "message": "Three failed missions",
   "roles": [
    {
     "name": "JAZZY",
@@ -203,14 +194,14 @@
     "role": "EVIL MINION"
    },
    {
-    "name": "NAV",
     "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "NAV"
    },
    {
+    "role": "MERLIN",
     "name": "AVALON",
-    "assassin": false,
-    "role": "MERLIN"
+    "assassin": false
    },
    {
     "name": "ZOE",
@@ -223,32 +214,41 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "ABHIJIT",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "ABHIJIT"
    }
   ],
-  "votes": [
-   {
-    "SHALINI": true,
-    "AVALON": true
-   },
-   {
-    "NAV": false,
-    "SHALINI": true,
-    "AVALON": true
-   },
-   {
-    "JAZZY": false,
-    "ZOE": true,
-    "ABHIJIT": true,
-    "SHALINI": true
-   },
-   {
-    "JAZZY": false,
-    "ZOE": true,
-    "SHALINI": true
-   }
-  ]
+  "state": "EVIL_WIN"
+ },
+ "players": [
+  {
+   "name": "ABHIJIT",
+   "uid": "EccvBFC0axSC6fAdNR0WC6sNsB33"
+  },
+  {
+   "name": "ZOE",
+   "uid": "Pa6KAo5eTqbbBBnXRhINPBlDeuA2"
+  },
+  {
+   "name": "SHALINI",
+   "uid": "1a39B6jeWahIjAARYBB4qtW3JnB2"
+  },
+  {
+   "name": "AVALON",
+   "uid": "QEtFyQGRV0Qpp08ktC3QJFqEkdi2"
+  },
+  {
+   "uid": "TIdguCvDFEalAtSpGP5Aabr3Xd13",
+   "name": "JAZZY"
+  },
+  {
+   "uid": "la0SjG0w9TRnRl9OopPYEcgMejA3",
+   "name": "NAV"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586981164,
+  "_nanoseconds": 810447000
  }
 }

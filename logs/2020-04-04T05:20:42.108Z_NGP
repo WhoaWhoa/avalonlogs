@@ -1,44 +1,106 @@
 {
- "timeFinished": {
-  "_seconds": 1585978300,
-  "_nanoseconds": 377748000
- },
  "players": [
   {
    "uid": "tx0kcEK6OLReXSxfyfrW6pENoTC3",
    "name": "RAHUL"
   },
   {
-   "uid": "HmQ2lErT1sQwh7KK6ll3iiQVkgx2",
-   "name": "GAUTIST"
+   "name": "GAUTIST",
+   "uid": "HmQ2lErT1sQwh7KK6ll3iiQVkgx2"
   },
   {
-   "name": "CHANDAN",
-   "uid": "c0nahfL5laM56X72EMpxST5yEcA2"
+   "uid": "c0nahfL5laM56X72EMpxST5yEcA2",
+   "name": "CHANDAN"
   },
   {
-   "uid": "zPBITAoA8mUfSa0lFBJTz9FPat02",
-   "name": "ADITHYA"
+   "name": "ADITHYA",
+   "uid": "zPBITAoA8mUfSa0lFBJTz9FPat02"
   },
   {
    "uid": "Bf9S1n7I3tWDXk49SY5BmjNJ8Y02",
    "name": "WUK"
   },
   {
-   "uid": "l2WfetfYI1hqg5MzQyeUKIpuZ2F3",
-   "name": "PUCKHOE"
+   "name": "PUCKHOE",
+   "uid": "l2WfetfYI1hqg5MzQyeUKIpuZ2F3"
   }
  ],
+ "outcome": {
+  "assassinated": null,
+  "state": "GOOD_WIN",
+  "message": "Three missions succeeded",
+  "votes": [
+   {
+    "WUK": true,
+    "RAHUL": true
+   },
+   {
+    "GAUTIST": true,
+    "CHANDAN": true,
+    "ADITHYA": true
+   },
+   {
+    "RAHUL": false,
+    "GAUTIST": true,
+    "CHANDAN": true,
+    "ADITHYA": true
+   },
+   {
+    "CHANDAN": true,
+    "ADITHYA": true,
+    "GAUTIST": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "CHANDAN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "WUK"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "RAHUL"
+   },
+   {
+    "name": "PUCKHOE",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "name": "ADITHYA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "GAUTIST",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ]
+ },
  "timeCreated": {
   "_seconds": 1585977642,
   "_nanoseconds": 108000000
  },
  "missions": [
   {
+   "team": [
+    "RAHUL",
+    "WUK"
+   ],
    "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "RAHUL",
       "PUCKHOE",
@@ -47,19 +109,12 @@
       "CHANDAN",
       "WUK"
      ],
-     "proposer": "WUK",
      "team": [
       "RAHUL",
       "WUK"
      ],
-     "state": "APPROVED"
+     "proposer": "WUK"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "RAHUL",
-    "WUK"
    ]
   },
   {
@@ -69,9 +124,15 @@
     "ADITHYA"
    ],
    "numFails": 0,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "GAUTIST",
+      "CHANDAN",
+      "ADITHYA"
+     ],
      "votes": [
       "RAHUL",
       "PUCKHOE",
@@ -79,52 +140,39 @@
       "GAUTIST",
       "CHANDAN"
      ],
-     "proposer": "PUCKHOE",
-     "team": [
-      "GAUTIST",
-      "CHANDAN",
-      "ADITHYA"
-     ],
-     "state": "APPROVED"
+     "proposer": "PUCKHOE"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "teamSize": 3
   },
   {
-   "team": [
-    "ADITHYA",
-    "CHANDAN",
-    "GAUTIST",
-    "RAHUL"
-   ],
-   "numFails": 1,
    "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "GAUTIST",
-      "RAHUL",
-      "ADITHYA"
-     ],
-     "proposer": "RAHUL",
      "team": [
       "RAHUL",
       "CHANDAN",
       "WUK",
       "ADITHYA"
      ],
+     "proposer": "RAHUL",
+     "votes": [
+      "GAUTIST",
+      "RAHUL",
+      "ADITHYA"
+     ],
      "state": "REJECTED"
     },
     {
      "proposer": "GAUTIST",
+     "state": "APPROVED",
      "team": [
       "ADITHYA",
       "CHANDAN",
       "GAUTIST",
       "RAHUL"
      ],
-     "state": "APPROVED",
      "votes": [
       "GAUTIST",
       "CHANDAN",
@@ -134,17 +182,17 @@
      ]
     }
    ],
+   "state": "FAIL",
+   "team": [
+    "ADITHYA",
+    "CHANDAN",
+    "GAUTIST",
+    "RAHUL"
+   ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "CHANDAN",
-    "ADITHYA",
-    "GAUTIST"
-   ],
-   "numFails": 0,
    "teamSize": 3,
    "proposals": [
     {
@@ -156,81 +204,33 @@
       "RAHUL"
      ],
      "proposer": "CHANDAN",
+     "state": "APPROVED",
      "team": [
       "CHANDAN",
       "ADITHYA",
       "GAUTIST"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "CHANDAN",
+    "ADITHYA",
+    "GAUTIST"
+   ]
   },
   {
+   "state": "PENDING",
    "team": [],
    "teamSize": 4,
-   "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "proposals": []
   }
  ],
- "outcome": {
-  "roles": [
-   {
-    "name": "CHANDAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "WUK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "RAHUL",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "PUCKHOE",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ADITHYA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "GAUTIST",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "WUK": true,
-    "RAHUL": true
-   },
-   {
-    "CHANDAN": true,
-    "GAUTIST": true,
-    "ADITHYA": true
-   },
-   {
-    "RAHUL": false,
-    "CHANDAN": true,
-    "GAUTIST": true,
-    "ADITHYA": true
-   },
-   {
-    "GAUTIST": true,
-    "ADITHYA": true,
-    "CHANDAN": true
-   }
-  ],
-  "message": "Three missions succeeded",
-  "state": "GOOD_WIN",
-  "assassinated": null
+ "timeFinished": {
+  "_seconds": 1585978300,
+  "_nanoseconds": 377748000
  }
 }

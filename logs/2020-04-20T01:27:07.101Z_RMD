@@ -1,4 +1,79 @@
 {
+ "outcome": {
+  "roles": [
+   {
+    "role": "MERLIN",
+    "name": "TAI",
+    "assassin": false
+   },
+   {
+    "name": "KIMBERLY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "JENNA"
+   },
+   {
+    "role": "MORDRED",
+    "assassin": false,
+    "name": "BRIAN"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "TYLER"
+   },
+   {
+    "assassin": false,
+    "name": "KAREN",
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "name": "TINA",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "GOODWIN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "DOM"
+   }
+  ],
+  "votes": [
+   {
+    "KIMBERLY": true,
+    "DOM": false,
+    "KAREN": true
+   },
+   {
+    "JENNA": false,
+    "GOODWIN": true,
+    "KIMBERLY": true,
+    "KAREN": true
+   },
+   {
+    "KAREN": true,
+    "TAI": true,
+    "BRIAN": false,
+    "KIMBERLY": true
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "assassinated": null
+ },
+ "timeCreated": {
+  "_seconds": 1587346027,
+  "_nanoseconds": 101000000
+ },
  "timeFinished": {
   "_seconds": 1587347631,
   "_nanoseconds": 334000000
@@ -6,66 +81,61 @@
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1587346027,
-  "_nanoseconds": 101000000
- },
  "missions": [
   {
    "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "KAREN",
     "DOM",
     "KIMBERLY"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "votes": [
       "BRIAN"
      ],
+     "state": "REJECTED",
      "proposer": "BRIAN",
      "team": [
       "BRIAN",
       "KIMBERLY",
       "TYLER"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "proposer": "TAI",
-     "team": [
-      "TAI",
-      "BRIAN",
-      "KAREN"
-     ],
-     "state": "REJECTED",
      "votes": [
       "BRIAN",
       "KAREN",
       "GOODWIN",
       "TAI"
+     ],
+     "proposer": "TAI",
+     "state": "REJECTED",
+     "team": [
+      "TAI",
+      "BRIAN",
+      "KAREN"
      ]
     },
     {
+     "proposer": "TINA",
+     "votes": [
+      "BRIAN"
+     ],
      "team": [
       "TINA",
       "KIMBERLY",
       "BRIAN"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "BRIAN"
-     ],
-     "proposer": "TINA"
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "GOODWIN"
      ],
      "proposer": "GOODWIN",
+     "state": "REJECTED",
      "team": [
       "GOODWIN",
       "KIMBERLY",
@@ -73,7 +143,11 @@
      ]
     },
     {
-     "state": "APPROVED",
+     "team": [
+      "KAREN",
+      "DOM",
+      "KIMBERLY"
+     ],
      "votes": [
       "TAI",
       "KIMBERLY",
@@ -85,111 +159,104 @@
       "GOODWIN",
       "DOM"
      ],
-     "proposer": "KAREN",
+     "state": "APPROVED",
+     "proposer": "KAREN"
+    }
+   ],
+   "failsRequired": 1,
+   "numFails": 1
+  },
+  {
+   "proposals": [
+    {
      "team": [
-      "KAREN",
+      "JENNA",
+      "GOODWIN",
+      "KIMBERLY",
+      "KAREN"
+     ],
+     "proposer": "JENNA",
+     "votes": [
+      "JENNA",
+      "KAREN"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "team": [
       "DOM",
-      "KIMBERLY"
+      "KAREN",
+      "GOODWIN",
+      "JENNA"
+     ],
+     "state": "REJECTED",
+     "proposer": "DOM",
+     "votes": [
+      "DOM"
+     ]
+    },
+    {
+     "votes": [
+      "GOODWIN",
+      "JENNA",
+      "TYLER",
+      "KAREN"
+     ],
+     "team": [
+      "TYLER",
+      "KAREN",
+      "JENNA",
+      "GOODWIN"
+     ],
+     "proposer": "TYLER",
+     "state": "REJECTED"
+    },
+    {
+     "state": "APPROVED",
+     "proposer": "KIMBERLY",
+     "votes": [
+      "KIMBERLY",
+      "JENNA",
+      "TYLER",
+      "KAREN",
+      "TINA",
+      "GOODWIN"
+     ],
+     "team": [
+      "KIMBERLY",
+      "JENNA",
+      "KAREN",
+      "GOODWIN"
      ]
     }
    ],
-   "failsRequired": 1
-  },
-  {
+   "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "KIMBERLY",
     "JENNA",
     "KAREN",
     "GOODWIN"
    ],
-   "numFails": 1,
    "teamSize": 4,
-   "proposals": [
-    {
-     "votes": [
-      "JENNA",
-      "KAREN"
-     ],
-     "proposer": "JENNA",
-     "team": [
-      "JENNA",
-      "GOODWIN",
-      "KIMBERLY",
-      "KAREN"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "votes": [
-      "DOM"
-     ],
-     "proposer": "DOM",
-     "team": [
-      "DOM",
-      "KAREN",
-      "GOODWIN",
-      "JENNA"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "state": "REJECTED",
-     "votes": [
-      "GOODWIN",
-      "JENNA",
-      "TYLER",
-      "KAREN"
-     ],
-     "proposer": "TYLER",
-     "team": [
-      "TYLER",
-      "KAREN",
-      "JENNA",
-      "GOODWIN"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "votes": [
-      "KIMBERLY",
-      "JENNA",
-      "TYLER",
-      "KAREN",
-      "TINA",
-      "GOODWIN"
-     ],
-     "proposer": "KIMBERLY",
-     "team": [
-      "KIMBERLY",
-      "JENNA",
-      "KAREN",
-      "GOODWIN"
-     ]
-    }
-   ],
-   "failsRequired": 1,
    "state": "FAIL"
   },
   {
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "BRIAN",
+     "votes": [
+      "BRIAN"
+     ],
      "team": [
       "BRIAN",
       "KAREN",
       "GOODWIN",
       "JENNA"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "BRIAN"
-     ],
-     "proposer": "BRIAN"
+     ]
     },
     {
-     "votes": [
-      "TAI",
-      "KAREN"
-     ],
      "proposer": "TAI",
      "team": [
       "TAI",
@@ -197,17 +264,21 @@
       "KAREN",
       "KIMBERLY"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "TAI",
+      "KAREN"
+     ]
     },
     {
+     "state": "REJECTED",
+     "votes": [],
      "team": [
       "TINA",
       "KAREN",
       "BRIAN",
       "KIMBERLY"
      ],
-     "state": "REJECTED",
-     "votes": [],
      "proposer": "TINA"
     },
     {
@@ -217,11 +288,12 @@
       "TAI",
       "BRIAN"
      ],
-     "state": "REJECTED",
+     "proposer": "GOODWIN",
      "votes": [],
-     "proposer": "GOODWIN"
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "votes": [
       "KAREN",
       "TINA",
@@ -233,17 +305,17 @@
       "BRIAN",
       "TYLER"
      ],
-     "proposer": "KAREN",
      "team": [
       "KAREN",
       "TAI",
       "BRIAN",
       "KIMBERLY"
      ],
-     "state": "APPROVED"
+     "proposer": "KAREN"
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 1,
    "state": "FAIL",
    "team": [
     "KAREN",
@@ -251,131 +323,59 @@
     "BRIAN",
     "KIMBERLY"
    ],
-   "numFails": 1,
-   "teamSize": 4
+   "failsRequired": 1
   },
   {
+   "state": "PENDING",
+   "team": [],
    "teamSize": 5,
-   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 2,
-   "team": []
+   "failsRequired": 2
   },
   {
-   "state": "PENDING",
    "proposals": [],
    "failsRequired": 1,
-   "team": [],
-   "teamSize": 5
+   "state": "PENDING",
+   "teamSize": 5,
+   "team": []
   }
  ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "TAI",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "KIMBERLY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JENNA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "BRIAN",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "TYLER",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "KAREN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "TINA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "GOODWIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "DOM",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ],
-  "votes": [
-   {
-    "DOM": false,
-    "KIMBERLY": true,
-    "KAREN": true
-   },
-   {
-    "KIMBERLY": true,
-    "KAREN": true,
-    "JENNA": false,
-    "GOODWIN": true
-   },
-   {
-    "KAREN": true,
-    "BRIAN": false,
-    "TAI": true,
-    "KIMBERLY": true
-   }
-  ]
- },
  "players": [
   {
-   "name": "GOODWIN",
-   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2"
+   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2",
+   "name": "GOODWIN"
   },
   {
-   "uid": "kYmaig4V9qPVwzFNPynJHaGGk8P2",
-   "name": "KAREN"
+   "name": "KAREN",
+   "uid": "kYmaig4V9qPVwzFNPynJHaGGk8P2"
   },
   {
-   "uid": "GtnoqXEanyXtkUj99PorBMhxrlB2",
-   "name": "JENNA"
+   "name": "JENNA",
+   "uid": "GtnoqXEanyXtkUj99PorBMhxrlB2"
   },
   {
-   "uid": "g2saJNVJyLfN6OFRyod2aY0Jrer2",
-   "name": "DOM"
+   "name": "DOM",
+   "uid": "g2saJNVJyLfN6OFRyod2aY0Jrer2"
   },
   {
    "name": "TYLER",
    "uid": "OffwbigM2SblJxpZUB0eHkoPheI2"
   },
   {
-   "uid": "tVQNQuHDO8cihbBVOPRGTj0fm4I2",
-   "name": "KIMBERLY"
+   "name": "KIMBERLY",
+   "uid": "tVQNQuHDO8cihbBVOPRGTj0fm4I2"
   },
   {
-   "uid": "5G6cqYfJJNYUZj9hisWooPjf7ew2",
-   "name": "BRIAN"
+   "name": "BRIAN",
+   "uid": "5G6cqYfJJNYUZj9hisWooPjf7ew2"
   },
   {
    "name": "TAI",
    "uid": "7l4eqVu8MTPBqLwvlj5jOeefHZl1"
   },
   {
-   "uid": "HXoN5uYy10RFdjSv5xUP6IW2TCb2",
-   "name": "TINA"
+   "name": "TINA",
+   "uid": "HXoN5uYy10RFdjSv5xUP6IW2TCb2"
   }
  ]
 }

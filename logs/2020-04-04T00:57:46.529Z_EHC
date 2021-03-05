@@ -1,5 +1,55 @@
 {
+ "players": [
+  {
+   "name": "COLLIN",
+   "uid": "Sz6aQtk6I7Zscrg9bLHjQeG0e092"
+  },
+  {
+   "name": "FIREFOX",
+   "uid": "wQolY85mMndyQSC0g9PwyuCXQS03"
+  },
+  {
+   "name": "SAMSUNG",
+   "uid": "pP0L2u1Hg3Tvkq1j7O7cYyCAK5X2"
+  },
+  {
+   "uid": "0BPjXoilpYRwyX2syEXXsB9Cqeo1",
+   "name": "TTEP"
+  },
+  {
+   "name": "TTEPFIRE",
+   "uid": "Et6n6w0IqMgWgSvPvRPKiAOZIUw1"
+  }
+ ],
  "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
+  "assassinated": "COLLIN",
+  "votes": [
+   {
+    "FIREFOX": true,
+    "COLLIN": true
+   },
+   {
+    "TTEP": true,
+    "TTEPFIRE": true,
+    "COLLIN": true
+   },
+   {
+    "FIREFOX": false,
+    "SAMSUNG": false
+   },
+   {
+    "SAMSUNG": false,
+    "FIREFOX": false,
+    "TTEPFIRE": true
+   },
+   {
+    "TTEP": true,
+    "COLLIN": true,
+    "TTEPFIRE": true
+   }
+  ],
   "roles": [
    {
     "name": "SAMSUNG",
@@ -7,13 +57,13 @@
     "role": "EVIL MINION"
    },
    {
-    "name": "COLLIN",
     "assassin": false,
+    "name": "COLLIN",
     "role": "MERLIN"
    },
    {
-    "name": "TTEPFIRE",
     "assassin": false,
+    "name": "TTEPFIRE",
     "role": "LOYAL FOLLOWER"
    },
    {
@@ -23,118 +73,65 @@
    },
    {
     "name": "FIREFOX",
-    "assassin": false,
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "assassin": false
    }
-  ],
-  "votes": [
-   {
-    "FIREFOX": true,
-    "COLLIN": true
-   },
-   {
-    "COLLIN": true,
-    "TTEPFIRE": true,
-    "TTEP": true
-   },
-   {
-    "SAMSUNG": false,
-    "FIREFOX": false
-   },
-   {
-    "FIREFOX": false,
-    "SAMSUNG": false,
-    "TTEPFIRE": true
-   },
-   {
-    "TTEP": true,
-    "COLLIN": true,
-    "TTEPFIRE": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "COLLIN"
+  ]
  },
  "timeFinished": {
   "_seconds": 1585962595,
   "_nanoseconds": 890348000
  },
- "players": [
-  {
-   "uid": "Sz6aQtk6I7Zscrg9bLHjQeG0e092",
-   "name": "COLLIN"
-  },
-  {
-   "uid": "wQolY85mMndyQSC0g9PwyuCXQS03",
-   "name": "FIREFOX"
-  },
-  {
-   "uid": "pP0L2u1Hg3Tvkq1j7O7cYyCAK5X2",
-   "name": "SAMSUNG"
-  },
-  {
-   "uid": "0BPjXoilpYRwyX2syEXXsB9Cqeo1",
-   "name": "TTEP"
-  },
-  {
-   "uid": "Et6n6w0IqMgWgSvPvRPKiAOZIUw1",
-   "name": "TTEPFIRE"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585961866,
-  "_nanoseconds": 529000000
- },
  "missions": [
   {
-   "team": [
-    "COLLIN",
-    "FIREFOX"
-   ],
-   "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "COLLIN",
       "FIREFOX"
      ],
-     "state": "APPROVED",
+     "proposer": "TTEP",
      "votes": [
       "TTEPFIRE",
       "TTEP",
       "FIREFOX",
       "SAMSUNG",
       "COLLIN"
-     ],
-     "proposer": "TTEP"
+     ]
     }
    ],
+   "numFails": 0,
+   "state": "SUCCESS",
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "COLLIN",
+    "FIREFOX"
+   ]
   },
   {
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "COLLIN"
-     ],
-     "proposer": "TTEPFIRE",
      "team": [
       "FIREFOX",
       "COLLIN",
       "TTEPFIRE"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "TTEPFIRE",
+     "votes": [
+      "COLLIN"
+     ]
     },
     {
-     "proposer": "COLLIN",
      "team": [
       "COLLIN",
       "TTEP",
       "TTEPFIRE"
      ],
+     "proposer": "COLLIN",
      "state": "APPROVED",
      "votes": [
       "SAMSUNG",
@@ -145,31 +142,25 @@
      ]
     }
    ],
-   "failsRequired": 1,
    "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "COLLIN",
     "TTEP",
     "TTEPFIRE"
    ],
-   "numFails": 0,
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
-   "team": [
-    "FIREFOX",
-    "SAMSUNG"
-   ],
+   "failsRequired": 1,
    "numFails": 2,
-   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "FIREFOX",
       "SAMSUNG"
      ],
-     "state": "APPROVED",
      "votes": [
       "SAMSUNG",
       "COLLIN",
@@ -180,29 +171,34 @@
      "proposer": "FIREFOX"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "FIREFOX",
+    "SAMSUNG"
+   ],
+   "teamSize": 2,
+   "state": "FAIL"
   },
   {
+   "teamSize": 3,
    "team": [
     "FIREFOX",
     "SAMSUNG",
     "TTEPFIRE"
    ],
    "numFails": 2,
-   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "TTEPFIRE",
-      "TTEP"
-     ],
+     "state": "REJECTED",
      "proposer": "SAMSUNG",
      "team": [
       "COLLIN",
       "SAMSUNG",
       "TTEP"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "TTEPFIRE",
+      "TTEP"
+     ]
     },
     {
      "votes": [
@@ -210,19 +206,14 @@
       "FIREFOX"
      ],
      "proposer": "TTEP",
+     "state": "REJECTED",
      "team": [
       "COLLIN",
       "FIREFOX",
       "SAMSUNG"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "team": [
-      "FIREFOX",
-      "SAMSUNG",
-      "TTEPFIRE"
-     ],
      "state": "APPROVED",
      "votes": [
       "SAMSUNG",
@@ -230,30 +221,36 @@
       "TTEPFIRE",
       "TTEP"
      ],
+     "team": [
+      "FIREFOX",
+      "SAMSUNG",
+      "TTEPFIRE"
+     ],
      "proposer": "TTEPFIRE"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "COLLIN",
     "TTEP",
     "TTEPFIRE"
    ],
-   "numFails": 0,
    "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
      "proposer": "COLLIN",
+     "state": "APPROVED",
      "team": [
       "COLLIN",
       "TTEP",
       "TTEPFIRE"
      ],
-     "state": "APPROVED",
      "votes": [
       "SAMSUNG",
       "COLLIN",
@@ -261,8 +258,11 @@
       "FIREFOX"
      ]
     }
-   ],
-   "failsRequired": 1
+   ]
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1585961866,
+  "_nanoseconds": 529000000
+ }
 }

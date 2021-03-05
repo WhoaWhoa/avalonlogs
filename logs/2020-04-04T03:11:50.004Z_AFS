@@ -1,16 +1,99 @@
 {
+ "outcome": {
+  "roles": [
+   {
+    "name": "CHARLES",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "NANCY"
+   },
+   {
+    "assassin": false,
+    "name": "LUELLY",
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "name": "DAVID",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "name": "SUSIE",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "DOUGLAS",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "OBERON",
+    "name": "JACQLINE",
+    "assassin": false
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "CHARLIE",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "BILL"
+   },
+   {
+    "name": "CINDY",
+    "assassin": false,
+    "role": "MORDRED"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "assassinated": null,
+  "votes": [
+   {
+    "CINDY": true,
+    "JACQLINE": true,
+    "SUSIE": true
+   },
+   {
+    "SUSIE": false,
+    "CINDY": true,
+    "JACQLINE": true,
+    "DOUGLAS": true
+   },
+   {
+    "CHARLIE": true,
+    "BILL": false,
+    "NANCY": true,
+    "SUSIE": false
+   },
+   {
+    "DOUGLAS": true,
+    "DAVID": true,
+    "BILL": true,
+    "NANCY": true,
+    "CHARLIE": true
+   },
+   {
+    "CHARLES": true,
+    "JACQLINE": false,
+    "LUELLY": true,
+    "SUSIE": false,
+    "CINDY": false
+   }
+  ]
+ },
  "missions": [
   {
-   "team": [
-    "SUSIE",
-    "JACQLINE",
-    "CINDY"
-   ],
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "CHARLES",
       "NANCY",
@@ -23,6 +106,7 @@
       "BILL",
       "CINDY"
      ],
+     "state": "APPROVED",
      "proposer": "CINDY",
      "team": [
       "SUSIE",
@@ -31,28 +115,28 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "SUSIE",
+    "JACQLINE",
+    "CINDY"
+   ],
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
    "team": [
     "SUSIE",
     "JACQLINE",
     "CINDY",
     "DOUGLAS"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "DOUGLAS",
-     "team": [
-      "SUSIE",
-      "JACQLINE",
-      "CINDY",
-      "DOUGLAS"
-     ],
-     "state": "APPROVED",
      "votes": [
       "DAVID",
       "SUSIE",
@@ -62,14 +146,19 @@
       "CINDY",
       "CHARLES",
       "NANCY"
+     ],
+     "proposer": "DOUGLAS",
+     "state": "APPROVED",
+     "team": [
+      "SUSIE",
+      "JACQLINE",
+      "CINDY",
+      "DOUGLAS"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
-   "state": "FAIL",
    "team": [
     "CHARLIE",
     "NANCY",
@@ -77,58 +166,60 @@
     "SUSIE"
    ],
    "numFails": 2,
+   "failsRequired": 1,
    "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "DOUGLAS",
-      "CHARLIE",
-      "JACQLINE",
-      "DAVID"
-     ],
      "state": "REJECTED",
+     "proposer": "CHARLIE",
      "votes": [
       "DOUGLAS",
       "CHARLIE",
       "DAVID"
      ],
-     "proposer": "CHARLIE"
+     "team": [
+      "DOUGLAS",
+      "CHARLIE",
+      "JACQLINE",
+      "DAVID"
+     ]
     },
     {
+     "state": "REJECTED",
+     "team": [
+      "CHARLIE",
+      "DAVID",
+      "DOUGLAS",
+      "JACQLINE"
+     ],
+     "proposer": "DAVID",
      "votes": [
       "DAVID",
       "DOUGLAS",
       "JACQLINE",
       "CHARLIE",
       "BILL"
-     ],
-     "proposer": "DAVID",
-     "team": [
-      "CHARLIE",
-      "DAVID",
-      "DOUGLAS",
-      "JACQLINE"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "votes": [
-      "LUELLY",
-      "DAVID",
-      "DOUGLAS",
-      "JACQLINE"
-     ],
-     "proposer": "LUELLY",
      "team": [
       "DAVID",
       "LUELLY",
       "JACQLINE",
       "DOUGLAS"
      ],
+     "proposer": "LUELLY",
+     "votes": [
+      "LUELLY",
+      "DAVID",
+      "DOUGLAS",
+      "JACQLINE"
+     ],
      "state": "REJECTED"
     },
     {
      "state": "APPROVED",
+     "proposer": "NANCY",
      "votes": [
       "CHARLES",
       "NANCY",
@@ -139,7 +230,6 @@
       "BILL",
       "CINDY"
      ],
-     "proposer": "NANCY",
      "team": [
       "CHARLIE",
       "NANCY",
@@ -148,30 +238,12 @@
      ]
     }
    ],
-   "failsRequired": 1
+   "state": "FAIL"
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "DOUGLAS",
-    "CHARLIE",
-    "BILL",
-    "NANCY",
-    "DAVID"
-   ],
-   "numFails": 0,
-   "teamSize": 5,
    "proposals": [
     {
      "state": "APPROVED",
-     "votes": [
-      "SUSIE",
-      "DOUGLAS",
-      "JACQLINE",
-      "BILL",
-      "LUELLY",
-      "DAVID"
-     ],
      "proposer": "BILL",
      "team": [
       "DOUGLAS",
@@ -179,12 +251,32 @@
       "BILL",
       "NANCY",
       "DAVID"
+     ],
+     "votes": [
+      "SUSIE",
+      "DOUGLAS",
+      "JACQLINE",
+      "BILL",
+      "LUELLY",
+      "DAVID"
      ]
     }
    ],
-   "failsRequired": 2
+   "failsRequired": 2,
+   "numFails": 0,
+   "teamSize": 5,
+   "state": "SUCCESS",
+   "team": [
+    "DOUGLAS",
+    "CHARLIE",
+    "BILL",
+    "NANCY",
+    "DAVID"
+   ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 5,
    "state": "FAIL",
    "team": [
     "CHARLES",
@@ -194,9 +286,10 @@
     "SUSIE"
    ],
    "numFails": 3,
-   "teamSize": 5,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "CHARLES",
      "team": [
       "CHARLES",
       "LUELLY",
@@ -204,7 +297,6 @@
       "JACQLINE",
       "SUSIE"
      ],
-     "state": "APPROVED",
      "votes": [
       "JACQLINE",
       "BILL",
@@ -212,107 +304,11 @@
       "CHARLES",
       "SUSIE",
       "DOUGLAS"
-     ],
-     "proposer": "CHARLES"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   }
  ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "CHARLES"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "NANCY"
-   },
-   {
-    "name": "LUELLY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "DAVID",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SUSIE",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "DOUGLAS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JACQLINE",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "CHARLIE"
-   },
-   {
-    "name": "BILL",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "CINDY",
-    "assassin": false,
-    "role": "MORDRED"
-   }
-  ],
-  "votes": [
-   {
-    "JACQLINE": true,
-    "SUSIE": true,
-    "CINDY": true
-   },
-   {
-    "JACQLINE": true,
-    "SUSIE": false,
-    "CINDY": true,
-    "DOUGLAS": true
-   },
-   {
-    "BILL": false,
-    "SUSIE": false,
-    "CHARLIE": true,
-    "NANCY": true
-   },
-   {
-    "NANCY": true,
-    "BILL": true,
-    "CHARLIE": true,
-    "DOUGLAS": true,
-    "DAVID": true
-   },
-   {
-    "LUELLY": true,
-    "SUSIE": false,
-    "CINDY": false,
-    "CHARLES": true,
-    "JACQLINE": false
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1585971051,
-  "_nanoseconds": 569279000
- },
  "players": [
   {
    "uid": "RJSQNKQeJES6jqEdwdutusPVwE03",
@@ -323,24 +319,24 @@
    "name": "JACQLINE"
   },
   {
-   "uid": "nzkkyZ1aONWNIoHcpIC5uitLa3Y2",
-   "name": "CINDY"
+   "name": "CINDY",
+   "uid": "nzkkyZ1aONWNIoHcpIC5uitLa3Y2"
   },
   {
-   "uid": "iRfhYkCgZjR51gYuXaf5fMS8TXt1",
-   "name": "DOUGLAS"
+   "name": "DOUGLAS",
+   "uid": "iRfhYkCgZjR51gYuXaf5fMS8TXt1"
   },
   {
-   "uid": "MRTOu9ppKpO9mBH1VxVVpLD5bYv1",
-   "name": "CHARLIE"
+   "name": "CHARLIE",
+   "uid": "MRTOu9ppKpO9mBH1VxVVpLD5bYv1"
   },
   {
    "uid": "XOAHfxgj8IXUJBLFVYU8rn6AZ8W2",
    "name": "DAVID"
   },
   {
-   "uid": "PkVBKTFfqqcIiSG6rbBt35oRdUh1",
-   "name": "LUELLY"
+   "name": "LUELLY",
+   "uid": "PkVBKTFfqqcIiSG6rbBt35oRdUh1"
   },
   {
    "uid": "fVM9nYco4RZvDcA4QRSv3OZoOon1",
@@ -351,12 +347,16 @@
    "name": "BILL"
   },
   {
-   "uid": "KBcqzHe1pFgQIyvUZP8hV2AXVR92",
-   "name": "CHARLES"
+   "name": "CHARLES",
+   "uid": "KBcqzHe1pFgQIyvUZP8hV2AXVR92"
   }
  ],
  "timeCreated": {
   "_seconds": 1585969910,
   "_nanoseconds": 4000000
+ },
+ "timeFinished": {
+  "_seconds": 1585971051,
+  "_nanoseconds": 569279000
  }
 }

@@ -1,7 +1,76 @@
 {
+ "outcome": {
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "CAROL",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "GURU",
+    "assassin": false
+   },
+   {
+    "name": "SAM",
+    "role": "MORDRED",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "BEN"
+   },
+   {
+    "role": "MERLIN",
+    "name": "ZZA",
+    "assassin": false
+   },
+   {
+    "name": "BRANDI",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "votes": [
+   {
+    "BEN": true,
+    "CAROL": true
+   },
+   {
+    "BEN": true,
+    "CAROL": true,
+    "BRANDI": true
+   },
+   {
+    "BEN": false,
+    "CAROL": true,
+    "GURU": true,
+    "BRANDI": true
+   },
+   {
+    "SAM": false,
+    "ZZA": true,
+    "BRANDI": true
+   },
+   {
+    "CAROL": true,
+    "BEN": false,
+    "BRANDI": true,
+    "ZZA": true
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions"
+ },
  "timeFinished": {
   "_seconds": 1586104122,
   "_nanoseconds": 27211000
+ },
+ "timeCreated": {
+  "_seconds": 1586103373,
+  "_nanoseconds": 404000000
  },
  "players": [
   {
@@ -13,26 +82,22 @@
    "name": "BRANDI"
   },
   {
-   "uid": "eXwaxL4jeMeJBgT8rIc061jWIM22",
-   "name": "CAROL"
+   "name": "CAROL",
+   "uid": "eXwaxL4jeMeJBgT8rIc061jWIM22"
   },
   {
    "uid": "dvTgs7wShBcAS89U44YdJ3e0VEF3",
    "name": "SAM"
   },
   {
-   "uid": "Xo1yf7Z1QxVaXLd9PAC40dhSjTr2",
-   "name": "ZZA"
+   "name": "ZZA",
+   "uid": "Xo1yf7Z1QxVaXLd9PAC40dhSjTr2"
   },
   {
    "uid": "q0hQ1XUSJhchzpU8KJFpVaat4Au1",
    "name": "GURU"
   }
  ],
- "timeCreated": {
-  "_seconds": 1586103373,
-  "_nanoseconds": 404000000
- },
  "missions": [
   {
    "state": "SUCCESS",
@@ -40,7 +105,7 @@
     "CAROL",
     "BEN"
    ],
-   "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 2,
    "proposals": [
     {
@@ -50,32 +115,37 @@
       "GURU",
       "BEN"
      ],
+     "state": "APPROVED",
      "proposer": "GURU",
      "team": [
       "CAROL",
       "BEN"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 0
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "BEN",
-      "BRANDI",
-      "SAM"
-     ],
      "state": "REJECTED",
      "votes": [
       "BEN",
       "BRANDI"
      ],
+     "team": [
+      "BEN",
+      "BRANDI",
+      "SAM"
+     ],
      "proposer": "BEN"
     },
     {
+     "state": "APPROVED",
      "votes": [
       "CAROL",
       "GURU",
@@ -89,21 +159,17 @@
       "BEN",
       "CAROL",
       "BRANDI"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "BEN",
     "CAROL",
     "BRANDI"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   ]
   },
   {
+   "state": "FAIL",
    "team": [
     "CAROL",
     "BRANDI",
@@ -114,176 +180,110 @@
    "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "GURU",
       "SAM",
       "BEN",
       "CAROL"
      ],
-     "proposer": "CAROL",
      "team": [
       "CAROL",
       "BRANDI",
       "BEN",
       "GURU"
      ],
-     "state": "APPROVED"
+     "proposer": "CAROL"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
+   "numFails": 1,
    "team": [
     "SAM",
     "BRANDI",
     "ZZA"
    ],
-   "numFails": 1,
+   "state": "FAIL",
    "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "SAM",
      "votes": [
       "GURU",
       "SAM",
       "ZZA",
       "BRANDI"
      ],
-     "proposer": "SAM",
+     "state": "APPROVED",
      "team": [
       "SAM",
       "BRANDI",
       "ZZA"
      ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "teamSize": 4,
+   "state": "FAIL",
+   "numFails": 1,
    "team": [
     "BEN",
     "CAROL",
     "BRANDI",
     "ZZA"
    ],
-   "numFails": 1,
-   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "GURU",
-      "ZZA"
-     ],
-     "proposer": "ZZA",
+     "state": "REJECTED",
      "team": [
       "BRANDI",
       "ZZA",
       "GURU",
       "CAROL"
      ],
-     "state": "REJECTED"
-    },
-    {
-     "state": "REJECTED",
+     "proposer": "ZZA",
      "votes": [
       "GURU",
-      "SAM"
-     ],
-     "proposer": "GURU",
+      "ZZA"
+     ]
+    },
+    {
      "team": [
       "CAROL",
       "BRANDI",
       "BEN",
       "GURU"
-     ]
+     ],
+     "votes": [
+      "GURU",
+      "SAM"
+     ],
+     "state": "REJECTED",
+     "proposer": "GURU"
     },
     {
+     "proposer": "BEN",
+     "state": "APPROVED",
      "team": [
       "BEN",
       "CAROL",
       "BRANDI",
       "ZZA"
      ],
-     "state": "APPROVED",
      "votes": [
       "GURU",
       "SAM",
       "BEN",
       "BRANDI",
       "CAROL"
-     ],
-     "proposer": "BEN"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   }
- ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "CAROL",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "GURU",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SAM",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "BEN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ZZA",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "BRANDI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "CAROL": true,
-    "BEN": true
-   },
-   {
-    "BRANDI": true,
-    "CAROL": true,
-    "BEN": true
-   },
-   {
-    "GURU": true,
-    "BEN": false,
-    "BRANDI": true,
-    "CAROL": true
-   },
-   {
-    "SAM": false,
-    "BRANDI": true,
-    "ZZA": true
-   },
-   {
-    "BRANDI": true,
-    "ZZA": true,
-    "CAROL": true,
-    "BEN": false
-   }
-  ],
-  "message": "Three failed missions"
- }
+ ]
 }

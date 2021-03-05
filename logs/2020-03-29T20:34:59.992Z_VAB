@@ -1,27 +1,83 @@
 {
+ "outcome": {
+  "votes": [
+   {
+    "EVA": false,
+    "LOGAN": true
+   },
+   {
+    "JOE": true,
+    "EVA": true,
+    "MAX": false
+   },
+   {
+    "IDO": true,
+    "JOE": true
+   },
+   {
+    "JOE": true,
+    "LOGAN": true,
+    "IDO": true
+   },
+   {
+    "LOGAN": true,
+    "IDO": true,
+    "JOE": true
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "JOE",
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "EVA"
+   },
+   {
+    "name": "MAX",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "JOE",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "IDO",
+    "assassin": false
+   },
+   {
+    "name": "LOGAN",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ],
+  "state": "GOOD_WIN"
+ },
+ "timeFinished": {
+  "_seconds": 1585514469,
+  "_nanoseconds": 995813000
+ },
  "timeCreated": {
   "_seconds": 1585514099,
   "_nanoseconds": 992000000
  },
  "missions": [
   {
-   "team": [
-    "EVA",
-    "LOGAN"
-   ],
-   "numFails": 1,
    "teamSize": 2,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "IDO"
      ],
-     "proposer": "IDO",
      "team": [
       "IDO",
       "MAX"
      ],
-     "state": "REJECTED"
+     "proposer": "IDO"
     },
     {
      "state": "APPROVED",
@@ -39,32 +95,38 @@
      ]
     }
    ],
+   "state": "FAIL",
+   "numFails": 1,
    "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "EVA",
+    "LOGAN"
+   ]
   },
   {
+   "numFails": 1,
    "team": [
     "JOE",
     "MAX",
     "EVA"
    ],
-   "numFails": 1,
    "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "LOGAN",
       "JOE",
       "MAX"
      ],
-     "state": "REJECTED",
      "votes": [
       "EVA"
      ],
      "proposer": "EVA"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "IDO",
       "LOGAN"
@@ -74,69 +136,65 @@
       "MAX",
       "LOGAN",
       "JOE"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "EVA",
-      "MAX",
-      "JOE",
-      "IDO"
-     ],
-     "proposer": "JOE",
+     "state": "APPROVED",
      "team": [
       "JOE",
       "MAX",
       "EVA"
      ],
-     "state": "APPROVED"
+     "proposer": "JOE",
+     "votes": [
+      "EVA",
+      "MAX",
+      "JOE",
+      "IDO"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "IDO",
     "JOE"
    ],
    "numFails": 0,
    "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "IDO",
       "JOE"
      ],
-     "state": "APPROVED",
+     "proposer": "IDO",
      "votes": [
       "MAX",
       "JOE",
       "IDO",
       "LOGAN"
-     ],
-     "proposer": "IDO"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "team": [
-    "IDO",
-    "LOGAN",
-    "JOE"
-   ],
+   "failsRequired": 1,
    "numFails": 0,
    "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "MAX",
       "EVA",
       "LOGAN"
      ],
-     "state": "REJECTED",
      "votes": [
       "EVA",
       "MAX"
@@ -144,20 +202,43 @@
      "proposer": "MAX"
     },
     {
+     "proposer": "EVA",
+     "state": "REJECTED",
      "team": [
       "IDO",
       "MAX",
       "JOE"
      ],
-     "state": "REJECTED",
      "votes": [
       "MAX",
       "EVA"
-     ],
-     "proposer": "EVA"
+     ]
     },
     {
+     "votes": [
+      "JOE",
+      "IDO",
+      "LOGAN"
+     ],
+     "team": [
+      "IDO",
+      "LOGAN",
+      "JOE"
+     ],
      "proposer": "LOGAN",
+     "state": "APPROVED"
+    }
+   ],
+   "team": [
+    "IDO",
+    "LOGAN",
+    "JOE"
+   ]
+  },
+  {
+   "teamSize": 3,
+   "proposals": [
+    {
      "team": [
       "IDO",
       "LOGAN",
@@ -168,109 +249,28 @@
       "JOE",
       "IDO",
       "LOGAN"
-     ]
+     ],
+     "proposer": "JOE"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
-  },
-  {
-   "state": "SUCCESS",
    "team": [
     "IDO",
     "LOGAN",
     "JOE"
    ],
+   "failsRequired": 1,
    "numFails": 0,
-   "teamSize": 3,
-   "proposals": [
-    {
-     "votes": [
-      "JOE",
-      "IDO",
-      "LOGAN"
-     ],
-     "proposer": "JOE",
-     "team": [
-      "IDO",
-      "LOGAN",
-      "JOE"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1
+   "state": "SUCCESS"
   }
  ],
- "outcome": {
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "JOE",
-  "roles": [
-   {
-    "name": "EVA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "MAX",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JOE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "IDO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "LOGAN",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "votes": [
-   {
-    "LOGAN": true,
-    "EVA": false
-   },
-   {
-    "EVA": true,
-    "JOE": true,
-    "MAX": false
-   },
-   {
-    "IDO": true,
-    "JOE": true
-   },
-   {
-    "JOE": true,
-    "IDO": true,
-    "LOGAN": true
-   },
-   {
-    "IDO": true,
-    "LOGAN": true,
-    "JOE": true
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1585514469,
-  "_nanoseconds": 995813000
- },
  "players": [
   {
-   "uid": "xktobEw95VdYv7fAUX53tMzb0Ku1",
-   "name": "IDO"
+   "name": "IDO",
+   "uid": "xktobEw95VdYv7fAUX53tMzb0Ku1"
   },
   {
-   "name": "MAX",
-   "uid": "Mlkq7mGszSga6WTayYuf5WN5r0o2"
+   "uid": "Mlkq7mGszSga6WTayYuf5WN5r0o2",
+   "name": "MAX"
   },
   {
    "uid": "RvCdx31U97Yz8GEQpVLXnliU19p1",

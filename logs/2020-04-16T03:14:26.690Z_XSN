@@ -3,8 +3,95 @@
   "_seconds": 1587012647,
   "_nanoseconds": 65151000
  },
- "options": {
-  "inGameLog": false
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "MOIRA": true,
+    "LL": true,
+    "YI": true
+   },
+   {
+    "LL": true,
+    "CHEVIN": true,
+    "YI": true,
+    "MOIRA": true
+   },
+   {
+    "MOIRA": true,
+    "LL": true,
+    "YI": true,
+    "CHEVIN": false
+   },
+   {
+    "YI": true,
+    "CHEVIN": false,
+    "MOIRA": true,
+    "AN": false,
+    "LL": true
+   },
+   {
+    "MOIRA": true,
+    "CAR": true,
+    "YI": true,
+    "PRAVEEN": true,
+    "REINA": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "role": "MORDRED",
+    "assassin": false,
+    "name": "CHEVIN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "CAR",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "REINA"
+   },
+   {
+    "name": "SEAN",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "YI"
+   },
+   {
+    "name": "PRAVEEN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MOIRA"
+   },
+   {
+    "name": "LL",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "MIG",
+    "assassin": false,
+    "role": "OBERON"
+   },
+   {
+    "name": "AN",
+    "assassin": true,
+    "role": "EVIL MINION"
+   }
+  ],
+  "assassinated": "REINA"
  },
  "timeCreated": {
   "_seconds": 1587006866,
@@ -13,13 +100,12 @@
  "missions": [
   {
    "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "YI",
     "MOIRA",
     "LL"
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "state": "REJECTED",
@@ -28,41 +114,45 @@
       "PRAVEEN",
       "MIG"
      ],
-     "proposer": "CAR",
      "team": [
       "CAR",
       "MIG",
       "AN"
-     ]
+     ],
+     "proposer": "CAR"
     },
     {
-     "proposer": "MIG",
+     "state": "REJECTED",
      "team": [
       "MIG",
       "AN",
       "YI"
      ],
-     "state": "REJECTED",
      "votes": [
       "PRAVEEN",
       "MIG",
       "CAR"
-     ]
+     ],
+     "proposer": "MIG"
     },
     {
      "votes": [
       "PRAVEEN"
      ],
+     "state": "REJECTED",
      "proposer": "AN",
      "team": [
       "AN",
       "MIG",
       "CAR"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "APPROVED",
+     "team": [
+      "YI",
+      "MOIRA",
+      "LL"
+     ],
      "votes": [
       "CAR",
       "REINA",
@@ -73,14 +163,11 @@
       "CHEVIN"
      ],
      "proposer": "YI",
-     "team": [
-      "YI",
-      "MOIRA",
-      "LL"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "numFails": 0,
+   "teamSize": 3
   },
   {
    "team": [
@@ -91,8 +178,10 @@
    ],
    "numFails": 0,
    "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "PRAVEEN",
      "votes": [
       "PRAVEEN",
       "MOIRA",
@@ -100,7 +189,6 @@
       "CAR",
       "REINA"
      ],
-     "proposer": "PRAVEEN",
      "team": [
       "YI",
       "PRAVEEN",
@@ -110,28 +198,22 @@
      "state": "REJECTED"
     },
     {
+     "proposer": "MOIRA",
+     "votes": [
+      "LL",
+      "CAR",
+      "REINA"
+     ],
      "team": [
       "YI",
       "MOIRA",
       "LL",
       "CHEVIN"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "LL",
-      "CAR",
-      "REINA"
-     ],
-     "proposer": "MOIRA"
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "LL",
-      "MOIRA",
-      "YI",
-      "REINA"
-     ],
-     "state": "REJECTED",
+     "proposer": "LL",
      "votes": [
       "LL",
       "MIG",
@@ -139,7 +221,13 @@
       "REINA",
       "YI"
      ],
-     "proposer": "LL"
+     "state": "REJECTED",
+     "team": [
+      "LL",
+      "MOIRA",
+      "YI",
+      "REINA"
+     ]
     },
     {
      "votes": [
@@ -153,19 +241,19 @@
       "SEAN"
      ],
      "proposer": "CHEVIN",
+     "state": "APPROVED",
      "team": [
       "CHEVIN",
       "YI",
       "MOIRA",
       "LL"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
    "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
    "team": [
     "LL",
     "CHEVIN",
@@ -195,13 +283,16 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
    "proposals": [
     {
-     "proposer": "SEAN",
+     "state": "REJECTED",
+     "votes": [
+      "CAR",
+      "LL"
+     ],
      "team": [
       "SEAN",
       "CHEVIN",
@@ -209,30 +300,29 @@
       "MOIRA",
       "LL"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "CAR",
-      "LL"
-     ]
+     "proposer": "SEAN"
     },
     {
-     "proposer": "CAR",
-     "team": [
-      "CAR",
-      "CHEVIN",
-      "LL",
-      "MOIRA",
-      "YI"
-     ],
      "state": "REJECTED",
      "votes": [
       "MOIRA",
       "LL",
       "CAR",
       "REINA"
-     ]
+     ],
+     "team": [
+      "CAR",
+      "CHEVIN",
+      "LL",
+      "MOIRA",
+      "YI"
+     ],
+     "proposer": "CAR"
     },
     {
+     "votes": [
+      "MIG"
+     ],
      "team": [
       "CAR",
       "CHEVIN",
@@ -240,22 +330,10 @@
       "MOIRA",
       "MIG"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "MIG"
-     ],
-     "proposer": "MIG"
+     "proposer": "MIG",
+     "state": "REJECTED"
     },
     {
-     "proposer": "AN",
-     "team": [
-      "AN",
-      "CHEVIN",
-      "LL",
-      "MOIRA",
-      "YI"
-     ],
-     "state": "APPROVED",
      "votes": [
       "CHEVIN",
       "CAR",
@@ -263,11 +341,21 @@
       "MOIRA",
       "LL",
       "AN"
-     ]
+     ],
+     "team": [
+      "AN",
+      "CHEVIN",
+      "LL",
+      "MOIRA",
+      "YI"
+     ],
+     "proposer": "AN",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 2,
+   "teamSize": 5,
    "state": "FAIL",
+   "failsRequired": 2,
    "team": [
     "AN",
     "CHEVIN",
@@ -275,29 +363,12 @@
     "MOIRA",
     "YI"
    ],
-   "numFails": 2,
-   "teamSize": 5
+   "numFails": 2
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "YI",
-    "MOIRA",
-    "REINA",
-    "CAR",
-    "PRAVEEN"
-   ],
-   "numFails": 0,
-   "teamSize": 5,
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "YI",
-      "MOIRA",
-      "REINA",
-      "CAR",
-      "PRAVEEN"
-     ],
      "state": "APPROVED",
      "votes": [
       "CAR",
@@ -307,106 +378,35 @@
       "MIG",
       "AN"
      ],
-     "proposer": "YI"
+     "proposer": "YI",
+     "team": [
+      "YI",
+      "MOIRA",
+      "REINA",
+      "CAR",
+      "PRAVEEN"
+     ]
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 5,
+   "team": [
+    "YI",
+    "MOIRA",
+    "REINA",
+    "CAR",
+    "PRAVEEN"
+   ]
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "YI": true,
-    "LL": true,
-    "MOIRA": true
-   },
-   {
-    "YI": true,
-    "CHEVIN": true,
-    "LL": true,
-    "MOIRA": true
-   },
-   {
-    "YI": true,
-    "CHEVIN": false,
-    "LL": true,
-    "MOIRA": true
-   },
-   {
-    "AN": false,
-    "YI": true,
-    "CHEVIN": false,
-    "LL": true,
-    "MOIRA": true
-   },
-   {
-    "YI": true,
-    "REINA": true,
-    "PRAVEEN": true,
-    "CAR": true,
-    "MOIRA": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "REINA",
-  "roles": [
-   {
-    "name": "CHEVIN",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "CAR",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "REINA"
-   },
-   {
-    "name": "SEAN",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "YI"
-   },
-   {
-    "name": "PRAVEEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MOIRA"
-   },
-   {
-    "name": "LL",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MIG",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "AN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ]
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
-   "name": "YI",
-   "uid": "hJeFLpAxnFMEypzHti9SffWE3px1"
+   "uid": "hJeFLpAxnFMEypzHti9SffWE3px1",
+   "name": "YI"
   },
   {
    "uid": "EHVzw875RhONc4GJh5xay65sbsE2",
@@ -425,12 +425,12 @@
    "name": "CHEVIN"
   },
   {
-   "name": "REINA",
-   "uid": "UoQWnZzUwWRcljoBJkQieIG8eLV2"
+   "uid": "UoQWnZzUwWRcljoBJkQieIG8eLV2",
+   "name": "REINA"
   },
   {
-   "name": "SEAN",
-   "uid": "hX6Ojw74Z1RCWOKVx2qAk1o09o22"
+   "uid": "hX6Ojw74Z1RCWOKVx2qAk1o09o22",
+   "name": "SEAN"
   },
   {
    "name": "CAR",

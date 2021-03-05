@@ -1,4 +1,7 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
    "name": "PATRICK",
@@ -9,8 +12,8 @@
    "uid": "3BZDbZZUidhTK3mWnTiu3F3bNXI3"
   },
   {
-   "uid": "pqAjF6kKN2MkzfS5rtX6JctlusN2",
-   "name": "MALTE"
+   "name": "MALTE",
+   "uid": "pqAjF6kKN2MkzfS5rtX6JctlusN2"
   },
   {
    "uid": "Tzfj8KypC2NvafKDnRgrbYdDtk42",
@@ -21,28 +24,103 @@
    "name": "KOLAR"
   },
   {
-   "name": "MARKUS",
-   "uid": "mRt3Q8chi3VkwBRXnqGZqf8l0gj2"
+   "uid": "mRt3Q8chi3VkwBRXnqGZqf8l0gj2",
+   "name": "MARKUS"
   },
   {
    "name": "STEFAN",
    "uid": "vVd0Puuj52doSnLo6hThDUAAKLz1"
   },
   {
-   "uid": "ACKpLvD5HMNJPjbaoVuC4C7gdNA2",
-   "name": "INGO"
+   "name": "INGO",
+   "uid": "ACKpLvD5HMNJPjbaoVuC4C7gdNA2"
   },
   {
-   "name": "JONAS",
-   "uid": "pI1TOu36TlScMCZ9OXJxqLYuMPx1"
+   "uid": "pI1TOu36TlScMCZ9OXJxqLYuMPx1",
+   "name": "JONAS"
   }
  ],
+ "outcome": {
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "name": "MARKUS",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "NICK"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "CHRISTOPH"
+   },
+   {
+    "assassin": false,
+    "name": "STEFAN",
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "KOLAR",
+    "assassin": false,
+    "role": "OBERON"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JONAS",
+    "assassin": false
+   },
+   {
+    "name": "INGO",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "MALTE",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "PATRICK"
+   }
+  ],
+  "votes": [
+   {
+    "MARKUS": false,
+    "KOLAR": true,
+    "CHRISTOPH": true
+   },
+   {
+    "STEFAN": true,
+    "PATRICK": true,
+    "CHRISTOPH": true,
+    "INGO": true
+   },
+   {
+    "PATRICK": true,
+    "INGO": true,
+    "STEFAN": true,
+    "CHRISTOPH": true
+   },
+   {
+    "PATRICK": true,
+    "INGO": true,
+    "CHRISTOPH": true,
+    "STEFAN": true,
+    "MARKUS": false
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "STEFAN"
+ },
  "timeFinished": {
   "_seconds": 1588450551,
   "_nanoseconds": 470000000
- },
- "options": {
-  "inGameLog": false
  },
  "timeCreated": {
   "_seconds": 1588449756,
@@ -50,15 +128,17 @@
  },
  "missions": [
   {
-   "team": [
-    "KOLAR",
-    "MARKUS",
-    "CHRISTOPH"
-   ],
-   "numFails": 1,
+   "failsRequired": 1,
    "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "KOLAR",
+      "MARKUS",
+      "CHRISTOPH"
+     ],
      "votes": [
       "KOLAR",
       "JONAS",
@@ -67,37 +147,28 @@
       "NICK",
       "CHRISTOPH"
      ],
-     "proposer": "KOLAR",
-     "team": [
-      "KOLAR",
-      "MARKUS",
-      "CHRISTOPH"
-     ],
-     "state": "APPROVED"
+     "proposer": "KOLAR"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "team": [
+    "KOLAR",
+    "MARKUS",
+    "CHRISTOPH"
+   ]
   },
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "CHRISTOPH",
     "STEFAN",
     "INGO",
     "PATRICK"
    ],
-   "numFails": 0,
    "teamSize": 4,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "CHRISTOPH",
-      "STEFAN",
-      "INGO",
-      "PATRICK"
-     ],
-     "state": "APPROVED",
      "votes": [
       "MARKUS",
       "NICK",
@@ -108,29 +179,31 @@
       "INGO",
       "PATRICK"
      ],
-     "proposer": "MARKUS"
+     "proposer": "MARKUS",
+     "team": [
+      "CHRISTOPH",
+      "STEFAN",
+      "INGO",
+      "PATRICK"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "numFails": 0
   },
   {
+   "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "INGO",
     "STEFAN",
     "CHRISTOPH",
     "PATRICK"
    ],
-   "numFails": 0,
    "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "INGO",
-      "STEFAN",
-      "CHRISTOPH",
-      "PATRICK"
-     ],
-     "state": "APPROVED",
      "votes": [
       "INGO",
       "MALTE",
@@ -142,25 +215,21 @@
       "KOLAR",
       "JONAS"
      ],
-     "proposer": "STEFAN"
+     "team": [
+      "INGO",
+      "STEFAN",
+      "CHRISTOPH",
+      "PATRICK"
+     ],
+     "proposer": "STEFAN",
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "INGO",
-    "STEFAN",
-    "CHRISTOPH",
-    "PATRICK",
-    "MARKUS"
-   ],
-   "numFails": 1,
-   "teamSize": 5,
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "INGO",
      "team": [
       "INGO",
@@ -169,7 +238,6 @@
       "PATRICK",
       "MARKUS"
      ],
-     "state": "APPROVED",
      "votes": [
       "KOLAR",
       "JONAS",
@@ -182,92 +250,24 @@
      ]
     }
    ],
+   "team": [
+    "INGO",
+    "STEFAN",
+    "CHRISTOPH",
+    "PATRICK",
+    "MARKUS"
+   ],
+   "numFails": 1,
+   "teamSize": 5,
+   "state": "SUCCESS",
    "failsRequired": 2
   },
   {
-   "teamSize": 5,
-   "state": "PENDING",
+   "team": [],
    "proposals": [],
-   "failsRequired": 1,
-   "team": []
+   "state": "PENDING",
+   "teamSize": 5,
+   "failsRequired": 1
   }
- ],
- "outcome": {
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "STEFAN",
-  "roles": [
-   {
-    "name": "MARKUS",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "name": "NICK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "CHRISTOPH",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "STEFAN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "KOLAR",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "JONAS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "INGO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MALTE",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "PATRICK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "KOLAR": true,
-    "MARKUS": false,
-    "CHRISTOPH": true
-   },
-   {
-    "PATRICK": true,
-    "INGO": true,
-    "STEFAN": true,
-    "CHRISTOPH": true
-   },
-   {
-    "CHRISTOPH": true,
-    "PATRICK": true,
-    "INGO": true,
-    "STEFAN": true
-   },
-   {
-    "STEFAN": true,
-    "MARKUS": false,
-    "CHRISTOPH": true,
-    "PATRICK": true,
-    "INGO": true
-   }
-  ]
- }
+ ]
 }

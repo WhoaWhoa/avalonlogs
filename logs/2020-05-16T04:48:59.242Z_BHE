@@ -3,60 +3,150 @@
   "_seconds": 1589604539,
   "_nanoseconds": 242000000
  },
+ "players": [
+  {
+   "uid": "QcWw3qB6uob8BegrIp8o2nnvZy13",
+   "name": "RAPH"
+  },
+  {
+   "name": "SAAD",
+   "uid": "X2mcyKLMPMQhWx17AwSBOdLjAr63"
+  },
+  {
+   "uid": "7QifjUCY46TIhGd8uMfK41WSrIo1",
+   "name": "RAHUL"
+  },
+  {
+   "name": "MAFAZLA",
+   "uid": "aZqL41Bbh3RbhHBKbl58qifvaV23"
+  },
+  {
+   "name": "ZAIN",
+   "uid": "EizqnPS6PpbD6SLC66oODsd8jHN2"
+  },
+  {
+   "uid": "oJoeG2DBmBcntH1iFhM8MdYn3ox2",
+   "name": "RAAS"
+  }
+ ],
+ "outcome": {
+  "votes": [
+   {
+    "RAPH": true,
+    "SAAD": true
+   },
+   {
+    "RAPH": true,
+    "SAAD": true,
+    "MAFAZLA": false
+   },
+   {
+    "RAHUL": true,
+    "MAFAZLA": true,
+    "ZAIN": true,
+    "SAAD": true
+   },
+   {
+    "SAAD": true,
+    "MAFAZLA": false,
+    "ZAIN": true
+   },
+   {
+    "RAHUL": false,
+    "ZAIN": true,
+    "RAPH": true,
+    "SAAD": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "SAAD",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "RAPH"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "RAAS"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ZAIN"
+   },
+   {
+    "assassin": true,
+    "name": "MAFAZLA",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "RAHUL",
+    "assassin": false
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "assassinated": null
+ },
  "missions": [
   {
+   "failsRequired": 1,
    "team": [
     "SAAD",
     "RAPH"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [
+      "SAAD",
+      "ZAIN"
+     ],
+     "proposer": "ZAIN",
      "team": [
       "ZAIN",
       "SAAD"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "SAAD",
-      "ZAIN"
-     ],
-     "proposer": "ZAIN"
-    },
-    {
-     "state": "REJECTED",
-     "votes": [
-      "RAPH",
-      "RAAS",
-      "SAAD"
-     ],
-     "proposer": "RAAS",
-     "team": [
-      "RAAS",
-      "RAPH"
      ]
     },
     {
+     "team": [
+      "RAAS",
+      "RAPH"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "RAPH",
+      "RAAS",
+      "SAAD"
+     ],
+     "proposer": "RAAS"
+    },
+    {
+     "team": [
+      "RAPH",
+      "SAAD"
+     ],
      "votes": [
       "SAAD",
       "RAPH",
       "ZAIN"
      ],
-     "proposer": "RAPH",
-     "team": [
-      "RAPH",
-      "SAAD"
-     ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "RAPH"
     },
     {
-     "proposer": "SAAD",
+     "state": "APPROVED",
      "team": [
       "SAAD",
       "RAPH"
      ],
-     "state": "APPROVED",
+     "proposer": "SAAD",
      "votes": [
       "MAFAZLA",
       "SAAD",
@@ -66,42 +156,43 @@
      ]
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 0,
    "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
+     "votes": [
+      "SAAD",
+      "RAPH"
+     ],
      "team": [
       "RAHUL",
       "SAAD",
       "RAPH"
      ],
      "state": "REJECTED",
-     "votes": [
-      "SAAD",
-      "RAPH"
-     ],
      "proposer": "RAHUL"
     },
     {
+     "state": "APPROVED",
      "team": [
       "MAFAZLA",
       "SAAD",
       "RAPH"
      ],
-     "state": "APPROVED",
+     "proposer": "MAFAZLA",
      "votes": [
       "SAAD",
       "RAPH",
       "RAAS",
       "MAFAZLA"
-     ],
-     "proposer": "MAFAZLA"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "MAFAZLA",
     "SAAD",
@@ -117,8 +208,6 @@
     "ZAIN",
     "SAAD"
    ],
-   "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
      "state": "REJECTED",
@@ -151,80 +240,82 @@
      "proposer": "RAAS"
     },
     {
-     "votes": [
-      "RAPH"
-     ],
-     "proposer": "RAPH",
+     "state": "REJECTED",
      "team": [
       "RAPH",
       "SAAD",
       "RAAS",
       "RAHUL"
      ],
-     "state": "REJECTED"
+     "proposer": "RAPH",
+     "votes": [
+      "RAPH"
+     ]
     },
     {
-     "votes": [
-      "RAAS",
-      "RAPH"
-     ],
-     "proposer": "SAAD",
      "team": [
       "RAPH",
       "SAAD",
       "RAHUL",
       "RAAS"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "RAAS",
+      "RAPH"
+     ],
+     "proposer": "SAAD"
     },
     {
+     "proposer": "RAHUL",
+     "state": "APPROVED",
      "team": [
       "RAHUL",
       "MAFAZLA",
       "ZAIN",
       "SAAD"
      ],
-     "state": "APPROVED",
      "votes": [
       "SAAD",
       "RAAS",
       "ZAIN",
       "MAFAZLA",
       "RAHUL"
-     ],
-     "proposer": "RAHUL"
+     ]
     }
    ],
+   "teamSize": 4,
+   "numFails": 0,
    "failsRequired": 1,
    "state": "SUCCESS"
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
    "team": [
     "SAAD",
     "MAFAZLA",
     "ZAIN"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "ZAIN",
-      "MAFAZLA",
-      "RAHUL",
-      "SAAD"
-     ],
-     "proposer": "MAFAZLA",
      "team": [
       "SAAD",
       "MAFAZLA",
       "ZAIN"
      ],
-     "state": "APPROVED"
+     "proposer": "MAFAZLA",
+     "state": "APPROVED",
+     "votes": [
+      "ZAIN",
+      "MAFAZLA",
+      "RAHUL",
+      "SAAD"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
    "state": "FAIL",
@@ -235,50 +326,49 @@
     "RAPH"
    ],
    "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "RAPH",
       "ZAIN"
      ],
-     "proposer": "ZAIN",
      "team": [
       "RAHUL",
       "SAAD",
       "ZAIN",
       "RAPH"
      ],
-     "state": "REJECTED"
+     "proposer": "ZAIN"
     },
     {
-     "votes": [
-      "RAAS",
-      "ZAIN",
-      "SAAD"
-     ],
-     "proposer": "RAAS",
+     "state": "REJECTED",
      "team": [
       "ZAIN",
       "RAAS",
       "RAPH",
       "SAAD"
      ],
-     "state": "REJECTED"
+     "proposer": "RAAS",
+     "votes": [
+      "RAAS",
+      "ZAIN",
+      "SAAD"
+     ]
     },
     {
+     "proposer": "RAPH",
+     "votes": [
+      "MAFAZLA",
+      "RAPH"
+     ],
      "team": [
       "ZAIN",
       "SAAD",
       "RAPH",
       "RAHUL"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "MAFAZLA",
-      "RAPH"
-     ],
-     "proposer": "RAPH"
+     "state": "REJECTED"
     },
     {
      "state": "APPROVED",
@@ -298,98 +388,8 @@
      ]
     }
    ],
-   "failsRequired": 1
-  }
- ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "SAAD",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "RAPH",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "RAAS",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "ZAIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MAFAZLA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "RAHUL",
-    "assassin": false,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "RAPH": true,
-    "SAAD": true
-   },
-   {
-    "RAPH": true,
-    "SAAD": true,
-    "MAFAZLA": false
-   },
-   {
-    "SAAD": true,
-    "MAFAZLA": true,
-    "ZAIN": true,
-    "RAHUL": true
-   },
-   {
-    "SAAD": true,
-    "MAFAZLA": false,
-    "ZAIN": true
-   },
-   {
-    "ZAIN": true,
-    "RAHUL": false,
-    "RAPH": true,
-    "SAAD": true
-   }
-  ],
-  "message": "Three failed missions"
- },
- "players": [
-  {
-   "uid": "QcWw3qB6uob8BegrIp8o2nnvZy13",
-   "name": "RAPH"
-  },
-  {
-   "name": "SAAD",
-   "uid": "X2mcyKLMPMQhWx17AwSBOdLjAr63"
-  },
-  {
-   "uid": "7QifjUCY46TIhGd8uMfK41WSrIo1",
-   "name": "RAHUL"
-  },
-  {
-   "uid": "aZqL41Bbh3RbhHBKbl58qifvaV23",
-   "name": "MAFAZLA"
-  },
-  {
-   "uid": "EizqnPS6PpbD6SLC66oODsd8jHN2",
-   "name": "ZAIN"
-  },
-  {
-   "name": "RAAS",
-   "uid": "oJoeG2DBmBcntH1iFhM8MdYn3ox2"
+   "failsRequired": 1,
+   "teamSize": 4
   }
  ],
  "timeFinished": {

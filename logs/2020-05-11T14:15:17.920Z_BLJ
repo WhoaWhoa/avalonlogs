@@ -1,4 +1,83 @@
 {
+ "players": [
+  {
+   "name": "OLI",
+   "uid": "MFfQSbhOPSc6OqxtQnV9N5iblYW2"
+  },
+  {
+   "uid": "qyjkSlauYvM9g7xZgOh0i7BlNCi1",
+   "name": "PROWEI"
+  },
+  {
+   "uid": "A6JZLNa2xvYGg1fdPpFIhq8JB3x2",
+   "name": "HEXX"
+  },
+  {
+   "name": "RICHARD",
+   "uid": "wXo8AbRkEDSdaoBkQj51TR7ngH43"
+  },
+  {
+   "name": "LIEN",
+   "uid": "QxNU53vAIIW1zQoXzdgdoB5aS5J2"
+  }
+ ],
+ "outcome": {
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "PROWEI"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "HEXX"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "LIEN"
+   },
+   {
+    "name": "OLI",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "RICHARD",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "PROWEI": true,
+    "HEXX": true
+   },
+   {
+    "RICHARD": true,
+    "PROWEI": true,
+    "HEXX": true
+   },
+   {
+    "OLI": false,
+    "RICHARD": true
+   },
+   {
+    "PROWEI": true,
+    "HEXX": true,
+    "OLI": false
+   },
+   {
+    "HEXX": true,
+    "RICHARD": true,
+    "PROWEI": true
+   }
+  ],
+  "assassinated": "RICHARD",
+  "message": "Three successful missions"
+ },
  "timeFinished": {
   "_seconds": 1589207529,
   "_nanoseconds": 800000000
@@ -12,12 +91,11 @@
  },
  "missions": [
   {
+   "teamSize": 2,
    "team": [
     "PROWEI",
     "HEXX"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
@@ -28,19 +106,20 @@
       "RICHARD",
       "PROWEI"
      ],
-     "proposer": "HEXX",
      "team": [
       "PROWEI",
       "HEXX"
-     ]
+     ],
+     "proposer": "HEXX"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -57,27 +136,21 @@
      "proposer": "RICHARD"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "HEXX",
     "PROWEI",
     "RICHARD"
-   ]
+   ],
+   "numFails": 0
   },
   {
-   "team": [
-    "OLI",
-    "RICHARD"
-   ],
-   "numFails": 1,
-   "teamSize": 2,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "LIEN"
      ],
+     "state": "REJECTED",
      "proposer": "LIEN",
      "team": [
       "LIEN",
@@ -85,11 +158,11 @@
      ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "OLI",
       "RICHARD"
      ],
-     "state": "APPROVED",
      "votes": [
       "OLI",
       "PROWEI",
@@ -98,57 +171,63 @@
      "proposer": "OLI"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 2,
+   "state": "FAIL",
+   "team": [
+    "OLI",
+    "RICHARD"
+   ],
+   "numFails": 1,
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
    "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "OLI",
     "PROWEI",
     "HEXX"
    ],
-   "numFails": 1,
    "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
+     "proposer": "PROWEI",
+     "state": "REJECTED",
+     "votes": [
+      "PROWEI",
+      "LIEN"
+     ],
      "team": [
       "PROWEI",
       "LIEN",
       "OLI"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "PROWEI",
-      "LIEN"
-     ],
-     "proposer": "PROWEI"
+     ]
     },
     {
+     "votes": [
+      "HEXX",
+      "LIEN"
+     ],
+     "state": "REJECTED",
      "team": [
       "LIEN",
       "HEXX",
       "RICHARD"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "HEXX",
-      "LIEN"
-     ],
      "proposer": "HEXX"
     },
     {
+     "votes": [
+      "RICHARD",
+      "HEXX"
+     ],
      "team": [
       "PROWEI",
       "HEXX",
       "RICHARD"
      ],
      "state": "REJECTED",
-     "votes": [
-      "RICHARD",
-      "HEXX"
-     ],
      "proposer": "RICHARD"
     },
     {
@@ -170,17 +249,24 @@
       "PROWEI",
       "HEXX"
      ],
+     "proposer": "OLI",
      "state": "APPROVED",
      "votes": [
       "PROWEI",
       "LIEN",
       "OLI"
-     ],
-     "proposer": "OLI"
+     ]
     }
    ]
   },
   {
+   "team": [
+    "PROWEI",
+    "HEXX",
+    "RICHARD"
+   ],
+   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
@@ -189,102 +275,16 @@
       "HEXX",
       "RICHARD"
      ],
-     "proposer": "PROWEI",
      "team": [
       "PROWEI",
       "HEXX",
       "RICHARD"
-     ]
+     ],
+     "proposer": "PROWEI"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "PROWEI",
-    "HEXX",
-    "RICHARD"
-   ],
    "numFails": 0,
-   "teamSize": 3
-  }
- ],
- "outcome": {
-  "roles": [
-   {
-    "name": "PROWEI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "HEXX",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "LIEN",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "OLI",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "RICHARD",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "PROWEI": true,
-    "HEXX": true
-   },
-   {
-    "PROWEI": true,
-    "HEXX": true,
-    "RICHARD": true
-   },
-   {
-    "OLI": false,
-    "RICHARD": true
-   },
-   {
-    "PROWEI": true,
-    "HEXX": true,
-    "OLI": false
-   },
-   {
-    "RICHARD": true,
-    "PROWEI": true,
-    "HEXX": true
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "RICHARD"
- },
- "players": [
-  {
-   "name": "OLI",
-   "uid": "MFfQSbhOPSc6OqxtQnV9N5iblYW2"
-  },
-  {
-   "uid": "qyjkSlauYvM9g7xZgOh0i7BlNCi1",
-   "name": "PROWEI"
-  },
-  {
-   "name": "HEXX",
-   "uid": "A6JZLNa2xvYGg1fdPpFIhq8JB3x2"
-  },
-  {
-   "uid": "wXo8AbRkEDSdaoBkQj51TR7ngH43",
-   "name": "RICHARD"
-  },
-  {
-   "uid": "QxNU53vAIIW1zQoXzdgdoB5aS5J2",
-   "name": "LIEN"
+   "failsRequired": 1
   }
  ]
 }

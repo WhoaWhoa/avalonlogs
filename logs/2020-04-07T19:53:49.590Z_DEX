@@ -1,21 +1,53 @@
 {
+ "timeFinished": {
+  "_seconds": 1586290546,
+  "_nanoseconds": 409393000
+ },
  "outcome": {
+  "votes": [
+   {
+    "GEORGEWALK": true,
+    "ALEX": true
+   },
+   {
+    "JALLEN": true,
+    "GEORGEWALK": true,
+    "ALEX": true
+   },
+   {
+    "GEORGEWALK": true,
+    "IZZY": true,
+    "ALEX": false
+   },
+   {
+    "JALLEN": true,
+    "GEORGEWALK": true,
+    "ANGEROO": false,
+    "ALEX": false
+   },
+   {
+    "IZZY": true,
+    "BENNO": true,
+    "JALLEN": true,
+    "GEORGEWALK": true
+   }
+  ],
   "state": "EVIL_WIN",
-  "assassinated": "BENNO",
+  "message": "Merlin assassinated",
   "roles": [
    {
-    "name": "BENNO",
     "assassin": false,
+    "name": "BENNO",
     "role": "MERLIN"
    },
    {
+    "role": "EVIL MINION",
     "name": "ANGEROO",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "assassin": true
    },
    {
-    "name": "IZZY",
     "assassin": false,
+    "name": "IZZY",
     "role": "LOYAL FOLLOWER"
    },
    {
@@ -24,14 +56,14 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "ALEX",
     "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "ALEX"
    },
    {
-    "name": "RHIBARB",
     "assassin": false,
-    "role": "OBERON"
+    "role": "OBERON",
+    "name": "RHIBARB"
    },
    {
     "name": "GEORGEWALK",
@@ -39,39 +71,7 @@
     "role": "LOYAL FOLLOWER"
    }
   ],
-  "votes": [
-   {
-    "GEORGEWALK": true,
-    "ALEX": true
-   },
-   {
-    "GEORGEWALK": true,
-    "ALEX": true,
-    "JALLEN": true
-   },
-   {
-    "IZZY": true,
-    "GEORGEWALK": true,
-    "ALEX": false
-   },
-   {
-    "JALLEN": true,
-    "GEORGEWALK": true,
-    "ALEX": false,
-    "ANGEROO": false
-   },
-   {
-    "JALLEN": true,
-    "BENNO": true,
-    "GEORGEWALK": true,
-    "IZZY": true
-   }
-  ],
-  "message": "Merlin assassinated"
- },
- "timeFinished": {
-  "_seconds": 1586290546,
-  "_nanoseconds": 409393000
+  "assassinated": "BENNO"
  },
  "players": [
   {
@@ -79,12 +79,12 @@
    "uid": "eM9Ltl7b52O1f1oH4iegamCVSoE2"
   },
   {
-   "name": "IZZY",
-   "uid": "InTfyaKQ0uYhDlmCtROic0Gh0c02"
+   "uid": "InTfyaKQ0uYhDlmCtROic0Gh0c02",
+   "name": "IZZY"
   },
   {
-   "uid": "rtvrnDmT1lMNdSICJKOcT0Lyx7g1",
-   "name": "ALEX"
+   "name": "ALEX",
+   "uid": "rtvrnDmT1lMNdSICJKOcT0Lyx7g1"
   },
   {
    "uid": "FG7SOZPzquhQibHoe1DBt1uFtJg1",
@@ -109,33 +109,34 @@
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS",
    "team": [
     "ALEX",
     "GEORGEWALK"
    ],
-   "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "BENNO",
+      "GEORGEWALK"
+     ],
+     "state": "REJECTED",
+     "proposer": "BENNO",
      "votes": [
       "JALLEN",
       "BENNO",
       "IZZY"
-     ],
-     "proposer": "BENNO",
-     "team": [
-      "BENNO",
-      "GEORGEWALK"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "ALEX",
       "GEORGEWALK"
      ],
-     "state": "APPROVED",
      "votes": [
       "IZZY",
       "JALLEN",
@@ -144,73 +145,74 @@
      ],
      "proposer": "GEORGEWALK"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "IZZY",
-     "team": [
-      "IZZY",
-      "GEORGEWALK",
-      "RHIBARB"
-     ],
-     "state": "REJECTED",
      "votes": [
       "RHIBARB",
       "BENNO",
       "JALLEN"
+     ],
+     "proposer": "IZZY",
+     "state": "REJECTED",
+     "team": [
+      "IZZY",
+      "GEORGEWALK",
+      "RHIBARB"
      ]
     },
     {
-     "state": "APPROVED",
+     "proposer": "ALEX",
+     "team": [
+      "GEORGEWALK",
+      "ALEX",
+      "JALLEN"
+     ],
      "votes": [
       "IZZY",
       "JALLEN",
       "ALEX",
       "RHIBARB"
      ],
-     "proposer": "ALEX",
-     "team": [
-      "GEORGEWALK",
-      "ALEX",
-      "JALLEN"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "GEORGEWALK",
     "ALEX",
     "JALLEN"
    ],
    "numFails": 0,
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
+   "team": [
+    "ALEX",
+    "GEORGEWALK",
+    "IZZY"
+   ],
+   "state": "FAIL",
+   "teamSize": 3,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "ANGEROO",
       "RHIBARB",
       "GEORGEWALK"
      ],
-     "state": "REJECTED",
+     "proposer": "ANGEROO",
      "votes": [
       "BENNO",
       "ANGEROO",
       "RHIBARB"
-     ],
-     "proposer": "ANGEROO"
+     ]
     },
     {
-     "team": [
-      "ALEX",
-      "GEORGEWALK",
-      "IZZY"
-     ],
      "state": "APPROVED",
      "votes": [
       "IZZY",
@@ -220,22 +222,31 @@
       "GEORGEWALK",
       "BENNO"
      ],
+     "team": [
+      "ALEX",
+      "GEORGEWALK",
+      "IZZY"
+     ],
      "proposer": "RHIBARB"
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "ALEX",
-    "GEORGEWALK",
-    "IZZY"
-   ],
-   "numFails": 1,
-   "teamSize": 3
+   "numFails": 1
   },
   {
+   "state": "FAIL",
+   "teamSize": 4,
+   "team": [
+    "JALLEN",
+    "ALEX",
+    "GEORGEWALK",
+    "ANGEROO"
+   ],
+   "numFails": 2,
+   "failsRequired": 2,
    "proposals": [
     {
+     "proposer": "JALLEN",
      "votes": [
       "ANGEROO",
       "JALLEN",
@@ -243,7 +254,6 @@
       "RHIBARB",
       "GEORGEWALK"
      ],
-     "proposer": "JALLEN",
      "team": [
       "JALLEN",
       "ALEX",
@@ -252,38 +262,29 @@
      ],
      "state": "APPROVED"
     }
-   ],
-   "failsRequired": 2,
-   "state": "FAIL",
-   "team": [
-    "JALLEN",
-    "ALEX",
-    "GEORGEWALK",
-    "ANGEROO"
-   ],
-   "numFails": 2,
-   "teamSize": 4
+   ]
   },
   {
+   "teamSize": 4,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
-     "votes": [
-      "JALLEN",
-      "RHIBARB",
-      "GEORGEWALK",
-      "BENNO"
-     ],
      "proposer": "BENNO",
      "team": [
       "GEORGEWALK",
       "JALLEN",
       "BENNO",
       "IZZY"
-     ]
+     ],
+     "votes": [
+      "JALLEN",
+      "RHIBARB",
+      "GEORGEWALK",
+      "BENNO"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "GEORGEWALK",
@@ -291,8 +292,7 @@
     "BENNO",
     "IZZY"
    ],
-   "numFails": 0,
-   "teamSize": 4
+   "failsRequired": 1
   }
  ]
 }

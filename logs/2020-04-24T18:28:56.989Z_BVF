@@ -1,72 +1,15 @@
 {
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "ASH",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "LARS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "JACK"
-   },
-   {
-    "name": "JAMES",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SCOTT"
-   },
-   {
-    "name": "JACOB",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "MOOMIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "JAMES": false,
-    "LARS": true
-   },
-   {
-    "JACK": true,
-    "JACOB": true,
-    "MOOMIN": true
-   },
-   {
-    "JACK": true,
-    "JACOB": false,
-    "MOOMIN": true
-   },
-   {
-    "JACK": true,
-    "SCOTT": true,
-    "MOOMIN": true,
-    "LARS": true
-   }
-  ],
-  "message": "Five team proposals in a row rejected"
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1587754179,
+  "_nanoseconds": 256000000
  },
  "players": [
   {
-   "uid": "JwaYxzA0rtRzzrOdAXjJaxOEdGf1",
-   "name": "JACOB"
+   "name": "JACOB",
+   "uid": "JwaYxzA0rtRzzrOdAXjJaxOEdGf1"
   },
   {
    "uid": "sdmkmI5kJib8ddqI6k49z3h6knq2",
@@ -85,20 +28,77 @@
    "uid": "U47wD6a8iifY8tspoqG57eyhg5N2"
   },
   {
-   "uid": "expBDVV9ZYgQEIYolY5lsZys19X2",
-   "name": "SCOTT"
+   "name": "SCOTT",
+   "uid": "expBDVV9ZYgQEIYolY5lsZys19X2"
   },
   {
-   "name": "ASH",
-   "uid": "5H6oxE3V49QTlnvsFruYeA3xpER2"
+   "uid": "5H6oxE3V49QTlnvsFruYeA3xpER2",
+   "name": "ASH"
   }
  ],
- "timeFinished": {
-  "_seconds": 1587754179,
-  "_nanoseconds": 256000000
- },
- "options": {
-  "inGameLog": false
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "LARS": true,
+    "JAMES": false
+   },
+   {
+    "MOOMIN": true,
+    "JACK": true,
+    "JACOB": true
+   },
+   {
+    "MOOMIN": true,
+    "JACK": true,
+    "JACOB": false
+   },
+   {
+    "SCOTT": true,
+    "JACK": true,
+    "LARS": true,
+    "MOOMIN": true
+   }
+  ],
+  "assassinated": null,
+  "message": "Five team proposals in a row rejected",
+  "roles": [
+   {
+    "name": "ASH",
+    "role": "OBERON",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "LARS",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "JACK",
+    "role": "MERLIN"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "JAMES"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "SCOTT",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "assassin": false,
+    "name": "JACOB"
+   },
+   {
+    "name": "MOOMIN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ]
  },
  "timeCreated": {
   "_seconds": 1587752936,
@@ -106,6 +106,7 @@
  },
  "missions": [
   {
+   "state": "FAIL",
    "team": [
     "LARS",
     "JAMES"
@@ -114,10 +115,7 @@
    "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "LARS",
-      "JAMES"
-     ],
+     "proposer": "SCOTT",
      "state": "APPROVED",
      "votes": [
       "ASH",
@@ -127,13 +125,21 @@
       "SCOTT",
       "JACOB"
      ],
-     "proposer": "SCOTT"
+     "team": [
+      "LARS",
+      "JAMES"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
+   "team": [
+    "JACOB",
+    "MOOMIN",
+    "JACK"
+   ],
+   "numFails": 0,
    "proposals": [
     {
      "state": "REJECTED",
@@ -142,15 +148,20 @@
       "LARS",
       "JACK"
      ],
-     "proposer": "ASH",
      "team": [
       "LARS",
       "SCOTT",
       "MOOMIN"
-     ]
+     ],
+     "proposer": "ASH"
     },
     {
-     "state": "APPROVED",
+     "proposer": "JACOB",
+     "team": [
+      "JACOB",
+      "MOOMIN",
+      "JACK"
+     ],
      "votes": [
       "JACOB",
       "MOOMIN",
@@ -158,33 +169,15 @@
       "JACK",
       "JAMES"
      ],
-     "proposer": "JACOB",
-     "team": [
-      "JACOB",
-      "MOOMIN",
-      "JACK"
-     ]
+     "state": "APPROVED"
     }
    ],
+   "teamSize": 3,
    "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "JACOB",
-    "MOOMIN",
-    "JACK"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   "state": "SUCCESS"
   },
   {
-   "state": "FAIL",
-   "team": [
-    "JACOB",
-    "JACK",
-    "MOOMIN"
-   ],
    "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -205,34 +198,32 @@
      "proposer": "JAMES"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "JACOB",
+    "JACK",
+    "MOOMIN"
+   ]
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "MOOMIN",
-    "JACK",
-    "SCOTT",
-    "LARS"
-   ],
-   "numFails": 0,
-   "teamSize": 4,
+   "failsRequired": 2,
    "proposals": [
     {
-     "votes": [
-      "ASH"
-     ],
-     "proposer": "MOOMIN",
+     "state": "REJECTED",
      "team": [
       "MOOMIN",
       "JACK",
       "LARS",
       "ASH"
      ],
-     "state": "REJECTED"
+     "proposer": "MOOMIN",
+     "votes": [
+      "ASH"
+     ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "SCOTT",
       "JACOB",
@@ -241,6 +232,7 @@
       "JAMES"
      ],
      "proposer": "JACK",
+     "state": "APPROVED",
      "team": [
       "MOOMIN",
       "JACK",
@@ -249,10 +241,18 @@
      ]
     }
    ],
-   "failsRequired": 2
+   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 4,
+   "team": [
+    "MOOMIN",
+    "JACK",
+    "SCOTT",
+    "LARS"
+   ]
   },
   {
-   "teamSize": 4,
+   "team": [],
    "state": "PENDING",
    "proposals": [
     {
@@ -261,72 +261,72 @@
       "LARS",
       "JACK"
      ],
+     "state": "REJECTED",
      "proposer": "LARS",
      "team": [
       "LARS",
       "JACK",
       "MOOMIN",
       "SCOTT"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "JACOB"
-     ],
      "proposer": "SCOTT",
+     "state": "REJECTED",
      "team": [
       "SCOTT",
       "LARS",
       "JACK",
       "JACOB"
+     ],
+     "votes": [
+      "JACOB"
      ]
     },
     {
+     "state": "REJECTED",
      "proposer": "ASH",
+     "votes": [
+      "ASH"
+     ],
      "team": [
       "ASH",
       "LARS",
       "JAMES",
       "JACOB"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "ASH"
      ]
     },
     {
+     "votes": [
+      "JACOB"
+     ],
      "proposer": "JACOB",
+     "state": "REJECTED",
      "team": [
       "JACOB",
       "LARS",
       "JACK",
       "SCOTT"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "JACOB"
      ]
     },
     {
+     "proposer": "JAMES",
+     "state": "REJECTED",
      "votes": [
       "ASH",
       "JAMES",
       "JACOB"
      ],
-     "proposer": "JAMES",
      "team": [
       "JAMES",
       "JACOB",
       "JACK",
       "MOOMIN"
-     ],
-     "state": "REJECTED"
+     ]
     }
    ],
    "failsRequired": 1,
-   "team": []
+   "teamSize": 4
   }
  ]
 }

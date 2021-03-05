@@ -1,30 +1,54 @@
 {
+ "players": [
+  {
+   "uid": "IHph4KHYXxTGmYJ7NEk7QJHHoQP2",
+   "name": "TONY"
+  },
+  {
+   "uid": "v2F8yjcOKRS9ppo6HUxvCN261Us1",
+   "name": "JUSTIN"
+  },
+  {
+   "name": "BIPRA",
+   "uid": "cAtuz4hGU4TSzYuCEMMaAgpwO9Z2"
+  },
+  {
+   "name": "JANAK",
+   "uid": "gziAjSXkCGa9u7fEdfPmEnjMMDH3"
+  },
+  {
+   "name": "PDOSS",
+   "uid": "LMEQDIrpp4fOig3tHqkhnb9VJ1T2"
+  },
+  {
+   "name": "SHIKHOR",
+   "uid": "V5rZtOEvJYXnYMeAMGGG89eKNMb2"
+  }
+ ],
  "outcome": {
   "votes": [
    {
+    "SHIKHOR": true,
+    "PDOSS": true
+   },
+   {
+    "SHIKHOR": false,
     "PDOSS": true,
-    "SHIKHOR": true
+    "TONY": true
    },
    {
     "PDOSS": true,
-    "TONY": true,
-    "SHIKHOR": false
-   },
-   {
     "JUSTIN": true,
-    "PDOSS": true,
     "SHIKHOR": false,
     "BIPRA": true
    },
    {
     "JANAK": false,
-    "PDOSS": true,
-    "BIPRA": true
+    "BIPRA": true,
+    "PDOSS": true
    }
   ],
   "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
   "roles": [
    {
     "name": "SHIKHOR",
@@ -32,61 +56,33 @@
     "role": "MORDRED"
    },
    {
-    "name": "JANAK",
+    "role": "MORGANA",
     "assassin": false,
-    "role": "MORGANA"
+    "name": "JANAK"
    },
    {
-    "assassin": false,
+    "name": "PDOSS",
     "role": "LOYAL FOLLOWER",
-    "name": "PDOSS"
+    "assassin": false
    },
    {
-    "name": "JUSTIN",
     "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "name": "JUSTIN"
    },
    {
+    "assassin": false,
     "name": "BIPRA",
-    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
     "name": "TONY",
-    "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "assassin": false
    }
-  ]
- },
- "players": [
-  {
-   "name": "TONY",
-   "uid": "IHph4KHYXxTGmYJ7NEk7QJHHoQP2"
-  },
-  {
-   "name": "JUSTIN",
-   "uid": "v2F8yjcOKRS9ppo6HUxvCN261Us1"
-  },
-  {
-   "name": "BIPRA",
-   "uid": "cAtuz4hGU4TSzYuCEMMaAgpwO9Z2"
-  },
-  {
-   "uid": "gziAjSXkCGa9u7fEdfPmEnjMMDH3",
-   "name": "JANAK"
-  },
-  {
-   "uid": "LMEQDIrpp4fOig3tHqkhnb9VJ1T2",
-   "name": "PDOSS"
-  },
-  {
-   "name": "SHIKHOR",
-   "uid": "V5rZtOEvJYXnYMeAMGGG89eKNMb2"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1587933823,
-  "_nanoseconds": 649000000
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null
  },
  "options": {
   "inGameLog": false
@@ -97,18 +93,11 @@
  },
  "missions": [
   {
-   "team": [
-    "PDOSS",
-    "SHIKHOR"
-   ],
-   "numFails": 0,
    "teamSize": 2,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "PDOSS",
-      "SHIKHOR"
-     ],
      "state": "APPROVED",
      "votes": [
       "SHIKHOR",
@@ -118,13 +107,23 @@
       "BIPRA",
       "TONY"
      ],
-     "proposer": "PDOSS"
+     "proposer": "PDOSS",
+     "team": [
+      "PDOSS",
+      "SHIKHOR"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "PDOSS",
+    "SHIKHOR"
+   ],
+   "numFails": 0
   },
   {
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "votes": [
@@ -135,35 +134,41 @@
       "BIPRA",
       "TONY"
      ],
-     "proposer": "SHIKHOR",
      "team": [
       "PDOSS",
       "SHIKHOR",
       "TONY"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "SHIKHOR"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "PDOSS",
     "SHIKHOR",
     "TONY"
    ],
-   "numFails": 1,
-   "teamSize": 3
+   "numFails": 1
   },
   {
+   "team": [
+    "JUSTIN",
+    "PDOSS",
+    "SHIKHOR",
+    "BIPRA"
+   ],
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "BIPRA",
       "TONY",
       "PDOSS",
       "JANAK"
      ],
-     "state": "REJECTED",
      "votes": [
       "JANAK",
       "BIPRA",
@@ -172,51 +177,39 @@
      "proposer": "TONY"
     },
     {
+     "team": [
+      "JUSTIN",
+      "PDOSS",
+      "SHIKHOR",
+      "BIPRA"
+     ],
+     "proposer": "JUSTIN",
+     "state": "APPROVED",
      "votes": [
       "SHIKHOR",
       "JANAK",
       "PDOSS",
       "JUSTIN",
       "BIPRA"
-     ],
-     "proposer": "JUSTIN",
-     "team": [
-      "JUSTIN",
-      "PDOSS",
-      "SHIKHOR",
-      "BIPRA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "JUSTIN",
-    "PDOSS",
-    "SHIKHOR",
-    "BIPRA"
-   ],
-   "numFails": 1,
    "teamSize": 4
   },
   {
-   "state": "FAIL",
    "team": [
     "BIPRA",
     "JANAK",
     "PDOSS"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "BIPRA",
       "JANAK",
       "PDOSS"
      ],
-     "state": "APPROVED",
      "votes": [
       "SHIKHOR",
       "JANAK",
@@ -227,14 +220,21 @@
      "proposer": "BIPRA"
     }
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "proposals": [],
    "failsRequired": 1,
-   "team": [],
+   "proposals": [],
    "teamSize": 4,
+   "team": [],
    "state": "PENDING"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1587933823,
+  "_nanoseconds": 649000000
+ }
 }

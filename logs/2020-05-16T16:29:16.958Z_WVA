@@ -3,18 +3,119 @@
   "_seconds": 1589646556,
   "_nanoseconds": 958000000
  },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "SY",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "role": "MERLIN",
+    "name": "EVE",
+    "assassin": false
+   },
+   {
+    "name": "BRYAN",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "role": "OBERON",
+    "name": "YH",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "BAOREN"
+   },
+   {
+    "assassin": false,
+    "name": "MARCUS",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "DRANREB",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "XAVIER",
+    "assassin": false
+   }
+  ],
+  "assassinated": null,
+  "votes": [
+   {
+    "BRYAN": true,
+    "MARCUS": true,
+    "SY": false
+   },
+   {
+    "EVE": true,
+    "XAVIER": true,
+    "BRYAN": true,
+    "DRANREB": false
+   },
+   {
+    "YH": false,
+    "XAVIER": true,
+    "DRANREB": false,
+    "BAOREN": true
+   }
+  ]
+ },
+ "players": [
+  {
+   "name": "BAOREN",
+   "uid": "P6eMzKxVqARhF8xmgb1SPfLMtaw1"
+  },
+  {
+   "uid": "cBIBuU49xQd3ZUnY9gF9nnd3tnM2",
+   "name": "EVE"
+  },
+  {
+   "name": "YH",
+   "uid": "RjlNEwHaJxSqjeuVrVAaqXJdWRa2"
+  },
+  {
+   "uid": "nihkxcef2tQLCVpxyy4lTHPUYdA3",
+   "name": "SY"
+  },
+  {
+   "uid": "gcKCx5DcMNctrCDFOCjNdLK9cUl1",
+   "name": "MARCUS"
+  },
+  {
+   "uid": "ApLexr3LFBXDVTeMpIUAteS8Vr93",
+   "name": "BRYAN"
+  },
+  {
+   "name": "DRANREB",
+   "uid": "EcgiqwCU9tWjLA0TVu8duTedWay1"
+  },
+  {
+   "name": "XAVIER",
+   "uid": "gkK3jkbWSTT6dgmoJF894uthXNz1"
+  }
+ ],
  "missions": [
   {
+   "numFails": 1,
    "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "SY",
     "MARCUS",
     "BRYAN"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "SY",
      "votes": [
       "SY",
       "EVE",
@@ -23,16 +124,15 @@
       "BAOREN",
       "MARCUS"
      ],
-     "proposer": "SY",
+     "state": "APPROVED",
      "team": [
       "SY",
       "MARCUS",
       "BRYAN"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3
   },
   {
    "team": [
@@ -41,10 +141,15 @@
     "XAVIER",
     "EVE"
    ],
-   "numFails": 1,
-   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
+     "team": [
+      "MARCUS",
+      "BRYAN",
+      "DRANREB",
+      "XAVIER"
+     ],
      "votes": [
       "BRYAN",
       "YH",
@@ -52,22 +157,16 @@
       "MARCUS"
      ],
      "proposer": "MARCUS",
-     "team": [
-      "MARCUS",
-      "BRYAN",
-      "DRANREB",
-      "XAVIER"
-     ],
      "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "team": [
       "BRYAN",
       "DRANREB",
       "XAVIER",
       "EVE"
      ],
-     "state": "APPROVED",
      "votes": [
       "BAOREN",
       "MARCUS",
@@ -79,43 +178,30 @@
      "proposer": "BRYAN"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1,
+   "teamSize": 4,
+   "failsRequired": 1
   },
   {
-   "team": [
-    "YH",
-    "XAVIER",
-    "DRANREB",
-    "BAOREN"
-   ],
-   "numFails": 2,
    "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "BAOREN",
-      "MARCUS",
-      "DRANREB",
-      "YH"
-     ],
-     "proposer": "DRANREB",
      "team": [
       "DRANREB",
       "BAOREN",
       "EVE",
       "YH"
      ],
-     "state": "REJECTED"
+     "proposer": "DRANREB",
+     "state": "REJECTED",
+     "votes": [
+      "BAOREN",
+      "MARCUS",
+      "DRANREB",
+      "YH"
+     ]
     },
     {
-     "proposer": "XAVIER",
-     "team": [
-      "YH",
-      "XAVIER",
-      "DRANREB",
-      "BAOREN"
-     ],
      "state": "APPROVED",
      "votes": [
       "YH",
@@ -123,125 +209,39 @@
       "DRANREB",
       "XAVIER",
       "SY"
-     ]
+     ],
+     "team": [
+      "YH",
+      "XAVIER",
+      "DRANREB",
+      "BAOREN"
+     ],
+     "proposer": "XAVIER"
     }
    ],
+   "state": "FAIL",
+   "numFails": 2,
    "failsRequired": 1,
-   "state": "FAIL"
-  },
-  {
-   "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 2,
-   "team": [],
-   "teamSize": 5
+   "team": [
+    "YH",
+    "XAVIER",
+    "DRANREB",
+    "BAOREN"
+   ]
   },
   {
    "team": [],
    "teamSize": 5,
-   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
-  }
- ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "SY",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "name": "EVE",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "BRYAN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "OBERON",
-    "name": "YH"
-   },
-   {
-    "name": "BAOREN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MARCUS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "DRANREB",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "XAVIER",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "MARCUS": true,
-    "SY": false,
-    "BRYAN": true
-   },
-   {
-    "BRYAN": true,
-    "EVE": true,
-    "XAVIER": true,
-    "DRANREB": false
-   },
-   {
-    "BAOREN": true,
-    "YH": false,
-    "XAVIER": true,
-    "DRANREB": false
-   }
-  ]
- },
- "players": [
-  {
-   "name": "BAOREN",
-   "uid": "P6eMzKxVqARhF8xmgb1SPfLMtaw1"
+   "state": "PENDING",
+   "failsRequired": 2
   },
   {
-   "name": "EVE",
-   "uid": "cBIBuU49xQd3ZUnY9gF9nnd3tnM2"
-  },
-  {
-   "uid": "RjlNEwHaJxSqjeuVrVAaqXJdWRa2",
-   "name": "YH"
-  },
-  {
-   "name": "SY",
-   "uid": "nihkxcef2tQLCVpxyy4lTHPUYdA3"
-  },
-  {
-   "name": "MARCUS",
-   "uid": "gcKCx5DcMNctrCDFOCjNdLK9cUl1"
-  },
-  {
-   "name": "BRYAN",
-   "uid": "ApLexr3LFBXDVTeMpIUAteS8Vr93"
-  },
-  {
-   "name": "DRANREB",
-   "uid": "EcgiqwCU9tWjLA0TVu8duTedWay1"
-  },
-  {
-   "uid": "gkK3jkbWSTT6dgmoJF894uthXNz1",
-   "name": "XAVIER"
+   "proposals": [],
+   "teamSize": 5,
+   "failsRequired": 1,
+   "state": "PENDING",
+   "team": []
   }
  ],
  "timeFinished": {

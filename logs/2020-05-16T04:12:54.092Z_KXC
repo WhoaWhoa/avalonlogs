@@ -1,24 +1,29 @@
 {
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1589602374,
   "_nanoseconds": 92000000
  },
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3,
    "state": "FAIL",
    "team": [
     "SUE",
     "NELSON",
     "XIANG"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "SUE",
+      "NELSON",
+      "XIANG"
+     ],
      "votes": [
       "HOWARD",
       "XIANG",
@@ -30,35 +35,17 @@
       "ROU",
       "NELSON"
      ],
-     "proposer": "ROU",
-     "team": [
-      "SUE",
-      "NELSON",
-      "XIANG"
-     ]
+     "state": "APPROVED",
+     "proposer": "ROU"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "team": [
-    "FENG",
-    "SUE",
-    "HP",
-    "NELSON"
-   ],
    "numFails": 0,
    "teamSize": 4,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "XIANG",
-     "team": [
-      "FENG",
-      "SUE",
-      "HP",
-      "NELSON"
-     ],
-     "state": "APPROVED",
      "votes": [
       "HP",
       "ROU",
@@ -69,21 +56,26 @@
       "SUSAN",
       "TSUENG",
       "SUE"
-     ]
+     ],
+     "team": [
+      "FENG",
+      "SUE",
+      "HP",
+      "NELSON"
+     ],
+     "state": "APPROVED",
+     "proposer": "XIANG"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "FENG",
+    "SUE",
+    "HP",
+    "NELSON"
+   ]
   },
   {
-   "team": [
-    "NELSON",
-    "HP",
-    "FENG",
-    "XIANG"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -92,6 +84,7 @@
       "FENG",
       "XIANG"
      ],
+     "proposer": "TSUENG",
      "state": "APPROVED",
      "votes": [
       "HOWARD",
@@ -100,33 +93,24 @@
       "TSUENG",
       "SUE",
       "ROU"
-     ],
-     "proposer": "TSUENG"
+     ]
     }
    ],
+   "state": "FAIL",
+   "team": [
+    "NELSON",
+    "HP",
+    "FENG",
+    "XIANG"
+   ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 4,
+   "numFails": 1
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "FENG",
-    "HP",
-    "NELSON",
-    "SUSAN",
-    "SUE"
-   ],
-   "numFails": 0,
-   "teamSize": 5,
    "proposals": [
     {
-     "team": [
-      "FENG",
-      "HP",
-      "NELSON",
-      "SUSAN",
-      "SUE"
-     ],
      "state": "APPROVED",
      "votes": [
       "TSUENG",
@@ -140,12 +124,29 @@
       "CHERRY",
       "SUSAN"
      ],
-     "proposer": "FENG"
+     "proposer": "FENG",
+     "team": [
+      "FENG",
+      "HP",
+      "NELSON",
+      "SUSAN",
+      "SUE"
+     ]
     }
    ],
-   "failsRequired": 2
+   "team": [
+    "FENG",
+    "HP",
+    "NELSON",
+    "SUSAN",
+    "SUE"
+   ],
+   "numFails": 0,
+   "failsRequired": 2,
+   "teamSize": 5
   },
   {
+   "numFails": 0,
    "state": "SUCCESS",
    "team": [
     "HP",
@@ -154,8 +155,7 @@
     "NELSON",
     "FENG"
    ],
-   "numFails": 0,
-   "teamSize": 5,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -178,10 +178,12 @@
      "proposer": "SUE"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 5
   }
  ],
  "outcome": {
+  "message": "Merlin assassinated",
+  "assassinated": "FENG",
   "votes": [
    {
     "NELSON": true,
@@ -189,60 +191,58 @@
     "XIANG": false
    },
    {
+    "HP": true,
+    "NELSON": true,
+    "FENG": true,
+    "SUE": true
+   },
+   {
+    "NELSON": true,
+    "HP": true,
+    "FENG": true,
+    "XIANG": false
+   },
+   {
+    "SUE": true,
+    "FENG": true,
+    "NELSON": true,
+    "HP": true,
+    "SUSAN": true
+   },
+   {
     "NELSON": true,
     "SUE": true,
-    "HP": true,
-    "FENG": true
-   },
-   {
-    "XIANG": false,
-    "HP": true,
-    "FENG": true,
-    "NELSON": true
-   },
-   {
-    "SUE": true,
-    "HP": true,
     "FENG": true,
     "SUSAN": true,
-    "NELSON": true
-   },
-   {
-    "FENG": true,
-    "SUSAN": true,
-    "NELSON": true,
-    "SUE": true,
     "HP": true
    }
   ],
-  "message": "Merlin assassinated",
   "state": "EVIL_WIN",
-  "assassinated": "FENG",
   "roles": [
    {
-    "name": "ROU",
     "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "ROU"
    },
    {
     "name": "NELSON",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
+    "role": "MERLIN",
     "name": "FENG",
-    "assassin": false,
-    "role": "MERLIN"
+    "assassin": false
    },
    {
-    "name": "HOWARD",
     "assassin": false,
+    "name": "HOWARD",
     "role": "MORDRED"
    },
    {
-    "name": "XIANG",
     "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "XIANG"
    },
    {
     "name": "CHERRY",
@@ -261,20 +261,20 @@
    },
    {
     "name": "SUE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
-    "name": "HP",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "HP"
    }
   ]
  },
  "players": [
   {
-   "uid": "qjDeDxtpggSF9WWbIBj8hkrx8Oe2",
-   "name": "HP"
+   "name": "HP",
+   "uid": "qjDeDxtpggSF9WWbIBj8hkrx8Oe2"
   },
   {
    "uid": "R4fmZj79uDNSNHMlUvXLOlhN1x82",
@@ -285,8 +285,8 @@
    "name": "ROU"
   },
   {
-   "uid": "Bk5EH82zTOZV3ZvsqhTGTgty2jJ3",
-   "name": "XIANG"
+   "name": "XIANG",
+   "uid": "Bk5EH82zTOZV3ZvsqhTGTgty2jJ3"
   },
   {
    "uid": "3BlA7BaJOydU9LsNuqSVlAJAKYK2",
@@ -297,12 +297,12 @@
    "name": "FENG"
   },
   {
-   "uid": "G8PLzjApNAfOmzMel7adT9xmViw1",
-   "name": "SUE"
+   "name": "SUE",
+   "uid": "G8PLzjApNAfOmzMel7adT9xmViw1"
   },
   {
-   "uid": "CLZ73hWlzJUvwZMxmX40QFFBUZ93",
-   "name": "HOWARD"
+   "name": "HOWARD",
+   "uid": "CLZ73hWlzJUvwZMxmX40QFFBUZ93"
   },
   {
    "uid": "OgHLk6FrW2TMiSaFmKoneBcSUh92",

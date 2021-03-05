@@ -1,4 +1,78 @@
 {
+ "outcome": {
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "BCP",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "LAUREN",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "CHRISP",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "CHRIS",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "FREYA",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "name": "CAITLIN",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "name": "GEE",
+    "assassin": false,
+    "role": "PERCIVAL"
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "BCP": true,
+    "GEE": true
+   },
+   {
+    "CAITLIN": true,
+    "FREYA": false,
+    "GEE": true
+   },
+   {
+    "CAITLIN": true,
+    "CHRIS": false,
+    "BCP": true
+   },
+   {
+    "CAITLIN": true,
+    "BCP": true,
+    "GEE": true,
+    "LAUREN": true
+   },
+   {
+    "BCP": true,
+    "FREYA": false,
+    "GEE": true,
+    "LAUREN": true
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1587152047,
+  "_nanoseconds": 206000000
+ },
  "players": [
   {
    "name": "CHRIS",
@@ -13,8 +87,8 @@
    "name": "CHRISP"
   },
   {
-   "uid": "YagLhfqjiqUcYj865sgJQn63QTI2",
-   "name": "GEE"
+   "name": "GEE",
+   "uid": "YagLhfqjiqUcYj865sgJQn63QTI2"
   },
   {
    "uid": "QX3gT2JuGTSZimADImdKn0ISNS13",
@@ -25,20 +99,12 @@
    "name": "CAITLIN"
   },
   {
-   "uid": "yTwrkcmWEIQLMSV5dzFWvYqGEjW2",
-   "name": "FREYA"
+   "name": "FREYA",
+   "uid": "yTwrkcmWEIQLMSV5dzFWvYqGEjW2"
   }
  ],
- "timeFinished": {
-  "_seconds": 1587152845,
-  "_nanoseconds": 28000000
- },
  "options": {
   "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587152047,
-  "_nanoseconds": 206000000
  },
  "missions": [
   {
@@ -47,35 +113,34 @@
     "BCP",
     "GEE"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "BCP",
-      "GEE"
-     ],
-     "state": "APPROVED",
+     "proposer": "BCP",
      "votes": [
       "CAITLIN",
       "GEE",
       "BCP",
       "LAUREN"
      ],
-     "proposer": "BCP"
+     "team": [
+      "BCP",
+      "GEE"
+     ],
+     "state": "APPROVED"
     }
    ],
+   "numFails": 0,
+   "teamSize": 2,
    "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "CAITLIN",
     "GEE",
     "FREYA"
    ],
-   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "teamSize": 3,
    "proposals": [
     {
@@ -86,44 +151,39 @@
       "GEE",
       "CHRISP"
      ],
-     "proposer": "CHRISP",
      "team": [
       "CAITLIN",
       "GEE",
       "FREYA"
-     ]
+     ],
+     "proposer": "CHRISP"
     }
-   ]
+   ],
+   "numFails": 1
   },
   {
-   "team": [
-    "CAITLIN",
-    "BCP",
-    "CHRIS"
-   ],
-   "numFails": 1,
    "teamSize": 3,
    "proposals": [
     {
-     "proposer": "GEE",
      "team": [
       "GEE",
       "CHRISP",
       "CAITLIN"
      ],
-     "state": "REJECTED",
      "votes": [
       "GEE"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "GEE"
     },
     {
-     "proposer": "LAUREN",
+     "state": "REJECTED",
      "team": [
       "LAUREN",
       "BCP",
       "CAITLIN"
      ],
-     "state": "REJECTED",
+     "proposer": "LAUREN",
      "votes": [
       "BCP",
       "LAUREN",
@@ -131,12 +191,12 @@
      ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "CAITLIN",
       "BCP",
       "CHRIS"
      ],
-     "state": "APPROVED",
      "votes": [
       "CHRISP",
       "CHRIS",
@@ -146,20 +206,23 @@
      "proposer": "CAITLIN"
     }
    ],
+   "numFails": 1,
    "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "team": [
+    "CAITLIN",
+    "BCP",
+    "CHRIS"
+   ]
   },
   {
    "failsRequired": 2,
-   "state": "SUCCESS",
    "team": [
     "BCP",
     "GEE",
     "LAUREN",
     "CAITLIN"
    ],
-   "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -168,28 +231,28 @@
       "CAITLIN",
       "LAUREN"
      ],
-     "state": "REJECTED",
+     "proposer": "FREYA",
      "votes": [
       "LAUREN",
       "CAITLIN",
       "GEE"
      ],
-     "proposer": "FREYA"
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "CHRISP",
-      "FREYA",
-      "BCP",
-      "CHRIS"
-     ],
      "state": "REJECTED",
+     "proposer": "CHRIS",
      "votes": [
       "FREYA",
       "CHRISP",
       "CHRIS"
      ],
-     "proposer": "CHRIS"
+     "team": [
+      "CHRISP",
+      "FREYA",
+      "BCP",
+      "CHRIS"
+     ]
     },
     {
      "state": "APPROVED",
@@ -208,20 +271,20 @@
       "CAITLIN"
      ]
     }
-   ]
+   ],
+   "teamSize": 4,
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
-   "state": "FAIL",
-   "team": [
-    "FREYA",
-    "LAUREN",
-    "BCP",
-    "GEE"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
+     "votes": [
+      "CHRISP",
+      "CHRIS",
+      "FREYA"
+     ],
      "team": [
       "CAITLIN",
       "CHRISP",
@@ -229,14 +292,15 @@
       "FREYA"
      ],
      "state": "REJECTED",
-     "votes": [
-      "CHRISP",
-      "CHRIS",
-      "FREYA"
-     ],
      "proposer": "CHRISP"
     },
     {
+     "team": [
+      "FREYA",
+      "LAUREN",
+      "BCP",
+      "GEE"
+     ],
      "votes": [
       "CHRISP",
       "CHRIS",
@@ -245,86 +309,22 @@
       "BCP"
      ],
      "proposer": "GEE",
-     "team": [
-      "FREYA",
-      "LAUREN",
-      "BCP",
-      "GEE"
-     ],
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "state": "FAIL",
+   "numFails": 1,
+   "team": [
+    "FREYA",
+    "LAUREN",
+    "BCP",
+    "GEE"
+   ],
+   "teamSize": 4
   }
  ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "BCP",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "LAUREN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "CHRISP",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "CHRIS"
-   },
-   {
-    "name": "FREYA",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "CAITLIN",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "GEE",
-    "assassin": false,
-    "role": "PERCIVAL"
-   }
-  ],
-  "votes": [
-   {
-    "BCP": true,
-    "GEE": true
-   },
-   {
-    "GEE": true,
-    "CAITLIN": true,
-    "FREYA": false
-   },
-   {
-    "BCP": true,
-    "CAITLIN": true,
-    "CHRIS": false
-   },
-   {
-    "LAUREN": true,
-    "BCP": true,
-    "GEE": true,
-    "CAITLIN": true
-   },
-   {
-    "FREYA": false,
-    "LAUREN": true,
-    "BCP": true,
-    "GEE": true
-   }
-  ]
+ "timeFinished": {
+  "_seconds": 1587152845,
+  "_nanoseconds": 28000000
  }
 }

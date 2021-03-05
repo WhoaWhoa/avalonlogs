@@ -1,7 +1,34 @@
 {
  "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
+  "votes": [
+   {
+    "SAM": true,
+    "CHELSEA": true
+   },
+   {
+    "GARRETT": true,
+    "JWEEZY": true,
+    "MICHAEL": true
+   },
+   {
+    "JWEEZY": true,
+    "MICHAEL": false,
+    "GARRETT": true
+   },
+   {
+    "JWEEZY": true,
+    "SAM": false,
+    "BEN": false,
+    "CHELSEA": true
+   },
+   {
+    "MICHAEL": false,
+    "SAM": false,
+    "CHELSEA": true,
+    "GARRETT": true
+   }
+  ],
+  "message": "Three failed missions",
   "roles": [
    {
     "assassin": false,
@@ -14,95 +41,34 @@
     "name": "BEN"
    },
    {
-    "name": "MICHAEL",
     "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "MICHAEL"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "GARRETT",
+    "assassin": false
+   },
+   {
+    "name": "JWEEZY",
     "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JWEEZY"
-   },
-   {
+    "role": "MERLIN",
     "name": "WHITNEY",
-    "assassin": false,
-    "role": "MERLIN"
+    "assassin": false
    },
    {
     "name": "CHELSEA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    }
   ],
-  "votes": [
-   {
-    "SAM": true,
-    "CHELSEA": true
-   },
-   {
-    "GARRETT": true,
-    "JWEEZY": true,
-    "MICHAEL": true
-   },
-   {
-    "MICHAEL": false,
-    "GARRETT": true,
-    "JWEEZY": true
-   },
-   {
-    "CHELSEA": true,
-    "JWEEZY": true,
-    "BEN": false,
-    "SAM": false
-   },
-   {
-    "MICHAEL": false,
-    "SAM": false,
-    "CHELSEA": true,
-    "GARRETT": true
-   }
-  ],
-  "message": "Three failed missions"
+  "state": "EVIL_WIN",
+  "assassinated": null
  },
- "timeFinished": {
-  "_seconds": 1585446027,
-  "_nanoseconds": 853655000
- },
- "players": [
-  {
-   "uid": "SNVBXd3vENOilHwKVR4QIqAEOWT2",
-   "name": "MICHAEL"
-  },
-  {
-   "uid": "djwI2SZleWYwvnmNKvDiPWXNcm12",
-   "name": "SAM"
-  },
-  {
-   "name": "CHELSEA",
-   "uid": "AA7lhvFN7uRyg65h79VQzeHULOI2"
-  },
-  {
-   "uid": "qnXvOEC29uf0E8aKsCSrPrxUIKs1",
-   "name": "JWEEZY"
-  },
-  {
-   "uid": "T1gH0PTY6OTSBCzRg8Zo0UnrVa22",
-   "name": "GARRETT"
-  },
-  {
-   "name": "BEN",
-   "uid": "tdCXt58JUEP1sG1fBLvDwc49o4z1"
-  },
-  {
-   "uid": "FDqwNaTWetQd5yiJr269hXvOAap1",
-   "name": "WHITNEY"
-  }
- ],
  "timeCreated": {
   "_seconds": 1585445115,
   "_nanoseconds": 190000000
@@ -116,13 +82,13 @@
    ],
    "numFails": 0,
    "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
       "CHELSEA",
       "SAM"
      ],
-     "state": "APPROVED",
      "votes": [
       "MICHAEL",
       "GARRETT",
@@ -132,10 +98,10 @@
       "SAM",
       "BEN"
      ],
+     "state": "APPROVED",
      "proposer": "CHELSEA"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
    "state": "SUCCESS",
@@ -145,9 +111,10 @@
     "GARRETT"
    ],
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "JWEEZY",
      "votes": [
       "MICHAEL",
       "GARRETT",
@@ -155,24 +122,18 @@
       "SAM",
       "BEN"
      ],
-     "proposer": "JWEEZY",
      "team": [
       "JWEEZY",
       "MICHAEL",
       "GARRETT"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "teamSize": 3,
    "failsRequired": 1
   },
   {
-   "team": [
-    "GARRETT",
-    "JWEEZY",
-    "MICHAEL"
-   ],
-   "numFails": 1,
+   "state": "FAIL",
    "teamSize": 3,
    "proposals": [
     {
@@ -193,14 +154,18 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "GARRETT",
+    "JWEEZY",
+    "MICHAEL"
+   ],
+   "numFails": 1,
+   "failsRequired": 1
   },
   {
-   "numFails": 2,
-   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "BEN",
      "votes": [
       "JWEEZY",
       "CHELSEA",
@@ -208,27 +173,27 @@
       "BEN",
       "GARRETT"
      ],
-     "proposer": "BEN",
+     "state": "APPROVED",
      "team": [
       "SAM",
       "CHELSEA",
       "BEN",
       "JWEEZY"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "failsRequired": 2,
-   "state": "FAIL",
    "team": [
     "SAM",
     "CHELSEA",
     "BEN",
     "JWEEZY"
-   ]
+   ],
+   "numFails": 2,
+   "state": "FAIL",
+   "teamSize": 4
   },
   {
-   "state": "FAIL",
    "team": [
     "SAM",
     "MICHAEL",
@@ -237,29 +202,24 @@
    ],
    "numFails": 2,
    "teamSize": 4,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
+     "votes": [
+      "WHITNEY",
+      "CHELSEA"
+     ],
      "team": [
       "WHITNEY",
       "CHELSEA",
       "JWEEZY",
       "GARRETT"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "WHITNEY",
-      "CHELSEA"
-     ],
-     "proposer": "WHITNEY"
+     "proposer": "WHITNEY",
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "SAM",
-      "MICHAEL",
-      "CHELSEA",
-      "GARRETT"
-     ],
-     "state": "APPROVED",
      "votes": [
       "MICHAEL",
       "GARRETT",
@@ -267,10 +227,50 @@
       "SAM",
       "BEN"
      ],
-     "proposer": "MICHAEL"
+     "proposer": "MICHAEL",
+     "team": [
+      "SAM",
+      "MICHAEL",
+      "CHELSEA",
+      "GARRETT"
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1
+   ]
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1585446027,
+  "_nanoseconds": 853655000
+ },
+ "players": [
+  {
+   "uid": "SNVBXd3vENOilHwKVR4QIqAEOWT2",
+   "name": "MICHAEL"
+  },
+  {
+   "uid": "djwI2SZleWYwvnmNKvDiPWXNcm12",
+   "name": "SAM"
+  },
+  {
+   "uid": "AA7lhvFN7uRyg65h79VQzeHULOI2",
+   "name": "CHELSEA"
+  },
+  {
+   "name": "JWEEZY",
+   "uid": "qnXvOEC29uf0E8aKsCSrPrxUIKs1"
+  },
+  {
+   "name": "GARRETT",
+   "uid": "T1gH0PTY6OTSBCzRg8Zo0UnrVa22"
+  },
+  {
+   "uid": "tdCXt58JUEP1sG1fBLvDwc49o4z1",
+   "name": "BEN"
+  },
+  {
+   "name": "WHITNEY",
+   "uid": "FDqwNaTWetQd5yiJr269hXvOAap1"
   }
  ]
 }

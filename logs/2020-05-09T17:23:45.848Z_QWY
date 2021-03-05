@@ -1,31 +1,19 @@
 {
- "timeFinished": {
-  "_seconds": 1589045771,
-  "_nanoseconds": 787000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1589045025,
-  "_nanoseconds": 848000000
- },
  "missions": [
   {
+   "state": "SUCCESS",
+   "teamSize": 2,
    "team": [
     "COVIDREUBS",
     "JUSTSWEE"
    ],
-   "numFails": 0,
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "RONG",
      "team": [
       "COVIDREUBS",
       "JUSTSWEE"
      ],
-     "state": "APPROVED",
      "votes": [
       "RONG",
       "GEORGE",
@@ -34,21 +22,31 @@
       "JUSTSWEE",
       "COVIDREUBS",
       "MATT"
-     ]
+     ],
+     "proposer": "RONG",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0
   },
   {
+   "state": "FAIL",
+   "teamSize": 3,
+   "numFails": 1,
+   "team": [
+    "GEORGE",
+    "JUSTSWEE",
+    "COVIDREUBS"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "GEORGE",
      "team": [
       "GEORGE",
       "JUSTSWEE",
       "COVIDREUBS"
      ],
+     "proposer": "GEORGE",
      "state": "APPROVED",
      "votes": [
       "RONG",
@@ -57,35 +55,24 @@
       "GLEN"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "GEORGE",
-    "JUSTSWEE",
-    "COVIDREUBS"
-   ],
-   "numFails": 1,
-   "teamSize": 3
+   ]
   },
   {
-   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "GLEN",
     "CALEB",
     "COVIDREUBS"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "state": "REJECTED",
+     "proposer": "CALEB",
      "votes": [
       "RONG",
       "CALEB",
       "MATT"
      ],
-     "proposer": "CALEB",
      "team": [
       "CALEB",
       "MATT",
@@ -93,22 +80,24 @@
      ]
     },
     {
+     "team": [
+      "GLEN",
+      "CALEB",
+      "COVIDREUBS"
+     ],
+     "proposer": "GLEN",
+     "state": "APPROVED",
      "votes": [
       "RONG",
       "GEORGE",
       "CALEB",
       "COVIDREUBS",
       "MATT"
-     ],
-     "proposer": "GLEN",
-     "team": [
-      "GLEN",
-      "CALEB",
-      "COVIDREUBS"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "numFails": 1,
+   "state": "FAIL",
    "failsRequired": 1
   },
   {
@@ -118,8 +107,9 @@
     "GLEN",
     "CALEB"
    ],
-   "numFails": 2,
    "teamSize": 4,
+   "state": "FAIL",
+   "failsRequired": 2,
    "proposals": [
     {
      "team": [
@@ -128,7 +118,7 @@
       "GLEN",
       "CALEB"
      ],
-     "state": "APPROVED",
+     "proposer": "JUSTSWEE",
      "votes": [
       "RONG",
       "GEORGE",
@@ -136,62 +126,27 @@
       "GLEN",
       "JUSTSWEE"
      ],
-     "proposer": "JUSTSWEE"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 2,
-   "state": "FAIL"
+   "numFails": 2
   },
   {
    "proposals": [],
+   "state": "PENDING",
    "failsRequired": 1,
    "team": [],
-   "teamSize": 4,
-   "state": "PENDING"
+   "teamSize": 4
   }
  ],
  "outcome": {
-  "roles": [
-   {
-    "name": "COVIDREUBS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MATT",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "RONG",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "GEORGE",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "CALEB",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "GLEN",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "JUSTSWEE",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "assassinated": null,
   "votes": [
    {
-    "JUSTSWEE": true,
-    "COVIDREUBS": true
+    "COVIDREUBS": true,
+    "JUSTSWEE": true
    },
    {
     "COVIDREUBS": true,
@@ -199,20 +154,58 @@
     "JUSTSWEE": false
    },
    {
+    "COVIDREUBS": true,
     "GLEN": false,
-    "CALEB": true,
-    "COVIDREUBS": true
+    "CALEB": true
    },
    {
+    "RONG": false,
     "GLEN": true,
     "CALEB": true,
-    "RONG": false,
     "JUSTSWEE": false
    }
   ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "COVIDREUBS",
+    "assassin": false
+   },
+   {
+    "name": "MATT",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "RONG",
+    "assassin": true
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "GEORGE",
+    "assassin": false
+   },
+   {
+    "name": "CALEB",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "GLEN",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "role": "MORGANA",
+    "name": "JUSTSWEE",
+    "assassin": false
+   }
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1589045771,
+  "_nanoseconds": 787000000
  },
  "players": [
   {
@@ -224,12 +217,12 @@
    "uid": "hkvwEHhYOiVIFrScBXl1186HZ1r1"
   },
   {
-   "uid": "By4nEWNqNsZjM1umsNNuaXsJGu83",
-   "name": "COVIDREUBS"
+   "name": "COVIDREUBS",
+   "uid": "By4nEWNqNsZjM1umsNNuaXsJGu83"
   },
   {
-   "name": "MATT",
-   "uid": "RikkUOlzDAcNnP9fgpVIppyFVzj1"
+   "uid": "RikkUOlzDAcNnP9fgpVIppyFVzj1",
+   "name": "MATT"
   },
   {
    "name": "RONG",
@@ -240,8 +233,15 @@
    "name": "GEORGE"
   },
   {
-   "uid": "a1R4ajhXgzTtwBcXxpSXP3jitY72",
-   "name": "CALEB"
+   "name": "CALEB",
+   "uid": "a1R4ajhXgzTtwBcXxpSXP3jitY72"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1589045025,
+  "_nanoseconds": 848000000
+ },
+ "options": {
+  "inGameLog": false
+ }
 }

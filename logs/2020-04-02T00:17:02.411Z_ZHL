@@ -1,17 +1,98 @@
 {
+ "timeFinished": {
+  "_seconds": 1585787907,
+  "_nanoseconds": 446681000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "JORDAN": true,
+    "KEVIN": true
+   },
+   {
+    "KEVIN": true,
+    "DOUGLAS": true,
+    "JORDAN": false
+   },
+   {
+    "TIM": true,
+    "EMILY": false,
+    "BLAYDE": true
+   },
+   {
+    "BLAYDE": true,
+    "DOUGLAS": true,
+    "KEVIN": true,
+    "TIM": true
+   },
+   {
+    "BLAYDE": true,
+    "DOUGLAS": true,
+    "KEVIN": true,
+    "TIM": true
+   }
+  ],
+  "assassinated": "TIM",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "KEVIN"
+   },
+   {
+    "name": "TIM",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "EMILY",
+    "assassin": false
+   },
+   {
+    "name": "ERIC",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "BLAYDE"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "DOUGLAS"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "JORDAN"
+   }
+  ],
+  "message": "Merlin assassinated"
+ },
  "timeCreated": {
   "_seconds": 1585786622,
   "_nanoseconds": 411000000
  },
  "missions": [
   {
+   "numFails": 0,
+   "teamSize": 2,
+   "failsRequired": 1,
+   "team": [
+    "KEVIN",
+    "JORDAN"
+   ],
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "KEVIN",
       "JORDAN"
      ],
-     "state": "APPROVED",
      "votes": [
       "DOUGLAS",
       "JORDAN",
@@ -23,39 +104,32 @@
      "proposer": "KEVIN"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "KEVIN",
-    "JORDAN"
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   "state": "SUCCESS"
   },
   {
-   "team": [
-    "JORDAN",
-    "KEVIN",
-    "DOUGLAS"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "EMILY",
+     "votes": [
+      "DOUGLAS",
+      "TIM",
+      "EMILY"
+     ],
+     "state": "REJECTED",
      "team": [
       "EMILY",
       "TIM",
       "BLAYDE"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "DOUGLAS",
-      "TIM",
-      "EMILY"
-     ]
+     "proposer": "EMILY"
     },
     {
+     "state": "APPROVED",
+     "team": [
+      "JORDAN",
+      "KEVIN",
+      "DOUGLAS"
+     ],
+     "proposer": "DOUGLAS",
      "votes": [
       "ERIC",
       "BLAYDE",
@@ -64,18 +138,18 @@
       "KEVIN",
       "TIM",
       "EMILY"
-     ],
-     "proposer": "DOUGLAS",
-     "team": [
-      "JORDAN",
-      "KEVIN",
-      "DOUGLAS"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "state": "FAIL",
    "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3,
+   "team": [
+    "JORDAN",
+    "KEVIN",
+    "DOUGLAS"
+   ],
+   "numFails": 1
   },
   {
    "proposals": [
@@ -85,13 +159,13 @@
       "ERIC",
       "BLAYDE"
      ],
-     "state": "REJECTED",
      "votes": [
       "ERIC",
       "JORDAN",
       "KEVIN"
      ],
-     "proposer": "ERIC"
+     "proposer": "ERIC",
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -101,25 +175,45 @@
       "EMILY"
      ],
      "proposer": "JORDAN",
+     "state": "APPROVED",
      "team": [
       "EMILY",
       "BLAYDE",
       "TIM"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
    "state": "FAIL",
+   "numFails": 1,
    "team": [
     "EMILY",
     "BLAYDE",
     "TIM"
    ],
-   "numFails": 1,
+   "failsRequired": 1,
    "teamSize": 3
   },
   {
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "team": [
+      "TIM",
+      "BLAYDE",
+      "DOUGLAS",
+      "KEVIN"
+     ],
+     "votes": [
+      "KEVIN",
+      "TIM",
+      "EMILY",
+      "BLAYDE",
+      "DOUGLAS"
+     ],
+     "proposer": "TIM"
+    }
+   ],
+   "failsRequired": 2,
    "state": "SUCCESS",
    "team": [
     "TIM",
@@ -127,58 +221,31 @@
     "DOUGLAS",
     "KEVIN"
    ],
-   "numFails": 0,
    "teamSize": 4,
-   "proposals": [
-    {
-     "votes": [
-      "KEVIN",
-      "TIM",
-      "EMILY",
-      "BLAYDE",
-      "DOUGLAS"
-     ],
-     "proposer": "TIM",
-     "team": [
-      "TIM",
-      "BLAYDE",
-      "DOUGLAS",
-      "KEVIN"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 2
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "TIM",
-    "BLAYDE",
-    "KEVIN",
-    "DOUGLAS"
-   ],
    "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "BLAYDE",
-      "TIM",
-      "KEVIN",
-      "DOUGLAS"
-     ],
-     "state": "REJECTED",
      "votes": [
       "DOUGLAS",
       "KEVIN",
       "TIM"
      ],
-     "proposer": "BLAYDE"
+     "team": [
+      "BLAYDE",
+      "TIM",
+      "KEVIN",
+      "DOUGLAS"
+     ],
+     "proposer": "BLAYDE",
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
      "votes": [
       "KEVIN",
       "TIM",
@@ -186,6 +253,7 @@
       "DOUGLAS"
      ],
      "proposer": "KEVIN",
+     "state": "APPROVED",
      "team": [
       "TIM",
       "BLAYDE",
@@ -193,107 +261,39 @@
       "DOUGLAS"
      ]
     }
+   ],
+   "team": [
+    "TIM",
+    "BLAYDE",
+    "KEVIN",
+    "DOUGLAS"
    ]
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": "TIM",
-  "roles": [
-   {
-    "name": "KEVIN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "TIM",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "EMILY",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ERIC",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "BLAYDE"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "DOUGLAS"
-   },
-   {
-    "name": "JORDAN",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ],
-  "votes": [
-   {
-    "JORDAN": true,
-    "KEVIN": true
-   },
-   {
-    "DOUGLAS": true,
-    "JORDAN": false,
-    "KEVIN": true
-   },
-   {
-    "EMILY": false,
-    "TIM": true,
-    "BLAYDE": true
-   },
-   {
-    "BLAYDE": true,
-    "KEVIN": true,
-    "TIM": true,
-    "DOUGLAS": true
-   },
-   {
-    "BLAYDE": true,
-    "KEVIN": true,
-    "TIM": true,
-    "DOUGLAS": true
-   }
-  ],
-  "message": "Merlin assassinated"
- },
- "timeFinished": {
-  "_seconds": 1585787907,
-  "_nanoseconds": 446681000
- },
  "players": [
   {
-   "uid": "pPa6MuQiVnXFk5a1gGBzsGrxExG3",
-   "name": "JORDAN"
+   "name": "JORDAN",
+   "uid": "pPa6MuQiVnXFk5a1gGBzsGrxExG3"
   },
   {
-   "uid": "LFhha6pI3PUI6Mv1pRL8ZfLSITn2",
-   "name": "TIM"
+   "name": "TIM",
+   "uid": "LFhha6pI3PUI6Mv1pRL8ZfLSITn2"
   },
   {
-   "uid": "0ifjrL2pANM9IUk0UXCPGckXaMf1",
-   "name": "BLAYDE"
+   "name": "BLAYDE",
+   "uid": "0ifjrL2pANM9IUk0UXCPGckXaMf1"
   },
   {
-   "uid": "vfTPSJkcUEa23cQuOV1FDWvm02z1",
-   "name": "KEVIN"
+   "name": "KEVIN",
+   "uid": "vfTPSJkcUEa23cQuOV1FDWvm02z1"
   },
   {
    "uid": "5RXeJkvibWZyZl4pAnxFbqTAhIq2",
    "name": "EMILY"
   },
   {
-   "name": "DOUGLAS",
-   "uid": "47fpm11OT7MCNPTVx0UFqoJvPkf1"
+   "uid": "47fpm11OT7MCNPTVx0UFqoJvPkf1",
+   "name": "DOUGLAS"
   },
   {
    "name": "ERIC",

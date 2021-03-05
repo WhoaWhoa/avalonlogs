@@ -1,4 +1,77 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
+  "assassinated": "WANG",
+  "votes": [
+   {
+    "JARED": true,
+    "CACTUSJACK": true
+   },
+   {
+    "CACTUSJACK": true,
+    "ODENIGBO": true,
+    "JARED": true
+   },
+   {
+    "ODENIGBO": true,
+    "CACTUSJACK": false,
+    "JARED": true
+   },
+   {
+    "ODENIGBO": true,
+    "TYLER": false,
+    "KYLE": false,
+    "JARED": true
+   },
+   {
+    "JARED": true,
+    "ODENIGBO": true,
+    "WANG": true,
+    "NATHANHS": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MORDRED",
+    "name": "KYLE"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "ODENIGBO",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "CACTUSJACK",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "TYLER",
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "name": "JARED",
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "WANG"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "NATHANHS"
+   }
+  ]
+ },
  "players": [
   {
    "uid": "fxCl0C5MAqhIbZcRmrALFHbC3rg2",
@@ -17,40 +90,38 @@
    "name": "CACTUSJACK"
   },
   {
-   "uid": "zXNlP6Fj4dVnLAG0wVEbyjdjWYB3",
-   "name": "ODENIGBO"
+   "name": "ODENIGBO",
+   "uid": "zXNlP6Fj4dVnLAG0wVEbyjdjWYB3"
   },
   {
    "uid": "ac26FEaKVTTMGSH0ThMtWnp0yrG2",
    "name": "WANG"
   },
   {
-   "uid": "NQTeCuMst9VOI8JMyZGgH7vl7zk2",
-   "name": "KYLE"
+   "name": "KYLE",
+   "uid": "NQTeCuMst9VOI8JMyZGgH7vl7zk2"
   }
  ],
  "timeFinished": {
   "_seconds": 1587887931,
   "_nanoseconds": 114000000
  },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587885908,
-  "_nanoseconds": 31000000
- },
  "missions": [
   {
+   "failsRequired": 1,
    "team": [
     "CACTUSJACK",
     "JARED"
    ],
+   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "CACTUSJACK",
+      "JARED"
+     ],
+     "proposer": "CACTUSJACK",
      "votes": [
       "CACTUSJACK",
       "TYLER",
@@ -59,33 +130,16 @@
       "NATHANHS",
       "ODENIGBO"
      ],
-     "proposer": "CACTUSJACK",
-     "team": [
-      "CACTUSJACK",
-      "JARED"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "JARED",
-    "CACTUSJACK",
-    "ODENIGBO"
-   ],
-   "numFails": 0,
    "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "JARED",
-      "CACTUSJACK",
-      "ODENIGBO"
-     ],
-     "state": "APPROVED",
      "votes": [
       "TYLER",
       "JARED",
@@ -95,10 +149,22 @@
       "ODENIGBO",
       "CACTUSJACK"
      ],
-     "proposer": "ODENIGBO"
+     "team": [
+      "JARED",
+      "CACTUSJACK",
+      "ODENIGBO"
+     ],
+     "proposer": "ODENIGBO",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "JARED",
+    "CACTUSJACK",
+    "ODENIGBO"
+   ]
   },
   {
    "team": [
@@ -106,16 +172,8 @@
     "CACTUSJACK",
     "JARED"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "ODENIGBO",
-      "CACTUSJACK",
-      "JARED"
-     ],
-     "state": "APPROVED",
      "votes": [
       "CACTUSJACK",
       "TYLER",
@@ -125,84 +183,90 @@
       "KYLE",
       "ODENIGBO"
      ],
+     "team": [
+      "ODENIGBO",
+      "CACTUSJACK",
+      "JARED"
+     ],
+     "state": "APPROVED",
      "proposer": "WANG"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3,
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1
   },
   {
+   "numFails": 2,
+   "proposals": [
+    {
+     "votes": [
+      "NATHANHS",
+      "KYLE",
+      "ODENIGBO"
+     ],
+     "team": [
+      "CACTUSJACK",
+      "ODENIGBO",
+      "NATHANHS",
+      "JARED"
+     ],
+     "state": "REJECTED",
+     "proposer": "KYLE"
+    },
+    {
+     "votes": [
+      "TYLER",
+      "JARED",
+      "WANG",
+      "KYLE",
+      "ODENIGBO",
+      "CACTUSJACK"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "JARED",
+      "TYLER",
+      "KYLE",
+      "ODENIGBO"
+     ],
+     "proposer": "JARED"
+    }
+   ],
+   "failsRequired": 2,
+   "state": "FAIL",
+   "teamSize": 4,
    "team": [
     "JARED",
     "TYLER",
     "KYLE",
     "ODENIGBO"
-   ],
-   "numFails": 2,
-   "teamSize": 4,
-   "proposals": [
-    {
-     "proposer": "KYLE",
-     "team": [
-      "CACTUSJACK",
-      "ODENIGBO",
-      "NATHANHS",
-      "JARED"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "NATHANHS",
-      "KYLE",
-      "ODENIGBO"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "votes": [
-      "TYLER",
-      "JARED",
-      "WANG",
-      "KYLE",
-      "ODENIGBO",
-      "CACTUSJACK"
-     ],
-     "proposer": "JARED",
-     "team": [
-      "JARED",
-      "TYLER",
-      "KYLE",
-      "ODENIGBO"
-     ]
-    }
-   ],
-   "failsRequired": 2,
-   "state": "FAIL"
+   ]
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "NATHANHS",
-    "WANG",
-    "JARED",
-    "ODENIGBO"
-   ],
-   "numFails": 0,
    "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "KYLE"
      ],
-     "proposer": "TYLER",
      "team": [
       "KYLE",
       "WANG",
       "ODENIGBO",
       "CACTUSJACK"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "TYLER"
     },
     {
+     "team": [
+      "NATHANHS",
+      "WANG",
+      "JARED",
+      "ODENIGBO"
+     ],
      "state": "APPROVED",
      "votes": [
       "NATHANHS",
@@ -210,86 +274,22 @@
       "JARED",
       "WANG"
      ],
-     "proposer": "NATHANHS",
-     "team": [
-      "NATHANHS",
-      "WANG",
-      "JARED",
-      "ODENIGBO"
-     ]
+     "proposer": "NATHANHS"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "NATHANHS",
+    "WANG",
+    "JARED",
+    "ODENIGBO"
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0
   }
  ],
- "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "WANG",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "KYLE"
-   },
-   {
-    "name": "ODENIGBO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "CACTUSJACK",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "TYLER",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "JARED",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "WANG"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "NATHANHS"
-   }
-  ],
-  "votes": [
-   {
-    "JARED": true,
-    "CACTUSJACK": true
-   },
-   {
-    "JARED": true,
-    "ODENIGBO": true,
-    "CACTUSJACK": true
-   },
-   {
-    "JARED": true,
-    "ODENIGBO": true,
-    "CACTUSJACK": false
-   },
-   {
-    "TYLER": false,
-    "KYLE": false,
-    "JARED": true,
-    "ODENIGBO": true
-   },
-   {
-    "ODENIGBO": true,
-    "WANG": true,
-    "NATHANHS": true,
-    "JARED": true
-   }
-  ]
+ "timeCreated": {
+  "_seconds": 1587885908,
+  "_nanoseconds": 31000000
  }
 }

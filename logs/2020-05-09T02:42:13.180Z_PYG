@@ -3,27 +3,106 @@
   "_seconds": 1588992659,
   "_nanoseconds": 356000000
  },
- "options": {
-  "inGameLog": false
+ "outcome": {
+  "votes": [
+   {
+    "REID": true,
+    "BRIAN": true
+   },
+   {
+    "PATRICK": false,
+    "BRIAN": true,
+    "REID": true
+   },
+   {
+    "BRIAN": true,
+    "JONESY": true,
+    "JACK": true
+   },
+   {
+    "JACK": false,
+    "REID": true,
+    "JONESY": true,
+    "BRIAN": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "OBERON",
+    "name": "JACK",
+    "assassin": false
+   },
+   {
+    "name": "JONESY",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "BRIAN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "REID"
+   },
+   {
+    "name": "RYAN",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "name": "WILL",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "PATRICK",
+    "role": "MORDRED"
+   }
+  ],
+  "assassinated": "BRIAN",
+  "state": "GOOD_WIN",
+  "message": "Three successful missions"
  },
- "timeCreated": {
-  "_seconds": 1588992133,
-  "_nanoseconds": 180000000
- },
+ "players": [
+  {
+   "uid": "dWkLr2TeeMZh5RVBubE0LS1tWrh2",
+   "name": "JACK"
+  },
+  {
+   "uid": "FSth5yaAaSg2HtNaBN88XwMCxlv1",
+   "name": "WILL"
+  },
+  {
+   "name": "REID",
+   "uid": "JsV7G0CQiXg86UzXmJdBAU0xe4n1"
+  },
+  {
+   "uid": "gAiRUjpSMlbOzGpCzUNPHhcdscG3",
+   "name": "RYAN"
+  },
+  {
+   "name": "JONESY",
+   "uid": "xi35CAgu1pQX6cz9w1TGaSxDB7u1"
+  },
+  {
+   "uid": "EHYfAoNoRMfUQVovgiSACfXd6nq2",
+   "name": "BRIAN"
+  },
+  {
+   "uid": "IYJsCh44gxO4DSnfNlnO6Quz4pu2",
+   "name": "PATRICK"
+  }
+ ],
  "missions": [
   {
-   "team": [
-    "BRIAN",
-    "REID"
-   ],
-   "numFails": 0,
    "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "BRIAN",
-      "REID"
-     ],
      "state": "APPROVED",
      "votes": [
       "REID",
@@ -33,24 +112,36 @@
       "JONESY",
       "BRIAN"
      ],
+     "team": [
+      "BRIAN",
+      "REID"
+     ],
      "proposer": "BRIAN"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "BRIAN",
+    "REID"
+   ],
+   "numFails": 0
   },
   {
+   "numFails": 1,
    "state": "FAIL",
    "team": [
     "BRIAN",
     "PATRICK",
     "REID"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "BRIAN",
+      "PATRICK",
+      "REID"
+     ],
      "votes": [
       "WILL",
       "PATRICK",
@@ -60,20 +151,17 @@
       "REID",
       "RYAN"
      ],
-     "proposer": "PATRICK",
-     "team": [
-      "BRIAN",
-      "PATRICK",
-      "REID"
-     ]
+     "proposer": "PATRICK"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "JACK",
       "JONESY",
@@ -81,55 +169,50 @@
       "REID",
       "WILL"
      ],
-     "proposer": "JACK",
+     "state": "APPROVED",
      "team": [
       "BRIAN",
       "JONESY",
       "JACK"
-     ]
+     ],
+     "proposer": "JACK"
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 3,
    "state": "SUCCESS",
    "team": [
     "BRIAN",
     "JONESY",
     "JACK"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   ]
   },
   {
+   "failsRequired": 2,
+   "numFails": 1,
+   "state": "SUCCESS",
+   "teamSize": 4,
    "team": [
     "REID",
     "JACK",
     "BRIAN",
     "JONESY"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [
+      "JACK",
+      "WILL"
+     ],
      "proposer": "WILL",
      "team": [
       "JACK",
       "BRIAN",
       "JONESY",
       "PATRICK"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "JACK",
-      "WILL"
      ]
     },
     {
-     "team": [
-      "REID",
-      "JACK",
-      "BRIAN",
-      "JONESY"
-     ],
      "state": "APPROVED",
      "votes": [
       "WILL",
@@ -138,112 +221,29 @@
       "BRIAN",
       "REID"
      ],
+     "team": [
+      "REID",
+      "JACK",
+      "BRIAN",
+      "JONESY"
+     ],
      "proposer": "REID"
     }
-   ],
-   "failsRequired": 2,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "teamSize": 4,
    "state": "PENDING",
-   "proposals": [],
    "failsRequired": 1,
+   "proposals": [],
+   "teamSize": 4,
    "team": []
   }
  ],
- "outcome": {
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "BRIAN",
-  "roles": [
-   {
-    "name": "JACK",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "JONESY",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "BRIAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "REID",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "RYAN",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "WILL",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "PATRICK",
-    "assassin": true,
-    "role": "MORDRED"
-   }
-  ],
-  "votes": [
-   {
-    "BRIAN": true,
-    "REID": true
-   },
-   {
-    "BRIAN": true,
-    "PATRICK": false,
-    "REID": true
-   },
-   {
-    "JACK": true,
-    "JONESY": true,
-    "BRIAN": true
-   },
-   {
-    "REID": true,
-    "JACK": false,
-    "JONESY": true,
-    "BRIAN": true
-   }
-  ]
+ "options": {
+  "inGameLog": false
  },
- "players": [
-  {
-   "name": "JACK",
-   "uid": "dWkLr2TeeMZh5RVBubE0LS1tWrh2"
-  },
-  {
-   "name": "WILL",
-   "uid": "FSth5yaAaSg2HtNaBN88XwMCxlv1"
-  },
-  {
-   "uid": "JsV7G0CQiXg86UzXmJdBAU0xe4n1",
-   "name": "REID"
-  },
-  {
-   "uid": "gAiRUjpSMlbOzGpCzUNPHhcdscG3",
-   "name": "RYAN"
-  },
-  {
-   "uid": "xi35CAgu1pQX6cz9w1TGaSxDB7u1",
-   "name": "JONESY"
-  },
-  {
-   "name": "BRIAN",
-   "uid": "EHYfAoNoRMfUQVovgiSACfXd6nq2"
-  },
-  {
-   "uid": "IYJsCh44gxO4DSnfNlnO6Quz4pu2",
-   "name": "PATRICK"
-  }
- ]
+ "timeCreated": {
+  "_seconds": 1588992133,
+  "_nanoseconds": 180000000
+ }
 }

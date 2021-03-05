@@ -3,42 +3,84 @@
   "_seconds": 1586061920,
   "_nanoseconds": 745468000
  },
- "players": [
-  {
-   "uid": "6b0fbKwQdgavvvK84HPuShapRVg2",
-   "name": "IAN"
-  },
-  {
-   "name": "LAUREN",
-   "uid": "G8rvG5lm8uhXWThxGuaCwwpDE5y1"
-  },
-  {
-   "name": "YABOINATE",
-   "uid": "oy6I3fglWrbYrd3afmh080M1gyL2"
-  },
-  {
-   "uid": "JPU3HMM47JTCTCH1Byi0enhuEbu2",
-   "name": "FISH"
-  },
-  {
-   "uid": "0rBeFXC9VTQCw4xHdNFyE0KWF8I3",
-   "name": "ALEX"
-  },
-  {
-   "name": "MOHAMMAD",
-   "uid": "9eaRTj5gVAO5b2F1N4qY9VahUQs2"
-  },
-  {
-   "uid": "95TkkPobvGOENRrLsc90tycVjuV2",
-   "name": "JEFF"
-  }
- ],
  "timeCreated": {
   "_seconds": 1586060710,
   "_nanoseconds": 269000000
  },
+ "outcome": {
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "YABOINATE": true,
+    "LAUREN": true
+   },
+   {
+    "IAN": true,
+    "FISH": false,
+    "ALEX": true
+   },
+   {
+    "YABOINATE": true,
+    "LAUREN": true,
+    "ALEX": true
+   },
+   {
+    "ALEX": true,
+    "LAUREN": true,
+    "YABOINATE": true,
+    "IAN": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "FISH",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "ALEX",
+    "role": "MERLIN"
+   },
+   {
+    "name": "MOHAMMAD",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "IAN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "LAUREN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "YABOINATE"
+   },
+   {
+    "assassin": false,
+    "name": "JEFF",
+    "role": "MORGANA"
+   }
+  ],
+  "assassinated": "YABOINATE"
+ },
  "missions": [
   {
+   "state": "SUCCESS",
+   "teamSize": 2,
+   "numFails": 0,
+   "team": [
+    "YABOINATE",
+    "LAUREN"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
@@ -57,27 +99,13 @@
       "LAUREN"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "YABOINATE",
-    "LAUREN"
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   ]
   },
   {
    "state": "FAIL",
-   "team": [
-    "FISH",
-    "ALEX",
-    "IAN"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "FISH",
      "votes": [
       "JEFF",
       "FISH",
@@ -85,21 +113,41 @@
       "MOHAMMAD",
       "IAN"
      ],
-     "proposer": "FISH",
+     "state": "APPROVED",
      "team": [
       "FISH",
       "ALEX",
       "IAN"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "teamSize": 3,
+   "team": [
+    "FISH",
+    "ALEX",
+    "IAN"
+   ],
+   "numFails": 1,
    "failsRequired": 1
   },
   {
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "LAUREN",
+    "YABOINATE",
+    "ALEX"
+   ],
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "LAUREN",
+      "YABOINATE",
+      "ALEX"
+     ],
+     "proposer": "ALEX",
      "votes": [
       "JEFF",
       "FISH",
@@ -108,62 +156,48 @@
       "IAN",
       "LAUREN",
       "YABOINATE"
-     ],
-     "proposer": "ALEX",
-     "team": [
-      "LAUREN",
-      "YABOINATE",
-      "ALEX"
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "LAUREN",
-    "YABOINATE",
-    "ALEX"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   "state": "SUCCESS"
   },
   {
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "IAN",
     "ALEX",
     "LAUREN",
     "YABOINATE"
    ],
-   "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
+     "votes": [
+      "YABOINATE",
+      "JEFF",
+      "MOHAMMAD"
+     ],
+     "state": "REJECTED",
      "team": [
       "MOHAMMAD",
       "LAUREN",
       "YABOINATE",
       "FISH"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "YABOINATE",
-      "JEFF",
-      "MOHAMMAD"
-     ],
      "proposer": "MOHAMMAD"
     },
     {
+     "votes": [
+      "JEFF",
+      "FISH"
+     ],
      "proposer": "JEFF",
+     "state": "REJECTED",
      "team": [
       "IAN",
       "JEFF",
       "MOHAMMAD",
       "LAUREN"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "JEFF",
-      "FISH"
      ]
     },
     {
@@ -174,88 +208,54 @@
       "YABOINATE"
      ],
      "proposer": "IAN",
+     "state": "APPROVED",
      "team": [
       "IAN",
       "ALEX",
       "LAUREN",
       "YABOINATE"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "failsRequired": 2,
-   "state": "SUCCESS"
+   "teamSize": 4
   },
   {
-   "team": [],
-   "teamSize": 4,
-   "state": "PENDING",
    "proposals": [],
+   "team": [],
+   "state": "PENDING",
+   "teamSize": 4,
    "failsRequired": 1
   }
  ],
- "outcome": {
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "YABOINATE",
-  "roles": [
-   {
-    "name": "FISH",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ALEX",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "MOHAMMAD",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "IAN"
-   },
-   {
-    "name": "LAUREN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "YABOINATE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JEFF",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ],
-  "votes": [
-   {
-    "LAUREN": true,
-    "YABOINATE": true
-   },
-   {
-    "IAN": true,
-    "FISH": false,
-    "ALEX": true
-   },
-   {
-    "LAUREN": true,
-    "ALEX": true,
-    "YABOINATE": true
-   },
-   {
-    "IAN": true,
-    "LAUREN": true,
-    "ALEX": true,
-    "YABOINATE": true
-   }
-  ]
- }
+ "players": [
+  {
+   "uid": "6b0fbKwQdgavvvK84HPuShapRVg2",
+   "name": "IAN"
+  },
+  {
+   "name": "LAUREN",
+   "uid": "G8rvG5lm8uhXWThxGuaCwwpDE5y1"
+  },
+  {
+   "uid": "oy6I3fglWrbYrd3afmh080M1gyL2",
+   "name": "YABOINATE"
+  },
+  {
+   "uid": "JPU3HMM47JTCTCH1Byi0enhuEbu2",
+   "name": "FISH"
+  },
+  {
+   "uid": "0rBeFXC9VTQCw4xHdNFyE0KWF8I3",
+   "name": "ALEX"
+  },
+  {
+   "name": "MOHAMMAD",
+   "uid": "9eaRTj5gVAO5b2F1N4qY9VahUQs2"
+  },
+  {
+   "name": "JEFF",
+   "uid": "95TkkPobvGOENRrLsc90tycVjuV2"
+  }
+ ]
 }

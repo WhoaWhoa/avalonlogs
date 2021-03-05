@@ -1,13 +1,112 @@
 {
+ "outcome": {
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "BILLY": true,
+    "DAVID": true
+   },
+   {
+    "DAVID": true,
+    "BILLY": false,
+    "SOBY": true
+   },
+   {
+    "ANIMELOVER": true,
+    "XEW": true,
+    "JEFF": false,
+    "SOBY": true
+   },
+   {
+    "SOBY": true,
+    "XEW": true,
+    "ANIMELOVER": true
+   },
+   {
+    "SOBY": true,
+    "XEW": true,
+    "ANIMELOVER": true,
+    "DAVID": true
+   }
+  ],
+  "assassinated": "XEW",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "DAVID"
+   },
+   {
+    "role": "MERLIN",
+    "name": "XEW",
+    "assassin": false
+   },
+   {
+    "name": "SOBY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "BILLY",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "name": "JEFF",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "ANIMELOVER"
+   }
+  ]
+ },
+ "players": [
+  {
+   "uid": "7UFC5AyhQnMheIdo6dPr6NKIoDw1",
+   "name": "BILLY"
+  },
+  {
+   "name": "DAVID",
+   "uid": "dmUJTavrpIW0n9Itisnl9oWC83J2"
+  },
+  {
+   "uid": "yBZCTu2NSOcIhZ5ripOOPVy8IbM2",
+   "name": "JEFF"
+  },
+  {
+   "uid": "qFOiXAQUj5Y4eMY8byGyGt3joyu2",
+   "name": "ANIMELOVER"
+  },
+  {
+   "name": "XEW",
+   "uid": "LWu6F9gtCwgizCWHq1GGD9g4iln2"
+  },
+  {
+   "name": "SOBY",
+   "uid": "xuv4pYAXe7XllcNvgUuEV62weMH2"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586069241,
+  "_nanoseconds": 186893000
+ },
+ "timeCreated": {
+  "_seconds": 1586068355,
+  "_nanoseconds": 628000000
+ },
  "missions": [
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 2,
    "team": [
     "BILLY",
     "DAVID"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
      "state": "REJECTED",
@@ -23,31 +122,26 @@
      ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "DAVID",
       "SOBY",
       "BILLY",
       "JEFF"
      ],
-     "proposer": "BILLY",
      "team": [
       "BILLY",
       "DAVID"
-     ]
+     ],
+     "proposer": "BILLY",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS"
   },
   {
    "state": "FAIL",
-   "team": [
-    "DAVID",
-    "BILLY",
-    "SOBY"
-   ],
-   "numFails": 1,
    "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -57,21 +151,34 @@
       "SOBY",
       "BILLY"
      ],
-     "proposer": "DAVID",
      "team": [
       "DAVID",
       "BILLY",
       "SOBY"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "DAVID"
     }
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "team": [
+    "DAVID",
+    "BILLY",
+    "SOBY"
+   ]
   },
   {
+   "state": "FAIL",
+   "team": [
+    "JEFF",
+    "ANIMELOVER",
+    "XEW",
+    "SOBY"
+   ],
+   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "DAVID",
       "SOBY",
@@ -80,6 +187,7 @@
       "ANIMELOVER"
      ],
      "proposer": "JEFF",
+     "state": "APPROVED",
      "team": [
       "JEFF",
       "ANIMELOVER",
@@ -88,42 +196,38 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "JEFF",
-    "ANIMELOVER",
-    "XEW",
-    "SOBY"
-   ],
-   "numFails": 1,
    "teamSize": 4
   },
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "ANIMELOVER",
     "XEW",
     "SOBY"
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "numFails": 0,
    "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "BILLY",
-      "ANIMELOVER"
-     ],
-     "proposer": "ANIMELOVER",
+     "state": "REJECTED",
      "team": [
       "XEW",
       "ANIMELOVER",
       "BILLY"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "BILLY",
+      "ANIMELOVER"
+     ],
+     "proposer": "ANIMELOVER"
     },
     {
+     "team": [
+      "ANIMELOVER",
+      "XEW",
+      "SOBY"
+     ],
      "votes": [
       "DAVID",
       "XEW",
@@ -132,19 +236,21 @@
       "JEFF",
       "ANIMELOVER"
      ],
-     "proposer": "XEW",
-     "team": [
-      "ANIMELOVER",
-      "XEW",
-      "SOBY"
-     ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "XEW"
     }
    ]
   },
   {
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "DAVID",
+      "ANIMELOVER",
+      "XEW",
+      "SOBY"
+     ],
      "state": "APPROVED",
      "votes": [
       "SOBY",
@@ -152,124 +258,18 @@
       "DAVID",
       "XEW"
      ],
-     "proposer": "SOBY",
-     "team": [
-      "DAVID",
-      "ANIMELOVER",
-      "XEW",
-      "SOBY"
-     ]
+     "proposer": "SOBY"
     }
    ],
-   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 4,
    "state": "SUCCESS",
    "team": [
     "DAVID",
     "ANIMELOVER",
     "XEW",
     "SOBY"
-   ],
-   "numFails": 0,
-   "teamSize": 4
+   ]
   }
- ],
- "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "XEW",
-  "roles": [
-   {
-    "name": "DAVID",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "XEW",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "SOBY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "BILLY"
-   },
-   {
-    "name": "JEFF",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ANIMELOVER",
-    "assassin": false,
-    "role": "PERCIVAL"
-   }
-  ],
-  "votes": [
-   {
-    "DAVID": true,
-    "BILLY": true
-   },
-   {
-    "DAVID": true,
-    "BILLY": false,
-    "SOBY": true
-   },
-   {
-    "JEFF": false,
-    "XEW": true,
-    "ANIMELOVER": true,
-    "SOBY": true
-   },
-   {
-    "XEW": true,
-    "ANIMELOVER": true,
-    "SOBY": true
-   },
-   {
-    "XEW": true,
-    "ANIMELOVER": true,
-    "SOBY": true,
-    "DAVID": true
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1586069241,
-  "_nanoseconds": 186893000
- },
- "players": [
-  {
-   "uid": "7UFC5AyhQnMheIdo6dPr6NKIoDw1",
-   "name": "BILLY"
-  },
-  {
-   "uid": "dmUJTavrpIW0n9Itisnl9oWC83J2",
-   "name": "DAVID"
-  },
-  {
-   "name": "JEFF",
-   "uid": "yBZCTu2NSOcIhZ5ripOOPVy8IbM2"
-  },
-  {
-   "name": "ANIMELOVER",
-   "uid": "qFOiXAQUj5Y4eMY8byGyGt3joyu2"
-  },
-  {
-   "uid": "LWu6F9gtCwgizCWHq1GGD9g4iln2",
-   "name": "XEW"
-  },
-  {
-   "name": "SOBY",
-   "uid": "xuv4pYAXe7XllcNvgUuEV62weMH2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586068355,
-  "_nanoseconds": 628000000
- }
+ ]
 }

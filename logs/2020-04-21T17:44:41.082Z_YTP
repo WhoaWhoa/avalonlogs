@@ -1,44 +1,14 @@
 {
  "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "EREN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "YAMAHA"
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "HOTTIE"
-   },
-   {
-    "name": "YODDLS",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "AD",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ],
   "votes": [
    {
     "AD": true,
     "YODDLS": true
    },
    {
-    "YODDLS": true,
+    "EREN": true,
     "AD": false,
-    "EREN": true
+    "YODDLS": true
    },
    {
     "HOTTIE": true,
@@ -46,15 +16,45 @@
    },
    {
     "YODDLS": true,
-    "AD": false,
-    "YAMAHA": true
+    "YAMAHA": true,
+    "AD": false
    },
    {
     "HOTTIE": false,
     "YAMAHA": true,
     "EREN": true
    }
-  ]
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "EREN",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "YAMAHA",
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MORDRED",
+    "name": "HOTTIE",
+    "assassin": true
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "YODDLS"
+   },
+   {
+    "name": "AD",
+    "assassin": false,
+    "role": "MORGANA"
+   }
+  ],
+  "assassinated": null
  },
  "players": [
   {
@@ -70,33 +70,18 @@
    "uid": "rMFSK1y64ocxqhydlDLxOeMgWfi2"
   },
   {
-   "uid": "aRtexD045UaUsZTHepe4KghcKnv1",
-   "name": "YAMAHA"
+   "name": "YAMAHA",
+   "uid": "aRtexD045UaUsZTHepe4KghcKnv1"
   },
   {
-   "name": "EREN",
-   "uid": "7HUOGrGuy9azjzxxu3u1X4D11KE2"
+   "uid": "7HUOGrGuy9azjzxxu3u1X4D11KE2",
+   "name": "EREN"
   }
  ],
- "timeFinished": {
-  "_seconds": 1587491487,
-  "_nanoseconds": 696000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587491081,
-  "_nanoseconds": 82000000
- },
  "missions": [
   {
-   "team": [
-    "YODDLS",
-    "AD"
-   ],
-   "numFails": 0,
    "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
      "votes": [
@@ -114,39 +99,49 @@
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "YODDLS",
+    "AD"
+   ],
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "EREN",
-      "AD",
-      "YODDLS"
-     ],
-     "state": "APPROVED",
      "votes": [
       "HOTTIE",
       "AD",
       "EREN"
      ],
-     "proposer": "EREN"
+     "proposer": "EREN",
+     "team": [
+      "EREN",
+      "AD",
+      "YODDLS"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "EREN",
     "AD",
     "YODDLS"
    ],
-   "numFails": 1,
-   "teamSize": 3
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
+   "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "HOTTIE",
+      "YAMAHA"
+     ],
+     "proposer": "HOTTIE",
      "state": "APPROVED",
      "votes": [
       "YAMAHA",
@@ -154,31 +149,24 @@
       "YODDLS",
       "AD",
       "EREN"
-     ],
-     "proposer": "HOTTIE",
-     "team": [
-      "HOTTIE",
-      "YAMAHA"
      ]
     }
    ],
+   "numFails": 0,
    "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "HOTTIE",
     "YAMAHA"
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   ]
   },
   {
+   "failsRequired": 1,
    "team": [
     "YODDLS",
     "AD",
     "YAMAHA"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -187,32 +175,41 @@
       "YAMAHA"
      ],
      "state": "APPROVED",
+     "proposer": "YODDLS",
      "votes": [
       "HOTTIE",
       "YODDLS",
       "AD",
       "YAMAHA"
-     ],
-     "proposer": "YODDLS"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3
   },
   {
+   "state": "FAIL",
+   "numFails": 1,
+   "team": [
+    "EREN",
+    "YAMAHA",
+    "HOTTIE"
+   ],
+   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "AD",
-      "HOTTIE",
-      "EREN"
-     ],
+     "proposer": "AD",
      "state": "REJECTED",
      "votes": [
       "AD",
       "EREN"
      ],
-     "proposer": "AD"
+     "team": [
+      "AD",
+      "HOTTIE",
+      "EREN"
+     ]
     },
     {
      "team": [
@@ -220,24 +217,27 @@
       "YAMAHA",
       "HOTTIE"
      ],
-     "state": "APPROVED",
+     "proposer": "YAMAHA",
      "votes": [
       "HOTTIE",
       "YODDLS",
       "AD"
      ],
-     "proposer": "YAMAHA"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "EREN",
-    "YAMAHA",
-    "HOTTIE"
-   ],
-   "numFails": 1,
-   "teamSize": 3
+   "failsRequired": 1
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1587491487,
+  "_nanoseconds": 696000000
+ },
+ "timeCreated": {
+  "_seconds": 1587491081,
+  "_nanoseconds": 82000000
+ }
 }

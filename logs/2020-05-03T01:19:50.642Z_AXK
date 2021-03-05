@@ -1,4 +1,26 @@
 {
+ "players": [
+  {
+   "uid": "AhsotrQ677MLw8IldgNuiV0Cthq1",
+   "name": "NICK"
+  },
+  {
+   "uid": "S35ndHVwNJgu6udlkAzm8IJbjE62",
+   "name": "HERESY"
+  },
+  {
+   "uid": "E4YRYLW3MFZDmX8EH2ZogQpIRV23",
+   "name": "AMELIA"
+  },
+  {
+   "name": "BECK",
+   "uid": "C934hC190ZSgBbyog9WCaSqoaj02"
+  },
+  {
+   "uid": "ceUcXyDbrCfgKdWvwzp27GhPS1K2",
+   "name": "EM"
+  }
+ ],
  "timeFinished": {
   "_seconds": 1588469562,
   "_nanoseconds": 883000000
@@ -10,10 +32,72 @@
   "_seconds": 1588468790,
   "_nanoseconds": 642000000
  },
+ "outcome": {
+  "votes": [
+   {
+    "EM": true,
+    "AMELIA": false
+   },
+   {
+    "BECK": true,
+    "AMELIA": true,
+    "NICK": true
+   },
+   {
+    "NICK": true,
+    "BECK": true
+   },
+   {
+    "BECK": false,
+    "EM": true,
+    "NICK": true
+   },
+   {
+    "NICK": true,
+    "BECK": false,
+    "HERESY": true
+   }
+  ],
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "HERESY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "AMELIA"
+   },
+   {
+    "name": "EM",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "name": "BECK",
+    "role": "MORDRED",
+    "assassin": false
+   },
+   {
+    "name": "NICK",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN"
+ },
  "missions": [
   {
    "proposals": [
     {
+     "team": [
+      "EM",
+      "AMELIA"
+     ],
+     "proposer": "BECK",
      "votes": [
       "BECK",
       "NICK",
@@ -21,117 +105,112 @@
       "AMELIA",
       "EM"
      ],
-     "proposer": "BECK",
-     "team": [
-      "EM",
-      "AMELIA"
-     ],
      "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "EM",
     "AMELIA"
    ],
    "numFails": 1,
-   "teamSize": 2
+   "teamSize": 2,
+   "state": "FAIL"
   },
   {
+   "state": "SUCCESS",
    "team": [
     "NICK",
     "BECK",
     "AMELIA"
    ],
-   "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
+     "proposer": "EM",
+     "votes": [
+      "HERESY",
+      "EM"
+     ],
      "team": [
       "EM",
       "HERESY",
       "BECK"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "HERESY",
-      "EM"
-     ],
-     "proposer": "EM"
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
+     "proposer": "NICK",
      "votes": [
       "HERESY",
       "AMELIA",
       "NICK"
      ],
-     "proposer": "NICK",
      "team": [
       "NICK",
       "BECK",
       "AMELIA"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
+   "state": "SUCCESS",
    "team": [
     "NICK",
     "BECK"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
      "team": [
       "NICK",
       "BECK"
      ],
+     "proposer": "HERESY",
      "state": "APPROVED",
      "votes": [
       "NICK",
       "HERESY",
       "AMELIA",
       "BECK"
-     ],
-     "proposer": "HERESY"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2,
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
+   "numFails": 1,
    "team": [
     "BECK",
     "NICK",
     "EM"
    ],
-   "numFails": 1,
-   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "AMELIA",
+     "votes": [
+      "AMELIA"
+     ],
+     "state": "REJECTED",
      "team": [
       "BECK",
       "NICK",
       "AMELIA"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "AMELIA"
-     ],
-     "proposer": "AMELIA"
+     ]
     },
     {
-     "proposer": "BECK",
      "team": [
       "BECK",
       "NICK",
       "EM"
      ],
+     "proposer": "BECK",
      "state": "APPROVED",
      "votes": [
       "BECK",
@@ -142,33 +221,42 @@
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3
   },
   {
+   "teamSize": 3,
+   "team": [
+    "HERESY",
+    "NICK",
+    "BECK"
+   ],
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
      "votes": [
       "EM"
      ],
-     "proposer": "EM",
      "team": [
       "EM",
       "HERESY",
       "BECK"
      ],
+     "proposer": "EM",
      "state": "REJECTED"
     },
     {
+     "votes": [
+      "AMELIA"
+     ],
+     "state": "REJECTED",
+     "proposer": "NICK",
      "team": [
       "NICK",
       "AMELIA",
       "BECK"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "AMELIA"
-     ],
-     "proposer": "NICK"
+     ]
     },
     {
      "team": [
@@ -184,95 +272,7 @@
      ],
      "proposer": "HERESY"
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "HERESY",
-    "NICK",
-    "BECK"
-   ],
-   "numFails": 1,
-   "teamSize": 3
-  }
- ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "HERESY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "AMELIA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "EM",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "BECK",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "NICK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "AMELIA": false,
-    "EM": true
-   },
-   {
-    "AMELIA": true,
-    "BECK": true,
-    "NICK": true
-   },
-   {
-    "BECK": true,
-    "NICK": true
-   },
-   {
-    "BECK": false,
-    "EM": true,
-    "NICK": true
-   },
-   {
-    "BECK": false,
-    "NICK": true,
-    "HERESY": true
-   }
-  ]
- },
- "players": [
-  {
-   "uid": "AhsotrQ677MLw8IldgNuiV0Cthq1",
-   "name": "NICK"
-  },
-  {
-   "name": "HERESY",
-   "uid": "S35ndHVwNJgu6udlkAzm8IJbjE62"
-  },
-  {
-   "name": "AMELIA",
-   "uid": "E4YRYLW3MFZDmX8EH2ZogQpIRV23"
-  },
-  {
-   "uid": "C934hC190ZSgBbyog9WCaSqoaj02",
-   "name": "BECK"
-  },
-  {
-   "uid": "ceUcXyDbrCfgKdWvwzp27GhPS1K2",
-   "name": "EM"
+   ]
   }
  ]
 }

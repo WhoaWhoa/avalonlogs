@@ -1,28 +1,15 @@
 {
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588033716,
-  "_nanoseconds": 946000000
- },
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "RA",
     "XIAO",
     "CHRIS"
    ],
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "RA",
-      "XIAO",
-      "CHRIS"
-     ],
+     "proposer": "RA",
      "state": "APPROVED",
      "votes": [
       "CHRIS",
@@ -32,22 +19,31 @@
       "RAYRAY",
       "XIAO"
      ],
-     "proposer": "RA"
+     "team": [
+      "RA",
+      "XIAO",
+      "CHRIS"
+     ]
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
    "team": [
     "RA",
     "XIAO",
     "CHRIS",
     "XXY"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "RAYRAY",
      "state": "APPROVED",
      "votes": [
       "KEVIN",
@@ -57,7 +53,6 @@
       "CHRIS",
       "YOOOOO"
      ],
-     "proposer": "RAYRAY",
      "team": [
       "RA",
       "XIAO",
@@ -65,11 +60,19 @@
       "XXY"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
+   "state": "FAIL",
+   "teamSize": 4,
+   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "XIAO",
+    "CHRIS",
+    "RA",
+    "SUKI"
+   ],
    "proposals": [
     {
      "state": "APPROVED",
@@ -88,31 +91,15 @@
       "SUKI"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "XIAO",
-    "CHRIS",
-    "RA",
-    "SUKI"
-   ],
-   "numFails": 1,
-   "teamSize": 4
+   ]
   },
   {
-   "state": "FAIL",
-   "team": [
-    "CHRIS",
-    "KEVIN",
-    "SUKI",
-    "RAYRAY",
-    "XXY"
-   ],
    "numFails": 2,
-   "teamSize": 5,
+   "state": "FAIL",
+   "failsRequired": 2,
    "proposals": [
     {
+     "proposer": "CHRIS",
      "team": [
       "CHRIS",
       "KEVIN",
@@ -120,7 +107,6 @@
       "RAYRAY",
       "XXY"
      ],
-     "state": "APPROVED",
      "votes": [
       "CHRIS",
       "KEVIN",
@@ -128,69 +114,52 @@
       "XXY",
       "RAYRAY"
      ],
-     "proposer": "CHRIS"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 2
+   "teamSize": 5,
+   "team": [
+    "CHRIS",
+    "KEVIN",
+    "SUKI",
+    "RAYRAY",
+    "XXY"
+   ]
   },
   {
-   "failsRequired": 1,
-   "team": [],
-   "teamSize": 5,
    "state": "PENDING",
-   "proposals": []
+   "teamSize": 5,
+   "proposals": [],
+   "failsRequired": 1,
+   "team": []
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
-  "votes": [
-   {
-    "XIAO": true,
-    "CHRIS": true,
-    "RA": true
-   },
-   {
-    "XIAO": false,
-    "CHRIS": true,
-    "XXY": true,
-    "RA": true
-   },
-   {
-    "RA": true,
-    "XIAO": false,
-    "SUKI": true,
-    "CHRIS": true
-   },
-   {
-    "SUKI": true,
-    "CHRIS": true,
-    "XXY": true,
-    "KEVIN": false,
-    "RAYRAY": false
-   }
-  ],
-  "message": "Three failed missions",
   "state": "EVIL_WIN",
-  "assassinated": null,
+  "message": "Three failed missions",
   "roles": [
    {
-    "name": "KEVIN",
     "assassin": false,
+    "name": "KEVIN",
     "role": "MORDRED"
    },
    {
-    "name": "SUKI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "XXY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "RA"
+    "assassin": false,
+    "name": "SUKI"
+   },
+   {
+    "assassin": false,
+    "name": "XXY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "RA",
+    "assassin": false
    },
    {
     "name": "RAYRAY",
@@ -198,34 +167,65 @@
     "role": "MORGANA"
    },
    {
-    "name": "XIAO",
     "assassin": true,
+    "name": "XIAO",
     "role": "EVIL MINION"
    },
    {
+    "role": "MERLIN",
     "name": "CHRIS",
-    "assassin": false,
-    "role": "MERLIN"
+    "assassin": false
    },
    {
     "name": "YOOOOO",
     "assassin": false,
     "role": "PERCIVAL"
    }
-  ]
+  ],
+  "votes": [
+   {
+    "CHRIS": true,
+    "XIAO": true,
+    "RA": true
+   },
+   {
+    "XXY": true,
+    "CHRIS": true,
+    "XIAO": false,
+    "RA": true
+   },
+   {
+    "SUKI": true,
+    "XIAO": false,
+    "CHRIS": true,
+    "RA": true
+   },
+   {
+    "RAYRAY": false,
+    "SUKI": true,
+    "CHRIS": true,
+    "KEVIN": false,
+    "XXY": true
+   }
+  ],
+  "assassinated": null
+ },
+ "timeFinished": {
+  "_seconds": 1588034243,
+  "_nanoseconds": 982000000
  },
  "players": [
   {
-   "name": "XIAO",
-   "uid": "wguKKm8G8dVFMrObcuWAF49yzvJ3"
+   "uid": "wguKKm8G8dVFMrObcuWAF49yzvJ3",
+   "name": "XIAO"
   },
   {
    "name": "CHRIS",
    "uid": "IoolRV7g9POaY9YZiusS7G2TPiF3"
   },
   {
-   "name": "KEVIN",
-   "uid": "bFEIbjtUEsg9hP32Cd6iANtwApq2"
+   "uid": "bFEIbjtUEsg9hP32Cd6iANtwApq2",
+   "name": "KEVIN"
   },
   {
    "uid": "EMxPnjpwdUfyWQeVwYaaPa4qUID2",
@@ -236,20 +236,20 @@
    "name": "SUKI"
   },
   {
-   "uid": "B8i6dS0FSBVjGUpFtAovsEF029r1",
-   "name": "YOOOOO"
+   "name": "YOOOOO",
+   "uid": "B8i6dS0FSBVjGUpFtAovsEF029r1"
   },
   {
    "name": "RA",
    "uid": "RRZ47YSJJQNYV5TAoZ3v8VNnuBB2"
   },
   {
-   "uid": "r5cmLymM05h85IXGUMhdxfbhPO62",
-   "name": "RAYRAY"
+   "name": "RAYRAY",
+   "uid": "r5cmLymM05h85IXGUMhdxfbhPO62"
   }
  ],
- "timeFinished": {
-  "_seconds": 1588034243,
-  "_nanoseconds": 982000000
+ "timeCreated": {
+  "_seconds": 1588033716,
+  "_nanoseconds": 946000000
  }
 }

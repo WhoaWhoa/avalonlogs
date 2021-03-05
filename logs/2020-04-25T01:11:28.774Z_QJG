@@ -1,4 +1,69 @@
 {
+ "outcome": {
+  "roles": [
+   {
+    "assassin": false,
+    "name": "SHAL",
+    "role": "MERLIN"
+   },
+   {
+    "name": "TOM",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "TARA",
+    "role": "MORGANA"
+   },
+   {
+    "name": "ALI",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "LUKE"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "IMBENJAMMI",
+    "assassin": false
+   }
+  ],
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "SHAL": true,
+    "TARA": true
+   },
+   {
+    "TARA": false,
+    "SHAL": true,
+    "LUKE": true
+   },
+   {
+    "ALI": true,
+    "TOM": false,
+    "IMBENJAMMI": true,
+    "SHAL": true
+   },
+   {
+    "SHAL": true,
+    "ALI": true,
+    "LUKE": true
+   },
+   {
+    "IMBENJAMMI": true,
+    "LUKE": true,
+    "SHAL": true,
+    "ALI": true
+   }
+  ],
+  "assassinated": "LUKE"
+ },
  "timeFinished": {
   "_seconds": 1587777787,
   "_nanoseconds": 496000000
@@ -12,20 +77,9 @@
  },
  "missions": [
   {
-   "team": [
-    "TARA",
-    "SHAL"
-   ],
    "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "proposer": "TARA",
-     "team": [
-      "TARA",
-      "SHAL"
-     ],
-     "state": "APPROVED",
      "votes": [
       "SHAL",
       "TOM",
@@ -33,29 +87,36 @@
       "ALI",
       "LUKE",
       "IMBENJAMMI"
-     ]
+     ],
+     "team": [
+      "TARA",
+      "SHAL"
+     ],
+     "proposer": "TARA",
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "teamSize": 2,
+   "team": [
+    "TARA",
+    "SHAL"
+   ]
   },
   {
    "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "SHAL",
     "TARA",
     "LUKE"
    ],
-   "numFails": 1,
    "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "SHAL",
-      "TARA",
-      "LUKE"
-     ],
-     "state": "APPROVED",
+     "proposer": "LUKE",
      "votes": [
       "TOM",
       "TARA",
@@ -63,30 +124,33 @@
       "IMBENJAMMI",
       "SHAL"
      ],
-     "proposer": "LUKE"
+     "state": "APPROVED",
+     "team": [
+      "SHAL",
+      "TARA",
+      "LUKE"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
    "proposals": [
     {
-     "votes": [
-      "TARA",
-      "ALI",
-      "IMBENJAMMI"
-     ],
-     "proposer": "ALI",
      "team": [
       "ALI",
       "TARA",
       "LUKE",
       "IMBENJAMMI"
      ],
-     "state": "REJECTED"
+     "proposer": "ALI",
+     "state": "REJECTED",
+     "votes": [
+      "TARA",
+      "ALI",
+      "IMBENJAMMI"
+     ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "ALI",
       "IMBENJAMMI",
@@ -94,6 +158,7 @@
       "TOM"
      ],
      "proposer": "IMBENJAMMI",
+     "state": "APPROVED",
      "team": [
       "IMBENJAMMI",
       "TOM",
@@ -102,25 +167,24 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
+   "teamSize": 4,
    "team": [
     "IMBENJAMMI",
     "TOM",
     "SHAL",
     "ALI"
    ],
+   "state": "FAIL",
    "numFails": 1,
-   "teamSize": 4
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
    "team": [
     "SHAL",
     "LUKE",
     "ALI"
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 3,
    "proposals": [
     {
@@ -138,11 +202,6 @@
      ]
     },
     {
-     "team": [
-      "SHAL",
-      "LUKE",
-      "ALI"
-     ],
      "state": "APPROVED",
      "votes": [
       "ALI",
@@ -150,124 +209,65 @@
       "IMBENJAMMI",
       "SHAL"
      ],
-     "proposer": "SHAL"
-    }
-   ],
-   "failsRequired": 1
-  },
-  {
-   "numFails": 0,
-   "teamSize": 4,
-   "proposals": [
-    {
+     "proposer": "SHAL",
      "team": [
-      "TARA",
-      "IMBENJAMMI",
       "SHAL",
-      "LUKE"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "TARA"
-     ],
-     "proposer": "TARA"
-    },
-    {
-     "state": "APPROVED",
-     "votes": [
-      "IMBENJAMMI",
-      "SHAL",
-      "ALI",
-      "LUKE"
-     ],
-     "proposer": "LUKE",
-     "team": [
       "LUKE",
-      "SHAL",
-      "ALI",
-      "IMBENJAMMI"
+      "ALI"
      ]
     }
    ],
    "failsRequired": 1,
+   "numFails": 0
+  },
+  {
    "state": "SUCCESS",
    "team": [
     "LUKE",
     "SHAL",
     "ALI",
     "IMBENJAMMI"
-   ]
+   ],
+   "numFails": 0,
+   "proposals": [
+    {
+     "proposer": "TARA",
+     "votes": [
+      "TARA"
+     ],
+     "state": "REJECTED",
+     "team": [
+      "TARA",
+      "IMBENJAMMI",
+      "SHAL",
+      "LUKE"
+     ]
+    },
+    {
+     "team": [
+      "LUKE",
+      "SHAL",
+      "ALI",
+      "IMBENJAMMI"
+     ],
+     "votes": [
+      "IMBENJAMMI",
+      "SHAL",
+      "ALI",
+      "LUKE"
+     ],
+     "state": "APPROVED",
+     "proposer": "LUKE"
+    }
+   ],
+   "failsRequired": 1,
+   "teamSize": 4
   }
  ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "LUKE",
-  "roles": [
-   {
-    "name": "SHAL",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "TOM",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "TARA",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "ALI",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "LUKE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "IMBENJAMMI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "TARA": true,
-    "SHAL": true
-   },
-   {
-    "TARA": false,
-    "LUKE": true,
-    "SHAL": true
-   },
-   {
-    "SHAL": true,
-    "IMBENJAMMI": true,
-    "ALI": true,
-    "TOM": false
-   },
-   {
-    "ALI": true,
-    "SHAL": true,
-    "LUKE": true
-   },
-   {
-    "SHAL": true,
-    "IMBENJAMMI": true,
-    "LUKE": true,
-    "ALI": true
-   }
-  ],
-  "message": "Three successful missions"
- },
  "players": [
   {
-   "uid": "DBmJbVJuI3gk5sq6JN0gM9aMNUX2",
-   "name": "TOM"
+   "name": "TOM",
+   "uid": "DBmJbVJuI3gk5sq6JN0gM9aMNUX2"
   },
   {
    "uid": "NIAmvvfK4pNNBRZTyluXo7elAnh2",
@@ -286,8 +286,8 @@
    "name": "ALI"
   },
   {
-   "uid": "iRszaW7C7kVSlrmOUY3k9MyqssA2",
-   "name": "IMBENJAMMI"
+   "name": "IMBENJAMMI",
+   "uid": "iRszaW7C7kVSlrmOUY3k9MyqssA2"
   }
  ]
 }

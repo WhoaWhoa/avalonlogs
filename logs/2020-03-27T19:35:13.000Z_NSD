@@ -1,12 +1,78 @@
 {
- "timeFinished": {
-  "_seconds": 1585340767,
-  "_nanoseconds": 208166000
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "MALTE": true,
+    "NIC": true
+   },
+   {
+    "BORLOX": false,
+    "KAY": true,
+    "NICK": true
+   },
+   {
+    "MALTE": true,
+    "FLO": true,
+    "NIC": true
+   },
+   {
+    "NICK": true,
+    "FLO": false,
+    "MALTE": false,
+    "NIC": true
+   },
+   {
+    "NIC": true,
+    "KAY": true,
+    "NILS": true,
+    "MALTE": false
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "KAY"
+   },
+   {
+    "name": "NIC",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "BORLOX"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "FLO"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "MALTE"
+   },
+   {
+    "assassin": false,
+    "name": "NILS",
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "NICK",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
  },
  "players": [
   {
-   "uid": "83UmRZnXJKQS7tgwfPeRImJP9vD2",
-   "name": "NICK"
+   "name": "NICK",
+   "uid": "83UmRZnXJKQS7tgwfPeRImJP9vD2"
   },
   {
    "uid": "5R0pi3zdaqg5BHKjhNE5kv1aFHx1",
@@ -21,18 +87,22 @@
    "uid": "M8Ekv5ivtHYOFGL5oqbr3kIyzcc2"
   },
   {
-   "name": "NIC",
-   "uid": "267HMobbWBXa5NQD96euOFFgByD2"
+   "uid": "267HMobbWBXa5NQD96euOFFgByD2",
+   "name": "NIC"
   },
   {
-   "uid": "vkSZgIxGBxZXNQ1OPGqiIxm1wdp2",
-   "name": "NILS"
+   "name": "NILS",
+   "uid": "vkSZgIxGBxZXNQ1OPGqiIxm1wdp2"
   },
   {
    "uid": "KLpamWl4MvRW9lnv0SiPNACsLhi2",
    "name": "FLO"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585340767,
+  "_nanoseconds": 208166000
+ },
  "timeCreated": {
   "_seconds": 1585337713,
   "_nanoseconds": 0
@@ -40,18 +110,14 @@
  "missions": [
   {
    "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "NIC",
     "MALTE"
    ],
-   "numFails": 0,
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "NIC",
-      "MALTE"
-     ],
      "state": "APPROVED",
      "votes": [
       "MALTE",
@@ -62,19 +128,61 @@
       "BORLOX",
       "FLO"
      ],
+     "team": [
+      "NIC",
+      "MALTE"
+     ],
      "proposer": "NIC"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "NILS",
      "team": [
       "KAY",
       "NICK",
       "BORLOX"
+     ],
+     "proposer": "NILS",
+     "votes": [
+      "KAY",
+      "NIC",
+      "BORLOX",
+      "FLO",
+      "MALTE",
+      "NILS",
+      "NICK"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "numFails": 1,
+   "team": [
+    "KAY",
+    "NICK",
+    "BORLOX"
+   ],
+   "teamSize": 3
+  },
+  {
+   "team": [
+    "FLO",
+    "NIC",
+    "MALTE"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "proposals": [
+    {
+     "proposer": "FLO",
+     "team": [
+      "FLO",
+      "NIC",
+      "MALTE"
      ],
      "state": "APPROVED",
      "votes": [
@@ -89,58 +197,20 @@
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "KAY",
-    "NICK",
-    "BORLOX"
-   ],
-   "numFails": 1,
    "teamSize": 3
   },
   {
-   "team": [
-    "FLO",
-    "NIC",
-    "MALTE"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
-   "proposals": [
-    {
-     "votes": [
-      "KAY",
-      "NIC",
-      "BORLOX",
-      "FLO",
-      "MALTE",
-      "NILS",
-      "NICK"
-     ],
-     "proposer": "FLO",
-     "team": [
-      "FLO",
-      "NIC",
-      "MALTE"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
-  },
-  {
+   "failsRequired": 2,
+   "numFails": 2,
+   "state": "FAIL",
    "team": [
     "NIC",
     "MALTE",
     "NICK",
     "FLO"
    ],
-   "numFails": 2,
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "FLO",
       "MALTE",
@@ -156,64 +226,65 @@
       "MALTE",
       "NICK",
       "FLO"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 2,
-   "state": "FAIL"
+   "teamSize": 4
   },
   {
+   "team": [
+    "NIC",
+    "MALTE",
+    "KAY",
+    "NILS"
+   ],
    "proposals": [
     {
      "votes": [
       "BORLOX",
       "MALTE"
      ],
-     "proposer": "MALTE",
+     "state": "REJECTED",
      "team": [
       "MALTE",
       "NIC",
       "FLO",
       "BORLOX"
      ],
-     "state": "REJECTED"
+     "proposer": "MALTE"
     },
     {
      "votes": [
       "MALTE"
      ],
-     "proposer": "BORLOX",
+     "state": "REJECTED",
      "team": [
       "NILS",
       "NIC",
       "MALTE",
       "KAY"
      ],
-     "state": "REJECTED"
+     "proposer": "BORLOX"
     },
     {
+     "state": "REJECTED",
      "team": [
       "KAY",
       "NIC",
       "NICK",
       "NILS"
      ],
-     "state": "REJECTED",
+     "proposer": "KAY",
      "votes": [
       "NILS",
       "NICK",
       "KAY"
-     ],
-     "proposer": "KAY"
+     ]
     },
     {
-     "team": [
-      "NIC",
-      "MALTE",
-      "KAY",
-      "NILS"
-     ],
      "state": "APPROVED",
+     "proposer": "NIC",
      "votes": [
       "BORLOX",
       "FLO",
@@ -221,89 +292,18 @@
       "NILS",
       "NIC"
      ],
-     "proposer": "NIC"
+     "team": [
+      "NIC",
+      "MALTE",
+      "KAY",
+      "NILS"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "NIC",
-    "MALTE",
-    "KAY",
-    "NILS"
-   ],
+   "teamSize": 4,
    "numFails": 1,
-   "teamSize": 4
+   "state": "FAIL",
+   "failsRequired": 1
   }
- ],
- "outcome": {
-  "roles": [
-   {
-    "name": "KAY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "NIC",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "BORLOX"
-   },
-   {
-    "name": "FLO",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "MALTE",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "NILS",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "NICK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "NIC": true,
-    "MALTE": true
-   },
-   {
-    "NICK": true,
-    "KAY": true,
-    "BORLOX": false
-   },
-   {
-    "NIC": true,
-    "MALTE": true,
-    "FLO": true
-   },
-   {
-    "NIC": true,
-    "MALTE": false,
-    "FLO": false,
-    "NICK": true
-   },
-   {
-    "MALTE": false,
-    "KAY": true,
-    "NIC": true,
-    "NILS": true
-   }
-  ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null
- }
+ ]
 }

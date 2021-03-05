@@ -1,8 +1,4 @@
 {
- "timeCreated": {
-  "_seconds": 1585979131,
-  "_nanoseconds": 493000000
- },
  "missions": [
   {
    "proposals": [
@@ -15,41 +11,41 @@
       "NAT"
      ],
      "proposer": "SILAS",
+     "state": "APPROVED",
      "team": [
       "SILAS",
       "NESSA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 2,
    "state": "SUCCESS",
    "team": [
     "SILAS",
     "NESSA"
    ],
-   "numFails": 0,
-   "teamSize": 2
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "NAT",
     "SILAS",
     "NESSA"
    ],
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "NAT",
      "votes": [
       "RYAN",
       "DELZ",
       "NAT",
       "SILAS"
      ],
-     "proposer": "NAT",
+     "state": "APPROVED",
      "team": [
       "NAT",
       "SILAS",
@@ -57,7 +53,7 @@
      ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3
   },
   {
    "state": "FAIL",
@@ -67,59 +63,57 @@
     "SILAS",
     "NAT"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "votes": [
+      "S"
+     ],
+     "state": "REJECTED",
      "team": [
       "RYAN",
       "NAT",
       "S",
       "SILAS"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "S"
-     ],
      "proposer": "S"
     },
     {
+     "team": [
+      "DELZ",
+      "NESSA",
+      "SILAS",
+      "NAT"
+     ],
      "state": "REJECTED",
      "votes": [
       "RYAN",
       "DELZ",
       "NAT"
      ],
-     "proposer": "DELZ",
+     "proposer": "DELZ"
+    },
+    {
+     "proposer": "RYAN",
+     "votes": [
+      "RYAN"
+     ],
+     "state": "REJECTED",
      "team": [
-      "DELZ",
+      "RYAN",
       "NESSA",
       "SILAS",
       "NAT"
      ]
     },
     {
-     "team": [
-      "RYAN",
-      "NESSA",
-      "SILAS",
-      "NAT"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "RYAN"
-     ],
-     "proposer": "RYAN"
-    },
-    {
      "state": "APPROVED",
+     "proposer": "NESSA",
      "votes": [
       "NESSA",
       "SILAS",
       "DELZ",
       "NAT"
      ],
-     "proposer": "NESSA",
      "team": [
       "DELZ",
       "NESSA",
@@ -128,17 +122,20 @@
      ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 4
   },
   {
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "SILAS",
       "NAT",
       "S"
      ],
-     "state": "REJECTED",
      "votes": [
       "SILAS",
       "RYAN"
@@ -153,35 +150,57 @@
       "NESSA",
       "SILAS"
      ],
-     "proposer": "NAT",
      "team": [
       "NAT",
       "NESSA",
       "S"
-     ]
+     ],
+     "proposer": "NAT"
     }
    ],
-   "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS",
    "team": [
     "NAT",
     "NESSA",
     "S"
    ],
-   "numFails": 0,
    "teamSize": 3
   },
   {
+   "state": "PENDING",
+   "team": [],
    "proposals": [],
    "failsRequired": 1,
-   "team": [],
-   "teamSize": 4,
-   "state": "PENDING"
+   "teamSize": 4
   }
  ],
  "outcome": {
   "state": "GOOD_WIN",
+  "votes": [
+   {
+    "NESSA": true,
+    "SILAS": true
+   },
+   {
+    "SILAS": true,
+    "NESSA": true,
+    "NAT": true
+   },
+   {
+    "NESSA": true,
+    "SILAS": true,
+    "NAT": true,
+    "DELZ": false
+   },
+   {
+    "NESSA": true,
+    "NAT": true,
+    "S": true
+   }
+  ],
   "assassinated": "NESSA",
+  "message": "Three successful missions",
   "roles": [
    {
     "name": "NESSA",
@@ -194,9 +213,9 @@
     "name": "SILAS"
    },
    {
-    "name": "S",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "S"
    },
    {
     "name": "RYAN",
@@ -209,55 +228,32 @@
     "role": "MORDRED"
    },
    {
-    "name": "NAT",
     "assassin": false,
+    "name": "NAT",
     "role": "MERLIN"
    }
-  ],
-  "votes": [
-   {
-    "SILAS": true,
-    "NESSA": true
-   },
-   {
-    "SILAS": true,
-    "NESSA": true,
-    "NAT": true
-   },
-   {
-    "DELZ": false,
-    "SILAS": true,
-    "NESSA": true,
-    "NAT": true
-   },
-   {
-    "NESSA": true,
-    "S": true,
-    "NAT": true
-   }
-  ],
-  "message": "Three successful missions"
+  ]
  },
- "timeFinished": {
-  "_seconds": 1585980650,
-  "_nanoseconds": 634675000
+ "timeCreated": {
+  "_seconds": 1585979131,
+  "_nanoseconds": 493000000
  },
  "players": [
   {
-   "name": "DELZ",
-   "uid": "h8HkNQqBFQdSKoPqC3JfqO1bptE2"
+   "uid": "h8HkNQqBFQdSKoPqC3JfqO1bptE2",
+   "name": "DELZ"
   },
   {
-   "uid": "5BrQewCuQaUbfWIzD0SS70Hky352",
-   "name": "RYAN"
+   "name": "RYAN",
+   "uid": "5BrQewCuQaUbfWIzD0SS70Hky352"
   },
   {
-   "uid": "oTvMuO8b2WTNeZfG5uZ06kOMNCt2",
-   "name": "NESSA"
+   "name": "NESSA",
+   "uid": "oTvMuO8b2WTNeZfG5uZ06kOMNCt2"
   },
   {
-   "uid": "oxXS9ESvtVUL3fqxRZPUQwLM4IK2",
-   "name": "SILAS"
+   "name": "SILAS",
+   "uid": "oxXS9ESvtVUL3fqxRZPUQwLM4IK2"
   },
   {
    "name": "NAT",
@@ -267,5 +263,9 @@
    "name": "S",
    "uid": "Cu625G3FY2ge1dgAYLEKFpw58IQ2"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1585980650,
+  "_nanoseconds": 634675000
+ }
 }

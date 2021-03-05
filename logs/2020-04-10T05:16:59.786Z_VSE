@@ -1,20 +1,98 @@
 {
+ "players": [
+  {
+   "uid": "D9P4edHkq0ZUO0Q5HepkHOw9jWU2",
+   "name": "DADI"
+  },
+  {
+   "name": "MARWIE",
+   "uid": "DhUsOXH1LhSIgj7hiLECw5H0pc23"
+  },
+  {
+   "name": "SANG",
+   "uid": "VC6osNuueXYBnlenQGGO543wgFX2"
+  },
+  {
+   "name": "NEEHAW",
+   "uid": "VCKDlXqBm8VPlQUs4Cp8VnrzA1F3"
+  },
+  {
+   "name": "SAAK",
+   "uid": "lLbnA05okrbSr3qNJsd0AKcpQPN2"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586496428,
+  "_nanoseconds": 327999000
+ },
+ "outcome": {
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "SAAK",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "DADI"
+   },
+   {
+    "assassin": true,
+    "name": "SANG",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "MORDRED",
+    "assassin": false,
+    "name": "NEEHAW"
+   },
+   {
+    "name": "MARWIE",
+    "role": "MERLIN",
+    "assassin": false
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "SAAK": true,
+    "MARWIE": true
+   },
+   {
+    "DADI": true,
+    "SANG": false,
+    "SAAK": true
+   },
+   {
+    "MARWIE": true,
+    "SANG": true
+   },
+   {
+    "NEEHAW": false,
+    "MARWIE": true,
+    "SAAK": true
+   },
+   {
+    "SAAK": true,
+    "MARWIE": true,
+    "NEEHAW": false
+   }
+  ]
+ },
  "missions": [
   {
    "state": "SUCCESS",
+   "teamSize": 2,
    "team": [
     "SAAK",
     "MARWIE"
    ],
    "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "SAAK",
-      "MARWIE"
-     ],
-     "state": "APPROVED",
      "votes": [
       "SANG",
       "NEEHAW",
@@ -22,13 +100,36 @@
       "SAAK",
       "DADI"
      ],
-     "proposer": "SAAK"
+     "state": "APPROVED",
+     "proposer": "SAAK",
+     "team": [
+      "SAAK",
+      "MARWIE"
+     ]
     }
    ],
    "failsRequired": 1
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "votes": [
+      "SANG",
+      "NEEHAW",
+      "MARWIE",
+      "SAAK",
+      "DADI"
+     ],
+     "team": [
+      "SAAK",
+      "SANG",
+      "DADI"
+     ],
+     "state": "APPROVED",
+     "proposer": "DADI"
+    }
+   ],
    "team": [
     "SAAK",
     "SANG",
@@ -36,33 +137,11 @@
    ],
    "numFails": 1,
    "teamSize": 3,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "SANG",
-      "NEEHAW",
-      "MARWIE",
-      "SAAK",
-      "DADI"
-     ],
-     "proposer": "DADI",
-     "team": [
-      "SAAK",
-      "SANG",
-      "DADI"
-     ]
-    }
-   ],
-   "failsRequired": 1
+   "state": "FAIL"
   },
   {
-   "team": [
-    "SANG",
-    "MARWIE"
-   ],
+   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
      "votes": [
@@ -70,11 +149,11 @@
       "MARWIE"
      ],
      "proposer": "MARWIE",
+     "state": "REJECTED",
      "team": [
       "MARWIE",
       "SAAK"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "team": [
@@ -92,171 +171,92 @@
      "proposer": "SANG"
     }
    ],
+   "teamSize": 2,
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "SANG",
+    "MARWIE"
+   ]
   },
   {
-   "state": "FAIL",
    "team": [
     "NEEHAW",
     "MARWIE",
     "SAAK"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "NEEHAW",
-     "team": [
-      "NEEHAW",
-      "MARWIE",
-      "SAAK"
-     ],
      "state": "APPROVED",
      "votes": [
       "MARWIE",
       "SAAK",
       "SANG",
       "NEEHAW"
-     ]
+     ],
+     "team": [
+      "NEEHAW",
+      "MARWIE",
+      "SAAK"
+     ],
+     "proposer": "NEEHAW"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
+   "numFails": 1,
+   "teamSize": 3,
    "state": "FAIL",
    "team": [
     "MARWIE",
     "NEEHAW",
     "SAAK"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "SAAK",
+     "votes": [
+      "SAAK"
+     ],
+     "state": "REJECTED",
      "team": [
       "SAAK",
       "MARWIE",
       "DADI"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "SAAK"
-     ],
-     "proposer": "SAAK"
+     ]
     },
     {
      "votes": [
       "DADI",
       "SANG"
      ],
+     "state": "REJECTED",
      "proposer": "DADI",
      "team": [
       "DADI",
       "MARWIE",
       "SANG"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "SAAK",
       "NEEHAW",
       "MARWIE"
      ],
-     "proposer": "MARWIE",
      "team": [
       "MARWIE",
       "NEEHAW",
       "SAAK"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "MARWIE"
     }
    ],
    "failsRequired": 1
-  }
- ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "SAAK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "DADI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SANG",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "NEEHAW"
-   },
-   {
-    "name": "MARWIE",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "votes": [
-   {
-    "MARWIE": true,
-    "SAAK": true
-   },
-   {
-    "DADI": true,
-    "SANG": false,
-    "SAAK": true
-   },
-   {
-    "MARWIE": true,
-    "SANG": true
-   },
-   {
-    "MARWIE": true,
-    "SAAK": true,
-    "NEEHAW": false
-   },
-   {
-    "MARWIE": true,
-    "SAAK": true,
-    "NEEHAW": false
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1586496428,
-  "_nanoseconds": 327999000
- },
- "players": [
-  {
-   "uid": "D9P4edHkq0ZUO0Q5HepkHOw9jWU2",
-   "name": "DADI"
-  },
-  {
-   "uid": "DhUsOXH1LhSIgj7hiLECw5H0pc23",
-   "name": "MARWIE"
-  },
-  {
-   "name": "SANG",
-   "uid": "VC6osNuueXYBnlenQGGO543wgFX2"
-  },
-  {
-   "uid": "VCKDlXqBm8VPlQUs4Cp8VnrzA1F3",
-   "name": "NEEHAW"
-  },
-  {
-   "uid": "lLbnA05okrbSr3qNJsd0AKcpQPN2",
-   "name": "SAAK"
   }
  ],
  "timeCreated": {

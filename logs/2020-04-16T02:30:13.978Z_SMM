@@ -1,30 +1,85 @@
 {
- "timeFinished": {
-  "_seconds": 1587005086,
-  "_nanoseconds": 265295000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587004213,
-  "_nanoseconds": 978000000
+ "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": "DANIEL",
+  "votes": [
+   {
+    "ATRA": true,
+    "JOSH": false
+   },
+   {
+    "AAVA": true,
+    "DANIEL": true,
+    "JUICE": false
+   },
+   {
+    "DANIEL": true,
+    "MANDY": true,
+    "ATRA": true,
+    "AAVA": true
+   },
+   {
+    "AAVA": true,
+    "MANDY": true,
+    "DANIEL": true
+   },
+   {
+    "DANIEL": true,
+    "AAVA": true,
+    "ATRA": true,
+    "MANDY": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "AAVA"
+   },
+   {
+    "name": "MANDY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ATRA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "DANIEL",
+    "role": "MERLIN"
+   },
+   {
+    "assassin": true,
+    "name": "JOSH",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "JUICE",
+    "role": "EVIL MINION"
+   }
+  ]
  },
  "missions": [
   {
-   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 2,
    "team": [
     "JOSH",
     "ATRA"
    ],
-   "numFails": 1,
-   "teamSize": 2,
    "proposals": [
     {
      "team": [
       "JOSH",
       "ATRA"
      ],
+     "proposer": "JOSH",
      "state": "APPROVED",
      "votes": [
       "JUICE",
@@ -33,27 +88,33 @@
       "ATRA",
       "DANIEL",
       "JOSH"
-     ],
-     "proposer": "JOSH"
+     ]
     }
    ],
-   "failsRequired": 1
+   "state": "FAIL"
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
+   "team": [
+    "AAVA",
+    "DANIEL",
+    "JUICE"
+   ],
    "proposals": [
     {
+     "proposer": "ATRA",
+     "state": "REJECTED",
      "team": [
       "ATRA",
       "AAVA",
       "DANIEL"
      ],
-     "state": "REJECTED",
      "votes": [
       "DANIEL",
       "AAVA",
       "ATRA"
-     ],
-     "proposer": "ATRA"
+     ]
     },
     {
      "team": [
@@ -61,7 +122,6 @@
       "DANIEL",
       "JUICE"
      ],
-     "state": "APPROVED",
      "votes": [
       "DANIEL",
       "JOSH",
@@ -70,25 +130,31 @@
       "MANDY",
       "ATRA"
      ],
-     "proposer": "JUICE"
+     "proposer": "JUICE",
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "AAVA",
-    "DANIEL",
-    "JUICE"
-   ],
-   "numFails": 1,
    "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "AAVA",
+    "MANDY",
+    "DANIEL",
+    "ATRA"
+   ],
    "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "AAVA",
+     "team": [
+      "AAVA",
+      "MANDY",
+      "DANIEL",
+      "ATRA"
+     ],
      "votes": [
       "AAVA",
       "MANDY",
@@ -97,23 +163,11 @@
       "JOSH",
       "JUICE"
      ],
-     "proposer": "AAVA",
-     "team": [
-      "AAVA",
-      "MANDY",
-      "DANIEL",
-      "ATRA"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
    "state": "SUCCESS",
-   "team": [
-    "AAVA",
-    "MANDY",
-    "DANIEL",
-    "ATRA"
-   ]
+   "teamSize": 4
   },
   {
    "team": [
@@ -123,6 +177,8 @@
    ],
    "numFails": 0,
    "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -130,15 +186,16 @@
       "ATRA",
       "AAVA"
      ],
+     "proposer": "DANIEL",
      "state": "REJECTED",
      "votes": [
       "AAVA",
       "ATRA",
       "DANIEL"
-     ],
-     "proposer": "DANIEL"
+     ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "DANIEL",
       "JOSH",
@@ -147,17 +204,14 @@
       "MANDY",
       "ATRA"
      ],
-     "proposer": "MANDY",
      "team": [
       "DANIEL",
       "AAVA",
       "MANDY"
      ],
-     "state": "APPROVED"
+     "proposer": "MANDY"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
    "team": [
@@ -166,8 +220,9 @@
     "DANIEL",
     "MANDY"
    ],
-   "numFails": 0,
    "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -176,13 +231,19 @@
       "DANIEL",
       "MANDY"
      ],
+     "proposer": "JOSH",
      "state": "REJECTED",
      "votes": [
       "JOSH"
-     ],
-     "proposer": "JOSH"
+     ]
     },
     {
+     "team": [
+      "ATRA",
+      "AAVA",
+      "DANIEL",
+      "MANDY"
+     ],
      "state": "APPROVED",
      "votes": [
       "ATRA",
@@ -191,84 +252,12 @@
       "AAVA",
       "MANDY"
      ],
-     "proposer": "ATRA",
-     "team": [
-      "ATRA",
-      "AAVA",
-      "DANIEL",
-      "MANDY"
-     ]
+     "proposer": "ATRA"
     }
    ],
-   "failsRequired": 1,
    "state": "SUCCESS"
   }
  ],
- "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "DANIEL",
-  "roles": [
-   {
-    "name": "AAVA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MANDY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ATRA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "DANIEL",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "JOSH",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JUICE",
-    "assassin": false,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "ATRA": true,
-    "JOSH": false
-   },
-   {
-    "DANIEL": true,
-    "JUICE": false,
-    "AAVA": true
-   },
-   {
-    "AAVA": true,
-    "DANIEL": true,
-    "ATRA": true,
-    "MANDY": true
-   },
-   {
-    "AAVA": true,
-    "DANIEL": true,
-    "MANDY": true
-   },
-   {
-    "MANDY": true,
-    "AAVA": true,
-    "DANIEL": true,
-    "ATRA": true
-   }
-  ]
- },
  "players": [
   {
    "uid": "zrhBlBcoBcWOKkbTjGshr7dN3p43",
@@ -279,20 +268,31 @@
    "uid": "baVuOnVjAJdsPbOsFs8lkENOr5B3"
   },
   {
-   "uid": "s1z3cWcBbsfH4X9lbYNfh2bs9qY2",
-   "name": "JUICE"
+   "name": "JUICE",
+   "uid": "s1z3cWcBbsfH4X9lbYNfh2bs9qY2"
   },
   {
    "name": "AAVA",
    "uid": "WNQxEHjNsKPNzwUGGE5fftWyhvX2"
   },
   {
-   "uid": "2ZSW7aUnrEOsoCFgVlAz30dATdv1",
-   "name": "DANIEL"
+   "name": "DANIEL",
+   "uid": "2ZSW7aUnrEOsoCFgVlAz30dATdv1"
   },
   {
-   "name": "MANDY",
-   "uid": "XS2OU8qr9UbzozsAcAl6B4jqJ103"
+   "uid": "XS2OU8qr9UbzozsAcAl6B4jqJ103",
+   "name": "MANDY"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1587005086,
+  "_nanoseconds": 265295000
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1587004213,
+  "_nanoseconds": 978000000
+ }
 }

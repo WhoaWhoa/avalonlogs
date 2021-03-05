@@ -1,17 +1,41 @@
 {
  "outcome": {
   "state": "EVIL_WIN",
-  "assassinated": null,
+  "votes": [
+   {
+    "NORMALGOOD": true,
+    "PETER": true
+   },
+   {
+    "PETER": true,
+    "NORMALGOOD": true,
+    "YENEEGOO": false
+   },
+   {
+    "NORMALGOOD": true,
+    "GRON": true
+   },
+   {
+    "YENEEGOO": false,
+    "GRON": true,
+    "NORMALGOOD": true
+   },
+   {
+    "YENEEGOO": false,
+    "GRON": true,
+    "PETER": true
+   }
+  ],
   "roles": [
    {
     "name": "YENEEGOO",
-    "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "assassin": false
    },
    {
     "name": "IMVERYSAD",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
     "name": "PETER",
@@ -20,117 +44,53 @@
    },
    {
     "name": "NORMALGOOD",
-    "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "assassin": false
    },
    {
+    "role": "MERLIN",
     "name": "GRON",
-    "assassin": false,
-    "role": "MERLIN"
+    "assassin": false
    }
   ],
-  "votes": [
-   {
-    "PETER": true,
-    "NORMALGOOD": true
-   },
-   {
-    "PETER": true,
-    "NORMALGOOD": true,
-    "YENEEGOO": false
-   },
-   {
-    "GRON": true,
-    "NORMALGOOD": true
-   },
-   {
-    "NORMALGOOD": true,
-    "YENEEGOO": false,
-    "GRON": true
-   },
-   {
-    "YENEEGOO": false,
-    "GRON": true,
-    "PETER": true
-   }
-  ],
-  "message": "Three failed missions"
- },
- "players": [
-  {
-   "uid": "eyY3DEcBcwh6VTpOpHAzlCBZHKh2",
-   "name": "GRON"
-  },
-  {
-   "uid": "iJqRXsAVRWUnDhBYYNtOGcIrqgr1",
-   "name": "IMVERYSAD"
-  },
-  {
-   "name": "YENEEGOO",
-   "uid": "EnPurkvQCPcpGq6PX7GYaV12qEu2"
-  },
-  {
-   "uid": "J0wCPNOkdsN4BtpZ0n8aSKlZrNm1",
-   "name": "NORMALGOOD"
-  },
-  {
-   "uid": "qheIIhW8cmVUqMymVIKtXpuV64B3",
-   "name": "PETER"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1589519327,
-  "_nanoseconds": 652000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1589518631,
-  "_nanoseconds": 309000000
+  "message": "Three failed missions",
+  "assassinated": null
  },
  "missions": [
   {
-   "proposals": [
-    {
-     "votes": [
-      "IMVERYSAD",
-      "PETER",
-      "NORMALGOOD",
-      "YENEEGOO"
-     ],
-     "proposer": "NORMALGOOD",
-     "team": [
-      "NORMALGOOD",
-      "PETER"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS",
    "team": [
     "NORMALGOOD",
     "PETER"
    ],
-   "numFails": 0,
-   "teamSize": 2
-  },
-  {
-   "team": [
-    "PETER",
-    "NORMALGOOD",
-    "YENEEGOO"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
+   "failsRequired": 1,
+   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "NORMALGOOD",
      "team": [
+      "NORMALGOOD",
+      "PETER"
+     ],
+     "votes": [
+      "IMVERYSAD",
       "PETER",
       "NORMALGOOD",
       "YENEEGOO"
-     ],
+     ]
+    }
+   ]
+  },
+  {
+   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "FAIL",
+   "proposals": [
+    {
+     "proposer": "PETER",
      "state": "APPROVED",
      "votes": [
       "IMVERYSAD",
@@ -138,25 +98,26 @@
       "NORMALGOOD",
       "YENEEGOO"
      ],
-     "proposer": "PETER"
+     "team": [
+      "PETER",
+      "NORMALGOOD",
+      "YENEEGOO"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "PETER",
+    "NORMALGOOD",
+    "YENEEGOO"
+   ]
   },
   {
-   "team": [
-    "GRON",
-    "NORMALGOOD"
-   ],
    "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "GRON",
-      "NORMALGOOD"
-     ],
      "state": "APPROVED",
      "votes": [
       "YENEEGOO",
@@ -165,88 +126,127 @@
       "NORMALGOOD",
       "GRON"
      ],
-     "proposer": "GRON"
+     "proposer": "GRON",
+     "team": [
+      "GRON",
+      "NORMALGOOD"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "GRON",
+    "NORMALGOOD"
+   ]
   },
   {
+   "teamSize": 3,
+   "numFails": 1,
    "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "GRON",
     "YENEEGOO",
     "NORMALGOOD"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "votes": [],
      "proposer": "IMVERYSAD",
+     "state": "REJECTED",
+     "votes": [],
      "team": [
       "IMVERYSAD",
       "GRON",
       "YENEEGOO"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "proposer": "YENEEGOO",
-     "team": [
-      "GRON",
-      "YENEEGOO",
-      "NORMALGOOD"
-     ],
      "state": "APPROVED",
      "votes": [
       "NORMALGOOD",
       "GRON",
       "YENEEGOO"
+     ],
+     "team": [
+      "GRON",
+      "YENEEGOO",
+      "NORMALGOOD"
      ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "team": [
-    "PETER",
-    "GRON",
-    "YENEEGOO"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "NORMALGOOD",
+      "GRON",
+      "IMVERYSAD"
+     ],
      "state": "REJECTED",
      "votes": [
       "NORMALGOOD",
       "IMVERYSAD"
      ],
-     "proposer": "NORMALGOOD",
-     "team": [
-      "NORMALGOOD",
-      "GRON",
-      "IMVERYSAD"
-     ]
+     "proposer": "NORMALGOOD"
     },
     {
-     "state": "APPROVED",
      "votes": [
       "YENEEGOO",
       "IMVERYSAD",
       "PETER"
      ],
-     "proposer": "PETER",
+     "state": "APPROVED",
      "team": [
       "PETER",
       "GRON",
       "YENEEGOO"
-     ]
+     ],
+     "proposer": "PETER"
     }
    ],
+   "teamSize": 3,
    "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "team": [
+    "PETER",
+    "GRON",
+    "YENEEGOO"
+   ],
+   "numFails": 1
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1589518631,
+  "_nanoseconds": 309000000
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1589519327,
+  "_nanoseconds": 652000000
+ },
+ "players": [
+  {
+   "name": "GRON",
+   "uid": "eyY3DEcBcwh6VTpOpHAzlCBZHKh2"
+  },
+  {
+   "name": "IMVERYSAD",
+   "uid": "iJqRXsAVRWUnDhBYYNtOGcIrqgr1"
+  },
+  {
+   "uid": "EnPurkvQCPcpGq6PX7GYaV12qEu2",
+   "name": "YENEEGOO"
+  },
+  {
+   "name": "NORMALGOOD",
+   "uid": "J0wCPNOkdsN4BtpZ0n8aSKlZrNm1"
+  },
+  {
+   "uid": "qheIIhW8cmVUqMymVIKtXpuV64B3",
+   "name": "PETER"
   }
  ]
 }

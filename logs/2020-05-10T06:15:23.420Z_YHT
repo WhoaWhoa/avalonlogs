@@ -1,28 +1,136 @@
 {
+ "players": [
+  {
+   "uid": "9LbwmRENWzLvsvuH19S3n2RfOUz1",
+   "name": "HARISH"
+  },
+  {
+   "uid": "ZLtegVFtOUfRNJStRuqH4tLW0Rq1",
+   "name": "MEENAXI"
+  },
+  {
+   "name": "MERIN",
+   "uid": "hdwNhBkE5Wh1VoZjPR25Nan8jv22"
+  },
+  {
+   "uid": "GRfIPLZBNRUW872Sgv35caa7X7Y2",
+   "name": "SUMAIRA"
+  },
+  {
+   "uid": "IFOeJRwJCZZozPjWKNlnlwYrfK83",
+   "name": "KHUSHBOO"
+  },
+  {
+   "name": "HAMZA",
+   "uid": "ziPsnlpwrchYXQlN5uFNnhf7Q4E2"
+  },
+  {
+   "name": "ROHIT",
+   "uid": "kdDaXvOFe9UtvnIpezokEMJ16xO2"
+  },
+  {
+   "name": "DEEPAK",
+   "uid": "lTANGe8BuCVxY3tAjEn4f9x3Kab2"
+  }
+ ],
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1589091323,
-  "_nanoseconds": 420000000
+ "timeFinished": {
+  "_seconds": 1589095899,
+  "_nanoseconds": 799000000
+ },
+ "outcome": {
+  "message": "Three failed missions",
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "KHUSHBOO"
+   },
+   {
+    "name": "DEEPAK",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "SUMAIRA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "ROHIT",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MERIN"
+   },
+   {
+    "name": "HAMZA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "HARISH",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "MEENAXI"
+   }
+  ],
+  "votes": [
+   {
+    "HARISH": true,
+    "MEENAXI": true,
+    "MERIN": true
+   },
+   {
+    "MEENAXI": true,
+    "MERIN": true,
+    "HARISH": false,
+    "SUMAIRA": true
+   },
+   {
+    "MEENAXI": true,
+    "DEEPAK": true,
+    "SUMAIRA": true,
+    "ROHIT": false
+   },
+   {
+    "MEENAXI": true,
+    "HARISH": false,
+    "SUMAIRA": true,
+    "KHUSHBOO": true,
+    "ROHIT": false
+   }
+  ]
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "MERIN",
     "MEENAXI",
     "HARISH"
    ],
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "MERIN",
       "MEENAXI",
       "HARISH"
      ],
-     "state": "APPROVED",
      "votes": [
       "KHUSHBOO",
       "DEEPAK",
@@ -35,18 +143,11 @@
      "proposer": "MERIN"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 3
   },
   {
-   "team": [
-    "MERIN",
-    "MEENAXI",
-    "HARISH",
-    "SUMAIRA"
-   ],
-   "numFails": 1,
    "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -55,6 +156,7 @@
       "HARISH",
       "SUMAIRA"
      ],
+     "proposer": "SUMAIRA",
      "state": "APPROVED",
      "votes": [
       "MERIN",
@@ -64,12 +166,17 @@
       "DEEPAK",
       "SUMAIRA",
       "ROHIT"
-     ],
-     "proposer": "SUMAIRA"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1,
+   "state": "FAIL",
+   "team": [
+    "MERIN",
+    "MEENAXI",
+    "HARISH",
+    "SUMAIRA"
+   ]
   },
   {
    "team": [
@@ -79,26 +186,31 @@
     "MEENAXI"
    ],
    "numFails": 1,
-   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "KHUSHBOO",
      "team": [
       "MEENAXI",
       "SUMAIRA",
       "KHUSHBOO",
       "ROHIT"
      ],
-     "state": "REJECTED",
      "votes": [
       "HARISH",
       "KHUSHBOO",
       "SUMAIRA",
       "ROHIT"
-     ],
-     "proposer": "KHUSHBOO"
+     ]
     },
     {
-     "proposer": "HAMZA",
+     "votes": [
+      "HAMZA",
+      "DEEPAK",
+      "SUMAIRA",
+      "ROHIT"
+     ],
      "team": [
       "HARISH",
       "MERIN",
@@ -106,14 +218,11 @@
       "HAMZA"
      ],
      "state": "REJECTED",
-     "votes": [
-      "HAMZA",
-      "DEEPAK",
-      "SUMAIRA",
-      "ROHIT"
-     ]
+     "proposer": "HAMZA"
     },
     {
+     "proposer": "ROHIT",
+     "state": "APPROVED",
      "votes": [
       "KHUSHBOO",
       "DEEPAK",
@@ -123,36 +232,21 @@
       "HARISH",
       "MEENAXI"
      ],
-     "proposer": "ROHIT",
      "team": [
       "ROHIT",
       "SUMAIRA",
       "DEEPAK",
       "MEENAXI"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 4,
+   "failsRequired": 1
   },
   {
-   "team": [
-    "HARISH",
-    "SUMAIRA",
-    "MEENAXI",
-    "ROHIT",
-    "KHUSHBOO"
-   ],
-   "numFails": 2,
-   "teamSize": 5,
    "proposals": [
     {
-     "votes": [
-      "DEEPAK",
-      "SUMAIRA",
-      "MERIN"
-     ],
+     "state": "REJECTED",
      "proposer": "DEEPAK",
      "team": [
       "HARISH",
@@ -161,9 +255,15 @@
       "KHUSHBOO",
       "ROHIT"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "DEEPAK",
+      "SUMAIRA",
+      "MERIN"
+     ]
     },
     {
+     "state": "APPROVED",
+     "proposer": "HARISH",
      "votes": [
       "MEENAXI",
       "KHUSHBOO",
@@ -172,137 +272,37 @@
       "ROHIT",
       "HARISH"
      ],
-     "proposer": "HARISH",
      "team": [
       "HARISH",
       "SUMAIRA",
       "MEENAXI",
       "ROHIT",
       "KHUSHBOO"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "team": [
+    "HARISH",
+    "SUMAIRA",
+    "MEENAXI",
+    "ROHIT",
+    "KHUSHBOO"
+   ],
+   "teamSize": 5,
+   "state": "FAIL",
    "failsRequired": 2,
-   "state": "FAIL"
+   "numFails": 2
   },
   {
    "state": "PENDING",
    "proposals": [],
+   "teamSize": 5,
    "failsRequired": 1,
-   "team": [],
-   "teamSize": 5
+   "team": []
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "MEENAXI": true,
-    "HARISH": true,
-    "MERIN": true
-   },
-   {
-    "SUMAIRA": true,
-    "MEENAXI": true,
-    "HARISH": false,
-    "MERIN": true
-   },
-   {
-    "MEENAXI": true,
-    "ROHIT": false,
-    "SUMAIRA": true,
-    "DEEPAK": true
-   },
-   {
-    "SUMAIRA": true,
-    "KHUSHBOO": true,
-    "MEENAXI": true,
-    "ROHIT": false,
-    "HARISH": false
-   }
-  ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "KHUSHBOO",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "DEEPAK",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "SUMAIRA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ROHIT",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "MERIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "HAMZA"
-   },
-   {
-    "name": "HARISH",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "MEENAXI",
-    "assassin": false,
-    "role": "PERCIVAL"
-   }
-  ]
- },
- "players": [
-  {
-   "uid": "9LbwmRENWzLvsvuH19S3n2RfOUz1",
-   "name": "HARISH"
-  },
-  {
-   "uid": "ZLtegVFtOUfRNJStRuqH4tLW0Rq1",
-   "name": "MEENAXI"
-  },
-  {
-   "uid": "hdwNhBkE5Wh1VoZjPR25Nan8jv22",
-   "name": "MERIN"
-  },
-  {
-   "uid": "GRfIPLZBNRUW872Sgv35caa7X7Y2",
-   "name": "SUMAIRA"
-  },
-  {
-   "uid": "IFOeJRwJCZZozPjWKNlnlwYrfK83",
-   "name": "KHUSHBOO"
-  },
-  {
-   "uid": "ziPsnlpwrchYXQlN5uFNnhf7Q4E2",
-   "name": "HAMZA"
-  },
-  {
-   "name": "ROHIT",
-   "uid": "kdDaXvOFe9UtvnIpezokEMJ16xO2"
-  },
-  {
-   "name": "DEEPAK",
-   "uid": "lTANGe8BuCVxY3tAjEn4f9x3Kab2"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1589095899,
-  "_nanoseconds": 799000000
+ "timeCreated": {
+  "_seconds": 1589091323,
+  "_nanoseconds": 420000000
  }
 }

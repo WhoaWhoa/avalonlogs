@@ -1,38 +1,64 @@
 {
+ "players": [
+  {
+   "uid": "UADbSZA4fWY7RNNOiATK4diwMzE3",
+   "name": "MCMURRAY"
+  },
+  {
+   "name": "PHIL",
+   "uid": "Kpov5HRTLnZYzdgSt4NvdkkQPnq1"
+  },
+  {
+   "uid": "ZW0ekY1ChrggcLyV7vIT4jIzqDK2",
+   "name": "BECKY"
+  },
+  {
+   "name": "JEN",
+   "uid": "Lo4LPXdpt4bXK6ct1LHpof4mjMy2"
+  },
+  {
+   "name": "ERIC",
+   "uid": "AaRnndDTQdS6R22YluoLtMFNFDw2"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586574114,
+  "_nanoseconds": 76239000
+ },
  "outcome": {
-  "state": "GOOD_WIN",
   "assassinated": "PHIL",
+  "state": "GOOD_WIN",
   "roles": [
    {
-    "name": "ERIC",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "ERIC"
    },
    {
-    "name": "BECKY",
     "assassin": false,
-    "role": "OBERON"
+    "role": "OBERON",
+    "name": "BECKY"
    },
    {
+    "assassin": false,
     "name": "MCMURRAY",
-    "assassin": false,
     "role": "MERLIN"
    },
    {
     "name": "JEN",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
-    "name": "PHIL",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "PHIL"
    }
   ],
   "votes": [
    {
-    "ERIC": true,
-    "JEN": true
+    "JEN": true,
+    "ERIC": true
    },
    {
     "JEN": false,
@@ -49,39 +75,13 @@
     "PHIL": true
    },
    {
+    "MCMURRAY": true,
     "PHIL": true,
-    "ERIC": true,
-    "MCMURRAY": true
+    "ERIC": true
    }
   ],
   "message": "Three successful missions"
  },
- "timeFinished": {
-  "_seconds": 1586574114,
-  "_nanoseconds": 76239000
- },
- "players": [
-  {
-   "name": "MCMURRAY",
-   "uid": "UADbSZA4fWY7RNNOiATK4diwMzE3"
-  },
-  {
-   "name": "PHIL",
-   "uid": "Kpov5HRTLnZYzdgSt4NvdkkQPnq1"
-  },
-  {
-   "name": "BECKY",
-   "uid": "ZW0ekY1ChrggcLyV7vIT4jIzqDK2"
-  },
-  {
-   "uid": "Lo4LPXdpt4bXK6ct1LHpof4mjMy2",
-   "name": "JEN"
-  },
-  {
-   "uid": "AaRnndDTQdS6R22YluoLtMFNFDw2",
-   "name": "ERIC"
-  }
- ],
  "timeCreated": {
   "_seconds": 1586573640,
   "_nanoseconds": 936000000
@@ -93,14 +93,12 @@
     "ERIC",
     "JEN"
    ],
+   "failsRequired": 1,
    "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "ERIC",
-      "JEN"
-     ],
+     "proposer": "ERIC",
      "state": "APPROVED",
      "votes": [
       "ERIC",
@@ -109,59 +107,62 @@
       "JEN",
       "PHIL"
      ],
-     "proposer": "ERIC"
+     "team": [
+      "ERIC",
+      "JEN"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "failsRequired": 1,
    "team": [
     "PHIL",
     "MCMURRAY",
     "JEN"
    ],
-   "numFails": 1,
+   "state": "FAIL",
    "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "MCMURRAY",
       "PHIL"
      ],
-     "proposer": "MCMURRAY",
+     "state": "REJECTED",
      "team": [
       "ERIC",
       "PHIL",
       "MCMURRAY"
-     ]
+     ],
+     "proposer": "MCMURRAY"
     },
     {
-     "state": "APPROVED",
+     "team": [
+      "PHIL",
+      "MCMURRAY",
+      "JEN"
+     ],
      "votes": [
       "MCMURRAY",
       "JEN",
       "PHIL"
      ],
      "proposer": "PHIL",
-     "team": [
-      "PHIL",
-      "MCMURRAY",
-      "JEN"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
+   "numFails": 1,
+   "failsRequired": 1,
    "state": "FAIL",
+   "teamSize": 2,
    "team": [
     "ERIC",
     "JEN"
    ],
-   "numFails": 1,
-   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
@@ -170,62 +171,56 @@
       "BECKY",
       "JEN"
      ],
-     "proposer": "BECKY",
      "team": [
       "ERIC",
       "JEN"
-     ]
+     ],
+     "proposer": "BECKY"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "team": [
-    "ERIC",
-    "PHIL",
-    "MCMURRAY"
-   ],
-   "numFails": 0,
    "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "JEN",
-      "PHIL",
-      "MCMURRAY"
-     ],
      "state": "REJECTED",
      "votes": [
       "JEN"
      ],
-     "proposer": "JEN"
+     "proposer": "JEN",
+     "team": [
+      "JEN",
+      "PHIL",
+      "MCMURRAY"
+     ]
     },
     {
-     "proposer": "ERIC",
+     "votes": [
+      "ERIC",
+      "MCMURRAY",
+      "JEN"
+     ],
+     "state": "APPROVED",
      "team": [
       "ERIC",
       "PHIL",
       "MCMURRAY"
      ],
-     "state": "APPROVED",
-     "votes": [
-      "ERIC",
-      "MCMURRAY",
-      "JEN"
-     ]
+     "proposer": "ERIC"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "ERIC",
+    "PHIL",
+    "MCMURRAY"
+   ]
   },
   {
-   "team": [
-    "MCMURRAY",
-    "PHIL",
-    "ERIC"
-   ],
-   "numFails": 0,
    "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
@@ -242,8 +237,13 @@
      ]
     }
    ],
+   "numFails": 0,
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "MCMURRAY",
+    "PHIL",
+    "ERIC"
+   ]
   }
  ]
 }

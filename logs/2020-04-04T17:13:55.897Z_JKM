@@ -1,48 +1,49 @@
 {
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "LITHIT",
-    "GWEN"
-   ],
    "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "LITHIT",
       "GWEN"
      ],
-     "state": "APPROVED",
+     "proposer": "LITHIT",
      "votes": [
       "LITHIT",
       "ERIN",
       "GWEN",
       "PETE",
       "HAYLEY"
-     ],
-     "proposer": "LITHIT"
+     ]
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "LITHIT",
+    "GWEN"
+   ],
+   "teamSize": 2
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "CLAMMY",
     "HAYLEY",
     "LITHIT"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "GWEN",
      "team": [
       "GWEN",
       "LITHIT",
       "PETE"
      ],
+     "proposer": "GWEN",
      "state": "REJECTED",
      "votes": [
       "LITHIT",
@@ -52,6 +53,7 @@
     },
     {
      "state": "APPROVED",
+     "proposer": "CLAMMY",
      "votes": [
       "GWEN",
       "PETE",
@@ -60,7 +62,6 @@
       "LITHIT",
       "ERIN"
      ],
-     "proposer": "CLAMMY",
      "team": [
       "CLAMMY",
       "HAYLEY",
@@ -68,12 +69,19 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3
   },
   {
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "PHIL",
+      "HAYLEY",
+      "LITHIT"
+     ],
      "state": "APPROVED",
      "votes": [
       "PHIL",
@@ -83,35 +91,18 @@
       "HAYLEY",
       "CLAMMY"
      ],
-     "proposer": "PHIL",
-     "team": [
-      "PHIL",
-      "HAYLEY",
-      "LITHIT"
-     ]
+     "proposer": "PHIL"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "PHIL",
     "HAYLEY",
     "LITHIT"
    ],
-   "numFails": 0,
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
    "failsRequired": 2,
-   "state": "SUCCESS",
-   "team": [
-    "ERIN",
-    "PHIL",
-    "HAYLEY",
-    "LITHIT"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
      "proposer": "ERIN",
@@ -121,101 +112,114 @@
       "HAYLEY",
       "LITHIT"
      ],
-     "state": "APPROVED",
      "votes": [
       "HAYLEY",
       "PHIL",
       "LITHIT",
       "ERIN",
       "PETE"
-     ]
+     ],
+     "state": "APPROVED"
     }
+   ],
+   "state": "SUCCESS",
+   "numFails": 1,
+   "teamSize": 4,
+   "team": [
+    "ERIN",
+    "PHIL",
+    "HAYLEY",
+    "LITHIT"
    ]
   },
   {
-   "failsRequired": 1,
    "team": [],
-   "teamSize": 4,
    "state": "PENDING",
+   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": []
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": "HAYLEY",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "GWEN"
-   },
-   {
-    "name": "PETE",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "HAYLEY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "OBERON",
-    "name": "CLAMMY"
-   },
-   {
-    "name": "PHIL",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "LITHIT"
-   },
-   {
-    "name": "ERIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "GWEN": true,
-    "LITHIT": true
-   },
-   {
-    "HAYLEY": true,
-    "CLAMMY": true,
-    "LITHIT": false
-   },
-   {
-    "LITHIT": true,
-    "HAYLEY": true,
-    "PHIL": true
-   },
-   {
-    "LITHIT": false,
-    "HAYLEY": true,
-    "PHIL": true,
-    "ERIN": true
-   }
-  ],
-  "message": "Merlin assassinated"
- },
  "timeFinished": {
   "_seconds": 1586020836,
   "_nanoseconds": 379631000
  },
+ "outcome": {
+  "message": "Merlin assassinated",
+  "assassinated": "HAYLEY",
+  "votes": [
+   {
+    "LITHIT": true,
+    "GWEN": true
+   },
+   {
+    "LITHIT": false,
+    "HAYLEY": true,
+    "CLAMMY": true
+   },
+   {
+    "PHIL": true,
+    "LITHIT": true,
+    "HAYLEY": true
+   },
+   {
+    "ERIN": true,
+    "LITHIT": false,
+    "HAYLEY": true,
+    "PHIL": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "GWEN"
+   },
+   {
+    "assassin": true,
+    "name": "PETE",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "HAYLEY",
+    "role": "MERLIN"
+   },
+   {
+    "role": "OBERON",
+    "name": "CLAMMY",
+    "assassin": false
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "PHIL"
+   },
+   {
+    "name": "LITHIT",
+    "role": "MORDRED",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "ERIN",
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1586020435,
+  "_nanoseconds": 897000000
+ },
  "players": [
   {
-   "uid": "hRvi0wwBTfNVJqQHgUZVtHuv8kG3",
-   "name": "CLAMMY"
+   "name": "CLAMMY",
+   "uid": "hRvi0wwBTfNVJqQHgUZVtHuv8kG3"
   },
   {
-   "uid": "kBZa4RQECRMy73TrTnAA1QzsUoW2",
-   "name": "PHIL"
+   "name": "PHIL",
+   "uid": "kBZa4RQECRMy73TrTnAA1QzsUoW2"
   },
   {
    "uid": "7Pps76fURphfToGkJRWKhM48AJC3",
@@ -226,20 +230,16 @@
    "uid": "QpU6oAKgpifk2kQr5EH8f1ORcxh1"
   },
   {
-   "uid": "dZEEUj6awJcOobY8dDWzu6jyZqn2",
-   "name": "PETE"
+   "name": "PETE",
+   "uid": "dZEEUj6awJcOobY8dDWzu6jyZqn2"
   },
   {
-   "uid": "ge1lyrYQOtMUSB4hn3PH94HWS2v1",
-   "name": "LITHIT"
+   "name": "LITHIT",
+   "uid": "ge1lyrYQOtMUSB4hn3PH94HWS2v1"
   },
   {
    "uid": "jGsZQZWtJzfPYgG2Xp1YAUTZz953",
    "name": "GWEN"
   }
- ],
- "timeCreated": {
-  "_seconds": 1586020435,
-  "_nanoseconds": 897000000
- }
+ ]
 }

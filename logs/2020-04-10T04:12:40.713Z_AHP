@@ -1,47 +1,44 @@
 {
- "timeCreated": {
-  "_seconds": 1586491960,
-  "_nanoseconds": 713000000
- },
  "missions": [
   {
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "PATRICK",
     "ADITYA"
    ],
-   "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
      "team": [
       "T",
       "SUV"
      ],
-     "state": "REJECTED",
      "votes": [
       "T",
       "SUV"
      ],
+     "state": "REJECTED",
      "proposer": "T"
     },
     {
+     "state": "REJECTED",
+     "team": [
+      "ADITYA",
+      "SUV"
+     ],
      "votes": [
       "ADITYA",
       "SUV"
      ],
-     "proposer": "ADITYA",
-     "team": [
-      "ADITYA",
-      "SUV"
-     ],
-     "state": "REJECTED"
+     "proposer": "ADITYA"
     },
     {
+     "state": "APPROVED",
      "team": [
       "PATRICK",
       "ADITYA"
      ],
-     "state": "APPROVED",
      "votes": [
       "PATRICK",
       "SUV",
@@ -51,8 +48,7 @@
      "proposer": "PATRICK"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2
   },
   {
    "team": [
@@ -60,11 +56,10 @@
     "PATRICK",
     "ALEXL"
    ],
-   "numFails": 1,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "ALEXL",
      "votes": [
       "ADITYA",
       "ALEXK",
@@ -72,18 +67,20 @@
       "PATRICK",
       "SUV"
      ],
-     "proposer": "ALEXL",
      "team": [
       "ADITYA",
       "PATRICK",
       "ALEXL"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3,
    "state": "FAIL"
   },
   {
+   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "T",
@@ -91,15 +88,13 @@
     "SUV",
     "PATRICK"
    ],
-   "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
      "state": "REJECTED",
+     "proposer": "ALEXK",
      "votes": [
       "ALEXK"
      ],
-     "proposer": "ALEXK",
      "team": [
       "ALEXK",
       "SUV",
@@ -108,39 +103,31 @@
      ]
     },
     {
+     "team": [
+      "T",
+      "ADITYA",
+      "SUV",
+      "PATRICK"
+     ],
+     "proposer": "SUV",
      "state": "APPROVED",
      "votes": [
       "ALEXK",
       "T",
       "SUV",
       "ADITYA"
-     ],
-     "proposer": "SUV",
-     "team": [
-      "T",
-      "ADITYA",
-      "SUV",
-      "PATRICK"
      ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 0,
+   "teamSize": 4
   },
   {
-   "team": [
-    "T",
-    "ADITYA",
-    "SUV"
-   ],
-   "numFails": 0,
    "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "T",
-      "ADITYA",
-      "SUV"
-     ],
      "state": "APPROVED",
      "votes": [
       "PATRICK",
@@ -148,23 +135,31 @@
       "SUV",
       "ADITYA"
      ],
-     "proposer": "T"
+     "proposer": "T",
+     "team": [
+      "T",
+      "ADITYA",
+      "SUV"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "team": [
+    "T",
+    "ADITYA",
+    "SUV"
+   ]
   },
   {
-   "team": [],
-   "teamSize": 4,
    "state": "PENDING",
+   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [],
-   "failsRequired": 1
+   "team": []
   }
  ],
  "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "SUV",
+  "message": "Three successful missions",
   "roles": [
    {
     "name": "ADITYA",
@@ -182,14 +177,14 @@
     "role": "MORGANA"
    },
    {
-    "name": "PATRICK",
     "assassin": false,
+    "name": "PATRICK",
     "role": "PERCIVAL"
    },
    {
+    "role": "MERLIN",
     "name": "T",
-    "assassin": false,
-    "role": "MERLIN"
+    "assassin": false
    },
    {
     "name": "SUV",
@@ -197,29 +192,34 @@
     "role": "LOYAL FOLLOWER"
    }
   ],
+  "assassinated": "SUV",
   "votes": [
    {
-    "ADITYA": true,
-    "PATRICK": true
-   },
-   {
-    "ALEXL": false,
-    "ADITYA": true,
-    "PATRICK": true
-   },
-   {
     "PATRICK": true,
-    "T": true,
-    "SUV": true,
     "ADITYA": true
    },
    {
-    "SUV": true,
+    "PATRICK": true,
     "ADITYA": true,
+    "ALEXL": false
+   },
+   {
+    "SUV": true,
+    "PATRICK": true,
+    "ADITYA": true,
+    "T": true
+   },
+   {
+    "ADITYA": true,
+    "SUV": true,
     "T": true
    }
   ],
-  "message": "Three successful missions"
+  "state": "GOOD_WIN"
+ },
+ "timeCreated": {
+  "_seconds": 1586491960,
+  "_nanoseconds": 713000000
  },
  "timeFinished": {
   "_seconds": 1586493037,
@@ -231,24 +231,24 @@
    "uid": "BYHi6b3ZOqPb9M5QPjFiKgtBDnq1"
   },
   {
-   "uid": "KlN44oQSkdht78wZSHtnme9ynMB2",
-   "name": "ADITYA"
+   "name": "ADITYA",
+   "uid": "KlN44oQSkdht78wZSHtnme9ynMB2"
   },
   {
-   "name": "PATRICK",
-   "uid": "cYwsZba6qnVyMQ5vASCnQHdvm733"
+   "uid": "cYwsZba6qnVyMQ5vASCnQHdvm733",
+   "name": "PATRICK"
   },
   {
    "uid": "hJq1uFywA9cp8D4P5hs0bFeiTkg2",
    "name": "ALEXL"
   },
   {
-   "uid": "HdTIwg6quXSLWJ5BLAs9hT6pZ8a2",
-   "name": "ALEXK"
+   "name": "ALEXK",
+   "uid": "HdTIwg6quXSLWJ5BLAs9hT6pZ8a2"
   },
   {
-   "uid": "ebMquQOdtTMLSdIpWoPeJUt6bwI2",
-   "name": "SUV"
+   "name": "SUV",
+   "uid": "ebMquQOdtTMLSdIpWoPeJUt6bwI2"
   }
  ]
 }

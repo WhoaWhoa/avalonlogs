@@ -1,5 +1,39 @@
 {
  "outcome": {
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "name": "NADA",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "NOODLE",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "CURRY"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "DON"
+   },
+   {
+    "name": "IAN",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "TANHA",
+    "role": "MERLIN",
+    "assassin": false
+   }
+  ],
+  "assassinated": "TANHA",
   "votes": [
    {
     "IAN": true,
@@ -11,10 +45,10 @@
     "CURRY": true
    },
    {
+    "TANHA": true,
     "NOODLE": true,
     "DON": true,
-    "CURRY": true,
-    "TANHA": true
+    "CURRY": true
    },
    {
     "IAN": false,
@@ -23,46 +57,16 @@
    },
    {
     "NOODLE": true,
+    "TANHA": true,
     "DON": true,
-    "CURRY": true,
-    "TANHA": true
+    "CURRY": true
    }
   ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "TANHA",
-  "roles": [
-   {
-    "name": "NADA",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "NOODLE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "CURRY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "DON",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "IAN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "TANHA"
-   }
-  ]
+  "message": "Merlin assassinated"
+ },
+ "timeCreated": {
+  "_seconds": 1586065098,
+  "_nanoseconds": 377000000
  },
  "timeFinished": {
   "_seconds": 1586066222,
@@ -74,40 +78,42 @@
    "uid": "G34XUPdSluRght7GHvsTgDXkLOF3"
   },
   {
-   "uid": "iqcW40P2kjcuRFCBQ0SpecTA5PD3",
-   "name": "CURRY"
+   "name": "CURRY",
+   "uid": "iqcW40P2kjcuRFCBQ0SpecTA5PD3"
   },
   {
-   "name": "NOODLE",
-   "uid": "OGqQcFHcCFdpRSDzMwIROAb9Hr12"
+   "uid": "OGqQcFHcCFdpRSDzMwIROAb9Hr12",
+   "name": "NOODLE"
   },
   {
    "name": "IAN",
    "uid": "Q2otTlzotka3zrFgkkMU3FgigSJ2"
   },
   {
-   "uid": "gYXFpswfpuT5x1aKPS4XLGxJjYp2",
-   "name": "TANHA"
+   "name": "TANHA",
+   "uid": "gYXFpswfpuT5x1aKPS4XLGxJjYp2"
   },
   {
    "name": "DON",
    "uid": "8k05CkcTYWY9HDFh9mSMKeFSCSL2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1586065098,
-  "_nanoseconds": 377000000
- },
  "missions": [
   {
+   "state": "SUCCESS",
    "team": [
     "TANHA",
     "IAN"
    ],
    "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "TANHA",
+      "IAN"
+     ],
+     "proposer": "NOODLE",
+     "state": "APPROVED",
      "votes": [
       "DON",
       "IAN",
@@ -115,58 +121,52 @@
       "NADA",
       "NOODLE",
       "CURRY"
-     ],
-     "proposer": "NOODLE",
-     "team": [
-      "TANHA",
-      "IAN"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2,
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
-   "team": [
-    "NADA",
-    "CURRY",
-    "IAN"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "NADA",
-      "CURRY",
-      "IAN"
-     ],
-     "state": "APPROVED",
      "votes": [
       "IAN",
       "NADA",
       "NOODLE",
       "CURRY"
      ],
-     "proposer": "IAN"
+     "team": [
+      "NADA",
+      "CURRY",
+      "IAN"
+     ],
+     "proposer": "IAN",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "NADA",
+    "CURRY",
+    "IAN"
+   ]
   },
   {
-   "state": "SUCCESS",
    "team": [
     "CURRY",
     "NOODLE",
     "TANHA",
     "DON"
    ],
-   "numFails": 0,
    "teamSize": 4,
    "proposals": [
     {
+     "proposer": "TANHA",
+     "state": "APPROVED",
      "votes": [
       "NADA",
       "NOODLE",
@@ -175,17 +175,17 @@
       "IAN",
       "TANHA"
      ],
-     "proposer": "TANHA",
      "team": [
       "CURRY",
       "NOODLE",
       "TANHA",
       "DON"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
    "state": "FAIL",
@@ -195,28 +195,27 @@
     "NOODLE"
    ],
    "numFails": 1,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "IAN",
+      "DON",
+      "NOODLE"
+     ],
      "votes": [
       "NADA",
       "NOODLE",
       "DON",
       "IAN"
      ],
-     "proposer": "DON",
-     "team": [
-      "IAN",
-      "DON",
-      "NOODLE"
-     ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "DON"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
    "team": [
     "CURRY",
     "NOODLE",
@@ -224,66 +223,71 @@
     "DON"
    ],
    "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
+     "votes": [
+      "NADA",
+      "CURRY"
+     ],
+     "state": "REJECTED",
+     "proposer": "NADA",
      "team": [
       "NADA",
       "CURRY",
       "TANHA",
       "DON"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "NADA",
-      "CURRY"
-     ],
-     "proposer": "NADA"
+     ]
     },
     {
-     "team": [
+     "state": "REJECTED",
+     "votes": [
       "TANHA",
-      "DON",
       "NOODLE",
       "CURRY"
      ],
-     "state": "REJECTED",
-     "votes": [
+     "team": [
       "TANHA",
+      "DON",
       "NOODLE",
       "CURRY"
      ],
      "proposer": "CURRY"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "IAN",
       "NOODLE"
      ],
-     "proposer": "NOODLE",
      "team": [
       "NOODLE",
       "TANHA",
       "DON",
       "IAN"
      ],
-     "state": "REJECTED"
+     "proposer": "NOODLE"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "IAN"
      ],
-     "proposer": "IAN",
      "team": [
       "CURRY",
       "IAN",
       "TANHA",
       "DON"
-     ]
+     ],
+     "proposer": "IAN",
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
+     "proposer": "TANHA",
+     "team": [
+      "CURRY",
+      "NOODLE",
+      "TANHA",
+      "DON"
+     ],
      "votes": [
       "NADA",
       "NOODLE",
@@ -291,16 +295,12 @@
       "DON",
       "TANHA"
      ],
-     "proposer": "TANHA",
-     "team": [
-      "CURRY",
-      "NOODLE",
-      "TANHA",
-      "DON"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 4
   }
  ]
 }

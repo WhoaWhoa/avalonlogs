@@ -1,130 +1,8 @@
 {
- "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "CHRIS",
-  "roles": [
-   {
-    "name": "CHRIS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "TIM",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "THOMAS"
-   },
-   {
-    "name": "BERT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "DAVID",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "MICHELLE",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "name": "EVAN",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "CONNIE"
-   },
-   {
-    "name": "DIANA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "CONNIE": true,
-    "DIANA": true,
-    "DAVID": true
-   },
-   {
-    "MICHELLE": false,
-    "CONNIE": true,
-    "DIANA": true,
-    "DAVID": true
-   },
-   {
-    "THOMAS": true,
-    "DAVID": true,
-    "BERT": true,
-    "CONNIE": true
-   },
-   {
-    "BERT": true,
-    "CONNIE": true,
-    "CHRIS": true,
-    "THOMAS": true,
-    "DAVID": true
-   }
-  ],
-  "message": "Three successful missions"
- },
- "timeFinished": {
-  "_seconds": 1585867379,
-  "_nanoseconds": 176903000
- },
- "players": [
-  {
-   "uid": "SqiaA6X0CjVOxMDPmyjFvcsayX03",
-   "name": "DIANA"
-  },
-  {
-   "uid": "nyAXJoYAvbQEkhUbEi2mjQqqjai2",
-   "name": "EVAN"
-  },
-  {
-   "uid": "EZ6man5jV1Ws1fTtrxeAIajz8ky2",
-   "name": "TIM"
-  },
-  {
-   "uid": "UQJFUagMgcQ2aPTmCXk2tN18Gp73",
-   "name": "DAVID"
-  },
-  {
-   "uid": "WW9UDSJTWjcv5IEHdIzn4W3pC0F3",
-   "name": "CHRIS"
-  },
-  {
-   "uid": "nDW0mIuS9idaEFCyUTBMi9vFZC22",
-   "name": "CONNIE"
-  },
-  {
-   "uid": "NRa4Y5BvIRUu0NJtNcgsbihHeRV2",
-   "name": "MICHELLE"
-  },
-  {
-   "name": "BERT",
-   "uid": "kp5nBb02A7RrxWBrnr1Liq5kco23"
-  },
-  {
-   "name": "THOMAS",
-   "uid": "U3BfWb5BfHQ0FbnqlzsGEnbrg5p2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585866783,
-  "_nanoseconds": 660000000
- },
  "missions": [
   {
+   "failsRequired": 1,
+   "teamSize": 3,
    "state": "SUCCESS",
    "team": [
     "DIANA",
@@ -132,9 +10,14 @@
     "DAVID"
    ],
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "CONNIE",
+     "team": [
+      "DIANA",
+      "CONNIE",
+      "DAVID"
+     ],
      "votes": [
       "MICHELLE",
       "CONNIE",
@@ -143,27 +26,23 @@
       "TIM",
       "DAVID"
      ],
-     "proposer": "CONNIE",
-     "team": [
-      "DIANA",
-      "CONNIE",
-      "DAVID"
-     ],
      "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "team": [
+    "MICHELLE",
+    "DAVID",
+    "CONNIE",
+    "DIANA"
+   ],
+   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "MICHELLE",
-      "DAVID",
-      "CONNIE",
-      "DIANA"
-     ],
-     "state": "APPROVED",
+     "proposer": "MICHELLE",
      "votes": [
       "MICHELLE",
       "EVAN",
@@ -172,41 +51,18 @@
       "CHRIS",
       "DAVID"
      ],
-     "proposer": "MICHELLE"
+     "state": "APPROVED",
+     "team": [
+      "MICHELLE",
+      "DAVID",
+      "CONNIE",
+      "DIANA"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "MICHELLE",
-    "DAVID",
-    "CONNIE",
-    "DIANA"
-   ],
-   "numFails": 1,
-   "teamSize": 4
+   "failsRequired": 1
   },
   {
-   "proposals": [
-    {
-     "votes": [
-      "CONNIE",
-      "DIANA",
-      "THOMAS",
-      "BERT",
-      "DAVID"
-     ],
-     "proposer": "BERT",
-     "team": [
-      "BERT",
-      "CONNIE",
-      "THOMAS",
-      "DAVID"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "BERT",
@@ -215,13 +71,48 @@
     "DAVID"
    ],
    "numFails": 0,
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "proposer": "BERT",
+     "state": "APPROVED",
+     "team": [
+      "BERT",
+      "CONNIE",
+      "THOMAS",
+      "DAVID"
+     ],
+     "votes": [
+      "CONNIE",
+      "DIANA",
+      "THOMAS",
+      "BERT",
+      "DAVID"
+     ]
+    }
+   ],
    "teamSize": 4
   },
   {
-   "numFails": 0,
    "teamSize": 5,
+   "numFails": 0,
+   "team": [
+    "THOMAS",
+    "BERT",
+    "CONNIE",
+    "DAVID",
+    "CHRIS"
+   ],
+   "failsRequired": 2,
    "proposals": [
     {
+     "team": [
+      "THOMAS",
+      "BERT",
+      "CONNIE",
+      "DAVID",
+      "CHRIS"
+     ],
      "state": "APPROVED",
      "votes": [
       "CHRIS",
@@ -233,32 +124,141 @@
       "CONNIE",
       "DIANA"
      ],
-     "proposer": "THOMAS",
-     "team": [
-      "THOMAS",
-      "BERT",
-      "CONNIE",
-      "DAVID",
-      "CHRIS"
-     ]
+     "proposer": "THOMAS"
     }
    ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
-   "team": [
-    "THOMAS",
-    "BERT",
-    "CONNIE",
-    "DAVID",
-    "CHRIS"
-   ]
+   "state": "SUCCESS"
   },
   {
-   "team": [],
-   "teamSize": 5,
    "state": "PENDING",
    "proposals": [],
+   "team": [],
+   "teamSize": 5,
    "failsRequired": 1
   }
- ]
+ ],
+ "players": [
+  {
+   "name": "DIANA",
+   "uid": "SqiaA6X0CjVOxMDPmyjFvcsayX03"
+  },
+  {
+   "uid": "nyAXJoYAvbQEkhUbEi2mjQqqjai2",
+   "name": "EVAN"
+  },
+  {
+   "name": "TIM",
+   "uid": "EZ6man5jV1Ws1fTtrxeAIajz8ky2"
+  },
+  {
+   "uid": "UQJFUagMgcQ2aPTmCXk2tN18Gp73",
+   "name": "DAVID"
+  },
+  {
+   "name": "CHRIS",
+   "uid": "WW9UDSJTWjcv5IEHdIzn4W3pC0F3"
+  },
+  {
+   "name": "CONNIE",
+   "uid": "nDW0mIuS9idaEFCyUTBMi9vFZC22"
+  },
+  {
+   "name": "MICHELLE",
+   "uid": "NRa4Y5BvIRUu0NJtNcgsbihHeRV2"
+  },
+  {
+   "name": "BERT",
+   "uid": "kp5nBb02A7RrxWBrnr1Liq5kco23"
+  },
+  {
+   "uid": "U3BfWb5BfHQ0FbnqlzsGEnbrg5p2",
+   "name": "THOMAS"
+  }
+ ],
+ "outcome": {
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "DAVID": true,
+    "CONNIE": true,
+    "DIANA": true
+   },
+   {
+    "CONNIE": true,
+    "DAVID": true,
+    "DIANA": true,
+    "MICHELLE": false
+   },
+   {
+    "THOMAS": true,
+    "DAVID": true,
+    "CONNIE": true,
+    "BERT": true
+   },
+   {
+    "THOMAS": true,
+    "CONNIE": true,
+    "BERT": true,
+    "DAVID": true,
+    "CHRIS": true
+   }
+  ],
+  "assassinated": "CHRIS",
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "name": "CHRIS",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "TIM",
+    "role": "OBERON"
+   },
+   {
+    "assassin": false,
+    "name": "THOMAS",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "BERT"
+   },
+   {
+    "name": "DAVID",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": true,
+    "name": "MICHELLE",
+    "role": "MORDRED"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "EVAN"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "CONNIE"
+   },
+   {
+    "name": "DIANA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1585866783,
+  "_nanoseconds": 660000000
+ },
+ "timeFinished": {
+  "_seconds": 1585867379,
+  "_nanoseconds": 176903000
+ }
 }

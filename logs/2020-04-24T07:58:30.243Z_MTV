@@ -1,27 +1,87 @@
 {
+ "outcome": {
+  "message": "Three failed missions",
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "CALEB": true,
+    "WILLIAM": true,
+    "JOSHUA": true
+   },
+   {
+    "CALEB": false,
+    "WILLIAM": true,
+    "JOSHUA": true,
+    "JO": true
+   },
+   {
+    "DORA": true,
+    "BRI": true,
+    "BELLA": false,
+    "JO": true
+   },
+   {
+    "DORA": true,
+    "JL": false,
+    "JO": true,
+    "JOSHUA": true,
+    "CALEB": false
+   }
+  ],
+  "roles": [
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "JL"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "DORA",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "name": "CALEB",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "BELLA"
+   },
+   {
+    "name": "BRI",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "JOSHUA",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "WILLIAM"
+   },
+   {
+    "name": "JO",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ]
+ },
  "timeFinished": {
   "_seconds": 1587716138,
   "_nanoseconds": 691000000
  },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587715110,
-  "_nanoseconds": 243000000
- },
  "missions": [
   {
-   "team": [
-    "JOSHUA",
-    "WILLIAM",
-    "CALEB"
-   ],
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "JOSHUA",
      "votes": [
       "JL",
       "DORA",
@@ -31,27 +91,33 @@
       "WILLIAM",
       "JO"
      ],
-     "proposer": "JOSHUA",
      "team": [
       "JOSHUA",
       "WILLIAM",
       "CALEB"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
+   "state": "SUCCESS",
+   "teamSize": 3,
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "JOSHUA",
+    "WILLIAM",
+    "CALEB"
+   ]
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "JOSHUA",
     "CALEB",
     "WILLIAM",
     "JO"
    ],
+   "state": "FAIL",
    "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -60,7 +126,6 @@
       "WILLIAM",
       "JO"
      ],
-     "state": "APPROVED",
      "votes": [
       "WILLIAM",
       "JO",
@@ -70,53 +135,55 @@
       "BELLA",
       "JOSHUA"
      ],
+     "state": "APPROVED",
      "proposer": "JO"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 4
   },
   {
-   "team": [
-    "BELLA",
-    "DORA",
-    "JO",
-    "BRI"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "BRI",
      "team": [
       "BRI",
       "JOSHUA",
       "WILLIAM",
       "DORA"
      ],
-     "state": "REJECTED",
      "votes": [
       "BRI",
       "JOSHUA",
       "WILLIAM"
-     ],
-     "proposer": "BRI"
+     ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "BELLA",
       "BRI",
       "JO",
       "JL"
      ],
-     "proposer": "JL",
+     "state": "REJECTED",
      "team": [
       "JO",
       "JL",
       "BRI",
       "CALEB"
-     ]
+     ],
+     "proposer": "JL"
     },
     {
+     "proposer": "BELLA",
+     "state": "APPROVED",
+     "team": [
+      "BELLA",
+      "DORA",
+      "JO",
+      "BRI"
+     ],
      "votes": [
       "CALEB",
       "BELLA",
@@ -125,21 +192,24 @@
       "JO",
       "JL",
       "DORA"
-     ],
-     "proposer": "BELLA",
-     "team": [
-      "BELLA",
-      "DORA",
-      "JO",
-      "BRI"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 4,
+   "state": "FAIL",
+   "team": [
+    "BELLA",
+    "DORA",
+    "JO",
+    "BRI"
+   ],
+   "numFails": 1
   },
   {
+   "numFails": 2,
+   "teamSize": 5,
+   "state": "FAIL",
+   "failsRequired": 2,
    "team": [
     "CALEB",
     "DORA",
@@ -147,8 +217,6 @@
     "JOSHUA",
     "JL"
    ],
-   "numFails": 2,
-   "teamSize": 5,
    "proposals": [
     {
      "votes": [
@@ -159,6 +227,7 @@
       "JL",
       "DORA"
      ],
+     "state": "APPROVED",
      "proposer": "CALEB",
      "team": [
       "CALEB",
@@ -166,106 +235,30 @@
       "JO",
       "JOSHUA",
       "JL"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "failsRequired": 2,
-   "state": "FAIL"
+   ]
   },
   {
-   "failsRequired": 1,
-   "team": [],
-   "teamSize": 5,
    "state": "PENDING",
+   "team": [],
+   "failsRequired": 1,
+   "teamSize": 5,
    "proposals": []
   }
  ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "JL",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "DORA"
-   },
-   {
-    "name": "CALEB",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "BELLA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "BRI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JOSHUA"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "WILLIAM"
-   },
-   {
-    "name": "JO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "CALEB": true,
-    "WILLIAM": true,
-    "JOSHUA": true
-   },
-   {
-    "CALEB": false,
-    "JO": true,
-    "WILLIAM": true,
-    "JOSHUA": true
-   },
-   {
-    "DORA": true,
-    "JO": true,
-    "BELLA": false,
-    "BRI": true
-   },
-   {
-    "JL": false,
-    "DORA": true,
-    "JO": true,
-    "JOSHUA": true,
-    "CALEB": false
-   }
-  ]
- },
  "players": [
   {
    "name": "JOSHUA",
    "uid": "2Hr9s1FRnQcm7ppq1McbiEAlPkj2"
   },
   {
-   "uid": "ha3HOOgvknSDpN42s6SKS2vxL0B3",
-   "name": "JO"
+   "name": "JO",
+   "uid": "ha3HOOgvknSDpN42s6SKS2vxL0B3"
   },
   {
-   "name": "BRI",
-   "uid": "n2KxkALsEfPbDO18Mg6gWrvZIpA2"
+   "uid": "n2KxkALsEfPbDO18Mg6gWrvZIpA2",
+   "name": "BRI"
   },
   {
    "uid": "hk802MDQObXilLyU8oWBGTtQfY13",
@@ -276,16 +269,23 @@
    "name": "BELLA"
   },
   {
-   "uid": "7MHXtka2Zrdg57DCXhHDXTc4CwV2",
-   "name": "CALEB"
+   "name": "CALEB",
+   "uid": "7MHXtka2Zrdg57DCXhHDXTc4CwV2"
   },
   {
    "uid": "SG7KFuQdxudJN4VFz14GYf4oQbp1",
    "name": "WILLIAM"
   },
   {
-   "uid": "IbrT3mqYpJQVEibe0HMt0d5BtAk1",
-   "name": "DORA"
+   "name": "DORA",
+   "uid": "IbrT3mqYpJQVEibe0HMt0d5BtAk1"
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1587715110,
+  "_nanoseconds": 243000000
+ }
 }

@@ -1,40 +1,131 @@
 {
- "timeCreated": {
-  "_seconds": 1586357341,
-  "_nanoseconds": 773000000
+ "outcome": {
+  "message": "Three successful missions",
+  "assassinated": "KRYS",
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "name": "VST",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ANDREJ"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "JAN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MAROS",
+    "assassin": false
+   },
+   {
+    "name": "JEREMIAS",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "OBERON",
+    "name": "TIM"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "KRYS"
+   },
+   {
+    "role": "MERLIN",
+    "name": "MICHAEL",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "MAROS": true,
+    "KRYS": true,
+    "MICHAEL": true
+   },
+   {
+    "KRYS": true,
+    "MAROS": true,
+    "ANDREJ": true,
+    "VST": false
+   },
+   {
+    "ANDREJ": true,
+    "MAROS": true,
+    "MICHAEL": true,
+    "JAN": true
+   },
+   {
+    "JAN": true,
+    "ANDREJ": true,
+    "KRYS": true,
+    "MAROS": true,
+    "MICHAEL": true
+   }
+  ]
  },
+ "players": [
+  {
+   "name": "KRYS",
+   "uid": "qXLJJ9sBJ9dpZfbVdrLTU8TGkSi1"
+  },
+  {
+   "uid": "GJkOV0cSCPbqvq0n2jgTK6t5AlJ2",
+   "name": "JAN"
+  },
+  {
+   "uid": "HIDq0QKkfnU6Y85UuZAnBayNpFH2",
+   "name": "ANDREJ"
+  },
+  {
+   "name": "TIM",
+   "uid": "0GnYFkXtMYez2w6njBLllhmky9F2"
+  },
+  {
+   "uid": "mmZ8K38iBGfNGeD3VO9GMNsCpEt1",
+   "name": "JEREMIAS"
+  },
+  {
+   "name": "MAROS",
+   "uid": "vJAEVfL9D2c0OmkuQZ3PSEYL9Vf1"
+  },
+  {
+   "name": "MICHAEL",
+   "uid": "9wIiemweP8Rhxb3ovlGv9SilI9a2"
+  },
+  {
+   "name": "VST",
+   "uid": "CpE21PDS8bXpQBstvPfwAFnD5IF3"
+  }
+ ],
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "KRYS",
-    "MAROS",
-    "MICHAEL"
-   ],
-   "numFails": 0,
    "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "VST",
-      "JEREMIAS",
-      "JAN"
-     ],
-     "state": "REJECTED",
      "votes": [
       "JAN",
       "JEREMIAS",
       "ANDREJ"
      ],
-     "proposer": "VST"
+     "proposer": "VST",
+     "team": [
+      "VST",
+      "JEREMIAS",
+      "JAN"
+     ],
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "KRYS",
-      "MAROS",
-      "MICHAEL"
-     ],
-     "state": "APPROVED",
      "votes": [
       "KRYS",
       "MICHAEL",
@@ -42,36 +133,41 @@
       "JAN",
       "MAROS"
      ],
+     "state": "APPROVED",
+     "team": [
+      "KRYS",
+      "MAROS",
+      "MICHAEL"
+     ],
      "proposer": "KRYS"
     }
    ],
-   "failsRequired": 1
-  },
-  {
    "team": [
     "KRYS",
-    "ANDREJ",
     "MAROS",
-    "VST"
+    "MICHAEL"
    ],
-   "numFails": 1,
-   "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 0
+  },
+  {
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "JAN",
+     "state": "REJECTED",
      "votes": [
       "VST",
       "JAN",
       "JEREMIAS",
       "TIM"
      ],
-     "proposer": "JAN",
      "team": [
       "JAN",
       "VST",
       "MICHAEL",
       "JEREMIAS"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "proposer": "ANDREJ",
@@ -91,31 +187,45 @@
      ]
     }
    ],
+   "numFails": 1,
    "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 4,
+   "team": [
+    "KRYS",
+    "ANDREJ",
+    "MAROS",
+    "VST"
+   ]
   },
   {
-   "numFails": 0,
+   "team": [
+    "MAROS",
+    "MICHAEL",
+    "ANDREJ",
+    "JAN"
+   ],
    "teamSize": 4,
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "VST",
       "JEREMIAS",
       "TIM",
       "KRYS"
      ],
-     "proposer": "TIM",
      "team": [
       "KRYS",
       "TIM",
       "VST",
       "ANDREJ"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "TIM"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "JAN",
       "JEREMIAS",
@@ -123,6 +233,7 @@
       "VST"
      ],
      "proposer": "JEREMIAS",
+     "state": "REJECTED",
      "team": [
       "JEREMIAS",
       "KRYS",
@@ -131,29 +242,22 @@
      ]
     },
     {
+     "state": "REJECTED",
      "team": [
       "MAROS",
       "KRYS",
       "ANDREJ",
       "TIM"
      ],
-     "state": "REJECTED",
+     "proposer": "MAROS",
      "votes": [
       "ANDREJ",
       "JAN",
       "MAROS",
       "TIM"
-     ],
-     "proposer": "MAROS"
+     ]
     },
     {
-     "team": [
-      "MAROS",
-      "MICHAEL",
-      "ANDREJ",
-      "JAN"
-     ],
-     "state": "APPROVED",
      "votes": [
       "ANDREJ",
       "JAN",
@@ -162,31 +266,24 @@
       "MICHAEL",
       "VST"
      ],
+     "state": "APPROVED",
+     "team": [
+      "MAROS",
+      "MICHAEL",
+      "ANDREJ",
+      "JAN"
+     ],
      "proposer": "MICHAEL"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "MAROS",
-    "MICHAEL",
-    "ANDREJ",
-    "JAN"
    ]
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "MAROS",
-    "MICHAEL",
-    "ANDREJ",
-    "JAN",
-    "KRYS"
-   ],
-   "numFails": 0,
-   "teamSize": 5,
+   "failsRequired": 2,
    "proposals": [
     {
+     "votes": [
+      "JEREMIAS"
+     ],
      "team": [
       "VST",
       "MICHAEL",
@@ -194,14 +291,10 @@
       "JEREMIAS",
       "ANDREJ"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "JEREMIAS"
-     ],
-     "proposer": "VST"
+     "proposer": "VST",
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
      "votes": [
       "MICHAEL",
       "VST",
@@ -210,135 +303,42 @@
       "MAROS",
       "KRYS"
      ],
-     "proposer": "KRYS",
+     "state": "APPROVED",
      "team": [
       "MAROS",
       "MICHAEL",
       "ANDREJ",
       "JAN",
       "KRYS"
-     ]
+     ],
+     "proposer": "KRYS"
     }
    ],
-   "failsRequired": 2
+   "team": [
+    "MAROS",
+    "MICHAEL",
+    "ANDREJ",
+    "JAN",
+    "KRYS"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 5
   },
   {
-   "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 1,
    "team": [],
-   "teamSize": 5
+   "failsRequired": 1,
+   "teamSize": 5,
+   "proposals": [],
+   "state": "PENDING"
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "MICHAEL": true,
-    "MAROS": true,
-    "KRYS": true
-   },
-   {
-    "ANDREJ": true,
-    "MAROS": true,
-    "KRYS": true,
-    "VST": false
-   },
-   {
-    "ANDREJ": true,
-    "JAN": true,
-    "MAROS": true,
-    "MICHAEL": true
-   },
-   {
-    "JAN": true,
-    "ANDREJ": true,
-    "MAROS": true,
-    "KRYS": true,
-    "MICHAEL": true
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "KRYS",
-  "roles": [
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "VST"
-   },
-   {
-    "name": "ANDREJ",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MAROS"
-   },
-   {
-    "name": "JEREMIAS",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "TIM",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "KRYS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MICHAEL",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ]
- },
  "timeFinished": {
   "_seconds": 1586358342,
   "_nanoseconds": 923327000
  },
- "players": [
-  {
-   "uid": "qXLJJ9sBJ9dpZfbVdrLTU8TGkSi1",
-   "name": "KRYS"
-  },
-  {
-   "name": "JAN",
-   "uid": "GJkOV0cSCPbqvq0n2jgTK6t5AlJ2"
-  },
-  {
-   "uid": "HIDq0QKkfnU6Y85UuZAnBayNpFH2",
-   "name": "ANDREJ"
-  },
-  {
-   "uid": "0GnYFkXtMYez2w6njBLllhmky9F2",
-   "name": "TIM"
-  },
-  {
-   "uid": "mmZ8K38iBGfNGeD3VO9GMNsCpEt1",
-   "name": "JEREMIAS"
-  },
-  {
-   "name": "MAROS",
-   "uid": "vJAEVfL9D2c0OmkuQZ3PSEYL9Vf1"
-  },
-  {
-   "uid": "9wIiemweP8Rhxb3ovlGv9SilI9a2",
-   "name": "MICHAEL"
-  },
-  {
-   "uid": "CpE21PDS8bXpQBstvPfwAFnD5IF3",
-   "name": "VST"
-  }
- ]
+ "timeCreated": {
+  "_seconds": 1586357341,
+  "_nanoseconds": 773000000
+ }
 }

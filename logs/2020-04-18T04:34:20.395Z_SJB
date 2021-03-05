@@ -1,31 +1,20 @@
 {
- "timeFinished": {
-  "_seconds": 1587185287,
-  "_nanoseconds": 391000000
- },
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1587184460,
   "_nanoseconds": 395000000
  },
  "missions": [
   {
+   "teamSize": 2,
    "state": "SUCCESS",
    "team": [
     "CBYRDD",
     "ZACH"
    ],
-   "numFails": 0,
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "CBYRDD",
-      "ZACH"
-     ],
-     "state": "APPROVED",
+     "proposer": "TYLERWALL",
      "votes": [
       "TYLERWALL",
       "ALAN",
@@ -33,10 +22,14 @@
       "CBYRDD",
       "ZACH"
      ],
-     "proposer": "TYLERWALL"
+     "state": "APPROVED",
+     "team": [
+      "CBYRDD",
+      "ZACH"
+     ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 0
   },
   {
    "team": [
@@ -45,29 +38,32 @@
     "ZACH"
    ],
    "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "TYLERWALL",
-      "ALAN",
-      "ZACH"
-     ],
-     "state": "APPROVED",
      "votes": [
       "CUB",
       "CBYRDD",
       "TYLERWALL",
       "ALAN"
      ],
-     "proposer": "CUB"
+     "proposer": "CUB",
+     "team": [
+      "TYLERWALL",
+      "ALAN",
+      "ZACH"
+     ],
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
+   "teamSize": 3,
    "state": "FAIL"
   },
   {
-   "numFails": 0,
+   "team": [
+    "ZACH",
+    "CBYRDD"
+   ],
    "teamSize": 2,
    "proposals": [
     {
@@ -85,62 +81,76 @@
      ]
     }
    ],
-   "failsRequired": 1,
    "state": "SUCCESS",
-   "team": [
-    "ZACH",
-    "CBYRDD"
-   ]
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "CBYRDD",
-      "ZACH",
-      "ALAN"
-     ],
      "state": "APPROVED",
      "votes": [
       "TYLERWALL",
       "ALAN",
       "CBYRDD"
      ],
+     "team": [
+      "CBYRDD",
+      "ZACH",
+      "ALAN"
+     ],
      "proposer": "ZACH"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "CBYRDD",
     "ZACH",
     "ALAN"
    ],
-   "numFails": 0,
    "teamSize": 3
   },
   {
-   "failsRequired": 1,
-   "team": [],
    "teamSize": 3,
+   "team": [],
    "state": "PENDING",
+   "failsRequired": 1,
    "proposals": []
   }
  ],
  "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "ZACH",
-  "roles": [
+  "votes": [
    {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "TYLERWALL"
+    "ZACH": true,
+    "CBYRDD": true
    },
    {
+    "TYLERWALL": false,
+    "ZACH": true,
+    "ALAN": true
+   },
+   {
+    "CBYRDD": true,
+    "ZACH": true
+   },
+   {
+    "ALAN": true,
+    "ZACH": true,
+    "CBYRDD": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "TYLERWALL",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
     "name": "ALAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
     "name": "CUB",
@@ -149,35 +159,25 @@
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "CBYRDD"
+    "name": "CBYRDD",
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "ZACH",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    }
   ],
-  "votes": [
-   {
-    "CBYRDD": true,
-    "ZACH": true
-   },
-   {
-    "ALAN": true,
-    "TYLERWALL": false,
-    "ZACH": true
-   },
-   {
-    "ZACH": true,
-    "CBYRDD": true
-   },
-   {
-    "ZACH": true,
-    "ALAN": true,
-    "CBYRDD": true
-   }
-  ]
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
+  "assassinated": "ZACH"
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1587185287,
+  "_nanoseconds": 391000000
  },
  "players": [
   {
@@ -185,16 +185,16 @@
    "name": "ZACH"
   },
   {
-   "name": "ALAN",
-   "uid": "ZZ7S5mPvoGRnAso2kknYYJqNVMR2"
+   "uid": "ZZ7S5mPvoGRnAso2kknYYJqNVMR2",
+   "name": "ALAN"
   },
   {
    "name": "TYLERWALL",
    "uid": "s5tkLOHg1Yd1ONl24M47IfmCsUi2"
   },
   {
-   "name": "CUB",
-   "uid": "V5Hx8FAwVANP1rkm1irrKiErg3h1"
+   "uid": "V5Hx8FAwVANP1rkm1irrKiErg3h1",
+   "name": "CUB"
   },
   {
    "name": "CBYRDD",

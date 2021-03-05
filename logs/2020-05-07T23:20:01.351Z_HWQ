@@ -1,41 +1,80 @@
 {
- "players": [
-  {
-   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2",
-   "name": "GOODWIN"
-  },
-  {
-   "name": "JENNA",
-   "uid": "GtnoqXEanyXtkUj99PorBMhxrlB2"
-  },
-  {
-   "uid": "tVQNQuHDO8cihbBVOPRGTj0fm4I2",
-   "name": "KIMBERLY"
-  },
-  {
-   "uid": "1BzGT5Pb9SR0DbGe7Xxp8UUky8T2",
-   "name": "LASER"
-  },
-  {
-   "name": "TYLER",
-   "uid": "OffwbigM2SblJxpZUB0eHkoPheI2"
-  },
-  {
-   "name": "ROCIO",
-   "uid": "VbUDJdM4SNRVWhkElP1RFmbhRyo2"
-  },
-  {
-   "name": "KAREN",
-   "uid": "kYmaig4V9qPVwzFNPynJHaGGk8P2"
-  },
-  {
-   "uid": "iEzhrQLgEOXe7L05QEtqhr2uXDW2",
-   "name": "RAFMAN"
-  }
- ],
  "timeFinished": {
   "_seconds": 1588895165,
   "_nanoseconds": 0
+ },
+ "outcome": {
+  "votes": [
+   {
+    "RAFMAN": false,
+    "TYLER": true,
+    "GOODWIN": true
+   },
+   {
+    "JENNA": true,
+    "KIMBERLY": true,
+    "TYLER": true,
+    "ROCIO": true
+   },
+   {
+    "KIMBERLY": true,
+    "JENNA": true,
+    "TYLER": true,
+    "ROCIO": true
+   },
+   {
+    "TYLER": true,
+    "LASER": true,
+    "ROCIO": true,
+    "JENNA": true,
+    "KIMBERLY": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "name": "TYLER",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "KAREN",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "GOODWIN"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "ROCIO"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "KIMBERLY"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "RAFMAN"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "JENNA"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "LASER",
+    "assassin": false
+   }
+  ],
+  "assassinated": "JENNA"
  },
  "options": {
   "inGameLog": false
@@ -46,43 +85,39 @@
  },
  "missions": [
   {
-   "team": [
-    "TYLER",
-    "RAFMAN",
-    "GOODWIN"
-   ],
-   "numFails": 1,
    "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "GOODWIN",
-      "RAFMAN",
-      "KAREN"
-     ],
-     "state": "REJECTED",
      "votes": [
       "GOODWIN",
       "ROCIO",
       "KIMBERLY"
      ],
+     "state": "REJECTED",
+     "team": [
+      "GOODWIN",
+      "RAFMAN",
+      "KAREN"
+     ],
      "proposer": "GOODWIN"
     },
     {
-     "team": [
-      "JENNA",
-      "KIMBERLY",
-      "LASER"
-     ],
-     "state": "REJECTED",
      "votes": [
       "ROCIO",
       "KIMBERLY",
       "JENNA"
      ],
-     "proposer": "JENNA"
+     "proposer": "JENNA",
+     "state": "REJECTED",
+     "team": [
+      "JENNA",
+      "KIMBERLY",
+      "LASER"
+     ]
     },
     {
+     "state": "REJECTED",
      "votes": [
       "KIMBERLY"
      ],
@@ -91,23 +126,22 @@
       "KIMBERLY",
       "TYLER",
       "LASER"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "REJECTED",
+     "proposer": "LASER",
      "team": [
       "LASER",
       "KAREN",
       "RAFMAN"
      ],
-     "state": "REJECTED",
      "votes": [
       "LASER",
       "KAREN",
       "ROCIO",
       "KIMBERLY"
-     ],
-     "proposer": "LASER"
+     ]
     },
     {
      "votes": [
@@ -119,17 +153,22 @@
       "RAFMAN",
       "JENNA"
      ],
-     "proposer": "TYLER",
      "team": [
       "TYLER",
       "RAFMAN",
       "GOODWIN"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "TYLER"
     }
    ],
+   "numFails": 1,
    "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "TYLER",
+    "RAFMAN",
+    "GOODWIN"
+   ]
   },
   {
    "team": [
@@ -138,8 +177,7 @@
     "ROCIO",
     "TYLER"
    ],
-   "numFails": 0,
-   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -148,25 +186,25 @@
       "GOODWIN",
       "LASER"
      ],
-     "state": "REJECTED",
+     "proposer": "ROCIO",
      "votes": [
       "LASER",
       "ROCIO"
      ],
-     "proposer": "ROCIO"
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "JENNA"
+     ],
+     "proposer": "KAREN",
+     "state": "REJECTED",
      "team": [
       "KAREN",
       "GOODWIN",
       "KIMBERLY",
       "JENNA"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "JENNA"
-     ],
-     "proposer": "KAREN"
+     ]
     },
     {
      "team": [
@@ -189,22 +227,16 @@
       "GOODWIN"
      ],
      "proposer": "GOODWIN",
+     "state": "REJECTED",
      "team": [
       "GOODWIN",
       "KIMBERLY",
       "LASER",
       "KAREN"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "team": [
-      "JENNA",
-      "KIMBERLY",
-      "ROCIO",
-      "TYLER"
-     ],
-     "state": "APPROVED",
+     "proposer": "JENNA",
      "votes": [
       "GOODWIN",
       "ROCIO",
@@ -215,30 +247,23 @@
       "TYLER",
       "KAREN"
      ],
-     "proposer": "JENNA"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
-  },
-  {
-   "team": [
-    "KIMBERLY",
-    "JENNA",
-    "ROCIO",
-    "TYLER"
-   ],
-   "numFails": 0,
-   "teamSize": 4,
-   "proposals": [
-    {
-     "proposer": "KIMBERLY",
      "team": [
-      "KIMBERLY",
       "JENNA",
+      "KIMBERLY",
       "ROCIO",
       "TYLER"
      ],
+     "state": "APPROVED"
+    }
+   ],
+   "teamSize": 4,
+   "numFails": 0,
+   "state": "SUCCESS"
+  },
+  {
+   "failsRequired": 1,
+   "proposals": [
+    {
      "state": "APPROVED",
      "votes": [
       "ROCIO",
@@ -246,15 +271,32 @@
       "JENNA",
       "LASER",
       "TYLER"
-     ]
+     ],
+     "team": [
+      "KIMBERLY",
+      "JENNA",
+      "ROCIO",
+      "TYLER"
+     ],
+     "proposer": "KIMBERLY"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 4,
+   "team": [
+    "KIMBERLY",
+    "JENNA",
+    "ROCIO",
+    "TYLER"
+   ]
   },
   {
+   "teamSize": 5,
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "KIMBERLY",
       "JENNA",
@@ -262,7 +304,6 @@
       "ROCIO",
       "LASER"
      ],
-     "state": "APPROVED",
      "votes": [
       "LASER",
       "TYLER",
@@ -277,7 +318,6 @@
     }
    ],
    "failsRequired": 2,
-   "state": "SUCCESS",
    "team": [
     "KIMBERLY",
     "JENNA",
@@ -285,88 +325,48 @@
     "ROCIO",
     "LASER"
    ],
-   "numFails": 0,
-   "teamSize": 5
+   "state": "SUCCESS"
   },
   {
+   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1,
    "team": [],
-   "teamSize": 5,
-   "state": "PENDING"
+   "failsRequired": 1,
+   "teamSize": 5
   }
  ],
- "outcome": {
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "TYLER"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "KAREN"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "GOODWIN"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "ROCIO"
-   },
-   {
-    "name": "KIMBERLY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "RAFMAN"
-   },
-   {
-    "name": "JENNA",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "LASER"
-   }
-  ],
-  "votes": [
-   {
-    "TYLER": true,
-    "RAFMAN": false,
-    "GOODWIN": true
-   },
-   {
-    "TYLER": true,
-    "KIMBERLY": true,
-    "ROCIO": true,
-    "JENNA": true
-   },
-   {
-    "TYLER": true,
-    "KIMBERLY": true,
-    "ROCIO": true,
-    "JENNA": true
-   },
-   {
-    "LASER": true,
-    "TYLER": true,
-    "KIMBERLY": true,
-    "ROCIO": true,
-    "JENNA": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "JENNA"
- }
+ "players": [
+  {
+   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2",
+   "name": "GOODWIN"
+  },
+  {
+   "uid": "GtnoqXEanyXtkUj99PorBMhxrlB2",
+   "name": "JENNA"
+  },
+  {
+   "uid": "tVQNQuHDO8cihbBVOPRGTj0fm4I2",
+   "name": "KIMBERLY"
+  },
+  {
+   "name": "LASER",
+   "uid": "1BzGT5Pb9SR0DbGe7Xxp8UUky8T2"
+  },
+  {
+   "name": "TYLER",
+   "uid": "OffwbigM2SblJxpZUB0eHkoPheI2"
+  },
+  {
+   "uid": "VbUDJdM4SNRVWhkElP1RFmbhRyo2",
+   "name": "ROCIO"
+  },
+  {
+   "uid": "kYmaig4V9qPVwzFNPynJHaGGk8P2",
+   "name": "KAREN"
+  },
+  {
+   "uid": "iEzhrQLgEOXe7L05QEtqhr2uXDW2",
+   "name": "RAFMAN"
+  }
+ ]
 }

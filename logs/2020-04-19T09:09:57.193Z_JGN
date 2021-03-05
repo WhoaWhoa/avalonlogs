@@ -1,25 +1,97 @@
 {
- "timeFinished": {
-  "_seconds": 1587288167,
-  "_nanoseconds": 185000000
- },
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1587287397,
   "_nanoseconds": 193000000
  },
+ "outcome": {
+  "roles": [
+   {
+    "name": "JENJEN",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "name": "ANDIE",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "NUGGIES"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "PATTYWAP",
+    "assassin": false
+   },
+   {
+    "name": "ASHY",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "CHRISTOPHE"
+   },
+   {
+    "role": "MORDRED",
+    "assassin": false,
+    "name": "CHI"
+   },
+   {
+    "assassin": true,
+    "name": "JEFFREY",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "MORGANA",
+    "name": "MICHI",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "NUGGIES": true,
+    "ASHY": true,
+    "MICHI": true
+   },
+   {
+    "PATTYWAP": true,
+    "ASHY": true,
+    "NUGGIES": true,
+    "CHI": false
+   },
+   {
+    "NUGGIES": true,
+    "ASHY": true,
+    "PATTYWAP": true,
+    "MICHI": false
+   },
+   {
+    "NUGGIES": true,
+    "JENJEN": true,
+    "MICHI": false,
+    "CHRISTOPHE": true,
+    "CHI": false
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null,
+  "state": "EVIL_WIN"
+ },
  "missions": [
   {
    "state": "SUCCESS",
+   "teamSize": 3,
+   "failsRequired": 1,
    "team": [
     "MICHI",
     "ASHY",
     "NUGGIES"
    ],
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -31,30 +103,37 @@
       "JEFFREY",
       "MICHI"
      ],
-     "proposer": "MICHI",
      "team": [
       "MICHI",
       "ASHY",
       "NUGGIES"
      ],
+     "proposer": "MICHI",
      "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "state": "FAIL",
    "team": [
     "CHI",
     "NUGGIES",
     "ASHY",
     "PATTYWAP"
    ],
-   "numFails": 1,
    "teamSize": 4,
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "CHI",
      "state": "APPROVED",
+     "team": [
+      "CHI",
+      "NUGGIES",
+      "ASHY",
+      "PATTYWAP"
+     ],
      "votes": [
       "CHI",
       "JEFFREY",
@@ -64,38 +143,14 @@
       "PATTYWAP",
       "ASHY",
       "CHRISTOPHE"
-     ],
-     "proposer": "CHI",
-     "team": [
-      "CHI",
-      "NUGGIES",
-      "ASHY",
-      "PATTYWAP"
      ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "NUGGIES",
-    "ASHY",
-    "MICHI",
-    "PATTYWAP"
-   ],
-   "numFails": 1,
    "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "NUGGIES",
-      "ASHY",
-      "MICHI",
-      "PATTYWAP"
-     ],
-     "state": "APPROVED",
      "votes": [
       "MICHI",
       "JENJEN",
@@ -105,21 +160,29 @@
       "CHRISTOPHE",
       "JEFFREY"
      ],
+     "state": "APPROVED",
+     "team": [
+      "NUGGIES",
+      "ASHY",
+      "MICHI",
+      "PATTYWAP"
+     ],
      "proposer": "PATTYWAP"
     }
-   ]
-  },
-  {
-   "state": "FAIL",
+   ],
    "team": [
     "NUGGIES",
+    "ASHY",
     "MICHI",
-    "CHI",
-    "JENJEN",
-    "CHRISTOPHE"
+    "PATTYWAP"
    ],
-   "numFails": 2,
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1
+  },
+  {
    "teamSize": 5,
+   "state": "FAIL",
    "proposals": [
     {
      "team": [
@@ -130,16 +193,15 @@
       "NUGGIES"
      ],
      "state": "REJECTED",
+     "proposer": "JEFFREY",
      "votes": [
       "CHRISTOPHE",
       "CHI",
       "JEFFREY",
       "ANDIE"
-     ],
-     "proposer": "JEFFREY"
+     ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "MICHI",
       "JENJEN",
@@ -149,104 +211,35 @@
       "CHRISTOPHE",
       "CHI"
      ],
-     "proposer": "NUGGIES",
+     "state": "APPROVED",
      "team": [
       "NUGGIES",
       "MICHI",
       "CHI",
       "JENJEN",
       "CHRISTOPHE"
-     ]
+     ],
+     "proposer": "NUGGIES"
     }
    ],
-   "failsRequired": 2
+   "failsRequired": 2,
+   "numFails": 2,
+   "team": [
+    "NUGGIES",
+    "MICHI",
+    "CHI",
+    "JENJEN",
+    "CHRISTOPHE"
+   ]
   },
   {
-   "team": [],
+   "failsRequired": 1,
    "teamSize": 5,
+   "team": [],
    "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 1
+   "proposals": []
   }
  ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "JENJEN",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "ANDIE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "NUGGIES",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "PATTYWAP",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ASHY",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "CHRISTOPHE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "CHI",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "JEFFREY",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "MICHI",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ],
-  "votes": [
-   {
-    "NUGGIES": true,
-    "ASHY": true,
-    "MICHI": true
-   },
-   {
-    "PATTYWAP": true,
-    "NUGGIES": true,
-    "ASHY": true,
-    "CHI": false
-   },
-   {
-    "NUGGIES": true,
-    "ASHY": true,
-    "MICHI": false,
-    "PATTYWAP": true
-   },
-   {
-    "NUGGIES": true,
-    "CHRISTOPHE": true,
-    "MICHI": false,
-    "CHI": false,
-    "JENJEN": true
-   }
-  ]
- },
  "players": [
   {
    "uid": "9xvziqOuVSMznhIGczBkRjK1jO72",
@@ -257,16 +250,16 @@
    "uid": "XNxGKI06NeeZkxBLk5ZDYb90Rwa2"
   },
   {
-   "uid": "chKjep3PXPVuXV2CNQHgkGJySZ33",
-   "name": "PATTYWAP"
+   "name": "PATTYWAP",
+   "uid": "chKjep3PXPVuXV2CNQHgkGJySZ33"
   },
   {
    "uid": "6j8x1t74EPT5HlGjlw6UlrH9vlD3",
    "name": "JEFFREY"
   },
   {
-   "uid": "A3sdrABIXlaqNi8ombciYksTYeH3",
-   "name": "NUGGIES"
+   "name": "NUGGIES",
+   "uid": "A3sdrABIXlaqNi8ombciYksTYeH3"
   },
   {
    "uid": "7PgGBnwB3xYeXpaDDZyZK6ZFw7n2",
@@ -277,12 +270,19 @@
    "name": "JENJEN"
   },
   {
-   "uid": "oj2FTgkuMHNa7y5f3LKIdHOq01D3",
-   "name": "CHRISTOPHE"
+   "name": "CHRISTOPHE",
+   "uid": "oj2FTgkuMHNa7y5f3LKIdHOq01D3"
   },
   {
-   "uid": "9f1x3TcOGgTD9wNsqYtQPcZ5otJ3",
-   "name": "ANDIE"
+   "name": "ANDIE",
+   "uid": "9f1x3TcOGgTD9wNsqYtQPcZ5otJ3"
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1587288167,
+  "_nanoseconds": 185000000
+ }
 }

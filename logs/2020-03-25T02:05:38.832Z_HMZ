@@ -1,92 +1,96 @@
 {
  "outcome": {
-  "roles": [
-   {
-    "name": "NICOLE",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "NOELIA"
-   },
-   {
-    "name": "NAS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "PABLORI",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JOE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "IDO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "STEVE",
-    "assassin": false,
-    "role": "EVIL MINION"
-   }
-  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "assassinated": null,
   "votes": [
    {
     "NICOLE": true,
     "NAS": true
    },
    {
+    "NAS": true,
     "NICOLE": true,
-    "NOELIA": false,
-    "NAS": true
+    "NOELIA": false
    },
    {
-    "STEVE": true,
     "NICOLE": true,
+    "STEVE": true,
     "PABLORI": false
    },
    {
     "NICOLE": true,
-    "JOE": true,
     "NOELIA": false,
-    "STEVE": false
+    "STEVE": false,
+    "JOE": true
    }
   ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null
+  "roles": [
+   {
+    "assassin": false,
+    "name": "NICOLE",
+    "role": "MERLIN"
+   },
+   {
+    "name": "NOELIA",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "name": "NAS",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "PABLORI"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JOE",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "IDO"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "STEVE"
+   }
+  ]
  },
  "timeFinished": {
   "_seconds": 1585102971,
   "_nanoseconds": 815457000
  },
+ "timeCreated": {
+  "_seconds": 1585101938,
+  "_nanoseconds": 832000000
+ },
  "players": [
   {
-   "uid": "iHBcs5gGOvOAP9X5Vpacbnil04b2",
-   "name": "NAS"
+   "name": "NAS",
+   "uid": "iHBcs5gGOvOAP9X5Vpacbnil04b2"
   },
   {
    "name": "PABLORI",
    "uid": "dphPfIQYTqMJkF39tu4bq3B9u0G3"
   },
   {
-   "uid": "3nKOx7hRriT1kcsbCjKo2aRnpwI2",
-   "name": "STEVE"
+   "name": "STEVE",
+   "uid": "3nKOx7hRriT1kcsbCjKo2aRnpwI2"
   },
   {
-   "uid": "xktobEw95VdYv7fAUX53tMzb0Ku1",
-   "name": "IDO"
+   "name": "IDO",
+   "uid": "xktobEw95VdYv7fAUX53tMzb0Ku1"
   },
   {
-   "uid": "o0dtbxry0OevmL3AsMPPGKHrodJ3",
-   "name": "NOELIA"
+   "name": "NOELIA",
+   "uid": "o0dtbxry0OevmL3AsMPPGKHrodJ3"
   },
   {
    "uid": "ZZbaXEr38UQkXrmNBzVhW30DIAg2",
@@ -97,15 +101,21 @@
    "name": "NICOLE"
   }
  ],
- "timeCreated": {
-  "_seconds": 1585101938,
-  "_nanoseconds": 832000000
- },
  "missions": [
   {
+   "failsRequired": 1,
+   "team": [
+    "NICOLE",
+    "NAS"
+   ],
    "proposals": [
     {
+     "team": [
+      "NICOLE",
+      "NAS"
+     ],
      "state": "APPROVED",
+     "proposer": "NICOLE",
      "votes": [
       "NOELIA",
       "NAS",
@@ -113,35 +123,28 @@
       "JOE",
       "STEVE",
       "NICOLE"
-     ],
-     "proposer": "NICOLE",
-     "team": [
-      "NICOLE",
-      "NAS"
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "NICOLE",
-    "NAS"
-   ],
    "numFails": 0,
-   "teamSize": 2
+   "teamSize": 2,
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "NAS",
     "NICOLE",
     "NOELIA"
    ],
-   "numFails": 1,
-   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
+     "team": [
+      "NAS",
+      "NICOLE",
+      "NOELIA"
+     ],
+     "state": "APPROVED",
      "votes": [
       "NOELIA",
       "NAS",
@@ -149,32 +152,30 @@
       "JOE",
       "NICOLE"
      ],
-     "proposer": "NAS",
-     "team": [
-      "NAS",
-      "NICOLE",
-      "NOELIA"
-     ],
-     "state": "APPROVED"
+     "proposer": "NAS"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 1
   },
   {
+   "failsRequired": 1,
    "team": [
     "PABLORI",
     "STEVE",
     "NICOLE"
    ],
-   "numFails": 1,
    "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "NOELIA",
       "NAS",
       "IDO"
      ],
+     "state": "REJECTED",
      "proposer": "PABLORI",
      "team": [
       "PABLORI",
@@ -198,10 +199,11 @@
      "proposer": "STEVE"
     }
    ],
-   "failsRequired": 1,
    "state": "FAIL"
   },
   {
+   "state": "FAIL",
+   "teamSize": 4,
    "team": [
     "NOELIA",
     "STEVE",
@@ -209,48 +211,46 @@
     "NICOLE"
    ],
    "numFails": 2,
-   "teamSize": 4,
+   "failsRequired": 2,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "IDO",
       "NICOLE"
      ],
-     "proposer": "IDO",
+     "state": "REJECTED",
      "team": [
       "IDO",
       "NICOLE",
       "NAS",
       "JOE"
-     ]
+     ],
+     "proposer": "IDO"
     },
     {
-     "votes": [
-      "NOELIA",
-      "NAS",
-      "PABLORI",
-      "STEVE"
-     ],
-     "proposer": "NOELIA",
      "team": [
       "NOELIA",
       "STEVE",
       "JOE",
       "NICOLE"
      ],
+     "proposer": "NOELIA",
+     "votes": [
+      "NOELIA",
+      "NAS",
+      "PABLORI",
+      "STEVE"
+     ],
      "state": "APPROVED"
     }
-   ],
-   "failsRequired": 2,
-   "state": "FAIL"
+   ]
   },
   {
-   "proposals": [],
-   "failsRequired": 1,
-   "team": [],
    "teamSize": 4,
-   "state": "PENDING"
+   "failsRequired": 1,
+   "state": "PENDING",
+   "proposals": [],
+   "team": []
   }
  ]
 }

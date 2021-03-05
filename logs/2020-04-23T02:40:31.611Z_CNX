@@ -1,36 +1,75 @@
 {
- "players": [
-  {
-   "uid": "vtp0fnnjXgNuUmaLHYzyBzOGi2e2",
-   "name": "CLWNDRGN"
-  },
-  {
-   "name": "TORI",
-   "uid": "SgPsoRcjjINzxZdIOq9Iipq0Lxp2"
-  },
-  {
-   "name": "JOHNNY",
-   "uid": "Ws50X3H29xOkVXGfxKYVT6vSXWx2"
-  },
-  {
-   "name": "JESS",
-   "uid": "2nyGSFqz9WQ8CyCcIXqKEyPsZru2"
-  },
-  {
-   "name": "JAKE",
-   "uid": "u4AtHXg1G0NozgCVEXzdpuP0Y6E2"
-  },
-  {
-   "uid": "e4RWkVdJbfVEXZeHaz7hEJMOXMs2",
-   "name": "KELS"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1587610951,
-  "_nanoseconds": 400000000
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "TORI": true,
+    "JOHNNY": true
+   },
+   {
+    "JAKE": true,
+    "KELS": true,
+    "JESS": false
+   },
+   {
+    "JAKE": true,
+    "CLWNDRGN": true,
+    "TORI": false,
+    "KELS": true
+   },
+   {
+    "JOHNNY": true,
+    "CLWNDRGN": true,
+    "JAKE": true
+   },
+   {
+    "KELS": true,
+    "CLWNDRGN": true,
+    "JOHNNY": true,
+    "JAKE": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "JESS"
+   },
+   {
+    "name": "TORI",
+    "role": "MORDRED",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "CLWNDRGN",
+    "role": "MERLIN"
+   },
+   {
+    "name": "KELS",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "JAKE"
+   },
+   {
+    "assassin": false,
+    "name": "JOHNNY",
+    "role": "PERCIVAL"
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "CLWNDRGN"
  },
  "options": {
   "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1587610951,
+  "_nanoseconds": 400000000
  },
  "timeCreated": {
   "_seconds": 1587609631,
@@ -38,49 +77,43 @@
  },
  "missions": [
   {
+   "state": "SUCCESS",
+   "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "JOHNNY",
+     "team": [
+      "JOHNNY",
+      "TORI"
+     ],
      "votes": [
       "JESS",
       "TORI",
       "CLWNDRGN",
       "KELS",
       "JOHNNY"
-     ],
-     "proposer": "JOHNNY",
-     "team": [
-      "JOHNNY",
-      "TORI"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "JOHNNY",
     "TORI"
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   ]
   },
   {
-   "team": [
-    "JESS",
-    "JAKE",
-    "KELS"
-   ],
    "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "JESS",
      "votes": [
       "JESS",
       "KELS",
       "JAKE",
       "JOHNNY"
      ],
-     "proposer": "JESS",
      "team": [
       "JESS",
       "JAKE",
@@ -90,9 +123,16 @@
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3,
+   "state": "FAIL",
+   "team": [
+    "JESS",
+    "JAKE",
+    "KELS"
+   ]
   },
   {
+   "failsRequired": 1,
    "team": [
     "KELS",
     "CLWNDRGN",
@@ -103,184 +143,183 @@
    "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "TORI",
       "CLWNDRGN",
       "KELS"
      ],
-     "proposer": "JAKE",
+     "state": "REJECTED",
      "team": [
       "JAKE",
       "KELS",
       "TORI",
       "CLWNDRGN"
-     ]
+     ],
+     "proposer": "JAKE"
     },
     {
-     "team": [
-      "KELS",
-      "CLWNDRGN",
-      "TORI",
-      "JAKE"
-     ],
-     "state": "APPROVED",
+     "proposer": "KELS",
      "votes": [
       "TORI",
       "CLWNDRGN",
       "KELS",
       "JOHNNY"
      ],
-     "proposer": "KELS"
+     "state": "APPROVED",
+     "team": [
+      "KELS",
+      "CLWNDRGN",
+      "TORI",
+      "JAKE"
+     ]
     }
    ],
-   "failsRequired": 1,
    "state": "FAIL"
   },
   {
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "votes": [
+      "CLWNDRGN",
+      "JOHNNY"
+     ],
+     "team": [
+      "CLWNDRGN",
+      "JOHNNY",
+      "JAKE"
+     ],
+     "proposer": "CLWNDRGN",
+     "state": "REJECTED"
+    },
+    {
+     "team": [
+      "JOHNNY",
+      "TORI",
+      "CLWNDRGN"
+     ],
+     "proposer": "TORI",
+     "state": "REJECTED",
+     "votes": [
+      "TORI"
+     ]
+    },
+    {
+     "team": [
+      "CLWNDRGN",
+      "JAKE",
+      "KELS"
+     ],
+     "votes": [
+      "JOHNNY"
+     ],
+     "state": "REJECTED",
+     "proposer": "JOHNNY"
+    },
+    {
+     "state": "REJECTED",
+     "votes": [
+      "JESS",
+      "TORI",
+      "JAKE"
+     ],
+     "team": [
+      "JESS",
+      "CLWNDRGN",
+      "TORI"
+     ],
+     "proposer": "JESS"
+    },
+    {
+     "team": [
+      "JAKE",
+      "CLWNDRGN",
+      "JOHNNY"
+     ],
+     "proposer": "JAKE",
+     "state": "APPROVED",
+     "votes": [
+      "JESS",
+      "TORI",
+      "CLWNDRGN",
+      "KELS",
+      "JAKE",
+      "JOHNNY"
+     ]
+    }
+   ],
    "team": [
     "JAKE",
     "CLWNDRGN",
     "JOHNNY"
    ],
    "numFails": 0,
-   "teamSize": 3,
+   "failsRequired": 1
+  },
+  {
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "CLWNDRGN",
       "JOHNNY",
-      "JAKE"
+      "JAKE",
+      "KELS"
      ],
+     "proposer": "KELS",
+     "votes": [
+      "KELS"
+     ]
+    },
+    {
      "state": "REJECTED",
      "votes": [
-      "CLWNDRGN",
+      "KELS",
+      "JAKE",
       "JOHNNY"
+     ],
+     "team": [
+      "CLWNDRGN",
+      "JOHNNY",
+      "JAKE",
+      "KELS"
      ],
      "proposer": "CLWNDRGN"
     },
     {
-     "state": "REJECTED",
      "votes": [
+      "JESS",
       "TORI"
      ],
+     "state": "REJECTED",
      "proposer": "TORI",
      "team": [
-      "JOHNNY",
-      "TORI",
-      "CLWNDRGN"
-     ]
-    },
-    {
-     "votes": [
-      "JOHNNY"
-     ],
-     "proposer": "JOHNNY",
-     "team": [
-      "CLWNDRGN",
-      "JAKE",
-      "KELS"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "votes": [
-      "JESS",
-      "TORI",
-      "JAKE"
-     ],
-     "proposer": "JESS",
-     "team": [
-      "JESS",
-      "CLWNDRGN",
-      "TORI"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "team": [
-      "JAKE",
-      "CLWNDRGN",
-      "JOHNNY"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "JESS",
-      "TORI",
-      "CLWNDRGN",
-      "KELS",
-      "JAKE",
-      "JOHNNY"
-     ],
-     "proposer": "JAKE"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
-  },
-  {
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "votes": [
-      "KELS"
-     ],
-     "proposer": "KELS",
-     "team": [
-      "CLWNDRGN",
-      "JOHNNY",
-      "JAKE",
-      "KELS"
-     ]
-    },
-    {
-     "state": "REJECTED",
-     "votes": [
-      "KELS",
-      "JAKE",
-      "JOHNNY"
-     ],
-     "proposer": "CLWNDRGN",
-     "team": [
-      "CLWNDRGN",
-      "JOHNNY",
-      "JAKE",
-      "KELS"
-     ]
-    },
-    {
-     "team": [
       "TORI",
       "JOHNNY",
       "CLWNDRGN",
       "JAKE"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "JESS",
-      "TORI"
-     ],
-     "proposer": "TORI"
+     ]
     },
     {
-     "team": [
-      "CLWNDRGN",
-      "JOHNNY",
-      "JAKE",
-      "KELS"
-     ],
-     "state": "APPROVED",
      "votes": [
       "CLWNDRGN",
       "KELS",
       "JAKE",
       "JOHNNY"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "CLWNDRGN",
+      "JOHNNY",
+      "JAKE",
+      "KELS"
      ],
      "proposer": "JOHNNY"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "CLWNDRGN",
     "JOHNNY",
@@ -291,69 +330,30 @@
    "teamSize": 4
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": "CLWNDRGN",
-  "roles": [
-   {
-    "name": "JESS",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "TORI",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "CLWNDRGN",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "KELS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JAKE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "JOHNNY"
-   }
-  ],
-  "votes": [
-   {
-    "JOHNNY": true,
-    "TORI": true
-   },
-   {
-    "JAKE": true,
-    "JESS": false,
-    "KELS": true
-   },
-   {
-    "JAKE": true,
-    "KELS": true,
-    "TORI": false,
-    "CLWNDRGN": true
-   },
-   {
-    "JOHNNY": true,
-    "CLWNDRGN": true,
-    "JAKE": true
-   },
-   {
-    "JAKE": true,
-    "KELS": true,
-    "JOHNNY": true,
-    "CLWNDRGN": true
-   }
-  ],
-  "message": "Merlin assassinated"
- }
+ "players": [
+  {
+   "name": "CLWNDRGN",
+   "uid": "vtp0fnnjXgNuUmaLHYzyBzOGi2e2"
+  },
+  {
+   "name": "TORI",
+   "uid": "SgPsoRcjjINzxZdIOq9Iipq0Lxp2"
+  },
+  {
+   "name": "JOHNNY",
+   "uid": "Ws50X3H29xOkVXGfxKYVT6vSXWx2"
+  },
+  {
+   "uid": "2nyGSFqz9WQ8CyCcIXqKEyPsZru2",
+   "name": "JESS"
+  },
+  {
+   "uid": "u4AtHXg1G0NozgCVEXzdpuP0Y6E2",
+   "name": "JAKE"
+  },
+  {
+   "name": "KELS",
+   "uid": "e4RWkVdJbfVEXZeHaz7hEJMOXMs2"
+  }
+ ]
 }

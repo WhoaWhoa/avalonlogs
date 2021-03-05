@@ -1,14 +1,6 @@
 {
- "timeFinished": {
-  "_seconds": 1588238084,
-  "_nanoseconds": 234000000
- },
  "options": {
   "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588237479,
-  "_nanoseconds": 449000000
  },
  "missions": [
   {
@@ -16,11 +8,16 @@
     "JOE",
     "POOPYBUTHL"
    ],
-   "numFails": 0,
    "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "JOE",
+      "POOPYBUTHL"
+     ],
+     "proposer": "NPC",
      "votes": [
       "NPC",
       "JOE",
@@ -28,11 +25,6 @@
       "NATE",
       "POOPYBUTHL",
       "CHUMMY"
-     ],
-     "proposer": "NPC",
-     "team": [
-      "JOE",
-      "POOPYBUTHL"
      ]
     }
    ],
@@ -40,10 +32,12 @@
    "state": "SUCCESS"
   },
   {
-   "numFails": 0,
-   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "CHUMMY",
+     "state": "APPROVED",
      "votes": [
       "JOE",
       "HEEEEY",
@@ -51,35 +45,31 @@
       "CHUMMY",
       "NPC"
      ],
-     "proposer": "CHUMMY",
      "team": [
       "JOE",
       "POOPYBUTHL",
       "CHUMMY"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "JOE",
     "POOPYBUTHL",
     "CHUMMY"
-   ]
+   ],
+   "numFails": 0
   },
   {
-   "state": "FAIL",
-   "team": [
-    "JOE",
-    "NATE",
-    "CHUMMY",
-    "POOPYBUTHL"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "JOE",
+      "NATE",
+      "CHUMMY",
+      "POOPYBUTHL"
+     ],
      "state": "APPROVED",
      "votes": [
       "JOE",
@@ -88,58 +78,60 @@
       "POOPYBUTHL",
       "CHUMMY"
      ],
-     "proposer": "POOPYBUTHL",
-     "team": [
-      "JOE",
-      "NATE",
-      "CHUMMY",
-      "POOPYBUTHL"
-     ]
+     "proposer": "POOPYBUTHL"
     }
    ],
-   "failsRequired": 1
-  },
-  {
+   "state": "FAIL",
+   "teamSize": 4,
+   "numFails": 1,
    "team": [
     "JOE",
     "NATE",
+    "CHUMMY",
     "POOPYBUTHL"
-   ],
-   "numFails": 1,
+   ]
+  },
+  {
    "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
+     "team": [
+      "NPC",
+      "CHUMMY",
+      "JOE"
+     ],
      "votes": [
       "HEEEEY",
       "CHUMMY",
       "NPC"
      ],
      "proposer": "HEEEEY",
-     "team": [
-      "NPC",
-      "CHUMMY",
-      "JOE"
-     ],
      "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "team": [
       "JOE",
       "NATE",
       "POOPYBUTHL"
      ],
-     "state": "APPROVED",
+     "proposer": "JOE",
      "votes": [
       "JOE",
       "HEEEEY",
       "POOPYBUTHL",
       "NPC"
-     ],
-     "proposer": "JOE"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "JOE",
+    "NATE",
+    "POOPYBUTHL"
+   ]
   },
   {
    "team": [
@@ -148,49 +140,76 @@
     "POOPYBUTHL",
     "CHUMMY"
    ],
-   "numFails": 0,
    "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "POOPYBUTHL",
-      "CHUMMY",
-      "NPC",
-      "NATE"
-     ],
-     "proposer": "NATE",
      "team": [
       "NATE",
       "NPC",
       "POOPYBUTHL",
       "CHUMMY"
      ],
-     "state": "APPROVED"
+     "votes": [
+      "POOPYBUTHL",
+      "CHUMMY",
+      "NPC",
+      "NATE"
+     ],
+     "state": "APPROVED",
+     "proposer": "NATE"
     }
    ],
-   "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS"
   }
  ],
  "outcome": {
   "message": "Three successful missions",
-  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "JOE": true,
+    "POOPYBUTHL": true
+   },
+   {
+    "POOPYBUTHL": true,
+    "CHUMMY": true,
+    "JOE": true
+   },
+   {
+    "CHUMMY": true,
+    "POOPYBUTHL": true,
+    "JOE": false,
+    "NATE": true
+   },
+   {
+    "JOE": false,
+    "POOPYBUTHL": true,
+    "NATE": true
+   },
+   {
+    "CHUMMY": true,
+    "NATE": true,
+    "POOPYBUTHL": true,
+    "NPC": true
+   }
+  ],
   "assassinated": "NATE",
   "roles": [
    {
-    "name": "NPC",
     "assassin": false,
+    "name": "NPC",
     "role": "MERLIN"
    },
    {
-    "name": "JOE",
     "assassin": false,
+    "name": "JOE",
     "role": "MORGANA"
    },
    {
+    "role": "EVIL MINION",
     "name": "HEEEEY",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "assassin": true
    },
    {
     "name": "NATE",
@@ -198,57 +217,38 @@
     "role": "PERCIVAL"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "POOPYBUTHL",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "name": "CHUMMY",
     "assassin": false,
+    "name": "CHUMMY",
     "role": "LOYAL FOLLOWER"
    }
   ],
-  "votes": [
-   {
-    "JOE": true,
-    "POOPYBUTHL": true
-   },
-   {
-    "CHUMMY": true,
-    "JOE": true,
-    "POOPYBUTHL": true
-   },
-   {
-    "CHUMMY": true,
-    "NATE": true,
-    "JOE": false,
-    "POOPYBUTHL": true
-   },
-   {
-    "NATE": true,
-    "JOE": false,
-    "POOPYBUTHL": true
-   },
-   {
-    "NPC": true,
-    "CHUMMY": true,
-    "NATE": true,
-    "POOPYBUTHL": true
-   }
-  ]
+  "state": "GOOD_WIN"
+ },
+ "timeFinished": {
+  "_seconds": 1588238084,
+  "_nanoseconds": 234000000
+ },
+ "timeCreated": {
+  "_seconds": 1588237479,
+  "_nanoseconds": 449000000
  },
  "players": [
   {
-   "uid": "INPZG4dtlMfBqH4FyyLhNGKJQEQ2",
-   "name": "JOE"
+   "name": "JOE",
+   "uid": "INPZG4dtlMfBqH4FyyLhNGKJQEQ2"
   },
   {
-   "uid": "6kBX0Jrk6IQysdCODkNoA3bJ8hv1",
-   "name": "NATE"
+   "name": "NATE",
+   "uid": "6kBX0Jrk6IQysdCODkNoA3bJ8hv1"
   },
   {
-   "uid": "vXpG4awgu4Sutzy7uZ3Oc4k5Z4J2",
-   "name": "NPC"
+   "name": "NPC",
+   "uid": "vXpG4awgu4Sutzy7uZ3Oc4k5Z4J2"
   },
   {
    "name": "CHUMMY",
@@ -259,8 +259,8 @@
    "uid": "CXx7LODkU3WBrLxAP3PwXn04NPR2"
   },
   {
-   "uid": "XIb9SKNKJ7bqeVL8ZeJ5GryQAJ53",
-   "name": "HEEEEY"
+   "name": "HEEEEY",
+   "uid": "XIb9SKNKJ7bqeVL8ZeJ5GryQAJ53"
   }
  ]
 }

@@ -1,68 +1,65 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
    "team": [
     "SAM",
     "FIONA"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "SAM",
       "FIONA",
       "ELIZABETH"
      ],
-     "proposer": "ELIZABETH",
      "team": [
       "ELIZABETH",
       "SAM"
-     ]
+     ],
+     "proposer": "ELIZABETH",
+     "state": "REJECTED"
     },
     {
      "team": [
       "SAM",
       "FIONA"
      ],
+     "proposer": "SAM",
      "state": "APPROVED",
      "votes": [
       "SAM",
       "PATRICK",
       "FIONA",
       "ELIZABETH"
-     ],
-     "proposer": "SAM"
+     ]
     }
    ],
+   "state": "SUCCESS",
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2,
+   "numFails": 0
   },
   {
-   "team": [
-    "FIONA",
-    "SAM",
-    "VALERI"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "VALERI",
-      "ELIZABETH",
-      "FIONA"
-     ],
-     "state": "REJECTED",
      "votes": [
       "THEGREATNO",
       "VALERI",
+      "FIONA"
+     ],
+     "state": "REJECTED",
+     "team": [
+      "VALERI",
+      "ELIZABETH",
       "FIONA"
      ],
      "proposer": "THEGREATNO"
     },
     {
+     "proposer": "VALERI",
      "state": "APPROVED",
      "votes": [
       "THEGREATNO",
@@ -71,7 +68,6 @@
       "PATRICK",
       "FIONA"
      ],
-     "proposer": "VALERI",
      "team": [
       "FIONA",
       "SAM",
@@ -79,35 +75,44 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3,
+   "numFails": 1,
+   "state": "FAIL",
+   "team": [
+    "FIONA",
+    "SAM",
+    "VALERI"
+   ],
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
      "state": "REJECTED",
-     "votes": [
-      "THEGREATNO",
-      "VALERI",
-      "FIONA"
-     ],
-     "proposer": "FIONA",
      "team": [
       "FIONA",
       "SAM",
       "PATRICK",
       "THEGREATNO"
+     ],
+     "proposer": "FIONA",
+     "votes": [
+      "THEGREATNO",
+      "VALERI",
+      "FIONA"
      ]
     },
     {
      "state": "APPROVED",
+     "proposer": "PATRICK",
      "votes": [
       "SAM",
       "PATRICK",
       "FIONA",
       "ELIZABETH"
      ],
-     "proposer": "PATRICK",
      "team": [
       "FIONA",
       "PATRICK",
@@ -116,26 +121,25 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "FIONA",
     "PATRICK",
     "SAM",
     "ELIZABETH"
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 4
   },
   {
    "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "SAM",
     "FIONA",
     "PATRICK"
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -143,6 +147,7 @@
       "FIONA",
       "PATRICK"
      ],
+     "proposer": "ELIZABETH",
      "state": "APPROVED",
      "votes": [
       "VALERI",
@@ -150,24 +155,44 @@
       "PATRICK",
       "FIONA",
       "ELIZABETH"
-     ],
-     "proposer": "ELIZABETH"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "proposals": [],
-   "failsRequired": 1,
    "team": [],
+   "state": "PENDING",
    "teamSize": 4,
-   "state": "PENDING"
+   "failsRequired": 1,
+   "proposals": []
   }
  ],
  "outcome": {
   "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "FIONA": true,
+    "SAM": true
+   },
+   {
+    "SAM": true,
+    "FIONA": true,
+    "VALERI": false
+   },
+   {
+    "SAM": true,
+    "ELIZABETH": true,
+    "FIONA": true,
+    "PATRICK": true
+   },
+   {
+    "PATRICK": true,
+    "SAM": true,
+    "FIONA": true
+   }
+  ],
   "assassinated": "ELIZABETH",
+  "state": "EVIL_WIN",
   "roles": [
    {
     "name": "SAM",
@@ -185,43 +210,29 @@
     "role": "PERCIVAL"
    },
    {
-    "name": "ELIZABETH",
     "assassin": false,
+    "name": "ELIZABETH",
     "role": "MERLIN"
    },
    {
+    "role": "MORGANA",
     "name": "THEGREATNO",
-    "assassin": false,
-    "role": "MORGANA"
+    "assassin": false
    },
    {
     "name": "VALERI",
-    "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "SAM": true,
-    "FIONA": true
-   },
-   {
-    "SAM": true,
-    "FIONA": true,
-    "VALERI": false
-   },
-   {
-    "ELIZABETH": true,
-    "PATRICK": true,
-    "SAM": true,
-    "FIONA": true
-   },
-   {
-    "PATRICK": true,
-    "SAM": true,
-    "FIONA": true
+    "role": "EVIL MINION",
+    "assassin": true
    }
   ]
+ },
+ "timeCreated": {
+  "_seconds": 1587258782,
+  "_nanoseconds": 981000000
+ },
+ "timeFinished": {
+  "_seconds": 1587259172,
+  "_nanoseconds": 281000000
  },
  "players": [
   {
@@ -229,35 +240,24 @@
    "name": "FIONA"
   },
   {
-   "uid": "P1fRBIT3O2S7qtycQhNzmtWB8As1",
-   "name": "PATRICK"
+   "name": "PATRICK",
+   "uid": "P1fRBIT3O2S7qtycQhNzmtWB8As1"
   },
   {
-   "uid": "lZNDSlE4tOOJfH2uVU7jYDExWh83",
-   "name": "ELIZABETH"
+   "name": "ELIZABETH",
+   "uid": "lZNDSlE4tOOJfH2uVU7jYDExWh83"
   },
   {
    "uid": "v3hq9fLMPMa57GtzdZ1mVuXhqWz1",
    "name": "SAM"
   },
   {
-   "uid": "y3SigBQP8HZwKhzvZFwcNcLDJFg1",
-   "name": "THEGREATNO"
+   "name": "THEGREATNO",
+   "uid": "y3SigBQP8HZwKhzvZFwcNcLDJFg1"
   },
   {
    "uid": "hFjziC0uEgXVfcwNzAnmyvb2tb23",
    "name": "VALERI"
   }
- ],
- "timeFinished": {
-  "_seconds": 1587259172,
-  "_nanoseconds": 281000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587258782,
-  "_nanoseconds": 981000000
- }
+ ]
 }

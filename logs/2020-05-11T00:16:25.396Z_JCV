@@ -1,108 +1,73 @@
 {
- "players": [
-  {
-   "uid": "gAvGJDQufoXHm8Wk4pceuTHzUva2",
-   "name": "LYDIA"
-  },
-  {
-   "name": "TIM",
-   "uid": "zfr2eeTwc3SQ4uzShunRKL8opx13"
-  },
-  {
-   "uid": "nmJI7ofkNlbxH4hhwPTkPtfiniH3",
-   "name": "ANDREW"
-  },
-  {
-   "name": "ET",
-   "uid": "PphtkevnhCXLwYUn5EIguvBBKQx2"
-  },
-  {
-   "uid": "HdjU4bNbFogNHH9cU2gWmMTFSXy1",
-   "name": "BENJI"
-  },
-  {
-   "name": "LOHIT",
-   "uid": "OzBUlii3zPMY2dhPB4HlS4IxVaR2"
-  },
-  {
-   "uid": "R5lQ8844aHhSpUWhhhtaM0ApCml1",
-   "name": "SHELLEY"
-  }
- ],
  "timeFinished": {
   "_seconds": 1589156642,
   "_nanoseconds": 400000000
  },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1589156185,
-  "_nanoseconds": 396000000
- },
  "missions": [
   {
+   "failsRequired": 1,
    "team": [
     "ANDREW",
     "TIM"
    ],
-   "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "ANDREW",
+     "team": [
+      "ANDREW",
+      "TIM"
+     ],
      "votes": [
       "ET",
       "BENJI",
       "SHELLEY",
       "TIM"
      ],
-     "proposer": "ANDREW",
-     "team": [
-      "ANDREW",
+     "state": "APPROVED"
+    }
+   ],
+   "numFails": 0,
+   "teamSize": 2
+  },
+  {
+   "teamSize": 3,
+   "numFails": 0,
+   "proposals": [
+    {
+     "votes": [
+      "ET",
+      "BENJI",
+      "SHELLEY",
       "TIM"
-     ]
+     ],
+     "team": [
+      "TIM",
+      "ANDREW",
+      "ET"
+     ],
+     "state": "APPROVED",
+     "proposer": "ET"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
-  },
-  {
    "state": "SUCCESS",
    "team": [
     "TIM",
     "ANDREW",
     "ET"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
-   "proposals": [
-    {
-     "votes": [
-      "ET",
-      "BENJI",
-      "SHELLEY",
-      "TIM"
-     ],
-     "proposer": "ET",
-     "team": [
-      "TIM",
-      "ANDREW",
-      "ET"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "numFails": 1,
    "team": [
     "TIM",
     "ANDREW",
     "ET"
    ],
-   "numFails": 1,
+   "state": "FAIL",
    "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -110,6 +75,7 @@
       "ANDREW",
       "ET"
      ],
+     "proposer": "BENJI",
      "state": "APPROVED",
      "votes": [
       "ET",
@@ -117,59 +83,77 @@
       "SHELLEY",
       "TIM",
       "LOHIT"
-     ],
-     "proposer": "BENJI"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
-  },
-  {
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "BENJI",
-      "TIM",
-      "LOHIT",
-      "ET"
-     ],
-     "proposer": "LOHIT",
-     "team": [
-      "LOHIT",
-      "ET",
-      "ANDREW",
-      "TIM"
      ]
     }
-   ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
+   ]
+  },
+  {
    "team": [
     "LOHIT",
     "ET",
     "ANDREW",
     "TIM"
    ],
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "team": [
+      "LOHIT",
+      "ET",
+      "ANDREW",
+      "TIM"
+     ],
+     "proposer": "LOHIT",
+     "votes": [
+      "BENJI",
+      "TIM",
+      "LOHIT",
+      "ET"
+     ]
+    }
+   ],
    "numFails": 1,
-   "teamSize": 4
+   "teamSize": 4,
+   "failsRequired": 2,
+   "state": "SUCCESS"
   },
   {
    "teamSize": 4,
-   "state": "PENDING",
    "proposals": [],
    "failsRequired": 1,
+   "state": "PENDING",
    "team": []
   }
  ],
  "outcome": {
   "message": "Three successful missions",
-  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "TIM": true,
+    "ANDREW": true
+   },
+   {
+    "TIM": true,
+    "ANDREW": true,
+    "ET": true
+   },
+   {
+    "ET": false,
+    "ANDREW": true,
+    "TIM": true
+   },
+   {
+    "ANDREW": true,
+    "LOHIT": true,
+    "ET": false,
+    "TIM": true
+   }
+  ],
   "assassinated": "ANDREW",
   "roles": [
    {
-    "name": "BENJI",
     "assassin": false,
+    "name": "BENJI",
     "role": "MERLIN"
    },
    {
@@ -183,9 +167,9 @@
     "name": "LYDIA"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "TIM",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
     "name": "LOHIT",
@@ -193,9 +177,9 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "role": "PERCIVAL",
     "name": "ANDREW",
-    "assassin": false,
-    "role": "PERCIVAL"
+    "assassin": false
    },
    {
     "name": "ET",
@@ -203,27 +187,43 @@
     "role": "EVIL MINION"
    }
   ],
-  "votes": [
-   {
-    "ANDREW": true,
-    "TIM": true
-   },
-   {
-    "ANDREW": true,
-    "TIM": true,
-    "ET": true
-   },
-   {
-    "ET": false,
-    "ANDREW": true,
-    "TIM": true
-   },
-   {
-    "ANDREW": true,
-    "TIM": true,
-    "ET": false,
-    "LOHIT": true
-   }
-  ]
- }
+  "state": "GOOD_WIN"
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1589156185,
+  "_nanoseconds": 396000000
+ },
+ "players": [
+  {
+   "name": "LYDIA",
+   "uid": "gAvGJDQufoXHm8Wk4pceuTHzUva2"
+  },
+  {
+   "name": "TIM",
+   "uid": "zfr2eeTwc3SQ4uzShunRKL8opx13"
+  },
+  {
+   "uid": "nmJI7ofkNlbxH4hhwPTkPtfiniH3",
+   "name": "ANDREW"
+  },
+  {
+   "uid": "PphtkevnhCXLwYUn5EIguvBBKQx2",
+   "name": "ET"
+  },
+  {
+   "name": "BENJI",
+   "uid": "HdjU4bNbFogNHH9cU2gWmMTFSXy1"
+  },
+  {
+   "uid": "OzBUlii3zPMY2dhPB4HlS4IxVaR2",
+   "name": "LOHIT"
+  },
+  {
+   "name": "SHELLEY",
+   "uid": "R5lQ8844aHhSpUWhhhtaM0ApCml1"
+  }
+ ]
 }

@@ -1,22 +1,20 @@
 {
  "outcome": {
   "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
   "roles": [
    {
-    "assassin": false,
     "role": "EVIL MINION",
+    "assassin": false,
     "name": "WINEO"
    },
    {
-    "name": "JESSICA",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "JESSICA"
    },
    {
-    "name": "AKSHAY",
     "assassin": false,
+    "name": "AKSHAY",
     "role": "LOYAL FOLLOWER"
    },
    {
@@ -30,9 +28,9 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "JOJO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    }
   ],
   "votes": [
@@ -41,20 +39,20 @@
     "JESSICA": true
    },
    {
+    "JOJO": true,
     "JESSICA": true,
-    "MOM": false,
-    "JOJO": true
+    "MOM": false
    },
    {
-    "MOM": false,
-    "DAVIDW": true,
+    "JESSICA": true,
     "WINEO": false,
-    "JESSICA": true
+    "MOM": false,
+    "DAVIDW": true
    },
    {
     "AKSHAY": true,
-    "WINEO": true,
-    "JOJO": true
+    "JOJO": true,
+    "WINEO": true
    },
    {
     "JOJO": true,
@@ -62,41 +60,17 @@
     "WINEO": false,
     "JESSICA": true
    }
-  ]
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN"
+ },
+ "timeCreated": {
+  "_seconds": 1584925056,
+  "_nanoseconds": 241000000
  },
  "timeFinished": {
   "_seconds": 1584926563,
   "_nanoseconds": 984686000
- },
- "players": [
-  {
-   "name": "JESSICA",
-   "uid": "tUfEtieUStZlLrqfO8C95QRXX2y2"
-  },
-  {
-   "uid": "e7ljsJSWRCXaRq58zpZFjgGc30m2",
-   "name": "AKSHAY"
-  },
-  {
-   "uid": "g8Ij9a5AXQa9eTrQaR4NEWWziGB3",
-   "name": "JOJO"
-  },
-  {
-   "uid": "UeZLEYtSWXXyz4K7bFLB2QTIdhl2",
-   "name": "WINEO"
-  },
-  {
-   "uid": "ZSw1toTBKZaR8LPBjj2g4tWGTGZ2",
-   "name": "MOM"
-  },
-  {
-   "uid": "9UIBswTXFyZgRwuL2wIkKfRRjHg2",
-   "name": "DAVIDW"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1584925056,
-  "_nanoseconds": 241000000
  },
  "missions": [
   {
@@ -118,54 +92,47 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "WINEO",
     "JESSICA"
    ],
-   "numFails": 0,
-   "teamSize": 2
+   "state": "SUCCESS",
+   "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "state": "FAIL",
-   "team": [
-    "JESSICA",
-    "JOJO",
-    "MOM"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "AKSHAY",
-      "DAVIDW",
-      "WINEO"
-     ],
-     "state": "REJECTED",
      "votes": [
       "WINEO",
       "AKSHAY",
       "MOM"
      ],
+     "state": "REJECTED",
+     "team": [
+      "AKSHAY",
+      "DAVIDW",
+      "WINEO"
+     ],
      "proposer": "MOM"
     },
     {
-     "votes": [
-      "WINEO",
-      "AKSHAY",
-      "DAVIDW"
-     ],
-     "proposer": "DAVIDW",
+     "state": "REJECTED",
      "team": [
       "DAVIDW",
       "WINEO",
       "AKSHAY"
      ],
-     "state": "REJECTED"
+     "proposer": "DAVIDW",
+     "votes": [
+      "WINEO",
+      "AKSHAY",
+      "DAVIDW"
+     ]
     },
     {
+     "proposer": "JESSICA",
      "state": "APPROVED",
      "votes": [
       "WINEO",
@@ -173,7 +140,6 @@
       "MOM",
       "JOJO"
      ],
-     "proposer": "JESSICA",
      "team": [
       "JESSICA",
       "JOJO",
@@ -181,7 +147,15 @@
      ]
     }
    ],
-   "failsRequired": 1
+   "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "JESSICA",
+    "JOJO",
+    "MOM"
+   ],
+   "numFails": 1,
+   "teamSize": 3
   },
   {
    "team": [
@@ -191,20 +165,21 @@
     "MOM"
    ],
    "numFails": 2,
-   "teamSize": 4,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "AKSHAY",
      "votes": [
       "AKSHAY"
      ],
-     "proposer": "AKSHAY",
+     "state": "REJECTED",
      "team": [
       "AKSHAY",
       "WINEO",
       "DAVIDW",
       "MOM"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "team": [
@@ -213,24 +188,82 @@
       "JOJO",
       "MOM"
      ],
-     "state": "REJECTED",
+     "proposer": "JOJO",
      "votes": [
       "JOJO"
      ],
-     "proposer": "JOJO"
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "WINEO",
-      "DAVIDW",
-      "JOJO"
-     ],
      "proposer": "WINEO",
      "team": [
       "JOJO",
       "WINEO",
       "MOM",
       "DAVIDW"
+     ],
+     "votes": [
+      "WINEO",
+      "DAVIDW",
+      "JOJO"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "proposer": "MOM",
+     "state": "APPROVED",
+     "team": [
+      "JESSICA",
+      "WINEO",
+      "DAVIDW",
+      "MOM"
+     ],
+     "votes": [
+      "WINEO",
+      "JESSICA",
+      "MOM",
+      "DAVIDW",
+      "JOJO"
+     ]
+    }
+   ],
+   "teamSize": 4
+  },
+  {
+   "team": [
+    "AKSHAY",
+    "JOJO",
+    "WINEO"
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "team": [
+      "JESSICA",
+      "WINEO",
+      "DAVIDW"
+     ],
+     "votes": [
+      "DAVIDW",
+      "WINEO",
+      "MOM"
+     ],
+     "state": "REJECTED",
+     "proposer": "DAVIDW"
+    },
+    {
+     "proposer": "JESSICA",
+     "votes": [
+      "JESSICA",
+      "AKSHAY"
+     ],
+     "team": [
+      "JESSICA",
+      "AKSHAY",
+      "JOJO"
      ],
      "state": "REJECTED"
     },
@@ -239,81 +272,21 @@
      "votes": [
       "WINEO",
       "JESSICA",
-      "MOM",
-      "DAVIDW",
-      "JOJO"
-     ],
-     "proposer": "MOM",
-     "team": [
-      "JESSICA",
-      "WINEO",
-      "DAVIDW",
-      "MOM"
-     ]
-    }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
-  },
-  {
-   "state": "SUCCESS",
-   "team": [
-    "AKSHAY",
-    "JOJO",
-    "WINEO"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
-   "proposals": [
-    {
-     "team": [
-      "JESSICA",
-      "WINEO",
-      "DAVIDW"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "DAVIDW",
-      "WINEO",
-      "MOM"
-     ],
-     "proposer": "DAVIDW"
-    },
-    {
-     "team": [
-      "JESSICA",
-      "AKSHAY",
-      "JOJO"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "JESSICA",
-      "AKSHAY"
-     ],
-     "proposer": "JESSICA"
-    },
-    {
-     "votes": [
-      "WINEO",
-      "JESSICA",
       "AKSHAY",
       "MOM",
       "DAVIDW",
       "JOJO"
      ],
-     "proposer": "AKSHAY",
      "team": [
       "AKSHAY",
       "JOJO",
       "WINEO"
      ],
-     "state": "APPROVED"
+     "proposer": "AKSHAY"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "state": "FAIL",
    "team": [
     "JESSICA",
     "AKSHAY",
@@ -322,15 +295,31 @@
    ],
    "numFails": 1,
    "teamSize": 4,
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "state": "REJECTED",
+     "team": [
+      "AKSHAY",
+      "JOJO",
+      "WINEO",
+      "DAVIDW"
+     ],
+     "proposer": "JOJO",
      "votes": [
       "WINEO",
       "DAVIDW",
       "JOJO"
+     ]
+    },
+    {
+     "state": "REJECTED",
+     "proposer": "WINEO",
+     "votes": [
+      "JOJO",
+      "WINEO"
      ],
-     "proposer": "JOJO",
      "team": [
       "AKSHAY",
       "JOJO",
@@ -339,55 +328,34 @@
      ]
     },
     {
-     "team": [
-      "AKSHAY",
-      "JOJO",
-      "WINEO",
-      "DAVIDW"
-     ],
-     "state": "REJECTED",
      "votes": [
-      "JOJO",
-      "WINEO"
-     ],
-     "proposer": "WINEO"
-    },
-    {
-     "team": [
-      "AKSHAY",
-      "MOM",
       "WINEO",
+      "MOM",
       "JOJO"
      ],
      "state": "REJECTED",
-     "votes": [
-      "WINEO",
+     "team": [
+      "AKSHAY",
       "MOM",
+      "WINEO",
       "JOJO"
      ],
      "proposer": "MOM"
     },
     {
+     "state": "REJECTED",
+     "votes": [
+      "DAVIDW"
+     ],
      "team": [
       "AKSHAY",
       "JOJO",
       "WINEO",
       "DAVIDW"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "DAVIDW"
-     ],
      "proposer": "DAVIDW"
     },
     {
-     "proposer": "JESSICA",
-     "team": [
-      "JESSICA",
-      "AKSHAY",
-      "JOJO",
-      "WINEO"
-     ],
      "state": "APPROVED",
      "votes": [
       "WINEO",
@@ -395,10 +363,42 @@
       "AKSHAY",
       "MOM",
       "JOJO"
-     ]
+     ],
+     "team": [
+      "JESSICA",
+      "AKSHAY",
+      "JOJO",
+      "WINEO"
+     ],
+     "proposer": "JESSICA"
     }
-   ],
-   "failsRequired": 1
+   ]
+  }
+ ],
+ "players": [
+  {
+   "name": "JESSICA",
+   "uid": "tUfEtieUStZlLrqfO8C95QRXX2y2"
+  },
+  {
+   "uid": "e7ljsJSWRCXaRq58zpZFjgGc30m2",
+   "name": "AKSHAY"
+  },
+  {
+   "uid": "g8Ij9a5AXQa9eTrQaR4NEWWziGB3",
+   "name": "JOJO"
+  },
+  {
+   "name": "WINEO",
+   "uid": "UeZLEYtSWXXyz4K7bFLB2QTIdhl2"
+  },
+  {
+   "name": "MOM",
+   "uid": "ZSw1toTBKZaR8LPBjj2g4tWGTGZ2"
+  },
+  {
+   "uid": "9UIBswTXFyZgRwuL2wIkKfRRjHg2",
+   "name": "DAVIDW"
   }
  ]
 }

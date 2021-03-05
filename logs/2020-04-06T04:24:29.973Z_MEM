@@ -1,32 +1,5 @@
 {
  "outcome": {
-  "roles": [
-   {
-    "name": "AMY",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "MIKI",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "RYAN",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "JOON",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "JACQUELINE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
   "votes": [
    {
     "JACQUELINE": true,
@@ -34,62 +7,58 @@
    },
    {
     "MIKI": true,
-    "RYAN": true,
-    "JACQUELINE": true
+    "JACQUELINE": true,
+    "RYAN": true
    },
    {
     "JOON": true,
     "AMY": false
    },
    {
-    "JACQUELINE": true,
+    "RYAN": true,
     "MIKI": true,
-    "RYAN": true
+    "JACQUELINE": true
    }
   ],
   "message": "Three successful missions",
+  "assassinated": "JACQUELINE",
   "state": "GOOD_WIN",
-  "assassinated": "JACQUELINE"
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "AMY"
+   },
+   {
+    "assassin": false,
+    "name": "MIKI",
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MERLIN",
+    "name": "RYAN",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "name": "JOON",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "JACQUELINE"
+   }
+  ]
  },
- "timeFinished": {
-  "_seconds": 1586147655,
-  "_nanoseconds": 860370000
- },
- "players": [
-  {
-   "uid": "GSa7gDstjMTtgd5J68i1a0An7b43",
-   "name": "JACQUELINE"
-  },
-  {
-   "uid": "HPfgNZ66LHSfrNTJsuBbirH0Suo1",
-   "name": "RYAN"
-  },
-  {
-   "uid": "GCv8J4YDgkaFCaTQnQiNTXkbf6x1",
-   "name": "MIKI"
-  },
-  {
-   "uid": "56abzThM5uYoxL39q1xFUhUr40G3",
-   "name": "JOON"
-  },
-  {
-   "name": "AMY",
-   "uid": "sgROekVtiLYWxGJMU3JgVfl8lYM2"
-  }
- ],
  "timeCreated": {
   "_seconds": 1586147069,
   "_nanoseconds": 973000000
  },
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "JACQUELINE",
-    "RYAN"
-   ],
+   "failsRequired": 1,
    "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
@@ -105,58 +74,57 @@
      ]
     }
    ],
-   "failsRequired": 1
-  },
-  {
    "team": [
     "JACQUELINE",
-    "RYAN",
-    "MIKI"
+    "RYAN"
    ],
-   "numFails": 0,
+   "teamSize": 2,
+   "state": "SUCCESS"
+  },
+  {
    "teamSize": 3,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "JACQUELINE",
-      "MIKI",
-      "RYAN",
-      "JOON"
-     ],
-     "proposer": "MIKI",
      "team": [
       "JACQUELINE",
       "RYAN",
       "MIKI"
      ],
-     "state": "APPROVED"
+     "proposer": "MIKI",
+     "state": "APPROVED",
+     "votes": [
+      "JACQUELINE",
+      "MIKI",
+      "RYAN",
+      "JOON"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "JACQUELINE",
+    "RYAN",
+    "MIKI"
+   ]
   },
   {
-   "state": "FAIL",
-   "team": [
-    "JOON",
-    "AMY"
-   ],
-   "numFails": 1,
+   "failsRequired": 1,
    "teamSize": 2,
    "proposals": [
     {
-     "votes": [
-      "JOON"
-     ],
-     "proposer": "JOON",
      "team": [
       "AMY",
       "JOON"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "JOON",
+     "votes": [
+      "JOON"
+     ]
     },
     {
-     "proposer": "AMY",
      "team": [
       "JOON",
       "AMY"
@@ -166,19 +134,25 @@
       "AMY",
       "MIKI",
       "JOON"
-     ]
+     ],
+     "proposer": "AMY"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "JOON",
+    "AMY"
+   ],
+   "numFails": 1,
+   "state": "FAIL"
   },
   {
+   "numFails": 0,
    "team": [
     "MIKI",
     "RYAN",
     "JACQUELINE"
    ],
-   "numFails": 0,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -186,24 +160,50 @@
       "RYAN",
       "JACQUELINE"
      ],
-     "state": "APPROVED",
+     "proposer": "JACQUELINE",
      "votes": [
       "RYAN",
       "JACQUELINE",
       "MIKI"
      ],
-     "proposer": "JACQUELINE"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "teamSize": 3
   },
   {
-   "team": [],
-   "teamSize": 3,
-   "state": "PENDING",
+   "failsRequired": 1,
    "proposals": [],
-   "failsRequired": 1
+   "teamSize": 3,
+   "team": [],
+   "state": "PENDING"
   }
- ]
+ ],
+ "players": [
+  {
+   "uid": "GSa7gDstjMTtgd5J68i1a0An7b43",
+   "name": "JACQUELINE"
+  },
+  {
+   "uid": "HPfgNZ66LHSfrNTJsuBbirH0Suo1",
+   "name": "RYAN"
+  },
+  {
+   "name": "MIKI",
+   "uid": "GCv8J4YDgkaFCaTQnQiNTXkbf6x1"
+  },
+  {
+   "name": "JOON",
+   "uid": "56abzThM5uYoxL39q1xFUhUr40G3"
+  },
+  {
+   "uid": "sgROekVtiLYWxGJMU3JgVfl8lYM2",
+   "name": "AMY"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586147655,
+  "_nanoseconds": 860370000
+ }
 }

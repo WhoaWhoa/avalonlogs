@@ -1,29 +1,38 @@
 {
+ "timeFinished": {
+  "_seconds": 1587345005,
+  "_nanoseconds": 424000000
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "players": [
+  {
+   "name": "NINGNING",
+   "uid": "hXPpkhR8RYVCVZDKNzFEdQ14LQQ2"
+  },
+  {
+   "uid": "P7GZXR0op5Wno0t8EX5DuKw4dVs1",
+   "name": "WENDY"
+  },
+  {
+   "name": "JACK",
+   "uid": "N51oDWWrKsOATJ2kmbjA3X9KX7J2"
+  },
+  {
+   "name": "JEREMY",
+   "uid": "gV81w9P41uVaCkduqxvhOIkRwmf1"
+  },
+  {
+   "name": "MARG",
+   "uid": "vblI78Ut84gFCNMRy90rc7oU2ra2"
+  },
+  {
+   "uid": "p8efVMTYgvRK7RbCHJ90YqLqf1R2",
+   "name": "CYNTHIA"
+  }
+ ],
  "outcome": {
-  "votes": [
-   {
-    "WENDY": true,
-    "JEREMY": true
-   },
-   {
-    "JEREMY": true,
-    "WENDY": false,
-    "NINGNING": true
-   },
-   {
-    "NINGNING": true,
-    "JACK": true,
-    "JEREMY": true,
-    "CYNTHIA": true
-   },
-   {
-    "CYNTHIA": true,
-    "NINGNING": true,
-    "JACK": true
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
   "assassinated": "CYNTHIA",
   "roles": [
    {
@@ -32,14 +41,14 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "MARG",
     "assassin": true,
+    "name": "MARG",
     "role": "EVIL MINION"
    },
    {
-    "name": "NINGNING",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "NINGNING"
    },
    {
     "name": "JEREMY",
@@ -52,60 +61,45 @@
     "role": "MORGANA"
    },
    {
-    "name": "CYNTHIA",
     "assassin": false,
+    "name": "CYNTHIA",
     "role": "PERCIVAL"
    }
-  ]
- },
- "players": [
-  {
-   "uid": "hXPpkhR8RYVCVZDKNzFEdQ14LQQ2",
-   "name": "NINGNING"
-  },
-  {
-   "name": "WENDY",
-   "uid": "P7GZXR0op5Wno0t8EX5DuKw4dVs1"
-  },
-  {
-   "name": "JACK",
-   "uid": "N51oDWWrKsOATJ2kmbjA3X9KX7J2"
-  },
-  {
-   "uid": "gV81w9P41uVaCkduqxvhOIkRwmf1",
-   "name": "JEREMY"
-  },
-  {
-   "uid": "vblI78Ut84gFCNMRy90rc7oU2ra2",
-   "name": "MARG"
-  },
-  {
-   "uid": "p8efVMTYgvRK7RbCHJ90YqLqf1R2",
-   "name": "CYNTHIA"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1587345005,
-  "_nanoseconds": 424000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587343822,
-  "_nanoseconds": 971000000
+  ],
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "WENDY": true,
+    "JEREMY": true
+   },
+   {
+    "WENDY": false,
+    "JEREMY": true,
+    "NINGNING": true
+   },
+   {
+    "CYNTHIA": true,
+    "JEREMY": true,
+    "JACK": true,
+    "NINGNING": true
+   },
+   {
+    "NINGNING": true,
+    "JACK": true,
+    "CYNTHIA": true
+   }
+  ],
+  "message": "Three successful missions"
  },
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "WENDY",
     "JEREMY"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "CYNTHIA",
      "state": "APPROVED",
      "votes": [
       "NINGNING",
@@ -113,31 +107,27 @@
       "CYNTHIA",
       "MARG"
      ],
-     "proposer": "CYNTHIA",
      "team": [
       "WENDY",
       "JEREMY"
      ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 2
   },
   {
-   "team": [
-    "JEREMY",
-    "WENDY",
-    "NINGNING"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "NINGNING",
      "team": [
       "JEREMY",
       "WENDY",
       "NINGNING"
      ],
+     "proposer": "NINGNING",
      "state": "APPROVED",
      "votes": [
       "JEREMY",
@@ -147,25 +137,24 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "team": [
+    "JEREMY",
+    "WENDY",
+    "NINGNING"
+   ],
+   "teamSize": 3,
+   "numFails": 1
   },
   {
-   "team": [
-    "NINGNING",
-    "JACK",
-    "JEREMY",
-    "CYNTHIA"
-   ],
-   "numFails": 0,
-   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "REJECTED",
+     "proposer": "WENDY",
      "votes": [
       "WENDY"
      ],
-     "proposer": "WENDY",
      "team": [
       "NINGNING",
       "WENDY",
@@ -174,9 +163,6 @@
      ]
     },
     {
-     "votes": [
-      "WENDY"
-     ],
      "proposer": "JACK",
      "team": [
       "JACK",
@@ -184,51 +170,62 @@
       "CYNTHIA",
       "MARG"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "WENDY"
+     ]
     },
     {
-     "state": "APPROVED",
-     "votes": [
-      "NINGNING",
-      "JEREMY",
-      "WENDY",
-      "JACK"
-     ],
      "proposer": "JEREMY",
+     "state": "APPROVED",
      "team": [
       "NINGNING",
       "JACK",
       "JEREMY",
       "CYNTHIA"
+     ],
+     "votes": [
+      "NINGNING",
+      "JEREMY",
+      "WENDY",
+      "JACK"
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "NINGNING",
+    "JACK",
+    "JEREMY",
+    "CYNTHIA"
+   ],
+   "teamSize": 4,
+   "numFails": 0
   },
   {
+   "numFails": 0,
    "proposals": [
     {
+     "votes": [
+      "MARG"
+     ],
      "team": [
       "JEREMY",
       "NINGNING",
       "CYNTHIA"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "MARG"
-     ],
-     "proposer": "MARG"
+     "proposer": "MARG",
+     "state": "REJECTED"
     },
     {
      "state": "APPROVED",
+     "proposer": "CYNTHIA",
      "votes": [
       "CYNTHIA",
       "JACK",
       "NINGNING",
       "JEREMY"
      ],
-     "proposer": "CYNTHIA",
      "team": [
       "NINGNING",
       "CYNTHIA",
@@ -236,22 +233,25 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "NINGNING",
     "CYNTHIA",
     "JACK"
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 3
   },
   {
-   "team": [],
-   "teamSize": 4,
+   "failsRequired": 1,
    "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
+   "teamSize": 4,
+   "team": []
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1587343822,
+  "_nanoseconds": 971000000
+ }
 }

@@ -1,10 +1,73 @@
 {
- "timeFinished": {
-  "_seconds": 1588732135,
-  "_nanoseconds": 714000000
- },
- "options": {
-  "inGameLog": false
+ "outcome": {
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "JACK": true,
+    "BOB": true
+   },
+   {
+    "BOB": false,
+    "JACK": true,
+    "GURD": true
+   },
+   {
+    "EM": true,
+    "BOB": true,
+    "JACK": true
+   },
+   {
+    "MEECHY": true,
+    "BOB": false,
+    "EM": false,
+    "JACK": true
+   },
+   {
+    "JACK": true,
+    "MEECHY": true,
+    "RORO": true,
+    "GURD": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "GURD"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "ARJUN"
+   },
+   {
+    "name": "BOB",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "MEECHY",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "EM"
+   },
+   {
+    "assassin": false,
+    "name": "JACK",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "RORO",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "assassinated": "GURD",
+  "state": "EVIL_WIN"
  },
  "timeCreated": {
   "_seconds": 1588731667,
@@ -18,9 +81,14 @@
    ],
    "numFails": 0,
    "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "BOB",
+      "JACK"
+     ],
      "votes": [
       "MEECHY",
       "EM",
@@ -31,32 +99,15 @@
       "BOB"
      ],
      "proposer": "BOB",
-     "team": [
-      "BOB",
-      "JACK"
-     ]
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
    "state": "FAIL",
-   "team": [
-    "JACK",
-    "GURD",
-    "BOB"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "JACK",
-      "GURD",
-      "BOB"
-     ],
-     "state": "APPROVED",
+     "proposer": "GURD",
      "votes": [
       "EM",
       "JACK",
@@ -66,32 +117,45 @@
       "BOB",
       "MEECHY"
      ],
-     "proposer": "GURD"
+     "state": "APPROVED",
+     "team": [
+      "JACK",
+      "GURD",
+      "BOB"
+     ]
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "JACK",
+    "GURD",
+    "BOB"
+   ],
+   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3,
    "team": [
     "JACK",
     "BOB",
     "EM"
    ],
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "RORO",
+     "votes": [
+      "ARJUN"
+     ],
+     "state": "REJECTED",
      "team": [
       "GURD",
       "EM",
       "BOB"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "ARJUN"
-     ],
-     "proposer": "RORO"
+     ]
     },
     {
      "state": "APPROVED",
@@ -109,20 +173,12 @@
       "EM"
      ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "EM",
-     "team": [
-      "EM",
-      "MEECHY",
-      "JACK",
-      "BOB"
-     ],
-     "state": "APPROVED",
      "votes": [
       "MEECHY",
       "EM",
@@ -130,29 +186,29 @@
       "GURD",
       "ARJUN",
       "BOB"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "EM",
+      "MEECHY",
+      "JACK",
+      "BOB"
+     ],
+     "proposer": "EM"
     }
    ],
+   "teamSize": 4,
+   "numFails": 2,
    "failsRequired": 2,
-   "state": "FAIL",
    "team": [
     "EM",
     "MEECHY",
     "JACK",
     "BOB"
-   ],
-   "numFails": 2,
-   "teamSize": 4
+   ]
   },
   {
-   "team": [
-    "MEECHY",
-    "GURD",
-    "JACK",
-    "RORO"
-   ],
-   "numFails": 0,
-   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -161,89 +217,33 @@
       "JACK",
       "RORO"
      ],
-     "state": "APPROVED",
+     "proposer": "MEECHY",
      "votes": [
       "MEECHY",
       "JACK",
       "RORO",
       "GURD"
      ],
-     "proposer": "MEECHY"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "MEECHY",
+    "GURD",
+    "JACK",
+    "RORO"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 4
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": "GURD",
-  "roles": [
-   {
-    "name": "GURD",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "ARJUN",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "BOB",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "MEECHY",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "EM",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JACK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "RORO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "JACK": true,
-    "BOB": true
-   },
-   {
-    "JACK": true,
-    "BOB": false,
-    "GURD": true
-   },
-   {
-    "BOB": true,
-    "EM": true,
-    "JACK": true
-   },
-   {
-    "BOB": false,
-    "EM": false,
-    "MEECHY": true,
-    "JACK": true
-   },
-   {
-    "GURD": true,
-    "MEECHY": true,
-    "JACK": true,
-    "RORO": true
-   }
-  ],
-  "message": "Merlin assassinated"
+ "timeFinished": {
+  "_seconds": 1588732135,
+  "_nanoseconds": 714000000
+ },
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
@@ -255,12 +255,12 @@
    "uid": "iZiRhBMF9PP30lxHdDj6qbVIebP2"
   },
   {
-   "uid": "yLAkQMScojeE9vRYF6crXyXJix52",
-   "name": "RORO"
+   "name": "RORO",
+   "uid": "yLAkQMScojeE9vRYF6crXyXJix52"
   },
   {
-   "uid": "IBAyrHOGFhWVjf4UdF3rQmXqOrE2",
-   "name": "JACK"
+   "name": "JACK",
+   "uid": "IBAyrHOGFhWVjf4UdF3rQmXqOrE2"
   },
   {
    "name": "EM",
@@ -271,8 +271,8 @@
    "name": "MEECHY"
   },
   {
-   "uid": "PtPYV7Fy6khJthafgCQoGHCi44x2",
-   "name": "ARJUN"
+   "name": "ARJUN",
+   "uid": "PtPYV7Fy6khJthafgCQoGHCi44x2"
   }
  ]
 }

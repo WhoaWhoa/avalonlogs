@@ -1,7 +1,30 @@
 {
  "outcome": {
+  "message": "Three failed missions",
   "state": "EVIL_WIN",
   "assassinated": null,
+  "votes": [
+   {
+    "MATT": true,
+    "MAGGIE": true
+   },
+   {
+    "MAGGIE": true,
+    "SABRINA": true,
+    "MANNY": false
+   },
+   {
+    "EVAN": false,
+    "MATT": true,
+    "CRAIG": true
+   },
+   {
+    "MANNY": false,
+    "CRAIG": true,
+    "CALI": false,
+    "MATT": true
+   }
+  ],
   "roles": [
    {
     "assassin": false,
@@ -9,72 +32,45 @@
     "name": "MANNY"
    },
    {
-    "name": "CALI",
     "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "CALI"
    },
    {
-    "name": "EVAN",
     "assassin": false,
+    "name": "EVAN",
     "role": "MORGANA"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "CRAIG",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
     "name": "SABRINA",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
-    "name": "MAGGIE",
     "assassin": false,
+    "name": "MAGGIE",
     "role": "PERCIVAL"
    },
    {
-    "name": "MATT",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "MATT"
    }
-  ],
-  "votes": [
-   {
-    "MAGGIE": true,
-    "MATT": true
-   },
-   {
-    "MANNY": false,
-    "MAGGIE": true,
-    "SABRINA": true
-   },
-   {
-    "CRAIG": true,
-    "MATT": true,
-    "EVAN": false
-   },
-   {
-    "CALI": false,
-    "MATT": true,
-    "CRAIG": true,
-    "MANNY": false
-   }
-  ],
-  "message": "Three failed missions"
- },
- "timeFinished": {
-  "_seconds": 1586632956,
-  "_nanoseconds": 477807000
+  ]
  },
  "players": [
   {
-   "uid": "3ifCRVTHnQbRjssUsACCXryap4y1",
-   "name": "MANNY"
+   "name": "MANNY",
+   "uid": "3ifCRVTHnQbRjssUsACCXryap4y1"
   },
   {
-   "name": "MATT",
-   "uid": "FtkPiqL2UxQ3r6ulFE9R8mlXr2B3"
+   "uid": "FtkPiqL2UxQ3r6ulFE9R8mlXr2B3",
+   "name": "MATT"
   },
   {
    "name": "EVAN",
@@ -93,16 +89,17 @@
    "name": "SABRINA"
   },
   {
-   "uid": "WQE3TcMyu7cnVSeXwYCVCPKGDw93",
-   "name": "CRAIG"
+   "name": "CRAIG",
+   "uid": "WQE3TcMyu7cnVSeXwYCVCPKGDw93"
   }
  ],
- "timeCreated": {
-  "_seconds": 1586632399,
-  "_nanoseconds": 532000000
- },
  "missions": [
   {
+   "failsRequired": 1,
+   "team": [
+    "MATT",
+    "MAGGIE"
+   ],
    "proposals": [
     {
      "state": "APPROVED",
@@ -114,38 +111,20 @@
       "EVAN",
       "CRAIG"
      ],
-     "proposer": "CALI",
      "team": [
       "MATT",
       "MAGGIE"
-     ]
+     ],
+     "proposer": "CALI"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "MATT",
-    "MAGGIE"
-   ],
+   "teamSize": 2,
    "numFails": 0,
-   "teamSize": 2
+   "state": "SUCCESS"
   },
   {
-   "team": [
-    "MAGGIE",
-    "SABRINA",
-    "MANNY"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "MAGGIE",
-      "SABRINA",
-      "MANNY"
-     ],
-     "state": "APPROVED",
      "votes": [
       "MANNY",
       "CALI",
@@ -154,33 +133,39 @@
       "SABRINA",
       "MAGGIE"
      ],
-     "proposer": "MAGGIE"
+     "team": [
+      "MAGGIE",
+      "SABRINA",
+      "MANNY"
+     ],
+     "proposer": "MAGGIE",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
-  },
-  {
-   "state": "FAIL",
    "team": [
-    "CRAIG",
-    "MATT",
-    "EVAN"
+    "MAGGIE",
+    "SABRINA",
+    "MANNY"
    ],
    "numFails": 1,
-   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 3
+  },
+  {
+   "numFails": 1,
    "proposals": [
     {
+     "votes": [
+      "SABRINA",
+      "MAGGIE"
+     ],
      "proposer": "SABRINA",
+     "state": "REJECTED",
      "team": [
       "SABRINA",
       "MATT",
       "CRAIG"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "SABRINA",
-      "MAGGIE"
      ]
     },
     {
@@ -191,15 +176,22 @@
       "EVAN",
       "CRAIG"
      ],
-     "proposer": "CRAIG",
      "team": [
       "CRAIG",
       "MATT",
       "EVAN"
-     ]
+     ],
+     "proposer": "CRAIG"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "team": [
+    "CRAIG",
+    "MATT",
+    "EVAN"
+   ],
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
    "team": [
@@ -209,34 +201,42 @@
     "MANNY"
    ],
    "numFails": 2,
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "MANNY",
       "CALI",
       "EVAN",
       "CRAIG"
      ],
-     "proposer": "MANNY",
+     "state": "APPROVED",
      "team": [
       "CRAIG",
       "MATT",
       "CALI",
       "MANNY"
-     ]
+     ],
+     "proposer": "MANNY"
     }
    ],
-   "failsRequired": 2,
-   "state": "FAIL"
+   "teamSize": 4,
+   "state": "FAIL",
+   "failsRequired": 2
   },
   {
-   "team": [],
-   "teamSize": 4,
    "state": "PENDING",
+   "team": [],
+   "failsRequired": 1,
    "proposals": [],
-   "failsRequired": 1
+   "teamSize": 4
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1586632956,
+  "_nanoseconds": 477807000
+ },
+ "timeCreated": {
+  "_seconds": 1586632399,
+  "_nanoseconds": 532000000
+ }
 }

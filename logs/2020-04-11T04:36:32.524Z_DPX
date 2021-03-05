@@ -3,26 +3,30 @@
   "_seconds": 1586585618,
   "_nanoseconds": 109519000
  },
+ "timeCreated": {
+  "_seconds": 1586579792,
+  "_nanoseconds": 524000000
+ },
  "players": [
   {
    "uid": "2Le7F3eWuXQjNh6KesX7hzDxlcm1",
    "name": "SS"
   },
   {
-   "uid": "rCRrp1aYh0dyhvN0zucnRYkBg0T2",
-   "name": "AMIRA"
+   "name": "AMIRA",
+   "uid": "rCRrp1aYh0dyhvN0zucnRYkBg0T2"
   },
   {
-   "uid": "3PI087LzXOOf6f8wrGKTGHkzDaT2",
-   "name": "AYESH"
+   "name": "AYESH",
+   "uid": "3PI087LzXOOf6f8wrGKTGHkzDaT2"
   },
   {
    "uid": "KEtaPDFx0NPQ87mTYaNAFsoMPCP2",
    "name": "ALY"
   },
   {
-   "uid": "m8EmOcCHFGPSHOlw9rLUoYlnRuI3",
-   "name": "MURLEN"
+   "name": "MURLEN",
+   "uid": "m8EmOcCHFGPSHOlw9rLUoYlnRuI3"
   },
   {
    "uid": "I7tH1cnm7VgGV4OTtTBdAuwywBn2",
@@ -33,9 +37,75 @@
    "uid": "cw42NZ4OPGbrClKX1MRqzORUkgE3"
   }
  ],
- "timeCreated": {
-  "_seconds": 1586579792,
-  "_nanoseconds": 524000000
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "AYESH": true,
+    "LIM": true
+   },
+   {
+    "AYESH": false,
+    "SS": true,
+    "LIM": true
+   },
+   {
+    "LIM": true,
+    "AMIRA": true,
+    "SS": true
+   },
+   {
+    "LIM": true,
+    "SS": true,
+    "YELLOWTOSS": false,
+    "AMIRA": false
+   },
+   {
+    "LIM": true,
+    "SS": true,
+    "MURLEN": true,
+    "ALY": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "name": "SS",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "MURLEN",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "AMIRA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "AYESH"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "LIM"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "ALY"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "YELLOWTOSS"
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "ALY"
  },
  "missions": [
   {
@@ -43,14 +113,8 @@
     "LIM",
     "AYESH"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "LIM",
-      "AYESH"
-     ],
      "state": "APPROVED",
      "votes": [
       "YELLOWTOSS",
@@ -59,24 +123,35 @@
       "AYESH",
       "LIM"
      ],
-     "proposer": "LIM"
+     "proposer": "LIM",
+     "team": [
+      "LIM",
+      "AYESH"
+     ]
     }
    ],
+   "state": "SUCCESS",
+   "numFails": 0,
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2
   },
   {
-   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "SS",
     "AYESH",
     "LIM"
    ],
+   "failsRequired": 1,
    "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "SS",
+      "AYESH",
+      "LIM"
+     ],
      "votes": [
       "SS",
       "AMIRA",
@@ -84,34 +159,13 @@
       "LIM",
       "YELLOWTOSS"
      ],
-     "proposer": "SS",
-     "team": [
-      "SS",
-      "AYESH",
-      "LIM"
-     ]
+     "proposer": "SS"
     }
    ],
-   "failsRequired": 1
+   "state": "FAIL"
   },
   {
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "LIM",
-      "YELLOWTOSS",
-      "SS",
-      "AMIRA"
-     ],
-     "proposer": "AMIRA",
-     "team": [
-      "SS",
-      "LIM",
-      "AMIRA"
-     ]
-    }
-   ],
+   "numFails": 0,
    "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
@@ -119,7 +173,23 @@
     "LIM",
     "AMIRA"
    ],
-   "numFails": 0,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "proposer": "AMIRA",
+     "votes": [
+      "LIM",
+      "YELLOWTOSS",
+      "SS",
+      "AMIRA"
+     ],
+     "team": [
+      "SS",
+      "LIM",
+      "AMIRA"
+     ]
+    }
+   ],
    "teamSize": 3
   },
   {
@@ -130,52 +200,54 @@
     "LIM"
    ],
    "numFails": 2,
-   "teamSize": 4,
+   "state": "FAIL",
+   "failsRequired": 2,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "AYESH",
      "team": [
       "SS",
       "AMIRA",
       "LIM",
       "YELLOWTOSS"
      ],
-     "state": "REJECTED",
      "votes": [
       "SS",
       "AMIRA",
       "AYESH"
-     ],
-     "proposer": "AYESH"
+     ]
     },
     {
-     "proposer": "ALY",
+     "state": "REJECTED",
+     "votes": [
+      "ALY",
+      "MURLEN"
+     ],
      "team": [
       "ALY",
       "LIM",
       "MURLEN",
       "YELLOWTOSS"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "ALY",
-      "MURLEN"
-     ]
+     "proposer": "ALY"
     },
     {
      "proposer": "MURLEN",
+     "state": "REJECTED",
      "team": [
       "ALY",
       "MURLEN",
       "YELLOWTOSS",
       "LIM"
      ],
-     "state": "REJECTED",
      "votes": [
       "MURLEN",
       "ALY"
      ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "LIM",
       "YELLOWTOSS",
@@ -183,20 +255,28 @@
       "AMIRA",
       "AYESH"
      ],
-     "proposer": "YELLOWTOSS",
      "team": [
       "YELLOWTOSS",
       "SS",
       "AMIRA",
       "LIM"
      ],
-     "state": "APPROVED"
+     "proposer": "YELLOWTOSS"
     }
    ],
-   "failsRequired": 2,
-   "state": "FAIL"
+   "teamSize": 4
   },
   {
+   "failsRequired": 1,
+   "teamSize": 4,
+   "state": "SUCCESS",
+   "team": [
+    "ALY",
+    "LIM",
+    "SS",
+    "MURLEN"
+   ],
+   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -212,35 +292,35 @@
      "proposer": "LIM"
     },
     {
-     "votes": [],
      "proposer": "SS",
+     "votes": [],
+     "state": "REJECTED",
      "team": [
       "SS",
       "ALY",
       "AYESH",
       "AMIRA"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "AMIRA"
      ],
-     "proposer": "AMIRA",
      "team": [
       "AMIRA",
       "LIM",
       "MURLEN",
       "AYESH"
-     ]
+     ],
+     "proposer": "AMIRA",
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "AYESH"
      ],
      "proposer": "AYESH",
+     "state": "REJECTED",
      "team": [
       "AYESH",
       "SS",
@@ -249,7 +329,6 @@
      ]
     },
     {
-     "proposer": "ALY",
      "team": [
       "ALY",
       "LIM",
@@ -262,89 +341,10 @@
       "MURLEN",
       "LIM",
       "ALY"
-     ]
+     ],
+     "proposer": "ALY"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "ALY",
-    "LIM",
-    "SS",
-    "MURLEN"
-   ],
-   "numFails": 0,
-   "teamSize": 4
+   ]
   }
- ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": "ALY",
-  "roles": [
-   {
-    "name": "SS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MURLEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "AMIRA",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "AYESH"
-   },
-   {
-    "name": "LIM",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "ALY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "YELLOWTOSS",
-    "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "AYESH": true,
-    "LIM": true
-   },
-   {
-    "SS": true,
-    "AYESH": false,
-    "LIM": true
-   },
-   {
-    "SS": true,
-    "AMIRA": true,
-    "LIM": true
-   },
-   {
-    "AMIRA": false,
-    "LIM": true,
-    "YELLOWTOSS": false,
-    "SS": true
-   },
-   {
-    "LIM": true,
-    "MURLEN": true,
-    "ALY": true,
-    "SS": true
-   }
-  ],
-  "message": "Merlin assassinated"
- }
+ ]
 }

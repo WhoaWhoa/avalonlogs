@@ -1,26 +1,15 @@
 {
- "timeFinished": {
-  "_seconds": 1588725567,
-  "_nanoseconds": 343000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588724983,
-  "_nanoseconds": 330000000
- },
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "TUCO",
     "CLMTYDN"
    ],
+   "failsRequired": 1,
    "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "SKEPTICAL",
       "ROSEDYLAN",
@@ -29,25 +18,17 @@
       "ROBOT",
       "CLMTYDN"
      ],
-     "proposer": "ROSEDYLAN",
      "team": [
       "TUCO",
       "CLMTYDN"
      ],
-     "state": "APPROVED"
+     "proposer": "ROSEDYLAN"
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "teamSize": 2
   },
   {
-   "state": "FAIL",
-   "team": [
-    "TUCO",
-    "CLMTYDN",
-    "A"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -56,12 +37,12 @@
       "CLMTYDN"
      ],
      "proposer": "CLMTYDN",
+     "state": "REJECTED",
      "team": [
       "ROSEDYLAN",
       "ROBOT",
       "SKEPTICAL"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "votes": [
@@ -71,27 +52,35 @@
       "ROBOT"
      ],
      "proposer": "A",
+     "state": "APPROVED",
      "team": [
       "TUCO",
       "CLMTYDN",
       "A"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "team": [
+    "TUCO",
+    "CLMTYDN",
+    "A"
+   ],
+   "teamSize": 3,
+   "numFails": 1,
+   "state": "FAIL",
    "failsRequired": 1
   },
   {
+   "teamSize": 3,
+   "numFails": 2,
    "team": [
     "ROBOT",
     "TUCO",
     "ROSEDYLAN"
    ],
-   "numFails": 2,
-   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "ROBOT",
       "CLMTYDN",
@@ -104,30 +93,15 @@
       "ROBOT",
       "TUCO",
       "ROSEDYLAN"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
-   "team": [
-    "ROSEDYLAN",
-    "CLMTYDN",
-    "A",
-    "ROBOT"
-   ],
-   "numFails": 2,
-   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "ROSEDYLAN",
-      "CLMTYDN",
-      "A",
-      "ROBOT"
-     ],
      "state": "APPROVED",
      "votes": [
       "SKEPTICAL",
@@ -136,23 +110,58 @@
       "ROBOT",
       "CLMTYDN"
      ],
+     "team": [
+      "ROSEDYLAN",
+      "CLMTYDN",
+      "A",
+      "ROBOT"
+     ],
      "proposer": "SKEPTICAL"
     }
    ],
-   "failsRequired": 2
+   "state": "FAIL",
+   "teamSize": 4,
+   "numFails": 2,
+   "failsRequired": 2,
+   "team": [
+    "ROSEDYLAN",
+    "CLMTYDN",
+    "A",
+    "ROBOT"
+   ]
   },
   {
-   "proposals": [],
-   "failsRequired": 1,
-   "team": [],
    "teamSize": 4,
-   "state": "PENDING"
+   "failsRequired": 1,
+   "state": "PENDING",
+   "proposals": [],
+   "team": []
   }
  ],
  "outcome": {
   "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
+  "votes": [
+   {
+    "CLMTYDN": true,
+    "TUCO": true
+   },
+   {
+    "A": true,
+    "TUCO": false,
+    "CLMTYDN": true
+   },
+   {
+    "ROSEDYLAN": false,
+    "TUCO": false,
+    "ROBOT": true
+   },
+   {
+    "ROSEDYLAN": false,
+    "CLMTYDN": true,
+    "ROBOT": false,
+    "A": true
+   }
+  ],
   "roles": [
    {
     "name": "CLMTYDN",
@@ -160,75 +169,59 @@
     "role": "MERLIN"
    },
    {
-    "name": "SKEPTICAL",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "SKEPTICAL"
    },
    {
-    "name": "A",
+    "role": "PERCIVAL",
     "assassin": false,
-    "role": "PERCIVAL"
+    "name": "A"
    },
    {
-    "assassin": false,
+    "name": "ROSEDYLAN",
     "role": "MORGANA",
-    "name": "ROSEDYLAN"
+    "assassin": false
    },
    {
-    "name": "TUCO",
     "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "TUCO"
    },
    {
     "name": "JTC",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "name": "ROBOT",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    }
   ],
-  "votes": [
-   {
-    "TUCO": true,
-    "CLMTYDN": true
-   },
-   {
-    "CLMTYDN": true,
-    "TUCO": false,
-    "A": true
-   },
-   {
-    "ROBOT": true,
-    "ROSEDYLAN": false,
-    "TUCO": false
-   },
-   {
-    "ROBOT": false,
-    "A": true,
-    "ROSEDYLAN": false,
-    "CLMTYDN": true
-   }
-  ]
+  "assassinated": null,
+  "state": "EVIL_WIN"
+ },
+ "timeFinished": {
+  "_seconds": 1588725567,
+  "_nanoseconds": 343000000
  },
  "players": [
   {
-   "uid": "aeJghu81rgV5HRRYz1JMn1XPx2m2",
-   "name": "JTC"
+   "name": "JTC",
+   "uid": "aeJghu81rgV5HRRYz1JMn1XPx2m2"
   },
   {
-   "name": "TUCO",
-   "uid": "kSuVLLXXN6hIYXRPDcrXx9ILiN52"
+   "uid": "kSuVLLXXN6hIYXRPDcrXx9ILiN52",
+   "name": "TUCO"
   },
   {
    "uid": "XdvutMA0xKeTBUVrVWuByIQkUsL2",
    "name": "ROSEDYLAN"
   },
   {
-   "uid": "4KNI0xCYrdQx1sCChLFEb0pxVOs2",
-   "name": "CLMTYDN"
+   "name": "CLMTYDN",
+   "uid": "4KNI0xCYrdQx1sCChLFEb0pxVOs2"
   },
   {
    "name": "A",
@@ -239,8 +232,15 @@
    "name": "ROBOT"
   },
   {
-   "uid": "bSp75Ox6g3fgc8alHf5jhZajKpA3",
-   "name": "SKEPTICAL"
+   "name": "SKEPTICAL",
+   "uid": "bSp75Ox6g3fgc8alHf5jhZajKpA3"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1588724983,
+  "_nanoseconds": 330000000
+ },
+ "options": {
+  "inGameLog": false
+ }
 }

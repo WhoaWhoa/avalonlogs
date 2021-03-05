@@ -1,52 +1,79 @@
 {
- "players": [
-  {
-   "name": "TOM",
-   "uid": "DBmJbVJuI3gk5sq6JN0gM9aMNUX2"
-  },
-  {
-   "name": "SHAL",
-   "uid": "NIAmvvfK4pNNBRZTyluXo7elAnh2"
-  },
-  {
-   "uid": "PtnYZP937Yaj3BRoOoEibJKvmNq1",
-   "name": "TARA"
-  },
-  {
-   "uid": "bwGw2zkFfeOH24CRKuunkNjFpOn1",
-   "name": "LUKE"
-  },
-  {
-   "uid": "V4YW5XjlPFg1Pj87mv5zDhwWJEO2",
-   "name": "ALI"
-  }
- ],
  "timeFinished": {
   "_seconds": 1587776937,
   "_nanoseconds": 143000000
  },
+ "outcome": {
+  "message": "Three failed missions",
+  "assassinated": null,
+  "votes": [
+   {
+    "TARA": true,
+    "SHAL": true
+   },
+   {
+    "ALI": true,
+    "SHAL": true,
+    "LUKE": false
+   },
+   {
+    "ALI": true,
+    "TARA": true
+   },
+   {
+    "TARA": true,
+    "SHAL": true,
+    "TOM": false
+   },
+   {
+    "LUKE": false,
+    "ALI": true,
+    "TOM": false
+   }
+  ],
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "name": "TARA",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MERLIN",
+    "name": "ALI",
+    "assassin": false
+   },
+   {
+    "name": "SHAL",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "LUKE",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "MORGANA",
+    "name": "TOM",
+    "assassin": false
+   }
+  ]
+ },
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1587776481,
-  "_nanoseconds": 919000000
- },
  "missions": [
   {
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "TARA",
     "SHAL"
    ],
-   "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "TARA",
-      "SHAL"
-     ],
+     "proposer": "TARA",
      "state": "APPROVED",
      "votes": [
       "TOM",
@@ -55,19 +82,16 @@
       "SHAL",
       "LUKE"
      ],
-     "proposer": "TARA"
+     "team": [
+      "TARA",
+      "SHAL"
+     ]
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
-   "team": [
-    "SHAL",
-    "ALI",
-    "LUKE"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -85,44 +109,46 @@
      "proposer": "LUKE"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3,
+   "team": [
+    "SHAL",
+    "ALI",
+    "LUKE"
+   ],
+   "failsRequired": 1
   },
   {
-   "team": [
-    "ALI",
-    "TARA"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "ALI",
-      "TARA"
-     ],
-     "state": "APPROVED",
      "votes": [
       "TARA",
       "ALI",
       "SHAL",
       "LUKE"
      ],
-     "proposer": "ALI"
+     "proposer": "ALI",
+     "team": [
+      "ALI",
+      "TARA"
+     ],
+     "state": "APPROVED"
     }
    ],
+   "state": "SUCCESS",
+   "teamSize": 2,
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "ALI",
+    "TARA"
+   ],
+   "numFails": 0
   },
   {
    "state": "FAIL",
-   "team": [
-    "SHAL",
-    "TARA",
-    "TOM"
-   ],
-   "numFails": 1,
    "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -138,119 +164,93 @@
      "state": "REJECTED"
     },
     {
-     "team": [
-      "SHAL",
-      "TARA",
-      "TOM"
-     ],
-     "state": "APPROVED",
      "votes": [
       "TARA",
       "SHAL",
       "LUKE",
       "TOM"
      ],
+     "state": "APPROVED",
+     "team": [
+      "SHAL",
+      "TARA",
+      "TOM"
+     ],
      "proposer": "SHAL"
     }
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "team": [
+    "SHAL",
+    "TARA",
+    "TOM"
+   ]
   },
   {
    "state": "FAIL",
-   "team": [
-    "LUKE",
-    "TOM",
-    "ALI"
-   ],
-   "numFails": 2,
+   "failsRequired": 1,
    "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "TARA",
+      "ALI",
+      "SHAL"
+     ],
      "state": "REJECTED",
      "votes": [
       "TARA",
       "ALI"
      ],
-     "proposer": "TARA",
-     "team": [
-      "TARA",
-      "ALI",
-      "SHAL"
-     ]
+     "proposer": "TARA"
     },
     {
+     "votes": [
+      "SHAL",
+      "LUKE",
+      "TOM"
+     ],
      "team": [
       "LUKE",
       "TOM",
       "ALI"
      ],
      "state": "APPROVED",
-     "votes": [
-      "SHAL",
-      "LUKE",
-      "TOM"
-     ],
      "proposer": "LUKE"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "LUKE",
+    "TOM",
+    "ALI"
+   ],
+   "numFails": 2
   }
  ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "TARA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "ALI",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SHAL"
-   },
-   {
-    "name": "LUKE",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "TOM",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ],
-  "votes": [
-   {
-    "SHAL": true,
-    "TARA": true
-   },
-   {
-    "LUKE": false,
-    "ALI": true,
-    "SHAL": true
-   },
-   {
-    "TARA": true,
-    "ALI": true
-   },
-   {
-    "TARA": true,
-    "TOM": false,
-    "SHAL": true
-   },
-   {
-    "LUKE": false,
-    "ALI": true,
-    "TOM": false
-   }
-  ]
+ "players": [
+  {
+   "uid": "DBmJbVJuI3gk5sq6JN0gM9aMNUX2",
+   "name": "TOM"
+  },
+  {
+   "uid": "NIAmvvfK4pNNBRZTyluXo7elAnh2",
+   "name": "SHAL"
+  },
+  {
+   "name": "TARA",
+   "uid": "PtnYZP937Yaj3BRoOoEibJKvmNq1"
+  },
+  {
+   "name": "LUKE",
+   "uid": "bwGw2zkFfeOH24CRKuunkNjFpOn1"
+  },
+  {
+   "name": "ALI",
+   "uid": "V4YW5XjlPFg1Pj87mv5zDhwWJEO2"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1587776481,
+  "_nanoseconds": 919000000
  }
 }

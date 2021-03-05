@@ -1,25 +1,97 @@
 {
- "timeFinished": {
-  "_seconds": 1588449622,
-  "_nanoseconds": 684000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588449073,
-  "_nanoseconds": 536000000
+ "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "assassin": true,
+    "name": "VARUN",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "AMOL"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MUSKITEER"
+   },
+   {
+    "assassin": false,
+    "name": "ARJUN",
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "RAMU",
+    "assassin": false
+   },
+   {
+    "name": "SAMARTH",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "SANJAY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "name": "BHATLA",
+    "assassin": false
+   },
+   {
+    "name": "VIRAL",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "ADNAAN",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "ARJUN": true,
+    "SAMARTH": true,
+    "BHATLA": true
+   },
+   {
+    "ARJUN": true,
+    "BHATLA": false,
+    "SAMARTH": false,
+    "AMOL": true
+   },
+   {
+    "ADNAAN": false,
+    "RAMU": true,
+    "SANJAY": true,
+    "MUSKITEER": true
+   },
+   {
+    "ADNAAN": false,
+    "VARUN": false,
+    "VIRAL": true,
+    "SANJAY": true,
+    "RAMU": true
+   }
+  ]
  },
  "missions": [
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "ARJUN",
     "SAMARTH",
     "BHATLA"
    ],
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
@@ -34,28 +106,21 @@
       "SAMARTH",
       "SANJAY"
      ],
-     "proposer": "ARJUN",
      "team": [
       "ARJUN",
       "SAMARTH",
       "BHATLA"
-     ]
+     ],
+     "proposer": "ARJUN"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
-   "team": [
-    "BHATLA",
-    "ARJUN",
-    "SAMARTH",
-    "AMOL"
-   ],
-   "numFails": 2,
    "teamSize": 4,
    "proposals": [
     {
+     "proposer": "BHATLA",
      "state": "APPROVED",
      "votes": [
       "BHATLA",
@@ -66,7 +131,6 @@
       "RAMU",
       "SAMARTH"
      ],
-     "proposer": "BHATLA",
      "team": [
       "BHATLA",
       "ARJUN",
@@ -75,28 +139,28 @@
      ]
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "BHATLA",
+    "ARJUN",
+    "SAMARTH",
+    "AMOL"
+   ],
+   "failsRequired": 1,
+   "numFails": 2,
+   "state": "FAIL"
   },
   {
-   "failsRequired": 1,
    "state": "FAIL",
-   "team": [
-    "MUSKITEER",
-    "RAMU",
-    "ADNAAN",
-    "SANJAY"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "RAMU",
+     "state": "APPROVED",
      "team": [
       "MUSKITEER",
       "RAMU",
       "ADNAAN",
       "SANJAY"
      ],
-     "state": "APPROVED",
      "votes": [
       "BHATLA",
       "VIRAL",
@@ -108,14 +172,20 @@
       "RAMU",
       "SAMARTH",
       "SANJAY"
-     ],
-     "proposer": "RAMU"
+     ]
     }
-   ]
+   ],
+   "teamSize": 4,
+   "failsRequired": 1,
+   "team": [
+    "MUSKITEER",
+    "RAMU",
+    "ADNAAN",
+    "SANJAY"
+   ],
+   "numFails": 1
   },
   {
-   "failsRequired": 2,
-   "state": "FAIL",
    "team": [
     "SANJAY",
     "VARUN",
@@ -123,23 +193,23 @@
     "RAMU",
     "ADNAAN"
    ],
-   "numFails": 2,
-   "teamSize": 5,
+   "state": "FAIL",
+   "failsRequired": 2,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "VARUN",
-      "AMOL",
-      "SAMARTH"
-     ],
-     "proposer": "SAMARTH",
      "team": [
       "SANJAY",
       "RAMU",
       "VIRAL",
       "VARUN",
       "ADNAAN"
+     ],
+     "proposer": "SAMARTH",
+     "state": "REJECTED",
+     "votes": [
+      "VARUN",
+      "AMOL",
+      "SAMARTH"
      ]
     },
     {
@@ -150,7 +220,6 @@
       "RAMU",
       "ADNAAN"
      ],
-     "state": "APPROVED",
      "votes": [
       "BHATLA",
       "VARUN",
@@ -159,125 +228,52 @@
       "SAMARTH",
       "SANJAY"
      ],
-     "proposer": "SANJAY"
+     "proposer": "SANJAY",
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "numFails": 2,
+   "teamSize": 5
   },
   {
-   "team": [],
-   "teamSize": 5,
    "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 5,
+   "team": []
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "VARUN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "AMOL",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MUSKITEER",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ARJUN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "RAMU",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SAMARTH",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "SANJAY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "BHATLA"
-   },
-   {
-    "name": "VIRAL",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "ADNAAN",
-    "assassin": false,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "SAMARTH": true,
-    "BHATLA": true,
-    "ARJUN": true
-   },
-   {
-    "SAMARTH": false,
-    "BHATLA": false,
-    "ARJUN": true,
-    "AMOL": true
-   },
-   {
-    "ADNAAN": false,
-    "SANJAY": true,
-    "MUSKITEER": true,
-    "RAMU": true
-   },
-   {
-    "VIRAL": true,
-    "RAMU": true,
-    "VARUN": false,
-    "ADNAAN": false,
-    "SANJAY": true
-   }
-  ],
-  "message": "Three failed missions"
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1588449073,
+  "_nanoseconds": 536000000
  },
  "players": [
   {
-   "uid": "0zbOqjICfJfO48I1P8yufYz3UXF3",
-   "name": "RAMU"
+   "name": "RAMU",
+   "uid": "0zbOqjICfJfO48I1P8yufYz3UXF3"
   },
   {
-   "uid": "0xouKF9mLBXI0XSQTG9F5QbwAUR2",
-   "name": "SAMARTH"
+   "name": "SAMARTH",
+   "uid": "0xouKF9mLBXI0XSQTG9F5QbwAUR2"
   },
   {
-   "uid": "ey8idj5HLGOtnvuypH2nqw6TGOA3",
-   "name": "SANJAY"
+   "name": "SANJAY",
+   "uid": "ey8idj5HLGOtnvuypH2nqw6TGOA3"
   },
   {
    "uid": "1lTtJDSz1eZdOrfJMqn45PFETMH2",
    "name": "VIRAL"
   },
   {
-   "uid": "8RM8ZeiswVTroTST2gWJSXOzbMP2",
-   "name": "ADNAAN"
+   "name": "ADNAAN",
+   "uid": "8RM8ZeiswVTroTST2gWJSXOzbMP2"
   },
   {
-   "uid": "rbwf5vUZHeU7lNdYrePROa17mIV2",
-   "name": "VARUN"
+   "name": "VARUN",
+   "uid": "rbwf5vUZHeU7lNdYrePROa17mIV2"
   },
   {
    "name": "AMOL",
@@ -288,12 +284,16 @@
    "name": "MUSKITEER"
   },
   {
-   "name": "ARJUN",
-   "uid": "XClGXaRmyAMSYsWqiZgXQ4YiH9o1"
+   "uid": "XClGXaRmyAMSYsWqiZgXQ4YiH9o1",
+   "name": "ARJUN"
   },
   {
    "uid": "9c9NGzycawRKrKBEs335OQpfvxu2",
    "name": "BHATLA"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1588449622,
+  "_nanoseconds": 684000000
+ }
 }

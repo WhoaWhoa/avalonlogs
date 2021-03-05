@@ -1,4 +1,98 @@
 {
+ "players": [
+  {
+   "name": "JAE",
+   "uid": "rCunvkoGXFguieXUz4Tri3oMKJS2"
+  },
+  {
+   "name": "AC",
+   "uid": "OFpGlHHJnxRUKDkrI7yDi8dmLYS2"
+  },
+  {
+   "uid": "V1BT5b4FcJNncxIL3cfgyM0BSQ13",
+   "name": "ALLISON"
+  },
+  {
+   "uid": "RAHoz5OSQwhok4VefO9fYYokFpI2",
+   "name": "SARAH"
+  },
+  {
+   "uid": "5VeTEBYjalXdm6gQek5lyTQCulw1",
+   "name": "PUJU"
+  },
+  {
+   "name": "PUNIEJU",
+   "uid": "wa413JAEpVTwKFuXksRtHCS2K763"
+  },
+  {
+   "uid": "PwtvdmLYqxM0hobNr86mw38NNLJ3",
+   "name": "KUANDY"
+  }
+ ],
+ "outcome": {
+  "message": "Three successful missions",
+  "assassinated": "ALLISON",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "PUJU",
+    "role": "MORGANA"
+   },
+   {
+    "role": "OBERON",
+    "name": "SARAH",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "AC",
+    "assassin": true
+   },
+   {
+    "name": "ALLISON",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "JAE"
+   },
+   {
+    "name": "KUANDY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "PUNIEJU"
+   }
+  ],
+  "votes": [
+   {
+    "KUANDY": true,
+    "SARAH": true
+   },
+   {
+    "JAE": true,
+    "PUNIEJU": true,
+    "PUJU": true
+   },
+   {
+    "SARAH": false,
+    "ALLISON": true,
+    "AC": false
+   },
+   {
+    "PUNIEJU": true,
+    "PUJU": false,
+    "JAE": true,
+    "KUANDY": true
+   }
+  ],
+  "state": "GOOD_WIN"
+ },
  "missions": [
   {
    "team": [
@@ -6,14 +100,9 @@
     "SARAH"
    ],
    "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "KUANDY",
-      "SARAH"
-     ],
-     "state": "APPROVED",
      "votes": [
       "AC",
       "ALLISON",
@@ -22,24 +111,31 @@
       "PUNIEJU",
       "PUJU"
      ],
-     "proposer": "KUANDY"
+     "proposer": "KUANDY",
+     "state": "APPROVED",
+     "team": [
+      "KUANDY",
+      "SARAH"
+     ]
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2
   },
   {
+   "numFails": 0,
    "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "JAE",
     "PUJU",
     "PUNIEJU"
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "JAE",
      "votes": [
       "AC",
       "SARAH",
@@ -48,24 +144,18 @@
       "PUNIEJU",
       "KUANDY"
      ],
-     "proposer": "JAE",
      "team": [
       "JAE",
       "PUJU",
       "PUNIEJU"
      ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "team": [
-    "ALLISON",
-    "AC",
-    "SARAH"
-   ],
-   "numFails": 2,
    "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "team": [
@@ -85,13 +175,25 @@
      "proposer": "AC"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 2,
+   "team": [
+    "ALLISON",
+    "AC",
+    "SARAH"
+   ]
   },
   {
+   "numFails": 1,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "ALLISON",
+     "team": [
+      "JAE",
+      "PUJU",
+      "PUNIEJU",
+      "KUANDY"
+     ],
      "votes": [
       "JAE",
       "KUANDY",
@@ -99,135 +201,33 @@
       "SARAH",
       "AC",
       "ALLISON"
-     ],
-     "proposer": "ALLISON",
-     "team": [
-      "JAE",
-      "PUJU",
-      "PUNIEJU",
-      "KUANDY"
      ]
     }
    ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
    "team": [
     "JAE",
     "PUJU",
     "PUNIEJU",
     "KUANDY"
    ],
-   "numFails": 1,
-   "teamSize": 4
+   "teamSize": 4,
+   "state": "SUCCESS",
+   "failsRequired": 2
   },
   {
    "team": [],
-   "teamSize": 4,
-   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
-  }
- ],
- "outcome": {
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "ALLISON",
-  "roles": [
-   {
-    "name": "PUJU",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "OBERON",
-    "name": "SARAH"
-   },
-   {
-    "name": "AC",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ALLISON",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JAE",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "KUANDY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "PUNIEJU",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "votes": [
-   {
-    "KUANDY": true,
-    "SARAH": true
-   },
-   {
-    "JAE": true,
-    "PUNIEJU": true,
-    "PUJU": true
-   },
-   {
-    "SARAH": false,
-    "ALLISON": true,
-    "AC": false
-   },
-   {
-    "KUANDY": true,
-    "JAE": true,
-    "PUNIEJU": true,
-    "PUJU": false
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1585879083,
-  "_nanoseconds": 38326000
- },
- "players": [
-  {
-   "name": "JAE",
-   "uid": "rCunvkoGXFguieXUz4Tri3oMKJS2"
-  },
-  {
-   "uid": "OFpGlHHJnxRUKDkrI7yDi8dmLYS2",
-   "name": "AC"
-  },
-  {
-   "uid": "V1BT5b4FcJNncxIL3cfgyM0BSQ13",
-   "name": "ALLISON"
-  },
-  {
-   "uid": "RAHoz5OSQwhok4VefO9fYYokFpI2",
-   "name": "SARAH"
-  },
-  {
-   "uid": "5VeTEBYjalXdm6gQek5lyTQCulw1",
-   "name": "PUJU"
-  },
-  {
-   "uid": "wa413JAEpVTwKFuXksRtHCS2K763",
-   "name": "PUNIEJU"
-  },
-  {
-   "name": "KUANDY",
-   "uid": "PwtvdmLYqxM0hobNr86mw38NNLJ3"
+   "failsRequired": 1,
+   "state": "PENDING",
+   "teamSize": 4
   }
  ],
  "timeCreated": {
   "_seconds": 1585878587,
   "_nanoseconds": 218000000
+ },
+ "timeFinished": {
+  "_seconds": 1585879083,
+  "_nanoseconds": 38326000
  }
 }

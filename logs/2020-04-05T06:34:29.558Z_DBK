@@ -1,54 +1,76 @@
 {
- "timeFinished": {
-  "_seconds": 1586068840,
-  "_nanoseconds": 853393000
- },
- "players": [
-  {
-   "uid": "okaQmTb0QsNXQZyryf1Ompl1TAp1",
-   "name": "KATIA"
-  },
-  {
-   "uid": "7IIK1vE6Uma2Ac9H1bC8pVIppBI2",
-   "name": "MERLINNN"
-  },
-  {
-   "uid": "l6No6qJB0dXSxFQ0UmeaiHE3e323",
-   "name": "ROSIH"
-  },
-  {
-   "name": "SCOOBYBOOB",
-   "uid": "xrql511QuCcW0M9kwnZ1UTnmeaD3"
-  },
-  {
-   "uid": "BzXKfmWbKrN60dzXcaXDGylGNQ72",
-   "name": "SIMBA"
-  },
-  {
-   "uid": "T6K0cnhx75gru9iU2IE3NUM8v6m1",
-   "name": "SUHANI"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586068469,
-  "_nanoseconds": 558000000
+ "outcome": {
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "SUHANI": true,
+    "MERLINNN": true
+   },
+   {
+    "KATIA": true,
+    "ROSIH": false,
+    "SCOOBYBOOB": true
+   },
+   {
+    "SIMBA": true,
+    "SUHANI": true,
+    "MERLINNN": true,
+    "KATIA": true
+   },
+   {
+    "KATIA": true,
+    "SIMBA": true,
+    "MERLINNN": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "KATIA"
+   },
+   {
+    "name": "ROSIH",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "SIMBA",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "SCOOBYBOOB",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "SUHANI"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "MERLINNN"
+   }
+  ],
+  "assassinated": "MERLINNN"
  },
  "missions": [
   {
-   "team": [
-    "SUHANI",
-    "MERLINNN"
-   ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "ROSIH",
+     "state": "APPROVED",
      "team": [
       "SUHANI",
       "MERLINNN"
      ],
-     "state": "APPROVED",
+     "proposer": "ROSIH",
      "votes": [
       "ROSIH",
       "SIMBA",
@@ -58,55 +80,50 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "SUHANI",
+    "MERLINNN"
+   ],
+   "numFails": 0
   },
   {
-   "state": "FAIL",
-   "team": [
-    "ROSIH",
-    "KATIA",
-    "SCOOBYBOOB"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "SCOOBYBOOB",
-     "team": [
-      "ROSIH",
-      "KATIA",
-      "SCOOBYBOOB"
-     ],
      "state": "APPROVED",
      "votes": [
       "KATIA",
       "ROSIH",
       "SCOOBYBOOB",
       "SUHANI"
+     ],
+     "proposer": "SCOOBYBOOB",
+     "team": [
+      "ROSIH",
+      "KATIA",
+      "SCOOBYBOOB"
      ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "failsRequired": 1,
+   "team": [
+    "ROSIH",
+    "KATIA",
+    "SCOOBYBOOB"
+   ],
+   "state": "FAIL",
+   "numFails": 1
   },
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "SIMBA",
     "MERLINNN",
     "SUHANI",
     "KATIA"
    ],
-   "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "SIMBA",
-      "MERLINNN",
-      "SUHANI",
-      "KATIA"
-     ],
      "state": "APPROVED",
      "votes": [
       "ROSIH",
@@ -115,28 +132,30 @@
       "SUHANI",
       "KATIA"
      ],
-     "proposer": "SIMBA"
+     "proposer": "SIMBA",
+     "team": [
+      "SIMBA",
+      "MERLINNN",
+      "SUHANI",
+      "KATIA"
+     ]
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "teamSize": 4,
+   "numFails": 0
   },
   {
-   "team": [
-    "KATIA",
-    "MERLINNN",
-    "SIMBA"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "REJECTED",
+     "proposer": "SUHANI",
      "votes": [
       "SUHANI",
       "KATIA",
       "ROSIH"
      ],
-     "proposer": "SUHANI",
      "team": [
       "SUHANI",
       "KATIA",
@@ -150,83 +169,64 @@
       "SIMBA",
       "SCOOBYBOOB"
      ],
-     "proposer": "KATIA",
      "team": [
       "KATIA",
       "MERLINNN",
       "SIMBA"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "KATIA"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 3,
+   "numFails": 0,
+   "team": [
+    "KATIA",
+    "MERLINNN",
+    "SIMBA"
+   ]
   },
   {
+   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1,
    "team": [],
    "teamSize": 4,
-   "state": "PENDING"
+   "failsRequired": 1
   }
  ],
- "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "MERLINNN",
-  "roles": [
-   {
-    "name": "KATIA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ROSIH",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "SIMBA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SCOOBYBOOB",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SUHANI",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "MERLINNN",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "votes": [
-   {
-    "MERLINNN": true,
-    "SUHANI": true
-   },
-   {
-    "ROSIH": false,
-    "SCOOBYBOOB": true,
-    "KATIA": true
-   },
-   {
-    "SIMBA": true,
-    "SUHANI": true,
-    "KATIA": true,
-    "MERLINNN": true
-   },
-   {
-    "KATIA": true,
-    "MERLINNN": true,
-    "SIMBA": true
-   }
-  ]
- }
+ "timeFinished": {
+  "_seconds": 1586068840,
+  "_nanoseconds": 853393000
+ },
+ "timeCreated": {
+  "_seconds": 1586068469,
+  "_nanoseconds": 558000000
+ },
+ "players": [
+  {
+   "uid": "okaQmTb0QsNXQZyryf1Ompl1TAp1",
+   "name": "KATIA"
+  },
+  {
+   "uid": "7IIK1vE6Uma2Ac9H1bC8pVIppBI2",
+   "name": "MERLINNN"
+  },
+  {
+   "name": "ROSIH",
+   "uid": "l6No6qJB0dXSxFQ0UmeaiHE3e323"
+  },
+  {
+   "uid": "xrql511QuCcW0M9kwnZ1UTnmeaD3",
+   "name": "SCOOBYBOOB"
+  },
+  {
+   "uid": "BzXKfmWbKrN60dzXcaXDGylGNQ72",
+   "name": "SIMBA"
+  },
+  {
+   "name": "SUHANI",
+   "uid": "T6K0cnhx75gru9iU2IE3NUM8v6m1"
+  }
+ ]
 }

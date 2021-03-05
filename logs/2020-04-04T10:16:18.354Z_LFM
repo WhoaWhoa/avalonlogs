@@ -1,30 +1,54 @@
 {
  "outcome": {
+  "state": "GOOD_WIN",
+  "message": "Three missions succeeded",
+  "votes": [
+   {
+    "ARAVIND": true,
+    "NAMA": true
+   },
+   {
+    "NAMA": true,
+    "ANAND": true,
+    "ARAVIND": true
+   },
+   {
+    "NEOPHYTE": true,
+    "ANAND": true,
+    "NAMA": false,
+    "ARAVIND": false
+   },
+   {
+    "SAHANA": true,
+    "ANAND": true,
+    "CHAMATH": true
+   }
+  ],
   "roles": [
    {
-    "name": "NEOPHYTE",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "NEOPHYTE"
    },
    {
     "name": "ARAVIND",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": false
    },
    {
+    "role": "EVIL MINION",
     "name": "NAMA",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "assassin": false
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "SAHANA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
     "name": "ANAND",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "name": "CHAMATH",
@@ -32,65 +56,7 @@
     "role": "LOYAL FOLLOWER"
    }
   ],
-  "votes": [
-   {
-    "ARAVIND": true,
-    "NAMA": true
-   },
-   {
-    "ANAND": true,
-    "ARAVIND": true,
-    "NAMA": true
-   },
-   {
-    "ANAND": true,
-    "ARAVIND": false,
-    "NEOPHYTE": true,
-    "NAMA": false
-   },
-   {
-    "CHAMATH": true,
-    "ANAND": true,
-    "SAHANA": true
-   }
-  ],
-  "message": "Three missions succeeded",
-  "state": "GOOD_WIN",
   "assassinated": null
- },
- "timeFinished": {
-  "_seconds": 1585995703,
-  "_nanoseconds": 586394000
- },
- "players": [
-  {
-   "uid": "AwvKlvQodrZsQpsOWXM2wpzvTT83",
-   "name": "ARAVIND"
-  },
-  {
-   "uid": "e4nONM8KhHMgdcqsF7J5n4f6jXo1",
-   "name": "SAHANA"
-  },
-  {
-   "name": "NAMA",
-   "uid": "3aGGYUrSnyXcNga84iHCHOcosHb2"
-  },
-  {
-   "name": "ANAND",
-   "uid": "a0SDC1txl0ZzxlcUNHyoySxZzgu2"
-  },
-  {
-   "name": "NEOPHYTE",
-   "uid": "iMUVZSiu3yOt3ZKQBohamDU9U8E3"
-  },
-  {
-   "uid": "CO6sVGcmTnQOtjpe2oS2uADheKk1",
-   "name": "CHAMATH"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585995378,
-  "_nanoseconds": 354000000
  },
  "missions": [
   {
@@ -98,11 +64,14 @@
     "NAMA",
     "ARAVIND"
    ],
-   "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "NAMA",
+      "ARAVIND"
+     ],
      "votes": [
       "NAMA",
       "SAHANA",
@@ -111,27 +80,16 @@
       "ARAVIND"
      ],
      "proposer": "NAMA",
-     "team": [
-      "NAMA",
-      "ARAVIND"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "teamSize": 2
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "ANAND",
-    "NAMA",
-    "ARAVIND"
-   ],
-   "numFails": 0,
    "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "ARAVIND",
       "NAMA",
@@ -139,34 +97,38 @@
       "ANAND",
       "CHAMATH"
      ],
-     "proposer": "ANAND",
      "team": [
       "ANAND",
       "NAMA",
       "ARAVIND"
-     ]
+     ],
+     "proposer": "ANAND",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "ANAND",
+    "NAMA",
+    "ARAVIND"
+   ],
+   "numFails": 0
   },
   {
+   "teamSize": 4,
    "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 2,
    "team": [
     "ARAVIND",
     "NAMA",
     "ANAND",
     "NEOPHYTE"
    ],
-   "numFails": 2,
-   "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "NEOPHYTE",
-      "ARAVIND",
-      "NAMA",
-      "ANAND"
-     ],
+     "state": "APPROVED",
      "proposer": "NEOPHYTE",
      "team": [
       "ARAVIND",
@@ -174,20 +136,17 @@
       "ANAND",
       "NEOPHYTE"
      ],
-     "state": "APPROVED"
+     "votes": [
+      "NEOPHYTE",
+      "ARAVIND",
+      "NAMA",
+      "ANAND"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "ANAND",
-    "SAHANA",
-    "CHAMATH"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -198,23 +157,64 @@
       "ANAND",
       "CHAMATH"
      ],
+     "state": "APPROVED",
      "proposer": "CHAMATH",
      "team": [
       "ANAND",
       "SAHANA",
       "CHAMATH"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 0,
+   "teamSize": 3,
+   "failsRequired": 1,
+   "team": [
+    "ANAND",
+    "SAHANA",
+    "CHAMATH"
+   ]
   },
   {
-   "team": [],
-   "teamSize": 4,
-   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
+   "teamSize": 4,
+   "failsRequired": 1,
+   "state": "PENDING",
+   "team": []
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1585995703,
+  "_nanoseconds": 586394000
+ },
+ "timeCreated": {
+  "_seconds": 1585995378,
+  "_nanoseconds": 354000000
+ },
+ "players": [
+  {
+   "name": "ARAVIND",
+   "uid": "AwvKlvQodrZsQpsOWXM2wpzvTT83"
+  },
+  {
+   "name": "SAHANA",
+   "uid": "e4nONM8KhHMgdcqsF7J5n4f6jXo1"
+  },
+  {
+   "uid": "3aGGYUrSnyXcNga84iHCHOcosHb2",
+   "name": "NAMA"
+  },
+  {
+   "name": "ANAND",
+   "uid": "a0SDC1txl0ZzxlcUNHyoySxZzgu2"
+  },
+  {
+   "uid": "iMUVZSiu3yOt3ZKQBohamDU9U8E3",
+   "name": "NEOPHYTE"
+  },
+  {
+   "uid": "CO6sVGcmTnQOtjpe2oS2uADheKk1",
+   "name": "CHAMATH"
   }
  ]
 }

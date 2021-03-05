@@ -1,23 +1,17 @@
 {
- "timeFinished": {
-  "_seconds": 1588412006,
-  "_nanoseconds": 782000000
- },
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1588411178,
-  "_nanoseconds": 298000000
- },
  "missions": [
   {
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "MOONSTONE",
     "MATT"
    ],
-   "numFails": 0,
    "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -27,27 +21,26 @@
       "MOONSTONE",
       "SASA"
      ],
-     "proposer": "MOONSTONE",
      "team": [
       "MOONSTONE",
       "MATT"
      ],
+     "proposer": "MOONSTONE",
      "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "team": [
-    "SIMIANWARE",
-    "LISA",
-    "ANTONIS"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "SIMIANWARE",
+      "LISA",
+      "ANTONIS"
+     ],
+     "proposer": "SIMIANWARE",
      "votes": [
       "SIMIANWARE",
       "MOONSTONE",
@@ -55,29 +48,31 @@
       "MATT",
       "ANTONIS",
       "LISA"
-     ],
-     "proposer": "SIMIANWARE",
-     "team": [
-      "SIMIANWARE",
-      "LISA",
-      "ANTONIS"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "teamSize": 3,
+   "team": [
+    "SIMIANWARE",
+    "LISA",
+    "ANTONIS"
+   ],
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3,
    "team": [
     "SIMIANWARE",
     "MATT",
     "LISA"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "ANTONIS",
       "SASA"
@@ -87,16 +82,11 @@
       "SIMIANWARE",
       "MARC",
       "SASA"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "team": [
-      "SIMIANWARE",
-      "MATT",
-      "LISA"
-     ],
      "state": "APPROVED",
+     "proposer": "MATT",
      "votes": [
       "MOONSTONE",
       "SASA",
@@ -105,59 +95,47 @@
       "LISA",
       "SIMIANWARE"
      ],
-     "proposer": "MATT"
+     "team": [
+      "SIMIANWARE",
+      "MATT",
+      "LISA"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
+   "failsRequired": 2,
+   "numFails": 2,
+   "state": "FAIL",
+   "teamSize": 4,
    "team": [
     "LISA",
     "ANTONIS",
     "SIMIANWARE",
     "MATT"
    ],
-   "numFails": 2,
-   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "LISA",
-      "ANTONIS",
-      "SIMIANWARE",
-      "MATT"
-     ],
-     "state": "APPROVED",
      "votes": [
       "MOONSTONE",
       "MATT",
       "ANTONIS",
       "LISA"
      ],
-     "proposer": "LISA"
+     "proposer": "LISA",
+     "state": "APPROVED",
+     "team": [
+      "LISA",
+      "ANTONIS",
+      "SIMIANWARE",
+      "MATT"
+     ]
     }
-   ],
-   "failsRequired": 2,
-   "state": "FAIL"
+   ]
   },
   {
-   "team": [
-    "SASA",
-    "MARC",
-    "SIMIANWARE",
-    "ANTONIS"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "SASA",
-      "MARC",
-      "SIMIANWARE",
-      "ANTONIS"
-     ],
      "state": "APPROVED",
      "votes": [
       "SASA",
@@ -165,27 +143,73 @@
       "LISA",
       "MARC"
      ],
+     "team": [
+      "SASA",
+      "MARC",
+      "SIMIANWARE",
+      "ANTONIS"
+     ],
      "proposer": "SASA"
     }
    ],
+   "state": "FAIL",
+   "team": [
+    "SASA",
+    "MARC",
+    "SIMIANWARE",
+    "ANTONIS"
+   ],
+   "numFails": 1,
    "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 4
   }
  ],
+ "timeFinished": {
+  "_seconds": 1588412006,
+  "_nanoseconds": 782000000
+ },
  "outcome": {
-  "message": "Three failed missions",
   "state": "EVIL_WIN",
   "assassinated": null,
-  "roles": [
+  "message": "Three failed missions",
+  "votes": [
    {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "MOONSTONE"
+    "MOONSTONE": true,
+    "MATT": true
    },
    {
+    "ANTONIS": true,
+    "LISA": true,
+    "SIMIANWARE": true
+   },
+   {
+    "LISA": false,
+    "MATT": true,
+    "SIMIANWARE": true
+   },
+   {
+    "LISA": false,
+    "MATT": true,
+    "SIMIANWARE": true,
+    "ANTONIS": false
+   },
+   {
+    "MARC": true,
+    "SIMIANWARE": true,
+    "SASA": true,
+    "ANTONIS": false
+   }
+  ],
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "name": "MOONSTONE",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
     "name": "SASA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
     "name": "MATT",
@@ -194,82 +218,58 @@
    },
    {
     "name": "ANTONIS",
-    "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "assassin": false
    },
    {
     "name": "LISA",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
     "assassin": false,
-    "role": "MERLIN",
-    "name": "SIMIANWARE"
+    "name": "SIMIANWARE",
+    "role": "MERLIN"
    },
    {
     "name": "MARC",
     "assassin": false,
     "role": "LOYAL FOLLOWER"
    }
-  ],
-  "votes": [
-   {
-    "MATT": true,
-    "MOONSTONE": true
-   },
-   {
-    "SIMIANWARE": true,
-    "ANTONIS": true,
-    "LISA": true
-   },
-   {
-    "MATT": true,
-    "LISA": false,
-    "SIMIANWARE": true
-   },
-   {
-    "SIMIANWARE": true,
-    "MATT": true,
-    "ANTONIS": false,
-    "LISA": false
-   },
-   {
-    "SIMIANWARE": true,
-    "MARC": true,
-    "SASA": true,
-    "ANTONIS": false
-   }
   ]
  },
  "players": [
   {
-   "name": "SASA",
-   "uid": "RdWyDFt1wjgMtfCzE8jJhHsVzZr2"
+   "uid": "RdWyDFt1wjgMtfCzE8jJhHsVzZr2",
+   "name": "SASA"
   },
   {
-   "name": "MARC",
-   "uid": "aFMsf9BmvmT8UsbBmnGjiauAAXc2"
+   "uid": "aFMsf9BmvmT8UsbBmnGjiauAAXc2",
+   "name": "MARC"
   },
   {
-   "name": "MOONSTONE",
-   "uid": "ofsJiwY8M7RGr9OParPygu6eOMl2"
+   "uid": "ofsJiwY8M7RGr9OParPygu6eOMl2",
+   "name": "MOONSTONE"
   },
   {
-   "uid": "7txfLPGHklbkkW5oRqhakBXF4Ta2",
-   "name": "SIMIANWARE"
+   "name": "SIMIANWARE",
+   "uid": "7txfLPGHklbkkW5oRqhakBXF4Ta2"
   },
   {
-   "name": "ANTONIS",
-   "uid": "prWhmTrKUrb3JCD7BIXccyRgNZk1"
+   "uid": "prWhmTrKUrb3JCD7BIXccyRgNZk1",
+   "name": "ANTONIS"
   },
   {
-   "uid": "WJTahOj9WZdGyoXV7aoTGTphvc22",
-   "name": "MATT"
+   "name": "MATT",
+   "uid": "WJTahOj9WZdGyoXV7aoTGTphvc22"
   },
   {
    "name": "LISA",
    "uid": "hHVlD413iDZm5A5KmuTpRmEKJ6i1"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1588411178,
+  "_nanoseconds": 298000000
+ }
 }

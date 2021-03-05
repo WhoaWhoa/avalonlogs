@@ -1,17 +1,36 @@
 {
- "timeFinished": {
-  "_seconds": 1588476389,
-  "_nanoseconds": 133000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588474998,
-  "_nanoseconds": 589000000
- },
+ "players": [
+  {
+   "uid": "d3A3JNEfrfYKhVFnKAkjtTZBKVD2",
+   "name": "NIHAL"
+  },
+  {
+   "uid": "IuaASZPIzKY4eF2r0081vzPvWzP2",
+   "name": "YASH"
+  },
+  {
+   "name": "SACRO",
+   "uid": "zzdHqS5L3STQcKA3Xzg95mCtyER2"
+  },
+  {
+   "name": "DEAMON",
+   "uid": "MyN4YLaFSNhCYlJ5NpT1P4T3X9n2"
+  },
+  {
+   "name": "VIK",
+   "uid": "jeTT4rN5xthZuBUiR4lH0KZKfAk2"
+  },
+  {
+   "name": "GURKI",
+   "uid": "DVyee8w184bt1PHxNJgZidi9RVp2"
+  }
+ ],
  "missions": [
   {
+   "team": [
+    "NIHAL",
+    "YASH"
+   ],
    "proposals": [
     {
      "state": "APPROVED",
@@ -29,26 +48,20 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "NIHAL",
-    "YASH"
-   ],
    "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 2
   },
   {
-   "team": [
-    "YASH",
-    "NIHAL",
-    "GURKI"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "YASH",
+      "NIHAL",
+      "GURKI"
+     ],
      "votes": [
       "YASH",
       "NIHAL",
@@ -57,21 +70,32 @@
       "GURKI",
       "VIK"
      ],
-     "proposer": "YASH",
-     "team": [
-      "YASH",
-      "NIHAL",
-      "GURKI"
-     ]
+     "proposer": "YASH"
     }
    ],
+   "teamSize": 3,
+   "team": [
+    "YASH",
+    "NIHAL",
+    "GURKI"
+   ],
+   "state": "FAIL",
    "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
+   "team": [
+    "SACRO",
+    "GURKI",
+    "YASH",
+    "NIHAL"
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 4,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "VIK",
       "NIHAL",
@@ -85,51 +109,34 @@
       "GURKI",
       "YASH",
       "NIHAL"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "SACRO",
-    "GURKI",
-    "YASH",
-    "NIHAL"
-   ],
-   "numFails": 0,
-   "teamSize": 4
+   ]
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "SACRO",
-    "GURKI",
-    "NIHAL"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "DEAMON",
+     "state": "REJECTED",
      "team": [
       "SACRO",
       "DEAMON",
       "YASH"
      ],
-     "state": "REJECTED",
+     "proposer": "DEAMON",
      "votes": [
       "YASH",
       "DEAMON"
      ]
     },
     {
-     "proposer": "VIK",
      "team": [
       "SACRO",
       "GURKI",
       "NIHAL"
      ],
      "state": "APPROVED",
+     "proposer": "VIK",
      "votes": [
       "NIHAL",
       "SACRO",
@@ -138,27 +145,63 @@
      ]
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "SACRO",
+    "GURKI",
+    "NIHAL"
+   ],
+   "teamSize": 3,
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
    "team": [],
-   "teamSize": 4,
    "state": "PENDING",
    "proposals": [],
+   "teamSize": 4,
    "failsRequired": 1
   }
  ],
+ "timeFinished": {
+  "_seconds": 1588476389,
+  "_nanoseconds": 133000000
+ },
  "outcome": {
+  "votes": [
+   {
+    "YASH": true,
+    "NIHAL": true
+   },
+   {
+    "NIHAL": false,
+    "YASH": true,
+    "GURKI": true
+   },
+   {
+    "SACRO": true,
+    "NIHAL": true,
+    "YASH": true,
+    "GURKI": true
+   },
+   {
+    "NIHAL": true,
+    "SACRO": true,
+    "GURKI": true
+   }
+  ],
+  "assassinated": "DEAMON",
+  "state": "EVIL_WIN",
   "roles": [
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "GURKI"
    },
    {
-    "name": "VIK",
+    "role": "EVIL MINION",
     "assassin": true,
-    "role": "EVIL MINION"
+    "name": "VIK"
    },
    {
     "name": "YASH",
@@ -166,71 +209,28 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "NIHAL",
     "assassin": false,
+    "name": "NIHAL",
     "role": "EVIL MINION"
    },
    {
     "name": "SACRO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
-    "name": "DEAMON",
     "assassin": false,
+    "name": "DEAMON",
     "role": "MERLIN"
    }
   ],
-  "votes": [
-   {
-    "NIHAL": true,
-    "YASH": true
-   },
-   {
-    "GURKI": true,
-    "YASH": true,
-    "NIHAL": false
-   },
-   {
-    "YASH": true,
-    "SACRO": true,
-    "NIHAL": true,
-    "GURKI": true
-   },
-   {
-    "NIHAL": true,
-    "GURKI": true,
-    "SACRO": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "DEAMON"
+  "message": "Merlin assassinated"
  },
- "players": [
-  {
-   "uid": "d3A3JNEfrfYKhVFnKAkjtTZBKVD2",
-   "name": "NIHAL"
-  },
-  {
-   "uid": "IuaASZPIzKY4eF2r0081vzPvWzP2",
-   "name": "YASH"
-  },
-  {
-   "uid": "zzdHqS5L3STQcKA3Xzg95mCtyER2",
-   "name": "SACRO"
-  },
-  {
-   "uid": "MyN4YLaFSNhCYlJ5NpT1P4T3X9n2",
-   "name": "DEAMON"
-  },
-  {
-   "uid": "jeTT4rN5xthZuBUiR4lH0KZKfAk2",
-   "name": "VIK"
-  },
-  {
-   "uid": "DVyee8w184bt1PHxNJgZidi9RVp2",
-   "name": "GURKI"
-  }
- ]
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1588474998,
+  "_nanoseconds": 589000000
+ }
 }

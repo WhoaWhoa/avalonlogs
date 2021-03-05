@@ -3,6 +3,36 @@
   "_seconds": 1587756477,
   "_nanoseconds": 97000000
  },
+ "players": [
+  {
+   "uid": "JwaYxzA0rtRzzrOdAXjJaxOEdGf1",
+   "name": "JACOB"
+  },
+  {
+   "name": "JAMES",
+   "uid": "sdmkmI5kJib8ddqI6k49z3h6knq2"
+  },
+  {
+   "name": "MOOMIN",
+   "uid": "plWnS1pM9MaAbKbAQwkel8Me29r1"
+  },
+  {
+   "uid": "MAZtvwMwaINUbpcROkAdF6VvumB3",
+   "name": "JACK"
+  },
+  {
+   "uid": "U47wD6a8iifY8tspoqG57eyhg5N2",
+   "name": "LARS"
+  },
+  {
+   "uid": "expBDVV9ZYgQEIYolY5lsZys19X2",
+   "name": "SCOTT"
+  },
+  {
+   "uid": "5H6oxE3V49QTlnvsFruYeA3xpER2",
+   "name": "ASH"
+  }
+ ],
  "options": {
   "inGameLog": false
  },
@@ -17,25 +47,25 @@
     "LARS",
     "JAMES"
    ],
-   "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "LARS",
+      "JAMES"
+     ],
      "state": "APPROVED",
+     "proposer": "LARS",
      "votes": [
       "MOOMIN",
       "ASH",
       "LARS",
       "JAMES",
       "SCOTT"
-     ],
-     "proposer": "LARS",
-     "team": [
-      "LARS",
-      "JAMES"
      ]
     }
    ],
+   "numFails": 0,
    "failsRequired": 1
   },
   {
@@ -44,7 +74,7 @@
     "JAMES",
     "LARS"
    ],
-   "numFails": 1,
+   "state": "FAIL",
    "teamSize": 3,
    "proposals": [
     {
@@ -55,26 +85,26 @@
       "SCOTT",
       "MOOMIN"
      ],
-     "proposer": "SCOTT",
      "team": [
       "SCOTT",
       "JAMES",
       "LARS"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "SCOTT"
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
+   "team": [
+    "ASH",
+    "JACOB",
+    "JACK"
+   ],
    "proposals": [
     {
-     "team": [
-      "ASH",
-      "JACOB",
-      "JACK"
-     ],
      "state": "APPROVED",
      "votes": [
       "ASH",
@@ -85,21 +115,29 @@
       "JACOB",
       "MOOMIN"
      ],
-     "proposer": "ASH"
+     "proposer": "ASH",
+     "team": [
+      "ASH",
+      "JACOB",
+      "JACK"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "ASH",
-    "JACOB",
-    "JACK"
-   ],
    "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 3
   },
   {
    "numFails": 1,
+   "team": [
+    "JACOB",
+    "JACK",
+    "ASH",
+    "SCOTT"
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 2,
    "teamSize": 4,
    "proposals": [
     {
@@ -112,66 +150,78 @@
       "JAMES",
       "SCOTT"
      ],
-     "proposer": "JACOB",
      "team": [
       "JACOB",
       "JACK",
       "ASH",
       "SCOTT"
      ],
+     "proposer": "JACOB",
      "state": "APPROVED"
     }
-   ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
-   "team": [
-    "JACOB",
-    "JACK",
-    "ASH",
-    "SCOTT"
    ]
   },
   {
    "team": [],
-   "teamSize": 4,
    "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 4
   }
  ],
  "outcome": {
   "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "JACOB",
+  "votes": [
+   {
+    "JAMES": true,
+    "LARS": true
+   },
+   {
+    "JAMES": false,
+    "SCOTT": true,
+    "LARS": true
+   },
+   {
+    "JACK": true,
+    "ASH": true,
+    "JACOB": true
+   },
+   {
+    "JACK": true,
+    "ASH": true,
+    "SCOTT": false,
+    "JACOB": true
+   }
+  ],
   "roles": [
    {
-    "name": "ASH",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "ASH"
    },
    {
     "name": "LARS",
-    "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "assassin": false
    },
    {
+    "role": "MERLIN",
     "name": "JACK",
-    "assassin": false,
-    "role": "MERLIN"
+    "assassin": false
    },
    {
     "name": "JAMES",
-    "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "assassin": false
    },
    {
     "name": "SCOTT",
-    "assassin": true,
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "assassin": true
    },
    {
-    "name": "JACOB",
     "assassin": false,
+    "name": "JACOB",
     "role": "LOYAL FOLLOWER"
    },
    {
@@ -180,57 +230,7 @@
     "role": "OBERON"
    }
   ],
-  "votes": [
-   {
-    "LARS": true,
-    "JAMES": true
-   },
-   {
-    "JAMES": false,
-    "SCOTT": true,
-    "LARS": true
-   },
-   {
-    "ASH": true,
-    "JACOB": true,
-    "JACK": true
-   },
-   {
-    "SCOTT": false,
-    "ASH": true,
-    "JACOB": true,
-    "JACK": true
-   }
-  ]
- },
- "players": [
-  {
-   "uid": "JwaYxzA0rtRzzrOdAXjJaxOEdGf1",
-   "name": "JACOB"
-  },
-  {
-   "uid": "sdmkmI5kJib8ddqI6k49z3h6knq2",
-   "name": "JAMES"
-  },
-  {
-   "uid": "plWnS1pM9MaAbKbAQwkel8Me29r1",
-   "name": "MOOMIN"
-  },
-  {
-   "name": "JACK",
-   "uid": "MAZtvwMwaINUbpcROkAdF6VvumB3"
-  },
-  {
-   "name": "LARS",
-   "uid": "U47wD6a8iifY8tspoqG57eyhg5N2"
-  },
-  {
-   "uid": "expBDVV9ZYgQEIYolY5lsZys19X2",
-   "name": "SCOTT"
-  },
-  {
-   "uid": "5H6oxE3V49QTlnvsFruYeA3xpER2",
-   "name": "ASH"
-  }
- ]
+  "state": "GOOD_WIN",
+  "assassinated": "JACOB"
+ }
 }

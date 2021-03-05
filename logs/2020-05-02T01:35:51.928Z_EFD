@@ -1,43 +1,119 @@
 {
+ "players": [
+  {
+   "name": "SOMU",
+   "uid": "FL3gWrTcmXblotdXC2lohskjpsx1"
+  },
+  {
+   "uid": "JtxycyIBi6X9GcyiYOFTJeYW4bb2",
+   "name": "EFD"
+  },
+  {
+   "uid": "QAEqProuacTVQvG2W7W4vBZPsyW2",
+   "name": "RAGUL"
+  },
+  {
+   "name": "MUDITA",
+   "uid": "xs27iD7ecGMqbH4xwsl37iwqwy42"
+  },
+  {
+   "uid": "8boQs4Zm1pQFgdM48DN5kMShRoz2",
+   "name": "ADONIS"
+  }
+ ],
  "timeFinished": {
   "_seconds": 1588384164,
   "_nanoseconds": 195000000
  },
+ "outcome": {
+  "message": "Three missions succeeded",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MUDITA",
+    "assassin": false
+   },
+   {
+    "name": "ADONIS",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "SOMU",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "name": "RAGUL",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "EFD",
+    "role": "EVIL MINION"
+   }
+  ],
+  "assassinated": null,
+  "votes": [
+   {
+    "EFD": true,
+    "SOMU": true
+   },
+   {
+    "SOMU": false,
+    "RAGUL": true,
+    "EFD": false
+   },
+   {
+    "MUDITA": true,
+    "ADONIS": true
+   },
+   {
+    "MUDITA": true,
+    "SOMU": false,
+    "ADONIS": true
+   },
+   {
+    "RAGUL": true,
+    "MUDITA": true,
+    "ADONIS": true
+   }
+  ],
+  "state": "GOOD_WIN"
+ },
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1588383351,
-  "_nanoseconds": 928000000
- },
  "missions": [
   {
-   "team": [
-    "SOMU",
-    "EFD"
-   ],
+   "failsRequired": 1,
    "numFails": 0,
    "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "SOMU",
-      "EFD"
-     ],
-     "state": "APPROVED",
      "votes": [
       "MUDITA",
       "ADONIS",
       "SOMU",
       "EFD"
      ],
-     "proposer": "EFD"
+     "team": [
+      "SOMU",
+      "EFD"
+     ],
+     "proposer": "EFD",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "SOMU",
+    "EFD"
+   ]
   },
   {
+   "state": "FAIL",
    "team": [
     "RAGUL",
     "SOMU",
@@ -47,32 +123,25 @@
    "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "SOMU",
-      "RAGUL",
-      "EFD",
-      "MUDITA"
-     ],
      "proposer": "RAGUL",
+     "state": "APPROVED",
      "team": [
       "RAGUL",
       "SOMU",
       "EFD"
      ],
-     "state": "APPROVED"
+     "votes": [
+      "SOMU",
+      "RAGUL",
+      "EFD",
+      "MUDITA"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "ADONIS",
-    "MUDITA"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
      "state": "REJECTED",
@@ -90,7 +159,7 @@
       "ADONIS",
       "MUDITA"
      ],
-     "state": "APPROVED",
+     "proposer": "ADONIS",
      "votes": [
       "MUDITA",
       "ADONIS",
@@ -98,21 +167,34 @@
       "RAGUL",
       "EFD"
      ],
-     "proposer": "ADONIS"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "ADONIS",
+    "MUDITA"
+   ],
+   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 0
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "SOMU",
     "MUDITA",
     "ADONIS"
    ],
+   "state": "FAIL",
    "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "SOMU",
+      "MUDITA",
+      "ADONIS"
+     ],
      "state": "APPROVED",
      "votes": [
       "MUDITA",
@@ -121,20 +203,11 @@
       "RAGUL",
       "EFD"
      ],
-     "proposer": "SOMU",
-     "team": [
-      "SOMU",
-      "MUDITA",
-      "ADONIS"
-     ]
+     "proposer": "SOMU"
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -142,114 +215,41 @@
       "MUDITA",
       "RAGUL"
      ],
+     "proposer": "EFD",
      "state": "REJECTED",
      "votes": [
       "EFD"
-     ],
-     "proposer": "EFD"
+     ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "MUDITA",
       "ADONIS",
       "SOMU",
       "RAGUL"
      ],
-     "proposer": "RAGUL",
      "team": [
       "RAGUL",
       "MUDITA",
       "ADONIS"
-     ]
+     ],
+     "proposer": "RAGUL",
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "RAGUL",
     "MUDITA",
     "ADONIS"
-   ]
+   ],
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "numFails": 0
   }
  ],
- "outcome": {
-  "message": "Three missions succeeded",
-  "state": "GOOD_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "MUDITA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ADONIS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "SOMU"
-   },
-   {
-    "name": "RAGUL",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "EFD",
-    "assassin": false,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "SOMU": true,
-    "EFD": true
-   },
-   {
-    "EFD": false,
-    "RAGUL": true,
-    "SOMU": false
-   },
-   {
-    "ADONIS": true,
-    "MUDITA": true
-   },
-   {
-    "MUDITA": true,
-    "ADONIS": true,
-    "SOMU": false
-   },
-   {
-    "MUDITA": true,
-    "RAGUL": true,
-    "ADONIS": true
-   }
-  ]
- },
- "players": [
-  {
-   "name": "SOMU",
-   "uid": "FL3gWrTcmXblotdXC2lohskjpsx1"
-  },
-  {
-   "uid": "JtxycyIBi6X9GcyiYOFTJeYW4bb2",
-   "name": "EFD"
-  },
-  {
-   "name": "RAGUL",
-   "uid": "QAEqProuacTVQvG2W7W4vBZPsyW2"
-  },
-  {
-   "uid": "xs27iD7ecGMqbH4xwsl37iwqwy42",
-   "name": "MUDITA"
-  },
-  {
-   "uid": "8boQs4Zm1pQFgdM48DN5kMShRoz2",
-   "name": "ADONIS"
-  }
- ]
+ "timeCreated": {
+  "_seconds": 1588383351,
+  "_nanoseconds": 928000000
+ }
 }

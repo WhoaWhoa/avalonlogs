@@ -1,16 +1,17 @@
 {
  "missions": [
   {
+   "numFails": 0,
+   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "LILHERNG",
     "JASMINE"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "LILHERNG",
      "votes": [
       "WENXI",
       "CC",
@@ -19,18 +20,24 @@
       "JASMINE",
       "ZIZI"
      ],
-     "proposer": "LILHERNG",
      "team": [
       "LILHERNG",
       "JASMINE"
      ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
-   "numFails": 0,
    "teamSize": 3,
+   "team": [
+    "WENXI",
+    "CC",
+    "ALEX"
+   ],
+   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -39,42 +46,30 @@
       "JASMINE",
       "WENXI"
      ],
-     "proposer": "WENXI",
      "team": [
       "WENXI",
       "CC",
       "ALEX"
      ],
+     "proposer": "WENXI",
      "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "WENXI",
-    "CC",
-    "ALEX"
    ]
   },
   {
-   "state": "FAIL",
    "team": [
     "ZIZI",
     "ALEX",
     "CC",
     "WENXI"
    ],
-   "numFails": 1,
    "teamSize": 4,
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "ZIZI",
-      "ALEX",
-      "CC",
-      "WENXI"
-     ],
-     "state": "APPROVED",
+     "proposer": "ZIZI",
      "votes": [
       "WENXI",
       "CC",
@@ -82,29 +77,30 @@
       "JASMINE",
       "ZIZI"
      ],
-     "proposer": "ZIZI"
+     "state": "APPROVED",
+     "team": [
+      "ZIZI",
+      "ALEX",
+      "CC",
+      "WENXI"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "state": "FAIL",
-   "team": [
-    "CC",
-    "JASMINE",
-    "WENXI"
-   ],
-   "numFails": 1,
    "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
      "state": "REJECTED",
+     "proposer": "ALEX",
      "votes": [
       "ALEX",
       "LILHERNG",
       "ZIZI"
      ],
-     "proposer": "ALEX",
      "team": [
       "ALEX",
       "LILHERNG",
@@ -112,24 +108,29 @@
      ]
     },
     {
+     "team": [
+      "CC",
+      "JASMINE",
+      "WENXI"
+     ],
      "state": "APPROVED",
+     "proposer": "CC",
      "votes": [
       "ALEX",
       "JASMINE",
       "WENXI",
       "CC"
-     ],
-     "proposer": "CC",
-     "team": [
-      "CC",
-      "JASMINE",
-      "WENXI"
      ]
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "CC",
+    "JASMINE",
+    "WENXI"
+   ]
   },
   {
+   "state": "FAIL",
    "team": [
     "LILHERNG",
     "ALEX",
@@ -137,14 +138,9 @@
     "WENXI"
    ],
    "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "ALEX",
-      "JASMINE",
-      "ZIZI"
-     ],
+     "state": "REJECTED",
      "proposer": "JASMINE",
      "team": [
       "LILHERNG",
@@ -152,27 +148,31 @@
       "JASMINE",
       "ZIZI"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "ALEX",
+      "JASMINE",
+      "ZIZI"
+     ]
     },
     {
-     "proposer": "LILHERNG",
-     "team": [
-      "LILHERNG",
-      "ALEX",
-      "ZIZI",
-      "WENXI"
-     ],
      "state": "APPROVED",
      "votes": [
       "ALEX",
       "LILHERNG",
       "ZIZI",
       "WENXI"
-     ]
+     ],
+     "team": [
+      "LILHERNG",
+      "ALEX",
+      "ZIZI",
+      "WENXI"
+     ],
+     "proposer": "LILHERNG"
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 4
   }
  ],
  "outcome": {
@@ -182,15 +182,15 @@
     "JASMINE": true
    },
    {
-    "ALEX": true,
     "CC": true,
+    "ALEX": true,
     "WENXI": true
    },
    {
-    "WENXI": true,
     "ZIZI": true,
+    "CC": true,
     "ALEX": false,
-    "CC": true
+    "WENXI": true
    },
    {
     "CC": true,
@@ -198,30 +198,28 @@
     "JASMINE": false
    },
    {
-    "LILHERNG": true,
-    "WENXI": true,
     "ZIZI": true,
-    "ALEX": false
+    "ALEX": false,
+    "LILHERNG": true,
+    "WENXI": true
    }
   ],
   "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
   "roles": [
    {
+    "role": "LOYAL FOLLOWER",
     "name": "CC",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "name": "ALEX",
     "assassin": true,
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "name": "ALEX"
    },
    {
-    "assassin": false,
+    "name": "LILHERNG",
     "role": "MERLIN",
-    "name": "LILHERNG"
+    "assassin": false
    },
    {
     "name": "JASMINE",
@@ -229,33 +227,31 @@
     "role": "MORGANA"
    },
    {
-    "name": "ZIZI",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "ZIZI"
    },
    {
-    "name": "WENXI",
+    "role": "PERCIVAL",
     "assassin": false,
-    "role": "PERCIVAL"
+    "name": "WENXI"
    }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1586097284,
-  "_nanoseconds": 268894000
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null
  },
  "players": [
   {
-   "uid": "6QWJhy5FzQUatrrG6FmNT8esTyH3",
-   "name": "ALEX"
+   "name": "ALEX",
+   "uid": "6QWJhy5FzQUatrrG6FmNT8esTyH3"
   },
   {
    "name": "CC",
    "uid": "t9hwjl6uGfcL7syYQh1Fils32Nm1"
   },
   {
-   "uid": "BZKORFmJChYQBcbQ7OurjS2EZgf1",
-   "name": "JASMINE"
+   "name": "JASMINE",
+   "uid": "BZKORFmJChYQBcbQ7OurjS2EZgf1"
   },
   {
    "name": "LILHERNG",
@@ -266,12 +262,16 @@
    "name": "WENXI"
   },
   {
-   "name": "ZIZI",
-   "uid": "jB4bC6fLqcbhDyZKrJqZ1yURrfP2"
+   "uid": "jB4bC6fLqcbhDyZKrJqZ1yURrfP2",
+   "name": "ZIZI"
   }
  ],
  "timeCreated": {
   "_seconds": 1586096068,
   "_nanoseconds": 236000000
+ },
+ "timeFinished": {
+  "_seconds": 1586097284,
+  "_nanoseconds": 268894000
  }
 }

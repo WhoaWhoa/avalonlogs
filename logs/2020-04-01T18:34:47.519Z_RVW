@@ -1,18 +1,61 @@
 {
- "timeCreated": {
-  "_seconds": 1585766087,
-  "_nanoseconds": 519000000
+ "outcome": {
+  "votes": [
+   {
+    "ALAN": true,
+    "LEO": true
+   },
+   {
+    "MATT": false,
+    "LEO": true,
+    "ALAN": true
+   },
+   {
+    "LEO": true,
+    "ALAN": true
+   },
+   {
+    "LEO": true,
+    "ALAN": true,
+    "MATTHEW": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "OBERON",
+    "name": "MATT",
+    "assassin": false
+   },
+   {
+    "name": "NICK",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "name": "ALAN",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "name": "MATTHEW",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "LEO",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "assassinated": "ALAN",
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated"
  },
  "missions": [
   {
-   "team": [
-    "ALAN",
-    "LEO"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "LEO",
       "MATT"
@@ -21,102 +64,109 @@
      "team": [
       "MATT",
       "LEO"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "votes": [
+      "LEO"
+     ],
      "team": [
       "LEO",
       "MATTHEW"
      ],
      "state": "REJECTED",
-     "votes": [
-      "LEO"
-     ],
      "proposer": "LEO"
     },
     {
-     "team": [
-      "MATTHEW",
-      "NICK"
-     ],
      "state": "REJECTED",
+     "proposer": "MATTHEW",
      "votes": [
       "NICK"
      ],
-     "proposer": "MATTHEW"
+     "team": [
+      "MATTHEW",
+      "NICK"
+     ]
     },
     {
-     "proposer": "NICK",
-     "team": [
-      "NICK",
-      "MATTHEW"
-     ],
      "state": "REJECTED",
      "votes": [
       "NICK",
       "LEO"
-     ]
+     ],
+     "team": [
+      "NICK",
+      "MATTHEW"
+     ],
+     "proposer": "NICK"
     },
     {
      "state": "APPROVED",
+     "team": [
+      "ALAN",
+      "LEO"
+     ],
      "votes": [
       "ALAN",
       "MATTHEW",
       "LEO",
       "NICK"
      ],
-     "proposer": "ALAN",
-     "team": [
-      "ALAN",
-      "LEO"
-     ]
+     "proposer": "ALAN"
     }
    ],
+   "numFails": 0,
+   "teamSize": 2,
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "ALAN",
+    "LEO"
+   ]
   },
   {
+   "numFails": 1,
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "team": [
+      "LEO",
+      "MATT",
+      "ALAN"
+     ],
+     "votes": [
+      "LEO",
+      "MATT",
+      "ALAN"
+     ],
+     "state": "APPROVED",
+     "proposer": "MATT"
+    }
+   ],
+   "state": "FAIL",
    "team": [
     "LEO",
     "MATT",
     "ALAN"
    ],
-   "numFails": 1,
-   "teamSize": 3,
-   "proposals": [
-    {
-     "votes": [
-      "LEO",
-      "MATT",
-      "ALAN"
-     ],
-     "proposer": "MATT",
-     "team": [
-      "LEO",
-      "MATT",
-      "ALAN"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3
   },
   {
+   "state": "SUCCESS",
    "team": [
     "ALAN",
     "LEO"
    ],
+   "failsRequired": 1,
    "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
-     "proposer": "LEO",
      "team": [
       "ALAN",
       "LEO"
      ],
+     "proposer": "LEO",
      "state": "APPROVED",
      "votes": [
       "LEO",
@@ -124,37 +174,31 @@
       "ALAN"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "team": [
-    "LEO",
-    "MATTHEW",
-    "ALAN"
-   ],
    "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 3,
    "proposals": [
     {
+     "votes": [
+      "MATTHEW"
+     ],
      "proposer": "MATTHEW",
+     "state": "REJECTED",
      "team": [
       "MATTHEW",
       "LEO",
       "ALAN"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "MATTHEW"
      ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "NICK",
       "ALAN"
      ],
+     "state": "REJECTED",
      "proposer": "NICK",
      "team": [
       "ALAN",
@@ -168,86 +212,38 @@
       "MATTHEW",
       "ALAN"
      ],
-     "state": "APPROVED",
      "votes": [
       "MATTHEW",
       "LEO",
       "ALAN"
      ],
-     "proposer": "ALAN"
+     "proposer": "ALAN",
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "LEO",
+    "MATTHEW",
+    "ALAN"
+   ]
   },
   {
-   "team": [],
-   "teamSize": 3,
-   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
+   "team": [],
+   "failsRequired": 1,
+   "state": "PENDING",
+   "teamSize": 3
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "LEO": true,
-    "ALAN": true
-   },
-   {
-    "MATT": false,
-    "LEO": true,
-    "ALAN": true
-   },
-   {
-    "ALAN": true,
-    "LEO": true
-   },
-   {
-    "LEO": true,
-    "MATTHEW": true,
-    "ALAN": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "ALAN",
-  "roles": [
-   {
-    "name": "MATT",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "NICK"
-   },
-   {
-    "name": "ALAN",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "MATTHEW",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "LEO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ]
- },
  "timeFinished": {
   "_seconds": 1585766511,
   "_nanoseconds": 587319000
  },
  "players": [
   {
-   "uid": "3aqD1zWCcQfTi5Y0LoBvVDCQ1jH3",
-   "name": "MATT"
+   "name": "MATT",
+   "uid": "3aqD1zWCcQfTi5Y0LoBvVDCQ1jH3"
   },
   {
    "uid": "sz04JKxKuSclgCK8yKL2AO4AQOB2",
@@ -258,12 +254,16 @@
    "name": "MATTHEW"
   },
   {
-   "uid": "bxsGXFrzWCXlvCKeaBW5OhHrhHg1",
-   "name": "NICK"
+   "name": "NICK",
+   "uid": "bxsGXFrzWCXlvCKeaBW5OhHrhHg1"
   },
   {
    "name": "ALAN",
    "uid": "p7bHZM9msMQa97oZqpkhtCvyyc43"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1585766087,
+  "_nanoseconds": 519000000
+ }
 }

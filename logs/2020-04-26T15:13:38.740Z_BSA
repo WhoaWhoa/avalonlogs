@@ -1,19 +1,98 @@
 {
+ "timeFinished": {
+  "_seconds": 1587914855,
+  "_nanoseconds": 204000000
+ },
  "timeCreated": {
   "_seconds": 1587914018,
   "_nanoseconds": 740000000
  },
+ "players": [
+  {
+   "name": "EMMA",
+   "uid": "oNcAFYhJ1TZ7v93ksYEwoXXKsBm1"
+  },
+  {
+   "name": "SHEENO",
+   "uid": "sq4Pu05dceSoACMpdhL3yyxjiNk1"
+  },
+  {
+   "uid": "cvH5LmYEivap1PepPFzpdzlXa8I2",
+   "name": "MOONEY"
+  },
+  {
+   "uid": "Q2437dkNCoTPB3HAfUW1PPTUVuy1",
+   "name": "PRIYA"
+  },
+  {
+   "uid": "Wf9D3DbMDEQNVCD557JjazEENRF2",
+   "name": "CRISTINA"
+  },
+  {
+   "name": "DANNY",
+   "uid": "e4BPMNWDrPgwwiwMzAaiEX60eKi1"
+  }
+ ],
+ "outcome": {
+  "message": "Five team proposals in a row rejected",
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "SHEENO": true,
+    "PRIYA": true
+   },
+   {
+    "SHEENO": true,
+    "PRIYA": false,
+    "CRISTINA": true
+   },
+   {
+    "EMMA": true,
+    "SHEENO": true,
+    "PRIYA": false,
+    "MOONEY": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "SHEENO",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "CRISTINA",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "EMMA",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "PRIYA",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "MOONEY"
+   },
+   {
+    "assassin": false,
+    "name": "DANNY",
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
+ },
  "missions": [
   {
-   "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "PRIYA",
-      "SHEENO"
-     ],
-     "state": "APPROVED",
      "votes": [
       "EMMA",
       "PRIYA",
@@ -22,26 +101,28 @@
       "SHEENO",
       "CRISTINA"
      ],
-     "proposer": "PRIYA"
+     "team": [
+      "PRIYA",
+      "SHEENO"
+     ],
+     "proposer": "PRIYA",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "PRIYA",
     "SHEENO"
-   ]
+   ],
+   "numFails": 0,
+   "teamSize": 2
   },
   {
-   "team": [
-    "CRISTINA",
-    "SHEENO",
-    "PRIYA"
-   ],
    "numFails": 1,
+   "state": "FAIL",
    "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "SHEENO",
       "CRISTINA",
@@ -49,32 +130,27 @@
       "PRIYA",
       "MOONEY"
      ],
-     "proposer": "CRISTINA",
      "team": [
       "CRISTINA",
       "SHEENO",
       "PRIYA"
      ],
-     "state": "APPROVED"
+     "proposer": "CRISTINA"
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "CRISTINA",
+    "SHEENO",
+    "PRIYA"
+   ]
   },
   {
-   "team": [
-    "PRIYA",
-    "EMMA",
-    "SHEENO",
-    "MOONEY"
-   ],
    "numFails": 1,
    "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "PRIYA"
-     ],
+     "state": "REJECTED",
      "proposer": "DANNY",
      "team": [
       "DANNY",
@@ -82,22 +158,24 @@
       "SHEENO",
       "PRIYA"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "PRIYA"
+     ]
     },
     {
+     "proposer": "EMMA",
+     "state": "REJECTED",
      "team": [
       "EMMA",
       "SHEENO",
       "MOONEY",
       "DANNY"
      ],
-     "state": "REJECTED",
      "votes": [
       "CRISTINA",
       "EMMA",
       "MOONEY"
-     ],
-     "proposer": "EMMA"
+     ]
     },
     {
      "state": "APPROVED",
@@ -118,12 +196,17 @@
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "team": [
+    "PRIYA",
+    "EMMA",
+    "SHEENO",
+    "MOONEY"
+   ]
   },
   {
-   "team": [],
+   "failsRequired": 1,
    "teamSize": 3,
-   "state": "PENDING",
    "proposals": [
     {
      "team": [
@@ -140,13 +223,13 @@
      "proposer": "MOONEY"
     },
     {
+     "proposer": "PRIYA",
      "state": "REJECTED",
      "votes": [
       "CRISTINA",
       "PRIYA",
       "DANNY"
      ],
-     "proposer": "PRIYA",
      "team": [
       "PRIYA",
       "MOONEY",
@@ -159,16 +242,15 @@
       "PRIYA",
       "DANNY"
      ],
+     "state": "REJECTED",
      "proposer": "CRISTINA",
      "team": [
       "MOONEY",
       "DANNY",
       "CRISTINA"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "DANNY",
       "CRISTINA",
@@ -179,117 +261,35 @@
       "DANNY",
       "CRISTINA",
       "PRIYA"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "MOONEY",
-      "SHEENO",
-      "EMMA"
-     ],
-     "proposer": "EMMA",
      "team": [
       "EMMA",
       "MOONEY",
       "SHEENO"
+     ],
+     "state": "REJECTED",
+     "proposer": "EMMA",
+     "votes": [
+      "MOONEY",
+      "SHEENO",
+      "EMMA"
      ]
     }
    ],
-   "failsRequired": 1
+   "state": "PENDING",
+   "team": []
   },
   {
-   "failsRequired": 1,
    "team": [],
    "teamSize": 4,
    "state": "PENDING",
-   "proposals": []
+   "proposals": [],
+   "failsRequired": 1
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "PRIYA": true,
-    "SHEENO": true
-   },
-   {
-    "SHEENO": true,
-    "CRISTINA": true,
-    "PRIYA": false
-   },
-   {
-    "EMMA": true,
-    "PRIYA": false,
-    "MOONEY": true,
-    "SHEENO": true
-   }
-  ],
-  "message": "Five team proposals in a row rejected",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "SHEENO"
-   },
-   {
-    "name": "CRISTINA",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "EMMA"
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "PRIYA"
-   },
-   {
-    "name": "MOONEY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "DANNY"
-   }
-  ]
- },
- "players": [
-  {
-   "uid": "oNcAFYhJ1TZ7v93ksYEwoXXKsBm1",
-   "name": "EMMA"
-  },
-  {
-   "name": "SHEENO",
-   "uid": "sq4Pu05dceSoACMpdhL3yyxjiNk1"
-  },
-  {
-   "uid": "cvH5LmYEivap1PepPFzpdzlXa8I2",
-   "name": "MOONEY"
-  },
-  {
-   "uid": "Q2437dkNCoTPB3HAfUW1PPTUVuy1",
-   "name": "PRIYA"
-  },
-  {
-   "name": "CRISTINA",
-   "uid": "Wf9D3DbMDEQNVCD557JjazEENRF2"
-  },
-  {
-   "name": "DANNY",
-   "uid": "e4BPMNWDrPgwwiwMzAaiEX60eKi1"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1587914855,
-  "_nanoseconds": 204000000
- },
  "options": {
   "inGameLog": false
  }

@@ -1,11 +1,67 @@
 {
- "timeCreated": {
-  "_seconds": 1584739274,
-  "_nanoseconds": 928000000
+ "outcome": {
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "GOOSE"
+   },
+   {
+    "assassin": false,
+    "name": "TATRED",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "MRARROW",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "name": "DUFF",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "DUPE",
+    "role": "EVIL MINION"
+   }
+  ],
+  "votes": [
+   {
+    "DUPE": false,
+    "TATRED": true
+   },
+   {
+    "DUFF": true,
+    "GOOSE": false,
+    "MRARROW": true
+   },
+   {
+    "MRARROW": true,
+    "TATRED": true
+   },
+   {
+    "DUFF": true,
+    "DUPE": true,
+    "TATRED": true
+   },
+   {
+    "DUFF": true,
+    "TATRED": true,
+    "MRARROW": true
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "MRARROW"
  },
  "missions": [
   {
-   "numFails": 1,
+   "team": [
+    "TATRED",
+    "DUPE"
+   ],
    "teamSize": 2,
    "proposals": [
     {
@@ -21,25 +77,22 @@
      "state": "REJECTED"
     },
     {
+     "proposer": "TATRED",
      "state": "APPROVED",
      "votes": [
       "TATRED",
       "DUPE",
       "GOOSE"
      ],
-     "proposer": "TATRED",
      "team": [
       "TATRED",
       "DUPE"
      ]
     }
    ],
-   "failsRequired": 1,
    "state": "FAIL",
-   "team": [
-    "TATRED",
-    "DUPE"
-   ]
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
    "team": [
@@ -47,16 +100,12 @@
     "DUFF",
     "GOOSE"
    ],
-   "numFails": 1,
    "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "MRARROW",
-      "DUFF",
-      "GOOSE"
-     ],
-     "state": "APPROVED",
      "votes": [
       "GOOSE",
       "TATRED",
@@ -64,97 +113,97 @@
       "DUFF",
       "DUPE"
      ],
-     "proposer": "DUFF"
+     "proposer": "DUFF",
+     "state": "APPROVED",
+     "team": [
+      "MRARROW",
+      "DUFF",
+      "GOOSE"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "MRARROW",
     "TATRED"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "GOOSE",
+      "DUPE"
+     ],
+     "proposer": "GOOSE",
      "state": "REJECTED",
      "votes": [
       "DUPE",
       "GOOSE"
-     ],
-     "proposer": "GOOSE",
-     "team": [
-      "GOOSE",
-      "DUPE"
      ]
     },
     {
-     "proposer": "DUPE",
+     "state": "REJECTED",
      "team": [
       "DUPE",
       "TATRED"
      ],
-     "state": "REJECTED",
      "votes": [
       "TATRED",
       "DUPE"
-     ]
+     ],
+     "proposer": "DUPE"
     },
     {
-     "proposer": "MRARROW",
      "team": [
       "MRARROW",
       "TATRED"
      ],
-     "state": "APPROVED",
      "votes": [
       "TATRED",
       "MRARROW",
       "DUFF",
       "DUPE"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "MRARROW"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "state": "SUCCESS",
    "team": [
     "TATRED",
     "DUFF",
     "DUPE"
    ],
    "numFails": 0,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "TATRED",
+      "DUFF",
+      "DUPE"
+     ],
      "state": "APPROVED",
      "votes": [
       "DUPE",
       "GOOSE",
       "TATRED"
      ],
-     "proposer": "TATRED",
-     "team": [
-      "TATRED",
-      "DUFF",
-      "DUPE"
-     ]
+     "proposer": "TATRED"
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "teamSize": 3
   },
   {
-   "team": [
-    "TATRED",
-    "DUFF",
-    "MRARROW"
-   ],
    "numFails": 0,
    "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
      "team": [
@@ -162,77 +211,24 @@
       "DUFF",
       "MRARROW"
      ],
+     "proposer": "DUFF",
      "state": "APPROVED",
      "votes": [
       "TATRED",
       "MRARROW",
       "DUFF",
       "DUPE"
-     ],
-     "proposer": "DUFF"
+     ]
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "TATRED",
+    "DUFF",
+    "MRARROW"
+   ]
   }
  ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "MRARROW",
-  "roles": [
-   {
-    "name": "GOOSE",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "TATRED",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MRARROW",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "DUFF",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "DUPE",
-    "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "TATRED": true,
-    "DUPE": false
-   },
-   {
-    "GOOSE": false,
-    "MRARROW": true,
-    "DUFF": true
-   },
-   {
-    "TATRED": true,
-    "MRARROW": true
-   },
-   {
-    "DUFF": true,
-    "DUPE": true,
-    "TATRED": true
-   },
-   {
-    "DUFF": true,
-    "MRARROW": true,
-    "TATRED": true
-   }
-  ],
-  "message": "Three successful missions"
- },
  "timeFinished": {
   "_seconds": 1584739886,
   "_nanoseconds": 759156000
@@ -243,20 +239,24 @@
    "uid": "gStlP0bBNKbVp0wYlruCtTprPAQ2"
   },
   {
-   "name": "TATRED",
-   "uid": "Q9hiWGr0VDXbmfkPq8rDmA4X31l1"
+   "uid": "Q9hiWGr0VDXbmfkPq8rDmA4X31l1",
+   "name": "TATRED"
   },
   {
-   "uid": "JBXfWkL5tvXoTEK6PzJgAkqBWYZ2",
-   "name": "DUFF"
+   "name": "DUFF",
+   "uid": "JBXfWkL5tvXoTEK6PzJgAkqBWYZ2"
   },
   {
    "name": "GOOSE",
    "uid": "r96Dq29BTiYvh4lKGaGybLU6JCh2"
   },
   {
-   "uid": "8Cu3m4u0mNaweVj3HKl6I4eL85x1",
-   "name": "DUPE"
+   "name": "DUPE",
+   "uid": "8Cu3m4u0mNaweVj3HKl6I4eL85x1"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1584739274,
+  "_nanoseconds": 928000000
+ }
 }

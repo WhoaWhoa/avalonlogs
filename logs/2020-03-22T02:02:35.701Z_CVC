@@ -3,19 +3,96 @@
   "_seconds": 1584842555,
   "_nanoseconds": 701000000
  },
+ "outcome": {
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "LAP": true,
+    "SCOTT": true,
+    "KEVIN": true
+   },
+   {
+    "SCOTT": true,
+    "KEVIN": false,
+    "URANUS": true,
+    "LAP": true
+   },
+   {
+    "PAT": false,
+    "LAP": true,
+    "TAY": true,
+    "URANUS": true
+   },
+   {
+    "KATIE": true,
+    "COVIDEB": true,
+    "TAY": true,
+    "GAL": true,
+    "URANUS": true
+   },
+   {
+    "TAY": true,
+    "GAL": true,
+    "URANUS": true,
+    "KATIE": false,
+    "COVIDEB": true
+   }
+  ],
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "LAP",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "KEVIN",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "URANUS",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "TAY",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "GAL",
+    "assassin": false
+   },
+   {
+    "name": "SCOTT",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "PAT",
+    "assassin": true
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "KATIE",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "COVIDEB",
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
+ },
  "missions": [
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "LAP",
-    "SCOTT",
-    "KEVIN"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "LAP",
       "KEVIN",
@@ -24,25 +101,34 @@
       "KATIE",
       "COVIDEB"
      ],
-     "proposer": "KEVIN",
      "team": [
       "LAP",
       "SCOTT",
       "KEVIN"
      ],
-     "state": "APPROVED"
+     "proposer": "KEVIN"
     }
-   ]
+   ],
+   "state": "SUCCESS",
+   "team": [
+    "LAP",
+    "SCOTT",
+    "KEVIN"
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "teamSize": 4,
+   "state": "FAIL",
    "team": [
     "SCOTT",
     "LAP",
     "URANUS",
     "KEVIN"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -51,6 +137,7 @@
       "URANUS",
       "KEVIN"
      ],
+     "proposer": "URANUS",
      "state": "APPROVED",
      "votes": [
       "SCOTT",
@@ -61,78 +148,67 @@
       "KEVIN",
       "URANUS",
       "TAY"
-     ],
-     "proposer": "URANUS"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
-   "team": [
-    "LAP",
-    "URANUS",
-    "TAY",
-    "PAT"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "REJECTED",
-     "votes": [
-      "LAP",
-      "KEVIN",
-      "SCOTT"
-     ],
-     "proposer": "SCOTT",
      "team": [
       "SCOTT",
       "LAP",
       "COVIDEB",
       "GAL"
-     ]
+     ],
+     "votes": [
+      "LAP",
+      "KEVIN",
+      "SCOTT"
+     ],
+     "proposer": "SCOTT"
     },
     {
+     "state": "APPROVED",
+     "proposer": "LAP",
      "team": [
       "LAP",
       "URANUS",
       "TAY",
       "PAT"
      ],
-     "state": "APPROVED",
      "votes": [
       "LAP",
       "KEVIN",
       "URANUS",
       "TAY",
       "PAT"
-     ],
-     "proposer": "LAP"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 4,
+   "team": [
+    "LAP",
+    "URANUS",
+    "TAY",
+    "PAT"
+   ]
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "COVIDEB",
-    "TAY",
-    "URANUS",
-    "KATIE",
-    "GAL"
-   ],
    "numFails": 0,
-   "teamSize": 5,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "TAY",
       "GAL",
       "COVIDEB"
      ],
-     "proposer": "TAY",
      "team": [
       "TAY",
       "URANUS",
@@ -140,10 +216,9 @@
       "GAL",
       "COVIDEB"
      ],
-     "state": "REJECTED"
+     "proposer": "TAY"
     },
     {
-     "state": "APPROVED",
      "votes": [
       "LAP",
       "KEVIN",
@@ -155,6 +230,7 @@
       "COVIDEB"
      ],
      "proposer": "COVIDEB",
+     "state": "APPROVED",
      "team": [
       "COVIDEB",
       "TAY",
@@ -164,9 +240,21 @@
      ]
     }
    ],
-   "failsRequired": 2
+   "state": "SUCCESS",
+   "failsRequired": 2,
+   "teamSize": 5,
+   "team": [
+    "COVIDEB",
+    "TAY",
+    "URANUS",
+    "KATIE",
+    "GAL"
+   ]
   },
   {
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 5,
    "team": [
     "URANUS",
     "COVIDEB",
@@ -174,10 +262,14 @@
     "GAL",
     "TAY"
    ],
-   "numFails": 1,
-   "teamSize": 5,
    "proposals": [
     {
+     "votes": [
+      "TAY",
+      "SCOTT",
+      "PAT"
+     ],
+     "state": "REJECTED",
      "proposer": "PAT",
      "team": [
       "GAL",
@@ -185,15 +277,15 @@
       "PAT",
       "COVIDEB",
       "TAY"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "TAY",
-      "SCOTT",
-      "PAT"
      ]
     },
     {
+     "state": "REJECTED",
+     "votes": [
+      "GAL",
+      "PAT",
+      "KATIE"
+     ],
      "proposer": "KATIE",
      "team": [
       "KATIE",
@@ -201,22 +293,16 @@
       "GAL",
       "TAY",
       "LAP"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "GAL",
-      "PAT",
-      "KATIE"
      ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "TAY",
       "GAL",
       "KATIE"
      ],
      "proposer": "GAL",
+     "state": "REJECTED",
      "team": [
       "COVIDEB",
       "TAY",
@@ -227,6 +313,12 @@
     },
     {
      "proposer": "KEVIN",
+     "votes": [
+      "KEVIN",
+      "GAL",
+      "PAT",
+      "KATIE"
+     ],
      "team": [
       "COVIDEB",
       "URANUS",
@@ -234,13 +326,7 @@
       "GAL",
       "KEVIN"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "KEVIN",
-      "GAL",
-      "PAT",
-      "KATIE"
-     ]
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -253,113 +339,23 @@
       "COVIDEB"
      ],
      "proposer": "URANUS",
+     "state": "APPROVED",
      "team": [
       "URANUS",
       "COVIDEB",
       "KATIE",
       "GAL",
       "TAY"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "failsRequired": 1
   }
  ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "LAP"
-   },
-   {
-    "name": "KEVIN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "URANUS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "TAY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "GAL"
-   },
-   {
-    "name": "SCOTT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "PAT",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "KATIE",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "COVIDEB",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "KEVIN": true,
-    "SCOTT": true,
-    "LAP": true
-   },
-   {
-    "URANUS": true,
-    "KEVIN": false,
-    "SCOTT": true,
-    "LAP": true
-   },
-   {
-    "URANUS": true,
-    "TAY": true,
-    "PAT": false,
-    "LAP": true
-   },
-   {
-    "GAL": true,
-    "KATIE": true,
-    "URANUS": true,
-    "COVIDEB": true,
-    "TAY": true
-   },
-   {
-    "GAL": true,
-    "KATIE": false,
-    "URANUS": true,
-    "COVIDEB": true,
-    "TAY": true
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1584843768,
-  "_nanoseconds": 138579000
- },
  "players": [
   {
-   "uid": "d80FwEMK77MbKLxtd6lR4f0hpXM2",
-   "name": "URANUS"
+   "name": "URANUS",
+   "uid": "d80FwEMK77MbKLxtd6lR4f0hpXM2"
   },
   {
    "name": "SCOTT",
@@ -374,24 +370,28 @@
    "name": "TAY"
   },
   {
-   "uid": "p7XTBEasBwQfXBOdDe1zQtbIEZB3",
-   "name": "COVIDEB"
+   "name": "COVIDEB",
+   "uid": "p7XTBEasBwQfXBOdDe1zQtbIEZB3"
   },
   {
    "name": "PAT",
    "uid": "l70WRgA7tecPe7nFQekS5SLMidk1"
   },
   {
-   "uid": "djU4cKMFHAgd8MwCyGcUSJzD0AI2",
-   "name": "KATIE"
+   "name": "KATIE",
+   "uid": "djU4cKMFHAgd8MwCyGcUSJzD0AI2"
   },
   {
    "uid": "dUs6KKcEvjPjuWgjfRTWsCSVvQk1",
    "name": "GAL"
   },
   {
-   "name": "KEVIN",
-   "uid": "SxXIfDeqCBQ0Q7IVXXau9RmcmaK2"
+   "uid": "SxXIfDeqCBQ0Q7IVXXau9RmcmaK2",
+   "name": "KEVIN"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1584843768,
+  "_nanoseconds": 138579000
+ }
 }

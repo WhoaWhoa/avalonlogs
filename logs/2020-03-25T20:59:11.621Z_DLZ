@@ -5,12 +5,15 @@
  },
  "missions": [
   {
+   "team": [
+    "IVAN",
+    "SERGEYM"
+   ],
+   "numFails": 0,
+   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "IVAN",
-      "SERGEYM"
-     ],
      "state": "APPROVED",
      "votes": [
       "ELENA",
@@ -21,29 +24,26 @@
       "IVAN",
       "OLESIA"
      ],
+     "team": [
+      "IVAN",
+      "SERGEYM"
+     ],
      "proposer": "IVAN"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "IVAN",
-    "SERGEYM"
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   "failsRequired": 1
   },
   {
+   "state": "SUCCESS",
    "team": [
     "IVAN",
     "DIMASTOS",
     "SERGEYM"
    ],
-   "numFails": 0,
    "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "DIMASTOS",
      "votes": [
       "ELENA",
       "IMAFF",
@@ -51,7 +51,7 @@
       "SERGEYM",
       "OLESIA"
      ],
-     "proposer": "DIMASTOS",
+     "state": "APPROVED",
      "team": [
       "IVAN",
       "DIMASTOS",
@@ -59,39 +59,25 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
-   "team": [
-    "ELENA",
-    "IVAN",
-    "DIMASTOS"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "OLESIA",
-      "ALENKO"
-     ],
-     "proposer": "OLESIA",
+     "state": "REJECTED",
      "team": [
       "OLESIA",
       "ALENKO",
       "ELENA"
      ],
-     "state": "REJECTED"
+     "proposer": "OLESIA",
+     "votes": [
+      "OLESIA",
+      "ALENKO"
+     ]
     },
     {
-     "team": [
-      "ELENA",
-      "IVAN",
-      "DIMASTOS"
-     ],
-     "state": "APPROVED",
      "votes": [
       "DIMASTOS",
       "SERGEYM",
@@ -99,13 +85,28 @@
       "ELENA",
       "IMAFF"
      ],
-     "proposer": "ELENA"
+     "proposer": "ELENA",
+     "team": [
+      "ELENA",
+      "IVAN",
+      "DIMASTOS"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "ELENA",
+    "IVAN",
+    "DIMASTOS"
+   ]
   },
   {
    "state": "SUCCESS",
+   "failsRequired": 2,
    "team": [
     "ALENKO",
     "DIMASTOS",
@@ -116,6 +117,7 @@
    "teamSize": 4,
    "proposals": [
     {
+     "proposer": "ALENKO",
      "team": [
       "ALENKO",
       "DIMASTOS",
@@ -128,83 +130,81 @@
       "ELENA",
       "ALENKO",
       "IMAFF"
-     ],
-     "proposer": "ALENKO"
+     ]
     }
-   ],
-   "failsRequired": 2
+   ]
   },
   {
-   "proposals": [],
-   "failsRequired": 1,
-   "team": [],
    "teamSize": 4,
-   "state": "PENDING"
+   "team": [],
+   "state": "PENDING",
+   "proposals": [],
+   "failsRequired": 1
   }
  ],
  "outcome": {
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "DIMASTOS",
   "roles": [
    {
-    "name": "IVAN",
     "assassin": false,
+    "name": "IVAN",
     "role": "OBERON"
    },
    {
-    "name": "OLESIA",
     "assassin": true,
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "name": "OLESIA"
    },
    {
-    "name": "ELENA",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "ELENA"
    },
    {
+    "assassin": false,
     "name": "ALENKO",
-    "assassin": false,
     "role": "MERLIN"
    },
    {
     "assassin": false,
-    "role": "MORGANA",
-    "name": "IMAFF"
+    "name": "IMAFF",
+    "role": "MORGANA"
    },
    {
-    "name": "DIMASTOS",
+    "role": "PERCIVAL",
     "assassin": false,
-    "role": "PERCIVAL"
+    "name": "DIMASTOS"
    },
    {
-    "name": "SERGEYM",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "SERGEYM"
    }
   ],
+  "state": "GOOD_WIN",
   "votes": [
    {
     "SERGEYM": true,
     "IVAN": true
    },
    {
+    "IVAN": true,
     "SERGEYM": true,
-    "DIMASTOS": true,
-    "IVAN": true
-   },
-   {
-    "ELENA": true,
-    "DIMASTOS": true,
-    "IVAN": false
-   },
-   {
-    "ELENA": true,
-    "ALENKO": true,
-    "OLESIA": false,
     "DIMASTOS": true
+   },
+   {
+    "ELENA": true,
+    "IVAN": false,
+    "DIMASTOS": true
+   },
+   {
+    "OLESIA": false,
+    "DIMASTOS": true,
+    "ELENA": true,
+    "ALENKO": true
    }
-  ]
+  ],
+  "message": "Three successful missions",
+  "assassinated": "DIMASTOS"
  },
  "timeFinished": {
   "_seconds": 1585170254,
@@ -212,28 +212,28 @@
  },
  "players": [
   {
-   "uid": "Kav5POcSPEMFqkZUgpDywEngmEJ3",
-   "name": "IMAFF"
+   "name": "IMAFF",
+   "uid": "Kav5POcSPEMFqkZUgpDywEngmEJ3"
   },
   {
-   "uid": "64uVBhIuJhfLXYDXMMAY22Rcgz72",
-   "name": "IVAN"
+   "name": "IVAN",
+   "uid": "64uVBhIuJhfLXYDXMMAY22Rcgz72"
   },
   {
    "uid": "8LwSa6fvOWbJzhcCIQ9pAC4P5kn2",
    "name": "DIMASTOS"
   },
   {
-   "uid": "XrUT4lVIgqSkkCQHIUw9RaTSym52",
-   "name": "OLESIA"
+   "name": "OLESIA",
+   "uid": "XrUT4lVIgqSkkCQHIUw9RaTSym52"
   },
   {
    "uid": "ckCyTMxJFyP7XhEFTwyXUDzhd5A3",
    "name": "ELENA"
   },
   {
-   "uid": "n4H49WIoFnRMy6ZrrFLSyzwT1Dz2",
-   "name": "ALENKO"
+   "name": "ALENKO",
+   "uid": "n4H49WIoFnRMy6ZrrFLSyzwT1Dz2"
   },
   {
    "name": "SERGEYM",

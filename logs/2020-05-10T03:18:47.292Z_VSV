@@ -1,36 +1,27 @@
 {
- "timeCreated": {
-  "_seconds": 1589080727,
-  "_nanoseconds": 292000000
- },
  "missions": [
   {
    "team": [
     "MAFAZLA",
     "SAAD"
    ],
-   "numFails": 0,
    "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "ZAIN",
-      "MAFAZLA"
-     ],
-     "state": "REJECTED",
      "votes": [
       "ZAIN",
       "MAFAZLA",
       "MK"
      ],
-     "proposer": "ZAIN"
+     "team": [
+      "ZAIN",
+      "MAFAZLA"
+     ],
+     "proposer": "ZAIN",
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "MAFAZLA",
-      "SAAD"
-     ],
-     "state": "APPROVED",
      "votes": [
       "RAAS",
       "ZAIN",
@@ -38,13 +29,19 @@
       "SAAD",
       "MK"
      ],
+     "team": [
+      "MAFAZLA",
+      "SAAD"
+     ],
+     "state": "APPROVED",
      "proposer": "MAFAZLA"
     }
    ],
-   "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS"
   },
   {
+   "teamSize": 3,
    "state": "FAIL",
    "team": [
     "MAFAZLA",
@@ -52,32 +49,31 @@
     "SAAD"
    ],
    "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "state": "REJECTED",
-     "votes": [
-      "RAHUL",
-      "SAAD"
-     ],
-     "proposer": "SAAD",
      "team": [
       "MAFAZLA",
       "SAAD",
       "RAAS"
-     ]
+     ],
+     "votes": [
+      "RAHUL",
+      "SAAD"
+     ],
+     "proposer": "SAAD"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "MK"
      ],
-     "proposer": "RAHUL",
      "team": [
       "MAFAZLA",
       "RAHUL",
       "MK"
      ],
-     "state": "REJECTED"
+     "proposer": "RAHUL"
     },
     {
      "votes": [
@@ -86,25 +82,25 @@
       "SAAD",
       "MK"
      ],
-     "proposer": "MK",
      "team": [
       "MAFAZLA",
       "MK",
       "SAAD"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "MK"
     }
    ],
    "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "CHEZMASTA",
     "MK",
     "ZAIN"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -113,35 +109,29 @@
       "CHEZMASTA",
       "MK"
      ],
+     "state": "APPROVED",
      "proposer": "CHEZMASTA",
      "team": [
       "CHEZMASTA",
       "MK",
       "ZAIN"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
+   "state": "FAIL",
+   "failsRequired": 2,
    "team": [
     "RAAS",
     "RAHUL",
     "MAFAZLA",
     "ZAIN"
    ],
-   "numFails": 2,
-   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "RAAS",
-      "RAHUL",
-      "MAFAZLA",
-      "ZAIN"
-     ],
      "state": "APPROVED",
      "votes": [
       "MK",
@@ -149,24 +139,56 @@
       "MAFAZLA",
       "RAHUL"
      ],
+     "team": [
+      "RAAS",
+      "RAHUL",
+      "MAFAZLA",
+      "ZAIN"
+     ],
      "proposer": "RAAS"
     }
    ],
-   "failsRequired": 2,
-   "state": "FAIL"
+   "teamSize": 4,
+   "numFails": 2
   },
   {
-   "team": [],
    "teamSize": 4,
    "state": "PENDING",
    "proposals": [],
+   "team": [],
    "failsRequired": 1
   }
  ],
+ "timeCreated": {
+  "_seconds": 1589080727,
+  "_nanoseconds": 292000000
+ },
  "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "MAFAZLA": true,
+    "SAAD": true
+   },
+   {
+    "MAFAZLA": false,
+    "SAAD": true,
+    "MK": true
+   },
+   {
+    "ZAIN": true,
+    "MK": true,
+    "CHEZMASTA": false
+   },
+   {
+    "RAHUL": true,
+    "RAAS": false,
+    "ZAIN": true,
+    "MAFAZLA": false
+   }
+  ],
   "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
   "roles": [
    {
     "name": "MK",
@@ -174,8 +196,8 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "RAAS",
     "assassin": false,
+    "name": "RAAS",
     "role": "MORGANA"
    },
    {
@@ -184,13 +206,13 @@
     "role": "PERCIVAL"
    },
    {
-    "name": "MAFAZLA",
     "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "MAFAZLA"
    },
    {
-    "name": "RAHUL",
     "assassin": false,
+    "name": "RAHUL",
     "role": "MERLIN"
    },
    {
@@ -199,31 +221,9 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "CHEZMASTA",
+    "role": "EVIL MINION",
     "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "SAAD": true,
-    "MAFAZLA": true
-   },
-   {
-    "MK": true,
-    "SAAD": true,
-    "MAFAZLA": false
-   },
-   {
-    "MK": true,
-    "CHEZMASTA": false,
-    "ZAIN": true
-   },
-   {
-    "RAHUL": true,
-    "MAFAZLA": false,
-    "ZAIN": true,
-    "RAAS": false
+    "name": "CHEZMASTA"
    }
   ]
  },
@@ -233,12 +233,12 @@
    "name": "MK"
   },
   {
-   "name": "CHEZMASTA",
-   "uid": "1pALZ8GpFfaGpwypxX6CDZvFFJ22"
+   "uid": "1pALZ8GpFfaGpwypxX6CDZvFFJ22",
+   "name": "CHEZMASTA"
   },
   {
-   "uid": "oJoeG2DBmBcntH1iFhM8MdYn3ox2",
-   "name": "RAAS"
+   "name": "RAAS",
+   "uid": "oJoeG2DBmBcntH1iFhM8MdYn3ox2"
   },
   {
    "name": "ZAIN",
@@ -249,12 +249,12 @@
    "name": "MAFAZLA"
   },
   {
-   "name": "SAAD",
-   "uid": "X2mcyKLMPMQhWx17AwSBOdLjAr63"
+   "uid": "X2mcyKLMPMQhWx17AwSBOdLjAr63",
+   "name": "SAAD"
   },
   {
-   "name": "RAHUL",
-   "uid": "7QifjUCY46TIhGd8uMfK41WSrIo1"
+   "uid": "7QifjUCY46TIhGd8uMfK41WSrIo1",
+   "name": "RAHUL"
   }
  ],
  "timeFinished": {

@@ -1,29 +1,11 @@
 {
- "timeFinished": {
-  "_seconds": 1587751444,
-  "_nanoseconds": 139000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587750455,
-  "_nanoseconds": 595000000
- },
  "missions": [
   {
-   "team": [
-    "MOOMIN",
-    "LARS"
-   ],
    "numFails": 0,
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "MOOMIN",
-      "LARS"
-     ],
+     "proposer": "MOOMIN",
      "state": "APPROVED",
      "votes": [
       "LARS",
@@ -34,23 +16,25 @@
       "JACOB",
       "MOOMIN"
      ],
-     "proposer": "MOOMIN"
+     "team": [
+      "MOOMIN",
+      "LARS"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "MOOMIN",
+    "LARS"
+   ],
+   "teamSize": 2
   },
   {
-   "state": "FAIL",
-   "team": [
-    "JACK",
-    "SHEEBZ",
-    "JAMES"
-   ],
-   "numFails": 1,
    "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "JACK",
       "JAMES",
@@ -63,11 +47,16 @@
       "JACK",
       "SHEEBZ",
       "JAMES"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 1,
+   "team": [
+    "JACK",
+    "SHEEBZ",
+    "JAMES"
+   ]
   },
   {
    "team": [
@@ -75,63 +64,65 @@
     "MOOMIN",
     "JAMES"
    ],
-   "numFails": 1,
    "teamSize": 3,
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
+     "votes": [
+      "SHEEBZ"
+     ],
      "team": [
       "SHEEBZ",
       "LARS",
       "SCOTT"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "SHEEBZ"
-     ],
-     "proposer": "SHEEBZ"
+     "proposer": "SHEEBZ",
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
+     "proposer": "LARS",
      "team": [
       "LARS",
       "MOOMIN",
       "JAMES"
      ],
-     "state": "APPROVED",
      "votes": [
       "LARS",
       "JACK",
       "JAMES",
       "SHEEBZ",
       "MOOMIN"
-     ],
-     "proposer": "LARS"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
+   "state": "SUCCESS",
+   "failsRequired": 2,
    "team": [
     "JACOB",
     "JAMES",
     "LARS",
     "SCOTT"
    ],
-   "numFails": 0,
    "teamSize": 4,
+   "numFails": 0,
    "proposals": [
     {
+     "votes": [
+      "JACOB",
+      "JACK",
+      "SCOTT"
+     ],
+     "state": "REJECTED",
      "team": [
       "SCOTT",
       "LARS",
       "MOOMIN",
       "JACOB"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "JACOB",
-      "JACK",
-      "SCOTT"
      ],
      "proposer": "SCOTT"
     },
@@ -151,20 +142,18 @@
      ],
      "proposer": "JACOB"
     }
-   ],
-   "failsRequired": 2,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "state": "SUCCESS",
    "team": [
     "JACOB",
     "JAMES",
     "LARS",
     "SCOTT"
    ],
-   "numFails": 0,
    "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -176,23 +165,57 @@
       "JACOB",
       "MOOMIN"
      ],
-     "proposer": "JAMES",
      "team": [
       "JACOB",
       "JAMES",
       "LARS",
       "SCOTT"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "JAMES"
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS"
   }
  ],
+ "timeCreated": {
+  "_seconds": 1587750455,
+  "_nanoseconds": 595000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
+  "votes": [
+   {
+    "MOOMIN": true,
+    "LARS": true
+   },
+   {
+    "JAMES": true,
+    "SHEEBZ": true,
+    "JACK": false
+   },
+   {
+    "LARS": true,
+    "JAMES": true,
+    "MOOMIN": false
+   },
+   {
+    "SCOTT": true,
+    "JAMES": true,
+    "JACOB": true,
+    "LARS": true
+   },
+   {
+    "JACOB": true,
+    "JAMES": true,
+    "LARS": true,
+    "SCOTT": true
+   }
+  ],
   "message": "Three successful missions",
   "state": "GOOD_WIN",
-  "assassinated": "LARS",
   "roles": [
    {
     "name": "LARS",
@@ -200,64 +223,41 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "role": "EVIL MINION",
     "name": "JACK",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "assassin": false
    },
    {
-    "name": "JAMES",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "JAMES"
    },
    {
+    "role": "EVIL MINION",
     "name": "SHEEBZ",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "assassin": true
    },
    {
     "name": "SCOTT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
-    "name": "JACOB",
     "assassin": false,
+    "name": "JACOB",
     "role": "MERLIN"
    },
    {
+    "role": "EVIL MINION",
     "name": "MOOMIN",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "assassin": false
    }
   ],
-  "votes": [
-   {
-    "MOOMIN": true,
-    "LARS": true
-   },
-   {
-    "JACK": false,
-    "JAMES": true,
-    "SHEEBZ": true
-   },
-   {
-    "JAMES": true,
-    "MOOMIN": false,
-    "LARS": true
-   },
-   {
-    "JAMES": true,
-    "SCOTT": true,
-    "JACOB": true,
-    "LARS": true
-   },
-   {
-    "JAMES": true,
-    "SCOTT": true,
-    "JACOB": true,
-    "LARS": true
-   }
-  ]
+  "assassinated": "LARS"
+ },
+ "timeFinished": {
+  "_seconds": 1587751444,
+  "_nanoseconds": 139000000
  },
  "players": [
   {
@@ -265,28 +265,28 @@
    "name": "JACOB"
   },
   {
-   "uid": "sdmkmI5kJib8ddqI6k49z3h6knq2",
-   "name": "JAMES"
+   "name": "JAMES",
+   "uid": "sdmkmI5kJib8ddqI6k49z3h6knq2"
   },
   {
-   "uid": "plWnS1pM9MaAbKbAQwkel8Me29r1",
-   "name": "MOOMIN"
+   "name": "MOOMIN",
+   "uid": "plWnS1pM9MaAbKbAQwkel8Me29r1"
   },
   {
-   "uid": "MAZtvwMwaINUbpcROkAdF6VvumB3",
-   "name": "JACK"
+   "name": "JACK",
+   "uid": "MAZtvwMwaINUbpcROkAdF6VvumB3"
   },
   {
    "uid": "4tIKgZfAEjS1Lf5srY2zTxe9oY02",
    "name": "SHEEBZ"
   },
   {
-   "uid": "U47wD6a8iifY8tspoqG57eyhg5N2",
-   "name": "LARS"
+   "name": "LARS",
+   "uid": "U47wD6a8iifY8tspoqG57eyhg5N2"
   },
   {
-   "name": "SCOTT",
-   "uid": "expBDVV9ZYgQEIYolY5lsZys19X2"
+   "uid": "expBDVV9ZYgQEIYolY5lsZys19X2",
+   "name": "SCOTT"
   }
  ]
 }

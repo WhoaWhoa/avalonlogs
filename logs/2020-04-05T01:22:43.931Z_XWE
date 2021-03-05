@@ -1,23 +1,83 @@
 {
+ "timeCreated": {
+  "_seconds": 1586049763,
+  "_nanoseconds": 931000000
+ },
+ "players": [
+  {
+   "name": "EDWIN",
+   "uid": "k8NE0MajYxRPhTwwVazqFtJGkv93"
+  },
+  {
+   "name": "ROCK",
+   "uid": "NPBhJgMaqbVQCk4s4R7DfS6SIny1"
+  },
+  {
+   "uid": "AX9PkWlKhlh6oDPFYReift0r6803",
+   "name": "ERIC"
+  },
+  {
+   "name": "ROBN",
+   "uid": "RBqDM2eVZdeDrmiCP9PgwCjUPuF2"
+  },
+  {
+   "uid": "TJ42P1awY2a7aEKu8cJLkEwCGl93",
+   "name": "CZ"
+  },
+  {
+   "uid": "TGFET0MCsDSZbLRnQcD1aIcTvbz1",
+   "name": "RUDOLPH"
+  },
+  {
+   "name": "ROB",
+   "uid": "zYxkG5GTR0Q8yBnAeoYAoNj6GGb2"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586050352,
+  "_nanoseconds": 932660000
+ },
  "outcome": {
   "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "EDWIN",
-  "roles": [
+  "votes": [
    {
-    "name": "ROCK",
-    "assassin": false,
-    "role": "MORGANA"
+    "RUDOLPH": false,
+    "ROB": true
    },
    {
-    "assassin": false,
+    "ERIC": true,
+    "RUDOLPH": true,
+    "CZ": true
+   },
+   {
+    "CZ": true,
+    "ERIC": true,
+    "ROBN": true
+   },
+   {
+    "ROB": true,
+    "ERIC": true,
+    "CZ": true,
+    "ROBN": true
+   }
+  ],
+  "assassinated": "EDWIN",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "MORGANA",
+    "name": "ROCK",
+    "assassin": false
+   },
+   {
     "role": "MORDRED",
+    "assassin": false,
     "name": "RUDOLPH"
    },
    {
     "name": "EDWIN",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
     "name": "ERIC",
@@ -25,84 +85,25 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "ROBN",
     "assassin": false,
+    "name": "ROBN",
     "role": "PERCIVAL"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "ROB",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "assassin": true,
     "role": "EVIL MINION",
+    "assassin": true,
     "name": "CZ"
-   }
-  ],
-  "votes": [
-   {
-    "ROB": true,
-    "RUDOLPH": false
-   },
-   {
-    "ERIC": true,
-    "CZ": true,
-    "RUDOLPH": true
-   },
-   {
-    "ROBN": true,
-    "ERIC": true,
-    "CZ": true
-   },
-   {
-    "CZ": true,
-    "ROBN": true,
-    "ERIC": true,
-    "ROB": true
    }
   ]
  },
- "timeFinished": {
-  "_seconds": 1586050352,
-  "_nanoseconds": 932660000
- },
- "players": [
-  {
-   "uid": "k8NE0MajYxRPhTwwVazqFtJGkv93",
-   "name": "EDWIN"
-  },
-  {
-   "uid": "NPBhJgMaqbVQCk4s4R7DfS6SIny1",
-   "name": "ROCK"
-  },
-  {
-   "name": "ERIC",
-   "uid": "AX9PkWlKhlh6oDPFYReift0r6803"
-  },
-  {
-   "uid": "RBqDM2eVZdeDrmiCP9PgwCjUPuF2",
-   "name": "ROBN"
-  },
-  {
-   "uid": "TJ42P1awY2a7aEKu8cJLkEwCGl93",
-   "name": "CZ"
-  },
-  {
-   "name": "RUDOLPH",
-   "uid": "TGFET0MCsDSZbLRnQcD1aIcTvbz1"
-  },
-  {
-   "uid": "zYxkG5GTR0Q8yBnAeoYAoNj6GGb2",
-   "name": "ROB"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586049763,
-  "_nanoseconds": 931000000
- },
  "missions": [
   {
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "ROB",
@@ -116,7 +117,6 @@
       "ROB",
       "RUDOLPH"
      ],
-     "state": "APPROVED",
      "votes": [
       "RUDOLPH",
       "EDWIN",
@@ -124,14 +124,28 @@
       "ROB",
       "CZ"
      ],
-     "proposer": "EDWIN"
+     "proposer": "EDWIN",
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "team": [
+    "CZ",
+    "RUDOLPH",
+    "ERIC"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "CZ",
+      "RUDOLPH",
+      "ERIC"
+     ],
      "votes": [
       "CZ",
       "ROCK",
@@ -141,28 +155,15 @@
       "ROBN",
       "ROB"
      ],
-     "proposer": "ROCK",
-     "team": [
-      "CZ",
-      "RUDOLPH",
-      "ERIC"
-     ],
-     "state": "APPROVED"
+     "proposer": "ROCK"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "CZ",
-    "RUDOLPH",
-    "ERIC"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   "numFails": 0
   },
   {
    "proposals": [
     {
+     "proposer": "ERIC",
      "votes": [
       "EDWIN",
       "ERIC",
@@ -172,34 +173,26 @@
       "ROCK",
       "RUDOLPH"
      ],
-     "proposer": "ERIC",
+     "state": "APPROVED",
      "team": [
       "ERIC",
       "ROBN",
       "CZ"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "numFails": 0,
    "failsRequired": 1,
+   "teamSize": 3,
    "state": "SUCCESS",
    "team": [
     "ERIC",
     "ROBN",
     "CZ"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   ]
   },
   {
-   "team": [
-    "CZ",
-    "ROB",
-    "ROBN",
-    "ERIC"
-   ],
-   "numFails": 0,
-   "teamSize": 4,
+   "state": "SUCCESS",
    "proposals": [
     {
      "team": [
@@ -208,7 +201,6 @@
       "ROBN",
       "ERIC"
      ],
-     "state": "APPROVED",
      "votes": [
       "ROB",
       "CZ",
@@ -218,18 +210,26 @@
       "ERIC",
       "ROBN"
      ],
-     "proposer": "ROBN"
+     "proposer": "ROBN",
+     "state": "APPROVED"
     }
    ],
+   "numFails": 0,
    "failsRequired": 2,
-   "state": "SUCCESS"
+   "team": [
+    "CZ",
+    "ROB",
+    "ROBN",
+    "ERIC"
+   ],
+   "teamSize": 4
   },
   {
    "team": [],
-   "teamSize": 4,
    "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 1
+   "teamSize": 4,
+   "failsRequired": 1,
+   "proposals": []
   }
  ]
 }

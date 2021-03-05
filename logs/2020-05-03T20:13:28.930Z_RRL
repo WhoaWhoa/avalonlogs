@@ -1,24 +1,6 @@
 {
- "timeFinished": {
-  "_seconds": 1588537475,
-  "_nanoseconds": 659000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588536808,
-  "_nanoseconds": 930000000
- },
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "BROWNMAN",
-    "RAYRAY"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
      "team": [
@@ -36,25 +18,33 @@
      "proposer": "BROWNMAN"
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "BROWNMAN",
+    "RAYRAY"
+   ],
+   "teamSize": 2
   },
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS",
    "team": [
     "RAYRAY",
     "BROWNMAN",
     "XIAO"
    ],
-   "numFails": 0,
    "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "RAYRAY",
       "BROWNMAN",
       "XIAO"
      ],
-     "state": "APPROVED",
      "votes": [
       "BROWNMAN",
       "XXY",
@@ -65,19 +55,20 @@
      ],
      "proposer": "XIAO"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "teamSize": 3,
+   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "XIAO",
+    "RAYRAY",
+    "BROWNMAN"
+   ],
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "XXY",
-     "team": [
-      "XIAO",
-      "RAYRAY",
-      "BROWNMAN"
-     ],
-     "state": "APPROVED",
      "votes": [
       "RAYRAY",
       "XIAO",
@@ -85,38 +76,24 @@
       "JW",
       "BROWNMAN",
       "XXY"
-     ]
+     ],
+     "team": [
+      "XIAO",
+      "RAYRAY",
+      "BROWNMAN"
+     ],
+     "proposer": "XXY",
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "XIAO",
-    "RAYRAY",
-    "BROWNMAN"
-   ],
-   "numFails": 1,
-   "teamSize": 3
+   ]
   },
   {
-   "state": "FAIL",
-   "team": [
-    "RA",
-    "RAYRAY",
-    "BROWNMAN",
-    "XIAO"
-   ],
+   "failsRequired": 2,
    "numFails": 2,
    "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "RA",
-      "RAYRAY",
-      "BROWNMAN",
-      "XIAO"
-     ],
-     "state": "APPROVED",
      "votes": [
       "BROWNMAN",
       "XXY",
@@ -126,41 +103,54 @@
       "CHRIS",
       "JW"
      ],
-     "proposer": "RA"
+     "proposer": "RA",
+     "team": [
+      "RA",
+      "RAYRAY",
+      "BROWNMAN",
+      "XIAO"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 2
+   "team": [
+    "RA",
+    "RAYRAY",
+    "BROWNMAN",
+    "XIAO"
+   ]
   },
   {
+   "numFails": 1,
+   "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "XIAO",
     "CHRIS",
     "JW",
     "XXY"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
-     "votes": [],
-     "proposer": "RAYRAY",
      "team": [
       "RAYRAY",
       "JW",
       "XIAO",
       "XXY"
      ],
-     "state": "REJECTED"
+     "proposer": "RAYRAY",
+     "state": "REJECTED",
+     "votes": []
     },
     {
      "state": "APPROVED",
+     "proposer": "CHRIS",
      "votes": [
       "JW",
       "XXY",
       "XIAO",
       "CHRIS"
      ],
-     "proposer": "CHRIS",
      "team": [
       "XIAO",
       "CHRIS",
@@ -169,38 +159,65 @@
      ]
     }
    ],
-   "failsRequired": 1,
    "state": "FAIL"
   }
  ],
  "outcome": {
-  "message": "Three failed missions",
   "state": "EVIL_WIN",
+  "message": "Three failed missions",
   "assassinated": null,
-  "roles": [
+  "votes": [
    {
-    "name": "RAYRAY",
-    "assassin": false,
-    "role": "MORDRED"
+    "BROWNMAN": true,
+    "RAYRAY": true
    },
    {
-    "name": "XIAO",
+    "BROWNMAN": true,
+    "RAYRAY": true,
+    "XIAO": true
+   },
+   {
+    "BROWNMAN": true,
+    "XIAO": true,
+    "RAYRAY": false
+   },
+   {
+    "XIAO": true,
+    "BROWNMAN": true,
+    "RA": false,
+    "RAYRAY": false
+   },
+   {
+    "JW": true,
+    "CHRIS": false,
+    "XIAO": true,
+    "XXY": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "MORDRED",
+    "name": "RAYRAY",
+    "assassin": false
+   },
+   {
     "assassin": false,
+    "name": "XIAO",
     "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "CHRIS",
     "assassin": false,
-    "role": "MORGANA",
-    "name": "CHRIS"
+    "role": "MORGANA"
    },
    {
-    "name": "JW",
     "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "JW"
    },
    {
+    "assassin": false,
     "name": "BROWNMAN",
-    "assassin": false,
     "role": "MERLIN"
    },
    {
@@ -213,35 +230,11 @@
     "assassin": true,
     "role": "EVIL MINION"
    }
-  ],
-  "votes": [
-   {
-    "BROWNMAN": true,
-    "RAYRAY": true
-   },
-   {
-    "BROWNMAN": true,
-    "XIAO": true,
-    "RAYRAY": true
-   },
-   {
-    "BROWNMAN": true,
-    "XIAO": true,
-    "RAYRAY": false
-   },
-   {
-    "RA": false,
-    "XIAO": true,
-    "RAYRAY": false,
-    "BROWNMAN": true
-   },
-   {
-    "CHRIS": false,
-    "XXY": true,
-    "JW": true,
-    "XIAO": true
-   }
   ]
+ },
+ "timeFinished": {
+  "_seconds": 1588537475,
+  "_nanoseconds": 659000000
  },
  "players": [
   {
@@ -257,8 +250,8 @@
    "name": "RA"
   },
   {
-   "name": "RAYRAY",
-   "uid": "r5cmLymM05h85IXGUMhdxfbhPO62"
+   "uid": "r5cmLymM05h85IXGUMhdxfbhPO62",
+   "name": "RAYRAY"
   },
   {
    "name": "CHRIS",
@@ -272,5 +265,12 @@
    "name": "BROWNMAN",
    "uid": "LZF5wloD8zXZy1RQxt4PwpmnRRe2"
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1588536808,
+  "_nanoseconds": 930000000
+ }
 }

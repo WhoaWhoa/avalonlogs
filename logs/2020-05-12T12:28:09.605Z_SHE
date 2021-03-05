@@ -1,22 +1,16 @@
 {
  "missions": [
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "POPO",
-    "SHE"
-   ],
    "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "POPO",
      "team": [
       "POPO",
       "SHE"
      ],
      "state": "APPROVED",
+     "proposer": "POPO",
      "votes": [
       "POPO",
       "SHE",
@@ -26,19 +20,23 @@
       "XEYEANN"
      ]
     }
+   ],
+   "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "POPO",
+    "SHE"
    ]
   },
   {
-   "state": "FAIL",
-   "team": [
-    "POPO",
-    "XEYEANN",
-    "SHELL"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "POPO",
+      "XEYEANN",
+      "SHELL"
+     ],
      "votes": [
       "XAVIER",
       "SHE",
@@ -49,32 +47,30 @@
       "POPO"
      ],
      "proposer": "NOBBY",
-     "team": [
-      "POPO",
-      "XEYEANN",
-      "SHELL"
-     ],
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3,
+   "team": [
+    "POPO",
+    "XEYEANN",
+    "SHELL"
+   ]
   },
   {
-   "team": [
-    "NOBBY",
-    "SHE",
-    "DENISE"
-   ],
+   "failsRequired": 1,
+   "state": "FAIL",
    "numFails": 2,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "NOBBY",
       "SHE",
       "DENISE"
      ],
-     "state": "APPROVED",
      "votes": [
       "DENISE",
       "SHELL",
@@ -86,8 +82,12 @@
      "proposer": "XEYEANN"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3,
+   "team": [
+    "NOBBY",
+    "SHE",
+    "DENISE"
+   ]
   },
   {
    "team": [
@@ -98,8 +98,12 @@
    ],
    "numFails": 0,
    "teamSize": 4,
+   "failsRequired": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "SHELL",
+     "state": "APPROVED",
      "votes": [
       "DENISE",
       "SHELL",
@@ -107,29 +111,17 @@
       "XEYEANN",
       "XAVIER"
      ],
-     "proposer": "SHELL",
      "team": [
       "XAVIER",
       "SHELL",
       "DENISE",
       "POPO"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "failsRequired": 2,
-   "state": "SUCCESS"
+   ]
   },
   {
    "state": "FAIL",
-   "team": [
-    "XEYEANN",
-    "SHELL",
-    "XAVIER",
-    "POPO"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
      "proposer": "XAVIER",
@@ -149,28 +141,62 @@
      ]
     }
    ],
+   "team": [
+    "XEYEANN",
+    "SHELL",
+    "XAVIER",
+    "POPO"
+   ],
+   "numFails": 1,
+   "teamSize": 4,
    "failsRequired": 1
   }
  ],
  "outcome": {
-  "message": "Three failed missions",
   "state": "EVIL_WIN",
-  "assassinated": null,
+  "votes": [
+   {
+    "SHE": true,
+    "POPO": true
+   },
+   {
+    "XEYEANN": false,
+    "POPO": true,
+    "SHELL": true
+   },
+   {
+    "DENISE": true,
+    "SHE": false,
+    "NOBBY": false
+   },
+   {
+    "POPO": true,
+    "DENISE": true,
+    "SHELL": true,
+    "XAVIER": true
+   },
+   {
+    "XAVIER": true,
+    "XEYEANN": false,
+    "SHELL": true,
+    "POPO": true
+   }
+  ],
   "roles": [
    {
     "name": "NOBBY",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": false
    },
    {
+    "role": "EVIL MINION",
     "name": "XEYEANN",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "assassin": true
    },
    {
-    "name": "POPO",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "POPO"
    },
    {
     "name": "XAVIER",
@@ -189,38 +215,23 @@
    },
    {
     "name": "SHELL",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    }
   ],
-  "votes": [
-   {
-    "SHE": true,
-    "POPO": true
-   },
-   {
-    "POPO": true,
-    "SHELL": true,
-    "XEYEANN": false
-   },
-   {
-    "SHE": false,
-    "DENISE": true,
-    "NOBBY": false
-   },
-   {
-    "DENISE": true,
-    "XAVIER": true,
-    "POPO": true,
-    "SHELL": true
-   },
-   {
-    "POPO": true,
-    "SHELL": true,
-    "XEYEANN": false,
-    "XAVIER": true
-   }
-  ]
+  "message": "Three failed missions",
+  "assassinated": null
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1589286489,
+  "_nanoseconds": 605000000
+ },
+ "timeFinished": {
+  "_seconds": 1589286857,
+  "_nanoseconds": 327000000
  },
  "players": [
   {
@@ -228,16 +239,16 @@
    "name": "DENISE"
   },
   {
-   "uid": "wBH28zentFh6o5GZpWICd0B55ai2",
-   "name": "POPO"
+   "name": "POPO",
+   "uid": "wBH28zentFh6o5GZpWICd0B55ai2"
   },
   {
    "name": "NOBBY",
    "uid": "ztZfC6zDjNfefGIyySD4ScR3GtB3"
   },
   {
-   "uid": "hSCYcyKL5iUv1y05jD6f9RmJYiO2",
-   "name": "XEYEANN"
+   "name": "XEYEANN",
+   "uid": "hSCYcyKL5iUv1y05jD6f9RmJYiO2"
   },
   {
    "uid": "m4WD1yy8V8cvQWaq7AARZSUYkEf1",
@@ -248,19 +259,8 @@
    "uid": "qSUNPbf5YNQFtWn0niDOY55Na862"
   },
   {
-   "uid": "NC2E867LCScrT3p1JE4pNjNAql13",
-   "name": "SHE"
+   "name": "SHE",
+   "uid": "NC2E867LCScrT3p1JE4pNjNAql13"
   }
- ],
- "timeFinished": {
-  "_seconds": 1589286857,
-  "_nanoseconds": 327000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1589286489,
-  "_nanoseconds": 605000000
- }
+ ]
 }

@@ -1,65 +1,93 @@
 {
- "timeFinished": {
-  "_seconds": 1585367000,
-  "_nanoseconds": 167316000
- },
- "players": [
-  {
-   "uid": "wanJ8P6MxthP9lfd3yRJ3OpiImy2",
-   "name": "TIFFANY"
-  },
-  {
-   "uid": "8RvYLyv7r1eQBfjqBhe6jPQXmkQ2",
-   "name": "EVRA"
-  },
-  {
-   "uid": "M0Zoj5PQuQYXQ93oRwdfoTFbjXt2",
-   "name": "DICKSON"
-  },
-  {
-   "uid": "5Fumj2DR7pdpPOaNSubyMFFy87b2",
-   "name": "YASH"
-  },
-  {
-   "name": "NICOLAS",
-   "uid": "5fRJchdQRihmaYAowJu40J0iVIv1"
-  },
-  {
-   "uid": "0byXDGR8cCYA6HivK6cA3Kbox5X2",
-   "name": "MAXWELL"
-  },
-  {
-   "uid": "Xy0BDoPouqUXxmIrARjaKCiqpCD2",
-   "name": "JM"
-  },
-  {
-   "uid": "paAbOOy1tTfqkpYUK79Ga5GzzIm2",
-   "name": "JACKY"
-  },
-  {
-   "uid": "IkOK3tdhoFPydwWwW4c55bC2hHf1",
-   "name": "AJ"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585366322,
-  "_nanoseconds": 810000000
+ "outcome": {
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "YASH",
+    "role": "MORDRED",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "JACKY",
+    "role": "MORGANA"
+   },
+   {
+    "name": "DICKSON",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "TIFFANY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "EVRA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JM",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "NICOLAS"
+   },
+   {
+    "name": "MAXWELL",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "AJ",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "MAXWELL": true,
+    "NICOLAS": true,
+    "YASH": false
+   },
+   {
+    "AJ": true,
+    "TIFFANY": true,
+    "JM": false,
+    "EVRA": true
+   },
+   {
+    "NICOLAS": true,
+    "JACKY": false,
+    "DICKSON": true,
+    "TIFFANY": true
+   }
+  ],
+  "assassinated": null
  },
  "missions": [
   {
+   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "JACKY",
-      "DICKSON",
-      "AJ"
-     ],
+     "proposer": "EVRA",
      "state": "REJECTED",
      "votes": [
       "AJ",
       "EVRA"
      ],
-     "proposer": "EVRA"
+     "team": [
+      "JACKY",
+      "DICKSON",
+      "AJ"
+     ]
     },
     {
      "team": [
@@ -67,29 +95,29 @@
       "YASH",
       "NICOLAS"
      ],
-     "state": "REJECTED",
      "votes": [
       "JACKY",
       "TIFFANY",
       "JM",
       "MAXWELL"
      ],
-     "proposer": "DICKSON"
+     "proposer": "DICKSON",
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "AJ",
-      "JACKY",
-      "TIFFANY"
-     ],
-     "state": "REJECTED",
      "votes": [
       "MAXWELL",
       "JACKY",
       "TIFFANY",
       "JM"
      ],
-     "proposer": "YASH"
+     "proposer": "YASH",
+     "team": [
+      "AJ",
+      "JACKY",
+      "TIFFANY"
+     ],
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -108,44 +136,39 @@
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "NICOLAS",
     "YASH",
     "MAXWELL"
    ],
-   "numFails": 1,
-   "teamSize": 3
+   "state": "FAIL"
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "EVRA",
     "JM",
     "TIFFANY",
     "AJ"
    ],
-   "numFails": 1,
-   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
      "state": "REJECTED",
-     "votes": [
-      "EVRA",
-      "MAXWELL",
-      "AJ"
-     ],
-     "proposer": "MAXWELL",
      "team": [
       "MAXWELL",
       "JM",
       "JACKY",
       "AJ"
+     ],
+     "proposer": "MAXWELL",
+     "votes": [
+      "EVRA",
+      "MAXWELL",
+      "AJ"
      ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "JACKY",
       "TIFFANY",
@@ -156,6 +179,7 @@
       "YASH"
      ],
      "proposer": "JM",
+     "state": "APPROVED",
      "team": [
       "EVRA",
       "JM",
@@ -164,26 +188,14 @@
      ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "teamSize": 4
   },
   {
-   "state": "FAIL",
-   "team": [
-    "JACKY",
-    "NICOLAS",
-    "DICKSON",
-    "TIFFANY"
-   ],
-   "numFails": 1,
    "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "JACKY",
-      "NICOLAS",
-      "DICKSON",
-      "TIFFANY"
-     ],
+     "proposer": "JACKY",
      "state": "APPROVED",
      "votes": [
       "JM",
@@ -193,95 +205,83 @@
       "DICKSON",
       "TIFFANY"
      ],
-     "proposer": "JACKY"
+     "team": [
+      "JACKY",
+      "NICOLAS",
+      "DICKSON",
+      "TIFFANY"
+     ]
     }
    ],
-   "failsRequired": 1
-  },
-  {
-   "teamSize": 5,
-   "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 2,
-   "team": []
-  },
-  {
-   "state": "PENDING",
-   "proposals": [],
+   "state": "FAIL",
    "failsRequired": 1,
+   "team": [
+    "JACKY",
+    "NICOLAS",
+    "DICKSON",
+    "TIFFANY"
+   ],
+   "numFails": 1
+  },
+  {
+   "proposals": [],
    "team": [],
+   "state": "PENDING",
+   "failsRequired": 2,
    "teamSize": 5
+  },
+  {
+   "failsRequired": 1,
+   "proposals": [],
+   "teamSize": 5,
+   "team": [],
+   "state": "PENDING"
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "YASH",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "JACKY",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "DICKSON",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "TIFFANY"
-   },
-   {
-    "name": "EVRA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "JM"
-   },
-   {
-    "name": "NICOLAS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MAXWELL",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "AJ",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "NICOLAS": true,
-    "MAXWELL": true,
-    "YASH": false
-   },
-   {
-    "JM": false,
-    "AJ": true,
-    "TIFFANY": true,
-    "EVRA": true
-   },
-   {
-    "JACKY": false,
-    "TIFFANY": true,
-    "DICKSON": true,
-    "NICOLAS": true
-   }
-  ],
-  "message": "Three failed missions"
+ "players": [
+  {
+   "uid": "wanJ8P6MxthP9lfd3yRJ3OpiImy2",
+   "name": "TIFFANY"
+  },
+  {
+   "uid": "8RvYLyv7r1eQBfjqBhe6jPQXmkQ2",
+   "name": "EVRA"
+  },
+  {
+   "uid": "M0Zoj5PQuQYXQ93oRwdfoTFbjXt2",
+   "name": "DICKSON"
+  },
+  {
+   "name": "YASH",
+   "uid": "5Fumj2DR7pdpPOaNSubyMFFy87b2"
+  },
+  {
+   "name": "NICOLAS",
+   "uid": "5fRJchdQRihmaYAowJu40J0iVIv1"
+  },
+  {
+   "uid": "0byXDGR8cCYA6HivK6cA3Kbox5X2",
+   "name": "MAXWELL"
+  },
+  {
+   "name": "JM",
+   "uid": "Xy0BDoPouqUXxmIrARjaKCiqpCD2"
+  },
+  {
+   "name": "JACKY",
+   "uid": "paAbOOy1tTfqkpYUK79Ga5GzzIm2"
+  },
+  {
+   "uid": "IkOK3tdhoFPydwWwW4c55bC2hHf1",
+   "name": "AJ"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1585366322,
+  "_nanoseconds": 810000000
+ },
+ "timeFinished": {
+  "_seconds": 1585367000,
+  "_nanoseconds": 167316000
  }
 }

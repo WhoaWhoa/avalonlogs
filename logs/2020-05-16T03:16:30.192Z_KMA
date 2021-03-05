@@ -1,7 +1,6 @@
 {
- "timeCreated": {
-  "_seconds": 1589598990,
-  "_nanoseconds": 192000000
+ "options": {
+  "inGameLog": false
  },
  "missions": [
   {
@@ -9,8 +8,9 @@
     "CALEBCRAW",
     "LUCY"
    ],
-   "numFails": 0,
    "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -22,15 +22,14 @@
       "MAGICARP",
       "CALEBCRAW"
      ],
-     "proposer": "LUCY",
      "team": [
       "CALEBCRAW",
       "LUCY"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "LUCY"
     }
    ],
-   "failsRequired": 1,
    "state": "SUCCESS"
   },
   {
@@ -39,16 +38,15 @@
     "LUCY",
     "CALEBCRAW"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "KMA",
+     "state": "APPROVED",
      "team": [
       "KMA",
       "LUCY",
       "CALEBCRAW"
      ],
-     "state": "APPROVED",
      "votes": [
       "KMA",
       "REED",
@@ -57,29 +55,17 @@
       "ETTINGER",
       "RBG",
       "LUCY"
-     ],
-     "proposer": "KMA"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3,
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1
   },
   {
-   "team": [
-    "LUCY",
-    "CALEBCRAW",
-    "REED"
-   ],
-   "numFails": 2,
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "LUCY",
-      "CALEBCRAW",
-      "REED"
-     ],
-     "state": "APPROVED",
      "votes": [
       "RBG",
       "LUCY",
@@ -87,70 +73,91 @@
       "MAGICARP",
       "ETTINGER"
      ],
+     "team": [
+      "LUCY",
+      "CALEBCRAW",
+      "REED"
+     ],
+     "state": "APPROVED",
      "proposer": "REED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "team": [
+    "LUCY",
+    "CALEBCRAW",
+    "REED"
+   ],
+   "numFails": 2,
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
+   "team": [
+    "ETTINGER",
+    "KMA",
+    "RBG",
+    "CALEBCRAW"
+   ],
    "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "ETTINGER",
+     "state": "APPROVED",
      "team": [
       "ETTINGER",
       "KMA",
       "RBG",
       "CALEBCRAW"
      ],
-     "state": "APPROVED",
      "votes": [
       "ETTINGER",
       "RBG",
       "KMA",
       "MAGICARP",
       "CALEBCRAW"
-     ]
+     ],
+     "proposer": "ETTINGER"
     }
    ],
-   "failsRequired": 2,
+   "teamSize": 4,
    "state": "SUCCESS",
-   "team": [
-    "ETTINGER",
-    "KMA",
-    "RBG",
-    "CALEBCRAW"
-   ]
+   "failsRequired": 2
   },
   {
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "ETTINGER",
     "MAGICARP",
     "CALEBCRAW",
     "KMA"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "RBG",
-      "LUCY",
-      "REED"
-     ],
-     "proposer": "RBG",
      "team": [
       "RBG",
       "ETTINGER",
       "KMA",
       "LUCY"
+     ],
+     "proposer": "RBG",
+     "state": "REJECTED",
+     "votes": [
+      "RBG",
+      "LUCY",
+      "REED"
      ]
     },
     {
      "state": "APPROVED",
+     "team": [
+      "ETTINGER",
+      "MAGICARP",
+      "CALEBCRAW",
+      "KMA"
+     ],
      "votes": [
       "MAGICARP",
       "CALEBCRAW",
@@ -158,43 +165,62 @@
       "KMA",
       "REED"
      ],
-     "proposer": "MAGICARP",
-     "team": [
-      "ETTINGER",
-      "MAGICARP",
-      "CALEBCRAW",
-      "KMA"
-     ]
+     "proposer": "MAGICARP"
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   }
  ],
  "outcome": {
+  "votes": [
+   {
+    "LUCY": true,
+    "CALEBCRAW": true
+   },
+   {
+    "CALEBCRAW": true,
+    "LUCY": true,
+    "KMA": false
+   },
+   {
+    "CALEBCRAW": true,
+    "LUCY": false,
+    "REED": false
+   },
+   {
+    "ETTINGER": true,
+    "KMA": true,
+    "CALEBCRAW": true,
+    "RBG": true
+   },
+   {
+    "MAGICARP": true,
+    "CALEBCRAW": true,
+    "ETTINGER": true,
+    "KMA": false
+   }
+  ],
   "message": "Three failed missions",
   "state": "EVIL_WIN",
-  "assassinated": null,
   "roles": [
    {
     "name": "RBG",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
+    "role": "OBERON",
     "name": "LUCY",
-    "assassin": false,
-    "role": "OBERON"
+    "assassin": false
    },
    {
+    "role": "MORDRED",
     "name": "KMA",
-    "assassin": false,
-    "role": "MORDRED"
+    "assassin": false
    },
    {
-    "name": "REED",
+    "role": "EVIL MINION",
     "assassin": true,
-    "role": "EVIL MINION"
+    "name": "REED"
    },
    {
     "name": "MAGICARP",
@@ -207,39 +233,12 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "ETTINGER",
     "assassin": false,
+    "name": "ETTINGER",
     "role": "LOYAL FOLLOWER"
    }
   ],
-  "votes": [
-   {
-    "LUCY": true,
-    "CALEBCRAW": true
-   },
-   {
-    "LUCY": true,
-    "CALEBCRAW": true,
-    "KMA": false
-   },
-   {
-    "LUCY": false,
-    "CALEBCRAW": true,
-    "REED": false
-   },
-   {
-    "CALEBCRAW": true,
-    "RBG": true,
-    "ETTINGER": true,
-    "KMA": true
-   },
-   {
-    "ETTINGER": true,
-    "MAGICARP": true,
-    "KMA": false,
-    "CALEBCRAW": true
-   }
-  ]
+  "assassinated": null
  },
  "players": [
   {
@@ -251,31 +250,32 @@
    "name": "RBG"
   },
   {
-   "name": "MAGICARP",
-   "uid": "lEelTnGRYIMjmcYGKNopnMm8gGI3"
+   "uid": "lEelTnGRYIMjmcYGKNopnMm8gGI3",
+   "name": "MAGICARP"
   },
   {
-   "uid": "wedGfA08qqYvb7wkuoIBvvIIWRw1",
-   "name": "CALEBCRAW"
+   "name": "CALEBCRAW",
+   "uid": "wedGfA08qqYvb7wkuoIBvvIIWRw1"
   },
   {
    "uid": "3JGkqcYjrFYQM1oHLCbq17kLwoz1",
    "name": "LUCY"
   },
   {
-   "uid": "HAZYKr3yr4RLUYG9pLAQtkZQMOJ2",
-   "name": "KMA"
+   "name": "KMA",
+   "uid": "HAZYKr3yr4RLUYG9pLAQtkZQMOJ2"
   },
   {
    "name": "REED",
    "uid": "c6GtUfXtUHXM9uVftdmFDhg1T9b2"
   }
  ],
+ "timeCreated": {
+  "_seconds": 1589598990,
+  "_nanoseconds": 192000000
+ },
  "timeFinished": {
   "_seconds": 1589605818,
   "_nanoseconds": 980000000
- },
- "options": {
-  "inGameLog": false
  }
 }

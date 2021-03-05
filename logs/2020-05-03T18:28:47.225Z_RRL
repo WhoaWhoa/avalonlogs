@@ -1,10 +1,75 @@
 {
+ "timeFinished": {
+  "_seconds": 1588531466,
+  "_nanoseconds": 44000000
+ },
+ "outcome": {
+  "assassinated": null,
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "JW": true,
+    "XXY": true
+   },
+   {
+    "XIAO": true,
+    "XXY": true,
+    "JW": true
+   },
+   {
+    "XXY": false,
+    "RA": true,
+    "JW": true,
+    "XIAO": true
+   },
+   {
+    "RAYRAY": true,
+    "CHRIS": false,
+    "XIAO": true
+   },
+   {
+    "RA": true,
+    "CHRIS": false,
+    "JW": true,
+    "XXY": false
+   }
+  ],
+  "roles": [
+   {
+    "name": "CHRIS",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "JW"
+   },
+   {
+    "name": "XXY",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "RA",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "name": "RAYRAY",
+    "assassin": false
+   },
+   {
+    "name": "XIAO",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ]
+ },
  "missions": [
   {
-   "team": [
-    "JW",
-    "XXY"
-   ],
    "numFails": 0,
    "teamSize": 2,
    "proposals": [
@@ -13,28 +78,28 @@
       "JW",
       "XXY"
      ],
-     "state": "APPROVED",
      "votes": [
       "CHRIS",
       "JW",
       "XXY",
       "RAYRAY"
      ],
-     "proposer": "JW"
+     "proposer": "JW",
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "JW",
+    "XXY"
+   ]
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "XXY",
-    "JW",
-    "XIAO"
-   ],
-   "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -45,27 +110,33 @@
       "JW"
      ],
      "proposer": "XIAO",
+     "state": "APPROVED",
      "team": [
       "XXY",
       "JW",
       "XIAO"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "XXY",
+    "JW",
+    "XIAO"
+   ]
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 4,
    "team": [
     "XXY",
     "XIAO",
     "JW",
     "RA"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "XXY",
       "RAYRAY",
@@ -73,24 +144,25 @@
       "CHRIS",
       "JW"
      ],
-     "proposer": "XXY",
      "team": [
       "XXY",
       "XIAO",
       "JW",
       "RA"
      ],
-     "state": "APPROVED"
+     "proposer": "XXY"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [],
+     "state": "REJECTED",
      "proposer": "RA",
      "team": [
       "XIAO",
@@ -113,59 +185,52 @@
      ]
     },
     {
-     "team": [
-      "RAYRAY",
-      "CHRIS",
-      "XIAO"
-     ],
-     "state": "APPROVED",
+     "proposer": "CHRIS",
      "votes": [
       "XXY",
       "RAYRAY",
       "CHRIS",
       "JW"
      ],
-     "proposer": "CHRIS"
+     "team": [
+      "RAYRAY",
+      "CHRIS",
+      "XIAO"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "RAYRAY",
     "CHRIS",
     "XIAO"
    ],
-   "numFails": 1,
-   "teamSize": 3
+   "numFails": 1
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "JW",
     "XXY",
     "RA",
     "CHRIS"
    ],
-   "numFails": 2,
    "teamSize": 4,
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [
+      "JW"
+     ],
      "team": [
       "JW",
       "RA",
       "XIAO",
       "CHRIS"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "JW"
-     ],
      "proposer": "JW"
     },
     {
-     "votes": [
-      "XIAO"
-     ],
      "proposer": "XIAO",
      "team": [
       "XXY",
@@ -173,16 +238,19 @@
       "JW",
       "XIAO"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "XIAO"
+     ]
     },
     {
+     "proposer": "XXY",
      "votes": [
       "CHRIS",
       "JW",
       "XXY",
       "RA"
      ],
-     "proposer": "XXY",
      "team": [
       "JW",
       "XXY",
@@ -192,86 +260,26 @@
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "state": "FAIL",
+   "numFails": 2
   }
  ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "CHRIS",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "name": "JW",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "XXY",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "RA"
-   },
-   {
-    "name": "RAYRAY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "XIAO"
-   }
-  ],
-  "votes": [
-   {
-    "XXY": true,
-    "JW": true
-   },
-   {
-    "XIAO": true,
-    "XXY": true,
-    "JW": true
-   },
-   {
-    "XIAO": true,
-    "XXY": false,
-    "RA": true,
-    "JW": true
-   },
-   {
-    "CHRIS": false,
-    "XIAO": true,
-    "RAYRAY": true
-   },
-   {
-    "XXY": false,
-    "RA": true,
-    "JW": true,
-    "CHRIS": false
-   }
-  ]
+ "timeCreated": {
+  "_seconds": 1588530527,
+  "_nanoseconds": 225000000
  },
  "players": [
   {
-   "name": "XIAO",
-   "uid": "wguKKm8G8dVFMrObcuWAF49yzvJ3"
+   "uid": "wguKKm8G8dVFMrObcuWAF49yzvJ3",
+   "name": "XIAO"
   },
   {
-   "uid": "EMxPnjpwdUfyWQeVwYaaPa4qUID2",
-   "name": "XXY"
+   "name": "XXY",
+   "uid": "EMxPnjpwdUfyWQeVwYaaPa4qUID2"
   },
   {
-   "uid": "RRZ47YSJJQNYV5TAoZ3v8VNnuBB2",
-   "name": "RA"
+   "name": "RA",
+   "uid": "RRZ47YSJJQNYV5TAoZ3v8VNnuBB2"
   },
   {
    "uid": "r5cmLymM05h85IXGUMhdxfbhPO62",
@@ -286,15 +294,7 @@
    "name": "JW"
   }
  ],
- "timeFinished": {
-  "_seconds": 1588531466,
-  "_nanoseconds": 44000000
- },
  "options": {
   "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588530527,
-  "_nanoseconds": 225000000
  }
 }

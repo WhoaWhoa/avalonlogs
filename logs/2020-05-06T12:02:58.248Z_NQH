@@ -1,9 +1,128 @@
 {
+ "players": [
+  {
+   "name": "JAKE",
+   "uid": "OFOjvdWr8QecpxxrdMlS0VIgfZV2"
+  },
+  {
+   "name": "SHER",
+   "uid": "iqugLEWVadNQyJzoRMOdCit5uQr2"
+  },
+  {
+   "name": "JOHN",
+   "uid": "4ajxUlhwR5gX5e3BnGxFkgIbhCI3"
+  },
+  {
+   "name": "RON",
+   "uid": "d5LwK9o6aCaHk9kLgzg8qF7qQb03"
+  },
+  {
+   "uid": "dqqFBsDTHWSQTtr6D7MAD9l8SS63",
+   "name": "DUANE"
+  },
+  {
+   "name": "KEN",
+   "uid": "vSMdPcJjhmcUhRQqHCVN0vez9g32"
+  },
+  {
+   "name": "VITTO",
+   "uid": "9FX30zagLRSYuNPQDChdzcYb9C02"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1588766578,
+  "_nanoseconds": 248000000
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "roles": [
+   {
+    "name": "JAKE",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "SHER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "KEN"
+   },
+   {
+    "name": "JOHN",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "RON",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "VITTO"
+   },
+   {
+    "name": "DUANE",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "votes": [
+   {
+    "KEN": true,
+    "SHER": false
+   },
+   {
+    "VITTO": true,
+    "DUANE": true,
+    "KEN": true
+   },
+   {
+    "JAKE": true,
+    "KEN": true,
+    "RON": false
+   },
+   {
+    "VITTO": false,
+    "JAKE": true,
+    "DUANE": true,
+    "JOHN": true
+   },
+   {
+    "JAKE": true,
+    "DUANE": true,
+    "JOHN": true,
+    "VITTO": false
+   }
+  ],
+  "message": "Three failed missions"
+ },
+ "timeFinished": {
+  "_seconds": 1588767668,
+  "_nanoseconds": 740000000
+ },
  "missions": [
   {
+   "team": [
+    "SHER",
+    "KEN"
+   ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "KEN",
      "votes": [
       "RON",
       "DUANE",
@@ -11,31 +130,24 @@
       "KEN",
       "JOHN"
      ],
-     "proposer": "KEN",
      "team": [
       "SHER",
       "KEN"
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "SHER",
-    "KEN"
-   ],
-   "numFails": 1,
    "teamSize": 2
   },
   {
    "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 3,
+   "failsRequired": 1,
    "team": [
     "VITTO",
     "KEN",
     "DUANE"
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "proposer": "VITTO",
@@ -52,46 +164,37 @@
       "RON"
      ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
    "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "JAKE",
     "KEN",
     "RON"
    ],
-   "numFails": 1,
+   "state": "FAIL",
    "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "JAKE",
-      "KEN",
-      "RON"
-     ],
-     "state": "APPROVED",
      "votes": [
       "JOHN",
       "RON",
       "VITTO",
       "JAKE"
      ],
-     "proposer": "JAKE"
+     "state": "APPROVED",
+     "proposer": "JAKE",
+     "team": [
+      "JAKE",
+      "KEN",
+      "RON"
+     ]
     }
    ]
   },
   {
-   "team": [
-    "JOHN",
-    "JAKE",
-    "DUANE",
-    "VITTO"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -117,27 +220,28 @@
       "DUANE",
       "JAKE"
      ],
-     "proposer": "JOHN",
      "team": [
       "JOHN",
       "JAKE",
       "DUANE",
       "VITTO"
-     ]
+     ],
+     "proposer": "JOHN"
     }
    ],
+   "state": "SUCCESS",
+   "teamSize": 4,
    "failsRequired": 2,
-   "state": "SUCCESS"
+   "team": [
+    "JOHN",
+    "JAKE",
+    "DUANE",
+    "VITTO"
+   ],
+   "numFails": 1
   },
   {
-   "team": [
-    "DUANE",
-    "VITTO",
-    "JAKE",
-    "JOHN"
-   ],
    "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
      "state": "REJECTED",
@@ -154,135 +258,31 @@
      ]
     },
     {
-     "team": [
-      "DUANE",
-      "VITTO",
-      "JAKE",
-      "JOHN"
-     ],
      "state": "APPROVED",
+     "proposer": "DUANE",
      "votes": [
       "RON",
       "VITTO",
       "DUANE",
       "SHER"
      ],
-     "proposer": "DUANE"
+     "team": [
+      "DUANE",
+      "VITTO",
+      "JAKE",
+      "JOHN"
+     ]
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "DUANE",
+    "VITTO",
+    "JAKE",
+    "JOHN"
+   ],
+   "state": "FAIL",
+   "teamSize": 4
   }
- ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "JAKE",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "SHER",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "KEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JOHN",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "RON",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "VITTO",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "DUANE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "SHER": false,
-    "KEN": true
-   },
-   {
-    "KEN": true,
-    "VITTO": true,
-    "DUANE": true
-   },
-   {
-    "JAKE": true,
-    "RON": false,
-    "KEN": true
-   },
-   {
-    "JAKE": true,
-    "JOHN": true,
-    "DUANE": true,
-    "VITTO": false
-   },
-   {
-    "JAKE": true,
-    "JOHN": true,
-    "DUANE": true,
-    "VITTO": false
-   }
-  ]
- },
- "players": [
-  {
-   "uid": "OFOjvdWr8QecpxxrdMlS0VIgfZV2",
-   "name": "JAKE"
-  },
-  {
-   "uid": "iqugLEWVadNQyJzoRMOdCit5uQr2",
-   "name": "SHER"
-  },
-  {
-   "name": "JOHN",
-   "uid": "4ajxUlhwR5gX5e3BnGxFkgIbhCI3"
-  },
-  {
-   "name": "RON",
-   "uid": "d5LwK9o6aCaHk9kLgzg8qF7qQb03"
-  },
-  {
-   "uid": "dqqFBsDTHWSQTtr6D7MAD9l8SS63",
-   "name": "DUANE"
-  },
-  {
-   "uid": "vSMdPcJjhmcUhRQqHCVN0vez9g32",
-   "name": "KEN"
-  },
-  {
-   "uid": "9FX30zagLRSYuNPQDChdzcYb9C02",
-   "name": "VITTO"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1588767668,
-  "_nanoseconds": 740000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588766578,
-  "_nanoseconds": 248000000
- }
+ ]
 }

@@ -6,20 +6,42 @@
  "missions": [
   {
    "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "MORLIN",
     "ANIKETH"
    ],
-   "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
-     "proposer": "MORLIN",
+     "state": "APPROVED",
+     "votes": [
+      "CHAITHANYA",
+      "MORLIN",
+      "ANIKETH",
+      "ABHIJIT",
+      "BANANA",
+      "LBJ"
+     ],
      "team": [
       "MORLIN",
       "ANIKETH"
      ],
+     "proposer": "MORLIN"
+    }
+   ]
+  },
+  {
+   "proposals": [
+    {
      "state": "APPROVED",
+     "team": [
+      "ANIKETH",
+      "MORLIN",
+      "BANANA"
+     ],
+     "proposer": "ANIKETH",
      "votes": [
       "CHAITHANYA",
       "MORLIN",
@@ -30,36 +52,14 @@
      ]
     }
    ],
-   "failsRequired": 1
-  },
-  {
    "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "ANIKETH",
     "MORLIN",
     "BANANA"
    ],
    "numFails": 0,
-   "teamSize": 3,
-   "proposals": [
-    {
-     "team": [
-      "ANIKETH",
-      "MORLIN",
-      "BANANA"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "CHAITHANYA",
-      "MORLIN",
-      "ANIKETH",
-      "ABHIJIT",
-      "BANANA",
-      "LBJ"
-     ],
-     "proposer": "ANIKETH"
-    }
-   ],
    "failsRequired": 1
   },
   {
@@ -69,7 +69,6 @@
     "BANANA",
     "MORLIN"
    ],
-   "numFails": 0,
    "teamSize": 4,
    "proposals": [
     {
@@ -81,88 +80,35 @@
       "BANANA",
       "LBJ"
      ],
-     "proposer": "ABHIJIT",
      "team": [
       "ABHIJIT",
       "ANIKETH",
       "BANANA",
       "MORLIN"
      ],
+     "proposer": "ABHIJIT",
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
+   "state": "PENDING",
+   "proposals": [],
    "team": [],
    "teamSize": 3,
-   "state": "PENDING",
-   "proposals": [],
    "failsRequired": 1
   },
   {
-   "team": [],
-   "teamSize": 4,
    "state": "PENDING",
+   "failsRequired": 1,
    "proposals": [],
-   "failsRequired": 1
+   "team": [],
+   "teamSize": 4
   }
  ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "ABHIJIT",
-  "roles": [
-   {
-    "name": "ANIKETH",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ABHIJIT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "BANANA",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "LBJ",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "CHAITHANYA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MORLIN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "MORLIN": true,
-    "ANIKETH": true
-   },
-   {
-    "BANANA": true,
-    "MORLIN": true,
-    "ANIKETH": true
-   },
-   {
-    "BANANA": true,
-    "ABHIJIT": true,
-    "MORLIN": true,
-    "ANIKETH": true
-   }
-  ],
-  "message": "Three successful missions"
- },
  "timeFinished": {
   "_seconds": 1586585027,
   "_nanoseconds": 781503000
@@ -173,8 +119,8 @@
    "name": "CHAITHANYA"
   },
   {
-   "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3",
-   "name": "MORLIN"
+   "name": "MORLIN",
+   "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3"
   },
   {
    "name": "ANIKETH",
@@ -185,12 +131,66 @@
    "uid": "EccvBFC0axSC6fAdNR0WC6sNsB33"
   },
   {
-   "uid": "MZNNYGz2dyObT9G5nUSdpYmwN652",
-   "name": "LBJ"
+   "name": "LBJ",
+   "uid": "MZNNYGz2dyObT9G5nUSdpYmwN652"
   },
   {
-   "uid": "weox9NOyNDZiyKTtPDAXxvazdFV2",
-   "name": "BANANA"
+   "name": "BANANA",
+   "uid": "weox9NOyNDZiyKTtPDAXxvazdFV2"
   }
- ]
+ ],
+ "outcome": {
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "ANIKETH": true,
+    "MORLIN": true
+   },
+   {
+    "MORLIN": true,
+    "ANIKETH": true,
+    "BANANA": true
+   },
+   {
+    "ANIKETH": true,
+    "ABHIJIT": true,
+    "BANANA": true,
+    "MORLIN": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "ANIKETH"
+   },
+   {
+    "name": "ABHIJIT",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "BANANA"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "LBJ"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "CHAITHANYA"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "MORLIN",
+    "assassin": true
+   }
+  ],
+  "assassinated": "ABHIJIT",
+  "state": "GOOD_WIN"
+ }
 }

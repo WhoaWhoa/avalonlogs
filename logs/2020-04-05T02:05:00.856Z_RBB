@@ -1,7 +1,59 @@
 {
+ "players": [
+  {
+   "name": "JACK",
+   "uid": "BpVSg7CRg1aZv9so7JIsVSbKzr72"
+  },
+  {
+   "name": "JOHN",
+   "uid": "p9UniZas1vQ2sw9gY5JdIFb6ua03"
+  },
+  {
+   "uid": "qmVhGH90D5Ww2PbJ786o10HwFTO2",
+   "name": "LAUREN"
+  },
+  {
+   "name": "SUZI",
+   "uid": "YHHvIsdf2BZnRqGEMdGZSwPWbn23"
+  },
+  {
+   "name": "GRAEME",
+   "uid": "4X2HvbND0TSzCaOEy1NSqFHnYqz1"
+  },
+  {
+   "name": "GRACE",
+   "uid": "GJSjikNSG1RxDa1IyYMG2BtvnFg2"
+  },
+  {
+   "name": "PAPAFORMAN",
+   "uid": "9VEPp5rQSafs7kIGjdm8bGiQq0u1"
+  }
+ ],
  "outcome": {
-  "message": "Merlin assassinated",
   "state": "EVIL_WIN",
+  "votes": [
+   {
+    "GRAEME": true,
+    "PAPAFORMAN": true
+   },
+   {
+    "GRAEME": true,
+    "PAPAFORMAN": true,
+    "JACK": false
+   },
+   {
+    "PAPAFORMAN": true,
+    "JACK": true,
+    "LAUREN": true
+   },
+   {
+    "GRAEME": true,
+    "PAPAFORMAN": true,
+    "JACK": false,
+    "LAUREN": true
+   }
+  ],
+  "message": "Merlin assassinated",
   "assassinated": "PAPAFORMAN",
   "roles": [
    {
@@ -10,14 +62,14 @@
     "role": "MORGANA"
    },
    {
-    "name": "LAUREN",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "LAUREN"
    },
    {
     "name": "SUZI",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
     "name": "GRAEME",
@@ -35,31 +87,9 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "role": "MERLIN",
     "name": "PAPAFORMAN",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "votes": [
-   {
-    "GRAEME": true,
-    "PAPAFORMAN": true
-   },
-   {
-    "GRAEME": true,
-    "PAPAFORMAN": true,
-    "JACK": false
-   },
-   {
-    "JACK": true,
-    "PAPAFORMAN": true,
-    "LAUREN": true
-   },
-   {
-    "GRAEME": true,
-    "PAPAFORMAN": true,
-    "LAUREN": true,
-    "JACK": false
+    "assassin": false
    }
   ]
  },
@@ -67,50 +97,14 @@
   "_seconds": 1586053044,
   "_nanoseconds": 252736000
  },
- "players": [
-  {
-   "uid": "BpVSg7CRg1aZv9so7JIsVSbKzr72",
-   "name": "JACK"
-  },
-  {
-   "name": "JOHN",
-   "uid": "p9UniZas1vQ2sw9gY5JdIFb6ua03"
-  },
-  {
-   "uid": "qmVhGH90D5Ww2PbJ786o10HwFTO2",
-   "name": "LAUREN"
-  },
-  {
-   "uid": "YHHvIsdf2BZnRqGEMdGZSwPWbn23",
-   "name": "SUZI"
-  },
-  {
-   "uid": "4X2HvbND0TSzCaOEy1NSqFHnYqz1",
-   "name": "GRAEME"
-  },
-  {
-   "name": "GRACE",
-   "uid": "GJSjikNSG1RxDa1IyYMG2BtvnFg2"
-  },
-  {
-   "name": "PAPAFORMAN",
-   "uid": "9VEPp5rQSafs7kIGjdm8bGiQq0u1"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586052300,
-  "_nanoseconds": 856000000
- },
  "missions": [
   {
-   "team": [
-    "PAPAFORMAN",
-    "GRAEME"
-   ],
    "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "SUZI",
       "GRAEME",
@@ -124,29 +118,28 @@
      "team": [
       "PAPAFORMAN",
       "GRAEME"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "PAPAFORMAN",
+    "GRAEME"
+   ],
+   "failsRequired": 1
   },
   {
    "state": "FAIL",
+   "teamSize": 3,
+   "numFails": 1,
    "team": [
     "JACK",
     "PAPAFORMAN",
     "GRAEME"
    ],
-   "numFails": 1,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "JACK",
-      "PAPAFORMAN",
-      "GRAEME"
-     ],
+     "proposer": "JACK",
      "state": "APPROVED",
      "votes": [
       "SUZI",
@@ -156,29 +149,32 @@
       "GRACE",
       "LAUREN"
      ],
-     "proposer": "JACK"
+     "team": [
+      "JACK",
+      "PAPAFORMAN",
+      "GRAEME"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "JACK",
     "LAUREN",
     "PAPAFORMAN"
    ],
-   "numFails": 0,
    "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "REJECTED",
+     "proposer": "JOHN",
      "votes": [
       "JOHN",
       "GRACE",
       "SUZI"
      ],
-     "proposer": "JOHN",
      "team": [
       "JOHN",
       "JACK",
@@ -186,11 +182,6 @@
      ]
     },
     {
-     "team": [
-      "JACK",
-      "LAUREN",
-      "PAPAFORMAN"
-     ],
      "state": "APPROVED",
      "votes": [
       "JACK",
@@ -199,44 +190,35 @@
       "LAUREN",
       "SUZI"
      ],
+     "team": [
+      "JACK",
+      "LAUREN",
+      "PAPAFORMAN"
+     ],
      "proposer": "LAUREN"
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS"
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "GRAEME",
-    "JACK",
-    "PAPAFORMAN",
-    "LAUREN"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "JOHN",
-      "GRACE",
-      "LAUREN"
-     ],
-     "proposer": "SUZI",
+     "state": "REJECTED",
      "team": [
       "LAUREN",
       "JACK",
       "PAPAFORMAN",
       "SUZI"
      ],
-     "state": "REJECTED"
+     "proposer": "SUZI",
+     "votes": [
+      "JOHN",
+      "GRACE",
+      "LAUREN"
+     ]
     },
     {
-     "team": [
-      "GRAEME",
-      "JACK",
-      "PAPAFORMAN",
-      "LAUREN"
-     ],
+     "proposer": "GRAEME",
      "state": "APPROVED",
      "votes": [
       "LAUREN",
@@ -245,17 +227,35 @@
       "JOHN",
       "PAPAFORMAN"
      ],
-     "proposer": "GRAEME"
+     "team": [
+      "GRAEME",
+      "JACK",
+      "PAPAFORMAN",
+      "LAUREN"
+     ]
     }
    ],
-   "failsRequired": 2
+   "failsRequired": 2,
+   "state": "SUCCESS",
+   "numFails": 1,
+   "team": [
+    "GRAEME",
+    "JACK",
+    "PAPAFORMAN",
+    "LAUREN"
+   ],
+   "teamSize": 4
   },
   {
-   "team": [],
-   "teamSize": 4,
-   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
+   "state": "PENDING",
+   "failsRequired": 1,
+   "teamSize": 4,
+   "team": []
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1586052300,
+  "_nanoseconds": 856000000
+ }
 }

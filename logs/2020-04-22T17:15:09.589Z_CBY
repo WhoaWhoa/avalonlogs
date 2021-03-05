@@ -1,4 +1,89 @@
 {
+ "players": [
+  {
+   "uid": "vrNkKKHYoBP3nmouJuLWamgK82i2",
+   "name": "HOTTIE"
+  },
+  {
+   "name": "YODDLS",
+   "uid": "vPSceSdbA3h85a4kvKR9YiHv0513"
+  },
+  {
+   "uid": "AaMft9PvYRMz0r12PGJzpBbZ8d02",
+   "name": "NISH"
+  },
+  {
+   "uid": "NWgj6KVlNgWAT1I6FvXNYMpKZ382",
+   "name": "SHIVANI"
+  },
+  {
+   "uid": "7HUOGrGuy9azjzxxu3u1X4D11KE2",
+   "name": "EREN"
+  },
+  {
+   "uid": "L91mXOUOeXSIT0f2K0nlW1yHaYT2",
+   "name": "SHEZZ"
+  }
+ ],
+ "outcome": {
+  "assassinated": null,
+  "votes": [
+   {
+    "HOTTIE": true,
+    "NISH": true
+   },
+   {
+    "SHIVANI": false,
+    "YODDLS": true,
+    "SHEZZ": true
+   },
+   {
+    "YODDLS": true,
+    "NISH": true,
+    "HOTTIE": true,
+    "SHIVANI": false
+   },
+   {
+    "HOTTIE": true,
+    "SHIVANI": false,
+    "YODDLS": true
+   }
+  ],
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "role": "MORGANA",
+    "name": "SHIVANI",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "NISH"
+   },
+   {
+    "name": "HOTTIE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "name": "SHEZZ",
+    "role": "MORDRED"
+   },
+   {
+    "name": "EREN",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "YODDLS",
+    "assassin": false
+   }
+  ],
+  "state": "EVIL_WIN"
+ },
  "timeFinished": {
   "_seconds": 1587576313,
   "_nanoseconds": 330000000
@@ -12,30 +97,30 @@
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "NISH",
     "HOTTIE"
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 2,
    "proposals": [
     {
-     "proposer": "EREN",
+     "state": "APPROVED",
      "team": [
       "NISH",
       "HOTTIE"
      ],
-     "state": "APPROVED",
      "votes": [
       "NISH",
       "HOTTIE",
       "EREN",
       "YODDLS"
-     ]
+     ],
+     "proposer": "EREN"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
    "team": [
@@ -45,28 +130,29 @@
    ],
    "numFails": 1,
    "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "SHEZZ",
+     "state": "REJECTED",
      "team": [
       "SHIVANI",
       "YODDLS",
       "HOTTIE"
      ],
-     "state": "REJECTED",
      "votes": [
       "HOTTIE",
       "SHEZZ"
-     ],
-     "proposer": "SHEZZ"
+     ]
     },
     {
+     "proposer": "HOTTIE",
      "votes": [
       "YODDLS",
       "SHIVANI",
       "HOTTIE",
       "SHEZZ"
      ],
-     "proposer": "HOTTIE",
      "team": [
       "YODDLS",
       "SHEZZ",
@@ -75,49 +161,17 @@
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "team": [
-    "HOTTIE",
-    "YODDLS",
-    "NISH",
-    "SHIVANI"
-   ],
-   "numFails": 1,
+   "state": "FAIL",
    "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "NISH",
-      "HOTTIE",
-      "SHEZZ",
-      "EREN",
-      "YODDLS",
-      "SHIVANI"
-     ],
-     "proposer": "YODDLS",
      "team": [
       "HOTTIE",
       "YODDLS",
       "NISH",
-      "SHIVANI"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
-  },
-  {
-   "numFails": 1,
-   "teamSize": 3,
-   "proposals": [
-    {
-     "team": [
-      "HOTTIE",
-      "YODDLS",
       "SHIVANI"
      ],
      "state": "APPROVED",
@@ -129,108 +183,54 @@
       "YODDLS",
       "SHIVANI"
      ],
-     "proposer": "NISH"
+     "proposer": "YODDLS"
     }
    ],
+   "team": [
+    "HOTTIE",
+    "YODDLS",
+    "NISH",
+    "SHIVANI"
+   ],
+   "numFails": 1,
+   "failsRequired": 1
+  },
+  {
    "failsRequired": 1,
-   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3,
    "team": [
     "HOTTIE",
     "YODDLS",
     "SHIVANI"
+   ],
+   "state": "FAIL",
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "proposer": "NISH",
+     "votes": [
+      "NISH",
+      "HOTTIE",
+      "SHEZZ",
+      "EREN",
+      "YODDLS",
+      "SHIVANI"
+     ],
+     "team": [
+      "HOTTIE",
+      "YODDLS",
+      "SHIVANI"
+     ]
+    }
    ]
   },
   {
+   "team": [],
    "teamSize": 4,
    "state": "PENDING",
-   "proposals": [],
    "failsRequired": 1,
-   "team": []
-  }
- ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "SHIVANI",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "NISH",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "HOTTIE"
-   },
-   {
-    "name": "SHEZZ",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "EREN"
-   },
-   {
-    "name": "YODDLS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "HOTTIE": true,
-    "NISH": true
-   },
-   {
-    "SHIVANI": false,
-    "YODDLS": true,
-    "SHEZZ": true
-   },
-   {
-    "HOTTIE": true,
-    "NISH": true,
-    "SHIVANI": false,
-    "YODDLS": true
-   },
-   {
-    "HOTTIE": true,
-    "SHIVANI": false,
-    "YODDLS": true
-   }
-  ],
-  "message": "Three failed missions"
- },
- "players": [
-  {
-   "uid": "vrNkKKHYoBP3nmouJuLWamgK82i2",
-   "name": "HOTTIE"
-  },
-  {
-   "name": "YODDLS",
-   "uid": "vPSceSdbA3h85a4kvKR9YiHv0513"
-  },
-  {
-   "name": "NISH",
-   "uid": "AaMft9PvYRMz0r12PGJzpBbZ8d02"
-  },
-  {
-   "uid": "NWgj6KVlNgWAT1I6FvXNYMpKZ382",
-   "name": "SHIVANI"
-  },
-  {
-   "uid": "7HUOGrGuy9azjzxxu3u1X4D11KE2",
-   "name": "EREN"
-  },
-  {
-   "uid": "L91mXOUOeXSIT0f2K0nlW1yHaYT2",
-   "name": "SHEZZ"
+   "proposals": []
   }
  ]
 }

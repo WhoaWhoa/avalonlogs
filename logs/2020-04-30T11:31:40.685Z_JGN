@@ -1,10 +1,77 @@
 {
+ "outcome": {
+  "votes": [
+   {
+    "MICHI": true,
+    "ANDIE": true
+   },
+   {
+    "MICHISUX": false,
+    "PATTYWAP": true,
+    "CHI": true
+   },
+   {
+    "PATTYWAP": true,
+    "ANDIE": true,
+    "MICHI": false
+   },
+   {
+    "CHI": true,
+    "MICHI": true,
+    "ANDIE": true,
+    "JEFFREY": true
+   },
+   {
+    "ANDIE": true,
+    "MICHI": false,
+    "JEFFREY": true,
+    "CHI": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "CHI",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JEFFREY",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "JOYCE",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "MICHISUX",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "name": "MICHI",
+    "assassin": false
+   },
+   {
+    "name": "ANDIE",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "name": "PATTYWAP",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "message": "Three failed missions"
+ },
  "timeFinished": {
   "_seconds": 1588246902,
   "_nanoseconds": 727000000
- },
- "options": {
-  "inGameLog": false
  },
  "timeCreated": {
   "_seconds": 1588246300,
@@ -12,51 +79,51 @@
  },
  "missions": [
   {
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "ANDIE",
+    "MICHI"
+   ],
    "proposals": [
     {
      "team": [
       "ANDIE",
       "MICHI"
      ],
-     "state": "APPROVED",
+     "proposer": "ANDIE",
      "votes": [
       "PATTYWAP",
       "JEFFREY",
       "JOYCE",
       "MICHI"
      ],
-     "proposer": "ANDIE"
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "ANDIE",
-    "MICHI"
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   ]
   },
   {
+   "teamSize": 3,
    "team": [
     "MICHISUX",
     "CHI",
     "PATTYWAP"
    ],
    "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "MICHI"
-     ],
      "proposer": "MICHI",
+     "state": "REJECTED",
      "team": [
       "MICHI",
       "ANDIE",
       "MICHISUX"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "MICHI"
+     ]
     },
     {
      "state": "REJECTED",
@@ -64,14 +131,15 @@
       "CHI",
       "JOYCE"
      ],
-     "proposer": "CHI",
      "team": [
       "CHI",
       "ANDIE",
       "MICHI"
-     ]
+     ],
+     "proposer": "CHI"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "JEFFREY",
       "JOYCE",
@@ -82,21 +150,20 @@
       "JEFFREY",
       "ANDIE",
       "MICHI"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "PATTYWAP",
-      "JOYCE"
-     ],
-     "proposer": "JOYCE",
      "team": [
       "JOYCE",
       "MICHISUX",
       "CHI"
-     ]
+     ],
+     "proposer": "JOYCE",
+     "votes": [
+      "PATTYWAP",
+      "JOYCE"
+     ],
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -108,19 +175,21 @@
       "JOYCE",
       "MICHISUX"
      ],
-     "proposer": "MICHISUX",
      "team": [
       "MICHISUX",
       "CHI",
       "PATTYWAP"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "MICHISUX"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
+   "teamSize": 3,
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "PATTYWAP",
@@ -128,9 +197,9 @@
     "MICHI"
    ],
    "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "PATTYWAP",
      "team": [
       "PATTYWAP",
       "ANDIE",
@@ -143,30 +212,16 @@
       "CHI",
       "JEFFREY",
       "MICHI"
-     ],
-     "proposer": "PATTYWAP"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "ANDIE",
-    "MICHI",
-    "JEFFREY",
-    "CHI"
-   ],
-   "numFails": 0,
    "teamSize": 4,
+   "state": "SUCCESS",
+   "failsRequired": 2,
    "proposals": [
     {
-     "team": [
-      "ANDIE",
-      "MICHI",
-      "JEFFREY",
-      "CHI"
-     ],
      "state": "APPROVED",
      "votes": [
       "MICHI",
@@ -174,23 +229,35 @@
       "CHI",
       "JEFFREY"
      ],
-     "proposer": "ANDIE"
+     "proposer": "ANDIE",
+     "team": [
+      "ANDIE",
+      "MICHI",
+      "JEFFREY",
+      "CHI"
+     ]
     }
    ],
-   "failsRequired": 2
+   "numFails": 0,
+   "team": [
+    "ANDIE",
+    "MICHI",
+    "JEFFREY",
+    "CHI"
+   ]
   },
   {
-   "state": "FAIL",
    "team": [
     "MICHI",
     "ANDIE",
     "JEFFREY",
     "CHI"
    ],
+   "failsRequired": 1,
    "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "CHI",
       "JEFFREY",
@@ -203,111 +270,44 @@
       "ANDIE",
       "JEFFREY",
       "CHI"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "state": "FAIL",
+   "teamSize": 4
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "CHI",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "JEFFREY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "JOYCE"
-   },
-   {
-    "name": "MICHISUX",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "MICHI",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "ANDIE",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "PATTYWAP",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "MICHI": true,
-    "ANDIE": true
-   },
-   {
-    "MICHISUX": false,
-    "CHI": true,
-    "PATTYWAP": true
-   },
-   {
-    "MICHI": false,
-    "PATTYWAP": true,
-    "ANDIE": true
-   },
-   {
-    "JEFFREY": true,
-    "MICHI": true,
-    "CHI": true,
-    "ANDIE": true
-   },
-   {
-    "JEFFREY": true,
-    "MICHI": false,
-    "CHI": true,
-    "ANDIE": true
-   }
-  ],
-  "message": "Three failed missions"
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
-   "name": "CHI",
-   "uid": "XNxGKI06NeeZkxBLk5ZDYb90Rwa2"
+   "uid": "XNxGKI06NeeZkxBLk5ZDYb90Rwa2",
+   "name": "CHI"
   },
   {
    "uid": "6j8x1t74EPT5HlGjlw6UlrH9vlD3",
    "name": "JEFFREY"
   },
   {
-   "uid": "VuXwMC4Tg9ep9AAakEkxOHNFq2Z2",
-   "name": "JOYCE"
+   "name": "JOYCE",
+   "uid": "VuXwMC4Tg9ep9AAakEkxOHNFq2Z2"
   },
   {
    "uid": "go21W2md6kQ7I61bTByxqlRiaQF2",
    "name": "MICHISUX"
   },
   {
-   "name": "PATTYWAP",
-   "uid": "chKjep3PXPVuXV2CNQHgkGJySZ33"
+   "uid": "chKjep3PXPVuXV2CNQHgkGJySZ33",
+   "name": "PATTYWAP"
   },
   {
    "name": "ANDIE",
    "uid": "9f1x3TcOGgTD9wNsqYtQPcZ5otJ3"
   },
   {
-   "uid": "9xvziqOuVSMznhIGczBkRjK1jO72",
-   "name": "MICHI"
+   "name": "MICHI",
+   "uid": "9xvziqOuVSMznhIGczBkRjK1jO72"
   }
  ]
 }

@@ -1,16 +1,18 @@
 {
  "missions": [
   {
-   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "SHAWN",
     "NOTVAL",
     "VICTORIA"
    ],
-   "numFails": 0,
    "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "NOTVIN",
      "team": [
       "SHAWN",
       "NOTVAL",
@@ -27,16 +29,23 @@
       "MICHELLE",
       "NOTVAL",
       "SHAWN"
-     ],
-     "proposer": "NOTVIN"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "VICTORIA",
+     "team": [
+      "VICTORIA",
+      "SHAWN",
+      "IRISUWU",
+      "NOTVAL"
+     ],
      "votes": [
       "SHAWN",
       "CASSIE",
@@ -47,18 +56,9 @@
       "GABIN",
       "MICHELLE",
       "NOTVAL"
-     ],
-     "proposer": "VICTORIA",
-     "team": [
-      "VICTORIA",
-      "SHAWN",
-      "IRISUWU",
-      "NOTVAL"
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "VICTORIA",
     "SHAWN",
@@ -75,17 +75,20 @@
     "NOTVAL",
     "GABIN"
    ],
-   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "teamSize": 4,
+   "numFails": 1,
    "proposals": [
     {
+     "proposer": "SHAWN",
+     "state": "APPROVED",
      "team": [
       "SHAWN",
       "IRISUWU",
       "NOTVAL",
       "GABIN"
      ],
-     "state": "APPROVED",
      "votes": [
       "MICHAEL",
       "IRISUWU",
@@ -94,15 +97,12 @@
       "NOTVAL",
       "SHAWN",
       "NOTVIN"
-     ],
-     "proposer": "SHAWN"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
-   "state": "FAIL",
+   "numFails": 2,
    "team": [
     "SHAWN",
     "NOTVAL",
@@ -110,10 +110,10 @@
     "VICTORIA",
     "MICHELLE"
    ],
-   "numFails": 2,
-   "teamSize": 5,
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "CASSIE",
      "team": [
       "VICTORIA",
       "SHAWN",
@@ -121,17 +121,15 @@
       "GABIN",
       "CASSIE"
      ],
-     "state": "REJECTED",
      "votes": [
       "MICHAEL",
       "GABIN",
       "CASSIE",
       "VICTORIA"
      ],
-     "proposer": "CASSIE"
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
      "votes": [
       "VICTORIA",
       "MICHAEL",
@@ -149,79 +147,52 @@
       "MICHAEL",
       "VICTORIA",
       "MICHELLE"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 2
+   "failsRequired": 2,
+   "teamSize": 5
   },
   {
-   "team": [],
-   "teamSize": 5,
+   "failsRequired": 1,
    "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1
+   "teamSize": 5,
+   "team": []
   }
  ],
  "outcome": {
-  "votes": [
-   {
-    "VICTORIA": true,
-    "NOTVAL": true,
-    "SHAWN": true
-   },
-   {
-    "SHAWN": true,
-    "VICTORIA": true,
-    "NOTVAL": false,
-    "IRISUWU": true
-   },
-   {
-    "NOTVAL": false,
-    "GABIN": true,
-    "IRISUWU": true,
-    "SHAWN": true
-   },
-   {
-    "NOTVAL": false,
-    "MICHAEL": true,
-    "SHAWN": true,
-    "VICTORIA": true,
-    "MICHELLE": false
-   }
-  ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
   "roles": [
    {
-    "name": "NOTVAL",
     "assassin": false,
+    "name": "NOTVAL",
     "role": "MORGANA"
    },
    {
-    "name": "SHAWN",
     "assassin": false,
+    "name": "SHAWN",
     "role": "PERCIVAL"
    },
    {
-    "name": "CASSIE",
+    "role": "MERLIN",
     "assassin": false,
-    "role": "MERLIN"
+    "name": "CASSIE"
    },
    {
     "name": "NOTVIN",
-    "assassin": false,
-    "role": "OBERON"
+    "role": "OBERON",
+    "assassin": false
    },
    {
-    "name": "VICTORIA",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "VICTORIA"
    },
    {
-    "name": "MICHAEL",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "MICHAEL"
    },
    {
     "assassin": false,
@@ -234,15 +205,44 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "MICHELLE",
     "assassin": true,
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "name": "MICHELLE"
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "votes": [
+   {
+    "VICTORIA": true,
+    "NOTVAL": true,
+    "SHAWN": true
+   },
+   {
+    "IRISUWU": true,
+    "VICTORIA": true,
+    "NOTVAL": false,
+    "SHAWN": true
+   },
+   {
+    "IRISUWU": true,
+    "NOTVAL": false,
+    "GABIN": true,
+    "SHAWN": true
+   },
+   {
+    "SHAWN": true,
+    "VICTORIA": true,
+    "NOTVAL": false,
+    "MICHELLE": false,
+    "MICHAEL": true
    }
   ]
  },
- "timeFinished": {
-  "_seconds": 1585722570,
-  "_nanoseconds": 636423000
+ "timeCreated": {
+  "_seconds": 1585721964,
+  "_nanoseconds": 885000000
  },
  "players": [
   {
@@ -266,24 +266,24 @@
    "name": "IRISUWU"
   },
   {
-   "uid": "bC0XYzxmTtQbCbD1nSWRTLtVDW22",
-   "name": "MICHELLE"
+   "name": "MICHELLE",
+   "uid": "bC0XYzxmTtQbCbD1nSWRTLtVDW22"
   },
   {
-   "uid": "XN6x3ocQsyQ4m8hhKW8vCFaUpjt1",
-   "name": "GABIN"
+   "name": "GABIN",
+   "uid": "XN6x3ocQsyQ4m8hhKW8vCFaUpjt1"
   },
   {
-   "uid": "5mFRX9LPaxPjw2szxYnGWqbRShJ3",
-   "name": "NOTVIN"
+   "name": "NOTVIN",
+   "uid": "5mFRX9LPaxPjw2szxYnGWqbRShJ3"
   },
   {
-   "uid": "jY91b94or3Z8K2GY06CbQUvzQMk2",
-   "name": "VICTORIA"
+   "name": "VICTORIA",
+   "uid": "jY91b94or3Z8K2GY06CbQUvzQMk2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1585721964,
-  "_nanoseconds": 885000000
+ "timeFinished": {
+  "_seconds": 1585722570,
+  "_nanoseconds": 636423000
  }
 }

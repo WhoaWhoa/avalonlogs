@@ -1,10 +1,117 @@
 {
+ "players": [
+  {
+   "uid": "UBmX2yZQJSRoCSba7XJauHj94Jn1",
+   "name": "ADRIAN"
+  },
+  {
+   "uid": "FkJVcQGExRdhwEZBEAVuF0NIw333",
+   "name": "CHARMY"
+  },
+  {
+   "uid": "OEKjRCrUhHa7VDl0bQGhklAPHT33",
+   "name": "IVAN"
+  },
+  {
+   "name": "CHIZ",
+   "uid": "iZPi9EAoYUNpXYB2BRrGvbMlNS53"
+  },
+  {
+   "uid": "RJpdRT2ZZMSVeNTo0OxnMn8WOLy2",
+   "name": "JUDE"
+  },
+  {
+   "name": "NORBERT",
+   "uid": "cjR4nEHaGUTMuOPm3TIVy924nC63"
+  },
+  {
+   "name": "TINOTIN",
+   "uid": "ZpHogQcxyieghHhgYHg49Pg9tmz1"
+  },
+  {
+   "name": "CHARLES",
+   "uid": "AL0epHzptDRHZwdkRhTqKsNBXId2"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "roles": [
+   {
+    "name": "CHARMY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "JUDE",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "NORBERT"
+   },
+   {
+    "assassin": false,
+    "name": "IVAN",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "CHARLES",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "name": "TINOTIN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "CHIZ",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "ADRIAN"
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "IVAN": true,
+    "NORBERT": true,
+    "JUDE": true
+   },
+   {
+    "JUDE": true,
+    "TINOTIN": true,
+    "ADRIAN": false,
+    "NORBERT": true
+   },
+   {
+    "CHARMY": true,
+    "ADRIAN": false,
+    "TINOTIN": true,
+    "NORBERT": true
+   },
+   {
+    "IVAN": true,
+    "CHIZ": false,
+    "CHARMY": true,
+    "TINOTIN": true,
+    "CHARLES": false
+   }
+  ]
+ },
  "timeFinished": {
   "_seconds": 1589560811,
   "_nanoseconds": 408000000
- },
- "options": {
-  "inGameLog": false
  },
  "timeCreated": {
   "_seconds": 1589560427,
@@ -12,17 +119,22 @@
  },
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "NORBERT",
     "IVAN",
     "JUDE"
    ],
-   "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "NORBERT",
+      "IVAN",
+      "JUDE"
+     ],
      "votes": [
       "CHIZ",
       "TINOTIN",
@@ -31,26 +143,12 @@
       "IVAN",
       "CHARLES"
      ],
-     "proposer": "NORBERT",
-     "team": [
-      "NORBERT",
-      "IVAN",
-      "JUDE"
-     ]
+     "proposer": "NORBERT"
     }
    ],
-   "failsRequired": 1
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "ADRIAN",
-    "NORBERT",
-    "JUDE",
-    "TINOTIN"
-   ],
-   "numFails": 1,
    "teamSize": 4,
    "proposals": [
     {
@@ -61,13 +159,13 @@
       "IVAN"
      ],
      "proposer": "TINOTIN",
+     "state": "REJECTED",
      "team": [
       "NORBERT",
       "IVAN",
       "JUDE",
       "TINOTIN"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "votes": [
@@ -80,14 +178,23 @@
       "CHARMY"
      ],
      "proposer": "CHARLES",
+     "state": "APPROVED",
      "team": [
       "ADRIAN",
       "NORBERT",
       "JUDE",
       "TINOTIN"
-     ],
-     "state": "APPROVED"
+     ]
     }
+   ],
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
+   "team": [
+    "ADRIAN",
+    "NORBERT",
+    "JUDE",
+    "TINOTIN"
    ]
   },
   {
@@ -98,25 +205,28 @@
     "NORBERT"
    ],
    "numFails": 1,
+   "failsRequired": 1,
    "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
+     "team": [
+      "NORBERT",
+      "JUDE",
+      "IVAN",
+      "ADRIAN"
+     ],
      "votes": [
       "IVAN",
       "CHARLES",
       "CHIZ",
       "ADRIAN"
      ],
-     "proposer": "ADRIAN",
-     "team": [
-      "NORBERT",
-      "JUDE",
-      "IVAN",
-      "ADRIAN"
-     ]
+     "state": "REJECTED",
+     "proposer": "ADRIAN"
     },
     {
+     "proposer": "CHARMY",
+     "state": "APPROVED",
      "votes": [
       "NORBERT",
       "IVAN",
@@ -126,29 +236,21 @@
       "ADRIAN",
       "CHARMY"
      ],
-     "proposer": "CHARMY",
      "team": [
       "ADRIAN",
       "TINOTIN",
       "CHARMY",
       "NORBERT"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
    "state": "FAIL"
   },
   {
+   "failsRequired": 2,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "CHARMY",
-      "IVAN",
-      "CHIZ",
-      "CHARLES",
-      "TINOTIN"
-     ],
      "state": "APPROVED",
      "votes": [
       "IVAN",
@@ -158,11 +260,16 @@
       "ADRIAN",
       "CHARMY"
      ],
+     "team": [
+      "CHARMY",
+      "IVAN",
+      "CHIZ",
+      "CHARLES",
+      "TINOTIN"
+     ],
      "proposer": "IVAN"
     }
    ],
-   "failsRequired": 2,
-   "state": "FAIL",
    "team": [
     "CHARMY",
     "IVAN",
@@ -170,122 +277,15 @@
     "CHARLES",
     "TINOTIN"
    ],
-   "numFails": 2,
-   "teamSize": 5
-  },
-  {
    "teamSize": 5,
+   "numFails": 2
+  },
+  {
    "state": "PENDING",
-   "proposals": [],
+   "teamSize": 5,
    "failsRequired": 1,
-   "team": []
-  }
- ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "CHARMY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JUDE"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "NORBERT"
-   },
-   {
-    "name": "IVAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "CHARLES",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "TINOTIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "CHIZ",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ADRIAN",
-    "assassin": false,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "IVAN": true,
-    "JUDE": true,
-    "NORBERT": true
-   },
-   {
-    "JUDE": true,
-    "TINOTIN": true,
-    "ADRIAN": false,
-    "NORBERT": true
-   },
-   {
-    "CHARMY": true,
-    "TINOTIN": true,
-    "ADRIAN": false,
-    "NORBERT": true
-   },
-   {
-    "CHARLES": false,
-    "TINOTIN": true,
-    "IVAN": true,
-    "CHIZ": false,
-    "CHARMY": true
-   }
-  ],
-  "message": "Three failed missions"
- },
- "players": [
-  {
-   "uid": "UBmX2yZQJSRoCSba7XJauHj94Jn1",
-   "name": "ADRIAN"
-  },
-  {
-   "name": "CHARMY",
-   "uid": "FkJVcQGExRdhwEZBEAVuF0NIw333"
-  },
-  {
-   "uid": "OEKjRCrUhHa7VDl0bQGhklAPHT33",
-   "name": "IVAN"
-  },
-  {
-   "uid": "iZPi9EAoYUNpXYB2BRrGvbMlNS53",
-   "name": "CHIZ"
-  },
-  {
-   "uid": "RJpdRT2ZZMSVeNTo0OxnMn8WOLy2",
-   "name": "JUDE"
-  },
-  {
-   "uid": "cjR4nEHaGUTMuOPm3TIVy924nC63",
-   "name": "NORBERT"
-  },
-  {
-   "uid": "ZpHogQcxyieghHhgYHg49Pg9tmz1",
-   "name": "TINOTIN"
-  },
-  {
-   "uid": "AL0epHzptDRHZwdkRhTqKsNBXId2",
-   "name": "CHARLES"
+   "team": [],
+   "proposals": []
   }
  ]
 }

@@ -5,14 +5,6 @@
  },
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "MOKKIE",
-    "KOKEY",
-    "ANGIE"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -23,27 +15,35 @@
       "LIAN",
       "CHEW"
      ],
+     "state": "APPROVED",
      "proposer": "GWENNIE",
      "team": [
       "MOKKIE",
       "KOKEY",
       "ANGIE"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "MOKKIE",
+    "KOKEY",
+    "ANGIE"
+   ],
+   "state": "SUCCESS"
   },
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "KOKEY",
     "MOKKIE",
     "ANGIE",
     "ATHENA"
    ],
+   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -54,29 +54,37 @@
       "GWENNIE",
       "LIAN"
      ],
-     "proposer": "ATHENA",
      "team": [
       "KOKEY",
       "MOKKIE",
       "ANGIE",
       "ATHENA"
      ],
+     "proposer": "ATHENA",
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 4
   },
   {
+   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
    "team": [
     "ANGIE",
     "MOKKIE",
     "KOKEY",
     "YYHOPE"
    ],
-   "numFails": 1,
-   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
+     "votes": [
+      "ANGIE",
+      "MOKKIE",
+      "KOKEY",
+      "LIAN"
+     ],
      "team": [
       "KOKEY",
       "LIAN",
@@ -84,36 +92,39 @@
       "GWENNIE"
      ],
      "state": "REJECTED",
-     "votes": [
-      "ANGIE",
-      "MOKKIE",
-      "KOKEY",
-      "LIAN"
-     ],
      "proposer": "LIAN"
     },
     {
+     "state": "APPROVED",
      "team": [
       "ANGIE",
       "MOKKIE",
       "KOKEY",
       "YYHOPE"
      ],
-     "state": "APPROVED",
+     "proposer": "KOKEY",
      "votes": [
       "KOKEY",
       "GWENNIE",
       "LIAN",
       "ANGIE",
       "MOKKIE"
-     ],
-     "proposer": "KOKEY"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
+   "team": [
+    "YYHOPE",
+    "CHEW",
+    "ATHENA",
+    "GWENNIE",
+    "KOKEY"
+   ],
+   "failsRequired": 2,
+   "teamSize": 5,
+   "state": "SUCCESS",
+   "numFails": 1,
    "proposals": [
     {
      "state": "APPROVED",
@@ -125,53 +136,68 @@
       "KOKEY",
       "GWENNIE"
      ],
-     "proposer": "CHEW",
      "team": [
       "YYHOPE",
       "CHEW",
       "ATHENA",
       "GWENNIE",
       "KOKEY"
-     ]
+     ],
+     "proposer": "CHEW"
     }
-   ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
-   "team": [
-    "YYHOPE",
-    "CHEW",
-    "ATHENA",
-    "GWENNIE",
-    "KOKEY"
-   ],
-   "numFails": 1,
-   "teamSize": 5
+   ]
   },
   {
-   "team": [],
-   "teamSize": 5,
+   "failsRequired": 1,
    "state": "PENDING",
+   "team": [],
    "proposals": [],
-   "failsRequired": 1
+   "teamSize": 5
   }
  ],
  "outcome": {
-  "state": "GOOD_WIN",
   "assassinated": "ATHENA",
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "KOKEY": true,
+    "ANGIE": true,
+    "MOKKIE": true
+   },
+   {
+    "MOKKIE": true,
+    "KOKEY": true,
+    "ATHENA": true,
+    "ANGIE": true
+   },
+   {
+    "YYHOPE": true,
+    "ANGIE": true,
+    "KOKEY": true,
+    "MOKKIE": false
+   },
+   {
+    "YYHOPE": true,
+    "ATHENA": true,
+    "CHEW": true,
+    "GWENNIE": false,
+    "KOKEY": true
+   }
+  ],
   "roles": [
    {
+    "assassin": false,
     "name": "ATHENA",
-    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "KOKEY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "name": "GWENNIE",
     "assassin": true,
+    "name": "GWENNIE",
     "role": "EVIL MINION"
    },
    {
@@ -181,52 +207,30 @@
    },
    {
     "name": "YYHOPE",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "CHEW"
+    "name": "CHEW",
+    "assassin": false
    },
    {
-    "name": "ANGIE",
     "assassin": false,
+    "name": "ANGIE",
     "role": "MORDRED"
    },
    {
     "name": "MOKKIE",
-    "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "assassin": false
    }
   ],
-  "votes": [
-   {
-    "KOKEY": true,
-    "ANGIE": true,
-    "MOKKIE": true
-   },
-   {
-    "ANGIE": true,
-    "MOKKIE": true,
-    "ATHENA": true,
-    "KOKEY": true
-   },
-   {
-    "YYHOPE": true,
-    "ANGIE": true,
-    "MOKKIE": false,
-    "KOKEY": true
-   },
-   {
-    "GWENNIE": false,
-    "ATHENA": true,
-    "KOKEY": true,
-    "YYHOPE": true,
-    "CHEW": true
-   }
-  ],
-  "message": "Three successful missions"
+  "state": "GOOD_WIN"
+ },
+ "timeFinished": {
+  "_seconds": 1586859970,
+  "_nanoseconds": 210175000
  },
  "players": [
   {
@@ -234,38 +238,34 @@
    "uid": "WU0ku40gWKMom8Xvll0dTCg3Re23"
   },
   {
-   "name": "GWENNIE",
-   "uid": "SL1QLbNYKHVLFjhV1ngNUY17bo02"
+   "uid": "SL1QLbNYKHVLFjhV1ngNUY17bo02",
+   "name": "GWENNIE"
   },
   {
    "uid": "4mZqzAU715TeuXI1I0V9Cb06Aax2",
    "name": "ATHENA"
   },
   {
-   "name": "LIAN",
-   "uid": "qQEgqBTZf0cuHk15gr8ac9HHnjG3"
+   "uid": "qQEgqBTZf0cuHk15gr8ac9HHnjG3",
+   "name": "LIAN"
   },
   {
    "uid": "4EypV0UTKpcKkODSNtssruxSZKW2",
    "name": "KOKEY"
   },
   {
-   "uid": "iKBYoZPLhccGcLIiki2LQ1IkzO22",
-   "name": "CHEW"
+   "name": "CHEW",
+   "uid": "iKBYoZPLhccGcLIiki2LQ1IkzO22"
   },
   {
-   "uid": "Eekj3vIpmJVMlW2oAuEGMZbfLYW2",
-   "name": "MOKKIE"
+   "name": "MOKKIE",
+   "uid": "Eekj3vIpmJVMlW2oAuEGMZbfLYW2"
   },
   {
-   "uid": "UL2j4eVnwdWIhhhsW1fsLg3gjpf2",
-   "name": "ANGIE"
+   "name": "ANGIE",
+   "uid": "UL2j4eVnwdWIhhhsW1fsLg3gjpf2"
   }
  ],
- "timeFinished": {
-  "_seconds": 1586859970,
-  "_nanoseconds": 210175000
- },
  "options": {
   "inGameLog": false
  }

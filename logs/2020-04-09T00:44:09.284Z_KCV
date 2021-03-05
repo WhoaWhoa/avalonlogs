@@ -1,7 +1,7 @@
 {
- "timeFinished": {
-  "_seconds": 1586393533,
-  "_nanoseconds": 153695000
+ "timeCreated": {
+  "_seconds": 1586393049,
+  "_nanoseconds": 284000000
  },
  "players": [
   {
@@ -9,8 +9,8 @@
    "name": "KELVIN"
   },
   {
-   "uid": "jYAPv4IuMHcFuPCIWvpnB8CS0Nw2",
-   "name": "ADRIAN"
+   "name": "ADRIAN",
+   "uid": "jYAPv4IuMHcFuPCIWvpnB8CS0Nw2"
   },
   {
    "uid": "65JVZ1IEnCU2lDZAad1taZnkbFb2",
@@ -21,27 +21,90 @@
    "name": "SAM"
   },
   {
-   "uid": "Y77Unrq5prgSaHEAzueTO5x9pAF3",
-   "name": "ETHAN"
+   "name": "ETHAN",
+   "uid": "Y77Unrq5prgSaHEAzueTO5x9pAF3"
   },
   {
    "uid": "O78yb4V9GnNff9YuBn8IRotwtf02",
    "name": "THOMSON"
   },
   {
-   "uid": "1jHHwUGEfQTY3fFz6iZTZXiiXI33",
-   "name": "EDISON"
+   "name": "EDISON",
+   "uid": "1jHHwUGEfQTY3fFz6iZTZXiiXI33"
   }
  ],
- "timeCreated": {
-  "_seconds": 1586393049,
-  "_nanoseconds": 284000000
+ "timeFinished": {
+  "_seconds": 1586393533,
+  "_nanoseconds": 153695000
+ },
+ "outcome": {
+  "roles": [
+   {
+    "name": "SAM",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "THOMSON"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "KELVIN",
+    "assassin": false
+   },
+   {
+    "name": "ETHAN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "name": "NICHOLAS",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "assassin": false,
+    "name": "EDISON"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "ADRIAN",
+    "assassin": true
+   }
+  ],
+  "assassinated": "THOMSON",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "NICHOLAS": true,
+    "ADRIAN": true
+   },
+   {
+    "ETHAN": true,
+    "NICHOLAS": false,
+    "ADRIAN": true
+   },
+   {
+    "ETHAN": true,
+    "SAM": true,
+    "THOMSON": true
+   },
+   {
+    "ETHAN": true,
+    "SAM": true,
+    "KELVIN": true,
+    "THOMSON": true
+   }
+  ],
+  "message": "Three successful missions"
  },
  "missions": [
   {
    "proposals": [
     {
-     "proposer": "ADRIAN",
      "team": [
       "ADRIAN",
       "NICHOLAS"
@@ -54,22 +117,35 @@
       "ADRIAN",
       "SAM",
       "THOMSON"
-     ]
+     ],
+     "proposer": "ADRIAN"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "ADRIAN",
     "NICHOLAS"
    ],
-   "numFails": 0,
-   "teamSize": 2
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
+   "team": [
+    "ADRIAN",
+    "NICHOLAS",
+    "ETHAN"
+   ],
+   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "NICHOLAS",
      "state": "APPROVED",
+     "team": [
+      "ADRIAN",
+      "NICHOLAS",
+      "ETHAN"
+     ],
      "votes": [
       "KELVIN",
       "ETHAN",
@@ -78,78 +154,65 @@
       "ADRIAN",
       "SAM",
       "THOMSON"
-     ],
-     "proposer": "NICHOLAS",
-     "team": [
-      "ADRIAN",
-      "NICHOLAS",
-      "ETHAN"
      ]
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "ADRIAN",
-    "NICHOLAS",
-    "ETHAN"
-   ],
    "numFails": 1,
-   "teamSize": 3
+   "state": "FAIL"
   },
   {
+   "failsRequired": 1,
    "team": [
     "THOMSON",
     "SAM",
     "ETHAN"
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "THOMSON",
-      "SAM",
-      "ETHAN"
-     ],
-     "state": "APPROVED",
+     "proposer": "SAM",
      "votes": [
       "SAM",
       "THOMSON",
       "ETHAN",
       "ADRIAN"
      ],
-     "proposer": "SAM"
+     "team": [
+      "THOMSON",
+      "SAM",
+      "ETHAN"
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "failsRequired": 2,
-   "state": "SUCCESS",
+   "teamSize": 4,
    "team": [
     "THOMSON",
     "SAM",
     "KELVIN",
     "ETHAN"
    ],
+   "failsRequired": 2,
    "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "ETHAN",
+     "votes": [
+      "SAM",
+      "ADRIAN"
+     ],
+     "state": "REJECTED",
      "team": [
       "THOMSON",
       "SAM",
       "ADRIAN",
       "KELVIN"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "SAM",
-      "ADRIAN"
-     ]
+     "proposer": "ETHAN"
     },
     {
      "state": "APPROVED",
@@ -169,78 +232,15 @@
       "ETHAN"
      ]
     }
-   ]
+   ],
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
-   "team": [],
-   "teamSize": 4,
    "state": "PENDING",
-   "proposals": []
+   "proposals": [],
+   "team": [],
+   "failsRequired": 1,
+   "teamSize": 4
   }
- ],
- "outcome": {
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "THOMSON",
-  "roles": [
-   {
-    "name": "SAM",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "THOMSON",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "KELVIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ETHAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "NICHOLAS",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "EDISON",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "ADRIAN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "NICHOLAS": true,
-    "ADRIAN": true
-   },
-   {
-    "NICHOLAS": false,
-    "ADRIAN": true,
-    "ETHAN": true
-   },
-   {
-    "SAM": true,
-    "ETHAN": true,
-    "THOMSON": true
-   },
-   {
-    "SAM": true,
-    "ETHAN": true,
-    "THOMSON": true,
-    "KELVIN": true
-   }
-  ]
- }
+ ]
 }

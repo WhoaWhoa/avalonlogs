@@ -1,15 +1,127 @@
 {
+ "players": [
+  {
+   "name": "ADRIEN",
+   "uid": "OVutUpjGF6PNlqLaxoWU8mwR9vx1"
+  },
+  {
+   "name": "ANDREA",
+   "uid": "0yagN6Zwhvgsu82FcKFgpCRpnSA3"
+  },
+  {
+   "uid": "q5Uta53BFXYKCFqUcs0bP2CNxqa2",
+   "name": "CAT"
+  },
+  {
+   "name": "FRANKLIN",
+   "uid": "oquLmxHjGpfdOdoOqOCfQhHNjJi2"
+  },
+  {
+   "uid": "P1d4LFrUbjciFKjVX4lKJZ5E7az2",
+   "name": "GURMAN"
+  },
+  {
+   "name": "IVY",
+   "uid": "VYgFIVdb5NNcYDOvVBqBF5RGoqm1"
+  },
+  {
+   "name": "JASON",
+   "uid": "sMZy4adZ9FVfjpqXH991owzRSEx2"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586493489,
+  "_nanoseconds": 568127000
+ },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "votes": [
+   {
+    "FRANKLIN": false,
+    "JASON": true
+   },
+   {
+    "IVY": true,
+    "ADRIEN": true,
+    "JASON": true
+   },
+   {
+    "CAT": true,
+    "FRANKLIN": true,
+    "ANDREA": true
+   },
+   {
+    "CAT": false,
+    "ADRIEN": true,
+    "ANDREA": true,
+    "FRANKLIN": false
+   },
+   {
+    "FRANKLIN": false,
+    "GURMAN": false,
+    "ADRIEN": true,
+    "IVY": true
+   }
+  ],
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "IVY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "CAT"
+   },
+   {
+    "name": "FRANKLIN",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ADRIEN"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "ANDREA",
+    "assassin": false
+   },
+   {
+    "name": "GURMAN",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "MERLIN",
+    "name": "JASON",
+    "assassin": false
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1586492755,
+  "_nanoseconds": 808000000
+ },
  "missions": [
   {
+   "numFails": 1,
    "team": [
     "JASON",
     "FRANKLIN"
    ],
-   "numFails": 1,
-   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "JASON",
+      "FRANKLIN"
+     ],
+     "proposer": "JASON",
      "votes": [
       "GURMAN",
       "JASON",
@@ -17,33 +129,23 @@
       "CAT",
       "FRANKLIN",
       "ADRIEN"
-     ],
-     "proposer": "JASON",
-     "team": [
-      "JASON",
-      "FRANKLIN"
      ]
     }
    ],
+   "state": "FAIL",
    "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 2
   },
   {
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "ADRIEN",
     "JASON",
     "IVY"
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "ADRIEN",
-      "JASON",
-      "IVY"
-     ],
+     "proposer": "ADRIEN",
      "state": "APPROVED",
      "votes": [
       "IVY",
@@ -53,19 +155,27 @@
       "GURMAN",
       "JASON"
      ],
-     "proposer": "ADRIEN"
+     "team": [
+      "ADRIEN",
+      "JASON",
+      "IVY"
+     ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "ANDREA",
     "FRANKLIN",
     "CAT"
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
@@ -82,21 +192,21 @@
       "CAT"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
+   "teamSize": 4,
+   "failsRequired": 2,
    "team": [
     "CAT",
     "ADRIEN",
     "ANDREA",
     "FRANKLIN"
    ],
-   "numFails": 2,
-   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "ANDREA",
       "GURMAN",
@@ -104,21 +214,18 @@
       "FRANKLIN",
       "ADRIEN"
      ],
-     "proposer": "CAT",
      "team": [
       "CAT",
       "ADRIEN",
       "ANDREA",
       "FRANKLIN"
      ],
-     "state": "APPROVED"
+     "proposer": "CAT"
     }
    ],
-   "failsRequired": 2,
-   "state": "FAIL"
+   "numFails": 2
   },
   {
-   "state": "FAIL",
    "team": [
     "IVY",
     "FRANKLIN",
@@ -126,134 +233,27 @@
     "GURMAN"
    ],
    "numFails": 2,
-   "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "CAT",
-      "FRANKLIN",
-      "ADRIEN",
-      "GURMAN"
-     ],
      "proposer": "FRANKLIN",
+     "state": "APPROVED",
      "team": [
       "IVY",
       "FRANKLIN",
       "ADRIEN",
       "GURMAN"
      ],
-     "state": "APPROVED"
+     "votes": [
+      "CAT",
+      "FRANKLIN",
+      "ADRIEN",
+      "GURMAN"
+     ]
     }
    ],
+   "teamSize": 4,
+   "state": "FAIL",
    "failsRequired": 1
   }
- ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "IVY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "CAT",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "FRANKLIN",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "ADRIEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ANDREA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "GURMAN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JASON",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "votes": [
-   {
-    "JASON": true,
-    "FRANKLIN": false
-   },
-   {
-    "ADRIEN": true,
-    "IVY": true,
-    "JASON": true
-   },
-   {
-    "ANDREA": true,
-    "CAT": true,
-    "FRANKLIN": true
-   },
-   {
-    "FRANKLIN": false,
-    "ANDREA": true,
-    "CAT": false,
-    "ADRIEN": true
-   },
-   {
-    "ADRIEN": true,
-    "GURMAN": false,
-    "IVY": true,
-    "FRANKLIN": false
-   }
-  ],
-  "message": "Three failed missions"
- },
- "timeFinished": {
-  "_seconds": 1586493489,
-  "_nanoseconds": 568127000
- },
- "players": [
-  {
-   "uid": "OVutUpjGF6PNlqLaxoWU8mwR9vx1",
-   "name": "ADRIEN"
-  },
-  {
-   "name": "ANDREA",
-   "uid": "0yagN6Zwhvgsu82FcKFgpCRpnSA3"
-  },
-  {
-   "uid": "q5Uta53BFXYKCFqUcs0bP2CNxqa2",
-   "name": "CAT"
-  },
-  {
-   "uid": "oquLmxHjGpfdOdoOqOCfQhHNjJi2",
-   "name": "FRANKLIN"
-  },
-  {
-   "name": "GURMAN",
-   "uid": "P1d4LFrUbjciFKjVX4lKJZ5E7az2"
-  },
-  {
-   "uid": "VYgFIVdb5NNcYDOvVBqBF5RGoqm1",
-   "name": "IVY"
-  },
-  {
-   "name": "JASON",
-   "uid": "sMZy4adZ9FVfjpqXH991owzRSEx2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586492755,
-  "_nanoseconds": 808000000
- }
+ ]
 }

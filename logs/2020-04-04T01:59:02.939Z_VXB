@@ -3,6 +3,60 @@
   "_seconds": 1585965809,
   "_nanoseconds": 729316000
  },
+ "outcome": {
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "name": "MORDREDD",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "name": "KILLIAN",
+    "assassin": false
+   },
+   {
+    "name": "IAN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "BOY"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "MLEGROS"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "CONNOR"
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "IAN",
+  "votes": [
+   {
+    "IAN": true,
+    "BOY": true
+   },
+   {
+    "IAN": true,
+    "BOY": true,
+    "MORDREDD": true
+   },
+   {
+    "MORDREDD": true,
+    "IAN": true,
+    "BOY": true,
+    "MLEGROS": true
+   }
+  ]
+ },
  "players": [
   {
    "name": "MLEGROS",
@@ -13,55 +67,40 @@
    "name": "CONNOR"
   },
   {
-   "name": "KILLIAN",
-   "uid": "GptbjnV6ERXuVo5DD4KLJ9A4IYg2"
+   "uid": "GptbjnV6ERXuVo5DD4KLJ9A4IYg2",
+   "name": "KILLIAN"
   },
   {
-   "name": "BOY",
-   "uid": "nHdDF5QVrCbx276v3rvUTTgGMIB3"
+   "uid": "nHdDF5QVrCbx276v3rvUTTgGMIB3",
+   "name": "BOY"
   },
   {
    "name": "MORDREDD",
    "uid": "21LDQlDn3GYqEZFjgNh468DkBm23"
   },
   {
-   "uid": "TkjP55su1wcztgt8F4s9rXLinoV2",
-   "name": "IAN"
+   "name": "IAN",
+   "uid": "TkjP55su1wcztgt8F4s9rXLinoV2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1585965542,
-  "_nanoseconds": 939000000
- },
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "BOY",
-    "IAN"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "KILLIAN",
-      "MLEGROS"
-     ],
-     "state": "REJECTED",
      "votes": [
       "MLEGROS",
       "CONNOR",
       "KILLIAN"
+     ],
+     "state": "REJECTED",
+     "team": [
+      "KILLIAN",
+      "MLEGROS"
      ],
      "proposer": "KILLIAN"
     },
     {
-     "team": [
-      "BOY",
-      "IAN"
-     ],
-     "state": "APPROVED",
+     "proposer": "BOY",
      "votes": [
       "MLEGROS",
       "CONNOR",
@@ -70,23 +109,31 @@
       "IAN",
       "BOY"
      ],
-     "proposer": "BOY"
+     "team": [
+      "BOY",
+      "IAN"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 2,
+   "failsRequired": 1,
+   "team": [
+    "BOY",
+    "IAN"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "MORDREDD",
      "team": [
       "BOY",
       "MORDREDD",
       "IAN"
      ],
-     "state": "APPROVED",
+     "proposer": "MORDREDD",
      "votes": [
       "MLEGROS",
       "CONNOR",
@@ -94,16 +141,19 @@
       "KILLIAN",
       "IAN",
       "BOY"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
    "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "BOY",
     "MORDREDD",
     "IAN"
-   ]
+   ],
+   "numFails": 0
   },
   {
    "proposals": [
@@ -113,34 +163,34 @@
       "IAN",
       "MLEGROS"
      ],
-     "proposer": "IAN",
      "team": [
       "BOY",
       "IAN",
       "MLEGROS",
       "KILLIAN"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "IAN"
     },
     {
+     "state": "APPROVED",
+     "votes": [
+      "MORDREDD",
+      "IAN",
+      "BOY",
+      "MLEGROS"
+     ],
+     "proposer": "MLEGROS",
      "team": [
       "BOY",
       "IAN",
       "MLEGROS",
       "MORDREDD"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "MORDREDD",
-      "IAN",
-      "BOY",
-      "MLEGROS"
-     ],
-     "proposer": "MLEGROS"
+     ]
     }
    ],
-   "failsRequired": 1,
    "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "BOY",
     "IAN",
@@ -151,72 +201,22 @@
    "teamSize": 4
   },
   {
+   "state": "PENDING",
    "proposals": [],
    "failsRequired": 1,
    "team": [],
-   "teamSize": 3,
-   "state": "PENDING"
+   "teamSize": 3
   },
   {
-   "team": [],
-   "teamSize": 4,
-   "state": "PENDING",
    "proposals": [],
+   "teamSize": 4,
+   "team": [],
+   "state": "PENDING",
    "failsRequired": 1
   }
  ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "IAN",
-  "roles": [
-   {
-    "name": "MORDREDD",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "KILLIAN"
-   },
-   {
-    "name": "IAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "BOY",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MLEGROS"
-   },
-   {
-    "name": "CONNOR",
-    "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "BOY": true,
-    "IAN": true
-   },
-   {
-    "MORDREDD": true,
-    "IAN": true,
-    "BOY": true
-   },
-   {
-    "BOY": true,
-    "MORDREDD": true,
-    "IAN": true,
-    "MLEGROS": true
-   }
-  ],
-  "message": "Three successful missions"
+ "timeCreated": {
+  "_seconds": 1585965542,
+  "_nanoseconds": 939000000
  }
 }

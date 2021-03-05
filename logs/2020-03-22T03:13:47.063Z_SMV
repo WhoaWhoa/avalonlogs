@@ -1,7 +1,72 @@
 {
- "timeFinished": {
-  "_seconds": 1584848893,
-  "_nanoseconds": 835209000
+ "outcome": {
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "JENNA"
+   },
+   {
+    "assassin": false,
+    "name": "BRIAN",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "TOBY",
+    "role": "MERLIN"
+   },
+   {
+    "assassin": true,
+    "name": "TYLER",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "JASON",
+    "assassin": true,
+    "role": "MORGANA"
+   },
+   {
+    "name": "GOODWIN",
+    "role": "PERCIVAL",
+    "assassin": false
+   }
+  ],
+  "assassinated": "TOBY",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "TYLER": false,
+    "GOODWIN": true
+   },
+   {
+    "TOBY": true,
+    "JASON": true,
+    "JENNA": true
+   },
+   {
+    "TOBY": true,
+    "JENNA": true,
+    "GOODWIN": true,
+    "JASON": false
+   },
+   {
+    "GOODWIN": true,
+    "BRIAN": true,
+    "TOBY": true
+   },
+   {
+    "TOBY": true,
+    "GOODWIN": true,
+    "BRIAN": true,
+    "JENNA": true
+   }
+  ],
+  "message": "Merlin assassinated"
+ },
+ "timeCreated": {
+  "_seconds": 1584846827,
+  "_nanoseconds": 63000000
  },
  "players": [
   {
@@ -13,78 +78,79 @@
    "name": "JASON"
   },
   {
-   "uid": "JGCLVetGepXx4rLnxA33ErZRAXB2",
-   "name": "TYLER"
+   "name": "TYLER",
+   "uid": "JGCLVetGepXx4rLnxA33ErZRAXB2"
   },
   {
    "uid": "YckS9udxtgcpWUfqj3t66QdVZmi1",
    "name": "BRIAN"
   },
   {
-   "name": "JENNA",
-   "uid": "u9QPwqYkeJVZntf6PRp8OqJjkqj2"
+   "uid": "u9QPwqYkeJVZntf6PRp8OqJjkqj2",
+   "name": "JENNA"
   },
   {
-   "uid": "zNaikAizAoMuWbr7UTWOyVjSJoi2",
-   "name": "TOBY"
+   "name": "TOBY",
+   "uid": "zNaikAizAoMuWbr7UTWOyVjSJoi2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1584846827,
-  "_nanoseconds": 63000000
+ "timeFinished": {
+  "_seconds": 1584848893,
+  "_nanoseconds": 835209000
  },
  "missions": [
   {
-   "state": "FAIL",
    "team": [
     "TYLER",
     "GOODWIN"
    ],
    "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "teamSize": 2,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "JENNA",
      "team": [
       "JENNA",
       "GOODWIN"
      ],
-     "state": "REJECTED",
-     "votes": [],
-     "proposer": "JENNA"
+     "votes": []
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "TOBY"
-     ],
      "proposer": "TOBY",
      "team": [
       "TOBY",
       "GOODWIN"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "TOBY"
      ]
     },
     {
-     "votes": [
-      "JENNA",
-      "GOODWIN"
-     ],
-     "proposer": "GOODWIN",
+     "state": "REJECTED",
      "team": [
       "GOODWIN",
       "JENNA"
      ],
-     "state": "REJECTED"
+     "proposer": "GOODWIN",
+     "votes": [
+      "JENNA",
+      "GOODWIN"
+     ]
     },
     {
-     "team": [
-      "JASON",
-      "TOBY"
-     ],
+     "proposer": "JASON",
      "state": "REJECTED",
      "votes": [
       "JASON"
      ],
-     "proposer": "JASON"
+     "team": [
+      "JASON",
+      "TOBY"
+     ]
     },
     {
      "votes": [
@@ -95,55 +161,55 @@
       "JASON",
       "GOODWIN"
      ],
-     "proposer": "TYLER",
      "team": [
       "TYLER",
       "GOODWIN"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "TYLER"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "JASON",
     "TOBY",
     "JENNA"
    ],
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "REJECTED",
      "votes": [
       "BRIAN"
      ],
-     "proposer": "BRIAN",
      "team": [
       "BRIAN",
       "TOBY",
       "JASON"
-     ]
+     ],
+     "proposer": "BRIAN"
     },
     {
+     "proposer": "JENNA",
      "team": [
       "JENNA",
       "BRIAN",
       "GOODWIN"
      ],
-     "state": "REJECTED",
      "votes": [
       "GOODWIN",
       "JENNA"
      ],
-     "proposer": "JENNA"
+     "state": "REJECTED"
     },
     {
+     "proposer": "TOBY",
      "votes": [
       "TOBY"
      ],
-     "proposer": "TOBY",
      "team": [
       "TOBY",
       "GOODWIN",
@@ -157,22 +223,15 @@
       "BRIAN",
       "JENNA"
      ],
-     "state": "REJECTED",
      "votes": [
       "JENNA",
       "BRIAN",
       "GOODWIN"
      ],
+     "state": "REJECTED",
      "proposer": "GOODWIN"
     },
     {
-     "proposer": "JASON",
-     "team": [
-      "JASON",
-      "TOBY",
-      "JENNA"
-     ],
-     "state": "APPROVED",
      "votes": [
       "JENNA",
       "BRIAN",
@@ -180,43 +239,50 @@
       "TYLER",
       "JASON",
       "GOODWIN"
-     ]
+     ],
+     "team": [
+      "JASON",
+      "TOBY",
+      "JENNA"
+     ],
+     "proposer": "JASON",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
    "team": [
     "GOODWIN",
     "JASON",
     "JENNA",
     "TOBY"
    ],
+   "failsRequired": 1,
    "numFails": 1,
+   "state": "FAIL",
    "teamSize": 4,
    "proposals": [
     {
-     "proposer": "TYLER",
      "team": [
       "TOBY",
       "JENNA",
       "TYLER",
       "JASON"
      ],
+     "proposer": "TYLER",
      "state": "REJECTED",
      "votes": [
       "TYLER"
      ]
     },
     {
-     "state": "REJECTED",
+     "proposer": "BRIAN",
      "votes": [
       "BRIAN",
       "JENNA"
      ],
-     "proposer": "BRIAN",
+     "state": "REJECTED",
      "team": [
       "JASON",
       "TOBY",
@@ -225,16 +291,16 @@
      ]
     },
     {
+     "state": "REJECTED",
+     "votes": [
+      "BRIAN",
+      "JASON"
+     ],
      "team": [
       "JENNA",
       "TOBY",
       "JASON",
       "BRIAN"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "BRIAN",
-      "JASON"
      ],
      "proposer": "JENNA"
     },
@@ -245,21 +311,15 @@
       "BRIAN",
       "JASON"
      ],
-     "state": "REJECTED",
      "votes": [
       "JENNA",
       "BRIAN",
       "JASON"
      ],
+     "state": "REJECTED",
      "proposer": "TOBY"
     },
     {
-     "team": [
-      "GOODWIN",
-      "JASON",
-      "JENNA",
-      "TOBY"
-     ],
      "state": "APPROVED",
      "votes": [
       "JENNA",
@@ -269,10 +329,15 @@
       "JASON",
       "GOODWIN"
      ],
+     "team": [
+      "GOODWIN",
+      "JASON",
+      "JENNA",
+      "TOBY"
+     ],
      "proposer": "GOODWIN"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
    "team": [
@@ -280,51 +345,50 @@
     "BRIAN",
     "GOODWIN"
    ],
-   "numFails": 0,
    "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "BRIAN"
-     ],
+     "state": "REJECTED",
      "proposer": "JASON",
      "team": [
       "JASON",
       "GOODWIN",
       "BRIAN"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "BRIAN"
+     ]
     },
     {
+     "state": "REJECTED",
+     "votes": [],
      "team": [
       "TYLER",
       "BRIAN",
       "TOBY"
      ],
-     "state": "REJECTED",
-     "votes": [],
      "proposer": "TYLER"
     },
     {
      "state": "REJECTED",
-     "votes": [
-      "BRIAN",
-      "TYLER"
-     ],
-     "proposer": "BRIAN",
      "team": [
       "BRIAN",
       "TOBY",
       "GOODWIN"
+     ],
+     "proposer": "BRIAN",
+     "votes": [
+      "BRIAN",
+      "TYLER"
      ]
     },
     {
+     "proposer": "JENNA",
      "state": "REJECTED",
      "votes": [
       "JENNA",
       "BRIAN"
      ],
-     "proposer": "JENNA",
      "team": [
       "JENNA",
       "BRIAN",
@@ -332,11 +396,6 @@
      ]
     },
     {
-     "team": [
-      "TOBY",
-      "BRIAN",
-      "GOODWIN"
-     ],
      "state": "APPROVED",
      "votes": [
       "GOODWIN",
@@ -344,13 +403,22 @@
       "BRIAN",
       "TOBY"
      ],
+     "team": [
+      "TOBY",
+      "BRIAN",
+      "GOODWIN"
+     ],
      "proposer": "TOBY"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
+   "state": "SUCCESS",
+   "teamSize": 4,
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -361,91 +429,23 @@
       "JASON",
       "GOODWIN"
      ],
-     "proposer": "GOODWIN",
      "team": [
       "GOODWIN",
       "BRIAN",
       "JENNA",
       "TOBY"
      ],
+     "proposer": "GOODWIN",
      "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "GOODWIN",
     "BRIAN",
     "JENNA",
     "TOBY"
-   ],
-   "numFails": 0,
-   "teamSize": 4
+   ]
   }
- ],
- "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "TOBY",
-  "roles": [
-   {
-    "name": "JENNA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "BRIAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "TOBY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "TYLER",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JASON",
-    "assassin": true,
-    "role": "MORGANA"
-   },
-   {
-    "name": "GOODWIN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   }
-  ],
-  "votes": [
-   {
-    "GOODWIN": true,
-    "TYLER": false
-   },
-   {
-    "JENNA": true,
-    "JASON": true,
-    "TOBY": true
-   },
-   {
-    "GOODWIN": true,
-    "TOBY": true,
-    "JENNA": true,
-    "JASON": false
-   },
-   {
-    "GOODWIN": true,
-    "BRIAN": true,
-    "TOBY": true
-   },
-   {
-    "TOBY": true,
-    "JENNA": true,
-    "GOODWIN": true,
-    "BRIAN": true
-   }
-  ]
- }
+ ]
 }

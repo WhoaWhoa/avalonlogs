@@ -1,53 +1,13 @@
 {
- "timeFinished": {
-  "_seconds": 1585978857,
-  "_nanoseconds": 522340000
- },
- "players": [
-  {
-   "uid": "XBPGIBk6ujUBMBaqT9b9l2fGAtI2",
-   "name": "GID"
-  },
-  {
-   "uid": "bh3gKSmGgfWDgCvKWeruOH5bVmy1",
-   "name": "COLIN"
-  },
-  {
-   "uid": "f46hrrHShIgGipLo06rAKFkN3142",
-   "name": "RENINI"
-  },
-  {
-   "name": "CASEY",
-   "uid": "6LUPzKtivbMjFWVn0OR7rohoo5a2"
-  },
-  {
-   "name": "TIM",
-   "uid": "18woXz2FfeQdASbbUrspRCvQHUi1"
-  },
-  {
-   "uid": "kCt7hnrAfeU7XEeFrfZRwxkPytX2",
-   "name": "JESS"
-  },
-  {
-   "name": "MOCHI",
-   "uid": "NCFB9cPIsnX3xtNmnsAdXUVpRUn2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585978567,
-  "_nanoseconds": 812000000
- },
  "missions": [
   {
    "team": [
     "GID",
     "COLIN"
    ],
-   "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "GID",
       "JESS",
@@ -61,23 +21,25 @@
      "team": [
       "GID",
       "COLIN"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "teamSize": 2,
+   "failsRequired": 1
   },
   {
    "state": "FAIL",
-   "team": [
-    "COLIN",
-    "GID",
-    "RENINI"
-   ],
-   "numFails": 1,
    "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "COLIN",
+      "GID",
+      "RENINI"
+     ],
+     "proposer": "COLIN",
      "votes": [
       "TIM",
       "MOCHI",
@@ -87,14 +49,14 @@
       "JESS",
       "RENINI"
      ],
-     "proposer": "COLIN",
-     "team": [
-      "COLIN",
-      "GID",
-      "RENINI"
-     ],
      "state": "APPROVED"
     }
+   ],
+   "numFails": 1,
+   "team": [
+    "COLIN",
+    "GID",
+    "RENINI"
    ],
    "failsRequired": 1
   },
@@ -104,16 +66,10 @@
     "JESS",
     "TIM"
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "MOCHI",
-      "JESS",
-      "TIM"
-     ],
      "state": "APPROVED",
+     "proposer": "RENINI",
      "votes": [
       "JESS",
       "RENINI",
@@ -121,24 +77,23 @@
       "CASEY",
       "GID"
      ],
-     "proposer": "RENINI"
+     "team": [
+      "MOCHI",
+      "JESS",
+      "TIM"
+     ]
     }
    ],
+   "numFails": 0,
+   "teamSize": 3,
    "failsRequired": 1,
    "state": "SUCCESS"
   },
   {
-   "team": [
-    "MOCHI",
-    "JESS",
-    "TIM",
-    "CASEY"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "CASEY",
      "votes": [
       "TIM",
       "MOCHI",
@@ -147,7 +102,6 @@
       "JESS",
       "RENINI"
      ],
-     "proposer": "CASEY",
      "team": [
       "MOCHI",
       "JESS",
@@ -156,26 +110,55 @@
      ]
     }
    ],
+   "teamSize": 4,
    "failsRequired": 2,
+   "numFails": 1,
+   "team": [
+    "MOCHI",
+    "JESS",
+    "TIM",
+    "CASEY"
+   ],
    "state": "SUCCESS"
   },
   {
-   "state": "PENDING",
+   "team": [],
    "proposals": [],
    "failsRequired": 1,
-   "team": [],
+   "state": "PENDING",
    "teamSize": 4
   }
  ],
  "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
   "assassinated": "COLIN",
+  "votes": [
+   {
+    "COLIN": true,
+    "GID": true
+   },
+   {
+    "COLIN": true,
+    "RENINI": false,
+    "GID": true
+   },
+   {
+    "JESS": true,
+    "TIM": true,
+    "MOCHI": true
+   },
+   {
+    "TIM": true,
+    "MOCHI": true,
+    "CASEY": false,
+    "JESS": true
+   }
+  ],
+  "message": "Merlin assassinated",
   "roles": [
    {
-    "name": "TIM",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "TIM"
    },
    {
     "name": "MOCHI",
@@ -183,14 +166,14 @@
     "role": "PERCIVAL"
    },
    {
+    "role": "OBERON",
     "name": "CASEY",
-    "assassin": false,
-    "role": "OBERON"
+    "assassin": false
    },
    {
     "name": "COLIN",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
     "name": "GID",
@@ -203,32 +186,49 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "role": "MORDRED",
     "name": "RENINI",
-    "assassin": true,
-    "role": "MORDRED"
+    "assassin": true
    }
   ],
-  "votes": [
-   {
-    "GID": true,
-    "COLIN": true
-   },
-   {
-    "COLIN": true,
-    "GID": true,
-    "RENINI": false
-   },
-   {
-    "TIM": true,
-    "JESS": true,
-    "MOCHI": true
-   },
-   {
-    "MOCHI": true,
-    "TIM": true,
-    "CASEY": false,
-    "JESS": true
-   }
-  ]
+  "state": "EVIL_WIN"
+ },
+ "players": [
+  {
+   "uid": "XBPGIBk6ujUBMBaqT9b9l2fGAtI2",
+   "name": "GID"
+  },
+  {
+   "name": "COLIN",
+   "uid": "bh3gKSmGgfWDgCvKWeruOH5bVmy1"
+  },
+  {
+   "name": "RENINI",
+   "uid": "f46hrrHShIgGipLo06rAKFkN3142"
+  },
+  {
+   "name": "CASEY",
+   "uid": "6LUPzKtivbMjFWVn0OR7rohoo5a2"
+  },
+  {
+   "uid": "18woXz2FfeQdASbbUrspRCvQHUi1",
+   "name": "TIM"
+  },
+  {
+   "name": "JESS",
+   "uid": "kCt7hnrAfeU7XEeFrfZRwxkPytX2"
+  },
+  {
+   "uid": "NCFB9cPIsnX3xtNmnsAdXUVpRUn2",
+   "name": "MOCHI"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1585978567,
+  "_nanoseconds": 812000000
+ },
+ "timeFinished": {
+  "_seconds": 1585978857,
+  "_nanoseconds": 522340000
  }
 }

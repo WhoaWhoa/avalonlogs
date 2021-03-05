@@ -1,54 +1,50 @@
 {
  "outcome": {
-  "message": "Five team proposals in a row rejected",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "MACKPHONE",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "MATT",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "TEST",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "IPAD",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "COMP",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
   "votes": [
    {
-    "MACKPHONE": true,
-    "COMP": true
+    "COMP": true,
+    "MACKPHONE": true
    },
    {
-    "TEST": true,
     "MACKPHONE": true,
-    "COMP": true
+    "COMP": true,
+    "TEST": true
    },
    {
     "MATT": false,
     "COMP": true
    }
+  ],
+  "message": "Five team proposals in a row rejected",
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "MACKPHONE"
+   },
+   {
+    "assassin": false,
+    "name": "MATT",
+    "role": "MORDRED"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "TEST",
+    "assassin": true
+   },
+   {
+    "name": "IPAD",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "COMP",
+    "assassin": false
+   }
   ]
- },
- "timeFinished": {
-  "_seconds": 1585686980,
-  "_nanoseconds": 138652000
  },
  "players": [
   {
@@ -76,17 +72,21 @@
   "_seconds": 1585686406,
   "_nanoseconds": 585000000
  },
+ "timeFinished": {
+  "_seconds": 1585686980,
+  "_nanoseconds": 138652000
+ },
  "missions": [
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "MACKPHONE",
     "COMP"
    ],
-   "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
+     "proposer": "IPAD",
      "team": [
       "MACKPHONE",
       "COMP"
@@ -97,13 +97,14 @@
       "IPAD",
       "COMP",
       "MACKPHONE"
-     ],
-     "proposer": "IPAD"
+     ]
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
+   "teamSize": 3,
    "state": "SUCCESS",
    "team": [
     "MACKPHONE",
@@ -111,60 +112,56 @@
     "TEST"
    ],
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "MACKPHONE",
       "COMP",
       "TEST"
      ],
-     "state": "APPROVED",
+     "proposer": "MACKPHONE",
      "votes": [
       "MACKPHONE",
       "MATT",
       "IPAD",
       "COMP"
-     ],
-     "proposer": "MACKPHONE"
+     ]
     }
    ],
    "failsRequired": 1
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "MATT",
     "COMP"
    ],
+   "state": "FAIL",
    "numFails": 1,
-   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "MATT",
+      "COMP"
+     ],
+     "proposer": "MATT",
      "votes": [
       "MATT",
       "TEST",
       "IPAD",
       "COMP"
-     ],
-     "proposer": "MATT",
-     "team": [
-      "MATT",
-      "COMP"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
-   "team": [],
-   "teamSize": 3,
-   "state": "PENDING",
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [],
+     "state": "REJECTED",
      "proposer": "COMP",
      "team": [
       "TEST",
@@ -173,52 +170,55 @@
      ]
     },
     {
+     "proposer": "TEST",
+     "state": "REJECTED",
      "team": [
       "TEST",
       "COMP",
       "MATT"
      ],
-     "state": "REJECTED",
-     "votes": [],
-     "proposer": "TEST"
+     "votes": []
     },
     {
+     "votes": [],
      "proposer": "IPAD",
-     "team": [
-      "TEST",
-      "COMP",
-      "MATT"
-     ],
      "state": "REJECTED",
-     "votes": []
-    },
-    {
-     "proposer": "MACKPHONE",
-     "team": [
-      "MATT",
-      "COMP",
-      "IPAD"
-     ],
-     "state": "REJECTED",
-     "votes": []
-    },
-    {
-     "state": "REJECTED",
-     "votes": [],
-     "proposer": "MATT",
      "team": [
       "TEST",
       "COMP",
       "MATT"
      ]
+    },
+    {
+     "team": [
+      "MATT",
+      "COMP",
+      "IPAD"
+     ],
+     "proposer": "MACKPHONE",
+     "votes": [],
+     "state": "REJECTED"
+    },
+    {
+     "team": [
+      "TEST",
+      "COMP",
+      "MATT"
+     ],
+     "votes": [],
+     "proposer": "MATT",
+     "state": "REJECTED"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "team": [],
+   "failsRequired": 1,
+   "state": "PENDING"
   },
   {
-   "state": "PENDING",
-   "proposals": [],
    "failsRequired": 1,
+   "proposals": [],
+   "state": "PENDING",
    "team": [],
    "teamSize": 3
   }

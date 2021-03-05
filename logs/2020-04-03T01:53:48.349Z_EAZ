@@ -1,7 +1,27 @@
 {
  "outcome": {
+  "message": "Merlin assassinated",
   "state": "EVIL_WIN",
   "assassinated": "ALYSON",
+  "votes": [
+   {
+    "CY": true,
+    "KAI": true,
+    "GAMEOVER": true
+   },
+   {
+    "MARCH": true,
+    "KAI": true,
+    "GAMEOVER": true,
+    "CY": true
+   },
+   {
+    "MARCH": true,
+    "GAMEOVER": true,
+    "KAI": true,
+    "CY": true
+   }
+  ],
   "roles": [
    {
     "name": "KAI",
@@ -10,8 +30,8 @@
    },
    {
     "name": "CY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "name": "SEB",
@@ -19,103 +39,43 @@
     "role": "EVIL MINION"
    },
    {
-    "name": "JIMBOTECH",
+    "role": "EVIL MINION",
     "assassin": false,
-    "role": "EVIL MINION"
+    "name": "JIMBOTECH"
    },
    {
     "name": "JESSE",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": false
    },
    {
-    "name": "GAMEOVER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "GAMEOVER"
    },
    {
     "name": "ALYSON",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
-    "name": "MARCH",
     "assassin": false,
+    "name": "MARCH",
     "role": "LOYAL FOLLOWER"
    }
-  ],
-  "votes": [
-   {
-    "CY": true,
-    "GAMEOVER": true,
-    "KAI": true
-   },
-   {
-    "GAMEOVER": true,
-    "MARCH": true,
-    "KAI": true,
-    "CY": true
-   },
-   {
-    "CY": true,
-    "GAMEOVER": true,
-    "MARCH": true,
-    "KAI": true
-   }
-  ],
-  "message": "Merlin assassinated"
- },
- "timeFinished": {
-  "_seconds": 1585879384,
-  "_nanoseconds": 237485000
- },
- "players": [
-  {
-   "uid": "oo4zea3r72QJuoGGAqgxu2RkV4k1",
-   "name": "KAI"
-  },
-  {
-   "uid": "rsBkz6A8jUTrZDpm9wNgXPJEJSZ2",
-   "name": "SEB"
-  },
-  {
-   "uid": "zdP8gERmvRQ3iRsj32yLgRnifkA2",
-   "name": "MARCH"
-  },
-  {
-   "uid": "KGEeovUSZxQy9Ee8SPaCM6lLEls2",
-   "name": "ALYSON"
-  },
-  {
-   "uid": "8FdxDiRy0fcAIbPxWTfeIc5WI5E3",
-   "name": "JIMBOTECH"
-  },
-  {
-   "uid": "TtQknB1DQweiPJaIon3kZkmy6Os2",
-   "name": "JESSE"
-  },
-  {
-   "name": "CY",
-   "uid": "mGEz3FSlSEVWyar1YQSvJbYkT7T2"
-  },
-  {
-   "uid": "Mnu8PnZS7SMHjKQ4OUenn3pO0zy1",
-   "name": "GAMEOVER"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585878828,
-  "_nanoseconds": 349000000
+  ]
  },
  "missions": [
   {
+   "team": [
+    "KAI",
+    "GAMEOVER",
+    "CY"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "KAI",
-      "GAMEOVER",
-      "CY"
-     ],
      "state": "APPROVED",
      "votes": [
       "SEB",
@@ -124,45 +84,41 @@
       "ALYSON",
       "MARCH"
      ],
+     "team": [
+      "KAI",
+      "GAMEOVER",
+      "CY"
+     ],
      "proposer": "KAI"
     }
    ],
-   "failsRequired": 1,
    "state": "SUCCESS",
-   "team": [
-    "KAI",
-    "GAMEOVER",
-    "CY"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   "numFails": 0
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "KAI",
-    "CY",
-    "GAMEOVER",
-    "MARCH"
-   ],
-   "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
      "proposer": "SEB",
+     "votes": [
+      "ALYSON",
+      "SEB"
+     ],
+     "state": "REJECTED",
      "team": [
       "KAI",
       "JIMBOTECH",
       "GAMEOVER",
       "SEB"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "ALYSON",
-      "SEB"
      ]
     },
     {
+     "team": [
+      "KAI",
+      "CY",
+      "GAMEOVER",
+      "MARCH"
+     ],
      "votes": [
       "KAI",
       "CY",
@@ -171,58 +127,61 @@
       "MARCH"
      ],
      "proposer": "MARCH",
-     "team": [
-      "KAI",
-      "CY",
-      "GAMEOVER",
-      "MARCH"
-     ],
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
-  },
-  {
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "KAI",
     "CY",
     "GAMEOVER",
     "MARCH"
    ],
+   "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 0
+  },
+  {
    "numFails": 0,
+   "failsRequired": 1,
+   "team": [
+    "KAI",
+    "CY",
+    "GAMEOVER",
+    "MARCH"
+   ],
+   "state": "SUCCESS",
    "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "KAI",
-      "MARCH",
-      "ALYSON",
-      "CY"
-     ],
+     "proposer": "ALYSON",
      "state": "REJECTED",
      "votes": [
       "KAI",
       "ALYSON"
      ],
-     "proposer": "ALYSON"
+     "team": [
+      "KAI",
+      "MARCH",
+      "ALYSON",
+      "CY"
+     ]
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "JIMBOTECH",
-      "JESSE"
-     ],
-     "proposer": "JIMBOTECH",
      "team": [
       "KAI",
       "MARCH",
       "CY",
       "JESSE"
-     ]
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "JIMBOTECH",
+      "JESSE"
+     ],
+     "proposer": "JIMBOTECH"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "JIMBOTECH",
       "JESSE"
@@ -233,41 +192,82 @@
       "KAI",
       "JESSE",
       "MARCH"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "votes": [
-      "GAMEOVER",
-      "ALYSON",
-      "MARCH",
-      "KAI",
-      "CY"
-     ],
-     "proposer": "CY",
      "team": [
       "KAI",
       "CY",
       "GAMEOVER",
       "MARCH"
      ],
-     "state": "APPROVED"
+     "proposer": "CY",
+     "state": "APPROVED",
+     "votes": [
+      "GAMEOVER",
+      "ALYSON",
+      "MARCH",
+      "KAI",
+      "CY"
+     ]
     }
    ]
   },
   {
-   "failsRequired": 2,
-   "team": [],
+   "proposals": [],
    "teamSize": 5,
    "state": "PENDING",
-   "proposals": []
+   "team": [],
+   "failsRequired": 2
   },
   {
-   "team": [],
-   "teamSize": 5,
+   "failsRequired": 1,
    "state": "PENDING",
+   "teamSize": 5,
    "proposals": [],
-   "failsRequired": 1
+   "team": []
   }
- ]
+ ],
+ "players": [
+  {
+   "name": "KAI",
+   "uid": "oo4zea3r72QJuoGGAqgxu2RkV4k1"
+  },
+  {
+   "uid": "rsBkz6A8jUTrZDpm9wNgXPJEJSZ2",
+   "name": "SEB"
+  },
+  {
+   "uid": "zdP8gERmvRQ3iRsj32yLgRnifkA2",
+   "name": "MARCH"
+  },
+  {
+   "name": "ALYSON",
+   "uid": "KGEeovUSZxQy9Ee8SPaCM6lLEls2"
+  },
+  {
+   "uid": "8FdxDiRy0fcAIbPxWTfeIc5WI5E3",
+   "name": "JIMBOTECH"
+  },
+  {
+   "uid": "TtQknB1DQweiPJaIon3kZkmy6Os2",
+   "name": "JESSE"
+  },
+  {
+   "uid": "mGEz3FSlSEVWyar1YQSvJbYkT7T2",
+   "name": "CY"
+  },
+  {
+   "uid": "Mnu8PnZS7SMHjKQ4OUenn3pO0zy1",
+   "name": "GAMEOVER"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1585878828,
+  "_nanoseconds": 349000000
+ },
+ "timeFinished": {
+  "_seconds": 1585879384,
+  "_nanoseconds": 237485000
+ }
 }

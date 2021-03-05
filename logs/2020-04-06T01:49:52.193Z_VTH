@@ -1,7 +1,29 @@
 {
  "outcome": {
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "TYLER": true,
+    "LANGATHAN": true
+   },
+   {
+    "SAM": true,
+    "TYLER": true,
+    "LANGATHAN": true
+   },
+   {
+    "TYLER": true,
+    "LANGATHAN": false,
+    "SAM": true
+   },
+   {
+    "ERICA": true,
+    "TYLER": true,
+    "GRAEME": true,
+    "KAY": true
+   }
+  ],
   "state": "GOOD_WIN",
-  "assassinated": "GRAEME",
   "roles": [
    {
     "name": "KAY",
@@ -9,14 +31,14 @@
     "role": "PERCIVAL"
    },
    {
-    "name": "SAM",
     "assassin": false,
+    "name": "SAM",
     "role": "MORGANA"
    },
    {
-    "name": "GRAEME",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "GRAEME"
    },
    {
     "name": "KEV",
@@ -24,14 +46,14 @@
     "role": "MERLIN"
    },
    {
-    "name": "TYLER",
     "assassin": false,
+    "name": "TYLER",
     "role": "OBERON"
    },
    {
+    "name": "ERICA",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ERICA"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": true,
@@ -39,38 +61,20 @@
     "name": "LANGATHAN"
    }
   ],
-  "votes": [
-   {
-    "LANGATHAN": true,
-    "TYLER": true
-   },
-   {
-    "SAM": true,
-    "LANGATHAN": true,
-    "TYLER": true
-   },
-   {
-    "LANGATHAN": false,
-    "TYLER": true,
-    "SAM": true
-   },
-   {
-    "TYLER": true,
-    "ERICA": true,
-    "GRAEME": true,
-    "KAY": true
-   }
-  ],
-  "message": "Three successful missions"
+  "assassinated": "GRAEME"
  },
  "timeFinished": {
   "_seconds": 1586139159,
   "_nanoseconds": 337158000
  },
+ "timeCreated": {
+  "_seconds": 1586137792,
+  "_nanoseconds": 193000000
+ },
  "players": [
   {
-   "uid": "BnJINdVgeQbP0ECTJrdeycrnEZ83",
-   "name": "ERICA"
+   "name": "ERICA",
+   "uid": "BnJINdVgeQbP0ECTJrdeycrnEZ83"
   },
   {
    "name": "GRAEME",
@@ -81,61 +85,51 @@
    "uid": "vFbsPmfm2AUFhJrIg9m9Bknblzv1"
   },
   {
-   "name": "KEV",
-   "uid": "uVEOuJwkvidAfFHDqvoODfpeDbu1"
+   "uid": "uVEOuJwkvidAfFHDqvoODfpeDbu1",
+   "name": "KEV"
   },
   {
-   "uid": "bU0d51g1j6a1QHnRu8GFi3y67AZ2",
-   "name": "LANGATHAN"
+   "name": "LANGATHAN",
+   "uid": "bU0d51g1j6a1QHnRu8GFi3y67AZ2"
   },
   {
    "uid": "xYX50Qzfnqdc7wk3M59Ss7fFiwX2",
    "name": "SAM"
   },
   {
-   "uid": "ZbXNzeYqRTgb53yXDbuXYelY1la2",
-   "name": "TYLER"
+   "name": "TYLER",
+   "uid": "ZbXNzeYqRTgb53yXDbuXYelY1la2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1586137792,
-  "_nanoseconds": 193000000
- },
  "missions": [
   {
+   "numFails": 0,
    "failsRequired": 1,
+   "teamSize": 2,
    "state": "SUCCESS",
    "team": [
     "LANGATHAN",
     "TYLER"
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "LANGATHAN",
+      "TYLER"
+     ],
+     "proposer": "LANGATHAN",
      "votes": [
       "SAM",
       "GRAEME",
       "TYLER",
       "LANGATHAN",
       "KAY"
-     ],
-     "proposer": "LANGATHAN",
-     "team": [
-      "LANGATHAN",
-      "TYLER"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ]
   },
   {
-   "team": [
-    "LANGATHAN",
-    "SAM",
-    "TYLER"
-   ],
-   "numFails": 0,
    "teamSize": 3,
    "proposals": [
     {
@@ -158,16 +152,22 @@
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "LANGATHAN",
+    "SAM",
+    "TYLER"
+   ]
   },
   {
+   "numFails": 1,
    "team": [
     "TYLER",
     "SAM",
     "LANGATHAN"
    ],
-   "numFails": 1,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -175,34 +175,35 @@
       "SAM",
       "LANGATHAN"
      ],
-     "state": "APPROVED",
      "votes": [
       "KAY",
       "KEV",
       "TYLER",
       "ERICA"
      ],
+     "state": "APPROVED",
      "proposer": "TYLER"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
+   "failsRequired": 2,
    "proposals": [
     {
+     "proposer": "ERICA",
+     "state": "REJECTED",
      "team": [
       "ERICA",
       "KAY",
       "GRAEME",
       "KEV"
      ],
-     "state": "REJECTED",
      "votes": [
       "KEV",
       "ERICA"
-     ],
-     "proposer": "ERICA"
+     ]
     },
     {
      "state": "APPROVED",
@@ -221,23 +222,22 @@
      ]
     }
    ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
    "team": [
     "GRAEME",
     "KAY",
     "ERICA",
     "TYLER"
    ],
-   "numFails": 0,
-   "teamSize": 4
+   "state": "SUCCESS",
+   "teamSize": 4,
+   "numFails": 0
   },
   {
-   "teamSize": 4,
    "state": "PENDING",
+   "team": [],
    "proposals": [],
    "failsRequired": 1,
-   "team": []
+   "teamSize": 4
   }
  ]
 }

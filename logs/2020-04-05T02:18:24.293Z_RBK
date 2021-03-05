@@ -3,43 +3,82 @@
   "_seconds": 1586053856,
   "_nanoseconds": 348385000
  },
- "players": [
-  {
-   "name": "KEVIN",
-   "uid": "zxANVrZ9BFWebDokdzJVsJw2za43"
-  },
-  {
-   "name": "KATE",
-   "uid": "zP3unMEXl9Oy3VLRggwleXDGE2l2"
-  },
-  {
-   "uid": "lPQP6jalWreQSvlDFEGyGepyVbA2",
-   "name": "KEENER"
-  },
-  {
-   "uid": "KxXhKTwRZ6fyqBiaThBgn21iqV42",
-   "name": "JON"
-  },
-  {
-   "uid": "i209qiPXiYVIVpEGO7Xl8VWuUR53",
-   "name": "MATT"
-  },
-  {
-   "name": "LAUREN",
-   "uid": "IYsMY5iliefhUCLL3Cv1rDUU9qw1"
-  },
-  {
-   "uid": "smmahotL20dyfULERo7AiDwcN5k1",
-   "name": "KEN"
-  },
-  {
-   "uid": "MNUtXdWGy3SZdRYK2dU8G7B9d2I2",
-   "name": "SEAN"
-  }
- ],
  "timeCreated": {
   "_seconds": 1586053104,
   "_nanoseconds": 293000000
+ },
+ "outcome": {
+  "roles": [
+   {
+    "name": "KEENER",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "LAUREN"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "SEAN"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "KEVIN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "KATE",
+    "assassin": false
+   },
+   {
+    "name": "KEN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "MATT"
+   },
+   {
+    "assassin": false,
+    "name": "JON",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "JON": true,
+    "KEENER": true,
+    "SEAN": true
+   },
+   {
+    "JON": true,
+    "KEENER": true,
+    "SEAN": true,
+    "KEVIN": false
+   },
+   {
+    "JON": true,
+    "SEAN": true,
+    "KEENER": true,
+    "KATE": true
+   },
+   {
+    "LAUREN": true,
+    "KEENER": true,
+    "SEAN": false,
+    "MATT": true,
+    "JON": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "LAUREN"
  },
  "missions": [
   {
@@ -48,8 +87,8 @@
     "JON",
     "KEENER"
    ],
+   "failsRequired": 1,
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -70,19 +109,20 @@
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 3,
    "state": "SUCCESS"
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 4,
    "team": [
     "SEAN",
     "JON",
     "KEENER",
     "KEVIN"
    ],
+   "state": "FAIL",
    "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -91,6 +131,7 @@
       "KEENER",
       "KEVIN"
      ],
+     "proposer": "KEVIN",
      "state": "APPROVED",
      "votes": [
       "KEENER",
@@ -101,24 +142,23 @@
       "KEN",
       "MATT",
       "JON"
-     ],
-     "proposer": "KEVIN"
+     ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "SEAN",
-    "JON",
-    "KEENER",
-    "KATE"
-   ],
-   "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 4,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "SEAN",
+      "JON",
+      "KEENER",
+      "KATE"
+     ],
      "state": "APPROVED",
      "votes": [
       "KEENER",
@@ -129,16 +169,15 @@
       "MATT",
       "JON"
      ],
-     "proposer": "KATE",
-     "team": [
-      "SEAN",
-      "JON",
-      "KEENER",
-      "KATE"
-     ]
+     "proposer": "KATE"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "SEAN",
+    "JON",
+    "KEENER",
+    "KATE"
+   ]
   },
   {
    "team": [
@@ -149,10 +188,8 @@
     "SEAN"
    ],
    "numFails": 1,
-   "teamSize": 5,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "KEENER",
       "LAUREN",
@@ -160,98 +197,61 @@
       "KEN",
       "JON"
      ],
-     "proposer": "KEENER",
      "team": [
       "KEENER",
       "JON",
       "MATT",
       "LAUREN",
       "SEAN"
-     ]
+     ],
+     "proposer": "KEENER",
+     "state": "APPROVED"
     }
    ],
+   "state": "SUCCESS",
    "failsRequired": 2,
-   "state": "SUCCESS"
+   "teamSize": 5
   },
   {
-   "failsRequired": 1,
-   "team": [],
    "teamSize": 5,
    "state": "PENDING",
-   "proposals": []
+   "team": [],
+   "proposals": [],
+   "failsRequired": 1
   }
  ],
- "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "LAUREN",
-  "roles": [
-   {
-    "name": "KEENER",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "LAUREN"
-   },
-   {
-    "name": "SEAN",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "KEVIN",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "KATE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "KEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MATT",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JON",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "JON": true,
-    "KEENER": true,
-    "SEAN": true
-   },
-   {
-    "JON": true,
-    "KEVIN": false,
-    "KEENER": true,
-    "SEAN": true
-   },
-   {
-    "SEAN": true,
-    "KATE": true,
-    "JON": true,
-    "KEENER": true
-   },
-   {
-    "JON": true,
-    "KEENER": true,
-    "MATT": true,
-    "LAUREN": true,
-    "SEAN": false
-   }
-  ]
- }
+ "players": [
+  {
+   "name": "KEVIN",
+   "uid": "zxANVrZ9BFWebDokdzJVsJw2za43"
+  },
+  {
+   "uid": "zP3unMEXl9Oy3VLRggwleXDGE2l2",
+   "name": "KATE"
+  },
+  {
+   "name": "KEENER",
+   "uid": "lPQP6jalWreQSvlDFEGyGepyVbA2"
+  },
+  {
+   "name": "JON",
+   "uid": "KxXhKTwRZ6fyqBiaThBgn21iqV42"
+  },
+  {
+   "uid": "i209qiPXiYVIVpEGO7Xl8VWuUR53",
+   "name": "MATT"
+  },
+  {
+   "uid": "IYsMY5iliefhUCLL3Cv1rDUU9qw1",
+   "name": "LAUREN"
+  },
+  {
+   "name": "KEN",
+   "uid": "smmahotL20dyfULERo7AiDwcN5k1"
+  },
+  {
+   "name": "SEAN",
+   "uid": "MNUtXdWGy3SZdRYK2dU8G7B9d2I2"
+  }
+ ]
 }

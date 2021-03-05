@@ -1,15 +1,116 @@
 {
+ "players": [
+  {
+   "name": "SOO",
+   "uid": "knEMSBbLCIe0rTwsYyFGnZZTmVt1"
+  },
+  {
+   "name": "ANDREA",
+   "uid": "qR6zXMGZDkREtEKPVmedgu7oe682"
+  },
+  {
+   "name": "ASHLEY",
+   "uid": "dWLCp2JD2RhJD6nePirAya7BbJ53"
+  },
+  {
+   "name": "JAEIN",
+   "uid": "3QEKbSOmfoYgZMAbLc6Dfn0SfwT2"
+  },
+  {
+   "name": "BAGOR",
+   "uid": "rNuUzhj1pEfhdEjl2jfprM0BSMt1"
+  },
+  {
+   "name": "DUNCAN",
+   "uid": "dwmghtOHcpajLxC1YWn54HiioSe2"
+  }
+ ],
+ "outcome": {
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "DUNCAN": true,
+    "ANDREA": true
+   },
+   {
+    "BAGOR": true,
+    "JAEIN": true,
+    "ASHLEY": false
+   },
+   {
+    "BAGOR": true,
+    "DUNCAN": true,
+    "SOO": true,
+    "ANDREA": true
+   },
+   {
+    "DUNCAN": true,
+    "ANDREA": false,
+    "SOO": true
+   },
+   {
+    "BAGOR": true,
+    "DUNCAN": true,
+    "ANDREA": false,
+    "SOO": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": true,
+    "name": "ASHLEY",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "BAGOR",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "ANDREA"
+   },
+   {
+    "name": "JAEIN",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "DUNCAN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "SOO"
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN"
+ },
+ "timeCreated": {
+  "_seconds": 1585443690,
+  "_nanoseconds": 408000000
+ },
+ "timeFinished": {
+  "_seconds": 1585444227,
+  "_nanoseconds": 872510000
+ },
  "missions": [
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 2,
    "team": [
     "DUNCAN",
     "ANDREA"
    ],
-   "numFails": 0,
-   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "SOO",
      "votes": [
       "ASHLEY",
       "BAGOR",
@@ -18,24 +119,16 @@
       "DUNCAN",
       "SOO"
      ],
-     "proposer": "SOO",
      "team": [
       "DUNCAN",
       "ANDREA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 0
   },
   {
-   "team": [
-    "ASHLEY",
-    "JAEIN",
-    "BAGOR"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
      "votes": [
@@ -46,65 +139,66 @@
       "DUNCAN",
       "SOO"
      ],
-     "proposer": "ANDREA",
      "team": [
       "ASHLEY",
       "JAEIN",
       "BAGOR"
      ],
+     "proposer": "ANDREA",
      "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1,
+   "teamSize": 3,
+   "team": [
+    "ASHLEY",
+    "JAEIN",
+    "BAGOR"
+   ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 4,
    "state": "SUCCESS",
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "proposer": "ASHLEY",
+     "team": [
+      "SOO",
+      "ANDREA",
+      "DUNCAN",
+      "BAGOR"
+     ],
+     "votes": [
+      "DUNCAN",
+      "SOO",
+      "ASHLEY",
+      "BAGOR",
+      "ANDREA"
+     ]
+    }
+   ],
+   "numFails": 0,
    "team": [
     "SOO",
     "ANDREA",
     "DUNCAN",
     "BAGOR"
-   ],
-   "numFails": 0,
-   "teamSize": 4,
-   "proposals": [
-    {
-     "team": [
-      "SOO",
-      "ANDREA",
-      "DUNCAN",
-      "BAGOR"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "DUNCAN",
-      "SOO",
-      "ASHLEY",
-      "BAGOR",
-      "ANDREA"
-     ],
-     "proposer": "ASHLEY"
-    }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "team": [
-    "DUNCAN",
-    "SOO",
-    "ANDREA"
-   ],
-   "numFails": 1,
    "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "JAEIN",
       "ASHLEY"
      ],
      "proposer": "JAEIN",
+     "state": "REJECTED",
      "team": [
       "SOO",
       "ASHLEY",
@@ -112,12 +206,13 @@
      ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "DUNCAN",
       "SOO",
       "ANDREA"
      ],
-     "state": "APPROVED",
+     "proposer": "BAGOR",
      "votes": [
       "ASHLEY",
       "BAGOR",
@@ -125,26 +220,31 @@
       "JAEIN",
       "DUNCAN",
       "SOO"
-     ],
-     "proposer": "BAGOR"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "DUNCAN",
+    "SOO",
+    "ANDREA"
+   ],
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
+   "numFails": 1,
    "state": "FAIL",
+   "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "ANDREA",
     "DUNCAN",
     "SOO",
     "BAGOR"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "JAEIN",
       "DUNCAN",
@@ -156,8 +256,7 @@
       "ASHLEY",
       "JAEIN",
       "SOO"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "team": [
@@ -178,104 +277,5 @@
     }
    ]
   }
- ],
- "outcome": {
-  "votes": [
-   {
-    "DUNCAN": true,
-    "ANDREA": true
-   },
-   {
-    "BAGOR": true,
-    "ASHLEY": false,
-    "JAEIN": true
-   },
-   {
-    "SOO": true,
-    "ANDREA": true,
-    "BAGOR": true,
-    "DUNCAN": true
-   },
-   {
-    "DUNCAN": true,
-    "SOO": true,
-    "ANDREA": false
-   },
-   {
-    "DUNCAN": true,
-    "SOO": true,
-    "ANDREA": false,
-    "BAGOR": true
-   }
-  ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "ASHLEY"
-   },
-   {
-    "name": "BAGOR",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ANDREA",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JAEIN",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "DUNCAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SOO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1585444227,
-  "_nanoseconds": 872510000
- },
- "players": [
-  {
-   "name": "SOO",
-   "uid": "knEMSBbLCIe0rTwsYyFGnZZTmVt1"
-  },
-  {
-   "uid": "qR6zXMGZDkREtEKPVmedgu7oe682",
-   "name": "ANDREA"
-  },
-  {
-   "name": "ASHLEY",
-   "uid": "dWLCp2JD2RhJD6nePirAya7BbJ53"
-  },
-  {
-   "uid": "3QEKbSOmfoYgZMAbLc6Dfn0SfwT2",
-   "name": "JAEIN"
-  },
-  {
-   "name": "BAGOR",
-   "uid": "rNuUzhj1pEfhdEjl2jfprM0BSMt1"
-  },
-  {
-   "name": "DUNCAN",
-   "uid": "dwmghtOHcpajLxC1YWn54HiioSe2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585443690,
-  "_nanoseconds": 408000000
- }
+ ]
 }
