@@ -1,49 +1,91 @@
 {
- "timeCreated": {
-  "_seconds": 1589300141,
-  "_nanoseconds": 791000000
- },
- "options": {
-  "inGameLog": false
- },
  "players": [
   {
    "uid": "ebEgmZuKkIgkRJkcrMMtNXmpJhB2",
    "name": "ROBIN"
   },
   {
-   "uid": "z9rJN41CX3RPQD3KnRDIc4omgdo2",
-   "name": "WEI"
+   "name": "WEI",
+   "uid": "z9rJN41CX3RPQD3KnRDIc4omgdo2"
   },
   {
-   "uid": "YjIwyhCncYUiYPvf2PZcnmxX2Ou1",
-   "name": "SKYX"
+   "name": "SKYX",
+   "uid": "YjIwyhCncYUiYPvf2PZcnmxX2Ou1"
   },
   {
-   "uid": "1bJ81Hm1pVgWVQIR92GlUKEx6iH3",
-   "name": "KENT"
+   "name": "KENT",
+   "uid": "1bJ81Hm1pVgWVQIR92GlUKEx6iH3"
   },
   {
-   "uid": "w6eoxVI6I5NrapBHh3I4tf1Igvr1",
-   "name": "WEILUN"
+   "name": "WEILUN",
+   "uid": "w6eoxVI6I5NrapBHh3I4tf1Igvr1"
   },
   {
    "name": "PROVIDENCE",
    "uid": "w2ngiDASElTWBTMXd9fdYpBlSNx1"
   }
  ],
- "timeFinished": {
-  "_seconds": 1589300482,
-  "_nanoseconds": 21000000
+ "outcome": {
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "ROBIN",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "WEI",
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "name": "PROVIDENCE",
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "name": "SKYX",
+    "role": "MERLIN"
+   },
+   {
+    "name": "KENT",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "role": "MORDRED",
+    "name": "WEILUN"
+   }
+  ],
+  "votes": [
+   {
+    "KENT": true,
+    "WEILUN": true
+   },
+   {
+    "KENT": true,
+    "WEI": true,
+    "WEILUN": true
+   },
+   {
+    "WEILUN": false,
+    "SKYX": true,
+    "WEI": true,
+    "KENT": true
+   },
+   {
+    "WEI": true,
+    "ROBIN": true,
+    "KENT": true
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "ROBIN"
  },
  "missions": [
   {
-   "team": [
-    "KENT",
-    "WEILUN"
-   ],
-   "teamSize": 2,
-   "numFails": 0,
    "state": "SUCCESS",
    "proposals": [
     {
@@ -52,28 +94,26 @@
       "WEILUN"
      ],
      "proposer": "KENT",
-     "state": "APPROVED",
      "votes": [
       "ROBIN",
       "WEI",
       "SKYX",
       "KENT",
       "WEILUN"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "KENT",
+    "WEILUN"
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 2
   },
   {
-   "numFails": 0,
    "state": "SUCCESS",
-   "team": [
-    "WEILUN",
-    "KENT",
-    "WEI"
-   ],
-   "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
@@ -91,10 +131,17 @@
       "WEI"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "WEILUN",
+    "KENT",
+    "WEI"
+   ],
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
    "team": [
     "KENT",
     "WEI",
@@ -103,35 +150,45 @@
    ],
    "proposals": [
     {
-     "votes": [
-      "SKYX",
-      "WEILUN",
-      "WEI",
-      "PROVIDENCE"
-     ],
-     "proposer": "PROVIDENCE",
      "team": [
       "KENT",
       "WEI",
       "WEILUN",
       "SKYX"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "votes": [
+      "SKYX",
+      "WEILUN",
+      "WEI",
+      "PROVIDENCE"
+     ],
+     "proposer": "PROVIDENCE"
     }
    ],
-   "teamSize": 4,
+   "numFails": 1,
+   "state": "FAIL",
    "failsRequired": 1,
-   "numFails": 1
+   "teamSize": 4
   },
   {
+   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "ROBIN",
+    "WEI",
+    "KENT"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "WEI",
       "ROBIN",
       "PROVIDENCE"
      ],
+     "state": "REJECTED",
      "proposer": "ROBIN",
      "votes": [
       "ROBIN",
@@ -140,6 +197,7 @@
      ]
     },
     {
+     "proposer": "WEI",
      "votes": [
       "ROBIN",
       "WEI",
@@ -147,89 +205,31 @@
       "WEILUN"
      ],
      "state": "APPROVED",
-     "proposer": "WEI",
      "team": [
       "ROBIN",
       "WEI",
       "KENT"
      ]
     }
-   ],
-   "state": "SUCCESS",
-   "teamSize": 3,
-   "failsRequired": 1,
-   "team": [
-    "ROBIN",
-    "WEI",
-    "KENT"
-   ],
-   "numFails": 0
+   ]
   },
   {
-   "state": "PENDING",
    "failsRequired": 1,
+   "teamSize": 4,
    "team": [],
    "proposals": [],
-   "teamSize": 4
+   "state": "PENDING"
   }
  ],
- "outcome": {
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "ROBIN",
-    "assassin": false
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "WEI"
-   },
-   {
-    "name": "PROVIDENCE",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "SKYX",
-    "role": "MERLIN"
-   },
-   {
-    "name": "KENT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "WEILUN",
-    "role": "MORDRED",
-    "assassin": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "ROBIN",
-  "votes": [
-   {
-    "WEILUN": true,
-    "KENT": true
-   },
-   {
-    "WEI": true,
-    "WEILUN": true,
-    "KENT": true
-   },
-   {
-    "WEI": true,
-    "KENT": true,
-    "WEILUN": false,
-    "SKYX": true
-   },
-   {
-    "WEI": true,
-    "ROBIN": true,
-    "KENT": true
-   }
-  ],
-  "state": "GOOD_WIN"
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1589300141,
+  "_nanoseconds": 791000000
+ },
+ "timeFinished": {
+  "_seconds": 1589300482,
+  "_nanoseconds": 21000000
  }
 }

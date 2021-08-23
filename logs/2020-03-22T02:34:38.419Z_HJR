@@ -9,8 +9,8 @@
    "name": "EDGE"
   },
   {
-   "name": "PIXIE",
-   "uid": "3B8sV0lFx6V9NwhAJMRBHXOSXrD2"
+   "uid": "3B8sV0lFx6V9NwhAJMRBHXOSXrD2",
+   "name": "PIXIE"
   },
   {
    "uid": "ChnVBLjndUgFhAAWKQIMNCpFKCz1",
@@ -21,54 +21,24 @@
    "uid": "abP1Fn1aeUYeM7tdtdDe82yzjfH2"
   }
  ],
- "timeFinished": {
-  "_seconds": 1584844680,
-  "_nanoseconds": 724742000
- },
  "outcome": {
-  "message": "Three failed missions",
-  "assassinated": null,
-  "votes": [
-   {
-    "EDGE": false,
-    "PIXIE": true
-   },
-   {
-    "INCOG": true,
-    "PIXIE": true,
-    "EDGE": false
-   },
-   {
-    "ETWO": true,
-    "RYAN": true
-   },
-   {
-    "EDGE": true,
-    "PIXIE": true,
-    "INCOG": true
-   },
-   {
-    "ETWO": true,
-    "INCOG": true,
-    "RYAN": false
-   }
-  ],
   "state": "EVIL_WIN",
+  "assassinated": null,
   "roles": [
    {
-    "role": "EVIL MINION",
+    "assassin": true,
     "name": "RYAN",
-    "assassin": true
+    "role": "EVIL MINION"
    },
    {
-    "assassin": true,
     "name": "EDGE",
+    "assassin": true,
     "role": "MORGANA"
    },
    {
     "name": "ETWO",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
     "name": "INCOG",
@@ -76,72 +46,101 @@
     "assassin": false
    },
    {
+    "assassin": false,
     "name": "PIXIE",
-    "role": "PERCIVAL",
-    "assassin": false
+    "role": "PERCIVAL"
    }
-  ]
+  ],
+  "votes": [
+   {
+    "EDGE": false,
+    "PIXIE": true
+   },
+   {
+    "PIXIE": true,
+    "INCOG": true,
+    "EDGE": false
+   },
+   {
+    "RYAN": true,
+    "ETWO": true
+   },
+   {
+    "INCOG": true,
+    "PIXIE": true,
+    "EDGE": true
+   },
+   {
+    "INCOG": true,
+    "RYAN": false,
+    "ETWO": true
+   }
+  ],
+  "message": "Three failed missions"
  },
  "timeCreated": {
   "_seconds": 1584844478,
   "_nanoseconds": 419000000
  },
+ "timeFinished": {
+  "_seconds": 1584844680,
+  "_nanoseconds": 724742000
+ },
  "missions": [
   {
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "EDGE",
     "PIXIE"
    ],
-   "failsRequired": 1,
-   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "RYAN",
      "team": [
       "RYAN",
       "EDGE"
      ],
+     "state": "REJECTED",
      "votes": [
       "RYAN",
       "PIXIE"
-     ]
+     ],
+     "proposer": "RYAN"
     },
     {
-     "proposer": "EDGE",
+     "team": [
+      "EDGE",
+      "PIXIE"
+     ],
      "votes": [
       "ETWO",
       "INCOG",
       "RYAN"
      ],
-     "team": [
-      "EDGE",
-      "PIXIE"
-     ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "EDGE"
     }
    ],
-   "teamSize": 2,
-   "state": "FAIL"
+   "teamSize": 2
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "INCOG",
     "PIXIE",
     "EDGE"
    ],
-   "teamSize": 3,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "INCOG",
       "PIXIE",
       "EDGE"
      ],
      "proposer": "PIXIE",
-     "state": "APPROVED",
      "votes": [
       "INCOG",
       "PIXIE",
@@ -151,19 +150,17 @@
      ]
     }
    ],
-   "numFails": 1
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "RYAN",
-    "ETWO"
-   ],
-   "teamSize": 2,
    "proposals": [
     {
-     "proposer": "INCOG",
      "state": "APPROVED",
+     "team": [
+      "RYAN",
+      "ETWO"
+     ],
      "votes": [
       "ETWO",
       "INCOG",
@@ -171,26 +168,31 @@
       "RYAN",
       "EDGE"
      ],
-     "team": [
-      "RYAN",
-      "ETWO"
-     ]
+     "proposer": "INCOG"
     }
    ],
-   "numFails": 0,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "RYAN",
+    "ETWO"
+   ],
+   "numFails": 0
   },
   {
-   "teamSize": 3,
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "ETWO",
      "votes": [
       "EDGE",
       "ETWO",
       "PIXIE"
      ],
-     "proposer": "ETWO",
      "team": [
       "INCOG",
       "PIXIE",
@@ -198,24 +200,19 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS",
    "team": [
     "INCOG",
     "PIXIE",
     "EDGE"
-   ]
+   ],
+   "teamSize": 3
   },
   {
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "RYAN",
-     "team": [
-      "RYAN",
-      "INCOG",
-      "ETWO"
-     ],
      "votes": [
       "ETWO",
       "INCOG",
@@ -223,18 +220,21 @@
       "RYAN",
       "EDGE"
      ],
-     "state": "APPROVED"
+     "team": [
+      "RYAN",
+      "INCOG",
+      "ETWO"
+     ]
     }
    ],
-   "teamSize": 3,
-   "state": "FAIL",
    "failsRequired": 1,
-   "numFails": 1,
    "team": [
     "RYAN",
     "INCOG",
     "ETWO"
-   ]
+   ],
+   "teamSize": 3,
+   "numFails": 1
   }
  ]
 }

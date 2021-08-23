@@ -3,35 +3,106 @@
   "_seconds": 1586646929,
   "_nanoseconds": 933023000
  },
+ "outcome": {
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "DOM",
+    "role": "MERLIN"
+   },
+   {
+    "name": "KENNY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "ELLIE",
+    "assassin": false
+   },
+   {
+    "name": "TAI",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "BEN",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "SANDRA"
+   },
+   {
+    "name": "AINI",
+    "role": "MORDRED",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "ELLIE": true,
+    "SANDRA": true
+   },
+   {
+    "ELLIE": true,
+    "KENNY": true,
+    "SANDRA": true
+   },
+   {
+    "SANDRA": false,
+    "KENNY": true,
+    "ELLIE": true
+   },
+   {
+    "KENNY": true,
+    "TAI": true,
+    "AINI": false,
+    "BEN": false
+   },
+   {
+    "KENNY": true,
+    "DOM": true,
+    "TAI": true,
+    "ELLIE": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "KENNY"
+ },
  "timeCreated": {
   "_seconds": 1586643478,
   "_nanoseconds": 281000000
  },
  "missions": [
   {
+   "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
+     "proposer": "DOM",
+     "votes": [
+      "KENNY"
+     ],
      "team": [
       "BEN",
       "KENNY"
      ],
-     "proposer": "DOM",
-     "state": "REJECTED",
-     "votes": [
-      "KENNY"
-     ]
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
-     "proposer": "TAI",
      "votes": [],
      "team": [
       "ELLIE",
       "AINI"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "TAI"
     },
     {
-     "proposer": "KENNY",
      "votes": [
       "KENNY"
      ],
@@ -39,25 +110,21 @@
      "team": [
       "TAI",
       "AINI"
-     ]
+     ],
+     "proposer": "KENNY"
     },
     {
-     "votes": [
-      "TAI"
-     ],
-     "proposer": "AINI",
-     "state": "REJECTED",
      "team": [
       "AINI",
       "TAI"
-     ]
+     ],
+     "votes": [
+      "TAI"
+     ],
+     "state": "REJECTED",
+     "proposer": "AINI"
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "ELLIE",
-      "SANDRA"
-     ],
      "votes": [
       "DOM",
       "KENNY",
@@ -67,70 +134,72 @@
       "AINI",
       "SANDRA"
      ],
+     "state": "APPROVED",
+     "team": [
+      "ELLIE",
+      "SANDRA"
+     ],
      "proposer": "ELLIE"
     }
    ],
-   "failsRequired": 1,
    "team": [
     "ELLIE",
     "SANDRA"
    ],
-   "teamSize": 2,
-   "numFails": 0,
+   "failsRequired": 1,
    "state": "SUCCESS"
   },
   {
    "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "KENNY"
-     ],
+     "state": "REJECTED",
      "team": [
       "BEN",
       "ELLIE",
       "SANDRA"
      ],
-     "proposer": "BEN",
-     "state": "REJECTED"
+     "votes": [
+      "KENNY"
+     ],
+     "proposer": "BEN"
     },
     {
      "state": "REJECTED",
-     "proposer": "SANDRA",
+     "votes": [
+      "DOM"
+     ],
      "team": [
       "SANDRA",
       "ELLIE",
       "DOM"
      ],
-     "votes": [
-      "DOM"
-     ]
+     "proposer": "SANDRA"
     },
     {
      "state": "REJECTED",
-     "votes": [
-      "DOM",
-      "KENNY"
-     ],
      "team": [
       "DOM",
       "SANDRA",
       "ELLIE"
      ],
+     "votes": [
+      "DOM",
+      "KENNY"
+     ],
      "proposer": "DOM"
     },
     {
-     "votes": [
-      "TAI"
-     ],
-     "state": "REJECTED",
      "team": [
       "ELLIE",
       "SANDRA",
       "TAI"
      ],
-     "proposer": "TAI"
+     "state": "REJECTED",
+     "proposer": "TAI",
+     "votes": [
+      "TAI"
+     ]
     },
     {
      "state": "APPROVED",
@@ -156,31 +225,32 @@
     "SANDRA",
     "ELLIE"
    ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "KENNY",
-      "SANDRA",
-      "ELLIE"
-     ],
      "votes": [
       "AINI",
       "DOM",
       "KENNY",
       "ELLIE"
      ],
+     "team": [
+      "KENNY",
+      "SANDRA",
+      "ELLIE"
+     ],
+     "state": "APPROVED",
      "proposer": "AINI"
     }
    ],
-   "numFails": 1,
-   "failsRequired": 1,
-   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "KENNY",
     "SANDRA",
@@ -196,42 +266,43 @@
    ],
    "proposals": [
     {
-     "proposer": "ELLIE",
+     "votes": [],
      "team": [
       "ELLIE",
       "DOM",
       "BEN",
       "TAI"
      ],
-     "votes": [],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "ELLIE"
     },
     {
-     "proposer": "BEN",
-     "votes": [],
      "team": [
       "BEN",
       "DOM",
       "TAI",
       "KENNY"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "BEN",
+     "votes": []
     },
     {
+     "state": "REJECTED",
+     "votes": [
+      "DOM",
+      "SANDRA"
+     ],
      "team": [
       "SANDRA",
       "AINI",
       "KENNY",
       "DOM"
      ],
-     "votes": [
-      "DOM",
-      "SANDRA"
-     ],
-     "proposer": "SANDRA",
-     "state": "REJECTED"
+     "proposer": "SANDRA"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "DOM",
       "BEN",
@@ -243,8 +314,7 @@
       "AINI",
       "KENNY"
      ],
-     "proposer": "DOM",
-     "state": "REJECTED"
+     "proposer": "DOM"
     },
     {
      "state": "APPROVED",
@@ -265,140 +335,70 @@
      "proposer": "TAI"
     }
    ],
-   "teamSize": 4,
-   "numFails": 2,
    "state": "FAIL",
-   "failsRequired": 2
+   "numFails": 2,
+   "failsRequired": 2,
+   "teamSize": 4
   },
   {
+   "numFails": 0,
+   "proposals": [
+    {
+     "proposer": "KENNY",
+     "state": "APPROVED",
+     "votes": [
+      "TAI",
+      "DOM",
+      "KENNY",
+      "ELLIE"
+     ],
+     "team": [
+      "ELLIE",
+      "KENNY",
+      "TAI",
+      "DOM"
+     ]
+    }
+   ],
    "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "ELLIE",
     "KENNY",
     "TAI",
     "DOM"
    ],
-   "numFails": 0,
-   "teamSize": 4,
-   "state": "SUCCESS",
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "ELLIE",
-      "KENNY",
-      "TAI",
-      "DOM"
-     ],
-     "proposer": "KENNY",
-     "votes": [
-      "TAI",
-      "DOM",
-      "KENNY",
-      "ELLIE"
-     ]
-    }
-   ]
+   "teamSize": 4
   }
  ],
  "players": [
   {
-   "uid": "IFaNJK9jz9aGorOsvQ85GwoBB8b2",
-   "name": "KENNY"
+   "name": "KENNY",
+   "uid": "IFaNJK9jz9aGorOsvQ85GwoBB8b2"
   },
   {
-   "name": "AINI",
-   "uid": "NFJKxgalxcMOOtV4qAWLW0OlFB72"
+   "uid": "NFJKxgalxcMOOtV4qAWLW0OlFB72",
+   "name": "AINI"
   },
   {
-   "uid": "OOP2nQEUsPemaubNSWf0ZtwJ9ZN2",
-   "name": "ELLIE"
+   "name": "ELLIE",
+   "uid": "OOP2nQEUsPemaubNSWf0ZtwJ9ZN2"
   },
   {
-   "name": "BEN",
-   "uid": "g3xT4KzWvFPnf0uk7wvWHmVkNyh2"
+   "uid": "g3xT4KzWvFPnf0uk7wvWHmVkNyh2",
+   "name": "BEN"
   },
   {
-   "name": "SANDRA",
-   "uid": "klLOCBScCmXTbHsqi9RGsjPzULw1"
+   "uid": "klLOCBScCmXTbHsqi9RGsjPzULw1",
+   "name": "SANDRA"
   },
   {
-   "name": "DOM",
-   "uid": "g2saJNVJyLfN6OFRyod2aY0Jrer2"
+   "uid": "g2saJNVJyLfN6OFRyod2aY0Jrer2",
+   "name": "DOM"
   },
   {
-   "uid": "7l4eqVu8MTPBqLwvlj5jOeefHZl1",
-   "name": "TAI"
+   "name": "TAI",
+   "uid": "7l4eqVu8MTPBqLwvlj5jOeefHZl1"
   }
- ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "name": "DOM",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "name": "KENNY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ELLIE"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "TAI"
-   },
-   {
-    "name": "BEN",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "SANDRA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "AINI",
-    "assassin": false,
-    "role": "MORDRED"
-   }
-  ],
-  "votes": [
-   {
-    "SANDRA": true,
-    "ELLIE": true
-   },
-   {
-    "KENNY": true,
-    "ELLIE": true,
-    "SANDRA": true
-   },
-   {
-    "KENNY": true,
-    "SANDRA": false,
-    "ELLIE": true
-   },
-   {
-    "BEN": false,
-    "KENNY": true,
-    "AINI": false,
-    "TAI": true
-   },
-   {
-    "ELLIE": true,
-    "TAI": true,
-    "DOM": true,
-    "KENNY": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "KENNY"
- }
+ ]
 }

@@ -2,50 +2,51 @@
  "options": {
   "inGameLog": false
  },
- "players": [
-  {
-   "name": "SHAWN",
-   "uid": "BYcr6J1oxrPio777HmmpY61t7hj2"
-  },
-  {
-   "name": "DL",
-   "uid": "ZyyzxhBD9eOQHwl4qqvk1eNMn4H2"
-  },
-  {
-   "uid": "18i2KrPjChcZtXGTaWZgS4DUItv1",
-   "name": "TREVOR"
-  },
-  {
-   "uid": "5mxKBeYvSnfrblfV7Ht5KpidKqk1",
-   "name": "TYRONE"
-  },
-  {
-   "name": "GABIN",
-   "uid": "sIrgAWMdHHM1HRklcEECtygpHFq1"
-  },
-  {
-   "uid": "PAnptkxOgKVnc0t5RuM2ajiLbV42",
-   "name": "THICCHAR"
-  }
- ],
+ "timeCreated": {
+  "_seconds": 1595653921,
+  "_nanoseconds": 532000000
+ },
  "outcome": {
+  "assassinated": null,
   "state": "EVIL_WIN",
+  "votes": [
+   {
+    "GABIN": true,
+    "TYRONE": true
+   },
+   {
+    "GABIN": true,
+    "TREVOR": true,
+    "TYRONE": true
+   },
+   {
+    "GABIN": false,
+    "TYRONE": true,
+    "TREVOR": true,
+    "THICCHAR": true
+   },
+   {
+    "TREVOR": true,
+    "THICCHAR": true,
+    "GABIN": false
+   }
+  ],
   "message": "Five team proposals in a row rejected",
   "roles": [
    {
-    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "name": "TYRONE"
+    "name": "TYRONE",
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "assassin": true,
     "name": "GABIN",
-    "role": "MORDRED",
-    "assassin": true
+    "role": "MORDRED"
    },
    {
     "role": "PERCIVAL",
-    "name": "SHAWN",
-    "assassin": false
+    "assassin": false,
+    "name": "SHAWN"
    },
    {
     "name": "TREVOR",
@@ -53,48 +54,29 @@
     "role": "MERLIN"
    },
    {
-    "assassin": false,
     "name": "THICCHAR",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "role": "MORGANA",
     "name": "DL",
     "assassin": false
    }
-  ],
-  "assassinated": null,
-  "votes": [
-   {
-    "GABIN": true,
-    "TYRONE": true
-   },
-   {
-    "TYRONE": true,
-    "TREVOR": true,
-    "GABIN": true
-   },
-   {
-    "TREVOR": true,
-    "THICCHAR": true,
-    "TYRONE": true,
-    "GABIN": false
-   },
-   {
-    "GABIN": false,
-    "THICCHAR": true,
-    "TREVOR": true
-   }
   ]
- },
- "timeFinished": {
-  "_seconds": 1595655399,
-  "_nanoseconds": 770000000
  },
  "missions": [
   {
+   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "GABIN",
+      "TYRONE"
+     ],
+     "proposer": "TREVOR",
+     "state": "APPROVED",
      "votes": [
       "TYRONE",
       "GABIN",
@@ -102,23 +84,15 @@
       "TREVOR",
       "THICCHAR",
       "DL"
-     ],
-     "team": [
-      "GABIN",
-      "TYRONE"
-     ],
-     "state": "APPROVED",
-     "proposer": "TREVOR"
+     ]
     }
    ],
    "failsRequired": 1,
-   "teamSize": 2,
+   "state": "SUCCESS",
    "team": [
     "GABIN",
     "TYRONE"
-   ],
-   "numFails": 0,
-   "state": "SUCCESS"
+   ]
   },
   {
    "team": [
@@ -126,10 +100,18 @@
     "GABIN",
     "TREVOR"
    ],
+   "numFails": 0,
    "state": "SUCCESS",
    "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "TYRONE",
+     "team": [
+      "TYRONE",
+      "GABIN",
+      "TREVOR"
+     ],
+     "state": "APPROVED",
      "votes": [
       "TYRONE",
       "GABIN",
@@ -137,28 +119,17 @@
       "TREVOR",
       "THICCHAR",
       "DL"
-     ],
-     "team": [
-      "TYRONE",
-      "GABIN",
-      "TREVOR"
-     ],
-     "proposer": "TYRONE",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "numFails": 0,
    "teamSize": 3
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
-   "teamSize": 4,
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "proposer": "GABIN",
-     "state": "APPROVED",
      "votes": [
       "TYRONE",
       "GABIN",
@@ -172,24 +143,22 @@
       "TREVOR",
       "TYRONE",
       "THICCHAR"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "team": [
     "GABIN",
     "TREVOR",
     "TYRONE",
     "THICCHAR"
-   ]
+   ],
+   "state": "FAIL"
   },
   {
+   "failsRequired": 1,
    "numFails": 1,
-   "state": "FAIL",
-   "team": [
-    "THICCHAR",
-    "GABIN",
-    "TREVOR"
-   ],
    "proposals": [
     {
      "proposer": "THICCHAR",
@@ -198,44 +167,50 @@
       "GABIN",
       "TREVOR"
      ],
-     "state": "APPROVED",
      "votes": [
       "GABIN",
       "TREVOR",
       "THICCHAR",
       "DL"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 3,
-   "failsRequired": 1
+   "team": [
+    "THICCHAR",
+    "GABIN",
+    "TREVOR"
+   ],
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
+   "state": "PENDING",
    "proposals": [
     {
-     "votes": [
-      "TYRONE",
-      "SHAWN"
-     ],
-     "state": "REJECTED",
+     "proposer": "SHAWN",
      "team": [
       "SHAWN",
       "TYRONE",
       "DL",
       "GABIN"
      ],
-     "proposer": "SHAWN"
+     "state": "REJECTED",
+     "votes": [
+      "TYRONE",
+      "SHAWN"
+     ]
     },
     {
-     "state": "REJECTED",
      "votes": [],
-     "proposer": "DL",
      "team": [
       "TYRONE",
       "GABIN",
       "DL",
       "TREVOR"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "DL"
     },
     {
      "votes": [
@@ -251,18 +226,18 @@
      ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "TYRONE",
       "SHAWN"
      ],
+     "proposer": "TYRONE",
+     "state": "REJECTED",
      "team": [
       "SHAWN",
       "DL",
       "TYRONE",
       "THICCHAR"
-     ],
-     "proposer": "TYRONE"
+     ]
     },
     {
      "proposer": "GABIN",
@@ -272,21 +247,46 @@
       "DL",
       "TYRONE"
      ],
+     "state": "REJECTED",
      "votes": [
       "GABIN",
       "DL"
-     ],
-     "state": "REJECTED"
+     ]
     }
    ],
-   "state": "PENDING",
    "team": [],
-   "teamSize": 4,
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 4
   }
  ],
- "timeCreated": {
-  "_seconds": 1595653921,
-  "_nanoseconds": 532000000
- }
+ "timeFinished": {
+  "_seconds": 1595655399,
+  "_nanoseconds": 770000000
+ },
+ "players": [
+  {
+   "uid": "BYcr6J1oxrPio777HmmpY61t7hj2",
+   "name": "SHAWN"
+  },
+  {
+   "uid": "ZyyzxhBD9eOQHwl4qqvk1eNMn4H2",
+   "name": "DL"
+  },
+  {
+   "name": "TREVOR",
+   "uid": "18i2KrPjChcZtXGTaWZgS4DUItv1"
+  },
+  {
+   "name": "TYRONE",
+   "uid": "5mxKBeYvSnfrblfV7Ht5KpidKqk1"
+  },
+  {
+   "name": "GABIN",
+   "uid": "sIrgAWMdHHM1HRklcEECtygpHFq1"
+  },
+  {
+   "uid": "PAnptkxOgKVnc0t5RuM2ajiLbV42",
+   "name": "THICCHAR"
+  }
+ ]
 }

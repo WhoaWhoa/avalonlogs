@@ -1,74 +1,10 @@
 {
- "timeFinished": {
-  "_seconds": 1606859403,
-  "_nanoseconds": 798000000
- },
  "options": {
   "inGameLog": false
  },
- "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three missions succeeded",
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "name": "NICO",
-    "assassin": false
-   },
-   {
-    "name": "CHARLIE",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "JU"
-   },
-   {
-    "assassin": false,
-    "name": "FLYGIRL",
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "LAETI",
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "REGIS",
-    "assassin": false
-   },
-   {
-    "name": "ANTOINE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "ANTOINE": true,
-    "CHARLIE": true
-   },
-   {
-    "REGIS": true,
-    "ANTOINE": true,
-    "JU": true
-   },
-   {
-    "JU": true,
-    "ANTOINE": true,
-    "LAETI": false
-   },
-   {
-    "REGIS": true,
-    "JU": true,
-    "ANTOINE": true,
-    "NICO": false
-   }
-  ],
-  "assassinated": null
+ "timeFinished": {
+  "_seconds": 1606859403,
+  "_nanoseconds": 798000000
  },
  "players": [
   {
@@ -80,29 +16,39 @@
    "name": "LAETI"
   },
   {
-   "uid": "kqoTDpNAUceOluk8d1hIaKtOZWy1",
-   "name": "CHARLIE"
+   "name": "CHARLIE",
+   "uid": "kqoTDpNAUceOluk8d1hIaKtOZWy1"
   },
   {
-   "name": "NICO",
-   "uid": "LlEcgvmonLOZp784lTzUXXtE9C42"
+   "uid": "LlEcgvmonLOZp784lTzUXXtE9C42",
+   "name": "NICO"
   },
   {
-   "name": "FLYGIRL",
-   "uid": "bUoGXjke14QB1bov2zG9VaSfoNH3"
+   "uid": "bUoGXjke14QB1bov2zG9VaSfoNH3",
+   "name": "FLYGIRL"
   },
   {
-   "uid": "vW4wNkSBNuZHfcUHLu5hClAsLBf2",
-   "name": "JU"
+   "name": "JU",
+   "uid": "vW4wNkSBNuZHfcUHLu5hClAsLBf2"
   },
   {
    "name": "REGIS",
    "uid": "gTS5ixzdhtVY6fw6XK6AnEjGrGi1"
   }
  ],
+ "timeCreated": {
+  "_seconds": 1606857671,
+  "_nanoseconds": 738000000
+ },
  "missions": [
   {
    "numFails": 0,
+   "teamSize": 2,
+   "team": [
+    "CHARLIE",
+    "ANTOINE"
+   ],
+   "state": "SUCCESS",
    "failsRequired": 1,
    "proposals": [
     {
@@ -113,62 +59,53 @@
       "ANTOINE"
      ],
      "proposer": "CHARLIE",
-     "state": "APPROVED",
      "team": [
       "CHARLIE",
       "ANTOINE"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "team": [
-    "CHARLIE",
-    "ANTOINE"
-   ],
-   "state": "SUCCESS",
-   "teamSize": 2
+   ]
   },
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "NICO",
      "votes": [
       "CHARLIE",
       "FLYGIRL",
       "NICO"
      ],
+     "state": "REJECTED",
      "team": [
       "NICO",
       "ANTOINE",
       "CHARLIE"
      ],
-     "state": "REJECTED"
+     "proposer": "NICO"
     },
     {
-     "proposer": "FLYGIRL",
      "state": "REJECTED",
+     "team": [
+      "FLYGIRL",
+      "LAETI",
+      "JU"
+     ],
      "votes": [
       "FLYGIRL",
       "NICO",
       "LAETI"
      ],
-     "team": [
-      "FLYGIRL",
-      "LAETI",
-      "JU"
-     ]
+     "proposer": "FLYGIRL"
     },
     {
+     "proposer": "JU",
+     "state": "REJECTED",
      "votes": [
       "JU",
       "NICO",
       "FLYGIRL"
      ],
-     "state": "REJECTED",
-     "proposer": "JU",
      "team": [
       "NICO",
       "JU",
@@ -177,6 +114,7 @@
     },
     {
      "state": "APPROVED",
+     "proposer": "REGIS",
      "votes": [
       "ANTOINE",
       "LAETI",
@@ -187,17 +125,21 @@
       "REGIS",
       "ANTOINE",
       "JU"
-     ],
-     "proposer": "REGIS"
+     ]
     }
    ],
+   "failsRequired": 1,
    "team": [
     "REGIS",
     "ANTOINE",
     "JU"
-   ]
+   ],
+   "state": "SUCCESS",
+   "teamSize": 3
   },
   {
+   "numFails": 1,
+   "failsRequired": 1,
    "state": "FAIL",
    "teamSize": 3,
    "team": [
@@ -205,10 +147,14 @@
     "JU",
     "LAETI"
    ],
-   "failsRequired": 1,
    "proposals": [
     {
      "proposer": "ANTOINE",
+     "team": [
+      "ANTOINE",
+      "JU",
+      "LAETI"
+     ],
      "state": "APPROVED",
      "votes": [
       "LAETI",
@@ -216,26 +162,29 @@
       "JU",
       "NICO",
       "ANTOINE"
-     ],
-     "team": [
-      "ANTOINE",
-      "JU",
-      "LAETI"
      ]
     }
-   ],
-   "numFails": 1
+   ]
   },
   {
+   "numFails": 1,
+   "failsRequired": 2,
+   "team": [
+    "ANTOINE",
+    "JU",
+    "REGIS",
+    "NICO"
+   ],
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "FLYGIRL",
       "REGIS",
       "LAETI",
       "CHARLIE"
      ],
-     "state": "REJECTED",
      "proposer": "LAETI",
      "votes": [
       "CHARLIE",
@@ -244,89 +193,140 @@
      ]
     },
     {
-     "proposer": "CHARLIE",
+     "team": [
+      "CHARLIE",
+      "LAETI",
+      "NICO",
+      "JU"
+     ],
      "state": "REJECTED",
      "votes": [
       "NICO",
       "CHARLIE",
       "LAETI"
      ],
-     "team": [
-      "CHARLIE",
-      "LAETI",
-      "NICO",
-      "JU"
-     ]
+     "proposer": "CHARLIE"
     },
     {
+     "state": "REJECTED",
+     "team": [
+      "NICO",
+      "CHARLIE",
+      "LAETI",
+      "JU"
+     ],
      "votes": [
       "LAETI",
       "NICO",
       "CHARLIE"
      ],
-     "state": "REJECTED",
-     "team": [
-      "NICO",
-      "CHARLIE",
-      "LAETI",
-      "JU"
-     ],
      "proposer": "NICO"
     },
     {
+     "proposer": "FLYGIRL",
      "votes": [
       "FLYGIRL",
       "NICO",
       "ANTOINE"
      ],
-     "state": "REJECTED",
      "team": [
       "FLYGIRL",
       "NICO",
       "ANTOINE",
       "JU"
      ],
-     "proposer": "FLYGIRL"
+     "state": "REJECTED"
     },
     {
-     "proposer": "JU",
+     "state": "APPROVED",
      "team": [
       "ANTOINE",
       "JU",
       "REGIS",
       "NICO"
      ],
-     "state": "APPROVED",
      "votes": [
       "REGIS",
       "CHARLIE",
       "JU",
       "LAETI",
       "ANTOINE"
-     ]
+     ],
+     "proposer": "JU"
     }
    ],
-   "team": [
-    "ANTOINE",
-    "JU",
-    "REGIS",
-    "NICO"
-   ],
-   "numFails": 1,
-   "failsRequired": 2,
-   "teamSize": 4,
-   "state": "SUCCESS"
+   "teamSize": 4
   },
   {
+   "failsRequired": 1,
    "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1,
-   "team": [],
-   "teamSize": 4
+   "teamSize": 4,
+   "team": []
   }
  ],
- "timeCreated": {
-  "_seconds": 1606857671,
-  "_nanoseconds": 738000000
+ "outcome": {
+  "message": "Three missions succeeded",
+  "votes": [
+   {
+    "ANTOINE": true,
+    "CHARLIE": true
+   },
+   {
+    "REGIS": true,
+    "JU": true,
+    "ANTOINE": true
+   },
+   {
+    "ANTOINE": true,
+    "LAETI": false,
+    "JU": true
+   },
+   {
+    "NICO": false,
+    "JU": true,
+    "REGIS": true,
+    "ANTOINE": true
+   }
+  ],
+  "assassinated": null,
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "NICO",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "CHARLIE",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "JU",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "FLYGIRL",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "name": "LAETI",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "name": "REGIS",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "ANTOINE",
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
  }
 }

@@ -1,103 +1,37 @@
 {
- "outcome": {
-  "votes": [
-   {
-    "PRAVEEN": true,
-    "CHEVIN": false
-   },
-   {
-    "LL": true,
-    "KZHU": true,
-    "AN": true
-   },
-   {
-    "PRAVEEN": true,
-    "LL": true,
-    "AN": true
-   },
-   {
-    "AN": true,
-    "JIMMY": true,
-    "PRAVEEN": true,
-    "LL": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "LL",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "JIMMY",
-    "role": "MORGANA"
-   },
-   {
-    "name": "KZHU",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "OBERON",
-    "name": "CHEVIN",
-    "assassin": false
-   },
-   {
-    "name": "SEAN",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "name": "AN",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "PRAVEEN"
-   }
-  ],
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "assassinated": "KZHU"
- },
  "missions": [
   {
+   "teamSize": 2,
    "failsRequired": 1,
-   "numFails": 1,
-   "team": [
-    "PRAVEEN",
-    "CHEVIN"
-   ],
+   "state": "FAIL",
    "proposals": [
     {
      "proposer": "JIMMY",
-     "votes": [
-      "SEAN",
-      "JIMMY"
-     ],
      "team": [
       "JIMMY",
       "AN"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "SEAN",
+      "JIMMY"
+     ]
     },
     {
-     "state": "REJECTED",
-     "team": [
-      "CHEVIN",
-      "AN"
-     ],
      "votes": [
       "PRAVEEN",
       "AN",
       "CHEVIN"
      ],
+     "state": "REJECTED",
+     "team": [
+      "CHEVIN",
+      "AN"
+     ],
      "proposer": "AN"
     },
     {
+     "state": "APPROVED",
      "team": [
       "PRAVEEN",
       "CHEVIN"
@@ -108,26 +42,21 @@
       "SEAN",
       "AN"
      ],
-     "proposer": "PRAVEEN",
-     "state": "APPROVED"
+     "proposer": "PRAVEEN"
     }
    ],
-   "state": "FAIL",
-   "teamSize": 2
+   "team": [
+    "PRAVEEN",
+    "CHEVIN"
+   ],
+   "numFails": 1
   },
   {
-   "numFails": 0,
    "state": "SUCCESS",
    "failsRequired": 1,
-   "team": [
-    "LL",
-    "AN",
-    "KZHU"
-   ],
    "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "JIMMY"
      ],
@@ -136,10 +65,10 @@
       "KZHU",
       "LL"
      ],
+     "state": "REJECTED",
      "proposer": "CHEVIN"
     },
     {
-     "proposer": "KZHU",
      "votes": [
       "KZHU",
       "PRAVEEN"
@@ -149,7 +78,8 @@
       "AN",
       "PRAVEEN"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "KZHU"
     },
     {
      "votes": [
@@ -160,21 +90,31 @@
       "CHEVIN"
      ],
      "proposer": "LL",
+     "state": "APPROVED",
      "team": [
       "LL",
       "AN",
       "KZHU"
-     ],
-     "state": "APPROVED"
+     ]
     }
+   ],
+   "numFails": 0,
+   "team": [
+    "LL",
+    "AN",
+    "KZHU"
    ]
   },
   {
    "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 3,
+   "team": [
+    "PRAVEEN",
+    "LL",
+    "AN"
+   ],
    "proposals": [
     {
+     "proposer": "SEAN",
      "votes": [
       "KZHU",
       "AN",
@@ -182,7 +122,6 @@
       "PRAVEEN",
       "JIMMY"
      ],
-     "proposer": "SEAN",
      "state": "APPROVED",
      "team": [
       "PRAVEEN",
@@ -191,26 +130,15 @@
      ]
     }
    ],
-   "team": [
-    "PRAVEEN",
-    "LL",
-    "AN"
-   ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3
   },
   {
-   "teamSize": 4,
-   "state": "SUCCESS",
    "numFails": 0,
-   "team": [
-    "PRAVEEN",
-    "LL",
-    "AN",
-    "JIMMY"
-   ],
-   "failsRequired": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "JIMMY",
      "team": [
       "PRAVEEN",
@@ -218,7 +146,6 @@
       "AN",
       "JIMMY"
      ],
-     "state": "APPROVED",
      "votes": [
       "KZHU",
       "AN",
@@ -229,35 +156,45 @@
       "CHEVIN"
      ]
     }
-   ]
+   ],
+   "team": [
+    "PRAVEEN",
+    "LL",
+    "AN",
+    "JIMMY"
+   ],
+   "teamSize": 4,
+   "failsRequired": 2,
+   "state": "SUCCESS"
   },
   {
    "proposals": [],
-   "state": "PENDING",
-   "failsRequired": 1,
    "teamSize": 4,
-   "team": []
+   "team": [],
+   "failsRequired": 1,
+   "state": "PENDING"
   }
  ],
  "timeFinished": {
   "_seconds": 1608876343,
   "_nanoseconds": 245000000
  },
- "options": {
-  "inGameLog": false
+ "timeCreated": {
+  "_seconds": 1608875442,
+  "_nanoseconds": 928000000
  },
  "players": [
   {
-   "uid": "EHVzw875RhONc4GJh5xay65sbsE2",
-   "name": "PRAVEEN"
+   "name": "PRAVEEN",
+   "uid": "EHVzw875RhONc4GJh5xay65sbsE2"
   },
   {
    "uid": "xdF3AA3GpWYH48o1Wl0qnKey2qh1",
    "name": "CHEVIN"
   },
   {
-   "name": "KZHU",
-   "uid": "09iwCUAVE5bu4SsdsOz3S6trYTl2"
+   "uid": "09iwCUAVE5bu4SsdsOz3S6trYTl2",
+   "name": "KZHU"
   },
   {
    "uid": "1bkbk09boMYSV5pWJPdUEBUELvf2",
@@ -272,12 +209,75 @@
    "uid": "C2w26VfH4Vao7lRgDWoMkTHFTwE3"
   },
   {
-   "name": "AN",
-   "uid": "fkS5ZYpOT3N3cgqn0bzao5y0aaY2"
+   "uid": "fkS5ZYpOT3N3cgqn0bzao5y0aaY2",
+   "name": "AN"
   }
  ],
- "timeCreated": {
-  "_seconds": 1608875442,
-  "_nanoseconds": 928000000
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "CHEVIN": false,
+    "PRAVEEN": true
+   },
+   {
+    "KZHU": true,
+    "AN": true,
+    "LL": true
+   },
+   {
+    "LL": true,
+    "PRAVEEN": true,
+    "AN": true
+   },
+   {
+    "PRAVEEN": true,
+    "JIMMY": true,
+    "AN": true,
+    "LL": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "name": "LL",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "JIMMY"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "KZHU"
+   },
+   {
+    "role": "OBERON",
+    "assassin": false,
+    "name": "CHEVIN"
+   },
+   {
+    "assassin": true,
+    "role": "MORDRED",
+    "name": "SEAN"
+   },
+   {
+    "name": "AN",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "name": "PRAVEEN",
+    "role": "PERCIVAL"
+   }
+  ],
+  "assassinated": "KZHU"
  }
 }

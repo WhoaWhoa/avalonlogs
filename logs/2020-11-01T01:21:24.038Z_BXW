@@ -3,6 +3,7 @@
   {
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "ARJUN",
      "votes": [
       "IZZY",
@@ -12,38 +13,40 @@
      "team": [
       "ARJUN",
       "NDOG"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "numFails": 1,
-   "failsRequired": 1,
    "teamSize": 2,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "ARJUN",
     "NDOG"
-   ],
-   "state": "FAIL"
+   ]
   },
   {
-   "state": "SUCCESS",
-   "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
-     "votes": [
-      "ROB",
-      "KMARSH"
-     ],
-     "proposer": "KMARSH",
-     "state": "REJECTED",
      "team": [
       "KMARSH",
       "ARJUN",
       "IZZY"
-     ]
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "ROB",
+      "KMARSH"
+     ],
+     "proposer": "KMARSH"
     },
     {
+     "team": [
+      "NDOG",
+      "IZZY",
+      "KMARSH"
+     ],
+     "proposer": "NDOG",
      "state": "APPROVED",
      "votes": [
       "NDOG",
@@ -51,16 +54,13 @@
       "KMARSH",
       "ARJUN",
       "IZZY"
-     ],
-     "proposer": "NDOG",
-     "team": [
-      "NDOG",
-      "IZZY",
-      "KMARSH"
      ]
     }
    ],
+   "numFails": 0,
    "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "NDOG",
     "IZZY",
@@ -68,7 +68,6 @@
    ]
   },
   {
-   "teamSize": 2,
    "proposals": [
     {
      "votes": [
@@ -76,57 +75,67 @@
       "ROB",
       "KMARSH"
      ],
-     "proposer": "IZZY",
      "team": [
       "IZZY",
       "NDOG"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "IZZY"
     }
    ],
+   "teamSize": 2,
+   "failsRequired": 1,
    "team": [
     "IZZY",
     "NDOG"
    ],
-   "state": "SUCCESS",
    "numFails": 0,
-   "failsRequired": 1
+   "state": "SUCCESS"
   },
   {
-   "team": [
-    "KMARSH",
-    "ROB",
-    "IZZY"
-   ],
-   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "KMARSH",
-      "ROB",
-      "IZZY"
-     ],
-     "state": "APPROVED",
      "votes": [
       "ARJUN",
       "KMARSH",
       "ROB"
      ],
+     "state": "APPROVED",
+     "team": [
+      "KMARSH",
+      "ROB",
+      "IZZY"
+     ],
      "proposer": "ROB"
     }
    ],
+   "teamSize": 3,
+   "team": [
+    "KMARSH",
+    "ROB",
+    "IZZY"
+   ],
    "numFails": 1,
-   "state": "FAIL",
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "FAIL",
+   "team": [
+    "NDOG",
+    "IZZY",
+    "ROB"
+   ],
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "proposer": "ARJUN",
      "votes": [
       "ARJUN"
      ],
+     "state": "REJECTED",
      "team": [
       "ARJUN",
       "ROB",
@@ -134,7 +143,7 @@
      ]
     },
     {
-     "proposer": "KMARSH",
+     "state": "REJECTED",
      "votes": [
       "ARJUN",
       "KMARSH"
@@ -144,10 +153,9 @@
       "IZZY",
       "NDOG"
      ],
-     "state": "REJECTED"
+     "proposer": "KMARSH"
     },
     {
-     "state": "APPROVED",
      "votes": [
       "NDOG",
       "ROB",
@@ -158,28 +166,81 @@
       "NDOG",
       "IZZY",
       "ROB"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "team": [
-    "NDOG",
-    "IZZY",
-    "ROB"
-   ],
-   "state": "FAIL",
-   "numFails": 1
+   ]
   }
  ],
  "timeFinished": {
   "_seconds": 1604194229,
   "_nanoseconds": 626000000
  },
+ "timeCreated": {
+  "_seconds": 1604193684,
+  "_nanoseconds": 38000000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "NDOG": true,
+    "ARJUN": false
+   },
+   {
+    "KMARSH": true,
+    "IZZY": true,
+    "NDOG": true
+   },
+   {
+    "IZZY": true,
+    "NDOG": true
+   },
+   {
+    "ROB": false,
+    "IZZY": true,
+    "KMARSH": true
+   },
+   {
+    "NDOG": true,
+    "ROB": false,
+    "IZZY": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "MERLIN",
+    "name": "KMARSH",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "NDOG",
+    "assassin": false
+   },
+   {
+    "name": "ARJUN",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "IZZY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "ROB"
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions"
+ },
  "players": [
   {
-   "name": "NDOG",
-   "uid": "eM9Ltl7b52O1f1oH4iegamCVSoE2"
+   "uid": "eM9Ltl7b52O1f1oH4iegamCVSoE2",
+   "name": "NDOG"
   },
   {
    "name": "IZZY",
@@ -198,68 +259,7 @@
    "name": "KMARSH"
   }
  ],
- "timeCreated": {
-  "_seconds": 1604193684,
-  "_nanoseconds": 38000000
- },
  "options": {
   "inGameLog": false
- },
- "outcome": {
-  "votes": [
-   {
-    "NDOG": true,
-    "ARJUN": false
-   },
-   {
-    "NDOG": true,
-    "KMARSH": true,
-    "IZZY": true
-   },
-   {
-    "IZZY": true,
-    "NDOG": true
-   },
-   {
-    "IZZY": true,
-    "KMARSH": true,
-    "ROB": false
-   },
-   {
-    "NDOG": true,
-    "IZZY": true,
-    "ROB": false
-   }
-  ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "KMARSH",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "NDOG",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "ARJUN"
-   },
-   {
-    "name": "IZZY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "ROB"
-   }
-  ],
-  "assassinated": null
  }
 }

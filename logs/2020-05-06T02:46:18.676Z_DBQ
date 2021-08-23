@@ -1,123 +1,83 @@
 {
- "timeFinished": {
-  "_seconds": 1588733600,
-  "_nanoseconds": 780000000
- },
- "timeCreated": {
-  "_seconds": 1588733178,
-  "_nanoseconds": 676000000
- },
  "outcome": {
-  "state": "GOOD_WIN",
   "message": "Three successful missions",
   "roles": [
    {
-    "role": "MERLIN",
     "assassin": false,
-    "name": "JACK"
+    "name": "JACK",
+    "role": "MERLIN"
    },
    {
+    "role": "MORGANA",
     "name": "RORO",
-    "assassin": false,
-    "role": "MORGANA"
+    "assassin": false
    },
    {
-    "role": "EVIL MINION",
     "assassin": true,
-    "name": "GURD"
+    "name": "GURD",
+    "role": "EVIL MINION"
    },
    {
     "assassin": false,
-    "name": "ARJUN",
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "BOB",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "PERCIVAL",
+    "name": "ARJUN"
    },
    {
     "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "MEECHY"
+    "name": "BOB"
    },
    {
-    "name": "EM",
+    "role": "LOYAL FOLLOWER",
+    "name": "MEECHY",
+    "assassin": false
+   },
+   {
     "assassin": false,
+    "name": "EM",
     "role": "EVIL MINION"
    }
   ],
-  "assassinated": "ARJUN",
   "votes": [
    {
-    "JACK": true,
-    "GURD": true
-   },
-   {
-    "JACK": true,
-    "GURD": false,
-    "EM": true
-   },
-   {
-    "RORO": true,
-    "MEECHY": true,
+    "GURD": true,
     "JACK": true
    },
    {
-    "BOB": true,
-    "ARJUN": true,
+    "EM": true,
+    "GURD": false,
+    "JACK": true
+   },
+   {
     "JACK": true,
+    "RORO": true,
+    "MEECHY": true
+   },
+   {
+    "JACK": true,
+    "ARJUN": true,
+    "BOB": true,
     "MEECHY": true
    }
-  ]
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "ARJUN"
  },
  "options": {
   "inGameLog": false
  },
- "players": [
-  {
-   "name": "BOB",
-   "uid": "xBDVjvpBRebuHideNnoIcaxofLC3"
-  },
-  {
-   "uid": "iZiRhBMF9PP30lxHdDj6qbVIebP2",
-   "name": "GURD"
-  },
-  {
-   "name": "RORO",
-   "uid": "yLAkQMScojeE9vRYF6crXyXJix52"
-  },
-  {
-   "uid": "IBAyrHOGFhWVjf4UdF3rQmXqOrE2",
-   "name": "JACK"
-  },
-  {
-   "uid": "B1wHtVFkPmaboZhvjjK4CbLdqbs2",
-   "name": "EM"
-  },
-  {
-   "name": "MEECHY",
-   "uid": "Tac5pqX63lgNHmCT1zjqEjLlrrE2"
-  },
-  {
-   "uid": "PtPYV7Fy6khJthafgCQoGHCi44x2",
-   "name": "ARJUN"
-  }
- ],
+ "timeFinished": {
+  "_seconds": 1588733600,
+  "_nanoseconds": 780000000
+ },
  "missions": [
   {
-   "team": [
-    "JACK",
-    "GURD"
-   ],
+   "teamSize": 2,
+   "state": "SUCCESS",
    "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "JACK",
-      "GURD"
-     ],
      "votes": [
       "GURD",
       "ARJUN",
@@ -127,23 +87,23 @@
       "JACK",
       "RORO"
      ],
-     "proposer": "JACK"
+     "proposer": "JACK",
+     "team": [
+      "JACK",
+      "GURD"
+     ]
     }
    ],
-   "numFails": 0,
-   "teamSize": 2,
-   "state": "SUCCESS"
-  },
-  {
-   "failsRequired": 1,
-   "state": "FAIL",
-   "numFails": 1,
    "team": [
-    "EM",
     "JACK",
     "GURD"
    ],
+   "numFails": 0
+  },
+  {
    "teamSize": 3,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "state": "APPROVED",
@@ -163,14 +123,18 @@
      ],
      "proposer": "EM"
     }
-   ]
+   ],
+   "team": [
+    "EM",
+    "JACK",
+    "GURD"
+   ],
+   "failsRequired": 1
   },
   {
-   "numFails": 0,
-   "state": "SUCCESS",
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "JACK",
       "RORO",
@@ -180,7 +144,6 @@
       "EM"
      ],
      "proposer": "MEECHY",
-     "state": "APPROVED",
      "team": [
       "MEECHY",
       "JACK",
@@ -188,17 +151,31 @@
      ]
     }
    ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "MEECHY",
     "JACK",
     "RORO"
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "state": "SUCCESS",
+   "team": [
+    "MEECHY",
+    "ARJUN",
+    "JACK",
+    "BOB"
+   ],
    "proposals": [
     {
+     "team": [
+      "MEECHY",
+      "ARJUN",
+      "JACK",
+      "BOB"
+     ],
      "state": "APPROVED",
      "proposer": "ARJUN",
      "votes": [
@@ -208,31 +185,54 @@
       "ARJUN",
       "BOB",
       "MEECHY"
-     ],
-     "team": [
-      "MEECHY",
-      "ARJUN",
-      "JACK",
-      "BOB"
      ]
     }
    ],
    "failsRequired": 2,
    "numFails": 0,
-   "team": [
-    "MEECHY",
-    "ARJUN",
-    "JACK",
-    "BOB"
-   ],
+   "state": "SUCCESS",
    "teamSize": 4
   },
   {
-   "failsRequired": 1,
    "proposals": [],
-   "teamSize": 4,
    "team": [],
-   "state": "PENDING"
+   "state": "PENDING",
+   "teamSize": 4,
+   "failsRequired": 1
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1588733178,
+  "_nanoseconds": 676000000
+ },
+ "players": [
+  {
+   "uid": "xBDVjvpBRebuHideNnoIcaxofLC3",
+   "name": "BOB"
+  },
+  {
+   "name": "GURD",
+   "uid": "iZiRhBMF9PP30lxHdDj6qbVIebP2"
+  },
+  {
+   "uid": "yLAkQMScojeE9vRYF6crXyXJix52",
+   "name": "RORO"
+  },
+  {
+   "uid": "IBAyrHOGFhWVjf4UdF3rQmXqOrE2",
+   "name": "JACK"
+  },
+  {
+   "uid": "B1wHtVFkPmaboZhvjjK4CbLdqbs2",
+   "name": "EM"
+  },
+  {
+   "uid": "Tac5pqX63lgNHmCT1zjqEjLlrrE2",
+   "name": "MEECHY"
+  },
+  {
+   "name": "ARJUN",
+   "uid": "PtPYV7Fy6khJthafgCQoGHCi44x2"
   }
  ]
 }

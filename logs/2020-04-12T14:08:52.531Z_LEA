@@ -1,87 +1,92 @@
 {
- "timeFinished": {
-  "_seconds": 1586701951,
-  "_nanoseconds": 60207000
+ "outcome": {
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "PETERGOOD",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "TEO"
+   },
+   {
+    "name": "JW",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "name": "TAYA",
+    "role": "MORGANA"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "ANDY"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "BONNN",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "HAN",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "PETERGOOD": true,
+    "TEO": true
+   },
+   {
+    "HAN": true,
+    "TAYA": false,
+    "JW": true
+   },
+   {
+    "PETERGOOD": true,
+    "ANDY": false,
+    "HAN": true
+   },
+   {
+    "TEO": true,
+    "JW": true,
+    "PETERGOOD": true,
+    "ANDY": true
+   },
+   {
+    "PETERGOOD": true,
+    "TEO": true,
+    "HAN": true,
+    "JW": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "JW"
  },
  "timeCreated": {
   "_seconds": 1586700532,
   "_nanoseconds": 531000000
  },
- "outcome": {
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "PETERGOOD",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "TEO",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "JW"
-   },
-   {
-    "name": "TAYA",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "ANDY",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "BONNN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "HAN",
-    "assassin": false
-   }
-  ],
-  "assassinated": "JW",
-  "votes": [
-   {
-    "TEO": true,
-    "PETERGOOD": true
-   },
-   {
-    "TAYA": false,
-    "HAN": true,
-    "JW": true
-   },
-   {
-    "ANDY": false,
-    "HAN": true,
-    "PETERGOOD": true
-   },
-   {
-    "JW": true,
-    "TEO": true,
-    "ANDY": true,
-    "PETERGOOD": true
-   },
-   {
-    "PETERGOOD": true,
-    "HAN": true,
-    "TEO": true,
-    "JW": true
-   }
-  ],
-  "message": "Three successful missions"
- },
  "missions": [
   {
+   "team": [
+    "TEO",
+    "PETERGOOD"
+   ],
    "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "TEO",
+      "PETERGOOD"
+     ],
      "state": "APPROVED",
      "votes": [
       "JW",
@@ -91,74 +96,71 @@
       "HAN",
       "TEO"
      ],
-     "team": [
-      "TEO",
-      "PETERGOOD"
-     ],
      "proposer": "TEO"
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "team": [
-    "TEO",
-    "PETERGOOD"
-   ],
-   "numFails": 0
+   "numFails": 0,
+   "teamSize": 2
   },
   {
+   "failsRequired": 1,
    "team": [
     "TAYA",
     "HAN",
     "JW"
    ],
    "numFails": 1,
-   "failsRequired": 1,
    "state": "FAIL",
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "BONNN",
-     "state": "APPROVED",
      "votes": [
       "BONNN",
       "HAN",
       "JW",
       "TAYA"
      ],
+     "proposer": "BONNN",
+     "state": "APPROVED",
      "team": [
       "TAYA",
       "HAN",
       "JW"
      ]
     }
-   ]
+   ],
+   "teamSize": 3
   },
   {
+   "team": [
+    "ANDY",
+    "PETERGOOD",
+    "HAN"
+   ],
    "state": "FAIL",
+   "failsRequired": 1,
    "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "TEO",
-      "ANDY",
-      "PETERGOOD"
-     ],
+     "state": "REJECTED",
      "votes": [
       "PETERGOOD",
       "JW"
      ],
-     "state": "REJECTED",
-     "proposer": "PETERGOOD"
+     "proposer": "PETERGOOD",
+     "team": [
+      "TEO",
+      "ANDY",
+      "PETERGOOD"
+     ]
     },
     {
+     "proposer": "TAYA",
+     "state": "REJECTED",
      "team": [
       "TEO",
       "BONNN",
       "HAN"
      ],
-     "proposer": "TAYA",
-     "state": "REJECTED",
      "votes": [
       "TAYA",
       "BONNN"
@@ -170,21 +172,15 @@
       "JW",
       "ANDY"
      ],
-     "proposer": "HAN",
+     "state": "REJECTED",
      "votes": [
       "TAYA",
       "BONNN",
       "HAN"
      ],
-     "state": "REJECTED"
+     "proposer": "HAN"
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "ANDY",
-      "PETERGOOD",
-      "HAN"
-     ],
      "votes": [
       "BONNN",
       "HAN",
@@ -192,24 +188,22 @@
       "TAYA",
       "ANDY"
      ],
-     "proposer": "ANDY"
+     "team": [
+      "ANDY",
+      "PETERGOOD",
+      "HAN"
+     ],
+     "proposer": "ANDY",
+     "state": "APPROVED"
     }
    ],
-   "numFails": 1,
-   "team": [
-    "ANDY",
-    "PETERGOOD",
-    "HAN"
-   ],
-   "failsRequired": 1
+   "numFails": 1
   },
   {
-   "failsRequired": 2,
    "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "JW",
-     "state": "APPROVED",
      "votes": [
       "BONNN",
       "PETERGOOD",
@@ -218,36 +212,43 @@
       "TAYA",
       "ANDY"
      ],
+     "proposer": "JW",
      "team": [
       "JW",
       "ANDY",
       "PETERGOOD",
       "TEO"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
    "team": [
     "JW",
     "ANDY",
     "PETERGOOD",
     "TEO"
    ],
+   "failsRequired": 2,
    "teamSize": 4
   },
   {
-   "teamSize": 4,
-   "numFails": 0,
    "failsRequired": 1,
+   "team": [
+    "HAN",
+    "PETERGOOD",
+    "TEO",
+    "JW"
+   ],
+   "numFails": 0,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "PETERGOOD",
       "HAN",
       "TEO",
       "JW"
      ],
-     "state": "REJECTED",
      "proposer": "TEO",
      "votes": [
       "TEO",
@@ -255,54 +256,48 @@
      ]
     },
     {
-     "proposer": "BONNN",
-     "votes": [
-      "BONNN"
-     ],
      "state": "REJECTED",
+     "proposer": "BONNN",
      "team": [
       "BONNN",
       "HAN",
       "ANDY",
       "TEO"
+     ],
+     "votes": [
+      "BONNN"
      ]
     },
     {
+     "votes": [
+      "BONNN",
+      "PETERGOOD"
+     ],
+     "proposer": "PETERGOOD",
      "state": "REJECTED",
      "team": [
       "PETERGOOD",
       "TEO",
       "JW",
       "TAYA"
-     ],
-     "proposer": "PETERGOOD",
-     "votes": [
-      "BONNN",
-      "PETERGOOD"
      ]
     },
     {
-     "team": [
-      "JW",
-      "TEO",
-      "BONNN",
-      "TAYA"
-     ],
      "votes": [
       "ANDY",
       "BONNN",
       "TAYA"
      ],
-     "state": "REJECTED",
-     "proposer": "TAYA"
+     "proposer": "TAYA",
+     "team": [
+      "JW",
+      "TEO",
+      "BONNN",
+      "TAYA"
+     ],
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "HAN",
-      "PETERGOOD",
-      "TEO",
-      "JW"
-     ],
      "state": "APPROVED",
      "votes": [
       "PETERGOOD",
@@ -310,18 +305,23 @@
       "JW",
       "HAN"
      ],
+     "team": [
+      "HAN",
+      "PETERGOOD",
+      "TEO",
+      "JW"
+     ],
      "proposer": "HAN"
     }
    ],
    "state": "SUCCESS",
-   "team": [
-    "HAN",
-    "PETERGOOD",
-    "TEO",
-    "JW"
-   ]
+   "teamSize": 4
   }
  ],
+ "timeFinished": {
+  "_seconds": 1586701951,
+  "_nanoseconds": 60207000
+ },
  "players": [
   {
    "name": "ANDY",
@@ -336,12 +336,12 @@
    "uid": "BMt4lnyg6ChczswADx58qa9fD2n1"
   },
   {
-   "name": "BONNN",
-   "uid": "ZxUHkjKyVdY7A4F6gUXYAZ9a3q82"
+   "uid": "ZxUHkjKyVdY7A4F6gUXYAZ9a3q82",
+   "name": "BONNN"
   },
   {
-   "name": "PETERGOOD",
-   "uid": "iydUeXut2SSoVbOsLPToBhSzLnf1"
+   "uid": "iydUeXut2SSoVbOsLPToBhSzLnf1",
+   "name": "PETERGOOD"
   },
   {
    "name": "TAYA",

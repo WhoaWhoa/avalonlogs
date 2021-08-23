@@ -1,7 +1,7 @@
 {
- "timeFinished": {
-  "_seconds": 1586038102,
-  "_nanoseconds": 8390000
+ "timeCreated": {
+  "_seconds": 1586035608,
+  "_nanoseconds": 513000000
  },
  "players": [
   {
@@ -29,32 +29,36 @@
    "uid": "CV4O6UecnPf65pD6fwqypKlUjA42"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1586038102,
+  "_nanoseconds": 8390000
+ },
  "outcome": {
   "roles": [
    {
     "name": "WINNIE",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
-    "role": "MERLIN",
+    "assassin": false,
     "name": "ANDREW",
-    "assassin": false
+    "role": "MERLIN"
    },
    {
-    "name": "AMY",
+    "role": "MORDRED",
     "assassin": false,
-    "role": "MORDRED"
+    "name": "AMY"
    },
    {
-    "name": "DASHACLES",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
     "role": "LOYAL FOLLOWER",
+    "name": "DASHACLES"
+   },
+   {
+    "assassin": false,
     "name": "ANNIE",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "NATHAN",
@@ -62,52 +66,54 @@
     "role": "LOYAL FOLLOWER"
    }
   ],
+  "assassinated": "DASHACLES",
+  "state": "GOOD_WIN",
   "votes": [
    {
-    "NATHAN": true,
-    "AMY": true
-   },
-   {
-    "ANDREW": true,
     "AMY": true,
     "NATHAN": true
    },
    {
-    "WINNIE": false,
-    "DASHACLES": true,
-    "ANNIE": true,
-    "NATHAN": true
+    "ANDREW": true,
+    "NATHAN": true,
+    "AMY": true
    },
    {
-    "DASHACLES": true,
+    "NATHAN": true,
     "WINNIE": false,
+    "DASHACLES": true,
     "ANNIE": true
+   },
+   {
+    "WINNIE": false,
+    "ANNIE": true,
+    "DASHACLES": true
    },
    {
     "ANNIE": true,
     "NATHAN": true,
-    "ANDREW": true,
-    "DASHACLES": true
+    "DASHACLES": true,
+    "ANDREW": true
    }
   ],
-  "assassinated": "DASHACLES",
-  "state": "GOOD_WIN",
   "message": "Three successful missions"
- },
- "timeCreated": {
-  "_seconds": 1586035608,
-  "_nanoseconds": 513000000
  },
  "missions": [
   {
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "NATHAN",
+    "AMY"
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "NATHAN",
       "AMY"
      ],
-     "proposer": "AMY",
      "votes": [
       "WINNIE",
       "ANDREW",
@@ -115,29 +121,22 @@
       "DASHACLES",
       "ANNIE",
       "NATHAN"
-     ]
+     ],
+     "proposer": "AMY",
+     "state": "APPROVED"
     }
-   ],
-   "state": "SUCCESS",
-   "teamSize": 2,
-   "team": [
-    "NATHAN",
-    "AMY"
-   ],
-   "failsRequired": 1,
-   "numFails": 0
+   ]
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
    "team": [
     "AMY",
     "NATHAN",
     "ANDREW"
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "NATHAN",
       "WINNIE",
@@ -146,71 +145,65 @@
       "DASHACLES",
       "ANNIE"
      ],
+     "proposer": "ANDREW",
      "team": [
       "AMY",
       "NATHAN",
       "ANDREW"
-     ],
-     "proposer": "ANDREW",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "SUCCESS"
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3
   },
   {
    "state": "FAIL",
-   "team": [
-    "NATHAN",
-    "WINNIE",
-    "ANNIE",
-    "DASHACLES"
-   ],
    "numFails": 1,
-   "teamSize": 4,
-   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "ANDREW",
-      "AMY",
-      "DASHACLES"
-     ],
      "team": [
       "DASHACLES",
       "AMY",
       "ANDREW",
       "NATHAN"
      ],
+     "votes": [
+      "ANDREW",
+      "AMY",
+      "DASHACLES"
+     ],
      "proposer": "DASHACLES",
      "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "team": [
       "NATHAN",
       "WINNIE",
       "ANNIE",
       "DASHACLES"
      ],
+     "proposer": "NATHAN",
      "votes": [
       "DASHACLES",
       "NATHAN",
       "WINNIE",
       "ANDREW",
       "AMY"
-     ],
-     "proposer": "NATHAN",
-     "state": "APPROVED"
+     ]
     }
-   ]
-  },
-  {
+   ],
    "failsRequired": 1,
    "team": [
+    "NATHAN",
     "WINNIE",
     "ANNIE",
     "DASHACLES"
    ],
-   "teamSize": 3,
+   "teamSize": 4
+  },
+  {
    "proposals": [
     {
      "votes": [
@@ -229,12 +222,26 @@
     }
    ],
    "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "WINNIE",
+    "ANNIE",
+    "DASHACLES"
+   ],
    "numFails": 1
   },
   {
+   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "ANNIE",
+     "team": [
+      "ANNIE",
+      "NATHAN",
+      "DASHACLES",
+      "ANDREW"
+     ],
      "state": "APPROVED",
      "votes": [
       "DASHACLES",
@@ -243,23 +250,16 @@
       "ANDREW",
       "AMY"
      ],
-     "team": [
-      "ANNIE",
-      "NATHAN",
-      "DASHACLES",
-      "ANDREW"
-     ]
+     "proposer": "ANNIE"
     }
    ],
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "ANNIE",
     "NATHAN",
     "DASHACLES",
     "ANDREW"
    ],
-   "teamSize": 4,
-   "state": "SUCCESS",
    "numFails": 0
   }
  ]

@@ -1,4 +1,64 @@
 {
+ "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "TIM": true,
+    "JORDAN": true
+   },
+   {
+    "TIM": true,
+    "BLAYDE": true,
+    "DRAGONBONE": false
+   },
+   {
+    "JORDAN": true,
+    "ERIC": true
+   },
+   {
+    "TIM": true,
+    "ERIC": true,
+    "JORDAN": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "name": "ERIC",
+    "role": "MERLIN"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "TIM",
+    "assassin": false
+   },
+   {
+    "name": "BLAYDE",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "DRAGONBONE",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "JORDAN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "assassinated": "ERIC"
+ },
+ "timeCreated": {
+  "_seconds": 1585015138,
+  "_nanoseconds": 562000000
+ },
+ "timeFinished": {
+  "_seconds": 1585015753,
+  "_nanoseconds": 38390000
+ },
  "missions": [
   {
    "team": [
@@ -6,33 +66,33 @@
     "TIM"
    ],
    "numFails": 0,
-   "teamSize": 2,
-   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "JORDAN",
-      "ERIC",
-      "TIM"
-     ],
      "state": "APPROVED",
      "team": [
       "JORDAN",
       "TIM"
      ],
-     "proposer": "JORDAN"
+     "proposer": "JORDAN",
+     "votes": [
+      "JORDAN",
+      "ERIC",
+      "TIM"
+     ]
     }
    ],
-   "state": "SUCCESS"
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
    "failsRequired": 1,
+   "numFails": 1,
    "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
      "proposer": "TIM",
-     "state": "APPROVED",
      "votes": [
       "DRAGONBONE",
       "ERIC",
@@ -42,75 +102,76 @@
       "TIM",
       "BLAYDE",
       "DRAGONBONE"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "team": [
     "TIM",
     "BLAYDE",
     "DRAGONBONE"
-   ],
-   "numFails": 1
+   ]
   },
   {
-   "proposals": [
-    {
-     "votes": [
-      "JORDAN",
-      "ERIC"
-     ],
-     "state": "REJECTED",
-     "team": [
-      "JORDAN",
-      "TIM"
-     ],
-     "proposer": "BLAYDE"
-    },
-    {
-     "state": "REJECTED",
-     "votes": [
-      "DRAGONBONE",
-      "JORDAN"
-     ],
-     "team": [
-      "DRAGONBONE",
-      "JORDAN"
-     ],
-     "proposer": "DRAGONBONE"
-    },
-    {
-     "proposer": "ERIC",
-     "state": "APPROVED",
-     "votes": [
-      "JORDAN",
-      "ERIC",
-      "TIM"
-     ],
-     "team": [
-      "ERIC",
-      "JORDAN"
-     ]
-    }
-   ],
+   "state": "SUCCESS",
    "numFails": 0,
    "team": [
     "ERIC",
     "JORDAN"
    ],
-   "state": "SUCCESS",
+   "teamSize": 2,
    "failsRequired": 1,
-   "teamSize": 2
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "proposer": "BLAYDE",
+     "team": [
+      "JORDAN",
+      "TIM"
+     ],
+     "votes": [
+      "JORDAN",
+      "ERIC"
+     ]
+    },
+    {
+     "proposer": "DRAGONBONE",
+     "team": [
+      "DRAGONBONE",
+      "JORDAN"
+     ],
+     "votes": [
+      "DRAGONBONE",
+      "JORDAN"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "votes": [
+      "JORDAN",
+      "ERIC",
+      "TIM"
+     ],
+     "proposer": "ERIC",
+     "state": "APPROVED",
+     "team": [
+      "ERIC",
+      "JORDAN"
+     ]
+    }
+   ]
   },
   {
-   "numFails": 0,
    "team": [
     "JORDAN",
     "TIM",
     "ERIC"
    ],
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "ERIC",
       "TIM",
@@ -123,25 +184,20 @@
       "TIM",
       "ERIC"
      ],
-     "proposer": "JORDAN"
+     "proposer": "JORDAN",
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 3
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
    "teamSize": 3,
-   "team": [],
+   "failsRequired": 1,
+   "proposals": [],
    "state": "PENDING",
-   "proposals": []
+   "team": []
   }
  ],
- "timeCreated": {
-  "_seconds": 1585015138,
-  "_nanoseconds": 562000000
- },
  "players": [
   {
    "name": "JORDAN",
@@ -156,68 +212,12 @@
    "name": "BLAYDE"
   },
   {
-   "name": "DRAGONBONE",
-   "uid": "CAPMlPcCM8hjY7JGph5c3gsqvVF3"
+   "uid": "CAPMlPcCM8hjY7JGph5c3gsqvVF3",
+   "name": "DRAGONBONE"
   },
   {
    "name": "ERIC",
    "uid": "wGdp2DYNfeW5AJPz5O7XKsQkloE2"
   }
- ],
- "timeFinished": {
-  "_seconds": 1585015753,
-  "_nanoseconds": 38390000
- },
- "outcome": {
-  "message": "Merlin assassinated",
-  "votes": [
-   {
-    "TIM": true,
-    "JORDAN": true
-   },
-   {
-    "BLAYDE": true,
-    "DRAGONBONE": false,
-    "TIM": true
-   },
-   {
-    "JORDAN": true,
-    "ERIC": true
-   },
-   {
-    "TIM": true,
-    "ERIC": true,
-    "JORDAN": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "assassinated": "ERIC",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "ERIC"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "TIM"
-   },
-   {
-    "assassin": true,
-    "name": "BLAYDE",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "DRAGONBONE",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "name": "JORDAN",
-    "role": "LOYAL FOLLOWER"
-   }
-  ]
- }
+ ]
 }

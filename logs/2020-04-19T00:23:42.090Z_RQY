@@ -1,12 +1,56 @@
 {
+ "players": [
+  {
+   "uid": "v3hq9fLMPMa57GtzdZ1mVuXhqWz1",
+   "name": "SAM"
+  },
+  {
+   "name": "HALLAM",
+   "uid": "CkCaRBsCpwPuaKBRJ0f8FxZk0gh1"
+  },
+  {
+   "uid": "8FsYM4XhXqMCsINfwIRX2xGGqYv1",
+   "name": "FIONA"
+  },
+  {
+   "name": "VALERI",
+   "uid": "hFjziC0uEgXVfcwNzAnmyvb2tb23"
+  },
+  {
+   "name": "PATRICK",
+   "uid": "P1fRBIT3O2S7qtycQhNzmtWB8As1"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
-  "state": "GOOD_WIN",
   "message": "Three successful missions",
-  "assassinated": "FIONA",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "PATRICK": true,
+    "FIONA": true
+   },
+   {
+    "HALLAM": true,
+    "SAM": true,
+    "VALERI": false
+   },
+   {
+    "FIONA": true,
+    "PATRICK": true
+   },
+   {
+    "PATRICK": true,
+    "SAM": true,
+    "FIONA": true
+   }
+  ],
   "roles": [
    {
-    "name": "SAM",
     "assassin": false,
+    "name": "SAM",
     "role": "LOYAL FOLLOWER"
    },
    {
@@ -21,102 +65,64 @@
    },
    {
     "assassin": false,
-    "name": "PATRICK",
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "name": "PATRICK"
    },
    {
     "assassin": true,
-    "name": "HALLAM",
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "HALLAM"
    }
   ],
-  "votes": [
-   {
-    "PATRICK": true,
-    "FIONA": true
-   },
-   {
-    "VALERI": false,
-    "HALLAM": true,
-    "SAM": true
-   },
-   {
-    "FIONA": true,
-    "PATRICK": true
-   },
-   {
-    "FIONA": true,
-    "SAM": true,
-    "PATRICK": true
-   }
-  ]
+  "assassinated": "FIONA"
  },
- "players": [
-  {
-   "name": "SAM",
-   "uid": "v3hq9fLMPMa57GtzdZ1mVuXhqWz1"
-  },
-  {
-   "name": "HALLAM",
-   "uid": "CkCaRBsCpwPuaKBRJ0f8FxZk0gh1"
-  },
-  {
-   "uid": "8FsYM4XhXqMCsINfwIRX2xGGqYv1",
-   "name": "FIONA"
-  },
-  {
-   "uid": "hFjziC0uEgXVfcwNzAnmyvb2tb23",
-   "name": "VALERI"
-  },
-  {
-   "name": "PATRICK",
-   "uid": "P1fRBIT3O2S7qtycQhNzmtWB8As1"
-  }
- ],
+ "timeCreated": {
+  "_seconds": 1587255822,
+  "_nanoseconds": 90000000
+ },
  "missions": [
   {
+   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "FIONA",
-     "team": [
-      "FIONA",
-      "PATRICK"
-     ],
      "votes": [
       "FIONA",
       "VALERI",
       "PATRICK",
       "HALLAM"
-     ]
+     ],
+     "team": [
+      "FIONA",
+      "PATRICK"
+     ],
+     "proposer": "FIONA"
     }
    ],
-   "numFails": 0,
+   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "FIONA",
     "PATRICK"
-   ],
-   "teamSize": 2,
-   "failsRequired": 1
+   ]
   },
   {
-   "state": "FAIL",
-   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
+     "team": [
+      "VALERI",
+      "HALLAM",
+      "SAM"
+     ],
      "state": "APPROVED",
-     "proposer": "VALERI",
      "votes": [
       "VALERI",
       "FIONA",
       "HALLAM"
      ],
-     "team": [
-      "VALERI",
-      "HALLAM",
-      "SAM"
-     ]
+     "proposer": "VALERI"
     }
    ],
    "team": [
@@ -124,12 +130,11 @@
     "HALLAM",
     "SAM"
    ],
-   "teamSize": 3,
-   "numFails": 1
+   "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
-   "numFails": 0,
    "team": [
     "PATRICK",
     "FIONA"
@@ -142,20 +147,25 @@
       "FIONA",
       "PATRICK"
      ],
-     "proposer": "PATRICK",
-     "state": "APPROVED",
      "team": [
       "PATRICK",
       "FIONA"
-     ]
+     ],
+     "proposer": "PATRICK",
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "teamSize": 2,
-   "failsRequired": 1
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
-   "numFails": 0,
+   "team": [
+    "SAM",
+    "FIONA",
+    "PATRICK"
+   ],
    "proposals": [
     {
      "state": "APPROVED",
@@ -172,31 +182,21 @@
      ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "SAM",
-    "FIONA",
-    "PATRICK"
-   ],
-   "teamSize": 3
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
-   "proposals": [],
-   "state": "PENDING",
    "team": [],
    "failsRequired": 1,
-   "teamSize": 3
+   "teamSize": 3,
+   "state": "PENDING",
+   "proposals": []
   }
  ],
  "timeFinished": {
   "_seconds": 1587256045,
   "_nanoseconds": 795000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587255822,
-  "_nanoseconds": 90000000
  }
 }

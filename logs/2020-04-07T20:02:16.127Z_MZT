@@ -1,37 +1,67 @@
 {
+ "timeCreated": {
+  "_seconds": 1586289736,
+  "_nanoseconds": 127000000
+ },
  "outcome": {
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "RUTH": true,
+    "PETE": true
+   },
+   {
+    "RUTH": true,
+    "GEORGINA": true,
+    "PETE": false
+   },
+   {
+    "GEORGINA": true,
+    "GEOFF": false,
+    "RUTH": true
+   },
+   {
+    "SMEMILY": false,
+    "RUTH": true,
+    "PRAYAAS": true,
+    "WANDY": true
+   },
+   {
+    "GEORGINA": true,
+    "PRAYAAS": true,
+    "RUTH": true,
+    "WANDY": true
+   }
+  ],
   "roles": [
    {
-    "name": "GEOFF",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "WANDY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "RUTH"
-   },
-   {
     "role": "EVIL MINION",
-    "name": "SMEMILY",
+    "name": "GEOFF",
     "assassin": false
    },
    {
-    "role": "EVIL MINION",
-    "name": "PETE",
-    "assassin": true
+    "role": "LOYAL FOLLOWER",
+    "name": "WANDY",
+    "assassin": false
    },
    {
-    "name": "PRAYAAS",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "RUTH",
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "SMEMILY"
+   },
+   {
+    "name": "PETE",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "PRAYAAS",
+    "assassin": false
    },
    {
     "assassin": false,
@@ -39,49 +69,24 @@
     "name": "GEORGINA"
    }
   ],
-  "votes": [
-   {
-    "RUTH": true,
-    "PETE": true
-   },
-   {
-    "GEORGINA": true,
-    "RUTH": true,
-    "PETE": false
-   },
-   {
-    "GEORGINA": true,
-    "RUTH": true,
-    "GEOFF": false
-   },
-   {
-    "SMEMILY": false,
-    "PRAYAAS": true,
-    "WANDY": true,
-    "RUTH": true
-   },
-   {
-    "WANDY": true,
-    "PRAYAAS": true,
-    "RUTH": true,
-    "GEORGINA": true
-   }
-  ],
-  "assassinated": "WANDY"
- },
- "timeFinished": {
-  "_seconds": 1586290505,
-  "_nanoseconds": 300068000
- },
- "timeCreated": {
-  "_seconds": 1586289736,
-  "_nanoseconds": 127000000
+  "assassinated": "WANDY",
+  "message": "Three successful missions",
+  "state": "GOOD_WIN"
  },
  "missions": [
   {
+   "team": [
+    "RUTH",
+    "PETE"
+   ],
    "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "RUTH",
+      "PETE"
+     ],
      "votes": [
       "PETE",
       "PRAYAAS",
@@ -91,29 +96,31 @@
       "RUTH",
       "SMEMILY"
      ],
-     "state": "APPROVED",
-     "team": [
-      "RUTH",
-      "PETE"
-     ],
      "proposer": "RUTH"
     }
    ],
-   "team": [
-    "RUTH",
-    "PETE"
-   ],
+   "state": "SUCCESS",
    "teamSize": 2,
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
-   "numFails": 1,
+   "state": "FAIL",
+   "team": [
+    "RUTH",
+    "PETE",
+    "GEORGINA"
+   ],
+   "failsRequired": 1,
    "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
      "proposer": "PETE",
+     "team": [
+      "RUTH",
+      "PETE",
+      "GEORGINA"
+     ],
      "votes": [
       "GEORGINA",
       "GEOFF",
@@ -122,37 +129,22 @@
       "SMEMILY",
       "PETE",
       "PRAYAAS"
-     ],
-     "team": [
-      "RUTH",
-      "PETE",
-      "GEORGINA"
      ]
     }
    ],
-   "team": [
-    "RUTH",
-    "PETE",
-    "GEORGINA"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1
+   "numFails": 1
   },
   {
-   "team": [
-    "GEOFF",
-    "GEORGINA",
-    "RUTH"
-   ],
+   "numFails": 1,
    "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
      "proposer": "GEORGINA",
      "votes": [
       "GEORGINA",
       "PETE"
      ],
+     "state": "REJECTED",
      "team": [
       "GEORGINA",
       "SMEMILY",
@@ -160,6 +152,7 @@
      ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "GEOFF",
       "WANDY",
@@ -168,32 +161,27 @@
       "PETE",
       "PRAYAAS"
      ],
+     "proposer": "GEOFF",
      "team": [
       "GEOFF",
       "GEORGINA",
       "RUTH"
-     ],
-     "state": "APPROVED",
-     "proposer": "GEOFF"
+     ]
     }
    ],
-   "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1
+   "failsRequired": 1,
+   "team": [
+    "GEOFF",
+    "GEORGINA",
+    "RUTH"
+   ],
+   "state": "FAIL"
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "WANDY",
-    "RUTH",
-    "PRAYAAS",
-    "SMEMILY"
-   ],
    "teamSize": 4,
-   "failsRequired": 2,
-   "numFails": 1,
    "proposals": [
     {
+     "proposer": "WANDY",
      "state": "APPROVED",
      "votes": [
       "GEORGINA",
@@ -207,46 +195,58 @@
       "RUTH",
       "PRAYAAS",
       "SMEMILY"
-     ],
-     "proposer": "WANDY"
-    }
-   ]
-  },
-  {
-   "teamSize": 4,
-   "proposals": [
-    {
-     "team": [
-      "PRAYAAS",
-      "WANDY",
-      "RUTH",
-      "GEORGINA"
-     ],
-     "state": "APPROVED",
-     "proposer": "PRAYAAS",
-     "votes": [
-      "WANDY",
-      "RUTH",
-      "PRAYAAS",
-      "GEORGINA"
      ]
     }
    ],
+   "numFails": 1,
+   "team": [
+    "WANDY",
+    "RUTH",
+    "PRAYAAS",
+    "SMEMILY"
+   ],
    "state": "SUCCESS",
+   "failsRequired": 2
+  },
+  {
+   "teamSize": 4,
    "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "PRAYAAS",
     "WANDY",
     "RUTH",
     "GEORGINA"
    ],
+   "proposals": [
+    {
+     "votes": [
+      "WANDY",
+      "RUTH",
+      "PRAYAAS",
+      "GEORGINA"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "PRAYAAS",
+      "WANDY",
+      "RUTH",
+      "GEORGINA"
+     ],
+     "proposer": "PRAYAAS"
+    }
+   ],
    "numFails": 0
   }
  ],
+ "timeFinished": {
+  "_seconds": 1586290505,
+  "_nanoseconds": 300068000
+ },
  "players": [
   {
-   "name": "RUTH",
-   "uid": "PtVTXIQENJf0N3vr6ojSTHPXuUQ2"
+   "uid": "PtVTXIQENJf0N3vr6ojSTHPXuUQ2",
+   "name": "RUTH"
   },
   {
    "name": "PETE",
@@ -257,20 +257,20 @@
    "name": "GEORGINA"
   },
   {
-   "uid": "vUDs0IQyl0OZWCSQBdaa3ITmyE23",
-   "name": "GEOFF"
+   "name": "GEOFF",
+   "uid": "vUDs0IQyl0OZWCSQBdaa3ITmyE23"
   },
   {
-   "name": "WANDY",
-   "uid": "rhIpZAbJkpacPIxYUqtiD0FrZip1"
+   "uid": "rhIpZAbJkpacPIxYUqtiD0FrZip1",
+   "name": "WANDY"
   },
   {
    "name": "PRAYAAS",
    "uid": "ueBhO5L0E3Sn2c7oO9YnteQlGNz1"
   },
   {
-   "name": "SMEMILY",
-   "uid": "1sahmx45gXcAmo8BuVU6yEZY0rx1"
+   "uid": "1sahmx45gXcAmo8BuVU6yEZY0rx1",
+   "name": "SMEMILY"
   }
  ]
 }

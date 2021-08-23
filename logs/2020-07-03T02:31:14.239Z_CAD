@@ -1,38 +1,13 @@
 {
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1593743474,
-  "_nanoseconds": 239000000
- },
  "outcome": {
-  "votes": [
-   {
-    "CHRIS": true,
-    "ADAM": true
-   },
-   {
-    "JET": true,
-    "ANINDYA": true,
-    "CHRIS": false
-   },
-   {
-    "ADAM": true,
-    "ANINDYA": true
-   },
-   {
-    "JET": true,
-    "ANINDYA": true,
-    "ADAM": true
-   }
-  ],
+  "state": "GOOD_WIN",
   "message": "Three successful missions",
+  "assassinated": "ANINDYA",
   "roles": [
    {
     "assassin": false,
-    "name": "CHRIS",
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "CHRIS"
    },
    {
     "name": "ANINDYA",
@@ -40,14 +15,14 @@
     "assassin": false
    },
    {
+    "name": "JET",
     "role": "PERCIVAL",
-    "assassin": false,
-    "name": "JET"
+    "assassin": false
    },
    {
     "name": "ADAM",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
     "assassin": true,
@@ -55,94 +30,91 @@
     "role": "MORDRED"
    }
   ],
-  "state": "GOOD_WIN",
-  "assassinated": "ANINDYA"
+  "votes": [
+   {
+    "ADAM": true,
+    "CHRIS": true
+   },
+   {
+    "JET": true,
+    "CHRIS": false,
+    "ANINDYA": true
+   },
+   {
+    "ADAM": true,
+    "ANINDYA": true
+   },
+   {
+    "ADAM": true,
+    "ANINDYA": true,
+    "JET": true
+   }
+  ]
  },
- "players": [
-  {
-   "name": "JET",
-   "uid": "G1IRPXw7ETgM4zBCIMjVvlqaywg1"
-  },
-  {
-   "uid": "71Lnm5hJt4NYB6IMrg6vXvQOyTl1",
-   "name": "CHRIS"
-  },
-  {
-   "name": "ADAM",
-   "uid": "5Nl0zBHVy1V9rmkYhtGINyXaWaj1"
-  },
-  {
-   "name": "ANINDYA",
-   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2"
-  },
-  {
-   "uid": "JAPBZxxk0fMO1c5d7Dli45JF9D23",
-   "name": "NIKOLAI"
-  }
- ],
  "timeFinished": {
   "_seconds": 1593743956,
   "_nanoseconds": 331000000
  },
  "missions": [
   {
+   "teamSize": 2,
+   "state": "SUCCESS",
    "team": [
     "ADAM",
     "CHRIS"
    ],
-   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "JET",
+     "team": [
+      "JET",
+      "CHRIS"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "JET",
+      "CHRIS"
+     ]
+    },
+    {
+     "proposer": "CHRIS",
      "state": "REJECTED",
      "team": [
       "JET",
       "CHRIS"
      ],
      "votes": [
-      "JET",
-      "CHRIS"
-     ],
-     "proposer": "JET"
-    },
-    {
-     "votes": [
       "CHRIS",
       "JET"
-     ],
-     "proposer": "CHRIS",
-     "team": [
-      "JET",
-      "CHRIS"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "proposer": "ADAM",
-     "votes": [
-      "JET",
+     "team": [
       "ADAM",
       "CHRIS"
      ],
+     "proposer": "ADAM",
      "state": "APPROVED",
-     "team": [
+     "votes": [
+      "JET",
       "ADAM",
       "CHRIS"
      ]
     }
    ],
-   "teamSize": 2,
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "numFails": 0
   },
   {
    "numFails": 1,
+   "teamSize": 3,
    "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "JET",
     "CHRIS",
     "ANINDYA"
    ],
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -153,39 +125,42 @@
      "votes": [
       "ADAM"
      ],
-     "proposer": "ANINDYA",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "ANINDYA"
     },
     {
-     "state": "REJECTED",
      "team": [
       "CHRIS",
       "ADAM",
       "NIKOLAI"
      ],
      "proposer": "NIKOLAI",
+     "state": "REJECTED",
      "votes": [
       "NIKOLAI"
      ]
     },
     {
-     "team": [
-      "JET",
-      "CHRIS",
-      "ANINDYA"
-     ],
-     "state": "APPROVED",
+     "proposer": "JET",
      "votes": [
       "JET",
       "CHRIS",
       "ANINDYA"
      ],
-     "proposer": "JET"
+     "state": "APPROVED",
+     "team": [
+      "JET",
+      "CHRIS",
+      "ANINDYA"
+     ]
     }
-   ],
-   "state": "FAIL"
+   ]
   },
   {
+   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "REJECTED",
@@ -193,27 +168,26 @@
       "ADAM",
       "CHRIS"
      ],
-     "proposer": "CHRIS",
      "team": [
       "CHRIS",
       "ADAM"
-     ]
+     ],
+     "proposer": "CHRIS"
     },
     {
      "state": "REJECTED",
+     "team": [
+      "ADAM",
+      "JET"
+     ],
      "proposer": "ADAM",
      "votes": [
       "JET",
       "ADAM"
-     ],
-     "team": [
-      "ADAM",
-      "JET"
      ]
     },
     {
      "state": "APPROVED",
-     "proposer": "ANINDYA",
      "votes": [
       "JET",
       "ADAM",
@@ -222,51 +196,48 @@
      "team": [
       "ANINDYA",
       "ADAM"
-     ]
+     ],
+     "proposer": "ANINDYA"
     }
    ],
-   "numFails": 0,
    "team": [
     "ANINDYA",
     "ADAM"
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "teamSize": 2
+   ]
   },
   {
+   "teamSize": 3,
+   "failsRequired": 1,
    "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
       "NIKOLAI"
      ],
+     "state": "REJECTED",
      "team": [
       "ADAM",
       "ANINDYA",
       "NIKOLAI"
      ],
-     "proposer": "NIKOLAI",
-     "state": "REJECTED"
+     "proposer": "NIKOLAI"
     },
     {
      "state": "APPROVED",
-     "proposer": "JET",
+     "team": [
+      "ADAM",
+      "ANINDYA",
+      "JET"
+     ],
      "votes": [
       "ANINDYA",
       "JET",
       "ADAM"
      ],
-     "team": [
-      "ADAM",
-      "ANINDYA",
-      "JET"
-     ]
+     "proposer": "JET"
     }
    ],
-   "numFails": 0,
-   "failsRequired": 1,
-   "teamSize": 3,
    "team": [
     "ADAM",
     "ANINDYA",
@@ -274,11 +245,40 @@
    ]
   },
   {
-   "failsRequired": 1,
    "proposals": [],
-   "teamSize": 3,
+   "failsRequired": 1,
    "team": [],
+   "teamSize": 3,
    "state": "PENDING"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1593743474,
+  "_nanoseconds": 239000000
+ },
+ "players": [
+  {
+   "name": "JET",
+   "uid": "G1IRPXw7ETgM4zBCIMjVvlqaywg1"
+  },
+  {
+   "name": "CHRIS",
+   "uid": "71Lnm5hJt4NYB6IMrg6vXvQOyTl1"
+  },
+  {
+   "name": "ADAM",
+   "uid": "5Nl0zBHVy1V9rmkYhtGINyXaWaj1"
+  },
+  {
+   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2",
+   "name": "ANINDYA"
+  },
+  {
+   "name": "NIKOLAI",
+   "uid": "JAPBZxxk0fMO1c5d7Dli45JF9D23"
   }
  ]
 }

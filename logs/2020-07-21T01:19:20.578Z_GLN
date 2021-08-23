@@ -1,43 +1,78 @@
 {
- "players": [
-  {
-   "uid": "z0NqzrdcNbQ1ppCWYJyYHbrhsoI2",
-   "name": "THEA"
-  },
-  {
-   "uid": "GlfGzm3er8REfwqquX78V1B8HoC3",
-   "name": "MIKEY"
-  },
-  {
-   "uid": "NFM8eUhTY5WrcqgdbJzBw7sDfZh1",
-   "name": "TANDY"
-  },
-  {
-   "uid": "omXfsH70O7b44VDYNRKBRnT1WvW2",
-   "name": "JOEL"
-  },
-  {
-   "name": "JAMES",
-   "uid": "RFJqWpJzyvNc0G8QNUV0fM84zSx2"
-  },
-  {
-   "name": "CHRISTINA",
-   "uid": "qGCqhNFbfWbAmJLiB19YRWtKFDn2"
-  }
- ],
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1595295450,
   "_nanoseconds": 37000000
- },
- "options": {
-  "inGameLog": false
  },
  "timeCreated": {
   "_seconds": 1595294360,
   "_nanoseconds": 578000000
  },
+ "outcome": {
+  "roles": [
+   {
+    "assassin": false,
+    "name": "JOEL",
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "JAMES"
+   },
+   {
+    "name": "TANDY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "THEA"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "CHRISTINA",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "MIKEY",
+    "role": "MERLIN"
+   }
+  ],
+  "assassinated": null,
+  "votes": [
+   {
+    "THEA": true,
+    "CHRISTINA": true
+   },
+   {
+    "MIKEY": true,
+    "CHRISTINA": false,
+    "THEA": true
+   },
+   {
+    "JAMES": false,
+    "MIKEY": true,
+    "THEA": true,
+    "TANDY": true
+   },
+   {
+    "CHRISTINA": false,
+    "THEA": true,
+    "TANDY": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions"
+ },
  "missions": [
   {
+   "state": "SUCCESS",
+   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
@@ -55,33 +90,32 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "state": "SUCCESS",
-   "numFails": 0,
    "team": [
     "CHRISTINA",
     "THEA"
-   ]
+   ],
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
    "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "THEA",
-     "state": "APPROVED",
      "votes": [
       "CHRISTINA",
       "TANDY",
       "THEA",
       "JAMES"
      ],
+     "state": "APPROVED",
      "team": [
       "THEA",
       "CHRISTINA",
       "MIKEY"
-     ]
+     ],
+     "proposer": "THEA"
     }
    ],
    "team": [
@@ -89,16 +123,11 @@
     "CHRISTINA",
     "MIKEY"
    ],
-   "numFails": 1,
-   "failsRequired": 1
+   "numFails": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "MIKEY",
      "votes": [
       "JOEL",
       "THEA",
@@ -109,23 +138,25 @@
       "TANDY",
       "JOEL",
       "THEA"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "MIKEY"
     },
     {
+     "state": "APPROVED",
      "votes": [
       "TANDY",
       "THEA",
       "JAMES",
       "CHRISTINA"
      ],
-     "state": "APPROVED",
+     "proposer": "TANDY",
      "team": [
       "THEA",
       "MIKEY",
       "TANDY",
       "JAMES"
-     ],
-     "proposer": "TANDY"
+     ]
     }
    ],
    "team": [
@@ -134,130 +165,99 @@
     "TANDY",
     "JAMES"
    ],
+   "teamSize": 4,
    "numFails": 1,
+   "failsRequired": 1,
    "state": "FAIL"
   },
   {
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "team": [
-      "TANDY",
-      "JOEL",
-      "THEA"
-     ],
-     "votes": [
-      "MIKEY",
-      "TANDY",
-      "JOEL"
-     ],
-     "proposer": "JOEL",
-     "state": "REJECTED"
-    },
-    {
-     "team": [
-      "TANDY",
-      "JOEL",
-      "JAMES"
-     ],
-     "proposer": "JAMES",
-     "state": "REJECTED",
-     "votes": [
-      "TANDY",
-      "JAMES",
-      "CHRISTINA"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "votes": [
-      "JOEL",
-      "CHRISTINA",
-      "THEA",
-      "TANDY"
-     ],
-     "team": [
-      "CHRISTINA",
-      "THEA",
-      "TANDY"
-     ],
-     "proposer": "CHRISTINA"
-    }
-   ],
    "numFails": 1,
-   "teamSize": 3,
    "team": [
     "CHRISTINA",
     "THEA",
     "TANDY"
    ],
-   "state": "FAIL"
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "proposer": "JOEL",
+     "team": [
+      "TANDY",
+      "JOEL",
+      "THEA"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "MIKEY",
+      "TANDY",
+      "JOEL"
+     ]
+    },
+    {
+     "votes": [
+      "TANDY",
+      "JAMES",
+      "CHRISTINA"
+     ],
+     "proposer": "JAMES",
+     "state": "REJECTED",
+     "team": [
+      "TANDY",
+      "JOEL",
+      "JAMES"
+     ]
+    },
+    {
+     "state": "APPROVED",
+     "proposer": "CHRISTINA",
+     "team": [
+      "CHRISTINA",
+      "THEA",
+      "TANDY"
+     ],
+     "votes": [
+      "JOEL",
+      "CHRISTINA",
+      "THEA",
+      "TANDY"
+     ]
+    }
+   ],
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
-   "teamSize": 4,
    "state": "PENDING",
    "proposals": [],
-   "team": [],
-   "failsRequired": 1
+   "teamSize": 4,
+   "failsRequired": 1,
+   "team": []
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "JOEL",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "JAMES"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "TANDY"
-   },
-   {
-    "name": "THEA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "CHRISTINA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "MIKEY",
-    "role": "MERLIN"
-   }
-  ],
-  "assassinated": null,
-  "votes": [
-   {
-    "THEA": true,
-    "CHRISTINA": true
-   },
-   {
-    "MIKEY": true,
-    "THEA": true,
-    "CHRISTINA": false
-   },
-   {
-    "THEA": true,
-    "JAMES": false,
-    "MIKEY": true,
-    "TANDY": true
-   },
-   {
-    "TANDY": true,
-    "CHRISTINA": false,
-    "THEA": true
-   }
-  ]
- }
+ "players": [
+  {
+   "name": "THEA",
+   "uid": "z0NqzrdcNbQ1ppCWYJyYHbrhsoI2"
+  },
+  {
+   "name": "MIKEY",
+   "uid": "GlfGzm3er8REfwqquX78V1B8HoC3"
+  },
+  {
+   "name": "TANDY",
+   "uid": "NFM8eUhTY5WrcqgdbJzBw7sDfZh1"
+  },
+  {
+   "name": "JOEL",
+   "uid": "omXfsH70O7b44VDYNRKBRnT1WvW2"
+  },
+  {
+   "uid": "RFJqWpJzyvNc0G8QNUV0fM84zSx2",
+   "name": "JAMES"
+  },
+  {
+   "name": "CHRISTINA",
+   "uid": "qGCqhNFbfWbAmJLiB19YRWtKFDn2"
+  }
+ ]
 }

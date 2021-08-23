@@ -1,97 +1,15 @@
 {
- "outcome": {
-  "votes": [
-   {
-    "TAYA": true,
-    "YAN": true,
-    "JO": true
-   },
-   {
-    "TAYA": true,
-    "JO": true,
-    "YAN": true,
-    "JENNY": false
-   },
-   {
-    "TAYA": true,
-    "YAN": true,
-    "PETER": false,
-    "JO": true
-   },
-   {
-    "JENNY": false,
-    "HANA": false,
-    "JUN": true,
-    "ANDY": true,
-    "TAYA": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": true,
-    "name": "PETER",
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "JENNY",
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "YAN",
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "name": "TAYA",
-    "role": "MERLIN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "ANDY"
-   },
-   {
-    "name": "HANA",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "name": "JUN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "JO"
-   }
-  ],
-  "assassinated": null,
-  "message": "Three failed missions"
- },
- "timeCreated": {
-  "_seconds": 1586098361,
-  "_nanoseconds": 890000000
- },
- "timeFinished": {
-  "_seconds": 1586098630,
-  "_nanoseconds": 640078000
- },
  "missions": [
   {
-   "state": "SUCCESS",
+   "team": [
+    "TAYA",
+    "YAN",
+    "JO"
+   ],
    "failsRequired": 1,
    "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "TAYA",
-      "YAN",
-      "JO"
-     ],
      "proposer": "TAYA",
      "state": "APPROVED",
      "votes": [
@@ -100,17 +18,21 @@
       "JUN",
       "JO",
       "JENNY"
+     ],
+     "team": [
+      "TAYA",
+      "YAN",
+      "JO"
      ]
     }
    ],
-   "team": [
-    "TAYA",
-    "YAN",
-    "JO"
-   ],
-   "teamSize": 3
+   "teamSize": 3,
+   "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "TAYA",
     "YAN",
@@ -118,10 +40,9 @@
     "JENNY"
    ],
    "teamSize": 4,
-   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "YAN",
+     "state": "APPROVED",
      "votes": [
       "PETER",
       "JENNY",
@@ -129,31 +50,28 @@
       "TAYA",
       "JO"
      ],
-     "state": "APPROVED",
      "team": [
       "TAYA",
       "YAN",
       "JO",
       "JENNY"
-     ]
+     ],
+     "proposer": "YAN"
     }
-   ],
-   "state": "FAIL",
-   "numFails": 1
+   ]
   },
   {
-   "failsRequired": 1,
+   "team": [
+    "JO",
+    "YAN",
+    "TAYA",
+    "PETER"
+   ],
    "state": "FAIL",
+   "failsRequired": 1,
    "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "JO",
-      "YAN",
-      "TAYA",
-      "PETER"
-     ],
      "votes": [
       "JENNY",
       "YAN",
@@ -161,23 +79,22 @@
       "JO",
       "PETER"
      ],
-     "proposer": "JO"
+     "state": "APPROVED",
+     "proposer": "JO",
+     "team": [
+      "JO",
+      "YAN",
+      "TAYA",
+      "PETER"
+     ]
     }
-   ],
-   "team": [
-    "JO",
-    "YAN",
-    "TAYA",
-    "PETER"
    ],
    "teamSize": 4
   },
   {
-   "numFails": 2,
-   "teamSize": 5,
-   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "ANDY",
      "team": [
       "ANDY",
       "JUN",
@@ -192,10 +109,12 @@
       "HANA",
       "JUN",
       "PETER"
-     ],
-     "proposer": "ANDY"
+     ]
     }
    ],
+   "numFails": 2,
+   "teamSize": 5,
+   "state": "FAIL",
    "failsRequired": 2,
    "team": [
     "ANDY",
@@ -206,29 +125,106 @@
    ]
   },
   {
-   "state": "PENDING",
+   "teamSize": 5,
    "team": [],
    "failsRequired": 1,
-   "proposals": [],
-   "teamSize": 5
+   "state": "PENDING",
+   "proposals": []
   }
  ],
+ "outcome": {
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "PETER"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "JENNY",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "YAN"
+   },
+   {
+    "role": "MERLIN",
+    "name": "TAYA",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "ANDY",
+    "assassin": false
+   },
+   {
+    "name": "HANA",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "JUN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "JO"
+   }
+  ],
+  "votes": [
+   {
+    "YAN": true,
+    "TAYA": true,
+    "JO": true
+   },
+   {
+    "TAYA": true,
+    "JO": true,
+    "JENNY": false,
+    "YAN": true
+   },
+   {
+    "YAN": true,
+    "JO": true,
+    "TAYA": true,
+    "PETER": false
+   },
+   {
+    "HANA": false,
+    "TAYA": true,
+    "ANDY": true,
+    "JENNY": false,
+    "JUN": true
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions",
+  "state": "EVIL_WIN"
+ },
+ "timeCreated": {
+  "_seconds": 1586098361,
+  "_nanoseconds": 890000000
+ },
  "players": [
   {
-   "uid": "KnQTI8aNqrMMX82gkXFjwm9OqyI3",
-   "name": "ANDY"
+   "name": "ANDY",
+   "uid": "KnQTI8aNqrMMX82gkXFjwm9OqyI3"
   },
   {
    "name": "HANA",
    "uid": "rucAGTZAd0aWOpbNnNtUiAk2ZnN2"
   },
   {
-   "uid": "LuIskfbI32g2OClOtU4VgMhiVcC3",
-   "name": "JENNY"
+   "name": "JENNY",
+   "uid": "LuIskfbI32g2OClOtU4VgMhiVcC3"
   },
   {
-   "name": "JUN",
-   "uid": "B1fFxIsQN5NPjrSOKM6spRTzMwY2"
+   "uid": "B1fFxIsQN5NPjrSOKM6spRTzMwY2",
+   "name": "JUN"
   },
   {
    "name": "PETER",
@@ -246,5 +242,9 @@
    "uid": "eRw0uHs4TDQOF7yMRPtqEZhGlMu2",
    "name": "JO"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1586098630,
+  "_nanoseconds": 640078000
+ }
 }

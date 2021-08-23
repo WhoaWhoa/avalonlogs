@@ -1,4 +1,41 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1594120986,
+  "_nanoseconds": 628000000
+ },
+ "timeFinished": {
+  "_seconds": 1594121955,
+  "_nanoseconds": 116000000
+ },
+ "players": [
+  {
+   "name": "SMGYU",
+   "uid": "ZGxaxL7UWTPxabb8WVSvBIg43xa2"
+  },
+  {
+   "uid": "YQqi8jMZ2ORvDbjAS0Lp4AxHOt92",
+   "name": "YUL"
+  },
+  {
+   "uid": "jU9OONE4T8SRqntvHhdmFr8Jznp1",
+   "name": "JYP"
+  },
+  {
+   "name": "NASTY",
+   "uid": "HlVcnl0kEhc3QQXt9d1tV9my6852"
+  },
+  {
+   "name": "SEOKS",
+   "uid": "9CNLrBdIsrTdzS7rvGJNZwDGDMi1"
+  },
+  {
+   "name": "BMW",
+   "uid": "Ta6CZDbIPDW0rvrrGjxWkZDBIQq1"
+  }
+ ],
  "outcome": {
   "state": "EVIL_WIN",
   "votes": [
@@ -8,14 +45,14 @@
    },
    {
     "SMGYU": true,
-    "NASTY": true,
-    "BMW": true
+    "BMW": true,
+    "NASTY": true
    },
    {
-    "YUL": true,
-    "SEOKS": true,
     "NASTY": true,
-    "JYP": false
+    "YUL": true,
+    "JYP": false,
+    "SEOKS": true
    },
    {
     "BMW": true,
@@ -23,14 +60,12 @@
     "SEOKS": true
    },
    {
+    "BMW": true,
     "JYP": false,
     "YUL": true,
-    "BMW": true,
     "NASTY": true
    }
   ],
-  "message": "Three failed missions",
-  "assassinated": null,
   "roles": [
    {
     "name": "NASTY",
@@ -44,38 +79,35 @@
    },
    {
     "name": "SMGYU",
-    "role": "MORGANA",
-    "assassin": false
+    "assassin": false,
+    "role": "MORGANA"
    },
    {
     "name": "JYP",
-    "role": "MORDRED",
-    "assassin": true
+    "assassin": true,
+    "role": "MORDRED"
    },
    {
-    "assassin": false,
     "name": "SEOKS",
+    "assassin": false,
     "role": "PERCIVAL"
    },
    {
-    "assassin": false,
     "name": "BMW",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    }
-  ]
+  ],
+  "message": "Three failed missions",
+  "assassinated": null
  },
  "missions": [
   {
-   "team": [
-    "BMW",
-    "SMGYU"
-   ],
-   "numFails": 0,
-   "failsRequired": 1,
-   "teamSize": 2,
    "state": "SUCCESS",
+   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "JYP",
      "votes": [
       "BMW",
       "NASTY",
@@ -84,21 +116,29 @@
       "JYP",
       "SEOKS"
      ],
-     "proposer": "JYP",
+     "state": "APPROVED",
      "team": [
       "BMW",
       "SMGYU"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ]
+   ],
+   "numFails": 0,
+   "team": [
+    "BMW",
+    "SMGYU"
+   ],
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "SMGYU",
+      "NASTY",
+      "BMW"
+     ],
+     "state": "APPROVED",
      "votes": [
       "YUL",
       "SMGYU",
@@ -107,37 +147,24 @@
       "BMW",
       "NASTY"
      ],
-     "proposer": "NASTY",
-     "state": "APPROVED",
-     "team": [
-      "SMGYU",
-      "NASTY",
-      "BMW"
-     ]
+     "proposer": "NASTY"
     }
    ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "SUCCESS",
    "team": [
     "SMGYU",
     "NASTY",
     "BMW"
-   ],
-   "teamSize": 3
+   ]
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
-   "numFails": 1,
-   "teamSize": 4,
-   "team": [
-    "SEOKS",
-    "NASTY",
-    "JYP",
-    "YUL"
-   ],
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "SEOKS",
+     "state": "APPROVED",
      "votes": [
       "NASTY",
       "YUL",
@@ -153,26 +180,35 @@
       "YUL"
      ]
     }
-   ]
+   ],
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "SEOKS",
+    "NASTY",
+    "JYP",
+    "YUL"
+   ],
+   "teamSize": 4
   },
   {
-   "failsRequired": 1,
    "teamSize": 3,
-   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "BMW",
      "votes": [
       "NASTY"
      ],
+     "state": "REJECTED",
      "team": [
       "SMGYU",
       "NASTY",
       "BMW"
-     ],
-     "state": "REJECTED",
-     "proposer": "BMW"
+     ]
     },
     {
+     "state": "APPROVED",
      "proposer": "SMGYU",
      "team": [
       "SMGYU",
@@ -184,21 +220,29 @@
       "JYP",
       "SEOKS",
       "BMW"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "numFails": 1,
    "team": [
     "SMGYU",
     "SEOKS",
     "BMW"
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL"
   },
   {
    "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "YUL",
+      "JYP",
+      "NASTY",
+      "BMW"
+     ],
      "proposer": "YUL",
      "votes": [
       "YUL",
@@ -207,62 +251,18 @@
       "SEOKS",
       "BMW",
       "NASTY"
-     ],
-     "team": [
-      "YUL",
-      "JYP",
-      "NASTY",
-      "BMW"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "numFails": 1,
    "state": "FAIL",
-   "teamSize": 4,
+   "numFails": 1,
    "team": [
     "YUL",
     "JYP",
     "NASTY",
     "BMW"
-   ]
+   ],
+   "teamSize": 4
   }
- ],
- "timeCreated": {
-  "_seconds": 1594120986,
-  "_nanoseconds": 628000000
- },
- "timeFinished": {
-  "_seconds": 1594121955,
-  "_nanoseconds": 116000000
- },
- "players": [
-  {
-   "uid": "ZGxaxL7UWTPxabb8WVSvBIg43xa2",
-   "name": "SMGYU"
-  },
-  {
-   "uid": "YQqi8jMZ2ORvDbjAS0Lp4AxHOt92",
-   "name": "YUL"
-  },
-  {
-   "uid": "jU9OONE4T8SRqntvHhdmFr8Jznp1",
-   "name": "JYP"
-  },
-  {
-   "uid": "HlVcnl0kEhc3QQXt9d1tV9my6852",
-   "name": "NASTY"
-  },
-  {
-   "uid": "9CNLrBdIsrTdzS7rvGJNZwDGDMi1",
-   "name": "SEOKS"
-  },
-  {
-   "name": "BMW",
-   "uid": "Ta6CZDbIPDW0rvrrGjxWkZDBIQq1"
-  }
- ],
- "options": {
-  "inGameLog": false
- }
+ ]
 }

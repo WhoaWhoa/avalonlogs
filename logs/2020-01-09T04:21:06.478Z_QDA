@@ -1,14 +1,13 @@
 {
  "outcome": {
-  "state": "EVIL_WIN",
   "votes": [
    {
-    "ROB": true,
-    "ANDREW": true
+    "ANDREW": true,
+    "ROB": true
    },
    {
-    "ZZZZ": false,
     "ANDREW": true,
+    "ZZZZ": false,
     "NAV": true
    },
    {
@@ -16,52 +15,59 @@
     "ZZZZ": true
    },
    {
-    "JERSH": true,
+    "ANDREW": true,
     "ZZZZ": false,
-    "ANDREW": true
+    "JERSH": true
    },
    {
-    "ANDREW": true,
+    "ROB": true,
     "JERSH": true,
-    "ROB": true
+    "ANDREW": true
    }
   ],
+  "assassinated": "NAV",
   "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
   "roles": [
    {
-    "assassin": true,
     "name": "JERSH",
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "name": "ZZZZ",
+    "assassin": false,
+    "role": "MORGANA"
    },
    {
     "assassin": false,
-    "role": "MORGANA",
-    "name": "ZZZZ"
-   },
-   {
     "name": "NAV",
-    "assassin": false,
     "role": "MERLIN"
    },
    {
-    "assassin": false,
+    "role": "PERCIVAL",
     "name": "ANDREW",
-    "role": "PERCIVAL"
+    "assassin": false
    },
    {
-    "name": "ROB",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "ROB"
    }
-  ],
-  "assassinated": "NAV"
+  ]
  },
  "missions": [
   {
+   "team": [
+    "ROB",
+    "ANDREW"
+   ],
+   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "ROB",
      "votes": [
       "ANDREW",
       "ROB",
@@ -70,62 +76,54 @@
      "team": [
       "ROB",
       "ANDREW"
-     ]
+     ],
+     "proposer": "ROB",
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0,
-   "state": "SUCCESS",
-   "team": [
-    "ROB",
-    "ANDREW"
    ]
   },
   {
-   "team": [
-    "ANDREW",
-    "ZZZZ",
-    "NAV"
-   ],
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "NAV",
-      "ROB",
-      "JERSH",
-      "ZZZZ"
-     ],
      "state": "APPROVED",
      "team": [
       "ANDREW",
       "ZZZZ",
       "NAV"
      ],
-     "proposer": "NAV"
+     "proposer": "NAV",
+     "votes": [
+      "NAV",
+      "ROB",
+      "JERSH",
+      "ZZZZ"
+     ]
     }
    ],
    "failsRequired": 1,
-   "state": "FAIL",
-   "teamSize": 3,
-   "numFails": 1
+   "team": [
+    "ANDREW",
+    "ZZZZ",
+    "NAV"
+   ]
   },
   {
-   "teamSize": 2,
-   "numFails": 0,
    "team": [
     "ZZZZ",
     "ANDREW"
    ],
-   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
+     "proposer": "ZZZZ",
      "votes": [
       "ZZZZ",
       "NAV",
       "ANDREW"
      ],
-     "proposer": "ZZZZ",
      "team": [
       "ZZZZ",
       "ANDREW"
@@ -133,13 +131,11 @@
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 2,
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
-   "state": "FAIL",
-   "numFails": 1,
-   "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -148,19 +144,23 @@
       "ZZZZ"
      ],
      "state": "APPROVED",
-     "proposer": "ANDREW",
      "team": [
       "ZZZZ",
       "ANDREW",
       "JERSH"
-     ]
+     ],
+     "proposer": "ANDREW"
     }
    ],
+   "numFails": 1,
    "team": [
     "ZZZZ",
     "ANDREW",
     "JERSH"
-   ]
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
    "team": [
@@ -168,13 +168,11 @@
     "ANDREW",
     "JERSH"
    ],
-   "teamSize": 3,
+   "state": "SUCCESS",
    "failsRequired": 1,
    "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "JERSH",
      "votes": [
       "JERSH"
      ],
@@ -182,29 +180,35 @@
       "ROB",
       "ANDREW",
       "JERSH"
-     ]
+     ],
+     "proposer": "JERSH",
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "ROB",
-      "ANDREW",
-      "JERSH"
-     ],
+     "proposer": "ROB",
      "state": "APPROVED",
      "votes": [
       "ROB",
       "JERSH",
       "ZZZZ"
      ],
-     "proposer": "ROB"
+     "team": [
+      "ROB",
+      "ANDREW",
+      "JERSH"
+     ]
     }
    ],
-   "state": "SUCCESS"
+   "teamSize": 3
   }
  ],
  "timeFinished": {
   "_seconds": 1578544499,
   "_nanoseconds": 955039000
+ },
+ "timeCreated": {
+  "_seconds": 1578543666,
+  "_nanoseconds": 478000000
  },
  "players": [
   {
@@ -212,24 +216,20 @@
    "name": "NAV"
   },
   {
-   "name": "ZZZZ",
-   "uid": "DCQy8J0xUIhD1fjQ179KzXWSwGm1"
+   "uid": "DCQy8J0xUIhD1fjQ179KzXWSwGm1",
+   "name": "ZZZZ"
   },
   {
-   "name": "ANDREW",
-   "uid": "Femz53uJPyNGl1bPihNgpNrnqmw1"
+   "uid": "Femz53uJPyNGl1bPihNgpNrnqmw1",
+   "name": "ANDREW"
   },
   {
    "uid": "VxlISaDB5bMlxRwqCWQWnHIE4RD2",
    "name": "JERSH"
   },
   {
-   "name": "ROB",
-   "uid": "Rh7YLDoR7zObEtwCnCVe2qpbp5K2"
+   "uid": "Rh7YLDoR7zObEtwCnCVe2qpbp5K2",
+   "name": "ROB"
   }
- ],
- "timeCreated": {
-  "_seconds": 1578543666,
-  "_nanoseconds": 478000000
- }
+ ]
 }

@@ -1,69 +1,4 @@
 {
- "outcome": {
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "name": "MARC",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "CONNOR",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "YB",
-    "assassin": false
-   },
-   {
-    "name": "DREW",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "ROSE"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "MATT",
-    "assassin": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "votes": [
-   {
-    "YB": true,
-    "CONNOR": true
-   },
-   {
-    "CONNOR": true,
-    "DREW": true,
-    "YB": true
-   },
-   {
-    "DREW": true,
-    "ROSE": false,
-    "YB": true,
-    "CONNOR": true
-   },
-   {
-    "MARC": false,
-    "YB": true,
-    "CONNOR": true
-   },
-   {
-    "CONNOR": true,
-    "ROSE": false,
-    "MATT": true,
-    "DREW": true
-   }
-  ],
-  "message": "Three failed missions"
- },
  "timeCreated": {
   "_seconds": 1611459341,
   "_nanoseconds": 5000000
@@ -72,71 +7,78 @@
   "_seconds": 1611460449,
   "_nanoseconds": 461000000
  },
- "options": {
-  "inGameLog": false
- },
  "missions": [
   {
-   "team": [
-    "YB",
-    "CONNOR"
-   ],
-   "teamSize": 2,
-   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "YB",
+     "team": [
+      "YB",
+      "CONNOR"
+     ],
      "votes": [
       "YB",
       "ROSE",
       "CONNOR",
       "MARC",
       "DREW"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "YB",
-      "CONNOR"
-     ],
-     "proposer": "YB"
+     ]
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS",
-   "failsRequired": 1
+   "numFails": 0,
+   "teamSize": 2,
+   "team": [
+    "YB",
+    "CONNOR"
+   ]
   },
   {
-   "teamSize": 3,
+   "team": [
+    "DREW",
+    "YB",
+    "CONNOR"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "DREW",
-      "YB",
-      "CONNOR"
-     ],
-     "proposer": "DREW",
      "state": "APPROVED",
+     "proposer": "DREW",
      "votes": [
       "ROSE",
       "MARC",
       "CONNOR",
       "DREW",
       "YB"
+     ],
+     "team": [
+      "DREW",
+      "YB",
+      "CONNOR"
      ]
     }
    ],
+   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 3
+  },
+  {
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 4,
    "team": [
+    "ROSE",
     "DREW",
     "YB",
     "CONNOR"
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0
-  },
-  {
-   "teamSize": 4,
-   "numFails": 1,
    "proposals": [
     {
+     "votes": [
+      "MATT"
+     ],
      "state": "REJECTED",
      "team": [
       "MATT",
@@ -144,14 +86,9 @@
       "YB",
       "CONNOR"
      ],
-     "votes": [
-      "MATT"
-     ],
      "proposer": "MATT"
     },
     {
-     "state": "REJECTED",
-     "proposer": "MARC",
      "team": [
       "MARC",
       "DREW",
@@ -160,44 +97,39 @@
      ],
      "votes": [
       "MARC"
-     ]
+     ],
+     "proposer": "MARC",
+     "state": "REJECTED"
     },
     {
      "proposer": "ROSE",
+     "team": [
+      "ROSE",
+      "DREW",
+      "YB",
+      "CONNOR"
+     ],
      "state": "APPROVED",
      "votes": [
       "DREW",
       "YB",
       "MARC",
       "ROSE"
-     ],
-     "team": [
-      "ROSE",
-      "DREW",
-      "YB",
-      "CONNOR"
      ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "ROSE",
-    "DREW",
-    "YB",
-    "CONNOR"
-   ],
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
    "teamSize": 3,
-   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "MARC",
     "CONNOR",
     "YB"
    ],
-   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
      "team": [
@@ -218,8 +150,8 @@
       "CONNOR",
       "MATT"
      ],
-     "proposer": "YB",
      "state": "REJECTED",
+     "proposer": "YB",
      "votes": [
       "ROSE",
       "YB",
@@ -227,12 +159,12 @@
      ]
     },
     {
+     "state": "REJECTED",
      "team": [
       "CONNOR",
       "YB",
       "DREW"
      ],
-     "state": "REJECTED",
      "votes": [
       "DREW",
       "CONNOR",
@@ -241,22 +173,20 @@
      "proposer": "DREW"
     },
     {
+     "proposer": "MATT",
      "state": "REJECTED",
-     "team": [
-      "MATT",
-      "YB",
-      "CONNOR"
-     ],
      "votes": [
       "MATT",
       "CONNOR",
       "ROSE"
      ],
-     "proposer": "MATT"
+     "team": [
+      "MATT",
+      "YB",
+      "CONNOR"
+     ]
     },
     {
-     "state": "APPROVED",
-     "proposer": "MARC",
      "votes": [
       "MARC",
       "DREW",
@@ -265,44 +195,46 @@
       "ROSE",
       "MATT"
      ],
+     "proposer": "MARC",
      "team": [
       "MARC",
       "CONNOR",
       "YB"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ]
   },
   {
    "proposals": [
     {
-     "votes": [
-      "DREW",
-      "ROSE"
-     ],
      "team": [
       "ROSE",
       "CONNOR",
       "DREW",
       "MATT"
      ],
-     "state": "REJECTED",
-     "proposer": "ROSE"
-    },
-    {
-     "proposer": "CONNOR",
-     "state": "REJECTED",
+     "proposer": "ROSE",
      "votes": [
       "DREW",
-      "YB",
-      "MATT"
+      "ROSE"
      ],
+     "state": "REJECTED"
+    },
+    {
+     "state": "REJECTED",
      "team": [
       "CONNOR",
       "YB",
       "DREW",
       "MATT"
-     ]
+     ],
+     "votes": [
+      "DREW",
+      "YB",
+      "MATT"
+     ],
+     "proposer": "CONNOR"
     },
     {
      "proposer": "YB",
@@ -312,13 +244,14 @@
       "DREW",
       "MATT"
      ],
+     "state": "REJECTED",
      "votes": [
       "YB",
       "CONNOR"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "proposer": "DREW",
      "votes": [
       "MARC",
       "DREW",
@@ -326,18 +259,15 @@
       "ROSE",
       "MATT"
      ],
-     "state": "APPROVED",
      "team": [
       "DREW",
       "MATT",
       "CONNOR",
       "ROSE"
      ],
-     "proposer": "DREW"
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 4,
-   "failsRequired": 1,
    "team": [
     "DREW",
     "MATT",
@@ -345,9 +275,79 @@
     "ROSE"
    ],
    "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 4,
    "state": "FAIL"
   }
  ],
+ "outcome": {
+  "votes": [
+   {
+    "YB": true,
+    "CONNOR": true
+   },
+   {
+    "DREW": true,
+    "CONNOR": true,
+    "YB": true
+   },
+   {
+    "DREW": true,
+    "CONNOR": true,
+    "YB": true,
+    "ROSE": false
+   },
+   {
+    "CONNOR": true,
+    "MARC": false,
+    "YB": true
+   },
+   {
+    "CONNOR": true,
+    "ROSE": false,
+    "MATT": true,
+    "DREW": true
+   }
+  ],
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "MARC"
+   },
+   {
+    "name": "CONNOR",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "YB"
+   },
+   {
+    "assassin": false,
+    "name": "DREW",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "ROSE"
+   },
+   {
+    "name": "MATT",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN"
+ },
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
    "name": "CONNOR",

@@ -1,9 +1,120 @@
 {
+ "outcome": {
+  "votes": [
+   {
+    "KIRENA": true,
+    "STEVE": true
+   },
+   {
+    "KIRENA": false,
+    "STEVE": true,
+    "AY": true
+   },
+   {
+    "AY": true,
+    "JK": true,
+    "BRYAN": true,
+    "STEVE": true
+   },
+   {
+    "KIRENA": false,
+    "BRYAN": true,
+    "JK": true
+   },
+   {
+    "SP": false,
+    "AY": true,
+    "JK": true,
+    "STEVE": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "JK"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "AY",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "BRYAN"
+   },
+   {
+    "name": "STEVE",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "KIRENA"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "SP"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "message": "Three failed missions"
+ },
+ "timeFinished": {
+  "_seconds": 1605651620,
+  "_nanoseconds": 856000000
+ },
+ "timeCreated": {
+  "_seconds": 1605651176,
+  "_nanoseconds": 645000000
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "players": [
+  {
+   "uid": "fa1VPoY86yWKpTQ6V7nDAaf3GCJ3",
+   "name": "KIRENA"
+  },
+  {
+   "uid": "08dOcZu0zENbASeN7Um7wvDctdf2",
+   "name": "JK"
+  },
+  {
+   "name": "BRYAN",
+   "uid": "6Tv9wVQYeMMztp8216mzr6PqDv32"
+  },
+  {
+   "uid": "0z9HG8A6HVZt0Gy3q72hem5EiSj2",
+   "name": "SP"
+  },
+  {
+   "uid": "ZkpJfalAdWflLMonrR66zaY1MpA3",
+   "name": "AY"
+  },
+  {
+   "name": "STEVE",
+   "uid": "M0AHeqHEyVSFAq3gdGFrKa8GwYw2"
+  }
+ ],
  "missions": [
   {
-   "state": "SUCCESS",
+   "team": [
+    "KIRENA",
+    "STEVE"
+   ],
+   "failsRequired": 1,
+   "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "KIRENA",
+      "STEVE"
+     ],
      "votes": [
       "SP",
       "AY",
@@ -12,52 +123,44 @@
       "BRYAN",
       "JK"
      ],
-     "proposer": "SP",
-     "team": [
-      "KIRENA",
-      "STEVE"
-     ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "SP"
     }
    ],
-   "teamSize": 2,
-   "numFails": 0,
-   "team": [
-    "KIRENA",
-    "STEVE"
-   ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "JK",
+      "KIRENA",
+      "STEVE",
+      "AY"
+     ],
+     "team": [
+      "AY",
+      "STEVE",
+      "KIRENA"
+     ],
+     "proposer": "AY"
+    }
+   ],
    "team": [
     "AY",
     "STEVE",
     "KIRENA"
    ],
    "numFails": 1,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "proposer": "AY",
-     "team": [
-      "AY",
-      "STEVE",
-      "KIRENA"
-     ],
-     "votes": [
-      "JK",
-      "KIRENA",
-      "STEVE",
-      "AY"
-     ]
-    }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3
+   "state": "FAIL"
   },
   {
    "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "STEVE",
     "AY",
@@ -65,17 +168,9 @@
     "BRYAN"
    ],
    "numFails": 0,
-   "teamSize": 4,
-   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "STEVE",
-      "AY",
-      "JK",
-      "BRYAN"
-     ],
      "votes": [
       "AY",
       "BRYAN",
@@ -83,44 +178,59 @@
       "KIRENA",
       "STEVE"
      ],
-     "proposer": "STEVE"
+     "proposer": "STEVE",
+     "team": [
+      "STEVE",
+      "AY",
+      "JK",
+      "BRYAN"
+     ]
     }
-   ]
+   ],
+   "teamSize": 4
   },
   {
-   "state": "FAIL",
-   "team": [
-    "KIRENA",
-    "JK",
-    "BRYAN"
-   ],
+   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
+     "proposer": "KIRENA",
      "votes": [
       "BRYAN",
       "JK",
       "KIRENA",
       "SP"
      ],
+     "state": "APPROVED",
      "team": [
       "KIRENA",
       "JK",
       "BRYAN"
-     ],
-     "proposer": "KIRENA",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "numFails": 1,
-   "teamSize": 3,
-   "failsRequired": 1
+   "state": "FAIL",
+   "team": [
+    "KIRENA",
+    "JK",
+    "BRYAN"
+   ],
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "JK",
+    "STEVE",
+    "AY",
+    "SP"
+   ],
+   "state": "FAIL",
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "JK",
      "votes": [
       "JK",
       "SP",
@@ -132,120 +242,10 @@
       "STEVE",
       "AY",
       "SP"
-     ]
+     ],
+     "proposer": "JK"
     }
-   ],
-   "teamSize": 4,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "team": [
-    "JK",
-    "STEVE",
-    "AY",
-    "SP"
    ]
   }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1605651176,
-  "_nanoseconds": 645000000
- },
- "timeFinished": {
-  "_seconds": 1605651620,
-  "_nanoseconds": 856000000
- },
- "players": [
-  {
-   "uid": "fa1VPoY86yWKpTQ6V7nDAaf3GCJ3",
-   "name": "KIRENA"
-  },
-  {
-   "name": "JK",
-   "uid": "08dOcZu0zENbASeN7Um7wvDctdf2"
-  },
-  {
-   "uid": "6Tv9wVQYeMMztp8216mzr6PqDv32",
-   "name": "BRYAN"
-  },
-  {
-   "name": "SP",
-   "uid": "0z9HG8A6HVZt0Gy3q72hem5EiSj2"
-  },
-  {
-   "name": "AY",
-   "uid": "ZkpJfalAdWflLMonrR66zaY1MpA3"
-  },
-  {
-   "name": "STEVE",
-   "uid": "M0AHeqHEyVSFAq3gdGFrKa8GwYw2"
-  }
- ],
- "outcome": {
-  "assassinated": null,
-  "votes": [
-   {
-    "STEVE": true,
-    "KIRENA": true
-   },
-   {
-    "KIRENA": false,
-    "AY": true,
-    "STEVE": true
-   },
-   {
-    "BRYAN": true,
-    "STEVE": true,
-    "JK": true,
-    "AY": true
-   },
-   {
-    "BRYAN": true,
-    "JK": true,
-    "KIRENA": false
-   },
-   {
-    "JK": true,
-    "STEVE": true,
-    "SP": false,
-    "AY": true
-   }
-  ],
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "JK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "AY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "BRYAN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "STEVE",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "KIRENA",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "SP"
-   }
-  ],
-  "state": "EVIL_WIN"
- }
+ ]
 }

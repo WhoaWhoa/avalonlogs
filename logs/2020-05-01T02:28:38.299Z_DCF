@@ -1,4 +1,8 @@
 {
+ "timeFinished": {
+  "_seconds": 1588301260,
+  "_nanoseconds": 254000000
+ },
  "players": [
   {
    "name": "SIRKEN",
@@ -9,8 +13,8 @@
    "uid": "5Nl0zBHVy1V9rmkYhtGINyXaWaj1"
   },
   {
-   "name": "JET",
-   "uid": "qNPrtGdIpLerSfOckTxaznIIGy72"
+   "uid": "qNPrtGdIpLerSfOckTxaznIIGy72",
+   "name": "JET"
   },
   {
    "name": "KLAUDIA",
@@ -21,69 +25,59 @@
    "uid": "LNbFQPCC7NhM56pyXzg2u76WE0g1"
   },
   {
-   "name": "AFFINE",
-   "uid": "0v9dXMc3kvZ2yKoL8dZuHeRAl3d2"
+   "uid": "0v9dXMc3kvZ2yKoL8dZuHeRAl3d2",
+   "name": "AFFINE"
   },
   {
-   "name": "ANINDYA",
-   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2"
+   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2",
+   "name": "ANINDYA"
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588300118,
-  "_nanoseconds": 299000000
- },
- "timeFinished": {
-  "_seconds": 1588301260,
-  "_nanoseconds": 254000000
- },
  "outcome": {
   "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
   "roles": [
    {
-    "role": "PERCIVAL",
+    "name": "AFFINE",
     "assassin": false,
-    "name": "AFFINE"
+    "role": "PERCIVAL"
    },
    {
     "name": "KLAUDIA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "JET",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
     "assassin": false,
-    "name": "ADAM"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
-    "role": "OBERON",
-    "name": "BRYCE"
+    "name": "ADAM",
+    "role": "MERLIN"
    },
    {
-    "name": "SIRKEN",
+    "name": "BRYCE",
+    "assassin": false,
+    "role": "OBERON"
+   },
+   {
     "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "SIRKEN"
    },
    {
+    "role": "MORGANA",
     "assassin": false,
-    "name": "ANINDYA",
-    "role": "MORGANA"
+    "name": "ANINDYA"
    }
   ],
+  "message": "Merlin assassinated",
+  "assassinated": "ADAM",
   "votes": [
    {
-    "KLAUDIA": true,
-    "BRYCE": false
+    "BRYCE": false,
+    "KLAUDIA": true
    },
    {
     "SIRKEN": true,
@@ -91,32 +85,31 @@
     "AFFINE": true
    },
    {
-    "ANINDYA": true,
+    "SIRKEN": true,
     "AFFINE": true,
-    "SIRKEN": true
+    "ANINDYA": true
    },
    {
-    "ANINDYA": false,
     "AFFINE": true,
-    "SIRKEN": false,
-    "JET": true
-   },
-   {
-    "ADAM": true,
-    "KLAUDIA": true,
     "JET": true,
-    "AFFINE": true
+    "SIRKEN": false,
+    "ANINDYA": false
+   },
+   {
+    "JET": true,
+    "ADAM": true,
+    "AFFINE": true,
+    "KLAUDIA": true
    }
-  ],
-  "assassinated": "ADAM"
+  ]
  },
  "missions": [
   {
-   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
-     "proposer": "SIRKEN",
      "state": "REJECTED",
+     "proposer": "SIRKEN",
      "votes": [
       "SIRKEN",
       "AFFINE",
@@ -128,45 +121,49 @@
      ]
     },
     {
-     "votes": [
-      "SIRKEN",
-      "JET",
-      "ADAM"
-     ],
      "proposer": "ADAM",
+     "state": "REJECTED",
      "team": [
       "ADAM",
       "SIRKEN"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "SIRKEN",
+      "JET",
+      "ADAM"
+     ]
     },
     {
-     "team": [
-      "ADAM",
-      "AFFINE"
-     ],
-     "state": "REJECTED",
+     "proposer": "JET",
      "votes": [
       "JET",
       "ADAM"
      ],
-     "proposer": "JET"
+     "state": "REJECTED",
+     "team": [
+      "ADAM",
+      "AFFINE"
+     ]
     },
     {
+     "team": [
+      "KLAUDIA",
+      "AFFINE"
+     ],
      "state": "REJECTED",
      "votes": [
       "JET",
       "ADAM",
       "KLAUDIA"
      ],
-     "proposer": "KLAUDIA",
-     "team": [
-      "KLAUDIA",
-      "AFFINE"
-     ]
+     "proposer": "KLAUDIA"
     },
     {
      "proposer": "BRYCE",
+     "team": [
+      "KLAUDIA",
+      "BRYCE"
+     ],
      "state": "APPROVED",
      "votes": [
       "AFFINE",
@@ -175,24 +172,18 @@
       "BRYCE",
       "SIRKEN",
       "ANINDYA"
-     ],
-     "team": [
-      "KLAUDIA",
-      "BRYCE"
      ]
     }
    ],
-   "state": "FAIL",
    "team": [
     "KLAUDIA",
     "BRYCE"
    ],
-   "numFails": 1,
-   "teamSize": 2
+   "failsRequired": 1,
+   "teamSize": 2,
+   "state": "FAIL"
   },
   {
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
      "votes": [],
@@ -205,20 +196,21 @@
      "state": "REJECTED"
     },
     {
-     "votes": [
-      "ANINDYA",
-      "AFFINE",
-      "JET"
-     ],
      "team": [
       "ANINDYA",
       "AFFINE",
       "SIRKEN"
      ],
-     "proposer": "ANINDYA",
-     "state": "REJECTED"
+     "votes": [
+      "ANINDYA",
+      "AFFINE",
+      "JET"
+     ],
+     "state": "REJECTED",
+     "proposer": "ANINDYA"
     },
     {
+     "state": "APPROVED",
      "votes": [
       "AFFINE",
       "JET",
@@ -226,7 +218,6 @@
       "ANINDYA"
      ],
      "proposer": "SIRKEN",
-     "state": "APPROVED",
      "team": [
       "SIRKEN",
       "AFFINE",
@@ -234,48 +225,56 @@
      ]
     }
    ],
-   "state": "SUCCESS",
    "team": [
     "SIRKEN",
     "AFFINE",
     "ANINDYA"
    ],
+   "numFails": 0,
+   "teamSize": 3,
+   "state": "SUCCESS",
    "failsRequired": 1
   },
   {
+   "state": "SUCCESS",
+   "numFails": 0,
+   "team": [
+    "SIRKEN",
+    "AFFINE",
+    "ANINDYA"
+   ],
    "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "ANINDYA",
-      "JET",
-      "ADAM"
-     ],
      "team": [
       "AFFINE",
       "SIRKEN",
       "ANINDYA"
      ],
      "state": "REJECTED",
-     "proposer": "ADAM"
+     "proposer": "ADAM",
+     "votes": [
+      "ANINDYA",
+      "JET",
+      "ADAM"
+     ]
     },
     {
      "proposer": "JET",
-     "votes": [
-      "JET",
-      "ADAM",
-      "ANINDYA"
-     ],
      "team": [
       "SIRKEN",
       "AFFINE",
+      "ANINDYA"
+     ],
+     "votes": [
+      "JET",
+      "ADAM",
       "ANINDYA"
      ],
      "state": "REJECTED"
     },
     {
      "proposer": "KLAUDIA",
-     "state": "REJECTED",
      "votes": [
       "KLAUDIA",
       "SIRKEN"
@@ -284,15 +283,16 @@
       "ANINDYA",
       "KLAUDIA",
       "SIRKEN"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "team": [
       "SIRKEN",
       "AFFINE",
       "ANINDYA"
      ],
+     "state": "REJECTED",
      "proposer": "BRYCE",
      "votes": [
       "JET",
@@ -301,12 +301,12 @@
      ]
     },
     {
-     "proposer": "AFFINE",
      "team": [
       "SIRKEN",
       "AFFINE",
       "ANINDYA"
      ],
+     "proposer": "AFFINE",
      "state": "APPROVED",
      "votes": [
       "BRYCE",
@@ -319,17 +319,9 @@
      ]
     }
    ],
-   "team": [
-    "SIRKEN",
-    "AFFINE",
-    "ANINDYA"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
    "teamSize": 3
   },
   {
-   "teamSize": 4,
    "state": "FAIL",
    "failsRequired": 2,
    "team": [
@@ -338,80 +330,77 @@
     "SIRKEN",
     "JET"
    ],
-   "numFails": 2,
    "proposals": [
     {
-     "proposer": "ANINDYA",
-     "team": [
-      "ANINDYA",
-      "AFFINE",
-      "SIRKEN",
-      "JET"
-     ],
      "state": "APPROVED",
+     "proposer": "ANINDYA",
      "votes": [
       "SIRKEN",
       "ANINDYA",
       "AFFINE",
       "JET"
+     ],
+     "team": [
+      "ANINDYA",
+      "AFFINE",
+      "SIRKEN",
+      "JET"
      ]
     }
-   ]
+   ],
+   "teamSize": 4,
+   "numFails": 2
   },
   {
-   "team": [
-    "AFFINE",
-    "KLAUDIA",
-    "JET",
-    "ADAM"
-   ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "teamSize": 4,
-   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [],
      "proposer": "SIRKEN",
      "team": [
       "SIRKEN",
       "ADAM",
       "BRYCE",
       "ANINDYA"
-     ],
-     "votes": [],
-     "state": "REJECTED"
+     ]
     },
     {
      "proposer": "ADAM",
-     "votes": [
-      "ANINDYA",
-      "AFFINE",
-      "ADAM"
-     ],
      "team": [
       "AFFINE",
       "JET",
       "ADAM",
       "KLAUDIA"
      ],
+     "votes": [
+      "ANINDYA",
+      "AFFINE",
+      "ADAM"
+     ],
      "state": "REJECTED"
     },
     {
-     "proposer": "JET",
      "team": [
       "ADAM",
       "JET",
       "KLAUDIA",
       "AFFINE"
      ],
-     "state": "REJECTED",
+     "proposer": "JET",
      "votes": [
       "ADAM",
       "JET",
       "AFFINE"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "AFFINE",
+      "KLAUDIA",
+      "ADAM",
+      "JET"
+     ],
      "team": [
       "AFFINE",
       "KLAUDIA",
@@ -419,15 +408,26 @@
       "ADAM"
      ],
      "proposer": "KLAUDIA",
-     "votes": [
-      "AFFINE",
-      "KLAUDIA",
-      "ADAM",
-      "JET"
-     ],
      "state": "APPROVED"
     }
+   ],
+   "teamSize": 4,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "team": [
+    "AFFINE",
+    "KLAUDIA",
+    "JET",
+    "ADAM"
    ]
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1588300118,
+  "_nanoseconds": 299000000
+ }
 }

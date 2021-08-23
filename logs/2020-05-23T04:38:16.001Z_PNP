@@ -1,16 +1,15 @@
 {
- "timeFinished": {
-  "_seconds": 1590209499,
-  "_nanoseconds": 875000000
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
-   "uid": "D9P4edHkq0ZUO0Q5HepkHOw9jWU2",
-   "name": "DADI"
+   "name": "DADI",
+   "uid": "D9P4edHkq0ZUO0Q5HepkHOw9jWU2"
   },
   {
-   "name": "OPITER",
-   "uid": "4rIubwDrfKeZ3d7XBWhRmJkylLc2"
+   "uid": "4rIubwDrfKeZ3d7XBWhRmJkylLc2",
+   "name": "OPITER"
   },
   {
    "name": "TANHUNG",
@@ -21,24 +20,96 @@
    "uid": "Vlxc61ZA8vRZCXGEdE3Nr5KU0y62"
   },
   {
-   "uid": "jqC6DNw9QPehrIBORPxDYw1IfwH2",
-   "name": "SAMEER"
+   "name": "SAMEER",
+   "uid": "jqC6DNw9QPehrIBORPxDYw1IfwH2"
   },
   {
-   "uid": "A7YjAEzvbWchUA0mXahjFNni5Z33",
-   "name": "SHREYAS"
+   "name": "SHREYAS",
+   "uid": "A7YjAEzvbWchUA0mXahjFNni5Z33"
   },
   {
-   "name": "SOMU",
-   "uid": "wpe6Yo39PNheuIqhhuAlarR6tGe2"
+   "uid": "wpe6Yo39PNheuIqhhuAlarR6tGe2",
+   "name": "SOMU"
   }
  ],
- "timeCreated": {
-  "_seconds": 1590208696,
-  "_nanoseconds": 1000000
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "SHREYAS": true,
+    "ISHYISH": true
+   },
+   {
+    "ISHYISH": true,
+    "SAMEER": true,
+    "SOMU": true
+   },
+   {
+    "SAMEER": false,
+    "DADI": true,
+    "ISHYISH": true
+   },
+   {
+    "TANHUNG": true,
+    "OPITER": false,
+    "SHREYAS": true,
+    "SOMU": false
+   },
+   {
+    "DADI": true,
+    "SOMU": false,
+    "ISHYISH": true,
+    "OPITER": false
+   }
+  ],
+  "roles": [
+   {
+    "name": "SAMEER",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "TANHUNG"
+   },
+   {
+    "assassin": false,
+    "name": "ISHYISH",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MORDRED",
+    "name": "SOMU"
+   },
+   {
+    "assassin": false,
+    "name": "SHREYAS",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "DADI",
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": true,
+    "name": "OPITER",
+    "role": "EVIL MINION"
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions"
+ },
+ "timeFinished": {
+  "_seconds": 1590209499,
+  "_nanoseconds": 875000000
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "ISHYISH",
     "SHREYAS"
@@ -55,28 +126,23 @@
       "TANHUNG",
       "ISHYISH"
      ],
+     "state": "APPROVED",
      "team": [
       "ISHYISH",
       "SHREYAS"
      ],
-     "proposer": "SHREYAS",
-     "state": "APPROVED"
+     "proposer": "SHREYAS"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0
+   "state": "SUCCESS"
   },
   {
-   "team": [
-    "SOMU",
-    "SAMEER",
-    "ISHYISH"
-   ],
    "numFails": 0,
+   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "SOMU",
+     "state": "APPROVED",
      "votes": [
       "SAMEER",
       "ISHYISH",
@@ -89,18 +155,21 @@
       "SAMEER",
       "ISHYISH"
      ],
-     "state": "APPROVED"
+     "proposer": "SOMU"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "teamSize": 3
+   "team": [
+    "SOMU",
+    "SAMEER",
+    "ISHYISH"
+   ],
+   "failsRequired": 1
   },
   {
-   "teamSize": 3,
    "state": "FAIL",
    "proposals": [
     {
+     "proposer": "DADI",
      "team": [
       "DADI",
       "SAMEER",
@@ -113,22 +182,20 @@
       "SOMU",
       "DADI",
       "OPITER"
-     ],
-     "proposer": "DADI"
+     ]
     }
    ],
+   "numFails": 1,
+   "teamSize": 3,
    "failsRequired": 1,
    "team": [
     "DADI",
     "SAMEER",
     "ISHYISH"
-   ],
-   "numFails": 1
+   ]
   },
   {
    "state": "FAIL",
-   "failsRequired": 2,
-   "teamSize": 4,
    "numFails": 2,
    "team": [
     "OPITER",
@@ -138,8 +205,14 @@
    ],
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "OPITER",
+      "SOMU",
+      "TANHUNG",
+      "SHREYAS"
+     ],
      "proposer": "OPITER",
+     "state": "APPROVED",
      "votes": [
       "SAMEER",
       "TANHUNG",
@@ -147,34 +220,29 @@
       "SHREYAS",
       "DADI",
       "OPITER"
-     ],
-     "team": [
-      "OPITER",
-      "SOMU",
-      "TANHUNG",
-      "SHREYAS"
      ]
     }
-   ]
+   ],
+   "failsRequired": 2,
+   "teamSize": 4
   },
   {
    "numFails": 2,
    "proposals": [
     {
+     "votes": [
+      "TANHUNG"
+     ],
      "team": [
       "SHREYAS",
       "TANHUNG",
       "ISHYISH",
       "DADI"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "TANHUNG"
-     ],
-     "proposer": "TANHUNG"
+     "proposer": "TANHUNG",
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
      "proposer": "ISHYISH",
      "votes": [
       "SAMEER",
@@ -188,91 +256,23 @@
       "ISHYISH",
       "SOMU",
       "OPITER"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "teamSize": 4,
-   "state": "FAIL",
    "team": [
     "DADI",
     "ISHYISH",
     "SOMU",
     "OPITER"
-   ]
+   ],
+   "teamSize": 4,
+   "state": "FAIL"
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "assassinated": null,
-  "votes": [
-   {
-    "SHREYAS": true,
-    "ISHYISH": true
-   },
-   {
-    "SOMU": true,
-    "SAMEER": true,
-    "ISHYISH": true
-   },
-   {
-    "DADI": true,
-    "ISHYISH": true,
-    "SAMEER": false
-   },
-   {
-    "SHREYAS": true,
-    "TANHUNG": true,
-    "OPITER": false,
-    "SOMU": false
-   },
-   {
-    "OPITER": false,
-    "ISHYISH": true,
-    "DADI": true,
-    "SOMU": false
-   }
-  ],
-  "roles": [
-   {
-    "role": "MORGANA",
-    "name": "SAMEER",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "TANHUNG"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "ISHYISH"
-   },
-   {
-    "assassin": false,
-    "name": "SOMU",
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SHREYAS"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "DADI",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "OPITER"
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Three failed missions"
+ "timeCreated": {
+  "_seconds": 1590208696,
+  "_nanoseconds": 1000000
  }
 }

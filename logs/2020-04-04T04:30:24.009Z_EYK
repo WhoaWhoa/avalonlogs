@@ -1,123 +1,16 @@
 {
- "timeCreated": {
-  "_seconds": 1585974624,
-  "_nanoseconds": 9000000
- },
- "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "TIM"
-   },
-   {
-    "name": "MOCHI",
-    "role": "OBERON",
-    "assassin": false
-   },
-   {
-    "name": "CASEY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "name": "HONEYBUN",
-    "role": "MORDRED"
-   },
-   {
-    "role": "MERLIN",
-    "name": "COLIN",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "GID",
-    "assassin": false
-   },
-   {
-    "role": "MORGANA",
-    "name": "RENINI",
-    "assassin": false
-   }
-  ],
-  "votes": [
-   {
-    "TIM": true,
-    "CASEY": true
-   },
-   {
-    "CASEY": true,
-    "TIM": true,
-    "HONEYBUN": true
-   },
-   {
-    "CASEY": true,
-    "HONEYBUN": true,
-    "RENINI": false
-   },
-   {
-    "HONEYBUN": false,
-    "CASEY": true,
-    "GID": true,
-    "TIM": true
-   }
-  ],
-  "assassinated": "COLIN"
- },
- "players": [
-  {
-   "uid": "bh3gKSmGgfWDgCvKWeruOH5bVmy1",
-   "name": "COLIN"
-  },
-  {
-   "uid": "18woXz2FfeQdASbbUrspRCvQHUi1",
-   "name": "TIM"
-  },
-  {
-   "name": "CASEY",
-   "uid": "6LUPzKtivbMjFWVn0OR7rohoo5a2"
-  },
-  {
-   "name": "HONEYBUN",
-   "uid": "gkiSYujkARe1ztvl3491ojgHhz93"
-  },
-  {
-   "name": "RENINI",
-   "uid": "f46hrrHShIgGipLo06rAKFkN3142"
-  },
-  {
-   "name": "GID",
-   "uid": "XBPGIBk6ujUBMBaqT9b9l2fGAtI2"
-  },
-  {
-   "uid": "NCFB9cPIsnX3xtNmnsAdXUVpRUn2",
-   "name": "MOCHI"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1585974908,
-  "_nanoseconds": 610740000
- },
  "missions": [
   {
+   "state": "SUCCESS",
    "numFails": 0,
-   "failsRequired": 1,
-   "team": [
-    "CASEY",
-    "TIM"
-   ],
-   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "CASEY",
       "TIM"
      ],
      "proposer": "CASEY",
-     "state": "APPROVED",
      "votes": [
       "TIM",
       "MOCHI",
@@ -129,10 +22,16 @@
      ]
     }
    ],
-   "state": "SUCCESS"
+   "team": [
+    "CASEY",
+    "TIM"
+   ],
+   "failsRequired": 1,
+   "teamSize": 2
   },
   {
    "teamSize": 3,
+   "state": "SUCCESS",
    "team": [
     "HONEYBUN",
     "CASEY",
@@ -141,11 +40,6 @@
    "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "HONEYBUN",
-      "CASEY",
-      "TIM"
-     ],
      "votes": [
       "TIM",
       "MOCHI",
@@ -155,23 +49,26 @@
       "GID",
       "RENINI"
      ],
-     "proposer": "HONEYBUN",
-     "state": "APPROVED"
+     "team": [
+      "HONEYBUN",
+      "CASEY",
+      "TIM"
+     ],
+     "state": "APPROVED",
+     "proposer": "HONEYBUN"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
-   "teamSize": 3,
-   "numFails": 1,
-   "state": "FAIL",
-   "failsRequired": 1,
    "team": [
     "CASEY",
     "HONEYBUN",
     "RENINI"
    ],
+   "teamSize": 3,
+   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
      "votes": [
@@ -189,22 +86,26 @@
      ],
      "proposer": "RENINI"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "failsRequired": 2,
-   "state": "SUCCESS",
-   "numFails": 1,
    "team": [
     "HONEYBUN",
     "CASEY",
     "TIM",
     "GID"
    ],
-   "teamSize": 4,
+   "state": "SUCCESS",
+   "failsRequired": 2,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "HONEYBUN",
+      "CASEY",
+      "TIM",
+      "GID"
+     ],
      "votes": [
       "GID",
       "RENINI",
@@ -215,21 +116,120 @@
       "COLIN"
      ],
      "proposer": "GID",
-     "team": [
-      "HONEYBUN",
-      "CASEY",
-      "TIM",
-      "GID"
-     ]
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "numFails": 1,
+   "teamSize": 4
   },
   {
    "teamSize": 4,
+   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1,
    "team": [],
-   "state": "PENDING"
+   "failsRequired": 1
+  }
+ ],
+ "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": "COLIN",
+  "roles": [
+   {
+    "name": "TIM",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "role": "OBERON",
+    "name": "MOCHI"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "CASEY"
+   },
+   {
+    "role": "MORDRED",
+    "name": "HONEYBUN",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "COLIN"
+   },
+   {
+    "assassin": false,
+    "name": "GID",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "RENINI",
+    "role": "MORGANA",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "TIM": true,
+    "CASEY": true
+   },
+   {
+    "HONEYBUN": true,
+    "TIM": true,
+    "CASEY": true
+   },
+   {
+    "RENINI": false,
+    "HONEYBUN": true,
+    "CASEY": true
+   },
+   {
+    "HONEYBUN": false,
+    "TIM": true,
+    "CASEY": true,
+    "GID": true
+   }
+  ],
+  "message": "Merlin assassinated"
+ },
+ "timeCreated": {
+  "_seconds": 1585974624,
+  "_nanoseconds": 9000000
+ },
+ "timeFinished": {
+  "_seconds": 1585974908,
+  "_nanoseconds": 610740000
+ },
+ "players": [
+  {
+   "uid": "bh3gKSmGgfWDgCvKWeruOH5bVmy1",
+   "name": "COLIN"
+  },
+  {
+   "name": "TIM",
+   "uid": "18woXz2FfeQdASbbUrspRCvQHUi1"
+  },
+  {
+   "name": "CASEY",
+   "uid": "6LUPzKtivbMjFWVn0OR7rohoo5a2"
+  },
+  {
+   "name": "HONEYBUN",
+   "uid": "gkiSYujkARe1ztvl3491ojgHhz93"
+  },
+  {
+   "uid": "f46hrrHShIgGipLo06rAKFkN3142",
+   "name": "RENINI"
+  },
+  {
+   "uid": "XBPGIBk6ujUBMBaqT9b9l2fGAtI2",
+   "name": "GID"
+  },
+  {
+   "name": "MOCHI",
+   "uid": "NCFB9cPIsnX3xtNmnsAdXUVpRUn2"
   }
  ]
 }

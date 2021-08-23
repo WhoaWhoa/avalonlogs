@@ -2,78 +2,9 @@
  "options": {
   "inGameLog": false
  },
- "timeFinished": {
-  "_seconds": 1590370012,
-  "_nanoseconds": 213000000
- },
- "players": [
-  {
-   "uid": "kmvVYnSqwDhrjhjPQz54diyHqbE2",
-   "name": "AT"
-  },
-  {
-   "name": "LOHIT",
-   "uid": "OzBUlii3zPMY2dhPB4HlS4IxVaR2"
-  },
-  {
-   "name": "LYDIA",
-   "uid": "gAvGJDQufoXHm8Wk4pceuTHzUva2"
-  },
-  {
-   "name": "BENJI",
-   "uid": "HdjU4bNbFogNHH9cU2gWmMTFSXy1"
-  },
-  {
-   "uid": "0JHTg7ZXCBXtOUop3x2FaKZtnNq1",
-   "name": "JIM"
-  },
-  {
-   "name": "LUKE",
-   "uid": "HlJgDn9a8HhCWhyNdeQ8ZOvjBcO2"
-  },
-  {
-   "uid": "zfr2eeTwc3SQ4uzShunRKL8opx13",
-   "name": "TIM"
-  },
-  {
-   "name": "ET",
-   "uid": "PphtkevnhCXLwYUn5EIguvBBKQx2"
-  },
-  {
-   "name": "ANDREW",
-   "uid": "nmJI7ofkNlbxH4hhwPTkPtfiniH3"
-  }
- ],
  "outcome": {
-  "assassinated": "LYDIA",
-  "message": "Three successful missions",
   "state": "GOOD_WIN",
-  "votes": [
-   {
-    "LUKE": true,
-    "JIM": true,
-    "BENJI": false
-   },
-   {
-    "LUKE": true,
-    "LYDIA": true,
-    "AT": true,
-    "LOHIT": true
-   },
-   {
-    "AT": true,
-    "LOHIT": true,
-    "LYDIA": true,
-    "LUKE": true
-   },
-   {
-    "LUKE": true,
-    "AT": true,
-    "BENJI": true,
-    "LYDIA": true,
-    "LOHIT": true
-   }
-  ],
+  "assassinated": "LYDIA",
   "roles": [
    {
     "assassin": false,
@@ -81,29 +12,29 @@
     "role": "MORGANA"
    },
    {
+    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "ANDREW",
-    "assassin": false
+    "name": "ANDREW"
    },
    {
-    "assassin": true,
     "role": "EVIL MINION",
-    "name": "TIM"
+    "name": "TIM",
+    "assassin": true
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "AT"
+    "name": "AT",
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MERLIN",
     "name": "LOHIT",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
     "name": "ET",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "LYDIA",
@@ -116,32 +47,71 @@
     "role": "PERCIVAL"
    },
    {
-    "name": "BENJI",
+    "role": "MORDRED",
     "assassin": false,
-    "role": "MORDRED"
+    "name": "BENJI"
    }
-  ]
+  ],
+  "votes": [
+   {
+    "BENJI": false,
+    "LUKE": true,
+    "JIM": true
+   },
+   {
+    "LYDIA": true,
+    "LUKE": true,
+    "AT": true,
+    "LOHIT": true
+   },
+   {
+    "LOHIT": true,
+    "LYDIA": true,
+    "AT": true,
+    "LUKE": true
+   },
+   {
+    "LOHIT": true,
+    "LUKE": true,
+    "BENJI": true,
+    "LYDIA": true,
+    "AT": true
+   }
+  ],
+  "message": "Three successful missions"
+ },
+ "timeFinished": {
+  "_seconds": 1590370012,
+  "_nanoseconds": 213000000
  },
  "missions": [
   {
-   "state": "FAIL",
    "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "LUKE",
+    "JIM",
+    "BENJI"
+   ],
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "TIM",
-      "AT",
-      "ET"
-     ],
-     "state": "REJECTED",
      "team": [
       "JIM",
       "BENJI",
       "LYDIA"
      ],
-     "proposer": "JIM"
+     "proposer": "JIM",
+     "state": "REJECTED",
+     "votes": [
+      "TIM",
+      "AT",
+      "ET"
+     ]
     },
     {
+     "proposer": "LUKE",
+     "state": "APPROVED",
      "votes": [
       "LUKE",
       "BENJI",
@@ -149,8 +119,6 @@
       "AT",
       "ET"
      ],
-     "state": "APPROVED",
-     "proposer": "LUKE",
      "team": [
       "LUKE",
       "JIM",
@@ -158,40 +126,41 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "LUKE",
-    "JIM",
-    "BENJI"
-   ],
-   "teamSize": 3
+   "state": "FAIL"
   },
   {
+   "failsRequired": 1,
    "state": "SUCCESS",
+   "team": [
+    "LOHIT",
+    "LYDIA",
+    "AT",
+    "LUKE"
+   ],
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "AT",
-      "ET",
-      "BENJI",
-      "TIM"
-     ],
      "team": [
       "TIM",
       "ET",
       "ANDREW",
       "AT"
      ],
+     "votes": [
+      "AT",
+      "ET",
+      "BENJI",
+      "TIM"
+     ],
+     "state": "REJECTED",
      "proposer": "TIM"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "LOHIT",
       "ET"
      ],
      "proposer": "ET",
+     "state": "REJECTED",
      "team": [
       "ET",
       "ANDREW",
@@ -215,20 +184,26 @@
      ]
     },
     {
-     "votes": [
-      "ET"
-     ],
-     "proposer": "AT",
      "team": [
       "AT",
       "ANDREW",
       "TIM",
       "ET"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "AT",
+     "votes": [
+      "ET"
+     ]
     },
     {
      "proposer": "LOHIT",
+     "team": [
+      "LOHIT",
+      "LYDIA",
+      "AT",
+      "LUKE"
+     ],
      "state": "APPROVED",
      "votes": [
       "ANDREW",
@@ -240,39 +215,15 @@
       "LUKE",
       "BENJI",
       "JIM"
-     ],
-     "team": [
-      "LOHIT",
-      "LYDIA",
-      "AT",
-      "LUKE"
      ]
     }
    ],
-   "team": [
-    "LOHIT",
-    "LYDIA",
-    "AT",
-    "LUKE"
-   ],
-   "teamSize": 4,
-   "failsRequired": 1,
-   "numFails": 0
+   "numFails": 0,
+   "teamSize": 4
   },
   {
-   "team": [
-    "LOHIT",
-    "LYDIA",
-    "AT",
-    "LUKE"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "LYDIA",
      "votes": [
       "AT",
       "LOHIT",
@@ -284,18 +235,30 @@
       "ANDREW",
       "TIM"
      ],
-     "state": "APPROVED",
      "team": [
       "LOHIT",
       "LYDIA",
       "AT",
       "LUKE"
-     ]
+     ],
+     "proposer": "LYDIA",
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "team": [
+    "LOHIT",
+    "LYDIA",
+    "AT",
+    "LUKE"
+   ],
+   "teamSize": 4,
+   "state": "SUCCESS"
   },
   {
-   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 5,
    "proposals": [
     {
      "team": [
@@ -306,6 +269,7 @@
       "LUKE"
      ],
      "proposer": "BENJI",
+     "state": "APPROVED",
      "votes": [
       "AT",
       "LOHIT",
@@ -315,13 +279,11 @@
       "JIM",
       "ANDREW",
       "TIM"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "failsRequired": 2,
-   "numFails": 0,
-   "teamSize": 5,
+   "state": "SUCCESS",
    "team": [
     "BENJI",
     "LYDIA",
@@ -331,11 +293,49 @@
    ]
   },
   {
-   "team": [],
    "proposals": [],
    "teamSize": 5,
+   "failsRequired": 1,
    "state": "PENDING",
-   "failsRequired": 1
+   "team": []
+  }
+ ],
+ "players": [
+  {
+   "uid": "kmvVYnSqwDhrjhjPQz54diyHqbE2",
+   "name": "AT"
+  },
+  {
+   "name": "LOHIT",
+   "uid": "OzBUlii3zPMY2dhPB4HlS4IxVaR2"
+  },
+  {
+   "name": "LYDIA",
+   "uid": "gAvGJDQufoXHm8Wk4pceuTHzUva2"
+  },
+  {
+   "name": "BENJI",
+   "uid": "HdjU4bNbFogNHH9cU2gWmMTFSXy1"
+  },
+  {
+   "name": "JIM",
+   "uid": "0JHTg7ZXCBXtOUop3x2FaKZtnNq1"
+  },
+  {
+   "name": "LUKE",
+   "uid": "HlJgDn9a8HhCWhyNdeQ8ZOvjBcO2"
+  },
+  {
+   "uid": "zfr2eeTwc3SQ4uzShunRKL8opx13",
+   "name": "TIM"
+  },
+  {
+   "uid": "PphtkevnhCXLwYUn5EIguvBBKQx2",
+   "name": "ET"
+  },
+  {
+   "name": "ANDREW",
+   "uid": "nmJI7ofkNlbxH4hhwPTkPtfiniH3"
   }
  ],
  "timeCreated": {

@@ -1,19 +1,83 @@
 {
- "options": {
-  "inGameLog": false
+ "timeCreated": {
+  "_seconds": 1591439458,
+  "_nanoseconds": 416000000
+ },
+ "outcome": {
+  "assassinated": "KENT",
+  "roles": [
+   {
+    "name": "PROVIDENCE",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ROBIN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JL",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "name": "DAN",
+    "assassin": true
+   },
+   {
+    "name": "KENT",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "SOVEREIGN"
+   },
+   {
+    "name": "LALALOLOLA",
+    "assassin": false,
+    "role": "OBERON"
+   }
+  ],
+  "votes": [
+   {
+    "ROBIN": true,
+    "DAN": true
+   },
+   {
+    "KENT": true,
+    "DAN": false,
+    "ROBIN": true
+   },
+   {
+    "SOVEREIGN": true,
+    "KENT": true,
+    "JL": true
+   },
+   {
+    "KENT": true,
+    "LALALOLOLA": false,
+    "JL": true,
+    "SOVEREIGN": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "state": "EVIL_WIN"
  },
  "timeFinished": {
   "_seconds": 1591439753,
   "_nanoseconds": 680000000
  },
- "timeCreated": {
-  "_seconds": 1591439458,
-  "_nanoseconds": 416000000
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
-   "uid": "ebEgmZuKkIgkRJkcrMMtNXmpJhB2",
-   "name": "ROBIN"
+   "name": "ROBIN",
+   "uid": "ebEgmZuKkIgkRJkcrMMtNXmpJhB2"
   },
   {
    "name": "DAN",
@@ -24,26 +88,27 @@
    "name": "KENT"
   },
   {
-   "name": "PROVIDENCE",
-   "uid": "w2ngiDASElTWBTMXd9fdYpBlSNx1"
+   "uid": "w2ngiDASElTWBTMXd9fdYpBlSNx1",
+   "name": "PROVIDENCE"
   },
   {
-   "uid": "bI2OVSenLLhu3HprJLUfksPK1Hm1",
-   "name": "JL"
+   "name": "JL",
+   "uid": "bI2OVSenLLhu3HprJLUfksPK1Hm1"
   },
   {
    "name": "SOVEREIGN",
    "uid": "hJiNVPvKNVNZrAynLC7dKKaLkU22"
   },
   {
-   "uid": "YjIwyhCncYUiYPvf2PZcnmxX2Ou1",
-   "name": "LALALOLOLA"
+   "name": "LALALOLOLA",
+   "uid": "YjIwyhCncYUiYPvf2PZcnmxX2Ou1"
   }
  ],
  "missions": [
   {
    "proposals": [
     {
+     "proposer": "ROBIN",
      "votes": [
       "PROVIDENCE",
       "ROBIN",
@@ -52,7 +117,6 @@
       "KENT",
       "SOVEREIGN"
      ],
-     "proposer": "ROBIN",
      "state": "APPROVED",
      "team": [
       "ROBIN",
@@ -71,12 +135,14 @@
   },
   {
    "failsRequired": 1,
-   "numFails": 1,
    "teamSize": 3,
-   "state": "FAIL",
+   "team": [
+    "ROBIN",
+    "DAN",
+    "KENT"
+   ],
    "proposals": [
     {
-     "proposer": "DAN",
      "votes": [
       "PROVIDENCE",
       "ROBIN",
@@ -85,66 +151,67 @@
       "KENT",
       "SOVEREIGN"
      ],
+     "state": "APPROVED",
      "team": [
       "ROBIN",
       "DAN",
       "KENT"
      ],
-     "state": "APPROVED"
+     "proposer": "DAN"
     }
    ],
-   "team": [
-    "ROBIN",
-    "DAN",
-    "KENT"
-   ]
+   "state": "FAIL",
+   "numFails": 1
   },
   {
-   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "KENT",
     "SOVEREIGN",
     "JL"
    ],
-   "state": "SUCCESS",
-   "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
+     "votes": [
+      "SOVEREIGN",
+      "ROBIN",
+      "JL",
+      "DAN",
+      "KENT"
+     ],
      "team": [
       "KENT",
       "SOVEREIGN",
       "JL"
      ],
      "proposer": "KENT",
-     "votes": [
-      "SOVEREIGN",
-      "ROBIN",
-      "JL",
-      "DAN",
-      "KENT"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "state": "SUCCESS"
   },
   {
+   "state": "SUCCESS",
+   "numFails": 1,
+   "teamSize": 4,
+   "failsRequired": 2,
    "proposals": [
     {
+     "votes": [
+      "PROVIDENCE"
+     ],
      "team": [
       "KENT",
       "PROVIDENCE",
       "LALALOLOLA",
       "SOVEREIGN"
      ],
-     "votes": [
-      "PROVIDENCE"
-     ],
-     "proposer": "PROVIDENCE",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "PROVIDENCE"
     },
     {
-     "proposer": "JL",
      "votes": [
       "SOVEREIGN",
       "JL",
@@ -152,13 +219,14 @@
       "DAN",
       "KENT"
      ],
+     "state": "APPROVED",
+     "proposer": "JL",
      "team": [
       "KENT",
       "JL",
       "SOVEREIGN",
       "LALALOLOLA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "team": [
@@ -166,82 +234,14 @@
     "JL",
     "SOVEREIGN",
     "LALALOLOLA"
-   ],
-   "numFails": 1,
-   "failsRequired": 2,
-   "teamSize": 4,
-   "state": "SUCCESS"
+   ]
   },
   {
+   "proposals": [],
    "teamSize": 4,
    "team": [],
    "failsRequired": 1,
-   "state": "PENDING",
-   "proposals": []
+   "state": "PENDING"
   }
- ],
- "outcome": {
-  "roles": [
-   {
-    "role": "MORGANA",
-    "name": "PROVIDENCE",
-    "assassin": false
-   },
-   {
-    "name": "ROBIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "JL",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "DAN",
-    "role": "MORDRED",
-    "assassin": true
-   },
-   {
-    "name": "KENT",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "SOVEREIGN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "LALALOLOLA",
-    "assassin": false,
-    "role": "OBERON"
-   }
-  ],
-  "assassinated": "KENT",
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
-  "votes": [
-   {
-    "ROBIN": true,
-    "DAN": true
-   },
-   {
-    "DAN": false,
-    "KENT": true,
-    "ROBIN": true
-   },
-   {
-    "KENT": true,
-    "JL": true,
-    "SOVEREIGN": true
-   },
-   {
-    "LALALOLOLA": false,
-    "SOVEREIGN": true,
-    "KENT": true,
-    "JL": true
-   }
-  ]
- }
+ ]
 }

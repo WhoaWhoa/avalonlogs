@@ -1,80 +1,13 @@
 {
- "outcome": {
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "FEMALEHORS": true,
-    "SPITZ": true
-   },
-   {
-    "FEMALEHORS": true,
-    "SPITZ": false,
-    "ANNIE": true
-   },
-   {
-    "EUCLID": false,
-    "SPITZ": false,
-    "JANICE": true,
-    "MARVIN": true
-   },
-   {
-    "JANICE": true,
-    "FEMALEHORS": true,
-    "ANNIE": true
-   },
-   {
-    "JANICE": true,
-    "MARVIN": true,
-    "ANNIE": true,
-    "FEMALEHORS": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "MARVIN",
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "EUCLID"
-   },
-   {
-    "name": "JANICE",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "ANNIE",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "FEMALEHORS",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "MARVIN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "SPITZ",
-    "assassin": false
-   }
-  ]
- },
  "missions": [
   {
-   "state": "SUCCESS",
-   "teamSize": 2,
-   "numFails": 0,
    "proposals": [
     {
      "team": [
       "SPITZ",
       "FEMALEHORS"
      ],
+     "proposer": "SPITZ",
      "state": "APPROVED",
      "votes": [
       "EUCLID",
@@ -83,21 +16,30 @@
       "FEMALEHORS",
       "MARVIN",
       "SPITZ"
-     ],
-     "proposer": "SPITZ"
+     ]
     }
    ],
+   "numFails": 0,
+   "teamSize": 2,
    "failsRequired": 1,
    "team": [
     "SPITZ",
     "FEMALEHORS"
-   ]
+   ],
+   "state": "SUCCESS"
   },
   {
+   "numFails": 1,
+   "teamSize": 3,
    "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "ANNIE",
+    "SPITZ",
+    "FEMALEHORS"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "ANNIE",
       "FEMALEHORS",
@@ -110,28 +52,22 @@
       "SPITZ",
       "FEMALEHORS"
      ],
+     "state": "APPROVED",
      "proposer": "ANNIE"
     }
-   ],
-   "team": [
-    "ANNIE",
-    "SPITZ",
-    "FEMALEHORS"
-   ],
-   "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 3
+   ]
   },
   {
-   "teamSize": 4,
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "proposer": "FEMALEHORS",
+     "state": "REJECTED",
      "votes": [
       "FEMALEHORS",
       "SPITZ"
      ],
-     "state": "REJECTED",
      "team": [
       "FEMALEHORS",
       "EUCLID",
@@ -140,6 +76,7 @@
      ]
     },
     {
+     "proposer": "EUCLID",
      "team": [
       "FEMALEHORS",
       "EUCLID",
@@ -147,7 +84,6 @@
       "JANICE"
      ],
      "state": "REJECTED",
-     "proposer": "EUCLID",
      "votes": [
       "EUCLID",
       "JANICE",
@@ -156,41 +92,40 @@
     },
     {
      "proposer": "MARVIN",
-     "votes": [
-      "MARVIN",
-      "SPITZ",
-      "EUCLID",
-      "JANICE"
-     ],
      "team": [
       "MARVIN",
       "EUCLID",
       "SPITZ",
       "JANICE"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "votes": [
+      "MARVIN",
+      "SPITZ",
+      "EUCLID",
+      "JANICE"
+     ]
     }
    ],
-   "failsRequired": 1,
+   "numFails": 2,
    "team": [
     "MARVIN",
     "EUCLID",
     "SPITZ",
     "JANICE"
    ],
-   "state": "FAIL",
-   "numFails": 2
+   "teamSize": 4
   },
   {
-   "numFails": 0,
+   "team": [
+    "FEMALEHORS",
+    "JANICE",
+    "ANNIE"
+   ],
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "FEMALEHORS",
-      "JANICE",
-      "ANNIE"
-     ],
+     "proposer": "JANICE",
      "votes": [
       "EUCLID",
       "JANICE",
@@ -198,22 +133,20 @@
       "FEMALEHORS",
       "MARVIN"
      ],
-     "proposer": "JANICE"
+     "state": "APPROVED",
+     "team": [
+      "FEMALEHORS",
+      "JANICE",
+      "ANNIE"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "FEMALEHORS",
-    "JANICE",
-    "ANNIE"
-   ],
    "teamSize": 3,
-   "state": "SUCCESS"
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "teamSize": 4,
    "failsRequired": 1,
-   "numFails": 0,
    "team": [
     "ANNIE",
     "FEMALEHORS",
@@ -221,8 +154,11 @@
     "MARVIN"
    ],
    "state": "SUCCESS",
+   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "SPITZ",
+     "state": "REJECTED",
      "team": [
       "EUCLID",
       "ANNIE",
@@ -232,12 +168,9 @@
      "votes": [
       "EUCLID",
       "SPITZ"
-     ],
-     "proposer": "SPITZ",
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "ANNIE",
       "FEMALEHORS",
@@ -245,6 +178,7 @@
       "MARVIN"
      ],
      "proposer": "ANNIE",
+     "state": "APPROVED",
      "votes": [
       "FEMALEHORS",
       "MARVIN",
@@ -253,7 +187,8 @@
       "ANNIE"
      ]
     }
-   ]
+   ],
+   "numFails": 0
   }
  ],
  "timeCreated": {
@@ -266,28 +201,93 @@
  },
  "players": [
   {
-   "uid": "EZMer3OkShbw1l8dYKIk979kAaU2",
-   "name": "ANNIE"
+   "name": "ANNIE",
+   "uid": "EZMer3OkShbw1l8dYKIk979kAaU2"
   },
   {
-   "uid": "moUO9BWGH8bNEcWxAvbkLj7Xt7l1",
-   "name": "FEMALEHORS"
+   "name": "FEMALEHORS",
+   "uid": "moUO9BWGH8bNEcWxAvbkLj7Xt7l1"
   },
   {
    "uid": "6nIJPFLFk0daOcEEsS9FmcQrHnY2",
    "name": "EUCLID"
   },
   {
-   "name": "MARVIN",
-   "uid": "JfQUsnSMg1b9b5IPOKv3xJuJdlt2"
+   "uid": "JfQUsnSMg1b9b5IPOKv3xJuJdlt2",
+   "name": "MARVIN"
   },
   {
-   "name": "JANICE",
-   "uid": "kawF5UNaBORsHvmUSyKwPLqvcYt2"
+   "uid": "kawF5UNaBORsHvmUSyKwPLqvcYt2",
+   "name": "JANICE"
   },
   {
    "uid": "d9x8t1EkOeV2LI5tJcEKkyU3mB32",
    "name": "SPITZ"
   }
- ]
+ ],
+ "outcome": {
+  "votes": [
+   {
+    "FEMALEHORS": true,
+    "SPITZ": true
+   },
+   {
+    "FEMALEHORS": true,
+    "SPITZ": false,
+    "ANNIE": true
+   },
+   {
+    "MARVIN": true,
+    "EUCLID": false,
+    "JANICE": true,
+    "SPITZ": false
+   },
+   {
+    "ANNIE": true,
+    "FEMALEHORS": true,
+    "JANICE": true
+   },
+   {
+    "JANICE": true,
+    "MARVIN": true,
+    "ANNIE": true,
+    "FEMALEHORS": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "name": "EUCLID",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "JANICE",
+    "role": "MERLIN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "ANNIE"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "FEMALEHORS",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MARVIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "SPITZ"
+   }
+  ],
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "assassinated": "MARVIN"
+ }
 }

@@ -1,45 +1,18 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
-  "votes": [
-   {
-    "NICK": true,
-    "ROHAN": true
-   },
-   {
-    "NICK": true,
-    "ROHAN": true,
-    "KAUSHAL": false
-   },
-   {
-    "ROHAN": true,
-    "PRIDHVI": false,
-    "AMEYA": true
-   },
-   {
-    "NICK": true,
-    "AMEYA": true,
-    "ROHAN": true,
-    "KLAY": false
-   },
-   {
-    "MEMO": true,
-    "AMEYA": true,
-    "ROHAN": true,
-    "NICK": true
-   }
-  ],
   "roles": [
    {
-    "assassin": false,
+    "role": "OBERON",
     "name": "KAUSHAL",
-    "role": "OBERON"
+    "assassin": false
    },
    {
-    "assassin": true,
+    "role": "MORDRED",
     "name": "PRIDHVI",
-    "role": "MORDRED"
+    "assassin": true
    },
    {
     "assassin": false,
@@ -48,34 +21,56 @@
    },
    {
     "name": "AMEYA",
-    "role": "MERLIN",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
+    "assassin": false,
     "name": "MEMO",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "assassin": false,
     "name": "NICK",
-    "role": "PERCIVAL",
-    "assassin": false
+    "role": "PERCIVAL"
    },
    {
-    "name": "KLAY",
+    "assassin": false,
     "role": "MORGANA",
-    "assassin": false
+    "name": "KLAY"
    }
   ],
-  "assassinated": "AMEYA"
- },
- "timeCreated": {
-  "_seconds": 1598686460,
-  "_nanoseconds": 599000000
- },
- "timeFinished": {
-  "_seconds": 1598688043,
-  "_nanoseconds": 887000000
+  "assassinated": "AMEYA",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "NICK": true,
+    "ROHAN": true
+   },
+   {
+    "ROHAN": true,
+    "KAUSHAL": false,
+    "NICK": true
+   },
+   {
+    "PRIDHVI": false,
+    "ROHAN": true,
+    "AMEYA": true
+   },
+   {
+    "ROHAN": true,
+    "NICK": true,
+    "KLAY": false,
+    "AMEYA": true
+   },
+   {
+    "NICK": true,
+    "MEMO": true,
+    "AMEYA": true,
+    "ROHAN": true
+   }
+  ],
+  "message": "Merlin assassinated"
  },
  "players": [
   {
@@ -87,20 +82,20 @@
    "name": "ROHAN"
   },
   {
-   "uid": "bPC4ngKgF1UioBVRuUmIGyPEOw03",
-   "name": "NICK"
+   "name": "NICK",
+   "uid": "bPC4ngKgF1UioBVRuUmIGyPEOw03"
   },
   {
-   "name": "KAUSHAL",
-   "uid": "lHvH2Q0Vc1UbF40N06Zr6svg26i1"
+   "uid": "lHvH2Q0Vc1UbF40N06Zr6svg26i1",
+   "name": "KAUSHAL"
   },
   {
-   "name": "PRIDHVI",
-   "uid": "4GfCahioxqeJie6psB9eYJTCG793"
+   "uid": "4GfCahioxqeJie6psB9eYJTCG793",
+   "name": "PRIDHVI"
   },
   {
-   "uid": "V4SAGCzS9KMfXt2eiWuWhKXSMm12",
-   "name": "KLAY"
+   "name": "KLAY",
+   "uid": "V4SAGCzS9KMfXt2eiWuWhKXSMm12"
   },
   {
    "uid": "1FdWUDx8sCeb6EZoZXIQJlZsnTJ3",
@@ -111,8 +106,18 @@
   {
    "state": "SUCCESS",
    "failsRequired": 1,
+   "team": [
+    "NICK",
+    "ROHAN"
+   ],
    "proposals": [
     {
+     "team": [
+      "NICK",
+      "ROHAN"
+     ],
+     "state": "APPROVED",
+     "proposer": "NICK",
      "votes": [
       "ROHAN",
       "PRIDHVI",
@@ -121,29 +126,23 @@
       "KLAY",
       "AMEYA",
       "KAUSHAL"
-     ],
-     "proposer": "NICK",
-     "team": [
-      "NICK",
-      "ROHAN"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "teamSize": 2,
+   "numFails": 0
+  },
+  {
+   "state": "FAIL",
+   "teamSize": 3,
    "team": [
+    "KAUSHAL",
     "NICK",
     "ROHAN"
    ],
-   "numFails": 0,
-   "teamSize": 2
-  },
-  {
    "numFails": 1,
-   "state": "FAIL",
-   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "MEMO",
       "KAUSHAL",
@@ -153,6 +152,7 @@
       "KLAY",
       "AMEYA"
      ],
+     "state": "APPROVED",
      "team": [
       "KAUSHAL",
       "NICK",
@@ -161,27 +161,18 @@
      "proposer": "KAUSHAL"
     }
    ],
-   "teamSize": 3,
-   "team": [
-    "KAUSHAL",
-    "NICK",
-    "ROHAN"
-   ]
+   "failsRequired": 1
   },
   {
    "state": "FAIL",
-   "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 1,
-   "team": [
-    "PRIDHVI",
-    "ROHAN",
-    "AMEYA"
-   ],
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "PRIDHVI",
+     "team": [
+      "PRIDHVI",
+      "ROHAN",
+      "AMEYA"
+     ],
      "votes": [
       "NICK",
       "KAUSHAL",
@@ -191,79 +182,81 @@
       "AMEYA",
       "PRIDHVI"
      ],
-     "team": [
-      "PRIDHVI",
-      "ROHAN",
-      "AMEYA"
-     ]
+     "proposer": "PRIDHVI"
     }
-   ]
-  },
-  {
+   ],
+   "failsRequired": 1,
    "team": [
-    "KLAY",
-    "NICK",
-    "AMEYA",
-    "ROHAN"
+    "PRIDHVI",
+    "ROHAN",
+    "AMEYA"
    ],
    "numFails": 1,
-   "state": "SUCCESS",
-   "teamSize": 4,
-   "failsRequired": 2,
+   "teamSize": 3
+  },
+  {
    "proposals": [
     {
      "state": "APPROVED",
+     "votes": [
+      "ROHAN",
+      "AMEYA",
+      "NICK",
+      "KLAY"
+     ],
      "team": [
       "KLAY",
       "NICK",
       "AMEYA",
       "ROHAN"
      ],
-     "proposer": "KLAY",
-     "votes": [
-      "ROHAN",
-      "AMEYA",
-      "NICK",
-      "KLAY"
-     ]
+     "proposer": "KLAY"
     }
-   ]
+   ],
+   "failsRequired": 2,
+   "team": [
+    "KLAY",
+    "NICK",
+    "AMEYA",
+    "ROHAN"
+   ],
+   "state": "SUCCESS",
+   "numFails": 1,
+   "teamSize": 4
   },
   {
-   "teamSize": 4,
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "AMEYA",
     "ROHAN",
     "NICK",
     "MEMO"
    ],
-   "numFails": 0,
    "proposals": [
     {
      "proposer": "MEMO",
      "state": "REJECTED",
-     "votes": [
-      "AMEYA",
-      "MEMO",
-      "NICK"
-     ],
      "team": [
       "MEMO",
       "AMEYA",
       "ROHAN",
       "NICK"
+     ],
+     "votes": [
+      "AMEYA",
+      "MEMO",
+      "NICK"
      ]
     },
     {
      "state": "APPROVED",
-     "proposer": "AMEYA",
      "votes": [
       "MEMO",
       "AMEYA",
       "NICK",
       "ROHAN"
      ],
+     "proposer": "AMEYA",
      "team": [
       "AMEYA",
       "ROHAN",
@@ -272,10 +265,17 @@
      ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 0,
+   "teamSize": 4,
+   "state": "SUCCESS"
   }
  ],
- "options": {
-  "inGameLog": false
+ "timeFinished": {
+  "_seconds": 1598688043,
+  "_nanoseconds": 887000000
+ },
+ "timeCreated": {
+  "_seconds": 1598686460,
+  "_nanoseconds": 599000000
  }
 }

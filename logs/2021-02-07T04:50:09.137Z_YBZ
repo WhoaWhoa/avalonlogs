@@ -1,49 +1,82 @@
 {
- "players": [
-  {
-   "name": "SANJ",
-   "uid": "RhEbWzkZRePMekReAhgvYnVbDa93"
-  },
-  {
-   "name": "PDEXT",
-   "uid": "G4Km2o8souOwoYTHpyDIYSIIZlq1"
-  },
-  {
-   "name": "ALEX",
-   "uid": "1gn2CkngGsWQPQgnjFNqvWbxGHy2"
-  },
-  {
-   "uid": "c65QLoUEV5NxT5zbwu0t1eiY6C93",
-   "name": "MATT"
-  },
-  {
-   "name": "KGB",
-   "uid": "M92ECvoiKJXwJnhmyUwN0ocjuk02"
-  },
-  {
-   "name": "TESSA",
-   "uid": "yTbhBVnpZQP7I5jVvixxYUZ2A9T2"
-  }
- ],
+ "timeFinished": {
+  "_seconds": 1612674484,
+  "_nanoseconds": 194000000
+ },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "MATT": true,
+    "KGB": true
+   },
+   {
+    "SANJ": true,
+    "MATT": true,
+    "KGB": false
+   },
+   {
+    "SANJ": true,
+    "MATT": true,
+    "PDEXT": true,
+    "ALEX": true
+   },
+   {
+    "MATT": true,
+    "PDEXT": true,
+    "ALEX": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "MATT"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "TESSA"
+   },
+   {
+    "role": "MERLIN",
+    "name": "PDEXT",
+    "assassin": false
+   },
+   {
+    "name": "ALEX",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "SANJ",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": true,
+    "name": "KGB",
+    "role": "EVIL MINION"
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "PDEXT"
+ },
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1612673409,
-  "_nanoseconds": 137000000
- },
  "missions": [
   {
-   "teamSize": 2,
-   "team": [
-    "MATT",
-    "KGB"
-   ],
-   "numFails": 0,
-   "state": "SUCCESS",
    "failsRequired": 1,
+   "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "MATT",
+      "KGB"
+     ],
+     "proposer": "MATT",
+     "state": "APPROVED",
      "votes": [
       "ALEX",
       "MATT",
@@ -51,60 +84,61 @@
       "PDEXT",
       "KGB",
       "TESSA"
-     ],
-     "state": "APPROVED",
-     "proposer": "MATT",
-     "team": [
-      "MATT",
-      "KGB"
      ]
     }
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "team": [
+    "MATT",
+    "KGB"
    ]
   },
   {
-   "teamSize": 3,
+   "numFails": 1,
    "failsRequired": 1,
-   "proposals": [
-    {
-     "team": [
-      "KGB",
-      "MATT",
-      "SANJ"
-     ],
-     "votes": [
-      "MATT",
-      "ALEX",
-      "KGB",
-      "SANJ"
-     ],
-     "proposer": "KGB",
-     "state": "APPROVED"
-    }
-   ],
    "team": [
     "KGB",
     "MATT",
     "SANJ"
    ],
    "state": "FAIL",
-   "numFails": 1
+   "teamSize": 3,
+   "proposals": [
+    {
+     "proposer": "KGB",
+     "votes": [
+      "MATT",
+      "ALEX",
+      "KGB",
+      "SANJ"
+     ],
+     "team": [
+      "KGB",
+      "MATT",
+      "SANJ"
+     ],
+     "state": "APPROVED"
+    }
+   ]
   },
   {
-   "state": "SUCCESS",
    "team": [
     "MATT",
     "ALEX",
     "PDEXT",
     "SANJ"
    ],
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
      "state": "REJECTED",
-     "proposer": "TESSA",
      "votes": [
       "TESSA",
       "MATT"
      ],
+     "proposer": "TESSA",
      "team": [
       "TESSA",
       "PDEXT",
@@ -127,8 +161,6 @@
      ]
     },
     {
-     "proposer": "PDEXT",
-     "state": "REJECTED",
      "team": [
       "SANJ",
       "PDEXT",
@@ -139,17 +171,19 @@
       "PDEXT",
       "SANJ",
       "ALEX"
-     ]
+     ],
+     "proposer": "PDEXT",
+     "state": "REJECTED"
     },
     {
      "state": "APPROVED",
+     "proposer": "ALEX",
      "votes": [
       "MATT",
       "ALEX",
       "PDEXT",
       "SANJ"
      ],
-     "proposer": "ALEX",
      "team": [
       "MATT",
       "ALEX",
@@ -158,14 +192,18 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "teamSize": 4
+   "teamSize": 4,
+   "failsRequired": 1
   },
   {
+   "team": [
+    "MATT",
+    "ALEX",
+    "PDEXT"
+   ],
+   "numFails": 0,
    "failsRequired": 1,
    "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -173,6 +211,7 @@
       "ALEX",
       "PDEXT"
      ],
+     "state": "APPROVED",
      "votes": [
       "ALEX",
       "KGB",
@@ -180,86 +219,47 @@
       "PDEXT",
       "SANJ"
      ],
-     "proposer": "MATT",
-     "state": "APPROVED"
+     "proposer": "MATT"
     }
-   ],
-   "team": [
-    "MATT",
-    "ALEX",
-    "PDEXT"
    ],
    "state": "SUCCESS"
   },
   {
+   "failsRequired": 1,
+   "teamSize": 4,
    "state": "PENDING",
    "proposals": [],
-   "teamSize": 4,
-   "team": [],
-   "failsRequired": 1
+   "team": []
   }
  ],
- "timeFinished": {
-  "_seconds": 1612674484,
-  "_nanoseconds": 194000000
- },
- "outcome": {
-  "votes": [
-   {
-    "MATT": true,
-    "KGB": true
-   },
-   {
-    "MATT": true,
-    "SANJ": true,
-    "KGB": false
-   },
-   {
-    "ALEX": true,
-    "PDEXT": true,
-    "MATT": true,
-    "SANJ": true
-   },
-   {
-    "PDEXT": true,
-    "ALEX": true,
-    "MATT": true
-   }
-  ],
-  "assassinated": "PDEXT",
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MATT"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "TESSA"
-   },
-   {
-    "assassin": false,
-    "name": "PDEXT",
-    "role": "MERLIN"
-   },
-   {
-    "name": "ALEX",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "SANJ"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "KGB",
-    "assassin": true
-   }
-  ]
+ "players": [
+  {
+   "uid": "RhEbWzkZRePMekReAhgvYnVbDa93",
+   "name": "SANJ"
+  },
+  {
+   "uid": "G4Km2o8souOwoYTHpyDIYSIIZlq1",
+   "name": "PDEXT"
+  },
+  {
+   "uid": "1gn2CkngGsWQPQgnjFNqvWbxGHy2",
+   "name": "ALEX"
+  },
+  {
+   "name": "MATT",
+   "uid": "c65QLoUEV5NxT5zbwu0t1eiY6C93"
+  },
+  {
+   "name": "KGB",
+   "uid": "M92ECvoiKJXwJnhmyUwN0ocjuk02"
+  },
+  {
+   "uid": "yTbhBVnpZQP7I5jVvixxYUZ2A9T2",
+   "name": "TESSA"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1612673409,
+  "_nanoseconds": 137000000
  }
 }

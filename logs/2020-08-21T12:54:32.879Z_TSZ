@@ -1,61 +1,12 @@
 {
- "players": [
-  {
-   "name": "VQ",
-   "uid": "T9lqbHu2UAQfk7CSaSLnXU9HNJb2"
-  },
-  {
-   "uid": "5PYnByoF6YWmLus2JfQ04XMqHyP2",
-   "name": "JORDAN"
-  },
-  {
-   "name": "LH",
-   "uid": "9j3ueVNSnOQ1DTw3N3PwzNZzfqx2"
-  },
-  {
-   "name": "PL",
-   "uid": "SLvUR8s8dggh4SKJB8oAvY0yqHA2"
-  },
-  {
-   "uid": "cvKBuXmHBiQVTjrGCDtNCbBXbAV2",
-   "name": "TANTAN"
-  },
-  {
-   "name": "WILLIAM",
-   "uid": "YegTZmUNcESz7s2TXSldSoVMRmF3"
-  },
-  {
-   "name": "WINNIE",
-   "uid": "Ht0V6yPvPkdrxVfPRU4tdkHrN1j1"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1598014472,
-  "_nanoseconds": 879000000
+ "timeFinished": {
+  "_seconds": 1598015121,
+  "_nanoseconds": 234000000
  },
  "outcome": {
-  "votes": [
-   {
-    "LH": true,
-    "WILLIAM": true
-   },
-   {
-    "LH": true,
-    "PL": true,
-    "WILLIAM": true
-   },
-   {
-    "LH": true,
-    "WILLIAM": false,
-    "PL": true
-   },
-   {
-    "TANTAN": false,
-    "WINNIE": true,
-    "JORDAN": true,
-    "VQ": true
-   }
-  ],
+  "assassinated": "JORDAN",
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
   "roles": [
    {
     "name": "WINNIE",
@@ -63,9 +14,9 @@
     "role": "MERLIN"
    },
    {
+    "role": "PERCIVAL",
     "name": "LH",
-    "assassin": false,
-    "role": "PERCIVAL"
+    "assassin": false
    },
    {
     "assassin": false,
@@ -73,79 +24,98 @@
     "name": "PL"
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "JORDAN"
+    "name": "JORDAN",
+    "assassin": false
    },
    {
-    "role": "MORGANA",
     "assassin": false,
+    "role": "MORGANA",
     "name": "WILLIAM"
    },
    {
     "role": "MORDRED",
-    "name": "TANTAN",
-    "assassin": false
+    "assassin": false,
+    "name": "TANTAN"
    },
    {
-    "name": "VQ",
     "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "VQ"
    }
   ],
-  "message": "Three successful missions",
-  "assassinated": "JORDAN",
-  "state": "GOOD_WIN"
+  "votes": [
+   {
+    "LH": true,
+    "WILLIAM": true
+   },
+   {
+    "PL": true,
+    "LH": true,
+    "WILLIAM": true
+   },
+   {
+    "LH": true,
+    "PL": true,
+    "WILLIAM": false
+   },
+   {
+    "WINNIE": true,
+    "JORDAN": true,
+    "TANTAN": false,
+    "VQ": true
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1598014472,
+  "_nanoseconds": 879000000
  },
  "missions": [
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
-   "team": [
-    "LH",
-    "WILLIAM"
-   ],
-   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "WINNIE",
+     "state": "REJECTED",
      "team": [
       "WINNIE",
       "JORDAN"
      ],
-     "state": "REJECTED",
      "votes": [
       "PL",
       "JORDAN",
       "WINNIE"
-     ],
-     "proposer": "WINNIE"
+     ]
     },
     {
-     "state": "REJECTED",
-     "proposer": "VQ",
-     "votes": [
-      "PL",
-      "JORDAN"
-     ],
      "team": [
       "VQ",
       "WILLIAM"
-     ]
-    },
-    {
-     "proposer": "JORDAN",
-     "state": "REJECTED",
+     ],
      "votes": [
-      "WINNIE",
+      "PL",
       "JORDAN"
      ],
+     "state": "REJECTED",
+     "proposer": "VQ"
+    },
+    {
+     "state": "REJECTED",
+     "proposer": "JORDAN",
      "team": [
       "JORDAN",
       "WINNIE"
+     ],
+     "votes": [
+      "WINNIE",
+      "JORDAN"
      ]
     },
     {
+     "team": [
+      "LH",
+      "WILLIAM"
+     ],
      "votes": [
       "JORDAN",
       "VQ",
@@ -153,33 +123,29 @@
       "WILLIAM",
       "LH"
      ],
-     "team": [
-      "LH",
-      "WILLIAM"
-     ],
      "proposer": "LH",
      "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "LH",
+    "WILLIAM"
+   ],
+   "numFails": 0,
+   "teamSize": 2
   },
   {
-   "teamSize": 3,
+   "state": "SUCCESS",
    "team": [
     "PL",
     "LH",
     "WILLIAM"
    ],
-   "state": "SUCCESS",
    "numFails": 0,
-   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "PL",
-      "LH",
-      "WILLIAM"
-     ],
-     "state": "APPROVED",
      "votes": [
       "JORDAN",
       "LH",
@@ -188,15 +154,29 @@
       "VQ",
       "PL"
      ],
+     "state": "APPROVED",
+     "team": [
+      "PL",
+      "LH",
+      "WILLIAM"
+     ],
      "proposer": "PL"
     }
-   ]
+   ],
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
-   "numFails": 1,
+   "team": [
+    "LH",
+    "WILLIAM",
+    "PL"
+   ],
    "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "TANTAN",
      "team": [
       "LH",
       "WILLIAM",
@@ -209,24 +189,28 @@
       "WILLIAM",
       "WINNIE",
       "VQ"
-     ],
-     "state": "APPROVED",
-     "proposer": "TANTAN"
+     ]
     }
    ],
-   "team": [
-    "LH",
-    "WILLIAM",
-    "PL"
-   ],
+   "state": "FAIL",
    "teamSize": 3,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
+   "numFails": 1,
+   "teamSize": 4,
+   "team": [
+    "WINNIE",
+    "TANTAN",
+    "VQ",
+    "JORDAN"
+   ],
+   "failsRequired": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "WILLIAM",
      "state": "APPROVED",
+     "proposer": "WILLIAM",
      "votes": [
       "TANTAN",
       "JORDAN",
@@ -240,31 +224,47 @@
       "JORDAN"
      ]
     }
-   ],
-   "numFails": 1,
-   "team": [
-    "WINNIE",
-    "TANTAN",
-    "VQ",
-    "JORDAN"
-   ],
-   "teamSize": 4,
-   "failsRequired": 2,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "team": [],
+   "state": "PENDING",
    "failsRequired": 1,
    "teamSize": 4,
-   "state": "PENDING",
-   "proposals": []
+   "proposals": [],
+   "team": []
   }
  ],
- "timeFinished": {
-  "_seconds": 1598015121,
-  "_nanoseconds": 234000000
- },
  "options": {
   "inGameLog": false
- }
+ },
+ "players": [
+  {
+   "name": "VQ",
+   "uid": "T9lqbHu2UAQfk7CSaSLnXU9HNJb2"
+  },
+  {
+   "name": "JORDAN",
+   "uid": "5PYnByoF6YWmLus2JfQ04XMqHyP2"
+  },
+  {
+   "name": "LH",
+   "uid": "9j3ueVNSnOQ1DTw3N3PwzNZzfqx2"
+  },
+  {
+   "name": "PL",
+   "uid": "SLvUR8s8dggh4SKJB8oAvY0yqHA2"
+  },
+  {
+   "name": "TANTAN",
+   "uid": "cvKBuXmHBiQVTjrGCDtNCbBXbAV2"
+  },
+  {
+   "name": "WILLIAM",
+   "uid": "YegTZmUNcESz7s2TXSldSoVMRmF3"
+  },
+  {
+   "name": "WINNIE",
+   "uid": "Ht0V6yPvPkdrxVfPRU4tdkHrN1j1"
+  }
+ ]
 }

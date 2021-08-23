@@ -1,14 +1,17 @@
 {
  "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "assassinated": null,
   "votes": [
    {
-    "YOUNESS": true,
-    "IZZY": true
+    "IZZY": true,
+    "YOUNESS": true
    },
    {
-    "SCOTT": false,
+    "YOUNESS": true,
     "ALKHANSA": true,
-    "YOUNESS": true
+    "SCOTT": false
    },
    {
     "YOUNESS": true,
@@ -20,56 +23,68 @@
     "RAMYA": true
    },
    {
-    "RAMYA": true,
+    "ALKHANSA": true,
     "IZZY": false,
-    "ALKHANSA": true
+    "RAMYA": true
    }
   ],
-  "state": "EVIL_WIN",
   "roles": [
    {
-    "name": "ALKHANSA",
     "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "ALKHANSA"
    },
    {
-    "name": "RAMYA",
     "role": "MERLIN",
-    "assassin": false
+    "assassin": false,
+    "name": "RAMYA"
    },
    {
     "name": "IZZY",
-    "role": "MORDRED",
-    "assassin": true
+    "assassin": true,
+    "role": "MORDRED"
    },
    {
-    "name": "YOUNESS",
     "assassin": false,
+    "name": "YOUNESS",
     "role": "LOYAL FOLLOWER"
    },
    {
     "name": "SCOTT",
-    "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "assassin": false
    }
-  ],
-  "assassinated": null,
-  "message": "Three failed missions"
+  ]
  },
- "timeCreated": {
-  "_seconds": 1590800365,
-  "_nanoseconds": 206000000
- },
+ "players": [
+  {
+   "name": "RAMYA",
+   "uid": "ouXMorBTweWuQnGMWpQIBjDXcIG2"
+  },
+  {
+   "uid": "aAxDtaMVOchGac1r0JqSAu9AIsg2",
+   "name": "IZZY"
+  },
+  {
+   "uid": "WXy8DSVQ0DcUno5ccAM4ifjW4jn2",
+   "name": "YOUNESS"
+  },
+  {
+   "name": "SCOTT",
+   "uid": "v6wYFsp31RQ4T73zUw7UYJJsCaw1"
+  },
+  {
+   "name": "ALKHANSA",
+   "uid": "QfWwliaTN3YURPy9X7iXBHFV67z1"
+  }
+ ],
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "IZZY",
-    "YOUNESS"
-   ],
    "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "IZZY",
       "YOUNESS",
@@ -78,23 +93,21 @@
       "RAMYA"
      ],
      "proposer": "IZZY",
-     "state": "APPROVED",
      "team": [
       "IZZY",
       "YOUNESS"
      ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 2
-  },
-  {
+   "teamSize": 2,
    "team": [
-    "SCOTT",
-    "ALKHANSA",
+    "IZZY",
     "YOUNESS"
    ],
-   "teamSize": 3,
+   "state": "SUCCESS"
+  },
+  {
+   "numFails": 1,
    "failsRequired": 1,
    "proposals": [
     {
@@ -103,25 +116,28 @@
       "IZZY",
       "SCOTT"
      ],
-     "proposer": "YOUNESS",
      "state": "APPROVED",
      "team": [
       "SCOTT",
       "ALKHANSA",
       "YOUNESS"
-     ]
+     ],
+     "proposer": "YOUNESS"
     }
    ],
-   "state": "FAIL",
-   "numFails": 1
+   "teamSize": 3,
+   "team": [
+    "SCOTT",
+    "ALKHANSA",
+    "YOUNESS"
+   ],
+   "state": "FAIL"
   },
   {
-   "team": [
-    "YOUNESS",
-    "IZZY"
-   ],
+   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "ALKHANSA",
       "YOUNESS",
@@ -131,16 +147,19 @@
       "YOUNESS",
       "IZZY"
      ],
-     "state": "APPROVED",
      "proposer": "SCOTT"
     }
    ],
+   "team": [
+    "YOUNESS",
+    "IZZY"
+   ],
+   "failsRequired": 1,
    "numFails": 0,
-   "state": "SUCCESS",
-   "teamSize": 2,
-   "failsRequired": 1
+   "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
    "proposals": [
     {
      "team": [
@@ -148,7 +167,6 @@
       "IZZY",
       "YOUNESS"
      ],
-     "proposer": "ALKHANSA",
      "votes": [
       "ALKHANSA",
       "RAMYA",
@@ -156,22 +174,20 @@
       "YOUNESS",
       "SCOTT"
      ],
+     "proposer": "ALKHANSA",
      "state": "APPROVED"
     }
    ],
-   "numFails": 1,
-   "failsRequired": 1,
-   "state": "FAIL",
    "teamSize": 3,
    "team": [
     "RAMYA",
     "IZZY",
     "YOUNESS"
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
-   "teamSize": 3,
-   "state": "FAIL",
    "failsRequired": 1,
    "team": [
     "RAMYA",
@@ -180,51 +196,35 @@
    ],
    "proposals": [
     {
-     "team": [
-      "RAMYA",
-      "IZZY",
-      "ALKHANSA"
-     ],
-     "state": "APPROVED",
-     "proposer": "RAMYA",
      "votes": [
       "SCOTT",
       "ALKHANSA",
       "RAMYA",
       "IZZY"
+     ],
+     "proposer": "RAMYA",
+     "state": "APPROVED",
+     "team": [
+      "RAMYA",
+      "IZZY",
+      "ALKHANSA"
      ]
     }
    ],
+   "state": "FAIL",
+   "teamSize": 3,
    "numFails": 1
-  }
- ],
- "timeFinished": {
-  "_seconds": 1590800687,
-  "_nanoseconds": 655000000
- },
- "players": [
-  {
-   "name": "RAMYA",
-   "uid": "ouXMorBTweWuQnGMWpQIBjDXcIG2"
-  },
-  {
-   "name": "IZZY",
-   "uid": "aAxDtaMVOchGac1r0JqSAu9AIsg2"
-  },
-  {
-   "name": "YOUNESS",
-   "uid": "WXy8DSVQ0DcUno5ccAM4ifjW4jn2"
-  },
-  {
-   "uid": "v6wYFsp31RQ4T73zUw7UYJJsCaw1",
-   "name": "SCOTT"
-  },
-  {
-   "name": "ALKHANSA",
-   "uid": "QfWwliaTN3YURPy9X7iXBHFV67z1"
   }
  ],
  "options": {
   "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1590800365,
+  "_nanoseconds": 206000000
+ },
+ "timeFinished": {
+  "_seconds": 1590800687,
+  "_nanoseconds": 655000000
  }
 }

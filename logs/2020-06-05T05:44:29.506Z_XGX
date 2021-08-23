@@ -1,5 +1,32 @@
 {
  "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "ALLI": true,
+    "JERRY": true,
+    "AND": true
+   },
+   {
+    "AND": false,
+    "ALLI": true,
+    "MAL": true,
+    "JERRY": true
+   },
+   {
+    "JERRY": true,
+    "NIKKI": true,
+    "AND": false,
+    "WILL": true
+   },
+   {
+    "MAL": true,
+    "JERRY": true,
+    "NIKKI": true,
+    "AND": false,
+    "LEA": false
+   }
+  ],
   "roles": [
    {
     "assassin": false,
@@ -8,13 +35,13 @@
    },
    {
     "name": "NIKKI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
-    "name": "AND",
+    "role": "MORGANA",
     "assassin": false,
-    "role": "MORGANA"
+    "name": "AND"
    },
    {
     "role": "LOYAL FOLLOWER",
@@ -23,75 +50,43 @@
    },
    {
     "name": "MAL",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
     "role": "MORDRED",
-    "name": "LEA",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "name": "JERRY"
+    "name": "LEA"
    },
    {
     "assassin": false,
+    "name": "JERRY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MERLIN",
     "name": "AMANDA",
-    "role": "MERLIN"
+    "assassin": false
    }
   ],
   "assassinated": null,
-  "votes": [
-   {
-    "ALLI": true,
-    "JERRY": true,
-    "AND": true
-   },
-   {
-    "MAL": true,
-    "AND": false,
-    "JERRY": true,
-    "ALLI": true
-   },
-   {
-    "NIKKI": true,
-    "AND": false,
-    "WILL": true,
-    "JERRY": true
-   },
-   {
-    "AND": false,
-    "MAL": true,
-    "LEA": false,
-    "NIKKI": true,
-    "JERRY": true
-   }
-  ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN"
- },
- "timeCreated": {
-  "_seconds": 1591335869,
-  "_nanoseconds": 506000000
+  "message": "Three failed missions"
  },
  "missions": [
   {
-   "teamSize": 3,
-   "state": "SUCCESS",
    "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "votes": [
-      "MAL",
-      "LEA",
+     "proposer": "JERRY",
+     "team": [
       "JERRY",
       "ALLI",
       "AND"
      ],
-     "proposer": "JERRY",
-     "team": [
+     "votes": [
+      "MAL",
+      "LEA",
       "JERRY",
       "ALLI",
       "AND"
@@ -104,19 +99,27 @@
     "ALLI",
     "AND"
    ],
-   "numFails": 0
+   "teamSize": 3,
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 4,
+   "state": "FAIL",
+   "team": [
+    "MAL",
+    "JERRY",
+    "ALLI",
+    "AND"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "WILL",
      "votes": [
       "JERRY",
       "AMANDA",
       "AND"
      ],
+     "proposer": "WILL",
+     "state": "REJECTED",
      "team": [
       "WILL",
       "JERRY",
@@ -125,8 +128,12 @@
      ]
     },
     {
-     "state": "APPROVED",
-     "proposer": "MAL",
+     "team": [
+      "MAL",
+      "JERRY",
+      "ALLI",
+      "AND"
+     ],
      "votes": [
       "ALLI",
       "AND",
@@ -134,113 +141,105 @@
       "JERRY",
       "AMANDA"
      ],
-     "team": [
-      "MAL",
-      "JERRY",
-      "ALLI",
-      "AND"
-     ]
+     "state": "APPROVED",
+     "proposer": "MAL"
     }
    ],
-   "team": [
-    "MAL",
-    "JERRY",
-    "ALLI",
-    "AND"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1
+   "numFails": 1,
+   "teamSize": 4
   },
   {
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "AMANDA",
       "AND",
       "ALLI",
       "MAL"
      ],
+     "proposer": "AMANDA",
      "votes": [
       "MAL"
      ],
-     "proposer": "AMANDA"
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "team": [
       "LEA",
       "AND",
       "ALLI",
       "WILL"
      ],
+     "proposer": "LEA",
      "votes": [
       "WILL",
       "LEA"
      ],
-     "proposer": "LEA"
+     "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
      "team": [
       "NIKKI",
       "WILL",
       "AND",
       "MAL"
      ],
-     "state": "REJECTED",
+     "proposer": "NIKKI",
      "votes": [
       "MAL",
       "NIKKI"
-     ],
-     "proposer": "NIKKI"
+     ]
     },
     {
      "state": "APPROVED",
      "proposer": "AND",
-     "team": [
-      "AND",
-      "JERRY",
-      "NIKKI",
-      "WILL"
-     ],
      "votes": [
       "ALLI",
       "NIKKI",
       "AND",
       "WILL",
       "JERRY"
+     ],
+     "team": [
+      "AND",
+      "JERRY",
+      "NIKKI",
+      "WILL"
      ]
     }
    ],
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "AND",
     "JERRY",
     "NIKKI",
     "WILL"
    ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 4,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
+   "teamSize": 5,
+   "state": "FAIL",
    "numFails": 2,
+   "failsRequired": 2,
    "proposals": [
     {
+     "proposer": "ALLI",
      "votes": [
       "ALLI",
       "MAL"
      ],
+     "state": "REJECTED",
      "team": [
       "AMANDA",
       "LEA",
       "NIKKI",
       "MAL",
       "ALLI"
-     ],
-     "state": "REJECTED",
-     "proposer": "ALLI"
+     ]
     },
     {
      "votes": [
@@ -250,73 +249,74 @@
       "LEA",
       "JERRY"
      ],
-     "proposer": "JERRY",
-     "state": "APPROVED",
      "team": [
       "JERRY",
       "AND",
       "MAL",
       "NIKKI",
       "LEA"
-     ]
+     ],
+     "proposer": "JERRY",
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 5,
    "team": [
     "JERRY",
     "AND",
     "MAL",
     "NIKKI",
     "LEA"
-   ],
-   "state": "FAIL",
-   "failsRequired": 2
+   ]
   },
   {
    "state": "PENDING",
-   "proposals": [],
    "failsRequired": 1,
    "team": [],
+   "proposals": [],
    "teamSize": 5
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "players": [
   {
    "name": "AMANDA",
    "uid": "odPkiBFUb6ZbL9M5WK9z2QCdmki1"
   },
   {
-   "uid": "ypgiApuBmpe1SGgTtjqegOgSTHV2",
-   "name": "LEA"
+   "name": "LEA",
+   "uid": "ypgiApuBmpe1SGgTtjqegOgSTHV2"
   },
   {
-   "uid": "8v7hEQeRTSWlBiECjTpfsyxef743",
-   "name": "NIKKI"
+   "name": "NIKKI",
+   "uid": "8v7hEQeRTSWlBiECjTpfsyxef743"
   },
   {
    "name": "AND",
    "uid": "YjHTtFigZxME7Fwl1YSaplKCv3M2"
   },
   {
-   "uid": "JF2WCvWSMTNetOHOv8ihxL1PGB93",
-   "name": "ALLI"
+   "name": "ALLI",
+   "uid": "JF2WCvWSMTNetOHOv8ihxL1PGB93"
   },
   {
-   "name": "JERRY",
-   "uid": "XWzHKSBzEuVXWoyT03d3GxGreEH2"
+   "uid": "XWzHKSBzEuVXWoyT03d3GxGreEH2",
+   "name": "JERRY"
   },
   {
    "uid": "qnxhb19kxuV55M3z8BjAObjoGP83",
    "name": "WILL"
   },
   {
-   "name": "MAL",
-   "uid": "GqgDHzzhRZUBDuQTVqyocktoyn62"
+   "uid": "GqgDHzzhRZUBDuQTVqyocktoyn62",
+   "name": "MAL"
   }
  ],
+ "timeCreated": {
+  "_seconds": 1591335869,
+  "_nanoseconds": 506000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1591338549,
   "_nanoseconds": 718000000

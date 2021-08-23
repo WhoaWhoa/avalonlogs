@@ -3,127 +3,23 @@
   "_seconds": 1601051918,
   "_nanoseconds": 84000000
  },
- "players": [
-  {
-   "name": "KEVIN",
-   "uid": "NeQnJgjAvrNX7S3GxPyMvKeCZTA3"
-  },
-  {
-   "name": "LUKE",
-   "uid": "oioHvvzUgnQPT5GTw8a94GoSv7Z2"
-  },
-  {
-   "uid": "AwXIOWpeehSLQzNXKakZijDwVjm2",
-   "name": "BRIAN"
-  },
-  {
-   "uid": "S5fIIuUF3JdvMpsVHXOAwkQuDrw1",
-   "name": "ROMAN"
-  },
-  {
-   "uid": "OqhRxwoFB2Tle4vGhOPVaaiR0Jt2",
-   "name": "JACK"
-  },
-  {
-   "uid": "xjawiSQejMO4bVfmTkI33w1SMS22",
-   "name": "JESSICA"
-  },
-  {
-   "name": "RIHAO",
-   "uid": "szLZMBESZFQftLQwgnbjXEu3YLS2"
-  }
- ],
- "outcome": {
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "JACK": true,
-    "ROMAN": true
-   },
-   {
-    "ROMAN": true,
-    "RIHAO": true,
-    "JESSICA": true
-   },
-   {
-    "ROMAN": false,
-    "RIHAO": true,
-    "JESSICA": true
-   },
-   {
-    "RIHAO": false,
-    "KEVIN": true,
-    "JESSICA": true,
-    "ROMAN": false
-   },
-   {
-    "JACK": true,
-    "JESSICA": true,
-    "BRIAN": true,
-    "RIHAO": false
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "BRIAN",
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "name": "RIHAO",
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "KEVIN",
-    "assassin": false
-   },
-   {
-    "name": "JESSICA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "ROMAN"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JACK"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "LUKE"
-   }
-  ]
- },
- "timeCreated": {
-  "_seconds": 1601050405,
-  "_nanoseconds": 81000000
- },
- "options": {
-  "inGameLog": false
- },
  "missions": [
   {
    "team": [
     "JACK",
     "ROMAN"
    ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "ROMAN",
      "team": [
       "ROMAN",
       "JACK"
      ],
-     "proposer": "ROMAN",
+     "state": "REJECTED",
      "votes": [
       "BRIAN",
       "JACK",
@@ -137,20 +33,23 @@
       "KEVIN",
       "JACK"
      ],
-     "state": "APPROVED",
      "proposer": "JACK",
+     "state": "APPROVED",
      "team": [
       "JACK",
       "ROMAN"
      ]
     }
    ],
-   "teamSize": 2,
-   "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "ROMAN",
+    "JESSICA",
+    "RIHAO"
+   ],
    "proposals": [
     {
      "team": [
@@ -168,17 +67,13 @@
      ]
     }
    ],
-   "team": [
-    "ROMAN",
-    "JESSICA",
-    "RIHAO"
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 3
+   "teamSize": 3,
+   "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -186,6 +81,7 @@
       "JESSICA",
       "RIHAO"
      ],
+     "state": "APPROVED",
      "votes": [
       "LUKE",
       "BRIAN",
@@ -194,122 +90,226 @@
       "JESSICA",
       "RIHAO"
      ],
-     "proposer": "RIHAO",
-     "state": "APPROVED"
+     "proposer": "RIHAO"
     }
    ],
-   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "ROMAN",
     "JESSICA",
     "RIHAO"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1
+   ]
   },
   {
-   "failsRequired": 2,
-   "numFails": 2,
    "state": "FAIL",
-   "team": [
-    "KEVIN",
-    "JESSICA",
-    "RIHAO",
-    "ROMAN"
-   ],
    "proposals": [
     {
+     "votes": [
+      "LUKE",
+      "KEVIN",
+      "BRIAN",
+      "RIHAO"
+     ],
      "team": [
       "KEVIN",
       "JESSICA",
       "RIHAO",
       "ROMAN"
      ],
-     "proposer": "KEVIN",
      "state": "APPROVED",
-     "votes": [
-      "LUKE",
-      "KEVIN",
-      "BRIAN",
-      "RIHAO"
-     ]
+     "proposer": "KEVIN"
     }
    ],
-   "teamSize": 4
+   "teamSize": 4,
+   "failsRequired": 2,
+   "team": [
+    "KEVIN",
+    "JESSICA",
+    "RIHAO",
+    "ROMAN"
+   ],
+   "numFails": 2
   },
   {
+   "failsRequired": 1,
    "team": [
     "JACK",
     "JESSICA",
     "BRIAN",
     "RIHAO"
    ],
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "LUKE",
+     "votes": [
+      "LUKE",
+      "RIHAO"
+     ],
      "team": [
       "JESSICA",
       "RIHAO",
       "JACK",
       "LUKE"
      ],
-     "votes": [
-      "LUKE",
-      "RIHAO"
-     ],
-     "proposer": "LUKE"
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "RIHAO",
-      "JESSICA",
-      "LUKE"
-     ],
+     "state": "REJECTED",
      "team": [
       "RIHAO",
       "JESSICA",
       "JACK",
       "BRIAN"
      ],
-     "state": "REJECTED",
+     "votes": [
+      "RIHAO",
+      "JESSICA",
+      "LUKE"
+     ],
      "proposer": "BRIAN"
     },
     {
      "votes": [
       "LUKE"
      ],
-     "proposer": "ROMAN",
      "team": [
       "JACK",
       "ROMAN",
       "LUKE",
       "BRIAN"
      ],
+     "proposer": "ROMAN",
      "state": "REJECTED"
     },
     {
      "state": "APPROVED",
-     "votes": [
-      "LUKE",
-      "JESSICA",
-      "JACK",
-      "ROMAN",
-      "RIHAO"
-     ],
      "team": [
       "JACK",
       "JESSICA",
       "BRIAN",
       "RIHAO"
      ],
-     "proposer": "JACK"
+     "proposer": "JACK",
+     "votes": [
+      "LUKE",
+      "JESSICA",
+      "JACK",
+      "ROMAN",
+      "RIHAO"
+     ]
     }
    ],
-   "state": "FAIL",
-   "teamSize": 4,
-   "failsRequired": 1,
-   "numFails": 1
+   "teamSize": 4
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1601050405,
+  "_nanoseconds": 81000000
+ },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "assassinated": null,
+  "votes": [
+   {
+    "ROMAN": true,
+    "JACK": true
+   },
+   {
+    "ROMAN": true,
+    "JESSICA": true,
+    "RIHAO": true
+   },
+   {
+    "JESSICA": true,
+    "ROMAN": false,
+    "RIHAO": true
+   },
+   {
+    "JESSICA": true,
+    "KEVIN": true,
+    "ROMAN": false,
+    "RIHAO": false
+   },
+   {
+    "JACK": true,
+    "RIHAO": false,
+    "JESSICA": true,
+    "BRIAN": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "name": "BRIAN",
+    "role": "MERLIN"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "RIHAO",
+    "assassin": false
+   },
+   {
+    "name": "KEVIN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "JESSICA"
+   },
+   {
+    "assassin": false,
+    "name": "ROMAN",
+    "role": "MORGANA"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JACK",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "LUKE",
+    "role": "EVIL MINION"
+   }
+  ]
+ },
+ "players": [
+  {
+   "name": "KEVIN",
+   "uid": "NeQnJgjAvrNX7S3GxPyMvKeCZTA3"
+  },
+  {
+   "name": "LUKE",
+   "uid": "oioHvvzUgnQPT5GTw8a94GoSv7Z2"
+  },
+  {
+   "name": "BRIAN",
+   "uid": "AwXIOWpeehSLQzNXKakZijDwVjm2"
+  },
+  {
+   "uid": "S5fIIuUF3JdvMpsVHXOAwkQuDrw1",
+   "name": "ROMAN"
+  },
+  {
+   "name": "JACK",
+   "uid": "OqhRxwoFB2Tle4vGhOPVaaiR0Jt2"
+  },
+  {
+   "uid": "xjawiSQejMO4bVfmTkI33w1SMS22",
+   "name": "JESSICA"
+  },
+  {
+   "uid": "szLZMBESZFQftLQwgnbjXEu3YLS2",
+   "name": "RIHAO"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ }
 }

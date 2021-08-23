@@ -1,44 +1,80 @@
 {
- "players": [
-  {
-   "uid": "n881TP9mNnQgKkCqYU0kOFkVh9u1",
-   "name": "RICHARD"
-  },
-  {
-   "name": "ERAJ",
-   "uid": "RlCBCQnibneBjkSDgQ3KfXpYbA52"
-  },
-  {
-   "name": "JAS",
-   "uid": "LmEFFBf3KzeOcfVwQhkfFAMFzEt1"
-  },
-  {
-   "name": "KAT",
-   "uid": "WHhFQY87aIht0n4nLhFDWjsrBfn2"
-  },
-  {
-   "name": "LOCTRI",
-   "uid": "chLDTr7Jg9PBszhDIVlJZcrYF523"
-  },
-  {
-   "name": "RYANHEART",
-   "uid": "lKg5QVMrxBVnKo3mNjtj6kg8vaF2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585916923,
-  "_nanoseconds": 835000000
+ "outcome": {
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "KAT": true,
+    "RYANHEART": true
+   },
+   {
+    "LOCTRI": true,
+    "JAS": true,
+    "RICHARD": true
+   },
+   {
+    "LOCTRI": true,
+    "RICHARD": true,
+    "JAS": true,
+    "ERAJ": false
+   },
+   {
+    "LOCTRI": true,
+    "JAS": true,
+    "RICHARD": true
+   }
+  ],
+  "assassinated": "JAS",
+  "roles": [
+   {
+    "name": "RYANHEART",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "name": "ERAJ",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "LOCTRI"
+   },
+   {
+    "name": "JAS",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "RICHARD",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "KAT",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ]
  },
  "timeFinished": {
   "_seconds": 1585918207,
   "_nanoseconds": 912549000
  },
+ "timeCreated": {
+  "_seconds": 1585916923,
+  "_nanoseconds": 835000000
+ },
  "missions": [
   {
-   "state": "SUCCESS",
-   "teamSize": 2,
-   "failsRequired": 1,
    "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "KAT",
+    "RYANHEART"
+   ],
+   "teamSize": 2,
    "proposals": [
     {
      "team": [
@@ -57,21 +93,20 @@
      "state": "APPROVED"
     }
    ],
-   "team": [
-    "KAT",
-    "RYANHEART"
-   ]
+   "failsRequired": 1
   },
   {
-   "team": [
-    "JAS",
-    "RICHARD",
-    "LOCTRI"
-   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "SUCCESS",
    "numFails": 0,
    "proposals": [
     {
-     "proposer": "LOCTRI",
+     "team": [
+      "JAS",
+      "RICHARD",
+      "LOCTRI"
+     ],
      "votes": [
       "RYANHEART",
       "ERAJ",
@@ -80,141 +115,106 @@
       "RICHARD",
       "KAT"
      ],
-     "team": [
-      "JAS",
-      "RICHARD",
-      "LOCTRI"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "state": "SUCCESS"
-  },
-  {
-   "team": [
-    "RICHARD",
-    "JAS",
-    "LOCTRI",
-    "ERAJ"
-   ],
-   "teamSize": 4,
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "team": [
-      "RICHARD",
-      "JAS",
-      "LOCTRI",
-      "ERAJ"
-     ],
-     "proposer": "RYANHEART",
      "state": "APPROVED",
-     "votes": [
-      "RYANHEART",
-      "LOCTRI",
-      "JAS",
-      "RICHARD"
-     ]
-    }
-   ],
-   "numFails": 1,
-   "state": "FAIL"
-  },
-  {
-   "proposals": [
-    {
-     "team": [
-      "JAS",
-      "RICHARD",
-      "LOCTRI"
-     ],
-     "votes": [
-      "ERAJ",
-      "LOCTRI",
-      "JAS",
-      "RICHARD"
-     ],
-     "proposer": "RICHARD",
-     "state": "APPROVED"
+     "proposer": "LOCTRI"
     }
    ],
    "team": [
     "JAS",
     "RICHARD",
     "LOCTRI"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "team": [],
+   "numFails": 1,
+   "state": "FAIL",
    "failsRequired": 1,
-   "state": "PENDING",
-   "proposals": [],
+   "team": [
+    "RICHARD",
+    "JAS",
+    "LOCTRI",
+    "ERAJ"
+   ],
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "team": [
+      "RICHARD",
+      "JAS",
+      "LOCTRI",
+      "ERAJ"
+     ],
+     "votes": [
+      "RYANHEART",
+      "LOCTRI",
+      "JAS",
+      "RICHARD"
+     ],
+     "proposer": "RYANHEART"
+    }
+   ],
    "teamSize": 4
+  },
+  {
+   "teamSize": 3,
+   "numFails": 0,
+   "failsRequired": 1,
+   "team": [
+    "JAS",
+    "RICHARD",
+    "LOCTRI"
+   ],
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "votes": [
+      "ERAJ",
+      "LOCTRI",
+      "JAS",
+      "RICHARD"
+     ],
+     "team": [
+      "JAS",
+      "RICHARD",
+      "LOCTRI"
+     ],
+     "state": "APPROVED",
+     "proposer": "RICHARD"
+    }
+   ]
+  },
+  {
+   "teamSize": 4,
+   "team": [],
+   "state": "PENDING",
+   "failsRequired": 1,
+   "proposals": []
   }
  ],
- "outcome": {
-  "roles": [
-   {
-    "role": "MORDRED",
-    "name": "RYANHEART",
-    "assassin": true
-   },
-   {
-    "name": "ERAJ",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "LOCTRI",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JAS"
-   },
-   {
-    "assassin": false,
-    "name": "RICHARD",
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "MERLIN",
-    "name": "KAT",
-    "assassin": false
-   }
-  ],
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "KAT": true,
-    "RYANHEART": true
-   },
-   {
-    "RICHARD": true,
-    "LOCTRI": true,
-    "JAS": true
-   },
-   {
-    "RICHARD": true,
-    "LOCTRI": true,
-    "JAS": true,
-    "ERAJ": false
-   },
-   {
-    "RICHARD": true,
-    "LOCTRI": true,
-    "JAS": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "JAS"
- }
+ "players": [
+  {
+   "name": "RICHARD",
+   "uid": "n881TP9mNnQgKkCqYU0kOFkVh9u1"
+  },
+  {
+   "uid": "RlCBCQnibneBjkSDgQ3KfXpYbA52",
+   "name": "ERAJ"
+  },
+  {
+   "uid": "LmEFFBf3KzeOcfVwQhkfFAMFzEt1",
+   "name": "JAS"
+  },
+  {
+   "uid": "WHhFQY87aIht0n4nLhFDWjsrBfn2",
+   "name": "KAT"
+  },
+  {
+   "uid": "chLDTr7Jg9PBszhDIVlJZcrYF523",
+   "name": "LOCTRI"
+  },
+  {
+   "uid": "lKg5QVMrxBVnKo3mNjtj6kg8vaF2",
+   "name": "RYANHEART"
+  }
+ ]
 }

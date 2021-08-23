@@ -10,59 +10,99 @@
  "options": {
   "inGameLog": false
  },
- "players": [
-  {
-   "uid": "g21ycsypBoVjCAwdiYkPgudQhM23",
-   "name": "JOBERON"
-  },
-  {
-   "uid": "zM9XPY9QEiM3EfKBXlgKk97GJAF3",
-   "name": "ROCKY"
-  },
-  {
-   "name": "KAREN",
-   "uid": "kYmaig4V9qPVwzFNPynJHaGGk8P2"
-  },
-  {
-   "uid": "HXoN5uYy10RFdjSv5xUP6IW2TCb2",
-   "name": "TINA"
-  },
-  {
-   "name": "TOBY",
-   "uid": "VlJgElRD4VZXmlTxpA5QRET5Z4W2"
-  },
-  {
-   "name": "KIMMERLIN",
-   "uid": "tVQNQuHDO8cihbBVOPRGTj0fm4I2"
-  },
-  {
-   "uid": "lHx01lkWR8RJbNr7VOto3YG3qz33",
-   "name": "STEVE"
-  },
-  {
-   "name": "LASERBLUE",
-   "uid": "1BzGT5Pb9SR0DbGe7Xxp8UUky8T2"
-  },
-  {
-   "name": "ROCIO",
-   "uid": "VbUDJdM4SNRVWhkElP1RFmbhRyo2"
-  },
-  {
-   "name": "GJENNA",
-   "uid": "GtnoqXEanyXtkUj99PorBMhxrlB2"
-  }
- ],
+ "outcome": {
+  "assassinated": "KAREN",
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "name": "KIMMERLIN",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "STEVE",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "LASERBLUE",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "ROCIO",
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "KAREN",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "JOBERON",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "TOBY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "TINA"
+   },
+   {
+    "assassin": false,
+    "role": "MORDRED",
+    "name": "GJENNA"
+   },
+   {
+    "assassin": false,
+    "role": "OBERON",
+    "name": "ROCKY"
+   }
+  ],
+  "votes": [
+   {
+    "KAREN": true,
+    "TOBY": true,
+    "GJENNA": true
+   },
+   {
+    "KAREN": true,
+    "GJENNA": false,
+    "ROCKY": false,
+    "TOBY": true
+   },
+   {
+    "JOBERON": true,
+    "TOBY": true,
+    "STEVE": true,
+    "GJENNA": false
+   },
+   {
+    "JOBERON": true,
+    "TINA": true,
+    "STEVE": true,
+    "ROCIO": true,
+    "KAREN": true
+   },
+   {
+    "KAREN": true,
+    "STEVE": true,
+    "JOBERON": true,
+    "TINA": true,
+    "ROCIO": true
+   }
+  ]
+ },
  "missions": [
   {
-   "team": [
-    "GJENNA",
-    "TOBY",
-    "KAREN"
-   ],
-   "teamSize": 3,
    "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "proposals": [
     {
      "state": "REJECTED",
@@ -78,12 +118,12 @@
      ]
     },
     {
+     "proposer": "STEVE",
      "team": [
       "STEVE",
       "JOBERON",
       "ROCKY"
      ],
-     "proposer": "STEVE",
      "votes": [
       "STEVE",
       "LASERBLUE"
@@ -92,7 +132,6 @@
     },
     {
      "state": "REJECTED",
-     "proposer": "LASERBLUE",
      "votes": [
       "LASERBLUE",
       "TINA"
@@ -101,15 +140,10 @@
       "LASERBLUE",
       "KAREN",
       "TINA"
-     ]
+     ],
+     "proposer": "LASERBLUE"
     },
     {
-     "proposer": "ROCIO",
-     "team": [
-      "KIMMERLIN",
-      "LASERBLUE",
-      "ROCIO"
-     ],
      "state": "REJECTED",
      "votes": [
       "JOBERON",
@@ -117,16 +151,16 @@
       "ROCIO",
       "LASERBLUE",
       "TINA"
+     ],
+     "proposer": "ROCIO",
+     "team": [
+      "KIMMERLIN",
+      "LASERBLUE",
+      "ROCIO"
      ]
     },
     {
-     "team": [
-      "GJENNA",
-      "TOBY",
-      "KAREN"
-     ],
      "state": "APPROVED",
-     "proposer": "GJENNA",
      "votes": [
       "KAREN",
       "JOBERON",
@@ -137,14 +171,26 @@
       "TOBY",
       "ROCIO",
       "LASERBLUE"
-     ]
+     ],
+     "team": [
+      "GJENNA",
+      "TOBY",
+      "KAREN"
+     ],
+     "proposer": "GJENNA"
     }
+   ],
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "GJENNA",
+    "TOBY",
+    "KAREN"
    ]
   },
   {
-   "failsRequired": 1,
    "state": "FAIL",
-   "numFails": 2,
    "teamSize": 4,
    "team": [
     "TOBY",
@@ -152,63 +198,63 @@
     "GJENNA",
     "ROCKY"
    ],
+   "numFails": 2,
    "proposals": [
     {
-     "votes": [
-      "JOBERON"
-     ],
+     "state": "REJECTED",
      "team": [
       "JOBERON",
       "KAREN",
       "TOBY",
       "ROCKY"
      ],
-     "proposer": "JOBERON",
-     "state": "REJECTED"
+     "votes": [
+      "JOBERON"
+     ],
+     "proposer": "JOBERON"
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "ROCKY",
-      "TOBY"
-     ],
-     "proposer": "ROCKY",
      "team": [
       "ROCKY",
       "GJENNA",
       "TOBY",
       "KAREN"
-     ]
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "ROCKY",
+      "TOBY"
+     ],
+     "proposer": "ROCKY"
     },
     {
+     "state": "REJECTED",
+     "votes": [
+      "ROCIO",
+      "GJENNA"
+     ],
      "team": [
       "KAREN",
       "TOBY",
       "GJENNA",
       "ROCIO"
      ],
-     "proposer": "KAREN",
-     "votes": [
-      "ROCIO",
-      "GJENNA"
-     ],
-     "state": "REJECTED"
+     "proposer": "KAREN"
     },
     {
-     "votes": [
-      "TINA"
-     ],
-     "proposer": "TINA",
      "state": "REJECTED",
      "team": [
       "TINA",
       "KAREN",
       "ROCKY",
       "TOBY"
+     ],
+     "proposer": "TINA",
+     "votes": [
+      "TINA"
      ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "TOBY",
       "KAREN",
@@ -216,6 +262,7 @@
       "ROCKY"
      ],
      "proposer": "TOBY",
+     "state": "APPROVED",
      "votes": [
       "KIMMERLIN",
       "ROCIO",
@@ -228,7 +275,8 @@
       "JOBERON"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
    "team": [
@@ -237,73 +285,67 @@
     "TOBY",
     "GJENNA"
    ],
-   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "ROCIO"
-     ],
      "proposer": "KIMMERLIN",
      "team": [
       "KIMMERLIN",
       "LASERBLUE",
       "ROCIO",
       "TOBY"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "ROCIO"
      ]
     },
     {
-     "proposer": "STEVE",
+     "state": "REJECTED",
      "votes": [
       "STEVE",
       "JOBERON"
      ],
+     "proposer": "STEVE",
      "team": [
       "STEVE",
       "TOBY",
       "JOBERON",
       "LASERBLUE"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "team": [
-      "LASERBLUE",
-      "TOBY",
-      "TINA",
-      "STEVE"
-     ],
-     "state": "REJECTED",
      "votes": [
       "TOBY",
       "TINA",
       "LASERBLUE",
       "STEVE"
      ],
-     "proposer": "LASERBLUE"
+     "proposer": "LASERBLUE",
+     "state": "REJECTED",
+     "team": [
+      "LASERBLUE",
+      "TOBY",
+      "TINA",
+      "STEVE"
+     ]
     },
     {
+     "votes": [
+      "KIMMERLIN"
+     ],
      "team": [
       "ROCIO",
       "STEVE",
       "LASERBLUE",
       "KIMMERLIN"
      ],
-     "proposer": "ROCIO",
      "state": "REJECTED",
-     "votes": [
-      "KIMMERLIN"
-     ]
+     "proposer": "ROCIO"
     },
     {
      "state": "APPROVED",
-     "proposer": "GJENNA",
-     "team": [
-      "STEVE",
-      "JOBERON",
-      "TOBY",
-      "GJENNA"
-     ],
      "votes": [
       "LASERBLUE",
       "JOBERON",
@@ -313,17 +355,20 @@
       "KIMMERLIN",
       "KAREN",
       "STEVE"
-     ]
+     ],
+     "team": [
+      "STEVE",
+      "JOBERON",
+      "TOBY",
+      "GJENNA"
+     ],
+     "proposer": "GJENNA"
     }
    ],
-   "teamSize": 4,
    "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 2,
    "team": [
     "TINA",
     "ROCIO",
@@ -331,24 +376,28 @@
     "STEVE",
     "JOBERON"
    ],
-   "teamSize": 5,
+   "failsRequired": 2,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "votes": [
+      "LASERBLUE",
+      "ROCIO"
+     ],
      "proposer": "JOBERON",
+     "state": "REJECTED",
      "team": [
       "JOBERON",
       "STEVE",
       "ROCIO",
       "LASERBLUE",
       "TINA"
-     ],
-     "votes": [
-      "LASERBLUE",
-      "ROCIO"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "REJECTED",
+     "proposer": "ROCKY",
      "votes": [],
      "team": [
       "ROCKY",
@@ -356,34 +405,24 @@
       "STEVE",
       "LASERBLUE",
       "ROCIO"
-     ],
-     "state": "REJECTED",
-     "proposer": "ROCKY"
+     ]
     },
     {
      "state": "REJECTED",
      "votes": [
       "KAREN"
      ],
+     "proposer": "KAREN",
      "team": [
       "TINA",
       "JOBERON",
       "STEVE",
       "KAREN",
       "LASERBLUE"
-     ],
-     "proposer": "KAREN"
+     ]
     },
     {
-     "team": [
-      "TINA",
-      "ROCIO",
-      "KAREN",
-      "STEVE",
-      "JOBERON"
-     ],
      "state": "APPROVED",
-     "proposer": "TINA",
      "votes": [
       "GJENNA",
       "JOBERON",
@@ -393,97 +432,20 @@
       "ROCIO",
       "KAREN",
       "STEVE"
-     ]
-    }
-   ]
-  },
-  {
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "state": "REJECTED",
+     ],
+     "proposer": "TINA",
      "team": [
-      "TOBY",
-      "JOBERON",
-      "STEVE",
       "TINA",
-      "ROCIO"
-     ],
-     "votes": [
-      "TOBY"
-     ],
-     "proposer": "TOBY"
-    },
-    {
-     "votes": [
-      "KIMMERLIN"
-     ],
-     "proposer": "KIMMERLIN",
-     "team": [
-      "KIMMERLIN",
-      "JOBERON",
-      "TOBY",
-      "STEVE",
-      "ROCIO"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "team": [
-      "STEVE",
-      "TOBY",
-      "ROCIO",
-      "JOBERON",
-      "TINA"
-     ],
-     "proposer": "STEVE",
-     "state": "REJECTED",
-     "votes": [
-      "LASERBLUE",
-      "STEVE",
-      "TOBY"
-     ]
-    },
-    {
-     "proposer": "LASERBLUE",
-     "state": "REJECTED",
-     "votes": [
-      "LASERBLUE",
-      "TOBY",
-      "GJENNA"
-     ],
-     "team": [
-      "ROCIO",
-      "STEVE",
-      "TOBY",
-      "TINA",
-      "JOBERON"
-     ]
-    },
-    {
-     "votes": [
-      "GJENNA",
-      "LASERBLUE",
-      "JOBERON",
-      "ROCKY",
       "ROCIO",
       "KAREN",
       "STEVE",
-      "TOBY",
-      "TINA"
-     ],
-     "proposer": "ROCIO",
-     "state": "APPROVED",
-     "team": [
-      "ROCIO",
-      "TINA",
-      "STEVE",
-      "JOBERON",
-      "KAREN"
+      "JOBERON"
      ]
     }
    ],
-   "numFails": 0,
+   "teamSize": 5
+  },
+  {
    "state": "SUCCESS",
    "team": [
     "ROCIO",
@@ -492,97 +454,135 @@
     "JOBERON",
     "KAREN"
    ],
-   "teamSize": 5
+   "proposals": [
+    {
+     "team": [
+      "TOBY",
+      "JOBERON",
+      "STEVE",
+      "TINA",
+      "ROCIO"
+     ],
+     "proposer": "TOBY",
+     "votes": [
+      "TOBY"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "votes": [
+      "KIMMERLIN"
+     ],
+     "state": "REJECTED",
+     "team": [
+      "KIMMERLIN",
+      "JOBERON",
+      "TOBY",
+      "STEVE",
+      "ROCIO"
+     ],
+     "proposer": "KIMMERLIN"
+    },
+    {
+     "proposer": "STEVE",
+     "votes": [
+      "LASERBLUE",
+      "STEVE",
+      "TOBY"
+     ],
+     "state": "REJECTED",
+     "team": [
+      "STEVE",
+      "TOBY",
+      "ROCIO",
+      "JOBERON",
+      "TINA"
+     ]
+    },
+    {
+     "team": [
+      "ROCIO",
+      "STEVE",
+      "TOBY",
+      "TINA",
+      "JOBERON"
+     ],
+     "votes": [
+      "LASERBLUE",
+      "TOBY",
+      "GJENNA"
+     ],
+     "proposer": "LASERBLUE",
+     "state": "REJECTED"
+    },
+    {
+     "proposer": "ROCIO",
+     "team": [
+      "ROCIO",
+      "TINA",
+      "STEVE",
+      "JOBERON",
+      "KAREN"
+     ],
+     "votes": [
+      "GJENNA",
+      "LASERBLUE",
+      "JOBERON",
+      "ROCKY",
+      "ROCIO",
+      "KAREN",
+      "STEVE",
+      "TOBY",
+      "TINA"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "teamSize": 5,
+   "failsRequired": 1,
+   "numFails": 0
   }
  ],
- "outcome": {
-  "roles": [
-   {
-    "assassin": false,
-    "name": "KIMMERLIN",
-    "role": "MORGANA"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "STEVE"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "LASERBLUE"
-   },
-   {
-    "name": "ROCIO",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "KAREN",
-    "role": "MERLIN"
-   },
-   {
-    "name": "JOBERON",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "TOBY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "TINA",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MORDRED",
-    "name": "GJENNA",
-    "assassin": false
-   },
-   {
-    "role": "OBERON",
-    "assassin": false,
-    "name": "ROCKY"
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "KAREN",
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "TOBY": true,
-    "KAREN": true,
-    "GJENNA": true
-   },
-   {
-    "ROCKY": false,
-    "KAREN": true,
-    "GJENNA": false,
-    "TOBY": true
-   },
-   {
-    "STEVE": true,
-    "TOBY": true,
-    "JOBERON": true,
-    "GJENNA": false
-   },
-   {
-    "JOBERON": true,
-    "ROCIO": true,
-    "STEVE": true,
-    "KAREN": true,
-    "TINA": true
-   },
-   {
-    "JOBERON": true,
-    "KAREN": true,
-    "TINA": true,
-    "STEVE": true,
-    "ROCIO": true
-   }
-  ]
- }
+ "players": [
+  {
+   "uid": "g21ycsypBoVjCAwdiYkPgudQhM23",
+   "name": "JOBERON"
+  },
+  {
+   "name": "ROCKY",
+   "uid": "zM9XPY9QEiM3EfKBXlgKk97GJAF3"
+  },
+  {
+   "name": "KAREN",
+   "uid": "kYmaig4V9qPVwzFNPynJHaGGk8P2"
+  },
+  {
+   "name": "TINA",
+   "uid": "HXoN5uYy10RFdjSv5xUP6IW2TCb2"
+  },
+  {
+   "uid": "VlJgElRD4VZXmlTxpA5QRET5Z4W2",
+   "name": "TOBY"
+  },
+  {
+   "name": "KIMMERLIN",
+   "uid": "tVQNQuHDO8cihbBVOPRGTj0fm4I2"
+  },
+  {
+   "name": "STEVE",
+   "uid": "lHx01lkWR8RJbNr7VOto3YG3qz33"
+  },
+  {
+   "uid": "1BzGT5Pb9SR0DbGe7Xxp8UUky8T2",
+   "name": "LASERBLUE"
+  },
+  {
+   "uid": "VbUDJdM4SNRVWhkElP1RFmbhRyo2",
+   "name": "ROCIO"
+  },
+  {
+   "name": "GJENNA",
+   "uid": "GtnoqXEanyXtkUj99PorBMhxrlB2"
+  }
+ ]
 }

@@ -1,95 +1,20 @@
 {
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "VED": true,
-    "SUQI": true
-   },
-   {
-    "JERRY": true,
-    "CHRIS": false,
-    "SUQI": true
-   },
-   {
-    "VED": true,
-    "SUQI": true,
-    "ALICE": true
-   },
-   {
-    "SUQI": true,
-    "ALICE": true,
-    "STEV": true,
-    "VED": true
-   }
-  ],
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "name": "JERRY",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "name": "SUQI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "VED",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "ALICE",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "STEV",
-    "assassin": false
-   },
-   {
-    "name": "CHRIS",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "role": "MORDRED",
-    "assassin": false,
-    "name": "OZSEXYMAN"
-   }
-  ],
-  "assassinated": "SUQI"
- },
- "timeCreated": {
-  "_seconds": 1587785110,
-  "_nanoseconds": 14000000
- },
- "timeFinished": {
-  "_seconds": 1587785396,
-  "_nanoseconds": 431000000
- },
  "players": [
   {
-   "uid": "kga5ovBVI0UF0GohoZ0cewtChua2",
-   "name": "VED"
+   "name": "VED",
+   "uid": "kga5ovBVI0UF0GohoZ0cewtChua2"
   },
   {
-   "uid": "CP4UjqQmDJbs2K4q4XhyBIk1CfC3",
-   "name": "ALICE"
+   "name": "ALICE",
+   "uid": "CP4UjqQmDJbs2K4q4XhyBIk1CfC3"
   },
   {
    "uid": "W6Z8jnt5KIOeZCCSO1BSnf25M7i1",
    "name": "STEV"
   },
   {
-   "uid": "i0ChwySgoXZ9GmzNxiAGDC93O632",
-   "name": "CHRIS"
+   "name": "CHRIS",
+   "uid": "i0ChwySgoXZ9GmzNxiAGDC93O632"
   },
   {
    "name": "OZSEXYMAN",
@@ -100,18 +25,26 @@
    "uid": "xSjl6IEjoVenHNzrWpyMAPPRD5i1"
   },
   {
-   "name": "SUQI",
-   "uid": "hoMNBUNdwuW1AxgC8AcKVih2OL63"
+   "uid": "hoMNBUNdwuW1AxgC8AcKVih2OL63",
+   "name": "SUQI"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1587785396,
+  "_nanoseconds": 431000000
+ },
  "missions": [
   {
-   "failsRequired": 1,
    "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
      "proposer": "SUQI",
+     "team": [
+      "SUQI",
+      "VED"
+     ],
      "votes": [
       "CHRIS",
       "OZSEXYMAN",
@@ -119,10 +52,6 @@
       "VED",
       "ALICE",
       "STEV"
-     ],
-     "team": [
-      "SUQI",
-      "VED"
      ]
     }
    ],
@@ -130,27 +59,27 @@
     "SUQI",
     "VED"
    ],
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 2
   },
   {
-   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
    "team": [
     "CHRIS",
     "JERRY",
     "SUQI"
    ],
-   "failsRequired": 1,
-   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "CHRIS",
       "JERRY",
       "SUQI"
      ],
      "proposer": "VED",
+     "state": "APPROVED",
      "votes": [
       "VED",
       "ALICE",
@@ -160,19 +89,15 @@
      ]
     }
    ],
-   "state": "FAIL"
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "numFails": 0,
-   "team": [
-    "VED",
-    "SUQI",
-    "ALICE"
-   ],
+   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "ALICE",
+     "state": "APPROVED",
      "votes": [
       "ALICE",
       "STEV",
@@ -185,49 +110,124 @@
       "VED",
       "SUQI",
       "ALICE"
-     ],
-     "proposer": "ALICE",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "teamSize": 3
+   "failsRequired": 1,
+   "team": [
+    "VED",
+    "SUQI",
+    "ALICE"
+   ],
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 2,
+   "team": [
+    "VED",
+    "ALICE",
+    "SUQI",
+    "STEV"
+   ],
    "numFails": 0,
-   "state": "SUCCESS",
    "teamSize": 4,
    "proposals": [
     {
      "state": "APPROVED",
+     "votes": [
+      "SUQI",
+      "VED",
+      "ALICE",
+      "STEV"
+     ],
      "team": [
       "VED",
       "ALICE",
       "SUQI",
       "STEV"
      ],
-     "proposer": "STEV",
-     "votes": [
-      "SUQI",
-      "VED",
-      "ALICE",
-      "STEV"
-     ]
+     "proposer": "STEV"
     }
    ],
-   "team": [
-    "VED",
-    "ALICE",
-    "SUQI",
-    "STEV"
-   ]
+   "state": "SUCCESS",
+   "failsRequired": 2
   },
   {
+   "state": "PENDING",
    "proposals": [],
    "teamSize": 4,
-   "failsRequired": 1,
-   "state": "PENDING",
-   "team": []
+   "team": [],
+   "failsRequired": 1
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1587785110,
+  "_nanoseconds": 14000000
+ },
+ "outcome": {
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "SUQI": true,
+    "VED": true
+   },
+   {
+    "JERRY": true,
+    "SUQI": true,
+    "CHRIS": false
+   },
+   {
+    "SUQI": true,
+    "ALICE": true,
+    "VED": true
+   },
+   {
+    "SUQI": true,
+    "VED": true,
+    "ALICE": true,
+    "STEV": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "name": "JERRY",
+    "assassin": true
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "SUQI"
+   },
+   {
+    "role": "MERLIN",
+    "name": "VED",
+    "assassin": false
+   },
+   {
+    "name": "ALICE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "STEV"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "CHRIS"
+   },
+   {
+    "role": "MORDRED",
+    "assassin": false,
+    "name": "OZSEXYMAN"
+   }
+  ],
+  "assassinated": "SUQI"
+ }
 }

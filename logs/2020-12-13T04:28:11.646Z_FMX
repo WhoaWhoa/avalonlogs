@@ -1,48 +1,90 @@
 {
- "players": [
-  {
-   "uid": "tlkvGyim9zRvizV7peiFC4N4Y8F3",
-   "name": "BRADY"
-  },
-  {
-   "name": "SAMH",
-   "uid": "gEJD5g1638NkywZGgMqB5bdWM2g2"
-  },
-  {
-   "name": "JEREMY",
-   "uid": "xIuTTDEoriWwwvsEhfvf7iLj1wO2"
-  },
-  {
-   "name": "YOSH",
-   "uid": "gfL8dKjsmlTKZdG1PktG5B3tJuq2"
-  },
-  {
-   "uid": "D5BsL8l6wRWgaCvAIQ7PUmoWvKx1",
-   "name": "TEDLY"
-  },
-  {
-   "name": "MICHAEL",
-   "uid": "D7U9hTcc8yMdv4FukiZNQsqHUjl2"
-  },
-  {
-   "name": "SHELBY",
-   "uid": "agzcjzHYzcWStFU8McKORValVeJ2"
-  },
-  {
-   "uid": "ceYdR2MU3mNur0XIFldeagTGIex2",
-   "name": "CHRISTIAN"
-  }
- ],
+ "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "YOSH",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "CHRISTIAN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "BRADY",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "name": "MICHAEL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "TEDLY",
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "name": "JEREMY",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "SHELBY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "SAMH",
+    "role": "EVIL MINION"
+   }
+  ],
+  "assassinated": null,
+  "votes": [
+   {
+    "BRADY": true,
+    "MICHAEL": true,
+    "SAMH": true
+   },
+   {
+    "SAMH": false,
+    "BRADY": true,
+    "SHELBY": true,
+    "MICHAEL": true
+   },
+   {
+    "BRADY": true,
+    "TEDLY": true,
+    "YOSH": true,
+    "CHRISTIAN": true
+   },
+   {
+    "BRADY": true,
+    "TEDLY": true,
+    "SAMH": false,
+    "CHRISTIAN": true,
+    "MICHAEL": false
+   },
+   {
+    "CHRISTIAN": true,
+    "BRADY": true,
+    "TEDLY": true,
+    "MICHAEL": false,
+    "YOSH": true
+   }
+  ]
+ },
  "missions": [
   {
-   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "MICHAEL",
-      "SAMH",
-      "BRADY"
-     ],
      "votes": [
       "CHRISTIAN",
       "SHELBY",
@@ -52,28 +94,28 @@
       "YOSH",
       "TEDLY"
      ],
-     "proposer": "MICHAEL",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "MICHAEL",
+      "SAMH",
+      "BRADY"
+     ],
+     "proposer": "MICHAEL"
     }
    ],
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "MICHAEL",
     "SAMH",
     "BRADY"
-   ],
-   "teamSize": 3,
-   "state": "SUCCESS",
-   "numFails": 0
+   ]
   },
   {
    "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "teamSize": 4,
-   "team": [
-    "MICHAEL",
-    "SHELBY",
-    "SAMH",
-    "BRADY"
-   ],
    "proposals": [
     {
      "state": "APPROVED",
@@ -85,20 +127,23 @@
       "YOSH",
       "CHRISTIAN"
      ],
-     "proposer": "SHELBY",
      "team": [
       "MICHAEL",
       "SHELBY",
       "SAMH",
       "BRADY"
-     ]
+     ],
+     "proposer": "SHELBY"
     }
    ],
-   "state": "FAIL",
-   "failsRequired": 1
+   "team": [
+    "MICHAEL",
+    "SHELBY",
+    "SAMH",
+    "BRADY"
+   ]
   },
   {
-   "numFails": 0,
    "team": [
     "BRADY",
     "TEDLY",
@@ -107,8 +152,8 @@
    ],
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [],
+     "state": "REJECTED",
      "proposer": "CHRISTIAN",
      "team": [
       "TEDLY",
@@ -118,8 +163,13 @@
      ]
     },
     {
+     "team": [
+      "BRADY",
+      "TEDLY",
+      "CHRISTIAN",
+      "YOSH"
+     ],
      "state": "APPROVED",
-     "proposer": "BRADY",
      "votes": [
       "CHRISTIAN",
       "BRADY",
@@ -128,38 +178,18 @@
       "TEDLY",
       "SHELBY"
      ],
-     "team": [
-      "BRADY",
-      "TEDLY",
-      "CHRISTIAN",
-      "YOSH"
-     ]
+     "proposer": "BRADY"
     }
    ],
-   "failsRequired": 1,
    "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS"
   },
   {
-   "numFails": 2,
-   "failsRequired": 2,
-   "state": "FAIL",
-   "team": [
-    "TEDLY",
-    "BRADY",
-    "SAMH",
-    "CHRISTIAN",
-    "MICHAEL"
-   ],
+   "teamSize": 5,
    "proposals": [
     {
-     "votes": [
-      "JEREMY",
-      "SHELBY",
-      "SAMH",
-      "YOSH"
-     ],
-     "proposer": "SAMH",
      "team": [
       "SAMH",
       "YOSH",
@@ -167,10 +197,16 @@
       "CHRISTIAN",
       "JEREMY"
      ],
-     "state": "REJECTED"
+     "proposer": "SAMH",
+     "state": "REJECTED",
+     "votes": [
+      "JEREMY",
+      "SHELBY",
+      "SAMH",
+      "YOSH"
+     ]
     },
     {
-     "proposer": "JEREMY",
      "votes": [
       "SAMH",
       "YOSH",
@@ -184,9 +220,12 @@
       "MICHAEL",
       "CHRISTIAN"
      ],
+     "proposer": "JEREMY",
      "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
+     "proposer": "YOSH",
      "team": [
       "SHELBY",
       "YOSH",
@@ -194,13 +233,11 @@
       "TEDLY",
       "CHRISTIAN"
      ],
-     "proposer": "YOSH",
      "votes": [
       "YOSH",
       "SHELBY",
       "JEREMY"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "APPROVED",
@@ -221,10 +258,19 @@
      ]
     }
    ],
-   "teamSize": 5
+   "team": [
+    "TEDLY",
+    "BRADY",
+    "SAMH",
+    "CHRISTIAN",
+    "MICHAEL"
+   ],
+   "failsRequired": 2,
+   "numFails": 2,
+   "state": "FAIL"
   },
   {
-   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "CHRISTIAN",
     "TEDLY",
@@ -232,17 +278,11 @@
     "YOSH",
     "MICHAEL"
    ],
-   "state": "FAIL",
-   "teamSize": 5,
+   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "SAMH",
-      "TEDLY",
-      "MICHAEL",
-      "CHRISTIAN",
-      "YOSH"
-     ],
+     "proposer": "MICHAEL",
      "state": "REJECTED",
      "votes": [
       "MICHAEL",
@@ -250,7 +290,13 @@
       "JEREMY",
       "CHRISTIAN"
      ],
-     "proposer": "MICHAEL"
+     "team": [
+      "SAMH",
+      "TEDLY",
+      "MICHAEL",
+      "CHRISTIAN",
+      "YOSH"
+     ]
     },
     {
      "votes": [
@@ -259,8 +305,8 @@
       "YOSH",
       "JEREMY"
      ],
-     "state": "REJECTED",
      "proposer": "SHELBY",
+     "state": "REJECTED",
      "team": [
       "SHELBY",
       "YOSH",
@@ -271,6 +317,7 @@
     },
     {
      "state": "APPROVED",
+     "proposer": "CHRISTIAN",
      "votes": [
       "CHRISTIAN",
       "YOSH",
@@ -284,99 +331,52 @@
       "BRADY",
       "YOSH",
       "MICHAEL"
-     ],
-     "proposer": "CHRISTIAN"
+     ]
     }
    ],
-   "numFails": 1
+   "teamSize": 5
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "assassinated": null,
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "YOSH"
-   },
-   {
-    "name": "CHRISTIAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "BRADY",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "name": "MICHAEL",
-    "assassin": false
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "TEDLY"
-   },
-   {
-    "name": "JEREMY",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SHELBY"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "SAMH",
-    "assassin": true
-   }
-  ],
-  "votes": [
-   {
-    "BRADY": true,
-    "MICHAEL": true,
-    "SAMH": true
-   },
-   {
-    "BRADY": true,
-    "SAMH": false,
-    "SHELBY": true,
-    "MICHAEL": true
-   },
-   {
-    "CHRISTIAN": true,
-    "YOSH": true,
-    "BRADY": true,
-    "TEDLY": true
-   },
-   {
-    "MICHAEL": false,
-    "CHRISTIAN": true,
-    "SAMH": false,
-    "BRADY": true,
-    "TEDLY": true
-   },
-   {
-    "BRADY": true,
-    "YOSH": true,
-    "CHRISTIAN": true,
-    "TEDLY": true,
-    "MICHAEL": false
-   }
-  ],
-  "state": "EVIL_WIN"
- },
+ "players": [
+  {
+   "name": "BRADY",
+   "uid": "tlkvGyim9zRvizV7peiFC4N4Y8F3"
+  },
+  {
+   "uid": "gEJD5g1638NkywZGgMqB5bdWM2g2",
+   "name": "SAMH"
+  },
+  {
+   "name": "JEREMY",
+   "uid": "xIuTTDEoriWwwvsEhfvf7iLj1wO2"
+  },
+  {
+   "name": "YOSH",
+   "uid": "gfL8dKjsmlTKZdG1PktG5B3tJuq2"
+  },
+  {
+   "name": "TEDLY",
+   "uid": "D5BsL8l6wRWgaCvAIQ7PUmoWvKx1"
+  },
+  {
+   "uid": "D7U9hTcc8yMdv4FukiZNQsqHUjl2",
+   "name": "MICHAEL"
+  },
+  {
+   "name": "SHELBY",
+   "uid": "agzcjzHYzcWStFU8McKORValVeJ2"
+  },
+  {
+   "uid": "ceYdR2MU3mNur0XIFldeagTGIex2",
+   "name": "CHRISTIAN"
+  }
+ ],
  "timeFinished": {
   "_seconds": 1607836171,
   "_nanoseconds": 406000000
+ },
+ "options": {
+  "inGameLog": false
  },
  "timeCreated": {
   "_seconds": 1607833691,

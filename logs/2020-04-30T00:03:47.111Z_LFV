@@ -1,48 +1,91 @@
 {
- "timeFinished": {
-  "_seconds": 1588205607,
-  "_nanoseconds": 166000000
- },
  "timeCreated": {
   "_seconds": 1588205027,
   "_nanoseconds": 111000000
  },
- "players": [
-  {
-   "name": "ALEXIS",
-   "uid": "S56JnMQWPxdeVzmrFAMPMlVXeWx1"
-  },
-  {
-   "name": "MADISON",
-   "uid": "6ji7qI2QW5dtxhgFZJ2eYBVcKsL2"
-  },
-  {
-   "uid": "fuotSmGXVZTHKAdMAPsxYn7nNmE3",
-   "name": "MARTA"
-  },
-  {
-   "uid": "Uns8jizFJ3U0iQSzyz3MosQUjev1",
-   "name": "EZRA"
-  },
-  {
-   "name": "JBAE",
-   "uid": "4DZEZjkhrrVxFVZP7D2xK1M6ur92"
-  },
-  {
-   "uid": "eoauQ3y9RIUOH0CwyVzMqqebHRv1",
-   "name": "RACHYRACH"
-  },
-  {
-   "name": "BONGRIPPER",
-   "uid": "d3PLzwlZx3R83vL5kZJ3KaABbdl2"
-  }
- ],
+ "outcome": {
+  "roles": [
+   {
+    "name": "BONGRIPPER",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "name": "EZRA",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "name": "RACHYRACH",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MERLIN",
+    "name": "MARTA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "ALEXIS"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "JBAE"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MADISON",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "RACHYRACH": true,
+    "EZRA": true
+   },
+   {
+    "JBAE": true,
+    "RACHYRACH": true,
+    "MARTA": true
+   },
+   {
+    "EZRA": true,
+    "RACHYRACH": true,
+    "ALEXIS": false
+   },
+   {
+    "MARTA": true,
+    "EZRA": true,
+    "MADISON": true,
+    "RACHYRACH": true
+   }
+  ],
+  "assassinated": "EZRA",
+  "message": "Three successful missions",
+  "state": "GOOD_WIN"
+ },
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
+   "team": [
+    "RACHYRACH",
+    "EZRA"
+   ],
    "teamSize": 2,
    "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "RACHYRACH",
+      "EZRA"
+     ],
      "votes": [
       "JBAE",
       "MADISON",
@@ -51,31 +94,27 @@
       "MARTA",
       "ALEXIS"
      ],
-     "proposer": "RACHYRACH",
-     "state": "APPROVED",
-     "team": [
-      "RACHYRACH",
-      "EZRA"
-     ]
+     "proposer": "RACHYRACH"
     }
    ],
-   "team": [
-    "RACHYRACH",
-    "EZRA"
-   ],
-   "failsRequired": 1,
-   "numFails": 0
+   "failsRequired": 1
   },
   {
+   "numFails": 0,
+   "team": [
+    "RACHYRACH",
+    "JBAE",
+    "MARTA"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "BONGRIPPER",
      "team": [
       "RACHYRACH",
       "JBAE",
       "MARTA"
      ],
+     "state": "APPROVED",
      "votes": [
       "RACHYRACH",
       "MARTA",
@@ -86,30 +125,17 @@
      ]
     }
    ],
-   "numFails": 0,
    "teamSize": 3,
    "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "RACHYRACH",
-    "JBAE",
-    "MARTA"
-   ]
+   "failsRequired": 1
   },
   {
-   "teamSize": 3,
-   "state": "FAIL",
    "numFails": 1,
    "failsRequired": 1,
-   "team": [
-    "ALEXIS",
-    "EZRA",
-    "RACHYRACH"
-   ],
+   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "ALEXIS",
-     "state": "APPROVED",
      "votes": [
       "EZRA",
       "MARTA",
@@ -118,21 +144,35 @@
       "MADISON",
       "BONGRIPPER"
      ],
+     "proposer": "ALEXIS",
+     "state": "APPROVED",
      "team": [
       "ALEXIS",
       "EZRA",
       "RACHYRACH"
      ]
     }
+   ],
+   "team": [
+    "ALEXIS",
+    "EZRA",
+    "RACHYRACH"
    ]
   },
   {
-   "teamSize": 4,
+   "numFails": 0,
+   "team": [
+    "MADISON",
+    "EZRA",
+    "RACHYRACH",
+    "MARTA"
+   ],
    "failsRequired": 2,
    "state": "SUCCESS",
-   "numFails": 0,
    "proposals": [
     {
+     "proposer": "MADISON",
+     "state": "APPROVED",
      "votes": [
       "MARTA",
       "MADISON",
@@ -140,8 +180,6 @@
       "EZRA",
       "RACHYRACH"
      ],
-     "proposer": "MADISON",
-     "state": "APPROVED",
      "team": [
       "MADISON",
       "EZRA",
@@ -150,86 +188,48 @@
      ]
     }
    ],
-   "team": [
-    "MADISON",
-    "EZRA",
-    "RACHYRACH",
-    "MARTA"
-   ]
+   "teamSize": 4
   },
   {
    "state": "PENDING",
-   "team": [],
    "proposals": [],
+   "teamSize": 4,
    "failsRequired": 1,
-   "teamSize": 4
+   "team": []
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "EZRA": true,
-    "RACHYRACH": true
-   },
-   {
-    "MARTA": true,
-    "RACHYRACH": true,
-    "JBAE": true
-   },
-   {
-    "RACHYRACH": true,
-    "ALEXIS": false,
-    "EZRA": true
-   },
-   {
-    "MARTA": true,
-    "RACHYRACH": true,
-    "MADISON": true,
-    "EZRA": true
-   }
-  ],
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "name": "BONGRIPPER",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "EZRA"
-   },
-   {
-    "name": "RACHYRACH",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "MARTA",
-    "role": "MERLIN"
-   },
-   {
-    "name": "ALEXIS",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JBAE",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "name": "MADISON",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   }
-  ],
-  "assassinated": "EZRA",
-  "state": "GOOD_WIN"
- },
- "options": {
-  "inGameLog": false
+ "players": [
+  {
+   "name": "ALEXIS",
+   "uid": "S56JnMQWPxdeVzmrFAMPMlVXeWx1"
+  },
+  {
+   "uid": "6ji7qI2QW5dtxhgFZJ2eYBVcKsL2",
+   "name": "MADISON"
+  },
+  {
+   "name": "MARTA",
+   "uid": "fuotSmGXVZTHKAdMAPsxYn7nNmE3"
+  },
+  {
+   "name": "EZRA",
+   "uid": "Uns8jizFJ3U0iQSzyz3MosQUjev1"
+  },
+  {
+   "name": "JBAE",
+   "uid": "4DZEZjkhrrVxFVZP7D2xK1M6ur92"
+  },
+  {
+   "name": "RACHYRACH",
+   "uid": "eoauQ3y9RIUOH0CwyVzMqqebHRv1"
+  },
+  {
+   "uid": "d3PLzwlZx3R83vL5kZJ3KaABbdl2",
+   "name": "BONGRIPPER"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1588205607,
+  "_nanoseconds": 166000000
  }
 }

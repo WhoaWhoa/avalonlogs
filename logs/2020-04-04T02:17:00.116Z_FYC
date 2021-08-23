@@ -1,25 +1,23 @@
 {
- "timeCreated": {
-  "_seconds": 1585966620,
-  "_nanoseconds": 116000000
- },
  "missions": [
   {
-   "state": "FAIL",
    "numFails": 1,
    "team": [
     "ASTON",
     "EDISON",
     "ETHAN"
    ],
+   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "ASTON",
      "team": [
       "ASTON",
       "EDISON",
       "ETHAN"
      ],
+     "proposer": "ASTON",
+     "state": "APPROVED",
      "votes": [
       "ETHAN",
       "TIFFANY",
@@ -28,15 +26,14 @@
       "ADRIAN",
       "SAM",
       "THOMSON"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3
+   "state": "FAIL"
   },
   {
-   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
    "failsRequired": 1,
    "team": [
     "EDISON",
@@ -44,9 +41,10 @@
     "ASTON",
     "SAM"
    ],
-   "teamSize": 4,
+   "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "EDISON",
      "votes": [
       "EDISON",
@@ -61,38 +59,30 @@
       "THOMSON",
       "ASTON",
       "SAM"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "state": "FAIL"
+   ]
   },
   {
-   "team": [
-    "SAM",
-    "THOMSON",
-    "ADRIAN",
-    "ERIC"
-   ],
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "ETHAN",
       "EDISON",
       "TIFFANY",
       "ADRIAN"
      ],
-     "state": "REJECTED",
-     "proposer": "ETHAN",
      "votes": [
       "ETHAN",
       "TIFFANY",
       "ERIC",
       "EDISON"
-     ]
+     ],
+     "proposer": "ETHAN"
     },
     {
-     "state": "APPROVED",
+     "proposer": "ADRIAN",
      "votes": [
       "EDISON",
       "ADRIAN",
@@ -108,26 +98,32 @@
       "ADRIAN",
       "ERIC"
      ],
-     "proposer": "ADRIAN"
+     "state": "APPROVED"
     }
    ],
+   "state": "FAIL",
+   "failsRequired": 1,
    "teamSize": 4,
-   "numFails": 1,
-   "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "SAM",
+    "THOMSON",
+    "ADRIAN",
+    "ERIC"
+   ],
+   "numFails": 1
   },
   {
-   "teamSize": 5,
-   "team": [],
    "state": "PENDING",
+   "team": [],
+   "proposals": [],
    "failsRequired": 2,
-   "proposals": []
+   "teamSize": 5
   },
   {
-   "team": [],
    "teamSize": 5,
-   "proposals": [],
    "failsRequired": 1,
+   "team": [],
+   "proposals": [],
    "state": "PENDING"
   }
  ],
@@ -136,61 +132,40 @@
   "_nanoseconds": 720187000
  },
  "outcome": {
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "ETHAN": true,
-    "EDISON": true,
-    "ASTON": false
-   },
-   {
-    "ASTON": true,
-    "SAM": false,
-    "EDISON": true,
-    "THOMSON": true
-   },
-   {
-    "ADRIAN": true,
-    "THOMSON": true,
-    "SAM": false,
-    "ERIC": true
-   }
-  ],
-  "message": "Three failed missions",
   "roles": [
    {
+    "name": "SAM",
     "assassin": true,
-    "role": "MORDRED",
-    "name": "SAM"
+    "role": "MORDRED"
    },
    {
-    "assassin": false,
     "name": "THOMSON",
+    "assassin": false,
     "role": "OBERON"
    },
    {
     "role": "MERLIN",
-    "assassin": false,
-    "name": "ETHAN"
-   },
-   {
-    "assassin": false,
-    "name": "ASTON",
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "name": "TIFFANY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "ERIC",
+    "name": "ETHAN",
     "assassin": false
    },
    {
-    "role": "PERCIVAL",
+    "name": "ASTON",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "TIFFANY"
+   },
+   {
+    "assassin": false,
+    "name": "ERIC",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
     "name": "EDISON",
+    "role": "PERCIVAL",
     "assassin": false
    },
    {
@@ -199,16 +174,37 @@
     "role": "LOYAL FOLLOWER"
    }
   ],
-  "assassinated": null
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "EDISON": true,
+    "ETHAN": true,
+    "ASTON": false
+   },
+   {
+    "ASTON": true,
+    "SAM": false,
+    "THOMSON": true,
+    "EDISON": true
+   },
+   {
+    "SAM": false,
+    "ADRIAN": true,
+    "ERIC": true,
+    "THOMSON": true
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions"
  },
  "players": [
   {
-   "uid": "IgHTN0zhTSdrSy8UQIShbS1qtFc2",
-   "name": "SAM"
+   "name": "SAM",
+   "uid": "IgHTN0zhTSdrSy8UQIShbS1qtFc2"
   },
   {
-   "name": "THOMSON",
-   "uid": "PNxYt83wKtVYPSb6hzjb1fAv0O12"
+   "uid": "PNxYt83wKtVYPSb6hzjb1fAv0O12",
+   "name": "THOMSON"
   },
   {
    "name": "ASTON",
@@ -223,16 +219,20 @@
    "name": "ETHAN"
   },
   {
-   "uid": "3ag3hq2fJhcP47haVWoQJessYnd2",
-   "name": "ADRIAN"
+   "name": "ADRIAN",
+   "uid": "3ag3hq2fJhcP47haVWoQJessYnd2"
   },
   {
-   "uid": "ytbxQNtBOBMNJP1sIXwVxnOuQlE2",
-   "name": "ERIC"
+   "name": "ERIC",
+   "uid": "ytbxQNtBOBMNJP1sIXwVxnOuQlE2"
   },
   {
    "name": "TIFFANY",
    "uid": "wXloM6HybFOqOQHIIyawcIo8dO33"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1585966620,
+  "_nanoseconds": 116000000
+ }
 }

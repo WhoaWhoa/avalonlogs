@@ -1,35 +1,38 @@
 {
- "options": {
-  "inGameLog": false
- },
- "players": [
-  {
-   "name": "ICEMONEY",
-   "uid": "Ah2fju4v0AXtSnnZwIef7iM7KLg2"
-  },
-  {
-   "name": "RAY",
-   "uid": "2i47YYJXw5a7xL9uHLkzjNr22Om2"
-  },
-  {
-   "uid": "5H0huIVEGdO0zemg0a4hDmQQbS72",
-   "name": "JOSHUA"
-  },
-  {
-   "name": "KEVIN",
-   "uid": "OIldn7FigsR49oZVeoqZCjPfGJt1"
-  },
-  {
-   "name": "BOB",
-   "uid": "XOKLUTrO6WQ0VlLjCrkICM5uIW63"
-  }
- ],
  "timeFinished": {
   "_seconds": 1590820462,
   "_nanoseconds": 833000000
  },
  "outcome": {
+  "message": "Three successful missions",
   "assassinated": "RAY",
+  "roles": [
+   {
+    "role": "MERLIN",
+    "name": "KEVIN",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "JOSHUA"
+   },
+   {
+    "name": "BOB",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "name": "RAY",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "ICEMONEY",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
   "state": "GOOD_WIN",
   "votes": [
    {
@@ -37,8 +40,8 @@
     "KEVIN": true
    },
    {
-    "KEVIN": true,
     "ICEMONEY": true,
+    "KEVIN": true,
     "BOB": false
    },
    {
@@ -47,76 +50,22 @@
    },
    {
     "JOSHUA": false,
-    "KEVIN": true,
-    "RAY": true
-   },
-   {
-    "ICEMONEY": true,
     "RAY": true,
     "KEVIN": true
-   }
-  ],
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "name": "KEVIN",
-    "assassin": false,
-    "role": "MERLIN"
    },
    {
-    "name": "JOSHUA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "BOB",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "RAY",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "ICEMONEY",
-    "assassin": false
+    "RAY": true,
+    "ICEMONEY": true,
+    "KEVIN": true
    }
   ]
  },
  "missions": [
   {
-   "team": [
-    "BOB",
-    "KEVIN"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "KEVIN",
-      "JOSHUA",
-      "BOB",
-      "RAY",
-      "ICEMONEY"
-     ],
-     "team": [
-      "BOB",
-      "KEVIN"
-     ],
-     "proposer": "BOB"
-    }
-   ],
    "state": "SUCCESS",
-   "numFails": 0
-  },
-  {
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "KEVIN",
       "JOSHUA",
@@ -124,31 +73,52 @@
       "RAY",
       "ICEMONEY"
      ],
-     "state": "APPROVED",
-     "proposer": "ICEMONEY",
+     "proposer": "BOB",
      "team": [
-      "ICEMONEY",
       "BOB",
       "KEVIN"
      ]
     }
    ],
    "team": [
+    "BOB",
+    "KEVIN"
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 2
+  },
+  {
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "team": [
+      "ICEMONEY",
+      "BOB",
+      "KEVIN"
+     ],
+     "proposer": "ICEMONEY",
+     "votes": [
+      "KEVIN",
+      "JOSHUA",
+      "BOB",
+      "RAY",
+      "ICEMONEY"
+     ]
+    }
+   ],
+   "state": "FAIL",
+   "numFails": 1,
+   "team": [
     "ICEMONEY",
     "BOB",
     "KEVIN"
    ],
    "failsRequired": 1,
-   "state": "FAIL",
-   "numFails": 1
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
-   "numFails": 0,
-   "team": [
-    "RAY",
-    "KEVIN"
-   ],
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -166,19 +136,18 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 2
+   "numFails": 0,
+   "teamSize": 2,
+   "team": [
+    "RAY",
+    "KEVIN"
+   ],
+   "state": "SUCCESS"
   },
   {
    "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "RAY",
-      "KEVIN",
-      "JOSHUA"
-     ],
      "votes": [
       "BOB",
       "RAY",
@@ -186,19 +155,28 @@
       "KEVIN",
       "JOSHUA"
      ],
+     "state": "APPROVED",
+     "team": [
+      "RAY",
+      "KEVIN",
+      "JOSHUA"
+     ],
      "proposer": "JOSHUA"
     }
    ],
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "RAY",
     "KEVIN",
     "JOSHUA"
-   ],
-   "numFails": 1,
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -207,13 +185,13 @@
       "RAY",
       "ICEMONEY"
      ],
-     "state": "APPROVED",
-     "proposer": "KEVIN",
      "team": [
       "ICEMONEY",
       "KEVIN",
       "RAY"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "KEVIN"
     }
    ],
    "team": [
@@ -221,14 +199,36 @@
     "KEVIN",
     "RAY"
    ],
-   "numFails": 0,
-   "teamSize": 3,
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 3
+  }
+ ],
+ "players": [
+  {
+   "name": "ICEMONEY",
+   "uid": "Ah2fju4v0AXtSnnZwIef7iM7KLg2"
+  },
+  {
+   "name": "RAY",
+   "uid": "2i47YYJXw5a7xL9uHLkzjNr22Om2"
+  },
+  {
+   "name": "JOSHUA",
+   "uid": "5H0huIVEGdO0zemg0a4hDmQQbS72"
+  },
+  {
+   "uid": "OIldn7FigsR49oZVeoqZCjPfGJt1",
+   "name": "KEVIN"
+  },
+  {
+   "name": "BOB",
+   "uid": "XOKLUTrO6WQ0VlLjCrkICM5uIW63"
   }
  ],
  "timeCreated": {
   "_seconds": 1590819599,
   "_nanoseconds": 958000000
+ },
+ "options": {
+  "inGameLog": false
  }
 }

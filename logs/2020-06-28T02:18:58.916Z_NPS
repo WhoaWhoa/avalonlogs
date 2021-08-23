@@ -1,7 +1,32 @@
 {
+ "timeFinished": {
+  "_seconds": 1593311183,
+  "_nanoseconds": 776000000
+ },
  "outcome": {
-  "message": "Three failed missions",
-  "assassinated": null,
+  "votes": [
+   {
+    "MINHCHAU": true,
+    "ARI": true
+   },
+   {
+    "OLIVIA": false,
+    "ARI": true,
+    "MINHCHAU": true
+   },
+   {
+    "OLIVIA": false,
+    "HAHN": true,
+    "ARI": true,
+    "JAMES": true
+   },
+   {
+    "JAMES": true,
+    "HAHN": true,
+    "OLIVIA": false
+   }
+  ],
+  "state": "EVIL_WIN",
   "roles": [
    {
     "name": "HAHN",
@@ -9,65 +34,40 @@
     "assassin": false
    },
    {
-    "name": "OLIVIA",
     "assassin": false,
+    "name": "OLIVIA",
     "role": "MORGANA"
    },
    {
     "name": "MINHCHAU",
-    "role": "MERLIN",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "assassin": false,
+    "role": "LOYAL FOLLOWER",
     "name": "JAMES"
    },
    {
+    "role": "MORDRED",
     "name": "NPS",
-    "assassin": true,
-    "role": "MORDRED"
+    "assassin": true
    },
    {
-    "name": "ARI",
+    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "name": "ARI"
    }
   ],
-  "votes": [
-   {
-    "ARI": true,
-    "MINHCHAU": true
-   },
-   {
-    "ARI": true,
-    "MINHCHAU": true,
-    "OLIVIA": false
-   },
-   {
-    "HAHN": true,
-    "JAMES": true,
-    "OLIVIA": false,
-    "ARI": true
-   },
-   {
-    "OLIVIA": false,
-    "HAHN": true,
-    "JAMES": true
-   }
-  ],
-  "state": "EVIL_WIN"
+  "message": "Three failed missions",
+  "assassinated": null
+ },
+ "timeCreated": {
+  "_seconds": 1593310738,
+  "_nanoseconds": 916000000
  },
  "missions": [
   {
-   "team": [
-    "ARI",
-    "MINHCHAU"
-   ],
-   "state": "SUCCESS",
-   "teamSize": 2,
-   "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -78,32 +78,36 @@
       "JAMES",
       "NPS"
      ],
+     "proposer": "ARI",
+     "state": "APPROVED",
      "team": [
       "ARI",
       "MINHCHAU"
-     ],
-     "state": "APPROVED",
-     "proposer": "ARI"
+     ]
     }
-   ]
+   ],
+   "team": [
+    "ARI",
+    "MINHCHAU"
+   ],
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
    "failsRequired": 1,
-   "team": [
-    "ARI",
-    "MINHCHAU",
-    "OLIVIA"
-   ],
    "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "ARI",
       "MINHCHAU",
       "OLIVIA"
      ],
      "proposer": "OLIVIA",
+     "state": "APPROVED",
      "votes": [
       "JAMES",
       "NPS",
@@ -115,24 +119,37 @@
     }
    ],
    "numFails": 1,
-   "state": "FAIL"
+   "team": [
+    "ARI",
+    "MINHCHAU",
+    "OLIVIA"
+   ]
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "JAMES",
+    "HAHN",
+    "OLIVIA",
+    "ARI"
+   ],
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "NPS",
+     "votes": [
+      "NPS",
+      "ARI",
+      "MINHCHAU"
+     ],
      "team": [
       "NPS",
       "ARI",
       "MINHCHAU",
       "HAHN"
      ],
-     "votes": [
-      "NPS",
-      "ARI",
-      "MINHCHAU"
-     ]
+     "state": "REJECTED",
+     "proposer": "NPS"
     },
     {
      "state": "APPROVED",
@@ -143,58 +160,48 @@
       "ARI",
       "HAHN"
      ],
+     "proposer": "JAMES",
      "team": [
       "JAMES",
       "HAHN",
       "OLIVIA",
       "ARI"
-     ],
-     "proposer": "JAMES"
+     ]
     }
    ],
-   "team": [
-    "JAMES",
-    "HAHN",
-    "OLIVIA",
-    "ARI"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 1
+   "teamSize": 4
   },
   {
    "failsRequired": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "MINHCHAU",
-      "ARI"
-     ],
+     "proposer": "MINHCHAU",
      "team": [
       "MINHCHAU",
       "NPS",
       "ARI"
      ],
-     "proposer": "MINHCHAU",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "MINHCHAU",
+      "ARI"
+     ]
     },
     {
      "proposer": "HAHN",
-     "votes": [
-      "HAHN",
-      "OLIVIA",
-      "JAMES",
-      "NPS",
-      "ARI"
-     ],
+     "state": "APPROVED",
      "team": [
       "JAMES",
       "HAHN",
       "OLIVIA"
      ],
-     "state": "APPROVED"
+     "votes": [
+      "HAHN",
+      "OLIVIA",
+      "JAMES",
+      "NPS",
+      "ARI"
+     ]
     }
    ],
    "team": [
@@ -202,21 +209,25 @@
     "HAHN",
     "OLIVIA"
    ],
+   "numFails": 1,
    "state": "FAIL",
-   "numFails": 1
+   "teamSize": 3
   },
   {
    "proposals": [],
-   "teamSize": 4,
-   "team": [],
    "state": "PENDING",
+   "team": [],
+   "teamSize": 4,
    "failsRequired": 1
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
-   "uid": "liTXGBqdAWcXM98E01pTMJAL7h83",
-   "name": "JAMES"
+   "name": "JAMES",
+   "uid": "liTXGBqdAWcXM98E01pTMJAL7h83"
   },
   {
    "name": "MINHCHAU",
@@ -238,16 +249,5 @@
    "name": "NPS",
    "uid": "eoe4hYHljjMFneLPXXsvEaUCqU23"
   }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1593311183,
-  "_nanoseconds": 776000000
- },
- "timeCreated": {
-  "_seconds": 1593310738,
-  "_nanoseconds": 916000000
- }
+ ]
 }

@@ -1,21 +1,45 @@
 {
- "options": {
-  "inGameLog": false
- },
  "timeFinished": {
   "_seconds": 1602377848,
   "_nanoseconds": 741000000
  },
+ "timeCreated": {
+  "_seconds": 1602377429,
+  "_nanoseconds": 153000000
+ },
  "outcome": {
+  "votes": [
+   {
+    "JENNA": true,
+    "MERLINI": true
+   },
+   {
+    "JENNA": true,
+    "SAN": false,
+    "MERLINI": true
+   },
+   {
+    "JENNA": false,
+    "MERLINI": true
+   },
+   {
+    "JASON": true,
+    "JENNA": false,
+    "SAN": false
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null,
+  "state": "EVIL_WIN",
   "roles": [
    {
-    "name": "MERLINI",
     "role": "LOYAL FOLLOWER",
+    "name": "MERLINI",
     "assassin": false
    },
    {
-    "role": "MERLIN",
     "name": "CAMPBELL",
+    "role": "MERLIN",
     "assassin": false
    },
    {
@@ -24,39 +48,19 @@
     "assassin": true
    },
    {
+    "role": "PERCIVAL",
     "name": "JASON",
-    "assassin": false,
-    "role": "PERCIVAL"
+    "assassin": false
    },
    {
     "assassin": false,
-    "name": "JENNA",
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "JENNA"
    }
-  ],
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "JENNA": true,
-    "MERLINI": true
-   },
-   {
-    "MERLINI": true,
-    "SAN": false,
-    "JENNA": true
-   },
-   {
-    "JENNA": false,
-    "MERLINI": true
-   },
-   {
-    "JENNA": false,
-    "SAN": false,
-    "JASON": true
-   }
-  ],
-  "assassinated": null,
-  "message": "Three failed missions"
+  ]
+ },
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
@@ -68,45 +72,45 @@
    "uid": "AuB8urDRMYTUz9AM0pmTZVVdQIt2"
   },
   {
-   "name": "SAN",
-   "uid": "ikKdmTV4MbgyUM1l2BnsxnahU4u1"
+   "uid": "ikKdmTV4MbgyUM1l2BnsxnahU4u1",
+   "name": "SAN"
   },
   {
-   "uid": "oEwhs0oVgSXJVOAlcXHBPfl2VZU2",
-   "name": "JENNA"
+   "name": "JENNA",
+   "uid": "oEwhs0oVgSXJVOAlcXHBPfl2VZU2"
   },
   {
-   "uid": "mb10gzdDvpdVMbnNo9lyIMK6B3B3",
-   "name": "CAMPBELL"
+   "name": "CAMPBELL",
+   "uid": "mb10gzdDvpdVMbnNo9lyIMK6B3B3"
   }
  ],
  "missions": [
   {
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "MERLINI",
-      "JENNA"
-     ],
-     "proposer": "MERLINI",
      "votes": [
       "JENNA",
       "CAMPBELL",
       "JASON",
       "MERLINI",
       "SAN"
+     ],
+     "proposer": "MERLINI",
+     "team": [
+      "MERLINI",
+      "JENNA"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0,
+   "teamSize": 2,
    "team": [
     "MERLINI",
     "JENNA"
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
    "failsRequired": 1,
@@ -115,54 +119,55 @@
     "JENNA",
     "MERLINI"
    ],
-   "teamSize": 3,
+   "state": "FAIL",
    "numFails": 1,
    "proposals": [
     {
-     "votes": [
-      "MERLINI",
-      "JENNA",
-      "CAMPBELL",
-      "SAN"
-     ],
      "team": [
       "SAN",
       "JENNA",
       "MERLINI"
      ],
      "proposer": "SAN",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "votes": [
+      "MERLINI",
+      "JENNA",
+      "CAMPBELL",
+      "SAN"
+     ]
     }
    ],
-   "state": "FAIL"
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
-   "teamSize": 2,
-   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "JENNA",
      "votes": [
       "CAMPBELL",
       "MERLINI",
       "JENNA",
       "JASON"
      ],
-     "proposer": "JENNA",
      "team": [
       "MERLINI",
       "JENNA"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
    "team": [
     "MERLINI",
     "JENNA"
-   ]
+   ],
+   "teamSize": 2,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
+   "state": "FAIL",
    "failsRequired": 1,
    "proposals": [
     {
@@ -174,8 +179,8 @@
       "CAMPBELL",
       "MERLINI"
      ],
-     "state": "REJECTED",
-     "proposer": "CAMPBELL"
+     "proposer": "CAMPBELL",
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -183,34 +188,29 @@
       "SAN",
       "JASON"
      ],
-     "proposer": "JASON",
-     "state": "APPROVED",
      "team": [
       "JASON",
       "JENNA",
       "SAN"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "JASON"
     }
    ],
-   "state": "FAIL",
-   "numFails": 2,
    "team": [
     "JASON",
     "JENNA",
     "SAN"
    ],
-   "teamSize": 3
+   "teamSize": 3,
+   "numFails": 2
   },
   {
-   "teamSize": 3,
    "state": "PENDING",
-   "proposals": [],
+   "teamSize": 3,
+   "team": [],
    "failsRequired": 1,
-   "team": []
+   "proposals": []
   }
- ],
- "timeCreated": {
-  "_seconds": 1602377429,
-  "_nanoseconds": 153000000
- }
+ ]
 }

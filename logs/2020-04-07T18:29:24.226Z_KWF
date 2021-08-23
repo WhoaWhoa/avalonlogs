@@ -1,22 +1,49 @@
 {
+ "timeFinished": {
+  "_seconds": 1586284870,
+  "_nanoseconds": 311626000
+ },
  "outcome": {
   "message": "Three failed missions",
+  "votes": [
+   {
+    "ALAN": true,
+    "LEOCIVAL": true
+   },
+   {
+    "ALAN": true,
+    "MATT": true,
+    "JOEL": false
+   },
+   {
+    "LEOCIVAL": true,
+    "LUKE": true,
+    "ALAN": false
+   },
+   {
+    "JOEL": false,
+    "LEOCIVAL": true,
+    "ERIC": false,
+    "ALAN": false
+   }
+  ],
+  "assassinated": null,
   "state": "EVIL_WIN",
   "roles": [
    {
-    "role": "EVIL MINION",
+    "assassin": true,
     "name": "ERIC",
-    "assassin": true
+    "role": "EVIL MINION"
    },
    {
-    "name": "EHSAN",
     "role": "PERCIVAL",
-    "assassin": false
+    "assassin": false,
+    "name": "EHSAN"
    },
    {
-    "name": "LUKE",
     "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "name": "LUKE"
    },
    {
     "assassin": false,
@@ -24,8 +51,8 @@
     "name": "LEOCIVAL"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "MATT",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
    },
    {
@@ -38,75 +65,89 @@
     "assassin": false,
     "name": "ALAN"
    }
-  ],
-  "votes": [
-   {
-    "LEOCIVAL": true,
-    "ALAN": true
-   },
-   {
-    "JOEL": false,
-    "ALAN": true,
-    "MATT": true
-   },
-   {
-    "LEOCIVAL": true,
-    "ALAN": false,
-    "LUKE": true
-   },
-   {
-    "ALAN": false,
-    "ERIC": false,
-    "LEOCIVAL": true,
-    "JOEL": false
-   }
-  ],
-  "assassinated": null
+  ]
  },
+ "players": [
+  {
+   "name": "MATT",
+   "uid": "gmAei7NP3veDkxiZibTLkaDhSaD2"
+  },
+  {
+   "uid": "TxfOTxKECeYBKApBqR2Lttgjat13",
+   "name": "ERIC"
+  },
+  {
+   "uid": "JoA7dHnD6sdrCY4EmanbZxJy5AD3",
+   "name": "JOEL"
+  },
+  {
+   "name": "LUKE",
+   "uid": "NxyKET0TjCNbsHhI70CETBPWAwX2"
+  },
+  {
+   "name": "LEOCIVAL",
+   "uid": "GMkNjegOxGhnSMc3KwhWV0AKS4Q2"
+  },
+  {
+   "name": "EHSAN",
+   "uid": "c0Y12G5M1ANro7r8nAr3GAK3wuz1"
+  },
+  {
+   "uid": "XIYazHItkoOFwnBZ5ht3vSqvlsS2",
+   "name": "ALAN"
+  }
+ ],
  "missions": [
   {
+   "numFails": 0,
+   "teamSize": 2,
+   "team": [
+    "LEOCIVAL",
+    "ALAN"
+   ],
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "REJECTED",
+     "proposer": "JOEL",
      "team": [
       "JOEL",
       "LUKE"
      ],
-     "proposer": "JOEL",
      "votes": [
       "EHSAN",
       "JOEL"
      ]
     },
     {
-     "votes": [
-      "ERIC"
-     ],
+     "proposer": "LUKE",
      "team": [
       "LUKE",
       "ERIC"
      ],
-     "state": "REJECTED",
-     "proposer": "LUKE"
+     "votes": [
+      "ERIC"
+     ],
+     "state": "REJECTED"
     },
     {
-     "proposer": "LEOCIVAL",
      "state": "REJECTED",
+     "votes": [
+      "LEOCIVAL"
+     ],
      "team": [
       "LEOCIVAL",
       "LUKE"
      ],
-     "votes": [
-      "LEOCIVAL"
-     ]
+     "proposer": "LEOCIVAL"
     },
     {
+     "proposer": "EHSAN",
+     "state": "REJECTED",
      "votes": [
       "ALAN",
       "EHSAN"
      ],
-     "state": "REJECTED",
-     "proposer": "EHSAN",
      "team": [
       "EHSAN",
       "ALAN"
@@ -117,7 +158,6 @@
       "LEOCIVAL",
       "ALAN"
      ],
-     "proposer": "ALAN",
      "votes": [
       "EHSAN",
       "LUKE",
@@ -125,46 +165,36 @@
       "JOEL",
       "ALAN"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "ALAN"
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "LEOCIVAL",
-    "ALAN"
-   ],
-   "teamSize": 2,
-   "state": "SUCCESS",
-   "numFails": 0
+   "failsRequired": 1
   },
   {
    "state": "FAIL",
    "numFails": 1,
-   "team": [
-    "JOEL",
-    "MATT",
-    "ALAN"
-   ],
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "MATT",
       "LEOCIVAL",
       "ALAN"
      ],
-     "proposer": "MATT",
-     "state": "REJECTED",
      "votes": [
       "ALAN",
       "EHSAN",
       "MATT"
-     ]
+     ],
+     "proposer": "MATT"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "ALAN"
      ],
+     "state": "REJECTED",
      "team": [
       "ERIC",
       "LEOCIVAL",
@@ -173,36 +203,49 @@
      "proposer": "ERIC"
     },
     {
+     "team": [
+      "JOEL",
+      "MATT",
+      "ALAN"
+     ],
      "votes": [
       "ALAN",
       "EHSAN",
       "MATT",
       "JOEL"
      ],
-     "team": [
-      "JOEL",
-      "MATT",
-      "ALAN"
-     ],
-     "proposer": "JOEL",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "JOEL"
     }
    ],
-   "failsRequired": 1,
+   "team": [
+    "JOEL",
+    "MATT",
+    "ALAN"
+   ],
    "teamSize": 3
   },
   {
+   "team": [
+    "LUKE",
+    "LEOCIVAL",
+    "ALAN"
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
      "state": "REJECTED",
-     "team": [
-      "MATT",
-      "LUKE",
-      "ALAN"
-     ],
      "votes": [
       "LUKE",
       "MATT",
+      "ALAN"
+     ],
+     "team": [
+      "MATT",
+      "LUKE",
       "ALAN"
      ],
      "proposer": "LUKE"
@@ -222,42 +265,42 @@
       "ALAN"
      ]
     }
-   ],
-   "numFails": 1,
-   "teamSize": 3,
-   "failsRequired": 1,
-   "team": [
-    "LUKE",
-    "LEOCIVAL",
-    "ALAN"
-   ],
-   "state": "FAIL"
+   ]
   },
   {
+   "state": "FAIL",
+   "team": [
+    "ERIC",
+    "JOEL",
+    "ALAN",
+    "LEOCIVAL"
+   ],
+   "numFails": 3,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "EHSAN",
       "JOEL",
       "LUKE",
       "LEOCIVAL"
      ],
-     "proposer": "EHSAN",
      "votes": [
       "EHSAN"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "EHSAN"
     },
     {
+     "votes": [
+      "ALAN"
+     ],
      "state": "REJECTED",
      "team": [
       "ALAN",
       "MATT",
       "LEOCIVAL",
       "LUKE"
-     ],
-     "votes": [
-      "ALAN"
      ],
      "proposer": "ALAN"
     },
@@ -294,57 +337,14 @@
      ]
     }
    ],
-   "failsRequired": 2,
-   "numFails": 3,
-   "state": "FAIL",
-   "team": [
-    "ERIC",
-    "JOEL",
-    "ALAN",
-    "LEOCIVAL"
-   ],
-   "teamSize": 4
+   "failsRequired": 2
   },
   {
-   "state": "PENDING",
-   "proposals": [],
-   "teamSize": 4,
    "team": [],
-   "failsRequired": 1
-  }
- ],
- "timeFinished": {
-  "_seconds": 1586284870,
-  "_nanoseconds": 311626000
- },
- "players": [
-  {
-   "name": "MATT",
-   "uid": "gmAei7NP3veDkxiZibTLkaDhSaD2"
-  },
-  {
-   "uid": "TxfOTxKECeYBKApBqR2Lttgjat13",
-   "name": "ERIC"
-  },
-  {
-   "uid": "JoA7dHnD6sdrCY4EmanbZxJy5AD3",
-   "name": "JOEL"
-  },
-  {
-   "name": "LUKE",
-   "uid": "NxyKET0TjCNbsHhI70CETBPWAwX2"
-  },
-  {
-   "name": "LEOCIVAL",
-   "uid": "GMkNjegOxGhnSMc3KwhWV0AKS4Q2"
-  },
-  {
-   "name": "EHSAN",
-   "uid": "c0Y12G5M1ANro7r8nAr3GAK3wuz1"
-  },
-  {
-   "name": "ALAN",
-   "uid": "XIYazHItkoOFwnBZ5ht3vSqvlsS2"
+   "state": "PENDING",
+   "failsRequired": 1,
+   "proposals": [],
+   "teamSize": 4
   }
  ],
  "timeCreated": {

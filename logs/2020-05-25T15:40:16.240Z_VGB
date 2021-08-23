@@ -1,11 +1,48 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1590421216,
+  "_nanoseconds": 240000000
+ },
+ "players": [
+  {
+   "uid": "ebEgmZuKkIgkRJkcrMMtNXmpJhB2",
+   "name": "ROBIN"
+  },
+  {
+   "name": "SOVEREIGN",
+   "uid": "hJiNVPvKNVNZrAynLC7dKKaLkU22"
+  },
+  {
+   "uid": "1bJ81Hm1pVgWVQIR92GlUKEx6iH3",
+   "name": "KENT"
+  },
+  {
+   "name": "SWEE",
+   "uid": "JnvFx6wpH8T4LQorOxnu0KTuk1s1"
+  },
+  {
+   "name": "CHEESE",
+   "uid": "yD0Arogk0PNpBhI0FTxD7oPL5kt1"
+  },
+  {
+   "uid": "w2ngiDASElTWBTMXd9fdYpBlSNx1",
+   "name": "PROVIDENCE"
+  },
+  {
+   "uid": "qPIYra8LXHcID7Vmxts9q32GUGq2",
+   "name": "PERCIVALS"
+  }
+ ],
  "timeFinished": {
   "_seconds": 1590422304,
   "_nanoseconds": 655000000
  },
  "outcome": {
-  "message": "Three failed missions",
   "assassinated": null,
+  "message": "Three failed missions",
   "state": "EVIL_WIN",
   "votes": [
    {
@@ -18,48 +55,48 @@
     "KENT": true
    },
    {
+    "CHEESE": false,
     "PROVIDENCE": true,
-    "SOVEREIGN": true,
-    "CHEESE": false
-   },
-   {
-    "SOVEREIGN": true,
-    "PROVIDENCE": true,
-    "KENT": true,
-    "ROBIN": true
-   },
-   {
-    "PROVIDENCE": true,
-    "KENT": false,
-    "PERCIVALS": true,
     "SOVEREIGN": true
+   },
+   {
+    "ROBIN": true,
+    "KENT": true,
+    "SOVEREIGN": true,
+    "PROVIDENCE": true
+   },
+   {
+    "KENT": false,
+    "SOVEREIGN": true,
+    "PERCIVALS": true,
+    "PROVIDENCE": true
    }
   ],
   "roles": [
    {
-    "assassin": false,
+    "role": "LOYAL FOLLOWER",
     "name": "PROVIDENCE",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "ROBIN",
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "MORGANA",
-    "name": "SWEE",
     "assassin": false
    },
    {
-    "assassin": true,
-    "name": "CHEESE",
-    "role": "MORDRED"
+    "name": "ROBIN",
+    "role": "PERCIVAL",
+    "assassin": false
    },
    {
     "assassin": false,
-    "role": "MERLIN",
-    "name": "PERCIVALS"
+    "name": "SWEE",
+    "role": "MORGANA"
+   },
+   {
+    "name": "CHEESE",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "PERCIVALS",
+    "role": "MERLIN"
    },
    {
     "role": "OBERON",
@@ -67,18 +104,24 @@
     "name": "KENT"
    },
    {
-    "assassin": false,
     "name": "SOVEREIGN",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    }
   ]
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "KENT",
+     "team": [
+      "KENT",
+      "SWEE"
+     ],
+     "state": "APPROVED",
      "votes": [
       "PERCIVALS",
       "KENT",
@@ -86,33 +129,35 @@
       "ROBIN",
       "SWEE",
       "CHEESE"
-     ],
-     "team": [
-      "KENT",
-      "SWEE"
      ]
     }
    ],
-   "numFails": 0,
-   "teamSize": 2,
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "KENT",
     "SWEE"
-   ]
+   ],
+   "numFails": 0,
+   "teamSize": 2
   },
   {
+   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "KENT",
     "SWEE",
     "PROVIDENCE"
    ],
-   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
      "proposer": "SWEE",
      "state": "APPROVED",
+     "team": [
+      "KENT",
+      "SWEE",
+      "PROVIDENCE"
+     ],
      "votes": [
       "SOVEREIGN",
       "PROVIDENCE",
@@ -121,19 +166,19 @@
       "CHEESE",
       "PERCIVALS",
       "KENT"
-     ],
-     "team": [
-      "KENT",
-      "SWEE",
-      "PROVIDENCE"
      ]
     }
-   ],
-   "numFails": 1,
-   "state": "FAIL",
-   "teamSize": 3
+   ]
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "CHEESE",
+    "PROVIDENCE",
+    "SOVEREIGN"
+   ],
+   "state": "FAIL",
+   "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
@@ -152,21 +197,17 @@
       "CHEESE"
      ]
     }
-   ],
-   "team": [
-    "CHEESE",
-    "PROVIDENCE",
-    "SOVEREIGN"
-   ],
-   "teamSize": 3,
-   "state": "FAIL",
-   "failsRequired": 1
+   ]
   },
   {
    "proposals": [
     {
-     "proposer": "PROVIDENCE",
-     "state": "APPROVED",
+     "team": [
+      "PROVIDENCE",
+      "ROBIN",
+      "SOVEREIGN",
+      "KENT"
+     ],
      "votes": [
       "PROVIDENCE",
       "ROBIN",
@@ -175,68 +216,55 @@
       "KENT",
       "SOVEREIGN"
      ],
-     "team": [
-      "PROVIDENCE",
-      "ROBIN",
-      "SOVEREIGN",
-      "KENT"
-     ]
+     "state": "APPROVED",
+     "proposer": "PROVIDENCE"
     }
    ],
+   "failsRequired": 2,
+   "numFails": 0,
    "team": [
     "PROVIDENCE",
     "ROBIN",
     "SOVEREIGN",
     "KENT"
    ],
-   "teamSize": 4,
-   "numFails": 0,
    "state": "SUCCESS",
-   "failsRequired": 2
+   "teamSize": 4
   },
   {
-   "teamSize": 4,
    "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "PROVIDENCE",
-    "KENT",
-    "SOVEREIGN",
-    "PERCIVALS"
-   ],
    "numFails": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "CHEESE",
       "PERCIVALS"
      ],
-     "state": "REJECTED",
+     "proposer": "PERCIVALS",
      "team": [
       "PROVIDENCE",
       "SOVEREIGN",
       "ROBIN",
       "PERCIVALS"
-     ],
-     "proposer": "PERCIVALS"
+     ]
     },
     {
+     "proposer": "ROBIN",
      "team": [
       "ROBIN",
       "PROVIDENCE",
       "SWEE",
       "KENT"
      ],
-     "state": "REJECTED",
      "votes": [
       "ROBIN",
       "CHEESE",
       "KENT"
      ],
-     "proposer": "ROBIN"
+     "state": "REJECTED"
     },
     {
-     "proposer": "SOVEREIGN",
      "state": "APPROVED",
      "votes": [
       "CHEESE",
@@ -245,6 +273,7 @@
       "PROVIDENCE",
       "ROBIN"
      ],
+     "proposer": "SOVEREIGN",
      "team": [
       "PROVIDENCE",
       "KENT",
@@ -252,44 +281,15 @@
       "PERCIVALS"
      ]
     }
+   ],
+   "teamSize": 4,
+   "state": "FAIL",
+   "team": [
+    "PROVIDENCE",
+    "KENT",
+    "SOVEREIGN",
+    "PERCIVALS"
    ]
-  }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1590421216,
-  "_nanoseconds": 240000000
- },
- "players": [
-  {
-   "name": "ROBIN",
-   "uid": "ebEgmZuKkIgkRJkcrMMtNXmpJhB2"
-  },
-  {
-   "uid": "hJiNVPvKNVNZrAynLC7dKKaLkU22",
-   "name": "SOVEREIGN"
-  },
-  {
-   "uid": "1bJ81Hm1pVgWVQIR92GlUKEx6iH3",
-   "name": "KENT"
-  },
-  {
-   "name": "SWEE",
-   "uid": "JnvFx6wpH8T4LQorOxnu0KTuk1s1"
-  },
-  {
-   "name": "CHEESE",
-   "uid": "yD0Arogk0PNpBhI0FTxD7oPL5kt1"
-  },
-  {
-   "name": "PROVIDENCE",
-   "uid": "w2ngiDASElTWBTMXd9fdYpBlSNx1"
-  },
-  {
-   "uid": "qPIYra8LXHcID7Vmxts9q32GUGq2",
-   "name": "PERCIVALS"
   }
  ]
 }

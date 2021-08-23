@@ -1,21 +1,77 @@
 {
- "timeFinished": {
-  "_seconds": 1608299995,
-  "_nanoseconds": 592000000
+ "outcome": {
+  "roles": [
+   {
+    "name": "GAB",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "name": "HELIAS",
+    "assassin": false
+   },
+   {
+    "name": "BONGGA",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "JARED",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "GELO"
+   },
+   {
+    "name": "MARC",
+    "role": "EVIL MINION",
+    "assassin": true
+   }
+  ],
+  "assassinated": "GELO",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "BONGGA": true,
+    "MARC": true
+   },
+   {
+    "BONGGA": true,
+    "GAB": true,
+    "MARC": true
+   },
+   {
+    "GAB": true,
+    "BONGGA": true,
+    "JARED": true,
+    "MARC": false
+   },
+   {
+    "MARC": false,
+    "JARED": true,
+    "BONGGA": true
+   },
+   {
+    "GAB": true,
+    "BONGGA": true,
+    "GELO": true,
+    "JARED": true
+   }
+  ],
+  "message": "Three successful missions"
+ },
+ "options": {
+  "inGameLog": false
  },
  "missions": [
   {
-   "state": "SUCCESS",
    "teamSize": 2,
-   "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "MARC",
-      "BONGGA"
-     ],
-     "state": "APPROVED",
      "votes": [
       "GAB",
       "BONGGA",
@@ -24,18 +80,28 @@
       "MARC",
       "HELIAS"
      ],
+     "state": "APPROVED",
+     "team": [
+      "MARC",
+      "BONGGA"
+     ],
      "proposer": "MARC"
     }
    ],
+   "state": "SUCCESS",
    "team": [
     "MARC",
     "BONGGA"
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS",
+   "team": [
+    "BONGGA",
+    "MARC",
+    "GAB"
+   ],
    "proposals": [
     {
      "votes": [
@@ -45,8 +111,8 @@
       "GELO",
       "HELIAS"
      ],
-     "state": "APPROVED",
      "proposer": "BONGGA",
+     "state": "APPROVED",
      "team": [
       "BONGGA",
       "MARC",
@@ -55,23 +121,13 @@
     }
    ],
    "teamSize": 3,
-   "team": [
-    "BONGGA",
-    "MARC",
-    "GAB"
-   ]
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
-   "team": [
-    "JARED",
-    "GAB",
-    "MARC",
-    "BONGGA"
-   ],
-   "numFails": 1,
    "failsRequired": 1,
-   "state": "FAIL",
-   "teamSize": 4,
+   "numFails": 1,
    "proposals": [
     {
      "votes": [
@@ -87,21 +143,32 @@
       "MARC",
       "BONGGA"
      ],
-     "proposer": "JARED",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "JARED"
     }
-   ]
+   ],
+   "team": [
+    "JARED",
+    "GAB",
+    "MARC",
+    "BONGGA"
+   ],
+   "teamSize": 4,
+   "state": "FAIL"
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "HELIAS",
      "team": [
       "HELIAS",
       "BONGGA",
       "GELO"
      ],
      "state": "REJECTED",
-     "proposer": "HELIAS",
      "votes": [
       "BONGGA",
       "HELIAS",
@@ -109,13 +176,13 @@
      ]
     },
     {
+     "state": "REJECTED",
      "team": [
       "GAB",
       "JARED",
       "GELO"
      ],
      "proposer": "GAB",
-     "state": "REJECTED",
      "votes": [
       "GAB",
       "JARED",
@@ -123,8 +190,6 @@
      ]
     },
     {
-     "proposer": "GELO",
-     "state": "REJECTED",
      "votes": [
       "GAB",
       "JARED",
@@ -134,21 +199,23 @@
       "JARED",
       "GAB",
       "BONGGA"
-     ]
-    },
-    {
-     "team": [
-      "MARC",
-      "BONGGA",
-      "HELIAS"
      ],
      "state": "REJECTED",
+     "proposer": "GELO"
+    },
+    {
      "votes": [
       "MARC",
       "HELIAS",
       "BONGGA"
      ],
-     "proposer": "MARC"
+     "proposer": "MARC",
+     "state": "REJECTED",
+     "team": [
+      "MARC",
+      "BONGGA",
+      "HELIAS"
+     ]
     },
     {
      "state": "APPROVED",
@@ -159,38 +226,24 @@
       "GELO",
       "HELIAS"
      ],
+     "proposer": "BONGGA",
      "team": [
       "BONGGA",
       "MARC",
       "JARED"
-     ],
-     "proposer": "BONGGA"
+     ]
     }
    ],
-   "failsRequired": 1,
    "numFails": 1,
-   "state": "FAIL",
    "team": [
     "BONGGA",
     "MARC",
     "JARED"
-   ],
-   "teamSize": 3
+   ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 0,
-   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "BONGGA",
-      "JARED",
-      "GAB",
-      "GELO"
-     ],
-     "state": "APPROVED",
      "votes": [
       "GELO",
       "BONGGA",
@@ -198,7 +251,14 @@
       "GAB",
       "JARED"
      ],
-     "proposer": "JARED"
+     "proposer": "JARED",
+     "team": [
+      "BONGGA",
+      "JARED",
+      "GAB",
+      "GELO"
+     ],
+     "state": "APPROVED"
     }
    ],
    "team": [
@@ -206,80 +266,16 @@
     "JARED",
     "GAB",
     "GELO"
-   ]
+   ],
+   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 4
   }
  ],
  "timeCreated": {
   "_seconds": 1608299546,
   "_nanoseconds": 614000000
- },
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "GELO",
-  "votes": [
-   {
-    "MARC": true,
-    "BONGGA": true
-   },
-   {
-    "BONGGA": true,
-    "GAB": true,
-    "MARC": true
-   },
-   {
-    "BONGGA": true,
-    "JARED": true,
-    "GAB": true,
-    "MARC": false
-   },
-   {
-    "JARED": true,
-    "MARC": false,
-    "BONGGA": true
-   },
-   {
-    "GELO": true,
-    "JARED": true,
-    "GAB": true,
-    "BONGGA": true
-   }
-  ],
-  "roles": [
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "GAB"
-   },
-   {
-    "name": "HELIAS",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "name": "BONGGA",
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JARED"
-   },
-   {
-    "name": "GELO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "name": "MARC",
-    "role": "EVIL MINION"
-   }
-  ],
-  "message": "Three successful missions"
  },
  "players": [
   {
@@ -287,24 +283,28 @@
    "name": "GELO"
   },
   {
-   "name": "MARC",
-   "uid": "uCWk75sqeJQxLOY8o4CgbPTyzs92"
+   "uid": "uCWk75sqeJQxLOY8o4CgbPTyzs92",
+   "name": "MARC"
   },
   {
-   "name": "BONGGA",
-   "uid": "vTIG6ikNdZRURZT8i0YC28Foq322"
+   "uid": "vTIG6ikNdZRURZT8i0YC28Foq322",
+   "name": "BONGGA"
   },
   {
    "name": "JARED",
    "uid": "z3eO0oPGJWZVSFbU8UBBHtDa4ll2"
   },
   {
-   "uid": "fAgDknqOvgYTfxvpatDoNH9FrhE3",
-   "name": "HELIAS"
+   "name": "HELIAS",
+   "uid": "fAgDknqOvgYTfxvpatDoNH9FrhE3"
   },
   {
-   "name": "GAB",
-   "uid": "UtmiDTE79bSxszCKky8cbLXDDfw2"
+   "uid": "UtmiDTE79bSxszCKky8cbLXDDfw2",
+   "name": "GAB"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1608299995,
+  "_nanoseconds": 592000000
+ }
 }

@@ -7,6 +7,120 @@
   "_seconds": 1611691677,
   "_nanoseconds": 792000000
  },
+ "outcome": {
+  "votes": [
+   {
+    "ROMAIN": true,
+    "ANTOINE": true,
+    "JU": true
+   },
+   {
+    "RV": false,
+    "ANTOINE": true,
+    "JU": true,
+    "ROMAIN": true
+   },
+   {
+    "DOF": true,
+    "RV": true,
+    "REGIS": true,
+    "NATHAN": true
+   },
+   {
+    "FLYGIRL": true,
+    "ROMAIN": true,
+    "DOF": false,
+    "JU": true,
+    "RV": false
+   },
+   {
+    "RV": false,
+    "FLYGIRL": true,
+    "DOF": false,
+    "ANTOINE": true,
+    "ROMAIN": true
+   }
+  ],
+  "assassinated": null,
+  "roles": [
+   {
+    "name": "REGIS",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "RV",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "FLYGIRL",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "NATHAN",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "name": "JU",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "DOF",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "ROMAIN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "ANTOINE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions"
+ },
+ "players": [
+  {
+   "uid": "3UU8HxjclAaU2U7xzCBKHVr5oFL2",
+   "name": "ROMAIN"
+  },
+  {
+   "name": "ANTOINE",
+   "uid": "xlFldH3u2vSyHdP0JXXHRfTceko1"
+  },
+  {
+   "name": "DOF",
+   "uid": "TJscKtm0DKUEeSiOxY8Uzc5zDHV2"
+  },
+  {
+   "uid": "71T9VxXn41ZdZTAJixMCKKFRDCi2",
+   "name": "RV"
+  },
+  {
+   "name": "FLYGIRL",
+   "uid": "bUoGXjke14QB1bov2zG9VaSfoNH3"
+  },
+  {
+   "uid": "jKI1o1OJexbWE1xQZN4pJXEV4E32",
+   "name": "NATHAN"
+  },
+  {
+   "name": "JU",
+   "uid": "vW4wNkSBNuZHfcUHLu5hClAsLBf2"
+  },
+  {
+   "name": "REGIS",
+   "uid": "gTS5ixzdhtVY6fw6XK6AnEjGrGi1"
+  }
+ ],
  "missions": [
   {
    "team": [
@@ -14,27 +128,31 @@
     "ANTOINE",
     "ROMAIN"
    ],
-   "state": "SUCCESS",
    "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "NATHAN",
-      "DOF",
-      "REGIS"
-     ],
-     "state": "REJECTED",
      "proposer": "NATHAN",
+     "state": "REJECTED",
      "votes": [
       "RV",
       "NATHAN",
       "REGIS",
       "DOF"
+     ],
+     "team": [
+      "NATHAN",
+      "DOF",
+      "REGIS"
      ]
     },
     {
+     "team": [
+      "JU",
+      "ANTOINE",
+      "ROMAIN"
+     ],
      "state": "APPROVED",
+     "proposer": "JU",
      "votes": [
       "RV",
       "NATHAN",
@@ -42,40 +160,37 @@
       "ANTOINE",
       "ROMAIN",
       "JU"
-     ],
-     "team": [
-      "JU",
-      "ANTOINE",
-      "ROMAIN"
-     ],
-     "proposer": "JU"
+     ]
     }
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
    "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "ROMAIN",
     "ANTOINE",
     "JU",
     "RV"
    ],
+   "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "REGIS",
+     "votes": [
+      "REGIS",
+      "NATHAN"
+     ],
+     "state": "REJECTED",
      "team": [
       "DOF",
       "REGIS",
       "NATHAN",
       "RV"
-     ],
-     "proposer": "REGIS",
-     "state": "REJECTED",
-     "votes": [
-      "REGIS",
-      "NATHAN"
      ]
     },
     {
@@ -88,27 +203,21 @@
       "NATHAN",
       "ANTOINE"
      ],
-     "proposer": "ROMAIN",
      "team": [
       "ROMAIN",
       "ANTOINE",
       "JU",
       "RV"
-     ]
+     ],
+     "proposer": "ROMAIN"
     }
-   ],
-   "numFails": 1
+   ]
   },
   {
-   "numFails": 0,
    "state": "SUCCESS",
-   "team": [
-    "NATHAN",
-    "DOF",
-    "RV",
-    "REGIS"
-   ],
    "teamSize": 4,
+   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -117,25 +226,25 @@
       "REGIS",
       "RV"
      ],
-     "state": "REJECTED",
      "proposer": "ANTOINE",
      "votes": [
       "ANTOINE"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "state": "REJECTED",
-     "team": [
-      "DOF",
-      "JU",
-      "ROMAIN",
-      "FLYGIRL"
-     ],
      "votes": [
       "FLYGIRL",
       "DOF",
       "NATHAN",
       "JU"
+     ],
+     "team": [
+      "DOF",
+      "JU",
+      "ROMAIN",
+      "FLYGIRL"
      ],
      "proposer": "DOF"
     },
@@ -155,6 +264,8 @@
      ]
     },
     {
+     "state": "REJECTED",
+     "proposer": "FLYGIRL",
      "team": [
       "DOF",
       "FLYGIRL",
@@ -165,9 +276,7 @@
       "ANTOINE",
       "DOF",
       "FLYGIRL"
-     ],
-     "state": "REJECTED",
-     "proposer": "FLYGIRL"
+     ]
     },
     {
      "state": "APPROVED",
@@ -180,31 +289,33 @@
       "NATHAN",
       "DOF"
      ],
+     "proposer": "NATHAN",
      "team": [
       "NATHAN",
       "DOF",
       "RV",
       "REGIS"
-     ],
-     "proposer": "NATHAN"
+     ]
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "NATHAN",
+    "DOF",
+    "RV",
+    "REGIS"
+   ]
   },
   {
-   "failsRequired": 2,
-   "teamSize": 5,
-   "team": [
-    "JU",
-    "FLYGIRL",
-    "RV",
-    "DOF",
-    "ROMAIN"
-   ],
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "JU",
-     "state": "APPROVED",
+     "team": [
+      "JU",
+      "FLYGIRL",
+      "RV",
+      "DOF",
+      "ROMAIN"
+     ],
      "votes": [
       "FLYGIRL",
       "DOF",
@@ -212,21 +323,29 @@
       "RV",
       "JU"
      ],
-     "team": [
-      "JU",
-      "FLYGIRL",
-      "RV",
-      "DOF",
-      "ROMAIN"
-     ]
+     "state": "APPROVED",
+     "proposer": "JU"
     }
    ],
-   "state": "FAIL",
+   "failsRequired": 2,
+   "team": [
+    "JU",
+    "FLYGIRL",
+    "RV",
+    "DOF",
+    "ROMAIN"
+   ],
+   "teamSize": 5,
    "numFails": 2
   },
   {
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "REGIS",
+     "votes": [
+      "NATHAN"
+     ],
      "team": [
       "REGIS",
       "ROMAIN",
@@ -234,14 +353,13 @@
       "JU",
       "RV"
      ],
-     "votes": [
-      "NATHAN"
-     ],
-     "proposer": "REGIS",
      "state": "REJECTED"
     },
     {
      "proposer": "ROMAIN",
+     "votes": [
+      "ROMAIN"
+     ],
      "team": [
       "ROMAIN",
       "DOF",
@@ -249,13 +367,9 @@
       "REGIS",
       "NATHAN"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "ROMAIN"
-     ]
+     "state": "REJECTED"
     },
     {
-     "proposer": "ANTOINE",
      "state": "APPROVED",
      "votes": [
       "RV",
@@ -271,9 +385,11 @@
       "ROMAIN",
       "RV",
       "DOF"
-     ]
+     ],
+     "proposer": "ANTOINE"
     }
    ],
+   "state": "FAIL",
    "numFails": 2,
    "team": [
     "ANTOINE",
@@ -282,126 +398,10 @@
     "RV",
     "DOF"
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
    "teamSize": 5
   }
  ],
  "options": {
   "inGameLog": false
- },
- "players": [
-  {
-   "name": "ROMAIN",
-   "uid": "3UU8HxjclAaU2U7xzCBKHVr5oFL2"
-  },
-  {
-   "name": "ANTOINE",
-   "uid": "xlFldH3u2vSyHdP0JXXHRfTceko1"
-  },
-  {
-   "uid": "TJscKtm0DKUEeSiOxY8Uzc5zDHV2",
-   "name": "DOF"
-  },
-  {
-   "name": "RV",
-   "uid": "71T9VxXn41ZdZTAJixMCKKFRDCi2"
-  },
-  {
-   "uid": "bUoGXjke14QB1bov2zG9VaSfoNH3",
-   "name": "FLYGIRL"
-  },
-  {
-   "uid": "jKI1o1OJexbWE1xQZN4pJXEV4E32",
-   "name": "NATHAN"
-  },
-  {
-   "uid": "vW4wNkSBNuZHfcUHLu5hClAsLBf2",
-   "name": "JU"
-  },
-  {
-   "name": "REGIS",
-   "uid": "gTS5ixzdhtVY6fw6XK6AnEjGrGi1"
-  }
- ],
- "outcome": {
-  "roles": [
-   {
-    "name": "REGIS",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "RV",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "FLYGIRL"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "NATHAN",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JU"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "DOF"
-   },
-   {
-    "name": "ROMAIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ANTOINE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "JU": true,
-    "ANTOINE": true,
-    "ROMAIN": true
-   },
-   {
-    "RV": false,
-    "JU": true,
-    "ANTOINE": true,
-    "ROMAIN": true
-   },
-   {
-    "NATHAN": true,
-    "REGIS": true,
-    "DOF": true,
-    "RV": true
-   },
-   {
-    "JU": true,
-    "RV": false,
-    "FLYGIRL": true,
-    "ROMAIN": true,
-    "DOF": false
-   },
-   {
-    "DOF": false,
-    "FLYGIRL": true,
-    "ANTOINE": true,
-    "ROMAIN": true,
-    "RV": false
-   }
-  ],
-  "message": "Three failed missions"
  }
 }

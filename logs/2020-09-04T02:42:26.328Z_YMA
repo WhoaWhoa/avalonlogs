@@ -1,26 +1,45 @@
 {
- "timeFinished": {
-  "_seconds": 1599189350,
-  "_nanoseconds": 343000000
- },
  "timeCreated": {
   "_seconds": 1599187346,
   "_nanoseconds": 328000000
+ },
+ "players": [
+  {
+   "name": "LILY",
+   "uid": "ETSDsbTLzMeAH699whnDxiakPlo2"
+  },
+  {
+   "name": "ANDREW",
+   "uid": "WbuWZE9ytJMdKRivY5mLMug5Aqt1"
+  },
+  {
+   "name": "MASON",
+   "uid": "AzIstDWHgdO2tpUu3QpkI7H27Pz1"
+  },
+  {
+   "name": "EUNICE",
+   "uid": "fFFZXfb27sP6iQrlIKOlo3BmtS82"
+  },
+  {
+   "uid": "1itOqZiIdmMfq8lGFi7W09Ha2Gc2",
+   "name": "FRANK"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1599189350,
+  "_nanoseconds": 343000000
  },
  "options": {
   "inGameLog": false
  },
  "missions": [
   {
-   "team": [
-    "EUNICE",
-    "ANDREW"
-   ],
-   "failsRequired": 1,
+   "numFails": 1,
    "teamSize": 2,
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "EUNICE",
       "ANDREW"
@@ -30,47 +49,58 @@
       "EUNICE",
       "ANDREW"
      ],
-     "proposer": "EUNICE"
+     "proposer": "EUNICE",
+     "state": "APPROVED"
     }
    ],
-   "numFails": 1,
-   "state": "FAIL"
+   "team": [
+    "EUNICE",
+    "ANDREW"
+   ]
   },
   {
-   "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "FRANK",
     "EUNICE",
     "MASON"
    ],
-   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "FRANK",
-      "EUNICE",
-      "MASON"
-     ],
+     "proposer": "FRANK",
+     "state": "APPROVED",
      "votes": [
       "ANDREW",
       "EUNICE",
       "MASON"
      ],
-     "state": "APPROVED",
-     "proposer": "FRANK"
+     "team": [
+      "FRANK",
+      "EUNICE",
+      "MASON"
+     ]
     }
-   ],
-   "state": "SUCCESS",
-   "numFails": 0
+   ]
   },
   {
+   "numFails": 0,
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "MASON",
+    "FRANK"
+   ],
    "proposals": [
     {
-     "team": [
+     "votes": [
       "LILY",
       "FRANK"
      ],
-     "votes": [
+     "team": [
       "LILY",
       "FRANK"
      ],
@@ -79,103 +109,121 @@
     },
     {
      "votes": [],
+     "proposer": "ANDREW",
+     "state": "REJECTED",
      "team": [
       "FRANK",
       "ANDREW"
-     ],
-     "proposer": "ANDREW",
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "MASON",
       "FRANK"
      ],
      "proposer": "MASON",
-     "state": "APPROVED",
      "votes": [
       "FRANK",
       "EUNICE",
       "MASON"
      ]
     }
-   ],
-   "numFails": 0,
-   "failsRequired": 1,
-   "teamSize": 2,
-   "team": [
-    "MASON",
-    "FRANK"
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
+   "team": [
+    "EUNICE",
+    "LILY",
+    "FRANK"
+   ],
+   "state": "FAIL",
+   "failsRequired": 1,
    "numFails": 1,
    "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "EUNICE",
-      "LILY",
-      "FRANK"
-     ],
      "state": "APPROVED",
      "votes": [
       "EUNICE",
       "LILY",
       "ANDREW"
      ],
-     "proposer": "EUNICE"
+     "proposer": "EUNICE",
+     "team": [
+      "EUNICE",
+      "LILY",
+      "FRANK"
+     ]
     }
-   ],
-   "state": "FAIL",
-   "team": [
-    "EUNICE",
-    "LILY",
-    "FRANK"
-   ],
-   "failsRequired": 1
+   ]
   },
   {
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "FRANK",
      "team": [
       "MASON",
       "FRANK",
       "LILY"
      ],
+     "state": "APPROVED",
      "votes": [
       "LILY",
       "MASON",
       "FRANK"
-     ]
+     ],
+     "proposer": "FRANK"
     }
    ],
-   "teamSize": 3,
-   "numFails": 0,
-   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "MASON",
     "FRANK",
     "LILY"
-   ]
+   ],
+   "numFails": 0,
+   "teamSize": 3,
+   "failsRequired": 1
   }
  ],
  "outcome": {
   "state": "GOOD_WIN",
-  "message": "Three successful missions",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "FRANK"
+   },
+   {
+    "name": "EUNICE",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "LILY",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "name": "ANDREW",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "name": "MASON",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
   "votes": [
    {
     "EUNICE": true,
     "ANDREW": false
    },
    {
-    "EUNICE": true,
     "FRANK": true,
-    "MASON": true
+    "MASON": true,
+    "EUNICE": true
    },
    {
     "FRANK": true,
@@ -187,60 +235,12 @@
     "FRANK": true
    },
    {
-    "FRANK": true,
     "MASON": true,
-    "LILY": true
+    "LILY": true,
+    "FRANK": true
    }
   ],
-  "roles": [
-   {
-    "assassin": false,
-    "name": "FRANK",
-    "role": "MERLIN"
-   },
-   {
-    "name": "EUNICE",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "LILY"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "ANDREW"
-   },
-   {
-    "assassin": false,
-    "name": "MASON",
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
+  "message": "Three successful missions",
   "assassinated": "MASON"
- },
- "players": [
-  {
-   "name": "LILY",
-   "uid": "ETSDsbTLzMeAH699whnDxiakPlo2"
-  },
-  {
-   "uid": "WbuWZE9ytJMdKRivY5mLMug5Aqt1",
-   "name": "ANDREW"
-  },
-  {
-   "name": "MASON",
-   "uid": "AzIstDWHgdO2tpUu3QpkI7H27Pz1"
-  },
-  {
-   "uid": "fFFZXfb27sP6iQrlIKOlo3BmtS82",
-   "name": "EUNICE"
-  },
-  {
-   "name": "FRANK",
-   "uid": "1itOqZiIdmMfq8lGFi7W09Ha2Gc2"
-  }
- ]
+ }
 }

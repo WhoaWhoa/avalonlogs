@@ -1,16 +1,43 @@
 {
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1587695623,
   "_nanoseconds": 145000000
  },
+ "timeFinished": {
+  "_seconds": 1587696094,
+  "_nanoseconds": 547000000
+ },
+ "players": [
+  {
+   "uid": "1PwZ4ux2bXh4bIAuqGaivyVDLG03",
+   "name": "RENEE"
+  },
+  {
+   "uid": "EZQnxU7HUNWMqtTHKfGtz0A607I3",
+   "name": "ROBO"
+  },
+  {
+   "name": "D",
+   "uid": "GaCsVBERrYg8HdqBP6d7QFl20mf1"
+  },
+  {
+   "name": "KEITHERS",
+   "uid": "IXVaZeHKZRX1FqPwTUWTSdo0I2k1"
+  },
+  {
+   "uid": "EzBj6GBnPLPwp49qTabZI5oxq9v2",
+   "name": "CHRIS"
+  }
+ ],
  "missions": [
   {
-   "state": "SUCCESS",
    "proposals": [
     {
+     "team": [
+      "ROBO",
+      "D"
+     ],
+     "state": "APPROVED",
      "votes": [
       "RENEE",
       "D",
@@ -18,33 +45,35 @@
       "ROBO",
       "KEITHERS"
      ],
-     "state": "APPROVED",
-     "team": [
-      "ROBO",
-      "D"
-     ],
      "proposer": "D"
     }
    ],
-   "numFails": 0,
-   "teamSize": 2,
+   "failsRequired": 1,
    "team": [
     "ROBO",
     "D"
    ],
-   "failsRequired": 1
+   "teamSize": 2,
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
+   "state": "SUCCESS",
    "team": [
     "KEITHERS",
     "D",
     "ROBO"
    ],
    "numFails": 0,
-   "teamSize": 3,
    "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "KEITHERS",
+     "team": [
+      "KEITHERS",
+      "D",
+      "ROBO"
+     ],
      "state": "APPROVED",
      "votes": [
       "ROBO",
@@ -52,19 +81,17 @@
       "RENEE",
       "D",
       "CHRIS"
-     ],
-     "team": [
-      "KEITHERS",
-      "D",
-      "ROBO"
-     ],
-     "proposer": "KEITHERS"
+     ]
     }
    ],
-   "state": "SUCCESS"
+   "teamSize": 3
   },
   {
-   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "CHRIS",
+    "ROBO"
+   ],
    "proposals": [
     {
      "votes": [
@@ -80,92 +107,63 @@
      "state": "APPROVED"
     }
    ],
-   "teamSize": 2,
+   "numFails": 1,
    "state": "FAIL",
-   "team": [
-    "CHRIS",
-    "ROBO"
-   ],
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
    "failsRequired": 1,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "votes": [
+      "RENEE"
+     ],
+     "proposer": "RENEE",
+     "team": [
+      "D",
+      "ROBO",
+      "RENEE"
+     ]
+    },
+    {
+     "team": [
+      "ROBO",
+      "D",
+      "KEITHERS"
+     ],
+     "votes": [
+      "D",
+      "ROBO",
+      "KEITHERS"
+     ],
+     "proposer": "ROBO",
+     "state": "APPROVED"
+    }
+   ],
+   "numFails": 0,
    "team": [
     "ROBO",
     "D",
     "KEITHERS"
    ],
-   "teamSize": 3,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "team": [
-      "D",
-      "ROBO",
-      "RENEE"
-     ],
-     "votes": [
-      "RENEE"
-     ],
-     "proposer": "RENEE"
-    },
-    {
-     "state": "APPROVED",
-     "team": [
-      "ROBO",
-      "D",
-      "KEITHERS"
-     ],
-     "proposer": "ROBO",
-     "votes": [
-      "D",
-      "ROBO",
-      "KEITHERS"
-     ]
-    }
-   ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "state": "SUCCESS"
   },
   {
-   "state": "PENDING",
    "proposals": [],
+   "state": "PENDING",
    "teamSize": 3,
    "team": [],
    "failsRequired": 1
   }
  ],
- "timeFinished": {
-  "_seconds": 1587696094,
-  "_nanoseconds": 547000000
- },
  "outcome": {
-  "votes": [
-   {
-    "D": true,
-    "ROBO": true
-   },
-   {
-    "ROBO": true,
-    "D": true,
-    "KEITHERS": true
-   },
-   {
-    "CHRIS": false,
-    "ROBO": true
-   },
-   {
-    "KEITHERS": true,
-    "ROBO": true,
-    "D": true
-   }
-  ],
-  "message": "Three successful missions",
   "roles": [
    {
-    "assassin": false,
     "role": "MERLIN",
-    "name": "D"
+    "name": "D",
+    "assassin": false
    },
    {
     "name": "CHRIS",
@@ -178,39 +176,41 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "PERCIVAL",
     "assassin": false,
-    "name": "KEITHERS"
+    "name": "KEITHERS",
+    "role": "PERCIVAL"
    },
    {
-    "assassin": true,
     "role": "EVIL MINION",
-    "name": "RENEE"
+    "name": "RENEE",
+    "assassin": true
    }
   ],
+  "message": "Three successful missions",
   "state": "GOOD_WIN",
-  "assassinated": "KEITHERS"
+  "assassinated": "KEITHERS",
+  "votes": [
+   {
+    "ROBO": true,
+    "D": true
+   },
+   {
+    "KEITHERS": true,
+    "ROBO": true,
+    "D": true
+   },
+   {
+    "CHRIS": false,
+    "ROBO": true
+   },
+   {
+    "KEITHERS": true,
+    "ROBO": true,
+    "D": true
+   }
+  ]
  },
- "players": [
-  {
-   "name": "RENEE",
-   "uid": "1PwZ4ux2bXh4bIAuqGaivyVDLG03"
-  },
-  {
-   "name": "ROBO",
-   "uid": "EZQnxU7HUNWMqtTHKfGtz0A607I3"
-  },
-  {
-   "name": "D",
-   "uid": "GaCsVBERrYg8HdqBP6d7QFl20mf1"
-  },
-  {
-   "uid": "IXVaZeHKZRX1FqPwTUWTSdo0I2k1",
-   "name": "KEITHERS"
-  },
-  {
-   "uid": "EzBj6GBnPLPwp49qTabZI5oxq9v2",
-   "name": "CHRIS"
-  }
- ]
+ "options": {
+  "inGameLog": false
+ }
 }

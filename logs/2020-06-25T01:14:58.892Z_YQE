@@ -6,106 +6,79 @@
  "outcome": {
   "message": "Three successful missions",
   "assassinated": "ANDREW",
-  "state": "GOOD_WIN",
-  "votes": [
+  "roles": [
    {
-    "ANDREW": true,
-    "JACOB": true
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MOOG"
    },
    {
-    "ANDREW": true,
+    "role": "OBERON",
+    "name": "JACOB",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "MAGGIE"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "WILLIAM",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "YQE",
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "name": "KAIT",
+    "role": "MORGANA"
+   },
+   {
+    "name": "ANDREW",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
     "JACOB": true,
+    "ANDREW": true
+   },
+   {
+    "JACOB": true,
+    "ANDREW": true,
     "YQE": false
    },
    {
     "MAGGIE": true,
-    "JACOB": true,
-    "KAIT": false
+    "KAIT": false,
+    "JACOB": true
    },
    {
+    "YQE": false,
     "WILLIAM": true,
     "MOOG": true,
-    "YQE": false,
     "MAGGIE": true
    },
    {
-    "MAGGIE": true,
-    "WILLIAM": true,
     "MOOG": true,
-    "ANDREW": true
+    "ANDREW": true,
+    "MAGGIE": true,
+    "WILLIAM": true
    }
   ],
-  "roles": [
-   {
-    "name": "MOOG",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JACOB",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "MAGGIE"
-   },
-   {
-    "name": "WILLIAM",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "name": "YQE",
-    "assassin": true
-   },
-   {
-    "name": "KAIT",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "ANDREW",
-    "role": "LOYAL FOLLOWER"
-   }
-  ]
+  "state": "GOOD_WIN"
  },
- "players": [
-  {
-   "name": "WILLIAM",
-   "uid": "VxipGc7OdyT4jdEWULAO5Qz7gsG2"
-  },
-  {
-   "name": "KAIT",
-   "uid": "RA9UnSkEJoe3BPwUlKI0LWZTwIJ3"
-  },
-  {
-   "uid": "HTLH43iXT2WncHxLu7fCfQs0NEi2",
-   "name": "ANDREW"
-  },
-  {
-   "name": "JACOB",
-   "uid": "ypJLspHY5JVx5fNNVFggUdO63MU2"
-  },
-  {
-   "name": "MOOG",
-   "uid": "Hi1XljgqB3cHmNYFuMndJnMo4ya2"
-  },
-  {
-   "name": "YQE",
-   "uid": "bcmefETEzVPsMDQONXofiaBQVef2"
-  },
-  {
-   "uid": "o45uKzIpeqQSIxzXj33bowuXDd23",
-   "name": "MAGGIE"
-  }
- ],
  "timeCreated": {
   "_seconds": 1593047698,
   "_nanoseconds": 892000000
+ },
+ "options": {
+  "inGameLog": false
  },
  "missions": [
   {
@@ -128,29 +101,36 @@
     }
    ],
    "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 2,
    "team": [
     "JACOB",
     "ANDREW"
    ],
-   "numFails": 0,
-   "failsRequired": 1
+   "numFails": 0
   },
   {
+   "team": [
+    "JACOB",
+    "YQE",
+    "ANDREW"
+   ],
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "JACOB",
       "WILLIAM",
       "YQE"
      ],
+     "proposer": "MOOG",
      "team": [
       "WILLIAM",
       "MOOG",
       "JACOB"
      ],
-     "proposer": "MOOG"
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -158,8 +138,8 @@
       "YQE",
       "ANDREW"
      ],
-     "proposer": "YQE",
      "state": "APPROVED",
+     "proposer": "YQE",
      "votes": [
       "KAIT",
       "ANDREW",
@@ -171,25 +151,14 @@
      ]
     }
    ],
-   "numFails": 1,
-   "team": [
-    "JACOB",
-    "YQE",
-    "ANDREW"
-   ],
-   "state": "FAIL",
-   "teamSize": 3,
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "teamSize": 3,
-   "numFails": 1,
+   "state": "FAIL",
    "failsRequired": 1,
-   "team": [
-    "MAGGIE",
-    "KAIT",
-    "JACOB"
-   ],
+   "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -197,6 +166,7 @@
       "KAIT",
       "JACOB"
      ],
+     "state": "APPROVED",
      "votes": [
       "MAGGIE",
       "YQE",
@@ -204,16 +174,17 @@
       "MOOG",
       "JACOB"
      ],
-     "state": "APPROVED",
      "proposer": "MAGGIE"
     }
    ],
-   "state": "FAIL"
+   "team": [
+    "MAGGIE",
+    "KAIT",
+    "JACOB"
+   ]
   },
   {
    "teamSize": 4,
-   "state": "SUCCESS",
-   "numFails": 1,
    "proposals": [
     {
      "team": [
@@ -222,57 +193,47 @@
       "MAGGIE",
       "MOOG"
      ],
-     "state": "APPROVED",
      "proposer": "WILLIAM",
      "votes": [
       "MAGGIE",
       "WILLIAM",
       "YQE",
       "MOOG"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 2,
    "team": [
     "WILLIAM",
     "YQE",
     "MAGGIE",
     "MOOG"
-   ]
-  },
-  {
-   "team": [
-    "MOOG",
-    "ANDREW",
-    "MAGGIE",
-    "WILLIAM"
    ],
    "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
+   "numFails": 1,
+   "failsRequired": 2
+  },
+  {
+   "state": "SUCCESS",
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
+     "team": [
+      "KAIT",
+      "MAGGIE",
+      "YQE",
+      "WILLIAM"
+     ],
      "votes": [
       "KAIT",
       "JACOB",
       "YQE"
      ],
      "proposer": "KAIT",
-     "team": [
-      "KAIT",
-      "MAGGIE",
-      "YQE",
-      "WILLIAM"
-     ]
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "MOOG",
-      "ANDREW",
-      "MAGGIE",
-      "WILLIAM"
-     ],
+     "state": "APPROVED",
      "votes": [
       "MOOG",
       "MAGGIE",
@@ -280,14 +241,53 @@
       "YQE",
       "ANDREW"
      ],
-     "proposer": "ANDREW",
-     "state": "APPROVED"
+     "team": [
+      "MOOG",
+      "ANDREW",
+      "MAGGIE",
+      "WILLIAM"
+     ],
+     "proposer": "ANDREW"
     }
    ],
-   "teamSize": 4
+   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "MOOG",
+    "ANDREW",
+    "MAGGIE",
+    "WILLIAM"
+   ]
   }
  ],
- "options": {
-  "inGameLog": false
- }
+ "players": [
+  {
+   "name": "WILLIAM",
+   "uid": "VxipGc7OdyT4jdEWULAO5Qz7gsG2"
+  },
+  {
+   "name": "KAIT",
+   "uid": "RA9UnSkEJoe3BPwUlKI0LWZTwIJ3"
+  },
+  {
+   "uid": "HTLH43iXT2WncHxLu7fCfQs0NEi2",
+   "name": "ANDREW"
+  },
+  {
+   "name": "JACOB",
+   "uid": "ypJLspHY5JVx5fNNVFggUdO63MU2"
+  },
+  {
+   "uid": "Hi1XljgqB3cHmNYFuMndJnMo4ya2",
+   "name": "MOOG"
+  },
+  {
+   "name": "YQE",
+   "uid": "bcmefETEzVPsMDQONXofiaBQVef2"
+  },
+  {
+   "name": "MAGGIE",
+   "uid": "o45uKzIpeqQSIxzXj33bowuXDd23"
+  }
+ ]
 }

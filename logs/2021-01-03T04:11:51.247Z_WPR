@@ -1,27 +1,95 @@
 {
- "options": {
-  "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1609648913,
-  "_nanoseconds": 348000000
- },
- "timeCreated": {
-  "_seconds": 1609647111,
-  "_nanoseconds": 247000000
+ "outcome": {
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "HWSNBN": true,
+    "METH": true,
+    "KARAN": false
+   },
+   {
+    "CHEFDADI": true,
+    "KARAN": true,
+    "MARLIN": true,
+    "PK": false
+   },
+   {
+    "HWSNBN": true,
+    "METH": true,
+    "BANANA": true,
+    "CHAI": true
+   },
+   {
+    "BANANA": true,
+    "HWSNBN": true,
+    "CHAI": true,
+    "METH": true,
+    "CHEFDADI": true
+   },
+   {
+    "CHAI": true,
+    "BANANA": true,
+    "HWSNBN": true,
+    "CHEFDADI": true,
+    "METH": true
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "CHAI",
+  "roles": [
+   {
+    "name": "PK",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "name": "HWSNBN",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "KARAN",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "OBERON",
+    "name": "MARLIN"
+   },
+   {
+    "assassin": false,
+    "name": "BANANA",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "METH",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "CHAI",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "CHEFDADI"
+   }
+  ]
  },
  "missions": [
   {
-   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "KARAN",
      "team": [
       "KARAN",
       "METH",
       "HWSNBN"
      ],
-     "proposer": "KARAN",
+     "state": "APPROVED",
      "votes": [
       "METH",
       "CHAI",
@@ -32,20 +100,26 @@
      ]
     }
    ],
+   "numFails": 1,
+   "teamSize": 3,
+   "state": "FAIL",
    "team": [
     "KARAN",
     "METH",
     "HWSNBN"
    ],
-   "numFails": 1,
-   "state": "FAIL",
    "failsRequired": 1
   },
   {
-   "failsRequired": 1,
+   "team": [
+    "MARLIN",
+    "PK",
+    "KARAN",
+    "CHEFDADI"
+   ],
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "HWSNBN",
       "CHAI",
@@ -57,9 +131,11 @@
       "HWSNBN",
       "BANANA",
       "CHEFDADI"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "team": [
       "MARLIN",
       "PK",
@@ -67,7 +143,6 @@
       "CHEFDADI"
      ],
      "proposer": "MARLIN",
-     "state": "APPROVED",
      "votes": [
       "MARLIN",
       "BANANA",
@@ -78,42 +153,40 @@
      ]
     }
    ],
-   "teamSize": 4,
-   "team": [
-    "MARLIN",
-    "PK",
-    "KARAN",
-    "CHEFDADI"
-   ],
-   "numFails": 1,
-   "state": "FAIL"
+   "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 4
   },
   {
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "CHEFDADI",
-      "BANANA",
-      "PK"
-     ],
      "team": [
       "BANANA",
       "HWSNBN",
       "PK",
       "CHEFDADI"
      ],
+     "state": "REJECTED",
      "proposer": "BANANA",
-     "state": "REJECTED"
+     "votes": [
+      "CHEFDADI",
+      "BANANA",
+      "PK"
+     ]
     },
     {
+     "proposer": "CHEFDADI",
+     "state": "REJECTED",
      "votes": [
       "BANANA",
       "CHEFDADI",
       "METH",
       "HWSNBN"
      ],
-     "state": "REJECTED",
-     "proposer": "CHEFDADI",
      "team": [
       "CHEFDADI",
       "BANANA",
@@ -122,27 +195,23 @@
      ]
     },
     {
-     "votes": [
-      "METH",
-      "BANANA",
-      "HWSNBN",
-      "MARLIN",
-      "CHAI"
-     ],
      "team": [
       "CHAI",
       "BANANA",
       "METH",
       "HWSNBN"
      ],
+     "proposer": "CHAI",
      "state": "APPROVED",
-     "proposer": "CHAI"
+     "votes": [
+      "METH",
+      "BANANA",
+      "HWSNBN",
+      "MARLIN",
+      "CHAI"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS",
-   "teamSize": 4,
    "team": [
     "CHAI",
     "BANANA",
@@ -151,9 +220,10 @@
    ]
   },
   {
-   "teamSize": 5,
+   "failsRequired": 2,
    "proposals": [
     {
+     "state": "REJECTED",
      "proposer": "PK",
      "team": [
       "HWSNBN",
@@ -165,18 +235,10 @@
      "votes": [
       "PK",
       "MARLIN"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "APPROVED",
-     "team": [
-      "HWSNBN",
-      "BANANA",
-      "METH",
-      "CHAI",
-      "CHEFDADI"
-     ],
      "proposer": "METH",
      "votes": [
       "CHAI",
@@ -185,11 +247,17 @@
       "CHEFDADI",
       "METH",
       "MARLIN"
+     ],
+     "team": [
+      "HWSNBN",
+      "BANANA",
+      "METH",
+      "CHAI",
+      "CHEFDADI"
      ]
     }
    ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "HWSNBN",
     "BANANA",
@@ -197,9 +265,13 @@
     "CHAI",
     "CHEFDADI"
    ],
-   "numFails": 0
+   "teamSize": 5,
+   "state": "SUCCESS"
   },
   {
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 5,
    "failsRequired": 1,
    "team": [
     "HWSNBN",
@@ -208,12 +280,8 @@
     "CHAI",
     "METH"
    ],
-   "teamSize": 5,
-   "numFails": 0,
-   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "BANANA",
       "KARAN",
@@ -221,13 +289,20 @@
       "CHAI",
       "HWSNBN"
      ],
+     "proposer": "KARAN",
+     "state": "REJECTED",
      "votes": [
       "KARAN"
-     ],
-     "proposer": "KARAN"
+     ]
     },
     {
-     "state": "APPROVED",
+     "team": [
+      "HWSNBN",
+      "BANANA",
+      "CHEFDADI",
+      "CHAI",
+      "METH"
+     ],
      "votes": [
       "CHAI",
       "METH",
@@ -236,30 +311,28 @@
       "HWSNBN",
       "CHEFDADI"
      ],
-     "team": [
-      "HWSNBN",
-      "BANANA",
-      "CHEFDADI",
-      "CHAI",
-      "METH"
-     ],
+     "state": "APPROVED",
      "proposer": "HWSNBN"
     }
    ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1609648913,
+  "_nanoseconds": 348000000
+ },
  "players": [
   {
-   "name": "HWSNBN",
-   "uid": "RMh8asPf7khAo3YWIMNdy1EDHDp2"
+   "uid": "RMh8asPf7khAo3YWIMNdy1EDHDp2",
+   "name": "HWSNBN"
   },
   {
-   "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3",
-   "name": "MARLIN"
+   "name": "MARLIN",
+   "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3"
   },
   {
-   "uid": "weox9NOyNDZiyKTtPDAXxvazdFV2",
-   "name": "BANANA"
+   "name": "BANANA",
+   "uid": "weox9NOyNDZiyKTtPDAXxvazdFV2"
   },
   {
    "uid": "bFTTuhvrzTWkpx2y2tA2VEo4OHx2",
@@ -278,88 +351,15 @@
    "uid": "KH4ZmjI5XOUYu4rOwmw4oDElxue2"
   },
   {
-   "uid": "1yawy0IzcvTwYGbNSNefkUZnxej1",
-   "name": "KARAN"
+   "name": "KARAN",
+   "uid": "1yawy0IzcvTwYGbNSNefkUZnxej1"
   }
  ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "CHAI",
-  "roles": [
-   {
-    "name": "PK",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "name": "HWSNBN",
-    "role": "MERLIN"
-   },
-   {
-    "role": "MORDRED",
-    "name": "KARAN",
-    "assassin": true
-   },
-   {
-    "name": "MARLIN",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "BANANA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "METH",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "CHAI",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "CHEFDADI",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   }
-  ],
-  "votes": [
-   {
-    "METH": true,
-    "KARAN": false,
-    "HWSNBN": true
-   },
-   {
-    "PK": false,
-    "KARAN": true,
-    "CHEFDADI": true,
-    "MARLIN": true
-   },
-   {
-    "BANANA": true,
-    "CHAI": true,
-    "HWSNBN": true,
-    "METH": true
-   },
-   {
-    "METH": true,
-    "CHAI": true,
-    "CHEFDADI": true,
-    "HWSNBN": true,
-    "BANANA": true
-   },
-   {
-    "CHEFDADI": true,
-    "BANANA": true,
-    "HWSNBN": true,
-    "METH": true,
-    "CHAI": true
-   }
-  ],
-  "message": "Three successful missions"
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1609647111,
+  "_nanoseconds": 247000000
  }
 }

@@ -1,76 +1,78 @@
 {
  "missions": [
   {
-   "numFails": 0,
-   "failsRequired": 1,
+   "team": [
+    "PIR",
+    "OLIVER"
+   ],
    "proposals": [
     {
+     "state": "REJECTED",
      "proposer": "ARTHUR",
-     "team": [
+     "votes": [
       "ARTHUR",
       "OLIVER"
      ],
-     "state": "REJECTED",
-     "votes": [
+     "team": [
       "ARTHUR",
       "OLIVER"
      ]
     },
     {
+     "votes": [
+      "OLIVER",
+      "MEEP",
+      "RAM",
+      "PIR"
+     ],
+     "state": "APPROVED",
      "team": [
       "PIR",
       "OLIVER"
      ],
-     "proposer": "PIR",
-     "state": "APPROVED",
-     "votes": [
-      "OLIVER",
-      "MEEP",
-      "RAM",
-      "PIR"
-     ]
+     "proposer": "PIR"
     }
    ],
-   "team": [
-    "PIR",
-    "OLIVER"
-   ],
+   "teamSize": 2,
    "state": "SUCCESS",
-   "teamSize": 2
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "PIR",
-      "OLIVER",
-      "MEEP"
-     ],
-     "votes": [
-      "OLIVER",
-      "MEEP",
-      "RAM"
-     ],
-     "proposer": "OLIVER"
-    }
-   ],
-   "numFails": 0,
    "failsRequired": 1,
-   "state": "SUCCESS",
-   "teamSize": 3,
+   "numFails": 0,
    "team": [
     "PIR",
     "OLIVER",
     "MEEP"
-   ]
+   ],
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "votes": [
+      "OLIVER",
+      "MEEP",
+      "RAM"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "PIR",
+      "OLIVER",
+      "MEEP"
+     ],
+     "proposer": "OLIVER"
+    }
+   ],
+   "teamSize": 3
   },
   {
+   "state": "FAIL",
    "team": [
     "OLIVER",
     "PIR"
    ],
-   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 1,
    "proposals": [
     {
      "votes": [
@@ -78,17 +80,15 @@
       "OLIVER",
       "RAM"
      ],
-     "proposer": "RAM",
      "team": [
       "OLIVER",
       "PIR"
      ],
+     "proposer": "RAM",
      "state": "APPROVED"
     }
    ],
-   "numFails": 1,
-   "state": "FAIL",
-   "teamSize": 2
+   "failsRequired": 1
   },
   {
    "proposals": [
@@ -98,78 +98,58 @@
       "RAM",
       "MEEP"
      ],
-     "proposer": "MEEP",
-     "state": "APPROVED",
      "votes": [
       "OLIVER",
       "MEEP",
       "RAM",
       "PIR"
-     ]
+     ],
+     "proposer": "MEEP",
+     "state": "APPROVED"
     }
    ],
    "teamSize": 3,
    "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "OLIVER",
     "RAM",
     "MEEP"
    ],
-   "failsRequired": 1,
    "numFails": 1
   },
   {
    "state": "SUCCESS",
+   "numFails": 0,
    "teamSize": 3,
    "failsRequired": 1,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "ARTHUR",
-      "OLIVER",
-      "MEEP"
-     ],
-     "proposer": "ARTHUR",
-     "votes": [
-      "ARTHUR",
-      "MEEP",
-      "RAM"
-     ]
-    }
-   ],
    "team": [
     "ARTHUR",
     "OLIVER",
     "MEEP"
    ],
-   "numFails": 0
-  }
- ],
- "players": [
-  {
-   "name": "ARTHUR",
-   "uid": "BsTDBnCYKtTWrK25R25k0gAP7Oy1"
-  },
-  {
-   "name": "PIR",
-   "uid": "6s7BIgnhgLf2G0ugJCrfgOXR7Jt2"
-  },
-  {
-   "uid": "BgUpMd2mM9OsJ2kM6d1w5XruWzQ2",
-   "name": "OLIVER"
-  },
-  {
-   "uid": "1DiDnVS5IeRwgSRAwvGsuQ4SWTt2",
-   "name": "RAM"
-  },
-  {
-   "name": "MEEP",
-   "uid": "kGEvWOQJzQaBzcbtTlGxs4AOx6B3"
+   "proposals": [
+    {
+     "votes": [
+      "ARTHUR",
+      "MEEP",
+      "RAM"
+     ],
+     "proposer": "ARTHUR",
+     "state": "APPROVED",
+     "team": [
+      "ARTHUR",
+      "OLIVER",
+      "MEEP"
+     ]
+    }
+   ]
   }
  ],
  "outcome": {
+  "message": "Three successful missions",
   "assassinated": "OLIVER",
+  "state": "GOOD_WIN",
   "roles": [
    {
     "name": "PIR",
@@ -178,52 +158,54 @@
    },
    {
     "assassin": false,
-    "name": "ARTHUR",
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "name": "ARTHUR"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "OLIVER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "MEEP",
-    "role": "PERCIVAL",
-    "assassin": false
+    "assassin": false,
+    "role": "PERCIVAL"
    },
    {
-    "name": "RAM",
     "role": "MORGANA",
+    "name": "RAM",
     "assassin": false
    }
   ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
   "votes": [
    {
     "PIR": true,
     "OLIVER": true
    },
    {
+    "PIR": true,
     "MEEP": true,
+    "OLIVER": true
+   },
+   {
     "OLIVER": true,
-    "PIR": true
+    "PIR": false
    },
    {
-    "PIR": false,
-    "OLIVER": true
-   },
-   {
+    "OLIVER": true,
     "MEEP": true,
-    "RAM": false,
-    "OLIVER": true
+    "RAM": false
    },
    {
-    "MEEP": true,
+    "OLIVER": true,
     "ARTHUR": true,
-    "OLIVER": true
+    "MEEP": true
    }
   ]
+ },
+ "timeCreated": {
+  "_seconds": 1593984489,
+  "_nanoseconds": 922000000
  },
  "timeFinished": {
   "_seconds": 1593985124,
@@ -232,8 +214,26 @@
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1593984489,
-  "_nanoseconds": 922000000
- }
+ "players": [
+  {
+   "uid": "BsTDBnCYKtTWrK25R25k0gAP7Oy1",
+   "name": "ARTHUR"
+  },
+  {
+   "name": "PIR",
+   "uid": "6s7BIgnhgLf2G0ugJCrfgOXR7Jt2"
+  },
+  {
+   "name": "OLIVER",
+   "uid": "BgUpMd2mM9OsJ2kM6d1w5XruWzQ2"
+  },
+  {
+   "name": "RAM",
+   "uid": "1DiDnVS5IeRwgSRAwvGsuQ4SWTt2"
+  },
+  {
+   "name": "MEEP",
+   "uid": "kGEvWOQJzQaBzcbtTlGxs4AOx6B3"
+  }
+ ]
 }

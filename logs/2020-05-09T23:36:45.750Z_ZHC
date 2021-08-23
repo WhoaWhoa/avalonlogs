@@ -1,36 +1,41 @@
 {
- "timeFinished": {
-  "_seconds": 1589067589,
-  "_nanoseconds": 220000000
- },
  "players": [
   {
    "name": "BERT",
    "uid": "H18sk7GAsLfaXKim6lcmR2JdK7q1"
   },
   {
-   "name": "JS",
-   "uid": "9SEssQPgQJMMOAtupdHcCNoZgiq2"
+   "uid": "9SEssQPgQJMMOAtupdHcCNoZgiq2",
+   "name": "JS"
   },
   {
-   "name": "YOUNGEST",
-   "uid": "5zkn80MuEthaNx8WDVECr1PwpKx1"
+   "uid": "5zkn80MuEthaNx8WDVECr1PwpKx1",
+   "name": "YOUNGEST"
   },
   {
-   "name": "JENNY",
-   "uid": "75hvJ3YLkbfgwWxfACUvGGLedxU2"
+   "uid": "75hvJ3YLkbfgwWxfACUvGGLedxU2",
+   "name": "JENNY"
   },
   {
    "uid": "EK4lIYvymiPc9E7qSiN58j3bRts2",
    "name": "LILX"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1589067589,
+  "_nanoseconds": 220000000
+ },
  "missions": [
   {
-   "state": "SUCCESS",
+   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "LILX",
+     "state": "APPROVED",
+     "team": [
+      "LILX",
+      "BERT"
+     ],
      "votes": [
       "BERT",
       "LILX",
@@ -38,25 +43,33 @@
       "JENNY",
       "YOUNGEST"
      ],
-     "state": "APPROVED",
-     "team": [
-      "LILX",
-      "BERT"
-     ]
+     "proposer": "LILX"
     }
    ],
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "LILX",
     "BERT"
-   ],
-   "numFails": 0,
-   "failsRequired": 1
+   ]
   },
   {
+   "team": [
+    "BERT",
+    "LILX",
+    "YOUNGEST"
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "proposer": "BERT",
+     "team": [
+      "BERT",
+      "LILX",
+      "YOUNGEST"
+     ],
      "state": "APPROVED",
      "votes": [
       "JENNY",
@@ -64,29 +77,20 @@
       "BERT",
       "LILX",
       "JS"
-     ],
-     "team": [
-      "BERT",
-      "LILX",
-      "YOUNGEST"
      ]
     }
    ],
-   "teamSize": 3,
-   "team": [
-    "BERT",
-    "LILX",
-    "YOUNGEST"
-   ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1
+   "numFails": 0
   },
   {
+   "team": [
+    "YOUNGEST",
+    "LILX"
+   ],
    "proposals": [
     {
-     "proposer": "JS",
      "state": "REJECTED",
+     "proposer": "JS",
      "votes": [
       "JS",
       "JENNY"
@@ -97,41 +101,37 @@
      ]
     },
     {
+     "proposer": "YOUNGEST",
+     "team": [
+      "YOUNGEST",
+      "LILX"
+     ],
      "votes": [
       "JENNY",
       "YOUNGEST",
       "BERT",
       "LILX"
      ],
-     "proposer": "YOUNGEST",
-     "team": [
-      "YOUNGEST",
-      "LILX"
-     ],
      "state": "APPROVED"
     }
    ],
-   "team": [
-    "YOUNGEST",
-    "LILX"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
    "state": "SUCCESS",
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 2
   },
   {
-   "failsRequired": 1,
-   "state": "PENDING",
-   "teamSize": 3,
-   "proposals": [],
-   "team": []
-  },
-  {
-   "failsRequired": 1,
    "team": [],
+   "teamSize": 3,
    "state": "PENDING",
+   "failsRequired": 1,
+   "proposals": []
+  },
+  {
    "proposals": [],
+   "state": "PENDING",
+   "team": [],
+   "failsRequired": 1,
    "teamSize": 3
   }
  ],
@@ -139,41 +139,26 @@
   "inGameLog": false
  },
  "outcome": {
-  "votes": [
-   {
-    "BERT": true,
-    "LILX": true
-   },
-   {
-    "LILX": true,
-    "YOUNGEST": true,
-    "BERT": true
-   },
-   {
-    "YOUNGEST": true,
-    "LILX": true
-   }
-  ],
   "roles": [
    {
     "role": "LOYAL FOLLOWER",
-    "name": "YOUNGEST",
-    "assassin": false
+    "assassin": false,
+    "name": "YOUNGEST"
    },
    {
+    "name": "BERT",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "BERT"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "LILX",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
-    "name": "JS",
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "JS"
    },
    {
     "assassin": false,
@@ -181,9 +166,24 @@
     "role": "EVIL MINION"
    }
   ],
+  "votes": [
+   {
+    "LILX": true,
+    "BERT": true
+   },
+   {
+    "LILX": true,
+    "BERT": true,
+    "YOUNGEST": true
+   },
+   {
+    "LILX": true,
+    "YOUNGEST": true
+   }
+  ],
+  "state": "GOOD_WIN",
   "assassinated": null,
-  "message": "Three missions succeeded",
-  "state": "GOOD_WIN"
+  "message": "Three missions succeeded"
  },
  "timeCreated": {
   "_seconds": 1589067405,

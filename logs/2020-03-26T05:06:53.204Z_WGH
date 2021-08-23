@@ -1,90 +1,37 @@
 {
- "timeFinished": {
-  "_seconds": 1585199318,
-  "_nanoseconds": 920821000
- },
  "players": [
   {
-   "uid": "UYfe5G3DIfQlJAVA4IRUhQpEBK72",
-   "name": "ANGELA"
+   "name": "ANGELA",
+   "uid": "UYfe5G3DIfQlJAVA4IRUhQpEBK72"
   },
   {
-   "uid": "5tH6ccVA9ZeuK313wkz7sG7bxXq1",
-   "name": "ANUJ"
+   "name": "ANUJ",
+   "uid": "5tH6ccVA9ZeuK313wkz7sG7bxXq1"
   },
   {
-   "name": "ARCHIT",
-   "uid": "Q1VcmH3AXaaIK5jsu3OvYdKK0eJ2"
+   "uid": "Q1VcmH3AXaaIK5jsu3OvYdKK0eJ2",
+   "name": "ARCHIT"
   },
   {
-   "name": "ARNAV",
-   "uid": "WHWpTLwxu7XS9FjgxEp1ZjFdSci1"
+   "uid": "WHWpTLwxu7XS9FjgxEp1ZjFdSci1",
+   "name": "ARNAV"
   },
   {
-   "uid": "0TslBw4c1ldSK5HxvBQawh1v9ya2",
-   "name": "ROSHAN"
+   "name": "ROSHAN",
+   "uid": "0TslBw4c1ldSK5HxvBQawh1v9ya2"
   }
  ],
  "timeCreated": {
   "_seconds": 1585199213,
   "_nanoseconds": 204000000
  },
- "outcome": {
-  "roles": [
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "ROSHAN"
-   },
-   {
-    "role": "MORGANA",
-    "name": "ANUJ",
-    "assassin": false
-   },
-   {
-    "name": "ANGELA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "MERLIN",
-    "name": "ARCHIT",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ARNAV"
-   }
-  ],
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "ANGELA": true,
-    "ARCHIT": true
-   },
-   {
-    "ROSHAN": true,
-    "ANUJ": false,
-    "ANGELA": true
-   },
-   {
-    "ARCHIT": true,
-    "ANUJ": false
-   },
-   {
-    "ROSHAN": false,
-    "ARNAV": true,
-    "ANUJ": false
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null
- },
  "missions": [
   {
-   "numFails": 0,
-   "teamSize": 2,
+   "team": [
+    "ANGELA",
+    "ARCHIT"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
      "proposer": "ANGELA",
@@ -100,41 +47,39 @@
      "state": "APPROVED"
     }
    ],
-   "team": [
-    "ANGELA",
-    "ARCHIT"
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "teamSize": 2,
+   "numFails": 0
   },
   {
-   "numFails": 1,
-   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "ROSHAN",
       "ANUJ",
       "ANGELA"
      ],
+     "state": "APPROVED",
+     "proposer": "ANUJ",
      "team": [
       "ANUJ",
       "ANGELA",
       "ROSHAN"
-     ],
-     "proposer": "ANUJ"
+     ]
     }
    ],
-   "teamSize": 3,
-   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "ANUJ",
     "ANGELA",
     "ROSHAN"
-   ]
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
+   "numFails": 1,
    "teamSize": 2,
    "failsRequired": 1,
    "team": [
@@ -143,56 +88,111 @@
    ],
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "ARCHIT",
       "ANUJ"
      ],
+     "proposer": "ARCHIT",
      "votes": [
       "ARCHIT",
       "ROSHAN",
       "ANUJ",
       "ANGELA"
      ],
-     "proposer": "ARCHIT"
+     "state": "APPROVED"
     }
    ],
-   "state": "FAIL",
-   "numFails": 1
+   "state": "FAIL"
   },
   {
+   "state": "FAIL",
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "ARNAV",
-      "ANUJ",
-      "ROSHAN"
-     ],
-     "proposer": "ARNAV",
      "votes": [
       "ROSHAN",
       "ANUJ",
       "ARNAV"
+     ],
+     "state": "APPROVED",
+     "proposer": "ARNAV",
+     "team": [
+      "ARNAV",
+      "ANUJ",
+      "ROSHAN"
      ]
     }
    ],
-   "state": "FAIL",
-   "numFails": 2,
+   "failsRequired": 1,
    "team": [
     "ARNAV",
     "ANUJ",
     "ROSHAN"
    ],
-   "failsRequired": 1,
-   "teamSize": 3
+   "numFails": 2
   },
   {
-   "state": "PENDING",
    "teamSize": 3,
-   "failsRequired": 1,
    "team": [],
+   "failsRequired": 1,
+   "state": "PENDING",
    "proposals": []
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1585199318,
+  "_nanoseconds": 920821000
+ },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "votes": [
+   {
+    "ARCHIT": true,
+    "ANGELA": true
+   },
+   {
+    "ROSHAN": true,
+    "ANUJ": false,
+    "ANGELA": true
+   },
+   {
+    "ARCHIT": true,
+    "ANUJ": false
+   },
+   {
+    "ROSHAN": false,
+    "ANUJ": false,
+    "ARNAV": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "ROSHAN"
+   },
+   {
+    "name": "ANUJ",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "ANGELA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "ARCHIT"
+   },
+   {
+    "name": "ARNAV",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "message": "Three failed missions"
+ }
 }

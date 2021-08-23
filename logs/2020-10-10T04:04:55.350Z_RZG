@@ -1,4 +1,69 @@
 {
+ "outcome": {
+  "roles": [
+   {
+    "name": "ALBERT",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "CHRIS"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "EMILY"
+   },
+   {
+    "role": "MORDRED",
+    "assassin": true,
+    "name": "MEGAN"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "PATRICK"
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "EMILY": true,
+    "ALBERT": true
+   },
+   {
+    "EMILY": false,
+    "ALBERT": true,
+    "PATRICK": true
+   },
+   {
+    "MEGAN": true,
+    "CHRIS": true
+   },
+   {
+    "PATRICK": true,
+    "CHRIS": true,
+    "MEGAN": false
+   },
+   {
+    "MEGAN": false,
+    "ALBERT": true,
+    "CHRIS": true
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1602302695,
+  "_nanoseconds": 350000000
+ },
+ "timeFinished": {
+  "_seconds": 1602303672,
+  "_nanoseconds": 247000000
+ },
  "options": {
   "inGameLog": false
  },
@@ -20,78 +85,83 @@
    "uid": "DXv2CTdidiP8u6rROMT6ToGAsjc2"
   },
   {
-   "uid": "a9zinWFXOuRCFGdnneS5bJQPuRF2",
-   "name": "ALBERT"
+   "name": "ALBERT",
+   "uid": "a9zinWFXOuRCFGdnneS5bJQPuRF2"
   }
  ],
  "missions": [
   {
-   "team": [
-    "EMILY",
-    "ALBERT"
-   ],
+   "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "EMILY",
-      "ALBERT"
-     ],
-     "proposer": "ALBERT",
      "state": "APPROVED",
      "votes": [
       "PATRICK",
       "CHRIS",
       "EMILY",
       "ALBERT"
+     ],
+     "proposer": "ALBERT",
+     "team": [
+      "EMILY",
+      "ALBERT"
      ]
     }
    ],
-   "teamSize": 2,
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0
+   "team": [
+    "EMILY",
+    "ALBERT"
+   ]
   },
   {
-   "state": "FAIL",
+   "numFails": 1,
    "teamSize": 3,
    "team": [
     "EMILY",
     "ALBERT",
     "PATRICK"
    ],
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "EMILY",
+     "team": [
+      "EMILY",
+      "ALBERT",
+      "PATRICK"
+     ],
      "state": "APPROVED",
+     "proposer": "EMILY",
      "votes": [
       "EMILY",
       "ALBERT",
       "PATRICK",
       "MEGAN"
-     ],
-     "team": [
-      "EMILY",
-      "ALBERT",
-      "PATRICK"
      ]
     }
-   ],
-   "numFails": 1,
-   "failsRequired": 1
+   ]
   },
   {
-   "numFails": 0,
-   "teamSize": 2,
+   "team": [
+    "MEGAN",
+    "CHRIS"
+   ],
+   "state": "SUCCESS",
    "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "PATRICK",
-     "votes": [
+     "state": "REJECTED",
+     "team": [
       "CHRIS",
       "PATRICK"
      ],
-     "state": "REJECTED",
-     "team": [
+     "proposer": "PATRICK",
+     "votes": [
       "CHRIS",
       "PATRICK"
      ]
@@ -101,62 +171,55 @@
       "MEGAN",
       "CHRIS"
      ],
-     "proposer": "MEGAN",
      "state": "APPROVED",
      "votes": [
       "PATRICK",
       "MEGAN",
       "CHRIS",
       "EMILY"
-     ]
+     ],
+     "proposer": "MEGAN"
     }
-   ],
-   "state": "SUCCESS",
-   "team": [
-    "MEGAN",
-    "CHRIS"
    ]
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "MEGAN",
-    "CHRIS",
-    "PATRICK"
-   ],
    "state": "FAIL",
    "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "MEGAN",
-      "CHRIS",
-      "PATRICK"
-     ],
      "proposer": "CHRIS",
+     "state": "APPROVED",
      "votes": [
       "CHRIS",
       "PATRICK",
       "MEGAN"
      ],
-     "state": "APPROVED"
+     "team": [
+      "MEGAN",
+      "CHRIS",
+      "PATRICK"
+     ]
     }
    ],
-   "numFails": 1
+   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "MEGAN",
+    "CHRIS",
+    "PATRICK"
+   ]
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "ALBERT",
     "CHRIS",
     "MEGAN"
    ],
+   "failsRequired": 1,
    "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "ALBERT",
      "team": [
       "ALBERT",
       "CHRIS",
@@ -168,74 +231,11 @@
       "EMILY",
       "MEGAN"
      ],
+     "proposer": "ALBERT",
      "state": "APPROVED"
     }
-   ]
+   ],
+   "state": "FAIL"
   }
- ],
- "outcome": {
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "ALBERT": true,
-    "EMILY": true
-   },
-   {
-    "PATRICK": true,
-    "EMILY": false,
-    "ALBERT": true
-   },
-   {
-    "CHRIS": true,
-    "MEGAN": true
-   },
-   {
-    "MEGAN": false,
-    "CHRIS": true,
-    "PATRICK": true
-   },
-   {
-    "CHRIS": true,
-    "ALBERT": true,
-    "MEGAN": false
-   }
-  ],
-  "roles": [
-   {
-    "name": "ALBERT",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "CHRIS",
-    "role": "MERLIN"
-   },
-   {
-    "name": "EMILY",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "role": "MORDRED",
-    "name": "MEGAN",
-    "assassin": true
-   },
-   {
-    "name": "PATRICK",
-    "assassin": false,
-    "role": "PERCIVAL"
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1602303672,
-  "_nanoseconds": 247000000
- },
- "timeCreated": {
-  "_seconds": 1602302695,
-  "_nanoseconds": 350000000
- }
+ ]
 }

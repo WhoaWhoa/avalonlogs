@@ -1,7 +1,57 @@
 {
- "timeFinished": {
-  "_seconds": 1587914855,
-  "_nanoseconds": 204000000
+ "outcome": {
+  "message": "Five team proposals in a row rejected",
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "votes": [
+   {
+    "SHEENO": true,
+    "PRIYA": true
+   },
+   {
+    "CRISTINA": true,
+    "SHEENO": true,
+    "PRIYA": false
+   },
+   {
+    "MOONEY": true,
+    "PRIYA": false,
+    "SHEENO": true,
+    "EMMA": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "SHEENO"
+   },
+   {
+    "assassin": false,
+    "name": "CRISTINA",
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "name": "EMMA",
+    "role": "MERLIN"
+   },
+   {
+    "name": "PRIYA",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "name": "MOONEY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "DANNY",
+    "assassin": false
+   }
+  ]
  },
  "timeCreated": {
   "_seconds": 1587914018,
@@ -17,12 +67,12 @@
    "uid": "sq4Pu05dceSoACMpdhL3yyxjiNk1"
   },
   {
-   "uid": "cvH5LmYEivap1PepPFzpdzlXa8I2",
-   "name": "MOONEY"
+   "name": "MOONEY",
+   "uid": "cvH5LmYEivap1PepPFzpdzlXa8I2"
   },
   {
-   "uid": "Q2437dkNCoTPB3HAfUW1PPTUVuy1",
-   "name": "PRIYA"
+   "name": "PRIYA",
+   "uid": "Q2437dkNCoTPB3HAfUW1PPTUVuy1"
   },
   {
    "uid": "Wf9D3DbMDEQNVCD557JjazEENRF2",
@@ -33,66 +83,21 @@
    "uid": "e4BPMNWDrPgwwiwMzAaiEX60eKi1"
   }
  ],
- "outcome": {
-  "message": "Five team proposals in a row rejected",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "SHEENO": true,
-    "PRIYA": true
-   },
-   {
-    "SHEENO": true,
-    "PRIYA": false,
-    "CRISTINA": true
-   },
-   {
-    "EMMA": true,
-    "SHEENO": true,
-    "PRIYA": false,
-    "MOONEY": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "SHEENO",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "CRISTINA",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "EMMA",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "PRIYA",
-    "role": "MORDRED",
-    "assassin": true
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "MOONEY"
-   },
-   {
-    "assassin": false,
-    "name": "DANNY",
-    "role": "LOYAL FOLLOWER"
-   }
-  ]
+ "timeFinished": {
+  "_seconds": 1587914855,
+  "_nanoseconds": 204000000
  },
  "missions": [
   {
+   "team": [
+    "PRIYA",
+    "SHEENO"
+   ],
+   "numFails": 0,
    "state": "SUCCESS",
-   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "EMMA",
       "PRIYA",
@@ -101,24 +106,18 @@
       "SHEENO",
       "CRISTINA"
      ],
+     "proposer": "PRIYA",
      "team": [
       "PRIYA",
       "SHEENO"
-     ],
-     "proposer": "PRIYA",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "team": [
-    "PRIYA",
-    "SHEENO"
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   "teamSize": 2,
+   "failsRequired": 1
   },
   {
-   "numFails": 1,
-   "state": "FAIL",
+   "failsRequired": 1,
    "teamSize": 3,
    "proposals": [
     {
@@ -138,33 +137,41 @@
      "proposer": "CRISTINA"
     }
    ],
-   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "CRISTINA",
     "SHEENO",
     "PRIYA"
-   ]
+   ],
+   "numFails": 1
   },
   {
-   "numFails": 1,
    "teamSize": 4,
+   "state": "FAIL",
+   "team": [
+    "PRIYA",
+    "EMMA",
+    "SHEENO",
+    "MOONEY"
+   ],
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "DANNY",
      "team": [
       "DANNY",
       "MOONEY",
       "SHEENO",
       "PRIYA"
      ],
+     "proposer": "DANNY",
      "votes": [
       "PRIYA"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "proposer": "EMMA",
      "state": "REJECTED",
+     "proposer": "EMMA",
      "team": [
       "EMMA",
       "SHEENO",
@@ -179,76 +186,71 @@
     },
     {
      "state": "APPROVED",
+     "team": [
+      "PRIYA",
+      "EMMA",
+      "SHEENO",
+      "MOONEY"
+     ],
+     "proposer": "SHEENO",
      "votes": [
       "MOONEY",
       "SHEENO",
       "CRISTINA",
       "EMMA",
       "PRIYA"
-     ],
-     "proposer": "SHEENO",
-     "team": [
-      "PRIYA",
-      "EMMA",
-      "SHEENO",
-      "MOONEY"
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "PRIYA",
-    "EMMA",
-    "SHEENO",
-    "MOONEY"
-   ]
+   "failsRequired": 1
   },
   {
+   "team": [],
    "failsRequired": 1,
    "teamSize": 3,
+   "state": "PENDING",
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "MOONEY",
       "EMMA",
       "SHEENO"
      ],
-     "state": "REJECTED",
+     "proposer": "MOONEY",
      "votes": [
       "SHEENO",
       "EMMA",
       "MOONEY"
-     ],
-     "proposer": "MOONEY"
+     ]
     },
     {
-     "proposer": "PRIYA",
-     "state": "REJECTED",
-     "votes": [
-      "CRISTINA",
-      "PRIYA",
-      "DANNY"
-     ],
      "team": [
       "PRIYA",
       "MOONEY",
       "DANNY"
-     ]
-    },
-    {
+     ],
+     "state": "REJECTED",
+     "proposer": "PRIYA",
      "votes": [
       "CRISTINA",
       "PRIYA",
       "DANNY"
-     ],
-     "state": "REJECTED",
-     "proposer": "CRISTINA",
+     ]
+    },
+    {
      "team": [
       "MOONEY",
       "DANNY",
       "CRISTINA"
-     ]
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "CRISTINA",
+      "PRIYA",
+      "DANNY"
+     ],
+     "proposer": "CRISTINA"
     },
     {
      "votes": [
@@ -265,27 +267,25 @@
      "state": "REJECTED"
     },
     {
-     "team": [
-      "EMMA",
-      "MOONEY",
-      "SHEENO"
-     ],
-     "state": "REJECTED",
      "proposer": "EMMA",
      "votes": [
       "MOONEY",
       "SHEENO",
       "EMMA"
+     ],
+     "state": "REJECTED",
+     "team": [
+      "EMMA",
+      "MOONEY",
+      "SHEENO"
      ]
     }
-   ],
-   "state": "PENDING",
-   "team": []
+   ]
   },
   {
+   "state": "PENDING",
    "team": [],
    "teamSize": 4,
-   "state": "PENDING",
    "proposals": [],
    "failsRequired": 1
   }

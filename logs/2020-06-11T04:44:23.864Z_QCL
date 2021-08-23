@@ -1,12 +1,12 @@
 {
  "players": [
   {
-   "name": "JERRY",
-   "uid": "XWzHKSBzEuVXWoyT03d3GxGreEH2"
+   "uid": "XWzHKSBzEuVXWoyT03d3GxGreEH2",
+   "name": "JERRY"
   },
   {
-   "uid": "8v7hEQeRTSWlBiECjTpfsyxef743",
-   "name": "NIKKI"
+   "name": "NIKKI",
+   "uid": "8v7hEQeRTSWlBiECjTpfsyxef743"
   },
   {
    "uid": "GqgDHzzhRZUBDuQTVqyocktoyn62",
@@ -29,21 +29,93 @@
    "name": "ERIC"
   }
  ],
+ "outcome": {
+  "votes": [
+   {
+    "KENNY": true,
+    "JPAN": true
+   },
+   {
+    "JPAN": false,
+    "NIKKI": true,
+    "KENNY": true
+   },
+   {
+    "WILL": true,
+    "JPAN": false,
+    "JERRY": true
+   },
+   {
+    "WILL": true,
+    "JERRY": true,
+    "KENNY": true,
+    "MAL": true
+   },
+   {
+    "JERRY": true,
+    "ERIC": true,
+    "KENNY": true,
+    "WILL": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "NIKKI"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "WILL"
+   },
+   {
+    "role": "MERLIN",
+    "name": "ERIC",
+    "assassin": false
+   },
+   {
+    "name": "MAL",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "JERRY"
+   },
+   {
+    "assassin": false,
+    "name": "KENNY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JPAN",
+    "role": "MORGANA",
+    "assassin": false
+   }
+  ],
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "assassinated": "JERRY"
+ },
  "timeCreated": {
   "_seconds": 1591850663,
   "_nanoseconds": 864000000
  },
+ "timeFinished": {
+  "_seconds": 1591852116,
+  "_nanoseconds": 921000000
+ },
  "missions": [
   {
-   "failsRequired": 1,
-   "numFails": 0,
+   "team": [
+    "KENNY",
+    "JPAN"
+   ],
    "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "KENNY",
-      "JPAN"
-     ],
      "state": "APPROVED",
      "votes": [
       "WILL",
@@ -53,47 +125,50 @@
       "KENNY",
       "JPAN"
      ],
+     "team": [
+      "KENNY",
+      "JPAN"
+     ],
      "proposer": "KENNY"
     }
    ],
-   "team": [
-    "KENNY",
-    "JPAN"
-   ],
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "KENNY",
-      "JPAN",
-      "ERIC",
-      "JERRY"
-     ],
      "proposer": "JPAN",
      "team": [
       "JPAN",
       "KENNY",
       "NIKKI"
      ],
+     "votes": [
+      "KENNY",
+      "JPAN",
+      "ERIC",
+      "JERRY"
+     ],
      "state": "APPROVED"
     }
    ],
-   "state": "FAIL",
    "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "JPAN",
     "KENNY",
     "NIKKI"
-   ]
+   ],
+   "teamSize": 3
   },
   {
+   "state": "FAIL",
+   "teamSize": 3,
    "numFails": 1,
    "failsRequired": 1,
-   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -114,15 +189,16 @@
       "ERIC",
       "MAL"
      ],
+     "proposer": "ERIC",
      "state": "REJECTED",
      "team": [
       "KENNY",
       "MAL",
       "WILL"
-     ],
-     "proposer": "ERIC"
+     ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "JPAN",
       "WILL",
@@ -130,7 +206,6 @@
       "JERRY"
      ],
      "proposer": "JERRY",
-     "state": "APPROVED",
      "team": [
       "JERRY",
       "WILL",
@@ -138,7 +213,6 @@
      ]
     }
    ],
-   "state": "FAIL",
    "team": [
     "JERRY",
     "WILL",
@@ -146,8 +220,6 @@
    ]
   },
   {
-   "failsRequired": 2,
-   "numFails": 0,
    "team": [
     "MAL",
     "JERRY",
@@ -155,7 +227,8 @@
     "KENNY"
    ],
    "state": "SUCCESS",
-   "teamSize": 4,
+   "failsRequired": 2,
+   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -165,16 +238,10 @@
       "MAL"
      ],
      "votes": [],
-     "state": "REJECTED",
-     "proposer": "NIKKI"
+     "proposer": "NIKKI",
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "MAL",
-      "JERRY",
-      "WILL",
-      "KENNY"
-     ],
      "votes": [
       "KENNY",
       "JPAN",
@@ -182,116 +249,49 @@
       "MAL",
       "JERRY"
      ],
+     "proposer": "MAL",
      "state": "APPROVED",
-     "proposer": "MAL"
+     "team": [
+      "MAL",
+      "JERRY",
+      "WILL",
+      "KENNY"
+     ]
     }
-   ]
+   ],
+   "teamSize": 4
   },
   {
    "proposals": [
     {
-     "team": [
-      "KENNY",
-      "JERRY",
-      "WILL",
-      "ERIC"
-     ],
+     "state": "APPROVED",
      "votes": [
       "KENNY",
       "WILL",
       "ERIC",
       "JERRY"
      ],
-     "state": "APPROVED",
+     "team": [
+      "KENNY",
+      "JERRY",
+      "WILL",
+      "ERIC"
+     ],
      "proposer": "KENNY"
     }
    ],
-   "teamSize": 4,
    "failsRequired": 1,
    "state": "SUCCESS",
-   "numFails": 0,
    "team": [
     "KENNY",
     "JERRY",
     "WILL",
     "ERIC"
-   ]
+   ],
+   "numFails": 0,
+   "teamSize": 4
   }
  ],
- "timeFinished": {
-  "_seconds": 1591852116,
-  "_nanoseconds": 921000000
- },
- "outcome": {
-  "votes": [
-   {
-    "JPAN": true,
-    "KENNY": true
-   },
-   {
-    "KENNY": true,
-    "JPAN": false,
-    "NIKKI": true
-   },
-   {
-    "WILL": true,
-    "JPAN": false,
-    "JERRY": true
-   },
-   {
-    "MAL": true,
-    "JERRY": true,
-    "KENNY": true,
-    "WILL": true
-   },
-   {
-    "WILL": true,
-    "ERIC": true,
-    "JERRY": true,
-    "KENNY": true
-   }
-  ],
-  "assassinated": "JERRY",
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "name": "NIKKI",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "WILL",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "ERIC",
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "MAL"
-   },
-   {
-    "name": "JERRY",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "KENNY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "JPAN",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ]
- },
  "options": {
   "inGameLog": false
  }

@@ -1,20 +1,81 @@
 {
- "timeFinished": {
-  "_seconds": 1595146448,
-  "_nanoseconds": 740000000
+ "outcome": {
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "name": "ROHAN",
+    "assassin": true
+   },
+   {
+    "name": "BROWNBEARD",
+    "role": "OBERON",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "PRIDHVI"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "BRYANT"
+   },
+   {
+    "name": "KLAY",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "SHRAVAN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "NICK"
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "SHRAVAN",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "NICK": true,
+    "PRIDHVI": true
+   },
+   {
+    "ROHAN": true,
+    "NICK": true,
+    "PRIDHVI": true
+   },
+   {
+    "BRYANT": true,
+    "ROHAN": false,
+    "NICK": true
+   },
+   {
+    "BROWNBEARD": false,
+    "PRIDHVI": true,
+    "NICK": true,
+    "ROHAN": false
+   },
+   {
+    "PRIDHVI": true,
+    "NICK": true,
+    "SHRAVAN": true,
+    "BRYANT": true
+   }
+  ]
  },
  "missions": [
   {
    "teamSize": 2,
-   "numFails": 0,
-   "team": [
-    "NICK",
-    "PRIDHVI"
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "NICK",
+     "state": "APPROVED",
      "votes": [
       "NICK",
       "KLAY",
@@ -23,30 +84,31 @@
       "SHRAVAN",
       "BRYANT"
      ],
-     "proposer": "NICK",
-     "state": "APPROVED",
      "team": [
       "NICK",
       "PRIDHVI"
      ]
     }
-   ]
+   ],
+   "numFails": 0,
+   "team": [
+    "NICK",
+    "PRIDHVI"
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
-   "team": [
-    "PRIDHVI",
-    "NICK",
-    "ROHAN"
-   ],
+   "numFails": 0,
    "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "PRIDHVI",
       "NICK",
       "ROHAN"
      ],
-     "proposer": "ROHAN",
      "votes": [
       "NICK",
       "PRIDHVI",
@@ -55,12 +117,16 @@
       "ROHAN",
       "BRYANT"
      ],
-     "state": "APPROVED"
+     "proposer": "ROHAN"
     }
    ],
    "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1
+   "failsRequired": 1,
+   "team": [
+    "PRIDHVI",
+    "NICK",
+    "ROHAN"
+   ]
   },
   {
    "proposals": [
@@ -70,19 +136,19 @@
       "ROHAN",
       "BRYANT"
      ],
+     "state": "APPROVED",
+     "proposer": "BRYANT",
      "votes": [
       "ROHAN",
       "PRIDHVI",
       "KLAY",
       "BRYANT",
       "NICK"
-     ],
-     "state": "APPROVED",
-     "proposer": "BRYANT"
+     ]
     }
    ],
-   "failsRequired": 1,
    "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "NICK",
     "ROHAN",
@@ -93,16 +159,8 @@
   },
   {
    "failsRequired": 2,
-   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "BROWNBEARD",
-      "ROHAN",
-      "NICK",
-      "PRIDHVI"
-     ],
-     "proposer": "BROWNBEARD",
      "votes": [
       "ROHAN",
       "KLAY",
@@ -110,9 +168,17 @@
       "BROWNBEARD",
       "PRIDHVI"
      ],
-     "state": "APPROVED"
+     "proposer": "BROWNBEARD",
+     "state": "APPROVED",
+     "team": [
+      "BROWNBEARD",
+      "ROHAN",
+      "NICK",
+      "PRIDHVI"
+     ]
     }
    ],
+   "state": "FAIL",
    "team": [
     "BROWNBEARD",
     "ROHAN",
@@ -120,77 +186,88 @@
     "PRIDHVI"
    ],
    "numFails": 2,
-   "state": "FAIL"
+   "teamSize": 4
   },
   {
-   "team": [
-    "SHRAVAN",
-    "PRIDHVI",
-    "NICK",
-    "BRYANT"
-   ],
-   "teamSize": 4,
-   "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "BRYANT",
-      "ROHAN",
-      "BROWNBEARD"
-     ],
-     "proposer": "SHRAVAN",
-     "state": "REJECTED",
      "team": [
       "SHRAVAN",
       "BRYANT",
       "PRIDHVI",
       "BROWNBEARD"
+     ],
+     "proposer": "SHRAVAN",
+     "state": "REJECTED",
+     "votes": [
+      "BRYANT",
+      "ROHAN",
+      "BROWNBEARD"
      ]
     },
     {
+     "votes": [
+      "KLAY",
+      "NICK",
+      "ROHAN"
+     ],
+     "state": "REJECTED",
      "team": [
       "KLAY",
       "NICK",
       "BRYANT",
       "SHRAVAN"
      ],
-     "proposer": "KLAY",
-     "votes": [
-      "KLAY",
-      "NICK",
-      "ROHAN"
-     ],
-     "state": "REJECTED"
+     "proposer": "KLAY"
     },
     {
-     "team": [
-      "SHRAVAN",
-      "PRIDHVI",
-      "NICK",
-      "BRYANT"
-     ],
+     "state": "APPROVED",
+     "proposer": "PRIDHVI",
      "votes": [
       "SHRAVAN",
       "BRYANT",
       "PRIDHVI",
       "NICK"
      ],
-     "proposer": "PRIDHVI",
-     "state": "APPROVED"
+     "team": [
+      "SHRAVAN",
+      "PRIDHVI",
+      "NICK",
+      "BRYANT"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 4,
+   "team": [
+    "SHRAVAN",
+    "PRIDHVI",
+    "NICK",
+    "BRYANT"
+   ],
+   "state": "SUCCESS"
   }
  ],
+ "timeCreated": {
+  "_seconds": 1595144741,
+  "_nanoseconds": 752000000
+ },
+ "timeFinished": {
+  "_seconds": 1595146448,
+  "_nanoseconds": 740000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
-   "name": "SHRAVAN",
-   "uid": "JbCckK6FAEQcLuHKAvN69wqbOS73"
+   "uid": "JbCckK6FAEQcLuHKAvN69wqbOS73",
+   "name": "SHRAVAN"
   },
   {
-   "uid": "V4SAGCzS9KMfXt2eiWuWhKXSMm12",
-   "name": "KLAY"
+   "name": "KLAY",
+   "uid": "V4SAGCzS9KMfXt2eiWuWhKXSMm12"
   },
   {
    "name": "PRIDHVI",
@@ -201,93 +278,16 @@
    "uid": "bPC4ngKgF1UioBVRuUmIGyPEOw03"
   },
   {
-   "name": "ROHAN",
-   "uid": "kxOTeulhGKcu2MOCO9lYm5giHP82"
+   "uid": "kxOTeulhGKcu2MOCO9lYm5giHP82",
+   "name": "ROHAN"
   },
   {
-   "uid": "U6scF13Z1JREsmyEZfa2cjw35qB3",
-   "name": "BRYANT"
+   "name": "BRYANT",
+   "uid": "U6scF13Z1JREsmyEZfa2cjw35qB3"
   },
   {
    "uid": "MtEIBFOtu7aeIxgJkb4oODo2qhp1",
    "name": "BROWNBEARD"
   }
- ],
- "outcome": {
-  "roles": [
-   {
-    "name": "ROHAN",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "name": "BROWNBEARD",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "PRIDHVI",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "BRYANT",
-    "assassin": false
-   },
-   {
-    "name": "KLAY",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "SHRAVAN",
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "NICK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "state": "GOOD_WIN",
-  "assassinated": "SHRAVAN",
-  "votes": [
-   {
-    "PRIDHVI": true,
-    "NICK": true
-   },
-   {
-    "ROHAN": true,
-    "PRIDHVI": true,
-    "NICK": true
-   },
-   {
-    "BRYANT": true,
-    "NICK": true,
-    "ROHAN": false
-   },
-   {
-    "BROWNBEARD": false,
-    "PRIDHVI": true,
-    "ROHAN": false,
-    "NICK": true
-   },
-   {
-    "SHRAVAN": true,
-    "BRYANT": true,
-    "NICK": true,
-    "PRIDHVI": true
-   }
-  ],
-  "message": "Three successful missions"
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1595144741,
-  "_nanoseconds": 752000000
- }
+ ]
 }

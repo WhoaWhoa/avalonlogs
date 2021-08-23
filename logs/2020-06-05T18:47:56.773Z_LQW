@@ -1,16 +1,51 @@
 {
+ "timeFinished": {
+  "_seconds": 1591383618,
+  "_nanoseconds": 580000000
+ },
+ "players": [
+  {
+   "uid": "wprhzz8JcTTaypHBgCApMkCahXh1",
+   "name": "TJ"
+  },
+  {
+   "uid": "gSscAu4c2fgtYBT6FyocjIgOcL12",
+   "name": "DROOL"
+  },
+  {
+   "uid": "h4gOMi3ZVoQ4uzHfF4YH6vwzWwu1",
+   "name": "CHRISTINE"
+  },
+  {
+   "uid": "fiXM57UAplMPWT3BjibAKwbsVvu1",
+   "name": "DUCKXU"
+  },
+  {
+   "name": "EMILY",
+   "uid": "jSUjJUqFCLXvgkvbT8ccWc0JDG63"
+  },
+  {
+   "uid": "xmLIEMFHVUWaUljoYZCsDGimxdj2",
+   "name": "DAN"
+  },
+  {
+   "name": "DYLAN",
+   "uid": "X8HBN3vBijMFpP8mH6XaxgdUKnD2"
+  }
+ ],
  "outcome": {
   "message": "Three successful missions",
   "state": "GOOD_WIN",
+  "assassinated": "CHRISTINE",
   "votes": [
    {
     "DROOL": true,
     "DUCKXU": true
    },
    {
+    "DAN": true,
     "DUCKXU": true,
-    "DROOL": true,
-    "DAN": true
+    "DROOL": true
    },
    {
     "DUCKXU": false,
@@ -19,20 +54,20 @@
    },
    {
     "EMILY": true,
+    "DAN": true,
     "DYLAN": true,
-    "CHRISTINE": true,
-    "DAN": true
+    "CHRISTINE": true
    }
   ],
   "roles": [
    {
-    "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "DAN",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "name": "DYLAN",
+    "assassin": false,
     "role": "MERLIN"
    },
    {
@@ -42,26 +77,32 @@
    },
    {
     "name": "DROOL",
-    "role": "EVIL MINION",
-    "assassin": false
+    "assassin": false,
+    "role": "EVIL MINION"
    },
    {
     "assassin": false,
-    "name": "EMILY",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "EMILY"
    },
    {
+    "assassin": true,
     "name": "DUCKXU",
-    "role": "EVIL MINION",
-    "assassin": true
+    "role": "EVIL MINION"
    },
    {
     "assassin": false,
-    "name": "CHRISTINE",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "CHRISTINE"
    }
-  ],
-  "assassinated": "CHRISTINE"
+  ]
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1591382876,
+  "_nanoseconds": 773000000
  },
  "missions": [
   {
@@ -84,24 +125,17 @@
      "proposer": "EMILY"
     }
    ],
+   "numFails": 0,
    "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 2,
    "team": [
     "DUCKXU",
     "DROOL"
-   ],
-   "numFails": 0,
-   "failsRequired": 1,
-   "teamSize": 2
+   ]
   },
   {
-   "numFails": 0,
-   "state": "SUCCESS",
-   "team": [
-    "DAN",
-    "DUCKXU",
-    "DROOL"
-   ],
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -109,6 +143,7 @@
       "DUCKXU",
       "DROOL"
      ],
+     "state": "APPROVED",
      "proposer": "DAN",
      "votes": [
       "DUCKXU",
@@ -118,34 +153,50 @@
       "TJ",
       "DROOL",
       "EMILY"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "team": [
+    "DAN",
+    "DUCKXU",
+    "DROOL"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
    "teamSize": 3,
-   "failsRequired": 1,
    "state": "FAIL",
+   "numFails": 2,
+   "failsRequired": 1,
+   "team": [
+    "DUCKXU",
+    "DAN",
+    "DROOL"
+   ],
    "proposals": [
     {
-     "proposer": "DYLAN",
      "votes": [
       "DAN",
       "DYLAN",
       "EMILY"
      ],
-     "state": "REJECTED",
      "team": [
       "DYLAN",
       "DAN",
       "CHRISTINE"
-     ]
+     ],
+     "proposer": "DYLAN",
+     "state": "REJECTED"
     },
     {
+     "team": [
+      "DUCKXU",
+      "DAN",
+      "DROOL"
+     ],
      "state": "APPROVED",
-     "proposer": "TJ",
      "votes": [
       "TJ",
       "DROOL",
@@ -154,111 +205,60 @@
       "CHRISTINE",
       "DAN"
      ],
-     "team": [
-      "DUCKXU",
-      "DAN",
-      "DROOL"
-     ]
+     "proposer": "TJ"
     }
-   ],
-   "numFails": 2,
-   "team": [
-    "DUCKXU",
-    "DAN",
-    "DROOL"
    ]
   },
   {
    "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "DAN",
       "DROOL",
       "DUCKXU",
       "CHRISTINE"
      ],
-     "proposer": "DROOL",
+     "state": "REJECTED",
      "votes": [
       "CHRISTINE",
       "DROOL"
-     ]
+     ],
+     "proposer": "DROOL"
     },
     {
-     "proposer": "CHRISTINE",
      "state": "APPROVED",
-     "votes": [
-      "EMILY",
-      "CHRISTINE",
-      "DAN",
-      "DYLAN"
-     ],
+     "proposer": "CHRISTINE",
      "team": [
       "CHRISTINE",
       "DAN",
       "DYLAN",
       "EMILY"
+     ],
+     "votes": [
+      "EMILY",
+      "CHRISTINE",
+      "DAN",
+      "DYLAN"
      ]
     }
    ],
+   "state": "SUCCESS",
    "failsRequired": 2,
+   "teamSize": 4,
    "team": [
     "CHRISTINE",
     "DAN",
     "DYLAN",
     "EMILY"
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
-   "team": [],
-   "proposals": [],
-   "teamSize": 4,
    "state": "PENDING",
+   "teamSize": 4,
+   "proposals": [],
+   "team": [],
    "failsRequired": 1
   }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1591382876,
-  "_nanoseconds": 773000000
- },
- "players": [
-  {
-   "name": "TJ",
-   "uid": "wprhzz8JcTTaypHBgCApMkCahXh1"
-  },
-  {
-   "uid": "gSscAu4c2fgtYBT6FyocjIgOcL12",
-   "name": "DROOL"
-  },
-  {
-   "name": "CHRISTINE",
-   "uid": "h4gOMi3ZVoQ4uzHfF4YH6vwzWwu1"
-  },
-  {
-   "name": "DUCKXU",
-   "uid": "fiXM57UAplMPWT3BjibAKwbsVvu1"
-  },
-  {
-   "name": "EMILY",
-   "uid": "jSUjJUqFCLXvgkvbT8ccWc0JDG63"
-  },
-  {
-   "uid": "xmLIEMFHVUWaUljoYZCsDGimxdj2",
-   "name": "DAN"
-  },
-  {
-   "name": "DYLAN",
-   "uid": "X8HBN3vBijMFpP8mH6XaxgdUKnD2"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1591383618,
-  "_nanoseconds": 580000000
- }
+ ]
 }

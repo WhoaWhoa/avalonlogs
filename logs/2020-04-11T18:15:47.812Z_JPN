@@ -1,112 +1,4 @@
 {
- "timeFinished": {
-  "_seconds": 1586631024,
-  "_nanoseconds": 247247000
- },
- "outcome": {
-  "votes": [
-   {
-    "MALTE": true,
-    "KOLAR": true
-   },
-   {
-    "MALTE": true,
-    "KOLAR": false,
-    "MARKUS": true
-   },
-   {
-    "MALTE": true,
-    "PATRICK": true,
-    "KOLAR": false
-   },
-   {
-    "NICK": true,
-    "MARKUS": true,
-    "STEFAN": true,
-    "PATRICK": true
-   },
-   {
-    "PATRICK": true,
-    "MARKUS": true,
-    "MALTE": true,
-    "NICK": true
-   }
-  ],
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "KOLAR",
-    "role": "MORGANA"
-   },
-   {
-    "name": "PATRICK",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "MALTE"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "MARKUS"
-   },
-   {
-    "name": "NICK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "CHRISTOPH",
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "STEFAN",
-    "assassin": true
-   }
-  ],
-  "assassinated": "MALTE",
-  "state": "GOOD_WIN"
- },
- "players": [
-  {
-   "uid": "ll5oFF9hc8dAFIbkDAPDKoR7fil2",
-   "name": "NICK"
-  },
-  {
-   "uid": "1CdXWvea3SgisHfcWq2mpkOhQwE3",
-   "name": "MALTE"
-  },
-  {
-   "name": "KOLAR",
-   "uid": "2BQcjWuUIxfKHkgKCRDeqBYLbcg2"
-  },
-  {
-   "name": "MARKUS",
-   "uid": "mRt3Q8chi3VkwBRXnqGZqf8l0gj2"
-  },
-  {
-   "name": "PATRICK",
-   "uid": "PYYzqvbAyGeFXfpEIFus8sRMaWP2"
-  },
-  {
-   "uid": "Tzfj8KypC2NvafKDnRgrbYdDtk42",
-   "name": "CHRISTOPH"
-  },
-  {
-   "uid": "vVd0Puuj52doSnLo6hThDUAAKLz1",
-   "name": "STEFAN"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586628947,
-  "_nanoseconds": 812000000
- },
  "missions": [
   {
    "failsRequired": 1,
@@ -114,7 +6,7 @@
     "KOLAR",
     "MALTE"
    ],
-   "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
@@ -134,15 +26,21 @@
      "proposer": "MALTE"
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "teamSize": 2,
+   "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
    "numFails": 1,
+   "team": [
+    "MARKUS",
+    "KOLAR",
+    "MALTE"
+   ],
    "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "KOLAR",
      "team": [
       "MARKUS",
       "KOLAR",
@@ -157,34 +55,21 @@
       "CHRISTOPH",
       "STEFAN",
       "KOLAR"
-     ]
+     ],
+     "proposer": "KOLAR"
     }
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "team": [
-    "MARKUS",
-    "KOLAR",
-    "MALTE"
    ]
   },
   {
-   "team": [
-    "MALTE",
-    "KOLAR",
-    "PATRICK"
-   ],
    "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "proposer": "MARKUS",
      "votes": [
       "MARKUS"
      ],
-     "state": "REJECTED",
      "team": [
       "MARKUS",
       "CHRISTOPH",
@@ -192,8 +77,8 @@
      ]
     },
     {
-     "state": "APPROVED",
      "proposer": "PATRICK",
+     "state": "APPROVED",
      "team": [
       "MALTE",
       "KOLAR",
@@ -208,22 +93,33 @@
       "NICK"
      ]
     }
-   ]
+   ],
+   "teamSize": 3,
+   "team": [
+    "MALTE",
+    "KOLAR",
+    "PATRICK"
+   ],
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
-   "failsRequired": 2,
    "teamSize": 4,
-   "numFails": 0,
+   "team": [
+    "STEFAN",
+    "MARKUS",
+    "PATRICK",
+    "NICK"
+   ],
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "KOLAR",
       "CHRISTOPH",
       "STEFAN"
      ],
      "proposer": "CHRISTOPH",
+     "state": "REJECTED",
      "team": [
       "NICK",
       "STEFAN",
@@ -232,12 +128,6 @@
      ]
     },
     {
-     "team": [
-      "STEFAN",
-      "MARKUS",
-      "PATRICK",
-      "NICK"
-     ],
      "votes": [
       "CHRISTOPH",
       "STEFAN",
@@ -246,19 +136,19 @@
       "MALTE"
      ],
      "state": "APPROVED",
+     "team": [
+      "STEFAN",
+      "MARKUS",
+      "PATRICK",
+      "NICK"
+     ],
      "proposer": "STEFAN"
     }
    ],
-   "team": [
-    "STEFAN",
-    "MARKUS",
-    "PATRICK",
-    "NICK"
-   ]
+   "failsRequired": 2,
+   "numFails": 0
   },
   {
-   "numFails": 0,
-   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -267,24 +157,134 @@
       "PATRICK",
       "MALTE"
      ],
+     "proposer": "NICK",
      "state": "APPROVED",
      "votes": [
       "PATRICK",
       "MALTE",
       "MARKUS",
       "NICK"
-     ],
-     "proposer": "NICK"
+     ]
     }
    ],
-   "teamSize": 4,
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "NICK",
     "MARKUS",
     "PATRICK",
     "MALTE"
-   ]
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 4
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1586631024,
+  "_nanoseconds": 247247000
+ },
+ "players": [
+  {
+   "uid": "ll5oFF9hc8dAFIbkDAPDKoR7fil2",
+   "name": "NICK"
+  },
+  {
+   "name": "MALTE",
+   "uid": "1CdXWvea3SgisHfcWq2mpkOhQwE3"
+  },
+  {
+   "uid": "2BQcjWuUIxfKHkgKCRDeqBYLbcg2",
+   "name": "KOLAR"
+  },
+  {
+   "name": "MARKUS",
+   "uid": "mRt3Q8chi3VkwBRXnqGZqf8l0gj2"
+  },
+  {
+   "name": "PATRICK",
+   "uid": "PYYzqvbAyGeFXfpEIFus8sRMaWP2"
+  },
+  {
+   "name": "CHRISTOPH",
+   "uid": "Tzfj8KypC2NvafKDnRgrbYdDtk42"
+  },
+  {
+   "name": "STEFAN",
+   "uid": "vVd0Puuj52doSnLo6hThDUAAKLz1"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1586628947,
+  "_nanoseconds": 812000000
+ },
+ "outcome": {
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "name": "KOLAR",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "PATRICK",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "MALTE",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "MARKUS",
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "NICK"
+   },
+   {
+    "assassin": false,
+    "name": "CHRISTOPH",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "STEFAN",
+    "role": "EVIL MINION",
+    "assassin": true
+   }
+  ],
+  "assassinated": "MALTE",
+  "votes": [
+   {
+    "MALTE": true,
+    "KOLAR": true
+   },
+   {
+    "KOLAR": false,
+    "MARKUS": true,
+    "MALTE": true
+   },
+   {
+    "PATRICK": true,
+    "MALTE": true,
+    "KOLAR": false
+   },
+   {
+    "NICK": true,
+    "STEFAN": true,
+    "PATRICK": true,
+    "MARKUS": true
+   },
+   {
+    "MARKUS": true,
+    "MALTE": true,
+    "PATRICK": true,
+    "NICK": true
+   }
+  ]
+ }
 }

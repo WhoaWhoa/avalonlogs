@@ -1,20 +1,100 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1591888760,
+  "_nanoseconds": 904000000
+ },
+ "outcome": {
+  "assassinated": null,
+  "roles": [
+   {
+    "assassin": false,
+    "name": "ROBIN",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JL",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "DAN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "JEREMY",
+    "assassin": false
+   },
+   {
+    "name": "KENT",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "SOVEREIGN",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "LALALOLOLA",
+    "role": "MORGANA"
+   },
+   {
+    "name": "PROVIDENCE",
+    "role": "MORDRED",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "KENT": true,
+    "JEREMY": true,
+    "DAN": true
+   },
+   {
+    "JEREMY": true,
+    "KENT": true,
+    "DAN": true,
+    "PROVIDENCE": false
+   },
+   {
+    "DAN": true,
+    "JEREMY": true,
+    "KENT": true,
+    "LALALOLOLA": true
+   },
+   {
+    "JEREMY": true,
+    "DAN": true,
+    "PROVIDENCE": false,
+    "KENT": true,
+    "LALALOLOLA": false
+   },
+   {
+    "JL": true,
+    "JEREMY": true,
+    "DAN": true,
+    "PROVIDENCE": false,
+    "ROBIN": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions"
+ },
+ "timeFinished": {
+  "_seconds": 1591889982,
+  "_nanoseconds": 37000000
+ },
  "missions": [
   {
-   "team": [
-    "KENT",
-    "DAN",
-    "JEREMY"
-   ],
    "state": "SUCCESS",
-   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "KENT",
-      "DAN",
-      "JEREMY"
-     ],
      "state": "APPROVED",
      "votes": [
       "KENT",
@@ -24,23 +104,36 @@
       "DAN",
       "JEREMY"
      ],
+     "team": [
+      "KENT",
+      "DAN",
+      "JEREMY"
+     ],
      "proposer": "KENT"
     }
    ],
    "numFails": 0,
-   "teamSize": 3
-  },
-  {
-   "teamSize": 4,
-   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "KENT",
     "DAN",
-    "JEREMY",
-    "PROVIDENCE"
+    "JEREMY"
    ],
+   "failsRequired": 1
+  },
+  {
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "KENT",
+      "DAN",
+      "JEREMY",
+      "PROVIDENCE"
+     ],
      "votes": [
       "KENT",
       "SOVEREIGN",
@@ -50,21 +143,18 @@
       "DAN",
       "JEREMY"
      ],
-     "team": [
-      "KENT",
-      "DAN",
-      "JEREMY",
-      "PROVIDENCE"
-     ],
-     "state": "APPROVED",
      "proposer": "DAN"
     }
    ],
-   "failsRequired": 1,
-   "numFails": 1
+   "team": [
+    "KENT",
+    "DAN",
+    "JEREMY",
+    "PROVIDENCE"
+   ],
+   "state": "FAIL"
   },
   {
-   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -91,12 +181,14 @@
     "JEREMY",
     "KENT"
    ],
+   "teamSize": 4,
    "failsRequired": 1,
    "numFails": 0
   },
   {
-   "failsRequired": 2,
    "teamSize": 5,
+   "numFails": 2,
+   "failsRequired": 2,
    "team": [
     "LALALOLOLA",
     "DAN",
@@ -104,7 +196,7 @@
     "KENT",
     "PROVIDENCE"
    ],
-   "numFails": 2,
+   "state": "FAIL",
    "proposals": [
     {
      "votes": [
@@ -123,11 +215,10 @@
       "KENT",
       "PROVIDENCE"
      ],
-     "proposer": "PROVIDENCE",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "PROVIDENCE"
     }
-   ],
-   "state": "FAIL"
+   ]
   },
   {
    "team": [
@@ -138,42 +229,42 @@
     "JEREMY"
    ],
    "teamSize": 5,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "SOVEREIGN",
-      "LALALOLOLA"
-     ],
-     "proposer": "SOVEREIGN",
      "team": [
       "JEREMY",
       "JL",
       "SOVEREIGN",
       "KENT",
       "PROVIDENCE"
-     ]
+     ],
+     "votes": [
+      "SOVEREIGN",
+      "LALALOLOLA"
+     ],
+     "state": "REJECTED",
+     "proposer": "SOVEREIGN"
     },
     {
-     "proposer": "JL",
-     "state": "REJECTED",
-     "votes": [
-      "DAN",
-      "PROVIDENCE",
-      "JL",
-      "ROBIN"
-     ],
      "team": [
       "ROBIN",
       "JL",
       "DAN",
       "JEREMY",
       "PROVIDENCE"
-     ]
+     ],
+     "votes": [
+      "DAN",
+      "PROVIDENCE",
+      "JL",
+      "ROBIN"
+     ],
+     "proposer": "JL",
+     "state": "REJECTED"
     },
     {
-     "votes": [],
-     "state": "REJECTED",
      "team": [
       "JEREMY",
       "PROVIDENCE",
@@ -181,16 +272,11 @@
       "KENT",
       "DAN"
      ],
-     "proposer": "LALALOLOLA"
+     "votes": [],
+     "proposer": "LALALOLOLA",
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "ROBIN",
-      "DAN",
-      "JL",
-      "PROVIDENCE",
-      "JEREMY"
-     ],
      "votes": [
       "DAN",
       "JEREMY",
@@ -199,27 +285,28 @@
       "ROBIN",
       "JL"
      ],
-     "proposer": "ROBIN",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "ROBIN",
+      "DAN",
+      "JL",
+      "PROVIDENCE",
+      "JEREMY"
+     ],
+     "proposer": "ROBIN"
     }
    ],
-   "numFails": 1,
-   "state": "FAIL",
    "failsRequired": 1
   }
  ],
- "timeCreated": {
-  "_seconds": 1591888760,
-  "_nanoseconds": 904000000
- },
  "players": [
   {
    "uid": "YjIwyhCncYUiYPvf2PZcnmxX2Ou1",
    "name": "LALALOLOLA"
   },
   {
-   "uid": "ebEgmZuKkIgkRJkcrMMtNXmpJhB2",
-   "name": "ROBIN"
+   "name": "ROBIN",
+   "uid": "ebEgmZuKkIgkRJkcrMMtNXmpJhB2"
   },
   {
    "name": "KENT",
@@ -234,103 +321,16 @@
    "uid": "JLqcJkN64Qg9SY4JKFahTOXy3On2"
   },
   {
-   "uid": "w2ngiDASElTWBTMXd9fdYpBlSNx1",
-   "name": "PROVIDENCE"
+   "name": "PROVIDENCE",
+   "uid": "w2ngiDASElTWBTMXd9fdYpBlSNx1"
   },
   {
-   "uid": "hJiNVPvKNVNZrAynLC7dKKaLkU22",
-   "name": "SOVEREIGN"
+   "name": "SOVEREIGN",
+   "uid": "hJiNVPvKNVNZrAynLC7dKKaLkU22"
   },
   {
    "name": "JL",
    "uid": "bI2OVSenLLhu3HprJLUfksPK1Hm1"
   }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1591889982,
-  "_nanoseconds": 37000000
- },
- "outcome": {
-  "assassinated": null,
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "DAN": true,
-    "KENT": true,
-    "JEREMY": true
-   },
-   {
-    "DAN": true,
-    "PROVIDENCE": false,
-    "KENT": true,
-    "JEREMY": true
-   },
-   {
-    "LALALOLOLA": true,
-    "JEREMY": true,
-    "KENT": true,
-    "DAN": true
-   },
-   {
-    "LALALOLOLA": false,
-    "JEREMY": true,
-    "DAN": true,
-    "PROVIDENCE": false,
-    "KENT": true
-   },
-   {
-    "JEREMY": true,
-    "ROBIN": true,
-    "DAN": true,
-    "PROVIDENCE": false,
-    "JL": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "ROBIN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "JL",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "DAN"
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "JEREMY"
-   },
-   {
-    "assassin": false,
-    "name": "KENT",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "SOVEREIGN"
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "LALALOLOLA"
-   },
-   {
-    "name": "PROVIDENCE",
-    "assassin": false,
-    "role": "MORDRED"
-   }
-  ]
- }
+ ]
 }

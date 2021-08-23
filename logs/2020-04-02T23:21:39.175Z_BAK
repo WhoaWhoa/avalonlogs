@@ -1,77 +1,7 @@
 {
- "players": [
-  {
-   "name": "KAREN",
-   "uid": "lgFShAkDmheF0VFLHKSq4VuS5LA3"
-  },
-  {
-   "name": "JIMMY",
-   "uid": "mKRHSdAI67aMae7RUWeiCfKMSvc2"
-  },
-  {
-   "name": "JOHN",
-   "uid": "TIuhZf7MDVfSXA3sCwLZqVEbFkR2"
-  },
-  {
-   "name": "ALEX",
-   "uid": "OfSnvCcZe5anEUWFdUqNf9PvnUK2"
-  },
-  {
-   "name": "KEVIN",
-   "uid": "A4b62HJDANYXomWcxHAGBDw4Fs13"
-  },
-  {
-   "name": "ISABEL",
-   "uid": "ohDZ9CKryxQGcPY3PIDpMdFsjs52"
-  },
-  {
-   "uid": "tbMyQmKrTRMhdTVPWhyPZYzW4h02",
-   "name": "ELLEN"
-  },
-  {
-   "name": "JONO",
-   "uid": "TvxOE5lWKGQpVdOH4O740rTzabT2"
-  },
-  {
-   "uid": "a0Z2gAqTsNXCCXuC0YDLh48PhJ63",
-   "name": "KIM"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585869699,
-  "_nanoseconds": 175000000
- },
- "timeFinished": {
-  "_seconds": 1585870925,
-  "_nanoseconds": 92665000
- },
  "outcome": {
-  "votes": [
-   {
-    "ALEX": true,
-    "KAREN": false,
-    "ISABEL": true
-   },
-   {
-    "JIMMY": true,
-    "ELLEN": true,
-    "JOHN": true,
-    "ALEX": true
-   },
-   {
-    "JIMMY": true,
-    "JOHN": true,
-    "ALEX": true,
-    "KIM": true
-   },
-   {
-    "ELLEN": true,
-    "JOHN": true,
-    "JIMMY": true,
-    "ALEX": true,
-    "KIM": true
-   }
-  ],
+  "assassinated": "JOHN",
+  "state": "GOOD_WIN",
   "message": "Three successful missions",
   "roles": [
    {
@@ -80,39 +10,39 @@
     "assassin": false
    },
    {
-    "assassin": false,
     "role": "MORDRED",
-    "name": "JONO"
-   },
-   {
-    "name": "ISABEL",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "KAREN",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "name": "JIMMY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "KIM",
+    "name": "JONO",
     "assassin": false
    },
    {
     "assassin": false,
-    "name": "ELLEN",
-    "role": "PERCIVAL"
+    "name": "ISABEL",
+    "role": "MERLIN"
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "KAREN"
+   },
+   {
     "assassin": false,
-    "name": "ALEX"
+    "role": "LOYAL FOLLOWER",
+    "name": "JIMMY"
+   },
+   {
+    "name": "KIM",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "ELLEN",
+    "assassin": false
+   },
+   {
+    "name": "ALEX",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "role": "LOYAL FOLLOWER",
@@ -120,24 +50,56 @@
     "assassin": false
    }
   ],
-  "assassinated": "JOHN",
-  "state": "GOOD_WIN"
+  "votes": [
+   {
+    "KAREN": false,
+    "ALEX": true,
+    "ISABEL": true
+   },
+   {
+    "ALEX": true,
+    "ELLEN": true,
+    "JOHN": true,
+    "JIMMY": true
+   },
+   {
+    "JIMMY": true,
+    "JOHN": true,
+    "KIM": true,
+    "ALEX": true
+   },
+   {
+    "JOHN": true,
+    "ELLEN": true,
+    "ALEX": true,
+    "JIMMY": true,
+    "KIM": true
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1585869699,
+  "_nanoseconds": 175000000
  },
  "missions": [
   {
+   "team": [
+    "KAREN",
+    "ALEX",
+    "ISABEL"
+   ],
    "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 1,
    "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "KAREN",
      "team": [
       "KAREN",
       "ALEX",
       "ISABEL"
      ],
+     "proposer": "KAREN",
      "votes": [
       "ELLEN",
       "ALEX",
@@ -146,17 +108,14 @@
       "ISABEL",
       "KAREN",
       "KIM"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "team": [
-    "KAREN",
-    "ALEX",
-    "ISABEL"
    ]
   },
   {
    "state": "SUCCESS",
+   "teamSize": 4,
    "numFails": 0,
    "failsRequired": 1,
    "team": [
@@ -167,6 +126,14 @@
    ],
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "ALEX",
+      "ELLEN",
+      "JOHN",
+      "JIMMY"
+     ],
+     "proposer": "JIMMY",
      "votes": [
       "ALEX",
       "JOHN",
@@ -175,22 +142,12 @@
       "KAREN",
       "JIMMY",
       "KIM"
-     ],
-     "proposer": "JIMMY",
-     "state": "APPROVED",
-     "team": [
-      "ALEX",
-      "ELLEN",
-      "JOHN",
-      "JIMMY"
      ]
     }
-   ],
-   "teamSize": 4
+   ]
   },
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
+   "numFails": 0,
    "teamSize": 4,
    "team": [
     "JIMMY",
@@ -198,9 +155,10 @@
     "ALEX",
     "KIM"
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "JIMMY",
       "JOHN",
@@ -216,21 +174,13 @@
       "JONO",
       "KAREN",
       "JIMMY"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "numFails": 0
+   ]
   },
   {
-   "numFails": 0,
-   "team": [
-    "ALEX",
-    "JOHN",
-    "JIMMY",
-    "KIM",
-    "ELLEN"
-   ],
-   "state": "SUCCESS",
+   "failsRequired": 2,
    "proposals": [
     {
      "team": [
@@ -240,7 +190,7 @@
       "KIM",
       "ELLEN"
      ],
-     "proposer": "ALEX",
+     "state": "APPROVED",
      "votes": [
       "KIM",
       "ELLEN",
@@ -249,18 +199,68 @@
       "KAREN",
       "JIMMY"
      ],
-     "state": "APPROVED"
+     "proposer": "ALEX"
     }
    ],
-   "teamSize": 5,
-   "failsRequired": 2
+   "team": [
+    "ALEX",
+    "JOHN",
+    "JIMMY",
+    "KIM",
+    "ELLEN"
+   ],
+   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 5
   },
   {
-   "state": "PENDING",
-   "proposals": [],
    "teamSize": 5,
    "team": [],
-   "failsRequired": 1
+   "state": "PENDING",
+   "failsRequired": 1,
+   "proposals": []
   }
- ]
+ ],
+ "players": [
+  {
+   "name": "KAREN",
+   "uid": "lgFShAkDmheF0VFLHKSq4VuS5LA3"
+  },
+  {
+   "name": "JIMMY",
+   "uid": "mKRHSdAI67aMae7RUWeiCfKMSvc2"
+  },
+  {
+   "name": "JOHN",
+   "uid": "TIuhZf7MDVfSXA3sCwLZqVEbFkR2"
+  },
+  {
+   "uid": "OfSnvCcZe5anEUWFdUqNf9PvnUK2",
+   "name": "ALEX"
+  },
+  {
+   "name": "KEVIN",
+   "uid": "A4b62HJDANYXomWcxHAGBDw4Fs13"
+  },
+  {
+   "uid": "ohDZ9CKryxQGcPY3PIDpMdFsjs52",
+   "name": "ISABEL"
+  },
+  {
+   "name": "ELLEN",
+   "uid": "tbMyQmKrTRMhdTVPWhyPZYzW4h02"
+  },
+  {
+   "uid": "TvxOE5lWKGQpVdOH4O740rTzabT2",
+   "name": "JONO"
+  },
+  {
+   "name": "KIM",
+   "uid": "a0Z2gAqTsNXCCXuC0YDLh48PhJ63"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1585870925,
+  "_nanoseconds": 92665000
+ }
 }

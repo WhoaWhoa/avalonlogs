@@ -1,100 +1,36 @@
 {
- "timeFinished": {
-  "_seconds": 1587090991,
-  "_nanoseconds": 782063000
- },
- "outcome": {
-  "assassinated": "ANINDYA",
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "name": "GOODWIN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ADAM",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "DAN",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ANINDYA"
-   },
-   {
-    "name": "NIKOLAI",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "name": "AFFINE",
-    "role": "MORGANA",
-    "assassin": false
-   }
-  ],
-  "votes": [
-   {
-    "DAN": true,
-    "ANINDYA": true
-   },
-   {
-    "AFFINE": true,
-    "NIKOLAI": true,
-    "GOODWIN": false
-   },
-   {
-    "DAN": true,
-    "NIKOLAI": true,
-    "ADAM": true,
-    "ANINDYA": true
-   },
-   {
-    "DAN": true,
-    "ANINDYA": true,
-    "NIKOLAI": true
-   }
-  ],
-  "message": "Three successful missions"
- },
  "missions": [
   {
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "teamSize": 2,
    "team": [
     "ANINDYA",
     "DAN"
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
-     "team": [
-      "GOODWIN",
-      "AFFINE"
-     ],
      "votes": [
       "DAN",
       "GOODWIN"
      ],
+     "team": [
+      "GOODWIN",
+      "AFFINE"
+     ],
+     "state": "REJECTED",
      "proposer": "GOODWIN"
     },
     {
-     "state": "REJECTED",
      "proposer": "ADAM",
-     "votes": [
-      "AFFINE",
-      "ADAM"
-     ],
      "team": [
       "ADAM",
       "AFFINE"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "AFFINE",
+      "ADAM"
      ]
     },
     {
@@ -102,29 +38,27 @@
       "DAN",
       "ADAM"
      ],
-     "state": "REJECTED",
+     "proposer": "DAN",
      "votes": [
       "ADAM",
       "DAN"
      ],
-     "proposer": "DAN"
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "NIKOLAI",
-      "ANINDYA"
-     ],
+     "proposer": "NIKOLAI",
      "votes": [
       "ADAM",
       "DAN",
       "NIKOLAI"
      ],
      "state": "REJECTED",
-     "proposer": "NIKOLAI"
+     "team": [
+      "NIKOLAI",
+      "ANINDYA"
+     ]
     },
     {
-     "proposer": "ANINDYA",
-     "state": "APPROVED",
      "votes": [
       "DAN",
       "ANINDYA",
@@ -133,101 +67,109 @@
       "GOODWIN",
       "ADAM"
      ],
+     "state": "APPROVED",
      "team": [
       "ANINDYA",
       "DAN"
-     ]
+     ],
+     "proposer": "ANINDYA"
     }
-   ]
+   ],
+   "numFails": 0
   },
   {
+   "failsRequired": 1,
    "state": "FAIL",
+   "numFails": 1,
+   "proposals": [
+    {
+     "team": [
+      "ANINDYA",
+      "DAN",
+      "AFFINE"
+     ],
+     "votes": [
+      "AFFINE"
+     ],
+     "proposer": "AFFINE",
+     "state": "REJECTED"
+    },
+    {
+     "proposer": "GOODWIN",
+     "state": "REJECTED",
+     "votes": [
+      "AFFINE"
+     ],
+     "team": [
+      "GOODWIN",
+      "ANINDYA",
+      "AFFINE"
+     ]
+    },
+    {
+     "state": "REJECTED",
+     "votes": [
+      "ADAM",
+      "ANINDYA"
+     ],
+     "proposer": "ADAM",
+     "team": [
+      "DAN",
+      "ADAM",
+      "ANINDYA"
+     ]
+    },
+    {
+     "state": "REJECTED",
+     "team": [
+      "DAN",
+      "ADAM",
+      "GOODWIN"
+     ],
+     "votes": [],
+     "proposer": "DAN"
+    },
+    {
+     "proposer": "NIKOLAI",
+     "votes": [
+      "GOODWIN",
+      "ADAM",
+      "DAN",
+      "ANINDYA",
+      "NIKOLAI",
+      "AFFINE"
+     ],
+     "team": [
+      "NIKOLAI",
+      "GOODWIN",
+      "AFFINE"
+     ],
+     "state": "APPROVED"
+    }
+   ],
    "team": [
     "NIKOLAI",
     "GOODWIN",
     "AFFINE"
    ],
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "proposer": "AFFINE",
-     "votes": [
-      "AFFINE"
-     ],
-     "team": [
-      "ANINDYA",
-      "DAN",
-      "AFFINE"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "votes": [
-      "AFFINE"
-     ],
-     "proposer": "GOODWIN",
-     "team": [
-      "GOODWIN",
-      "ANINDYA",
-      "AFFINE"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "votes": [
-      "ADAM",
-      "ANINDYA"
-     ],
-     "team": [
-      "DAN",
-      "ADAM",
-      "ANINDYA"
-     ],
-     "proposer": "ADAM",
-     "state": "REJECTED"
-    },
-    {
-     "votes": [],
-     "state": "REJECTED",
-     "proposer": "DAN",
-     "team": [
-      "DAN",
-      "ADAM",
-      "GOODWIN"
-     ]
-    },
-    {
-     "votes": [
-      "GOODWIN",
-      "ADAM",
-      "DAN",
-      "ANINDYA",
-      "NIKOLAI",
-      "AFFINE"
-     ],
-     "proposer": "NIKOLAI",
-     "state": "APPROVED",
-     "team": [
-      "NIKOLAI",
-      "GOODWIN",
-      "AFFINE"
-     ]
-    }
-   ],
-   "numFails": 1,
    "teamSize": 3
   },
   {
+   "teamSize": 4,
    "failsRequired": 1,
-   "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "ADAM",
     "DAN",
     "NIKOLAI",
     "ANINDYA"
    ],
+   "numFails": 0,
    "proposals": [
     {
+     "votes": [
+      "ADAM"
+     ],
      "team": [
       "ANINDYA",
       "DAN",
@@ -235,123 +177,118 @@
       "NIKOLAI"
      ],
      "proposer": "ANINDYA",
-     "state": "REJECTED",
-     "votes": [
-      "ADAM"
-     ]
+     "state": "REJECTED"
     },
     {
      "votes": [],
+     "proposer": "AFFINE",
+     "state": "REJECTED",
      "team": [
       "AFFINE",
       "DAN",
       "ANINDYA",
       "NIKOLAI"
-     ],
-     "state": "REJECTED",
-     "proposer": "AFFINE"
+     ]
     },
     {
+     "state": "REJECTED",
+     "proposer": "GOODWIN",
      "team": [
       "GOODWIN",
       "DAN",
       "ANINDYA",
       "ADAM"
      ],
-     "state": "REJECTED",
-     "proposer": "GOODWIN",
      "votes": []
     },
     {
+     "team": [
+      "ADAM",
+      "DAN",
+      "NIKOLAI",
+      "ANINDYA"
+     ],
      "state": "APPROVED",
-     "proposer": "ADAM",
      "votes": [
       "DAN",
       "ANINDYA",
       "NIKOLAI",
       "ADAM"
      ],
-     "team": [
-      "ADAM",
-      "DAN",
-      "NIKOLAI",
-      "ANINDYA"
-     ]
+     "proposer": "ADAM"
     }
-   ],
-   "teamSize": 4,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "failsRequired": 1,
    "team": [
     "DAN",
     "NIKOLAI",
     "ANINDYA"
    ],
    "numFails": 0,
-   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "DAN",
+     "state": "REJECTED",
+     "team": [
+      "DAN",
+      "ADAM",
+      "ANINDYA"
+     ],
      "votes": [
       "ANINDYA",
       "ADAM",
       "DAN"
-     ],
-     "state": "REJECTED",
-     "proposer": "DAN",
-     "team": [
-      "DAN",
-      "ADAM",
-      "ANINDYA"
      ]
     },
     {
      "proposer": "NIKOLAI",
-     "state": "APPROVED",
-     "team": [
-      "DAN",
-      "NIKOLAI",
-      "ANINDYA"
-     ],
      "votes": [
       "DAN",
       "ANINDYA",
       "NIKOLAI",
       "ADAM"
-     ]
+     ],
+     "team": [
+      "DAN",
+      "NIKOLAI",
+      "ANINDYA"
+     ],
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "teamSize": 3
   },
   {
-   "team": [],
-   "state": "PENDING",
-   "failsRequired": 1,
    "proposals": [],
-   "teamSize": 4
+   "failsRequired": 1,
+   "state": "PENDING",
+   "teamSize": 4,
+   "team": []
   }
  ],
  "players": [
   {
-   "name": "GOODWIN",
-   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2"
+   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2",
+   "name": "GOODWIN"
   },
   {
    "name": "ADAM",
    "uid": "5Nl0zBHVy1V9rmkYhtGINyXaWaj1"
   },
   {
-   "uid": "Ds3YQyl9z9Q2lRjNZFT21kj2s063",
-   "name": "DAN"
+   "name": "DAN",
+   "uid": "Ds3YQyl9z9Q2lRjNZFT21kj2s063"
   },
   {
-   "uid": "JAPBZxxk0fMO1c5d7Dli45JF9D23",
-   "name": "NIKOLAI"
+   "name": "NIKOLAI",
+   "uid": "JAPBZxxk0fMO1c5d7Dli45JF9D23"
   },
   {
-   "name": "ANINDYA",
-   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2"
+   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2",
+   "name": "ANINDYA"
   },
   {
    "name": "AFFINE",
@@ -364,5 +301,68 @@
  "timeCreated": {
   "_seconds": 1587089906,
   "_nanoseconds": 497000000
+ },
+ "outcome": {
+  "assassinated": "ANINDYA",
+  "votes": [
+   {
+    "ANINDYA": true,
+    "DAN": true
+   },
+   {
+    "AFFINE": true,
+    "GOODWIN": false,
+    "NIKOLAI": true
+   },
+   {
+    "ADAM": true,
+    "DAN": true,
+    "NIKOLAI": true,
+    "ANINDYA": true
+   },
+   {
+    "ANINDYA": true,
+    "DAN": true,
+    "NIKOLAI": true
+   }
+  ],
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "GOODWIN"
+   },
+   {
+    "name": "ADAM",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "DAN",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "ANINDYA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "NIKOLAI",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "AFFINE"
+   }
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1587090991,
+  "_nanoseconds": 782063000
  }
 }

@@ -1,69 +1,40 @@
 {
- "outcome": {
-  "assassinated": "LULIN",
-  "votes": [
-   {
-    "LEO": true,
-    "MINA": true
-   },
-   {
-    "JERRY": true,
-    "DAKSTUPGEN": true,
-    "LEO": true
-   },
-   {
-    "LEO": true,
-    "JERRY": true,
-    "DAKSTUPGEN": true,
-    "MINA": false
-   },
-   {
-    "LEO": true,
-    "JENNY": true,
-    "JERRY": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "LULIN"
-   },
-   {
-    "name": "JENNY",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "name": "JERRY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "DAKSTUPGEN"
-   },
-   {
-    "name": "MINA",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "name": "LEO",
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "message": "Merlin assassinated"
+ "players": [
+  {
+   "uid": "tpx35IilkseydC0KtJXbkvthp8f1",
+   "name": "MINA"
+  },
+  {
+   "uid": "Kw9qyVkYXqQOlCaH746iPpRrEmi1",
+   "name": "JENNY"
+  },
+  {
+   "name": "LEO",
+   "uid": "F9wFFbRyUAMuxXh1aChOKnpkLdZ2"
+  },
+  {
+   "name": "LULIN",
+   "uid": "QxFiWwLy8uV25uC6IBmUstctMp52"
+  },
+  {
+   "name": "JERRY",
+   "uid": "eGUjVrYYFueYLJhWwb7rMHBIIQ62"
+  },
+  {
+   "name": "DAKSTUPGEN",
+   "uid": "YAZ1Sv1gEWOnB5hCoddmjSKstI53"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1590438818,
+  "_nanoseconds": 287000000
  },
  "missions": [
   {
-   "team": [
-    "LEO",
-    "MINA"
-   ],
+   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
@@ -82,31 +53,32 @@
      "proposer": "LEO"
     }
    ],
-   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "LEO",
+    "MINA"
+   ],
    "numFails": 0,
-   "teamSize": 2,
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
-   "team": [
-    "JERRY",
-    "LEO",
-    "DAKSTUPGEN"
-   ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "LULIN",
+     "votes": [
+      "JENNY",
+      "JERRY",
+      "LULIN"
+     ],
      "state": "REJECTED",
      "team": [
       "JERRY",
       "LEO",
       "LULIN"
      ],
-     "votes": [
-      "JENNY",
-      "JERRY",
-      "LULIN"
-     ]
+     "proposer": "LULIN"
     },
     {
      "team": [
@@ -114,34 +86,45 @@
       "LEO",
       "DAKSTUPGEN"
      ],
+     "state": "APPROVED",
      "votes": [
       "LEO",
       "JERRY",
       "DAKSTUPGEN",
       "MINA"
      ],
-     "state": "APPROVED",
      "proposer": "JERRY"
     }
    ],
    "numFails": 0,
-   "teamSize": 3,
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "team": [
+    "JERRY",
+    "LEO",
+    "DAKSTUPGEN"
+   ]
   },
   {
+   "numFails": 1,
+   "team": [
+    "LEO",
+    "MINA",
+    "DAKSTUPGEN",
+    "JERRY"
+   ],
+   "teamSize": 4,
+   "state": "FAIL",
    "failsRequired": 1,
    "proposals": [
     {
      "state": "REJECTED",
-     "votes": [],
-     "proposer": "DAKSTUPGEN",
      "team": [
       "DAKSTUPGEN",
       "JENNY",
       "JERRY",
       "LULIN"
-     ]
+     ],
+     "votes": [],
+     "proposer": "DAKSTUPGEN"
     },
     {
      "team": [
@@ -159,49 +142,48 @@
      ],
      "proposer": "MINA"
     }
-   ],
-   "team": [
-    "LEO",
-    "MINA",
-    "DAKSTUPGEN",
-    "JERRY"
-   ],
-   "numFails": 1,
-   "teamSize": 4,
-   "state": "FAIL"
+   ]
   },
   {
    "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "JENNY",
-      "MINA",
-      "LEO"
-     ],
      "team": [
       "JENNY",
       "MINA",
       "LEO"
      ],
-     "proposer": "JENNY"
+     "votes": [
+      "JENNY",
+      "MINA",
+      "LEO"
+     ],
+     "proposer": "JENNY",
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "MINA",
+      "LEO",
+      "LULIN"
+     ],
      "state": "REJECTED",
      "proposer": "LEO",
      "team": [
       "LEO",
       "JERRY",
       "MINA"
-     ],
-     "votes": [
-      "MINA",
-      "LEO",
-      "LULIN"
      ]
     },
     {
+     "state": "APPROVED",
+     "proposer": "LULIN",
+     "team": [
+      "JENNY",
+      "LEO",
+      "JERRY"
+     ],
      "votes": [
       "JENNY",
       "JERRY",
@@ -209,68 +191,86 @@
       "MINA",
       "LEO",
       "LULIN"
-     ],
-     "proposer": "LULIN",
-     "state": "APPROVED",
-     "team": [
-      "JENNY",
-      "LEO",
-      "JERRY"
      ]
     }
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "JENNY",
     "LEO",
     "JERRY"
-   ]
+   ],
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
    "state": "PENDING",
    "failsRequired": 1,
-   "team": [],
    "teamSize": 4,
+   "team": [],
    "proposals": []
   }
  ],
- "players": [
-  {
-   "name": "MINA",
-   "uid": "tpx35IilkseydC0KtJXbkvthp8f1"
-  },
-  {
-   "name": "JENNY",
-   "uid": "Kw9qyVkYXqQOlCaH746iPpRrEmi1"
-  },
-  {
-   "uid": "F9wFFbRyUAMuxXh1aChOKnpkLdZ2",
-   "name": "LEO"
-  },
-  {
-   "name": "LULIN",
-   "uid": "QxFiWwLy8uV25uC6IBmUstctMp52"
-  },
-  {
-   "uid": "eGUjVrYYFueYLJhWwb7rMHBIIQ62",
-   "name": "JERRY"
-  },
-  {
-   "name": "DAKSTUPGEN",
-   "uid": "YAZ1Sv1gEWOnB5hCoddmjSKstI53"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1590438818,
-  "_nanoseconds": 287000000
- },
  "timeFinished": {
   "_seconds": 1590440391,
   "_nanoseconds": 140000000
  },
- "options": {
-  "inGameLog": false
+ "outcome": {
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "LEO": true,
+    "MINA": true
+   },
+   {
+    "LEO": true,
+    "JERRY": true,
+    "DAKSTUPGEN": true
+   },
+   {
+    "DAKSTUPGEN": true,
+    "MINA": false,
+    "LEO": true,
+    "JERRY": true
+   },
+   {
+    "JERRY": true,
+    "LEO": true,
+    "JENNY": true
+   }
+  ],
+  "assassinated": "LULIN",
+  "roles": [
+   {
+    "role": "MERLIN",
+    "name": "LULIN",
+    "assassin": false
+   },
+   {
+    "name": "JENNY",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "JERRY"
+   },
+   {
+    "assassin": false,
+    "name": "DAKSTUPGEN",
+    "role": "MORGANA"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "MINA",
+    "assassin": true
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "LEO",
+    "assassin": false
+   }
+  ],
+  "state": "EVIL_WIN"
  }
 }

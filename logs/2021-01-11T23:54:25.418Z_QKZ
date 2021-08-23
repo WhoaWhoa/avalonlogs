@@ -1,5 +1,33 @@
 {
  "outcome": {
+  "votes": [
+   {
+    "ALI": true,
+    "LUKE": true
+   },
+   {
+    "ABBY": true,
+    "MATT": true,
+    "HOLLY": false
+   },
+   {
+    "LUKE": true,
+    "HOLLY": true,
+    "RUBY": false
+   },
+   {
+    "LUKE": true,
+    "MATT": true,
+    "ABBY": true,
+    "ALI": true
+   },
+   {
+    "RUBY": false,
+    "LUKE": true,
+    "ALI": true,
+    "MATT": true
+   }
+  ],
   "roles": [
    {
     "role": "EVIL MINION",
@@ -8,18 +36,18 @@
    },
    {
     "name": "HOLLY",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
-    "name": "LUKE",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "LUKE"
    },
    {
     "assassin": false,
-    "name": "ALI",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "ALI"
    },
    {
     "role": "LOYAL FOLLOWER",
@@ -28,54 +56,63 @@
    },
    {
     "role": "MORGANA",
-    "assassin": false,
-    "name": "ANNIE"
+    "name": "ANNIE",
+    "assassin": false
    },
    {
+    "name": "MATT",
     "role": "MERLIN",
-    "assassin": false,
-    "name": "MATT"
+    "assassin": false
    }
   ],
   "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "LUKE": true,
-    "ALI": true
-   },
-   {
-    "HOLLY": false,
-    "ABBY": true,
-    "MATT": true
-   },
-   {
-    "LUKE": true,
-    "HOLLY": true,
-    "RUBY": false
-   },
-   {
-    "ALI": true,
-    "ABBY": true,
-    "MATT": true,
-    "LUKE": true
-   },
-   {
-    "MATT": true,
-    "ALI": true,
-    "RUBY": false,
-    "LUKE": true
-   }
-  ],
-  "assassinated": null
+  "assassinated": null,
+  "state": "EVIL_WIN"
  },
+ "timeCreated": {
+  "_seconds": 1610409265,
+  "_nanoseconds": 418000000
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "players": [
+  {
+   "uid": "ws696x3ECDchHLYtqjGXmLyR7LF3",
+   "name": "RUBY"
+  },
+  {
+   "name": "ABBY",
+   "uid": "hchNElALnOQG5cjcP0pDy8belK62"
+  },
+  {
+   "uid": "zvcVHIYIDvfZonG3pAiHPOeHE282",
+   "name": "LUKE"
+  },
+  {
+   "uid": "uIbfoYpUZXZ5IF2IZGOMw8dJtRe2",
+   "name": "MATT"
+  },
+  {
+   "uid": "2gHqMpDTN2Y0K9niwz3FtSsTeTx2",
+   "name": "ALI"
+  },
+  {
+   "name": "ANNIE",
+   "uid": "T3wHCGn1fNQu9BmQoOGWRQxBT1s2"
+  },
+  {
+   "name": "HOLLY",
+   "uid": "PId7jBZXU0Xs76vmnDKQKKnw9Gg2"
+  }
+ ],
  "missions": [
   {
+   "state": "SUCCESS",
    "team": [
     "LUKE",
     "ALI"
    ],
-   "state": "SUCCESS",
    "teamSize": 2,
    "proposals": [
     {
@@ -84,14 +121,15 @@
       "MATT",
       "ALI"
      ],
-     "proposer": "MATT",
+     "state": "REJECTED",
      "team": [
       "ALI",
       "MATT"
      ],
-     "state": "REJECTED"
+     "proposer": "MATT"
     },
     {
+     "state": "APPROVED",
      "votes": [
       "HOLLY",
       "ABBY",
@@ -99,7 +137,6 @@
       "ANNIE",
       "LUKE"
      ],
-     "state": "APPROVED",
      "team": [
       "LUKE",
       "ALI"
@@ -111,10 +148,15 @@
    "numFails": 0
   },
   {
+   "team": [
+    "HOLLY",
+    "ABBY",
+    "MATT"
+   ],
    "numFails": 1,
    "teamSize": 3,
-   "state": "FAIL",
    "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "votes": [
@@ -131,21 +173,9 @@
       "MATT"
      ]
     }
-   ],
-   "team": [
-    "HOLLY",
-    "ABBY",
-    "MATT"
    ]
   },
   {
-   "team": [
-    "RUBY",
-    "LUKE",
-    "HOLLY"
-   ],
-   "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -153,23 +183,23 @@
       "ALI",
       "ANNIE"
      ],
-     "proposer": "HOLLY",
-     "state": "REJECTED",
      "team": [
       "HOLLY",
       "ABBY",
       "MATT"
-     ]
+     ],
+     "proposer": "HOLLY",
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
+     "proposer": "RUBY",
      "votes": [
       "RUBY",
       "LUKE",
       "HOLLY",
       "ANNIE"
      ],
-     "proposer": "RUBY",
-     "state": "APPROVED",
      "team": [
       "RUBY",
       "LUKE",
@@ -177,31 +207,17 @@
      ]
     }
    ],
+   "failsRequired": 1,
    "numFails": 1,
-   "state": "FAIL"
+   "team": [
+    "RUBY",
+    "LUKE",
+    "HOLLY"
+   ],
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
-   "failsRequired": 2,
-   "proposals": [
-    {
-     "team": [
-      "MATT",
-      "ABBY",
-      "ALI",
-      "LUKE"
-     ],
-     "state": "APPROVED",
-     "proposer": "ABBY",
-     "votes": [
-      "LUKE",
-      "ALI",
-      "MATT",
-      "RUBY",
-      "ABBY"
-     ]
-    }
-   ],
-   "teamSize": 4,
    "team": [
     "MATT",
     "ABBY",
@@ -209,7 +225,28 @@
     "LUKE"
    ],
    "state": "SUCCESS",
-   "numFails": 0
+   "failsRequired": 2,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "team": [
+      "MATT",
+      "ABBY",
+      "ALI",
+      "LUKE"
+     ],
+     "votes": [
+      "LUKE",
+      "ALI",
+      "MATT",
+      "RUBY",
+      "ABBY"
+     ],
+     "proposer": "ABBY"
+    }
+   ],
+   "numFails": 0,
+   "teamSize": 4
   },
   {
    "proposals": [
@@ -220,6 +257,7 @@
       "RUBY",
       "MATT"
      ],
+     "proposer": "LUKE",
      "state": "APPROVED",
      "votes": [
       "ANNIE",
@@ -228,59 +266,21 @@
       "LUKE",
       "RUBY",
       "ALI"
-     ],
-     "proposer": "LUKE"
+     ]
     }
    ],
    "numFails": 1,
-   "failsRequired": 1,
-   "state": "FAIL",
    "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "LUKE",
     "ALI",
     "RUBY",
     "MATT"
-   ]
+   ],
+   "state": "FAIL"
   }
  ],
- "timeCreated": {
-  "_seconds": 1610409265,
-  "_nanoseconds": 418000000
- },
- "players": [
-  {
-   "uid": "ws696x3ECDchHLYtqjGXmLyR7LF3",
-   "name": "RUBY"
-  },
-  {
-   "name": "ABBY",
-   "uid": "hchNElALnOQG5cjcP0pDy8belK62"
-  },
-  {
-   "uid": "zvcVHIYIDvfZonG3pAiHPOeHE282",
-   "name": "LUKE"
-  },
-  {
-   "name": "MATT",
-   "uid": "uIbfoYpUZXZ5IF2IZGOMw8dJtRe2"
-  },
-  {
-   "name": "ALI",
-   "uid": "2gHqMpDTN2Y0K9niwz3FtSsTeTx2"
-  },
-  {
-   "name": "ANNIE",
-   "uid": "T3wHCGn1fNQu9BmQoOGWRQxBT1s2"
-  },
-  {
-   "uid": "PId7jBZXU0Xs76vmnDKQKKnw9Gg2",
-   "name": "HOLLY"
-  }
- ],
- "options": {
-  "inGameLog": false
- },
  "timeFinished": {
   "_seconds": 1610409751,
   "_nanoseconds": 652000000

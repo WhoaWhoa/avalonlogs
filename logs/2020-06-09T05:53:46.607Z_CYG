@@ -2,22 +2,86 @@
  "options": {
   "inGameLog": false
  },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "SIPSOP",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "KAVEL"
+   },
+   {
+    "role": "MORDRED",
+    "name": "CANDACE",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "STEVEN"
+   },
+   {
+    "name": "STEP",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "BRIN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "JONE"
+   }
+  ],
+  "assassinated": "KAVEL",
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "CANDACE": true,
+    "SIPSOP": true
+   },
+   {
+    "KAVEL": true,
+    "SIPSOP": true,
+    "CANDACE": false
+   },
+   {
+    "SIPSOP": true,
+    "CANDACE": true,
+    "BRIN": true
+   },
+   {
+    "BRIN": true,
+    "CANDACE": true,
+    "STEP": true,
+    "SIPSOP": true
+   }
+  ]
+ },
  "players": [
   {
-   "uid": "DiTDjibNGoQcsaQ3Wv1kWVoZH9p1",
-   "name": "KAVEL"
+   "name": "KAVEL",
+   "uid": "DiTDjibNGoQcsaQ3Wv1kWVoZH9p1"
   },
   {
-   "uid": "2DfTudmjRpafLQQho25vT4pGDDU2",
-   "name": "CANDACE"
+   "name": "CANDACE",
+   "uid": "2DfTudmjRpafLQQho25vT4pGDDU2"
   },
   {
-   "name": "SIPSOP",
-   "uid": "7C5ZmvG5d8PbUHlWMQD3O0MsurB3"
+   "uid": "7C5ZmvG5d8PbUHlWMQD3O0MsurB3",
+   "name": "SIPSOP"
   },
   {
-   "uid": "bLqvbD7BG0QlcEhfGrfqs1PsWH63",
-   "name": "STEP"
+   "name": "STEP",
+   "uid": "bLqvbD7BG0QlcEhfGrfqs1PsWH63"
   },
   {
    "uid": "gmkYNMfRn6Qj4mXZuJZ7Tc41WXT2",
@@ -32,18 +96,26 @@
    "name": "STEVEN"
   }
  ],
+ "timeCreated": {
+  "_seconds": 1591682026,
+  "_nanoseconds": 607000000
+ },
  "missions": [
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
+   "teamSize": 2,
+   "numFails": 0,
    "team": [
     "CANDACE",
     "SIPSOP"
    ],
-   "teamSize": 2,
-   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "team": [
+      "CANDACE",
+      "SIPSOP"
+     ],
+     "proposer": "STEP",
      "votes": [
       "SIPSOP",
       "KAVEL",
@@ -52,48 +124,57 @@
       "STEP",
       "BRIN"
      ],
-     "state": "APPROVED",
-     "proposer": "STEP",
-     "team": [
-      "CANDACE",
-      "SIPSOP"
-     ]
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
-   "team": [
-    "CANDACE",
-    "SIPSOP",
-    "KAVEL"
-   ],
-   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "CANDACE",
-      "SIPSOP",
-      "KAVEL"
-     ],
      "proposer": "JONE",
+     "state": "APPROVED",
      "votes": [
       "STEVEN",
       "JONE",
       "SIPSOP",
       "KAVEL",
       "CANDACE"
+     ],
+     "team": [
+      "CANDACE",
+      "SIPSOP",
+      "KAVEL"
      ]
     }
    ],
+   "numFails": 1,
+   "teamSize": 3,
+   "state": "FAIL",
    "failsRequired": 1,
-   "numFails": 1
+   "team": [
+    "CANDACE",
+    "SIPSOP",
+    "KAVEL"
+   ]
   },
   {
+   "numFails": 0,
+   "teamSize": 3,
+   "team": [
+    "CANDACE",
+    "SIPSOP",
+    "BRIN"
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "BRIN",
+     "team": [
+      "CANDACE",
+      "SIPSOP",
+      "BRIN"
+     ],
      "votes": [
       "STEVEN",
       "STEP",
@@ -102,134 +183,53 @@
       "SIPSOP",
       "CANDACE"
      ],
-     "state": "APPROVED",
+     "proposer": "BRIN",
+     "state": "APPROVED"
+    }
+   ]
+  },
+  {
+   "numFails": 0,
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "proposer": "STEVEN",
+     "votes": [
+      "STEVEN",
+      "STEP",
+      "BRIN",
+      "JONE",
+      "SIPSOP",
+      "CANDACE"
+     ],
      "team": [
       "CANDACE",
       "SIPSOP",
-      "BRIN"
-     ]
+      "BRIN",
+      "STEP"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "numFails": 0,
-   "teamSize": 3,
-   "failsRequired": 1,
-   "team": [
-    "CANDACE",
-    "SIPSOP",
-    "BRIN"
-   ],
-   "state": "SUCCESS"
-  },
-  {
+   "teamSize": 4,
    "team": [
     "CANDACE",
     "SIPSOP",
     "BRIN",
     "STEP"
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "proposals": [
-    {
-     "votes": [
-      "STEVEN",
-      "STEP",
-      "BRIN",
-      "JONE",
-      "SIPSOP",
-      "CANDACE"
-     ],
-     "proposer": "STEVEN",
-     "state": "APPROVED",
-     "team": [
-      "CANDACE",
-      "SIPSOP",
-      "BRIN",
-      "STEP"
-     ]
-    }
-   ],
-   "failsRequired": 2,
-   "teamSize": 4
+   "failsRequired": 2
   },
   {
    "state": "PENDING",
-   "teamSize": 4,
-   "failsRequired": 1,
    "proposals": [],
-   "team": []
+   "team": [],
+   "teamSize": 4,
+   "failsRequired": 1
   }
  ],
- "timeCreated": {
-  "_seconds": 1591682026,
-  "_nanoseconds": 607000000
- },
  "timeFinished": {
   "_seconds": 1591682581,
   "_nanoseconds": 187000000
- },
- "outcome": {
-  "assassinated": "KAVEL",
-  "votes": [
-   {
-    "CANDACE": true,
-    "SIPSOP": true
-   },
-   {
-    "CANDACE": false,
-    "SIPSOP": true,
-    "KAVEL": true
-   },
-   {
-    "CANDACE": true,
-    "SIPSOP": true,
-    "BRIN": true
-   },
-   {
-    "BRIN": true,
-    "CANDACE": true,
-    "SIPSOP": true,
-    "STEP": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "SIPSOP",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MERLIN",
-    "name": "KAVEL",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "CANDACE",
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "STEVEN"
-   },
-   {
-    "name": "STEP",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "BRIN",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "name": "JONE",
-    "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ]
  }
 }

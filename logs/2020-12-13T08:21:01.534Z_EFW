@@ -1,4 +1,8 @@
 {
+ "timeCreated": {
+  "_seconds": 1607847661,
+  "_nanoseconds": 534000000
+ },
  "timeFinished": {
   "_seconds": 1607848513,
   "_nanoseconds": 663000000
@@ -6,29 +10,24 @@
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1607847661,
-  "_nanoseconds": 534000000
- },
  "outcome": {
-  "message": "Merlin assassinated",
   "state": "EVIL_WIN",
-  "assassinated": "CALEB",
+  "message": "Merlin assassinated",
   "roles": [
    {
+    "assassin": false,
     "role": "OBERON",
-    "name": "GLEN",
-    "assassin": false
+    "name": "GLEN"
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "name": "FIO",
     "assassin": false,
-    "name": "FIO"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "DAMIEN",
-    "role": "MORDRED",
-    "assassin": true
+    "assassin": true,
+    "role": "MORDRED"
    },
    {
     "role": "MERLIN",
@@ -36,30 +35,31 @@
     "assassin": false
    },
    {
-    "name": "COVIDREUBS",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "COVIDREUBS"
    },
    {
-    "name": "MATT",
     "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "name": "MATT"
    },
    {
-    "role": "PERCIVAL",
+    "name": "GEORGE",
     "assassin": false,
-    "name": "GEORGE"
+    "role": "PERCIVAL"
    }
   ],
+  "assassinated": "CALEB",
   "votes": [
    {
     "GLEN": true,
     "GEORGE": true
    },
    {
-    "GLEN": true,
     "GEORGE": true,
-    "MATT": true
+    "MATT": true,
+    "GLEN": true
    },
    {
     "MATT": true,
@@ -67,10 +67,10 @@
     "GLEN": false
    },
    {
-    "GEORGE": true,
-    "GLEN": true,
+    "FIO": true,
     "COVIDREUBS": false,
-    "FIO": true
+    "GLEN": true,
+    "GEORGE": true
    }
   ]
  },
@@ -84,30 +84,39 @@
    "name": "GEORGE"
   },
   {
-   "uid": "By4nEWNqNsZjM1umsNNuaXsJGu83",
-   "name": "COVIDREUBS"
+   "name": "COVIDREUBS",
+   "uid": "By4nEWNqNsZjM1umsNNuaXsJGu83"
   },
   {
-   "name": "CALEB",
-   "uid": "ynFZBTX5qvRoBnME4DO2Yo8wWJD2"
+   "uid": "ynFZBTX5qvRoBnME4DO2Yo8wWJD2",
+   "name": "CALEB"
   },
   {
-   "name": "MATT",
-   "uid": "RikkUOlzDAcNnP9fgpVIppyFVzj1"
+   "uid": "RikkUOlzDAcNnP9fgpVIppyFVzj1",
+   "name": "MATT"
   },
   {
    "uid": "pomPXWnXirTTk5aOoYzJxqLz0lE3",
    "name": "FIO"
   },
   {
-   "name": "DAMIEN",
-   "uid": "hadY9LIIwTNiZ1op6exJXud2eH62"
+   "uid": "hadY9LIIwTNiZ1op6exJXud2eH62",
+   "name": "DAMIEN"
   }
  ],
  "missions": [
   {
+   "team": [
+    "GEORGE",
+    "GLEN"
+   ],
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "GEORGE",
+      "GLEN"
+     ],
      "votes": [
       "COVIDREUBS",
       "CALEB",
@@ -117,67 +126,58 @@
       "GLEN",
       "GEORGE"
      ],
-     "team": [
-      "GEORGE",
-      "GLEN"
-     ],
-     "proposer": "GEORGE",
-     "state": "APPROVED"
+     "proposer": "GEORGE"
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "GEORGE",
-    "GLEN"
-   ],
-   "teamSize": 2,
    "state": "SUCCESS",
+   "teamSize": 2,
+   "failsRequired": 1,
    "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0,
    "teamSize": 3,
    "team": [
     "MATT",
     "GEORGE",
     "GLEN"
    ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "votes": [
-      "GEORGE",
-      "FIO",
-      "COVIDREUBS"
-     ],
      "team": [
       "COVIDREUBS",
       "GEORGE",
       "GLEN"
      ],
-     "state": "REJECTED",
-     "proposer": "COVIDREUBS"
+     "votes": [
+      "GEORGE",
+      "FIO",
+      "COVIDREUBS"
+     ],
+     "proposer": "COVIDREUBS",
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "FIO"
-     ],
+     "proposer": "CALEB",
      "team": [
       "CALEB",
       "DAMIEN",
       "FIO"
      ],
      "state": "REJECTED",
-     "proposer": "CALEB"
+     "votes": [
+      "FIO"
+     ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "MATT",
       "GEORGE",
       "GLEN"
      ],
+     "proposer": "MATT",
      "votes": [
       "MATT",
       "GLEN",
@@ -185,20 +185,20 @@
       "COVIDREUBS",
       "CALEB"
      ],
-     "proposer": "MATT"
+     "state": "APPROVED"
     }
    ]
   },
   {
    "state": "FAIL",
    "numFails": 1,
+   "failsRequired": 1,
    "teamSize": 3,
    "team": [
     "MATT",
     "GEORGE",
     "GLEN"
    ],
-   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -206,6 +206,8 @@
       "GEORGE",
       "GLEN"
      ],
+     "state": "APPROVED",
+     "proposer": "FIO",
      "votes": [
       "GEORGE",
       "FIO",
@@ -213,19 +215,11 @@
       "DAMIEN",
       "MATT",
       "GLEN"
-     ],
-     "state": "APPROVED",
-     "proposer": "FIO"
+     ]
     }
    ]
   },
   {
-   "team": [
-    "GLEN",
-    "GEORGE",
-    "FIO",
-    "COVIDREUBS"
-   ],
    "failsRequired": 2,
    "proposals": [
     {
@@ -234,42 +228,48 @@
       "CALEB",
       "COVIDREUBS"
      ],
-     "proposer": "DAMIEN",
      "team": [
       "DAMIEN",
       "COVIDREUBS",
       "GEORGE",
       "CALEB"
-     ]
+     ],
+     "proposer": "DAMIEN"
     },
     {
-     "votes": [
-      "DAMIEN",
-      "COVIDREUBS",
-      "GEORGE",
-      "GLEN",
-      "FIO"
-     ],
-     "proposer": "GLEN",
+     "state": "APPROVED",
      "team": [
       "GLEN",
       "GEORGE",
       "FIO",
       "COVIDREUBS"
      ],
-     "state": "APPROVED"
+     "proposer": "GLEN",
+     "votes": [
+      "DAMIEN",
+      "COVIDREUBS",
+      "GEORGE",
+      "GLEN",
+      "FIO"
+     ]
     }
    ],
    "state": "SUCCESS",
+   "team": [
+    "GLEN",
+    "GEORGE",
+    "FIO",
+    "COVIDREUBS"
+   ],
    "numFails": 1,
    "teamSize": 4
   },
   {
-   "team": [],
    "teamSize": 4,
-   "failsRequired": 1,
+   "team": [],
+   "proposals": [],
    "state": "PENDING",
-   "proposals": []
+   "failsRequired": 1
   }
  ]
 }

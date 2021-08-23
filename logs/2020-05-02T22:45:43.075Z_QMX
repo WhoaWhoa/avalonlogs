@@ -1,68 +1,130 @@
 {
- "timeCreated": {
-  "_seconds": 1588459543,
-  "_nanoseconds": 75000000
+ "timeFinished": {
+  "_seconds": 1588461187,
+  "_nanoseconds": 566000000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "HU": true,
+    "BRUCE": true
+   },
+   {
+    "TEO": true,
+    "YING": true,
+    "BRIAN": true
+   },
+   {
+    "YING": true,
+    "BRIAN": false,
+    "TEO": true,
+    "HU": true
+   },
+   {
+    "BRIAN": false,
+    "JOE": true,
+    "TEO": true
+   },
+   {
+    "BRIAN": false,
+    "HU": true,
+    "JOE": true,
+    "YING": true
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null,
+  "roles": [
+   {
+    "role": "MORGANA",
+    "name": "BRUCE",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "YING"
+   },
+   {
+    "name": "TEO",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "HU"
+   },
+   {
+    "name": "JOE",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "BRIAN",
+    "assassin": true,
+    "role": "MORDRED"
+   }
+  ],
+  "state": "EVIL_WIN"
  },
  "missions": [
   {
+   "failsRequired": 1,
    "team": [
     "HU",
     "BRUCE"
    ],
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "team": [
+      "HU",
+      "BRUCE"
+     ],
      "proposer": "HU",
-     "state": "APPROVED",
      "votes": [
       "BRIAN",
       "BRUCE",
       "YING",
       "TEO"
      ],
-     "team": [
-      "HU",
-      "BRUCE"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 2,
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0
+   "teamSize": 2
   },
   {
    "state": "SUCCESS",
-   "numFails": 0,
    "proposals": [
     {
-     "votes": [
-      "BRUCE"
-     ],
-     "state": "REJECTED",
      "proposer": "BRUCE",
      "team": [
       "BRUCE",
       "HU",
       "JOE"
-     ]
+     ],
+     "votes": [
+      "BRUCE"
+     ],
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "proposer": "BRIAN",
+     "votes": [
+      "YING",
+      "TEO",
+      "BRIAN"
+     ],
      "team": [
       "BRUCE",
       "BRIAN",
       "HU"
      ],
-     "votes": [
-      "YING",
-      "TEO",
-      "BRIAN"
-     ]
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
-     "proposer": "TEO",
      "votes": [
       "BRIAN",
       "YING",
@@ -70,38 +132,40 @@
       "HU",
       "JOE"
      ],
+     "state": "APPROVED",
      "team": [
       "BRIAN",
       "TEO",
       "YING"
-     ]
+     ],
+     "proposer": "TEO"
     }
    ],
+   "numFails": 0,
    "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "BRIAN",
     "TEO",
     "YING"
-   ],
-   "teamSize": 3
+   ]
   },
   {
-   "teamSize": 4,
    "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "JOE",
+     "state": "REJECTED",
+     "votes": [
+      "JOE",
+      "BRIAN"
+     ],
      "team": [
       "JOE",
       "HU",
       "TEO",
       "BRIAN"
-     ],
-     "votes": [
-      "JOE",
-      "BRIAN"
-     ],
-     "state": "REJECTED",
-     "proposer": "JOE"
+     ]
     },
     {
      "votes": [
@@ -109,13 +173,13 @@
       "HU",
       "BRIAN"
      ],
-     "state": "REJECTED",
      "team": [
       "TEO",
       "YING",
       "HU",
       "BRIAN"
      ],
+     "state": "REJECTED",
      "proposer": "YING"
     },
     {
@@ -125,18 +189,19 @@
       "HU",
       "BRIAN"
      ],
-     "proposer": "HU",
-     "state": "APPROVED",
      "team": [
       "HU",
       "YING",
       "TEO",
       "BRIAN"
-     ]
+     ],
+     "proposer": "HU",
+     "state": "APPROVED"
     }
    ],
    "state": "FAIL",
    "numFails": 1,
+   "teamSize": 4,
    "team": [
     "HU",
     "YING",
@@ -145,24 +210,18 @@
    ]
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "JOE",
-    "BRIAN",
-    "TEO"
-   ],
-   "numFails": 1,
    "teamSize": 3,
+   "failsRequired": 1,
    "state": "FAIL",
    "proposals": [
     {
      "proposer": "BRUCE",
+     "state": "APPROVED",
      "team": [
       "JOE",
       "BRIAN",
       "TEO"
      ],
-     "state": "APPROVED",
      "votes": [
       "BRIAN",
       "BRUCE",
@@ -171,66 +230,76 @@
       "JOE"
      ]
     }
+   ],
+   "numFails": 1,
+   "team": [
+    "JOE",
+    "BRIAN",
+    "TEO"
    ]
   },
   {
    "state": "FAIL",
-   "proposals": [
-    {
-     "proposer": "BRIAN",
-     "votes": [
-      "JOE",
-      "BRIAN"
-     ],
-     "state": "REJECTED",
-     "team": [
-      "BRIAN",
-      "JOE",
-      "YING",
-      "HU"
-     ]
-    },
-    {
-     "proposer": "TEO",
-     "state": "REJECTED",
-     "votes": [
-      "TEO"
-     ],
-     "team": [
-      "TEO",
-      "JOE",
-      "YING",
-      "HU"
-     ]
-    },
-    {
-     "votes": [
-      "BRIAN",
-      "BRUCE",
-      "YING",
-      "JOE"
-     ],
-     "state": "APPROVED",
-     "proposer": "JOE",
-     "team": [
-      "JOE",
-      "YING",
-      "HU",
-      "BRIAN"
-     ]
-    }
-   ],
    "teamSize": 4,
+   "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "JOE",
     "YING",
     "HU",
     "BRIAN"
    ],
-   "numFails": 1,
-   "failsRequired": 1
+   "proposals": [
+    {
+     "proposer": "BRIAN",
+     "state": "REJECTED",
+     "votes": [
+      "JOE",
+      "BRIAN"
+     ],
+     "team": [
+      "BRIAN",
+      "JOE",
+      "YING",
+      "HU"
+     ]
+    },
+    {
+     "state": "REJECTED",
+     "team": [
+      "TEO",
+      "JOE",
+      "YING",
+      "HU"
+     ],
+     "votes": [
+      "TEO"
+     ],
+     "proposer": "TEO"
+    },
+    {
+     "proposer": "JOE",
+     "team": [
+      "JOE",
+      "YING",
+      "HU",
+      "BRIAN"
+     ],
+     "votes": [
+      "BRIAN",
+      "BRUCE",
+      "YING",
+      "JOE"
+     ],
+     "state": "APPROVED"
+    }
+   ]
   }
  ],
+ "timeCreated": {
+  "_seconds": 1588459543,
+  "_nanoseconds": 75000000
+ },
  "players": [
   {
    "uid": "UDW0LpRg2STjoxnExy4LaQCHg0s1",
@@ -241,8 +310,8 @@
    "uid": "zH62FhdO93fgue6xy1GZiX6emJC3"
   },
   {
-   "uid": "BMt4lnyg6ChczswADx58qa9fD2n1",
-   "name": "TEO"
+   "name": "TEO",
+   "uid": "BMt4lnyg6ChczswADx58qa9fD2n1"
   },
   {
    "name": "JOE",
@@ -253,80 +322,11 @@
    "name": "YING"
   },
   {
-   "name": "HU",
-   "uid": "rhReFTrGCIW29G5PPpSOEmovGF02"
+   "uid": "rhReFTrGCIW29G5PPpSOEmovGF02",
+   "name": "HU"
   }
  ],
  "options": {
   "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1588461187,
-  "_nanoseconds": 566000000
- },
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "votes": [
-   {
-    "BRUCE": true,
-    "HU": true
-   },
-   {
-    "TEO": true,
-    "BRIAN": true,
-    "YING": true
-   },
-   {
-    "TEO": true,
-    "YING": true,
-    "BRIAN": false,
-    "HU": true
-   },
-   {
-    "BRIAN": false,
-    "TEO": true,
-    "JOE": true
-   },
-   {
-    "JOE": true,
-    "HU": true,
-    "YING": true,
-    "BRIAN": false
-   }
-  ],
-  "roles": [
-   {
-    "name": "BRUCE",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "name": "YING",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "TEO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "HU",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "JOE",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "name": "BRIAN",
-    "assassin": true,
-    "role": "MORDRED"
-   }
-  ],
-  "message": "Three failed missions"
  }
 }

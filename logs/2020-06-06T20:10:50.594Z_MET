@@ -1,35 +1,62 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1591474707,
   "_nanoseconds": 856000000
  },
  "outcome": {
+  "assassinated": "TOM",
   "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "JAZZY": true,
+    "ALEX": true
+   },
+   {
+    "ALEX": true,
+    "JAZZY": false,
+    "OLIVER": true
+   },
+   {
+    "OLIVER": true,
+    "AGO": true,
+    "TOM": true
+   },
+   {
+    "TOM": true,
+    "AGO": true,
+    "OLIVER": true,
+    "JAZZY": false
+   }
+  ],
   "roles": [
    {
     "name": "HOFRORO",
-    "role": "EVIL MINION",
-    "assassin": true
+    "assassin": true,
+    "role": "EVIL MINION"
    },
    {
+    "assassin": false,
     "name": "OLIVER",
-    "role": "LOYAL FOLLOWER",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "TOM",
+    "role": "MERLIN",
     "assassin": false
    },
    {
     "assassin": false,
-    "name": "TOM",
-    "role": "MERLIN"
-   },
-   {
     "name": "JEZ",
-    "role": "OBERON",
-    "assassin": false
+    "role": "OBERON"
    },
    {
     "name": "ALEX",
-    "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "assassin": false
    },
    {
     "name": "JAZZY",
@@ -37,50 +64,24 @@
     "role": "MORGANA"
    },
    {
-    "assassin": false,
+    "role": "LOYAL FOLLOWER",
     "name": "AGO",
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    }
-  ],
-  "assassinated": "TOM",
-  "votes": [
-   {
-    "ALEX": true,
-    "JAZZY": true
-   },
-   {
-    "OLIVER": true,
-    "JAZZY": false,
-    "ALEX": true
-   },
-   {
-    "AGO": true,
-    "OLIVER": true,
-    "TOM": true
-   },
-   {
-    "AGO": true,
-    "OLIVER": true,
-    "JAZZY": false,
-    "TOM": true
-   }
-  ],
-  "state": "EVIL_WIN"
+  ]
  },
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "ALEX",
     "JAZZY"
    ],
+   "teamSize": 2,
    "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "ALEX",
-      "JAZZY"
-     ],
      "proposer": "ALEX",
      "state": "APPROVED",
      "votes": [
@@ -89,37 +90,41 @@
       "JEZ",
       "ALEX",
       "JAZZY"
+     ],
+     "team": [
+      "ALEX",
+      "JAZZY"
      ]
     }
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   ]
   },
   {
+   "numFails": 1,
    "state": "FAIL",
    "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "JEZ",
-      "AGO"
-     ],
-     "state": "REJECTED",
      "team": [
       "AGO",
       "TOM",
       "JEZ"
      ],
-     "proposer": "AGO"
+     "proposer": "AGO",
+     "state": "REJECTED",
+     "votes": [
+      "JEZ",
+      "AGO"
+     ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "HOFRORO",
       "OLIVER",
       "ALEX",
       "JAZZY"
      ],
-     "state": "APPROVED",
      "team": [
       "OLIVER",
       "JAZZY",
@@ -128,33 +133,28 @@
      "proposer": "OLIVER"
     }
    ],
-   "numFails": 1,
    "team": [
     "OLIVER",
     "JAZZY",
     "ALEX"
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "numFails": 0,
-   "state": "SUCCESS",
-   "teamSize": 3,
    "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "HOFRORO",
       "OLIVER",
       "JEZ"
      ],
-     "state": "REJECTED",
+     "proposer": "HOFRORO",
      "team": [
       "HOFRORO",
       "AGO",
       "JEZ"
-     ],
-     "proposer": "HOFRORO"
+     ]
     },
     {
      "state": "REJECTED",
@@ -163,14 +163,15 @@
       "JEZ",
       "JAZZY"
      ],
+     "proposer": "JAZZY",
      "team": [
       "JAZZY",
       "HOFRORO",
       "OLIVER"
-     ],
-     "proposer": "JAZZY"
+     ]
     },
     {
+     "state": "REJECTED",
      "votes": [
       "JEZ",
       "AGO",
@@ -181,17 +182,16 @@
       "AGO",
       "TOM"
      ],
-     "proposer": "JEZ",
-     "state": "REJECTED"
+     "proposer": "JEZ"
     },
     {
-     "state": "APPROVED",
      "team": [
       "OLIVER",
       "AGO",
       "TOM"
      ],
      "proposer": "TOM",
+     "state": "APPROVED",
      "votes": [
       "OLIVER",
       "TOM",
@@ -201,36 +201,38 @@
      ]
     }
    ],
+   "teamSize": 3,
    "team": [
     "OLIVER",
     "AGO",
     "TOM"
-   ]
+   ],
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
+   "state": "SUCCESS",
+   "numFails": 1,
+   "teamSize": 4,
+   "failsRequired": 2,
    "proposals": [
     {
      "state": "REJECTED",
-     "team": [
-      "JAZZY",
-      "OLIVER",
-      "AGO",
-      "ALEX"
-     ],
      "proposer": "ALEX",
      "votes": [
       "OLIVER",
       "ALEX",
       "JAZZY"
+     ],
+     "team": [
+      "JAZZY",
+      "OLIVER",
+      "AGO",
+      "ALEX"
      ]
     },
     {
-     "team": [
-      "AGO",
-      "OLIVER",
-      "TOM",
-      "JAZZY"
-     ],
+     "state": "APPROVED",
      "votes": [
       "HOFRORO",
       "OLIVER",
@@ -238,7 +240,12 @@
       "JAZZY",
       "AGO"
      ],
-     "state": "APPROVED",
+     "team": [
+      "AGO",
+      "OLIVER",
+      "TOM",
+      "JAZZY"
+     ],
      "proposer": "AGO"
     }
    ],
@@ -247,35 +254,24 @@
     "OLIVER",
     "TOM",
     "JAZZY"
-   ],
-   "teamSize": 4,
-   "failsRequired": 2,
-   "numFails": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
+   "proposals": [],
    "teamSize": 4,
-   "team": [],
    "failsRequired": 1,
    "state": "PENDING",
-   "proposals": []
+   "team": []
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1591474250,
-  "_nanoseconds": 594000000
- },
  "players": [
   {
    "name": "AGO",
    "uid": "cSJrlLfi1zd0pCIMCybT9noh6wJ2"
   },
   {
-   "name": "OLIVER",
-   "uid": "7t2XK8IHOYc6QyBgKJHWO0OJVux1"
+   "uid": "7t2XK8IHOYc6QyBgKJHWO0OJVux1",
+   "name": "OLIVER"
   },
   {
    "name": "HOFRORO",
@@ -286,16 +282,20 @@
    "name": "JAZZY"
   },
   {
-   "uid": "MZ8KmvU8kff7bdwFccEtlTKGK1d2",
-   "name": "JEZ"
+   "name": "JEZ",
+   "uid": "MZ8KmvU8kff7bdwFccEtlTKGK1d2"
   },
   {
    "uid": "6TxBJWIWjrbVEWHIOgVmpTrT6zT2",
    "name": "TOM"
   },
   {
-   "name": "ALEX",
-   "uid": "brhogKPr46hbUOwODibLCOzyxLL2"
+   "uid": "brhogKPr46hbUOwODibLCOzyxLL2",
+   "name": "ALEX"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1591474250,
+  "_nanoseconds": 594000000
+ }
 }

@@ -1,4 +1,8 @@
 {
+ "timeCreated": {
+  "_seconds": 1585613340,
+  "_nanoseconds": 46000000
+ },
  "players": [
   {
    "name": "MICHELLE",
@@ -13,8 +17,8 @@
    "name": "DIANA"
   },
   {
-   "uid": "EZ6man5jV1Ws1fTtrxeAIajz8ky2",
-   "name": "TIM"
+   "name": "TIM",
+   "uid": "EZ6man5jV1Ws1fTtrxeAIajz8ky2"
   },
   {
    "uid": "M9vxQxeQSFRkcnaRzCdRXSNSNTE2",
@@ -24,58 +28,54 @@
  "outcome": {
   "roles": [
    {
-    "role": "MERLIN",
     "name": "CHRIS",
-    "assassin": false
-   },
-   {
-    "role": "PERCIVAL",
     "assassin": false,
-    "name": "MICHELLE"
+    "role": "MERLIN"
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "name": "MICHELLE",
     "assassin": false,
-    "name": "TIM"
+    "role": "PERCIVAL"
    },
    {
-    "assassin": true,
+    "assassin": false,
+    "name": "TIM",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MORDRED",
     "name": "BIMOTHY",
-    "role": "MORDRED"
+    "assassin": true
    },
    {
-    "role": "MORGANA",
     "name": "DIANA",
-    "assassin": false
+    "assassin": false,
+    "role": "MORGANA"
    }
   ],
+  "message": "Three successful missions",
   "votes": [
    {
     "TIM": true,
     "CHRIS": true
    },
    {
-    "TIM": true,
     "BIMOTHY": false,
-    "DIANA": false
+    "DIANA": false,
+    "TIM": true
    },
    {
-    "CHRIS": true,
-    "MICHELLE": true
+    "MICHELLE": true,
+    "CHRIS": true
    },
    {
-    "CHRIS": true,
     "TIM": true,
+    "CHRIS": true,
     "MICHELLE": true
    }
   ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "MICHELLE"
- },
- "timeCreated": {
-  "_seconds": 1585613340,
-  "_nanoseconds": 46000000
+  "assassinated": "MICHELLE",
+  "state": "GOOD_WIN"
  },
  "timeFinished": {
   "_seconds": 1585613830,
@@ -83,11 +83,17 @@
  },
  "missions": [
   {
+   "teamSize": 2,
+   "numFails": 0,
    "failsRequired": 1,
+   "team": [
+    "TIM",
+    "CHRIS"
+   ],
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "TIM",
      "votes": [
       "CHRIS",
       "MICHELLE",
@@ -95,87 +101,88 @@
       "BIMOTHY",
       "DIANA"
      ],
+     "proposer": "TIM",
      "team": [
       "TIM",
       "CHRIS"
      ]
     }
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "team": [
-    "TIM",
-    "CHRIS"
-   ],
-   "teamSize": 2
+   ]
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "BIMOTHY",
+    "TIM",
+    "DIANA"
+   ],
+   "numFails": 2,
+   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "BIMOTHY",
+     "team": [
+      "BIMOTHY",
+      "TIM",
+      "DIANA"
+     ],
+     "state": "APPROVED",
      "votes": [
       "MICHELLE",
       "TIM",
       "BIMOTHY",
       "DIANA",
       "CHRIS"
-     ],
+     ]
+    }
+   ]
+  },
+  {
+   "failsRequired": 1,
+   "proposals": [
+    {
      "team": [
-      "BIMOTHY",
+      "MICHELLE",
+      "CHRIS"
+     ],
+     "state": "APPROVED",
+     "proposer": "MICHELLE",
+     "votes": [
+      "CHRIS",
+      "MICHELLE",
       "TIM",
+      "BIMOTHY",
       "DIANA"
      ]
     }
    ],
-   "numFails": 2,
-   "failsRequired": 1,
-   "state": "FAIL",
-   "teamSize": 3,
-   "team": [
-    "BIMOTHY",
-    "TIM",
-    "DIANA"
-   ]
-  },
-  {
    "teamSize": 2,
    "team": [
     "MICHELLE",
     "CHRIS"
    ],
    "numFails": 0,
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "proposals": [
-    {
-     "votes": [
-      "CHRIS",
-      "MICHELLE",
-      "TIM",
-      "BIMOTHY",
-      "DIANA"
-     ],
-     "team": [
-      "MICHELLE",
-      "CHRIS"
-     ],
-     "state": "APPROVED",
-     "proposer": "MICHELLE"
-    }
-   ]
+   "state": "SUCCESS"
   },
   {
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "MICHELLE",
+    "CHRIS",
+    "TIM"
+   ],
    "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "MICHELLE",
       "TIM",
       "DIANA",
       "CHRIS"
      ],
-     "state": "APPROVED",
      "team": [
       "MICHELLE",
       "CHRIS",
@@ -184,21 +191,14 @@
      "proposer": "CHRIS"
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "MICHELLE",
-    "CHRIS",
-    "TIM"
-   ],
    "numFails": 0
   },
   {
-   "state": "PENDING",
-   "failsRequired": 1,
-   "team": [],
    "teamSize": 3,
-   "proposals": []
+   "failsRequired": 1,
+   "proposals": [],
+   "team": [],
+   "state": "PENDING"
   }
  ]
 }

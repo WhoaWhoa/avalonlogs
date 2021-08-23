@@ -1,23 +1,105 @@
 {
- "timeFinished": {
-  "_seconds": 1585957912,
-  "_nanoseconds": 843931000
- },
- "timeCreated": {
-  "_seconds": 1585956223,
-  "_nanoseconds": 802000000
+ "outcome": {
+  "roles": [
+   {
+    "name": "SHADOW",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "KARAN"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "ARIEL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "EMILY"
+   },
+   {
+    "assassin": false,
+    "name": "HUMMUS",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "MANOLYA"
+   },
+   {
+    "name": "ANNI",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "CAT",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "name": "RCA",
+    "role": "OBERON",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "assassin": false,
+    "name": "CINDY"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "HUMMUS": true,
+    "RCA": true,
+    "EMILY": true
+   },
+   {
+    "ARIEL": true,
+    "SHADOW": true,
+    "EMILY": true,
+    "CINDY": true
+   },
+   {
+    "SHADOW": true,
+    "ARIEL": true,
+    "CINDY": false,
+    "EMILY": true
+   },
+   {
+    "ARIEL": true,
+    "HUMMUS": true,
+    "SHADOW": true,
+    "CAT": false,
+    "CINDY": false
+   },
+   {
+    "SHADOW": true,
+    "ANNI": true,
+    "KARAN": true,
+    "CINDY": false,
+    "HUMMUS": true
+   }
+  ]
  },
  "missions": [
   {
    "numFails": 0,
-   "state": "SUCCESS",
    "team": [
     "EMILY",
     "HUMMUS",
     "RCA"
    ],
-   "failsRequired": 1,
    "teamSize": 3,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
      "votes": [
@@ -28,27 +110,26 @@
       "ANNI",
       "CAT"
      ],
-     "proposer": "EMILY",
      "team": [
       "EMILY",
       "HUMMUS",
       "RCA"
      ],
+     "proposer": "EMILY",
      "state": "APPROVED"
     }
    ]
   },
   {
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "EMILY",
       "HUMMUS",
       "RCA",
       "CAT"
      ],
+     "state": "REJECTED",
      "proposer": "HUMMUS",
      "votes": [
       "MANOLYA",
@@ -59,38 +140,45 @@
     },
     {
      "proposer": "KARAN",
+     "team": [
+      "HUMMUS",
+      "EMILY",
+      "ARIEL",
+      "KARAN"
+     ],
      "state": "REJECTED",
      "votes": [
       "EMILY",
       "RCA",
       "KARAN",
       "ARIEL"
-     ],
-     "team": [
-      "HUMMUS",
-      "EMILY",
-      "ARIEL",
-      "KARAN"
      ]
     },
     {
+     "proposer": "MANOLYA",
+     "state": "REJECTED",
      "votes": [
       "EMILY",
       "MANOLYA",
       "CAT",
       "RCA"
      ],
-     "state": "REJECTED",
      "team": [
       "CINDY",
       "EMILY",
       "MANOLYA",
       "RCA"
-     ],
-     "proposer": "MANOLYA"
+     ]
     },
     {
+     "team": [
+      "SHADOW",
+      "ARIEL",
+      "CINDY",
+      "EMILY"
+     ],
      "state": "APPROVED",
+     "proposer": "SHADOW",
      "votes": [
       "CAT",
       "RCA",
@@ -101,25 +189,19 @@
       "HUMMUS",
       "MANOLYA",
       "ANNI"
-     ],
-     "proposer": "SHADOW",
-     "team": [
-      "SHADOW",
-      "ARIEL",
-      "CINDY",
-      "EMILY"
      ]
     }
    ],
+   "teamSize": 4,
    "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
    "team": [
     "SHADOW",
     "ARIEL",
     "CINDY",
     "EMILY"
-   ]
+   ],
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
    "team": [
@@ -128,13 +210,11 @@
     "EMILY",
     "SHADOW"
    ],
-   "state": "FAIL",
-   "teamSize": 4,
    "numFails": 1,
+   "state": "FAIL",
    "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "RCA",
      "votes": [
       "ARIEL",
@@ -148,6 +228,7 @@
       "SHADOW",
       "KARAN"
      ],
+     "state": "APPROVED",
      "team": [
       "ARIEL",
       "CINDY",
@@ -155,13 +236,22 @@
       "SHADOW"
      ]
     }
-   ]
+   ],
+   "teamSize": 4
   },
   {
-   "state": "FAIL",
+   "team": [
+    "ARIEL",
+    "HUMMUS",
+    "CAT",
+    "SHADOW",
+    "CINDY"
+   ],
    "failsRequired": 2,
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "ANNI",
      "team": [
       "ARIEL",
       "CINDY",
@@ -169,17 +259,23 @@
       "KARAN",
       "MANOLYA"
      ],
-     "proposer": "ANNI",
+     "state": "REJECTED",
      "votes": [
       "MANOLYA",
       "ANNI",
       "RCA"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "APPROVED",
      "proposer": "ARIEL",
+     "state": "APPROVED",
+     "team": [
+      "ARIEL",
+      "HUMMUS",
+      "CAT",
+      "SHADOW",
+      "CINDY"
+     ],
      "votes": [
       "CINDY",
       "SHADOW",
@@ -188,29 +284,28 @@
       "MANOLYA",
       "ANNI",
       "RCA"
-     ],
-     "team": [
-      "ARIEL",
-      "HUMMUS",
-      "CAT",
-      "SHADOW",
-      "CINDY"
      ]
     }
    ],
-   "numFails": 2,
    "teamSize": 5,
-   "team": [
-    "ARIEL",
-    "HUMMUS",
-    "CAT",
-    "SHADOW",
-    "CINDY"
-   ]
+   "numFails": 2
   },
   {
+   "numFails": 1,
+   "team": [
+    "ANNI",
+    "SHADOW",
+    "CINDY",
+    "HUMMUS",
+    "KARAN"
+   ],
    "proposals": [
     {
+     "votes": [
+      "EMILY",
+      "MANOLYA",
+      "CAT"
+     ],
      "state": "REJECTED",
      "team": [
       "RCA",
@@ -219,15 +314,16 @@
       "MANOLYA",
       "EMILY"
      ],
-     "proposer": "CAT",
-     "votes": [
-      "EMILY",
-      "MANOLYA",
-      "CAT"
-     ]
+     "proposer": "CAT"
     },
     {
-     "proposer": "CINDY",
+     "team": [
+      "ANNI",
+      "SHADOW",
+      "CINDY",
+      "HUMMUS",
+      "KARAN"
+     ],
      "state": "APPROVED",
      "votes": [
       "SHADOW",
@@ -238,40 +334,30 @@
       "CAT",
       "CINDY"
      ],
-     "team": [
-      "ANNI",
-      "SHADOW",
-      "CINDY",
-      "HUMMUS",
-      "KARAN"
-     ]
+     "proposer": "CINDY"
     }
    ],
-   "teamSize": 5,
-   "team": [
-    "ANNI",
-    "SHADOW",
-    "CINDY",
-    "HUMMUS",
-    "KARAN"
-   ],
-   "numFails": 1,
+   "failsRequired": 1,
    "state": "FAIL",
-   "failsRequired": 1
+   "teamSize": 5
   }
  ],
+ "timeCreated": {
+  "_seconds": 1585956223,
+  "_nanoseconds": 802000000
+ },
  "players": [
   {
-   "uid": "mocxL0vb6jOVIpkc6ELm6ywJQrr2",
-   "name": "ANNI"
+   "name": "ANNI",
+   "uid": "mocxL0vb6jOVIpkc6ELm6ywJQrr2"
   },
   {
    "uid": "iHW8Z689RZg2KAsSXNXkMFaRfdV2",
    "name": "ARIEL"
   },
   {
-   "uid": "agMo67tDZdcIFWh52plIyja1vVS2",
-   "name": "CAT"
+   "name": "CAT",
+   "uid": "agMo67tDZdcIFWh52plIyja1vVS2"
   },
   {
    "name": "CINDY",
@@ -294,102 +380,16 @@
    "name": "MANOLYA"
   },
   {
-   "name": "SHADOW",
-   "uid": "9JBTsVG2pSZTRLMXPCrm6gvSEpE2"
+   "uid": "9JBTsVG2pSZTRLMXPCrm6gvSEpE2",
+   "name": "SHADOW"
   },
   {
    "uid": "kYK4PbdvjRQQCVQ1QKb2L6nVODI3",
    "name": "RCA"
   }
  ],
- "outcome": {
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "SHADOW",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "KARAN",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "ARIEL",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "name": "EMILY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "HUMMUS",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "MORGANA",
-    "name": "MANOLYA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ANNI"
-   },
-   {
-    "name": "CAT",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "role": "OBERON",
-    "assassin": false,
-    "name": "RCA"
-   },
-   {
-    "name": "CINDY",
-    "role": "MORDRED",
-    "assassin": false
-   }
-  ],
-  "assassinated": null,
-  "votes": [
-   {
-    "EMILY": true,
-    "RCA": true,
-    "HUMMUS": true
-   },
-   {
-    "CINDY": true,
-    "ARIEL": true,
-    "EMILY": true,
-    "SHADOW": true
-   },
-   {
-    "CINDY": false,
-    "SHADOW": true,
-    "ARIEL": true,
-    "EMILY": true
-   },
-   {
-    "CAT": false,
-    "ARIEL": true,
-    "SHADOW": true,
-    "CINDY": false,
-    "HUMMUS": true
-   },
-   {
-    "SHADOW": true,
-    "HUMMUS": true,
-    "ANNI": true,
-    "KARAN": true,
-    "CINDY": false
-   }
-  ],
-  "state": "EVIL_WIN"
+ "timeFinished": {
+  "_seconds": 1585957912,
+  "_nanoseconds": 843931000
  }
 }

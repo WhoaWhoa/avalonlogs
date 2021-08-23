@@ -1,7 +1,4 @@
 {
- "options": {
-  "inGameLog": false
- },
  "players": [
   {
    "name": "BCP",
@@ -12,34 +9,91 @@
    "uid": "yTwrkcmWEIQLMSV5dzFWvYqGEjW2"
   },
   {
-   "uid": "vpfGqtxejjXWS1COxi4YEkOVz3U2",
-   "name": "CAITLIN"
+   "name": "CAITLIN",
+   "uid": "vpfGqtxejjXWS1COxi4YEkOVz3U2"
   },
   {
    "uid": "QX3gT2JuGTSZimADImdKn0ISNS13",
    "name": "LAUREN"
   },
   {
-   "name": "JON",
-   "uid": "NKpnztpwJ9hONgbjjaTOkSge9H62"
+   "uid": "NKpnztpwJ9hONgbjjaTOkSge9H62",
+   "name": "JON"
   },
   {
-   "uid": "CNdzUQBOCCTQ9HRwUvbRfkPYZQT2",
-   "name": "CHRIS"
+   "name": "CHRIS",
+   "uid": "CNdzUQBOCCTQ9HRwUvbRfkPYZQT2"
   }
  ],
+ "outcome": {
+  "assassinated": "JON",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "FREYA": true,
+    "LAUREN": false
+   },
+   {
+    "BCP": true,
+    "JON": true,
+    "CHRIS": true
+   },
+   {
+    "JON": true,
+    "FREYA": true,
+    "CHRIS": true,
+    "BCP": true
+   },
+   {
+    "CHRIS": true,
+    "BCP": true,
+    "FREYA": true
+   }
+  ],
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "CHRIS"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "FREYA"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "CAITLIN"
+   },
+   {
+    "name": "JON",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "BCP",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": true,
+    "name": "LAUREN",
+    "role": "MORDRED"
+   }
+  ]
+ },
  "missions": [
   {
-   "state": "FAIL",
-   "numFails": 1,
    "team": [
     "LAUREN",
     "FREYA"
    ],
    "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "BCP",
       "LAUREN",
@@ -51,37 +105,44 @@
       "LAUREN",
       "FREYA"
      ],
+     "state": "APPROVED",
      "proposer": "CAITLIN"
     }
    ],
+   "state": "FAIL",
    "teamSize": 2
   },
   {
-   "failsRequired": 1,
+   "team": [
+    "BCP",
+    "JON",
+    "CHRIS"
+   ],
    "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "votes": [
-      "BCP",
-      "CAITLIN",
-      "JON"
-     ],
      "team": [
       "LAUREN",
       "FREYA",
       "CHRIS"
      ],
-     "proposer": "LAUREN",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "BCP",
+      "CAITLIN",
+      "JON"
+     ],
+     "proposer": "LAUREN"
     },
     {
-     "state": "REJECTED",
-     "proposer": "JON",
      "team": [
       "FREYA",
       "LAUREN",
       "CAITLIN"
      ],
+     "proposer": "JON",
+     "state": "REJECTED",
      "votes": [
       "LAUREN",
       "CAITLIN",
@@ -89,13 +150,12 @@
      ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "BCP",
       "JON",
       "CHRIS"
      ],
-     "proposer": "CHRIS",
+     "state": "APPROVED",
      "votes": [
       "BCP",
       "LAUREN",
@@ -103,19 +163,15 @@
       "FREYA",
       "CAITLIN",
       "JON"
-     ]
+     ],
+     "proposer": "CHRIS"
     }
    ],
-   "team": [
-    "BCP",
-    "JON",
-    "CHRIS"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
-   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -124,41 +180,31 @@
       "JON",
       "CHRIS"
      ],
-     "proposer": "BCP",
      "state": "APPROVED",
      "votes": [
       "BCP",
       "CHRIS",
       "FREYA",
       "JON"
-     ]
+     ],
+     "proposer": "BCP"
     }
    ],
    "state": "SUCCESS",
    "teamSize": 4,
+   "numFails": 0,
    "team": [
     "BCP",
     "FREYA",
     "JON",
     "CHRIS"
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "team": [
-    "FREYA",
-    "BCP",
-    "CHRIS"
-   ],
-   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "FREYA",
-      "BCP",
-      "CHRIS"
-     ],
      "votes": [
       "CHRIS",
       "FREYA",
@@ -166,19 +212,29 @@
       "JON",
       "BCP"
      ],
+     "team": [
+      "FREYA",
+      "BCP",
+      "CHRIS"
+     ],
+     "state": "APPROVED",
      "proposer": "FREYA"
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "state": "SUCCESS"
+   "team": [
+    "FREYA",
+    "BCP",
+    "CHRIS"
+   ],
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
-   "teamSize": 4,
-   "proposals": [],
-   "team": [],
    "state": "PENDING",
-   "failsRequired": 1
+   "failsRequired": 1,
+   "proposals": [],
+   "teamSize": 4,
+   "team": []
   }
  ],
  "timeFinished": {
@@ -189,63 +245,7 @@
   "_seconds": 1586804571,
   "_nanoseconds": 701000000
  },
- "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "assassinated": "JON",
-  "votes": [
-   {
-    "LAUREN": false,
-    "FREYA": true
-   },
-   {
-    "BCP": true,
-    "JON": true,
-    "CHRIS": true
-   },
-   {
-    "FREYA": true,
-    "BCP": true,
-    "CHRIS": true,
-    "JON": true
-   },
-   {
-    "BCP": true,
-    "CHRIS": true,
-    "FREYA": true
-   }
-  ],
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "CHRIS",
-    "assassin": false
-   },
-   {
-    "name": "FREYA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "CAITLIN",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "JON",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "BCP",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "LAUREN",
-    "role": "MORDRED",
-    "assassin": true
-   }
-  ]
+ "options": {
+  "inGameLog": false
  }
 }

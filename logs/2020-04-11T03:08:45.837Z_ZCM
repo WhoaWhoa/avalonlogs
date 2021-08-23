@@ -1,79 +1,108 @@
 {
+ "timeCreated": {
+  "_seconds": 1586574525,
+  "_nanoseconds": 837000000
+ },
+ "timeFinished": {
+  "_seconds": 1586575497,
+  "_nanoseconds": 253007000
+ },
  "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "assassinated": "RIS",
   "roles": [
    {
     "name": "YUR",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
     "assassin": false,
-    "name": "REGGIE",
-    "role": "PERCIVAL"
+    "role": "MERLIN"
    },
    {
-    "name": "ZI",
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "REGGIE"
+   },
+   {
     "role": "MORGANA",
-    "assassin": false
+    "assassin": false,
+    "name": "ZI"
    },
    {
     "role": "LOYAL FOLLOWER",
-    "name": "ERIC",
-    "assassin": false
+    "assassin": false,
+    "name": "ERIC"
    },
    {
-    "role": "MORDRED",
+    "assassin": true,
     "name": "LILY",
-    "assassin": true
+    "role": "MORDRED"
    },
    {
-    "name": "RIS",
     "role": "LOYAL FOLLOWER",
+    "name": "RIS",
     "assassin": false
    }
   ],
+  "assassinated": "RIS",
   "votes": [
    {
     "RIS": true,
     "ZI": true
    },
    {
-    "RIS": true,
     "ZI": false,
-    "LILY": true
+    "LILY": true,
+    "RIS": true
    },
    {
-    "LILY": false,
-    "YUR": true,
     "RIS": true,
+    "YUR": true,
+    "LILY": false,
     "ERIC": true
    },
    {
+    "YUR": true,
     "ERIC": true,
-    "REGGIE": true,
-    "YUR": true
+    "REGGIE": true
    },
    {
     "RIS": true,
-    "REGGIE": true,
     "ERIC": true,
-    "YUR": true
+    "YUR": true,
+    "REGGIE": true
    }
-  ]
+  ],
+  "message": "Three successful missions",
+  "state": "GOOD_WIN"
  },
- "timeFinished": {
-  "_seconds": 1586575497,
-  "_nanoseconds": 253007000
- },
+ "players": [
+  {
+   "name": "ZI",
+   "uid": "6pZFmUf5fCXe2EzkIcWuz3KboZg1"
+  },
+  {
+   "name": "ERIC",
+   "uid": "oKN1ARvBsRhuKzqW2zvjlaesgwu1"
+  },
+  {
+   "uid": "1cNaBv0lVzY0PNPW91ZYmJ0jKat2",
+   "name": "LILY"
+  },
+  {
+   "uid": "tg0CMJrdOQdH0HvohiubfdoLM8g1",
+   "name": "RIS"
+  },
+  {
+   "name": "YUR",
+   "uid": "Wx4Kns9zcQQCp3ed4VZE5bzmPAC3"
+  },
+  {
+   "name": "REGGIE",
+   "uid": "oHEd1h9Yw4bqtBD5ScNMmRwKzPg1"
+  }
+ ],
  "missions": [
   {
-   "teamSize": 2,
-   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "ERIC",
      "team": [
       "RIS",
@@ -84,27 +113,36 @@
       "RIS",
       "REGGIE",
       "ZI"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 0,
    "team": [
     "RIS",
     "ZI"
-   ]
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 2
   },
   {
+   "state": "FAIL",
+   "teamSize": 3,
+   "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "ZI",
     "LILY",
     "RIS"
    ],
-   "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "ZI",
+      "LILY",
+      "RIS"
+     ],
      "proposer": "LILY",
      "votes": [
       "LILY",
@@ -112,65 +150,49 @@
       "REGGIE",
       "ZI",
       "ERIC"
-     ],
-     "team": [
-      "ZI",
-      "LILY",
-      "RIS"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "numFails": 1,
-   "state": "FAIL"
+   ]
   },
   {
-   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
-     "votes": [
-      "ERIC",
-      "LILY",
-      "RIS",
-      "YUR"
-     ],
      "team": [
       "RIS",
       "ERIC",
       "YUR",
       "LILY"
      ],
-     "state": "APPROVED",
-     "proposer": "RIS"
+     "proposer": "RIS",
+     "votes": [
+      "ERIC",
+      "LILY",
+      "RIS",
+      "YUR"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 4,
    "state": "FAIL",
+   "teamSize": 4,
    "team": [
     "RIS",
     "ERIC",
     "YUR",
     "LILY"
    ],
-   "numFails": 1
+   "failsRequired": 1
   },
   {
-   "numFails": 0,
-   "team": [
-    "YUR",
-    "ERIC",
-    "REGGIE"
-   ],
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "YUR",
      "team": [
       "YUR",
       "ERIC",
       "REGGIE"
      ],
-     "state": "APPROVED",
-     "proposer": "YUR",
      "votes": [
       "YUR",
       "REGGIE",
@@ -178,15 +200,40 @@
       "ERIC",
       "LILY",
       "RIS"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "numFails": 0,
+   "team": [
+    "YUR",
+    "ERIC",
+    "REGGIE"
+   ],
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1
+  },
+  {
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "proposer": "REGGIE",
+     "votes": [
+      "ERIC",
+      "RIS",
+      "YUR",
+      "REGGIE"
+     ],
+     "team": [
+      "REGGIE",
+      "YUR",
+      "ERIC",
+      "RIS"
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
-  },
-  {
-   "numFails": 0,
-   "state": "SUCCESS",
    "team": [
     "REGGIE",
     "YUR",
@@ -195,54 +242,7 @@
    ],
    "teamSize": 4,
    "failsRequired": 1,
-   "proposals": [
-    {
-     "team": [
-      "REGGIE",
-      "YUR",
-      "ERIC",
-      "RIS"
-     ],
-     "proposer": "REGGIE",
-     "state": "APPROVED",
-     "votes": [
-      "ERIC",
-      "RIS",
-      "YUR",
-      "REGGIE"
-     ]
-    }
-   ]
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586574525,
-  "_nanoseconds": 837000000
- },
- "players": [
-  {
-   "uid": "6pZFmUf5fCXe2EzkIcWuz3KboZg1",
-   "name": "ZI"
-  },
-  {
-   "uid": "oKN1ARvBsRhuKzqW2zvjlaesgwu1",
-   "name": "ERIC"
-  },
-  {
-   "name": "LILY",
-   "uid": "1cNaBv0lVzY0PNPW91ZYmJ0jKat2"
-  },
-  {
-   "name": "RIS",
-   "uid": "tg0CMJrdOQdH0HvohiubfdoLM8g1"
-  },
-  {
-   "uid": "Wx4Kns9zcQQCp3ed4VZE5bzmPAC3",
-   "name": "YUR"
-  },
-  {
-   "uid": "oHEd1h9Yw4bqtBD5ScNMmRwKzPg1",
-   "name": "REGGIE"
+   "numFails": 0
   }
  ]
 }

@@ -1,16 +1,43 @@
 {
  "outcome": {
-  "message": "Three failed missions",
   "state": "EVIL_WIN",
   "assassinated": null,
-  "votes": [
+  "roles": [
    {
-    "ABBAS": false,
-    "JULES": true
+    "name": "ANDREW",
+    "role": "MORGANA",
+    "assassin": false
    },
    {
-    "ABBAS": true,
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "JULES"
+   },
+   {
+    "assassin": false,
+    "name": "SASHA",
+    "role": "MERLIN"
+   },
+   {
+    "name": "ABBAS",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "BSCHNADO",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "JULES": true,
+    "ABBAS": false
+   },
+   {
     "BSCHNADO": true,
+    "ABBAS": true,
     "ANDREW": true
    },
    {
@@ -18,55 +45,50 @@
     "BSCHNADO": true
    },
    {
-    "BSCHNADO": true,
     "ANDREW": false,
-    "ABBAS": true
+    "ABBAS": true,
+    "BSCHNADO": true
    },
    {
     "ANDREW": false,
     "JULES": true,
     "BSCHNADO": true
    }
-  ],
-  "roles": [
-   {
-    "role": "MORGANA",
-    "name": "ANDREW",
-    "assassin": false
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "JULES",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "name": "SASHA",
-    "assassin": false
-   },
-   {
-    "name": "ABBAS",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "BSCHNADO"
-   }
   ]
  },
- "timeFinished": {
-  "_seconds": 1586054105,
-  "_nanoseconds": 501627000
- },
+ "players": [
+  {
+   "name": "ANDREW",
+   "uid": "yVN4l7lvPncDVFhq7Xw3EMqIoTx2"
+  },
+  {
+   "name": "BSCHNADO",
+   "uid": "bQZMcInrKaR75y8tclegecjWBjS2"
+  },
+  {
+   "name": "SASHA",
+   "uid": "VrXsddC8B7WexURfmgOGKgMCFGw1"
+  },
+  {
+   "uid": "3VNOgvK6lQQkajxyLXZxxLPv1ir1",
+   "name": "JULES"
+  },
+  {
+   "uid": "9lVK8EtlRjSBjQ9VeroOmnHHlBi2",
+   "name": "ABBAS"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1586053028,
   "_nanoseconds": 672000000
  },
  "missions": [
   {
-   "teamSize": 2,
+   "failsRequired": 1,
+   "team": [
+    "ABBAS",
+    "JULES"
+   ],
    "proposals": [
     {
      "proposer": "ABBAS",
@@ -85,18 +107,18 @@
     }
    ],
    "numFails": 1,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "team": [
-    "ABBAS",
-    "JULES"
-   ]
+   "teamSize": 2,
+   "state": "FAIL"
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 0,
    "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "BSCHNADO",
+    "ANDREW",
+    "ABBAS"
+   ],
+   "teamSize": 3,
    "proposals": [
     {
      "state": "REJECTED",
@@ -112,42 +134,45 @@
      ]
     },
     {
-     "proposer": "BSCHNADO",
      "team": [
       "BSCHNADO",
       "ANDREW",
       "ABBAS"
      ],
-     "state": "APPROVED",
      "votes": [
       "ABBAS",
       "BSCHNADO",
       "ANDREW"
-     ]
+     ],
+     "proposer": "BSCHNADO",
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "BSCHNADO",
-    "ANDREW",
-    "ABBAS"
-   ]
+   "numFails": 0
   },
   {
-   "state": "SUCCESS",
+   "team": [
+    "BSCHNADO",
+    "JULES"
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "JULES",
-      "SASHA"
-     ],
-     "proposer": "SASHA",
-     "state": "REJECTED",
      "team": [
       "SASHA",
       "JULES"
+     ],
+     "proposer": "SASHA",
+     "state": "REJECTED",
+     "votes": [
+      "JULES",
+      "SASHA"
      ]
     },
     {
+     "proposer": "JULES",
+     "state": "APPROVED",
      "team": [
       "BSCHNADO",
       "JULES"
@@ -156,27 +181,19 @@
       "JULES",
       "SASHA",
       "ANDREW"
-     ],
-     "state": "APPROVED",
-     "proposer": "JULES"
+     ]
     }
    ],
    "teamSize": 2,
-   "failsRequired": 1,
-   "numFails": 0,
-   "team": [
-    "BSCHNADO",
-    "JULES"
-   ]
+   "state": "SUCCESS"
   },
   {
-   "numFails": 1,
-   "state": "FAIL",
    "team": [
     "ABBAS",
     "ANDREW",
     "BSCHNADO"
    ],
+   "state": "FAIL",
    "proposals": [
     {
      "team": [
@@ -185,66 +202,49 @@
       "BSCHNADO"
      ],
      "state": "APPROVED",
+     "proposer": "ABBAS",
      "votes": [
       "JULES",
       "ABBAS",
       "BSCHNADO",
       "ANDREW"
-     ],
-     "proposer": "ABBAS"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3
+   "numFails": 1,
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "ANDREW",
-      "JULES",
-      "ABBAS"
-     ],
-     "team": [
-      "ANDREW",
-      "BSCHNADO",
-      "JULES"
-     ],
-     "proposer": "ANDREW"
-    }
-   ],
+   "teamSize": 3,
+   "state": "FAIL",
    "team": [
     "ANDREW",
     "BSCHNADO",
     "JULES"
    ],
-   "teamSize": 3,
+   "proposals": [
+    {
+     "votes": [
+      "ANDREW",
+      "JULES",
+      "ABBAS"
+     ],
+     "state": "APPROVED",
+     "proposer": "ANDREW",
+     "team": [
+      "ANDREW",
+      "BSCHNADO",
+      "JULES"
+     ]
+    }
+   ],
    "numFails": 1,
-   "state": "FAIL",
    "failsRequired": 1
   }
  ],
- "players": [
-  {
-   "name": "ANDREW",
-   "uid": "yVN4l7lvPncDVFhq7Xw3EMqIoTx2"
-  },
-  {
-   "uid": "bQZMcInrKaR75y8tclegecjWBjS2",
-   "name": "BSCHNADO"
-  },
-  {
-   "name": "SASHA",
-   "uid": "VrXsddC8B7WexURfmgOGKgMCFGw1"
-  },
-  {
-   "uid": "3VNOgvK6lQQkajxyLXZxxLPv1ir1",
-   "name": "JULES"
-  },
-  {
-   "name": "ABBAS",
-   "uid": "9lVK8EtlRjSBjQ9VeroOmnHHlBi2"
-  }
- ]
+ "timeFinished": {
+  "_seconds": 1586054105,
+  "_nanoseconds": 501627000
+ }
 }

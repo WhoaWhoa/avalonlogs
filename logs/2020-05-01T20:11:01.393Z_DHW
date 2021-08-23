@@ -1,46 +1,14 @@
 {
+ "timeFinished": {
+  "_seconds": 1588366569,
+  "_nanoseconds": 894000000
+ },
  "outcome": {
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "PARROT"
-   },
-   {
-    "name": "SONALI",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "ANKITH"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "MOUBANI"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "BHATLA"
-   },
-   {
-    "name": "PAUL",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "SHREYA"
-   }
-  ],
+  "assassinated": null,
   "votes": [
    {
-    "SHREYA": true,
-    "PARROT": true
+    "PARROT": true,
+    "SHREYA": true
    },
    {
     "ANKITH": true,
@@ -48,43 +16,74 @@
     "PAUL": false
    },
    {
-    "PARROT": true,
+    "BHATLA": true,
     "SONALI": false,
-    "BHATLA": true
+    "PARROT": true
    },
    {
+    "SONALI": true,
     "PAUL": false,
-    "PARROT": true,
     "ANKITH": true,
-    "SONALI": true
+    "PARROT": true
    },
    {
-    "PARROT": true,
+    "MOUBANI": false,
     "ANKITH": true,
     "PAUL": false,
-    "MOUBANI": false
+    "PARROT": true
    }
   ],
   "message": "Three failed missions",
   "state": "EVIL_WIN",
-  "assassinated": null
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "PARROT",
+    "assassin": false
+   },
+   {
+    "name": "SONALI",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "ANKITH"
+   },
+   {
+    "name": "MOUBANI",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "BHATLA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "PAUL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "SHREYA"
+   }
+  ]
  },
  "options": {
   "inGameLog": false
  },
- "timeFinished": {
-  "_seconds": 1588366569,
-  "_nanoseconds": 894000000
- },
- "timeCreated": {
-  "_seconds": 1588363861,
-  "_nanoseconds": 393000000
- },
  "missions": [
   {
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "PAUL",
       "SHREYA",
@@ -98,7 +97,6 @@
       "SHREYA",
       "PARROT"
      ],
-     "state": "APPROVED",
      "proposer": "SHREYA"
     }
    ],
@@ -106,28 +104,36 @@
     "SHREYA",
     "PARROT"
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
-   "state": "FAIL",
+   "team": [
+    "ANKITH",
+    "BHATLA",
+    "PAUL"
+   ],
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "PARROT",
-      "SONALI"
-     ],
      "team": [
       "PARROT",
       "SHREYA",
+      "SONALI"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "PARROT",
       "SONALI"
      ],
      "proposer": "PARROT"
     },
     {
      "proposer": "MOUBANI",
+     "team": [
+      "ANKITH",
+      "BHATLA",
+      "PAUL"
+     ],
+     "state": "APPROVED",
      "votes": [
       "PAUL",
       "SHREYA",
@@ -136,33 +142,26 @@
       "ANKITH",
       "MOUBANI",
       "BHATLA"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "ANKITH",
-      "BHATLA",
-      "PAUL"
      ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 1,
    "teamSize": 3,
-   "team": [
-    "ANKITH",
-    "BHATLA",
-    "PAUL"
-   ]
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "SONALI",
     "BHATLA",
     "PARROT"
    ],
+   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "SONALI",
      "state": "APPROVED",
      "votes": [
       "PAUL",
@@ -174,19 +173,25 @@
       "SONALI",
       "BHATLA",
       "PARROT"
-     ]
+     ],
+     "proposer": "SONALI"
     }
-   ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "state": "FAIL",
-   "teamSize": 3
+   ]
   },
   {
+   "teamSize": 4,
+   "team": [
+    "PAUL",
+    "ANKITH",
+    "PARROT",
+    "SONALI"
+   ],
+   "numFails": 1,
    "failsRequired": 2,
    "state": "SUCCESS",
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "SHREYA",
       "BHATLA"
@@ -197,11 +202,11 @@
       "PARROT",
       "MOUBANI"
      ],
-     "state": "REJECTED",
      "proposer": "BHATLA"
     },
     {
      "state": "APPROVED",
+     "proposer": "PAUL",
      "votes": [
       "PARROT",
       "SONALI",
@@ -209,7 +214,6 @@
       "MOUBANI",
       "PAUL"
      ],
-     "proposer": "PAUL",
      "team": [
       "PAUL",
       "ANKITH",
@@ -217,20 +221,12 @@
       "SONALI"
      ]
     }
-   ],
-   "team": [
-    "PAUL",
-    "ANKITH",
-    "PARROT",
-    "SONALI"
-   ],
-   "teamSize": 4,
-   "numFails": 1
+   ]
   },
   {
-   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "ANKITH",
      "state": "APPROVED",
      "votes": [
       "PAUL",
@@ -246,49 +242,53 @@
       "PARROT",
       "MOUBANI",
       "PAUL"
-     ],
-     "proposer": "ANKITH"
+     ]
     }
    ],
+   "failsRequired": 1,
+   "numFails": 2,
+   "teamSize": 4,
+   "state": "FAIL",
    "team": [
     "ANKITH",
     "PARROT",
     "MOUBANI",
     "PAUL"
-   ],
-   "failsRequired": 1,
-   "numFails": 2,
-   "state": "FAIL"
+   ]
   }
  ],
+ "timeCreated": {
+  "_seconds": 1588363861,
+  "_nanoseconds": 393000000
+ },
  "players": [
   {
-   "uid": "9c9NGzycawRKrKBEs335OQpfvxu2",
-   "name": "BHATLA"
+   "name": "BHATLA",
+   "uid": "9c9NGzycawRKrKBEs335OQpfvxu2"
   },
   {
    "name": "PAUL",
    "uid": "UhKGeSjDsfgZ7evqdgO0JUDC0703"
   },
   {
-   "uid": "esxAz4vrx5TTgoPayrmpRx506F83",
-   "name": "ANKITH"
+   "name": "ANKITH",
+   "uid": "esxAz4vrx5TTgoPayrmpRx506F83"
   },
   {
-   "uid": "Yg3svtoHeFMgFLh37OC7RDxdNEr1",
-   "name": "SHREYA"
+   "name": "SHREYA",
+   "uid": "Yg3svtoHeFMgFLh37OC7RDxdNEr1"
   },
   {
    "name": "PARROT",
    "uid": "XFB8W49EibMvdaZvd60WHSXa59v2"
   },
   {
-   "uid": "xjPYcZQFvJbdCrRFHRnh8q5V5p53",
-   "name": "MOUBANI"
+   "name": "MOUBANI",
+   "uid": "xjPYcZQFvJbdCrRFHRnh8q5V5p53"
   },
   {
-   "uid": "xteNenvXXOTCQLkuSEBlF5cNRg83",
-   "name": "SONALI"
+   "name": "SONALI",
+   "uid": "xteNenvXXOTCQLkuSEBlF5cNRg83"
   }
  ]
 }

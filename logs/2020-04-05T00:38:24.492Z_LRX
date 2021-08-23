@@ -1,46 +1,80 @@
 {
- "timeFinished": {
-  "_seconds": 1586048607,
-  "_nanoseconds": 687939000
+ "outcome": {
+  "assassinated": null,
+  "votes": [
+   {
+    "PAULKIM": true,
+    "TIM": true
+   },
+   {
+    "PAULKIM": true,
+    "SARA": false,
+    "TIM": true
+   },
+   {
+    "TIM": true,
+    "NEWT": true,
+    "SARA": true
+   },
+   {
+    "SARA": false,
+    "TIM": true,
+    "NEWT": false,
+    "JARRISBURG": true
+   },
+   {
+    "SARA": false,
+    "TIM": true,
+    "JENBBQ": true,
+    "BETTY": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "BETTY"
+   },
+   {
+    "assassin": false,
+    "name": "TIM",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "SARA",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "name": "PAULKIM",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "JENBBQ",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "name": "JARRISBURG",
+    "role": "MORDRED"
+   },
+   {
+    "role": "MORGANA",
+    "name": "NEWT",
+    "assassin": false
+   }
+  ],
+  "message": "Three failed missions"
  },
- "timeCreated": {
-  "_seconds": 1586047104,
-  "_nanoseconds": 492000000
- },
- "players": [
-  {
-   "name": "TIM",
-   "uid": "afLpfC2enOX2ULsPs5MPbwxG4t03"
-  },
-  {
-   "name": "NEWT",
-   "uid": "3oGtssESm1dZS7Hxaq4zHQYC9Hf1"
-  },
-  {
-   "name": "JARRISBURG",
-   "uid": "JkagQO5lA9QHINNNcmpzDQCTT7x1"
-  },
-  {
-   "uid": "LpevvXPgRNaoPYn700H1T55QpyO2",
-   "name": "SARA"
-  },
-  {
-   "uid": "vJuF9sJxk8Oh39wnJt3W68u4VFo2",
-   "name": "BETTY"
-  },
-  {
-   "name": "JENBBQ",
-   "uid": "mEVvYQxn4bUbb0YmEeMK6yOMTdU2"
-  },
-  {
-   "uid": "YiongaHAVVS7o9HsnFufyhXwSOx2",
-   "name": "PAULKIM"
-  }
- ],
  "missions": [
   {
+   "numFails": 0,
    "proposals": [
     {
+     "proposer": "PAULKIM",
      "state": "APPROVED",
      "team": [
       "TIM",
@@ -54,22 +88,18 @@
       "TIM",
       "SARA",
       "PAULKIM"
-     ],
-     "proposer": "PAULKIM"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0,
+   "teamSize": 2,
    "team": [
     "TIM",
     "PAULKIM"
    ],
-   "teamSize": 2
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
-   "numFails": 1,
    "proposals": [
     {
      "state": "APPROVED",
@@ -90,48 +120,50 @@
      "proposer": "TIM"
     }
    ],
-   "failsRequired": 1,
    "team": [
     "TIM",
     "SARA",
     "PAULKIM"
    ],
-   "teamSize": 3
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
-   "team": [
-    "NEWT",
-    "TIM",
-    "SARA"
-   ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "NEWT",
      "state": "APPROVED",
-     "team": [
-      "NEWT",
-      "TIM",
-      "SARA"
-     ],
      "votes": [
       "JARRISBURG",
       "NEWT",
       "BETTY",
       "TIM",
       "SARA"
-     ]
+     ],
+     "team": [
+      "NEWT",
+      "TIM",
+      "SARA"
+     ],
+     "proposer": "NEWT"
     }
-   ]
+   ],
+   "team": [
+    "NEWT",
+    "TIM",
+    "SARA"
+   ],
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "state": "FAIL",
+   "failsRequired": 2,
+   "numFails": 2,
    "proposals": [
     {
-     "proposer": "JARRISBURG",
      "state": "APPROVED",
      "votes": [
       "JARRISBURG",
@@ -147,7 +179,8 @@
       "SARA",
       "TIM",
       "JARRISBURG"
-     ]
+     ],
+     "proposer": "JARRISBURG"
     }
    ],
    "team": [
@@ -156,15 +189,13 @@
     "TIM",
     "JARRISBURG"
    ],
-   "numFails": 2,
-   "teamSize": 4,
-   "failsRequired": 2
+   "state": "FAIL",
+   "teamSize": 4
   },
   {
-   "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "SARA",
      "votes": [
       "BETTY",
       "SARA"
@@ -175,10 +206,16 @@
       "BETTY",
       "SARA"
      ],
+     "proposer": "SARA",
      "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
+     "team": [
+      "JENBBQ",
+      "TIM",
+      "SARA",
+      "BETTY"
+     ],
      "votes": [
       "BETTY",
       "TIM",
@@ -187,18 +224,13 @@
       "JENBBQ",
       "NEWT"
      ],
-     "proposer": "BETTY",
-     "team": [
-      "JENBBQ",
-      "TIM",
-      "SARA",
-      "BETTY"
-     ]
+     "state": "APPROVED",
+     "proposer": "BETTY"
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "JENBBQ",
     "TIM",
@@ -207,74 +239,42 @@
    ]
   }
  ],
- "outcome": {
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "BETTY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "TIM",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "SARA"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "PAULKIM"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "JENBBQ"
-   },
-   {
-    "role": "MORDRED",
-    "name": "JARRISBURG",
-    "assassin": false
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "NEWT"
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "TIM": true,
-    "PAULKIM": true
-   },
-   {
-    "SARA": false,
-    "PAULKIM": true,
-    "TIM": true
-   },
-   {
-    "TIM": true,
-    "SARA": true,
-    "NEWT": true
-   },
-   {
-    "TIM": true,
-    "SARA": false,
-    "NEWT": false,
-    "JARRISBURG": true
-   },
-   {
-    "BETTY": true,
-    "JENBBQ": true,
-    "TIM": true,
-    "SARA": false
-   }
-  ]
+ "players": [
+  {
+   "name": "TIM",
+   "uid": "afLpfC2enOX2ULsPs5MPbwxG4t03"
+  },
+  {
+   "name": "NEWT",
+   "uid": "3oGtssESm1dZS7Hxaq4zHQYC9Hf1"
+  },
+  {
+   "uid": "JkagQO5lA9QHINNNcmpzDQCTT7x1",
+   "name": "JARRISBURG"
+  },
+  {
+   "uid": "LpevvXPgRNaoPYn700H1T55QpyO2",
+   "name": "SARA"
+  },
+  {
+   "uid": "vJuF9sJxk8Oh39wnJt3W68u4VFo2",
+   "name": "BETTY"
+  },
+  {
+   "name": "JENBBQ",
+   "uid": "mEVvYQxn4bUbb0YmEeMK6yOMTdU2"
+  },
+  {
+   "name": "PAULKIM",
+   "uid": "YiongaHAVVS7o9HsnFufyhXwSOx2"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586048607,
+  "_nanoseconds": 687939000
+ },
+ "timeCreated": {
+  "_seconds": 1586047104,
+  "_nanoseconds": 492000000
  }
 }

@@ -1,84 +1,16 @@
 {
- "players": [
-  {
-   "uid": "8hrrQzIPvaPrrH8DJK2cJB5IPwB2",
-   "name": "TOM"
-  },
-  {
-   "uid": "R9f2SKlYaDVIclh13YJR9zotckj2",
-   "name": "SHRAVAN"
-  },
-  {
-   "uid": "UYgJkQ0rCybAWtwGheZJIoj3lwe2",
-   "name": "SHRI"
-  },
-  {
-   "name": "SHIVAM",
-   "uid": "YSai6t31fTa29BpZq3rVdYpqlyk1"
-  },
-  {
-   "name": "POPI",
-   "uid": "X2lR64z5aNeX84nZb1MylwKD0tq2"
-  },
-  {
-   "name": "JIG",
-   "uid": "80g2WVEqM5dj75jp6YF0buAtc052"
-  },
-  {
-   "name": "MANNY",
-   "uid": "uXTsMNsBAyUaG8NtN6j0ZSbokjo1"
-  }
- ],
  "outcome": {
-  "roles": [
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "SHRI"
-   },
-   {
-    "name": "JIG",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "name": "MANNY",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "POPI"
-   },
-   {
-    "assassin": false,
-    "name": "TOM",
-    "role": "MORGANA"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "SHIVAM"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "SHRAVAN",
-    "assassin": false
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null,
   "state": "EVIL_WIN",
+  "assassinated": null,
   "votes": [
    {
-    "SHRI": true,
-    "TOM": true
+    "TOM": true,
+    "SHRI": true
    },
    {
     "TOM": false,
-    "SHRI": false,
-    "SHRAVAN": true
+    "SHRAVAN": true,
+    "SHRI": false
    },
    {
     "JIG": false,
@@ -86,10 +18,48 @@
     "MANNY": true
    },
    {
-    "MANNY": true,
     "SHIVAM": true,
     "JIG": false,
-    "TOM": false
+    "TOM": false,
+    "MANNY": true
+   }
+  ],
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "SHRI",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "name": "JIG",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "MANNY"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "POPI",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "name": "TOM",
+    "assassin": false
+   },
+   {
+    "name": "SHIVAM",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "SHRAVAN"
    }
   ]
  },
@@ -97,17 +67,15 @@
   "_seconds": 1585369432,
   "_nanoseconds": 587398000
  },
+ "timeCreated": {
+  "_seconds": 1585368884,
+  "_nanoseconds": 808000000
+ },
  "missions": [
   {
    "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "SHRI",
-      "TOM"
-     ],
-     "proposer": "SHRI",
      "votes": [
       "JIG",
       "MANNY",
@@ -116,23 +84,33 @@
       "SHIVAM",
       "SHRAVAN",
       "SHRI"
+     ],
+     "state": "APPROVED",
+     "proposer": "SHRI",
+     "team": [
+      "SHRI",
+      "TOM"
      ]
     }
    ],
+   "numFails": 0,
    "team": [
     "SHRI",
     "TOM"
    ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
+   "state": "FAIL",
    "numFails": 2,
-   "failsRequired": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "SHRAVAN",
+      "TOM",
+      "SHRI"
+     ],
      "proposer": "SHIVAM",
      "votes": [
       "MANNY",
@@ -142,12 +120,7 @@
       "SHRAVAN",
       "SHRI"
      ],
-     "state": "APPROVED",
-     "team": [
-      "SHRAVAN",
-      "TOM",
-      "SHRI"
-     ]
+     "state": "APPROVED"
     }
    ],
    "team": [
@@ -155,17 +128,22 @@
     "TOM",
     "SHRI"
    ],
-   "state": "FAIL"
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "state": "FAIL",
    "numFails": 1,
    "team": [
     "POPI",
     "JIG",
     "MANNY"
    ],
+   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "POPI",
       "TOM",
@@ -173,31 +151,22 @@
       "JIG",
       "MANNY"
      ],
-     "proposer": "POPI",
-     "state": "APPROVED",
      "team": [
       "POPI",
       "JIG",
       "MANNY"
-     ]
+     ],
+     "proposer": "POPI"
     }
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 3
+   ]
   },
   {
-   "numFails": 2,
-   "failsRequired": 2,
-   "team": [
-    "TOM",
-    "JIG",
-    "MANNY",
-    "SHIVAM"
-   ],
    "state": "FAIL",
+   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "JIG",
      "votes": [
       "SHRI",
       "JIG",
@@ -206,28 +175,59 @@
       "TOM",
       "SHIVAM"
      ],
-     "state": "APPROVED",
      "team": [
       "TOM",
       "JIG",
       "MANNY",
       "SHIVAM"
-     ],
-     "proposer": "JIG"
+     ]
     }
    ],
-   "teamSize": 4
+   "failsRequired": 2,
+   "team": [
+    "TOM",
+    "JIG",
+    "MANNY",
+    "SHIVAM"
+   ],
+   "numFails": 2
   },
   {
-   "team": [],
-   "teamSize": 4,
    "failsRequired": 1,
    "state": "PENDING",
-   "proposals": []
+   "proposals": [],
+   "teamSize": 4,
+   "team": []
   }
  ],
- "timeCreated": {
-  "_seconds": 1585368884,
-  "_nanoseconds": 808000000
- }
+ "players": [
+  {
+   "name": "TOM",
+   "uid": "8hrrQzIPvaPrrH8DJK2cJB5IPwB2"
+  },
+  {
+   "name": "SHRAVAN",
+   "uid": "R9f2SKlYaDVIclh13YJR9zotckj2"
+  },
+  {
+   "uid": "UYgJkQ0rCybAWtwGheZJIoj3lwe2",
+   "name": "SHRI"
+  },
+  {
+   "uid": "YSai6t31fTa29BpZq3rVdYpqlyk1",
+   "name": "SHIVAM"
+  },
+  {
+   "uid": "X2lR64z5aNeX84nZb1MylwKD0tq2",
+   "name": "POPI"
+  },
+  {
+   "name": "JIG",
+   "uid": "80g2WVEqM5dj75jp6YF0buAtc052"
+  },
+  {
+   "uid": "uXTsMNsBAyUaG8NtN6j0ZSbokjo1",
+   "name": "MANNY"
+  }
+ ]
 }

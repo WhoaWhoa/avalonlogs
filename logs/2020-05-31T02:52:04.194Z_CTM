@@ -1,41 +1,28 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1590893524,
+  "_nanoseconds": 194000000
+ },
  "outcome": {
-  "message": "Merlin assassinated",
-  "votes": [
-   {
-    "JACKSON": true,
-    "DELANEY": false
-   },
-   {
-    "ALLIE": true,
-    "JACKSON": true,
-    "CHRIS": true
-   },
-   {
-    "JACKSON": true,
-    "ALLIE": true
-   },
-   {
-    "ALLIE": true,
-    "JACKSON": true,
-    "CHRIS": true
-   }
-  ],
+  "state": "EVIL_WIN",
   "roles": [
    {
     "role": "EVIL MINION",
-    "name": "PAUL",
-    "assassin": true
+    "assassin": true,
+    "name": "PAUL"
    },
    {
-    "assassin": false,
     "name": "ALLIE",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "JACKSON"
+    "name": "JACKSON",
+    "assassin": false
    },
    {
     "name": "DELANEY",
@@ -48,22 +35,60 @@
     "assassin": false
    }
   ],
-  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "JACKSON": true,
+    "DELANEY": false
+   },
+   {
+    "JACKSON": true,
+    "CHRIS": true,
+    "ALLIE": true
+   },
+   {
+    "ALLIE": true,
+    "JACKSON": true
+   },
+   {
+    "ALLIE": true,
+    "CHRIS": true,
+    "JACKSON": true
+   }
+  ],
   "assassinated": "CHRIS"
+ },
+ "players": [
+  {
+   "name": "ALLIE",
+   "uid": "TxkaF4mV8KY1Y3wNEEum1MCbwdc2"
+  },
+  {
+   "name": "PAUL",
+   "uid": "USsfTrNmTwh5aPw3jqAH9FjLeNv1"
+  },
+  {
+   "name": "CHRIS",
+   "uid": "0tHkE8DF0Pa3yENHun7suCQiVfg2"
+  },
+  {
+   "uid": "MQW494wOmOdoDLbNPxtZK9F3wfa2",
+   "name": "DELANEY"
+  },
+  {
+   "name": "JACKSON",
+   "uid": "rKrXZPSnPFNo8U4tqZMXL90B8I22"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1590893896,
+  "_nanoseconds": 478000000
  },
  "missions": [
   {
-   "numFails": 1,
-   "state": "FAIL",
-   "team": [
-    "DELANEY",
-    "JACKSON"
-   ],
-   "teamSize": 2,
    "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "ALLIE",
      "team": [
       "DELANEY",
       "JACKSON"
@@ -75,33 +100,48 @@
       "JACKSON",
       "DELANEY",
       "CHRIS"
-     ]
+     ],
+     "proposer": "ALLIE"
     }
-   ]
+   ],
+   "teamSize": 2,
+   "numFails": 1,
+   "team": [
+    "DELANEY",
+    "JACKSON"
+   ],
+   "state": "FAIL"
   },
   {
+   "team": [
+    "CHRIS",
+    "ALLIE",
+    "JACKSON"
+   ],
    "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "PAUL",
-     "state": "REJECTED",
-     "votes": [
-      "PAUL"
-     ],
      "team": [
       "PAUL",
       "DELANEY",
       "JACKSON"
-     ]
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "PAUL"
+     ],
+     "proposer": "PAUL"
     },
     {
+     "proposer": "CHRIS",
+     "state": "APPROVED",
      "team": [
       "CHRIS",
       "ALLIE",
       "JACKSON"
      ],
-     "proposer": "CHRIS",
-     "state": "APPROVED",
      "votes": [
       "JACKSON",
       "DELANEY",
@@ -111,28 +151,28 @@
      ]
     }
    ],
+   "numFails": 0
+  },
+  {
    "team": [
-    "CHRIS",
     "ALLIE",
     "JACKSON"
    ],
+   "teamSize": 2,
    "numFails": 0,
-   "failsRequired": 1,
-   "teamSize": 3
-  },
-  {
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "DELANEY",
       "PAUL"
      ],
+     "proposer": "DELANEY",
      "team": [
       "ALLIE",
       "DELANEY"
-     ],
-     "state": "REJECTED",
-     "proposer": "DELANEY"
+     ]
     },
     {
      "votes": [
@@ -149,23 +189,9 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "team": [
-    "ALLIE",
-    "JACKSON"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "failsRequired": 1
   },
   {
-   "team": [
-    "CHRIS",
-    "ALLIE",
-    "JACKSON"
-   ],
-   "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -175,8 +201,8 @@
       "DELANEY",
       "CHRIS"
      ],
-     "state": "APPROVED",
      "proposer": "ALLIE",
+     "state": "APPROVED",
      "team": [
       "CHRIS",
       "ALLIE",
@@ -184,48 +210,22 @@
      ]
     }
    ],
-   "state": "SUCCESS",
-   "teamSize": 3
-  },
-  {
-   "team": [],
    "teamSize": 3,
+   "state": "SUCCESS",
+   "team": [
+    "CHRIS",
+    "ALLIE",
+    "JACKSON"
+   ],
    "failsRequired": 1,
-   "state": "PENDING",
-   "proposals": []
-  }
- ],
- "timeFinished": {
-  "_seconds": 1590893896,
-  "_nanoseconds": 478000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1590893524,
-  "_nanoseconds": 194000000
- },
- "players": [
-  {
-   "name": "ALLIE",
-   "uid": "TxkaF4mV8KY1Y3wNEEum1MCbwdc2"
+   "numFails": 0
   },
   {
-   "name": "PAUL",
-   "uid": "USsfTrNmTwh5aPw3jqAH9FjLeNv1"
-  },
-  {
-   "uid": "0tHkE8DF0Pa3yENHun7suCQiVfg2",
-   "name": "CHRIS"
-  },
-  {
-   "uid": "MQW494wOmOdoDLbNPxtZK9F3wfa2",
-   "name": "DELANEY"
-  },
-  {
-   "uid": "rKrXZPSnPFNo8U4tqZMXL90B8I22",
-   "name": "JACKSON"
+   "proposals": [],
+   "team": [],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "PENDING"
   }
  ]
 }

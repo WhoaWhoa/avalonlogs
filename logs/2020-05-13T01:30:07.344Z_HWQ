@@ -9,24 +9,24 @@
  },
  "players": [
   {
-   "uid": "RniuYVqsO5OCnZPcOk4YrY2qf742",
-   "name": "CHAVI"
+   "name": "CHAVI",
+   "uid": "RniuYVqsO5OCnZPcOk4YrY2qf742"
   },
   {
    "uid": "tVQNQuHDO8cihbBVOPRGTj0fm4I2",
    "name": "KIMBERLY"
   },
   {
-   "uid": "lHx01lkWR8RJbNr7VOto3YG3qz33",
-   "name": "STEVE"
+   "name": "STEVE",
+   "uid": "lHx01lkWR8RJbNr7VOto3YG3qz33"
   },
   {
    "uid": "OffwbigM2SblJxpZUB0eHkoPheI2",
    "name": "TYLER"
   },
   {
-   "uid": "kYmaig4V9qPVwzFNPynJHaGGk8P2",
-   "name": "KAREN"
+   "name": "KAREN",
+   "uid": "kYmaig4V9qPVwzFNPynJHaGGk8P2"
   },
   {
    "name": "GOODWIN",
@@ -37,57 +37,37 @@
    "uid": "VlJgElRD4VZXmlTxpA5QRET5Z4W2"
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "outcome": {
   "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "TYLER": true,
-    "STEVE": true
-   },
-   {
-    "TYLER": true,
-    "KIMBERLY": true,
-    "STEVE": true
-   },
-   {
-    "TYLER": true,
-    "STEVE": true,
-    "KIMBERLY": true
-   }
-  ],
   "roles": [
    {
     "name": "KIMBERLY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "STEVE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "STEVE"
-   },
-   {
-    "name": "TOBY",
     "role": "OBERON",
-    "assassin": false
+    "name": "TOBY"
    },
    {
     "assassin": false,
-    "role": "MERLIN",
-    "name": "TYLER"
+    "name": "TYLER",
+    "role": "MERLIN"
    },
    {
     "name": "KAREN",
-    "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "assassin": false
    },
    {
-    "name": "CHAVI",
     "role": "PERCIVAL",
+    "name": "CHAVI",
     "assassin": false
    },
    {
@@ -96,15 +76,37 @@
     "role": "EVIL MINION"
    }
   ],
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "STEVE": true,
+    "TYLER": true
+   },
+   {
+    "TYLER": true,
+    "STEVE": true,
+    "KIMBERLY": true
+   },
+   {
+    "STEVE": true,
+    "KIMBERLY": true,
+    "TYLER": true
+   }
+  ],
   "assassinated": "KIMBERLY"
+ },
+ "options": {
+  "inGameLog": false
  },
  "missions": [
   {
-   "numFails": 0,
    "team": [
     "TYLER",
     "STEVE"
    ],
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -123,78 +125,71 @@
       "KIMBERLY",
       "STEVE"
      ],
-     "state": "REJECTED",
+     "proposer": "STEVE",
      "team": [
       "STEVE",
       "KIMBERLY"
      ],
-     "proposer": "STEVE"
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "KIMBERLY",
+      "TYLER",
+      "KAREN",
+      "CHAVI"
+     ],
      "team": [
       "TYLER",
       "STEVE"
      ],
      "proposer": "TYLER",
-     "votes": [
-      "KIMBERLY",
-      "TYLER",
-      "KAREN",
-      "CHAVI"
-     ],
      "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "teamSize": 2,
    "failsRequired": 1
   },
   {
-   "numFails": 0,
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "KAREN"
-     ],
      "team": [
       "KAREN",
       "TYLER",
       "STEVE"
      ],
-     "proposer": "KAREN",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "KAREN"
+     ],
+     "proposer": "KAREN"
     },
     {
-     "team": [
-      "GOODWIN",
-      "TYLER",
-      "STEVE"
-     ],
      "proposer": "GOODWIN",
      "state": "REJECTED",
      "votes": [
       "KAREN",
       "GOODWIN"
+     ],
+     "team": [
+      "GOODWIN",
+      "TYLER",
+      "STEVE"
      ]
     },
     {
+     "proposer": "TOBY",
+     "votes": [
+      "TOBY"
+     ],
      "team": [
       "TOBY",
       "CHAVI",
       "STEVE"
      ],
-     "proposer": "TOBY",
-     "state": "REJECTED",
-     "votes": [
-      "TOBY"
-     ]
+     "state": "REJECTED"
     },
     {
      "proposer": "CHAVI",
-     "state": "REJECTED",
      "votes": [
       "KAREN",
       "CHAVI"
@@ -203,10 +198,12 @@
       "TYLER",
       "STEVE",
       "CHAVI"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "proposer": "KIMBERLY",
+     "state": "APPROVED",
      "votes": [
       "STEVE",
       "TOBY",
@@ -216,7 +213,6 @@
       "GOODWIN",
       "KIMBERLY"
      ],
-     "state": "APPROVED",
      "team": [
       "KIMBERLY",
       "STEVE",
@@ -224,20 +220,27 @@
      ]
     }
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "KIMBERLY",
     "STEVE",
     "TYLER"
-   ]
+   ],
+   "numFails": 0,
+   "teamSize": 3
   },
   {
-   "numFails": 0,
-   "teamSize": 3,
-   "state": "SUCCESS",
    "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "STEVE",
+     "team": [
+      "STEVE",
+      "TYLER",
+      "KIMBERLY"
+     ],
      "votes": [
       "KIMBERLY",
       "STEVE",
@@ -245,34 +248,31 @@
       "TYLER",
       "KAREN",
       "CHAVI"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "STEVE",
-      "TYLER",
-      "KIMBERLY"
      ]
     }
    ],
+   "numFails": 0,
+   "teamSize": 3,
    "team": [
     "STEVE",
     "TYLER",
     "KIMBERLY"
-   ]
-  },
-  {
-   "state": "PENDING",
-   "team": [],
-   "failsRequired": 2,
-   "proposals": [],
-   "teamSize": 4
+   ],
+   "state": "SUCCESS"
   },
   {
    "proposals": [],
-   "state": "PENDING",
    "team": [],
    "teamSize": 4,
-   "failsRequired": 1
+   "failsRequired": 2,
+   "state": "PENDING"
+  },
+  {
+   "state": "PENDING",
+   "failsRequired": 1,
+   "proposals": [],
+   "teamSize": 4,
+   "team": []
   }
  ]
 }

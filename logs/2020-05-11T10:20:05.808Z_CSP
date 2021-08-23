@@ -1,16 +1,20 @@
 {
  "missions": [
   {
-   "numFails": 0,
    "failsRequired": 1,
    "state": "SUCCESS",
-   "teamSize": 2,
    "team": [
     "VIET",
     "NEVIN"
    ],
+   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "VIET",
+      "NEVIN"
+     ],
      "state": "APPROVED",
      "votes": [
       "BROHEK",
@@ -19,56 +23,45 @@
       "NEVIN",
       "VIET"
      ],
-     "team": [
-      "VIET",
-      "NEVIN"
-     ],
      "proposer": "BROHEK"
     }
    ]
   },
   {
-   "numFails": 1,
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "NEVIN",
-    "VIET",
-    "BROHEK"
-   ],
+   "teamSize": 3,
    "proposals": [
     {
+     "votes": [
+      "ALLAN"
+     ],
      "team": [
       "ALLAN",
       "BROHEK",
       "KINSON"
      ],
      "state": "REJECTED",
-     "votes": [
-      "ALLAN"
-     ],
      "proposer": "ALLAN"
     },
     {
      "state": "REJECTED",
      "proposer": "KINSON",
-     "votes": [
-      "NEVIN",
-      "KINSON"
-     ],
      "team": [
       "KINSON",
       "NEVIN",
       "BROHEK"
+     ],
+     "votes": [
+      "NEVIN",
+      "KINSON"
      ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "NEVIN",
       "VIET",
       "BROHEK"
      ],
+     "state": "APPROVED",
      "votes": [
       "NEVIN",
       "VIET",
@@ -78,43 +71,42 @@
      "proposer": "NEVIN"
     }
    ],
-   "teamSize": 3
-  },
-  {
-   "numFails": 0,
    "team": [
     "NEVIN",
-    "VIET"
+    "VIET",
+    "BROHEK"
    ],
-   "teamSize": 2,
-   "state": "SUCCESS",
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1
+  },
+  {
    "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 2,
    "proposals": [
     {
-     "proposer": "VIET",
-     "team": [
-      "NEVIN",
-      "VIET"
-     ],
-     "state": "APPROVED",
      "votes": [
       "ALLAN",
       "NEVIN",
       "VIET"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "NEVIN",
+      "VIET"
+     ],
+     "proposer": "VIET"
     }
-   ]
+   ],
+   "team": [
+    "NEVIN",
+    "VIET"
+   ],
+   "numFails": 0
   },
   {
-   "numFails": 0,
    "failsRequired": 1,
-   "teamSize": 3,
-   "state": "SUCCESS",
-   "team": [
-    "BROHEK",
-    "KINSON",
-    "NEVIN"
-   ],
    "proposals": [
     {
      "team": [
@@ -122,67 +114,68 @@
       "KINSON",
       "NEVIN"
      ],
-     "state": "APPROVED",
      "votes": [
       "KINSON",
       "NEVIN",
       "BROHEK"
      ],
+     "state": "APPROVED",
      "proposer": "BROHEK"
     }
+   ],
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "team": [
+    "BROHEK",
+    "KINSON",
+    "NEVIN"
    ]
   },
   {
-   "teamSize": 3,
+   "team": [],
+   "state": "PENDING",
    "failsRequired": 1,
    "proposals": [],
-   "state": "PENDING",
-   "team": []
+   "teamSize": 3
   }
  ],
- "timeCreated": {
-  "_seconds": 1589192405,
-  "_nanoseconds": 808000000
- },
  "players": [
   {
    "name": "NEVIN",
    "uid": "imN1n6zwnabEtwlUkv5EC46Sbp82"
   },
   {
-   "name": "VIET",
-   "uid": "z1pJNhIkudeHquTDnpvBR64CY252"
+   "uid": "z1pJNhIkudeHquTDnpvBR64CY252",
+   "name": "VIET"
   },
   {
-   "name": "BROHEK",
-   "uid": "rvOeMl3TINOwztWyKxePZQx1u883"
+   "uid": "rvOeMl3TINOwztWyKxePZQx1u883",
+   "name": "BROHEK"
   },
   {
    "name": "ALLAN",
    "uid": "b4rIuDPmu1RBhwViQ0XzOHsQjRp1"
   },
   {
-   "uid": "89ys8xvCVeUnc2KE61GUs4b7BVh1",
-   "name": "KINSON"
+   "name": "KINSON",
+   "uid": "89ys8xvCVeUnc2KE61GUs4b7BVh1"
   }
  ],
- "timeFinished": {
-  "_seconds": 1589192748,
-  "_nanoseconds": 693000000
- },
  "options": {
   "inGameLog": false
  },
  "outcome": {
+  "message": "Three successful missions",
   "votes": [
    {
-    "VIET": true,
-    "NEVIN": true
+    "NEVIN": true,
+    "VIET": true
    },
    {
-    "VIET": false,
+    "BROHEK": true,
     "NEVIN": true,
-    "BROHEK": true
+    "VIET": false
    },
    {
     "VIET": true,
@@ -194,35 +187,42 @@
     "BROHEK": true
    }
   ],
+  "assassinated": "KINSON",
   "state": "GOOD_WIN",
-  "message": "Three successful missions",
   "roles": [
    {
     "name": "ALLAN",
-    "role": "EVIL MINION",
-    "assassin": true
+    "assassin": true,
+    "role": "EVIL MINION"
    },
    {
-    "assassin": false,
     "name": "KINSON",
+    "assassin": false,
     "role": "PERCIVAL"
    },
    {
-    "assassin": false,
     "name": "NEVIN",
+    "assassin": false,
     "role": "MERLIN"
    },
    {
+    "assassin": false,
     "role": "MORDRED",
-    "name": "VIET",
-    "assassin": false
+    "name": "VIET"
    },
    {
+    "name": "BROHEK",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "BROHEK"
+    "role": "LOYAL FOLLOWER"
    }
-  ],
-  "assassinated": "KINSON"
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1589192748,
+  "_nanoseconds": 693000000
+ },
+ "timeCreated": {
+  "_seconds": 1589192405,
+  "_nanoseconds": 808000000
  }
 }

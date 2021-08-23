@@ -1,15 +1,16 @@
 {
- "options": {
-  "inGameLog": false
+ "timeFinished": {
+  "_seconds": 1589160992,
+  "_nanoseconds": 831000000
  },
  "players": [
   {
-   "name": "LYDIA",
-   "uid": "gAvGJDQufoXHm8Wk4pceuTHzUva2"
+   "uid": "gAvGJDQufoXHm8Wk4pceuTHzUva2",
+   "name": "LYDIA"
   },
   {
-   "uid": "zfr2eeTwc3SQ4uzShunRKL8opx13",
-   "name": "TIM"
+   "name": "TIM",
+   "uid": "zfr2eeTwc3SQ4uzShunRKL8opx13"
   },
   {
    "name": "ANDREW",
@@ -36,21 +37,93 @@
    "uid": "kmvVYnSqwDhrjhjPQz54diyHqbE2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1589157647,
-  "_nanoseconds": 801000000
+ "outcome": {
+  "message": "Three failed missions",
+  "assassinated": null,
+  "votes": [
+   {
+    "AT": true,
+    "LYDIA": true,
+    "BENJI": true
+   },
+   {
+    "BENJI": true,
+    "LYDIA": true,
+    "TIM": false,
+    "LOHIT": true
+   },
+   {
+    "LYDIA": true,
+    "SHELLEY": true,
+    "AT": false,
+    "ET": true
+   },
+   {
+    "LYDIA": true,
+    "BENJI": true,
+    "ANDREW": true,
+    "SHELLEY": true,
+    "ET": true
+   },
+   {
+    "SHELLEY": true,
+    "ANDREW": false,
+    "BENJI": true,
+    "LYDIA": true,
+    "LOHIT": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "LYDIA"
+   },
+   {
+    "name": "BENJI",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "SHELLEY"
+   },
+   {
+    "name": "TIM",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "LOHIT",
+    "assassin": false
+   },
+   {
+    "name": "AT",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "role": "MORGANA",
+    "name": "ANDREW",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "ET",
+    "role": "MERLIN"
+   }
+  ],
+  "state": "EVIL_WIN"
  },
  "missions": [
   {
+   "state": "SUCCESS",
    "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "AT",
-      "BENJI",
-      "LYDIA"
-     ],
-     "proposer": "AT",
      "votes": [
       "LYDIA",
       "BENJI",
@@ -59,54 +132,58 @@
       "AT",
       "ET"
      ],
-     "state": "APPROVED"
+     "proposer": "AT",
+     "state": "APPROVED",
+     "team": [
+      "AT",
+      "BENJI",
+      "LYDIA"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "teamSize": 3,
-   "numFails": 0,
    "team": [
     "AT",
     "BENJI",
     "LYDIA"
-   ]
+   ],
+   "numFails": 0
   },
   {
-   "state": "FAIL",
-   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 4,
    "team": [
     "BENJI",
     "LYDIA",
     "TIM",
     "LOHIT"
    ],
-   "teamSize": 4,
-   "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "LYDIA",
      "team": [
       "LYDIA",
       "BENJI",
       "ANDREW",
       "LOHIT"
      ],
+     "state": "REJECTED",
      "votes": [
       "LYDIA",
       "BENJI",
       "SHELLEY"
-     ],
-     "proposer": "LYDIA"
+     ]
     },
     {
-     "proposer": "TIM",
+     "state": "REJECTED",
      "team": [
       "LYDIA",
       "BENJI",
       "AT",
       "TIM"
      ],
-     "state": "REJECTED",
+     "proposer": "TIM",
      "votes": [
       "AT",
       "SHELLEY",
@@ -133,15 +210,16 @@
       "ET"
      ],
      "state": "REJECTED",
+     "proposer": "ET",
      "team": [
       "ET",
       "LYDIA",
       "BENJI",
       "SHELLEY"
-     ],
-     "proposer": "ET"
+     ]
     },
     {
+     "proposer": "BENJI",
      "votes": [
       "ANDREW",
       "ET",
@@ -151,29 +229,22 @@
       "TIM",
       "LOHIT"
      ],
-     "proposer": "BENJI",
-     "state": "APPROVED",
      "team": [
       "BENJI",
       "LYDIA",
       "TIM",
       "LOHIT"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ]
   },
   {
    "failsRequired": 1,
-   "numFails": 1,
-   "team": [
-    "ET",
-    "AT",
-    "LYDIA",
-    "SHELLEY"
-   ],
    "teamSize": 4,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "BENJI",
       "SHELLEY",
@@ -181,7 +252,6 @@
       "AT"
      ],
      "proposer": "LOHIT",
-     "state": "REJECTED",
      "team": [
       "LOHIT",
       "BENJI",
@@ -190,38 +260,44 @@
      ]
     },
     {
+     "votes": [
+      "ET",
+      "BENJI",
+      "SHELLEY",
+      "LOHIT"
+     ],
+     "proposer": "SHELLEY",
+     "state": "REJECTED",
      "team": [
       "SHELLEY",
       "ET",
       "LOHIT",
       "BENJI"
-     ],
-     "state": "REJECTED",
-     "proposer": "SHELLEY",
-     "votes": [
-      "ET",
-      "BENJI",
-      "SHELLEY",
-      "LOHIT"
      ]
     },
     {
-     "state": "REJECTED",
-     "proposer": "AT",
-     "votes": [
-      "LOHIT",
-      "AT"
-     ],
      "team": [
       "AT",
       "TIM",
       "BENJI",
       "LOHIT"
-     ]
+     ],
+     "votes": [
+      "LOHIT",
+      "AT"
+     ],
+     "state": "REJECTED",
+     "proposer": "AT"
     },
     {
-     "state": "APPROVED",
      "proposer": "LYDIA",
+     "state": "APPROVED",
+     "team": [
+      "ET",
+      "AT",
+      "LYDIA",
+      "SHELLEY"
+     ],
      "votes": [
       "LYDIA",
       "SHELLEY",
@@ -229,21 +305,87 @@
       "AT",
       "ANDREW",
       "ET"
-     ],
-     "team": [
-      "ET",
-      "AT",
-      "LYDIA",
-      "SHELLEY"
      ]
     }
    ],
+   "team": [
+    "ET",
+    "AT",
+    "LYDIA",
+    "SHELLEY"
+   ],
+   "numFails": 1,
    "state": "FAIL"
   },
   {
-   "failsRequired": 2,
-   "state": "SUCCESS",
    "numFails": 0,
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "team": [
+      "LOHIT",
+      "ET",
+      "TIM",
+      "BENJI",
+      "ANDREW"
+     ],
+     "votes": [
+      "TIM"
+     ],
+     "proposer": "TIM"
+    },
+    {
+     "state": "REJECTED",
+     "team": [
+      "ANDREW",
+      "ET",
+      "AT",
+      "SHELLEY",
+      "BENJI"
+     ],
+     "proposer": "ANDREW",
+     "votes": [
+      "AT",
+      "ANDREW"
+     ]
+    },
+    {
+     "team": [
+      "LYDIA",
+      "SHELLEY",
+      "ET",
+      "LOHIT",
+      "AT"
+     ],
+     "state": "REJECTED",
+     "proposer": "ET",
+     "votes": [
+      "LYDIA",
+      "BENJI",
+      "AT",
+      "ET"
+     ]
+    },
+    {
+     "proposer": "BENJI",
+     "state": "APPROVED",
+     "votes": [
+      "TIM",
+      "AT",
+      "ET",
+      "LYDIA",
+      "BENJI"
+     ],
+     "team": [
+      "LYDIA",
+      "ET",
+      "BENJI",
+      "SHELLEY",
+      "ANDREW"
+     ]
+    }
+   ],
    "teamSize": 5,
    "team": [
     "LYDIA",
@@ -252,208 +394,66 @@
     "SHELLEY",
     "ANDREW"
    ],
-   "proposals": [
-    {
-     "proposer": "TIM",
-     "state": "REJECTED",
-     "team": [
-      "LOHIT",
-      "ET",
-      "TIM",
-      "BENJI",
-      "ANDREW"
-     ],
-     "votes": [
-      "TIM"
-     ]
-    },
-    {
-     "votes": [
-      "AT",
-      "ANDREW"
-     ],
-     "state": "REJECTED",
-     "proposer": "ANDREW",
-     "team": [
-      "ANDREW",
-      "ET",
-      "AT",
-      "SHELLEY",
-      "BENJI"
-     ]
-    },
-    {
-     "votes": [
-      "LYDIA",
-      "BENJI",
-      "AT",
-      "ET"
-     ],
-     "team": [
-      "LYDIA",
-      "SHELLEY",
-      "ET",
-      "LOHIT",
-      "AT"
-     ],
-     "state": "REJECTED",
-     "proposer": "ET"
-    },
-    {
-     "proposer": "BENJI",
-     "state": "APPROVED",
-     "votes": [
-      "TIM",
-      "AT",
-      "ET",
-      "LYDIA",
-      "BENJI"
-     ],
-     "team": [
-      "LYDIA",
-      "ET",
-      "BENJI",
-      "SHELLEY",
-      "ANDREW"
-     ]
-    }
-   ]
+   "failsRequired": 2
   },
   {
    "state": "FAIL",
-   "numFails": 1,
-   "teamSize": 5,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "votes": [
-      "AT",
-      "SHELLEY",
-      "TIM",
-      "LOHIT"
-     ],
-     "proposer": "LOHIT",
-     "team": [
-      "BENJI",
-      "LOHIT",
-      "SHELLEY",
-      "ANDREW",
-      "TIM"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "team": [
-      "SHELLEY",
-      "ANDREW",
-      "LYDIA",
-      "LOHIT",
-      "BENJI"
-     ],
-     "proposer": "SHELLEY",
-     "votes": [
-      "ANDREW",
-      "LYDIA",
-      "BENJI",
-      "SHELLEY",
-      "TIM",
-      "LOHIT",
-      "AT"
-     ]
-    }
-   ],
-   "failsRequired": 1,
    "team": [
     "SHELLEY",
     "ANDREW",
     "LYDIA",
     "LOHIT",
     "BENJI"
+   ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 5,
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "team": [
+      "BENJI",
+      "LOHIT",
+      "SHELLEY",
+      "ANDREW",
+      "TIM"
+     ],
+     "votes": [
+      "AT",
+      "SHELLEY",
+      "TIM",
+      "LOHIT"
+     ],
+     "proposer": "LOHIT"
+    },
+    {
+     "votes": [
+      "ANDREW",
+      "LYDIA",
+      "BENJI",
+      "SHELLEY",
+      "TIM",
+      "LOHIT",
+      "AT"
+     ],
+     "team": [
+      "SHELLEY",
+      "ANDREW",
+      "LYDIA",
+      "LOHIT",
+      "BENJI"
+     ],
+     "state": "APPROVED",
+     "proposer": "SHELLEY"
+    }
    ]
   }
  ],
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "LYDIA": true,
-    "AT": true,
-    "BENJI": true
-   },
-   {
-    "LOHIT": true,
-    "TIM": false,
-    "BENJI": true,
-    "LYDIA": true
-   },
-   {
-    "SHELLEY": true,
-    "AT": false,
-    "LYDIA": true,
-    "ET": true
-   },
-   {
-    "BENJI": true,
-    "SHELLEY": true,
-    "LYDIA": true,
-    "ET": true,
-    "ANDREW": true
-   },
-   {
-    "LYDIA": true,
-    "BENJI": true,
-    "LOHIT": true,
-    "SHELLEY": true,
-    "ANDREW": false
-   }
-  ],
-  "assassinated": null,
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "LYDIA",
-    "assassin": false
-   },
-   {
-    "name": "BENJI",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "SHELLEY"
-   },
-   {
-    "name": "TIM",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "LOHIT"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "AT"
-   },
-   {
-    "role": "MORGANA",
-    "name": "ANDREW",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "name": "ET",
-    "assassin": false
-   }
-  ]
+ "timeCreated": {
+  "_seconds": 1589157647,
+  "_nanoseconds": 801000000
  },
- "timeFinished": {
-  "_seconds": 1589160992,
-  "_nanoseconds": 831000000
+ "options": {
+  "inGameLog": false
  }
 }

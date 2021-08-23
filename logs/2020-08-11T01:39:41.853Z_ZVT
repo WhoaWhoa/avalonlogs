@@ -1,8 +1,4 @@
 {
- "timeCreated": {
-  "_seconds": 1597109981,
-  "_nanoseconds": 853000000
- },
  "timeFinished": {
   "_seconds": 1597110778,
   "_nanoseconds": 89000000
@@ -13,33 +9,90 @@
    "uid": "NZ5EhU6kjRhQ3G8kE82ylM8DN092"
   },
   {
-   "name": "MEI",
-   "uid": "L8vJjcYkLfRcJjoDnrwW4PzP9YB2"
+   "uid": "L8vJjcYkLfRcJjoDnrwW4PzP9YB2",
+   "name": "MEI"
   },
   {
    "name": "NEKO",
    "uid": "yMp2e5CVikaamjZHCytIuA3Ur7D3"
   },
   {
-   "name": "FARHAN",
-   "uid": "4rEcgHZdgnRC4AdzY9U9Rps7GcV2"
+   "uid": "4rEcgHZdgnRC4AdzY9U9Rps7GcV2",
+   "name": "FARHAN"
   },
   {
    "name": "ERIN",
    "uid": "Nps5I9e0FzUSNVsM2YlcERger2k1"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1597109981,
+  "_nanoseconds": 853000000
+ },
+ "outcome": {
+  "roles": [
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "NEKO"
+   },
+   {
+    "role": "MORGANA",
+    "name": "MEI",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "CHARLES",
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "name": "FARHAN",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "name": "ERIN",
+    "role": "EVIL MINION"
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null,
+  "votes": [
+   {
+    "MEI": true,
+    "ERIN": true
+   },
+   {
+    "MEI": true,
+    "FARHAN": true,
+    "ERIN": true
+   },
+   {
+    "CHARLES": true,
+    "MEI": false
+   },
+   {
+    "NEKO": true,
+    "FARHAN": true,
+    "ERIN": false
+   },
+   {
+    "MEI": false,
+    "ERIN": false,
+    "NEKO": true
+   }
+  ],
+  "state": "EVIL_WIN"
+ },
  "missions": [
   {
-   "team": [
-    "ERIN",
-    "MEI"
-   ],
-   "state": "SUCCESS",
-   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "ERIN",
       "MEI"
@@ -51,25 +104,37 @@
       "MEI",
       "NEKO",
       "ERIN"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "numFails": 0,
-   "failsRequired": 1
+   "teamSize": 2,
+   "team": [
+    "ERIN",
+    "MEI"
+   ]
   },
   {
-   "failsRequired": 1,
-   "numFails": 0,
    "teamSize": 3,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "MEI",
+    "FARHAN",
+    "ERIN"
+   ],
    "proposals": [
     {
      "proposer": "FARHAN",
-     "state": "APPROVED",
      "team": [
       "MEI",
       "FARHAN",
       "ERIN"
      ],
+     "state": "APPROVED",
      "votes": [
       "FARHAN",
       "CHARLES",
@@ -78,58 +143,51 @@
      ]
     }
    ],
-   "team": [
-    "MEI",
-    "FARHAN",
-    "ERIN"
-   ],
-   "state": "SUCCESS"
+   "numFails": 0
   },
   {
-   "state": "FAIL",
-   "team": [
-    "MEI",
-    "CHARLES"
-   ],
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "MEI",
-      "CHARLES"
-     ],
+     "proposer": "ERIN",
      "votes": [
       "FARHAN",
       "MEI",
       "ERIN"
      ],
-     "proposer": "ERIN"
+     "team": [
+      "MEI",
+      "CHARLES"
+     ]
     }
    ],
    "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 2
+   "state": "FAIL",
+   "team": [
+    "MEI",
+    "CHARLES"
+   ],
+   "teamSize": 2,
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
-   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
      "votes": [
       "FARHAN",
       "CHARLES"
      ],
+     "state": "REJECTED",
      "team": [
       "CHARLES",
       "FARHAN",
       "NEKO"
      ],
-     "state": "REJECTED",
      "proposer": "CHARLES"
     },
     {
      "state": "APPROVED",
-     "proposer": "MEI",
      "votes": [
       "ERIN",
       "MEI",
@@ -140,103 +198,45 @@
       "NEKO",
       "FARHAN",
       "ERIN"
-     ]
+     ],
+     "proposer": "MEI"
     }
    ],
+   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "NEKO",
     "FARHAN",
     "ERIN"
-   ],
-   "teamSize": 3,
-   "numFails": 1
+   ]
   },
   {
-   "state": "FAIL",
-   "failsRequired": 1,
-   "team": [
-    "MEI",
-    "NEKO",
-    "ERIN"
-   ],
+   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "NEKO",
-     "team": [
-      "MEI",
-      "NEKO",
-      "ERIN"
-     ],
      "state": "APPROVED",
      "votes": [
       "NEKO",
       "ERIN",
       "MEI"
-     ]
+     ],
+     "team": [
+      "MEI",
+      "NEKO",
+      "ERIN"
+     ],
+     "proposer": "NEKO"
     }
    ],
-   "teamSize": 3,
-   "numFails": 2
+   "failsRequired": 1,
+   "numFails": 2,
+   "state": "FAIL",
+   "team": [
+    "MEI",
+    "NEKO",
+    "ERIN"
+   ]
   }
- ],
- "outcome": {
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "ERIN": true,
-    "MEI": true
-   },
-   {
-    "ERIN": true,
-    "FARHAN": true,
-    "MEI": true
-   },
-   {
-    "CHARLES": true,
-    "MEI": false
-   },
-   {
-    "ERIN": false,
-    "NEKO": true,
-    "FARHAN": true
-   },
-   {
-    "ERIN": false,
-    "NEKO": true,
-    "MEI": false
-   }
-  ],
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "NEKO",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "name": "MEI",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "CHARLES",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "FARHAN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "ERIN",
-    "assassin": true
-   }
-  ]
- },
- "options": {
-  "inGameLog": false
- }
+ ]
 }

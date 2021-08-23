@@ -1,48 +1,125 @@
 {
- "options": {
-  "inGameLog": false
- },
  "players": [
   {
    "uid": "ee6eyUB14aNrfwxfgS3EpXKkJ4r1",
    "name": "SAM"
   },
   {
-   "name": "MRDRDSEYES",
-   "uid": "uEUfU25ZsmftHb1w5lYsMQnwacq1"
+   "uid": "uEUfU25ZsmftHb1w5lYsMQnwacq1",
+   "name": "MRDRDSEYES"
   },
   {
    "name": "NATALIE",
    "uid": "fvFnkXTLhKXjLmO15nWTKISC9oi1"
   },
   {
-   "uid": "O7DwW2kryWSZzKwdOLZyDjMQ3KF3",
-   "name": "TERRY"
+   "name": "TERRY",
+   "uid": "O7DwW2kryWSZzKwdOLZyDjMQ3KF3"
   },
   {
-   "name": "BOSSMAN",
-   "uid": "q78WRgUspVfBbMzCvgFevSnJmsn2"
+   "uid": "q78WRgUspVfBbMzCvgFevSnJmsn2",
+   "name": "BOSSMAN"
   },
   {
    "name": "JOHN",
    "uid": "yJeOQdGOQnPIYSk3gxRVbf5A3jo1"
   },
   {
-   "name": "FATTDONN",
-   "uid": "EKyhtGgmjmPgR2hxXKULALHMIbj2"
+   "uid": "EKyhtGgmjmPgR2hxXKULALHMIbj2",
+   "name": "FATTDONN"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "assassinated": "MRDRDSEYES",
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "SAM": false,
+    "BOSSMAN": true
+   },
+   {
+    "SAM": false,
+    "FATTDONN": true,
+    "MRDRDSEYES": true
+   },
+   {
+    "FATTDONN": true,
+    "MRDRDSEYES": true,
+    "BOSSMAN": true
+   },
+   {
+    "FATTDONN": true,
+    "BOSSMAN": true,
+    "MRDRDSEYES": true,
+    "NATALIE": true
+   },
+   {
+    "BOSSMAN": true,
+    "MRDRDSEYES": true,
+    "NATALIE": true,
+    "FATTDONN": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "NATALIE",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "name": "SAM",
+    "assassin": false
+   },
+   {
+    "name": "TERRY",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "JOHN"
+   },
+   {
+    "name": "FATTDONN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "BOSSMAN",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "name": "MRDRDSEYES",
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1587523397,
+  "_nanoseconds": 884000000
+ },
  "missions": [
   {
+   "state": "FAIL",
    "team": [
     "SAM",
     "BOSSMAN"
    ],
-   "numFails": 1,
-   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "SAM",
+      "BOSSMAN"
+     ],
      "votes": [
       "BOSSMAN",
       "NATALIE",
@@ -50,47 +127,42 @@
       "JOHN",
       "FATTDONN"
      ],
-     "team": [
-      "SAM",
-      "BOSSMAN"
-     ],
      "proposer": "SAM"
     }
    ],
-   "state": "FAIL",
-   "failsRequired": 1
+   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 2
   },
   {
    "teamSize": 3,
-   "team": [
-    "MRDRDSEYES",
-    "FATTDONN",
-    "SAM"
-   ],
    "proposals": [
     {
-     "team": [
-      "MRDRDSEYES",
-      "FATTDONN",
-      "SAM"
-     ],
-     "proposer": "MRDRDSEYES",
+     "state": "APPROVED",
      "votes": [
       "TERRY",
       "JOHN",
       "MRDRDSEYES",
       "NATALIE"
      ],
-     "state": "APPROVED"
+     "proposer": "MRDRDSEYES",
+     "team": [
+      "MRDRDSEYES",
+      "FATTDONN",
+      "SAM"
+     ]
     }
    ],
+   "team": [
+    "MRDRDSEYES",
+    "FATTDONN",
+    "SAM"
+   ],
+   "numFails": 1,
    "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1
+   "failsRequired": 1
   },
   {
-   "numFails": 0,
-   "state": "SUCCESS",
    "proposals": [
     {
      "team": [
@@ -99,98 +171,107 @@
       "MRDRDSEYES"
      ],
      "proposer": "NATALIE",
+     "state": "REJECTED",
      "votes": [
       "BOSSMAN",
       "MRDRDSEYES",
       "NATALIE"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "votes": [
-      "TERRY",
-      "JOHN"
-     ],
-     "proposer": "TERRY",
      "state": "REJECTED",
+     "proposer": "TERRY",
      "team": [
       "TERRY",
       "MRDRDSEYES",
       "BOSSMAN"
+     ],
+     "votes": [
+      "TERRY",
+      "JOHN"
      ]
     },
     {
+     "proposer": "BOSSMAN",
      "state": "APPROVED",
+     "team": [
+      "BOSSMAN",
+      "FATTDONN",
+      "MRDRDSEYES"
+     ],
      "votes": [
       "NATALIE",
       "JOHN",
       "FATTDONN",
       "BOSSMAN",
       "MRDRDSEYES"
-     ],
-     "team": [
-      "BOSSMAN",
-      "FATTDONN",
-      "MRDRDSEYES"
-     ],
-     "proposer": "BOSSMAN"
+     ]
     }
    ],
-   "teamSize": 3,
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "BOSSMAN",
     "FATTDONN",
     "MRDRDSEYES"
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
    "failsRequired": 2,
+   "numFails": 0,
    "team": [
     "FATTDONN",
     "BOSSMAN",
     "NATALIE",
     "MRDRDSEYES"
    ],
-   "teamSize": 4,
-   "numFails": 0,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "JOHN",
+     "votes": [
+      "JOHN"
+     ],
      "team": [
       "SAM",
       "JOHN",
       "BOSSMAN",
       "FATTDONN"
-     ],
-     "votes": [
-      "JOHN"
-     ],
-     "proposer": "JOHN",
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "APPROVED",
-     "team": [
-      "FATTDONN",
-      "BOSSMAN",
-      "NATALIE",
-      "MRDRDSEYES"
-     ],
      "votes": [
       "FATTDONN",
       "BOSSMAN",
       "MRDRDSEYES",
       "NATALIE"
      ],
-     "proposer": "FATTDONN"
+     "proposer": "FATTDONN",
+     "team": [
+      "FATTDONN",
+      "BOSSMAN",
+      "NATALIE",
+      "MRDRDSEYES"
+     ]
     }
-   ]
+   ],
+   "teamSize": 4,
+   "state": "SUCCESS"
   },
   {
+   "team": [
+    "MRDRDSEYES",
+    "NATALIE",
+    "BOSSMAN",
+    "FATTDONN"
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "NATALIE",
       "FATTDONN",
@@ -203,17 +284,10 @@
       "NATALIE",
       "BOSSMAN",
       "FATTDONN"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 4,
-   "team": [
-    "MRDRDSEYES",
-    "NATALIE",
-    "BOSSMAN",
-    "FATTDONN"
-   ],
-   "failsRequired": 1,
    "state": "SUCCESS",
    "numFails": 0
   }
@@ -221,79 +295,5 @@
  "timeCreated": {
   "_seconds": 1587522547,
   "_nanoseconds": 967000000
- },
- "timeFinished": {
-  "_seconds": 1587523397,
-  "_nanoseconds": 884000000
- },
- "outcome": {
-  "assassinated": "MRDRDSEYES",
-  "votes": [
-   {
-    "SAM": false,
-    "BOSSMAN": true
-   },
-   {
-    "SAM": false,
-    "FATTDONN": true,
-    "MRDRDSEYES": true
-   },
-   {
-    "BOSSMAN": true,
-    "FATTDONN": true,
-    "MRDRDSEYES": true
-   },
-   {
-    "MRDRDSEYES": true,
-    "FATTDONN": true,
-    "BOSSMAN": true,
-    "NATALIE": true
-   },
-   {
-    "NATALIE": true,
-    "MRDRDSEYES": true,
-    "FATTDONN": true,
-    "BOSSMAN": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "NATALIE"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "SAM"
-   },
-   {
-    "name": "TERRY",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "JOHN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "FATTDONN"
-   },
-   {
-    "name": "BOSSMAN",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "MRDRDSEYES",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "state": "GOOD_WIN",
-  "message": "Three successful missions"
  }
 }

@@ -4,12 +4,34 @@
   "_nanoseconds": 88000000
  },
  "outcome": {
-  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "EMILY": true,
+    "KEVIN": true
+   },
+   {
+    "KEVIN": true,
+    "ALBERT": false,
+    "EMILY": true
+   },
+   {
+    "EMILY": true,
+    "CHONGZ": true,
+    "MEGAN": true,
+    "KEVIN": true
+   },
+   {
+    "CHONGZ": true,
+    "EMILY": true,
+    "KEVIN": true
+   }
+  ],
   "roles": [
    {
     "role": "LOYAL FOLLOWER",
-    "name": "EMILY",
-    "assassin": false
+    "assassin": false,
+    "name": "EMILY"
    },
    {
     "name": "ALBERT",
@@ -22,9 +44,9 @@
     "name": "MEGAN"
    },
    {
-    "role": "MERLIN",
     "name": "CHONGZ",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
     "name": "KEVIN",
@@ -32,156 +54,157 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
+    "role": "MORGANA",
     "name": "PATRICK",
-    "role": "MORGANA"
+    "assassin": false
    }
   ],
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "KEVIN": true,
-    "EMILY": true
-   },
-   {
-    "EMILY": true,
-    "ALBERT": false,
-    "KEVIN": true
-   },
-   {
-    "MEGAN": true,
-    "KEVIN": true,
-    "EMILY": true,
-    "CHONGZ": true
-   },
-   {
-    "KEVIN": true,
-    "EMILY": true,
-    "CHONGZ": true
-   }
-  ],
-  "assassinated": "EMILY"
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1589689857,
-  "_nanoseconds": 142000000
+  "assassinated": "EMILY",
+  "message": "Three successful missions"
  },
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "EMILY",
-    "KEVIN"
-   ],
-   "numFails": 0,
-   "failsRequired": 1,
-   "teamSize": 2,
    "proposals": [
     {
-     "proposer": "ALBERT",
-     "state": "REJECTED",
-     "team": [
-      "CHONGZ",
-      "ALBERT"
-     ],
      "votes": [
       "CHONGZ",
       "ALBERT",
       "MEGAN"
-     ]
-    },
-    {
+     ],
      "team": [
       "CHONGZ",
-      "KEVIN"
+      "ALBERT"
      ],
+     "proposer": "ALBERT",
+     "state": "REJECTED"
+    },
+    {
      "votes": [
       "MEGAN",
       "CHONGZ",
       "KEVIN"
      ],
-     "state": "REJECTED",
-     "proposer": "CHONGZ"
+     "team": [
+      "CHONGZ",
+      "KEVIN"
+     ],
+     "proposer": "CHONGZ",
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
-     "proposer": "KEVIN",
+     "team": [
+      "EMILY",
+      "KEVIN"
+     ],
      "votes": [
       "EMILY",
       "ALBERT",
       "MEGAN",
       "KEVIN"
      ],
-     "team": [
-      "EMILY",
-      "KEVIN"
-     ]
+     "proposer": "KEVIN",
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1,
+   "team": [
+    "EMILY",
+    "KEVIN"
+   ],
+   "teamSize": 2
   },
   {
-   "numFails": 1,
-   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "EMILY",
     "KEVIN",
     "ALBERT"
    ],
    "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "EMILY",
+      "KEVIN",
+      "ALBERT"
+     ],
+     "state": "APPROVED",
      "votes": [
       "PATRICK",
       "EMILY",
       "ALBERT",
       "MEGAN"
      ],
-     "state": "APPROVED",
-     "team": [
-      "EMILY",
-      "KEVIN",
-      "ALBERT"
-     ],
      "proposer": "EMILY"
     }
    ],
-   "teamSize": 3
+   "numFails": 1
   },
   {
+   "proposals": [
+    {
+     "votes": [
+      "PATRICK",
+      "MEGAN"
+     ],
+     "proposer": "PATRICK",
+     "state": "REJECTED",
+     "team": [
+      "PATRICK",
+      "MEGAN",
+      "CHONGZ",
+      "KEVIN"
+     ]
+    },
+    {
+     "state": "APPROVED",
+     "votes": [
+      "MEGAN",
+      "CHONGZ",
+      "KEVIN",
+      "PATRICK",
+      "EMILY"
+     ],
+     "team": [
+      "CHONGZ",
+      "MEGAN",
+      "KEVIN",
+      "EMILY"
+     ],
+     "proposer": "MEGAN"
+    }
+   ],
+   "state": "SUCCESS",
    "failsRequired": 1,
+   "teamSize": 4,
    "team": [
     "CHONGZ",
     "MEGAN",
     "KEVIN",
     "EMILY"
    ],
+   "numFails": 0
+  },
+  {
    "state": "SUCCESS",
-   "teamSize": 4,
    "proposals": [
     {
      "state": "REJECTED",
-     "proposer": "PATRICK",
+     "proposer": "ALBERT",
      "team": [
-      "PATRICK",
+      "KEVIN",
       "MEGAN",
-      "CHONGZ",
-      "KEVIN"
+      "ALBERT"
      ],
      "votes": [
-      "PATRICK",
-      "MEGAN"
+      "ALBERT"
      ]
     },
     {
-     "team": [
-      "CHONGZ",
-      "MEGAN",
-      "KEVIN",
-      "EMILY"
-     ],
+     "proposer": "CHONGZ",
      "votes": [
       "MEGAN",
       "CHONGZ",
@@ -190,72 +213,46 @@
       "EMILY"
      ],
      "state": "APPROVED",
-     "proposer": "MEGAN"
+     "team": [
+      "CHONGZ",
+      "KEVIN",
+      "EMILY"
+     ]
     }
    ],
-   "numFails": 0
-  },
-  {
-   "failsRequired": 1,
    "teamSize": 3,
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "CHONGZ",
     "KEVIN",
     "EMILY"
-   ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "proposals": [
-    {
-     "team": [
-      "KEVIN",
-      "MEGAN",
-      "ALBERT"
-     ],
-     "state": "REJECTED",
-     "proposer": "ALBERT",
-     "votes": [
-      "ALBERT"
-     ]
-    },
-    {
-     "proposer": "CHONGZ",
-     "team": [
-      "CHONGZ",
-      "KEVIN",
-      "EMILY"
-     ],
-     "votes": [
-      "MEGAN",
-      "CHONGZ",
-      "KEVIN",
-      "PATRICK",
-      "EMILY"
-     ],
-     "state": "APPROVED"
-    }
    ]
   },
   {
-   "teamSize": 4,
-   "state": "PENDING",
+   "team": [],
    "failsRequired": 1,
+   "state": "PENDING",
    "proposals": [],
-   "team": []
+   "teamSize": 4
   }
  ],
+ "timeCreated": {
+  "_seconds": 1589689857,
+  "_nanoseconds": 142000000
+ },
  "players": [
   {
    "name": "EMILY",
    "uid": "jzpZGHVfjbS3p6VsfpGY53wN27T2"
   },
   {
-   "uid": "qzE9MBPUiQftGC5QBsAfarSiBEM2",
-   "name": "PATRICK"
+   "name": "PATRICK",
+   "uid": "qzE9MBPUiQftGC5QBsAfarSiBEM2"
   },
   {
-   "name": "MEGAN",
-   "uid": "mkHd7EYg7eW9EZHfpEyjVPsAmkm1"
+   "uid": "mkHd7EYg7eW9EZHfpEyjVPsAmkm1",
+   "name": "MEGAN"
   },
   {
    "uid": "a9zinWFXOuRCFGdnneS5bJQPuRF2",
@@ -269,5 +266,8 @@
    "uid": "T3KiFaDEOEY8wSMnNf76VjKor313",
    "name": "KEVIN"
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ }
 }

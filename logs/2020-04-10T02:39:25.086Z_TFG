@@ -1,19 +1,95 @@
 {
- "timeFinished": {
-  "_seconds": 1586488674,
-  "_nanoseconds": 742095000
- },
- "timeCreated": {
-  "_seconds": 1586486365,
-  "_nanoseconds": 86000000
+ "outcome": {
+  "votes": [
+   {
+    "NIKOLAI": true,
+    "KENNETH": true,
+    "OWEN": true
+   },
+   {
+    "KENNETH": false,
+    "OWEN": true,
+    "DAN": true,
+    "CRAIG": false
+   },
+   {
+    "ALEX": true,
+    "CRAIG": true,
+    "KENNETH": true,
+    "JET": false
+   },
+   {
+    "OWEN": true,
+    "NIKOLAI": true,
+    "ADAM": true,
+    "JET": true,
+    "ALEX": true
+   },
+   {
+    "ADAM": true,
+    "NIKOLAI": true,
+    "DAN": true,
+    "ALEX": true,
+    "OWEN": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "DAN"
+   },
+   {
+    "name": "NIKOLAI",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "JET"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ADAM"
+   },
+   {
+    "name": "CRAIG",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "KENNETH"
+   },
+   {
+    "name": "OWEN",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "name": "ALEX",
+    "role": "PERCIVAL"
+   }
+  ],
+  "assassinated": "OWEN",
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated"
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "team": [
+    "KENNETH",
+    "NIKOLAI",
+    "OWEN"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "ALEX",
       "OWEN",
@@ -25,20 +101,21 @@
       "JET",
       "ADAM"
      ],
-     "proposer": "ALEX"
+     "proposer": "ALEX",
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "team": [
       "DAN",
       "NIKOLAI",
       "CRAIG"
      ],
+     "proposer": "DAN",
      "votes": [
       "CRAIG",
       "NIKOLAI"
      ],
-     "proposer": "DAN"
+     "state": "REJECTED"
     },
     {
      "proposer": "CRAIG",
@@ -55,19 +132,24 @@
      ]
     },
     {
-     "proposer": "ADAM",
-     "votes": [
-      "ADAM"
-     ],
      "state": "REJECTED",
+     "proposer": "ADAM",
      "team": [
       "KENNETH",
       "ADAM",
       "CRAIG"
+     ],
+     "votes": [
+      "ADAM"
      ]
     },
     {
-     "proposer": "KENNETH",
+     "team": [
+      "KENNETH",
+      "NIKOLAI",
+      "OWEN"
+     ],
+     "state": "APPROVED",
      "votes": [
       "ADAM",
       "CRAIG",
@@ -77,23 +159,14 @@
       "DAN",
       "NIKOLAI"
      ],
-     "state": "APPROVED",
-     "team": [
-      "KENNETH",
-      "NIKOLAI",
-      "OWEN"
-     ]
+     "proposer": "KENNETH"
     }
    ],
-   "team": [
-    "KENNETH",
-    "NIKOLAI",
-    "OWEN"
-   ],
-   "numFails": 0,
-   "state": "SUCCESS"
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
+   "teamSize": 4,
    "failsRequired": 1,
    "team": [
     "OWEN",
@@ -101,196 +174,189 @@
     "CRAIG",
     "KENNETH"
    ],
+   "state": "FAIL",
+   "numFails": 2,
    "proposals": [
     {
-     "proposer": "NIKOLAI",
      "votes": [
       "NIKOLAI"
      ],
+     "state": "REJECTED",
      "team": [
       "KENNETH",
       "NIKOLAI",
       "OWEN",
       "ALEX"
      ],
-     "state": "REJECTED"
+     "proposer": "NIKOLAI"
     },
     {
-     "state": "REJECTED",
-     "proposer": "JET",
-     "votes": [
-      "JET"
-     ],
      "team": [
       "KENNETH",
       "CRAIG",
       "JET",
       "ALEX"
-     ]
+     ],
+     "votes": [
+      "JET"
+     ],
+     "proposer": "JET",
+     "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "JET",
       "OWEN",
       "DAN"
      ],
-     "proposer": "OWEN",
-     "state": "REJECTED",
      "team": [
       "ADAM",
       "NIKOLAI",
       "OWEN",
       "DAN"
-     ]
+     ],
+     "proposer": "OWEN"
     },
     {
-     "votes": [
-      "JET",
-      "ALEX"
-     ],
      "state": "REJECTED",
+     "proposer": "ALEX",
      "team": [
       "ALEX",
       "CRAIG",
       "KENNETH",
       "JET"
      ],
-     "proposer": "ALEX"
+     "votes": [
+      "JET",
+      "ALEX"
+     ]
     },
     {
+     "proposer": "DAN",
      "state": "APPROVED",
+     "votes": [
+      "ADAM",
+      "CRAIG",
+      "OWEN",
+      "ALEX",
+      "DAN",
+      "NIKOLAI"
+     ],
      "team": [
       "OWEN",
       "DAN",
       "CRAIG",
       "KENNETH"
-     ],
-     "proposer": "DAN",
-     "votes": [
-      "ADAM",
-      "CRAIG",
-      "OWEN",
-      "ALEX",
-      "DAN",
-      "NIKOLAI"
      ]
     }
-   ],
-   "numFails": 2,
-   "state": "FAIL",
-   "teamSize": 4
+   ]
   },
   {
-   "numFails": 1,
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "votes": [
-      "JET",
-      "ALEX"
-     ],
-     "proposer": "CRAIG",
-     "team": [
-      "CRAIG",
-      "JET",
-      "ALEX",
-      "KENNETH"
-     ]
-    },
-    {
-     "proposer": "ADAM",
-     "team": [
-      "ADAM",
-      "NIKOLAI",
-      "DAN",
-      "CRAIG"
-     ],
-     "votes": [
-      "DAN"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "team": [
-      "KENNETH",
-      "NIKOLAI",
-      "OWEN",
-      "JET"
-     ],
-     "proposer": "KENNETH",
-     "state": "REJECTED",
-     "votes": []
-    },
-    {
-     "votes": [
-      "DAN",
-      "NIKOLAI",
-      "ADAM"
-     ],
-     "proposer": "NIKOLAI",
-     "team": [
-      "ALEX",
-      "CRAIG",
-      "NIKOLAI",
-      "ADAM"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "state": "APPROVED",
-     "votes": [
-      "KENNETH",
-      "OWEN",
-      "ALEX",
-      "DAN",
-      "NIKOLAI",
-      "JET",
-      "ADAM"
-     ],
-     "team": [
-      "CRAIG",
-      "KENNETH",
-      "JET",
-      "ALEX"
-     ],
-     "proposer": "JET"
-    }
-   ],
-   "teamSize": 4,
-   "state": "FAIL",
    "team": [
     "CRAIG",
     "KENNETH",
     "JET",
     "ALEX"
-   ]
-  },
-  {
-   "teamSize": 5,
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "numFails": 0,
+   ],
+   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
+      "JET",
+      "ALEX"
+     ],
+     "proposer": "CRAIG",
+     "state": "REJECTED",
+     "team": [
+      "CRAIG",
+      "JET",
+      "ALEX",
+      "KENNETH"
+     ]
+    },
+    {
+     "proposer": "ADAM",
+     "votes": [
       "DAN"
      ],
+     "team": [
+      "ADAM",
+      "NIKOLAI",
+      "DAN",
+      "CRAIG"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "proposer": "KENNETH",
      "state": "REJECTED",
-     "proposer": "OWEN",
+     "votes": [],
+     "team": [
+      "KENNETH",
+      "NIKOLAI",
+      "OWEN",
+      "JET"
+     ]
+    },
+    {
+     "votes": [
+      "DAN",
+      "NIKOLAI",
+      "ADAM"
+     ],
+     "state": "REJECTED",
+     "proposer": "NIKOLAI",
+     "team": [
+      "ALEX",
+      "CRAIG",
+      "NIKOLAI",
+      "ADAM"
+     ]
+    },
+    {
+     "team": [
+      "CRAIG",
+      "KENNETH",
+      "JET",
+      "ALEX"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "KENNETH",
+      "OWEN",
+      "ALEX",
+      "DAN",
+      "NIKOLAI",
+      "JET",
+      "ADAM"
+     ],
+     "proposer": "JET"
+    }
+   ]
+  },
+  {
+   "numFails": 0,
+   "failsRequired": 2,
+   "proposals": [
+    {
+     "state": "REJECTED",
      "team": [
       "ADAM",
       "NIKOLAI",
       "OWEN",
       "JET",
       "KENNETH"
+     ],
+     "proposer": "OWEN",
+     "votes": [
+      "DAN"
      ]
     },
     {
-     "votes": [
-      "ALEX",
-      "NIKOLAI"
-     ],
      "team": [
       "ALEX",
       "OWEN",
@@ -298,26 +364,29 @@
       "ADAM",
       "KENNETH"
      ],
-     "state": "REJECTED",
-     "proposer": "ALEX"
+     "votes": [
+      "ALEX",
+      "NIKOLAI"
+     ],
+     "proposer": "ALEX",
+     "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
+     "proposer": "DAN",
+     "votes": [
+      "DAN"
+     ],
      "team": [
       "DAN",
       "NIKOLAI",
       "ADAM",
       "ALEX",
       "KENNETH"
-     ],
-     "votes": [
-      "DAN"
-     ],
-     "proposer": "DAN",
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "REJECTED",
-     "proposer": "CRAIG",
      "votes": [
       "CRAIG"
      ],
@@ -327,9 +396,19 @@
       "NIKOLAI",
       "ALEX",
       "ADAM"
-     ]
+     ],
+     "proposer": "CRAIG"
     },
     {
+     "team": [
+      "ADAM",
+      "NIKOLAI",
+      "OWEN",
+      "ALEX",
+      "JET"
+     ],
+     "proposer": "ADAM",
+     "state": "APPROVED",
      "votes": [
       "JET",
       "ADAM",
@@ -339,15 +418,6 @@
       "ALEX",
       "DAN",
       "NIKOLAI"
-     ],
-     "proposer": "ADAM",
-     "state": "APPROVED",
-     "team": [
-      "ADAM",
-      "NIKOLAI",
-      "OWEN",
-      "ALEX",
-      "JET"
      ]
     }
    ],
@@ -357,9 +427,13 @@
     "OWEN",
     "ALEX",
     "JET"
-   ]
+   ],
+   "teamSize": 5,
+   "state": "SUCCESS"
   },
   {
+   "state": "SUCCESS",
+   "teamSize": 5,
    "team": [
     "OWEN",
     "DAN",
@@ -367,10 +441,12 @@
     "NIKOLAI",
     "ADAM"
    ],
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
      "votes": [],
+     "proposer": "KENNETH",
      "state": "REJECTED",
      "team": [
       "ADAM",
@@ -378,10 +454,14 @@
       "ALEX",
       "KENNETH",
       "JET"
-     ],
-     "proposer": "KENNETH"
+     ]
     },
     {
+     "proposer": "NIKOLAI",
+     "votes": [
+      "NIKOLAI",
+      "JET"
+     ],
      "state": "REJECTED",
      "team": [
       "ADAM",
@@ -389,18 +469,10 @@
       "OWEN",
       "JET",
       "ALEX"
-     ],
-     "votes": [
-      "NIKOLAI",
-      "JET"
-     ],
-     "proposer": "NIKOLAI"
+     ]
     },
     {
-     "votes": [
-      "NIKOLAI",
-      "JET"
-     ],
+     "state": "REJECTED",
      "proposer": "JET",
      "team": [
       "ALEX",
@@ -409,7 +481,10 @@
       "NIKOLAI",
       "ADAM"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "NIKOLAI",
+      "JET"
+     ]
     },
     {
      "team": [
@@ -419,13 +494,13 @@
       "NIKOLAI",
       "ADAM"
      ],
+     "state": "REJECTED",
+     "proposer": "OWEN",
      "votes": [
       "DAN",
       "ADAM",
       "OWEN"
-     ],
-     "proposer": "OWEN",
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "APPROVED",
@@ -436,101 +511,18 @@
       "DAN",
       "NIKOLAI"
      ],
-     "proposer": "ALEX",
      "team": [
       "OWEN",
       "DAN",
       "ALEX",
       "NIKOLAI",
       "ADAM"
-     ]
+     ],
+     "proposer": "ALEX"
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 5,
-   "numFails": 0
+   ]
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "KENNETH": true,
-    "OWEN": true,
-    "NIKOLAI": true
-   },
-   {
-    "KENNETH": false,
-    "CRAIG": false,
-    "OWEN": true,
-    "DAN": true
-   },
-   {
-    "JET": false,
-    "KENNETH": true,
-    "CRAIG": true,
-    "ALEX": true
-   },
-   {
-    "ADAM": true,
-    "JET": true,
-    "NIKOLAI": true,
-    "ALEX": true,
-    "OWEN": true
-   },
-   {
-    "OWEN": true,
-    "ADAM": true,
-    "DAN": true,
-    "NIKOLAI": true,
-    "ALEX": true
-   }
-  ],
-  "assassinated": "OWEN",
-  "message": "Merlin assassinated",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "DAN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "NIKOLAI",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "JET",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "ADAM",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "CRAIG",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "name": "KENNETH",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "OWEN",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "ALEX",
-    "assassin": false
-   }
-  ]
- },
  "players": [
   {
    "name": "CRAIG",
@@ -541,28 +533,36 @@
    "uid": "0v9dXMc3kvZ2yKoL8dZuHeRAl3d2"
   },
   {
-   "uid": "Pami2ZJ0YHSMhHLII5RVzgcX2MI2",
-   "name": "KENNETH"
+   "name": "KENNETH",
+   "uid": "Pami2ZJ0YHSMhHLII5RVzgcX2MI2"
   },
   {
-   "name": "NIKOLAI",
-   "uid": "JAPBZxxk0fMO1c5d7Dli45JF9D23"
+   "uid": "JAPBZxxk0fMO1c5d7Dli45JF9D23",
+   "name": "NIKOLAI"
   },
   {
-   "name": "JET",
-   "uid": "dkBAA5oRvaXAxG2kDgD1XiNWcOo1"
+   "uid": "dkBAA5oRvaXAxG2kDgD1XiNWcOo1",
+   "name": "JET"
   },
   {
-   "name": "OWEN",
-   "uid": "kdnDzJ8nJnRmhaqgbpylpgp1KHk1"
+   "uid": "kdnDzJ8nJnRmhaqgbpylpgp1KHk1",
+   "name": "OWEN"
   },
   {
-   "uid": "QODvuT833JNtPCbTsGwjTMGP9Sp1",
-   "name": "ALEX"
+   "name": "ALEX",
+   "uid": "QODvuT833JNtPCbTsGwjTMGP9Sp1"
   },
   {
    "name": "DAN",
    "uid": "Ds3YQyl9z9Q2lRjNZFT21kj2s063"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1586488674,
+  "_nanoseconds": 742095000
+ },
+ "timeCreated": {
+  "_seconds": 1586486365,
+  "_nanoseconds": 86000000
+ }
 }

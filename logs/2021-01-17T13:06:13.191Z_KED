@@ -1,44 +1,133 @@
 {
+ "players": [
+  {
+   "name": "FEEFS",
+   "uid": "QiceSEq9q5PWzTDLM4BKrDNbOvK2"
+  },
+  {
+   "name": "JOE",
+   "uid": "phmdP3l6kbdCy3eAxUpzu6AYvvH3"
+  },
+  {
+   "uid": "lPYxFpeJAoYfHZoTSWFjfpvEs7B3",
+   "name": "ND"
+  },
+  {
+   "uid": "FHfAgIt8mWVSy3XHJx6NwhWGFXo2",
+   "name": "YAMA"
+  },
+  {
+   "name": "MIKE",
+   "uid": "PHim6ip66SZHOr0kj7YxyjMrv8o2"
+  },
+  {
+   "name": "DEN",
+   "uid": "ywHqpFS7FfdOoAD1BS282rNzD1H2"
+  }
+ ],
+ "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "roles": [
+   {
+    "assassin": true,
+    "name": "MIKE",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "YAMA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "ND",
+    "role": "MERLIN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "DEN"
+   },
+   {
+    "name": "FEEFS",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "JOE"
+   }
+  ],
+  "votes": [
+   {
+    "FEEFS": true,
+    "JOE": true
+   },
+   {
+    "JOE": true,
+    "FEEFS": false,
+    "ND": true
+   },
+   {
+    "JOE": true,
+    "FEEFS": false,
+    "YAMA": true,
+    "DEN": true
+   },
+   {
+    "YAMA": true,
+    "FEEFS": false,
+    "JOE": true
+   }
+  ],
+  "message": "Three failed missions"
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1610888773,
+  "_nanoseconds": 191000000
+ },
+ "timeFinished": {
+  "_seconds": 1610889875,
+  "_nanoseconds": 439000000
+ },
  "missions": [
   {
-   "numFails": 0,
+   "teamSize": 2,
    "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "FEEFS",
     "JOE"
    ],
-   "teamSize": 2,
-   "state": "SUCCESS",
    "proposals": [
     {
      "proposer": "FEEFS",
+     "state": "APPROVED",
+     "team": [
+      "FEEFS",
+      "JOE"
+     ],
      "votes": [
       "ND",
       "JOE",
       "FEEFS",
       "YAMA",
       "DEN"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "FEEFS",
-      "JOE"
      ]
     }
    ]
   },
   {
+   "state": "FAIL",
    "teamSize": 3,
-   "failsRequired": 1,
-   "team": [
-    "FEEFS",
-    "JOE",
-    "ND"
-   ],
-   "numFails": 1,
    "proposals": [
     {
-     "proposer": "JOE",
      "votes": [
       "DEN",
       "MIKE",
@@ -47,33 +136,45 @@
       "ND",
       "YAMA"
      ],
+     "state": "APPROVED",
      "team": [
       "FEEFS",
       "JOE",
       "ND"
      ],
-     "state": "APPROVED"
+     "proposer": "JOE"
     }
    ],
-   "state": "FAIL"
+   "numFails": 1,
+   "team": [
+    "FEEFS",
+    "JOE",
+    "ND"
+   ],
+   "failsRequired": 1
   },
   {
    "teamSize": 4,
-   "failsRequired": 1,
    "state": "FAIL",
+   "team": [
+    "YAMA",
+    "FEEFS",
+    "JOE",
+    "DEN"
+   ],
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "ND"
-     ],
-     "proposer": "ND",
      "team": [
       "JOE",
       "ND",
       "YAMA",
       "FEEFS"
-     ]
+     ],
+     "proposer": "ND",
+     "votes": [
+      "ND"
+     ],
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -83,22 +184,17 @@
       "YAMA",
       "ND"
      ],
-     "state": "APPROVED",
+     "proposer": "YAMA",
      "team": [
       "YAMA",
       "FEEFS",
       "JOE",
       "DEN"
      ],
-     "proposer": "YAMA"
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "YAMA",
-    "FEEFS",
-    "JOE",
-    "DEN"
-   ],
+   "failsRequired": 1,
    "numFails": 1
   },
   {
@@ -107,10 +203,10 @@
     "JOE",
     "YAMA"
    ],
+   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "MIKE",
      "votes": [
       "MIKE",
       "ND",
@@ -120,32 +216,34 @@
       "MIKE",
       "JOE",
       "YAMA"
-     ]
+     ],
+     "proposer": "MIKE",
+     "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
+     "proposer": "DEN",
+     "votes": [
+      "JOE",
+      "DEN"
+     ],
      "team": [
       "DEN",
       "MIKE",
       "FEEFS"
-     ],
-     "proposer": "DEN",
-     "state": "REJECTED",
-     "votes": [
-      "JOE",
-      "DEN"
      ]
     },
     {
+     "votes": [
+      "JOE",
+      "FEEFS"
+     ],
      "team": [
       "FEEFS",
       "JOE",
       "YAMA"
      ],
      "state": "REJECTED",
-     "votes": [
-      "JOE",
-      "FEEFS"
-     ],
      "proposer": "FEEFS"
     },
     {
@@ -155,122 +253,24 @@
       "FEEFS",
       "JOE"
      ],
+     "state": "APPROVED",
      "team": [
       "FEEFS",
       "JOE",
       "YAMA"
      ],
-     "proposer": "JOE",
-     "state": "APPROVED"
+     "proposer": "JOE"
     }
    ],
-   "teamSize": 3,
-   "failsRequired": 1,
    "numFails": 1,
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
    "state": "PENDING",
+   "proposals": [],
    "teamSize": 4,
-   "team": [],
    "failsRequired": 1,
-   "proposals": []
+   "team": []
   }
- ],
- "timeFinished": {
-  "_seconds": 1610889875,
-  "_nanoseconds": 439000000
- },
- "players": [
-  {
-   "name": "FEEFS",
-   "uid": "QiceSEq9q5PWzTDLM4BKrDNbOvK2"
-  },
-  {
-   "uid": "phmdP3l6kbdCy3eAxUpzu6AYvvH3",
-   "name": "JOE"
-  },
-  {
-   "name": "ND",
-   "uid": "lPYxFpeJAoYfHZoTSWFjfpvEs7B3"
-  },
-  {
-   "name": "YAMA",
-   "uid": "FHfAgIt8mWVSy3XHJx6NwhWGFXo2"
-  },
-  {
-   "name": "MIKE",
-   "uid": "PHim6ip66SZHOr0kj7YxyjMrv8o2"
-  },
-  {
-   "uid": "ywHqpFS7FfdOoAD1BS282rNzD1H2",
-   "name": "DEN"
-  }
- ],
- "outcome": {
-  "assassinated": null,
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "MIKE"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "YAMA"
-   },
-   {
-    "assassin": false,
-    "name": "ND",
-    "role": "MERLIN"
-   },
-   {
-    "name": "DEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "FEEFS",
-    "role": "MORGANA"
-   },
-   {
-    "name": "JOE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "FEEFS": true,
-    "JOE": true
-   },
-   {
-    "ND": true,
-    "FEEFS": false,
-    "JOE": true
-   },
-   {
-    "JOE": true,
-    "DEN": true,
-    "YAMA": true,
-    "FEEFS": false
-   },
-   {
-    "YAMA": true,
-    "FEEFS": false,
-    "JOE": true
-   }
-  ],
-  "state": "EVIL_WIN"
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1610888773,
-  "_nanoseconds": 191000000
- }
+ ]
 }

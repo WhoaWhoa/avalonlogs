@@ -1,74 +1,6 @@
 {
- "timeFinished": {
-  "_seconds": 1593502023,
-  "_nanoseconds": 960000000
- },
  "options": {
   "inGameLog": false
- },
- "outcome": {
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "name": "GIMPOLE",
-    "role": "MORDRED",
-    "assassin": true
-   },
-   {
-    "role": "OBERON",
-    "name": "JASMINE",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "BRANDEN"
-   },
-   {
-    "assassin": false,
-    "name": "ALLY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ALBERT",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "RYAN",
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "name": "MICHELLLE",
-    "role": "MERLIN"
-   }
-  ],
-  "assassinated": "ALLY",
-  "message": "Three successful missions",
-  "votes": [
-   {
-    "ALBERT": true,
-    "JASMINE": true
-   },
-   {
-    "ALLY": true,
-    "ALBERT": true,
-    "JASMINE": false
-   },
-   {
-    "ALLY": true,
-    "MICHELLLE": true,
-    "BRANDEN": true
-   },
-   {
-    "MICHELLLE": true,
-    "ALBERT": false,
-    "BRANDEN": true,
-    "ALLY": true
-   }
-  ]
  },
  "timeCreated": {
   "_seconds": 1593500950,
@@ -104,12 +36,83 @@
    "name": "JASMINE"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1593502023,
+  "_nanoseconds": 960000000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "JASMINE": true,
+    "ALBERT": true
+   },
+   {
+    "ALBERT": true,
+    "ALLY": true,
+    "JASMINE": false
+   },
+   {
+    "BRANDEN": true,
+    "ALLY": true,
+    "MICHELLLE": true
+   },
+   {
+    "ALLY": true,
+    "BRANDEN": true,
+    "MICHELLLE": true,
+    "ALBERT": false
+   }
+  ],
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "assassinated": "ALLY",
+  "roles": [
+   {
+    "name": "GIMPOLE",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "name": "JASMINE",
+    "assassin": false,
+    "role": "OBERON"
+   },
+   {
+    "name": "BRANDEN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "ALLY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ALBERT",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "RYAN"
+   },
+   {
+    "name": "MICHELLLE",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ]
+ },
  "missions": [
   {
-   "teamSize": 2,
-   "failsRequired": 1,
+   "team": [
+    "JASMINE",
+    "ALBERT"
+   ],
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "JASMINE",
       "BRANDEN",
@@ -119,33 +122,29 @@
       "MICHELLLE",
       "GIMPOLE"
      ],
-     "proposer": "JASMINE",
-     "state": "APPROVED",
      "team": [
       "JASMINE",
       "ALBERT"
-     ]
+     ],
+     "proposer": "JASMINE"
     }
    ],
-   "team": [
-    "JASMINE",
-    "ALBERT"
-   ],
+   "teamSize": 2,
    "numFails": 0,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
    "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1,
+   "teamSize": 3,
    "team": [
     "ALLY",
     "ALBERT",
     "JASMINE"
    ],
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "MICHELLLE",
       "GIMPOLE",
@@ -155,21 +154,36 @@
       "ALBERT",
       "RYAN"
      ],
+     "proposer": "ALLY",
      "team": [
       "ALLY",
       "ALBERT",
       "JASMINE"
-     ],
-     "proposer": "ALLY",
-     "state": "APPROVED"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
+   "state": "SUCCESS",
    "teamSize": 3,
+   "numFails": 0,
+   "team": [
+    "ALLY",
+    "BRANDEN",
+    "MICHELLLE"
+   ],
    "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "BRANDEN",
+     "team": [
+      "ALLY",
+      "BRANDEN",
+      "MICHELLLE"
+     ],
+     "state": "APPROVED",
      "votes": [
       "RYAN",
       "MICHELLLE",
@@ -178,37 +192,23 @@
       "BRANDEN",
       "ALLY",
       "ALBERT"
-     ],
-     "proposer": "BRANDEN",
-     "state": "APPROVED",
-     "team": [
-      "ALLY",
-      "BRANDEN",
-      "MICHELLLE"
      ]
     }
-   ],
-   "state": "SUCCESS",
-   "team": [
-    "ALLY",
-    "BRANDEN",
-    "MICHELLLE"
-   ],
-   "numFails": 0
+   ]
   },
   {
-   "numFails": 1,
    "state": "SUCCESS",
+   "numFails": 1,
+   "failsRequired": 2,
    "team": [
     "ALLY",
     "BRANDEN",
     "ALBERT",
     "MICHELLLE"
    ],
-   "failsRequired": 2,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "RYAN",
       "GIMPOLE",
@@ -217,23 +217,23 @@
       "ALLY",
       "ALBERT"
      ],
-     "proposer": "ALBERT",
+     "state": "APPROVED",
      "team": [
       "ALLY",
       "BRANDEN",
       "ALBERT",
       "MICHELLLE"
-     ]
+     ],
+     "proposer": "ALBERT"
     }
-   ],
-   "teamSize": 4
+   ]
   },
   {
    "teamSize": 4,
-   "team": [],
+   "failsRequired": 1,
    "proposals": [],
    "state": "PENDING",
-   "failsRequired": 1
+   "team": []
   }
  ]
 }

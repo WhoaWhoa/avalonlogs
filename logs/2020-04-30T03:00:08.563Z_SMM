@@ -1,4 +1,90 @@
 {
+ "timeFinished": {
+  "_seconds": 1588216837,
+  "_nanoseconds": 734000000
+ },
+ "timeCreated": {
+  "_seconds": 1588215608,
+  "_nanoseconds": 563000000
+ },
+ "outcome": {
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "JOSEPHINE": true,
+    "DANIEL": true,
+    "MATT": true
+   },
+   {
+    "JOSH": true,
+    "KMM": true,
+    "DANIEL": true,
+    "ATRA": true
+   },
+   {
+    "AAVA": false,
+    "DANIEL": true,
+    "JOSEPHINE": true,
+    "JOSH": true
+   },
+   {
+    "AAVA": false,
+    "DANIEL": true,
+    "KMM": true,
+    "JOSEPHINE": true,
+    "JOSH": true
+   }
+  ],
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "DANIEL"
+   },
+   {
+    "name": "JOSH",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "JUICE"
+   },
+   {
+    "name": "JOSEPHINE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "AAVA",
+    "assassin": false
+   },
+   {
+    "name": "KMM",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "MANDY",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "MATT",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ATRA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "assassinated": "KMM"
+ },
  "options": {
   "inGameLog": false
  },
@@ -8,20 +94,20 @@
    "name": "ATRA"
   },
   {
-   "uid": "2ZSW7aUnrEOsoCFgVlAz30dATdv1",
-   "name": "DANIEL"
+   "name": "DANIEL",
+   "uid": "2ZSW7aUnrEOsoCFgVlAz30dATdv1"
   },
   {
-   "uid": "zrhBlBcoBcWOKkbTjGshr7dN3p43",
-   "name": "JOSH"
+   "name": "JOSH",
+   "uid": "zrhBlBcoBcWOKkbTjGshr7dN3p43"
   },
   {
-   "name": "JUICE",
-   "uid": "s1z3cWcBbsfH4X9lbYNfh2bs9qY2"
+   "uid": "s1z3cWcBbsfH4X9lbYNfh2bs9qY2",
+   "name": "JUICE"
   },
   {
-   "name": "AAVA",
-   "uid": "WNQxEHjNsKPNzwUGGE5fftWyhvX2"
+   "uid": "WNQxEHjNsKPNzwUGGE5fftWyhvX2",
+   "name": "AAVA"
   },
   {
    "name": "KMM",
@@ -42,15 +128,24 @@
  ],
  "missions": [
   {
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "numFails": 0,
+   "team": [
+    "DANIEL",
+    "MATT",
+    "JOSEPHINE"
+   ],
+   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "DANIEL",
      "team": [
       "DANIEL",
       "MATT",
       "JOSEPHINE"
      ],
-     "proposer": "DANIEL",
+     "state": "APPROVED",
      "votes": [
       "DANIEL",
       "JUICE",
@@ -60,36 +155,17 @@
       "MANDY",
       "MATT",
       "ATRA"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "team": [
-    "DANIEL",
-    "MATT",
-    "JOSEPHINE"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 3
+   ]
   },
   {
-   "team": [
-    "DANIEL",
-    "ATRA",
-    "JOSH",
-    "KMM"
-   ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "JOSH",
      "state": "APPROVED",
-     "team": [
-      "DANIEL",
-      "ATRA",
-      "JOSH",
-      "KMM"
-     ],
      "votes": [
       "ATRA",
       "DANIEL",
@@ -97,24 +173,25 @@
       "JUICE",
       "KMM",
       "MANDY"
-     ]
+     ],
+     "team": [
+      "DANIEL",
+      "ATRA",
+      "JOSH",
+      "KMM"
+     ],
+     "proposer": "JOSH"
     }
    ],
-   "numFails": 0,
-   "teamSize": 4,
    "state": "SUCCESS",
-   "failsRequired": 1
+   "team": [
+    "DANIEL",
+    "ATRA",
+    "JOSH",
+    "KMM"
+   ]
   },
   {
-   "state": "FAIL",
-   "failsRequired": 1,
-   "team": [
-    "AAVA",
-    "JOSH",
-    "JOSEPHINE",
-    "DANIEL"
-   ],
-   "numFails": 1,
    "proposals": [
     {
      "votes": [
@@ -123,16 +200,22 @@
       "KMM",
       "MATT"
      ],
+     "state": "REJECTED",
+     "proposer": "JUICE",
      "team": [
       "MANDY",
       "JUICE",
       "ATRA",
       "KMM"
-     ],
-     "state": "REJECTED",
-     "proposer": "JUICE"
+     ]
     },
     {
+     "team": [
+      "AAVA",
+      "JOSH",
+      "JOSEPHINE",
+      "DANIEL"
+     ],
      "votes": [
       "DANIEL",
       "JOSH",
@@ -144,23 +227,36 @@
       "MATT",
       "ATRA"
      ],
-     "team": [
-      "AAVA",
-      "JOSH",
-      "JOSEPHINE",
-      "DANIEL"
-     ],
-     "state": "APPROVED",
-     "proposer": "AAVA"
+     "proposer": "AAVA",
+     "state": "APPROVED"
     }
    ],
+   "state": "FAIL",
+   "numFails": 1,
+   "team": [
+    "AAVA",
+    "JOSH",
+    "JOSEPHINE",
+    "DANIEL"
+   ],
+   "failsRequired": 1,
    "teamSize": 4
   },
   {
    "teamSize": 5,
+   "state": "SUCCESS",
+   "numFails": 1,
    "failsRequired": 2,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "AAVA",
+      "JOSH",
+      "KMM",
+      "DANIEL",
+      "JOSEPHINE"
+     ],
      "proposer": "KMM",
      "votes": [
       "DANIEL",
@@ -169,119 +265,23 @@
       "KMM",
       "MANDY",
       "ATRA"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "AAVA",
-      "JOSH",
-      "KMM",
-      "DANIEL",
-      "JOSEPHINE"
      ]
     }
    ],
-   "state": "SUCCESS",
    "team": [
     "AAVA",
     "JOSH",
     "KMM",
     "DANIEL",
     "JOSEPHINE"
-   ],
-   "numFails": 1
+   ]
   },
   {
-   "proposals": [],
-   "state": "PENDING",
+   "team": [],
    "failsRequired": 1,
-   "teamSize": 5,
-   "team": []
+   "state": "PENDING",
+   "proposals": [],
+   "teamSize": 5
   }
- ],
- "timeFinished": {
-  "_seconds": 1588216837,
-  "_nanoseconds": 734000000
- },
- "timeCreated": {
-  "_seconds": 1588215608,
-  "_nanoseconds": 563000000
- },
- "outcome": {
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "name": "DANIEL",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "JOSH",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JUICE",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "JOSEPHINE",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "AAVA",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "KMM",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "MANDY"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "MATT"
-   },
-   {
-    "assassin": false,
-    "name": "ATRA",
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "assassinated": "KMM",
-  "message": "Three successful missions",
-  "votes": [
-   {
-    "MATT": true,
-    "JOSEPHINE": true,
-    "DANIEL": true
-   },
-   {
-    "JOSH": true,
-    "ATRA": true,
-    "KMM": true,
-    "DANIEL": true
-   },
-   {
-    "DANIEL": true,
-    "JOSH": true,
-    "JOSEPHINE": true,
-    "AAVA": false
-   },
-   {
-    "KMM": true,
-    "DANIEL": true,
-    "JOSEPHINE": true,
-    "JOSH": true,
-    "AAVA": false
-   }
-  ]
- }
+ ]
 }

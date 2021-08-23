@@ -1,14 +1,72 @@
 {
+ "outcome": {
+  "votes": [
+   {
+    "JENNY": true,
+    "ELLIS": true
+   },
+   {
+    "ANNEMARIE": true,
+    "ELLIS": true,
+    "JENNY": true
+   },
+   {
+    "JENNY": true,
+    "SHACK": false,
+    "ANNEMARIE": true,
+    "ELLIS": true
+   },
+   {
+    "ELLIS": true,
+    "JENNY": true,
+    "ANNEMARIE": false
+   }
+  ],
+  "message": "Five team proposals in a row rejected",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "name": "ELLIS",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "role": "MORDRED",
+    "name": "ANNEMARIE"
+   },
+   {
+    "name": "MK",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "ERIC"
+   },
+   {
+    "assassin": false,
+    "name": "JENNY",
+    "role": "MERLIN"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "SHACK"
+   }
+  ],
+  "assassinated": null
+ },
+ "timeFinished": {
+  "_seconds": 1585965571,
+  "_nanoseconds": 518714000
+ },
  "missions": [
   {
-   "team": [
-    "JENNY",
-    "ELLIS"
-   ],
-   "teamSize": 2,
-   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "ELLIS",
       "ANNEMARIE",
@@ -16,32 +74,34 @@
       "JENNY"
      ],
      "proposer": "MK",
-     "state": "APPROVED",
      "team": [
       "JENNY",
       "ELLIS"
      ]
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS",
+   "team": [
+    "JENNY",
+    "ELLIS"
+   ],
+   "teamSize": 2,
    "numFails": 0
   },
   {
+   "failsRequired": 1,
    "team": [
     "ELLIS",
     "JENNY",
     "ANNEMARIE"
    ],
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
      "proposer": "ELLIS",
-     "team": [
-      "ELLIS",
-      "JENNY",
-      "ANNEMARIE"
-     ],
      "votes": [
       "JENNY",
       "SHACK",
@@ -49,22 +109,33 @@
       "ANNEMARIE",
       "MK",
       "ERIC"
+     ],
+     "team": [
+      "ELLIS",
+      "JENNY",
+      "ANNEMARIE"
      ]
     }
    ],
-   "teamSize": 3,
-   "failsRequired": 1,
    "state": "SUCCESS"
   },
   {
-   "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
+   "team": [
+    "ANNEMARIE",
+    "JENNY",
+    "SHACK",
+    "ELLIS"
+   ],
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "ELLIS",
       "ERIC"
      ],
-     "state": "REJECTED",
      "team": [
       "ERIC",
       "ANNEMARIE",
@@ -74,7 +145,6 @@
      "proposer": "ERIC"
     },
     {
-     "proposer": "ANNEMARIE",
      "votes": [
       "ERIC",
       "SHACK",
@@ -82,35 +152,21 @@
       "ANNEMARIE",
       "MK"
      ],
-     "state": "APPROVED",
      "team": [
       "ANNEMARIE",
       "JENNY",
       "SHACK",
       "ELLIS"
-     ]
+     ],
+     "proposer": "ANNEMARIE",
+     "state": "APPROVED"
     }
    ],
-   "numFails": 1,
-   "team": [
-    "ANNEMARIE",
-    "JENNY",
-    "SHACK",
-    "ELLIS"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1
+   "teamSize": 4
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "JENNY",
-      "ANNEMARIE",
-      "ELLIS"
-     ],
      "state": "APPROVED",
      "proposer": "JENNY",
      "votes": [
@@ -119,24 +175,27 @@
       "ELLIS",
       "ANNEMARIE",
       "MK"
+     ],
+     "team": [
+      "JENNY",
+      "ANNEMARIE",
+      "ELLIS"
      ]
     }
    ],
+   "teamSize": 3,
    "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "JENNY",
     "ANNEMARIE",
     "ELLIS"
-   ],
-   "teamSize": 3
+   ]
   },
   {
-   "state": "PENDING",
-   "teamSize": 4,
-   "team": [],
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "SHACK",
       "ANNEMARIE",
@@ -148,17 +207,18 @@
       "ELLIS",
       "ERIC"
      ],
-     "proposer": "SHACK"
+     "proposer": "SHACK",
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
-     "proposer": "MK",
      "team": [
       "JENNY",
       "MK",
       "ELLIS",
       "ERIC"
      ],
+     "proposer": "MK",
+     "state": "REJECTED",
      "votes": [
       "JENNY",
       "ELLIS",
@@ -166,7 +226,11 @@
      ]
     },
     {
-     "proposer": "ELLIS",
+     "votes": [
+      "MK",
+      "JENNY",
+      "ELLIS"
+     ],
      "team": [
       "JENNY",
       "MK",
@@ -174,13 +238,11 @@
       "ERIC"
      ],
      "state": "REJECTED",
-     "votes": [
-      "MK",
-      "JENNY",
-      "ELLIS"
-     ]
+     "proposer": "ELLIS"
     },
     {
+     "proposer": "ERIC",
+     "state": "REJECTED",
      "votes": [
       "ERIC",
       "SHACK",
@@ -191,27 +253,28 @@
       "ELLIS",
       "ANNEMARIE",
       "SHACK"
-     ],
-     "proposer": "ERIC",
-     "state": "REJECTED"
+     ]
     },
     {
+     "votes": [
+      "SHACK",
+      "ANNEMARIE",
+      "ERIC"
+     ],
+     "proposer": "ANNEMARIE",
      "state": "REJECTED",
      "team": [
       "ANNEMARIE",
       "ERIC",
       "JENNY",
       "MK"
-     ],
-     "votes": [
-      "SHACK",
-      "ANNEMARIE",
-      "ERIC"
-     ],
-     "proposer": "ANNEMARIE"
+     ]
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "state": "PENDING",
+   "teamSize": 4,
+   "team": []
   }
  ],
  "players": [
@@ -220,8 +283,8 @@
    "name": "JENNY"
   },
   {
-   "uid": "3S6IAOgJIfdkhNokIFecylAJbhH3",
-   "name": "SHACK"
+   "name": "SHACK",
+   "uid": "3S6IAOgJIfdkhNokIFecylAJbhH3"
   },
   {
    "name": "MK",
@@ -232,77 +295,14 @@
    "uid": "jCYFFvOTn6bzCBAOouTEoo4MK0J3"
   },
   {
-   "name": "ERIC",
-   "uid": "ytEiFeYheiec31OghrJTXTX2hlT2"
+   "uid": "ytEiFeYheiec31OghrJTXTX2hlT2",
+   "name": "ERIC"
   },
   {
-   "uid": "GExQ3csiB9TpQY4MAe2m2yCxC7Y2",
-   "name": "ANNEMARIE"
+   "name": "ANNEMARIE",
+   "uid": "GExQ3csiB9TpQY4MAe2m2yCxC7Y2"
   }
  ],
- "timeFinished": {
-  "_seconds": 1585965571,
-  "_nanoseconds": 518714000
- },
- "outcome": {
-  "message": "Five team proposals in a row rejected",
-  "votes": [
-   {
-    "JENNY": true,
-    "ELLIS": true
-   },
-   {
-    "ELLIS": true,
-    "ANNEMARIE": true,
-    "JENNY": true
-   },
-   {
-    "ELLIS": true,
-    "ANNEMARIE": true,
-    "SHACK": false,
-    "JENNY": true
-   },
-   {
-    "JENNY": true,
-    "ELLIS": true,
-    "ANNEMARIE": false
-   }
-  ],
-  "roles": [
-   {
-    "name": "ELLIS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ANNEMARIE",
-    "role": "MORDRED",
-    "assassin": true
-   },
-   {
-    "name": "MK",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "ERIC",
-    "assassin": false
-   },
-   {
-    "name": "JENNY",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "SHACK",
-    "role": "MORGANA",
-    "assassin": false
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN"
- },
  "timeCreated": {
   "_seconds": 1585963077,
   "_nanoseconds": 925000000

@@ -1,33 +1,5 @@
 {
- "players": [
-  {
-   "name": "JP",
-   "uid": "oMFPJZDGSmekmXrlKNSIvl3TzLS2"
-  },
-  {
-   "uid": "DddGwIPbYTYseSgjSdd1Qbwqm3R2",
-   "name": "LAURA"
-  },
-  {
-   "name": "REGIS",
-   "uid": "gTS5ixzdhtVY6fw6XK6AnEjGrGi1"
-  },
-  {
-   "name": "AURELIA",
-   "uid": "t3hmiC7r8wW7e7CCSa3XJ8KkIAc2"
-  },
-  {
-   "name": "CECILE",
-   "uid": "Xybo3Pw6qbdtbBJF3Hn2pCnT2Rr1"
-  }
- ],
- "options": {
-  "inGameLog": false
- },
  "outcome": {
-  "message": "Three missions succeeded",
-  "assassinated": null,
-  "state": "GOOD_WIN",
   "votes": [
    {
     "CECILE": true,
@@ -39,13 +11,13 @@
     "LAURA": true
    },
    {
-    "CECILE": true,
-    "LAURA": true
+    "LAURA": true,
+    "CECILE": true
    },
    {
     "JP": false,
-    "LAURA": true,
-    "CECILE": true
+    "CECILE": true,
+    "LAURA": true
    },
    {
     "CECILE": true,
@@ -53,25 +25,26 @@
     "LAURA": true
    }
   ],
+  "state": "GOOD_WIN",
   "roles": [
    {
-    "name": "CECILE",
     "assassin": false,
+    "name": "CECILE",
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
+    "role": "OBERON",
     "name": "JP",
-    "role": "OBERON"
-   },
-   {
-    "name": "REGIS",
-    "role": "EVIL MINION",
     "assassin": false
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "role": "EVIL MINION",
+    "name": "REGIS",
+    "assassin": false
+   },
+   {
     "assassin": false,
+    "role": "LOYAL FOLLOWER",
     "name": "AURELIA"
    },
    {
@@ -79,52 +52,90 @@
     "assassin": false,
     "role": "LOYAL FOLLOWER"
    }
-  ]
+  ],
+  "message": "Three missions succeeded",
+  "assassinated": null
+ },
+ "timeCreated": {
+  "_seconds": 1588781813,
+  "_nanoseconds": 302000000
+ },
+ "players": [
+  {
+   "uid": "oMFPJZDGSmekmXrlKNSIvl3TzLS2",
+   "name": "JP"
+  },
+  {
+   "uid": "DddGwIPbYTYseSgjSdd1Qbwqm3R2",
+   "name": "LAURA"
+  },
+  {
+   "name": "REGIS",
+   "uid": "gTS5ixzdhtVY6fw6XK6AnEjGrGi1"
+  },
+  {
+   "uid": "t3hmiC7r8wW7e7CCSa3XJ8KkIAc2",
+   "name": "AURELIA"
+  },
+  {
+   "uid": "Xybo3Pw6qbdtbBJF3Hn2pCnT2Rr1",
+   "name": "CECILE"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1588785317,
+  "_nanoseconds": 139000000
+ },
+ "options": {
+  "inGameLog": false
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "REGIS",
+    "CECILE"
+   ],
    "proposals": [
     {
+     "team": [
+      "LAURA",
+      "JP"
+     ],
      "proposer": "LAURA",
-     "state": "REJECTED",
      "votes": [
       "JP",
       "LAURA"
      ],
-     "team": [
-      "LAURA",
-      "JP"
-     ]
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
+     "team": [
+      "REGIS",
+      "CECILE"
+     ],
      "proposer": "REGIS",
      "votes": [
       "REGIS",
       "LAURA",
       "CECILE"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "REGIS",
-      "CECILE"
      ]
     }
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "REGIS",
-    "CECILE"
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   ]
   },
   {
    "numFails": 1,
-   "state": "FAIL",
+   "failsRequired": 1,
    "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "AURELIA",
      "team": [
       "AURELIA",
       "CECILE",
@@ -132,29 +143,27 @@
      ],
      "votes": [
       "AURELIA"
-     ],
-     "state": "REJECTED",
-     "proposer": "AURELIA"
+     ]
     },
     {
-     "team": [
-      "CECILE",
-      "JP",
-      "LAURA"
-     ],
      "proposer": "CECILE",
+     "state": "REJECTED",
      "votes": [
       "LAURA",
       "CECILE"
      ],
-     "state": "REJECTED"
+     "team": [
+      "CECILE",
+      "JP",
+      "LAURA"
+     ]
     },
     {
      "state": "REJECTED",
-     "proposer": "JP",
      "votes": [
       "CECILE"
      ],
+     "proposer": "JP",
      "team": [
       "JP",
       "REGIS",
@@ -166,16 +175,17 @@
       "LAURA",
       "CECILE"
      ],
+     "state": "REJECTED",
      "team": [
       "LAURA",
       "CECILE",
       "JP"
      ],
-     "proposer": "LAURA",
-     "state": "REJECTED"
+     "proposer": "LAURA"
     },
     {
      "proposer": "REGIS",
+     "state": "APPROVED",
      "votes": [
       "JP",
       "REGIS",
@@ -183,7 +193,6 @@
       "LAURA",
       "CECILE"
      ],
-     "state": "APPROVED",
      "team": [
       "AURELIA",
       "LAURA",
@@ -191,7 +200,6 @@
      ]
     }
    ],
-   "failsRequired": 1,
    "team": [
     "AURELIA",
     "LAURA",
@@ -201,41 +209,38 @@
   {
    "teamSize": 2,
    "state": "SUCCESS",
-   "team": [
-    "LAURA",
-    "CECILE"
-   ],
    "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
       "AURELIA"
      ],
-     "state": "REJECTED",
      "team": [
       "AURELIA",
       "CECILE"
      ],
+     "state": "REJECTED",
      "proposer": "AURELIA"
     },
     {
+     "team": [
+      "CECILE",
+      "JP"
+     ],
      "state": "REJECTED",
-     "proposer": "CECILE",
      "votes": [
       "CECILE",
       "JP"
      ],
-     "team": [
-      "CECILE",
-      "JP"
-     ]
+     "proposer": "CECILE"
     },
     {
+     "state": "REJECTED",
      "team": [
       "JP",
       "CECILE"
      ],
-     "state": "REJECTED",
      "proposer": "JP",
      "votes": [
       "JP",
@@ -243,10 +248,6 @@
      ]
     },
     {
-     "team": [
-      "LAURA",
-      "CECILE"
-     ],
      "votes": [
       "AURELIA",
       "LAURA",
@@ -254,23 +255,28 @@
       "JP"
      ],
      "proposer": "LAURA",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "LAURA",
+      "CECILE"
+     ]
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "LAURA",
+    "CECILE"
+   ]
   },
   {
-   "teamSize": 3,
-   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "REGIS",
      "team": [
       "REGIS",
       "JP",
       "LAURA"
      ],
+     "proposer": "REGIS",
+     "state": "REJECTED",
      "votes": [
       "REGIS"
      ]
@@ -279,13 +285,13 @@
      "votes": [
       "AURELIA"
      ],
-     "state": "REJECTED",
+     "proposer": "AURELIA",
      "team": [
       "AURELIA",
       "LAURA",
       "CECILE"
      ],
-     "proposer": "AURELIA"
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -293,13 +299,13 @@
       "LAURA",
       "CECILE"
      ],
+     "state": "APPROVED",
+     "proposer": "CECILE",
      "team": [
       "CECILE",
       "LAURA",
       "JP"
-     ],
-     "proposer": "CECILE",
-     "state": "APPROVED"
+     ]
     }
    ],
    "failsRequired": 1,
@@ -308,47 +314,49 @@
     "LAURA",
     "JP"
    ],
-   "numFails": 1
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
    "proposals": [
     {
+     "team": [
+      "JP",
+      "AURELIA",
+      "CECILE"
+     ],
      "state": "REJECTED",
-     "team": [
-      "JP",
-      "AURELIA",
-      "CECILE"
-     ],
-     "proposer": "JP",
      "votes": [
       "JP",
       "CECILE"
-     ]
+     ],
+     "proposer": "JP"
     },
     {
-     "proposer": "LAURA",
-     "votes": [
-      "LAURA",
-      "CECILE"
-     ],
      "team": [
       "LAURA",
       "AURELIA",
       "CECILE"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "LAURA",
+      "CECILE"
+     ],
+     "state": "REJECTED",
+     "proposer": "LAURA"
     },
     {
-     "proposer": "REGIS",
+     "votes": [
+      "REGIS"
+     ],
      "state": "REJECTED",
      "team": [
       "REGIS",
       "AURELIA",
       "CECILE"
      ],
-     "votes": [
-      "REGIS"
-     ]
+     "proposer": "REGIS"
     },
     {
      "team": [
@@ -356,8 +364,8 @@
       "AURELIA",
       "CECILE"
      ],
-     "state": "APPROVED",
      "proposer": "AURELIA",
+     "state": "APPROVED",
      "votes": [
       "AURELIA",
       "LAURA",
@@ -365,23 +373,15 @@
      ]
     }
    ],
-   "numFails": 0,
    "failsRequired": 1,
-   "state": "SUCCESS",
+   "numFails": 0,
    "teamSize": 3,
    "team": [
     "LAURA",
     "AURELIA",
     "CECILE"
-   ]
+   ],
+   "state": "SUCCESS"
   }
- ],
- "timeCreated": {
-  "_seconds": 1588781813,
-  "_nanoseconds": 302000000
- },
- "timeFinished": {
-  "_seconds": 1588785317,
-  "_nanoseconds": 139000000
- }
+ ]
 }

@@ -1,10 +1,87 @@
 {
+ "outcome": {
+  "roles": [
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "GABO"
+   },
+   {
+    "name": "MASTER",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "EXPUNGE",
+    "assassin": false,
+    "role": "OBERON"
+   },
+   {
+    "name": "GOODMARK",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "name": "JAYSH",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "name": "KIRBY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "MOTTS",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "TATSUY",
+    "assassin": true,
+    "role": "EVIL MINION"
+   }
+  ],
+  "assassinated": null,
+  "votes": [
+   {
+    "KIRBY": true,
+    "GOODMARK": true,
+    "EXPUNGE": true
+   },
+   {
+    "KIRBY": true,
+    "GOODMARK": false,
+    "GABO": true,
+    "EXPUNGE": false
+   },
+   {
+    "MASTER": true,
+    "JAYSH": true,
+    "GABO": true,
+    "TATSUY": false
+   },
+   {
+    "MASTER": true,
+    "TATSUY": false,
+    "JAYSH": true,
+    "MOTTS": true,
+    "KIRBY": true
+   },
+   {
+    "EXPUNGE": false,
+    "KIRBY": true,
+    "MASTER": true,
+    "MOTTS": true,
+    "TATSUY": false
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN"
+ },
  "timeFinished": {
   "_seconds": 1599926187,
   "_nanoseconds": 533000000
- },
- "options": {
-  "inGameLog": false
  },
  "timeCreated": {
   "_seconds": 1599925745,
@@ -12,12 +89,12 @@
  },
  "players": [
   {
-   "name": "EXPUNGE",
-   "uid": "ei8pXvZxUsf4MJnP0jaAg8iFs0w1"
+   "uid": "ei8pXvZxUsf4MJnP0jaAg8iFs0w1",
+   "name": "EXPUNGE"
   },
   {
-   "name": "MOTTS",
-   "uid": "rPSdQx4G7XhNOyXa155scuJ3eXx2"
+   "uid": "rPSdQx4G7XhNOyXa155scuJ3eXx2",
+   "name": "MOTTS"
   },
   {
    "uid": "UyFfajWaMFSz3E9p88QN9DLNxU53",
@@ -28,12 +105,12 @@
    "name": "TATSUY"
   },
   {
-   "name": "JAYSH",
-   "uid": "cRvbrlR3QSTRxk0bs95CJ2cxJmx1"
+   "uid": "cRvbrlR3QSTRxk0bs95CJ2cxJmx1",
+   "name": "JAYSH"
   },
   {
-   "uid": "9bTTF1JYB4UF6RqnTajFn1fXRhs2",
-   "name": "GABO"
+   "name": "GABO",
+   "uid": "9bTTF1JYB4UF6RqnTajFn1fXRhs2"
   },
   {
    "name": "GOODMARK",
@@ -44,13 +121,22 @@
    "uid": "LhxNV35fy9c5prEF1r8UztH6Gw03"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
    "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "MASTER",
      "state": "APPROVED",
+     "proposer": "MASTER",
+     "team": [
+      "EXPUNGE",
+      "GOODMARK",
+      "KIRBY"
+     ],
      "votes": [
       "JAYSH",
       "MASTER",
@@ -59,35 +145,31 @@
       "MOTTS",
       "KIRBY",
       "EXPUNGE"
-     ],
-     "team": [
-      "EXPUNGE",
-      "GOODMARK",
-      "KIRBY"
      ]
     }
    ],
-   "teamSize": 3,
-   "numFails": 0,
    "team": [
     "EXPUNGE",
     "GOODMARK",
     "KIRBY"
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "numFails": 0
   },
   {
+   "state": "FAIL",
+   "team": [
+    "EXPUNGE",
+    "GOODMARK",
+    "KIRBY",
+    "GABO"
+   ],
+   "numFails": 2,
    "failsRequired": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "EXPUNGE",
-      "GOODMARK",
-      "KIRBY",
-      "GABO"
-     ],
-     "proposer": "EXPUNGE",
      "votes": [
       "EXPUNGE",
       "MASTER",
@@ -96,33 +178,27 @@
       "MOTTS",
       "KIRBY",
       "JAYSH"
-     ]
+     ],
+     "team": [
+      "EXPUNGE",
+      "GOODMARK",
+      "KIRBY",
+      "GABO"
+     ],
+     "proposer": "EXPUNGE"
     }
-   ],
-   "numFails": 2,
-   "state": "FAIL",
-   "team": [
-    "EXPUNGE",
-    "GOODMARK",
-    "KIRBY",
-    "GABO"
-   ],
-   "teamSize": 4
+   ]
   },
   {
+   "teamSize": 4,
    "team": [
     "TATSUY",
     "MASTER",
     "GABO",
     "JAYSH"
    ],
-   "numFails": 1,
-   "teamSize": 4,
-   "state": "FAIL",
-   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "MASTER",
       "EXPUNGE",
@@ -137,15 +213,33 @@
       "GABO",
       "JAYSH"
      ],
+     "state": "APPROVED",
      "proposer": "MOTTS"
     }
-   ]
+   ],
+   "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
-   "failsRequired": 2,
-   "numFails": 1,
+   "teamSize": 5,
+   "team": [
+    "KIRBY",
+    "TATSUY",
+    "MASTER",
+    "MOTTS",
+    "JAYSH"
+   ],
    "proposals": [
     {
+     "team": [
+      "KIRBY",
+      "TATSUY",
+      "MASTER",
+      "MOTTS",
+      "JAYSH"
+     ],
+     "state": "APPROVED",
      "proposer": "KIRBY",
      "votes": [
       "MASTER",
@@ -154,30 +248,17 @@
       "KIRBY",
       "GOODMARK",
       "TATSUY"
-     ],
-     "team": [
-      "KIRBY",
-      "TATSUY",
-      "MASTER",
-      "MOTTS",
-      "JAYSH"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "team": [
-    "KIRBY",
-    "TATSUY",
-    "MASTER",
-    "MOTTS",
-    "JAYSH"
-   ],
    "state": "SUCCESS",
-   "teamSize": 5
+   "failsRequired": 2,
+   "numFails": 1
   },
   {
-   "state": "FAIL",
+   "numFails": 2,
    "failsRequired": 1,
+   "teamSize": 5,
    "team": [
     "TATSUY",
     "KIRBY",
@@ -185,12 +266,9 @@
     "MASTER",
     "EXPUNGE"
    ],
-   "numFails": 2,
-   "teamSize": 5,
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "TATSUY",
-     "state": "APPROVED",
      "team": [
       "TATSUY",
       "KIRBY",
@@ -204,89 +282,11 @@
       "KIRBY",
       "TATSUY",
       "GOODMARK"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "TATSUY"
     }
    ]
   }
- ],
- "outcome": {
-  "votes": [
-   {
-    "EXPUNGE": true,
-    "KIRBY": true,
-    "GOODMARK": true
-   },
-   {
-    "EXPUNGE": false,
-    "GOODMARK": false,
-    "GABO": true,
-    "KIRBY": true
-   },
-   {
-    "GABO": true,
-    "MASTER": true,
-    "TATSUY": false,
-    "JAYSH": true
-   },
-   {
-    "TATSUY": false,
-    "KIRBY": true,
-    "JAYSH": true,
-    "MOTTS": true,
-    "MASTER": true
-   },
-   {
-    "KIRBY": true,
-    "EXPUNGE": false,
-    "MASTER": true,
-    "MOTTS": true,
-    "TATSUY": false
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "GABO",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "MASTER",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "EXPUNGE",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "GOODMARK"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "JAYSH"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "KIRBY"
-   },
-   {
-    "assassin": false,
-    "name": "MOTTS",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "TATSUY",
-    "assassin": true
-   }
-  ]
- }
+ ]
 }

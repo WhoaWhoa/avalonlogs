@@ -1,16 +1,110 @@
 {
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "LES": true,
+    "EUG": true,
+    "JOSH": true
+   },
+   {
+    "EUG": true,
+    "LES": false,
+    "JOSH": true,
+    "MAX": true
+   },
+   {
+    "TIMLAI": false,
+    "MAX": true,
+    "EUG": true,
+    "CALEB": true
+   },
+   {
+    "EUG": true,
+    "WILL": true,
+    "MAX": true,
+    "SIMON": true,
+    "CALEB": true
+   },
+   {
+    "MAX": true,
+    "WILL": false,
+    "EUG": true,
+    "RACHEL": true,
+    "CALEB": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "name": "WILL",
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "name": "CALEB",
+    "role": "MERLIN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JOSH",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "name": "JEV",
+    "assassin": false
+   },
+   {
+    "name": "TIMLAI",
+    "assassin": false,
+    "role": "OBERON"
+   },
+   {
+    "name": "MAX",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "EUG",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "name": "LES",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "SIMON"
+   },
+   {
+    "name": "RACHEL",
+    "assassin": false,
+    "role": "PERCIVAL"
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null
+ },
+ "timeFinished": {
+  "_seconds": 1597460897,
+  "_nanoseconds": 595000000
+ },
  "players": [
   {
    "uid": "ZIp49Ovt7VWcLpvyRPl4tEamrba2",
    "name": "SIMON"
   },
   {
-   "name": "WILL",
-   "uid": "Pauy4Wk9z7M8xPFDIWCZYshRXI73"
+   "uid": "Pauy4Wk9z7M8xPFDIWCZYshRXI73",
+   "name": "WILL"
   },
   {
-   "uid": "Ca3VT5d9X2SOfy4zFq3XplRuVlD3",
-   "name": "RACHEL"
+   "name": "RACHEL",
+   "uid": "Ca3VT5d9X2SOfy4zFq3XplRuVlD3"
   },
   {
    "uid": "aRRmRdicv9VnUCPGxBXVokC8VTs2",
@@ -25,8 +119,8 @@
    "name": "EUG"
   },
   {
-   "name": "MAX",
-   "uid": "i0GuZ1hpdMWBzjp9zcingbLTX4E2"
+   "uid": "i0GuZ1hpdMWBzjp9zcingbLTX4E2",
+   "name": "MAX"
   },
   {
    "name": "CALEB",
@@ -37,22 +131,31 @@
    "uid": "AeSR4aho5xO9u6HQhNAYpW4KBLl2"
   },
   {
-   "uid": "QfiqVStvDVVX4rBTbGBKeYZiops1",
-   "name": "JEV"
+   "name": "JEV",
+   "uid": "QfiqVStvDVVX4rBTbGBKeYZiops1"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1597458934,
+  "_nanoseconds": 74000000
+ },
  "missions": [
   {
    "state": "SUCCESS",
-   "numFails": 0,
    "failsRequired": 1,
    "team": [
     "JOSH",
     "LES",
     "EUG"
    ],
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "MAX",
       "SIMON",
@@ -64,7 +167,6 @@
       "EUG",
       "WILL"
      ],
-     "state": "APPROVED",
      "team": [
       "JOSH",
       "LES",
@@ -72,28 +174,22 @@
      ],
      "proposer": "JOSH"
     }
-   ],
-   "teamSize": 3
+   ]
   },
   {
-   "numFails": 1,
-   "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "JOSH",
     "LES",
     "EUG",
     "MAX"
    ],
-   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "JOSH",
-      "LES",
-      "EUG",
-      "MAX"
-     ],
-     "state": "APPROVED",
+     "proposer": "LES",
      "votes": [
       "JOSH",
       "EUG",
@@ -103,12 +199,18 @@
       "TIMLAI",
       "LES"
      ],
-     "proposer": "LES"
+     "state": "APPROVED",
+     "team": [
+      "JOSH",
+      "LES",
+      "EUG",
+      "MAX"
+     ]
     }
-   ],
-   "state": "FAIL"
+   ]
   },
   {
+   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -128,14 +230,6 @@
      ]
     },
     {
-     "team": [
-      "MAX",
-      "EUG",
-      "CALEB",
-      "TIMLAI"
-     ],
-     "proposer": "MAX",
-     "state": "APPROVED",
      "votes": [
       "WILL",
       "SIMON",
@@ -143,22 +237,39 @@
       "CALEB",
       "JEV",
       "MAX"
+     ],
+     "state": "APPROVED",
+     "proposer": "MAX",
+     "team": [
+      "MAX",
+      "EUG",
+      "CALEB",
+      "TIMLAI"
      ]
     }
    ],
-   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "MAX",
     "EUG",
     "CALEB",
     "TIMLAI"
    ],
-   "state": "FAIL",
    "numFails": 1,
-   "teamSize": 4
+   "failsRequired": 1
   },
   {
    "state": "SUCCESS",
+   "team": [
+    "CALEB",
+    "SIMON",
+    "WILL",
+    "MAX",
+    "EUG"
+   ],
+   "failsRequired": 2,
+   "teamSize": 5,
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -172,6 +283,7 @@
       "LES",
       "RACHEL"
      ],
+     "proposer": "CALEB",
      "state": "APPROVED",
      "team": [
       "CALEB",
@@ -179,26 +291,22 @@
       "WILL",
       "MAX",
       "EUG"
-     ],
-     "proposer": "CALEB"
+     ]
     }
-   ],
-   "numFails": 0,
-   "teamSize": 5,
-   "team": [
-    "CALEB",
-    "SIMON",
-    "WILL",
-    "MAX",
-    "EUG"
-   ],
-   "failsRequired": 2
+   ]
   },
   {
-   "teamSize": 5,
    "numFails": 1,
+   "team": [
+    "WILL",
+    "CALEB",
+    "RACHEL",
+    "EUG",
+    "MAX"
+   ],
    "proposals": [
     {
+     "proposer": "TIMLAI",
      "votes": [
       "EUG",
       "TIMLAI"
@@ -210,10 +318,10 @@
       "EUG",
       "CALEB"
      ],
-     "proposer": "TIMLAI",
      "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
      "team": [
       "CALEB",
       "MAX",
@@ -221,19 +329,17 @@
       "WILL",
       "JEV"
      ],
+     "proposer": "JEV",
      "votes": [
       "EUG",
       "LES",
       "JEV",
       "TIMLAI",
       "WILL"
-     ],
-     "proposer": "JEV",
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "REJECTED",
-     "proposer": "SIMON",
      "votes": [
       "SIMON",
       "MAX",
@@ -246,18 +352,10 @@
       "MAX",
       "RACHEL",
       "EUG"
-     ]
+     ],
+     "proposer": "SIMON"
     },
     {
-     "proposer": "WILL",
-     "state": "APPROVED",
-     "team": [
-      "WILL",
-      "CALEB",
-      "RACHEL",
-      "EUG",
-      "MAX"
-     ],
      "votes": [
       "RACHEL",
       "TIMLAI",
@@ -266,119 +364,21 @@
       "EUG",
       "LES",
       "WILL"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "WILL",
+      "CALEB",
+      "RACHEL",
+      "EUG",
+      "MAX"
+     ],
+     "proposer": "WILL"
     }
    ],
    "state": "FAIL",
-   "team": [
-    "WILL",
-    "CALEB",
-    "RACHEL",
-    "EUG",
-    "MAX"
-   ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 5
   }
- ],
- "timeFinished": {
-  "_seconds": 1597460897,
-  "_nanoseconds": 595000000
- },
- "timeCreated": {
-  "_seconds": 1597458934,
-  "_nanoseconds": 74000000
- },
- "outcome": {
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "WILL",
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "name": "CALEB",
-    "role": "MERLIN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "JOSH",
-    "assassin": false
-   },
-   {
-    "name": "JEV",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "TIMLAI",
-    "role": "OBERON"
-   },
-   {
-    "name": "MAX",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "EUG",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "LES"
-   },
-   {
-    "assassin": false,
-    "name": "SIMON",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "RACHEL"
-   }
-  ],
-  "votes": [
-   {
-    "JOSH": true,
-    "LES": true,
-    "EUG": true
-   },
-   {
-    "EUG": true,
-    "MAX": true,
-    "JOSH": true,
-    "LES": false
-   },
-   {
-    "EUG": true,
-    "TIMLAI": false,
-    "MAX": true,
-    "CALEB": true
-   },
-   {
-    "EUG": true,
-    "MAX": true,
-    "SIMON": true,
-    "WILL": true,
-    "CALEB": true
-   },
-   {
-    "WILL": false,
-    "EUG": true,
-    "RACHEL": true,
-    "MAX": true,
-    "CALEB": true
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN"
- },
- "options": {
-  "inGameLog": false
- }
+ ]
 }

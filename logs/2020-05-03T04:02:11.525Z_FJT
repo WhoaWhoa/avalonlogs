@@ -1,8 +1,88 @@
 {
+ "outcome": {
+  "roles": [
+   {
+    "name": "TRAN",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "CHIEU",
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "SUSIE",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "LILX"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "YF"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "LOOSE",
+    "assassin": false
+   },
+   {
+    "name": "REBECCA",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "JEAS"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "TRAN": true,
+    "SUSIE": true,
+    "JEAS": true
+   },
+   {
+    "JEAS": true,
+    "SUSIE": true,
+    "TRAN": false,
+    "LILX": true
+   },
+   {
+    "LOOSE": true,
+    "JEAS": true,
+    "YF": true,
+    "SUSIE": true
+   },
+   {
+    "YF": true,
+    "LOOSE": true,
+    "SUSIE": false,
+    "REBECCA": false,
+    "CHIEU": true
+   },
+   {
+    "YF": true,
+    "SUSIE": false,
+    "JEAS": true,
+    "LILX": true,
+    "CHIEU": true
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions"
+ },
  "players": [
   {
-   "uid": "XwCQKvntnqZNCmFEAHefHJos4q32",
-   "name": "CHIEU"
+   "name": "CHIEU",
+   "uid": "XwCQKvntnqZNCmFEAHefHJos4q32"
   },
   {
    "name": "REBECCA",
@@ -17,8 +97,8 @@
    "name": "TRAN"
   },
   {
-   "name": "JEAS",
-   "uid": "lAWneR4Ki1eEwZlELMXGLJG5tZS2"
+   "uid": "lAWneR4Ki1eEwZlELMXGLJG5tZS2",
+   "name": "JEAS"
   },
   {
    "name": "SUSIE",
@@ -33,19 +113,19 @@
    "uid": "AgBuEkGl32SkvzuQYpI1yKtUow12"
   }
  ],
- "timeFinished": {
-  "_seconds": 1588480181,
-  "_nanoseconds": 895000000
- },
  "missions": [
   {
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "team": [
+    "JEAS",
+    "SUSIE",
+    "TRAN"
+   ],
    "proposals": [
     {
-     "team": [
-      "JEAS",
-      "SUSIE",
-      "TRAN"
-     ],
      "state": "APPROVED",
      "proposer": "SUSIE",
      "votes": [
@@ -57,39 +137,26 @@
       "LOOSE",
       "REBECCA",
       "JEAS"
+     ],
+     "team": [
+      "JEAS",
+      "SUSIE",
+      "TRAN"
      ]
     }
-   ],
-   "team": [
-    "JEAS",
-    "SUSIE",
-    "TRAN"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 3,
-   "failsRequired": 1
+   ]
   },
   {
-   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "TRAN",
     "JEAS",
     "SUSIE",
     "LILX"
    ],
-   "numFails": 1,
-   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "TRAN",
-      "JEAS",
-      "SUSIE",
-      "LILX"
-     ],
      "proposer": "LILX",
-     "state": "APPROVED",
      "votes": [
       "SUSIE",
       "LILX",
@@ -99,16 +166,21 @@
       "JEAS",
       "TRAN",
       "CHIEU"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "TRAN",
+      "JEAS",
+      "SUSIE",
+      "LILX"
      ]
     }
    ],
+   "state": "FAIL",
+   "failsRequired": 1,
    "teamSize": 4
   },
   {
-   "numFails": 0,
-   "teamSize": 4,
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "LOOSE",
     "JEAS",
@@ -117,14 +189,13 @@
    ],
    "proposals": [
     {
-     "proposer": "LOOSE",
-     "state": "APPROVED",
      "team": [
       "LOOSE",
       "JEAS",
       "SUSIE",
       "YF"
      ],
+     "state": "APPROVED",
      "votes": [
       "SUSIE",
       "LILX",
@@ -133,21 +204,35 @@
       "REBECCA",
       "JEAS",
       "CHIEU"
-     ]
+     ],
+     "proposer": "LOOSE"
     }
-   ]
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 4
   },
   {
+   "state": "FAIL",
+   "team": [
+    "REBECCA",
+    "SUSIE",
+    "CHIEU",
+    "YF",
+    "LOOSE"
+   ],
+   "failsRequired": 2,
    "numFails": 2,
    "teamSize": 5,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "LILX",
       "CHIEU"
      ],
      "proposer": "CHIEU",
-     "state": "REJECTED",
      "team": [
       "LILX",
       "CHIEU",
@@ -157,14 +242,6 @@
      ]
     },
     {
-     "team": [
-      "REBECCA",
-      "SUSIE",
-      "CHIEU",
-      "YF",
-      "LOOSE"
-     ],
-     "proposer": "REBECCA",
      "votes": [
       "CHIEU",
       "SUSIE",
@@ -173,25 +250,32 @@
       "LOOSE",
       "REBECCA"
      ],
-     "state": "APPROVED"
+     "team": [
+      "REBECCA",
+      "SUSIE",
+      "CHIEU",
+      "YF",
+      "LOOSE"
+     ],
+     "state": "APPROVED",
+     "proposer": "REBECCA"
     }
-   ],
-   "failsRequired": 2,
-   "team": [
-    "REBECCA",
-    "SUSIE",
-    "CHIEU",
-    "YF",
-    "LOOSE"
-   ],
-   "state": "FAIL"
+   ]
   },
   {
+   "state": "FAIL",
    "teamSize": 5,
+   "team": [
+    "YF",
+    "JEAS",
+    "SUSIE",
+    "LILX",
+    "CHIEU"
+   ],
+   "numFails": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "YF",
      "votes": [
       "CHIEU",
       "SUSIE",
@@ -199,6 +283,7 @@
       "LOOSE",
       "REBECCA"
      ],
+     "proposer": "YF",
      "team": [
       "YF",
       "JEAS",
@@ -208,103 +293,18 @@
      ]
     }
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "team": [
-    "YF",
-    "JEAS",
-    "SUSIE",
-    "LILX",
-    "CHIEU"
-   ],
-   "numFails": 1
+   "failsRequired": 1
   }
  ],
  "options": {
   "inGameLog": false
  },
+ "timeFinished": {
+  "_seconds": 1588480181,
+  "_nanoseconds": 895000000
+ },
  "timeCreated": {
   "_seconds": 1588478531,
   "_nanoseconds": 525000000
- },
- "outcome": {
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "role": "MORGANA",
-    "name": "TRAN",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "CHIEU"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "SUSIE",
-    "assassin": true
-   },
-   {
-    "name": "LILX",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "YF"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "LOOSE",
-    "assassin": false
-   },
-   {
-    "name": "REBECCA",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JEAS",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   }
-  ],
-  "assassinated": null,
-  "votes": [
-   {
-    "JEAS": true,
-    "TRAN": true,
-    "SUSIE": true
-   },
-   {
-    "JEAS": true,
-    "TRAN": false,
-    "SUSIE": true,
-    "LILX": true
-   },
-   {
-    "SUSIE": true,
-    "YF": true,
-    "LOOSE": true,
-    "JEAS": true
-   },
-   {
-    "YF": true,
-    "CHIEU": true,
-    "SUSIE": false,
-    "REBECCA": false,
-    "LOOSE": true
-   },
-   {
-    "SUSIE": false,
-    "YF": true,
-    "LILX": true,
-    "JEAS": true,
-    "CHIEU": true
-   }
-  ],
-  "message": "Three failed missions"
  }
 }

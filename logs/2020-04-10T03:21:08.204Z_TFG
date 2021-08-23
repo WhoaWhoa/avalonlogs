@@ -1,7 +1,77 @@
 {
+ "outcome": {
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "name": "DAN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ANINDYA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "NIKOLAI"
+   },
+   {
+    "role": "OBERON",
+    "assassin": false,
+    "name": "JET"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "CRAIG"
+   },
+   {
+    "assassin": false,
+    "name": "KENNETH",
+    "role": "MORGANA"
+   },
+   {
+    "name": "OWEN",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "ALEX",
+    "assassin": false,
+    "role": "PERCIVAL"
+   }
+  ],
+  "votes": [
+   {
+    "OWEN": true,
+    "DAN": true,
+    "ALEX": true
+   },
+   {
+    "OWEN": true,
+    "CRAIG": true,
+    "DAN": true,
+    "ALEX": true
+   },
+   {
+    "ALEX": true,
+    "DAN": true,
+    "CRAIG": true,
+    "OWEN": true
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "JET"
+ },
  "timeFinished": {
   "_seconds": 1586490304,
   "_nanoseconds": 540495000
+ },
+ "timeCreated": {
+  "_seconds": 1586488868,
+  "_nanoseconds": 204000000
  },
  "players": [
   {
@@ -9,16 +79,16 @@
    "uid": "4sNqa4aD3MWk2zEPWcJKx4sKBXf1"
   },
   {
-   "name": "ALEX",
-   "uid": "QODvuT833JNtPCbTsGwjTMGP9Sp1"
+   "uid": "QODvuT833JNtPCbTsGwjTMGP9Sp1",
+   "name": "ALEX"
   },
   {
    "name": "DAN",
    "uid": "Ds3YQyl9z9Q2lRjNZFT21kj2s063"
   },
   {
-   "name": "OWEN",
-   "uid": "kdnDzJ8nJnRmhaqgbpylpgp1KHk1"
+   "uid": "kdnDzJ8nJnRmhaqgbpylpgp1KHk1",
+   "name": "OWEN"
   },
   {
    "uid": "JAPBZxxk0fMO1c5d7Dli45JF9D23",
@@ -29,59 +99,53 @@
    "uid": "Pami2ZJ0YHSMhHLII5RVzgcX2MI2"
   },
   {
-   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2",
-   "name": "ANINDYA"
+   "name": "ANINDYA",
+   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2"
   },
   {
-   "uid": "dkBAA5oRvaXAxG2kDgD1XiNWcOo1",
-   "name": "JET"
+   "name": "JET",
+   "uid": "dkBAA5oRvaXAxG2kDgD1XiNWcOo1"
   }
  ],
- "timeCreated": {
-  "_seconds": 1586488868,
-  "_nanoseconds": 204000000
- },
  "missions": [
   {
    "teamSize": 3,
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0,
    "team": [
     "OWEN",
     "DAN",
     "ALEX"
    ],
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "OWEN",
+     "state": "APPROVED",
+     "team": [
+      "OWEN",
+      "DAN",
+      "ALEX"
+     ],
      "votes": [
       "JET",
       "CRAIG",
       "OWEN",
       "ALEX",
       "DAN"
-     ],
-     "team": [
-      "OWEN",
-      "DAN",
-      "ALEX"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "team": [
-    "ALEX",
-    "CRAIG",
-    "OWEN",
-    "DAN"
-   ],
-   "numFails": 0,
-   "failsRequired": 1,
+   "teamSize": 4,
    "proposals": [
     {
+     "votes": [
+      "OWEN",
+      "DAN",
+      "JET"
+     ],
      "state": "REJECTED",
      "team": [
       "NIKOLAI",
@@ -89,12 +153,7 @@
       "ANINDYA",
       "JET"
      ],
-     "proposer": "NIKOLAI",
-     "votes": [
-      "OWEN",
-      "DAN",
-      "JET"
-     ]
+     "proposer": "NIKOLAI"
     },
     {
      "votes": [
@@ -106,37 +165,35 @@
       "ANINDYA",
       "NIKOLAI"
      ],
-     "proposer": "KENNETH",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "KENNETH"
     },
     {
-     "state": "REJECTED",
-     "proposer": "ANINDYA",
      "votes": [],
+     "state": "REJECTED",
      "team": [
       "ANINDYA",
       "OWEN",
       "JET",
       "ALEX"
-     ]
+     ],
+     "proposer": "ANINDYA"
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "NIKOLAI",
-      "JET"
-     ],
+     "proposer": "JET",
      "team": [
       "JET",
       "ANINDYA",
       "KENNETH",
       "NIKOLAI"
      ],
-     "proposer": "JET"
+     "state": "REJECTED",
+     "votes": [
+      "NIKOLAI",
+      "JET"
+     ]
     },
     {
-     "state": "APPROVED",
-     "proposer": "CRAIG",
      "votes": [
       "KENNETH",
       "OWEN",
@@ -147,6 +204,8 @@
       "JET",
       "CRAIG"
      ],
+     "state": "APPROVED",
+     "proposer": "CRAIG",
      "team": [
       "ALEX",
       "CRAIG",
@@ -155,34 +214,32 @@
      ]
     }
    ],
-   "teamSize": 4,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "ALEX",
+    "CRAIG",
+    "OWEN",
+    "DAN"
+   ],
+   "numFails": 0
   },
   {
-   "teamSize": 4,
-   "team": [
-    "OWEN",
-    "DAN",
-    "ALEX",
-    "CRAIG"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
    "failsRequired": 1,
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "ALEX",
      "votes": [
       "ALEX",
       "OWEN"
      ],
+     "state": "REJECTED",
      "team": [
       "CRAIG",
       "ALEX",
       "OWEN",
       "NIKOLAI"
-     ],
-     "proposer": "ALEX"
+     ]
     },
     {
      "team": [
@@ -201,87 +258,30 @@
       "ANINDYA"
      ]
     }
+   ],
+   "teamSize": 4,
+   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "OWEN",
+    "DAN",
+    "ALEX",
+    "CRAIG"
    ]
   },
   {
-   "team": [],
+   "proposals": [],
+   "failsRequired": 2,
    "state": "PENDING",
    "teamSize": 5,
-   "failsRequired": 2,
-   "proposals": []
+   "team": []
   },
   {
-   "team": [],
-   "teamSize": 5,
    "failsRequired": 1,
+   "team": [],
+   "proposals": [],
    "state": "PENDING",
-   "proposals": []
+   "teamSize": 5
   }
- ],
- "outcome": {
-  "assassinated": "JET",
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "DAN": true,
-    "OWEN": true,
-    "ALEX": true
-   },
-   {
-    "DAN": true,
-    "ALEX": true,
-    "OWEN": true,
-    "CRAIG": true
-   },
-   {
-    "OWEN": true,
-    "CRAIG": true,
-    "ALEX": true,
-    "DAN": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "name": "DAN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "ANINDYA",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "name": "NIKOLAI",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JET",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "CRAIG"
-   },
-   {
-    "name": "KENNETH",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "OWEN"
-   },
-   {
-    "assassin": false,
-    "name": "ALEX",
-    "role": "PERCIVAL"
-   }
-  ],
-  "message": "Three successful missions"
- }
+ ]
 }

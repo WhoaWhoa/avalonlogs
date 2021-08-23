@@ -1,47 +1,5 @@
 {
- "options": {
-  "inGameLog": false
- },
  "outcome": {
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "role": "OBERON",
-    "name": "ANDREW",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "ETHAN",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "name": "MARE",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "name": "BLITZ",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MORGANA",
-    "name": "MEGAN",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "GRANT",
-    "role": "MERLIN"
-   },
-   {
-    "name": "DREWWW",
-    "assassin": false,
-    "role": "PERCIVAL"
-   }
-  ],
-  "assassinated": null,
   "state": "EVIL_WIN",
   "votes": [
    {
@@ -54,23 +12,70 @@
     "MARE": true
    },
    {
-    "BLITZ": true,
     "GRANT": true,
+    "BLITZ": true,
     "MARE": false
    },
    {
     "MARE": true,
     "ANDREW": true,
-    "BLITZ": true,
-    "ETHAN": true
-   },
-   {
-    "MARE": false,
-    "ANDREW": false,
     "ETHAN": true,
     "BLITZ": true
+   },
+   {
+    "BLITZ": true,
+    "ETHAN": true,
+    "MARE": false,
+    "ANDREW": false
    }
-  ]
+  ],
+  "roles": [
+   {
+    "role": "OBERON",
+    "assassin": false,
+    "name": "ANDREW"
+   },
+   {
+    "name": "ETHAN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "MORDRED",
+    "name": "MARE"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "BLITZ"
+   },
+   {
+    "name": "MEGAN",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "GRANT"
+   },
+   {
+    "name": "DREWWW",
+    "role": "PERCIVAL",
+    "assassin": false
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null
+ },
+ "timeFinished": {
+  "_seconds": 1598664917,
+  "_nanoseconds": 697000000
+ },
+ "timeCreated": {
+  "_seconds": 1598662844,
+  "_nanoseconds": 477000000
  },
  "players": [
   {
@@ -82,12 +87,12 @@
    "uid": "6wBUhhlZQjPFbF1JYSuM4Inmiur1"
   },
   {
-   "name": "DREWWW",
-   "uid": "k7ARXyYR8oPMJoTXFWPOGB50ZBu2"
+   "uid": "k7ARXyYR8oPMJoTXFWPOGB50ZBu2",
+   "name": "DREWWW"
   },
   {
-   "uid": "pIjSItKivKMn77h7ZckVCClmZIx2",
-   "name": "BLITZ"
+   "name": "BLITZ",
+   "uid": "pIjSItKivKMn77h7ZckVCClmZIx2"
   },
   {
    "uid": "11rZd85dM6O53ourLEgexCK37Tn2",
@@ -102,35 +107,25 @@
    "uid": "k5C6Gy8312dCPjYz5LXbMtwemj13"
   }
  ],
- "timeFinished": {
-  "_seconds": 1598664917,
-  "_nanoseconds": 697000000
- },
  "missions": [
   {
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 2,
-   "state": "FAIL",
-   "team": [
-    "BLITZ",
-    "MEGAN"
-   ],
    "proposals": [
     {
-     "votes": [
-      "ANDREW",
-      "BLITZ",
-      "MEGAN"
-     ],
      "proposer": "DREWWW",
      "team": [
       "DREWWW",
       "ANDREW"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "ANDREW",
+      "BLITZ",
+      "MEGAN"
+     ]
     },
     {
+     "state": "APPROVED",
+     "proposer": "BLITZ",
      "votes": [
       "GRANT",
       "ETHAN",
@@ -139,62 +134,59 @@
       "MEGAN",
       "BLITZ"
      ],
-     "state": "APPROVED",
-     "proposer": "BLITZ",
      "team": [
       "BLITZ",
       "MEGAN"
      ]
     }
-   ]
+   ],
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 2,
+   "team": [
+    "BLITZ",
+    "MEGAN"
+   ],
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
-     "votes": [],
      "team": [
       "GRANT",
       "ANDREW",
       "MEGAN"
      ],
      "proposer": "MEGAN",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": []
     },
     {
+     "votes": [
+      "BLITZ"
+     ],
      "proposer": "MARE",
+     "state": "REJECTED",
      "team": [
       "MARE",
       "ANDREW",
       "GRANT"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "BLITZ"
      ]
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "ETHAN"
-     ],
+     "proposer": "ETHAN",
      "team": [
       "BLITZ",
       "ETHAN",
       "MARE"
      ],
-     "proposer": "ETHAN"
+     "state": "REJECTED",
+     "votes": [
+      "ETHAN"
+     ]
     },
     {
-     "proposer": "GRANT",
      "state": "APPROVED",
-     "team": [
-      "GRANT",
-      "MARE",
-      "BLITZ"
-     ],
      "votes": [
       "ANDREW",
       "DREWWW",
@@ -202,34 +194,36 @@
       "BLITZ",
       "MARE",
       "ETHAN"
+     ],
+     "proposer": "GRANT",
+     "team": [
+      "GRANT",
+      "MARE",
+      "BLITZ"
      ]
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "GRANT",
     "MARE",
     "BLITZ"
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "GRANT",
-    "BLITZ",
-    "MARE"
-   ],
-   "state": "FAIL",
-   "numFails": 1,
    "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "GRANT",
       "BLITZ",
       "MARE"
      ],
+     "proposer": "ANDREW",
      "votes": [
       "BLITZ",
       "GRANT",
@@ -237,17 +231,21 @@
       "ANDREW",
       "ETHAN"
      ],
-     "proposer": "ANDREW"
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "team": [
+    "GRANT",
+    "BLITZ",
+    "MARE"
+   ],
+   "state": "FAIL",
+   "numFails": 1
   },
   {
-   "state": "SUCCESS",
-   "failsRequired": 2,
+   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "DREWWW",
-     "state": "REJECTED",
      "votes": [
       "BLITZ",
       "DREWWW"
@@ -257,7 +255,9 @@
       "DREWWW",
       "ANDREW",
       "GRANT"
-     ]
+     ],
+     "proposer": "DREWWW",
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -266,7 +266,6 @@
       "ETHAN",
       "BLITZ"
      ],
-     "state": "APPROVED",
      "proposer": "BLITZ",
      "votes": [
       "MARE",
@@ -274,21 +273,27 @@
       "ETHAN",
       "BLITZ",
       "MEGAN"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 2,
    "team": [
     "ANDREW",
     "MARE",
     "ETHAN",
     "BLITZ"
    ],
-   "numFails": 0,
-   "teamSize": 4
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 2,
    "proposals": [
     {
+     "proposer": "MEGAN",
      "state": "APPROVED",
      "votes": [
       "MARE",
@@ -302,8 +307,7 @@
       "MARE",
       "ETHAN",
       "BLITZ"
-     ],
-     "proposer": "MEGAN"
+     ]
     }
    ],
    "team": [
@@ -312,14 +316,10 @@
     "ETHAN",
     "BLITZ"
    ],
-   "teamSize": 4,
-   "numFails": 2,
-   "state": "FAIL",
-   "failsRequired": 1
+   "teamSize": 4
   }
  ],
- "timeCreated": {
-  "_seconds": 1598662844,
-  "_nanoseconds": 477000000
+ "options": {
+  "inGameLog": false
  }
 }

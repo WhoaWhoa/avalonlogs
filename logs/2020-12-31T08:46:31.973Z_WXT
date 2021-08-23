@@ -1,7 +1,4 @@
 {
- "options": {
-  "inGameLog": false
- },
  "timeFinished": {
   "_seconds": 1609406394,
   "_nanoseconds": 317000000
@@ -9,48 +6,49 @@
  "outcome": {
   "votes": [
    {
+    "MATZO": true,
+    "SYD": true,
+    "DRAKE": true
+   },
+   {
     "DRAKE": true,
     "SYD": true,
+    "MATZO": false,
+    "BRONK": true
+   },
+   {
+    "SYD": true,
+    "DRAKE": true,
+    "BRIT": false,
     "MATZO": true
    },
    {
-    "MATZO": false,
-    "BRONK": true,
-    "SYD": true,
-    "DRAKE": true
-   },
-   {
-    "MATZO": true,
     "DRAKE": true,
-    "SYD": true,
-    "BRIT": false
-   },
-   {
-    "TOM": true,
-    "DRAKE": true,
-    "JAY": true,
-    "SYD": true,
-    "KATE": true
-   },
-   {
-    "SYD": true,
-    "JAY": true,
-    "TOM": true,
     "KATE": true,
-    "DRAKE": true
+    "SYD": true,
+    "TOM": true,
+    "JAY": true
+   },
+   {
+    "DRAKE": true,
+    "KATE": true,
+    "JAY": true,
+    "SYD": true,
+    "TOM": true
    }
   ],
   "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
   "roles": [
    {
+    "assassin": false,
     "name": "DRAKE",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "name": "TOM",
-    "role": "LOYAL FOLLOWER"
+    "name": "TOM"
    },
    {
     "assassin": false,
@@ -58,45 +56,51 @@
     "role": "PERCIVAL"
    },
    {
-    "assassin": false,
+    "role": "MERLIN",
     "name": "JAY",
-    "role": "MERLIN"
+    "assassin": false
    },
    {
-    "assassin": false,
+    "name": "KATE",
     "role": "LOYAL FOLLOWER",
-    "name": "KATE"
+    "assassin": false
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "BRONK"
    },
    {
-    "role": "MORGANA",
     "name": "MATZO",
-    "assassin": false
+    "assassin": false,
+    "role": "MORGANA"
    },
    {
-    "assassin": true,
     "name": "RY",
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "assassin": true
    },
    {
-    "name": "BRIT",
+    "assassin": false,
     "role": "OBERON",
-    "assassin": false
+    "name": "BRIT"
    }
   ],
-  "assassinated": "JAY",
-  "state": "EVIL_WIN"
+  "assassinated": "JAY"
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "SYD",
      "state": "APPROVED",
+     "team": [
+      "SYD",
+      "DRAKE",
+      "MATZO"
+     ],
+     "proposer": "SYD",
      "votes": [
       "JAY",
       "MATZO",
@@ -107,37 +111,27 @@
       "KATE",
       "RY",
       "TOM"
-     ],
-     "team": [
-      "SYD",
-      "DRAKE",
-      "MATZO"
      ]
     }
    ],
-   "teamSize": 3,
-   "numFails": 0,
    "team": [
     "SYD",
     "DRAKE",
     "MATZO"
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1
+   "numFails": 0,
+   "teamSize": 3
   },
   {
    "teamSize": 4,
-   "failsRequired": 1,
-   "numFails": 1,
+   "team": [
+    "SYD",
+    "BRONK",
+    "MATZO",
+    "DRAKE"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "SYD",
-      "BRONK",
-      "MATZO",
-      "DRAKE"
-     ],
      "votes": [
       "KATE",
       "SYD",
@@ -148,20 +142,39 @@
       "BRIT",
       "BRONK"
      ],
-     "proposer": "BRONK"
+     "proposer": "BRONK",
+     "state": "APPROVED",
+     "team": [
+      "SYD",
+      "BRONK",
+      "MATZO",
+      "DRAKE"
+     ]
     }
    ],
-   "team": [
-    "SYD",
-    "BRONK",
-    "MATZO",
-    "DRAKE"
-   ],
+   "numFails": 1,
+   "failsRequired": 1,
    "state": "FAIL"
   },
   {
+   "team": [
+    "SYD",
+    "MATZO",
+    "DRAKE",
+    "BRIT"
+   ],
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 4,
    "proposals": [
     {
+     "team": [
+      "SYD",
+      "MATZO",
+      "DRAKE",
+      "BRIT"
+     ],
      "state": "APPROVED",
      "proposer": "BRIT",
      "votes": [
@@ -173,29 +186,29 @@
       "BRIT",
       "KATE",
       "RY"
-     ],
-     "team": [
-      "SYD",
-      "MATZO",
-      "DRAKE",
-      "BRIT"
      ]
     }
-   ],
-   "team": [
-    "SYD",
-    "MATZO",
-    "DRAKE",
-    "BRIT"
-   ],
-   "numFails": 1,
-   "failsRequired": 1,
-   "state": "FAIL",
-   "teamSize": 4
+   ]
   },
   {
+   "state": "SUCCESS",
+   "failsRequired": 2,
+   "team": [
+    "DRAKE",
+    "SYD",
+    "JAY",
+    "TOM",
+    "KATE"
+   ],
+   "numFails": 0,
+   "teamSize": 5,
    "proposals": [
     {
+     "votes": [
+      "MATZO",
+      "RY"
+     ],
+     "proposer": "JAY",
      "state": "REJECTED",
      "team": [
       "BRONK",
@@ -203,11 +216,6 @@
       "RY",
       "JAY",
       "SYD"
-     ],
-     "proposer": "JAY",
-     "votes": [
-      "MATZO",
-      "RY"
      ]
     },
     {
@@ -216,6 +224,7 @@
       "DRAKE",
       "MATZO"
      ],
+     "proposer": "MATZO",
      "team": [
       "MATZO",
       "RY",
@@ -223,28 +232,27 @@
       "JAY",
       "KATE"
      ],
-     "state": "REJECTED",
-     "proposer": "MATZO"
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "DRAKE",
+      "BRIT",
+      "RY",
+      "TOM"
+     ],
+     "state": "REJECTED",
+     "proposer": "TOM",
      "team": [
       "BRONK",
       "BRIT",
       "TOM",
       "RY",
       "DRAKE"
-     ],
-     "proposer": "TOM",
-     "state": "REJECTED",
-     "votes": [
-      "DRAKE",
-      "BRIT",
-      "RY",
-      "TOM"
      ]
     },
     {
-     "proposer": "KATE",
+     "state": "APPROVED",
      "votes": [
       "JAY",
       "BRIT",
@@ -262,22 +270,22 @@
       "TOM",
       "KATE"
      ],
-     "state": "APPROVED"
+     "proposer": "KATE"
     }
-   ],
-   "teamSize": 5,
-   "team": [
-    "DRAKE",
-    "SYD",
-    "JAY",
-    "TOM",
-    "KATE"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "numFails": 0
+   ]
   },
   {
+   "teamSize": 5,
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "SYD",
+    "KATE",
+    "JAY",
+    "TOM",
+    "DRAKE"
+   ],
    "proposals": [
     {
      "team": [
@@ -287,7 +295,6 @@
       "TOM",
       "DRAKE"
      ],
-     "proposer": "RY",
      "votes": [
       "KATE",
       "TOM",
@@ -297,22 +304,15 @@
       "BRIT",
       "BRONK"
      ],
+     "proposer": "RY",
      "state": "APPROVED"
     }
-   ],
-   "team": [
-    "SYD",
-    "KATE",
-    "JAY",
-    "TOM",
-    "DRAKE"
-   ],
-   "teamSize": 5,
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0
+   ]
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
    "name": "DRAKE",
@@ -323,32 +323,32 @@
    "uid": "CbHppuFLaHSPTWtSB3WBoo2YZjV2"
   },
   {
-   "name": "BRONK",
-   "uid": "PALRFbv8pHW4p9sBz2FvIT3RLo92"
+   "uid": "PALRFbv8pHW4p9sBz2FvIT3RLo92",
+   "name": "BRONK"
   },
   {
    "name": "BRIT",
    "uid": "RjIzKWh3vDMtM04MmCUdeUC62hc2"
   },
   {
-   "uid": "gwix1oO6aIT8R7vtBfwGdZEPFKG2",
-   "name": "JAY"
+   "name": "JAY",
+   "uid": "gwix1oO6aIT8R7vtBfwGdZEPFKG2"
   },
   {
    "name": "MATZO",
    "uid": "7BPeMVD4PgPhpJoSlUzHNBMgylY2"
   },
   {
-   "name": "TOM",
-   "uid": "lCUYZ0hw6WUZCyaHdQcAeF4ke7V2"
+   "uid": "lCUYZ0hw6WUZCyaHdQcAeF4ke7V2",
+   "name": "TOM"
   },
   {
    "uid": "Tdl0wu6B0qNBl0NehhlOGEje2kO2",
    "name": "KATE"
   },
   {
-   "name": "RY",
-   "uid": "arw9ycBD0uWbJqxlzZla4YMA56C2"
+   "uid": "arw9ycBD0uWbJqxlzZla4YMA56C2",
+   "name": "RY"
   }
  ],
  "timeCreated": {

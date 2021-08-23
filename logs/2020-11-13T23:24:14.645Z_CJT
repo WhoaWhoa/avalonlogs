@@ -1,74 +1,12 @@
 {
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "assassinated": "EMMA",
-  "message": "Merlin assassinated",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "CRUNCHY"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ERIK"
-   },
-   {
-    "role": "MERLIN",
-    "name": "EMMA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "ROSE"
-   },
-   {
-    "assassin": true,
-    "name": "ROSELYN",
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ANNEKE"
-   }
-  ],
-  "votes": [
-   {
-    "ERIK": true,
-    "ANNEKE": true
-   },
-   {
-    "EMMA": true,
-    "ANNEKE": true,
-    "ROSE": true
-   },
-   {
-    "ANNEKE": true,
-    "EMMA": true,
-    "ROSELYN": false,
-    "ROSE": true
-   },
-   {
-    "ANNEKE": true,
-    "ROSE": true,
-    "EMMA": true
-   }
-  ],
-  "state": "EVIL_WIN"
- },
  "players": [
   {
    "uid": "lVnnZIgliyXwRhLK0j5Fckupzt13",
    "name": "ANNEKE"
   },
   {
-   "uid": "8GEIhDOTUFSRfX0miNofFoy08Gm2",
-   "name": "ROSE"
+   "name": "ROSE",
+   "uid": "8GEIhDOTUFSRfX0miNofFoy08Gm2"
   },
   {
    "uid": "Bez5oQqxEefMUbX0gomqEtsNPKh2",
@@ -79,24 +17,78 @@
    "uid": "SJRRLK7HL2SFlTANUZg3jvNfd8w1"
   },
   {
-   "name": "CRUNCHY",
-   "uid": "XNGpiL047LMdWBVFVAJBDyD7A883"
+   "uid": "XNGpiL047LMdWBVFVAJBDyD7A883",
+   "name": "CRUNCHY"
   },
   {
    "name": "ROSELYN",
    "uid": "971yV0PJiJg7AsyU2VMxLYoSpNM2"
   }
  ],
+ "outcome": {
+  "assassinated": "EMMA",
+  "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "ANNEKE": true,
+    "ERIK": true
+   },
+   {
+    "EMMA": true,
+    "ROSE": true,
+    "ANNEKE": true
+   },
+   {
+    "EMMA": true,
+    "ROSE": true,
+    "ANNEKE": true,
+    "ROSELYN": false
+   },
+   {
+    "ANNEKE": true,
+    "ROSE": true,
+    "EMMA": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "CRUNCHY",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "ERIK"
+   },
+   {
+    "assassin": false,
+    "name": "EMMA",
+    "role": "MERLIN"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "ROSE"
+   },
+   {
+    "assassin": true,
+    "name": "ROSELYN",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "ANNEKE",
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
+ },
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
-   "team": [
-    "ERIK",
-    "ANNEKE"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -109,18 +101,27 @@
       "ERIK",
       "ANNEKE"
      ],
-     "proposer": "ERIK",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "ERIK"
     }
-   ]
+   ],
+   "state": "SUCCESS",
+   "teamSize": 2,
+   "team": [
+    "ERIK",
+    "ANNEKE"
+   ],
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
    "failsRequired": 1,
-   "state": "SUCCESS",
-   "teamSize": 3,
    "numFails": 0,
+   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "EMMA",
      "votes": [
       "ROSE",
       "EMMA",
@@ -132,8 +133,7 @@
       "ROSE",
       "ANNEKE"
      ],
-     "state": "APPROVED",
-     "proposer": "EMMA"
+     "state": "APPROVED"
     }
    ],
    "team": [
@@ -143,51 +143,60 @@
    ]
   },
   {
-   "team": [
-    "ROSELYN",
-    "EMMA",
-    "ROSE",
-    "ANNEKE"
-   ],
-   "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "CRUNCHY",
      "votes": [
       "ROSE",
       "CRUNCHY",
       "ROSELYN",
       "ERIK"
      ],
-     "state": "APPROVED",
      "team": [
       "ROSELYN",
       "EMMA",
       "ROSE",
       "ANNEKE"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "CRUNCHY"
     }
    ],
-   "teamSize": 4,
+   "failsRequired": 1,
    "state": "FAIL",
-   "failsRequired": 1
+   "numFails": 1,
+   "team": [
+    "ROSELYN",
+    "EMMA",
+    "ROSE",
+    "ANNEKE"
+   ]
   },
   {
    "numFails": 0,
+   "team": [
+    "ROSE",
+    "EMMA",
+    "ANNEKE"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "ROSELYN"
+     ],
      "team": [
       "ROSELYN",
       "ROSE",
       "ANNEKE"
      ],
      "proposer": "ROSELYN",
-     "votes": [
-      "ROSELYN"
-     ]
+     "state": "REJECTED"
     },
     {
+     "proposer": "ANNEKE",
      "team": [
       "ROSE",
       "EMMA",
@@ -198,40 +207,31 @@
       "ANNEKE",
       "ERIK",
       "CRUNCHY"
-     ],
-     "proposer": "ANNEKE"
+     ]
     },
     {
-     "proposer": "ROSE",
-     "team": [
-      "ROSE",
-      "EMMA",
-      "ANNEKE"
-     ],
      "state": "APPROVED",
+     "proposer": "ROSE",
      "votes": [
       "ERIK",
       "ROSE",
       "EMMA",
       "ANNEKE"
+     ],
+     "team": [
+      "ROSE",
+      "EMMA",
+      "ANNEKE"
      ]
     }
-   ],
-   "teamSize": 3,
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "ROSE",
-    "EMMA",
-    "ANNEKE"
    ]
   },
   {
    "state": "PENDING",
    "proposals": [],
+   "team": [],
    "failsRequired": 1,
-   "teamSize": 4,
-   "team": []
+   "teamSize": 4
   }
  ],
  "timeCreated": {

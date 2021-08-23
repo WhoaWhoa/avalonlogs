@@ -1,76 +1,75 @@
 {
  "outcome": {
-  "roles": [
-   {
-    "name": "SOPHIA",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "SARAH",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "JULIA",
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "MERLIN",
-    "name": "EMMA",
-    "assassin": false
-   },
-   {
-    "name": "MOLLY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "SABRINA",
-    "assassin": true,
-    "role": "MORDRED"
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "JULIA",
   "votes": [
    {
     "EMMA": true,
     "SOPHIA": true
    },
    {
-    "JULIA": true,
     "MOLLY": true,
+    "JULIA": true,
     "SOPHIA": true
    },
    {
-    "SOPHIA": false,
     "SABRINA": true,
     "JULIA": true,
-    "MOLLY": true
+    "MOLLY": true,
+    "SOPHIA": false
    },
    {
-    "SARAH": true,
+    "EMMA": true,
     "JULIA": true,
-    "EMMA": true
+    "SARAH": true
+   }
+  ],
+  "assassinated": "JULIA",
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "role": "MORGANA",
+    "name": "SOPHIA",
+    "assassin": false
+   },
+   {
+    "name": "SARAH",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JULIA",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "name": "EMMA",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "name": "MOLLY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MORDRED",
+    "name": "SABRINA",
+    "assassin": true
    }
   ]
  },
- "timeCreated": {
-  "_seconds": 1613958830,
-  "_nanoseconds": 847000000
- },
  "missions": [
   {
+   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "SOPHIA",
       "EMMA"
      ],
-     "state": "APPROVED",
+     "proposer": "JULIA",
      "votes": [
       "MOLLY",
       "JULIA",
@@ -78,8 +77,7 @@
       "SARAH",
       "EMMA",
       "SOPHIA"
-     ],
-     "proposer": "JULIA"
+     ]
     }
    ],
    "failsRequired": 1,
@@ -87,11 +85,10 @@
    "team": [
     "SOPHIA",
     "EMMA"
-   ],
-   "teamSize": 2,
-   "state": "SUCCESS"
+   ]
   },
   {
+   "teamSize": 3,
    "state": "SUCCESS",
    "failsRequired": 1,
    "numFails": 0,
@@ -117,95 +114,98 @@
     "JULIA",
     "SOPHIA",
     "MOLLY"
-   ],
-   "teamSize": 3
+   ]
   },
   {
-   "proposals": [
-    {
-     "votes": [
-      "SABRINA",
-      "SOPHIA",
-      "MOLLY",
-      "JULIA"
-     ],
-     "proposer": "MOLLY",
-     "team": [
-      "MOLLY",
-      "SOPHIA",
-      "JULIA",
-      "SABRINA"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "MOLLY",
     "SOPHIA",
     "JULIA",
     "SABRINA"
    ],
+   "failsRequired": 1,
    "numFails": 1,
-   "state": "FAIL",
-   "teamSize": 4
+   "teamSize": 4,
+   "proposals": [
+    {
+     "team": [
+      "MOLLY",
+      "SOPHIA",
+      "JULIA",
+      "SABRINA"
+     ],
+     "proposer": "MOLLY",
+     "votes": [
+      "SABRINA",
+      "SOPHIA",
+      "MOLLY",
+      "JULIA"
+     ],
+     "state": "APPROVED"
+    }
+   ]
   },
   {
+   "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "SARAH",
     "EMMA",
     "JULIA"
    ],
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "JULIA",
-      "SARAH",
-      "EMMA"
-     ],
-     "proposer": "EMMA",
+     "state": "REJECTED",
      "votes": [
       "JULIA",
       "SARAH",
       "EMMA"
      ],
-     "state": "REJECTED"
+     "proposer": "EMMA",
+     "team": [
+      "JULIA",
+      "SARAH",
+      "EMMA"
+     ]
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "SARAH",
-      "EMMA",
-      "JULIA"
-     ],
      "votes": [
       "EMMA",
       "SABRINA",
       "JULIA",
       "SARAH"
      ],
+     "state": "APPROVED",
+     "team": [
+      "SARAH",
+      "EMMA",
+      "JULIA"
+     ],
      "proposer": "SARAH"
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
-   "team": [],
-   "state": "PENDING",
    "teamSize": 4,
+   "team": [],
    "failsRequired": 1,
+   "state": "PENDING",
    "proposals": []
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "timeFinished": {
   "_seconds": 1613959137,
   "_nanoseconds": 532000000
+ },
+ "timeCreated": {
+  "_seconds": 1613958830,
+  "_nanoseconds": 847000000
+ },
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
@@ -221,16 +221,16 @@
    "uid": "8DnljCkwd3PzcIh3EjT4OwnBrbm2"
   },
   {
-   "uid": "ax4o12nKdOgGn9HyUPXVSgx4KzJ2",
-   "name": "SABRINA"
+   "name": "SABRINA",
+   "uid": "ax4o12nKdOgGn9HyUPXVSgx4KzJ2"
   },
   {
    "uid": "DWwdVxeaZHMCCnvNwTJGwog6t4a2",
    "name": "MOLLY"
   },
   {
-   "name": "EMMA",
-   "uid": "EeuuM7uuJSZmkLGVaNqXlHY6vTl2"
+   "uid": "EeuuM7uuJSZmkLGVaNqXlHY6vTl2",
+   "name": "EMMA"
   }
  ]
 }

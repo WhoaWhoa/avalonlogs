@@ -4,81 +4,81 @@
   "_nanoseconds": 360000000
  },
  "outcome": {
-  "assassinated": null,
-  "state": "EVIL_WIN",
   "roles": [
    {
-    "assassin": false,
     "role": "PERCIVAL",
+    "assassin": false,
     "name": "JAKE"
    },
    {
     "name": "CODERSON",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
     "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
     "name": "IGOUSPOPUT",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
    },
    {
     "assassin": false,
-    "name": "JOM",
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "name": "JOM"
    },
    {
+    "assassin": true,
     "role": "EVIL MINION",
-    "name": "BRAEDEN",
-    "assassin": true
+    "name": "BRAEDEN"
    },
    {
-    "role": "EVIL MINION",
     "name": "LOGAN",
-    "assassin": false
+    "assassin": false,
+    "role": "EVIL MINION"
    }
   ],
   "votes": [
    {
-    "JOM": true,
-    "BRAEDEN": true
+    "BRAEDEN": true,
+    "JOM": true
    },
    {
-    "JAKE": true,
-    "JOM": true,
-    "BRAEDEN": false
-   },
-   {
-    "JOM": true,
-    "CODERSON": true,
     "BRAEDEN": false,
-    "LOGAN": false
+    "JAKE": true,
+    "JOM": true
    },
    {
-    "IGOUSPOPUT": true,
+    "BRAEDEN": false,
+    "LOGAN": false,
+    "JOM": true,
+    "CODERSON": true
+   },
+   {
     "CODERSON": true,
-    "JAKE": true
+    "JAKE": true,
+    "IGOUSPOPUT": true
    },
    {
     "JOM": true,
-    "LOGAN": false,
     "IGOUSPOPUT": true,
-    "CODERSON": true
+    "CODERSON": true,
+    "LOGAN": false
    }
   ],
-  "message": "Three failed missions"
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "assassinated": null
  },
  "missions": [
   {
    "teamSize": 2,
-   "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "BRAEDEN",
     "JOM"
    ],
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "BRAEDEN",
      "team": [
       "BRAEDEN",
       "JOM"
@@ -91,29 +91,28 @@
       "CODERSON",
       "IGOUSPOPUT",
       "JOM"
-     ]
+     ],
+     "proposer": "BRAEDEN"
     }
    ],
-   "numFails": 0,
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
-   "numFails": 1,
-   "teamSize": 3,
-   "failsRequired": 1,
    "team": [
     "BRAEDEN",
     "JAKE",
     "JOM"
    ],
-   "state": "FAIL",
+   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "BRAEDEN",
       "JAKE",
       "JOM"
      ],
+     "proposer": "JAKE",
      "votes": [
       "JAKE",
       "CODERSON",
@@ -121,85 +120,88 @@
       "JOM",
       "BRAEDEN",
       "LOGAN"
-     ],
-     "state": "APPROVED",
-     "proposer": "JAKE"
-    }
-   ]
-  },
-  {
-   "teamSize": 4,
-   "numFails": 2,
-   "proposals": [
-    {
-     "team": [
-      "BRAEDEN",
-      "LOGAN",
-      "CODERSON",
-      "JOM"
-     ],
-     "state": "APPROVED",
-     "proposer": "LOGAN",
-     "votes": [
-      "JOM",
-      "BRAEDEN",
-      "LOGAN",
-      "JAKE",
-      "CODERSON"
      ]
     }
    ],
-   "failsRequired": 1,
    "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1
+  },
+  {
+   "failsRequired": 1,
    "team": [
     "BRAEDEN",
     "LOGAN",
     "CODERSON",
     "JOM"
+   ],
+   "numFails": 2,
+   "state": "FAIL",
+   "teamSize": 4,
+   "proposals": [
+    {
+     "proposer": "LOGAN",
+     "team": [
+      "BRAEDEN",
+      "LOGAN",
+      "CODERSON",
+      "JOM"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "JOM",
+      "BRAEDEN",
+      "LOGAN",
+      "JAKE",
+      "CODERSON"
+     ]
+    }
    ]
   },
   {
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "team": [
+    "IGOUSPOPUT",
+    "CODERSON",
+    "JAKE"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "JOM",
+      "CODERSON"
+     ],
      "proposer": "CODERSON",
+     "state": "REJECTED",
      "team": [
       "JOM",
       "CODERSON",
       "IGOUSPOPUT"
-     ],
-     "votes": [
-      "JOM",
-      "CODERSON"
      ]
     },
     {
      "proposer": "IGOUSPOPUT",
+     "team": [
+      "IGOUSPOPUT",
+      "CODERSON",
+      "JAKE"
+     ],
      "state": "APPROVED",
      "votes": [
       "JAKE",
       "CODERSON",
       "IGOUSPOPUT",
       "JOM"
-     ],
-     "team": [
-      "IGOUSPOPUT",
-      "CODERSON",
-      "JAKE"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
-   "team": [
-    "IGOUSPOPUT",
-    "CODERSON",
-    "JAKE"
-   ],
-   "teamSize": 3
+   "numFails": 0
   },
   {
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "JOM",
     "LOGAN",
@@ -208,50 +210,53 @@
    ],
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "JOM",
-     "votes": [
-      "CODERSON",
-      "JOM"
-     ],
      "team": [
       "JOM",
       "JAKE",
       "CODERSON",
       "IGOUSPOPUT"
-     ]
+     ],
+     "votes": [
+      "CODERSON",
+      "JOM"
+     ],
+     "state": "REJECTED",
+     "proposer": "JOM"
     },
     {
+     "votes": [
+      "BRAEDEN",
+      "LOGAN"
+     ],
      "team": [
       "BRAEDEN",
       "CODERSON",
       "IGOUSPOPUT",
       "JOM"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "BRAEDEN",
-      "LOGAN"
-     ],
-     "proposer": "BRAEDEN"
+     "proposer": "BRAEDEN",
+     "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
+     "proposer": "JAKE",
      "votes": [
       "BRAEDEN",
       "LOGAN",
       "JAKE"
      ],
-     "state": "REJECTED",
      "team": [
       "BRAEDEN",
       "JAKE",
       "CODERSON",
       "IGOUSPOPUT"
-     ],
-     "proposer": "JAKE"
+     ]
     },
     {
-     "state": "REJECTED",
+     "votes": [
+      "BRAEDEN",
+      "LOGAN"
+     ],
      "proposer": "LOGAN",
      "team": [
       "BRAEDEN",
@@ -259,37 +264,35 @@
       "JAKE",
       "JOM"
      ],
-     "votes": [
-      "BRAEDEN",
-      "LOGAN"
-     ]
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "JOM",
-      "LOGAN",
-      "JAKE",
-      "CODERSON"
-     ],
-     "proposer": "CODERSON",
      "team": [
       "JOM",
       "LOGAN",
       "CODERSON",
       "IGOUSPOPUT"
      ],
-     "state": "APPROVED"
+     "proposer": "CODERSON",
+     "state": "APPROVED",
+     "votes": [
+      "JOM",
+      "LOGAN",
+      "JAKE",
+      "CODERSON"
+     ]
     }
    ],
-   "numFails": 1,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 4
+   "teamSize": 4,
+   "numFails": 1
   }
  ],
  "timeFinished": {
   "_seconds": 1589416622,
   "_nanoseconds": 443000000
+ },
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
@@ -297,8 +300,8 @@
    "uid": "a7C0b3TCune6iUz6LKpYLuDvg2m1"
   },
   {
-   "uid": "zzuSNymLpgN8LLZ4aDrlaciNEc42",
-   "name": "JAKE"
+   "name": "JAKE",
+   "uid": "zzuSNymLpgN8LLZ4aDrlaciNEc42"
   },
   {
    "uid": "n9jiqZWVvVPPAMcGulVXLMeN8ak1",
@@ -313,11 +316,8 @@
    "name": "IGOUSPOPUT"
   },
   {
-   "name": "JOM",
-   "uid": "Vg5ixhW2IJPFiSmC76fQ7QkEaih1"
+   "uid": "Vg5ixhW2IJPFiSmC76fQ7QkEaih1",
+   "name": "JOM"
   }
- ],
- "options": {
-  "inGameLog": false
- }
+ ]
 }

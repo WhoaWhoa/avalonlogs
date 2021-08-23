@@ -1,30 +1,93 @@
 {
+ "timeCreated": {
+  "_seconds": 1602314257,
+  "_nanoseconds": 573000000
+ },
+ "outcome": {
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "PATRICK": true,
+    "WANGSTA": true
+   },
+   {
+    "EMILY": true,
+    "WANGSTA": true,
+    "PATRICK": true
+   },
+   {
+    "ALBERT": true,
+    "WANGSTA": false,
+    "CHRIS": true,
+    "MEGAN": true
+   },
+   {
+    "EMILY": true,
+    "MEGAN": true,
+    "ALBERT": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": "CHRIS",
+  "roles": [
+   {
+    "name": "ALBERT",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "EMILY",
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "PATRICK"
+   },
+   {
+    "name": "MEGAN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MERLIN",
+    "name": "CHRIS",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "name": "WANGSTA",
+    "assassin": true
+   }
+  ]
+ },
  "missions": [
   {
-   "failsRequired": 1,
-   "numFails": 0,
    "state": "SUCCESS",
-   "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "WANGSTA",
-     "team": [
-      "WANGSTA",
-      "PATRICK"
-     ],
      "votes": [
       "CHRIS",
       "WANGSTA",
       "PATRICK",
       "EMILY"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "WANGSTA",
+      "PATRICK"
+     ],
+     "proposer": "WANGSTA"
     }
    ],
    "team": [
     "WANGSTA",
     "PATRICK"
-   ]
+   ],
+   "teamSize": 2,
+   "failsRequired": 1
   },
   {
    "failsRequired": 1,
@@ -35,7 +98,6 @@
     "WANGSTA"
    ],
    "teamSize": 3,
-   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
@@ -52,16 +114,19 @@
      ],
      "proposer": "EMILY"
     }
-   ]
+   ],
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "MEGAN",
     "CHRIS",
     "ALBERT",
     "WANGSTA"
    ],
+   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
      "team": [
@@ -70,15 +135,20 @@
       "WANGSTA",
       "CHRIS"
      ],
-     "state": "REJECTED",
      "proposer": "PATRICK",
      "votes": [
       "EMILY",
       "PATRICK"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
+     "team": [
+      "MEGAN",
+      "CHRIS",
+      "ALBERT",
+      "WANGSTA"
+     ],
      "proposer": "MEGAN",
      "votes": [
       "MEGAN",
@@ -87,61 +157,43 @@
       "CHRIS",
       "ALBERT"
      ],
-     "team": [
-      "MEGAN",
-      "CHRIS",
-      "ALBERT",
-      "WANGSTA"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "numFails": 1,
-   "state": "FAIL",
-   "teamSize": 4
+   "failsRequired": 1
   },
   {
-   "numFails": 0,
-   "teamSize": 3,
-   "failsRequired": 1,
-   "team": [
-    "EMILY",
-    "MEGAN",
-    "ALBERT"
-   ],
    "state": "SUCCESS",
    "proposals": [
     {
+     "votes": [
+      "CHRIS",
+      "ALBERT",
+      "PATRICK"
+     ],
      "team": [
       "CHRIS",
       "ALBERT",
       "PATRICK"
      ],
      "state": "REJECTED",
-     "votes": [
-      "CHRIS",
-      "ALBERT",
-      "PATRICK"
-     ],
      "proposer": "CHRIS"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "ALBERT"
      ],
-     "proposer": "ALBERT",
      "team": [
       "EMILY",
       "ALBERT",
       "WANGSTA"
-     ]
+     ],
+     "proposer": "ALBERT",
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "EMILY",
-      "MEGAN",
-      "ALBERT"
-     ],
+     "proposer": "WANGSTA",
+     "state": "APPROVED",
      "votes": [
       "EMILY",
       "PATRICK",
@@ -149,23 +201,30 @@
       "WANGSTA",
       "MEGAN"
      ],
-     "state": "APPROVED",
-     "proposer": "WANGSTA"
+     "team": [
+      "EMILY",
+      "MEGAN",
+      "ALBERT"
+     ]
     }
-   ]
+   ],
+   "team": [
+    "EMILY",
+    "MEGAN",
+    "ALBERT"
+   ],
+   "numFails": 0,
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
-   "team": [],
-   "proposals": [],
-   "failsRequired": 1,
+   "teamSize": 4,
    "state": "PENDING",
-   "teamSize": 4
+   "proposals": [],
+   "team": [],
+   "failsRequired": 1
   }
  ],
- "timeCreated": {
-  "_seconds": 1602314257,
-  "_nanoseconds": 573000000
- },
  "timeFinished": {
   "_seconds": 1602317113,
   "_nanoseconds": 553000000
@@ -176,8 +235,8 @@
    "uid": "jzpZGHVfjbS3p6VsfpGY53wN27T2"
   },
   {
-   "name": "PATRICK",
-   "uid": "qzE9MBPUiQftGC5QBsAfarSiBEM2"
+   "uid": "qzE9MBPUiQftGC5QBsAfarSiBEM2",
+   "name": "PATRICK"
   },
   {
    "name": "MEGAN",
@@ -192,69 +251,10 @@
    "name": "ALBERT"
   },
   {
-   "name": "WANGSTA",
-   "uid": "5eB2nrHHfRQGxFQtRZHce5S6W7Z2"
+   "uid": "5eB2nrHHfRQGxFQtRZHce5S6W7Z2",
+   "name": "WANGSTA"
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "WANGSTA": true,
-    "PATRICK": true
-   },
-   {
-    "PATRICK": true,
-    "EMILY": true,
-    "WANGSTA": true
-   },
-   {
-    "WANGSTA": false,
-    "CHRIS": true,
-    "ALBERT": true,
-    "MEGAN": true
-   },
-   {
-    "ALBERT": true,
-    "MEGAN": true,
-    "EMILY": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "ALBERT",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "EMILY",
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "PATRICK"
-   },
-   {
-    "assassin": false,
-    "name": "MEGAN",
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "CHRIS",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "name": "WANGSTA",
-    "role": "MORDRED"
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "CHRIS"
- },
  "options": {
   "inGameLog": false
  }

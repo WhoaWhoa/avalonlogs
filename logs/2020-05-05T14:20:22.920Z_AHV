@@ -1,6 +1,8 @@
 {
  "outcome": {
   "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "assassinated": null,
   "votes": [
    {
     "CARMEN": true,
@@ -8,29 +10,27 @@
    },
    {
     "PRANG": true,
-    "JKROLLS": true,
-    "CARMEN": false
+    "CARMEN": false,
+    "JKROLLS": true
    },
    {
     "CARMEN": true,
-    "PRANG": false,
-    "MATTHIAS": true
+    "MATTHIAS": true,
+    "PRANG": false
    },
    {
-    "MARCUS": true,
-    "JOHN": true,
     "MATTHIAS": true,
-    "CARMEN": false
+    "JOHN": true,
+    "CARMEN": false,
+    "MARCUS": true
    },
    {
     "JKROLLS": false,
     "MARCUS": true,
-    "JOHN": true,
-    "JEM": true
+    "JEM": true,
+    "JOHN": true
    }
   ],
-  "assassinated": null,
-  "message": "Three failed missions",
   "roles": [
    {
     "name": "JEM",
@@ -38,36 +38,40 @@
     "assassin": false
    },
    {
-    "name": "PRANG",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "MATTHIAS"
-   },
-   {
-    "role": "MORGANA",
-    "name": "JKROLLS",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "JOHN",
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": true,
     "role": "EVIL MINION",
-    "name": "CARMEN"
+    "name": "PRANG",
+    "assassin": false
    },
    {
-    "role": "LOYAL FOLLOWER",
-    "name": "MARCUS",
+    "name": "MATTHIAS",
+    "role": "MERLIN",
     "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "JKROLLS"
+   },
+   {
+    "name": "JOHN",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "name": "CARMEN",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MARCUS"
    }
   ]
+ },
+ "timeCreated": {
+  "_seconds": 1588688422,
+  "_nanoseconds": 920000000
  },
  "options": {
   "inGameLog": false
@@ -76,16 +80,48 @@
   "_seconds": 1588689257,
   "_nanoseconds": 820000000
  },
+ "players": [
+  {
+   "uid": "dyXPweiOsHOQeL31htysxwmBKk02",
+   "name": "MARCUS"
+  },
+  {
+   "uid": "z7Xl6hVKEjSWn8htXIemzAKC7Gi2",
+   "name": "JEM"
+  },
+  {
+   "uid": "fRvjFcjq0WYRmpoNaMO6EGzSbgG3",
+   "name": "PRANG"
+  },
+  {
+   "name": "MATTHIAS",
+   "uid": "OEtUXrmVsARzfyqNN0ielKsPsoA3"
+  },
+  {
+   "uid": "QTJi9UrIw0gfPNIaNEUGDQOlkyl1",
+   "name": "JOHN"
+  },
+  {
+   "name": "JKROLLS",
+   "uid": "2WINjLsUgCVKRP5XxFEEhN5Dfex2"
+  },
+  {
+   "name": "CARMEN",
+   "uid": "Pu7siNaL3LZ3sMtPVAEka3p0yST2"
+  }
+ ],
  "missions": [
   {
+   "failsRequired": 1,
+   "teamSize": 2,
    "state": "SUCCESS",
+   "numFails": 0,
+   "team": [
+    "JKROLLS",
+    "CARMEN"
+   ],
    "proposals": [
     {
-     "proposer": "JKROLLS",
-     "team": [
-      "JKROLLS",
-      "CARMEN"
-     ],
      "state": "APPROVED",
      "votes": [
       "PRANG",
@@ -94,21 +130,20 @@
       "JOHN",
       "CARMEN",
       "MARCUS"
-     ]
+     ],
+     "team": [
+      "JKROLLS",
+      "CARMEN"
+     ],
+     "proposer": "JKROLLS"
     }
-   ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "teamSize": 2,
-   "team": [
-    "JKROLLS",
-    "CARMEN"
    ]
   },
   {
    "proposals": [
     {
      "proposer": "CARMEN",
+     "state": "APPROVED",
      "votes": [
       "PRANG",
       "MATTHIAS",
@@ -117,7 +152,6 @@
       "CARMEN",
       "MARCUS"
      ],
-     "state": "APPROVED",
      "team": [
       "CARMEN",
       "JKROLLS",
@@ -126,31 +160,34 @@
     }
    ],
    "numFails": 1,
-   "state": "FAIL",
    "teamSize": 3,
-   "failsRequired": 1,
    "team": [
     "CARMEN",
     "JKROLLS",
     "PRANG"
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "PRANG",
     "MATTHIAS",
     "CARMEN"
    ],
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "MARCUS",
      "team": [
       "JEM",
       "MARCUS",
       "PRANG"
      ],
+     "proposer": "MARCUS",
+     "state": "REJECTED",
      "votes": [
       "JEM",
       "PRANG",
@@ -159,14 +196,14 @@
     },
     {
      "state": "REJECTED",
-     "votes": [
-      "JEM",
-      "PRANG"
-     ],
      "team": [
       "JEM",
       "JKROLLS",
       "MARCUS"
+     ],
+     "votes": [
+      "JEM",
+      "PRANG"
      ],
      "proposer": "JEM"
     },
@@ -185,16 +222,9 @@
       "CARMEN"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1
+   ]
   },
   {
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "numFails": 1,
-   "teamSize": 4,
    "team": [
     "MARCUS",
     "JOHN",
@@ -203,46 +233,62 @@
    ],
    "proposals": [
     {
-     "state": "APPROVED",
-     "votes": [
-      "PRANG",
-      "MATTHIAS",
-      "JOHN",
-      "CARMEN",
-      "MARCUS"
-     ],
-     "proposer": "MATTHIAS",
      "team": [
       "MARCUS",
       "JOHN",
       "MATTHIAS",
       "CARMEN"
-     ]
-    }
-   ]
-  },
-  {
-   "state": "FAIL",
-   "failsRequired": 1,
-   "proposals": [
-    {
+     ],
      "votes": [
+      "PRANG",
+      "MATTHIAS",
       "JOHN",
       "CARMEN",
       "MARCUS"
      ],
-     "proposer": "JOHN",
-     "state": "REJECTED",
+     "state": "APPROVED",
+     "proposer": "MATTHIAS"
+    }
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 2,
+   "teamSize": 4,
+   "numFails": 1
+  },
+  {
+   "teamSize": 4,
+   "failsRequired": 1,
+   "team": [
+    "JKROLLS",
+    "JOHN",
+    "MARCUS",
+    "JEM"
+   ],
+   "numFails": 1,
+   "proposals": [
+    {
      "team": [
       "PRANG",
       "MARCUS",
       "JOHN",
       "MATTHIAS"
-     ]
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "JOHN",
+      "CARMEN",
+      "MARCUS"
+     ],
+     "proposer": "JOHN"
     },
     {
-     "proposer": "JKROLLS",
      "state": "APPROVED",
+     "team": [
+      "JKROLLS",
+      "JOHN",
+      "MARCUS",
+      "JEM"
+     ],
      "votes": [
       "MARCUS",
       "JEM",
@@ -251,56 +297,10 @@
       "JOHN",
       "CARMEN"
      ],
-     "team": [
-      "JKROLLS",
-      "JOHN",
-      "MARCUS",
-      "JEM"
-     ]
+     "proposer": "JKROLLS"
     }
    ],
-   "numFails": 1,
-   "teamSize": 4,
-   "team": [
-    "JKROLLS",
-    "JOHN",
-    "MARCUS",
-    "JEM"
-   ]
-  }
- ],
- "timeCreated": {
-  "_seconds": 1588688422,
-  "_nanoseconds": 920000000
- },
- "players": [
-  {
-   "name": "MARCUS",
-   "uid": "dyXPweiOsHOQeL31htysxwmBKk02"
-  },
-  {
-   "uid": "z7Xl6hVKEjSWn8htXIemzAKC7Gi2",
-   "name": "JEM"
-  },
-  {
-   "uid": "fRvjFcjq0WYRmpoNaMO6EGzSbgG3",
-   "name": "PRANG"
-  },
-  {
-   "uid": "OEtUXrmVsARzfyqNN0ielKsPsoA3",
-   "name": "MATTHIAS"
-  },
-  {
-   "name": "JOHN",
-   "uid": "QTJi9UrIw0gfPNIaNEUGDQOlkyl1"
-  },
-  {
-   "uid": "2WINjLsUgCVKRP5XxFEEhN5Dfex2",
-   "name": "JKROLLS"
-  },
-  {
-   "uid": "Pu7siNaL3LZ3sMtPVAEka3p0yST2",
-   "name": "CARMEN"
+   "state": "FAIL"
   }
  ]
 }

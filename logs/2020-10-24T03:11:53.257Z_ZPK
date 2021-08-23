@@ -1,10 +1,13 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
-   "numFails": 0,
+   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "BANANA",
       "METH",
@@ -16,27 +19,28 @@
       "RAGHAV",
       "MARLIN"
      ],
+     "state": "APPROVED",
      "proposer": "RAGHAV"
     }
    ],
+   "state": "SUCCESS",
    "team": [
     "RAGHAV",
     "MARLIN"
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "teamSize": 2
+   "numFails": 0
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "MARLIN",
     "PRANUKOLLU",
     "METH"
    ],
-   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "BANANA",
       "ANIKETH",
@@ -48,20 +52,22 @@
       "PRANUKOLLU",
       "METH"
      ],
-     "proposer": "MARLIN"
+     "proposer": "MARLIN",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1
+   "failsRequired": 1
   },
   {
-   "teamSize": 3,
-   "numFails": 0,
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "ANIKETH",
+     "state": "APPROVED",
+     "team": [
+      "ANIKETH",
+      "BANANA",
+      "CHAI"
+     ],
      "votes": [
       "RAGHAV",
       "METH",
@@ -69,33 +75,22 @@
       "CHAI",
       "ANIKETH"
      ],
-     "state": "APPROVED",
-     "team": [
-      "ANIKETH",
-      "BANANA",
-      "CHAI"
-     ]
+     "proposer": "ANIKETH"
     }
    ],
-   "state": "SUCCESS",
    "team": [
     "ANIKETH",
     "BANANA",
     "CHAI"
-   ]
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "teamSize": 4,
-   "state": "SUCCESS",
-   "failsRequired": 2,
    "numFails": 1,
    "proposals": [
     {
-     "votes": [
-      "PRANUKOLLU",
-      "MARLIN",
-      "METH"
-     ],
      "state": "REJECTED",
      "team": [
       "BANANA",
@@ -103,21 +98,26 @@
       "MARLIN",
       "PRANUKOLLU"
      ],
+     "votes": [
+      "PRANUKOLLU",
+      "MARLIN",
+      "METH"
+     ],
      "proposer": "BANANA"
     },
     {
+     "votes": [
+      "PRANUKOLLU",
+      "MARLIN"
+     ],
      "team": [
       "PRANUKOLLU",
       "BANANA",
       "MARLIN",
       "ANIKETH"
      ],
-     "votes": [
-      "PRANUKOLLU",
-      "MARLIN"
-     ],
-     "state": "REJECTED",
-     "proposer": "PRANUKOLLU"
+     "proposer": "PRANUKOLLU",
+     "state": "REJECTED"
     },
     {
      "state": "APPROVED",
@@ -128,37 +128,33 @@
       "BANANA",
       "MARLIN"
      ],
-     "proposer": "CHAI",
      "team": [
       "ANIKETH",
       "BANANA",
       "METH",
       "CHAI"
-     ]
+     ],
+     "proposer": "CHAI"
     }
    ],
+   "state": "SUCCESS",
    "team": [
     "ANIKETH",
     "BANANA",
     "METH",
     "CHAI"
-   ]
+   ],
+   "failsRequired": 2,
+   "teamSize": 4
   },
   {
+   "teamSize": 4,
+   "team": [],
    "proposals": [],
    "state": "PENDING",
-   "team": [],
-   "teamSize": 4,
    "failsRequired": 1
   }
  ],
- "timeFinished": {
-  "_seconds": 1603510348,
-  "_nanoseconds": 498000000
- },
- "options": {
-  "inGameLog": false
- },
  "players": [
   {
    "uid": "gx0GNqbfVCTGyTSfSzc6XELipsf1",
@@ -169,20 +165,20 @@
    "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3"
   },
   {
-   "uid": "mhGqERYygScqJ0S29jQ3yK7o2ku2",
-   "name": "ANIKETH"
+   "name": "ANIKETH",
+   "uid": "mhGqERYygScqJ0S29jQ3yK7o2ku2"
   },
   {
-   "uid": "weox9NOyNDZiyKTtPDAXxvazdFV2",
-   "name": "BANANA"
+   "name": "BANANA",
+   "uid": "weox9NOyNDZiyKTtPDAXxvazdFV2"
   },
   {
-   "uid": "MZNNYGz2dyObT9G5nUSdpYmwN652",
-   "name": "PRANUKOLLU"
+   "name": "PRANUKOLLU",
+   "uid": "MZNNYGz2dyObT9G5nUSdpYmwN652"
   },
   {
-   "uid": "kSuFqj5ueWZYlfFBbfhTiidBQZd2",
-   "name": "CHAI"
+   "name": "CHAI",
+   "uid": "kSuFqj5ueWZYlfFBbfhTiidBQZd2"
   },
   {
    "uid": "KH4ZmjI5XOUYu4rOwmw4oDElxue2",
@@ -190,44 +186,45 @@
   }
  ],
  "outcome": {
+  "state": "EVIL_WIN",
   "votes": [
    {
+    "RAGHAV": true,
+    "MARLIN": true
+   },
+   {
+    "PRANUKOLLU": false,
     "MARLIN": true,
-    "RAGHAV": true
+    "METH": true
    },
    {
-    "METH": true,
-    "MARLIN": true,
-    "PRANUKOLLU": false
-   },
-   {
-    "CHAI": true,
-    "BANANA": true,
-    "ANIKETH": true
-   },
-   {
-    "BANANA": true,
     "ANIKETH": true,
     "CHAI": true,
-    "METH": false
+    "BANANA": true
+   },
+   {
+    "BANANA": true,
+    "METH": false,
+    "ANIKETH": true,
+    "CHAI": true
    }
   ],
   "assassinated": "MARLIN",
   "roles": [
    {
     "name": "METH",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "MARLIN",
-    "role": "MERLIN",
+    "role": "OBERON",
     "assassin": false
    },
    {
+    "role": "MERLIN",
+    "name": "MARLIN",
+    "assassin": false
+   },
+   {
+    "role": "PERCIVAL",
     "assassin": false,
-    "name": "ANIKETH",
-    "role": "PERCIVAL"
+    "name": "ANIKETH"
    },
    {
     "name": "PRANUKOLLU",
@@ -235,26 +232,29 @@
     "role": "MORDRED"
    },
    {
-    "name": "CHAI",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "CHAI"
    },
    {
+    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "BANANA",
-    "assassin": false
+    "name": "BANANA"
    },
    {
     "name": "RAGHAV",
-    "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "assassin": false
    }
   ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN"
+  "message": "Merlin assassinated"
  },
  "timeCreated": {
   "_seconds": 1603509113,
   "_nanoseconds": 257000000
+ },
+ "timeFinished": {
+  "_seconds": 1603510348,
+  "_nanoseconds": 498000000
  }
 }

@@ -1,70 +1,12 @@
 {
- "outcome": {
-  "assassinated": "SARAH",
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "BILLY": true,
-    "NATE": true
-   },
-   {
-    "BILLY": false,
-    "MARY": true,
-    "NATE": true
-   },
-   {
-    "MARY": true,
-    "CONNOR": true,
-    "DAVID": true
-   },
-   {
-    "SARAH": true,
-    "DAVID": true,
-    "CONNOR": true,
-    "MADISON": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "BILLY"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "DAVID"
-   },
-   {
-    "name": "CONNOR",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "MARY",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "NATE",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "name": "MADISON",
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "name": "SARAH",
-    "role": "MERLIN"
-   }
-  ]
- },
  "missions": [
   {
+   "team": [
+    "NATE",
+    "BILLY"
+   ],
+   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
@@ -77,25 +19,34 @@
       "DAVID",
       "MARY"
      ],
+     "proposer": "NATE",
      "team": [
       "NATE",
       "BILLY"
-     ],
-     "proposer": "NATE"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0,
+   "failsRequired": 1,
+   "numFails": 0
+  },
+  {
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
    "team": [
+    "MARY",
     "NATE",
     "BILLY"
    ],
-   "failsRequired": 1,
-   "teamSize": 2
-  },
-  {
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "MARY",
+      "NATE",
+      "BILLY"
+     ],
+     "proposer": "MARY",
      "votes": [
       "MADISON",
       "SARAH",
@@ -103,32 +54,21 @@
       "DAVID",
       "NATE",
       "MARY"
-     ],
-     "team": [
-      "MARY",
-      "NATE",
-      "BILLY"
-     ],
-     "proposer": "MARY",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "FAIL",
-   "numFails": 1,
-   "team": [
-    "MARY",
-    "NATE",
-    "BILLY"
-   ],
-   "teamSize": 3,
-   "failsRequired": 1
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
    "team": [
     "DAVID",
     "CONNOR",
     "MARY"
    ],
+   "numFails": 0,
+   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
@@ -141,32 +81,20 @@
       "MARY",
       "SARAH"
      ],
+     "proposer": "CONNOR",
      "team": [
       "DAVID",
       "CONNOR",
       "MARY"
-     ],
-     "proposer": "CONNOR"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 3
+   ]
   },
   {
    "state": "SUCCESS",
-   "numFails": 0,
-   "team": [
-    "MADISON",
-    "DAVID",
-    "CONNOR",
-    "SARAH"
-   ],
-   "teamSize": 4,
-   "failsRequired": 2,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "BILLY",
       "DAVID",
@@ -174,7 +102,6 @@
       "SARAH"
      ],
      "proposer": "MADISON",
-     "state": "REJECTED",
      "votes": [
       "MADISON",
       "BILLY"
@@ -191,39 +118,37 @@
       "SARAH"
      ],
      "state": "APPROVED",
+     "proposer": "BILLY",
      "team": [
       "MADISON",
       "DAVID",
       "CONNOR",
       "SARAH"
-     ],
-     "proposer": "BILLY"
+     ]
     }
-   ]
+   ],
+   "team": [
+    "MADISON",
+    "DAVID",
+    "CONNOR",
+    "SARAH"
+   ],
+   "failsRequired": 2,
+   "numFails": 0,
+   "teamSize": 4
   },
   {
-   "teamSize": 4,
+   "failsRequired": 1,
    "state": "PENDING",
-   "team": [],
+   "teamSize": 4,
    "proposals": [],
-   "failsRequired": 1
+   "team": []
   }
  ],
- "timeCreated": {
-  "_seconds": 1607053555,
-  "_nanoseconds": 379000000
- },
- "timeFinished": {
-  "_seconds": 1607054293,
-  "_nanoseconds": 400000000
- },
- "options": {
-  "inGameLog": false
- },
  "players": [
   {
-   "name": "DAVID",
-   "uid": "oXYMWdGfqTUdh0obOlr1jDy4myE2"
+   "uid": "oXYMWdGfqTUdh0obOlr1jDy4myE2",
+   "name": "DAVID"
   },
   {
    "uid": "y7Z94s64vBegmWVCSdhJHwzOv5D3",
@@ -234,20 +159,95 @@
    "name": "NATE"
   },
   {
-   "uid": "2iLS2EXvRSZzYKSkNYpuvtRac533",
-   "name": "MARY"
+   "name": "MARY",
+   "uid": "2iLS2EXvRSZzYKSkNYpuvtRac533"
   },
   {
-   "uid": "1vkpZc0CupeI1Qigif8tWxMfZAf1",
-   "name": "CONNOR"
+   "name": "CONNOR",
+   "uid": "1vkpZc0CupeI1Qigif8tWxMfZAf1"
   },
   {
-   "uid": "2XMJDJfWrDbgcCD91QCVSWc3Bmg2",
-   "name": "MADISON"
+   "name": "MADISON",
+   "uid": "2XMJDJfWrDbgcCD91QCVSWc3Bmg2"
   },
   {
-   "name": "BILLY",
-   "uid": "jqZOuUki3Jdn9c23JQE5Xw1ZMHP2"
+   "uid": "jqZOuUki3Jdn9c23JQE5Xw1ZMHP2",
+   "name": "BILLY"
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1607054293,
+  "_nanoseconds": 400000000
+ },
+ "timeCreated": {
+  "_seconds": 1607053555,
+  "_nanoseconds": 379000000
+ },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "BILLY": true,
+    "NATE": true
+   },
+   {
+    "MARY": true,
+    "NATE": true,
+    "BILLY": false
+   },
+   {
+    "CONNOR": true,
+    "MARY": true,
+    "DAVID": true
+   },
+   {
+    "CONNOR": true,
+    "SARAH": true,
+    "DAVID": true,
+    "MADISON": true
+   }
+  ],
+  "assassinated": "SARAH",
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "name": "BILLY",
+    "assassin": true
+   },
+   {
+    "name": "DAVID",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "CONNOR"
+   },
+   {
+    "name": "MARY",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "name": "NATE",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "name": "MADISON",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "name": "SARAH",
+    "role": "MERLIN"
+   }
+  ]
+ }
 }

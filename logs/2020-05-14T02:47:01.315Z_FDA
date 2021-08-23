@@ -3,14 +3,21 @@
   "_seconds": 1589425135,
   "_nanoseconds": 49000000
  },
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1589424421,
+  "_nanoseconds": 315000000
+ },
  "players": [
   {
    "name": "EYAD",
    "uid": "njelh8nXWIMhoXN2oUH8fSyNPNI2"
   },
   {
-   "uid": "NIKf5JTarXgYjDJPCzxGpoRo0gP2",
-   "name": "MARC"
+   "name": "MARC",
+   "uid": "NIKf5JTarXgYjDJPCzxGpoRo0gP2"
   },
   {
    "name": "ED",
@@ -21,38 +28,33 @@
    "uid": "yPyTOsJEPEXTQQj4L7r9zhvbdGy2"
   },
   {
-   "uid": "4sNqa4aD3MWk2zEPWcJKx4sKBXf1",
-   "name": "CRAIG"
+   "name": "CRAIG",
+   "uid": "4sNqa4aD3MWk2zEPWcJKx4sKBXf1"
   }
  ],
- "timeCreated": {
-  "_seconds": 1589424421,
-  "_nanoseconds": 315000000
- },
  "outcome": {
   "state": "EVIL_WIN",
+  "assassinated": null,
   "votes": [
    {
     "MARC": true,
     "CRAIG": true
    },
    {
+    "MARC": false,
     "ED": true,
-    "CRAIG": true,
+    "CRAIG": true
+   },
+   {
+    "EYAD": true,
     "MARC": false
    },
    {
-    "MARC": false,
-    "EYAD": true
-   },
-   {
+    "CRAIG": false,
     "AARON": true,
-    "MARC": false,
-    "CRAIG": false
+    "MARC": false
    }
   ],
-  "assassinated": null,
-  "message": "Three failed missions",
   "roles": [
    {
     "name": "AARON",
@@ -60,14 +62,14 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": true,
+    "role": "EVIL MINION",
     "name": "MARC",
-    "role": "EVIL MINION"
+    "assassin": true
    },
    {
+    "role": "EVIL MINION",
     "assassin": false,
-    "name": "CRAIG",
-    "role": "EVIL MINION"
+    "name": "CRAIG"
    },
    {
     "name": "ED",
@@ -75,30 +77,26 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "role": "MERLIN",
+    "assassin": false,
     "name": "EYAD"
    }
-  ]
- },
- "options": {
-  "inGameLog": false
+  ],
+  "message": "Three failed missions"
  },
  "missions": [
   {
-   "numFails": 0,
-   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "ED",
-      "AARON"
-     ],
      "state": "REJECTED",
-     "proposer": "AARON",
      "team": [
       "AARON",
       "ED"
+     ],
+     "proposer": "AARON",
+     "votes": [
+      "ED",
+      "AARON"
      ]
     },
     {
@@ -106,181 +104,183 @@
       "CRAIG",
       "MARC"
      ],
+     "proposer": "CRAIG",
+     "state": "APPROVED",
      "votes": [
       "CRAIG",
       "MARC",
       "AARON"
-     ],
-     "proposer": "CRAIG",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "SUCCESS",
    "teamSize": 2,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "CRAIG",
     "MARC"
    ]
   },
   {
-   "state": "FAIL",
-   "teamSize": 3,
-   "failsRequired": 1,
+   "team": [
+    "MARC",
+    "CRAIG",
+    "ED"
+   ],
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [
+      "EYAD",
+      "MARC"
+     ],
      "team": [
       "MARC",
       "CRAIG",
       "EYAD"
      ],
+     "proposer": "EYAD"
+    },
+    {
      "votes": [
+      "ED",
+      "MARC",
+      "CRAIG"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "MARC",
+      "CRAIG",
+      "ED"
+     ],
+     "proposer": "MARC"
+    }
+   ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 3
+  },
+  {
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
+   "team": [
+    "EYAD",
+    "MARC"
+   ],
+   "teamSize": 2,
+   "proposals": [
+    {
+     "votes": [
+      "ED"
+     ],
+     "team": [
+      "ED",
+      "AARON"
+     ],
+     "proposer": "ED",
+     "state": "REJECTED"
+    },
+    {
+     "proposer": "AARON",
+     "state": "REJECTED",
+     "votes": [
+      "MARC",
+      "AARON"
+     ],
+     "team": [
+      "CRAIG",
+      "MARC"
+     ]
+    },
+    {
+     "team": [
+      "CRAIG",
+      "ED"
+     ],
+     "state": "REJECTED",
+     "proposer": "CRAIG",
+     "votes": [
+      "ED"
+     ]
+    },
+    {
+     "team": [
       "EYAD",
       "MARC"
      ],
      "state": "REJECTED",
+     "votes": [
+      "MARC",
+      "EYAD"
+     ],
      "proposer": "EYAD"
     },
     {
      "proposer": "MARC",
      "votes": [
-      "ED",
       "MARC",
-      "CRAIG"
+      "CRAIG",
+      "ED",
+      "EYAD",
+      "AARON"
      ],
      "state": "APPROVED",
      "team": [
-      "MARC",
-      "CRAIG",
-      "ED"
+      "EYAD",
+      "MARC"
      ]
     }
-   ],
-   "numFails": 1,
-   "team": [
-    "MARC",
-    "CRAIG",
-    "ED"
    ]
   },
   {
-   "team": [
-    "EYAD",
-    "MARC"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "proposals": [
-    {
-     "team": [
-      "ED",
-      "AARON"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "ED"
-     ],
-     "proposer": "ED"
-    },
-    {
-     "proposer": "AARON",
-     "state": "REJECTED",
-     "votes": [
-      "MARC",
-      "AARON"
-     ],
-     "team": [
-      "CRAIG",
-      "MARC"
-     ]
-    },
-    {
-     "proposer": "CRAIG",
-     "state": "REJECTED",
-     "votes": [
-      "ED"
-     ],
-     "team": [
-      "CRAIG",
-      "ED"
-     ]
-    },
-    {
-     "team": [
-      "EYAD",
-      "MARC"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "MARC",
-      "EYAD"
-     ],
-     "proposer": "EYAD"
-    },
-    {
-     "state": "APPROVED",
-     "team": [
-      "EYAD",
-      "MARC"
-     ],
-     "votes": [
-      "MARC",
-      "CRAIG",
-      "ED",
-      "EYAD",
-      "AARON"
-     ],
-     "proposer": "MARC"
-    }
-   ],
+   "numFails": 2,
    "state": "FAIL",
-   "numFails": 1
-  },
-  {
    "teamSize": 3,
-   "failsRequired": 1,
    "team": [
     "CRAIG",
     "MARC",
     "AARON"
    ],
-   "state": "FAIL",
    "proposals": [
     {
-     "votes": [
-      "ED",
-      "AARON"
-     ],
      "team": [
       "ED",
       "CRAIG",
       "AARON"
      ],
      "state": "REJECTED",
-     "proposer": "ED"
+     "proposer": "ED",
+     "votes": [
+      "ED",
+      "AARON"
+     ]
     },
     {
-     "votes": [
-      "AARON",
-      "MARC",
-      "CRAIG"
-     ],
      "team": [
       "CRAIG",
       "MARC",
       "AARON"
      ],
      "state": "APPROVED",
-     "proposer": "AARON"
+     "proposer": "AARON",
+     "votes": [
+      "AARON",
+      "MARC",
+      "CRAIG"
+     ]
     }
    ],
-   "numFails": 2
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "state": "PENDING",
    "proposals": [],
+   "failsRequired": 1,
    "teamSize": 3,
-   "team": []
+   "team": [],
+   "state": "PENDING"
   }
  ]
 }

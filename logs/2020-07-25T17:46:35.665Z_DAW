@@ -1,65 +1,36 @@
 {
- "players": [
-  {
-   "uid": "01gsL4aM4QdsLQi64ecQ7ymjKxo2",
-   "name": "BOUL"
-  },
-  {
-   "uid": "vUXc0RTXooeM1Us0XZdi4j2AapU2",
-   "name": "KERWIN"
-  },
-  {
-   "name": "LUIS",
-   "uid": "mqsZoyUFHqdfxESdFdqNGogtrtZ2"
-  },
-  {
-   "name": "AUKAZE",
-   "uid": "INvAHDfS0Mg5bPaddtsnKNVnw9j1"
-  },
-  {
-   "uid": "hAEhzyOPLmRzcXVuYyLUHNxj6KY2",
-   "name": "JACKSON"
-  },
-  {
-   "name": "DAW",
-   "uid": "s7lGXWu6EMSVYxPtN67oUqhrNC72"
-  },
-  {
-   "name": "NAYNAY",
-   "uid": "DkQAAvJzUFblp5EAZ6rUxLs118E3"
-  }
- ],
  "outcome": {
-  "message": "Three successful missions",
-  "assassinated": "NAYNAY",
   "votes": [
    {
-    "DAW": true,
-    "AUKAZE": true
+    "AUKAZE": true,
+    "DAW": true
    },
    {
-    "KERWIN": false,
     "LUIS": true,
-    "NAYNAY": true
+    "NAYNAY": true,
+    "KERWIN": false
    },
    {
-    "KERWIN": true,
     "JACKSON": false,
+    "KERWIN": true,
     "LUIS": true
    },
    {
     "AUKAZE": true,
+    "JACKSON": false,
     "KERWIN": true,
-    "LUIS": true,
-    "JACKSON": false
+    "LUIS": true
    },
    {
     "LUIS": true,
-    "KERWIN": true,
     "DAW": true,
-    "AUKAZE": true
+    "AUKAZE": true,
+    "KERWIN": true
    }
   ],
+  "assassinated": "NAYNAY",
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
   "roles": [
    {
     "name": "KERWIN",
@@ -67,24 +38,24 @@
     "role": "MORDRED"
    },
    {
-    "assassin": false,
     "role": "PERCIVAL",
-    "name": "DAW"
+    "name": "DAW",
+    "assassin": false
    },
    {
+    "name": "BOUL",
     "role": "MORGANA",
-    "assassin": false,
-    "name": "BOUL"
+    "assassin": false
    },
    {
-    "assassin": false,
     "role": "MERLIN",
-    "name": "LUIS"
+    "name": "LUIS",
+    "assassin": false
    },
    {
-    "name": "NAYNAY",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "NAYNAY"
    },
    {
     "assassin": false,
@@ -92,12 +63,11 @@
     "name": "JACKSON"
    },
    {
-    "assassin": false,
+    "role": "LOYAL FOLLOWER",
     "name": "AUKAZE",
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    }
-  ],
-  "state": "GOOD_WIN"
+  ]
  },
  "missions": [
   {
@@ -105,12 +75,16 @@
     "DAW",
     "AUKAZE"
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
    "failsRequired": 1,
-   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "DAW",
+      "AUKAZE"
+     ],
+     "proposer": "JACKSON",
      "votes": [
       "AUKAZE",
       "KERWIN",
@@ -118,107 +92,105 @@
       "BOUL",
       "LUIS",
       "NAYNAY"
-     ],
-     "proposer": "JACKSON",
-     "team": [
-      "DAW",
-      "AUKAZE"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ]
+   ],
+   "teamSize": 2,
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
    "team": [
     "NAYNAY",
     "KERWIN",
     "LUIS"
    ],
-   "teamSize": 3,
-   "state": "FAIL",
    "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "DAW",
      "votes": [
       "DAW",
       "LUIS",
       "NAYNAY",
       "AUKAZE"
      ],
-     "proposer": "DAW",
      "team": [
       "NAYNAY",
       "KERWIN",
       "LUIS"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ]
+   ],
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "votes": [
+      "NAYNAY",
+      "JACKSON",
+      "KERWIN",
+      "DAW",
+      "LUIS"
+     ],
      "team": [
       "JACKSON",
       "KERWIN",
       "LUIS"
      ],
      "proposer": "NAYNAY",
-     "votes": [
-      "NAYNAY",
-      "JACKSON",
-      "KERWIN",
-      "DAW",
-      "LUIS"
-     ]
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "team": [
     "JACKSON",
     "KERWIN",
     "LUIS"
    ],
-   "numFails": 1,
    "teamSize": 3,
    "state": "FAIL"
   },
   {
-   "numFails": 1,
-   "teamSize": 4,
-   "failsRequired": 2,
    "team": [
     "KERWIN",
     "LUIS",
     "AUKAZE",
     "JACKSON"
    ],
+   "teamSize": 4,
+   "failsRequired": 2,
+   "numFails": 1,
    "state": "SUCCESS",
    "proposals": [
     {
+     "votes": [
+      "DAW",
+      "NAYNAY",
+      "JACKSON"
+     ],
      "team": [
       "BOUL",
       "KERWIN",
       "JACKSON",
       "NAYNAY"
      ],
-     "proposer": "BOUL",
      "state": "REJECTED",
-     "votes": [
-      "DAW",
-      "NAYNAY",
-      "JACKSON"
-     ]
+     "proposer": "BOUL"
     },
     {
+     "state": "APPROVED",
      "team": [
       "KERWIN",
       "LUIS",
       "AUKAZE",
       "JACKSON"
      ],
+     "proposer": "KERWIN",
      "votes": [
       "KERWIN",
       "DAW",
@@ -226,18 +198,13 @@
       "NAYNAY",
       "JACKSON",
       "AUKAZE"
-     ],
-     "proposer": "KERWIN",
-     "state": "APPROVED"
+     ]
     }
    ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "LUIS",
       "AUKAZE",
@@ -251,28 +218,61 @@
       "LUIS",
       "NAYNAY",
       "AUKAZE"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "numFails": 0,
    "state": "SUCCESS",
+   "teamSize": 4,
    "team": [
     "LUIS",
     "AUKAZE",
     "KERWIN",
     "DAW"
-   ]
+   ],
+   "numFails": 0,
+   "failsRequired": 1
   }
  ],
- "timeCreated": {
-  "_seconds": 1595699195,
-  "_nanoseconds": 665000000
- },
+ "players": [
+  {
+   "uid": "01gsL4aM4QdsLQi64ecQ7ymjKxo2",
+   "name": "BOUL"
+  },
+  {
+   "uid": "vUXc0RTXooeM1Us0XZdi4j2AapU2",
+   "name": "KERWIN"
+  },
+  {
+   "uid": "mqsZoyUFHqdfxESdFdqNGogtrtZ2",
+   "name": "LUIS"
+  },
+  {
+   "name": "AUKAZE",
+   "uid": "INvAHDfS0Mg5bPaddtsnKNVnw9j1"
+  },
+  {
+   "name": "JACKSON",
+   "uid": "hAEhzyOPLmRzcXVuYyLUHNxj6KY2"
+  },
+  {
+   "name": "DAW",
+   "uid": "s7lGXWu6EMSVYxPtN67oUqhrNC72"
+  },
+  {
+   "name": "NAYNAY",
+   "uid": "DkQAAvJzUFblp5EAZ6rUxLs118E3"
+  }
+ ],
  "timeFinished": {
   "_seconds": 1595700537,
   "_nanoseconds": 533000000
  },
  "options": {
   "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1595699195,
+  "_nanoseconds": 665000000
  }
 }

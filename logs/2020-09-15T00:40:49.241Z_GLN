@@ -1,15 +1,39 @@
 {
  "outcome": {
+  "votes": [
+   {
+    "TANDY": true,
+    "THEA": true
+   },
+   {
+    "JOEL": true,
+    "TANDY": true,
+    "THEA": true
+   },
+   {
+    "JAMES": false,
+    "JOEL": true,
+    "TANDY": true,
+    "THEA": true
+   },
+   {
+    "THEA": true,
+    "JOEL": true,
+    "TANDY": true
+   }
+  ],
+  "assassinated": "MIKEY",
   "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
   "roles": [
    {
-    "assassin": false,
     "name": "TANDY",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "THEA",
     "assassin": false,
+    "name": "THEA",
     "role": "LOYAL FOLLOWER"
    },
    {
@@ -19,71 +43,21 @@
    },
    {
     "name": "CHRISTINA",
-    "assassin": true,
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "assassin": true
    },
    {
-    "name": "JAMES",
+    "role": "MORGANA",
     "assassin": false,
-    "role": "MORGANA"
+    "name": "JAMES"
    },
    {
     "name": "MIKEY",
     "role": "MERLIN",
     "assassin": false
    }
-  ],
-  "votes": [
-   {
-    "THEA": true,
-    "TANDY": true
-   },
-   {
-    "JOEL": true,
-    "THEA": true,
-    "TANDY": true
-   },
-   {
-    "THEA": true,
-    "TANDY": true,
-    "JAMES": false,
-    "JOEL": true
-   },
-   {
-    "THEA": true,
-    "TANDY": true,
-    "JOEL": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "MIKEY"
+  ]
  },
- "players": [
-  {
-   "name": "TANDY",
-   "uid": "NFM8eUhTY5WrcqgdbJzBw7sDfZh1"
-  },
-  {
-   "uid": "RFJqWpJzyvNc0G8QNUV0fM84zSx2",
-   "name": "JAMES"
-  },
-  {
-   "name": "CHRISTINA",
-   "uid": "qGCqhNFbfWbAmJLiB19YRWtKFDn2"
-  },
-  {
-   "uid": "z0NqzrdcNbQ1ppCWYJyYHbrhsoI2",
-   "name": "THEA"
-  },
-  {
-   "uid": "omXfsH70O7b44VDYNRKBRnT1WvW2",
-   "name": "JOEL"
-  },
-  {
-   "name": "MIKEY",
-   "uid": "GlfGzm3er8REfwqquX78V1B8HoC3"
-  }
- ],
  "timeFinished": {
   "_seconds": 1600131214,
   "_nanoseconds": 429000000
@@ -97,35 +71,42 @@
  },
  "missions": [
   {
-   "teamSize": 2,
-   "team": [
-    "THEA",
-    "TANDY"
-   ],
-   "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
      "proposer": "THEA",
+     "team": [
+      "THEA",
+      "TANDY"
+     ],
      "votes": [
       "JAMES",
       "MIKEY",
       "THEA",
       "TANDY"
-     ],
-     "team": [
-      "THEA",
-      "TANDY"
      ]
     }
    ],
+   "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "THEA",
+    "TANDY"
+   ],
+   "numFails": 0,
    "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "TANDY",
+    "THEA",
+    "JOEL"
+   ],
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "JOEL",
      "votes": [
       "TANDY",
       "JAMES",
@@ -138,31 +119,23 @@
       "TANDY",
       "THEA",
       "JOEL"
-     ],
-     "state": "APPROVED",
-     "proposer": "JOEL"
+     ]
     }
    ],
-   "teamSize": 3,
    "state": "SUCCESS",
-   "team": [
-    "TANDY",
-    "THEA",
-    "JOEL"
-   ],
-   "numFails": 0
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
+   "numFails": 1,
    "state": "FAIL",
-   "teamSize": 4,
-   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "JOEL",
       "MIKEY"
      ],
-     "state": "REJECTED",
      "team": [
       "MIKEY",
       "JOEL",
@@ -172,6 +145,7 @@
      "proposer": "MIKEY"
     },
     {
+     "state": "APPROVED",
      "votes": [
       "JAMES",
       "THEA",
@@ -179,7 +153,6 @@
       "TANDY",
       "JOEL"
      ],
-     "state": "APPROVED",
      "team": [
       "TANDY",
       "THEA",
@@ -189,16 +162,17 @@
      "proposer": "TANDY"
     }
    ],
+   "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "TANDY",
     "THEA",
     "JOEL",
     "JAMES"
-   ],
-   "numFails": 1
+   ]
   },
   {
-   "teamSize": 3,
+   "state": "SUCCESS",
    "team": [
     "TANDY",
     "THEA",
@@ -206,20 +180,19 @@
    ],
    "proposals": [
     {
-     "votes": [
-      "JAMES",
-      "CHRISTINA"
-     ],
+     "state": "REJECTED",
      "proposer": "JAMES",
      "team": [
       "JAMES",
       "TANDY",
       "THEA"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "JAMES",
+      "CHRISTINA"
+     ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "CHRISTINA"
      ],
@@ -228,9 +201,11 @@
       "TANDY",
       "THEA"
      ],
-     "proposer": "CHRISTINA"
+     "proposer": "CHRISTINA",
+     "state": "REJECTED"
     },
     {
+     "proposer": "THEA",
      "team": [
       "TANDY",
       "THEA",
@@ -242,20 +217,45 @@
       "JOEL",
       "TANDY",
       "THEA"
-     ],
-     "proposer": "THEA"
+     ]
     }
    ],
-   "state": "SUCCESS",
+   "numFails": 0,
    "failsRequired": 1,
-   "numFails": 0
+   "teamSize": 3
   },
   {
-   "teamSize": 4,
-   "proposals": [],
-   "team": [],
    "failsRequired": 1,
-   "state": "PENDING"
+   "teamSize": 4,
+   "team": [],
+   "state": "PENDING",
+   "proposals": []
+  }
+ ],
+ "players": [
+  {
+   "uid": "NFM8eUhTY5WrcqgdbJzBw7sDfZh1",
+   "name": "TANDY"
+  },
+  {
+   "uid": "RFJqWpJzyvNc0G8QNUV0fM84zSx2",
+   "name": "JAMES"
+  },
+  {
+   "name": "CHRISTINA",
+   "uid": "qGCqhNFbfWbAmJLiB19YRWtKFDn2"
+  },
+  {
+   "name": "THEA",
+   "uid": "z0NqzrdcNbQ1ppCWYJyYHbrhsoI2"
+  },
+  {
+   "name": "JOEL",
+   "uid": "omXfsH70O7b44VDYNRKBRnT1WvW2"
+  },
+  {
+   "name": "MIKEY",
+   "uid": "GlfGzm3er8REfwqquX78V1B8HoC3"
   }
  ]
 }

@@ -1,15 +1,13 @@
 {
- "options": {
-  "inGameLog": false
- },
  "missions": [
   {
    "state": "FAIL",
+   "numFails": 1,
    "teamSize": 3,
    "failsRequired": 1,
-   "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "ASH",
       "LUCAS",
@@ -20,7 +18,6 @@
       "DOG"
      ],
      "proposer": "DOG",
-     "state": "APPROVED",
      "team": [
       "DOG",
       "JOEL",
@@ -35,46 +32,51 @@
    ]
   },
   {
-   "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 4,
    "team": [
     "JAYNA",
     "FELICIA",
     "LUCAS",
     "ASH"
    ],
-   "state": "SUCCESS",
-   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "JAYNA",
-      "FELICIA",
-      "LUCAS",
-      "ASH"
-     ],
-     "proposer": "ASH",
      "votes": [
       "CHING",
       "FELICIA",
       "JAYNA",
       "ASH",
       "LUCAS"
+     ],
+     "proposer": "ASH",
+     "team": [
+      "JAYNA",
+      "FELICIA",
+      "LUCAS",
+      "ASH"
      ]
     }
    ],
-   "teamSize": 4
+   "numFails": 0
   },
   {
+   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "LUCAS",
       "JAYNA",
       "ASH",
       "FELICIA"
      ],
+     "proposer": "LUCAS",
+     "state": "APPROVED",
      "votes": [
       "LUCAS",
       "CHING",
@@ -82,22 +84,19 @@
       "FELICIA",
       "JAYNA",
       "ASH"
-     ],
-     "proposer": "LUCAS"
+     ]
     }
    ],
-   "teamSize": 4,
-   "numFails": 1,
    "team": [
     "LUCAS",
     "JAYNA",
     "ASH",
     "FELICIA"
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
+   "failsRequired": 2,
+   "numFails": 1,
    "team": [
     "JOEL",
     "LUCAS",
@@ -105,13 +104,13 @@
     "ASH",
     "FELICIA"
    ],
-   "numFails": 1,
    "teamSize": 5,
-   "state": "SUCCESS",
-   "failsRequired": 2,
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "DARYL",
+     "votes": [
+      "DARYL"
+     ],
      "team": [
       "DARYL",
       "JOEL",
@@ -119,12 +118,10 @@
       "LUCAS",
       "ASH"
      ],
-     "votes": [
-      "DARYL"
-     ],
-     "proposer": "DARYL"
+     "state": "REJECTED"
     },
     {
+     "proposer": "JOEL",
      "state": "APPROVED",
      "votes": [
       "FELICIA",
@@ -139,32 +136,12 @@
       "JAYNA",
       "ASH",
       "FELICIA"
-     ],
-     "proposer": "JOEL"
-    }
-   ]
-  },
-  {
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "proposer": "FELICIA",
-     "votes": [
-      "LUCAS",
-      "FELICIA",
-      "DARYL",
-      "JAYNA",
-      "DOG"
-     ],
-     "team": [
-      "JOEL",
-      "LUCAS",
-      "FELICIA",
-      "JAYNA",
-      "DOG"
      ]
     }
    ],
+   "state": "SUCCESS"
+  },
+  {
    "teamSize": 5,
    "team": [
     "JOEL",
@@ -174,91 +151,107 @@
     "DOG"
    ],
    "numFails": 0,
+   "failsRequired": 1,
    "state": "SUCCESS",
-   "failsRequired": 1
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "team": [
+      "JOEL",
+      "LUCAS",
+      "FELICIA",
+      "JAYNA",
+      "DOG"
+     ],
+     "proposer": "FELICIA",
+     "votes": [
+      "LUCAS",
+      "FELICIA",
+      "DARYL",
+      "JAYNA",
+      "DOG"
+     ]
+    }
+   ]
   }
  ],
- "timeCreated": {
-  "_seconds": 1595924858,
-  "_nanoseconds": 586000000
- },
  "outcome": {
+  "assassinated": "JAYNA",
+  "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "DOG": true,
+    "JOEL": true,
+    "CHING": false
+   },
+   {
+    "JAYNA": true,
+    "FELICIA": true,
+    "ASH": true,
+    "LUCAS": true
+   },
+   {
+    "LUCAS": true,
+    "ASH": false,
+    "FELICIA": true,
+    "JAYNA": true
+   },
+   {
+    "ASH": false,
+    "JOEL": true,
+    "LUCAS": true,
+    "JAYNA": true,
+    "FELICIA": true
+   },
+   {
+    "FELICIA": true,
+    "JAYNA": true,
+    "DOG": true,
+    "LUCAS": true,
+    "JOEL": true
+   }
+  ],
   "roles": [
    {
-    "role": "MORDRED",
     "name": "ASH",
-    "assassin": true
+    "assassin": true,
+    "role": "MORDRED"
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "LUCAS"
+    "name": "LUCAS",
+    "role": "LOYAL FOLLOWER"
    },
    {
     "role": "MORGANA",
-    "name": "CHING",
-    "assassin": false
+    "assassin": false,
+    "name": "CHING"
    },
    {
+    "assassin": false,
     "role": "PERCIVAL",
-    "name": "JOEL",
-    "assassin": false
+    "name": "JOEL"
    },
    {
     "name": "FELICIA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
-    "name": "DARYL",
-    "role": "OBERON"
+    "role": "OBERON",
+    "name": "DARYL"
    },
    {
-    "role": "MERLIN",
+    "name": "JAYNA",
     "assassin": false,
-    "name": "JAYNA"
+    "role": "MERLIN"
    },
    {
     "name": "DOG",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "JAYNA",
-  "votes": [
-   {
-    "CHING": false,
-    "JOEL": true,
-    "DOG": true
-   },
-   {
-    "FELICIA": true,
-    "JAYNA": true,
-    "LUCAS": true,
-    "ASH": true
-   },
-   {
-    "FELICIA": true,
-    "ASH": false,
-    "LUCAS": true,
-    "JAYNA": true
-   },
-   {
-    "ASH": false,
-    "LUCAS": true,
-    "FELICIA": true,
-    "JOEL": true,
-    "JAYNA": true
-   },
-   {
-    "JOEL": true,
-    "LUCAS": true,
-    "FELICIA": true,
-    "JAYNA": true,
-    "DOG": true
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    }
   ]
  },
@@ -268,20 +261,20 @@
  },
  "players": [
   {
-   "uid": "4K89AqYr54gRLMLTcZGTOFqj4I72",
-   "name": "LUCAS"
+   "name": "LUCAS",
+   "uid": "4K89AqYr54gRLMLTcZGTOFqj4I72"
   },
   {
-   "uid": "rMxyFXRNz1OJkOyYuXBJEaGv6Qp2",
-   "name": "DARYL"
+   "name": "DARYL",
+   "uid": "rMxyFXRNz1OJkOyYuXBJEaGv6Qp2"
   },
   {
-   "name": "JOEL",
-   "uid": "JcIiFgPK7rRWyEJP8BdaBPmqkrI3"
+   "uid": "JcIiFgPK7rRWyEJP8BdaBPmqkrI3",
+   "name": "JOEL"
   },
   {
-   "uid": "E3woFVl0CLRVYle44s505iQ4q2y2",
-   "name": "FELICIA"
+   "name": "FELICIA",
+   "uid": "E3woFVl0CLRVYle44s505iQ4q2y2"
   },
   {
    "name": "CHING",
@@ -296,8 +289,15 @@
    "uid": "6lwnIUSKN3NCuXLJZGt0sB8iNan2"
   },
   {
-   "uid": "YoST4di0Haany82rv3sQXdNUQm82",
-   "name": "ASH"
+   "name": "ASH",
+   "uid": "YoST4di0Haany82rv3sQXdNUQm82"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1595924858,
+  "_nanoseconds": 586000000
+ },
+ "options": {
+  "inGameLog": false
+ }
 }

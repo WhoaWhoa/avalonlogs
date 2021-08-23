@@ -1,8 +1,9 @@
 {
  "missions": [
   {
+   "failsRequired": 1,
    "state": "SUCCESS",
-   "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -12,26 +13,25 @@
       "BOB",
       "KUSHAL"
      ],
+     "state": "APPROVED",
+     "proposer": "JD",
      "team": [
       "JD",
       "DISHA"
-     ],
-     "state": "APPROVED",
-     "proposer": "JD"
+     ]
     }
    ],
-   "numFails": 0,
-   "failsRequired": 1,
+   "teamSize": 2,
    "team": [
     "JD",
     "DISHA"
    ]
   },
   {
-   "failsRequired": 1,
    "teamSize": 3,
    "proposals": [
     {
+     "proposer": "DISHA",
      "votes": [
       "DISHA",
       "JD",
@@ -43,28 +43,19 @@
       "SUFY",
       "JD",
       "DISHA"
-     ],
-     "proposer": "DISHA"
+     ]
     }
    ],
-   "state": "SUCCESS",
    "team": [
     "SUFY",
     "JD",
     "DISHA"
    ],
-   "numFails": 0
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
-   "numFails": 1,
-   "failsRequired": 1,
-   "team": [
-    "KATTU",
-    "BOB",
-    "JD",
-    "DISHA"
-   ],
-   "teamSize": 4,
    "proposals": [
     {
      "state": "APPROVED",
@@ -85,37 +76,48 @@
      "proposer": "KATTU"
     }
    ],
+   "team": [
+    "KATTU",
+    "BOB",
+    "JD",
+    "DISHA"
+   ],
+   "teamSize": 4,
+   "numFails": 1,
+   "failsRequired": 1,
    "state": "FAIL"
   },
   {
    "teamSize": 3,
    "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1,
    "team": [
     "JD",
     "SUFY",
     "DISHA"
    ],
-   "state": "FAIL",
    "proposals": [
     {
-     "votes": [
-      "KUSHAL",
-      "JD",
-      "SUFY",
-      "KATTU"
-     ],
      "team": [
       "JD",
       "SUFY",
       "DISHA"
      ],
      "state": "APPROVED",
-     "proposer": "SUFY"
+     "proposer": "SUFY",
+     "votes": [
+      "KUSHAL",
+      "JD",
+      "SUFY",
+      "KATTU"
+     ]
     }
-   ],
-   "numFails": 1
+   ]
   },
   {
+   "numFails": 0,
+   "teamSize": 4,
    "team": [
     "BOB",
     "JD",
@@ -123,9 +125,9 @@
     "KUSHAL"
    ],
    "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "KUSHAL",
      "team": [
       "BOB",
@@ -133,6 +135,7 @@
       "DISHA",
       "KUSHAL"
      ],
+     "state": "APPROVED",
      "votes": [
       "SUFY",
       "JD",
@@ -141,12 +144,13 @@
       "DISHA"
      ]
     }
-   ],
-   "teamSize": 4,
-   "numFails": 0,
-   "state": "SUCCESS"
+   ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1597280952,
+  "_nanoseconds": 180000000
+ },
  "options": {
   "inGameLog": false
  },
@@ -154,22 +158,18 @@
   "_seconds": 1597280197,
   "_nanoseconds": 506000000
  },
- "timeFinished": {
-  "_seconds": 1597280952,
-  "_nanoseconds": 180000000
- },
  "players": [
   {
-   "uid": "E2T348gVmcZEId6ENFaNyV69sGm1",
-   "name": "KUSHAL"
+   "name": "KUSHAL",
+   "uid": "E2T348gVmcZEId6ENFaNyV69sGm1"
   },
   {
    "name": "BOB",
    "uid": "WkOfXdrT8hOxx0q9DLMcDtNJLoB3"
   },
   {
-   "uid": "NhIbflgddyXgORQzt8Q0Lc0XpyV2",
-   "name": "JD"
+   "name": "JD",
+   "uid": "NhIbflgddyXgORQzt8Q0Lc0XpyV2"
   },
   {
    "name": "DISHA",
@@ -188,13 +188,13 @@
   "roles": [
    {
     "assassin": false,
-    "role": "PERCIVAL",
-    "name": "KUSHAL"
+    "name": "KUSHAL",
+    "role": "PERCIVAL"
    },
    {
-    "assassin": true,
     "name": "KATTU",
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "assassin": true
    },
    {
     "name": "SUFY",
@@ -208,8 +208,8 @@
    },
    {
     "name": "DISHA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "name": "BOB",
@@ -217,36 +217,36 @@
     "role": "MERLIN"
    }
   ],
+  "assassinated": "KUSHAL",
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
   "votes": [
    {
     "DISHA": true,
     "JD": true
    },
    {
-    "JD": true,
     "SUFY": true,
+    "JD": true,
     "DISHA": true
    },
    {
-    "DISHA": true,
     "BOB": true,
-    "KATTU": false,
-    "JD": true
-   },
-   {
     "DISHA": true,
     "JD": true,
-    "SUFY": false
+    "KATTU": false
+   },
+   {
+    "JD": true,
+    "SUFY": false,
+    "DISHA": true
    },
    {
     "KUSHAL": true,
     "BOB": true,
-    "DISHA": true,
-    "JD": true
+    "JD": true,
+    "DISHA": true
    }
-  ],
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "assassinated": "KUSHAL"
+  ]
  }
 }

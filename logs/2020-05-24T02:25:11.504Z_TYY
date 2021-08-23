@@ -1,8 +1,13 @@
 {
  "missions": [
   {
-   "state": "SUCCESS",
    "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "ASHLEY",
+    "JANET",
+    "RM"
+   ],
    "proposals": [
     {
      "votes": [
@@ -16,28 +21,31 @@
       "NINO",
       "ALAN"
      ],
-     "state": "APPROVED",
      "team": [
       "ASHLEY",
       "JANET",
       "RM"
      ],
+     "state": "APPROVED",
      "proposer": "JANET"
     }
    ],
    "numFails": 0,
-   "teamSize": 3,
-   "team": [
-    "ASHLEY",
-    "JANET",
-    "RM"
-   ]
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
+   "numFails": 0,
    "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "RM",
+     "team": [
+      "ASHLEY",
+      "JANET",
+      "RM",
+      "NINO"
+     ],
      "votes": [
       "KEVIN",
       "ASHLEY",
@@ -48,47 +56,24 @@
       "MARCUS",
       "CATHY",
       "CINDY"
-     ],
-     "team": [
-      "ASHLEY",
-      "JANET",
-      "RM",
-      "NINO"
-     ],
-     "state": "APPROVED",
-     "proposer": "RM"
+     ]
     }
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "ASHLEY",
     "JANET",
     "RM",
     "NINO"
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
-   "state": "FAIL",
-   "teamSize": 4,
    "numFails": 1,
-   "team": [
-    "NINO",
-    "ASHLEY",
-    "JANET",
-    "RM"
-   ],
-   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "NINO",
-      "ASHLEY",
-      "JANET",
-      "RM"
-     ],
      "proposer": "NINO",
+     "state": "APPROVED",
      "votes": [
       "JANET",
       "RM",
@@ -99,23 +84,36 @@
       "CINDY",
       "KEVIN",
       "ASHLEY"
+     ],
+     "team": [
+      "NINO",
+      "ASHLEY",
+      "JANET",
+      "RM"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "team": [
+    "NINO",
+    "ASHLEY",
+    "JANET",
+    "RM"
+   ],
+   "teamSize": 4,
+   "state": "FAIL"
   },
   {
-   "failsRequired": 2,
-   "state": "SUCCESS",
-   "teamSize": 5,
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "NINO",
       "ALAN",
       "MARCUS"
      ],
      "proposer": "ALAN",
+     "state": "REJECTED",
      "team": [
       "ASHLEY",
       "JANET",
@@ -125,7 +123,7 @@
      ]
     },
     {
-     "state": "REJECTED",
+     "proposer": "MARCUS",
      "votes": [
       "MARCUS",
       "CINDY",
@@ -139,9 +137,10 @@
       "ALAN",
       "KEVIN"
      ],
-     "proposer": "MARCUS"
+     "state": "REJECTED"
     },
     {
+     "proposer": "CATHY",
      "state": "APPROVED",
      "votes": [
       "ASHLEY",
@@ -159,11 +158,12 @@
       "JANET",
       "RM",
       "NINO"
-     ],
-     "proposer": "CATHY"
+     ]
     }
    ],
-   "numFails": 1,
+   "teamSize": 5,
+   "state": "SUCCESS",
+   "failsRequired": 2,
    "team": [
     "CATHY",
     "ASHLEY",
@@ -173,29 +173,21 @@
    ]
   },
   {
-   "proposals": [],
-   "state": "PENDING",
-   "failsRequired": 1,
    "teamSize": 5,
-   "team": []
+   "team": [],
+   "failsRequired": 1,
+   "proposals": [],
+   "state": "PENDING"
   }
  ],
- "timeFinished": {
-  "_seconds": 1590288205,
-  "_nanoseconds": 417000000
- },
- "timeCreated": {
-  "_seconds": 1590287111,
-  "_nanoseconds": 504000000
- },
  "outcome": {
   "message": "Three successful missions",
   "state": "GOOD_WIN",
   "assassinated": "RM",
   "votes": [
    {
-    "JANET": true,
     "ASHLEY": true,
+    "JANET": true,
     "RM": true
    },
    {
@@ -205,44 +197,44 @@
     "ASHLEY": true
    },
    {
+    "JANET": true,
     "RM": true,
-    "NINO": false,
     "ASHLEY": true,
-    "JANET": true
+    "NINO": false
    },
    {
-    "NINO": false,
     "RM": true,
+    "ASHLEY": true,
     "CATHY": true,
-    "JANET": true,
-    "ASHLEY": true
+    "NINO": false,
+    "JANET": true
    }
   ],
   "roles": [
    {
     "assassin": false,
-    "name": "NINO",
-    "role": "OBERON"
-   },
-   {
-    "role": "MORGANA",
-    "name": "ALAN",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "name": "MARCUS",
-    "assassin": true
+    "role": "OBERON",
+    "name": "NINO"
    },
    {
     "assassin": false,
+    "name": "ALAN",
+    "role": "MORGANA"
+   },
+   {
+    "name": "MARCUS",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
     "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "CATHY"
    },
    {
-    "name": "CINDY",
+    "role": "MERLIN",
     "assassin": false,
-    "role": "MERLIN"
+    "name": "CINDY"
    },
    {
     "assassin": false,
@@ -251,13 +243,13 @@
    },
    {
     "name": "ASHLEY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "name": "JANET",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "role": "PERCIVAL",
@@ -266,45 +258,53 @@
    }
   ]
  },
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
-   "name": "ASHLEY",
-   "uid": "oUbh0cbD3dS4GAEzbDoU6qfEEO73"
+   "uid": "oUbh0cbD3dS4GAEzbDoU6qfEEO73",
+   "name": "ASHLEY"
   },
   {
    "uid": "c8AL0Gy5vPUsFpW1yXNE04LiMJB2",
    "name": "JANET"
   },
   {
-   "uid": "5ROZzXe2h0QLOYLTi2uNvytkqPp2",
-   "name": "RM"
+   "name": "RM",
+   "uid": "5ROZzXe2h0QLOYLTi2uNvytkqPp2"
   },
   {
-   "name": "NINO",
-   "uid": "o0J4MjCZwlbJ7YDGCkZ7UERLSN83"
+   "uid": "o0J4MjCZwlbJ7YDGCkZ7UERLSN83",
+   "name": "NINO"
   },
   {
-   "name": "ALAN",
-   "uid": "BSV8PXzydYaXtBuMWGVGx0eYPL02"
+   "uid": "BSV8PXzydYaXtBuMWGVGx0eYPL02",
+   "name": "ALAN"
   },
   {
-   "name": "MARCUS",
-   "uid": "GrouzuIWiGfIh1kiaWeynTsdmWo1"
+   "uid": "GrouzuIWiGfIh1kiaWeynTsdmWo1",
+   "name": "MARCUS"
   },
   {
    "name": "CATHY",
    "uid": "9lEDnYZldlPbAqymqmKdhmK0KLH2"
   },
   {
-   "uid": "r42ghwvuAXYXp5woGW8JjK86C0C3",
-   "name": "CINDY"
+   "name": "CINDY",
+   "uid": "r42ghwvuAXYXp5woGW8JjK86C0C3"
   },
   {
    "name": "KEVIN",
    "uid": "lckLRrCDaSeHjYoj6wuNDLDq7uu1"
   }
  ],
- "options": {
-  "inGameLog": false
+ "timeCreated": {
+  "_seconds": 1590287111,
+  "_nanoseconds": 504000000
+ },
+ "timeFinished": {
+  "_seconds": 1590288205,
+  "_nanoseconds": 417000000
  }
 }

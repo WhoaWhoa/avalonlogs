@@ -1,61 +1,4 @@
 {
- "outcome": {
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "ANDREW"
-   },
-   {
-    "name": "ETHAN",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "name": "KEERTHI",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "CONOR",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "ARIANE",
-    "role": "MORGANA",
-    "assassin": false
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "CONOR",
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "ETHAN": true,
-    "ARIANE": true
-   },
-   {
-    "ETHAN": true,
-    "ANDREW": true,
-    "ARIANE": false
-   },
-   {
-    "ETHAN": true,
-    "ARIANE": false
-   },
-   {
-    "ETHAN": true,
-    "CONOR": true,
-    "ANDREW": true
-   },
-   {
-    "ANDREW": true,
-    "CONOR": true,
-    "ETHAN": true
-   }
-  ]
- },
  "players": [
   {
    "uid": "hTv4X162SmUYwylZvab4Ddz2NMX2",
@@ -78,159 +21,222 @@
    "uid": "OP4yeheff0bXznnVhMl2zxHeUdo2"
   }
  ],
+ "timeCreated": {
+  "_seconds": 1597357630,
+  "_nanoseconds": 335000000
+ },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": "CONOR",
+  "roles": [
+   {
+    "name": "ANDREW",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ETHAN",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "name": "KEERTHI",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "CONOR",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "role": "MORGANA",
+    "name": "ARIANE",
+    "assassin": false
+   }
+  ],
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "ARIANE": true,
+    "ETHAN": true
+   },
+   {
+    "ETHAN": true,
+    "ANDREW": true,
+    "ARIANE": false
+   },
+   {
+    "ETHAN": true,
+    "ARIANE": false
+   },
+   {
+    "ETHAN": true,
+    "ANDREW": true,
+    "CONOR": true
+   },
+   {
+    "ANDREW": true,
+    "ETHAN": true,
+    "CONOR": true
+   }
+  ]
+ },
  "missions": [
   {
-   "team": [
-    "ETHAN",
-    "ARIANE"
-   ],
-   "failsRequired": 1,
    "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
+     "proposer": "KEERTHI",
+     "state": "REJECTED",
      "votes": [
       "ANDREW",
       "ETHAN"
      ],
-     "proposer": "KEERTHI",
-     "state": "REJECTED",
      "team": [
       "KEERTHI",
       "ETHAN"
      ]
     },
     {
-     "team": [
-      "ETHAN",
-      "ARIANE"
-     ],
-     "state": "APPROVED",
+     "proposer": "ETHAN",
      "votes": [
       "ETHAN",
       "ARIANE",
       "CONOR"
      ],
-     "proposer": "ETHAN"
+     "state": "APPROVED",
+     "team": [
+      "ETHAN",
+      "ARIANE"
+     ]
     }
    ],
-   "numFails": 0,
+   "failsRequired": 1,
+   "team": [
+    "ETHAN",
+    "ARIANE"
+   ],
    "teamSize": 2
   },
   {
-   "numFails": 1,
    "failsRequired": 1,
-   "teamSize": 3,
-   "state": "FAIL",
    "team": [
     "ANDREW",
     "ARIANE",
     "ETHAN"
    ],
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
+     "votes": [
+      "ANDREW",
+      "ARIANE",
+      "KEERTHI"
+     ],
      "team": [
       "ANDREW",
       "ARIANE",
       "ETHAN"
      ],
-     "proposer": "ANDREW",
-     "votes": [
-      "ANDREW",
-      "ARIANE",
-      "KEERTHI"
-     ],
-     "state": "APPROVED"
+     "proposer": "ANDREW"
     }
-   ]
+   ],
+   "teamSize": 3
   },
   {
-   "failsRequired": 1,
-   "numFails": 1,
-   "state": "FAIL",
-   "team": [
-    "ARIANE",
-    "ETHAN"
-   ],
    "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "CONOR",
      "votes": [
       "KEERTHI"
      ],
-     "proposer": "CONOR",
-     "state": "REJECTED",
      "team": [
       "CONOR",
       "KEERTHI"
      ]
     },
     {
+     "proposer": "ARIANE",
      "votes": [
       "ARIANE",
       "ANDREW",
       "ETHAN",
       "CONOR"
      ],
-     "proposer": "ARIANE",
      "team": [
       "ARIANE",
       "ETHAN"
      ],
      "state": "APPROVED"
     }
-   ]
+   ],
+   "state": "FAIL",
+   "team": [
+    "ARIANE",
+    "ETHAN"
+   ],
+   "numFails": 1
   },
   {
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "CONOR",
     "ETHAN",
     "ANDREW"
    ],
-   "state": "SUCCESS",
+   "teamSize": 3,
    "numFails": 0,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "KEERTHI",
       "ANDREW",
       "CONOR"
      ],
-     "votes": [],
      "proposer": "KEERTHI",
-     "state": "REJECTED"
+     "votes": []
     },
     {
-     "team": [
-      "CONOR",
-      "KEERTHI",
-      "ETHAN"
-     ],
      "votes": [
       "ETHAN",
       "KEERTHI"
      ],
      "state": "REJECTED",
-     "proposer": "ETHAN"
+     "proposer": "ETHAN",
+     "team": [
+      "CONOR",
+      "KEERTHI",
+      "ETHAN"
+     ]
     },
     {
+     "proposer": "ANDREW",
      "team": [
       "ANDREW",
       "CONOR",
       "ARIANE"
      ],
+     "state": "REJECTED",
      "votes": [
       "ARIANE"
-     ],
-     "proposer": "ANDREW",
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "ANDREW",
       "ETHAN",
       "CONOR"
      ],
+     "state": "APPROVED",
      "proposer": "CONOR",
      "team": [
       "CONOR",
@@ -238,59 +244,53 @@
       "ANDREW"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3
+   ]
   },
   {
    "state": "SUCCESS",
-   "proposals": [
-    {
-     "proposer": "ARIANE",
-     "team": [
-      "ARIANE",
-      "ETHAN",
-      "ANDREW"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "ARIANE"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "votes": [
-      "ETHAN",
-      "ANDREW",
-      "KEERTHI"
-     ],
-     "team": [
-      "ETHAN",
-      "ANDREW",
-      "CONOR"
-     ],
-     "proposer": "KEERTHI"
-    }
-   ],
-   "numFails": 0,
    "team": [
     "ETHAN",
     "ANDREW",
     "CONOR"
    ],
-   "failsRequired": 1,
-   "teamSize": 3
+   "numFails": 0,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "votes": [
+      "ARIANE"
+     ],
+     "state": "REJECTED",
+     "proposer": "ARIANE",
+     "team": [
+      "ARIANE",
+      "ETHAN",
+      "ANDREW"
+     ]
+    },
+    {
+     "votes": [
+      "ETHAN",
+      "ANDREW",
+      "KEERTHI"
+     ],
+     "proposer": "KEERTHI",
+     "state": "APPROVED",
+     "team": [
+      "ETHAN",
+      "ANDREW",
+      "CONOR"
+     ]
+    }
+   ],
+   "failsRequired": 1
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "timeFinished": {
   "_seconds": 1597358250,
   "_nanoseconds": 162000000
  },
- "timeCreated": {
-  "_seconds": 1597357630,
-  "_nanoseconds": 335000000
+ "options": {
+  "inGameLog": false
  }
 }

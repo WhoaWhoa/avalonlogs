@@ -1,37 +1,37 @@
 {
- "timeFinished": {
-  "_seconds": 1584757940,
-  "_nanoseconds": 685231000
- },
  "missions": [
   {
-   "teamSize": 2,
+   "failsRequired": 1,
    "team": [
     "NOTMERLIN",
     "URANUS"
    ],
+   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "NOTMERLIN",
+      "URANUS"
+     ],
+     "state": "APPROVED",
+     "proposer": "NOTMERLIN",
      "votes": [
       "JAMES",
       "DEB",
       "JESS",
       "URANUS",
       "NOTMERLIN"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "NOTMERLIN",
-      "URANUS"
-     ],
-     "proposer": "NOTMERLIN"
+     ]
     }
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1
+   "state": "SUCCESS"
   },
   {
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "JESS",
     "JAMES",
@@ -39,7 +39,7 @@
    ],
    "proposals": [
     {
-     "proposer": "JESS",
+     "state": "APPROVED",
      "team": [
       "JESS",
       "JAMES",
@@ -50,28 +50,18 @@
       "JAMES",
       "DEB"
      ],
-     "state": "APPROVED"
+     "proposer": "JESS"
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "state": "FAIL",
-   "numFails": 1
+   ]
   },
   {
-   "failsRequired": 1,
-   "numFails": 0,
-   "team": [
-    "URANUS",
-    "NOTMERLIN"
-   ],
    "proposals": [
     {
+     "proposer": "URANUS",
      "team": [
       "URANUS",
       "NOTMERLIN"
      ],
-     "proposer": "URANUS",
      "votes": [
       "URANUS",
       "NOTMERLIN",
@@ -80,17 +70,17 @@
      "state": "APPROVED"
     }
    ],
-   "teamSize": 2,
-   "state": "SUCCESS"
-  },
-  {
-   "teamSize": 3,
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "URANUS",
-    "NOTMERLIN",
-    "DEB"
+    "NOTMERLIN"
    ],
-   "numFails": 1,
+   "teamSize": 2
+  },
+  {
+   "state": "FAIL",
    "proposals": [
     {
      "votes": [
@@ -99,47 +89,25 @@
       "URANUS",
       "NOTMERLIN"
      ],
-     "proposer": "DEB",
      "state": "APPROVED",
      "team": [
       "URANUS",
       "NOTMERLIN",
       "DEB"
-     ]
+     ],
+     "proposer": "DEB"
     }
    ],
-   "state": "FAIL",
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 1,
+   "team": [
+    "URANUS",
+    "NOTMERLIN",
+    "DEB"
+   ],
+   "teamSize": 3
   },
   {
-   "proposals": [
-    {
-     "team": [
-      "JAMES",
-      "NOTMERLIN",
-      "JESS"
-     ],
-     "proposer": "JAMES",
-     "state": "REJECTED",
-     "votes": [
-      "JESS"
-     ]
-    },
-    {
-     "votes": [
-      "JESS",
-      "URANUS",
-      "DEB"
-     ],
-     "team": [
-      "NOTMERLIN",
-      "JESS",
-      "URANUS"
-     ],
-     "proposer": "NOTMERLIN",
-     "state": "APPROVED"
-    }
-   ],
    "failsRequired": 1,
    "teamSize": 3,
    "team": [
@@ -147,18 +115,46 @@
     "JESS",
     "URANUS"
    ],
-   "state": "FAIL",
-   "numFails": 1
+   "numFails": 1,
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "votes": [
+      "JESS"
+     ],
+     "team": [
+      "JAMES",
+      "NOTMERLIN",
+      "JESS"
+     ],
+     "proposer": "JAMES"
+    },
+    {
+     "votes": [
+      "JESS",
+      "URANUS",
+      "DEB"
+     ],
+     "proposer": "NOTMERLIN",
+     "team": [
+      "NOTMERLIN",
+      "JESS",
+      "URANUS"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "state": "FAIL"
   }
  ],
  "players": [
   {
-   "name": "DEB",
-   "uid": "p7XTBEasBwQfXBOdDe1zQtbIEZB3"
+   "uid": "p7XTBEasBwQfXBOdDe1zQtbIEZB3",
+   "name": "DEB"
   },
   {
-   "uid": "Y3TVkgUxuwcKKoFb1AjviCIFw5B3",
-   "name": "JAMES"
+   "name": "JAMES",
+   "uid": "Y3TVkgUxuwcKKoFb1AjviCIFw5B3"
   },
   {
    "name": "NOTMERLIN",
@@ -173,7 +169,13 @@
    "name": "URANUS"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1584757940,
+  "_nanoseconds": 685231000
+ },
  "outcome": {
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
   "votes": [
    {
     "NOTMERLIN": true,
@@ -185,13 +187,13 @@
     "JESS": false
    },
    {
-    "NOTMERLIN": true,
-    "URANUS": true
+    "URANUS": true,
+    "NOTMERLIN": true
    },
    {
+    "DEB": false,
     "NOTMERLIN": true,
-    "URANUS": true,
-    "DEB": false
+    "URANUS": true
    },
    {
     "URANUS": true,
@@ -199,7 +201,6 @@
     "NOTMERLIN": true
    }
   ],
-  "message": "Three failed missions",
   "roles": [
    {
     "assassin": false,
@@ -212,23 +213,22 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
+    "role": "LOYAL FOLLOWER",
     "name": "NOTMERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "JAMES",
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "name": "JAMES"
-   },
-   {
     "name": "DEB",
-    "role": "EVIL MINION",
-    "assassin": false
+    "role": "EVIL MINION"
    }
   ],
-  "assassinated": null,
-  "state": "EVIL_WIN"
+  "assassinated": null
  },
  "timeCreated": {
   "_seconds": 1584757534,

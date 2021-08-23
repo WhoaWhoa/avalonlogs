@@ -1,11 +1,55 @@
 {
- "timeFinished": {
-  "_seconds": 1586544216,
-  "_nanoseconds": 745471000
- },
- "timeCreated": {
-  "_seconds": 1586543537,
-  "_nanoseconds": 196000000
+ "outcome": {
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "name": "SOPHEY",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "SARAH"
+   },
+   {
+    "name": "CHRISTINE",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "ANGELL",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "ALISHA"
+   }
+  ],
+  "assassinated": "ANGELL",
+  "votes": [
+   {
+    "SOPHEY": true,
+    "ANGELL": true
+   },
+   {
+    "ANGELL": true,
+    "SOPHEY": true,
+    "ALISHA": false
+   },
+   {
+    "SARAH": true,
+    "CHRISTINE": true
+   },
+   {
+    "CHRISTINE": true,
+    "ALISHA": true,
+    "SARAH": true
+   }
+  ]
  },
  "missions": [
   {
@@ -13,8 +57,10 @@
     "ANGELL",
     "SOPHEY"
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
@@ -25,69 +71,66 @@
       "ALISHA",
       "SOPHEY"
      ],
+     "proposer": "SOPHEY",
      "team": [
       "ANGELL",
       "SOPHEY"
-     ],
-     "proposer": "SOPHEY"
+     ]
     }
-   ],
-   "teamSize": 2,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "state": "FAIL",
-   "numFails": 1,
    "failsRequired": 1,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "proposer": "ANGELL",
-     "team": [
-      "ANGELL",
-      "SOPHEY",
-      "SARAH"
-     ],
-     "votes": [
-      "SOPHEY",
-      "CHRISTINE"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "proposer": "ALISHA",
-     "team": [
-      "ALISHA",
-      "ANGELL",
-      "SOPHEY"
-     ],
-     "votes": [
-      "CHRISTINE",
-      "ANGELL",
-      "ALISHA",
-      "SOPHEY"
-     ]
-    }
-   ],
-   "teamSize": 3,
    "team": [
     "ALISHA",
     "ANGELL",
     "SOPHEY"
-   ]
+   ],
+   "proposals": [
+    {
+     "votes": [
+      "SOPHEY",
+      "CHRISTINE"
+     ],
+     "proposer": "ANGELL",
+     "state": "REJECTED",
+     "team": [
+      "ANGELL",
+      "SOPHEY",
+      "SARAH"
+     ]
+    },
+    {
+     "proposer": "ALISHA",
+     "state": "APPROVED",
+     "votes": [
+      "CHRISTINE",
+      "ANGELL",
+      "ALISHA",
+      "SOPHEY"
+     ],
+     "team": [
+      "ALISHA",
+      "ANGELL",
+      "SOPHEY"
+     ]
+    }
+   ],
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3
   },
   {
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "SARAH",
     "CHRISTINE"
    ],
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "SARAH",
-      "CHRISTINE"
-     ],
-     "proposer": "CHRISTINE",
      "state": "APPROVED",
      "votes": [
       "ANGELL",
@@ -95,13 +138,14 @@
       "SOPHEY",
       "SARAH",
       "CHRISTINE"
-     ]
+     ],
+     "team": [
+      "SARAH",
+      "CHRISTINE"
+     ],
+     "proposer": "CHRISTINE"
     }
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1,
-   "teamSize": 2
+   ]
   },
   {
    "team": [
@@ -109,15 +153,18 @@
     "CHRISTINE",
     "ALISHA"
    ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 3,
    "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "SARAH",
       "CHRISTINE",
       "ALISHA"
      ],
-     "state": "APPROVED",
      "votes": [
       "CHRISTINE",
       "ALISHA",
@@ -125,10 +172,7 @@
      ],
      "proposer": "SARAH"
     }
-   ],
-   "teamSize": 3,
-   "state": "SUCCESS",
-   "numFails": 0
+   ]
   },
   {
    "proposals": [],
@@ -138,78 +182,34 @@
    "team": []
   }
  ],
- "outcome": {
-  "message": "Three successful missions",
-  "assassinated": "ANGELL",
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "SOPHEY": true,
-    "ANGELL": true
-   },
-   {
-    "ALISHA": false,
-    "ANGELL": true,
-    "SOPHEY": true
-   },
-   {
-    "CHRISTINE": true,
-    "SARAH": true
-   },
-   {
-    "SARAH": true,
-    "ALISHA": true,
-    "CHRISTINE": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "SOPHEY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "SARAH"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "CHRISTINE",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ANGELL"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "ALISHA"
-   }
-  ]
+ "timeFinished": {
+  "_seconds": 1586544216,
+  "_nanoseconds": 745471000
  },
  "players": [
   {
-   "name": "SARAH",
-   "uid": "3m1mQQqUU4S2xSIFI2ogTTku6ss1"
+   "uid": "3m1mQQqUU4S2xSIFI2ogTTku6ss1",
+   "name": "SARAH"
   },
   {
    "uid": "OewWMpsmUNftybNbKze8SBZ37Q23",
    "name": "SOPHEY"
   },
   {
-   "name": "ANGELL",
-   "uid": "WRDiYfqIoLZLeBm3wOolbmfpFQj1"
+   "uid": "WRDiYfqIoLZLeBm3wOolbmfpFQj1",
+   "name": "ANGELL"
   },
   {
-   "uid": "SL1SWGfGKgbFR5j9EY8ACpZJ0pK2",
-   "name": "ALISHA"
+   "name": "ALISHA",
+   "uid": "SL1SWGfGKgbFR5j9EY8ACpZJ0pK2"
   },
   {
    "uid": "GI3sRgKFRINiMosJ2UoqcE9kFZo2",
    "name": "CHRISTINE"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1586543537,
+  "_nanoseconds": 196000000
+ }
 }

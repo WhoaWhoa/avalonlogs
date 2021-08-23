@@ -1,7 +1,74 @@
 {
+ "outcome": {
+  "assassinated": null,
+  "votes": [
+   {
+    "PAULY": true,
+    "SYD": true
+   },
+   {
+    "SYD": true,
+    "PAULY": false,
+    "MATTHIAS": true
+   },
+   {
+    "SYD": true,
+    "AJ": true,
+    "MATTHIAS": true
+   },
+   {
+    "SYD": true,
+    "MATTHIAS": true,
+    "MICHELLE": true,
+    "AJ": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "message": "Three missions succeeded",
+  "roles": [
+   {
+    "name": "SYD",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "PAULY",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "ALEC",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "MICHELLE"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MATTHIAS",
+    "assassin": false
+   },
+   {
+    "name": "AJ",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "TONY",
+    "role": "EVIL MINION"
+   }
+  ]
+ },
  "timeCreated": {
   "_seconds": 1595056578,
   "_nanoseconds": 136000000
+ },
+ "options": {
+  "inGameLog": false
  },
  "timeFinished": {
   "_seconds": 1595060359,
@@ -9,16 +76,20 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
+   "team": [
+    "PAULY",
+    "SYD"
+   ],
    "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
      "proposer": "MICHELLE",
-     "state": "REJECTED",
      "team": [
       "MICHELLE",
       "TONY"
      ],
+     "state": "REJECTED",
      "votes": [
       "MICHELLE",
       "ALEC",
@@ -26,58 +97,66 @@
      ]
     },
     {
+     "team": [
+      "PAULY",
+      "SYD"
+     ],
      "state": "APPROVED",
-     "proposer": "PAULY",
      "votes": [
       "PAULY",
       "SYD",
       "ALEC",
       "MATTHIAS"
      ],
-     "team": [
-      "PAULY",
-      "SYD"
-     ]
+     "proposer": "PAULY"
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "team": [
-    "PAULY",
-    "SYD"
-   ]
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
-   "numFails": 1,
    "failsRequired": 1,
+   "team": [
+    "SYD",
+    "PAULY",
+    "MATTHIAS"
+   ],
    "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
+     "team": [
+      "PAULY",
+      "AJ",
+      "SYD"
+     ],
      "votes": [
       "TONY",
       "AJ"
      ],
      "proposer": "AJ",
-     "team": [
-      "PAULY",
-      "AJ",
-      "SYD"
-     ]
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "TONY"
+     ],
      "team": [
       "TONY",
       "SYD",
       "PAULY"
      ],
      "state": "REJECTED",
-     "votes": [
-      "TONY"
-     ],
      "proposer": "TONY"
     },
     {
+     "proposer": "SYD",
+     "team": [
+      "SYD",
+      "PAULY",
+      "MATTHIAS"
+     ],
+     "state": "APPROVED",
      "votes": [
       "MICHELLE",
       "PAULY",
@@ -85,42 +164,26 @@
       "ALEC",
       "SYD",
       "MATTHIAS"
-     ],
-     "team": [
-      "SYD",
-      "PAULY",
-      "MATTHIAS"
-     ],
-     "proposer": "SYD",
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "team": [
-    "SYD",
-    "PAULY",
-    "MATTHIAS"
    ],
    "state": "FAIL"
   },
   {
-   "team": [
-    "AJ",
-    "SYD",
-    "MATTHIAS"
-   ],
    "state": "SUCCESS",
+   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "MATTHIAS",
      "state": "REJECTED",
+     "votes": [
+      "MATTHIAS",
+      "SYD"
+     ],
+     "proposer": "MATTHIAS",
      "team": [
       "MATTHIAS",
       "MICHELLE",
       "TONY"
-     ],
-     "votes": [
-      "MATTHIAS",
-      "SYD"
      ]
     },
     {
@@ -142,34 +205,29 @@
       "MATTHIAS"
      ],
      "proposer": "MICHELLE",
-     "state": "REJECTED",
      "votes": [
       "MICHELLE",
       "AJ",
       "SYD"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "proposer": "PAULY",
-     "votes": [
-      "PAULY",
-      "TONY",
-      "AJ"
-     ],
      "state": "REJECTED",
      "team": [
       "PAULY",
       "AJ",
       "TONY"
+     ],
+     "votes": [
+      "PAULY",
+      "TONY",
+      "AJ"
      ]
     },
     {
-     "proposer": "AJ",
-     "team": [
-      "AJ",
-      "SYD",
-      "MATTHIAS"
-     ],
+     "state": "APPROVED",
      "votes": [
       "ALEC",
       "SYD",
@@ -179,46 +237,54 @@
       "MATTHIAS",
       "MICHELLE"
      ],
-     "state": "APPROVED"
+     "team": [
+      "AJ",
+      "SYD",
+      "MATTHIAS"
+     ],
+     "proposer": "AJ"
     }
    ],
-   "numFails": 0,
    "failsRequired": 1,
-   "teamSize": 3
+   "team": [
+    "AJ",
+    "SYD",
+    "MATTHIAS"
+   ],
+   "numFails": 0
   },
   {
-   "failsRequired": 2,
-   "teamSize": 4,
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "MATTHIAS",
     "SYD",
     "AJ",
     "MICHELLE"
    ],
+   "failsRequired": 2,
    "proposals": [
     {
      "state": "REJECTED",
+     "votes": [
+      "TONY"
+     ],
+     "proposer": "TONY",
      "team": [
       "AJ",
       "MATTHIAS",
       "SYD",
       "ALEC"
-     ],
-     "proposer": "TONY",
-     "votes": [
-      "TONY"
      ]
     },
     {
      "state": "REJECTED",
-     "proposer": "SYD",
      "team": [
       "SYD",
       "MATTHIAS",
       "AJ",
       "MICHELLE"
      ],
+     "proposer": "SYD",
      "votes": [
       "SYD",
       "MATTHIAS",
@@ -226,12 +292,6 @@
      ]
     },
     {
-     "team": [
-      "MATTHIAS",
-      "SYD",
-      "AJ",
-      "MICHELLE"
-     ],
      "state": "APPROVED",
      "votes": [
       "AJ",
@@ -239,86 +299,26 @@
       "MICHELLE",
       "MATTHIAS"
      ],
-     "proposer": "MATTHIAS"
+     "proposer": "MATTHIAS",
+     "team": [
+      "MATTHIAS",
+      "SYD",
+      "AJ",
+      "MICHELLE"
+     ]
     }
    ],
-   "numFails": 0
+   "state": "SUCCESS",
+   "teamSize": 4
   },
   {
-   "failsRequired": 1,
    "teamSize": 4,
    "proposals": [],
+   "team": [],
    "state": "PENDING",
-   "team": []
+   "failsRequired": 1
   }
  ],
- "outcome": {
-  "assassinated": null,
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "SYD": true,
-    "PAULY": true
-   },
-   {
-    "PAULY": false,
-    "SYD": true,
-    "MATTHIAS": true
-   },
-   {
-    "MATTHIAS": true,
-    "AJ": true,
-    "SYD": true
-   },
-   {
-    "MICHELLE": true,
-    "AJ": true,
-    "SYD": true,
-    "MATTHIAS": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "SYD",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "PAULY",
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "ALEC",
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MICHELLE"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "MATTHIAS"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "AJ"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "TONY"
-   }
-  ],
-  "message": "Three missions succeeded"
- },
- "options": {
-  "inGameLog": false
- },
  "players": [
   {
    "name": "MICHELLE",
@@ -333,8 +333,8 @@
    "uid": "TLlmT79ytShk1ptG0DIhRorvwSh2"
   },
   {
-   "uid": "k700no0LADUq7iQD6TYm7yGS4D12",
-   "name": "TONY"
+   "name": "TONY",
+   "uid": "k700no0LADUq7iQD6TYm7yGS4D12"
   },
   {
    "uid": "Ko14sfrgWZfYuVSwFEuN3C3dMus1",

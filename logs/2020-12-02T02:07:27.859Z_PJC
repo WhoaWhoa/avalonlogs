@@ -3,13 +3,78 @@
   "_seconds": 1606874847,
   "_nanoseconds": 859000000
  },
- "options": {
-  "inGameLog": false
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "CHRIS": true,
+    "BILL": true
+   },
+   {
+    "BILL": false,
+    "CHRIS": true,
+    "HANNER": true
+   },
+   {
+    "MICHELLE": true,
+    "GMONEY": true,
+    "BILL": false,
+    "CHRIS": true
+   },
+   {
+    "CHRIS": true,
+    "GMONEY": true,
+    "HANNER": true
+   },
+   {
+    "HANNER": true,
+    "MICHELLE": true,
+    "CHRIS": true,
+    "GMONEY": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "HANNER"
+   },
+   {
+    "assassin": false,
+    "name": "MICHELLE",
+    "role": "MERLIN"
+   },
+   {
+    "name": "MAREBEAR",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "CHRIS",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "BILL"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "GMONEY"
+   }
+  ],
+  "assassinated": "MICHELLE"
  },
  "missions": [
   {
-   "numFails": 0,
-   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "BILL",
+    "CHRIS"
+   ],
    "proposals": [
     {
      "state": "APPROVED",
@@ -28,24 +93,19 @@
      ]
     }
    ],
-   "state": "SUCCESS",
    "teamSize": 2,
-   "team": [
-    "BILL",
-    "CHRIS"
-   ]
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
-   "teamSize": 3,
-   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "HANNER",
       "CHRIS",
       "BILL"
      ],
-     "state": "APPROVED",
      "votes": [
       "MICHELLE",
       "HANNER",
@@ -56,19 +116,19 @@
      "proposer": "HANNER"
     }
    ],
+   "numFails": 1,
+   "teamSize": 3,
+   "failsRequired": 1,
    "team": [
     "HANNER",
     "CHRIS",
     "BILL"
    ],
-   "failsRequired": 1,
-   "numFails": 1
+   "state": "FAIL"
   },
   {
    "proposals": [
     {
-     "proposer": "MICHELLE",
-     "state": "REJECTED",
      "votes": [
       "CHRIS",
       "MICHELLE",
@@ -79,23 +139,25 @@
       "MICHELLE",
       "CHRIS",
       "HANNER"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "MICHELLE"
     },
     {
-     "votes": [
-      "CHRIS",
-      "GMONEY",
-      "MAREBEAR",
-      "BILL"
-     ],
      "team": [
       "MICHELLE",
       "CHRIS",
       "BILL",
       "GMONEY"
      ],
+     "state": "APPROVED",
      "proposer": "GMONEY",
-     "state": "APPROVED"
+     "votes": [
+      "CHRIS",
+      "GMONEY",
+      "MAREBEAR",
+      "BILL"
+     ]
     }
    ],
    "team": [
@@ -104,26 +166,27 @@
     "BILL",
     "GMONEY"
    ],
+   "state": "FAIL",
    "failsRequired": 1,
    "numFails": 1,
-   "teamSize": 4,
-   "state": "FAIL"
+   "teamSize": 4
   },
   {
    "state": "SUCCESS",
-   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "MAREBEAR"
-     ],
-     "state": "REJECTED",
      "team": [
       "MAREBEAR",
       "MICHELLE",
       "GMONEY"
      ],
-     "proposer": "MAREBEAR"
+     "state": "REJECTED",
+     "proposer": "MAREBEAR",
+     "votes": [
+      "MAREBEAR"
+     ]
     },
     {
      "votes": [
@@ -138,7 +201,7 @@
      "state": "REJECTED"
     },
     {
-     "proposer": "CHRIS",
+     "state": "APPROVED",
      "votes": [
       "GMONEY",
       "CHRIS",
@@ -146,23 +209,40 @@
       "HANNER",
       "BILL"
      ],
-     "state": "APPROVED",
      "team": [
       "CHRIS",
       "HANNER",
       "GMONEY"
-     ]
+     ],
+     "proposer": "CHRIS"
     }
    ],
-   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "CHRIS",
     "HANNER",
     "GMONEY"
-   ],
-   "teamSize": 3
+   ]
   },
   {
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "CHRIS",
+      "GMONEY",
+      "MICHELLE",
+      "HANNER"
+     ],
+     "proposer": "HANNER",
+     "team": [
+      "CHRIS",
+      "HANNER",
+      "MICHELLE",
+      "GMONEY"
+     ]
+    }
+   ],
    "team": [
     "CHRIS",
     "HANNER",
@@ -170,97 +250,17 @@
     "GMONEY"
    ],
    "numFails": 0,
-   "teamSize": 4,
+   "failsRequired": 1,
    "state": "SUCCESS",
-   "proposals": [
-    {
-     "proposer": "HANNER",
-     "state": "APPROVED",
-     "team": [
-      "CHRIS",
-      "HANNER",
-      "MICHELLE",
-      "GMONEY"
-     ],
-     "votes": [
-      "CHRIS",
-      "GMONEY",
-      "MICHELLE",
-      "HANNER"
-     ]
-    }
-   ],
-   "failsRequired": 1
+   "teamSize": 4
   }
  ],
- "outcome": {
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "HANNER"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "MICHELLE"
-   },
-   {
-    "role": "MORGANA",
-    "name": "MAREBEAR",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "CHRIS",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "name": "BILL",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "GMONEY",
-    "role": "PERCIVAL",
-    "assassin": false
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "MICHELLE",
-  "votes": [
-   {
-    "BILL": true,
-    "CHRIS": true
-   },
-   {
-    "HANNER": true,
-    "BILL": false,
-    "CHRIS": true
-   },
-   {
-    "BILL": false,
-    "GMONEY": true,
-    "CHRIS": true,
-    "MICHELLE": true
-   },
-   {
-    "CHRIS": true,
-    "HANNER": true,
-    "GMONEY": true
-   },
-   {
-    "HANNER": true,
-    "MICHELLE": true,
-    "CHRIS": true,
-    "GMONEY": true
-   }
-  ],
-  "state": "EVIL_WIN"
- },
  "timeFinished": {
   "_seconds": 1606876175,
   "_nanoseconds": 41000000
+ },
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
@@ -272,12 +272,12 @@
    "name": "CHRIS"
   },
   {
-   "uid": "KF7iKscVVZMNotgLeiC98vLDyTW2",
-   "name": "HANNER"
+   "name": "HANNER",
+   "uid": "KF7iKscVVZMNotgLeiC98vLDyTW2"
   },
   {
-   "name": "MICHELLE",
-   "uid": "ImsRaTZWPaVphtrhFlRyDQE7A0A3"
+   "uid": "ImsRaTZWPaVphtrhFlRyDQE7A0A3",
+   "name": "MICHELLE"
   },
   {
    "uid": "yl9O4VzdfDY6x7QVK8fj4PYczOu2",

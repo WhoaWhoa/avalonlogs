@@ -1,67 +1,17 @@
 {
- "outcome": {
-  "assassinated": "CHRIS",
-  "votes": [
-   {
-    "CHRIS": true,
-    "SRINATH": true
-   },
-   {
-    "NATHAN": true,
-    "SRINATH": false,
-    "CHRIS": true
-   },
-   {
-    "BEN": false,
-    "NATHAN": true
-   },
-   {
-    "NATHAN": true,
-    "CHRIS": true,
-    "WILL": true
-   },
-   {
-    "NATHAN": true,
-    "WILL": true,
-    "CHRIS": true
-   }
-  ],
-  "roles": [
-   {
-    "role": "OBERON",
-    "name": "SRINATH",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "WILL"
-   },
-   {
-    "role": "MORDRED",
-    "name": "BEN",
-    "assassin": true
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "CHRIS"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "NATHAN"
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN"
- },
  "missions": [
   {
-   "failsRequired": 1,
+   "team": [
+    "CHRIS",
+    "SRINATH"
+   ],
    "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "CHRIS",
      "votes": [
       "SRINATH",
       "BEN",
@@ -70,28 +20,22 @@
       "WILL"
      ],
      "state": "APPROVED",
-     "proposer": "CHRIS",
      "team": [
       "CHRIS",
       "SRINATH"
      ]
     }
-   ],
-   "teamSize": 2,
-   "team": [
-    "CHRIS",
-    "SRINATH"
-   ],
-   "numFails": 0
+   ]
   },
   {
+   "teamSize": 3,
+   "state": "FAIL",
    "failsRequired": 1,
    "team": [
     "CHRIS",
     "SRINATH",
     "NATHAN"
    ],
-   "state": "FAIL",
    "proposals": [
     {
      "votes": [
@@ -99,17 +43,16 @@
       "NATHAN",
       "SRINATH"
      ],
-     "proposer": "SRINATH",
      "state": "APPROVED",
      "team": [
       "CHRIS",
       "SRINATH",
       "NATHAN"
-     ]
+     ],
+     "proposer": "SRINATH"
     }
    ],
-   "numFails": 1,
-   "teamSize": 3
+   "numFails": 1
   },
   {
    "team": [
@@ -117,43 +60,42 @@
     "BEN"
    ],
    "teamSize": 2,
-   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "NATHAN",
+     "team": [
+      "NATHAN",
+      "BEN"
+     ],
      "votes": [
       "NATHAN",
       "CHRIS",
       "WILL",
       "BEN"
-     ],
-     "team": [
-      "NATHAN",
-      "BEN"
-     ],
-     "state": "APPROVED",
-     "proposer": "NATHAN"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 1
+   "state": "FAIL"
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "BEN"
-     ],
-     "state": "REJECTED",
      "team": [
       "BEN",
       "WILL",
       "CHRIS"
      ],
-     "proposer": "BEN"
+     "proposer": "BEN",
+     "votes": [
+      "BEN"
+     ],
+     "state": "REJECTED"
     },
     {
+     "proposer": "WILL",
      "team": [
       "WILL",
       "NATHAN",
@@ -164,59 +106,121 @@
       "WILL",
       "CHRIS",
       "NATHAN"
-     ],
-     "proposer": "WILL"
+     ]
     }
    ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "WILL",
     "NATHAN",
     "CHRIS"
    ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "teamSize": 3
   },
   {
    "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "CHRIS",
+     "team": [
+      "CHRIS",
+      "NATHAN",
+      "WILL"
+     ],
      "votes": [
       "NATHAN",
       "CHRIS",
       "SRINATH",
       "WILL"
      ],
-     "team": [
-      "CHRIS",
-      "NATHAN",
-      "WILL"
-     ]
+     "state": "APPROVED",
+     "proposer": "CHRIS"
     }
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "CHRIS",
     "NATHAN",
     "WILL"
    ],
-   "teamSize": 3,
-   "state": "SUCCESS"
+   "numFails": 0
   }
  ],
+ "timeCreated": {
+  "_seconds": 1596941381,
+  "_nanoseconds": 653000000
+ },
+ "outcome": {
+  "roles": [
+   {
+    "role": "OBERON",
+    "assassin": false,
+    "name": "SRINATH"
+   },
+   {
+    "assassin": false,
+    "name": "WILL",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "BEN",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "name": "CHRIS",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "NATHAN",
+    "role": "MERLIN"
+   }
+  ],
+  "assassinated": "CHRIS",
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "SRINATH": true,
+    "CHRIS": true
+   },
+   {
+    "CHRIS": true,
+    "NATHAN": true,
+    "SRINATH": false
+   },
+   {
+    "BEN": false,
+    "NATHAN": true
+   },
+   {
+    "NATHAN": true,
+    "WILL": true,
+    "CHRIS": true
+   },
+   {
+    "NATHAN": true,
+    "WILL": true,
+    "CHRIS": true
+   }
+  ]
+ },
  "players": [
   {
-   "uid": "Mlj1qcrbbPh3rdp4IXOSSGUH1it1",
-   "name": "CHRIS"
+   "name": "CHRIS",
+   "uid": "Mlj1qcrbbPh3rdp4IXOSSGUH1it1"
   },
   {
-   "uid": "KzT00XSSEjdTKXa0SSMsagAlPqt1",
-   "name": "SRINATH"
+   "name": "SRINATH",
+   "uid": "KzT00XSSEjdTKXa0SSMsagAlPqt1"
   },
   {
-   "name": "NATHAN",
-   "uid": "jeWwT2iLauOBK1EWkm8HEA0LF5h1"
+   "uid": "jeWwT2iLauOBK1EWkm8HEA0LF5h1",
+   "name": "NATHAN"
   },
   {
    "uid": "kLcA2vNNH7N9dUmvlsAaRIoryUO2",
@@ -230,10 +234,6 @@
  "timeFinished": {
   "_seconds": 1596942110,
   "_nanoseconds": 426000000
- },
- "timeCreated": {
-  "_seconds": 1596941381,
-  "_nanoseconds": 653000000
  },
  "options": {
   "inGameLog": false

@@ -1,13 +1,110 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1611376355,
+  "_nanoseconds": 557000000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "BANANA": true,
+    "MARLIN": true,
+    "NITWIT": true
+   },
+   {
+    "BANANA": true,
+    "MARLIN": true,
+    "PK": true,
+    "NITWIT": true
+   },
+   {
+    "PK": true,
+    "NITWIT": true,
+    "BANANA": false,
+    "MARLIN": true
+   },
+   {
+    "BANANA": false,
+    "MARLIN": true,
+    "METH": false,
+    "HWSNBN": true,
+    "PK": true
+   },
+   {
+    "NITWIT": true,
+    "CHEFDADI": false,
+    "RAJ": true,
+    "CHAI": false,
+    "MARLIN": true
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null,
+  "roles": [
+   {
+    "role": "MERLIN",
+    "name": "RAJ",
+    "assassin": false
+   },
+   {
+    "name": "CHEFDADI",
+    "role": "OBERON",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "HWSNBN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "NITWIT",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "PK",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "ANIKETH",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "MARLIN",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "name": "BANANA",
+    "role": "MORDRED",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "METH"
+   },
+   {
+    "name": "CHAI",
+    "role": "EVIL MINION",
+    "assassin": true
+   }
+  ],
+  "state": "EVIL_WIN"
+ },
  "missions": [
   {
-   "numFails": 0,
-   "teamSize": 3,
    "team": [
     "BANANA",
     "MARLIN",
     "NITWIT"
    ],
+   "numFails": 0,
+   "teamSize": 3,
    "state": "SUCCESS",
    "proposals": [
     {
@@ -33,11 +130,11 @@
    "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
    "teamSize": 4,
    "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "RAJ",
       "PK",
@@ -48,7 +145,6 @@
       "CHAI"
      ],
      "proposer": "PK",
-     "state": "APPROVED",
      "team": [
       "PK",
       "BANANA",
@@ -63,19 +159,27 @@
     "MARLIN",
     "NITWIT"
    ],
-   "numFails": 0
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
-   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 4,
+   "team": [
+    "NITWIT",
+    "MARLIN",
+    "PK",
+    "BANANA"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "NITWIT",
       "MARLIN",
       "PK",
       "BANANA"
      ],
+     "proposer": "NITWIT",
      "votes": [
       "NITWIT",
       "CHEFDADI",
@@ -86,23 +190,13 @@
       "PK",
       "CHAI"
      ],
-     "proposer": "NITWIT"
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "NITWIT",
-    "MARLIN",
-    "PK",
-    "BANANA"
-   ],
    "failsRequired": 1,
-   "teamSize": 4,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
-   "state": "FAIL",
-   "failsRequired": 2,
-   "numFails": 2,
    "team": [
     "MARLIN",
     "PK",
@@ -111,10 +205,10 @@
     "HWSNBN"
    ],
    "teamSize": 5,
+   "failsRequired": 2,
+   "numFails": 2,
    "proposals": [
     {
-     "proposer": "HWSNBN",
-     "state": "REJECTED",
      "team": [
       "MARLIN",
       "HWSNBN",
@@ -122,6 +216,8 @@
       "BANANA",
       "NITWIT"
      ],
+     "state": "REJECTED",
+     "proposer": "HWSNBN",
      "votes": [
       "NITWIT",
       "MARLIN",
@@ -131,13 +227,7 @@
      ]
     },
     {
-     "team": [
-      "MARLIN",
-      "PK",
-      "BANANA",
-      "METH",
-      "HWSNBN"
-     ],
+     "state": "APPROVED",
      "votes": [
       "METH",
       "HWSNBN",
@@ -146,16 +236,22 @@
       "BANANA",
       "CHAI"
      ],
-     "state": "APPROVED",
-     "proposer": "METH"
+     "proposer": "METH",
+     "team": [
+      "MARLIN",
+      "PK",
+      "BANANA",
+      "METH",
+      "HWSNBN"
+     ]
     }
-   ]
+   ],
+   "state": "FAIL"
   },
   {
    "failsRequired": 1,
-   "state": "FAIL",
    "teamSize": 5,
-   "numFails": 2,
+   "state": "FAIL",
    "proposals": [
     {
      "state": "APPROVED",
@@ -168,16 +264,17 @@
       "NITWIT",
       "CHAI"
      ],
-     "proposer": "CHEFDADI",
      "team": [
       "CHAI",
       "MARLIN",
       "CHEFDADI",
       "RAJ",
       "NITWIT"
-     ]
+     ],
+     "proposer": "CHEFDADI"
     }
    ],
+   "numFails": 2,
    "team": [
     "CHAI",
     "MARLIN",
@@ -187,6 +284,10 @@
    ]
   }
  ],
+ "timeCreated": {
+  "_seconds": 1611375730,
+  "_nanoseconds": 774000000
+ },
  "players": [
   {
    "name": "METH",
@@ -201,133 +302,32 @@
    "name": "CHAI"
   },
   {
-   "name": "MARLIN",
-   "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3"
+   "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3",
+   "name": "MARLIN"
   },
   {
    "name": "RAJ",
    "uid": "1yawy0IzcvTwYGbNSNefkUZnxej1"
   },
   {
-   "name": "ANIKETH",
-   "uid": "mhGqERYygScqJ0S29jQ3yK7o2ku2"
+   "uid": "mhGqERYygScqJ0S29jQ3yK7o2ku2",
+   "name": "ANIKETH"
   },
   {
    "uid": "weox9NOyNDZiyKTtPDAXxvazdFV2",
    "name": "BANANA"
   },
   {
-   "uid": "MZNNYGz2dyObT9G5nUSdpYmwN652",
-   "name": "PK"
+   "name": "PK",
+   "uid": "MZNNYGz2dyObT9G5nUSdpYmwN652"
   },
   {
-   "uid": "M9nSGFmZJLediRJeU20AOG8aVjU2",
-   "name": "NITWIT"
+   "name": "NITWIT",
+   "uid": "M9nSGFmZJLediRJeU20AOG8aVjU2"
   },
   {
    "uid": "RMh8asPf7khAo3YWIMNdy1EDHDp2",
    "name": "HWSNBN"
   }
- ],
- "timeFinished": {
-  "_seconds": 1611376355,
-  "_nanoseconds": 557000000
- },
- "outcome": {
-  "roles": [
-   {
-    "name": "RAJ",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "OBERON",
-    "name": "CHEFDADI"
-   },
-   {
-    "assassin": false,
-    "name": "HWSNBN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "NITWIT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "PK",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "ANIKETH",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "MARLIN",
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "MORDRED",
-    "name": "BANANA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "METH",
-    "role": "MORGANA"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "CHAI"
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "assassinated": null,
-  "votes": [
-   {
-    "NITWIT": true,
-    "MARLIN": true,
-    "BANANA": true
-   },
-   {
-    "NITWIT": true,
-    "BANANA": true,
-    "MARLIN": true,
-    "PK": true
-   },
-   {
-    "BANANA": false,
-    "NITWIT": true,
-    "MARLIN": true,
-    "PK": true
-   },
-   {
-    "HWSNBN": true,
-    "BANANA": false,
-    "PK": true,
-    "METH": false,
-    "MARLIN": true
-   },
-   {
-    "RAJ": true,
-    "NITWIT": true,
-    "CHEFDADI": false,
-    "CHAI": false,
-    "MARLIN": true
-   }
-  ]
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1611375730,
-  "_nanoseconds": 774000000
- }
+ ]
 }

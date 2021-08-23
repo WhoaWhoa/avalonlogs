@@ -7,39 +7,39 @@
   "_nanoseconds": 100000000
  },
  "outcome": {
-  "assassinated": null,
+  "state": "EVIL_WIN",
   "votes": [
    {
-    "NANCY": true,
-    "LAURA": true
-   },
-   {
-    "JULIE": false,
     "LAURA": true,
     "NANCY": true
    },
    {
-    "LC": true,
+    "LAURA": true,
+    "NANCY": true,
+    "JULIE": false
+   },
+   {
     "CHELSEA": false,
     "CHRIS": true,
+    "LC": true,
     "LAURA": true
    },
    {
+    "CHRIS": true,
     "NANCY": true,
-    "CHELSEA": false,
-    "CHRIS": true
+    "CHELSEA": false
    }
   ],
   "roles": [
    {
     "role": "LOYAL FOLLOWER",
-    "name": "LC",
-    "assassin": false
+    "assassin": false,
+    "name": "LC"
    },
    {
-    "name": "NANCY",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "NANCY"
    },
    {
     "assassin": false,
@@ -52,18 +52,22 @@
     "role": "EVIL MINION"
    },
    {
-    "name": "CHELSEA",
     "assassin": false,
+    "name": "CHELSEA",
     "role": "EVIL MINION"
    },
    {
-    "role": "MERLIN",
+    "assassin": false,
     "name": "CHRIS",
-    "assassin": false
+    "role": "MERLIN"
    }
   ],
-  "state": "EVIL_WIN",
-  "message": "Three failed missions"
+  "message": "Three failed missions",
+  "assassinated": null
+ },
+ "timeFinished": {
+  "_seconds": 1590371810,
+  "_nanoseconds": 960000000
  },
  "players": [
   {
@@ -83,8 +87,8 @@
    "uid": "RG4IEdzfKscQm6RngeHUNSYIDpD2"
   },
   {
-   "uid": "YzrqQHPnMJUHSC3dnDdrseflhrf2",
-   "name": "JULIE"
+   "name": "JULIE",
+   "uid": "YzrqQHPnMJUHSC3dnDdrseflhrf2"
   },
   {
    "name": "LC",
@@ -97,31 +101,29 @@
     "NANCY",
     "LAURA"
    ],
-   "state": "SUCCESS",
-   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "NANCY",
-      "LAURA"
-     ],
-     "proposer": "NANCY",
      "votes": [
       "LC",
       "NANCY",
       "LAURA",
       "JULIE",
       "CHELSEA"
+     ],
+     "proposer": "NANCY",
+     "team": [
+      "NANCY",
+      "LAURA"
      ]
     }
    ],
+   "numFails": 0,
+   "teamSize": 2,
    "failsRequired": 1,
-   "numFails": 0
+   "state": "SUCCESS"
   },
   {
-   "state": "FAIL",
-   "teamSize": 3,
    "team": [
     "JULIE",
     "NANCY",
@@ -131,13 +133,13 @@
    "numFails": 1,
    "proposals": [
     {
-     "proposer": "JULIE",
      "state": "APPROVED",
      "team": [
       "JULIE",
       "NANCY",
       "LAURA"
      ],
+     "proposer": "JULIE",
      "votes": [
       "CHELSEA",
       "NANCY",
@@ -145,19 +147,24 @@
       "JULIE"
      ]
     }
-   ]
+   ],
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
    "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 4,
    "team": [
     "CHRIS",
     "CHELSEA",
     "LC",
     "LAURA"
    ],
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "LC",
+     "state": "REJECTED",
      "votes": [
       "LC",
       "LAURA",
@@ -169,138 +176,131 @@
       "CHELSEA",
       "LAURA"
      ],
-     "state": "REJECTED"
+     "proposer": "LC"
     },
     {
+     "proposer": "CHELSEA",
+     "votes": [
+      "LAURA",
+      "CHELSEA",
+      "NANCY"
+     ],
      "team": [
       "CHELSEA",
       "CHRIS",
       "NANCY",
       "LAURA"
      ],
-     "votes": [
-      "LAURA",
-      "CHELSEA",
-      "NANCY"
-     ],
-     "state": "REJECTED",
-     "proposer": "CHELSEA"
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "CHRIS",
+     "votes": [
       "CHELSEA",
+      "CHRIS",
       "LC",
       "LAURA"
      ],
-     "votes": [
-      "CHELSEA",
+     "team": [
       "CHRIS",
+      "CHELSEA",
       "LC",
       "LAURA"
      ],
      "proposer": "LAURA",
      "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 4
+   ]
   },
   {
+   "state": "FAIL",
    "failsRequired": 1,
+   "team": [
+    "CHELSEA",
+    "CHRIS",
+    "NANCY"
+   ],
+   "numFails": 1,
    "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "CHRIS",
-      "LC",
-      "NANCY"
-     ],
      "team": [
       "CHRIS",
       "LC",
       "NANCY"
      ],
+     "votes": [
+      "CHRIS",
+      "LC",
+      "NANCY"
+     ],
+     "state": "REJECTED",
      "proposer": "CHRIS"
     },
     {
+     "team": [
+      "NANCY",
+      "CHELSEA",
+      "JULIE"
+     ],
      "state": "REJECTED",
      "votes": [
       "NANCY",
       "JULIE",
       "CHELSEA"
      ],
-     "proposer": "NANCY",
-     "team": [
-      "NANCY",
-      "CHELSEA",
-      "JULIE"
-     ]
+     "proposer": "NANCY"
     },
     {
-     "team": [
-      "JULIE",
-      "CHELSEA",
-      "CHRIS"
-     ],
+     "state": "REJECTED",
      "votes": [
       "CHELSEA",
       "NANCY",
       "JULIE"
      ],
      "proposer": "JULIE",
-     "state": "REJECTED"
+     "team": [
+      "JULIE",
+      "CHELSEA",
+      "CHRIS"
+     ]
     },
     {
-     "state": "REJECTED",
-     "team": [
-      "LC",
-      "CHELSEA",
-      "LAURA"
-     ],
      "votes": [
       "JULIE",
       "CHELSEA",
       "LC"
      ],
-     "proposer": "LC"
+     "state": "REJECTED",
+     "proposer": "LC",
+     "team": [
+      "LC",
+      "CHELSEA",
+      "LAURA"
+     ]
     },
     {
      "state": "APPROVED",
-     "votes": [
-      "CHRIS",
-      "NANCY",
-      "JULIE",
-      "CHELSEA"
-     ],
+     "proposer": "CHELSEA",
      "team": [
       "CHELSEA",
       "CHRIS",
       "NANCY"
      ],
-     "proposer": "CHELSEA"
+     "votes": [
+      "CHRIS",
+      "NANCY",
+      "JULIE",
+      "CHELSEA"
+     ]
     }
-   ],
-   "numFails": 1,
-   "team": [
-    "CHELSEA",
-    "CHRIS",
-    "NANCY"
-   ],
-   "state": "FAIL"
+   ]
   },
   {
    "state": "PENDING",
-   "teamSize": 4,
-   "failsRequired": 1,
    "proposals": [],
-   "team": []
+   "team": [],
+   "failsRequired": 1,
+   "teamSize": 4
   }
- ],
- "timeFinished": {
-  "_seconds": 1590371810,
-  "_nanoseconds": 960000000
- }
+ ]
 }

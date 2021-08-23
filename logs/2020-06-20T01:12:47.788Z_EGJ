@@ -1,16 +1,82 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1592616078,
+  "_nanoseconds": 844000000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "COLTON": true,
+    "JONESY": true
+   },
+   {
+    "JONESY": true,
+    "COLTON": false,
+    "WILL": true
+   },
+   {
+    "PATRICK": true,
+    "JONESY": true,
+    "JACK": false,
+    "WILL": true
+   },
+   {
+    "COLTON": false,
+    "PATRICK": true,
+    "RYAN": true
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "roles": [
+   {
+    "name": "COLTON",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "JACK"
+   },
+   {
+    "assassin": false,
+    "name": "PATRICK",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JONESY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "RYAN",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "WILL"
+   }
+  ]
+ },
  "players": [
   {
-   "uid": "dWkLr2TeeMZh5RVBubE0LS1tWrh2",
-   "name": "JACK"
+   "name": "JACK",
+   "uid": "dWkLr2TeeMZh5RVBubE0LS1tWrh2"
   },
   {
-   "name": "COLTON",
-   "uid": "GTTQMzoE5Ca9dxaUVFrw9zdHj042"
+   "uid": "GTTQMzoE5Ca9dxaUVFrw9zdHj042",
+   "name": "COLTON"
   },
   {
-   "name": "WILL",
-   "uid": "FSth5yaAaSg2HtNaBN88XwMCxlv1"
+   "uid": "FSth5yaAaSg2HtNaBN88XwMCxlv1",
+   "name": "WILL"
   },
   {
    "name": "JONESY",
@@ -21,51 +87,28 @@
    "name": "PATRICK"
   },
   {
-   "uid": "gAiRUjpSMlbOzGpCzUNPHhcdscG3",
-   "name": "RYAN"
+   "name": "RYAN",
+   "uid": "gAiRUjpSMlbOzGpCzUNPHhcdscG3"
   }
  ],
  "missions": [
   {
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "proposer": "COLTON",
-     "team": [
-      "COLTON",
-      "JONESY"
-     ],
-     "votes": [
-      "PATRICK",
-      "JONESY",
-      "RYAN",
-      "WILL",
-      "COLTON"
-     ]
-    }
-   ],
+   "state": "SUCCESS",
+   "teamSize": 2,
    "team": [
     "COLTON",
     "JONESY"
    ],
+   "failsRequired": 1,
    "numFails": 0,
-   "state": "SUCCESS",
-   "teamSize": 2
-  },
-  {
-   "state": "FAIL",
-   "teamSize": 3,
-   "numFails": 1,
    "proposals": [
     {
      "team": [
       "COLTON",
-      "WILL",
       "JONESY"
      ],
-     "proposer": "WILL",
      "state": "APPROVED",
+     "proposer": "COLTON",
      "votes": [
       "PATRICK",
       "JONESY",
@@ -74,13 +117,36 @@
       "COLTON"
      ]
     }
-   ],
+   ]
+  },
+  {
+   "state": "FAIL",
    "team": [
     "COLTON",
     "WILL",
     "JONESY"
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "votes": [
+      "PATRICK",
+      "JONESY",
+      "RYAN",
+      "WILL",
+      "COLTON"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "COLTON",
+      "WILL",
+      "JONESY"
+     ],
+     "proposer": "WILL"
+    }
+   ]
   },
   {
    "team": [
@@ -89,46 +155,43 @@
     "JONESY",
     "PATRICK"
    ],
-   "state": "FAIL",
-   "teamSize": 4,
-   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "JACK",
+      "JONESY",
+      "RYAN"
+     ],
      "team": [
       "JONESY",
       "JACK",
       "RYAN",
       "COLTON"
      ],
-     "proposer": "JONESY",
-     "votes": [
-      "JACK",
-      "JONESY",
-      "RYAN"
-     ]
+     "state": "REJECTED",
+     "proposer": "JONESY"
     },
     {
+     "votes": [],
+     "state": "REJECTED",
      "team": [
       "COLTON",
       "WILL",
       "PATRICK",
       "JONESY"
      ],
-     "votes": [],
-     "state": "REJECTED",
      "proposer": "PATRICK"
     },
     {
-     "state": "REJECTED",
-     "votes": [],
      "team": [
       "RYAN",
       "WILL",
       "JONESY",
       "JACK"
      ],
-     "proposer": "RYAN"
+     "votes": [],
+     "proposer": "RYAN",
+     "state": "REJECTED"
     },
     {
      "state": "APPROVED",
@@ -147,112 +210,49 @@
      ]
     }
    ],
+   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
    "failsRequired": 1
   },
   {
-   "state": "FAIL",
-   "numFails": 1,
    "proposals": [
     {
+     "proposer": "COLTON",
      "state": "APPROVED",
+     "team": [
+      "COLTON",
+      "PATRICK",
+      "RYAN"
+     ],
      "votes": [
       "JONESY",
       "RYAN",
       "WILL",
       "COLTON"
-     ],
-     "proposer": "COLTON",
-     "team": [
-      "COLTON",
-      "PATRICK",
-      "RYAN"
      ]
     }
    ],
+   "numFails": 1,
+   "teamSize": 3,
+   "failsRequired": 1,
    "team": [
     "COLTON",
     "PATRICK",
     "RYAN"
    ],
-   "teamSize": 3,
-   "failsRequired": 1
+   "state": "FAIL"
   },
   {
-   "teamSize": 4,
-   "team": [],
    "failsRequired": 1,
+   "teamSize": 4,
    "state": "PENDING",
-   "proposals": []
+   "proposals": [],
+   "team": []
   }
  ],
  "timeCreated": {
   "_seconds": 1592615567,
   "_nanoseconds": 788000000
- },
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "votes": [
-   {
-    "JONESY": true,
-    "COLTON": true
-   },
-   {
-    "COLTON": false,
-    "WILL": true,
-    "JONESY": true
-   },
-   {
-    "JACK": false,
-    "PATRICK": true,
-    "WILL": true,
-    "JONESY": true
-   },
-   {
-    "COLTON": false,
-    "PATRICK": true,
-    "RYAN": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "COLTON",
-    "role": "MORDRED",
-    "assassin": true
-   },
-   {
-    "name": "JACK",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "PATRICK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "JONESY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "RYAN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "WILL",
-    "role": "MERLIN",
-    "assassin": false
-   }
-  ]
- },
- "options": {
-  "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1592616078,
-  "_nanoseconds": 844000000
  }
 }

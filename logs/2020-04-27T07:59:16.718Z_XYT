@@ -1,90 +1,73 @@
 {
- "players": [
-  {
-   "name": "AMANDA",
-   "uid": "odPkiBFUb6ZbL9M5WK9z2QCdmki1"
-  },
-  {
-   "name": "JERRY",
-   "uid": "XWzHKSBzEuVXWoyT03d3GxGreEH2"
-  },
-  {
-   "uid": "ypgiApuBmpe1SGgTtjqegOgSTHV2",
-   "name": "URMOM"
-  },
-  {
-   "uid": "GqgDHzzhRZUBDuQTVqyocktoyn62",
-   "name": "MAL"
-  },
-  {
-   "uid": "2ArLOkwXwTcCxHpeaGCU0T0n6QZ2",
-   "name": "LEA"
-  }
- ],
  "missions": [
   {
-   "teamSize": 2,
-   "state": "FAIL",
+   "numFails": 1,
    "failsRequired": 1,
    "team": [
     "URMOM",
     "MAL"
    ],
-   "numFails": 1,
+   "teamSize": 2,
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "URMOM",
      "state": "APPROVED",
-     "team": [
-      "URMOM",
-      "MAL"
-     ],
      "votes": [
       "JERRY",
       "URMOM",
       "AMANDA",
       "MAL",
       "LEA"
+     ],
+     "proposer": "URMOM",
+     "team": [
+      "URMOM",
+      "MAL"
      ]
     }
    ]
   },
   {
-   "state": "SUCCESS",
-   "teamSize": 3,
    "team": [
     "AMANDA",
     "JERRY",
     "URMOM"
    ],
+   "state": "SUCCESS",
+   "teamSize": 3,
    "proposals": [
     {
      "state": "REJECTED",
+     "votes": [
+      "LEA"
+     ],
      "team": [
       "AMANDA",
       "JERRY",
       "MAL"
      ],
-     "proposer": "MAL",
-     "votes": [
-      "LEA"
-     ]
+     "proposer": "MAL"
     },
     {
-     "votes": [
-      "MAL",
-      "LEA"
-     ],
-     "state": "REJECTED",
-     "proposer": "LEA",
      "team": [
       "AMANDA",
       "MAL",
       "JERRY"
-     ]
+     ],
+     "votes": [
+      "MAL",
+      "LEA"
+     ],
+     "proposer": "LEA",
+     "state": "REJECTED"
     },
     {
-     "proposer": "AMANDA",
+     "team": [
+      "AMANDA",
+      "JERRY",
+      "URMOM"
+     ],
+     "state": "APPROVED",
      "votes": [
       "MAL",
       "LEA",
@@ -92,28 +75,22 @@
       "URMOM",
       "AMANDA"
      ],
-     "state": "APPROVED",
-     "team": [
-      "AMANDA",
-      "JERRY",
-      "URMOM"
-     ]
+     "proposer": "AMANDA"
     }
    ],
-   "failsRequired": 1,
-   "numFails": 0
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
    "team": [
     "JERRY",
     "URMOM"
    ],
-   "teamSize": 2,
-   "numFails": 0,
    "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "URMOM",
       "AMANDA",
@@ -125,30 +102,31 @@
       "JERRY",
       "URMOM"
      ],
+     "state": "APPROVED",
      "proposer": "JERRY"
     }
    ],
-   "state": "SUCCESS"
+   "teamSize": 2
   },
   {
-   "state": "SUCCESS",
-   "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 3,
    "team": [
     "URMOM",
     "JERRY",
     "AMANDA"
    ],
-   "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
+     "proposer": "URMOM",
+     "state": "APPROVED",
      "votes": [
       "JERRY",
       "URMOM",
       "AMANDA"
      ],
-     "proposer": "URMOM",
-     "state": "APPROVED",
      "team": [
       "URMOM",
       "JERRY",
@@ -160,14 +138,44 @@
   {
    "failsRequired": 1,
    "team": [],
+   "proposals": [],
    "teamSize": 3,
-   "state": "PENDING",
-   "proposals": []
+   "state": "PENDING"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
-  "message": "Three successful missions",
   "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "URMOM"
+   },
+   {
+    "name": "AMANDA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "MAL",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "LEA"
+   },
+   {
+    "role": "MERLIN",
+    "name": "JERRY",
+    "assassin": false
+   }
+  ],
   "assassinated": "AMANDA",
   "votes": [
    {
@@ -180,49 +188,41 @@
     "JERRY": true
    },
    {
-    "URMOM": true,
-    "JERRY": true
+    "JERRY": true,
+    "URMOM": true
    },
    {
     "AMANDA": true,
-    "URMOM": true,
-    "JERRY": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "URMOM",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "name": "AMANDA",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "MAL",
-    "assassin": true
-   },
-   {
-    "role": "MORGANA",
-    "name": "LEA",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "name": "JERRY",
-    "assassin": false
+    "JERRY": true,
+    "URMOM": true
    }
   ]
  },
+ "players": [
+  {
+   "uid": "odPkiBFUb6ZbL9M5WK9z2QCdmki1",
+   "name": "AMANDA"
+  },
+  {
+   "name": "JERRY",
+   "uid": "XWzHKSBzEuVXWoyT03d3GxGreEH2"
+  },
+  {
+   "name": "URMOM",
+   "uid": "ypgiApuBmpe1SGgTtjqegOgSTHV2"
+  },
+  {
+   "uid": "GqgDHzzhRZUBDuQTVqyocktoyn62",
+   "name": "MAL"
+  },
+  {
+   "uid": "2ArLOkwXwTcCxHpeaGCU0T0n6QZ2",
+   "name": "LEA"
+  }
+ ],
  "timeFinished": {
   "_seconds": 1587974739,
   "_nanoseconds": 737000000
- },
- "options": {
-  "inGameLog": false
  },
  "timeCreated": {
   "_seconds": 1587974356,

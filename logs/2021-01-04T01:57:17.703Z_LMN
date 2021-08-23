@@ -1,11 +1,15 @@
 {
  "missions": [
   {
-   "failsRequired": 1,
    "numFails": 0,
-   "teamSize": 2,
+   "team": [
+    "KGB",
+    "MAY"
+   ],
    "proposals": [
     {
+     "proposer": "KGB",
+     "state": "APPROVED",
      "votes": [
       "EEK",
       "MOLLYYY",
@@ -14,51 +18,65 @@
       "ANDREW",
       "MAY"
      ],
-     "proposer": "KGB",
-     "state": "APPROVED",
      "team": [
       "KGB",
       "MAY"
      ]
     }
    ],
+   "teamSize": 2,
    "state": "SUCCESS",
-   "team": [
-    "KGB",
-    "MAY"
-   ]
+   "failsRequired": 1
   },
   {
+   "team": [
+    "EEK",
+    "MAX",
+    "MOLLYYY"
+   ],
    "failsRequired": 1,
    "numFails": 1,
    "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "EEK",
-      "MAX",
-      "MOLLYYY"
-     ],
      "votes": [
       "ANDREW",
       "EEK",
       "MAY",
       "MOLLYYY"
      ],
-     "proposer": "MOLLYYY"
+     "team": [
+      "EEK",
+      "MAX",
+      "MOLLYYY"
+     ],
+     "proposer": "MOLLYYY",
+     "state": "APPROVED"
     }
-   ],
-   "state": "FAIL",
-   "team": [
-    "EEK",
-    "MAX",
-    "MOLLYYY"
    ]
   },
   {
-   "teamSize": 4,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "team": [
+      "MAX",
+      "KGB",
+      "MAY",
+      "EEK"
+     ],
+     "votes": [
+      "MOLLYYY",
+      "MAY",
+      "MAX",
+      "EEK"
+     ],
+     "proposer": "MAX"
+    }
+   ],
    "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "MAX",
     "KGB",
@@ -66,25 +84,7 @@
     "EEK"
    ],
    "numFails": 0,
-   "state": "SUCCESS",
-   "proposals": [
-    {
-     "proposer": "MAX",
-     "votes": [
-      "MOLLYYY",
-      "MAY",
-      "MAX",
-      "EEK"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "MAX",
-      "KGB",
-      "MAY",
-      "EEK"
-     ]
-    }
-   ]
+   "teamSize": 4
   },
   {
    "team": [
@@ -92,21 +92,22 @@
     "MAY",
     "ANDREW"
    ],
-   "state": "SUCCESS",
+   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "EEK",
      "votes": [
       "MAX",
       "MOLLYYY",
       "EEK"
      ],
-     "proposer": "EEK",
-     "state": "REJECTED",
      "team": [
       "KGB",
       "MAY",
       "EEK"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -114,8 +115,8 @@
       "MAY",
       "ANDREW"
      ],
-     "proposer": "MAY",
      "state": "APPROVED",
+     "proposer": "MAY",
      "votes": [
       "MAY",
       "EEK",
@@ -125,52 +126,44 @@
      ]
     }
    ],
-   "teamSize": 3,
-   "numFails": 0,
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
    "state": "PENDING",
-   "team": [],
    "failsRequired": 1,
-   "teamSize": 4,
-   "proposals": []
+   "proposals": [],
+   "team": [],
+   "teamSize": 4
   }
  ],
- "timeFinished": {
-  "_seconds": 1609727795,
-  "_nanoseconds": 698000000
- },
- "timeCreated": {
-  "_seconds": 1609725437,
-  "_nanoseconds": 703000000
- },
  "outcome": {
+  "state": "GOOD_WIN",
   "roles": [
    {
-    "name": "MAY",
     "assassin": false,
+    "name": "MAY",
     "role": "LOYAL FOLLOWER"
    },
    {
     "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "MAX"
-   },
-   {
-    "name": "EEK",
-    "role": "MORGANA",
+    "name": "MAX",
     "assassin": false
    },
    {
-    "role": "MORDRED",
+    "name": "EEK",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
     "name": "MOLLYYY",
-    "assassin": true
+    "assassin": true,
+    "role": "MORDRED"
    },
    {
     "role": "MERLIN",
-    "assassin": false,
-    "name": "KGB"
+    "name": "KGB",
+    "assassin": false
    },
    {
     "role": "PERCIVAL",
@@ -178,48 +171,54 @@
     "name": "ANDREW"
    }
   ],
-  "message": "Three successful missions",
   "assassinated": "MAY",
-  "state": "GOOD_WIN",
+  "message": "Three successful missions",
   "votes": [
    {
     "KGB": true,
     "MAY": true
    },
    {
-    "MAX": true,
-    "MOLLYYY": false,
-    "EEK": true
-   },
-   {
     "EEK": true,
-    "KGB": true,
-    "MAY": true,
+    "MOLLYYY": false,
     "MAX": true
    },
    {
+    "KGB": true,
     "MAY": true,
-    "ANDREW": true,
-    "KGB": true
+    "EEK": true,
+    "MAX": true
+   },
+   {
+    "KGB": true,
+    "MAY": true,
+    "ANDREW": true
    }
   ]
  },
+ "timeCreated": {
+  "_seconds": 1609725437,
+  "_nanoseconds": 703000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
-   "name": "EEK",
-   "uid": "5WFxxWdjUHgJDeVYv30337n1xE82"
+   "uid": "5WFxxWdjUHgJDeVYv30337n1xE82",
+   "name": "EEK"
   },
   {
-   "name": "MAY",
-   "uid": "ZAXf69lahEReNHrfHaCxQ1vSzw33"
+   "uid": "ZAXf69lahEReNHrfHaCxQ1vSzw33",
+   "name": "MAY"
   },
   {
    "uid": "CtnEz8I7wDaQ53rFdl6GASj5Q3s1",
    "name": "ANDREW"
   },
   {
-   "name": "KGB",
-   "uid": "dMnVnXqH21YGfETIwKrG9o3TOVo2"
+   "uid": "dMnVnXqH21YGfETIwKrG9o3TOVo2",
+   "name": "KGB"
   },
   {
    "name": "MOLLYYY",
@@ -230,7 +229,8 @@
    "uid": "fwGJKJACVSWiFnmXSgoLKvBgteJ2"
   }
  ],
- "options": {
-  "inGameLog": false
+ "timeFinished": {
+  "_seconds": 1609727795,
+  "_nanoseconds": 698000000
  }
 }

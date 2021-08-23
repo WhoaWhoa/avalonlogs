@@ -4,34 +4,8 @@
   "_nanoseconds": 139631000
  },
  "outcome": {
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "SEAN": true,
-    "SABRINA": true
-   },
-   {
-    "ZARA": false,
-    "SEAN": true,
-    "SABRINA": true
-   },
-   {
-    "ZARA": false,
-    "ASHLEY": true
-   },
-   {
-    "SABRINA": true,
-    "SEAN": true,
-    "MEXINACHO": true
-   },
-   {
-    "ZARA": false,
-    "SEAN": true,
-    "ASHLEY": true
-   }
-  ],
   "assassinated": null,
+  "state": "EVIL_WIN",
   "roles": [
    {
     "name": "SEAN",
@@ -40,25 +14,51 @@
    },
    {
     "name": "ZARA",
-    "role": "EVIL MINION",
-    "assassin": true
+    "assassin": true,
+    "role": "EVIL MINION"
    },
    {
-    "name": "SABRINA",
     "assassin": false,
+    "name": "SABRINA",
     "role": "MERLIN"
    },
    {
     "name": "ASHLEY",
-    "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "assassin": false
    },
    {
-    "name": "MEXINACHO",
     "role": "PERCIVAL",
+    "name": "MEXINACHO",
     "assassin": false
    }
-  ]
+  ],
+  "votes": [
+   {
+    "SEAN": true,
+    "SABRINA": true
+   },
+   {
+    "SABRINA": true,
+    "ZARA": false,
+    "SEAN": true
+   },
+   {
+    "ASHLEY": true,
+    "ZARA": false
+   },
+   {
+    "SEAN": true,
+    "SABRINA": true,
+    "MEXINACHO": true
+   },
+   {
+    "SEAN": true,
+    "ASHLEY": true,
+    "ZARA": false
+   }
+  ],
+  "message": "Three failed missions"
  },
  "timeCreated": {
   "_seconds": 1586587036,
@@ -66,12 +66,14 @@
  },
  "missions": [
   {
+   "team": [
+    "SEAN",
+    "SABRINA"
+   ],
    "teamSize": 2,
-   "numFails": 0,
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "ZARA",
      "team": [
       "SEAN",
       "SABRINA"
@@ -83,49 +85,41 @@
       "ZARA",
       "SABRINA",
       "ASHLEY"
-     ]
+     ],
+     "proposer": "ZARA"
     }
    ],
-   "team": [
-    "SEAN",
-    "SABRINA"
-   ],
-   "state": "SUCCESS"
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "team": [
-    "SABRINA",
-    "ZARA",
-    "SEAN"
-   ],
-   "teamSize": 3,
-   "state": "FAIL",
+   "failsRequired": 1,
    "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "SABRINA",
-      "ZARA",
-      "SEAN"
-     ],
-     "proposer": "SEAN",
      "state": "APPROVED",
      "votes": [
       "SEAN",
       "ZARA",
       "SABRINA"
+     ],
+     "proposer": "SEAN",
+     "team": [
+      "SABRINA",
+      "ZARA",
+      "SEAN"
      ]
     }
    ],
-   "failsRequired": 1
+   "state": "FAIL",
+   "teamSize": 3,
+   "team": [
+    "SABRINA",
+    "ZARA",
+    "SEAN"
+   ]
   },
   {
-   "team": [
-    "ZARA",
-    "ASHLEY"
-   ],
-   "state": "FAIL",
-   "numFails": 1,
    "proposals": [
     {
      "votes": [
@@ -135,84 +129,90 @@
       "ASHLEY"
      ],
      "proposer": "SABRINA",
-     "state": "APPROVED",
      "team": [
       "ZARA",
       "ASHLEY"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
+   "numFails": 1,
    "failsRequired": 1,
+   "team": [
+    "ZARA",
+    "ASHLEY"
+   ],
+   "state": "FAIL",
    "teamSize": 2
   },
   {
-   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 3,
    "team": [
     "SEAN",
     "SABRINA",
     "MEXINACHO"
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "SEAN",
       "SABRINA",
       "MEXINACHO"
      ],
-     "proposer": "MEXINACHO",
-     "state": "APPROVED",
      "votes": [
       "MEXINACHO",
       "SEAN",
       "SABRINA",
       "ASHLEY"
-     ]
+     ],
+     "proposer": "MEXINACHO"
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0
+   ]
   },
   {
-   "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "ASHLEY",
-      "ZARA",
-      "SEAN"
-     ],
      "state": "APPROVED",
      "votes": [
       "MEXINACHO",
       "ZARA",
       "ASHLEY"
      ],
-     "proposer": "ASHLEY"
+     "proposer": "ASHLEY",
+     "team": [
+      "ASHLEY",
+      "ZARA",
+      "SEAN"
+     ]
     }
    ],
+   "numFails": 1,
    "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "ASHLEY",
     "ZARA",
     "SEAN"
    ],
-   "state": "FAIL",
    "teamSize": 3
   }
  ],
  "players": [
   {
-   "name": "ZARA",
-   "uid": "Jzzc8DA5MtTfUqf9AUvdmN7x5tw2"
+   "uid": "Jzzc8DA5MtTfUqf9AUvdmN7x5tw2",
+   "name": "ZARA"
   },
   {
    "name": "SEAN",
    "uid": "gXYl8pbQxJXGEM122AP3suGqSIn1"
   },
   {
-   "uid": "9SVOJs0iKWM1DAfUpHOr27pbWGF3",
-   "name": "SABRINA"
+   "name": "SABRINA",
+   "uid": "9SVOJs0iKWM1DAfUpHOr27pbWGF3"
   },
   {
    "name": "MEXINACHO",

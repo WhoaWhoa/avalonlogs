@@ -1,20 +1,76 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "players": [
+  {
+   "name": "JHAO",
+   "uid": "TdCxpEvayegLa5oysYI7wv0gPNv2"
+  },
+  {
+   "name": "KEVIN",
+   "uid": "u9q3r9fduORMBbyLQKnTEcZcKOW2"
+  },
+  {
+   "uid": "Cg0w7DBv10XCWwcUwd9Bj166aj53",
+   "name": "ARUN"
+  },
+  {
+   "name": "ANDREW",
+   "uid": "Vpog9N3crYMuSLGjZ3oNMADG0TP2"
+  },
+  {
+   "uid": "Hhn0HiBCsag0klnG8DJGikrCF5r1",
+   "name": "CARLOS"
+  },
+  {
+   "uid": "W7swG574FbRR0nBBq0LGoj8wvM13",
+   "name": "LTDAN"
+  },
+  {
+   "uid": "CR7SlZnFnBaA4kUt8pGD4IWG4fh1",
+   "name": "WORSTGAMER"
+  }
+ ],
  "outcome": {
+  "votes": [
+   {
+    "WORSTGAMER": true,
+    "KEVIN": true
+   },
+   {
+    "KEVIN": true,
+    "WORSTGAMER": true,
+    "ARUN": false
+   },
+   {
+    "LTDAN": true,
+    "WORSTGAMER": true,
+    "CARLOS": true
+   },
+   {
+    "CARLOS": true,
+    "LTDAN": true,
+    "KEVIN": false,
+    "WORSTGAMER": true
+   }
+  ],
   "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
   "roles": [
    {
+    "name": "LTDAN",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "LTDAN"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "KEVIN",
-    "role": "EVIL MINION",
-    "assassin": false
+    "assassin": false,
+    "role": "EVIL MINION"
    },
    {
-    "name": "WORSTGAMER",
     "assassin": false,
+    "name": "WORSTGAMER",
     "role": "LOYAL FOLLOWER"
    },
    {
@@ -23,63 +79,36 @@
     "name": "CARLOS"
    },
    {
-    "role": "EVIL MINION",
     "name": "ARUN",
-    "assassin": true
+    "assassin": true,
+    "role": "EVIL MINION"
    },
    {
-    "name": "JHAO",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "JHAO"
    },
    {
-    "name": "ANDREW",
     "role": "EVIL MINION",
-    "assassin": false
+    "assassin": false,
+    "name": "ANDREW"
    }
   ],
-  "state": "EVIL_WIN",
-  "assassinated": "CARLOS",
-  "votes": [
-   {
-    "WORSTGAMER": true,
-    "KEVIN": true
-   },
-   {
-    "ARUN": false,
-    "KEVIN": true,
-    "WORSTGAMER": true
-   },
-   {
-    "WORSTGAMER": true,
-    "LTDAN": true,
-    "CARLOS": true
-   },
-   {
-    "LTDAN": true,
-    "CARLOS": true,
-    "WORSTGAMER": true,
-    "KEVIN": false
-   }
-  ]
+  "assassinated": "CARLOS"
  },
  "missions": [
   {
-   "teamSize": 2,
    "state": "SUCCESS",
-   "team": [
-    "KEVIN",
-    "WORSTGAMER"
-   ],
-   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "KEVIN",
      "team": [
       "KEVIN",
       "WORSTGAMER"
      ],
      "state": "APPROVED",
+     "proposer": "KEVIN",
      "votes": [
       "JHAO",
       "LTDAN",
@@ -89,45 +118,44 @@
      ]
     }
    ],
-   "numFails": 0
-  },
-  {
+   "failsRequired": 1,
    "team": [
     "KEVIN",
-    "WORSTGAMER",
-    "ARUN"
-   ],
-   "numFails": 1,
+    "WORSTGAMER"
+   ]
+  },
+  {
    "failsRequired": 1,
-   "state": "FAIL",
-   "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
      "proposer": "ARUN",
+     "team": [
+      "KEVIN",
+      "WORSTGAMER",
+      "ARUN"
+     ],
+     "state": "APPROVED",
      "votes": [
       "LTDAN",
       "JHAO",
       "WORSTGAMER",
       "ARUN",
       "ANDREW"
-     ],
-     "team": [
-      "KEVIN",
-      "WORSTGAMER",
-      "ARUN"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ]
+   ],
+   "team": [
+    "KEVIN",
+    "WORSTGAMER",
+    "ARUN"
+   ],
+   "teamSize": 3,
+   "state": "FAIL"
   },
   {
-   "team": [
-    "LTDAN",
-    "CARLOS",
-    "WORSTGAMER"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -135,13 +163,13 @@
       "ANDREW",
       "CARLOS"
      ],
+     "state": "REJECTED",
      "proposer": "ANDREW",
      "votes": [
       "JHAO",
       "ARUN",
       "ANDREW"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "votes": [
@@ -149,39 +177,51 @@
       "JHAO",
       "CARLOS"
      ],
-     "proposer": "CARLOS",
-     "state": "REJECTED",
      "team": [
       "CARLOS",
       "LTDAN",
       "JHAO"
-     ]
+     ],
+     "proposer": "CARLOS",
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "LTDAN",
-      "CARLOS",
-      "WORSTGAMER"
-     ],
-     "proposer": "LTDAN",
      "votes": [
       "WORSTGAMER",
       "KEVIN",
       "LTDAN",
       "CARLOS"
-     ]
+     ],
+     "proposer": "LTDAN",
+     "team": [
+      "LTDAN",
+      "CARLOS",
+      "WORSTGAMER"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 3,
-   "numFails": 0
+   "state": "SUCCESS",
+   "team": [
+    "LTDAN",
+    "CARLOS",
+    "WORSTGAMER"
+   ],
+   "failsRequired": 1
   },
   {
-   "numFails": 1,
+   "team": [
+    "LTDAN",
+    "CARLOS",
+    "WORSTGAMER",
+    "KEVIN"
+   ],
+   "state": "SUCCESS",
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "WORSTGAMER",
+     "state": "APPROVED",
      "votes": [
       "WORSTGAMER",
       "CARLOS",
@@ -196,27 +236,17 @@
      ]
     }
    ],
-   "team": [
-    "LTDAN",
-    "CARLOS",
-    "WORSTGAMER",
-    "KEVIN"
-   ],
-   "teamSize": 4,
    "failsRequired": 2,
-   "state": "SUCCESS"
+   "numFails": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
-   "proposals": [],
    "state": "PENDING",
-   "team": []
+   "failsRequired": 1,
+   "team": [],
+   "teamSize": 4,
+   "proposals": []
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1601607661,
   "_nanoseconds": 975000000
@@ -224,35 +254,5 @@
  "timeFinished": {
   "_seconds": 1601608581,
   "_nanoseconds": 535000000
- },
- "players": [
-  {
-   "uid": "TdCxpEvayegLa5oysYI7wv0gPNv2",
-   "name": "JHAO"
-  },
-  {
-   "name": "KEVIN",
-   "uid": "u9q3r9fduORMBbyLQKnTEcZcKOW2"
-  },
-  {
-   "name": "ARUN",
-   "uid": "Cg0w7DBv10XCWwcUwd9Bj166aj53"
-  },
-  {
-   "uid": "Vpog9N3crYMuSLGjZ3oNMADG0TP2",
-   "name": "ANDREW"
-  },
-  {
-   "uid": "Hhn0HiBCsag0klnG8DJGikrCF5r1",
-   "name": "CARLOS"
-  },
-  {
-   "name": "LTDAN",
-   "uid": "W7swG574FbRR0nBBq0LGoj8wvM13"
-  },
-  {
-   "name": "WORSTGAMER",
-   "uid": "CR7SlZnFnBaA4kUt8pGD4IWG4fh1"
-  }
- ]
+ }
 }

@@ -5,49 +5,43 @@
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "team": [
+      "THOMAS",
+      "MS"
+     ],
      "votes": [
       "THOMAS",
       "MS",
       "MELANIE"
      ],
-     "team": [
-      "THOMAS",
-      "MS"
-     ],
-     "state": "APPROVED",
-     "proposer": "MELANIE"
+     "proposer": "MELANIE",
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 2,
-   "state": "SUCCESS",
    "team": [
     "THOMAS",
     "MS"
    ],
-   "numFails": 0,
-   "failsRequired": 1
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "MS",
-    "MELANIE",
-    "M"
-   ],
    "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
+     "votes": [
+      "THOMAS",
+      "NLG",
       "MS",
       "MELANIE",
       "M"
      ],
-     "votes": [
-      "THOMAS",
-      "NLG",
+     "team": [
       "MS",
       "MELANIE",
       "M"
@@ -55,66 +49,72 @@
      "proposer": "M"
     }
    ],
-   "teamSize": 3,
-   "numFails": 0
+   "team": [
+    "MS",
+    "MELANIE",
+    "M"
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "proposals": [
-    {
-     "votes": [
-      "THOMAS",
-      "NLG",
-      "M"
-     ],
-     "team": [
-      "M",
-      "MELANIE"
-     ],
-     "state": "APPROVED",
-     "proposer": "NLG"
-    }
-   ],
-   "numFails": 1,
-   "failsRequired": 1,
    "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "M",
     "MELANIE"
    ],
-   "teamSize": 2
-  },
-  {
-   "team": [
-    "MELANIE",
-    "NLG",
-    "MS"
-   ],
-   "teamSize": 3,
-   "numFails": 0,
-   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "votes": [
-      "MS",
-      "MELANIE",
-      "NLG"
+     "proposer": "NLG",
+     "team": [
+      "M",
+      "MELANIE"
      ],
+     "votes": [
+      "THOMAS",
+      "NLG",
+      "M"
+     ]
+    }
+   ],
+   "teamSize": 2,
+   "numFails": 1
+  },
+  {
+   "numFails": 0,
+   "proposals": [
+    {
      "team": [
       "MELANIE",
       "NLG",
       "MS"
      ],
-     "proposer": "MS"
+     "votes": [
+      "MS",
+      "MELANIE",
+      "NLG"
+     ],
+     "proposer": "MS",
+     "state": "APPROVED"
     }
    ],
+   "team": [
+    "MELANIE",
+    "NLG",
+    "MS"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
    "state": "SUCCESS"
   },
   {
+   "proposals": [],
    "state": "PENDING",
    "teamSize": 3,
    "failsRequired": 1,
-   "proposals": [],
    "team": []
   }
  ],
@@ -148,17 +148,17 @@
   "message": "Merlin assassinated",
   "votes": [
    {
-    "THOMAS": true,
-    "MS": true
+    "MS": true,
+    "THOMAS": true
    },
    {
-    "M": true,
+    "MS": true,
     "MELANIE": true,
-    "MS": true
+    "M": true
    },
    {
-    "MELANIE": true,
-    "M": false
+    "M": false,
+    "MELANIE": true
    },
    {
     "NLG": true,
@@ -166,6 +166,7 @@
     "MELANIE": true
    }
   ],
+  "assassinated": "MS",
   "roles": [
    {
     "name": "MELANIE",
@@ -173,13 +174,13 @@
     "role": "PERCIVAL"
    },
    {
-    "role": "EVIL MINION",
     "name": "M",
+    "role": "EVIL MINION",
     "assassin": true
    },
    {
-    "name": "THOMAS",
     "assassin": false,
+    "name": "THOMAS",
     "role": "MORGANA"
    },
    {
@@ -188,12 +189,11 @@
     "assassin": false
    },
    {
-    "role": "MERLIN",
     "assassin": false,
+    "role": "MERLIN",
     "name": "MS"
    }
   ],
-  "state": "EVIL_WIN",
-  "assassinated": "MS"
+  "state": "EVIL_WIN"
  }
 }

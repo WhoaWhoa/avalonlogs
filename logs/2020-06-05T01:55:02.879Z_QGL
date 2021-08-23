@@ -1,56 +1,112 @@
 {
- "players": [
-  {
-   "uid": "OffwbigM2SblJxpZUB0eHkoPheI2",
-   "name": "TYLER"
-  },
-  {
-   "name": "TOBY",
-   "uid": "VlJgElRD4VZXmlTxpA5QRET5Z4W2"
-  },
-  {
-   "uid": "1BzGT5Pb9SR0DbGe7Xxp8UUky8T2",
-   "name": "LASER"
-  },
-  {
-   "uid": "zM9XPY9QEiM3EfKBXlgKk97GJAF3",
-   "name": "ROCKY"
-  },
-  {
-   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2",
-   "name": "GOODWIN"
-  },
-  {
-   "name": "JENNA",
-   "uid": "GtnoqXEanyXtkUj99PorBMhxrlB2"
-  },
-  {
-   "uid": "g21ycsypBoVjCAwdiYkPgudQhM23",
-   "name": "JAMES"
-  },
-  {
-   "uid": "tVQNQuHDO8cihbBVOPRGTj0fm4I2",
-   "name": "KIMBERLY"
-  }
- ],
+ "timeCreated": {
+  "_seconds": 1591322102,
+  "_nanoseconds": 879000000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "TYLER": true,
+    "GOODWIN": true,
+    "JAMES": true
+   },
+   {
+    "ROCKY": true,
+    "JAMES": true,
+    "TYLER": false,
+    "GOODWIN": true
+   },
+   {
+    "GOODWIN": true,
+    "TYLER": false,
+    "JENNA": true,
+    "LASER": true
+   },
+   {
+    "LASER": true,
+    "TOBY": true,
+    "GOODWIN": true,
+    "ROCKY": true,
+    "JENNA": true
+   },
+   {
+    "TOBY": true,
+    "LASER": true,
+    "GOODWIN": true,
+    "ROCKY": true,
+    "JENNA": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "name": "LASER",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "name": "TOBY",
+    "role": "MERLIN"
+   },
+   {
+    "name": "JAMES",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": true,
+    "name": "TYLER",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "KIMBERLY",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "JENNA"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "GOODWIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ROCKY"
+   }
+  ],
+  "assassinated": "TOBY"
+ },
  "missions": [
   {
+   "failsRequired": 1,
+   "team": [
+    "JAMES",
+    "GOODWIN",
+    "TYLER"
+   ],
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [
+      "LASER",
+      "TOBY"
+     ],
      "team": [
       "LASER",
       "TOBY",
       "ROCKY"
      ],
-     "votes": [
-      "LASER",
-      "TOBY"
-     ],
-     "state": "REJECTED",
      "proposer": "LASER"
     },
     {
-     "state": "REJECTED",
      "team": [
       "ROCKY",
       "JENNA",
@@ -59,44 +115,38 @@
      "proposer": "ROCKY",
      "votes": [
       "TOBY"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "LASER",
-      "GOODWIN"
-     ],
-     "proposer": "GOODWIN",
-     "state": "REJECTED",
      "team": [
       "GOODWIN",
       "TOBY",
       "ROCKY"
+     ],
+     "state": "REJECTED",
+     "proposer": "GOODWIN",
+     "votes": [
+      "LASER",
+      "GOODWIN"
      ]
     },
     {
-     "state": "REJECTED",
      "team": [
       "JENNA",
       "TOBY",
       "ROCKY"
      ],
+     "proposer": "JENNA",
+     "state": "REJECTED",
      "votes": [
       "GOODWIN",
       "LASER",
       "TOBY",
       "JENNA"
-     ],
-     "proposer": "JENNA"
+     ]
     },
     {
-     "team": [
-      "JAMES",
-      "GOODWIN",
-      "TYLER"
-     ],
-     "proposer": "JAMES",
-     "state": "APPROVED",
      "votes": [
       "JAMES",
       "TYLER",
@@ -104,26 +154,24 @@
       "GOODWIN",
       "LASER",
       "TOBY"
-     ]
+     ],
+     "team": [
+      "JAMES",
+      "GOODWIN",
+      "TYLER"
+     ],
+     "state": "APPROVED",
+     "proposer": "JAMES"
     }
    ],
-   "team": [
-    "JAMES",
-    "GOODWIN",
-    "TYLER"
-   ],
    "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "teamSize": 3
   },
   {
-   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
-     "votes": [
-      "KIMBERLY"
-     ],
+     "state": "REJECTED",
      "proposer": "KIMBERLY",
      "team": [
       "KIMBERLY",
@@ -131,62 +179,56 @@
       "GOODWIN",
       "TYLER"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "KIMBERLY"
+     ]
     },
     {
      "state": "REJECTED",
-     "votes": [
-      "GOODWIN",
-      "ROCKY"
-     ],
      "team": [
       "TYLER",
       "GOODWIN",
       "JAMES",
+      "ROCKY"
+     ],
+     "votes": [
+      "GOODWIN",
       "ROCKY"
      ],
      "proposer": "TYLER"
     },
     {
+     "proposer": "TOBY",
+     "state": "REJECTED",
+     "votes": [
+      "GOODWIN",
+      "TOBY",
+      "JENNA"
+     ],
      "team": [
       "TYLER",
       "TOBY",
       "GOODWIN",
       "JAMES"
-     ],
-     "state": "REJECTED",
-     "proposer": "TOBY",
-     "votes": [
-      "GOODWIN",
-      "TOBY",
-      "JENNA"
      ]
     },
     {
-     "state": "REJECTED",
      "proposer": "LASER",
-     "votes": [
-      "LASER",
-      "TOBY",
-      "TYLER",
-      "JENNA"
-     ],
+     "state": "REJECTED",
      "team": [
       "LASER",
       "GOODWIN",
       "JAMES",
       "TYLER"
+     ],
+     "votes": [
+      "LASER",
+      "TOBY",
+      "TYLER",
+      "JENNA"
      ]
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "ROCKY",
-      "TYLER",
-      "GOODWIN",
-      "JAMES"
-     ],
-     "proposer": "ROCKY",
      "votes": [
       "JAMES",
       "TYLER",
@@ -196,28 +238,36 @@
       "ROCKY",
       "LASER",
       "TOBY"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "ROCKY",
+      "TYLER",
+      "GOODWIN",
+      "JAMES"
+     ],
+     "proposer": "ROCKY"
     }
    ],
-   "numFails": 1,
    "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "ROCKY",
     "TYLER",
     "GOODWIN",
     "JAMES"
    ],
-   "failsRequired": 1
+   "state": "FAIL"
   },
   {
-   "team": [
-    "TYLER",
-    "GOODWIN",
-    "JENNA",
-    "LASER"
-   ],
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
+     "votes": [
+      "TOBY"
+     ],
      "state": "REJECTED",
      "team": [
       "GOODWIN",
@@ -225,10 +275,7 @@
       "JENNA",
       "TYLER"
      ],
-     "proposer": "GOODWIN",
-     "votes": [
-      "TOBY"
-     ]
+     "proposer": "GOODWIN"
     },
     {
      "team": [
@@ -237,21 +284,21 @@
       "TOBY",
       "KIMBERLY"
      ],
-     "proposer": "JENNA",
      "state": "REJECTED",
      "votes": [
       "JENNA",
       "GOODWIN"
-     ]
+     ],
+     "proposer": "JENNA"
     },
     {
      "proposer": "JAMES",
+     "state": "REJECTED",
      "votes": [
       "GOODWIN",
       "LASER",
       "JAMES"
      ],
-     "state": "REJECTED",
      "team": [
       "JAMES",
       "GOODWIN",
@@ -260,146 +307,158 @@
      ]
     },
     {
-     "votes": [
-      "KIMBERLY",
-      "JENNA",
-      "GOODWIN"
-     ],
      "team": [
       "KIMBERLY",
       "TOBY",
       "GOODWIN",
       "JENNA"
      ],
-     "proposer": "KIMBERLY",
-     "state": "REJECTED"
-    },
-    {
-     "state": "APPROVED",
-     "votes": [
-      "JAMES",
-      "TYLER",
-      "JENNA",
-      "GOODWIN",
-      "LASER",
-      "TOBY"
-     ],
-     "team": [
-      "TYLER",
-      "GOODWIN",
-      "JENNA",
-      "LASER"
-     ],
-     "proposer": "TYLER"
-    }
-   ],
-   "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 4,
-   "state": "FAIL"
-  },
-  {
-   "numFails": 0,
-   "teamSize": 5,
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "proposals": [
-    {
-     "votes": [
-      "TOBY"
-     ],
-     "team": [
-      "TOBY",
-      "LASER",
-      "GOODWIN",
-      "JENNA",
-      "ROCKY"
-     ],
-     "proposer": "TOBY",
-     "state": "REJECTED"
-    },
-    {
-     "proposer": "LASER",
-     "team": [
-      "TOBY",
-      "LASER",
-      "JENNA",
-      "GOODWIN",
-      "ROCKY"
-     ],
-     "votes": [
-      "TYLER",
-      "LASER",
-      "TOBY"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "votes": [
-      "GOODWIN",
-      "TYLER"
-     ],
-     "proposer": "ROCKY",
      "state": "REJECTED",
-     "team": [
-      "ROCKY",
-      "GOODWIN",
-      "TOBY",
-      "JAMES",
-      "LASER"
-     ]
-    },
-    {
-     "proposer": "GOODWIN",
-     "state": "REJECTED",
-     "team": [
-      "GOODWIN",
-      "ROCKY",
-      "LASER",
-      "TOBY",
-      "KIMBERLY"
-     ],
      "votes": [
-      "TYLER"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "votes": [
-      "ROCKY",
-      "LASER",
-      "TOBY",
-      "JAMES",
-      "TYLER",
       "KIMBERLY",
       "JENNA",
       "GOODWIN"
      ],
+     "proposer": "KIMBERLY"
+    },
+    {
+     "proposer": "TYLER",
      "team": [
+      "TYLER",
+      "GOODWIN",
+      "JENNA",
+      "LASER"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "JAMES",
+      "TYLER",
       "JENNA",
       "GOODWIN",
-      "ROCKY",
       "LASER",
       "TOBY"
-     ],
-     "proposer": "JENNA"
+     ]
     }
    ],
+   "teamSize": 4,
+   "team": [
+    "TYLER",
+    "GOODWIN",
+    "JENNA",
+    "LASER"
+   ]
+  },
+  {
+   "failsRequired": 2,
+   "teamSize": 5,
    "team": [
     "JENNA",
     "GOODWIN",
     "ROCKY",
     "LASER",
     "TOBY"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "proposals": [
+    {
+     "votes": [
+      "TOBY"
+     ],
+     "team": [
+      "TOBY",
+      "LASER",
+      "GOODWIN",
+      "JENNA",
+      "ROCKY"
+     ],
+     "state": "REJECTED",
+     "proposer": "TOBY"
+    },
+    {
+     "state": "REJECTED",
+     "team": [
+      "TOBY",
+      "LASER",
+      "JENNA",
+      "GOODWIN",
+      "ROCKY"
+     ],
+     "proposer": "LASER",
+     "votes": [
+      "TYLER",
+      "LASER",
+      "TOBY"
+     ]
+    },
+    {
+     "votes": [
+      "GOODWIN",
+      "TYLER"
+     ],
+     "state": "REJECTED",
+     "team": [
+      "ROCKY",
+      "GOODWIN",
+      "TOBY",
+      "JAMES",
+      "LASER"
+     ],
+     "proposer": "ROCKY"
+    },
+    {
+     "state": "REJECTED",
+     "team": [
+      "GOODWIN",
+      "ROCKY",
+      "LASER",
+      "TOBY",
+      "KIMBERLY"
+     ],
+     "proposer": "GOODWIN",
+     "votes": [
+      "TYLER"
+     ]
+    },
+    {
+     "state": "APPROVED",
+     "team": [
+      "JENNA",
+      "GOODWIN",
+      "ROCKY",
+      "LASER",
+      "TOBY"
+     ],
+     "proposer": "JENNA",
+     "votes": [
+      "ROCKY",
+      "LASER",
+      "TOBY",
+      "JAMES",
+      "TYLER",
+      "KIMBERLY",
+      "JENNA",
+      "GOODWIN"
+     ]
+    }
    ]
   },
   {
    "numFails": 0,
-   "state": "SUCCESS",
    "failsRequired": 1,
-   "teamSize": 5,
+   "team": [
+    "LASER",
+    "TOBY",
+    "GOODWIN",
+    "JENNA",
+    "ROCKY"
+   ],
    "proposals": [
     {
+     "votes": [
+      "TYLER",
+      "JENNA"
+     ],
      "team": [
       "JAMES",
       "JENNA",
@@ -408,14 +467,11 @@
       "TOBY"
      ],
      "proposer": "JAMES",
-     "state": "REJECTED",
-     "votes": [
-      "TYLER",
-      "JENNA"
-     ]
+     "state": "REJECTED"
     },
     {
      "state": "REJECTED",
+     "proposer": "KIMBERLY",
      "votes": [
       "TYLER",
       "KIMBERLY",
@@ -427,11 +483,11 @@
       "GOODWIN",
       "JENNA",
       "KIMBERLY"
-     ],
-     "proposer": "KIMBERLY"
+     ]
     },
     {
      "state": "REJECTED",
+     "proposer": "TYLER",
      "votes": [
       "TYLER"
      ],
@@ -441,11 +497,13 @@
       "ROCKY",
       "GOODWIN",
       "JENNA"
-     ],
-     "proposer": "TYLER"
+     ]
     },
     {
-     "proposer": "TOBY",
+     "votes": [
+      "TYLER",
+      "LASER"
+     ],
      "team": [
       "TOBY",
       "LASER",
@@ -454,12 +512,10 @@
       "ROCKY"
      ],
      "state": "REJECTED",
-     "votes": [
-      "TYLER",
-      "LASER"
-     ]
+     "proposer": "TOBY"
     },
     {
+     "state": "APPROVED",
      "team": [
       "LASER",
       "TOBY",
@@ -467,7 +523,6 @@
       "JENNA",
       "ROCKY"
      ],
-     "state": "APPROVED",
      "votes": [
       "JENNA",
       "GOODWIN",
@@ -478,13 +533,42 @@
      "proposer": "LASER"
     }
    ],
-   "team": [
-    "LASER",
-    "TOBY",
-    "GOODWIN",
-    "JENNA",
-    "ROCKY"
-   ]
+   "state": "SUCCESS",
+   "teamSize": 5
+  }
+ ],
+ "players": [
+  {
+   "uid": "OffwbigM2SblJxpZUB0eHkoPheI2",
+   "name": "TYLER"
+  },
+  {
+   "uid": "VlJgElRD4VZXmlTxpA5QRET5Z4W2",
+   "name": "TOBY"
+  },
+  {
+   "name": "LASER",
+   "uid": "1BzGT5Pb9SR0DbGe7Xxp8UUky8T2"
+  },
+  {
+   "name": "ROCKY",
+   "uid": "zM9XPY9QEiM3EfKBXlgKk97GJAF3"
+  },
+  {
+   "name": "GOODWIN",
+   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2"
+  },
+  {
+   "uid": "GtnoqXEanyXtkUj99PorBMhxrlB2",
+   "name": "JENNA"
+  },
+  {
+   "uid": "g21ycsypBoVjCAwdiYkPgudQhM23",
+   "name": "JAMES"
+  },
+  {
+   "name": "KIMBERLY",
+   "uid": "tVQNQuHDO8cihbBVOPRGTj0fm4I2"
   }
  ],
  "timeFinished": {
@@ -493,89 +577,5 @@
  },
  "options": {
   "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1591322102,
-  "_nanoseconds": 879000000
- },
- "outcome": {
-  "assassinated": "TOBY",
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "LASER"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "TOBY"
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "JAMES"
-   },
-   {
-    "assassin": true,
-    "name": "TYLER",
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "KIMBERLY",
-    "assassin": false
-   },
-   {
-    "name": "JENNA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "GOODWIN"
-   },
-   {
-    "name": "ROCKY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "GOODWIN": true,
-    "TYLER": true,
-    "JAMES": true
-   },
-   {
-    "TYLER": false,
-    "JAMES": true,
-    "GOODWIN": true,
-    "ROCKY": true
-   },
-   {
-    "LASER": true,
-    "TYLER": false,
-    "GOODWIN": true,
-    "JENNA": true
-   },
-   {
-    "ROCKY": true,
-    "LASER": true,
-    "GOODWIN": true,
-    "TOBY": true,
-    "JENNA": true
-   },
-   {
-    "GOODWIN": true,
-    "ROCKY": true,
-    "TOBY": true,
-    "JENNA": true,
-    "LASER": true
-   }
-  ],
-  "message": "Merlin assassinated"
  }
 }

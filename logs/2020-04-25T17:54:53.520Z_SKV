@@ -2,100 +2,15 @@
  "options": {
   "inGameLog": false
  },
- "players": [
-  {
-   "uid": "0zbOqjICfJfO48I1P8yufYz3UXF3",
-   "name": "RAMU"
-  },
-  {
-   "name": "BHATLA",
-   "uid": "9c9NGzycawRKrKBEs335OQpfvxu2"
-  },
-  {
-   "name": "MUSKITEER",
-   "uid": "VFJ0hFkgYXVA6KZCz5Xw3aUjweC2"
-  },
-  {
-   "name": "VK",
-   "uid": "1lTtJDSz1eZdOrfJMqn45PFETMH2"
-  },
-  {
-   "uid": "GRpV5HGduThmNxXjFXVwVmSRrss1",
-   "name": "BBK"
-  },
-  {
-   "name": "ADNAAN",
-   "uid": "8RM8ZeiswVTroTST2gWJSXOzbMP2"
-  }
- ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "MUSKITEER",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "RAMU",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "BHATLA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "ADNAAN",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "VK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "BBK"
-   }
-  ],
-  "votes": [
-   {
-    "BHATLA": true,
-    "RAMU": true
-   },
-   {
-    "MUSKITEER": false,
-    "VK": true,
-    "RAMU": true
-   },
-   {
-    "BHATLA": true,
-    "VK": true,
-    "BBK": true,
-    "MUSKITEER": false
-   },
-   {
-    "BHATLA": true,
-    "ADNAAN": false,
-    "BBK": true
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1587838255,
-  "_nanoseconds": 638000000
- },
  "missions": [
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "RAMU",
+      "BHATLA"
+     ],
      "votes": [
       "BBK",
       "MUSKITEER",
@@ -105,24 +20,27 @@
       "VK"
      ],
      "proposer": "RAMU",
-     "team": [
-      "RAMU",
-      "BHATLA"
-     ],
      "state": "APPROVED"
     }
    ],
-   "teamSize": 2,
+   "state": "SUCCESS",
    "team": [
     "RAMU",
     "BHATLA"
    ],
-   "numFails": 0,
-   "failsRequired": 1
+   "teamSize": 2,
+   "numFails": 0
   },
   {
-   "numFails": 1,
+   "team": [
+    "RAMU",
+    "MUSKITEER",
+    "VK"
+   ],
    "teamSize": 3,
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -131,37 +49,31 @@
       "VK"
      ],
      "state": "APPROVED",
+     "proposer": "BHATLA",
      "votes": [
       "BHATLA",
       "ADNAAN",
       "VK",
       "MUSKITEER",
       "RAMU"
-     ],
-     "proposer": "BHATLA"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "RAMU",
-    "MUSKITEER",
-    "VK"
    ]
   },
   {
+   "teamSize": 4,
+   "numFails": 1,
    "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "BHATLA",
     "VK",
     "MUSKITEER",
     "BBK"
    ],
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "MUSKITEER",
      "votes": [
       "MUSKITEER",
       "BHATLA",
@@ -172,11 +84,15 @@
       "BHATLA",
       "VK",
       "ADNAAN"
-     ],
-     "proposer": "MUSKITEER",
-     "state": "REJECTED"
+     ]
     },
     {
+     "team": [
+      "BHATLA",
+      "VK",
+      "MUSKITEER",
+      "BBK"
+     ],
      "state": "APPROVED",
      "votes": [
       "BHATLA",
@@ -185,26 +101,21 @@
       "BBK",
       "MUSKITEER"
      ],
-     "team": [
-      "BHATLA",
-      "VK",
-      "MUSKITEER",
-      "BBK"
-     ],
      "proposer": "VK"
     }
-   ]
+   ],
+   "state": "FAIL"
   },
   {
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "BBK",
      "votes": [
       "BBK",
       "BHATLA",
       "ADNAAN"
      ],
+     "state": "REJECTED",
+     "proposer": "BBK",
      "team": [
       "BBK",
       "BHATLA",
@@ -212,8 +123,6 @@
      ]
     },
     {
-     "state": "REJECTED",
-     "proposer": "ADNAAN",
      "votes": [
       "VK",
       "ADNAAN"
@@ -222,16 +131,18 @@
       "ADNAAN",
       "BBK",
       "VK"
-     ]
+     ],
+     "proposer": "ADNAAN",
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "BHATLA",
       "BBK",
       "RAMU"
      ],
      "proposer": "RAMU",
+     "state": "REJECTED",
      "team": [
       "BHATLA",
       "BBK",
@@ -239,8 +150,6 @@
      ]
     },
     {
-     "state": "APPROVED",
-     "proposer": "BHATLA",
      "team": [
       "BBK",
       "ADNAAN",
@@ -252,29 +161,120 @@
       "VK",
       "BBK",
       "MUSKITEER"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "BHATLA"
     }
    ],
+   "failsRequired": 1,
    "team": [
     "BBK",
     "ADNAAN",
     "BHATLA"
    ],
+   "state": "FAIL",
    "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
    "team": [],
-   "state": "PENDING",
-   "teamSize": 4,
    "failsRequired": 1,
+   "teamSize": 4,
+   "state": "PENDING",
    "proposals": []
   }
  ],
+ "players": [
+  {
+   "uid": "0zbOqjICfJfO48I1P8yufYz3UXF3",
+   "name": "RAMU"
+  },
+  {
+   "uid": "9c9NGzycawRKrKBEs335OQpfvxu2",
+   "name": "BHATLA"
+  },
+  {
+   "uid": "VFJ0hFkgYXVA6KZCz5Xw3aUjweC2",
+   "name": "MUSKITEER"
+  },
+  {
+   "name": "VK",
+   "uid": "1lTtJDSz1eZdOrfJMqn45PFETMH2"
+  },
+  {
+   "name": "BBK",
+   "uid": "GRpV5HGduThmNxXjFXVwVmSRrss1"
+  },
+  {
+   "name": "ADNAAN",
+   "uid": "8RM8ZeiswVTroTST2gWJSXOzbMP2"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1587838255,
+  "_nanoseconds": 638000000
+ },
  "timeCreated": {
   "_seconds": 1587837293,
   "_nanoseconds": 520000000
+ },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "votes": [
+   {
+    "RAMU": true,
+    "BHATLA": true
+   },
+   {
+    "RAMU": true,
+    "VK": true,
+    "MUSKITEER": false
+   },
+   {
+    "BHATLA": true,
+    "BBK": true,
+    "MUSKITEER": false,
+    "VK": true
+   },
+   {
+    "BHATLA": true,
+    "BBK": true,
+    "ADNAAN": false
+   }
+  ],
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "MUSKITEER",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "RAMU",
+    "role": "MERLIN"
+   },
+   {
+    "name": "BHATLA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "ADNAAN",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "VK",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "BBK",
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
  }
 }

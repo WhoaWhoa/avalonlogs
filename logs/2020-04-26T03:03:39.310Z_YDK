@@ -1,36 +1,36 @@
 {
  "missions": [
   {
-   "state": "SUCCESS",
-   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "SANJY",
-      "SAAD"
-     ],
-     "state": "REJECTED",
      "votes": [
       "MAFAZLA",
       "SAAD",
       "SANJY"
      ],
-     "proposer": "SANJY"
+     "proposer": "SANJY",
+     "state": "REJECTED",
+     "team": [
+      "SANJY",
+      "SAAD"
+     ]
     },
     {
-     "proposer": "URWAH",
-     "team": [
-      "URWAH",
-      "MAFAZLA"
-     ],
-     "state": "REJECTED",
      "votes": [
       "RAAS",
       "URWAH",
       "MAFAZLA"
-     ]
+     ],
+     "team": [
+      "URWAH",
+      "MAFAZLA"
+     ],
+     "proposer": "URWAH",
+     "state": "REJECTED"
     },
     {
+     "proposer": "RAAS",
+     "state": "REJECTED",
      "votes": [
       "RAHUL",
       "RAAS",
@@ -39,16 +39,9 @@
      "team": [
       "RAAS",
       "RAHUL"
-     ],
-     "proposer": "RAAS",
-     "state": "REJECTED"
+     ]
     },
     {
-     "team": [
-      "SAAD",
-      "SANJY"
-     ],
-     "state": "APPROVED",
      "proposer": "SAAD",
      "votes": [
       "RAAS",
@@ -56,17 +49,25 @@
       "MAFAZLA",
       "SAAD",
       "SANJY"
-     ]
+     ],
+     "team": [
+      "SAAD",
+      "SANJY"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 2,
    "team": [
     "SAAD",
     "SANJY"
    ],
-   "failsRequired": 1
+   "numFails": 0
   },
   {
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
@@ -77,18 +78,17 @@
       "SANJY",
       "RAAS"
      ],
-     "proposer": "MAFAZLA",
      "team": [
       "MAFAZLA",
       "RAHUL",
       "SANJY"
-     ]
+     ],
+     "proposer": "MAFAZLA"
     }
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "teamSize": 3,
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "MAFAZLA",
     "RAHUL",
@@ -96,45 +96,48 @@
    ]
   },
   {
+   "state": "FAIL",
+   "numFails": 1,
    "failsRequired": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "RAHUL",
+     "team": [
+      "MAFAZLA",
+      "RAHUL",
+      "SANJY",
+      "RAAS"
+     ],
      "votes": [
       "RAAS",
       "URWAH",
       "MAFAZLA",
       "RAHUL",
       "SANJY"
-     ],
-     "proposer": "RAHUL",
-     "state": "APPROVED",
-     "team": [
-      "MAFAZLA",
-      "RAHUL",
-      "SANJY",
-      "RAAS"
      ]
     }
    ],
-   "numFails": 1,
-   "state": "FAIL",
    "team": [
     "MAFAZLA",
     "RAHUL",
     "SANJY",
     "RAAS"
-   ]
+   ],
+   "teamSize": 4
   },
   {
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "SANJY",
+    "RAHUL",
+    "MAFAZLA"
+   ],
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "SANJY",
-      "RAHUL",
-      "MAFAZLA"
-     ],
-     "state": "APPROVED",
      "proposer": "SANJY",
      "votes": [
       "SANJY",
@@ -142,30 +145,82 @@
       "URWAH",
       "MAFAZLA",
       "RAHUL"
-     ]
+     ],
+     "team": [
+      "SANJY",
+      "RAHUL",
+      "MAFAZLA"
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "state": "SUCCESS",
-   "team": [
-    "SANJY",
-    "RAHUL",
-    "MAFAZLA"
-   ],
-   "numFails": 0,
-   "teamSize": 3,
-   "failsRequired": 1
+   ]
   },
   {
-   "failsRequired": 1,
    "team": [],
+   "failsRequired": 1,
+   "teamSize": 4,
    "state": "PENDING",
-   "proposals": [],
-   "teamSize": 4
+   "proposals": []
   }
  ],
- "timeFinished": {
-  "_seconds": 1587870814,
-  "_nanoseconds": 664000000
+ "outcome": {
+  "votes": [
+   {
+    "SANJY": true,
+    "SAAD": true
+   },
+   {
+    "RAHUL": true,
+    "SANJY": true,
+    "MAFAZLA": true
+   },
+   {
+    "RAAS": false,
+    "MAFAZLA": true,
+    "SANJY": true,
+    "RAHUL": true
+   },
+   {
+    "SANJY": true,
+    "MAFAZLA": true,
+    "RAHUL": true
+   }
+  ],
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "name": "RAAS",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "URWAH",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "MAFAZLA",
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "RAHUL"
+   },
+   {
+    "assassin": false,
+    "name": "SAAD",
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "SANJY"
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "MAFAZLA"
  },
  "players": [
   {
@@ -177,86 +232,31 @@
    "uid": "7QifjUCY46TIhGd8uMfK41WSrIo1"
   },
   {
-   "uid": "IO3NiZdJh1Oy7IS0BAN6ZSsAe073",
-   "name": "SANJY"
+   "name": "SANJY",
+   "uid": "IO3NiZdJh1Oy7IS0BAN6ZSsAe073"
   },
   {
    "name": "URWAH",
    "uid": "b25KDZonqXVnJg1BnaKXhGQCFUt1"
   },
   {
-   "name": "RAAS",
-   "uid": "oJoeG2DBmBcntH1iFhM8MdYn3ox2"
+   "uid": "oJoeG2DBmBcntH1iFhM8MdYn3ox2",
+   "name": "RAAS"
   },
   {
    "name": "SAAD",
    "uid": "CNDU2KmpIlMMrwYJZzd4YJbOh223"
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "roles": [
-   {
-    "assassin": true,
-    "name": "RAAS",
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "URWAH",
-    "assassin": false
-   },
-   {
-    "name": "MAFAZLA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "name": "RAHUL",
-    "role": "MERLIN"
-   },
-   {
-    "name": "SAAD",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SANJY"
-   }
-  ],
-  "votes": [
-   {
-    "SAAD": true,
-    "SANJY": true
-   },
-   {
-    "SANJY": true,
-    "MAFAZLA": true,
-    "RAHUL": true
-   },
-   {
-    "RAAS": false,
-    "SANJY": true,
-    "MAFAZLA": true,
-    "RAHUL": true
-   },
-   {
-    "RAHUL": true,
-    "MAFAZLA": true,
-    "SANJY": true
-   }
-  ],
-  "assassinated": "MAFAZLA",
-  "state": "GOOD_WIN",
-  "message": "Three successful missions"
+ "timeFinished": {
+  "_seconds": 1587870814,
+  "_nanoseconds": 664000000
  },
  "timeCreated": {
   "_seconds": 1587870219,
   "_nanoseconds": 310000000
+ },
+ "options": {
+  "inGameLog": false
  }
 }

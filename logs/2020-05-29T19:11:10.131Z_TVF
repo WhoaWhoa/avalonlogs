@@ -1,158 +1,129 @@
 {
  "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "assassinated": null,
   "votes": [
    {
-    "CAREN": true,
-    "VICTORIA": true
+    "VICTORIA": true,
+    "CAREN": true
    },
    {
-    "JILL": true,
     "KAT": true,
-    "NATE": false
+    "NATE": false,
+    "JILL": true
    },
    {
     "JILL": false,
     "VICTORIA": true,
-    "NATE": false,
-    "DAN": true
+    "DAN": true,
+    "NATE": false
    },
    {
     "DAN": true,
-    "VICTORIA": true,
-    "NATE": false
+    "NATE": false,
+    "VICTORIA": true
    }
   ],
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
   "roles": [
    {
+    "role": "PERCIVAL",
     "assassin": false,
-    "name": "KAT",
-    "role": "PERCIVAL"
+    "name": "KAT"
    },
    {
-    "role": "EVIL MINION",
     "name": "JILL",
+    "role": "EVIL MINION",
     "assassin": true
    },
    {
-    "assassin": false,
     "name": "VICTORIA",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
     "name": "CAREN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "name": "NATE",
-    "role": "MORGANA",
-    "assassin": false
+    "assassin": false,
+    "role": "MORGANA"
    },
    {
-    "role": "MERLIN",
+    "assassin": false,
     "name": "DAN",
-    "assassin": false
+    "role": "MERLIN"
    }
   ]
  },
- "players": [
-  {
-   "name": "KAT",
-   "uid": "d3H1dDuLptVgZV0uxIigHfiEFUL2"
-  },
-  {
-   "uid": "mqUDeTwT2khtKQD3ZlZjVVtuO0D3",
-   "name": "CAREN"
-  },
-  {
-   "uid": "qSpHI1Lv2ZTZ3iehBNuUGAlekh03",
-   "name": "VICTORIA"
-  },
-  {
-   "uid": "h8RdzOhOUIW2B7KJd6lAgDfcVC42",
-   "name": "DAN"
-  },
-  {
-   "name": "NATE",
-   "uid": "OuIUANcLhfg85sDu4i2DgKTbRf83"
-  },
-  {
-   "uid": "I2Bdl4RNe7T3AEnYmk5ytnMJbX73",
-   "name": "JILL"
-  }
- ],
- "options": {
-  "inGameLog": false
- },
  "missions": [
   {
-   "numFails": 0,
+   "team": [
+    "VICTORIA",
+    "CAREN"
+   ],
    "proposals": [
     {
      "team": [
       "VICTORIA",
       "CAREN"
      ],
-     "proposer": "DAN",
-     "state": "APPROVED",
      "votes": [
       "DAN",
       "JILL",
       "VICTORIA",
       "CAREN"
-     ]
+     ],
+     "proposer": "DAN",
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "team": [
-    "VICTORIA",
-    "CAREN"
-   ],
    "teamSize": 2,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "KAT",
     "NATE",
     "JILL"
    ],
    "teamSize": 3,
-   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "NATE",
      "votes": [
       "DAN",
       "KAT",
       "JILL",
       "VICTORIA"
      ],
+     "state": "APPROVED",
      "team": [
       "KAT",
       "NATE",
       "JILL"
      ],
-     "state": "APPROVED"
+     "proposer": "NATE"
     }
-   ],
-   "numFails": 1,
-   "failsRequired": 1
+   ]
   },
   {
-   "failsRequired": 1,
-   "numFails": 2,
    "team": [
     "JILL",
     "NATE",
     "DAN",
     "VICTORIA"
    ],
-   "state": "FAIL",
    "teamSize": 4,
+   "numFails": 2,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -163,29 +134,26 @@
       "KAT",
       "JILL"
      ],
-     "proposer": "JILL",
      "team": [
       "JILL",
       "NATE",
       "DAN",
       "VICTORIA"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "JILL"
     }
    ]
   },
   {
-   "failsRequired": 1,
-   "numFails": 1,
    "team": [
     "NATE",
     "DAN",
     "VICTORIA"
    ],
-   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "VICTORIA",
       "CAREN",
@@ -194,24 +162,56 @@
       "KAT",
       "JILL"
      ],
+     "proposer": "KAT",
+     "state": "APPROVED",
      "team": [
       "NATE",
       "DAN",
       "VICTORIA"
-     ],
-     "proposer": "KAT"
+     ]
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3
   },
   {
    "teamSize": 4,
-   "team": [],
+   "failsRequired": 1,
    "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 1
+   "team": [],
+   "proposals": []
   }
  ],
+ "players": [
+  {
+   "uid": "d3H1dDuLptVgZV0uxIigHfiEFUL2",
+   "name": "KAT"
+  },
+  {
+   "name": "CAREN",
+   "uid": "mqUDeTwT2khtKQD3ZlZjVVtuO0D3"
+  },
+  {
+   "name": "VICTORIA",
+   "uid": "qSpHI1Lv2ZTZ3iehBNuUGAlekh03"
+  },
+  {
+   "name": "DAN",
+   "uid": "h8RdzOhOUIW2B7KJd6lAgDfcVC42"
+  },
+  {
+   "uid": "OuIUANcLhfg85sDu4i2DgKTbRf83",
+   "name": "NATE"
+  },
+  {
+   "name": "JILL",
+   "uid": "I2Bdl4RNe7T3AEnYmk5ytnMJbX73"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
  "timeCreated": {
   "_seconds": 1590779470,
   "_nanoseconds": 131000000

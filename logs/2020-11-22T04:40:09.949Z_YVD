@@ -1,68 +1,4 @@
 {
- "outcome": {
-  "votes": [
-   {
-    "NIRU": true,
-    "CHRIS": true
-   },
-   {
-    "NIRU": false,
-    "CAM": true,
-    "CHRIS": true
-   },
-   {
-    "CLAIRE": true,
-    "Z": true,
-    "CAM": true
-   },
-   {
-    "Z": true,
-    "CAM": true,
-    "CLAIRE": true,
-    "MIKE": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "SCOTT",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "MIKE",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "CAM",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "NIRU",
-    "role": "MORGANA"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "Z",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "CLAIRE"
-   },
-   {
-    "name": "CHRIS",
-    "assassin": false,
-    "role": "OBERON"
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "Z"
- },
  "timeFinished": {
   "_seconds": 1606020704,
   "_nanoseconds": 478000000
@@ -73,8 +9,8 @@
    "uid": "KqtfEYlRSGUjooGevMUcEy3yEP93"
   },
   {
-   "name": "NIRU",
-   "uid": "LO4vJHsGR3e8LOq0LfJ7OY0ivCt1"
+   "uid": "LO4vJHsGR3e8LOq0LfJ7OY0ivCt1",
+   "name": "NIRU"
   },
   {
    "uid": "YMOaMs80xdZT6q8T976H5lOdoKr1",
@@ -85,64 +21,61 @@
    "uid": "ssnuXVBEflb052Ux1z4KccpcCI93"
   },
   {
-   "uid": "KnNOdRTo5sPZiYqmPcg1KzO7Xz13",
-   "name": "CLAIRE"
+   "name": "CLAIRE",
+   "uid": "KnNOdRTo5sPZiYqmPcg1KzO7Xz13"
   },
   {
-   "name": "MIKE",
-   "uid": "14n8V3qsIyPjHyQ2hef4kgsb8qm1"
+   "uid": "14n8V3qsIyPjHyQ2hef4kgsb8qm1",
+   "name": "MIKE"
   },
   {
-   "name": "SCOTT",
-   "uid": "Oq2Xvk1jQ8RjoLaWTzTWT2OfKcc2"
+   "uid": "Oq2Xvk1jQ8RjoLaWTzTWT2OfKcc2",
+   "name": "SCOTT"
   }
  ],
  "missions": [
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "CHRIS",
+     "team": [
+      "CHRIS",
+      "NIRU"
+     ],
      "votes": [
       "Z",
       "CHRIS",
       "CAM",
       "NIRU"
-     ],
-     "proposer": "CHRIS",
-     "team": [
-      "CHRIS",
-      "NIRU"
      ]
     }
    ],
-   "failsRequired": 1,
    "team": [
     "CHRIS",
     "NIRU"
    ],
-   "numFails": 0,
    "teamSize": 2
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 1,
    "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "CAM",
-      "CHRIS",
-      "NIRU"
-     ],
-     "state": "APPROVED",
-     "proposer": "CAM",
      "votes": [
       "CHRIS",
       "NIRU",
       "CAM",
       "Z"
+     ],
+     "proposer": "CAM",
+     "state": "APPROVED",
+     "team": [
+      "CAM",
+      "CHRIS",
+      "NIRU"
      ]
     }
    ],
@@ -150,80 +83,89 @@
     "CAM",
     "CHRIS",
     "NIRU"
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 1
   },
   {
-   "numFails": 0,
    "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "Z",
-    "CAM",
-    "CLAIRE"
-   ],
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "CAM",
       "CLAIRE",
       "MIKE"
      ],
+     "proposer": "CLAIRE",
      "votes": [
       "CAM",
       "CLAIRE",
       "NIRU"
-     ],
-     "state": "REJECTED",
-     "proposer": "CLAIRE"
+     ]
     },
     {
-     "votes": [
-      "SCOTT",
-      "NIRU"
-     ],
      "team": [
       "MIKE",
       "CHRIS",
+      "NIRU"
+     ],
+     "votes": [
+      "SCOTT",
       "NIRU"
      ],
      "proposer": "MIKE",
      "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "proposer": "SCOTT",
-     "votes": [
-      "SCOTT"
-     ],
+     "state": "REJECTED",
      "team": [
       "MIKE",
       "CHRIS",
       "NIRU"
+     ],
+     "votes": [
+      "SCOTT"
      ]
     },
     {
-     "proposer": "Z",
      "state": "APPROVED",
-     "team": [
-      "Z",
-      "CAM",
-      "CLAIRE"
-     ],
      "votes": [
       "SCOTT",
       "Z",
       "CLAIRE",
       "CHRIS",
       "CAM"
-     ]
+     ],
+     "team": [
+      "Z",
+      "CAM",
+      "CLAIRE"
+     ],
+     "proposer": "Z"
     }
-   ]
+   ],
+   "numFails": 0,
+   "team": [
+    "Z",
+    "CAM",
+    "CLAIRE"
+   ],
+   "state": "SUCCESS",
+   "teamSize": 3
   },
   {
-   "failsRequired": 2,
-   "numFails": 0,
+   "team": [
+    "Z",
+    "CAM",
+    "CLAIRE",
+    "MIKE"
+   ],
    "teamSize": 4,
+   "numFails": 0,
+   "failsRequired": 2,
    "state": "SUCCESS",
    "proposals": [
     {
@@ -242,27 +184,85 @@
       "MIKE"
      ]
     }
-   ],
-   "team": [
-    "Z",
-    "CAM",
-    "CLAIRE",
-    "MIKE"
    ]
   },
   {
    "state": "PENDING",
-   "team": [],
    "failsRequired": 1,
    "proposals": [],
-   "teamSize": 4
+   "teamSize": 4,
+   "team": []
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "NIRU": true,
+    "CHRIS": true
+   },
+   {
+    "CHRIS": true,
+    "NIRU": false,
+    "CAM": true
+   },
+   {
+    "Z": true,
+    "CAM": true,
+    "CLAIRE": true
+   },
+   {
+    "Z": true,
+    "MIKE": true,
+    "CAM": true,
+    "CLAIRE": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "name": "SCOTT",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "MIKE",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "CAM",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "NIRU",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "name": "Z",
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MERLIN",
+    "name": "CLAIRE",
+    "assassin": false
+   },
+   {
+    "name": "CHRIS",
+    "assassin": false,
+    "role": "OBERON"
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "Z"
+ },
  "timeCreated": {
   "_seconds": 1606020009,
   "_nanoseconds": 949000000
- },
- "options": {
-  "inGameLog": false
  }
 }

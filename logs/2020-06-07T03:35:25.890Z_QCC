@@ -1,7 +1,4 @@
 {
- "options": {
-  "inGameLog": false
- },
  "timeFinished": {
   "_seconds": 1591504637,
   "_nanoseconds": 924000000
@@ -10,57 +7,108 @@
   "_seconds": 1591500925,
   "_nanoseconds": 890000000
  },
- "players": [
-  {
-   "name": "RYAN",
-   "uid": "FP5bENHJa0btJuQ704ASF8ekuwL2"
-  },
-  {
-   "uid": "VlJgElRD4VZXmlTxpA5QRET5Z4W2",
-   "name": "TOBY"
-  },
-  {
-   "name": "LASER",
-   "uid": "1BzGT5Pb9SR0DbGe7Xxp8UUky8T2"
-  },
-  {
-   "uid": "VK3pUVkXsCMFMxGEgEo0ckQuksm2",
-   "name": "BRIAN"
-  },
-  {
-   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2",
-   "name": "GOODWIN"
-  },
-  {
-   "name": "JAMES",
-   "uid": "g21ycsypBoVjCAwdiYkPgudQhM23"
-  },
-  {
-   "uid": "kYmaig4V9qPVwzFNPynJHaGGk8P2",
-   "name": "KAREN"
-  },
-  {
-   "uid": "zM9XPY9QEiM3EfKBXlgKk97GJAF3",
-   "name": "ROCKY"
-  }
- ],
+ "outcome": {
+  "roles": [
+   {
+    "role": "MORGANA",
+    "name": "KAREN",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "GOODWIN",
+    "role": "MORDRED"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "ROCKY"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "LASER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "TOBY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "OBERON",
+    "name": "RYAN",
+    "assassin": false
+   },
+   {
+    "name": "BRIAN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JAMES",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "LASER": true,
+    "GOODWIN": true,
+    "JAMES": true
+   },
+   {
+    "ROCKY": true,
+    "LASER": true,
+    "JAMES": true,
+    "GOODWIN": false
+   },
+   {
+    "GOODWIN": true,
+    "JAMES": true,
+    "BRIAN": true,
+    "KAREN": true
+   },
+   {
+    "KAREN": false,
+    "GOODWIN": false,
+    "JAMES": true,
+    "BRIAN": true,
+    "TOBY": true
+   },
+   {
+    "JAMES": true,
+    "TOBY": true,
+    "LASER": true,
+    "BRIAN": true,
+    "ROCKY": true
+   }
+  ],
+  "assassinated": "ROCKY",
+  "message": "Merlin assassinated"
+ },
  "missions": [
   {
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "votes": [
-      "GOODWIN",
-      "TOBY"
-     ],
-     "proposer": "ROCKY",
      "team": [
       "ROCKY",
       "BRIAN",
       "GOODWIN"
      ],
+     "votes": [
+      "GOODWIN",
+      "TOBY"
+     ],
+     "proposer": "ROCKY",
      "state": "REJECTED"
     },
     {
+     "proposer": "RYAN",
      "state": "REJECTED",
      "votes": [
       "RYAN",
@@ -70,8 +118,7 @@
       "RYAN",
       "TOBY",
       "KAREN"
-     ],
-     "proposer": "RYAN"
+     ]
     },
     {
      "team": [
@@ -79,62 +126,45 @@
       "LASER",
       "JAMES"
      ],
-     "proposer": "TOBY",
-     "state": "REJECTED",
      "votes": [
       "LASER",
       "TOBY"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "TOBY"
     },
     {
      "proposer": "LASER",
      "state": "APPROVED",
-     "team": [
-      "LASER",
-      "JAMES",
-      "GOODWIN"
-     ],
      "votes": [
       "GOODWIN",
       "LASER",
       "TOBY",
       "JAMES",
       "KAREN"
+     ],
+     "team": [
+      "LASER",
+      "JAMES",
+      "GOODWIN"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0,
    "team": [
     "LASER",
     "JAMES",
     "GOODWIN"
-   ],
-   "teamSize": 3,
-   "failsRequired": 1
+   ]
   },
   {
    "proposals": [
     {
-     "votes": [
-      "BRIAN"
-     ],
-     "state": "REJECTED",
      "proposer": "BRIAN",
      "team": [
       "BRIAN",
       "ROCKY",
       "GOODWIN",
       "RYAN"
-     ]
-    },
-    {
-     "proposer": "GOODWIN",
-     "team": [
-      "GOODWIN",
-      "BRIAN",
-      "JAMES",
-      "RYAN"
      ],
      "state": "REJECTED",
      "votes": [
@@ -142,19 +172,38 @@
      ]
     },
     {
+     "proposer": "GOODWIN",
      "state": "REJECTED",
      "votes": [
-      "LASER"
+      "BRIAN"
      ],
-     "proposer": "JAMES",
+     "team": [
+      "GOODWIN",
+      "BRIAN",
+      "JAMES",
+      "RYAN"
+     ]
+    },
+    {
      "team": [
       "JAMES",
       "LASER",
       "GOODWIN",
       "KAREN"
+     ],
+     "state": "REJECTED",
+     "proposer": "JAMES",
+     "votes": [
+      "LASER"
      ]
     },
     {
+     "team": [
+      "KAREN",
+      "JAMES",
+      "GOODWIN",
+      "LASER"
+     ],
      "votes": [
       "LASER",
       "RYAN",
@@ -162,15 +211,16 @@
       "KAREN"
      ],
      "proposer": "KAREN",
-     "team": [
-      "KAREN",
-      "JAMES",
-      "GOODWIN",
-      "LASER"
-     ],
      "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
+     "team": [
+      "ROCKY",
+      "GOODWIN",
+      "JAMES",
+      "LASER"
+     ],
      "votes": [
       "KAREN",
       "GOODWIN",
@@ -181,17 +231,10 @@
       "BRIAN",
       "JAMES"
      ],
-     "proposer": "ROCKY",
-     "team": [
-      "ROCKY",
-      "GOODWIN",
-      "JAMES",
-      "LASER"
-     ],
-     "state": "APPROVED"
+     "proposer": "ROCKY"
     }
    ],
-   "teamSize": 4,
+   "numFails": 1,
    "team": [
     "ROCKY",
     "GOODWIN",
@@ -199,76 +242,78 @@
     "LASER"
    ],
    "failsRequired": 1,
-   "numFails": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "teamSize": 4
   },
   {
-   "numFails": 0,
    "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "RYAN",
      "votes": [
       "RYAN"
      ],
+     "state": "REJECTED",
      "team": [
       "KAREN",
       "GOODWIN",
       "RYAN",
       "BRIAN"
      ],
-     "state": "REJECTED"
+     "proposer": "RYAN"
     },
     {
+     "votes": [
+      "TOBY"
+     ],
+     "state": "REJECTED",
      "team": [
       "TOBY",
       "LASER",
       "GOODWIN",
       "KAREN"
      ],
-     "proposer": "TOBY",
-     "state": "REJECTED",
-     "votes": [
-      "TOBY"
-     ]
+     "proposer": "TOBY"
     },
     {
-     "state": "REJECTED",
+     "votes": [
+      "LASER",
+      "TOBY",
+      "KAREN"
+     ],
      "team": [
       "LASER",
       "GOODWIN",
       "JAMES",
       "KAREN"
      ],
-     "votes": [
-      "LASER",
-      "TOBY",
-      "KAREN"
-     ],
+     "state": "REJECTED",
      "proposer": "LASER"
     },
     {
      "state": "REJECTED",
+     "votes": [
+      "RYAN",
+      "BRIAN"
+     ],
+     "proposer": "BRIAN",
      "team": [
       "BRIAN",
       "GOODWIN",
       "JAMES",
       "RYAN"
-     ],
-     "proposer": "BRIAN",
-     "votes": [
-      "RYAN",
-      "BRIAN"
      ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "GOODWIN",
       "JAMES",
       "KAREN",
       "BRIAN"
      ],
+     "state": "APPROVED",
      "proposer": "GOODWIN",
      "votes": [
       "KAREN",
@@ -282,17 +327,14 @@
      ]
     }
    ],
-   "teamSize": 4,
    "team": [
     "GOODWIN",
     "JAMES",
     "KAREN",
     "BRIAN"
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
-   "numFails": 2,
    "team": [
     "JAMES",
     "KAREN",
@@ -300,11 +342,10 @@
     "BRIAN",
     "TOBY"
    ],
-   "state": "FAIL",
-   "failsRequired": 2,
+   "numFails": 2,
+   "teamSize": 5,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "JAMES",
       "KAREN",
@@ -312,6 +353,7 @@
       "BRIAN",
       "TOBY"
      ],
+     "state": "APPROVED",
      "proposer": "JAMES",
      "votes": [
       "LASER",
@@ -322,12 +364,26 @@
      ]
     }
    ],
-   "teamSize": 5
+   "state": "FAIL",
+   "failsRequired": 2
   },
   {
+   "state": "SUCCESS",
+   "teamSize": 5,
+   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "ROCKY",
+    "LASER",
+    "JAMES",
+    "TOBY",
+    "BRIAN"
+   ],
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "KAREN"
+     ],
      "team": [
       "GOODWIN",
       "JAMES",
@@ -335,40 +391,38 @@
       "RYAN",
       "KAREN"
      ],
-     "proposer": "KAREN",
-     "votes": [
-      "KAREN"
-     ]
+     "state": "REJECTED",
+     "proposer": "KAREN"
     },
     {
-     "votes": [],
      "state": "REJECTED",
+     "proposer": "ROCKY",
+     "votes": [],
      "team": [
       "ROCKY",
       "LASER",
       "JAMES",
       "BRIAN",
       "TOBY"
-     ],
-     "proposer": "ROCKY"
+     ]
     },
     {
+     "state": "REJECTED",
+     "proposer": "RYAN",
+     "votes": [],
      "team": [
       "JAMES",
       "RYAN",
       "LASER",
       "TOBY",
       "BRIAN"
-     ],
-     "state": "REJECTED",
-     "proposer": "RYAN",
-     "votes": []
+     ]
     },
     {
+     "proposer": "TOBY",
      "votes": [
       "TOBY"
      ],
-     "proposer": "TOBY",
      "state": "REJECTED",
      "team": [
       "TOBY",
@@ -379,7 +433,6 @@
      ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "ROCKY",
       "LASER",
@@ -388,107 +441,54 @@
       "BRIAN",
       "JAMES"
      ],
+     "state": "APPROVED",
+     "proposer": "LASER",
      "team": [
       "ROCKY",
       "LASER",
       "JAMES",
       "TOBY",
       "BRIAN"
-     ],
-     "proposer": "LASER"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "teamSize": 5,
-   "team": [
-    "ROCKY",
-    "LASER",
-    "JAMES",
-    "TOBY",
-    "BRIAN"
-   ],
-   "state": "SUCCESS"
+   ]
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "JAMES": true,
-    "GOODWIN": true,
-    "LASER": true
-   },
-   {
-    "ROCKY": true,
-    "LASER": true,
-    "GOODWIN": false,
-    "JAMES": true
-   },
-   {
-    "JAMES": true,
-    "BRIAN": true,
-    "KAREN": true,
-    "GOODWIN": true
-   },
-   {
-    "GOODWIN": false,
-    "TOBY": true,
-    "KAREN": false,
-    "JAMES": true,
-    "BRIAN": true
-   },
-   {
-    "JAMES": true,
-    "BRIAN": true,
-    "LASER": true,
-    "TOBY": true,
-    "ROCKY": true
-   }
-  ],
-  "assassinated": "ROCKY",
-  "roles": [
-   {
-    "name": "KAREN",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "GOODWIN",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "name": "ROCKY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "LASER",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "TOBY",
-    "assassin": false
-   },
-   {
-    "name": "RYAN",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "BRIAN"
-   },
-   {
-    "name": "JAMES",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "message": "Merlin assassinated"
- }
+ "options": {
+  "inGameLog": false
+ },
+ "players": [
+  {
+   "uid": "FP5bENHJa0btJuQ704ASF8ekuwL2",
+   "name": "RYAN"
+  },
+  {
+   "name": "TOBY",
+   "uid": "VlJgElRD4VZXmlTxpA5QRET5Z4W2"
+  },
+  {
+   "name": "LASER",
+   "uid": "1BzGT5Pb9SR0DbGe7Xxp8UUky8T2"
+  },
+  {
+   "name": "BRIAN",
+   "uid": "VK3pUVkXsCMFMxGEgEo0ckQuksm2"
+  },
+  {
+   "name": "GOODWIN",
+   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2"
+  },
+  {
+   "uid": "g21ycsypBoVjCAwdiYkPgudQhM23",
+   "name": "JAMES"
+  },
+  {
+   "name": "KAREN",
+   "uid": "kYmaig4V9qPVwzFNPynJHaGGk8P2"
+  },
+  {
+   "uid": "zM9XPY9QEiM3EfKBXlgKk97GJAF3",
+   "name": "ROCKY"
+  }
+ ]
 }

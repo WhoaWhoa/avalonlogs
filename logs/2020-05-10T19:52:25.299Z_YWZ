@@ -1,107 +1,15 @@
 {
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "NAN",
-    "assassin": false
-   },
-   {
-    "name": "BERT",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "TOM",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "LILLY"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "LUCY"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "JENNY"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "BEN"
-   }
-  ],
-  "votes": [
-   {
-    "NAN": true,
-    "LUCY": true
-   },
-   {
-    "NAN": true,
-    "LILLY": false,
-    "LUCY": true
-   },
-   {
-    "JENNY": true,
-    "BEN": true,
-    "LUCY": true
-   },
-   {
-    "BERT": false,
-    "BEN": true,
-    "LUCY": true,
-    "JENNY": true
-   }
-  ],
-  "assassinated": "NAN"
- },
- "players": [
-  {
-   "name": "NAN",
-   "uid": "YdvG266agOTSaMFxiGfpWd1vfkB3"
-  },
-  {
-   "uid": "H18sk7GAsLfaXKim6lcmR2JdK7q1",
-   "name": "BERT"
-  },
-  {
-   "name": "TOM",
-   "uid": "v1GvzsGSzrd9Otsj4epJD9AOWuP2"
-  },
-  {
-   "uid": "EK4lIYvymiPc9E7qSiN58j3bRts2",
-   "name": "LILLY"
-  },
-  {
-   "uid": "6VdYNLMNNhYQOdIKaYPLAHpFN2C3",
-   "name": "LUCY"
-  },
-  {
-   "uid": "sZUfmlG9zdgN6ae0WBqe3sRuZqM2",
-   "name": "BEN"
-  },
-  {
-   "name": "JENNY",
-   "uid": "75hvJ3YLkbfgwWxfACUvGGLedxU2"
-  }
- ],
  "missions": [
   {
-   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "NAN",
+      "LUCY"
+     ],
      "state": "APPROVED",
+     "proposer": "TOM",
      "votes": [
       "BEN",
       "NAN",
@@ -109,29 +17,36 @@
       "LILLY",
       "LUCY",
       "JENNY"
-     ],
-     "team": [
-      "NAN",
-      "LUCY"
-     ],
-     "proposer": "TOM"
+     ]
     }
    ],
+   "teamSize": 2,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "NAN",
     "LUCY"
-   ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "teamSize": 2
+   ]
   },
   {
-   "failsRequired": 1,
+   "state": "FAIL",
    "teamSize": 3,
    "numFails": 1,
-   "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "NAN",
+    "LUCY",
+    "LILLY"
+   ],
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "NAN",
+      "LUCY",
+      "LILLY"
+     ],
+     "proposer": "LILLY",
      "votes": [
       "NAN",
       "BERT",
@@ -140,20 +55,8 @@
       "LUCY",
       "JENNY",
       "BEN"
-     ],
-     "state": "APPROVED",
-     "proposer": "LILLY",
-     "team": [
-      "NAN",
-      "LUCY",
-      "LILLY"
      ]
     }
-   ],
-   "team": [
-    "NAN",
-    "LUCY",
-    "LILLY"
    ]
   },
   {
@@ -163,24 +66,22 @@
     "BEN",
     "JENNY"
    ],
-   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "LUCY",
+      "JENNY",
+      "NAN"
+     ],
+     "state": "REJECTED",
      "votes": [
       "NAN",
       "LUCY",
       "BEN"
      ],
-     "proposer": "LUCY",
-     "state": "REJECTED",
-     "team": [
-      "LUCY",
-      "JENNY",
-      "NAN"
-     ]
+     "proposer": "LUCY"
     },
     {
-     "state": "APPROVED",
      "votes": [
       "LILLY",
       "LUCY",
@@ -188,6 +89,7 @@
       "BEN",
       "NAN"
      ],
+     "state": "APPROVED",
      "team": [
       "LUCY",
       "BEN",
@@ -197,17 +99,19 @@
     }
    ],
    "state": "SUCCESS",
-   "teamSize": 3
+   "teamSize": 3,
+   "numFails": 0
   },
   {
-   "state": "SUCCESS",
-   "failsRequired": 2,
    "team": [
     "JENNY",
     "BEN",
     "LUCY",
     "BERT"
    ],
+   "state": "SUCCESS",
+   "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -218,25 +122,54 @@
       "JENNY",
       "BEN"
      ],
+     "state": "APPROVED",
      "proposer": "JENNY",
      "team": [
       "JENNY",
       "BEN",
       "LUCY",
       "BERT"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "teamSize": 4,
-   "numFails": 1
+   "failsRequired": 2
   },
   {
-   "failsRequired": 1,
    "proposals": [],
    "teamSize": 4,
-   "team": [],
-   "state": "PENDING"
+   "failsRequired": 1,
+   "state": "PENDING",
+   "team": []
+  }
+ ],
+ "players": [
+  {
+   "uid": "YdvG266agOTSaMFxiGfpWd1vfkB3",
+   "name": "NAN"
+  },
+  {
+   "uid": "H18sk7GAsLfaXKim6lcmR2JdK7q1",
+   "name": "BERT"
+  },
+  {
+   "uid": "v1GvzsGSzrd9Otsj4epJD9AOWuP2",
+   "name": "TOM"
+  },
+  {
+   "name": "LILLY",
+   "uid": "EK4lIYvymiPc9E7qSiN58j3bRts2"
+  },
+  {
+   "name": "LUCY",
+   "uid": "6VdYNLMNNhYQOdIKaYPLAHpFN2C3"
+  },
+  {
+   "name": "BEN",
+   "uid": "sZUfmlG9zdgN6ae0WBqe3sRuZqM2"
+  },
+  {
+   "uid": "75hvJ3YLkbfgwWxfACUvGGLedxU2",
+   "name": "JENNY"
   }
  ],
  "timeFinished": {
@@ -246,5 +179,72 @@
  "timeCreated": {
   "_seconds": 1589140345,
   "_nanoseconds": 299000000
+ },
+ "outcome": {
+  "message": "Three successful missions",
+  "assassinated": "NAN",
+  "votes": [
+   {
+    "LUCY": true,
+    "NAN": true
+   },
+   {
+    "NAN": true,
+    "LUCY": true,
+    "LILLY": false
+   },
+   {
+    "BEN": true,
+    "JENNY": true,
+    "LUCY": true
+   },
+   {
+    "JENNY": true,
+    "BEN": true,
+    "BERT": false,
+    "LUCY": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "NAN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "BERT",
+    "assassin": false
+   },
+   {
+    "name": "TOM",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "LILLY"
+   },
+   {
+    "name": "LUCY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JENNY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "BEN"
+   }
+  ],
+  "state": "GOOD_WIN"
+ },
+ "options": {
+  "inGameLog": false
  }
 }

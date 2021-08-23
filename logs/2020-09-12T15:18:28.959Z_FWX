@@ -1,133 +1,22 @@
 {
- "timeFinished": {
-  "_seconds": 1599924732,
-  "_nanoseconds": 136000000
- },
- "players": [
-  {
-   "name": "EXPUNGE",
-   "uid": "ei8pXvZxUsf4MJnP0jaAg8iFs0w1"
-  },
-  {
-   "uid": "rPSdQx4G7XhNOyXa155scuJ3eXx2",
-   "name": "MOTTS"
-  },
-  {
-   "name": "KIRBY",
-   "uid": "UyFfajWaMFSz3E9p88QN9DLNxU53"
-  },
-  {
-   "name": "TATSUY",
-   "uid": "hQ6uY6MGU5ZagT5q6DXgHP6I7qP2"
-  },
-  {
-   "uid": "503Id2rCwhVb2wEtwdXUI3WPagT2",
-   "name": "GAMARO"
-  },
-  {
-   "uid": "cRvbrlR3QSTRxk0bs95CJ2cxJmx1",
-   "name": "JAYSH"
-  },
-  {
-   "name": "GABO",
-   "uid": "9bTTF1JYB4UF6RqnTajFn1fXRhs2"
-  },
-  {
-   "uid": "LhxNV35fy9c5prEF1r8UztH6Gw03",
-   "name": "CHER"
-  }
- ],
- "outcome": {
-  "roles": [
-   {
-    "name": "CHER",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "EXPUNGE"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "GAMARO",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "name": "KIRBY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "TATSUY",
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "MOTTS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "JAYSH"
-   },
-   {
-    "name": "GABO",
-    "assassin": false,
-    "role": "EVIL MINION"
-   }
-  ],
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "CHER": true,
-    "JAYSH": true,
-    "MOTTS": true
-   },
-   {
-    "JAYSH": true,
-    "KIRBY": true,
-    "CHER": true,
-    "MOTTS": true
-   },
-   {
-    "CHER": false,
-    "KIRBY": true,
-    "MOTTS": true,
-    "JAYSH": true
-   },
-   {
-    "GABO": false,
-    "MOTTS": true,
-    "GAMARO": false,
-    "KIRBY": true,
-    "JAYSH": true
-   },
-   {
-    "KIRBY": true,
-    "JAYSH": true,
-    "EXPUNGE": true,
-    "MOTTS": true,
-    "TATSUY": true
-   }
-  ],
-  "assassinated": "EXPUNGE",
-  "message": "Merlin assassinated"
- },
  "missions": [
   {
-   "teamSize": 3,
+   "team": [
+    "CHER",
+    "MOTTS",
+    "JAYSH"
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "CHER",
      "team": [
       "CHER",
       "MOTTS",
       "JAYSH"
      ],
-     "proposer": "CHER",
+     "state": "APPROVED",
      "votes": [
       "CHER",
       "KIRBY",
@@ -137,20 +26,21 @@
       "JAYSH",
       "TATSUY",
       "MOTTS"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 3
+  },
+  {
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "CHER",
     "MOTTS",
-    "JAYSH"
+    "JAYSH",
+    "KIRBY"
    ],
-   "state": "SUCCESS",
-   "numFails": 0
-  },
-  {
    "failsRequired": 1,
    "teamSize": 4,
    "proposals": [
@@ -173,19 +63,9 @@
      ],
      "state": "APPROVED"
     }
-   ],
-   "team": [
-    "CHER",
-    "MOTTS",
-    "JAYSH",
-    "KIRBY"
-   ],
-   "numFails": 0,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
    "numFails": 1,
    "team": [
     "MOTTS",
@@ -193,16 +73,10 @@
     "KIRBY",
     "JAYSH"
    ],
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "MOTTS",
-      "CHER",
-      "KIRBY",
-      "JAYSH"
-     ],
      "state": "APPROVED",
-     "proposer": "MOTTS",
      "votes": [
       "GAMARO",
       "MOTTS",
@@ -210,15 +84,33 @@
       "GABO",
       "EXPUNGE",
       "KIRBY"
-     ]
+     ],
+     "team": [
+      "MOTTS",
+      "CHER",
+      "KIRBY",
+      "JAYSH"
+     ],
+     "proposer": "MOTTS"
     }
    ],
+   "state": "FAIL",
    "teamSize": 4
   },
   {
+   "state": "FAIL",
+   "teamSize": 5,
+   "numFails": 2,
+   "team": [
+    "GAMARO",
+    "GABO",
+    "KIRBY",
+    "MOTTS",
+    "JAYSH"
+   ],
+   "failsRequired": 2,
    "proposals": [
     {
-     "proposer": "KIRBY",
      "state": "REJECTED",
      "team": [
       "GABO",
@@ -227,6 +119,7 @@
       "TATSUY",
       "MOTTS"
      ],
+     "proposer": "KIRBY",
      "votes": [
       "CHER",
       "GABO",
@@ -240,16 +133,17 @@
       "TATSUY"
      ],
      "state": "REJECTED",
-     "proposer": "TATSUY",
      "team": [
       "TATSUY",
       "CHER",
       "JAYSH",
       "MOTTS",
       "EXPUNGE"
-     ]
+     ],
+     "proposer": "TATSUY"
     },
     {
+     "proposer": "GAMARO",
      "votes": [
       "GABO",
       "KIRBY",
@@ -259,34 +153,30 @@
       "JAYSH",
       "MOTTS"
      ],
+     "state": "APPROVED",
      "team": [
       "GAMARO",
       "GABO",
       "KIRBY",
       "MOTTS",
       "JAYSH"
-     ],
-     "proposer": "GAMARO",
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "numFails": 2,
-   "teamSize": 5,
-   "failsRequired": 2,
-   "state": "FAIL",
-   "team": [
-    "GAMARO",
-    "GABO",
-    "KIRBY",
-    "MOTTS",
-    "JAYSH"
    ]
   },
   {
+   "teamSize": 5,
    "state": "SUCCESS",
-   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "JAYSH",
+      "KIRBY",
+      "MOTTS",
+      "EXPUNGE",
+      "TATSUY"
+     ],
+     "state": "APPROVED",
      "proposer": "JAYSH",
      "votes": [
       "KIRBY",
@@ -294,31 +184,141 @@
       "MOTTS",
       "JAYSH",
       "EXPUNGE"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "JAYSH",
-      "KIRBY",
-      "MOTTS",
-      "EXPUNGE",
-      "TATSUY"
      ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 5,
    "team": [
     "JAYSH",
     "KIRBY",
     "MOTTS",
     "EXPUNGE",
     "TATSUY"
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 0
+  }
+ ],
+ "outcome": {
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "role": "MORGANA",
+    "name": "CHER",
+    "assassin": false
+   },
+   {
+    "name": "EXPUNGE",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": true,
+    "name": "GAMARO",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "KIRBY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "TATSUY",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "name": "MOTTS",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "JAYSH",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "GABO"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "CHER": true,
+    "JAYSH": true,
+    "MOTTS": true
+   },
+   {
+    "MOTTS": true,
+    "KIRBY": true,
+    "JAYSH": true,
+    "CHER": true
+   },
+   {
+    "MOTTS": true,
+    "CHER": false,
+    "JAYSH": true,
+    "KIRBY": true
+   },
+   {
+    "MOTTS": true,
+    "KIRBY": true,
+    "GABO": false,
+    "GAMARO": false,
+    "JAYSH": true
+   },
+   {
+    "EXPUNGE": true,
+    "MOTTS": true,
+    "KIRBY": true,
+    "JAYSH": true,
+    "TATSUY": true
+   }
+  ],
+  "assassinated": "EXPUNGE"
+ },
+ "players": [
+  {
+   "uid": "ei8pXvZxUsf4MJnP0jaAg8iFs0w1",
+   "name": "EXPUNGE"
+  },
+  {
+   "uid": "rPSdQx4G7XhNOyXa155scuJ3eXx2",
+   "name": "MOTTS"
+  },
+  {
+   "uid": "UyFfajWaMFSz3E9p88QN9DLNxU53",
+   "name": "KIRBY"
+  },
+  {
+   "name": "TATSUY",
+   "uid": "hQ6uY6MGU5ZagT5q6DXgHP6I7qP2"
+  },
+  {
+   "uid": "503Id2rCwhVb2wEtwdXUI3WPagT2",
+   "name": "GAMARO"
+  },
+  {
+   "name": "JAYSH",
+   "uid": "cRvbrlR3QSTRxk0bs95CJ2cxJmx1"
+  },
+  {
+   "name": "GABO",
+   "uid": "9bTTF1JYB4UF6RqnTajFn1fXRhs2"
+  },
+  {
+   "name": "CHER",
+   "uid": "LhxNV35fy9c5prEF1r8UztH6Gw03"
   }
  ],
  "timeCreated": {
   "_seconds": 1599923908,
   "_nanoseconds": 959000000
+ },
+ "timeFinished": {
+  "_seconds": 1599924732,
+  "_nanoseconds": 136000000
  },
  "options": {
   "inGameLog": false

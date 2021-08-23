@@ -1,14 +1,108 @@
 {
+ "outcome": {
+  "assassinated": "TAY",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "LAP"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "KEVIN"
+   },
+   {
+    "name": "URANUS",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "name": "TAY",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "role": "OBERON",
+    "assassin": false,
+    "name": "GAL"
+   },
+   {
+    "name": "SCOTT",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": true,
+    "name": "PAT",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "KATIE",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "COVIDEB",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "KEVIN": true,
+    "GAL": false,
+    "URANUS": true
+   },
+   {
+    "TAY": true,
+    "LAP": true,
+    "URANUS": false,
+    "SCOTT": true
+   },
+   {
+    "KATIE": true,
+    "SCOTT": true,
+    "TAY": true,
+    "KEVIN": true
+   },
+   {
+    "KEVIN": true,
+    "LAP": true,
+    "SCOTT": true,
+    "TAY": true,
+    "KATIE": true
+   },
+   {
+    "KEVIN": true,
+    "TAY": true,
+    "KATIE": true,
+    "LAP": true,
+    "SCOTT": true
+   }
+  ],
+  "message": "Merlin assassinated"
+ },
  "missions": [
   {
+   "failsRequired": 1,
    "team": [
     "KEVIN",
     "URANUS",
     "GAL"
    ],
+   "teamSize": 3,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "KEVIN",
+      "URANUS",
+      "GAL"
+     ],
      "votes": [
       "KEVIN",
       "URANUS",
@@ -17,33 +111,15 @@
       "KATIE",
       "COVIDEB"
      ],
-     "proposer": "KEVIN",
-     "team": [
-      "KEVIN",
-      "URANUS",
-      "GAL"
-     ]
+     "proposer": "KEVIN"
     }
-   ],
-   "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 3
+   ]
   },
   {
    "numFails": 1,
-   "failsRequired": 1,
    "state": "FAIL",
-   "team": [
-    "URANUS",
-    "SCOTT",
-    "LAP",
-    "TAY"
-   ],
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "URANUS",
       "SCOTT",
@@ -59,13 +135,40 @@
       "URANUS",
       "GAL"
      ],
-     "proposer": "URANUS"
+     "proposer": "URANUS",
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "team": [
+    "URANUS",
+    "SCOTT",
+    "LAP",
+    "TAY"
+   ],
+   "teamSize": 4
   },
   {
+   "team": [
+    "SCOTT",
+    "TAY",
+    "KATIE",
+    "KEVIN"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "SCOTT",
+     "team": [
+      "SCOTT",
+      "TAY",
+      "KATIE",
+      "KEVIN"
+     ],
+     "state": "APPROVED",
      "votes": [
       "COVIDEB",
       "LAP",
@@ -76,32 +179,21 @@
       "SCOTT",
       "PAT",
       "KATIE"
-     ],
+     ]
+    }
+   ]
+  },
+  {
+   "proposals": [
+    {
+     "state": "APPROVED",
      "team": [
       "SCOTT",
+      "LAP",
       "TAY",
       "KATIE",
       "KEVIN"
      ],
-     "proposer": "SCOTT",
-     "state": "APPROVED"
-    }
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "SCOTT",
-    "TAY",
-    "KATIE",
-    "KEVIN"
-   ],
-   "teamSize": 4,
-   "numFails": 0
-  },
-  {
-   "failsRequired": 2,
-   "proposals": [
-    {
      "votes": [
       "LAP",
       "KEVIN",
@@ -111,19 +203,9 @@
       "SCOTT",
       "KATIE"
      ],
-     "proposer": "LAP",
-     "state": "APPROVED",
-     "team": [
-      "SCOTT",
-      "LAP",
-      "TAY",
-      "KATIE",
-      "KEVIN"
-     ]
+     "proposer": "LAP"
     }
    ],
-   "teamSize": 5,
-   "numFails": 0,
    "team": [
     "SCOTT",
     "LAP",
@@ -131,11 +213,22 @@
     "KATIE",
     "KEVIN"
    ],
-   "state": "SUCCESS"
+   "numFails": 0,
+   "teamSize": 5,
+   "state": "SUCCESS",
+   "failsRequired": 2
   },
   {
-   "numFails": 0,
+   "team": [
+    "SCOTT",
+    "LAP",
+    "TAY",
+    "KATIE",
+    "KEVIN"
+   ],
+   "state": "SUCCESS",
    "failsRequired": 1,
+   "teamSize": 5,
    "proposals": [
     {
      "state": "APPROVED",
@@ -156,15 +249,7 @@
      "proposer": "TAY"
     }
    ],
-   "team": [
-    "SCOTT",
-    "LAP",
-    "TAY",
-    "KATIE",
-    "KEVIN"
-   ],
-   "state": "SUCCESS",
-   "teamSize": 5
+   "numFails": 0
   }
  ],
  "timeFinished": {
@@ -181,121 +266,36 @@
    "name": "URANUS"
   },
   {
-   "uid": "JO7TYLymc2coTzZcNg0yyd3wBsv1",
-   "name": "SCOTT"
+   "name": "SCOTT",
+   "uid": "JO7TYLymc2coTzZcNg0yyd3wBsv1"
   },
   {
-   "uid": "jsyujs54qQSWy4ShLUlIl3zbi8z2",
-   "name": "LAP"
+   "name": "LAP",
+   "uid": "jsyujs54qQSWy4ShLUlIl3zbi8z2"
   },
   {
    "name": "TAY",
    "uid": "XdH1hEVEdGYtfX9QlFWf2DNL3lf2"
   },
   {
-   "uid": "p7XTBEasBwQfXBOdDe1zQtbIEZB3",
-   "name": "COVIDEB"
+   "name": "COVIDEB",
+   "uid": "p7XTBEasBwQfXBOdDe1zQtbIEZB3"
   },
   {
-   "name": "PAT",
-   "uid": "l70WRgA7tecPe7nFQekS5SLMidk1"
+   "uid": "l70WRgA7tecPe7nFQekS5SLMidk1",
+   "name": "PAT"
   },
   {
-   "name": "KATIE",
-   "uid": "djU4cKMFHAgd8MwCyGcUSJzD0AI2"
+   "uid": "djU4cKMFHAgd8MwCyGcUSJzD0AI2",
+   "name": "KATIE"
   },
   {
    "name": "GAL",
    "uid": "dUs6KKcEvjPjuWgjfRTWsCSVvQk1"
   },
   {
-   "uid": "SxXIfDeqCBQ0Q7IVXXau9RmcmaK2",
-   "name": "KEVIN"
+   "name": "KEVIN",
+   "uid": "SxXIfDeqCBQ0Q7IVXXau9RmcmaK2"
   }
- ],
- "outcome": {
-  "votes": [
-   {
-    "URANUS": true,
-    "GAL": false,
-    "KEVIN": true
-   },
-   {
-    "SCOTT": true,
-    "LAP": true,
-    "TAY": true,
-    "URANUS": false
-   },
-   {
-    "SCOTT": true,
-    "TAY": true,
-    "KATIE": true,
-    "KEVIN": true
-   },
-   {
-    "SCOTT": true,
-    "KEVIN": true,
-    "KATIE": true,
-    "LAP": true,
-    "TAY": true
-   },
-   {
-    "KEVIN": true,
-    "LAP": true,
-    "TAY": true,
-    "SCOTT": true,
-    "KATIE": true
-   }
-  ],
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "LAP",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "KEVIN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "URANUS"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "TAY"
-   },
-   {
-    "assassin": false,
-    "role": "OBERON",
-    "name": "GAL"
-   },
-   {
-    "name": "SCOTT",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "PAT"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "KATIE"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "COVIDEB"
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
-  "assassinated": "TAY"
- }
+ ]
 }

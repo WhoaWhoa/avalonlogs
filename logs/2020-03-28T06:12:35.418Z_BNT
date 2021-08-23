@@ -1,51 +1,76 @@
 {
- "players": [
-  {
-   "name": "MICHAEL",
-   "uid": "gLLjpKCydvWcWZ2vgRhvlichNyt2"
-  },
-  {
-   "uid": "9R5HeFIYLvgLJEV2S97J7NwNdf02",
-   "name": "JESS"
-  },
-  {
-   "uid": "hFS7tM0TSpai2lcwTRNTnE7rHFL2",
-   "name": "ALEX"
-  },
-  {
-   "name": "JACKYLMAO",
-   "uid": "weox4AvyhMSG1yRFxjYsCC7Qs1w2"
-  },
-  {
-   "uid": "BUK1lva11MaaQpTjirfuA5nWP213",
-   "name": "MOOCOW"
-  },
-  {
-   "name": "JUSTIN",
-   "uid": "6bAd5iCRtSZUOaXnN2OFG1iLH123"
-  },
-  {
-   "name": "LEEBRYAN",
-   "uid": "CnT5Rwq9XUR8tAZvmUmXVxnUpji1"
-  }
- ],
+ "timeFinished": {
+  "_seconds": 1585376293,
+  "_nanoseconds": 101416000
+ },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "assassinated": null,
+  "votes": [
+   {
+    "MOOCOW": true,
+    "JUSTIN": false
+   },
+   {
+    "MICHAEL": true,
+    "JESS": true,
+    "MOOCOW": true
+   },
+   {
+    "JESS": true,
+    "MOOCOW": false,
+    "MICHAEL": true
+   },
+   {
+    "MOOCOW": false,
+    "LEEBRYAN": true,
+    "JACKYLMAO": false,
+    "ALEX": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "PERCIVAL",
+    "name": "ALEX",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "JACKYLMAO",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MICHAEL"
+   },
+   {
+    "assassin": false,
+    "name": "MOOCOW",
+    "role": "MORDRED"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "JUSTIN"
+   },
+   {
+    "name": "JESS",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "LEEBRYAN",
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
+ },
  "missions": [
   {
-   "team": [
-    "MOOCOW",
-    "JUSTIN"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1,
    "proposals": [
     {
-     "proposer": "MICHAEL",
-     "team": [
-      "MOOCOW",
-      "JUSTIN"
-     ],
-     "state": "APPROVED",
      "votes": [
       "ALEX",
       "JACKYLMAO",
@@ -54,21 +79,30 @@
       "JUSTIN",
       "JESS",
       "LEEBRYAN"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "MOOCOW",
+      "JUSTIN"
+     ],
+     "proposer": "MICHAEL"
     }
    ],
-   "teamSize": 2
+   "team": [
+    "MOOCOW",
+    "JUSTIN"
+   ],
+   "state": "FAIL",
+   "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
-   "teamSize": 3,
-   "team": [
-    "MICHAEL",
-    "JESS",
-    "MOOCOW"
-   ],
+   "failsRequired": 1,
    "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "MICHAEL",
       "JESS",
@@ -83,20 +117,30 @@
       "ALEX",
       "JACKYLMAO"
      ],
-     "proposer": "JESS",
-     "state": "APPROVED"
+     "proposer": "JESS"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "MICHAEL",
+    "JESS",
+    "MOOCOW"
+   ],
+   "teamSize": 3
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
+   "team": [
+    "JESS",
+    "MICHAEL",
+    "MOOCOW"
+   ],
    "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "ALEX",
+     "state": "APPROVED",
      "team": [
       "JESS",
       "MICHAEL",
@@ -113,17 +157,28 @@
      ]
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "JESS",
-    "MICHAEL",
-    "MOOCOW"
-   ],
-   "numFails": 1
+   "failsRequired": 1
   },
   {
    "state": "FAIL",
-   "teamSize": 4,
+   "proposals": [
+    {
+     "votes": [
+      "LEEBRYAN",
+      "JACKYLMAO",
+      "MOOCOW",
+      "JUSTIN"
+     ],
+     "team": [
+      "LEEBRYAN",
+      "ALEX",
+      "JACKYLMAO",
+      "MOOCOW"
+     ],
+     "state": "APPROVED",
+     "proposer": "JACKYLMAO"
+    }
+   ],
    "numFails": 2,
    "team": [
     "LEEBRYAN",
@@ -132,103 +187,48 @@
     "MOOCOW"
    ],
    "failsRequired": 2,
-   "proposals": [
-    {
-     "proposer": "JACKYLMAO",
-     "team": [
-      "LEEBRYAN",
-      "ALEX",
-      "JACKYLMAO",
-      "MOOCOW"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "LEEBRYAN",
-      "JACKYLMAO",
-      "MOOCOW",
-      "JUSTIN"
-     ]
-    }
-   ]
+   "teamSize": 4
   },
   {
    "state": "PENDING",
-   "teamSize": 4,
    "proposals": [],
-   "team": [],
-   "failsRequired": 1
+   "teamSize": 4,
+   "failsRequired": 1,
+   "team": []
   }
  ],
- "timeFinished": {
-  "_seconds": 1585376293,
-  "_nanoseconds": 101416000
- },
+ "players": [
+  {
+   "name": "MICHAEL",
+   "uid": "gLLjpKCydvWcWZ2vgRhvlichNyt2"
+  },
+  {
+   "name": "JESS",
+   "uid": "9R5HeFIYLvgLJEV2S97J7NwNdf02"
+  },
+  {
+   "uid": "hFS7tM0TSpai2lcwTRNTnE7rHFL2",
+   "name": "ALEX"
+  },
+  {
+   "name": "JACKYLMAO",
+   "uid": "weox4AvyhMSG1yRFxjYsCC7Qs1w2"
+  },
+  {
+   "name": "MOOCOW",
+   "uid": "BUK1lva11MaaQpTjirfuA5nWP213"
+  },
+  {
+   "name": "JUSTIN",
+   "uid": "6bAd5iCRtSZUOaXnN2OFG1iLH123"
+  },
+  {
+   "name": "LEEBRYAN",
+   "uid": "CnT5Rwq9XUR8tAZvmUmXVxnUpji1"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1585375955,
   "_nanoseconds": 418000000
- },
- "outcome": {
-  "votes": [
-   {
-    "JUSTIN": false,
-    "MOOCOW": true
-   },
-   {
-    "MOOCOW": true,
-    "MICHAEL": true,
-    "JESS": true
-   },
-   {
-    "MOOCOW": false,
-    "JESS": true,
-    "MICHAEL": true
-   },
-   {
-    "LEEBRYAN": true,
-    "ALEX": true,
-    "JACKYLMAO": false,
-    "MOOCOW": false
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "ALEX",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "JACKYLMAO",
-    "assassin": true
-   },
-   {
-    "name": "MICHAEL",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "MOOCOW"
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "JUSTIN"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "JESS"
-   },
-   {
-    "name": "LEEBRYAN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   }
-  ]
  }
 }

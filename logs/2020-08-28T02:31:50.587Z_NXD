@@ -1,34 +1,71 @@
 {
- "players": [
-  {
-   "name": "ADAM",
-   "uid": "5Nl0zBHVy1V9rmkYhtGINyXaWaj1"
-  },
-  {
-   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2",
-   "name": "ANINDYA"
-  },
-  {
-   "uid": "V3CYobIAZwWneimGk4cLt7fQYEB3",
-   "name": "NIKHIL"
-  },
-  {
-   "name": "GAURAV",
-   "uid": "gOiGniqYSdWLat6om6YeFJidRZ22"
-  },
-  {
-   "uid": "JAPBZxxk0fMO1c5d7Dli45JF9D23",
-   "name": "NIKOLAI"
-  },
-  {
-   "name": "AFFINE",
-   "uid": "0v9dXMc3kvZ2yKoL8dZuHeRAl3d2"
-  },
-  {
-   "uid": "g4Gjm73b8UTD4k34SLYlr1IYmC13",
-   "name": "JET"
-  }
- ],
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "message": "Five team proposals in a row rejected",
+  "votes": [
+   {
+    "ANINDYA": true,
+    "GAURAV": true
+   },
+   {
+    "JET": true,
+    "NIKHIL": true,
+    "GAURAV": true
+   },
+   {
+    "NIKHIL": true,
+    "JET": false,
+    "GAURAV": true
+   },
+   {
+    "JET": false,
+    "ADAM": false,
+    "AFFINE": true,
+    "ANINDYA": false
+   }
+  ],
+  "roles": [
+   {
+    "name": "NIKHIL",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "NIKOLAI",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "name": "AFFINE",
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "name": "GAURAV",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "ANINDYA"
+   },
+   {
+    "name": "ADAM",
+    "role": "OBERON",
+    "assassin": false
+   },
+   {
+    "name": "JET",
+    "role": "EVIL MINION",
+    "assassin": true
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN"
+ },
  "timeFinished": {
   "_seconds": 1598583653,
   "_nanoseconds": 695000000
@@ -39,118 +76,114 @@
  },
  "missions": [
   {
-   "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "ANINDYA",
-      "GAURAV"
-     ],
      "votes": [
       "JET",
       "NIKHIL",
       "GAURAV",
       "ANINDYA"
      ],
-     "proposer": "JET",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "ANINDYA",
+      "GAURAV"
+     ],
+     "proposer": "JET"
     }
    ],
    "team": [
     "ANINDYA",
     "GAURAV"
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0
+   "teamSize": 2,
+   "state": "SUCCESS"
   },
   {
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "GAURAV",
+    "NIKHIL",
+    "JET"
+   ],
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
      "state": "REJECTED",
-     "proposer": "ADAM",
-     "votes": [
-      "ADAM"
-     ],
      "team": [
       "GAURAV",
       "ANINDYA",
       "ADAM"
-     ]
+     ],
+     "votes": [
+      "ADAM"
+     ],
+     "proposer": "ADAM"
     },
     {
-     "state": "REJECTED",
      "team": [
       "GAURAV",
       "ANINDYA",
       "JET"
      ],
-     "proposer": "ANINDYA",
      "votes": [
       "GAURAV",
       "JET"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "ANINDYA"
     },
     {
-     "state": "REJECTED",
-     "team": [
-      "NIKHIL",
-      "ANINDYA",
-      "ADAM"
-     ],
      "votes": [
       "NIKHIL",
       "ADAM",
       "ANINDYA"
      ],
+     "team": [
+      "NIKHIL",
+      "ANINDYA",
+      "ADAM"
+     ],
+     "state": "REJECTED",
      "proposer": "NIKHIL"
     },
     {
+     "state": "APPROVED",
+     "team": [
+      "GAURAV",
+      "NIKHIL",
+      "JET"
+     ],
      "votes": [
       "JET",
       "NIKHIL",
       "GAURAV",
       "ADAM"
      ],
-     "state": "APPROVED",
-     "proposer": "GAURAV",
-     "team": [
-      "GAURAV",
-      "NIKHIL",
-      "JET"
-     ]
+     "proposer": "GAURAV"
     }
-   ],
-   "team": [
-    "GAURAV",
-    "NIKHIL",
-    "JET"
-   ],
-   "teamSize": 3,
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0
+   ]
   },
   {
    "teamSize": 3,
+   "numFails": 1,
    "failsRequired": 1,
    "state": "FAIL",
-   "team": [
-    "NIKHIL",
-    "GAURAV",
-    "JET"
-   ],
    "proposals": [
     {
-     "votes": [
-      "NIKOLAI"
-     ],
      "state": "REJECTED",
      "proposer": "NIKOLAI",
      "team": [
       "NIKOLAI",
       "GAURAV",
       "AFFINE"
+     ],
+     "votes": [
+      "NIKOLAI"
      ]
     },
     {
@@ -166,17 +199,17 @@
      ]
     },
     {
-     "proposer": "JET",
      "state": "REJECTED",
-     "votes": [
-      "JET",
-      "NIKHIL",
-      "GAURAV"
-     ],
+     "proposer": "JET",
      "team": [
       "NIKHIL",
       "GAURAV",
       "JET"
+     ],
+     "votes": [
+      "JET",
+      "NIKHIL",
+      "GAURAV"
      ]
     },
     {
@@ -185,22 +218,16 @@
       "JET",
       "GAURAV"
      ],
-     "state": "REJECTED",
+     "proposer": "ADAM",
      "votes": [
       "GAURAV",
       "NIKHIL",
       "AFFINE"
      ],
-     "proposer": "ADAM"
+     "state": "REJECTED"
     },
     {
      "state": "APPROVED",
-     "team": [
-      "NIKHIL",
-      "GAURAV",
-      "JET"
-     ],
-     "proposer": "ANINDYA",
      "votes": [
       "NIKOLAI",
       "NIKHIL",
@@ -208,139 +235,153 @@
       "ANINDYA",
       "GAURAV",
       "ADAM"
+     ],
+     "proposer": "ANINDYA",
+     "team": [
+      "NIKHIL",
+      "GAURAV",
+      "JET"
      ]
     }
    ],
-   "numFails": 1
+   "team": [
+    "NIKHIL",
+    "GAURAV",
+    "JET"
+   ]
   },
   {
+   "state": "FAIL",
+   "proposals": [
+    {
+     "proposer": "NIKHIL",
+     "team": [
+      "NIKHIL",
+      "GAURAV",
+      "JET",
+      "ADAM"
+     ],
+     "state": "REJECTED",
+     "votes": []
+    },
+    {
+     "state": "REJECTED",
+     "proposer": "GAURAV",
+     "team": [
+      "GAURAV",
+      "JET",
+      "NIKOLAI",
+      "ANINDYA"
+     ],
+     "votes": [
+      "ANINDYA",
+      "GAURAV"
+     ]
+    },
+    {
+     "state": "REJECTED",
+     "team": [
+      "GAURAV",
+      "NIKOLAI",
+      "AFFINE",
+      "JET"
+     ],
+     "proposer": "NIKOLAI",
+     "votes": [
+      "NIKOLAI",
+      "GAURAV",
+      "ADAM"
+     ]
+    },
+    {
+     "team": [
+      "AFFINE",
+      "JET",
+      "ADAM",
+      "ANINDYA"
+     ],
+     "votes": [
+      "ADAM",
+      "JET",
+      "ANINDYA"
+     ],
+     "proposer": "AFFINE",
+     "state": "REJECTED"
+    },
+    {
+     "state": "APPROVED",
+     "proposer": "JET",
+     "votes": [
+      "NIKOLAI",
+      "ADAM",
+      "AFFINE",
+      "GAURAV",
+      "JET"
+     ],
+     "team": [
+      "ADAM",
+      "ANINDYA",
+      "AFFINE",
+      "JET"
+     ]
+    }
+   ],
+   "failsRequired": 2,
    "team": [
     "ADAM",
     "ANINDYA",
     "AFFINE",
     "JET"
    ],
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "team": [
-      "NIKHIL",
-      "GAURAV",
-      "JET",
-      "ADAM"
-     ],
-     "proposer": "NIKHIL",
-     "votes": []
-    },
-    {
-     "proposer": "GAURAV",
-     "team": [
-      "GAURAV",
-      "JET",
-      "NIKOLAI",
-      "ANINDYA"
-     ],
-     "votes": [
-      "ANINDYA",
-      "GAURAV"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "state": "REJECTED",
-     "team": [
-      "GAURAV",
-      "NIKOLAI",
-      "AFFINE",
-      "JET"
-     ],
-     "votes": [
-      "NIKOLAI",
-      "GAURAV",
-      "ADAM"
-     ],
-     "proposer": "NIKOLAI"
-    },
-    {
-     "votes": [
-      "ADAM",
-      "JET",
-      "ANINDYA"
-     ],
-     "team": [
-      "AFFINE",
-      "JET",
-      "ADAM",
-      "ANINDYA"
-     ],
-     "state": "REJECTED",
-     "proposer": "AFFINE"
-    },
-    {
-     "team": [
-      "ADAM",
-      "ANINDYA",
-      "AFFINE",
-      "JET"
-     ],
-     "votes": [
-      "NIKOLAI",
-      "ADAM",
-      "AFFINE",
-      "GAURAV",
-      "JET"
-     ],
-     "state": "APPROVED",
-     "proposer": "JET"
-    }
-   ],
-   "numFails": 3,
-   "failsRequired": 2,
    "teamSize": 4,
-   "state": "FAIL"
+   "numFails": 3
   },
   {
+   "team": [],
+   "teamSize": 4,
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [],
+     "proposer": "ADAM",
      "team": [
       "ANINDYA",
       "NIKHIL",
       "GAURAV",
       "ADAM"
-     ],
-     "votes": [],
-     "state": "REJECTED",
-     "proposer": "ADAM"
+     ]
     },
     {
-     "votes": [
-      "ANINDYA"
-     ],
-     "state": "REJECTED",
      "team": [
       "ANINDYA",
       "NIKHIL",
       "GAURAV",
       "NIKOLAI"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "ANINDYA"
      ],
      "proposer": "ANINDYA"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "NIKHIL",
       "JET",
       "ADAM"
      ],
+     "proposer": "NIKHIL",
+     "state": "REJECTED",
      "team": [
       "NIKHIL",
       "GAURAV",
       "NIKOLAI",
       "ADAM"
-     ],
-     "proposer": "NIKHIL"
+     ]
     },
     {
+     "state": "REJECTED",
+     "proposer": "GAURAV",
      "votes": [
       "GAURAV",
       "AFFINE"
@@ -350,9 +391,7 @@
       "GAURAV",
       "NIKHIL",
       "AFFINE"
-     ],
-     "proposer": "GAURAV",
-     "state": "REJECTED"
+     ]
     },
     {
      "team": [
@@ -361,86 +400,47 @@
       "NIKOLAI",
       "AFFINE"
      ],
-     "proposer": "NIKOLAI",
-     "state": "REJECTED",
      "votes": [
       "GAURAV",
       "AFFINE",
       "NIKOLAI"
-     ]
+     ],
+     "proposer": "NIKOLAI",
+     "state": "REJECTED"
     }
    ],
-   "failsRequired": 1,
    "state": "PENDING",
-   "teamSize": 4,
-   "team": []
+   "failsRequired": 1
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "votes": [
-   {
-    "ANINDYA": true,
-    "GAURAV": true
-   },
-   {
-    "JET": true,
-    "NIKHIL": true,
-    "GAURAV": true
-   },
-   {
-    "GAURAV": true,
-    "NIKHIL": true,
-    "JET": false
-   },
-   {
-    "AFFINE": true,
-    "ADAM": false,
-    "JET": false,
-    "ANINDYA": false
-   }
-  ],
-  "message": "Five team proposals in a row rejected",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "NIKHIL",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MERLIN",
-    "name": "NIKOLAI",
-    "assassin": false
-   },
-   {
-    "name": "AFFINE",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "GAURAV"
-   },
-   {
-    "name": "ANINDYA",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "ADAM",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "JET",
-    "role": "EVIL MINION",
-    "assassin": true
-   }
-  ]
- }
+ "players": [
+  {
+   "uid": "5Nl0zBHVy1V9rmkYhtGINyXaWaj1",
+   "name": "ADAM"
+  },
+  {
+   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2",
+   "name": "ANINDYA"
+  },
+  {
+   "name": "NIKHIL",
+   "uid": "V3CYobIAZwWneimGk4cLt7fQYEB3"
+  },
+  {
+   "name": "GAURAV",
+   "uid": "gOiGniqYSdWLat6om6YeFJidRZ22"
+  },
+  {
+   "uid": "JAPBZxxk0fMO1c5d7Dli45JF9D23",
+   "name": "NIKOLAI"
+  },
+  {
+   "name": "AFFINE",
+   "uid": "0v9dXMc3kvZ2yKoL8dZuHeRAl3d2"
+  },
+  {
+   "name": "JET",
+   "uid": "g4Gjm73b8UTD4k34SLYlr1IYmC13"
+  }
+ ]
 }

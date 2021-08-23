@@ -1,6 +1,7 @@
 {
  "missions": [
   {
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
@@ -24,28 +25,26 @@
     }
    ],
    "numFails": 0,
-   "failsRequired": 1,
    "team": [
     "BANANA",
     "MARLIN",
     "PK"
    ],
-   "teamSize": 3,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "teamSize": 3
   },
   {
-   "team": [
-    "BANANA",
-    "PK",
-    "CHAI",
-    "MARLIN"
-   ],
    "failsRequired": 1,
-   "state": "SUCCESS",
-   "teamSize": 4,
    "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "BANANA",
+      "PK",
+      "CHAI",
+      "MARLIN"
+     ],
+     "proposer": "CHAI",
      "state": "APPROVED",
      "votes": [
       "MARLIN",
@@ -54,45 +53,37 @@
       "PK",
       "BANANA",
       "CHAI"
-     ],
-     "team": [
-      "BANANA",
-      "PK",
-      "CHAI",
-      "MARLIN"
-     ],
-     "proposer": "CHAI"
+     ]
     }
-   ]
+   ],
+   "team": [
+    "BANANA",
+    "PK",
+    "CHAI",
+    "MARLIN"
+   ],
+   "teamSize": 4,
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 4,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 2,
    "proposals": [
     {
-     "votes": [
-      "AVISINGH",
-      "AVI"
-     ],
      "team": [
       "BANANA",
       "PK",
       "CHAI",
       "AVISINGH"
      ],
-     "state": "REJECTED",
-     "proposer": "AVISINGH"
+     "proposer": "AVISINGH",
+     "votes": [
+      "AVISINGH",
+      "AVI"
+     ],
+     "state": "REJECTED"
     },
     {
      "state": "APPROVED",
-     "team": [
-      "BANANA",
-      "PK",
-      "CHAI",
-      "MARLIN"
-     ],
+     "proposer": "KARAN",
      "votes": [
       "BANANA",
       "ANIKETH",
@@ -102,17 +93,28 @@
       "KARAN",
       "AVI"
      ],
-     "proposer": "KARAN"
+     "team": [
+      "BANANA",
+      "PK",
+      "CHAI",
+      "MARLIN"
+     ]
     }
    ],
+   "teamSize": 4,
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "BANANA",
     "PK",
     "CHAI",
     "MARLIN"
-   ]
+   ],
+   "numFails": 2
   },
   {
+   "teamSize": 5,
+   "numFails": 1,
    "failsRequired": 2,
    "team": [
     "METH",
@@ -121,16 +123,9 @@
     "AVISINGH",
     "AVI"
    ],
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "METH",
-      "ANIKETH",
-      "KARAN",
-      "AVISINGH",
-      "AVI"
-     ],
      "votes": [
       "MARLIN",
       "PK",
@@ -141,21 +136,107 @@
       "BANANA",
       "CHAI"
      ],
+     "state": "APPROVED",
+     "team": [
+      "METH",
+      "ANIKETH",
+      "KARAN",
+      "AVISINGH",
+      "AVI"
+     ],
      "proposer": "ANIKETH"
     }
-   ],
-   "teamSize": 5,
-   "state": "SUCCESS",
-   "numFails": 1
+   ]
   },
   {
-   "teamSize": 5,
-   "team": [],
    "state": "PENDING",
+   "team": [],
    "proposals": [],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 5
   }
  ],
+ "outcome": {
+  "votes": [
+   {
+    "BANANA": true,
+    "PK": true,
+    "MARLIN": true
+   },
+   {
+    "PK": true,
+    "BANANA": true,
+    "MARLIN": true,
+    "CHAI": true
+   },
+   {
+    "MARLIN": true,
+    "BANANA": true,
+    "CHAI": false,
+    "PK": false
+   },
+   {
+    "METH": true,
+    "KARAN": true,
+    "AVISINGH": true,
+    "ANIKETH": true,
+    "AVI": false
+   }
+  ],
+  "roles": [
+   {
+    "name": "AVISINGH",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "PK",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "name": "CHAI",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "BANANA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "ANIKETH",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "KARAN"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "METH"
+   },
+   {
+    "name": "AVI",
+    "role": "OBERON",
+    "assassin": false
+   },
+   {
+    "name": "MARLIN",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "KARAN",
+  "message": "Three successful missions"
+ },
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
    "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3",
@@ -166,24 +247,24 @@
    "name": "AVI"
   },
   {
-   "name": "BANANA",
-   "uid": "weox9NOyNDZiyKTtPDAXxvazdFV2"
+   "uid": "weox9NOyNDZiyKTtPDAXxvazdFV2",
+   "name": "BANANA"
   },
   {
-   "name": "PK",
-   "uid": "MZNNYGz2dyObT9G5nUSdpYmwN652"
+   "uid": "MZNNYGz2dyObT9G5nUSdpYmwN652",
+   "name": "PK"
   },
   {
-   "name": "CHAI",
-   "uid": "kSuFqj5ueWZYlfFBbfhTiidBQZd2"
+   "uid": "kSuFqj5ueWZYlfFBbfhTiidBQZd2",
+   "name": "CHAI"
   },
   {
    "name": "AVISINGH",
    "uid": "gx0GNqbfVCTGyTSfSzc6XELipsf1"
   },
   {
-   "name": "KARAN",
-   "uid": "1yawy0IzcvTwYGbNSNefkUZnxej1"
+   "uid": "1yawy0IzcvTwYGbNSNefkUZnxej1",
+   "name": "KARAN"
   },
   {
    "name": "ANIKETH",
@@ -198,89 +279,8 @@
   "_seconds": 1604120746,
   "_nanoseconds": 710000000
  },
- "options": {
-  "inGameLog": false
- },
  "timeFinished": {
   "_seconds": 1604121176,
   "_nanoseconds": 893000000
- },
- "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "assassinated": "KARAN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "AVISINGH"
-   },
-   {
-    "assassin": true,
-    "name": "PK",
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "name": "CHAI",
-    "role": "MORGANA"
-   },
-   {
-    "name": "BANANA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "ANIKETH",
-    "assassin": false
-   },
-   {
-    "name": "KARAN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "METH"
-   },
-   {
-    "name": "AVI",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "role": "MERLIN",
-    "name": "MARLIN",
-    "assassin": false
-   }
-  ],
-  "votes": [
-   {
-    "BANANA": true,
-    "MARLIN": true,
-    "PK": true
-   },
-   {
-    "PK": true,
-    "CHAI": true,
-    "BANANA": true,
-    "MARLIN": true
-   },
-   {
-    "BANANA": true,
-    "PK": false,
-    "CHAI": false,
-    "MARLIN": true
-   },
-   {
-    "ANIKETH": true,
-    "KARAN": true,
-    "AVI": false,
-    "METH": true,
-    "AVISINGH": true
-   }
-  ]
  }
 }

@@ -1,15 +1,115 @@
 {
+ "timeFinished": {
+  "_seconds": 1585487738,
+  "_nanoseconds": 210278000
+ },
+ "players": [
+  {
+   "name": "AIDS",
+   "uid": "yy6Y5z5mAecNKJPtjPZiS83d7oC3"
+  },
+  {
+   "uid": "um0sC7K3YBRkKpyYBaslGpnTOlD3",
+   "name": "PAT"
+  },
+  {
+   "uid": "3ludguR9Ypffu1N5L5N4SAoljBV2",
+   "name": "YELCONFY"
+  },
+  {
+   "uid": "shA3aDvxHxY38AIOdXIRUt5LC642",
+   "name": "PASTA"
+  },
+  {
+   "name": "COLLINS",
+   "uid": "U277ftPZANdTa82qKCJliXqpTuv1"
+  },
+  {
+   "name": "ARENSAMA",
+   "uid": "o0zITp2QyQZi5MuZdg3BuXaSuKp1"
+  }
+ ],
+ "outcome": {
+  "assassinated": null,
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "COLLINS": true,
+    "PASTA": true
+   },
+   {
+    "PASTA": true,
+    "PAT": false,
+    "COLLINS": true
+   },
+   {
+    "AIDS": true,
+    "YELCONFY": true,
+    "ARENSAMA": false,
+    "COLLINS": true
+   },
+   {
+    "AIDS": true,
+    "YELCONFY": true,
+    "PASTA": true
+   },
+   {
+    "YELCONFY": true,
+    "PAT": false,
+    "AIDS": true,
+    "PASTA": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "MORDRED",
+    "assassin": false,
+    "name": "PAT"
+   },
+   {
+    "name": "COLLINS",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "ARENSAMA",
+    "assassin": true
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "PASTA",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "AIDS",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "name": "YELCONFY",
+    "assassin": false
+   }
+  ]
+ },
  "missions": [
   {
    "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "PASTA",
     "COLLINS"
    ],
-   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "PASTA",
+     "team": [
+      "PASTA",
+      "COLLINS"
+     ],
      "votes": [
       "PAT",
       "COLLINS",
@@ -17,36 +117,30 @@
       "PASTA",
       "AIDS",
       "YELCONFY"
-     ],
-     "team": [
-      "PASTA",
-      "COLLINS"
-     ],
-     "proposer": "PASTA"
+     ]
     }
    ],
    "state": "SUCCESS",
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
-   "state": "FAIL",
-   "numFails": 1,
+   "teamSize": 3,
    "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "COLLINS",
-      "PASTA",
-      "PAT"
-     ],
-     "proposer": "COLLINS",
-     "state": "APPROVED",
      "votes": [
       "PAT",
       "COLLINS",
       "PASTA",
       "AIDS",
       "YELCONFY"
+     ],
+     "proposer": "COLLINS",
+     "state": "APPROVED",
+     "team": [
+      "COLLINS",
+      "PASTA",
+      "PAT"
      ]
     }
    ],
@@ -55,10 +149,14 @@
     "PASTA",
     "PAT"
    ],
-   "teamSize": 3
+   "numFails": 1,
+   "state": "FAIL"
   },
   {
+   "teamSize": 4,
+   "numFails": 1,
    "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -77,9 +175,6 @@
      "state": "APPROVED"
     }
    ],
-   "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 4,
    "team": [
     "ARENSAMA",
     "AIDS",
@@ -88,24 +183,7 @@
    ]
   },
   {
-   "state": "SUCCESS",
-   "proposals": [
-    {
-     "votes": [
-      "ARENSAMA",
-      "PASTA",
-      "AIDS",
-      "YELCONFY"
-     ],
-     "proposer": "AIDS",
-     "state": "APPROVED",
-     "team": [
-      "PASTA",
-      "AIDS",
-      "YELCONFY"
-     ]
-    }
-   ],
+   "numFails": 0,
    "failsRequired": 1,
    "teamSize": 3,
    "team": [
@@ -113,10 +191,26 @@
     "AIDS",
     "YELCONFY"
    ],
-   "numFails": 0
+   "proposals": [
+    {
+     "team": [
+      "PASTA",
+      "AIDS",
+      "YELCONFY"
+     ],
+     "state": "APPROVED",
+     "proposer": "AIDS",
+     "votes": [
+      "ARENSAMA",
+      "PASTA",
+      "AIDS",
+      "YELCONFY"
+     ]
+    }
+   ],
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
    "team": [
     "PAT",
     "AIDS",
@@ -124,16 +218,8 @@
     "YELCONFY"
    ],
    "teamSize": 4,
-   "state": "FAIL",
-   "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "PAT",
-      "AIDS",
-      "PASTA",
-      "YELCONFY"
-     ],
      "state": "APPROVED",
      "votes": [
       "PASTA",
@@ -141,108 +227,22 @@
       "YELCONFY",
       "PAT"
      ],
-     "proposer": "PAT"
+     "proposer": "PAT",
+     "team": [
+      "PAT",
+      "AIDS",
+      "PASTA",
+      "YELCONFY"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1
   }
  ],
- "players": [
-  {
-   "uid": "yy6Y5z5mAecNKJPtjPZiS83d7oC3",
-   "name": "AIDS"
-  },
-  {
-   "name": "PAT",
-   "uid": "um0sC7K3YBRkKpyYBaslGpnTOlD3"
-  },
-  {
-   "name": "YELCONFY",
-   "uid": "3ludguR9Ypffu1N5L5N4SAoljBV2"
-  },
-  {
-   "uid": "shA3aDvxHxY38AIOdXIRUt5LC642",
-   "name": "PASTA"
-  },
-  {
-   "uid": "U277ftPZANdTa82qKCJliXqpTuv1",
-   "name": "COLLINS"
-  },
-  {
-   "name": "ARENSAMA",
-   "uid": "o0zITp2QyQZi5MuZdg3BuXaSuKp1"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1585487738,
-  "_nanoseconds": 210278000
- },
  "timeCreated": {
   "_seconds": 1585487332,
   "_nanoseconds": 938000000
- },
- "outcome": {
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "COLLINS": true,
-    "PASTA": true
-   },
-   {
-    "COLLINS": true,
-    "PAT": false,
-    "PASTA": true
-   },
-   {
-    "COLLINS": true,
-    "AIDS": true,
-    "ARENSAMA": false,
-    "YELCONFY": true
-   },
-   {
-    "YELCONFY": true,
-    "PASTA": true,
-    "AIDS": true
-   },
-   {
-    "PASTA": true,
-    "AIDS": true,
-    "YELCONFY": true,
-    "PAT": false
-   }
-  ],
-  "roles": [
-   {
-    "role": "MORDRED",
-    "name": "PAT",
-    "assassin": false
-   },
-   {
-    "name": "COLLINS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ARENSAMA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "PASTA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "AIDS"
-   },
-   {
-    "role": "MERLIN",
-    "name": "YELCONFY",
-    "assassin": false
-   }
-  ],
-  "assassinated": null,
-  "message": "Three failed missions"
  }
 }

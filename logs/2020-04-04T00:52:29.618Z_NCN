@@ -1,6 +1,35 @@
 {
  "outcome": {
+  "roles": [
+   {
+    "name": "BALI",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "BIGDICK"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "SIMMY"
+   },
+   {
+    "assassin": false,
+    "name": "HONG",
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "EMMAISGAY",
+    "role": "EVIL MINION",
+    "assassin": true
+   }
+  ],
+  "assassinated": null,
   "state": "EVIL_WIN",
+  "message": "Three failed missions",
   "votes": [
    {
     "EMMAISGAY": true,
@@ -25,161 +54,103 @@
     "SIMMY": true,
     "HONG": true
    }
-  ],
-  "roles": [
-   {
-    "role": "MERLIN",
-    "name": "BALI",
-    "assassin": false
-   },
-   {
-    "name": "BIGDICK",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "SIMMY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "HONG",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "name": "EMMAISGAY",
-    "role": "EVIL MINION"
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null
- },
- "players": [
-  {
-   "name": "HONG",
-   "uid": "awkEnSHrd6TqPzPz1ZRzkCy8trF3"
-  },
-  {
-   "uid": "RvqgVONY34Y4wqMjClAk1i4QDD62",
-   "name": "BIGDICK"
-  },
-  {
-   "uid": "dXW7Z2UcQKSWtcIBQPAtE5YxG683",
-   "name": "SIMMY"
-  },
-  {
-   "name": "BALI",
-   "uid": "ndFJqonvpBYZlZel6eBPxLuOLUJ2"
-  },
-  {
-   "uid": "GERVTjwwt5ZXgaYMNxj1P8AHOHi1",
-   "name": "EMMAISGAY"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585961549,
-  "_nanoseconds": 618000000
+  ]
  },
  "missions": [
   {
-   "teamSize": 2,
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "proposer": "HONG",
+     "votes": [
+      "EMMAISGAY",
+      "BIGDICK",
+      "SIMMY",
+      "HONG"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "EMMAISGAY",
+      "HONG"
+     ]
+    }
+   ],
+   "numFails": 0,
    "state": "SUCCESS",
    "team": [
     "EMMAISGAY",
     "HONG"
    ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "proposals": [
-    {
-     "team": [
-      "EMMAISGAY",
-      "HONG"
-     ],
-     "votes": [
-      "EMMAISGAY",
-      "BIGDICK",
-      "SIMMY",
-      "HONG"
-     ],
-     "proposer": "HONG",
-     "state": "APPROVED"
-    }
-   ]
+   "teamSize": 2
   },
   {
+   "state": "FAIL",
    "failsRequired": 1,
-   "numFails": 1,
    "proposals": [
     {
-     "votes": [
-      "BIGDICK",
-      "SIMMY",
-      "HONG"
-     ],
-     "proposer": "BIGDICK",
-     "state": "APPROVED",
      "team": [
       "BALI",
       "BIGDICK",
       "SIMMY"
-     ]
+     ],
+     "votes": [
+      "BIGDICK",
+      "SIMMY",
+      "HONG"
+     ],
+     "state": "APPROVED",
+     "proposer": "BIGDICK"
     }
    ],
+   "numFails": 1,
+   "teamSize": 3,
    "team": [
     "BALI",
     "BIGDICK",
     "SIMMY"
-   ],
-   "state": "FAIL",
-   "teamSize": 3
+   ]
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "HONG",
-    "SIMMY"
-   ],
-   "state": "SUCCESS",
-   "teamSize": 2,
-   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "BIGDICK",
-      "BALI"
-     ],
      "votes": [
       "BIGDICK",
       "SIMMY"
+     ],
+     "team": [
+      "BIGDICK",
+      "BALI"
      ],
      "proposer": "SIMMY",
      "state": "REJECTED"
     },
     {
+     "proposer": "BALI",
      "team": [
       "HONG",
       "SIMMY"
      ],
+     "state": "APPROVED",
      "votes": [
       "SIMMY",
       "HONG",
       "EMMAISGAY",
       "BALI"
-     ],
-     "proposer": "BALI",
-     "state": "APPROVED"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "team": [
+    "HONG",
+    "SIMMY"
+   ],
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
-   "team": [
-    "BALI",
-    "SIMMY",
-    "EMMAISGAY"
-   ],
+   "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
      "state": "REJECTED",
@@ -195,6 +166,7 @@
      ]
     },
     {
+     "proposer": "HONG",
      "state": "REJECTED",
      "votes": [
       "SIMMY",
@@ -204,31 +176,39 @@
       "HONG",
       "SIMMY",
       "EMMAISGAY"
-     ],
-     "proposer": "HONG"
+     ]
     },
     {
      "state": "APPROVED",
+     "team": [
+      "BALI",
+      "SIMMY",
+      "EMMAISGAY"
+     ],
      "votes": [
       "BIGDICK",
       "SIMMY",
       "HONG",
       "EMMAISGAY"
      ],
-     "team": [
-      "BALI",
-      "SIMMY",
-      "EMMAISGAY"
-     ],
      "proposer": "BIGDICK"
     }
    ],
-   "state": "FAIL",
-   "teamSize": 3,
    "failsRequired": 1,
-   "numFails": 1
+   "state": "FAIL",
+   "team": [
+    "BALI",
+    "SIMMY",
+    "EMMAISGAY"
+   ]
   },
   {
+   "teamSize": 3,
+   "team": [
+    "BIGDICK",
+    "HONG",
+    "SIMMY"
+   ],
    "numFails": 1,
    "proposals": [
     {
@@ -248,17 +228,37 @@
     }
    ],
    "state": "FAIL",
-   "team": [
-    "BIGDICK",
-    "HONG",
-    "SIMMY"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3
+   "failsRequired": 1
+  }
+ ],
+ "players": [
+  {
+   "uid": "awkEnSHrd6TqPzPz1ZRzkCy8trF3",
+   "name": "HONG"
+  },
+  {
+   "name": "BIGDICK",
+   "uid": "RvqgVONY34Y4wqMjClAk1i4QDD62"
+  },
+  {
+   "name": "SIMMY",
+   "uid": "dXW7Z2UcQKSWtcIBQPAtE5YxG683"
+  },
+  {
+   "name": "BALI",
+   "uid": "ndFJqonvpBYZlZel6eBPxLuOLUJ2"
+  },
+  {
+   "name": "EMMAISGAY",
+   "uid": "GERVTjwwt5ZXgaYMNxj1P8AHOHi1"
   }
  ],
  "timeFinished": {
   "_seconds": 1585962012,
   "_nanoseconds": 521928000
+ },
+ "timeCreated": {
+  "_seconds": 1585961549,
+  "_nanoseconds": 618000000
  }
 }

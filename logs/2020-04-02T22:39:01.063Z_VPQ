@@ -1,84 +1,71 @@
 {
+ "timeFinished": {
+  "_seconds": 1585867351,
+  "_nanoseconds": 108973000
+ },
  "outcome": {
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "SAHANA",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "ANTHONY"
+   },
+   {
+    "assassin": false,
+    "name": "HONG",
+    "role": "MORGANA"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "ANH",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "ASHISH"
+   }
+  ],
+  "assassinated": null,
   "votes": [
    {
     "SAHANA": true,
     "HONG": true
    },
    {
-    "SAHANA": true,
     "HONG": true,
+    "SAHANA": true,
     "ANTHONY": true
    },
    {
-    "ASHISH": true,
-    "HONG": false
+    "HONG": false,
+    "ASHISH": true
+   },
+   {
+    "SAHANA": false,
+    "ANH": true,
+    "ANTHONY": true
    },
    {
     "SAHANA": false,
     "ANTHONY": true,
-    "ANH": true
-   },
-   {
-    "SAHANA": false,
-    "HONG": false,
-    "ANTHONY": true
+    "HONG": false
    }
   ],
-  "roles": [
-   {
-    "name": "SAHANA",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "name": "ANTHONY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MORGANA",
-    "name": "HONG",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "ANH"
-   },
-   {
-    "name": "ASHISH",
-    "role": "MERLIN",
-    "assassin": false
-   }
-  ],
-  "assassinated": null
- },
- "timeFinished": {
-  "_seconds": 1585867351,
-  "_nanoseconds": 108973000
- },
- "timeCreated": {
-  "_seconds": 1585867141,
-  "_nanoseconds": 63000000
+  "state": "EVIL_WIN",
+  "message": "Three failed missions"
  },
  "missions": [
   {
-   "team": [
-    "HONG",
-    "SAHANA"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "HONG",
-      "SAHANA"
-     ],
      "votes": [
       "SAHANA",
       "ANTHONY",
@@ -86,13 +73,31 @@
       "ANH",
       "ASHISH"
      ],
+     "team": [
+      "HONG",
+      "SAHANA"
+     ],
      "proposer": "HONG"
     }
    ],
+   "state": "SUCCESS",
+   "numFails": 0,
    "teamSize": 2,
-   "failsRequired": 1
+   "team": [
+    "HONG",
+    "SAHANA"
+   ]
   },
   {
+   "numFails": 0,
+   "failsRequired": 1,
+   "team": [
+    "ANTHONY",
+    "HONG",
+    "SAHANA"
+   ],
+   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
      "team": [
@@ -100,8 +105,53 @@
       "HONG",
       "SAHANA"
      ],
-     "proposer": "ANTHONY",
      "state": "APPROVED",
+     "votes": [
+      "ANH",
+      "ASHISH",
+      "SAHANA",
+      "ANTHONY",
+      "HONG"
+     ],
+     "proposer": "ANTHONY"
+    }
+   ]
+  },
+  {
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "HONG",
+    "ASHISH"
+   ],
+   "teamSize": 2,
+   "proposals": [
+    {
+     "team": [
+      "HONG",
+      "ASHISH"
+     ],
+     "proposer": "ASHISH",
+     "votes": [
+      "SAHANA",
+      "HONG",
+      "ASHISH"
+     ],
+     "state": "APPROVED"
+    }
+   ]
+  },
+  {
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "team": [
+      "ANH",
+      "ANTHONY",
+      "SAHANA"
+     ],
+     "proposer": "ANH",
      "votes": [
       "ANH",
       "ASHISH",
@@ -111,97 +161,43 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "team": [
-    "ANTHONY",
-    "HONG",
-    "SAHANA"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 2,
-   "proposals": [
-    {
-     "votes": [
-      "SAHANA",
-      "HONG",
-      "ASHISH"
-     ],
-     "proposer": "ASHISH",
-     "team": [
-      "HONG",
-      "ASHISH"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "team": [
-    "HONG",
-    "ASHISH"
-   ],
    "numFails": 1,
-   "state": "FAIL"
-  },
-  {
-   "teamSize": 3,
-   "proposals": [
-    {
-     "team": [
-      "ANH",
-      "ANTHONY",
-      "SAHANA"
-     ],
-     "votes": [
-      "ANH",
-      "ASHISH",
-      "SAHANA",
-      "ANTHONY",
-      "HONG"
-     ],
-     "proposer": "ANH",
-     "state": "APPROVED"
-    }
-   ],
-   "state": "FAIL",
    "team": [
     "ANH",
     "ANTHONY",
     "SAHANA"
    ],
-   "numFails": 1,
-   "failsRequired": 1
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
+   "state": "FAIL",
    "team": [
     "SAHANA",
     "HONG",
     "ANTHONY"
    ],
-   "failsRequired": 1,
    "teamSize": 3,
+   "numFails": 2,
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "SAHANA",
+      "HONG",
+      "ANTHONY"
+     ],
+     "proposer": "SAHANA",
      "state": "APPROVED",
      "votes": [
       "SAHANA",
       "ANTHONY",
       "HONG",
       "ASHISH"
-     ],
-     "team": [
-      "SAHANA",
-      "HONG",
-      "ANTHONY"
-     ],
-     "proposer": "SAHANA"
+     ]
     }
-   ],
-   "state": "FAIL",
-   "numFails": 2
+   ]
   }
  ],
  "players": [
@@ -210,20 +206,24 @@
    "uid": "6M5uV03wW4cRe8mP6jJpHpg0Szl1"
   },
   {
-   "name": "ASHISH",
-   "uid": "oqZuHaCNOcfxoUBPI1x6zUSpPxz1"
+   "uid": "oqZuHaCNOcfxoUBPI1x6zUSpPxz1",
+   "name": "ASHISH"
   },
   {
    "name": "ANH",
    "uid": "P7MmOfleu3WwBcZTe3pAbfsiXTO2"
   },
   {
-   "name": "SAHANA",
-   "uid": "HCuU9ZfUODSdUOgTREEB4DBxor03"
+   "uid": "HCuU9ZfUODSdUOgTREEB4DBxor03",
+   "name": "SAHANA"
   },
   {
    "name": "HONG",
    "uid": "awkEnSHrd6TqPzPz1ZRzkCy8trF3"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1585867141,
+  "_nanoseconds": 63000000
+ }
 }

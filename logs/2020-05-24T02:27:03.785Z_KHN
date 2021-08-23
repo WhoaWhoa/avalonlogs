@@ -1,59 +1,14 @@
 {
- "outcome": {
-  "roles": [
-   {
-    "name": "TOMMY",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "ZIPZOOM",
-    "assassin": false
-   },
-   {
-    "name": "ME",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "PAUL",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "SMYLES",
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "state": "GOOD_WIN",
-  "assassinated": null,
-  "message": "Three missions succeeded",
-  "votes": [
-   {
-    "TOMMY": true,
-    "ME": true
-   },
-   {
-    "TOMMY": false,
-    "ME": true,
-    "SMYLES": true
-   },
-   {
-    "PAUL": true,
-    "ZIPZOOM": true
-   },
-   {
-    "PAUL": true,
-    "ME": true,
-    "ZIPZOOM": true
-   }
-  ]
- },
  "timeFinished": {
   "_seconds": 1590287555,
   "_nanoseconds": 759000000
+ },
+ "timeCreated": {
+  "_seconds": 1590287223,
+  "_nanoseconds": 785000000
+ },
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
@@ -65,25 +20,18 @@
    "uid": "63bl9mOR62SH1kCyiYMj1TrLsnw1"
   },
   {
-   "name": "ZIPZOOM",
-   "uid": "2au1QgMdhKbJXPLgU2l3Xs8OWgK2"
+   "uid": "2au1QgMdhKbJXPLgU2l3Xs8OWgK2",
+   "name": "ZIPZOOM"
   },
   {
    "uid": "topjLiK9CFO8MOKdg6dDcLlgEIG2",
    "name": "PAUL"
   },
   {
-   "uid": "oFOu3svwzWXD2AfODoeI1yhqHeL2",
-   "name": "ME"
+   "name": "ME",
+   "uid": "oFOu3svwzWXD2AfODoeI1yhqHeL2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1590287223,
-  "_nanoseconds": 785000000
- },
- "options": {
-  "inGameLog": false
- },
  "missions": [
   {
    "team": [
@@ -91,9 +39,13 @@
     "ME"
    ],
    "teamSize": 2,
-   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "TOMMY",
+      "ME"
+     ],
      "proposer": "TOMMY",
      "votes": [
       "SMYLES",
@@ -101,22 +53,24 @@
       "ZIPZOOM",
       "ME",
       "PAUL"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "TOMMY",
-      "ME"
      ]
     }
    ],
+   "numFails": 0,
    "failsRequired": 1,
    "state": "SUCCESS"
   },
   {
-   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "TOMMY",
+    "SMYLES",
+    "ME"
+   ],
    "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "SMYLES",
       "TOMMY",
@@ -124,7 +78,6 @@
       "ME",
       "PAUL"
      ],
-     "state": "APPROVED",
      "proposer": "SMYLES",
      "team": [
       "TOMMY",
@@ -133,41 +86,43 @@
      ]
     }
    ],
-   "team": [
-    "TOMMY",
-    "SMYLES",
-    "ME"
-   ],
    "teamSize": 3,
-   "failsRequired": 1
+   "numFails": 1
   },
   {
+   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "PAUL",
     "ZIPZOOM"
    ],
-   "teamSize": 2,
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "PAUL",
-      "ZIPZOOM"
-     ],
-     "state": "APPROVED",
-     "proposer": "ZIPZOOM",
      "votes": [
       "ME",
       "TOMMY",
       "ZIPZOOM"
+     ],
+     "state": "APPROVED",
+     "proposer": "ZIPZOOM",
+     "team": [
+      "PAUL",
+      "ZIPZOOM"
      ]
     }
-   ]
+   ],
+   "teamSize": 2
   },
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "teamSize": 3,
+   "team": [
+    "PAUL",
+    "ZIPZOOM",
+    "ME"
+   ],
    "proposals": [
     {
      "state": "APPROVED",
@@ -176,30 +131,75 @@
       "ZIPZOOM",
       "ME"
      ],
-     "proposer": "PAUL",
      "votes": [
       "TOMMY",
       "ZIPZOOM",
       "ME",
       "PAUL"
-     ]
+     ],
+     "proposer": "PAUL"
     }
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "PAUL",
-    "ZIPZOOM",
-    "ME"
-   ]
+   "state": "SUCCESS"
   },
   {
-   "state": "PENDING",
    "proposals": [],
    "team": [],
-   "failsRequired": 1,
-   "teamSize": 3
+   "state": "PENDING",
+   "teamSize": 3,
+   "failsRequired": 1
   }
- ]
+ ],
+ "outcome": {
+  "state": "GOOD_WIN",
+  "message": "Three missions succeeded",
+  "assassinated": null,
+  "votes": [
+   {
+    "ME": true,
+    "TOMMY": true
+   },
+   {
+    "ME": true,
+    "TOMMY": false,
+    "SMYLES": true
+   },
+   {
+    "ZIPZOOM": true,
+    "PAUL": true
+   },
+   {
+    "ZIPZOOM": true,
+    "PAUL": true,
+    "ME": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "name": "TOMMY",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "ZIPZOOM"
+   },
+   {
+    "assassin": false,
+    "name": "ME",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "PAUL",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "SMYLES"
+   }
+  ]
+ }
 }

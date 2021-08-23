@@ -3,16 +3,36 @@
   "_seconds": 1588737591,
   "_nanoseconds": 690000000
  },
- "timeFinished": {
-  "_seconds": 1588737872,
-  "_nanoseconds": 0
- },
  "outcome": {
+  "votes": [
+   {
+    "KRISHU": true,
+    "ISLAM": true
+   },
+   {
+    "KRISHU": true,
+    "ISLAM": false,
+    "ESHAN": true
+   },
+   {
+    "ISLAM": false,
+    "TYRONE": true,
+    "TWOI": true,
+    "ESHAN": true
+   },
+   {
+    "TYRONE": true,
+    "ISLAM": false,
+    "KRISHU": true
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN",
   "roles": [
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "TYRONE"
+    "name": "TYRONE",
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "KRISHU",
@@ -20,82 +40,58 @@
     "assassin": false
    },
    {
-    "name": "TWOI",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "ANUPMASALA",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "role": "MORDRED",
     "assassin": false,
-    "name": "ISLAM"
+    "role": "MERLIN",
+    "name": "TWOI"
    },
    {
-    "name": "ESHAN",
-    "role": "LOYAL FOLLOWER",
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "ANUPMASALA"
+   },
+   {
+    "name": "ISLAM",
+    "role": "MORDRED",
     "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "ESHAN",
+    "role": "LOYAL FOLLOWER"
    }
   ],
-  "assassinated": null,
-  "votes": [
-   {
-    "KRISHU": true,
-    "ISLAM": true
-   },
-   {
-    "ISLAM": false,
-    "KRISHU": true,
-    "ESHAN": true
-   },
-   {
-    "ESHAN": true,
-    "ISLAM": false,
-    "TWOI": true,
-    "TYRONE": true
-   },
-   {
-    "KRISHU": true,
-    "TYRONE": true,
-    "ISLAM": false
-   }
-  ],
-  "state": "EVIL_WIN",
   "message": "Three failed missions"
  },
  "missions": [
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "KRISHU",
     "ISLAM"
    ],
-   "numFails": 0,
    "proposals": [
     {
+     "proposer": "KRISHU",
+     "state": "APPROVED",
+     "team": [
+      "KRISHU",
+      "ISLAM"
+     ],
      "votes": [
       "ESHAN",
       "KRISHU",
       "TWOI",
       "ANUPMASALA",
       "ISLAM"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "KRISHU",
-      "ISLAM"
-     ],
-     "proposer": "KRISHU"
+     ]
     }
    ],
-   "teamSize": 2
+   "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -103,103 +99,103 @@
       "ISLAM",
       "ESHAN"
      ],
+     "state": "REJECTED",
      "votes": [
       "ESHAN",
       "TWOI",
       "ANUPMASALA"
      ],
-     "proposer": "ANUPMASALA",
-     "state": "REJECTED"
+     "proposer": "ANUPMASALA"
     },
     {
+     "proposer": "ESHAN",
+     "state": "APPROVED",
      "team": [
       "ESHAN",
       "ISLAM",
       "KRISHU"
      ],
-     "proposer": "ESHAN",
      "votes": [
       "ISLAM",
       "ESHAN",
       "KRISHU",
       "TWOI",
       "ANUPMASALA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "FAIL",
    "team": [
     "ESHAN",
     "ISLAM",
     "KRISHU"
    ],
-   "failsRequired": 1,
-   "numFails": 1
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
-   "proposals": [
-    {
-     "proposer": "ISLAM",
-     "state": "APPROVED",
-     "votes": [
-      "TWOI",
-      "ANUPMASALA",
-      "ISLAM",
-      "ESHAN"
-     ],
-     "team": [
-      "TWOI",
-      "TYRONE",
-      "ESHAN",
-      "ISLAM"
-     ]
-    }
-   ],
    "team": [
     "TWOI",
     "TYRONE",
     "ESHAN",
     "ISLAM"
    ],
-   "numFails": 1,
    "failsRequired": 1,
    "state": "FAIL",
+   "proposals": [
+    {
+     "team": [
+      "TWOI",
+      "TYRONE",
+      "ESHAN",
+      "ISLAM"
+     ],
+     "state": "APPROVED",
+     "proposer": "ISLAM",
+     "votes": [
+      "TWOI",
+      "ANUPMASALA",
+      "ISLAM",
+      "ESHAN"
+     ]
+    }
+   ],
+   "numFails": 1,
    "teamSize": 4
   },
   {
    "failsRequired": 1,
+   "numFails": 1,
+   "team": [
+    "KRISHU",
+    "TYRONE",
+    "ISLAM"
+   ],
+   "state": "FAIL",
    "proposals": [
     {
+     "team": [
+      "KRISHU",
+      "TYRONE",
+      "ISLAM"
+     ],
+     "proposer": "TYRONE",
      "state": "APPROVED",
      "votes": [
       "ISLAM",
       "TYRONE",
       "TWOI",
       "ANUPMASALA"
-     ],
-     "team": [
-      "KRISHU",
-      "TYRONE",
-      "ISLAM"
-     ],
-     "proposer": "TYRONE"
+     ]
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "KRISHU",
-    "TYRONE",
-    "ISLAM"
-   ],
-   "numFails": 1,
    "teamSize": 3
   },
   {
-   "state": "PENDING",
    "teamSize": 4,
    "failsRequired": 1,
    "proposals": [],
+   "state": "PENDING",
    "team": []
   }
  ],
@@ -212,24 +208,28 @@
    "uid": "onxQ9AedDyWrfzksqdDBtdAr0552"
   },
   {
-   "name": "ISLAM",
-   "uid": "DVCrwgLYsaM2znFEJiHcGRQAXfa2"
+   "uid": "DVCrwgLYsaM2znFEJiHcGRQAXfa2",
+   "name": "ISLAM"
   },
   {
    "uid": "bwYRJWHfmTfJbkEXKTuv4MlXivG2",
    "name": "TYRONE"
   },
   {
-   "name": "TWOI",
-   "uid": "jdD6XtWopFPPjLYkeNqPkJ0gbdE2"
+   "uid": "jdD6XtWopFPPjLYkeNqPkJ0gbdE2",
+   "name": "TWOI"
   },
   {
-   "uid": "HzLCexJVmWPMcyRLHHnpw4LYVQu1",
-   "name": "KRISHU"
+   "name": "KRISHU",
+   "uid": "HzLCexJVmWPMcyRLHHnpw4LYVQu1"
   },
   {
    "uid": "OAu5c063bzUQoFjB81mw0jTwwu53",
    "name": "ANUPMASALA"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1588737872,
+  "_nanoseconds": 0
+ }
 }

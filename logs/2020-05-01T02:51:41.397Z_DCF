@@ -1,21 +1,94 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1588302698,
   "_nanoseconds": 431000000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "JET": true,
+    "NIKOLAI": true
+   },
+   {
+    "NIKOLAI": false,
+    "AFFINE": false,
+    "JET": true
+   },
+   {
+    "GOODWIN": true,
+    "ADAM": true,
+    "ANINDYA": false
+   },
+   {
+    "ADAM": true,
+    "BRYCE": true,
+    "AFFINE": true,
+    "GOODWIN": true
+   },
+   {
+    "ADAM": true,
+    "BRYCE": true,
+    "GOODWIN": true,
+    "JET": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": "BRYCE",
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "AFFINE"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "GOODWIN"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "ADAM",
+    "assassin": false
+   },
+   {
+    "name": "JET",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "name": "BRYCE",
+    "assassin": false
+   },
+   {
+    "name": "ANINDYA",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "name": "NIKOLAI",
+    "role": "OBERON"
+   }
+  ]
  },
  "missions": [
   {
    "proposals": [
     {
+     "team": [
+      "ANINDYA",
+      "AFFINE"
+     ],
+     "proposer": "ANINDYA",
      "state": "REJECTED",
      "votes": [
       "JET",
       "ANINDYA"
-     ],
-     "proposer": "ANINDYA",
-     "team": [
-      "ANINDYA",
-      "AFFINE"
      ]
     },
     {
@@ -31,7 +104,6 @@
      "state": "REJECTED"
     },
     {
-     "proposer": "GOODWIN",
      "team": [
       "AFFINE",
       "GOODWIN"
@@ -41,10 +113,11 @@
       "ANINDYA",
       "AFFINE",
       "GOODWIN"
-     ]
+     ],
+     "proposer": "GOODWIN"
     },
     {
-     "state": "REJECTED",
+     "proposer": "ADAM",
      "votes": [
       "NIKOLAI",
       "ADAM"
@@ -53,14 +126,15 @@
       "NIKOLAI",
       "ADAM"
      ],
-     "proposer": "ADAM"
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "team": [
       "JET",
       "NIKOLAI"
      ],
-     "state": "APPROVED",
+     "proposer": "JET",
      "votes": [
       "ANINDYA",
       "NIKOLAI",
@@ -69,8 +143,7 @@
       "ADAM",
       "JET",
       "BRYCE"
-     ],
-     "proposer": "JET"
+     ]
     }
    ],
    "team": [
@@ -79,69 +152,69 @@
    ],
    "numFails": 0,
    "teamSize": 2,
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
-   "numFails": 2,
+   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "JET",
     "AFFINE",
     "NIKOLAI"
    ],
+   "teamSize": 3,
    "proposals": [
     {
+     "votes": [
+      "AFFINE",
+      "JET",
+      "BRYCE"
+     ],
      "proposer": "BRYCE",
-     "state": "REJECTED",
      "team": [
       "JET",
       "NIKOLAI",
       "AFFINE"
      ],
-     "votes": [
-      "AFFINE",
-      "JET",
-      "BRYCE"
-     ]
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "AFFINE",
+     "team": [
       "JET",
+      "AFFINE",
       "NIKOLAI"
      ],
-     "proposer": "AFFINE",
      "state": "REJECTED",
-     "team": [
-      "JET",
+     "proposer": "AFFINE",
+     "votes": [
       "AFFINE",
+      "JET",
       "NIKOLAI"
      ]
     },
     {
+     "proposer": "ANINDYA",
      "team": [
       "JET",
       "AFFINE",
       "NIKOLAI"
      ],
+     "state": "APPROVED",
      "votes": [
       "BRYCE",
       "AFFINE",
       "ADAM",
       "JET"
-     ],
-     "proposer": "ANINDYA",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "teamSize": 3,
-   "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 2
   },
   {
-   "state": "FAIL",
+   "teamSize": 3,
    "failsRequired": 1,
-   "numFails": 1,
+   "state": "FAIL",
    "team": [
     "ANINDYA",
     "GOODWIN",
@@ -149,30 +222,34 @@
    ],
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [],
      "team": [
       "NIKOLAI",
       "GOODWIN",
       "BRYCE"
      ],
-     "proposer": "NIKOLAI"
+     "proposer": "NIKOLAI",
+     "state": "REJECTED"
     },
     {
      "proposer": "GOODWIN",
-     "state": "REJECTED",
-     "votes": [
-      "ADAM",
-      "JET"
-     ],
      "team": [
       "GOODWIN",
       "ADAM",
       "ANINDYA"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "ADAM",
+      "JET"
      ]
     },
     {
-     "proposer": "ADAM",
+     "team": [
+      "ANINDYA",
+      "GOODWIN",
+      "ADAM"
+     ],
      "state": "APPROVED",
      "votes": [
       "ANINDYA",
@@ -181,39 +258,28 @@
       "ADAM",
       "JET"
      ],
-     "team": [
-      "ANINDYA",
-      "GOODWIN",
-      "ADAM"
-     ]
+     "proposer": "ADAM"
     }
    ],
-   "teamSize": 3
+   "numFails": 1
   },
   {
    "teamSize": 4,
-   "failsRequired": 2,
-   "team": [
-    "GOODWIN",
-    "BRYCE",
-    "ADAM",
-    "AFFINE"
-   ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "votes": [
-      "JET",
-      "NIKOLAI"
-     ],
-     "state": "REJECTED",
      "team": [
       "GOODWIN",
       "ANINDYA",
       "ADAM",
       "BRYCE"
      ],
-     "proposer": "JET"
+     "proposer": "JET",
+     "votes": [
+      "JET",
+      "NIKOLAI"
+     ],
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -222,25 +288,37 @@
       "JET",
       "BRYCE"
      ],
-     "state": "APPROVED",
-     "proposer": "BRYCE",
      "team": [
       "GOODWIN",
       "BRYCE",
       "ADAM",
       "AFFINE"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "BRYCE"
     }
    ],
-   "state": "SUCCESS"
+   "numFails": 0,
+   "failsRequired": 2,
+   "team": [
+    "GOODWIN",
+    "BRYCE",
+    "ADAM",
+    "AFFINE"
+   ]
   },
   {
-   "state": "SUCCESS",
    "failsRequired": 1,
+   "team": [
+    "ADAM",
+    "BRYCE",
+    "GOODWIN",
+    "JET"
+   ],
    "proposals": [
     {
-     "state": "REJECTED",
      "proposer": "AFFINE",
+     "state": "REJECTED",
      "votes": [
       "AFFINE"
      ],
@@ -252,45 +330,45 @@
      ]
     },
     {
-     "state": "REJECTED",
-     "proposer": "ANINDYA",
-     "votes": [
-      "ANINDYA"
-     ],
      "team": [
       "ANINDYA",
       "GOODWIN",
       "BRYCE",
       "NIKOLAI"
-     ]
+     ],
+     "proposer": "ANINDYA",
+     "votes": [
+      "ANINDYA"
+     ],
+     "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
+     "proposer": "NIKOLAI",
      "team": [
       "BRYCE",
       "NIKOLAI",
       "GOODWIN",
       "ADAM"
      ],
-     "proposer": "NIKOLAI",
-     "state": "REJECTED",
      "votes": [
       "NIKOLAI"
      ]
     },
     {
-     "team": [
-      "GOODWIN",
-      "BRYCE",
-      "JET",
-      "ADAM"
-     ],
+     "proposer": "GOODWIN",
      "state": "REJECTED",
      "votes": [
       "BRYCE",
       "ADAM",
       "JET"
      ],
-     "proposer": "GOODWIN"
+     "team": [
+      "GOODWIN",
+      "BRYCE",
+      "JET",
+      "ADAM"
+     ]
     },
     {
      "team": [
@@ -299,23 +377,18 @@
       "GOODWIN",
       "JET"
      ],
-     "state": "APPROVED",
+     "proposer": "ADAM",
      "votes": [
       "BRYCE",
       "GOODWIN",
       "ADAM",
       "JET"
      ],
-     "proposer": "ADAM"
+     "state": "APPROVED"
     }
    ],
+   "state": "SUCCESS",
    "numFails": 0,
-   "team": [
-    "ADAM",
-    "BRYCE",
-    "GOODWIN",
-    "JET"
-   ],
    "teamSize": 4
   }
  ],
@@ -323,107 +396,34 @@
   "_seconds": 1588301501,
   "_nanoseconds": 397000000
  },
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": "BRYCE",
-  "roles": [
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "AFFINE"
-   },
-   {
-    "assassin": false,
-    "name": "GOODWIN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ADAM",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JET"
-   },
-   {
-    "assassin": false,
-    "name": "BRYCE",
-    "role": "MERLIN"
-   },
-   {
-    "name": "ANINDYA",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "NIKOLAI",
-    "role": "OBERON",
-    "assassin": false
-   }
-  ],
-  "votes": [
-   {
-    "NIKOLAI": true,
-    "JET": true
-   },
-   {
-    "NIKOLAI": false,
-    "AFFINE": false,
-    "JET": true
-   },
-   {
-    "ADAM": true,
-    "ANINDYA": false,
-    "GOODWIN": true
-   },
-   {
-    "GOODWIN": true,
-    "BRYCE": true,
-    "ADAM": true,
-    "AFFINE": true
-   },
-   {
-    "GOODWIN": true,
-    "BRYCE": true,
-    "ADAM": true,
-    "JET": true
-   }
-  ],
-  "message": "Merlin assassinated"
- },
  "players": [
   {
    "uid": "5Nl0zBHVy1V9rmkYhtGINyXaWaj1",
    "name": "ADAM"
   },
   {
-   "name": "JET",
-   "uid": "qNPrtGdIpLerSfOckTxaznIIGy72"
+   "uid": "qNPrtGdIpLerSfOckTxaznIIGy72",
+   "name": "JET"
   },
   {
    "name": "BRYCE",
    "uid": "LNbFQPCC7NhM56pyXzg2u76WE0g1"
   },
   {
-   "name": "AFFINE",
-   "uid": "0v9dXMc3kvZ2yKoL8dZuHeRAl3d2"
+   "uid": "0v9dXMc3kvZ2yKoL8dZuHeRAl3d2",
+   "name": "AFFINE"
   },
   {
-   "name": "ANINDYA",
-   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2"
+   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2",
+   "name": "ANINDYA"
   },
   {
-   "name": "NIKOLAI",
-   "uid": "JAPBZxxk0fMO1c5d7Dli45JF9D23"
+   "uid": "JAPBZxxk0fMO1c5d7Dli45JF9D23",
+   "name": "NIKOLAI"
   },
   {
-   "name": "GOODWIN",
-   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2"
+   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2",
+   "name": "GOODWIN"
   }
  ]
 }

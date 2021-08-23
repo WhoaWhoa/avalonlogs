@@ -1,16 +1,11 @@
 {
  "missions": [
   {
-   "failsRequired": 1,
-   "team": [
-    "CPL",
-    "WES"
-   ],
    "numFails": 0,
-   "state": "SUCCESS",
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "WES",
      "votes": [
       "MICHEL",
       "PERRY",
@@ -22,21 +17,26 @@
       "CPL",
       "WES"
      ],
-     "state": "APPROVED",
-     "proposer": "WES"
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "team": [
+    "CPL",
+    "WES"
+   ],
+   "state": "SUCCESS",
+   "teamSize": 2
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "CPL",
     "WES",
     "PERRY"
    ],
-   "teamSize": 3,
-   "state": "FAIL",
    "failsRequired": 1,
-   "numFails": 1,
    "proposals": [
     {
      "votes": [
@@ -45,27 +45,30 @@
       "WES",
       "CPL"
      ],
-     "proposer": "CPL",
      "team": [
       "CPL",
       "WES",
       "PERRY"
      ],
+     "proposer": "CPL",
      "state": "APPROVED"
     }
    ]
   },
   {
-   "state": "SUCCESS",
    "teamSize": 2,
+   "numFails": 0,
    "team": [
     "LOC",
     "WES"
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "LOC",
+      "WES"
+     ],
      "votes": [
       "CPL",
       "MICHEL",
@@ -73,10 +76,7 @@
       "LOC",
       "WES"
      ],
-     "team": [
-      "LOC",
-      "WES"
-     ],
+     "state": "APPROVED",
      "proposer": "LOC"
     }
    ],
@@ -88,9 +88,9 @@
     "MICHEL",
     "WES"
    ],
+   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "LOC",
       "MICHEL",
@@ -101,30 +101,35 @@
       "LOC",
       "WES"
      ],
+     "state": "APPROVED",
      "proposer": "MICHEL"
     }
    ],
    "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 3
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
    "teamSize": 3,
+   "failsRequired": 1,
+   "team": [
+    "LOC",
+    "CPL",
+    "WES"
+   ],
    "state": "SUCCESS",
    "numFails": 0,
    "proposals": [
     {
-     "proposer": "PERRY",
      "state": "REJECTED",
+     "votes": [
+      "PERRY"
+     ],
+     "proposer": "PERRY",
      "team": [
       "PERRY",
       "WES",
       "CPL"
-     ],
-     "votes": [
-      "PERRY"
      ]
     },
     {
@@ -133,20 +138,15 @@
       "CPL",
       "WES"
      ],
-     "proposer": "WES",
      "votes": [
       "PERRY",
       "LOC",
       "WES",
       "CPL"
      ],
+     "proposer": "WES",
      "state": "APPROVED"
     }
-   ],
-   "team": [
-    "LOC",
-    "CPL",
-    "WES"
    ]
   }
  ],
@@ -158,18 +158,75 @@
   "_seconds": 1586531339,
   "_nanoseconds": 922000000
  },
+ "outcome": {
+  "roles": [
+   {
+    "assassin": false,
+    "name": "WES",
+    "role": "MERLIN"
+   },
+   {
+    "name": "CPL",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "name": "MICHEL",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "PERRY",
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "name": "LOC",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "assassinated": "CPL",
+  "votes": [
+   {
+    "WES": true,
+    "CPL": true
+   },
+   {
+    "CPL": true,
+    "WES": true,
+    "PERRY": false
+   },
+   {
+    "LOC": true,
+    "WES": true
+   },
+   {
+    "LOC": true,
+    "WES": true,
+    "MICHEL": false
+   },
+   {
+    "WES": true,
+    "LOC": true,
+    "CPL": true
+   }
+  ],
+  "message": "Three successful missions",
+  "state": "GOOD_WIN"
+ },
  "players": [
   {
-   "uid": "nnPP02SUyWeF3gpWyfI8T9OzF053",
-   "name": "CPL"
+   "name": "CPL",
+   "uid": "nnPP02SUyWeF3gpWyfI8T9OzF053"
   },
   {
    "name": "LOC",
    "uid": "aDJx4bobm4WBZGlfm1oaTKVwtkw2"
   },
   {
-   "uid": "9xvziqOuVSMznhIGczBkRjK1jO72",
-   "name": "MICHEL"
+   "name": "MICHEL",
+   "uid": "9xvziqOuVSMznhIGczBkRjK1jO72"
   },
   {
    "name": "PERRY",
@@ -179,62 +236,5 @@
    "name": "WES",
    "uid": "M2GRgkRti9aSFRdxOs2Inth39Vz1"
   }
- ],
- "outcome": {
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "role": "MERLIN",
-    "name": "WES",
-    "assassin": false
-   },
-   {
-    "name": "CPL",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "name": "MICHEL",
-    "role": "MORGANA"
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "PERRY"
-   },
-   {
-    "assassin": false,
-    "name": "LOC",
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "CPL": true,
-    "WES": true
-   },
-   {
-    "WES": true,
-    "PERRY": false,
-    "CPL": true
-   },
-   {
-    "LOC": true,
-    "WES": true
-   },
-   {
-    "LOC": true,
-    "MICHEL": false,
-    "WES": true
-   },
-   {
-    "CPL": true,
-    "LOC": true,
-    "WES": true
-   }
-  ],
-  "assassinated": "CPL"
- }
+ ]
 }

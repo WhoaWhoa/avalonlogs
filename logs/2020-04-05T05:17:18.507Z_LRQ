@@ -1,33 +1,36 @@
 {
  "outcome": {
+  "assassinated": null,
   "votes": [
    {
-    "ANDREW": true,
-    "EMILY": true
-   },
-   {
     "EMILY": true,
-    "IVANA": false,
     "ANDREW": true
    },
    {
-    "TEDRA": true,
-    "ED": true,
-    "BECKA": false
+    "EMILY": true,
+    "ANDREW": true,
+    "IVANA": false
    },
    {
-    "EMILY": true,
-    "SNIFFSNIFF": true,
-    "ANDREW": true,
+    "BECKA": false,
+    "TEDRA": true,
     "ED": true
    },
    {
     "ED": true,
-    "ANDREW": true,
+    "SNIFFSNIFF": true,
     "EMILY": true,
-    "SNIFFSNIFF": false
+    "ANDREW": true
+   },
+   {
+    "EMILY": true,
+    "SNIFFSNIFF": false,
+    "ANDREW": true,
+    "ED": true
    }
   ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
   "roles": [
    {
     "name": "TEDRA",
@@ -36,8 +39,8 @@
    },
    {
     "name": "BECKA",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": false
    },
    {
     "assassin": false,
@@ -45,29 +48,192 @@
     "name": "ANDREW"
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "ED"
+    "name": "ED",
+    "assassin": false
    },
    {
     "name": "SNIFFSNIFF",
-    "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "assassin": false
    },
    {
-    "role": "EVIL MINION",
     "name": "IVANA",
+    "role": "EVIL MINION",
     "assassin": true
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "EMILY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    }
-  ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null
+  ]
+ },
+ "missions": [
+  {
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "ANDREW",
+    "EMILY"
+   ],
+   "proposals": [
+    {
+     "team": [
+      "ANDREW",
+      "EMILY"
+     ],
+     "votes": [
+      "BECKA",
+      "ANDREW",
+      "ED",
+      "SNIFFSNIFF",
+      "IVANA",
+      "EMILY",
+      "TEDRA"
+     ],
+     "proposer": "EMILY",
+     "state": "APPROVED"
+    }
+   ],
+   "state": "SUCCESS"
+  },
+  {
+   "numFails": 1,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "TEDRA",
+      "BECKA",
+      "ANDREW",
+      "ED",
+      "SNIFFSNIFF",
+      "IVANA",
+      "EMILY"
+     ],
+     "proposer": "ANDREW",
+     "team": [
+      "EMILY",
+      "IVANA",
+      "ANDREW"
+     ]
+    }
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "team": [
+    "EMILY",
+    "IVANA",
+    "ANDREW"
+   ],
+   "state": "FAIL"
+  },
+  {
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "proposer": "BECKA",
+     "team": [
+      "BECKA",
+      "ED",
+      "TEDRA"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "ED",
+      "SNIFFSNIFF",
+      "IVANA",
+      "EMILY",
+      "TEDRA",
+      "BECKA",
+      "ANDREW"
+     ]
+    }
+   ],
+   "failsRequired": 1,
+   "team": [
+    "BECKA",
+    "ED",
+    "TEDRA"
+   ]
+  },
+  {
+   "proposals": [
+    {
+     "votes": [
+      "IVANA",
+      "EMILY",
+      "TEDRA",
+      "BECKA",
+      "ANDREW",
+      "ED",
+      "SNIFFSNIFF"
+     ],
+     "proposer": "ED",
+     "state": "APPROVED",
+     "team": [
+      "ED",
+      "ANDREW",
+      "EMILY",
+      "SNIFFSNIFF"
+     ]
+    }
+   ],
+   "failsRequired": 2,
+   "state": "SUCCESS",
+   "team": [
+    "ED",
+    "ANDREW",
+    "EMILY",
+    "SNIFFSNIFF"
+   ],
+   "teamSize": 4,
+   "numFails": 0
+  },
+  {
+   "teamSize": 4,
+   "proposals": [
+    {
+     "proposer": "IVANA",
+     "state": "APPROVED",
+     "votes": [
+      "IVANA",
+      "EMILY",
+      "BECKA",
+      "ANDREW",
+      "ED",
+      "SNIFFSNIFF"
+     ],
+     "team": [
+      "ANDREW",
+      "ED",
+      "SNIFFSNIFF",
+      "EMILY"
+     ]
+    }
+   ],
+   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "ANDREW",
+    "ED",
+    "SNIFFSNIFF",
+    "EMILY"
+   ],
+   "state": "FAIL"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586064161,
+  "_nanoseconds": 872608000
+ },
+ "timeCreated": {
+  "_seconds": 1586063838,
+  "_nanoseconds": 507000000
  },
  "players": [
   {
@@ -91,178 +257,12 @@
    "uid": "fHLM0Y9FTbbLR4UUV7FFxj6LYJY2"
   },
   {
-   "name": "TEDRA",
-   "uid": "qF4O3Y0Jcqe76aahJ1Dd8FHxob43"
+   "uid": "qF4O3Y0Jcqe76aahJ1Dd8FHxob43",
+   "name": "TEDRA"
   },
   {
    "name": "EMILY",
    "uid": "G1G8tEVu7kPjU1VVay0eMD889823"
   }
- ],
- "missions": [
-  {
-   "state": "SUCCESS",
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "proposer": "EMILY",
-     "votes": [
-      "BECKA",
-      "ANDREW",
-      "ED",
-      "SNIFFSNIFF",
-      "IVANA",
-      "EMILY",
-      "TEDRA"
-     ],
-     "team": [
-      "ANDREW",
-      "EMILY"
-     ]
-    }
-   ],
-   "numFails": 0,
-   "teamSize": 2,
-   "failsRequired": 1,
-   "team": [
-    "ANDREW",
-    "EMILY"
-   ]
-  },
-  {
-   "state": "FAIL",
-   "team": [
-    "EMILY",
-    "IVANA",
-    "ANDREW"
-   ],
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "EMILY",
-      "IVANA",
-      "ANDREW"
-     ],
-     "votes": [
-      "TEDRA",
-      "BECKA",
-      "ANDREW",
-      "ED",
-      "SNIFFSNIFF",
-      "IVANA",
-      "EMILY"
-     ],
-     "proposer": "ANDREW"
-    }
-   ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 3
-  },
-  {
-   "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1,
-   "team": [
-    "BECKA",
-    "ED",
-    "TEDRA"
-   ],
-   "teamSize": 3,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "BECKA",
-      "ED",
-      "TEDRA"
-     ],
-     "votes": [
-      "ED",
-      "SNIFFSNIFF",
-      "IVANA",
-      "EMILY",
-      "TEDRA",
-      "BECKA",
-      "ANDREW"
-     ],
-     "proposer": "BECKA"
-    }
-   ]
-  },
-  {
-   "failsRequired": 2,
-   "team": [
-    "ED",
-    "ANDREW",
-    "EMILY",
-    "SNIFFSNIFF"
-   ],
-   "teamSize": 4,
-   "proposals": [
-    {
-     "votes": [
-      "IVANA",
-      "EMILY",
-      "TEDRA",
-      "BECKA",
-      "ANDREW",
-      "ED",
-      "SNIFFSNIFF"
-     ],
-     "team": [
-      "ED",
-      "ANDREW",
-      "EMILY",
-      "SNIFFSNIFF"
-     ],
-     "proposer": "ED",
-     "state": "APPROVED"
-    }
-   ],
-   "numFails": 0,
-   "state": "SUCCESS"
-  },
-  {
-   "state": "FAIL",
-   "proposals": [
-    {
-     "team": [
-      "ANDREW",
-      "ED",
-      "SNIFFSNIFF",
-      "EMILY"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "IVANA",
-      "EMILY",
-      "BECKA",
-      "ANDREW",
-      "ED",
-      "SNIFFSNIFF"
-     ],
-     "proposer": "IVANA"
-    }
-   ],
-   "team": [
-    "ANDREW",
-    "ED",
-    "SNIFFSNIFF",
-    "EMILY"
-   ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 4
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586063838,
-  "_nanoseconds": 507000000
- },
- "timeFinished": {
-  "_seconds": 1586064161,
-  "_nanoseconds": 872608000
- }
+ ]
 }

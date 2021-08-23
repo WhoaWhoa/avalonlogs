@@ -5,8 +5,8 @@
  },
  "players": [
   {
-   "uid": "pTCUWIjzlkU0QSilgWIS9F1Kucm1",
-   "name": "DYLAN"
+   "name": "DYLAN",
+   "uid": "pTCUWIjzlkU0QSilgWIS9F1Kucm1"
   },
   {
    "name": "ANNA",
@@ -21,58 +21,57 @@
    "name": "SARAH"
   },
   {
-   "name": "ASTA",
-   "uid": "QtitY5mVl0WjNThLVzJiGueArqu1"
+   "uid": "QtitY5mVl0WjNThLVzJiGueArqu1",
+   "name": "ASTA"
   }
  ],
- "timeCreated": {
-  "_seconds": 1597280815,
-  "_nanoseconds": 233000000
+ "options": {
+  "inGameLog": false
  },
  "outcome": {
-  "message": "Three missions succeeded",
   "roles": [
    {
-    "role": "LOYAL FOLLOWER",
     "assassin": false,
+    "role": "LOYAL FOLLOWER",
     "name": "DYLAN"
    },
    {
+    "assassin": false,
     "name": "SARAH",
-    "role": "EVIL MINION",
-    "assassin": false
+    "role": "EVIL MINION"
    },
    {
-    "role": "EVIL MINION",
+    "name": "ANNA",
     "assassin": false,
-    "name": "ANNA"
+    "role": "EVIL MINION"
    },
    {
+    "assassin": false,
     "name": "LKL",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
+    "name": "ASTA",
     "role": "LOYAL FOLLOWER",
-    "name": "ASTA"
+    "assassin": false
    }
   ],
   "state": "GOOD_WIN",
+  "message": "Three missions succeeded",
   "assassinated": null,
   "votes": [
    {
-    "LKL": true,
-    "ASTA": true
-   },
-   {
-    "LKL": true,
-    "ANNA": false,
-    "ASTA": true
-   },
-   {
     "ASTA": true,
-    "DYLAN": true
+    "LKL": true
+   },
+   {
+    "ANNA": false,
+    "ASTA": true,
+    "LKL": true
+   },
+   {
+    "DYLAN": true,
+    "ASTA": true
    },
    {
     "ANNA": false,
@@ -80,14 +79,16 @@
     "ASTA": true
    },
    {
-    "ASTA": true,
     "LKL": true,
-    "DYLAN": true
+    "DYLAN": true,
+    "ASTA": true
    }
   ]
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "LKL",
     "ASTA"
@@ -98,7 +99,6 @@
       "LKL",
       "ASTA"
      ],
-     "proposer": "LKL",
      "votes": [
       "ANNA",
       "LKL",
@@ -106,45 +106,44 @@
       "DYLAN",
       "ASTA"
      ],
+     "proposer": "LKL",
      "state": "APPROVED"
     }
    ],
-   "numFails": 0,
    "state": "SUCCESS",
-   "failsRequired": 1,
    "teamSize": 2
   },
   {
+   "teamSize": 3,
    "failsRequired": 1,
    "state": "FAIL",
-   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "ANNA",
-      "SARAH"
-     ],
+     "state": "REJECTED",
      "team": [
       "SARAH",
       "ANNA",
       "DYLAN"
      ],
      "proposer": "SARAH",
-     "state": "REJECTED"
-    },
-    {
-     "state": "APPROVED",
      "votes": [
       "ANNA",
-      "LKL",
-      "ASTA"
-     ],
+      "SARAH"
+     ]
+    },
+    {
      "team": [
       "ANNA",
       "ASTA",
       "LKL"
      ],
-     "proposer": "ASTA"
+     "votes": [
+      "ANNA",
+      "LKL",
+      "ASTA"
+     ],
+     "proposer": "ASTA",
+     "state": "APPROVED"
     }
    ],
    "numFails": 1,
@@ -155,62 +154,66 @@
    ]
   },
   {
+   "state": "SUCCESS",
+   "teamSize": 2,
    "team": [
     "DYLAN",
     "ASTA"
    ],
-   "teamSize": 2,
-   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "DYLAN",
      "state": "APPROVED",
+     "team": [
+      "DYLAN",
+      "ASTA"
+     ],
      "votes": [
       "LKL",
       "DYLAN",
       "ASTA"
      ],
-     "team": [
-      "DYLAN",
-      "ASTA"
-     ]
+     "proposer": "DYLAN"
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "failsRequired": 1
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "SARAH",
-      "ASTA",
-      "ANNA"
-     ],
-     "proposer": "ANNA",
-     "team": [
-      "ANNA",
-      "SARAH",
-      "ASTA"
-     ]
-    }
-   ],
-   "state": "FAIL",
    "team": [
     "ANNA",
     "SARAH",
     "ASTA"
    ],
-   "numFails": 2
-  },
-  {
    "teamSize": 3,
+   "numFails": 2,
    "proposals": [
     {
-     "proposer": "LKL",
+     "votes": [
+      "SARAH",
+      "ASTA",
+      "ANNA"
+     ],
+     "team": [
+      "ANNA",
+      "SARAH",
+      "ASTA"
+     ],
+     "proposer": "ANNA",
+     "state": "APPROVED"
+    }
+   ],
+   "state": "FAIL",
+   "failsRequired": 1
+  },
+  {
+   "team": [
+    "LKL",
+    "DYLAN",
+    "ASTA"
+   ],
+   "numFails": 0,
+   "proposals": [
+    {
      "state": "APPROVED",
      "votes": [
       "ASTA",
@@ -221,20 +224,17 @@
       "LKL",
       "DYLAN",
       "ASTA"
-     ]
+     ],
+     "proposer": "LKL"
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "LKL",
-    "DYLAN",
-    "ASTA"
-   ],
-   "numFails": 0,
-   "state": "SUCCESS"
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1
   }
  ],
- "options": {
-  "inGameLog": false
+ "timeCreated": {
+  "_seconds": 1597280815,
+  "_nanoseconds": 233000000
  }
 }

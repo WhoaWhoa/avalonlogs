@@ -3,17 +3,14 @@
   "_seconds": 1587585809,
   "_nanoseconds": 425000000
  },
- "options": {
-  "inGameLog": false
- },
  "players": [
   {
    "name": "FLOZZA",
    "uid": "2txxG2yOg3bNfP8RhLEw7w2vYx42"
   },
   {
-   "name": "BETH",
-   "uid": "9nyo7TDnugWNLFU3jQdauX8iEpS2"
+   "uid": "9nyo7TDnugWNLFU3jQdauX8iEpS2",
+   "name": "BETH"
   },
   {
    "name": "JAMES",
@@ -32,12 +29,12 @@
    "name": "SPAM"
   },
   {
-   "name": "EMILY",
-   "uid": "4SsapSIAITbFrsTjAU9pBmanqqa2"
+   "uid": "4SsapSIAITbFrsTjAU9pBmanqqa2",
+   "name": "EMILY"
   },
   {
-   "uid": "Ni4gvR05aKOWNrEtEbLTpgZwuZ92",
-   "name": "LISH"
+   "name": "LISH",
+   "uid": "Ni4gvR05aKOWNrEtEbLTpgZwuZ92"
   }
  ],
  "timeFinished": {
@@ -45,49 +42,8 @@
   "_nanoseconds": 966000000
  },
  "outcome": {
-  "message": "Merlin assassinated",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "FLOZZA",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "BURFDAYGAL"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "EMILY"
-   },
-   {
-    "name": "JAMES",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "JADE"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "SPAM"
-   },
-   {
-    "assassin": false,
-    "name": "BETH",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "LISH",
-    "assassin": false
-   }
-  ],
+  "state": "EVIL_WIN",
+  "assassinated": "BURFDAYGAL",
   "votes": [
    {
     "EMILY": false,
@@ -95,50 +51,87 @@
     "BETH": true
    },
    {
-    "FLOZZA": true,
+    "JADE": false,
     "LISH": true,
-    "JAMES": true,
-    "JADE": false
+    "FLOZZA": true,
+    "JAMES": true
    },
    {
+    "FLOZZA": true,
     "LISH": true,
     "SPAM": true,
-    "BETH": true,
-    "FLOZZA": true
+    "BETH": true
    },
    {
-    "BETH": true,
-    "LISH": true,
     "FLOZZA": true,
-    "SPAM": true,
-    "BURFDAYGAL": true
-   },
-   {
-    "LISH": true,
     "BETH": true,
-    "FLOZZA": true,
     "BURFDAYGAL": true,
+    "LISH": true,
     "SPAM": true
+   },
+   {
+    "FLOZZA": true,
+    "SPAM": true,
+    "BURFDAYGAL": true,
+    "BETH": true,
+    "LISH": true
    }
   ],
-  "state": "EVIL_WIN",
-  "assassinated": "BURFDAYGAL"
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "FLOZZA"
+   },
+   {
+    "assassin": false,
+    "name": "BURFDAYGAL",
+    "role": "MERLIN"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "EMILY",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "JAMES",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "JADE"
+   },
+   {
+    "name": "SPAM",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "BETH"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "LISH",
+    "assassin": false
+   }
+  ]
  },
  "missions": [
   {
-   "teamSize": 3,
-   "state": "FAIL",
    "team": [
     "EMILY",
     "BETH",
     "SPAM"
    ],
-   "numFails": 1,
-   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "EMILY",
      "state": "APPROVED",
+     "proposer": "EMILY",
      "votes": [
       "EMILY",
       "JADE",
@@ -152,7 +145,11 @@
       "SPAM"
      ]
     }
-   ]
+   ],
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
    "team": [
@@ -161,27 +158,25 @@
     "JADE",
     "LISH"
    ],
-   "teamSize": 4,
-   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "JAMES",
-      "FLOZZA",
-      "LISH",
-      "BURFDAYGAL"
-     ],
-     "proposer": "LISH",
+     "state": "REJECTED",
      "votes": [
       "JAMES",
       "JADE",
       "LISH",
       "FLOZZA"
      ],
-     "state": "REJECTED"
+     "team": [
+      "JAMES",
+      "FLOZZA",
+      "LISH",
+      "BURFDAYGAL"
+     ],
+     "proposer": "LISH"
     },
     {
-     "state": "APPROVED",
      "votes": [
       "BURFDAYGAL",
       "JAMES",
@@ -190,6 +185,7 @@
       "LISH",
       "FLOZZA"
      ],
+     "state": "APPROVED",
      "team": [
       "JAMES",
       "FLOZZA",
@@ -199,15 +195,23 @@
      "proposer": "FLOZZA"
     }
    ],
-   "state": "FAIL",
+   "teamSize": 4,
+   "failsRequired": 1,
    "numFails": 1
   },
   {
    "teamSize": 4,
-   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "SPAM",
+    "FLOZZA",
+    "LISH",
+    "BETH"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "BETH",
+     "state": "REJECTED",
      "votes": [
       "BETH",
       "LISH"
@@ -218,31 +222,25 @@
       "JAMES",
       "LISH"
      ],
-     "state": "REJECTED"
+     "proposer": "BETH"
     },
     {
-     "votes": [
-      "BETH",
+     "team": [
+      "FLOZZA",
       "BURFDAYGAL",
-      "JAMES",
+      "BETH",
       "SPAM"
      ],
      "proposer": "JAMES",
      "state": "REJECTED",
-     "team": [
-      "FLOZZA",
-      "BURFDAYGAL",
+     "votes": [
       "BETH",
+      "BURFDAYGAL",
+      "JAMES",
       "SPAM"
      ]
     },
     {
-     "team": [
-      "SPAM",
-      "FLOZZA",
-      "LISH",
-      "BETH"
-     ],
      "proposer": "JADE",
      "state": "APPROVED",
      "votes": [
@@ -253,28 +251,29 @@
       "JAMES",
       "JADE",
       "SPAM"
+     ],
+     "team": [
+      "SPAM",
+      "FLOZZA",
+      "LISH",
+      "BETH"
      ]
     }
    ],
-   "team": [
-    "SPAM",
-    "FLOZZA",
-    "LISH",
-    "BETH"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1
+   "numFails": 0
   },
   {
-   "team": [
-    "SPAM",
-    "LISH",
-    "BETH",
-    "FLOZZA",
-    "BURFDAYGAL"
-   ],
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "BURFDAYGAL",
+     "team": [
+      "SPAM",
+      "LISH",
+      "BETH",
+      "FLOZZA",
+      "BURFDAYGAL"
+     ],
      "votes": [
       "FLOZZA",
       "BURFDAYGAL",
@@ -284,25 +283,24 @@
       "SPAM",
       "BETH",
       "LISH"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "SPAM",
-      "LISH",
-      "BETH",
-      "FLOZZA",
-      "BURFDAYGAL"
-     ],
-     "proposer": "BURFDAYGAL"
+     ]
     }
    ],
+   "team": [
+    "SPAM",
+    "LISH",
+    "BETH",
+    "FLOZZA",
+    "BURFDAYGAL"
+   ],
    "failsRequired": 2,
+   "teamSize": 5,
    "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 5
+   "numFails": 0
   },
   {
    "teamSize": 5,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -323,9 +321,8 @@
      "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "LISH",
     "BETH",
@@ -334,5 +331,8 @@
     "SPAM"
    ]
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ }
 }

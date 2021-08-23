@@ -1,44 +1,7 @@
 {
- "players": [
-  {
-   "name": "JACK",
-   "uid": "dWkLr2TeeMZh5RVBubE0LS1tWrh2"
-  },
-  {
-   "name": "COLTON",
-   "uid": "GTTQMzoE5Ca9dxaUVFrw9zdHj042"
-  },
-  {
-   "uid": "FSth5yaAaSg2HtNaBN88XwMCxlv1",
-   "name": "WILL"
-  },
-  {
-   "name": "JONESY",
-   "uid": "xi35CAgu1pQX6cz9w1TGaSxDB7u1"
-  },
-  {
-   "uid": "IYJsCh44gxO4DSnfNlnO6Quz4pu2",
-   "name": "PATRICK"
-  },
-  {
-   "name": "RYAN",
-   "uid": "gAiRUjpSMlbOzGpCzUNPHhcdscG3"
-  },
-  {
-   "uid": "fFCH4DQRTpUVCVrn3NNx99qhlZD3",
-   "name": "ADAMNNN"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1592621036,
-  "_nanoseconds": 947000000
- },
- "timeCreated": {
-  "_seconds": 1592620282,
-  "_nanoseconds": 945000000
- },
  "outcome": {
   "state": "EVIL_WIN",
+  "assassinated": null,
   "votes": [
    {
     "COLTON": true,
@@ -50,21 +13,22 @@
     "RYAN": false
    },
    {
+    "PATRICK": false,
     "COLTON": true,
-    "WILL": true,
-    "PATRICK": false
+    "WILL": true
    }
   ],
+  "message": "Three failed missions",
   "roles": [
    {
-    "name": "COLTON",
     "role": "PERCIVAL",
+    "name": "COLTON",
     "assassin": false
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "JACK",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "role": "MORGANA",
@@ -72,46 +36,81 @@
     "name": "PATRICK"
    },
    {
-    "assassin": false,
+    "role": "MERLIN",
     "name": "ADAMNNN",
-    "role": "MERLIN"
+    "assassin": false
    },
    {
-    "assassin": false,
     "name": "JONESY",
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": false
    },
    {
-    "name": "RYAN",
     "assassin": true,
+    "name": "RYAN",
     "role": "EVIL MINION"
    },
    {
     "role": "LOYAL FOLLOWER",
-    "name": "WILL",
-    "assassin": false
+    "assassin": false,
+    "name": "WILL"
    }
-  ],
-  "assassinated": null,
-  "message": "Three failed missions"
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1592621036,
+  "_nanoseconds": 947000000
+ },
+ "players": [
+  {
+   "uid": "dWkLr2TeeMZh5RVBubE0LS1tWrh2",
+   "name": "JACK"
+  },
+  {
+   "name": "COLTON",
+   "uid": "GTTQMzoE5Ca9dxaUVFrw9zdHj042"
+  },
+  {
+   "uid": "FSth5yaAaSg2HtNaBN88XwMCxlv1",
+   "name": "WILL"
+  },
+  {
+   "uid": "xi35CAgu1pQX6cz9w1TGaSxDB7u1",
+   "name": "JONESY"
+  },
+  {
+   "uid": "IYJsCh44gxO4DSnfNlnO6Quz4pu2",
+   "name": "PATRICK"
+  },
+  {
+   "uid": "gAiRUjpSMlbOzGpCzUNPHhcdscG3",
+   "name": "RYAN"
+  },
+  {
+   "name": "ADAMNNN",
+   "uid": "fFCH4DQRTpUVCVrn3NNx99qhlZD3"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1592620282,
+  "_nanoseconds": 945000000
  },
  "missions": [
   {
-   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 1,
    "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "COLTON",
     "RYAN"
    ],
-   "numFails": 1,
    "proposals": [
     {
-     "proposer": "COLTON",
      "state": "APPROVED",
-     "team": [
-      "COLTON",
-      "RYAN"
-     ],
      "votes": [
       "JACK",
       "PATRICK",
@@ -119,20 +118,25 @@
       "JONESY",
       "RYAN",
       "COLTON"
-     ]
+     ],
+     "team": [
+      "COLTON",
+      "RYAN"
+     ],
+     "proposer": "COLTON"
     }
-   ],
-   "teamSize": 2
+   ]
   },
   {
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "RYAN",
     "JACK",
     "WILL"
    ],
-   "state": "FAIL",
-   "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
      "state": "REJECTED",
@@ -141,12 +145,12 @@
       "JONESY",
       "RYAN"
      ],
+     "proposer": "WILL",
      "team": [
       "WILL",
       "RYAN",
       "JACK"
-     ],
-     "proposer": "WILL"
+     ]
     },
     {
      "state": "REJECTED",
@@ -155,55 +159,52 @@
       "ADAMNNN",
       "WILL"
      ],
+     "proposer": "JONESY",
      "votes": [
       "WILL"
-     ],
-     "proposer": "JONESY"
+     ]
     },
     {
+     "state": "REJECTED",
      "team": [
       "JACK",
       "PATRICK",
       "RYAN"
      ],
-     "state": "REJECTED",
-     "proposer": "PATRICK",
      "votes": [
       "ADAMNNN",
       "WILL",
       "JACK"
-     ]
+     ],
+     "proposer": "PATRICK"
     },
     {
-     "state": "APPROVED",
      "votes": [
       "ADAMNNN",
       "RYAN",
       "WILL",
       "JACK"
      ],
-     "proposer": "RYAN",
      "team": [
       "RYAN",
       "JACK",
       "WILL"
-     ]
+     ],
+     "proposer": "RYAN",
+     "state": "APPROVED"
     }
-   ],
-   "numFails": 1
+   ]
   },
   {
-   "teamSize": 3,
+   "failsRequired": 1,
    "team": [
     "COLTON",
     "WILL",
     "PATRICK"
    ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "ADAMNNN",
      "votes": [
       "ADAMNNN"
      ],
@@ -212,20 +213,19 @@
       "PATRICK",
       "ADAMNNN"
      ],
-     "proposer": "ADAMNNN",
      "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "JACK"
      ],
-     "proposer": "JACK",
+     "state": "REJECTED",
      "team": [
       "JACK",
       "COLTON",
       "WILL"
-     ]
+     ],
+     "proposer": "JACK"
     },
     {
      "votes": [
@@ -233,12 +233,12 @@
       "JACK",
       "WILL"
      ],
-     "state": "REJECTED",
      "team": [
       "COLTON",
       "PATRICK",
       "WILL"
      ],
+     "state": "REJECTED",
      "proposer": "COLTON"
     },
     {
@@ -249,32 +249,32 @@
       "COLTON",
       "JACK"
      ],
-     "proposer": "WILL",
-     "state": "APPROVED",
      "team": [
       "COLTON",
       "WILL",
       "PATRICK"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "WILL"
     }
-   ]
+   ],
+   "numFails": 1,
+   "teamSize": 3,
+   "state": "FAIL"
   },
   {
-   "failsRequired": 2,
-   "proposals": [],
    "teamSize": 4,
+   "proposals": [],
    "team": [],
-   "state": "PENDING"
+   "state": "PENDING",
+   "failsRequired": 2
   },
   {
-   "failsRequired": 1,
    "proposals": [],
+   "team": [],
+   "failsRequired": 1,
    "state": "PENDING",
-   "teamSize": 4,
-   "team": []
+   "teamSize": 4
   }
- ],
- "options": {
-  "inGameLog": false
- }
+ ]
 }

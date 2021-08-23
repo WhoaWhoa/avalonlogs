@@ -1,66 +1,104 @@
 {
+ "players": [
+  {
+   "uid": "ZwQKdA7MUVhyUKmzmVKHHKySMMy1",
+   "name": "LOLO"
+  },
+  {
+   "name": "SABRINA",
+   "uid": "ZxCyVIDQFJg5zM63TNeOlFj77FD3"
+  },
+  {
+   "uid": "yg1GjrEOnUZMo5Et0SbuSVfGmUw1",
+   "name": "VIBEY"
+  },
+  {
+   "name": "SLAMO",
+   "uid": "kF6AZkxMLMdCtOQ3r5BbqiUNn432"
+  },
+  {
+   "name": "SAM",
+   "uid": "Vmx0CGXMkFfM3eYGrGoJXqPqglB3"
+  },
+  {
+   "uid": "RE1AM1TM2Gh01Z6ToJFAGSk5CEO2",
+   "name": "SWIFT"
+  },
+  {
+   "name": "Y",
+   "uid": "xCCzdzSpqJfAk3d6LAa0HpUqvL02"
+  },
+  {
+   "uid": "LhCBsSMODVg0bsDeJmI3OhfLm1L2",
+   "name": "JOJO"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
-  "state": "GOOD_WIN",
   "votes": [
    {
     "SAM": true,
-    "SABRINA": true,
-    "SWIFT": true
+    "SWIFT": true,
+    "SABRINA": true
    },
    {
-    "SABRINA": true,
-    "SAM": false,
+    "SLAMO": true,
     "SWIFT": true,
-    "SLAMO": true
+    "SABRINA": true,
+    "SAM": false
    },
    {
     "LOLO": true,
-    "SWIFT": true,
     "VIBEY": true,
+    "SWIFT": true,
     "Y": true
    },
    {
-    "LOLO": false,
-    "SABRINA": true,
-    "VIBEY": true,
+    "Y": true,
     "SWIFT": true,
-    "Y": true
+    "LOLO": false,
+    "VIBEY": true,
+    "SABRINA": true
    }
   ],
+  "state": "GOOD_WIN",
+  "assassinated": "SWIFT",
   "roles": [
    {
-    "name": "LOLO",
+    "role": "EVIL MINION",
     "assassin": true,
-    "role": "EVIL MINION"
+    "name": "LOLO"
    },
    {
+    "assassin": false,
     "name": "SABRINA",
-    "role": "MERLIN",
+    "role": "MERLIN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JOJO",
+    "assassin": false
+   },
+   {
+    "name": "Y",
+    "role": "MORDRED",
     "assassin": false
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JOJO"
+    "name": "SLAMO",
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
-    "name": "Y",
-    "role": "MORDRED"
+    "name": "VIBEY",
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "name": "SLAMO"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "VIBEY"
-   },
-   {
     "name": "SAM",
-    "assassin": false,
     "role": "EVIL MINION"
    },
    {
@@ -69,18 +107,20 @@
     "role": "PERCIVAL"
    }
   ],
-  "assassinated": "SWIFT",
   "message": "Three successful missions"
  },
- "options": {
-  "inGameLog": false
+ "timeCreated": {
+  "_seconds": 1607838071,
+  "_nanoseconds": 374000000
+ },
+ "timeFinished": {
+  "_seconds": 1607839084,
+  "_nanoseconds": 317000000
  },
  "missions": [
   {
-   "numFails": 0,
    "proposals": [
     {
-     "proposer": "SAM",
      "votes": [
       "Y",
       "SAM",
@@ -90,29 +130,37 @@
       "SWIFT",
       "SLAMO"
      ],
+     "state": "APPROVED",
      "team": [
       "SAM",
       "SWIFT",
       "SABRINA"
      ],
-     "state": "APPROVED"
+     "proposer": "SAM"
     }
    ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3,
    "team": [
     "SAM",
     "SWIFT",
     "SABRINA"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "failsRequired": 1,
+   "state": "FAIL",
    "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "SWIFT",
+      "SAM",
+      "SABRINA",
+      "SLAMO"
+     ],
      "votes": [
       "Y",
       "SWIFT",
@@ -121,35 +169,22 @@
       "VIBEY",
       "SAM"
      ],
-     "proposer": "SWIFT",
-     "team": [
-      "SWIFT",
-      "SAM",
-      "SABRINA",
-      "SLAMO"
-     ],
-     "state": "APPROVED"
+     "proposer": "SWIFT"
     }
    ],
-   "state": "FAIL",
    "team": [
     "SWIFT",
     "SAM",
     "SABRINA",
     "SLAMO"
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 4
   },
   {
-   "team": [
-    "SWIFT",
-    "LOLO",
-    "VIBEY",
-    "Y"
-   ],
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "Y",
      "votes": [
       "LOLO",
       "VIBEY",
@@ -160,14 +195,16 @@
       "Y",
       "SWIFT",
       "VIBEY"
-     ]
+     ],
+     "proposer": "Y",
+     "state": "REJECTED"
     },
     {
      "state": "REJECTED",
-     "proposer": "JOJO",
      "votes": [
       "JOJO"
      ],
+     "proposer": "JOJO",
      "team": [
       "SWIFT",
       "SABRINA",
@@ -176,14 +213,6 @@
      ]
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "SWIFT",
-      "LOLO",
-      "VIBEY",
-      "Y"
-     ],
-     "proposer": "LOLO",
      "votes": [
       "Y",
       "JOJO",
@@ -192,22 +221,47 @@
       "SWIFT",
       "SLAMO",
       "SAM"
-     ]
+     ],
+     "team": [
+      "SWIFT",
+      "LOLO",
+      "VIBEY",
+      "Y"
+     ],
+     "proposer": "LOLO",
+     "state": "APPROVED"
     }
    ],
-   "numFails": 0,
-   "teamSize": 4,
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "team": [
+    "SWIFT",
+    "LOLO",
+    "VIBEY",
+    "Y"
+   ],
+   "teamSize": 4
   },
   {
-   "state": "SUCCESS",
    "numFails": 1,
-   "failsRequired": 2,
+   "team": [
+    "SABRINA",
+    "Y",
+    "VIBEY",
+    "SWIFT",
+    "LOLO"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "SABRINA",
+      "Y",
+      "VIBEY",
+      "SWIFT",
+      "LOLO"
+     ],
      "proposer": "SABRINA",
+     "state": "APPROVED",
      "votes": [
       "JOJO",
       "SWIFT",
@@ -217,24 +271,12 @@
       "SLAMO",
       "SAM",
       "Y"
-     ],
-     "team": [
-      "SABRINA",
-      "Y",
-      "VIBEY",
-      "SWIFT",
-      "LOLO"
      ]
     }
    ],
-   "team": [
-    "SABRINA",
-    "Y",
-    "VIBEY",
-    "SWIFT",
-    "LOLO"
-   ],
-   "teamSize": 5
+   "teamSize": 5,
+   "failsRequired": 2,
+   "state": "SUCCESS"
   },
   {
    "state": "PENDING",
@@ -243,47 +285,5 @@
    "team": [],
    "failsRequired": 1
   }
- ],
- "timeCreated": {
-  "_seconds": 1607838071,
-  "_nanoseconds": 374000000
- },
- "players": [
-  {
-   "uid": "ZwQKdA7MUVhyUKmzmVKHHKySMMy1",
-   "name": "LOLO"
-  },
-  {
-   "uid": "ZxCyVIDQFJg5zM63TNeOlFj77FD3",
-   "name": "SABRINA"
-  },
-  {
-   "uid": "yg1GjrEOnUZMo5Et0SbuSVfGmUw1",
-   "name": "VIBEY"
-  },
-  {
-   "uid": "kF6AZkxMLMdCtOQ3r5BbqiUNn432",
-   "name": "SLAMO"
-  },
-  {
-   "name": "SAM",
-   "uid": "Vmx0CGXMkFfM3eYGrGoJXqPqglB3"
-  },
-  {
-   "name": "SWIFT",
-   "uid": "RE1AM1TM2Gh01Z6ToJFAGSk5CEO2"
-  },
-  {
-   "name": "Y",
-   "uid": "xCCzdzSpqJfAk3d6LAa0HpUqvL02"
-  },
-  {
-   "name": "JOJO",
-   "uid": "LhCBsSMODVg0bsDeJmI3OhfLm1L2"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1607839084,
-  "_nanoseconds": 317000000
- }
+ ]
 }

@@ -1,5 +1,43 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1591889334,
+  "_nanoseconds": 679000000
+ },
+ "timeFinished": {
+  "_seconds": 1591889686,
+  "_nanoseconds": 441000000
+ },
  "outcome": {
+  "roles": [
+   {
+    "role": "MERLIN",
+    "name": "BEA",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "SETH"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "DIN"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "TIM"
+   },
+   {
+    "name": "KENN",
+    "role": "EVIL MINION",
+    "assassin": false
+   }
+  ],
   "state": "EVIL_WIN",
   "votes": [
    {
@@ -7,9 +45,9 @@
     "SETH": false
    },
    {
+    "BEA": true,
     "DIN": true,
-    "TIM": true,
-    "BEA": true
+    "TIM": true
    },
    {
     "DIN": true,
@@ -21,81 +59,14 @@
     "DIN": true
    }
   ],
-  "assassinated": "BEA",
-  "roles": [
-   {
-    "role": "MERLIN",
-    "name": "BEA",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "SETH"
-   },
-   {
-    "name": "DIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "TIM",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "KENN",
-    "assassin": false,
-    "role": "EVIL MINION"
-   }
-  ],
-  "message": "Merlin assassinated"
- },
- "players": [
-  {
-   "name": "DIN",
-   "uid": "iYWCGTbS8COVtqK5F7awDOMoHmC2"
-  },
-  {
-   "uid": "3ZptZeX43aY641dO7Nh0ZtjP12G2",
-   "name": "BEA"
-  },
-  {
-   "name": "SETH",
-   "uid": "yMqPEUVioqb1zNHxPLpd01lJ2oF3"
-  },
-  {
-   "name": "TIM",
-   "uid": "pKvoful2GdSy130GZUV4bSO4hxc2"
-  },
-  {
-   "uid": "FqLkotkfLTNUkKiN4oaC3RTJR9w2",
-   "name": "KENN"
-  }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1591889334,
-  "_nanoseconds": 679000000
+  "message": "Merlin assassinated",
+  "assassinated": "BEA"
  },
  "missions": [
   {
-   "teamSize": 2,
-   "failsRequired": 1,
    "numFails": 1,
-   "team": [
-    "TIM",
-    "SETH"
-   ],
    "proposals": [
     {
-     "team": [
-      "TIM",
-      "SETH"
-     ],
-     "state": "APPROVED",
      "votes": [
       "DIN",
       "TIM",
@@ -103,45 +74,60 @@
       "BEA",
       "SETH"
      ],
-     "proposer": "DIN"
+     "state": "APPROVED",
+     "proposer": "DIN",
+     "team": [
+      "TIM",
+      "SETH"
+     ]
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 2,
+   "team": [
+    "TIM",
+    "SETH"
+   ]
   },
   {
-   "team": [
-    "DIN",
-    "BEA",
-    "TIM"
-   ],
-   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "DIN",
-      "BEA",
-      "TIM"
-     ],
-     "proposer": "BEA",
-     "state": "APPROVED",
      "votes": [
       "TIM",
       "KENN",
       "BEA",
       "SETH",
       "DIN"
+     ],
+     "state": "APPROVED",
+     "proposer": "BEA",
+     "team": [
+      "DIN",
+      "BEA",
+      "TIM"
      ]
     }
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1
+   "team": [
+    "DIN",
+    "BEA",
+    "TIM"
+   ],
+   "teamSize": 3
   },
   {
+   "numFails": 0,
+   "team": [
+    "KENN",
+    "DIN"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "SETH",
      "votes": [
       "DIN",
       "TIM",
@@ -149,31 +135,29 @@
       "BEA",
       "SETH"
      ],
+     "state": "APPROVED",
      "team": [
       "KENN",
       "DIN"
-     ]
+     ],
+     "proposer": "SETH"
     }
    ],
    "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 2,
-   "team": [
-    "KENN",
-    "DIN"
-   ],
-   "numFails": 0
+   "teamSize": 2
   },
   {
-   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "TIM",
     "DIN",
     "BEA"
    ],
-   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "TIM",
      "votes": [
       "BEA",
       "SETH",
@@ -186,23 +170,39 @@
       "DIN",
       "BEA"
      ],
-     "state": "APPROVED",
-     "proposer": "TIM"
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
    "teamSize": 3
   },
   {
-   "teamSize": 3,
-   "proposals": [],
+   "state": "PENDING",
    "failsRequired": 1,
+   "proposals": [],
    "team": [],
-   "state": "PENDING"
+   "teamSize": 3
   }
  ],
- "timeFinished": {
-  "_seconds": 1591889686,
-  "_nanoseconds": 441000000
- }
+ "players": [
+  {
+   "uid": "iYWCGTbS8COVtqK5F7awDOMoHmC2",
+   "name": "DIN"
+  },
+  {
+   "uid": "3ZptZeX43aY641dO7Nh0ZtjP12G2",
+   "name": "BEA"
+  },
+  {
+   "uid": "yMqPEUVioqb1zNHxPLpd01lJ2oF3",
+   "name": "SETH"
+  },
+  {
+   "name": "TIM",
+   "uid": "pKvoful2GdSy130GZUV4bSO4hxc2"
+  },
+  {
+   "name": "KENN",
+   "uid": "FqLkotkfLTNUkKiN4oaC3RTJR9w2"
+  }
+ ]
 }

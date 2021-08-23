@@ -1,6 +1,66 @@
 {
- "options": {
-  "inGameLog": false
+ "outcome": {
+  "roles": [
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "MICHAEL"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "CLITLICKER",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "CHRISTIAN",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MEDFORD"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "SLUTYKITTY"
+   },
+   {
+    "name": "MASTER",
+    "assassin": false,
+    "role": "MORDRED"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "MASTER": true,
+    "MEDFORD": true
+   },
+   {
+    "MEDFORD": true,
+    "MICHAEL": true,
+    "MASTER": true
+   },
+   {
+    "MEDFORD": true,
+    "MICHAEL": true,
+    "MASTER": false,
+    "CHRISTIAN": true
+   },
+   {
+    "MICHAEL": true,
+    "MEDFORD": true,
+    "SLUTYKITTY": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "SLUTYKITTY"
+ },
+ "timeFinished": {
+  "_seconds": 1608006535,
+  "_nanoseconds": 989000000
  },
  "players": [
   {
@@ -8,8 +68,8 @@
    "uid": "D7U9hTcc8yMdv4FukiZNQsqHUjl2"
   },
   {
-   "name": "CLITLICKER",
-   "uid": "puFKFMzMr6da8RGLhBRSbL9lM8t1"
+   "uid": "puFKFMzMr6da8RGLhBRSbL9lM8t1",
+   "name": "CLITLICKER"
   },
   {
    "name": "MICHAEL",
@@ -20,21 +80,21 @@
    "uid": "GewNMuoZnsUud7VJKrcEENu22Af1"
   },
   {
-   "uid": "NRTwGExQffTvt6gfl7ld2ZFVE2p1",
-   "name": "MASTER"
+   "name": "MASTER",
+   "uid": "NRTwGExQffTvt6gfl7ld2ZFVE2p1"
   },
   {
    "name": "SLUTYKITTY",
    "uid": "ZNMSytZGIreRWzlENyNyrMJgMEX2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1608005443,
-  "_nanoseconds": 11000000
+ "options": {
+  "inGameLog": false
  },
  "missions": [
   {
    "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
@@ -53,31 +113,23 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0,
    "team": [
     "MEDFORD",
     "MASTER"
-   ]
+   ],
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
+   "teamSize": 3,
+   "numFails": 0,
    "team": [
     "MICHAEL",
     "MASTER",
     "MEDFORD"
    ],
-   "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "MICHAEL",
-      "MASTER",
-      "MEDFORD"
-     ],
-     "proposer": "SLUTYKITTY",
      "votes": [
       "MICHAEL",
       "CLITLICKER",
@@ -86,15 +138,32 @@
       "SLUTYKITTY",
       "CHRISTIAN"
      ],
+     "team": [
+      "MICHAEL",
+      "MASTER",
+      "MEDFORD"
+     ],
+     "proposer": "SLUTYKITTY",
      "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS"
   },
   {
+   "failsRequired": 1,
    "teamSize": 4,
+   "numFails": 1,
+   "team": [
+    "CHRISTIAN",
+    "MEDFORD",
+    "MASTER",
+    "MICHAEL"
+   ],
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "CLITLICKER",
       "SLUTYKITTY",
@@ -102,7 +171,6 @@
       "MICHAEL",
       "MEDFORD"
      ],
-     "state": "APPROVED",
      "team": [
       "CHRISTIAN",
       "MEDFORD",
@@ -111,40 +179,31 @@
      ],
      "proposer": "CHRISTIAN"
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "CHRISTIAN",
-    "MEDFORD",
-    "MASTER",
-    "MICHAEL"
-   ],
-   "numFails": 1
+   ]
   },
   {
-   "teamSize": 3,
-   "state": "SUCCESS",
+   "team": [
+    "MICHAEL",
+    "SLUTYKITTY",
+    "MEDFORD"
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
+     "votes": [
+      "MASTER",
+      "CLITLICKER"
+     ],
+     "proposer": "CLITLICKER",
      "state": "REJECTED",
      "team": [
       "CHRISTIAN",
       "CLITLICKER",
       "SLUTYKITTY"
-     ],
-     "votes": [
-      "MASTER",
-      "CLITLICKER"
-     ],
-     "proposer": "CLITLICKER"
+     ]
     },
     {
-     "team": [
-      "MICHAEL",
-      "SLUTYKITTY",
-      "MEDFORD"
-     ],
      "votes": [
       "SLUTYKITTY",
       "CHRISTIAN",
@@ -152,87 +211,28 @@
       "CLITLICKER",
       "MICHAEL"
      ],
+     "team": [
+      "MICHAEL",
+      "SLUTYKITTY",
+      "MEDFORD"
+     ],
      "proposer": "MICHAEL",
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "team": [
-    "MICHAEL",
-    "SLUTYKITTY",
-    "MEDFORD"
-   ]
+   "teamSize": 3,
+   "state": "SUCCESS"
   },
   {
-   "team": [],
-   "failsRequired": 1,
-   "proposals": [],
    "teamSize": 4,
-   "state": "PENDING"
+   "proposals": [],
+   "state": "PENDING",
+   "failsRequired": 1,
+   "team": []
   }
  ],
- "timeFinished": {
-  "_seconds": 1608006535,
-  "_nanoseconds": 989000000
- },
- "outcome": {
-  "votes": [
-   {
-    "MASTER": true,
-    "MEDFORD": true
-   },
-   {
-    "MEDFORD": true,
-    "MICHAEL": true,
-    "MASTER": true
-   },
-   {
-    "MICHAEL": true,
-    "MASTER": false,
-    "CHRISTIAN": true,
-    "MEDFORD": true
-   },
-   {
-    "SLUTYKITTY": true,
-    "MICHAEL": true,
-    "MEDFORD": true
-   }
-  ],
-  "roles": [
-   {
-    "role": "PERCIVAL",
-    "name": "MICHAEL",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "CLITLICKER"
-   },
-   {
-    "name": "CHRISTIAN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "MEDFORD",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "SLUTYKITTY"
-   },
-   {
-    "assassin": false,
-    "name": "MASTER",
-    "role": "MORDRED"
-   }
-  ],
-  "assassinated": "SLUTYKITTY",
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN"
+ "timeCreated": {
+  "_seconds": 1608005443,
+  "_nanoseconds": 11000000
  }
 }

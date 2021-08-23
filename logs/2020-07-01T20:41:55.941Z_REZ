@@ -1,40 +1,84 @@
 {
- "players": [
-  {
-   "uid": "RaYHnkSLmudByl3YZvdQ2ZnxBZg1",
-   "name": "AVI"
-  },
-  {
-   "name": "SYLVIA",
-   "uid": "yljDnvfoiJVcxCF3SXg1MtjrrPv2"
-  },
-  {
-   "uid": "GoKLhnAfNfUKulkoHp0LymAw2Df1",
-   "name": "AUDREY"
-  },
-  {
-   "uid": "wWNyCor5GGPMDYDFibZ1y3FvsIw2",
-   "name": "BRIAN"
-  },
-  {
-   "name": "KATHERINE",
-   "uid": "jS6HNfdmRvhX7SSQdVcMjE9juU22"
-  },
-  {
-   "name": "CATHERINE",
-   "uid": "ryEFBW69dMR3R4Fq9j97xqT7VGW2"
-  },
-  {
-   "uid": "zf0llKy3Mnb573Y8vF7h206UBzi2",
-   "name": "REZ"
-  }
- ],
  "options": {
   "inGameLog": false
+ },
+ "outcome": {
+  "votes": [
+   {
+    "AVI": false,
+    "CATHERINE": true
+   },
+   {
+    "KATHERINE": true,
+    "REZ": true,
+    "BRIAN": true
+   },
+   {
+    "REZ": true,
+    "KATHERINE": true,
+    "BRIAN": false
+   },
+   {
+    "CATHERINE": true,
+    "SYLVIA": true,
+    "AUDREY": true,
+    "REZ": true
+   },
+   {
+    "SYLVIA": true,
+    "CATHERINE": true,
+    "AUDREY": true,
+    "KATHERINE": true
+   }
+  ],
+  "assassinated": "KATHERINE",
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "assassin": true,
+    "name": "REZ",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "AUDREY",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "SYLVIA",
+    "assassin": false
+   },
+   {
+    "name": "BRIAN",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "KATHERINE",
+    "role": "MERLIN"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "AVI"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "CATHERINE",
+    "assassin": false
+   }
+  ],
+  "state": "EVIL_WIN"
  },
  "timeCreated": {
   "_seconds": 1593636115,
   "_nanoseconds": 941000000
+ },
+ "timeFinished": {
+  "_seconds": 1593637220,
+  "_nanoseconds": 732000000
  },
  "missions": [
   {
@@ -51,32 +95,35 @@
       "AUDREY"
      ],
      "proposer": "KATHERINE",
+     "state": "APPROVED",
      "team": [
       "CATHERINE",
       "AVI"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "teamSize": 2,
+   "state": "FAIL",
    "team": [
     "CATHERINE",
     "AVI"
    ],
-   "teamSize": 2,
-   "numFails": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
    "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "BRIAN",
     "KATHERINE",
     "REZ"
    ],
+   "teamSize": 3,
    "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "CATHERINE",
      "votes": [
       "AUDREY",
       "KATHERINE",
@@ -86,12 +133,15 @@
       "KATHERINE",
       "CATHERINE",
       "REZ"
-     ],
-     "proposer": "CATHERINE",
-     "state": "REJECTED"
+     ]
     },
     {
-     "proposer": "REZ",
+     "team": [
+      "BRIAN",
+      "KATHERINE",
+      "REZ"
+     ],
+     "state": "APPROVED",
      "votes": [
       "AUDREY",
       "SYLVIA",
@@ -100,15 +150,9 @@
       "AVI",
       "REZ"
      ],
-     "team": [
-      "BRIAN",
-      "KATHERINE",
-      "REZ"
-     ],
-     "state": "APPROVED"
+     "proposer": "REZ"
     }
-   ],
-   "teamSize": 3
+   ]
   },
   {
    "team": [
@@ -116,12 +160,9 @@
     "KATHERINE",
     "REZ"
    ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 3,
-   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "AVI",
      "votes": [
       "REZ",
       "AUDREY",
@@ -130,62 +171,74 @@
       "AVI",
       "CATHERINE"
      ],
-     "proposer": "AVI",
-     "state": "APPROVED",
      "team": [
       "BRIAN",
       "KATHERINE",
       "REZ"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3
   },
   {
+   "numFails": 0,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "SYLVIA",
+      "BRIAN",
+      "KATHERINE",
+      "CATHERINE",
+      "AUDREY"
+     ],
+     "proposer": "SYLVIA",
+     "team": [
+      "REZ",
+      "SYLVIA",
+      "AUDREY",
+      "CATHERINE"
+     ]
+    }
+   ],
+   "state": "SUCCESS",
+   "teamSize": 4,
+   "failsRequired": 2,
    "team": [
     "REZ",
     "SYLVIA",
     "AUDREY",
     "CATHERINE"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "teamSize": 4,
-   "numFails": 0,
-   "proposals": [
-    {
-     "proposer": "SYLVIA",
-     "votes": [
-      "SYLVIA",
-      "BRIAN",
-      "KATHERINE",
-      "CATHERINE",
-      "AUDREY"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "REZ",
-      "SYLVIA",
-      "AUDREY",
-      "CATHERINE"
-     ]
-    }
    ]
   },
   {
+   "teamSize": 4,
+   "state": "SUCCESS",
+   "team": [
+    "SYLVIA",
+    "AUDREY",
+    "KATHERINE",
+    "CATHERINE"
+   ],
+   "numFails": 0,
    "proposals": [
     {
      "state": "REJECTED",
-     "votes": [
-      "AVI",
-      "REZ",
-      "AUDREY"
-     ],
      "proposer": "AUDREY",
      "team": [
       "AUDREY",
       "REZ",
       "KATHERINE",
       "SYLVIA"
+     ],
+     "votes": [
+      "AVI",
+      "REZ",
+      "AUDREY"
      ]
     },
     {
@@ -193,13 +246,13 @@
       "BRIAN",
       "AVI"
      ],
+     "proposer": "BRIAN",
      "team": [
       "BRIAN",
       "KATHERINE",
       "CATHERINE",
       "REZ"
      ],
-     "proposer": "BRIAN",
      "state": "REJECTED"
     },
     {
@@ -220,90 +273,37 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "SYLVIA",
-    "AUDREY",
-    "KATHERINE",
-    "CATHERINE"
-   ],
-   "numFails": 0,
-   "teamSize": 4,
-   "state": "SUCCESS"
+   "failsRequired": 1
   }
  ],
- "timeFinished": {
-  "_seconds": 1593637220,
-  "_nanoseconds": 732000000
- },
- "outcome": {
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "REZ",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "AUDREY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SYLVIA"
-   },
-   {
-    "name": "BRIAN",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "KATHERINE",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "AVI",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "CATHERINE",
-    "role": "PERCIVAL",
-    "assassin": false
-   }
-  ],
-  "votes": [
-   {
-    "AVI": false,
-    "CATHERINE": true
-   },
-   {
-    "REZ": true,
-    "KATHERINE": true,
-    "BRIAN": true
-   },
-   {
-    "KATHERINE": true,
-    "REZ": true,
-    "BRIAN": false
-   },
-   {
-    "REZ": true,
-    "AUDREY": true,
-    "CATHERINE": true,
-    "SYLVIA": true
-   },
-   {
-    "KATHERINE": true,
-    "AUDREY": true,
-    "SYLVIA": true,
-    "CATHERINE": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "KATHERINE"
- }
+ "players": [
+  {
+   "name": "AVI",
+   "uid": "RaYHnkSLmudByl3YZvdQ2ZnxBZg1"
+  },
+  {
+   "name": "SYLVIA",
+   "uid": "yljDnvfoiJVcxCF3SXg1MtjrrPv2"
+  },
+  {
+   "name": "AUDREY",
+   "uid": "GoKLhnAfNfUKulkoHp0LymAw2Df1"
+  },
+  {
+   "name": "BRIAN",
+   "uid": "wWNyCor5GGPMDYDFibZ1y3FvsIw2"
+  },
+  {
+   "name": "KATHERINE",
+   "uid": "jS6HNfdmRvhX7SSQdVcMjE9juU22"
+  },
+  {
+   "name": "CATHERINE",
+   "uid": "ryEFBW69dMR3R4Fq9j97xqT7VGW2"
+  },
+  {
+   "uid": "zf0llKy3Mnb573Y8vF7h206UBzi2",
+   "name": "REZ"
+  }
+ ]
 }

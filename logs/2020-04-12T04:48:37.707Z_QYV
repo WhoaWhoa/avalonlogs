@@ -1,16 +1,81 @@
 {
- "timeFinished": {
-  "_seconds": 1586667768,
-  "_nanoseconds": 836863000
+ "outcome": {
+  "assassinated": null,
+  "roles": [
+   {
+    "name": "CLUR",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "name": "SUQI",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "AMIE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "ALEECE",
+    "assassin": false
+   },
+   {
+    "name": "ALLISON",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "RADDY",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "CLUR": true,
+    "AMIE": true
+   },
+   {
+    "RADDY": true,
+    "ALEECE": true,
+    "SUQI": true
+   },
+   {
+    "SUQI": true,
+    "RADDY": true,
+    "ALEECE": true,
+    "ALLISON": false
+   },
+   {
+    "ALLISON": false,
+    "RADDY": true,
+    "ALEECE": true
+   },
+   {
+    "ALEECE": true,
+    "AMIE": true,
+    "CLUR": false,
+    "SUQI": true
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1586666917,
+  "_nanoseconds": 707000000
  },
  "missions": [
   {
    "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "CLUR",
     "AMIE"
    ],
+   "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
@@ -30,22 +95,12 @@
      "proposer": "CLUR"
     }
    ],
-   "numFails": 0
+   "failsRequired": 1
   },
   {
-   "teamSize": 3,
-   "team": [
-    "RADDY",
-    "ALEECE",
-    "SUQI"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "numFails": 0,
    "proposals": [
     {
-     "proposer": "RADDY",
-     "state": "APPROVED",
      "votes": [
       "ALEECE",
       "ALLISON",
@@ -58,24 +113,32 @@
       "RADDY",
       "ALEECE",
       "SUQI"
-     ]
+     ],
+     "proposer": "RADDY",
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "team": [
+    "RADDY",
+    "ALEECE",
+    "SUQI"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "SUCCESS"
   },
   {
    "teamSize": 4,
-   "failsRequired": 1,
-   "state": "FAIL",
+   "numFails": 1,
    "team": [
     "ALLISON",
     "ALEECE",
     "SUQI",
     "RADDY"
    ],
-   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "SUQI",
      "state": "APPROVED",
      "votes": [
       "CLUR",
@@ -90,84 +153,86 @@
       "ALEECE",
       "SUQI",
       "RADDY"
-     ]
+     ],
+     "proposer": "SUQI"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "proposer": "ALEECE",
+     "votes": [
+      "RADDY",
+      "CLUR",
+      "SUQI",
+      "AMIE",
+      "ALEECE",
+      "ALLISON"
+     ],
+     "team": [
+      "ALEECE",
+      "RADDY",
+      "ALLISON"
+     ]
+    }
+   ],
    "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1,
    "team": [
     "ALEECE",
     "RADDY",
     "ALLISON"
-   ],
-   "state": "FAIL",
-   "proposals": [
-    {
-     "proposer": "ALEECE",
-     "state": "APPROVED",
-     "team": [
-      "ALEECE",
-      "RADDY",
-      "ALLISON"
-     ],
-     "votes": [
-      "RADDY",
-      "CLUR",
-      "SUQI",
-      "AMIE",
-      "ALEECE",
-      "ALLISON"
-     ]
-    }
-   ],
-   "failsRequired": 1,
-   "numFails": 1
+   ]
   },
   {
-   "team": [
-    "ALEECE",
-    "CLUR",
-    "AMIE",
-    "SUQI"
-   ],
+   "state": "FAIL",
    "teamSize": 4,
    "proposals": [
     {
      "state": "REJECTED",
-     "votes": [
-      "RADDY",
-      "SUQI",
-      "AMIE"
-     ],
      "proposer": "AMIE",
      "team": [
       "SUQI",
       "ALEECE",
       "RADDY",
       "AMIE"
+     ],
+     "votes": [
+      "RADDY",
+      "SUQI",
+      "AMIE"
      ]
     },
     {
-     "proposer": "ALLISON",
-     "team": [
-      "ALEECE",
-      "CLUR",
-      "AMIE",
-      "SUQI"
-     ],
+     "state": "APPROVED",
      "votes": [
       "AMIE",
       "ALEECE",
       "ALLISON",
       "CLUR"
      ],
-     "state": "APPROVED"
+     "proposer": "ALLISON",
+     "team": [
+      "ALEECE",
+      "CLUR",
+      "AMIE",
+      "SUQI"
+     ]
     }
    ],
-   "state": "FAIL",
    "failsRequired": 1,
-   "numFails": 1
+   "numFails": 1,
+   "team": [
+    "ALEECE",
+    "CLUR",
+    "AMIE",
+    "SUQI"
+   ]
   }
  ],
  "players": [
@@ -176,93 +241,28 @@
    "uid": "In4CObak2DRhJBld6f2fREsxaD53"
   },
   {
-   "name": "CLUR",
-   "uid": "3pIEUP2bSpM93qFxTFtx7i7i1T13"
+   "uid": "3pIEUP2bSpM93qFxTFtx7i7i1T13",
+   "name": "CLUR"
   },
   {
-   "name": "RADDY",
-   "uid": "MSfdfQcsPZXAwhMfDHgp5XnIQxu2"
+   "uid": "MSfdfQcsPZXAwhMfDHgp5XnIQxu2",
+   "name": "RADDY"
   },
   {
-   "uid": "hoMNBUNdwuW1AxgC8AcKVih2OL63",
-   "name": "SUQI"
+   "name": "SUQI",
+   "uid": "hoMNBUNdwuW1AxgC8AcKVih2OL63"
   },
   {
-   "uid": "fDUydpj0tneQmyWXy1KKRhPEXf32",
-   "name": "ALEECE"
+   "name": "ALEECE",
+   "uid": "fDUydpj0tneQmyWXy1KKRhPEXf32"
   },
   {
    "uid": "ALJAX23dP8RQV7sId2zyMX6gju73",
    "name": "AMIE"
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "CLUR": true,
-    "AMIE": true
-   },
-   {
-    "SUQI": true,
-    "ALEECE": true,
-    "RADDY": true
-   },
-   {
-    "ALLISON": false,
-    "RADDY": true,
-    "SUQI": true,
-    "ALEECE": true
-   },
-   {
-    "RADDY": true,
-    "ALEECE": true,
-    "ALLISON": false
-   },
-   {
-    "CLUR": false,
-    "AMIE": true,
-    "ALEECE": true,
-    "SUQI": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "CLUR",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "SUQI"
-   },
-   {
-    "name": "AMIE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "ALEECE",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "ALLISON"
-   },
-   {
-    "name": "RADDY",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "assassinated": null
- },
- "timeCreated": {
-  "_seconds": 1586666917,
-  "_nanoseconds": 707000000
+ "timeFinished": {
+  "_seconds": 1586667768,
+  "_nanoseconds": 836863000
  }
 }

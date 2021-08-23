@@ -1,37 +1,75 @@
 {
- "timeFinished": {
-  "_seconds": 1598228682,
-  "_nanoseconds": 950000000
+ "timeCreated": {
+  "_seconds": 1598226850,
+  "_nanoseconds": 564000000
  },
- "players": [
-  {
-   "name": "JESSICA",
-   "uid": "RFRPsOFYaeXexViSnJHfHfICb092"
-  },
-  {
-   "uid": "h38Gd0ACYddHCD2BBzOngni9Hj23",
-   "name": "KATE"
-  },
-  {
-   "uid": "VP22jNvaBOY2gfhVpKsowje0PNS2",
-   "name": "CAROLINA"
-  },
-  {
-   "uid": "G9FNzXQeQ2TIoLBxGec5BgJ2aMU2",
-   "name": "ELENA"
-  },
-  {
-   "name": "LILIA",
-   "uid": "2HTwvjaixbRfm2H1Q7OCREU1If13"
-  },
-  {
-   "name": "ROG",
-   "uid": "NTphEPVqMnOYSDNPFPITAflk8vo2"
-  }
- ],
+ "outcome": {
+  "message": "Three failed missions",
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "LILIA": true,
+    "ELENA": true
+   },
+   {
+    "LILIA": true,
+    "ELENA": false,
+    "JESSICA": true
+   },
+   {
+    "ELENA": true,
+    "ROG": true,
+    "KATE": true,
+    "CAROLINA": false
+   },
+   {
+    "JESSICA": true,
+    "ELENA": false,
+    "KATE": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "JESSICA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MORDRED",
+    "name": "ELENA",
+    "assassin": true
+   },
+   {
+    "role": "MORGANA",
+    "name": "CAROLINA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "ROG"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "LILIA",
+    "assassin": false
+   },
+   {
+    "name": "KATE",
+    "role": "PERCIVAL",
+    "assassin": false
+   }
+  ]
+ },
  "missions": [
   {
-   "teamSize": 2,
+   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "ELENA",
+    "LILIA"
+   ],
    "proposals": [
     {
      "votes": [
@@ -40,28 +78,23 @@
       "ELENA",
       "CAROLINA"
      ],
+     "proposer": "CAROLINA",
      "team": [
       "ELENA",
       "LILIA"
      ],
-     "state": "APPROVED",
-     "proposer": "CAROLINA"
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
-   "team": [
-    "ELENA",
-    "LILIA"
-   ]
+   "teamSize": 2,
+   "failsRequired": 1
   },
   {
-   "numFails": 1,
    "failsRequired": 1,
-   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "ELENA",
      "votes": [
       "ELENA",
@@ -75,8 +108,7 @@
       "LILIA",
       "JESSICA",
       "ELENA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "team": [
@@ -84,11 +116,24 @@
     "JESSICA",
     "ELENA"
    ],
-   "teamSize": 3
+   "teamSize": 3,
+   "state": "FAIL"
   },
   {
+   "team": [
+    "KATE",
+    "ELENA",
+    "CAROLINA",
+    "ROG"
+   ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "LILIA",
+     "state": "REJECTED",
      "votes": [
       "KATE",
       "CAROLINA",
@@ -99,24 +144,22 @@
       "LILIA",
       "KATE",
       "CAROLINA"
-     ],
-     "proposer": "LILIA",
-     "state": "REJECTED"
+     ]
     },
     {
+     "proposer": "ROG",
      "votes": [
       "JESSICA",
       "ELENA",
       "ROG"
      ],
-     "state": "REJECTED",
-     "proposer": "ROG",
      "team": [
       "JESSICA",
       "ROG",
       "KATE",
       "ELENA"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -126,11 +169,11 @@
       "CAROLINA"
      ],
      "proposer": "JESSICA",
-     "state": "REJECTED",
      "votes": [
       "JESSICA",
       "KATE"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -140,83 +183,66 @@
       "ELENA",
       "KATE"
      ],
+     "state": "APPROVED",
      "team": [
       "KATE",
       "ELENA",
       "CAROLINA",
       "ROG"
      ],
-     "state": "APPROVED",
      "proposer": "KATE"
     }
-   ],
-   "numFails": 1,
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "KATE",
-    "ELENA",
-    "CAROLINA",
-    "ROG"
-   ],
-   "teamSize": 4
+   ]
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
-   "team": [
-    "JESSICA",
-    "KATE",
-    "ELENA"
-   ],
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "CAROLINA",
-     "votes": [],
      "team": [
       "CAROLINA",
       "ELENA",
       "LILIA"
-     ]
-    },
-    {
-     "team": [
-      "ELENA",
-      "ROG",
-      "JESSICA"
      ],
-     "votes": [
-      "ELENA",
-      "JESSICA"
-     ],
-     "proposer": "ELENA",
+     "votes": [],
+     "proposer": "CAROLINA",
      "state": "REJECTED"
     },
     {
+     "votes": [
+      "ELENA",
+      "JESSICA"
+     ],
+     "state": "REJECTED",
+     "team": [
+      "ELENA",
+      "ROG",
+      "JESSICA"
+     ],
+     "proposer": "ELENA"
+    },
+    {
      "state": "REJECTED",
      "team": [
       "KATE",
       "LILIA",
       "JESSICA"
      ],
+     "proposer": "LILIA",
      "votes": [
       "LILIA",
       "ROG"
-     ],
-     "proposer": "LILIA"
+     ]
     },
     {
      "votes": [
       "ROG",
       "LILIA"
      ],
+     "state": "REJECTED",
      "team": [
       "KATE",
       "ROG",
       "LILIA"
      ],
-     "state": "REJECTED",
      "proposer": "ROG"
     },
     {
@@ -236,81 +262,55 @@
      "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "team": [
+    "JESSICA",
+    "KATE",
+    "ELENA"
+   ],
    "state": "FAIL",
-   "numFails": 1
+   "teamSize": 3
   },
   {
-   "proposals": [],
-   "failsRequired": 1,
    "state": "PENDING",
    "teamSize": 4,
-   "team": []
+   "proposals": [],
+   "team": [],
+   "failsRequired": 1
   }
  ],
- "outcome": {
-  "roles": [
-   {
-    "name": "JESSICA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "ELENA"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "CAROLINA"
-   },
-   {
-    "assassin": false,
-    "name": "ROG",
-    "role": "MERLIN"
-   },
-   {
-    "name": "LILIA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "KATE",
-    "role": "PERCIVAL",
-    "assassin": false
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null,
-  "votes": [
-   {
-    "LILIA": true,
-    "ELENA": true
-   },
-   {
-    "ELENA": false,
-    "LILIA": true,
-    "JESSICA": true
-   },
-   {
-    "ROG": true,
-    "ELENA": true,
-    "CAROLINA": false,
-    "KATE": true
-   },
-   {
-    "ELENA": false,
-    "KATE": true,
-    "JESSICA": true
-   }
-  ],
-  "state": "EVIL_WIN"
+ "timeFinished": {
+  "_seconds": 1598228682,
+  "_nanoseconds": 950000000
  },
+ "players": [
+  {
+   "name": "JESSICA",
+   "uid": "RFRPsOFYaeXexViSnJHfHfICb092"
+  },
+  {
+   "name": "KATE",
+   "uid": "h38Gd0ACYddHCD2BBzOngni9Hj23"
+  },
+  {
+   "uid": "VP22jNvaBOY2gfhVpKsowje0PNS2",
+   "name": "CAROLINA"
+  },
+  {
+   "uid": "G9FNzXQeQ2TIoLBxGec5BgJ2aMU2",
+   "name": "ELENA"
+  },
+  {
+   "name": "LILIA",
+   "uid": "2HTwvjaixbRfm2H1Q7OCREU1If13"
+  },
+  {
+   "name": "ROG",
+   "uid": "NTphEPVqMnOYSDNPFPITAflk8vo2"
+  }
+ ],
  "options": {
   "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1598226850,
-  "_nanoseconds": 564000000
  }
 }

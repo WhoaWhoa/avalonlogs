@@ -1,138 +1,16 @@
 {
- "players": [
-  {
-   "name": "JAMIE",
-   "uid": "8h89JvYaqwhoPYR1OpsjEbFnLZd2"
-  },
-  {
-   "name": "MARIO",
-   "uid": "ID9co7IaJySfULupRbjVWUPVj7u2"
-  },
-  {
-   "uid": "a3kElbJsujO0kxVwXMmlG0u29eX2",
-   "name": "MEOW"
-  },
-  {
-   "name": "NICOLE",
-   "uid": "1xKCkPuDVbeVh9loGYClbCQlG0l1"
-  },
-  {
-   "name": "NEIL",
-   "uid": "nuBizBAt62aXFDtYyTcK0p691Ru2"
-  },
-  {
-   "name": "RUCHI",
-   "uid": "7gfwjAMzLMY0CKEdEYEf6aH7cWp2"
-  },
-  {
-   "uid": "MdHLlJYI2meB6sAVv8fs81R9PZH3",
-   "name": "FRYGUY"
-  },
-  {
-   "name": "BADASIAN",
-   "uid": "ur7ktOIkAJXY672oWqSW8ARDzwJ3"
-  },
-  {
-   "uid": "jMIpjYCtUQcV7JyKx9utV5cuY6A3",
-   "name": "GUPTA"
-  }
- ],
- "outcome": {
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "name": "NICOLE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "NEIL",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "FRYGUY",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "GUPTA",
-    "role": "MERLIN"
-   },
-   {
-    "name": "RUCHI",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "MEOW",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "MARIO",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "name": "JAMIE",
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "BADASIAN",
-    "assassin": false
-   }
-  ],
-  "assassinated": "BADASIAN",
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "MARIO": false,
-    "NICOLE": true,
-    "MEOW": true
-   },
-   {
-    "RUCHI": true,
-    "JAMIE": false,
-    "NEIL": true,
-    "MEOW": true
-   },
-   {
-    "GUPTA": true,
-    "NEIL": true,
-    "FRYGUY": true,
-    "BADASIAN": true
-   },
-   {
-    "NEIL": true,
-    "FRYGUY": true,
-    "BADASIAN": true,
-    "GUPTA": true,
-    "RUCHI": true
-   },
-   {
-    "NEIL": true,
-    "GUPTA": true,
-    "BADASIAN": true,
-    "FRYGUY": true,
-    "RUCHI": true
-   }
-  ]
- },
  "missions": [
   {
-   "teamSize": 3,
    "team": [
     "MARIO",
     "MEOW",
     "NICOLE"
    ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "MEOW",
      "votes": [
       "MEOW",
       "NEIL",
@@ -142,65 +20,51 @@
       "NICOLE",
       "FRYGUY"
      ],
+     "proposer": "MEOW",
+     "state": "APPROVED",
      "team": [
       "MARIO",
       "MEOW",
       "NICOLE"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1
+   "numFails": 1
   },
   {
-   "state": "FAIL",
-   "team": [
-    "NEIL",
-    "RUCHI",
-    "JAMIE",
-    "MEOW"
-   ],
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "NICOLE",
      "votes": [
       "GUPTA"
      ],
+     "proposer": "NICOLE",
      "team": [
       "JAMIE",
       "NEIL",
       "NICOLE",
       "GUPTA"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "proposer": "NEIL",
-     "votes": [
-      "NEIL",
-      "GUPTA",
-      "NICOLE",
-      "RUCHI"
-     ],
      "team": [
       "NEIL",
       "RUCHI",
       "FRYGUY",
       "BADASIAN"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "NEIL",
+      "GUPTA",
+      "NICOLE",
+      "RUCHI"
+     ],
+     "proposer": "NEIL"
     },
     {
      "state": "APPROVED",
-     "team": [
-      "NEIL",
-      "RUCHI",
-      "JAMIE",
-      "MEOW"
-     ],
-     "proposer": "RUCHI",
      "votes": [
       "RUCHI",
       "MEOW",
@@ -208,17 +72,44 @@
       "MARIO",
       "NEIL",
       "JAMIE"
-     ]
+     ],
+     "team": [
+      "NEIL",
+      "RUCHI",
+      "JAMIE",
+      "MEOW"
+     ],
+     "proposer": "RUCHI"
     }
    ],
    "failsRequired": 1,
-   "numFails": 1,
+   "state": "FAIL",
+   "team": [
+    "NEIL",
+    "RUCHI",
+    "JAMIE",
+    "MEOW"
+   ],
    "teamSize": 4
   },
   {
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "NEIL",
+    "FRYGUY",
+    "BADASIAN",
+    "GUPTA"
+   ],
    "teamSize": 4,
+   "numFails": 0,
    "proposals": [
     {
+     "votes": [
+      "NEIL",
+      "GUPTA",
+      "FRYGUY"
+     ],
      "proposer": "FRYGUY",
      "state": "REJECTED",
      "team": [
@@ -226,11 +117,6 @@
       "BADASIAN",
       "NEIL",
       "GUPTA"
-     ],
-     "votes": [
-      "NEIL",
-      "GUPTA",
-      "FRYGUY"
      ]
     },
     {
@@ -252,19 +138,11 @@
      "state": "APPROVED",
      "proposer": "BADASIAN"
     }
-   ],
-   "numFails": 0,
-   "failsRequired": 1,
-   "team": [
-    "NEIL",
-    "FRYGUY",
-    "BADASIAN",
-    "GUPTA"
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
    "failsRequired": 2,
+   "numFails": 0,
    "team": [
     "NEIL",
     "FRYGUY",
@@ -272,10 +150,9 @@
     "GUPTA",
     "RUCHI"
    ],
+   "teamSize": 5,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "GUPTA",
      "votes": [
       "MEOW",
       "BADASIAN",
@@ -293,23 +170,19 @@
       "BADASIAN",
       "GUPTA",
       "RUCHI"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "GUPTA"
     }
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "teamSize": 5
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
    "state": "SUCCESS",
-   "teamSize": 5,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "JAMIE"
-     ],
+     "proposer": "JAMIE",
      "team": [
       "JAMIE",
       "NEIL",
@@ -317,11 +190,13 @@
       "FRYGUY",
       "BADASIAN"
      ],
-     "proposer": "JAMIE"
+     "votes": [
+      "JAMIE"
+     ],
+     "state": "REJECTED"
     },
     {
      "state": "REJECTED",
-     "proposer": "MARIO",
      "team": [
       "MARIO",
       "FRYGUY",
@@ -329,6 +204,7 @@
       "GUPTA",
       "NEIL"
      ],
+     "proposer": "MARIO",
      "votes": [
       "MARIO"
      ]
@@ -343,36 +219,160 @@
       "RUCHI",
       "BADASIAN"
      ],
-     "proposer": "MEOW",
-     "state": "APPROVED",
      "team": [
       "NEIL",
       "RUCHI",
       "FRYGUY",
       "BADASIAN",
       "GUPTA"
-     ]
+     ],
+     "proposer": "MEOW",
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
+   "teamSize": 5,
    "team": [
     "NEIL",
     "RUCHI",
     "FRYGUY",
     "BADASIAN",
     "GUPTA"
-   ],
-   "numFails": 0
+   ]
   }
  ],
- "options": {
-  "inGameLog": false
+ "timeFinished": {
+  "_seconds": 1604898421,
+  "_nanoseconds": 242000000
  },
  "timeCreated": {
   "_seconds": 1604895707,
   "_nanoseconds": 476000000
  },
- "timeFinished": {
-  "_seconds": 1604898421,
-  "_nanoseconds": 242000000
- }
+ "outcome": {
+  "state": "GOOD_WIN",
+  "assassinated": "BADASIAN",
+  "votes": [
+   {
+    "MEOW": true,
+    "MARIO": false,
+    "NICOLE": true
+   },
+   {
+    "NEIL": true,
+    "JAMIE": false,
+    "MEOW": true,
+    "RUCHI": true
+   },
+   {
+    "BADASIAN": true,
+    "GUPTA": true,
+    "NEIL": true,
+    "FRYGUY": true
+   },
+   {
+    "BADASIAN": true,
+    "NEIL": true,
+    "FRYGUY": true,
+    "GUPTA": true,
+    "RUCHI": true
+   },
+   {
+    "GUPTA": true,
+    "RUCHI": true,
+    "NEIL": true,
+    "FRYGUY": true,
+    "BADASIAN": true
+   }
+  ],
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "name": "NICOLE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "NEIL",
+    "assassin": false
+   },
+   {
+    "name": "FRYGUY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "GUPTA",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "RUCHI"
+   },
+   {
+    "name": "MEOW",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "MARIO"
+   },
+   {
+    "name": "JAMIE",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "BADASIAN",
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "players": [
+  {
+   "name": "JAMIE",
+   "uid": "8h89JvYaqwhoPYR1OpsjEbFnLZd2"
+  },
+  {
+   "uid": "ID9co7IaJySfULupRbjVWUPVj7u2",
+   "name": "MARIO"
+  },
+  {
+   "name": "MEOW",
+   "uid": "a3kElbJsujO0kxVwXMmlG0u29eX2"
+  },
+  {
+   "name": "NICOLE",
+   "uid": "1xKCkPuDVbeVh9loGYClbCQlG0l1"
+  },
+  {
+   "uid": "nuBizBAt62aXFDtYyTcK0p691Ru2",
+   "name": "NEIL"
+  },
+  {
+   "uid": "7gfwjAMzLMY0CKEdEYEf6aH7cWp2",
+   "name": "RUCHI"
+  },
+  {
+   "uid": "MdHLlJYI2meB6sAVv8fs81R9PZH3",
+   "name": "FRYGUY"
+  },
+  {
+   "name": "BADASIAN",
+   "uid": "ur7ktOIkAJXY672oWqSW8ARDzwJ3"
+  },
+  {
+   "uid": "jMIpjYCtUQcV7JyKx9utV5cuY6A3",
+   "name": "GUPTA"
+  }
+ ]
 }

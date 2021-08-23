@@ -1,9 +1,53 @@
 {
+ "timeFinished": {
+  "_seconds": 1602291586,
+  "_nanoseconds": 413000000
+ },
+ "players": [
+  {
+   "name": "ZACH",
+   "uid": "bdkFhJxxnybw2WeSKWdOCTPs4Wn1"
+  },
+  {
+   "uid": "QltbjbGhK2NBqZvz5a9Aq2qPvM92",
+   "name": "BEN"
+  },
+  {
+   "uid": "pMRkIjejxmcNQg3z300ii46iAnO2",
+   "name": "MARK"
+  },
+  {
+   "name": "LECH",
+   "uid": "gHFxZczShQPl4Zl4DbfyT6YZBG73"
+  },
+  {
+   "uid": "9UwdrvGHKSa5CCjSSU6OonODapD3",
+   "name": "NEEPA"
+  },
+  {
+   "name": "CARO",
+   "uid": "eYgoeH31wZQ99promuVPX9MHgGt2"
+  },
+  {
+   "name": "DIANA",
+   "uid": "TdSLnZrv3McycHzbEgOflGZXlsw1"
+  },
+  {
+   "uid": "0ldFfo4cJHNjknOqnNurFwkbJA92",
+   "name": "EMILY"
+  },
+  {
+   "uid": "GkVkG1mo3UPChwqfVG4KeAXAkwl1",
+   "name": "SEAN"
+  }
+ ],
  "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
   "roles": [
    {
-    "role": "LOYAL FOLLOWER",
     "assassin": false,
+    "role": "LOYAL FOLLOWER",
     "name": "BEN"
    },
    {
@@ -17,24 +61,24 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "ZACH",
     "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "ZACH"
    },
    {
-    "assassin": false,
     "name": "SEAN",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "NEEPA"
    },
    {
-    "name": "LECH",
     "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "LECH"
    },
    {
     "role": "EVIL MINION",
@@ -43,10 +87,11 @@
    },
    {
     "role": "MERLIN",
-    "assassin": false,
-    "name": "CARO"
+    "name": "CARO",
+    "assassin": false
    }
   ],
+  "assassinated": null,
   "votes": [
    {
     "CARO": true,
@@ -54,35 +99,35 @@
     "NEEPA": true
    },
    {
-    "NEEPA": true,
+    "BEN": true,
     "LECH": false,
+    "NEEPA": true,
+    "DIANA": true
+   },
+   {
+    "SEAN": true,
+    "ZACH": false,
+    "EMILY": true,
+    "MARK": true
+   },
+   {
+    "EMILY": true,
+    "SEAN": true,
+    "MARK": true,
     "BEN": true,
     "DIANA": true
    },
    {
-    "MARK": true,
-    "SEAN": true,
-    "EMILY": true,
-    "ZACH": false
-   },
-   {
-    "SEAN": true,
-    "MARK": true,
-    "EMILY": true,
-    "DIANA": true,
-    "BEN": true
-   },
-   {
-    "EMILY": true,
     "MARK": false,
+    "SEAN": true,
     "DIANA": true,
-    "BEN": true,
-    "SEAN": true
+    "EMILY": true,
+    "BEN": true
    }
-  ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null
+  ]
+ },
+ "options": {
+  "inGameLog": false
  },
  "timeCreated": {
   "_seconds": 1602289483,
@@ -90,8 +135,15 @@
  },
  "missions": [
   {
+   "team": [
+    "CARO",
+    "LECH",
+    "NEEPA"
+   ],
    "failsRequired": 1,
+   "teamSize": 3,
    "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -112,28 +164,11 @@
       "NEEPA"
      ]
     }
-   ],
-   "numFails": 0,
-   "team": [
-    "CARO",
-    "LECH",
-    "NEEPA"
-   ],
-   "teamSize": 3
+   ]
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "BEN",
-    "DIANA",
-    "LECH",
-    "NEEPA"
-   ],
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "ZACH",
       "MARK",
@@ -150,12 +185,31 @@
       "DIANA",
       "LECH",
       "NEEPA"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
+   "team": [
+    "BEN",
+    "DIANA",
+    "LECH",
+    "NEEPA"
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
+   "state": "FAIL",
    "numFails": 1
   },
   {
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 4,
+   "team": [
+    "MARK",
+    "EMILY",
+    "SEAN",
+    "ZACH"
+   ],
    "proposals": [
     {
      "team": [
@@ -164,17 +218,15 @@
       "EMILY",
       "LECH"
      ],
-     "proposer": "EMILY",
+     "state": "REJECTED",
      "votes": [
       "EMILY",
       "LECH",
       "DIANA"
      ],
-     "state": "REJECTED"
+     "proposer": "EMILY"
     },
     {
-     "state": "APPROVED",
-     "proposer": "SEAN",
      "votes": [
       "ZACH",
       "NEEPA",
@@ -184,28 +236,22 @@
       "EMILY",
       "BEN"
      ],
+     "proposer": "SEAN",
      "team": [
       "MARK",
       "EMILY",
       "SEAN",
       "ZACH"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "numFails": 1,
-   "state": "FAIL",
-   "team": [
-    "MARK",
-    "EMILY",
-    "SEAN",
-    "ZACH"
-   ],
-   "failsRequired": 1,
-   "teamSize": 4
+   "failsRequired": 1
   },
   {
-   "numFails": 0,
    "teamSize": 5,
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "BEN",
     "EMILY",
@@ -213,9 +259,9 @@
     "MARK",
     "SEAN"
    ],
+   "failsRequired": 2,
    "proposals": [
     {
-     "proposer": "ZACH",
      "team": [
       "NEEPA",
       "SEAN",
@@ -229,9 +275,19 @@
       "SEAN",
       "LECH",
       "MARK"
-     ]
+     ],
+     "proposer": "ZACH"
     },
     {
+     "team": [
+      "BEN",
+      "EMILY",
+      "DIANA",
+      "MARK",
+      "SEAN"
+     ],
+     "proposer": "BEN",
+     "state": "APPROVED",
      "votes": [
       "NEEPA",
       "SEAN",
@@ -240,27 +296,31 @@
       "BEN",
       "DIANA",
       "LECH"
-     ],
-     "state": "APPROVED",
+     ]
+    }
+   ]
+  },
+  {
+   "team": [
+    "BEN",
+    "EMILY",
+    "DIANA",
+    "SEAN",
+    "MARK"
+   ],
+   "teamSize": 5,
+   "failsRequired": 1,
+   "numFails": 1,
+   "proposals": [
+    {
      "team": [
       "BEN",
       "EMILY",
       "DIANA",
-      "MARK",
-      "SEAN"
+      "SEAN",
+      "MARK"
      ],
-     "proposer": "BEN"
-    }
-   ],
-   "failsRequired": 2,
-   "state": "SUCCESS"
-  },
-  {
-   "failsRequired": 1,
-   "state": "FAIL",
-   "proposals": [
-    {
-     "proposer": "MARK",
+     "state": "APPROVED",
      "votes": [
       "SEAN",
       "ZACH",
@@ -271,70 +331,10 @@
       "LECH",
       "DIANA"
      ],
-     "team": [
-      "BEN",
-      "EMILY",
-      "DIANA",
-      "SEAN",
-      "MARK"
-     ],
-     "state": "APPROVED"
+     "proposer": "MARK"
     }
    ],
-   "team": [
-    "BEN",
-    "EMILY",
-    "DIANA",
-    "SEAN",
-    "MARK"
-   ],
-   "numFails": 1,
-   "teamSize": 5
-  }
- ],
- "timeFinished": {
-  "_seconds": 1602291586,
-  "_nanoseconds": 413000000
- },
- "options": {
-  "inGameLog": false
- },
- "players": [
-  {
-   "name": "ZACH",
-   "uid": "bdkFhJxxnybw2WeSKWdOCTPs4Wn1"
-  },
-  {
-   "name": "BEN",
-   "uid": "QltbjbGhK2NBqZvz5a9Aq2qPvM92"
-  },
-  {
-   "uid": "pMRkIjejxmcNQg3z300ii46iAnO2",
-   "name": "MARK"
-  },
-  {
-   "name": "LECH",
-   "uid": "gHFxZczShQPl4Zl4DbfyT6YZBG73"
-  },
-  {
-   "uid": "9UwdrvGHKSa5CCjSSU6OonODapD3",
-   "name": "NEEPA"
-  },
-  {
-   "name": "CARO",
-   "uid": "eYgoeH31wZQ99promuVPX9MHgGt2"
-  },
-  {
-   "uid": "TdSLnZrv3McycHzbEgOflGZXlsw1",
-   "name": "DIANA"
-  },
-  {
-   "name": "EMILY",
-   "uid": "0ldFfo4cJHNjknOqnNurFwkbJA92"
-  },
-  {
-   "uid": "GkVkG1mo3UPChwqfVG4KeAXAkwl1",
-   "name": "SEAN"
+   "state": "FAIL"
   }
  ]
 }

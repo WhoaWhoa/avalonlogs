@@ -1,15 +1,41 @@
 {
+ "players": [
+  {
+   "name": "JORDAN",
+   "uid": "o3yW7kargeWDgleWyLQmHVEmkRu1"
+  },
+  {
+   "name": "TIM",
+   "uid": "LFhha6pI3PUI6Mv1pRL8ZfLSITn2"
+  },
+  {
+   "uid": "5nmm9d2MvjOPwRZNPyg2rbOcZOi2",
+   "name": "BLAYDE"
+  },
+  {
+   "uid": "CAPMlPcCM8hjY7JGph5c3gsqvVF3",
+   "name": "DRAGONBONE"
+  },
+  {
+   "uid": "wGdp2DYNfeW5AJPz5O7XKsQkloE2",
+   "name": "ERIC"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1585017762,
+  "_nanoseconds": 259105000
+ },
  "outcome": {
-  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
   "votes": [
    {
-    "ERIC": true,
-    "JORDAN": true
+    "JORDAN": true,
+    "ERIC": true
    },
    {
-    "JORDAN": true,
+    "ERIC": false,
     "DRAGONBONE": false,
-    "ERIC": false
+    "JORDAN": true
    },
    {
     "JORDAN": true,
@@ -21,27 +47,28 @@
     "BLAYDE": true
    },
    {
-    "BLAYDE": true,
     "TIM": true,
+    "BLAYDE": true,
     "JORDAN": true
    }
   ],
-  "message": "Merlin assassinated",
+  "assassinated": "TIM",
+  "state": "EVIL_WIN",
   "roles": [
    {
-    "name": "DRAGONBONE",
     "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "JORDAN",
     "assassin": false,
-    "role": "PERCIVAL"
+    "name": "DRAGONBONE"
    },
    {
-    "name": "ERIC",
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "JORDAN"
+   },
+   {
     "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "ERIC"
    },
    {
     "name": "TIM",
@@ -53,54 +80,147 @@
     "name": "BLAYDE",
     "assassin": false
    }
-  ],
-  "assassinated": "TIM"
+  ]
  },
- "timeFinished": {
-  "_seconds": 1585017762,
-  "_nanoseconds": 259105000
+ "timeCreated": {
+  "_seconds": 1585016889,
+  "_nanoseconds": 566000000
  },
  "missions": [
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 2,
    "team": [
     "ERIC",
     "JORDAN"
    ],
-   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
      "proposer": "ERIC",
+     "team": [
+      "ERIC",
+      "JORDAN"
+     ],
      "votes": [
       "ERIC",
       "DRAGONBONE",
       "JORDAN"
+     ]
+    }
+   ],
+   "teamSize": 2,
+   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1
+  },
+  {
+   "state": "FAIL",
+   "teamSize": 3,
+   "numFails": 2,
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "team": [
+      "JORDAN",
+      "DRAGONBONE",
+      "ERIC"
+     ],
+     "proposer": "JORDAN",
+     "state": "APPROVED",
+     "votes": [
+      "DRAGONBONE",
+      "JORDAN",
+      "TIM",
+      "BLAYDE"
+     ]
+    }
+   ],
+   "team": [
+    "JORDAN",
+    "DRAGONBONE",
+    "ERIC"
+   ]
+  },
+  {
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "JORDAN",
+    "TIM"
+   ],
+   "numFails": 0,
+   "teamSize": 2,
+   "proposals": [
+    {
+     "votes": [
+      "ERIC",
+      "TIM",
+      "JORDAN"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "JORDAN",
+      "TIM"
+     ],
+     "proposer": "TIM"
+    }
+   ]
+  },
+  {
+   "teamSize": 3,
+   "failsRequired": 1,
+   "team": [
+    "ERIC",
+    "TIM",
+    "BLAYDE"
+   ],
+   "numFails": 1,
+   "state": "FAIL",
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "votes": [
+      "DRAGONBONE"
+     ],
+     "proposer": "BLAYDE",
+     "team": [
+      "JORDAN",
+      "DRAGONBONE",
+      "ERIC"
+     ]
+    },
+    {
+     "votes": [
+      "DRAGONBONE"
      ],
      "team": [
-      "ERIC",
+      "BLAYDE",
+      "DRAGONBONE",
       "JORDAN"
+     ],
+     "state": "REJECTED",
+     "proposer": "DRAGONBONE"
+    },
+    {
+     "state": "APPROVED",
+     "votes": [
+      "DRAGONBONE",
+      "ERIC",
+      "BLAYDE"
+     ],
+     "proposer": "ERIC",
+     "team": [
+      "ERIC",
+      "TIM",
+      "BLAYDE"
      ]
     }
    ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 2,
-   "state": "FAIL",
-   "team": [
-    "JORDAN",
-    "DRAGONBONE",
-    "ERIC"
-   ],
    "proposals": [
     {
      "state": "APPROVED",
      "votes": [
-      "DRAGONBONE",
       "JORDAN",
       "TIM",
       "BLAYDE"
@@ -108,140 +228,20 @@
      "proposer": "JORDAN",
      "team": [
       "JORDAN",
-      "DRAGONBONE",
-      "ERIC"
-     ]
-    }
-   ]
-  },
-  {
-   "team": [
-    "JORDAN",
-    "TIM"
-   ],
-   "teamSize": 2,
-   "numFails": 0,
-   "state": "SUCCESS",
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "JORDAN",
-      "TIM"
-     ],
-     "proposer": "TIM",
-     "votes": [
-      "ERIC",
-      "TIM",
-      "JORDAN"
-     ]
-    }
-   ],
-   "failsRequired": 1
-  },
-  {
-   "numFails": 1,
-   "teamSize": 3,
-   "proposals": [
-    {
-     "team": [
-      "JORDAN",
-      "DRAGONBONE",
-      "ERIC"
-     ],
-     "votes": [
-      "DRAGONBONE"
-     ],
-     "state": "REJECTED",
-     "proposer": "BLAYDE"
-    },
-    {
-     "team": [
-      "BLAYDE",
-      "DRAGONBONE",
-      "JORDAN"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "DRAGONBONE"
-     ],
-     "proposer": "DRAGONBONE"
-    },
-    {
-     "proposer": "ERIC",
-     "state": "APPROVED",
-     "votes": [
-      "DRAGONBONE",
-      "ERIC",
-      "BLAYDE"
-     ],
-     "team": [
-      "ERIC",
       "TIM",
       "BLAYDE"
      ]
     }
    ],
-   "team": [
-    "ERIC",
-    "TIM",
-    "BLAYDE"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1
-  },
-  {
    "state": "SUCCESS",
    "teamSize": 3,
-   "team": [
-    "JORDAN",
-    "TIM",
-    "BLAYDE"
-   ],
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "JORDAN",
-      "TIM",
-      "BLAYDE"
-     ],
-     "team": [
-      "JORDAN",
-      "TIM",
-      "BLAYDE"
-     ],
-     "proposer": "JORDAN"
-    }
-   ],
    "failsRequired": 1,
+   "team": [
+    "JORDAN",
+    "TIM",
+    "BLAYDE"
+   ],
    "numFails": 0
   }
- ],
- "players": [
-  {
-   "uid": "o3yW7kargeWDgleWyLQmHVEmkRu1",
-   "name": "JORDAN"
-  },
-  {
-   "name": "TIM",
-   "uid": "LFhha6pI3PUI6Mv1pRL8ZfLSITn2"
-  },
-  {
-   "name": "BLAYDE",
-   "uid": "5nmm9d2MvjOPwRZNPyg2rbOcZOi2"
-  },
-  {
-   "uid": "CAPMlPcCM8hjY7JGph5c3gsqvVF3",
-   "name": "DRAGONBONE"
-  },
-  {
-   "name": "ERIC",
-   "uid": "wGdp2DYNfeW5AJPz5O7XKsQkloE2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1585016889,
-  "_nanoseconds": 566000000
- }
+ ]
 }

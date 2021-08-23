@@ -3,32 +3,6 @@
   "_seconds": 1588551447,
   "_nanoseconds": 692000000
  },
- "players": [
-  {
-   "name": "RAPHAEL",
-   "uid": "w67mEdN2WkVUzkqVtu3fg6H9YkD3"
-  },
-  {
-   "uid": "9c2gFA1PJAguL0nQJJpi5igBRAa2",
-   "name": "PING"
-  },
-  {
-   "name": "ALLEN",
-   "uid": "Ly0C3GDEqDM5kdWBqWS50N7Dmrz2"
-  },
-  {
-   "uid": "Cp4S40RvYxQd709VgagmXkgAVeq2",
-   "name": "MANDO"
-  },
-  {
-   "name": "REED",
-   "uid": "vuOgUwYmHig2oVfUKEu7NiLw0Cf2"
-  },
-  {
-   "name": "MATTROMO",
-   "uid": "FFL26YB1d3erL9RGS325Zr9lgOg2"
-  }
- ],
  "outcome": {
   "assassinated": null,
   "roles": [
@@ -39,44 +13,45 @@
    },
    {
     "name": "RAPHAEL",
-    "role": "MERLIN",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "MANDO",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
    },
    {
-    "assassin": false,
-    "name": "MANDO",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
+    "name": "MATTROMO",
     "role": "MORGANA",
-    "name": "MATTROMO"
+    "assassin": false
    },
    {
-    "name": "PING",
+    "role": "PERCIVAL",
     "assassin": false,
-    "role": "PERCIVAL"
+    "name": "PING"
    },
    {
-    "assassin": true,
     "name": "ALLEN",
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    }
   ],
   "state": "EVIL_WIN",
+  "message": "Five team proposals in a row rejected",
   "votes": [
    {
     "RAPHAEL": true,
     "REED": true
    },
    {
-    "ALLEN": true,
     "REED": true,
-    "RAPHAEL": true
+    "RAPHAEL": true,
+    "ALLEN": true
    },
    {
-    "MANDO": true,
     "REED": true,
+    "MANDO": true,
     "RAPHAEL": true,
     "ALLEN": false
    },
@@ -85,13 +60,47 @@
     "REED": true,
     "RAPHAEL": true
    }
-  ],
-  "message": "Five team proposals in a row rejected"
+  ]
  },
+ "timeCreated": {
+  "_seconds": 1588550464,
+  "_nanoseconds": 635000000
+ },
+ "players": [
+  {
+   "name": "RAPHAEL",
+   "uid": "w67mEdN2WkVUzkqVtu3fg6H9YkD3"
+  },
+  {
+   "name": "PING",
+   "uid": "9c2gFA1PJAguL0nQJJpi5igBRAa2"
+  },
+  {
+   "name": "ALLEN",
+   "uid": "Ly0C3GDEqDM5kdWBqWS50N7Dmrz2"
+  },
+  {
+   "name": "MANDO",
+   "uid": "Cp4S40RvYxQd709VgagmXkgAVeq2"
+  },
+  {
+   "uid": "vuOgUwYmHig2oVfUKEu7NiLw0Cf2",
+   "name": "REED"
+  },
+  {
+   "uid": "FFL26YB1d3erL9RGS325Zr9lgOg2",
+   "name": "MATTROMO"
+  }
+ ],
  "missions": [
   {
    "proposals": [
     {
+     "team": [
+      "REED",
+      "RAPHAEL"
+     ],
+     "proposer": "REED",
      "votes": [
       "PING",
       "ALLEN",
@@ -99,24 +108,26 @@
       "RAPHAEL",
       "MANDO"
      ],
-     "proposer": "REED",
-     "state": "APPROVED",
-     "team": [
-      "REED",
-      "RAPHAEL"
-     ]
+     "state": "APPROVED"
     }
    ],
    "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "REED",
     "RAPHAEL"
    ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 2
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "ALLEN",
+    "RAPHAEL",
+    "REED"
+   ],
    "proposals": [
     {
      "team": [
@@ -133,33 +144,34 @@
      "proposer": "MATTROMO"
     },
     {
-     "state": "REJECTED",
-     "votes": [
+     "team": [
       "RAPHAEL",
       "PING",
       "ALLEN"
      ],
      "proposer": "RAPHAEL",
-     "team": [
+     "state": "REJECTED",
+     "votes": [
       "RAPHAEL",
       "PING",
       "ALLEN"
      ]
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "PING",
-      "REED"
-     ],
      "team": [
       "PING",
       "RAPHAEL",
       "REED"
      ],
-     "proposer": "PING"
+     "proposer": "PING",
+     "votes": [
+      "PING",
+      "REED"
+     ],
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "proposer": "ALLEN",
      "team": [
       "ALLEN",
@@ -172,25 +184,25 @@
       "PING",
       "ALLEN",
       "REED"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "team": [
-    "ALLEN",
-    "RAPHAEL",
-    "REED"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
    "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
+   "team": [
+    "RAPHAEL",
+    "ALLEN",
+    "MANDO",
+    "REED"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "MANDO",
      "votes": [
       "PING",
       "ALLEN",
@@ -198,37 +210,21 @@
       "RAPHAEL",
       "MANDO"
      ],
-     "state": "APPROVED",
      "team": [
       "RAPHAEL",
       "ALLEN",
       "MANDO",
       "REED"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "MANDO"
     }
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "team": [
-    "RAPHAEL",
-    "ALLEN",
-    "MANDO",
-    "REED"
-   ],
-   "teamSize": 4
+   ]
   },
   {
-   "failsRequired": 1,
-   "numFails": 1,
-   "state": "FAIL",
-   "team": [
-    "REED",
-    "ALLEN",
-    "RAPHAEL"
-   ],
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "MATTROMO",
       "PING",
@@ -240,41 +236,53 @@
       "ALLEN",
       "RAPHAEL"
      ],
+     "state": "APPROVED",
      "proposer": "REED"
     }
    ],
-   "teamSize": 3
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
+   "team": [
+    "REED",
+    "ALLEN",
+    "RAPHAEL"
+   ]
   },
   {
+   "state": "PENDING",
+   "team": [],
+   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "MATTROMO",
+     "state": "REJECTED",
      "votes": [
       "RAPHAEL",
       "MATTROMO",
       "ALLEN"
      ],
-     "state": "REJECTED",
      "team": [
       "RAPHAEL",
       "ALLEN",
       "MATTROMO",
       "MANDO"
-     ],
-     "proposer": "MATTROMO"
+     ]
     },
     {
-     "proposer": "RAPHAEL",
-     "state": "REJECTED",
-     "votes": [
-      "RAPHAEL",
-      "MATTROMO",
-      "ALLEN"
-     ],
      "team": [
       "RAPHAEL",
       "ALLEN",
       "MANDO",
       "MATTROMO"
+     ],
+     "state": "REJECTED",
+     "proposer": "RAPHAEL",
+     "votes": [
+      "RAPHAEL",
+      "MATTROMO",
+      "ALLEN"
      ]
     },
     {
@@ -285,13 +293,12 @@
       "MANDO"
      ],
      "state": "REJECTED",
+     "proposer": "PING",
      "votes": [
       "PING"
-     ],
-     "proposer": "PING"
+     ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "RAPHAEL",
       "MATTROMO",
@@ -303,16 +310,17 @@
       "MANDO",
       "MATTROMO"
      ],
+     "state": "REJECTED",
      "proposer": "ALLEN"
     },
     {
      "proposer": "MANDO",
+     "state": "REJECTED",
      "votes": [
       "RAPHAEL",
       "MANDO",
       "MATTROMO"
      ],
-     "state": "REJECTED",
      "team": [
       "RAPHAEL",
       "ALLEN",
@@ -320,17 +328,9 @@
       "MATTROMO"
      ]
     }
-   ],
-   "team": [],
-   "state": "PENDING",
-   "teamSize": 4,
-   "failsRequired": 1
+   ]
   }
  ],
- "timeCreated": {
-  "_seconds": 1588550464,
-  "_nanoseconds": 635000000
- },
  "options": {
   "inGameLog": false
  }

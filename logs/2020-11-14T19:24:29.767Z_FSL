@@ -1,7 +1,67 @@
 {
+ "outcome": {
+  "roles": [
+   {
+    "assassin": false,
+    "name": "YOANN",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "FRED",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "REGIS"
+   },
+   {
+    "name": "THIERRY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "LAURA"
+   }
+  ],
+  "votes": [
+   {
+    "REGIS": true,
+    "YOANN": true
+   },
+   {
+    "REGIS": false,
+    "YOANN": true,
+    "THIERRY": true
+   },
+   {
+    "YOANN": true,
+    "LAURA": true
+   },
+   {
+    "LAURA": true,
+    "YOANN": true,
+    "THIERRY": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "message": "Three missions succeeded",
+  "assassinated": null
+ },
+ "timeFinished": {
+  "_seconds": 1605383401,
+  "_nanoseconds": 459000000
+ },
  "missions": [
   {
-   "teamSize": 2,
+   "team": [
+    "REGIS",
+    "YOANN"
+   ],
+   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -20,8 +80,8 @@
       "REGIS",
       "YOANN"
      ],
-     "state": "APPROVED",
      "proposer": "REGIS",
+     "state": "APPROVED",
      "votes": [
       "YOANN",
       "REGIS",
@@ -30,113 +90,102 @@
      ]
     }
    ],
-   "team": [
-    "REGIS",
-    "YOANN"
-   ],
    "state": "SUCCESS",
    "failsRequired": 1,
-   "numFails": 0
+   "teamSize": 2
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 1,
    "team": [
     "THIERRY",
     "REGIS",
     "YOANN"
    ],
-   "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "FRED",
      "team": [
       "FRED",
       "THIERRY",
       "LAURA"
      ],
-     "proposer": "FRED",
      "votes": [
       "FRED"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "REJECTED",
      "votes": [
       "YOANN",
       "LAURA"
      ],
-     "proposer": "YOANN",
-     "state": "REJECTED",
      "team": [
       "YOANN",
       "REGIS",
       "LAURA"
-     ]
+     ],
+     "proposer": "YOANN"
     },
     {
-     "votes": [
-      "YOANN",
-      "REGIS",
-      "THIERRY"
-     ],
-     "state": "APPROVED",
-     "proposer": "THIERRY",
      "team": [
       "THIERRY",
       "REGIS",
       "YOANN"
+     ],
+     "proposer": "THIERRY",
+     "state": "APPROVED",
+     "votes": [
+      "YOANN",
+      "REGIS",
+      "THIERRY"
      ]
     }
    ],
    "state": "FAIL"
   },
   {
-   "team": [
-    "LAURA",
-    "YOANN"
-   ],
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "LAURA",
      "team": [
       "LAURA",
       "YOANN"
      ],
-     "state": "APPROVED",
      "votes": [
       "LAURA",
       "YOANN",
       "THIERRY"
-     ],
-     "proposer": "LAURA"
+     ]
     }
    ],
+   "team": [
+    "LAURA",
+    "YOANN"
+   ],
+   "numFails": 0,
    "failsRequired": 1,
-   "teamSize": 2,
    "state": "SUCCESS",
-   "numFails": 0
+   "teamSize": 2
   },
   {
    "teamSize": 3,
-   "team": [
-    "YOANN",
-    "LAURA",
-    "THIERRY"
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "REGIS",
-     "votes": [
-      "FRED",
-      "REGIS"
-     ],
      "team": [
       "REGIS",
       "THIERRY",
       "LAURA"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "FRED",
+      "REGIS"
+     ],
+     "state": "REJECTED",
+     "proposer": "REGIS"
     },
     {
      "votes": [
@@ -147,8 +196,8 @@
       "LAURA",
       "REGIS"
      ],
-     "proposer": "FRED",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "FRED"
     },
     {
      "proposer": "YOANN",
@@ -166,16 +215,30 @@
      "state": "APPROVED"
     }
    ],
-   "numFails": 0
+   "team": [
+    "YOANN",
+    "LAURA",
+    "THIERRY"
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
    "state": "PENDING",
    "proposals": [],
-   "team": []
+   "team": [],
+   "failsRequired": 1,
+   "teamSize": 3
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1605381869,
+  "_nanoseconds": 767000000
+ },
  "players": [
   {
    "name": "LAURA",
@@ -190,75 +253,12 @@
    "uid": "ASDKVcFeXKZkO0eVxwAGwYf1yhF2"
   },
   {
-   "uid": "uUKRU93E8tdqmgxDZGpOMTn0Dfz2",
-   "name": "YOANN"
+   "name": "YOANN",
+   "uid": "uUKRU93E8tdqmgxDZGpOMTn0Dfz2"
   },
   {
    "name": "THIERRY",
    "uid": "WVzYmb9yuJa8pVhJ7ejeK8F9XnC2"
   }
- ],
- "timeFinished": {
-  "_seconds": 1605383401,
-  "_nanoseconds": 459000000
- },
- "timeCreated": {
-  "_seconds": 1605381869,
-  "_nanoseconds": 767000000
- },
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "assassinated": null,
-  "votes": [
-   {
-    "REGIS": true,
-    "YOANN": true
-   },
-   {
-    "REGIS": false,
-    "THIERRY": true,
-    "YOANN": true
-   },
-   {
-    "YOANN": true,
-    "LAURA": true
-   },
-   {
-    "THIERRY": true,
-    "YOANN": true,
-    "LAURA": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "name": "YOANN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "FRED",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "REGIS",
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "THIERRY"
-   },
-   {
-    "name": "LAURA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "message": "Three missions succeeded",
-  "state": "GOOD_WIN"
- }
+ ]
 }

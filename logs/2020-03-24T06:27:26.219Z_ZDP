@@ -3,57 +3,6 @@
   "_seconds": 1585031246,
   "_nanoseconds": 219000000
  },
- "outcome": {
-  "message": "Merlin assassinated",
-  "votes": [
-   {
-    "WILL": true,
-    "SHIRLEEN": true
-   },
-   {
-    "SHIRLEEN": true,
-    "WILL": true,
-    "ZDP": true
-   },
-   {
-    "SHIRLEEN": true,
-    "WILL": true
-   }
-  ],
-  "assassinated": "SHIRLEEN",
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "role": "MORGANA",
-    "name": "DEAN",
-    "assassin": false
-   },
-   {
-    "name": "WILL",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "SHIRLEEN",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "MASNUN",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "ZDP"
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1585031971,
-  "_nanoseconds": 986746000
- },
  "players": [
   {
    "name": "MASNUN",
@@ -64,47 +13,95 @@
    "uid": "WUubnvfHiVOt1A07p3ExmmCyiN23"
   },
   {
-   "name": "ZDP",
-   "uid": "ysdhPBeelfP1lSNsXQGe850b1F73"
+   "uid": "ysdhPBeelfP1lSNsXQGe850b1F73",
+   "name": "ZDP"
   },
   {
-   "name": "DEAN",
-   "uid": "7ed86Ppc0kT3kLBx7FzzTDYrOYY2"
+   "uid": "7ed86Ppc0kT3kLBx7FzzTDYrOYY2",
+   "name": "DEAN"
   },
   {
    "uid": "m4HYuAScKdT8X9LSy0g1LnAv0Je2",
    "name": "SHIRLEEN"
   }
  ],
+ "outcome": {
+  "votes": [
+   {
+    "WILL": true,
+    "SHIRLEEN": true
+   },
+   {
+    "SHIRLEEN": true,
+    "ZDP": true,
+    "WILL": true
+   },
+   {
+    "SHIRLEEN": true,
+    "WILL": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "DEAN",
+    "role": "MORGANA"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "WILL",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "SHIRLEEN"
+   },
+   {
+    "assassin": true,
+    "name": "MASNUN",
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "ZDP"
+   }
+  ],
+  "assassinated": "SHIRLEEN",
+  "state": "EVIL_WIN"
+ },
  "missions": [
   {
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "SHIRLEEN",
-     "team": [
-      "WILL",
-      "SHIRLEEN"
-     ],
      "votes": [
       "WILL",
       "SHIRLEEN",
       "ZDP"
-     ]
+     ],
+     "team": [
+      "WILL",
+      "SHIRLEEN"
+     ],
+     "proposer": "SHIRLEEN"
     }
    ],
-   "teamSize": 2,
-   "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1,
    "team": [
     "WILL",
     "SHIRLEEN"
-   ]
+   ],
+   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 2
   },
   {
-   "state": "SUCCESS",
    "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 3,
    "failsRequired": 1,
    "team": [
     "SHIRLEEN",
@@ -113,46 +110,47 @@
    ],
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "MASNUN",
+     "votes": [],
      "team": [
       "MASNUN",
       "ZDP",
       "WILL"
-     ],
-     "proposer": "MASNUN",
-     "votes": [],
-     "state": "REJECTED"
+     ]
     },
     {
-     "team": [
-      "DEAN",
-      "MASNUN",
-      "WILL"
-     ],
      "proposer": "WILL",
      "state": "REJECTED",
      "votes": [
       "WILL",
       "MASNUN"
+     ],
+     "team": [
+      "DEAN",
+      "MASNUN",
+      "WILL"
      ]
     },
     {
-     "state": "APPROVED",
-     "votes": [
-      "SHIRLEEN",
-      "ZDP",
-      "WILL"
-     ],
      "team": [
       "SHIRLEEN",
       "ZDP",
       "WILL"
      ],
-     "proposer": "ZDP"
+     "proposer": "ZDP",
+     "state": "APPROVED",
+     "votes": [
+      "SHIRLEEN",
+      "ZDP",
+      "WILL"
+     ]
     }
-   ],
-   "teamSize": 3
+   ]
   },
   {
+   "numFails": 0,
+   "state": "SUCCESS",
    "failsRequired": 1,
    "team": [
     "SHIRLEEN",
@@ -160,7 +158,10 @@
    ],
    "proposals": [
     {
-     "proposer": "DEAN",
+     "team": [
+      "SHIRLEEN",
+      "WILL"
+     ],
      "votes": [
       "WILL",
       "SHIRLEEN",
@@ -168,15 +169,17 @@
       "DEAN"
      ],
      "state": "APPROVED",
-     "team": [
-      "SHIRLEEN",
-      "WILL"
-     ]
+     "proposer": "DEAN"
     }
    ],
-   "numFails": 0,
-   "teamSize": 2,
-   "state": "SUCCESS"
+   "teamSize": 2
+  },
+  {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "team": [],
+   "state": "PENDING",
+   "proposals": []
   },
   {
    "state": "PENDING",
@@ -184,13 +187,10 @@
    "teamSize": 3,
    "team": [],
    "failsRequired": 1
-  },
-  {
-   "team": [],
-   "state": "PENDING",
-   "failsRequired": 1,
-   "teamSize": 3,
-   "proposals": []
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1585031971,
+  "_nanoseconds": 986746000
+ }
 }

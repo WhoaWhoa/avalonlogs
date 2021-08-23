@@ -1,45 +1,18 @@
 {
- "players": [
-  {
-   "name": "ALLEN",
-   "uid": "Otyhww6DQZPfdwldw6MRDatkS5I3"
-  },
-  {
-   "name": "SKIMILK",
-   "uid": "ZQ1KYipQAdc5vavrWOzI5Mlz5Wk2"
-  },
-  {
-   "name": "MAX",
-   "uid": "oGCzA6emXjSBN5FkPEEEI5MDQ5p2"
-  },
-  {
-   "name": "AND",
-   "uid": "zQNLjUvTDpVWY4lIMhxwoKBgYjf2"
-  },
-  {
-   "name": "SNOOZY",
-   "uid": "6FxoWQTRccRcdtpqpaXbxRoBMP52"
-  }
- ],
- "options": {
-  "inGameLog": false
- },
  "timeFinished": {
   "_seconds": 1606026150,
   "_nanoseconds": 782000000
  },
  "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
   "votes": [
    {
     "ALLEN": true,
     "SNOOZY": true
    },
    {
+    "MAX": false,
     "SNOOZY": true,
-    "SKIMILK": true,
-    "MAX": false
+    "SKIMILK": true
    },
    {
     "AND": true,
@@ -58,24 +31,24 @@
   ],
   "roles": [
    {
-    "role": "MERLIN",
     "assassin": false,
-    "name": "AND"
+    "name": "AND",
+    "role": "MERLIN"
    },
    {
-    "role": "PERCIVAL",
     "name": "SKIMILK",
+    "role": "PERCIVAL",
     "assassin": false
    },
    {
-    "name": "SNOOZY",
     "role": "MORGANA",
+    "name": "SNOOZY",
     "assassin": false
    },
    {
-    "role": "MORDRED",
     "assassin": true,
-    "name": "MAX"
+    "name": "MAX",
+    "role": "MORDRED"
    },
    {
     "assassin": false,
@@ -83,116 +56,110 @@
     "name": "ALLEN"
    }
   ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
   "assassinated": null
- },
- "timeCreated": {
-  "_seconds": 1606025236,
-  "_nanoseconds": 334000000
  },
  "missions": [
   {
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "ALLEN",
+     "votes": [
+      "ALLEN",
+      "SNOOZY",
+      "SKIMILK"
+     ],
      "team": [
       "ALLEN",
       "SNOOZY"
      ],
-     "votes": [
-      "ALLEN",
-      "SNOOZY",
-      "SKIMILK"
-     ],
-     "proposer": "ALLEN"
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 2,
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
    "team": [
     "ALLEN",
     "SNOOZY"
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 2
   },
   {
    "failsRequired": 1,
-   "teamSize": 3,
    "state": "FAIL",
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "SNOOZY",
-      "MAX",
-      "SKIMILK"
-     ],
      "team": [
       "SKIMILK",
       "MAX",
       "SNOOZY"
      ],
+     "proposer": "SKIMILK",
      "state": "APPROVED",
-     "proposer": "SKIMILK"
+     "votes": [
+      "SNOOZY",
+      "MAX",
+      "SKIMILK"
+     ]
     }
    ],
-   "numFails": 1,
    "team": [
     "SKIMILK",
     "MAX",
     "SNOOZY"
-   ]
+   ],
+   "numFails": 1
   },
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
+   "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "MAX",
+      "AND"
+     ],
      "votes": [
       "MAX",
       "AND"
      ],
-     "team": [
-      "MAX",
-      "AND"
-     ],
-     "state": "REJECTED",
-     "proposer": "MAX"
+     "proposer": "MAX",
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "AND",
-      "ALLEN"
-     ],
+     "state": "APPROVED",
      "votes": [
       "ALLEN",
       "AND",
       "SKIMILK"
      ],
-     "proposer": "AND",
-     "state": "APPROVED"
+     "team": [
+      "AND",
+      "ALLEN"
+     ],
+     "proposer": "AND"
     }
    ],
-   "teamSize": 2,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "AND",
     "ALLEN"
-   ],
-   "numFails": 0
+   ]
   },
   {
-   "team": [
-    "MAX",
-    "SKIMILK",
-    "AND"
-   ],
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "SNOOZY",
      "team": [
       "ALLEN",
       "SNOOZY",
       "AND"
      ],
-     "proposer": "SNOOZY",
      "state": "REJECTED",
      "votes": [
       "SNOOZY",
@@ -200,27 +167,27 @@
      ]
     },
     {
-     "team": [
-      "ALLEN",
-      "SKIMILK",
-      "AND"
-     ],
      "proposer": "ALLEN",
      "state": "REJECTED",
      "votes": [
       "ALLEN",
       "SKIMILK"
+     ],
+     "team": [
+      "ALLEN",
+      "SKIMILK",
+      "AND"
      ]
     },
     {
-     "state": "REJECTED",
      "team": [
       "SKIMILK",
       "ALLEN",
       "MAX"
      ],
-     "votes": [],
-     "proposer": "SKIMILK"
+     "proposer": "SKIMILK",
+     "state": "REJECTED",
+     "votes": []
     },
     {
      "proposer": "MAX",
@@ -237,49 +204,82 @@
      ]
     }
    ],
-   "failsRequired": 1,
    "teamSize": 3,
-   "state": "FAIL",
-   "numFails": 1
+   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "MAX",
+    "SKIMILK",
+    "AND"
+   ]
   },
   {
-   "proposals": [
-    {
-     "team": [
-      "AND",
-      "ALLEN",
-      "MAX"
-     ],
-     "proposer": "AND",
-     "state": "REJECTED",
-     "votes": [
-      "AND"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "team": [
-      "SNOOZY",
-      "ALLEN",
-      "SKIMILK"
-     ],
-     "votes": [
-      "ALLEN",
-      "SKIMILK",
-      "SNOOZY"
-     ],
-     "proposer": "SNOOZY"
-    }
-   ],
+   "failsRequired": 1,
    "numFails": 1,
+   "teamSize": 3,
    "team": [
     "SNOOZY",
     "ALLEN",
     "SKIMILK"
    ],
    "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 3
+   "proposals": [
+    {
+     "votes": [
+      "AND"
+     ],
+     "state": "REJECTED",
+     "team": [
+      "AND",
+      "ALLEN",
+      "MAX"
+     ],
+     "proposer": "AND"
+    },
+    {
+     "proposer": "SNOOZY",
+     "votes": [
+      "ALLEN",
+      "SKIMILK",
+      "SNOOZY"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "SNOOZY",
+      "ALLEN",
+      "SKIMILK"
+     ]
+    }
+   ]
   }
- ]
+ ],
+ "players": [
+  {
+   "name": "ALLEN",
+   "uid": "Otyhww6DQZPfdwldw6MRDatkS5I3"
+  },
+  {
+   "name": "SKIMILK",
+   "uid": "ZQ1KYipQAdc5vavrWOzI5Mlz5Wk2"
+  },
+  {
+   "uid": "oGCzA6emXjSBN5FkPEEEI5MDQ5p2",
+   "name": "MAX"
+  },
+  {
+   "name": "AND",
+   "uid": "zQNLjUvTDpVWY4lIMhxwoKBgYjf2"
+  },
+  {
+   "name": "SNOOZY",
+   "uid": "6FxoWQTRccRcdtpqpaXbxRoBMP52"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1606025236,
+  "_nanoseconds": 334000000
+ },
+ "options": {
+  "inGameLog": false
+ }
 }

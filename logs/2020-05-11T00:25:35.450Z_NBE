@@ -3,6 +3,10 @@
   "_seconds": 1589157994,
   "_nanoseconds": 97000000
  },
+ "timeCreated": {
+  "_seconds": 1589156735,
+  "_nanoseconds": 450000000
+ },
  "players": [
   {
    "name": "N",
@@ -13,26 +17,97 @@
    "uid": "ePqxkXKRGvQzTSdnGibsu8bkE1k2"
   },
   {
-   "uid": "X4kr7qU8WxVJJVtOWhQiw2UWjnt1",
-   "name": "BSKY"
+   "name": "BSKY",
+   "uid": "X4kr7qU8WxVJJVtOWhQiw2UWjnt1"
   },
   {
-   "name": "JDC",
-   "uid": "E8DygwoenrSnl5Ch027bJOOxMmd2"
+   "uid": "E8DygwoenrSnl5Ch027bJOOxMmd2",
+   "name": "JDC"
   },
   {
    "uid": "4MiNR7w5RBPMLxqFqS1eFzRChTZ2",
    "name": "HOTHAM"
   },
   {
-   "name": "GRAPE",
-   "uid": "pg2tnmIyQdRR1PDmcCkRX3AD5Ma2"
+   "uid": "pg2tnmIyQdRR1PDmcCkRX3AD5Ma2",
+   "name": "GRAPE"
   }
  ],
+ "outcome": {
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "DC": true,
+    "JDC": true
+   },
+   {
+    "N": false,
+    "DC": true,
+    "HOTHAM": true
+   },
+   {
+    "DC": true,
+    "BSKY": false,
+    "HOTHAM": true,
+    "GRAPE": true
+   },
+   {
+    "GRAPE": true,
+    "JDC": true,
+    "DC": true
+   },
+   {
+    "JDC": true,
+    "DC": true,
+    "GRAPE": true,
+    "HOTHAM": true
+   }
+  ],
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "GRAPE",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JDC",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "DC",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "name": "N",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "HOTHAM"
+   },
+   {
+    "role": "MORGANA",
+    "name": "BSKY",
+    "assassin": false
+   }
+  ],
+  "assassinated": "HOTHAM"
+ },
  "missions": [
   {
-   "teamSize": 2,
    "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 2,
+   "team": [
+    "JDC",
+    "DC"
+   ],
    "proposals": [
     {
      "votes": [
@@ -41,13 +116,19 @@
       "DC"
      ],
      "state": "REJECTED",
+     "proposer": "BSKY",
      "team": [
       "BSKY",
       "JDC"
-     ],
-     "proposer": "BSKY"
+     ]
     },
     {
+     "proposer": "JDC",
+     "state": "APPROVED",
+     "team": [
+      "JDC",
+      "DC"
+     ],
      "votes": [
       "DC",
       "N",
@@ -55,54 +136,46 @@
       "BSKY",
       "GRAPE",
       "JDC"
-     ],
-     "team": [
-      "JDC",
-      "DC"
-     ],
-     "state": "APPROVED",
-     "proposer": "JDC"
+     ]
     }
-   ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "team": [
-    "JDC",
-    "DC"
    ]
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "HOTHAM",
+    "DC",
+    "N"
+   ],
+   "numFails": 1,
+   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "N",
       "HOTHAM",
       "BSKY",
       "GRAPE"
      ],
-     "proposer": "HOTHAM",
-     "state": "APPROVED",
      "team": [
       "HOTHAM",
       "DC",
       "N"
-     ]
+     ],
+     "proposer": "HOTHAM"
     }
-   ],
-   "team": [
-    "HOTHAM",
-    "DC",
-    "N"
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "numFails": 1,
-   "teamSize": 3
+   ]
   },
   {
    "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 4,
+   "team": [
+    "BSKY",
+    "DC",
+    "HOTHAM",
+    "GRAPE"
+   ],
    "proposals": [
     {
      "votes": [
@@ -114,8 +187,8 @@
       "N",
       "JDC"
      ],
-     "proposer": "GRAPE",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "GRAPE"
     },
     {
      "state": "REJECTED",
@@ -132,96 +205,92 @@
      ]
     },
     {
-     "votes": [
-      "GRAPE",
-      "DC"
-     ],
-     "state": "REJECTED",
      "team": [
       "DC",
       "BSKY",
       "GRAPE",
       "HOTHAM"
      ],
+     "state": "REJECTED",
+     "votes": [
+      "GRAPE",
+      "DC"
+     ],
      "proposer": "DC"
     },
     {
+     "state": "APPROVED",
      "team": [
       "BSKY",
       "DC",
       "HOTHAM",
       "GRAPE"
      ],
-     "state": "APPROVED",
-     "proposer": "BSKY",
      "votes": [
       "GRAPE",
       "DC",
       "N",
       "BSKY"
-     ]
+     ],
+     "proposer": "BSKY"
     }
    ],
-   "team": [
-    "BSKY",
-    "DC",
-    "HOTHAM",
-    "GRAPE"
-   ],
+   "failsRequired": 1,
+   "teamSize": 4,
    "numFails": 1
   },
   {
-   "team": [
-    "JDC",
-    "GRAPE",
-    "DC"
-   ],
+   "failsRequired": 1,
    "teamSize": 3,
    "proposals": [
     {
-     "proposer": "JDC",
-     "state": "APPROVED",
      "team": [
       "JDC",
       "GRAPE",
       "DC"
      ],
+     "state": "APPROVED",
      "votes": [
       "DC",
       "N",
       "HOTHAM",
       "GRAPE",
       "JDC"
-     ]
+     ],
+     "proposer": "JDC"
     }
    ],
-   "failsRequired": 1,
+   "team": [
+    "JDC",
+    "GRAPE",
+    "DC"
+   ],
    "state": "SUCCESS",
    "numFails": 0
   },
   {
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 4,
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "HOTHAM",
       "GRAPE",
       "JDC",
       "DC"
      ],
+     "proposer": "HOTHAM",
      "team": [
       "HOTHAM",
       "JDC",
       "GRAPE",
       "DC"
-     ],
-     "state": "APPROVED",
-     "proposer": "HOTHAM"
+     ]
     }
    ],
-   "teamSize": 4,
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "HOTHAM",
     "JDC",
@@ -232,74 +301,5 @@
  ],
  "options": {
   "inGameLog": false
- },
- "outcome": {
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "GRAPE",
-    "assassin": false
-   },
-   {
-    "name": "JDC",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "DC"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "N",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "name": "HOTHAM",
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "BSKY",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ],
-  "assassinated": "HOTHAM",
-  "votes": [
-   {
-    "JDC": true,
-    "DC": true
-   },
-   {
-    "N": false,
-    "DC": true,
-    "HOTHAM": true
-   },
-   {
-    "DC": true,
-    "BSKY": false,
-    "GRAPE": true,
-    "HOTHAM": true
-   },
-   {
-    "DC": true,
-    "JDC": true,
-    "GRAPE": true
-   },
-   {
-    "HOTHAM": true,
-    "GRAPE": true,
-    "DC": true,
-    "JDC": true
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN"
- },
- "timeCreated": {
-  "_seconds": 1589156735,
-  "_nanoseconds": 450000000
  }
 }

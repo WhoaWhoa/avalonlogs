@@ -1,28 +1,21 @@
 {
- "timeFinished": {
-  "_seconds": 1589036212,
-  "_nanoseconds": 311000000
- },
- "timeCreated": {
-  "_seconds": 1589035721,
-  "_nanoseconds": 622000000
- },
  "outcome": {
+  "state": "GOOD_WIN",
   "votes": [
    {
     "YUWEI": true,
     "QDW": true
    },
    {
+    "QDW": true,
     "TEDDYBEAR": true,
-    "YUWEI": true,
-    "QDW": true
+    "YUWEI": true
    },
    {
-    "TEDDYBEAR": false,
+    "CW": true,
     "YUWEI": true,
     "QDW": true,
-    "CW": true
+    "TEDDYBEAR": false
    },
    {
     "YUWEI": true,
@@ -30,17 +23,18 @@
     "CAIJIE": false
    },
    {
-    "CW": true,
+    "QDW": true,
     "SWEE": true,
-    "YUWEI": true,
-    "QDW": true
+    "CW": true,
+    "YUWEI": true
    }
   ],
+  "assassinated": "QDW",
   "roles": [
    {
     "role": "MORDRED",
-    "assassin": true,
-    "name": "TEDDYBEAR"
+    "name": "TEDDYBEAR",
+    "assassin": true
    },
    {
     "assassin": false,
@@ -48,14 +42,14 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "assassin": false,
     "role": "MORGANA",
-    "name": "CAIJIE",
-    "assassin": false
+    "name": "CAIJIE"
    },
    {
     "name": "CW",
-    "role": "MERLIN",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
     "name": "YUWEI",
@@ -68,25 +62,51 @@
     "role": "PERCIVAL"
    }
   ],
-  "assassinated": "QDW",
-  "state": "GOOD_WIN",
   "message": "Three successful missions"
  },
  "options": {
   "inGameLog": false
  },
+ "players": [
+  {
+   "uid": "A8hoIo0DiAaOVIQbMcbJRXqvv1e2",
+   "name": "CW"
+  },
+  {
+   "uid": "AgS9118HplRG2G2MU3ojO2lDu8Y2",
+   "name": "CAIJIE"
+  },
+  {
+   "name": "SWEE",
+   "uid": "JnvFx6wpH8T4LQorOxnu0KTuk1s1"
+  },
+  {
+   "uid": "gE5yQQeYsEYrFc5tcfTWAWjhj913",
+   "name": "QDW"
+  },
+  {
+   "name": "TEDDYBEAR",
+   "uid": "R2bMwedZryPSEhyObNZRKvGFcdw1"
+  },
+  {
+   "uid": "CZA3PqDY4mV3sl3vakTKPm5mf6F2",
+   "name": "YUWEI"
+  }
+ ],
  "missions": [
   {
-   "failsRequired": 1,
-   "numFails": 0,
    "teamSize": 2,
    "team": [
     "QDW",
     "YUWEI"
    ],
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "QDW",
+      "YUWEI"
+     ],
      "proposer": "QDW",
      "votes": [
       "QDW",
@@ -95,29 +115,25 @@
       "CW",
       "YUWEI"
      ],
-     "state": "APPROVED",
-     "team": [
-      "QDW",
-      "YUWEI"
-     ]
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
-   "numFails": 0,
    "teamSize": 3,
    "team": [
     "QDW",
     "TEDDYBEAR",
     "YUWEI"
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "QDW",
-      "TEDDYBEAR",
-      "YUWEI"
-     ],
+     "state": "APPROVED",
      "votes": [
       "CAIJIE",
       "CW",
@@ -126,20 +142,20 @@
       "TEDDYBEAR",
       "SWEE"
      ],
-     "state": "APPROVED",
-     "proposer": "TEDDYBEAR"
+     "proposer": "TEDDYBEAR",
+     "team": [
+      "QDW",
+      "TEDDYBEAR",
+      "YUWEI"
+     ]
     }
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1
+   ]
   },
   {
-   "team": [
-    "QDW",
-    "YUWEI",
-    "TEDDYBEAR",
-    "CW"
-   ],
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "state": "APPROVED",
@@ -158,27 +174,34 @@
      "proposer": "YUWEI"
     }
    ],
-   "teamSize": 4,
-   "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1
+   "team": [
+    "QDW",
+    "YUWEI",
+    "TEDDYBEAR",
+    "CW"
+   ]
   },
   {
-   "teamSize": 3,
+   "state": "FAIL",
+   "team": [
+    "QDW",
+    "CAIJIE",
+    "YUWEI"
+   ],
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "CW",
-      "YUWEI",
-      "QDW"
-     ],
      "team": [
       "CW",
       "QDW",
       "YUWEI"
      ],
-     "proposer": "CW"
+     "proposer": "CW",
+     "state": "REJECTED",
+     "votes": [
+      "CW",
+      "YUWEI",
+      "QDW"
+     ]
     },
     {
      "votes": [
@@ -194,34 +217,35 @@
      ]
     },
     {
-     "team": [
-      "SWEE",
-      "YUWEI",
-      "CAIJIE"
-     ],
      "votes": [
       "TEDDYBEAR",
       "SWEE",
       "CAIJIE"
      ],
-     "proposer": "SWEE",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "team": [
+      "SWEE",
+      "YUWEI",
+      "CAIJIE"
+     ],
+     "proposer": "SWEE"
     },
     {
-     "votes": [
-      "CW",
-      "YUWEI",
-      "QDW"
-     ],
      "proposer": "QDW",
      "state": "REJECTED",
      "team": [
       "YUWEI",
       "QDW",
       "CW"
+     ],
+     "votes": [
+      "CW",
+      "YUWEI",
+      "QDW"
      ]
     },
     {
+     "state": "APPROVED",
      "proposer": "TEDDYBEAR",
      "votes": [
       "CW",
@@ -230,7 +254,6 @@
       "SWEE",
       "CAIJIE"
      ],
-     "state": "APPROVED",
      "team": [
       "QDW",
       "CAIJIE",
@@ -238,70 +261,47 @@
      ]
     }
    ],
-   "state": "FAIL",
-   "numFails": 1,
    "failsRequired": 1,
-   "team": [
-    "QDW",
-    "CAIJIE",
-    "YUWEI"
-   ]
+   "numFails": 1,
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
    "failsRequired": 1,
    "teamSize": 4,
+   "team": [
+    "YUWEI",
+    "QDW",
+    "SWEE",
+    "CW"
+   ],
+   "state": "SUCCESS",
    "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
+     "votes": [
+      "CW",
+      "YUWEI",
+      "QDW",
+      "SWEE"
+     ],
      "team": [
       "YUWEI",
       "QDW",
       "SWEE",
       "CW"
      ],
-     "state": "APPROVED",
-     "proposer": "YUWEI",
-     "votes": [
-      "CW",
-      "YUWEI",
-      "QDW",
-      "SWEE"
-     ]
+     "proposer": "YUWEI"
     }
-   ],
-   "team": [
-    "YUWEI",
-    "QDW",
-    "SWEE",
-    "CW"
    ]
   }
  ],
- "players": [
-  {
-   "name": "CW",
-   "uid": "A8hoIo0DiAaOVIQbMcbJRXqvv1e2"
-  },
-  {
-   "name": "CAIJIE",
-   "uid": "AgS9118HplRG2G2MU3ojO2lDu8Y2"
-  },
-  {
-   "name": "SWEE",
-   "uid": "JnvFx6wpH8T4LQorOxnu0KTuk1s1"
-  },
-  {
-   "name": "QDW",
-   "uid": "gE5yQQeYsEYrFc5tcfTWAWjhj913"
-  },
-  {
-   "name": "TEDDYBEAR",
-   "uid": "R2bMwedZryPSEhyObNZRKvGFcdw1"
-  },
-  {
-   "uid": "CZA3PqDY4mV3sl3vakTKPm5mf6F2",
-   "name": "YUWEI"
-  }
- ]
+ "timeCreated": {
+  "_seconds": 1589035721,
+  "_nanoseconds": 622000000
+ },
+ "timeFinished": {
+  "_seconds": 1589036212,
+  "_nanoseconds": 311000000
+ }
 }

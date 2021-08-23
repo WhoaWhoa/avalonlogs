@@ -1,86 +1,16 @@
 {
- "timeFinished": {
-  "_seconds": 1593147839,
-  "_nanoseconds": 320000000
- },
- "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "AMALICIOUS",
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "KESHAV"
-   },
-   {
-    "name": "RAM",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "JAMALLAMA"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SHWETA"
-   },
-   {
-    "name": "ANOOVA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "LUCIFER"
-   },
-   {
-    "name": "MANU",
-    "assassin": false,
-    "role": "MORGANA"
-   }
-  ],
-  "assassinated": "KESHAV",
-  "votes": [
-   {
-    "KESHAV": true,
-    "MANU": true,
-    "SHWETA": true
-   },
-   {
-    "MANU": true,
-    "RAM": true,
-    "KESHAV": true,
-    "SHWETA": true
-   },
-   {
-    "RAM": true,
-    "SHWETA": true,
-    "MANU": false,
-    "KESHAV": true
-   },
-   {
-    "SHWETA": true,
-    "LUCIFER": true,
-    "KESHAV": true,
-    "RAM": true,
-    "MANU": true
-   }
-  ]
- },
  "missions": [
   {
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "MANU",
+      "SHWETA",
+      "KESHAV"
+     ],
+     "proposer": "MANU",
      "votes": [
       "MANU",
       "AMALICIOUS",
@@ -89,35 +19,22 @@
       "SHWETA",
       "ANOOVA",
       "LUCIFER"
-     ],
-     "team": [
-      "MANU",
-      "SHWETA",
-      "KESHAV"
-     ],
-     "proposer": "MANU",
-     "state": "APPROVED"
+     ]
     }
    ],
+   "teamSize": 3,
    "team": [
     "MANU",
     "SHWETA",
     "KESHAV"
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
    "proposals": [
     {
-     "team": [
-      "RAM",
-      "MANU",
-      "SHWETA",
-      "KESHAV"
-     ],
-     "state": "APPROVED",
+     "proposer": "RAM",
      "votes": [
       "KESHAV",
       "RAM",
@@ -127,53 +44,59 @@
       "LUCIFER",
       "MANU"
      ],
-     "proposer": "RAM"
-    }
-   ],
-   "teamSize": 4,
-   "team": [
-    "RAM",
-    "MANU",
-    "SHWETA",
-    "KESHAV"
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0
-  },
-  {
-   "numFails": 1,
-   "failsRequired": 1,
-   "proposals": [
-    {
      "state": "APPROVED",
      "team": [
       "RAM",
       "MANU",
       "SHWETA",
       "KESHAV"
-     ],
-     "proposer": "JAMALLAMA",
+     ]
+    }
+   ],
+   "teamSize": 4,
+   "numFails": 0,
+   "failsRequired": 1,
+   "team": [
+    "RAM",
+    "MANU",
+    "SHWETA",
+    "KESHAV"
+   ],
+   "state": "SUCCESS"
+  },
+  {
+   "team": [
+    "RAM",
+    "MANU",
+    "SHWETA",
+    "KESHAV"
+   ],
+   "teamSize": 4,
+   "numFails": 1,
+   "state": "FAIL",
+   "proposals": [
+    {
+     "state": "APPROVED",
      "votes": [
       "KESHAV",
       "RAM",
       "JAMALLAMA",
       "ANOOVA",
       "LUCIFER"
-     ]
+     ],
+     "team": [
+      "RAM",
+      "MANU",
+      "SHWETA",
+      "KESHAV"
+     ],
+     "proposer": "JAMALLAMA"
     }
    ],
-   "teamSize": 4,
-   "state": "FAIL",
-   "team": [
-    "RAM",
-    "MANU",
-    "SHWETA",
-    "KESHAV"
-   ]
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "SHWETA",
     "MANU",
@@ -181,14 +104,13 @@
     "KESHAV",
     "LUCIFER"
    ],
-   "numFails": 0,
-   "failsRequired": 2,
+   "state": "SUCCESS",
    "teamSize": 5,
    "proposals": [
     {
+     "proposer": "AMALICIOUS",
      "state": "REJECTED",
      "votes": [],
-     "proposer": "AMALICIOUS",
      "team": [
       "AMALICIOUS",
       "JAMALLAMA",
@@ -198,7 +120,10 @@
      ]
     },
     {
-     "state": "REJECTED",
+     "votes": [
+      "LUCIFER",
+      "MANU"
+     ],
      "team": [
       "LUCIFER",
       "SHWETA",
@@ -207,23 +132,20 @@
       "KESHAV"
      ],
      "proposer": "LUCIFER",
-     "votes": [
-      "LUCIFER",
-      "MANU"
-     ]
+     "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
+     "votes": [
+      "JAMALLAMA",
+      "ANOOVA"
+     ],
      "team": [
       "ANOOVA",
       "SHWETA",
       "MANU",
       "RAM",
       "AMALICIOUS"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "JAMALLAMA",
-      "ANOOVA"
      ],
      "proposer": "ANOOVA"
     },
@@ -246,16 +168,90 @@
       "LUCIFER"
      ]
     }
-   ]
+   ],
+   "failsRequired": 2
   },
   {
-   "team": [],
    "proposals": [],
-   "teamSize": 5,
    "state": "PENDING",
+   "teamSize": 5,
+   "team": [],
    "failsRequired": 1
   }
  ],
+ "outcome": {
+  "assassinated": "KESHAV",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "AMALICIOUS",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "KESHAV",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MERLIN",
+    "name": "RAM",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "JAMALLAMA"
+   },
+   {
+    "name": "SHWETA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ANOOVA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "LUCIFER"
+   },
+   {
+    "role": "MORGANA",
+    "name": "MANU",
+    "assassin": false
+   }
+  ],
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "MANU": true,
+    "SHWETA": true,
+    "KESHAV": true
+   },
+   {
+    "RAM": true,
+    "SHWETA": true,
+    "MANU": true,
+    "KESHAV": true
+   },
+   {
+    "RAM": true,
+    "SHWETA": true,
+    "MANU": false,
+    "KESHAV": true
+   },
+   {
+    "MANU": true,
+    "SHWETA": true,
+    "RAM": true,
+    "KESHAV": true,
+    "LUCIFER": true
+   }
+  ]
+ },
  "players": [
   {
    "name": "SHWETA",
@@ -274,8 +270,8 @@
    "name": "JAMALLAMA"
   },
   {
-   "uid": "ZfMwL4decjY8EmI7GnOV3l9hbkz2",
-   "name": "AMALICIOUS"
+   "name": "AMALICIOUS",
+   "uid": "ZfMwL4decjY8EmI7GnOV3l9hbkz2"
   },
   {
    "name": "LUCIFER",
@@ -296,5 +292,9 @@
  },
  "options": {
   "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1593147839,
+  "_nanoseconds": 320000000
  }
 }

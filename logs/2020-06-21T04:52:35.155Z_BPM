@@ -1,63 +1,13 @@
 {
- "timeCreated": {
-  "_seconds": 1592715155,
-  "_nanoseconds": 155000000
- },
- "outcome": {
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "JOBO"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MEI"
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "ELLEN"
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "ALEX"
-   },
-   {
-    "assassin": false,
-    "name": "ERIN",
-    "role": "PERCIVAL"
-   }
-  ],
-  "assassinated": null,
-  "votes": [
-   {
-    "MEI": true,
-    "ELLEN": false
-   },
-   {
-    "JOBO": true,
-    "ERIN": true,
-    "ELLEN": false
-   },
-   {
-    "JOBO": true,
-    "ALEX": false
-   }
-  ],
-  "state": "EVIL_WIN"
- },
- "timeFinished": {
-  "_seconds": 1592715525,
-  "_nanoseconds": 588000000
- },
  "missions": [
   {
-   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "ELLEN",
+    "MEI"
+   ],
    "state": "FAIL",
+   "teamSize": 2,
    "proposals": [
     {
      "votes": [
@@ -65,60 +15,55 @@
       "ERIN"
      ],
      "proposer": "MEI",
+     "state": "REJECTED",
      "team": [
       "ERIN",
       "JOBO"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "proposer": "ALEX",
      "state": "APPROVED",
-     "votes": [
-      "MEI",
-      "ELLEN",
-      "ALEX"
-     ],
      "team": [
       "ELLEN",
       "MEI"
      ],
-     "proposer": "ALEX"
+     "votes": [
+      "MEI",
+      "ELLEN",
+      "ALEX"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "ELLEN",
-    "MEI"
-   ],
-   "teamSize": 2
+   "numFails": 1
   },
   {
-   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "JOBO",
     "ERIN",
     "ELLEN"
    ],
-   "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "JOBO",
-      "ERIN",
-      "ELLEN"
-     ],
      "proposer": "ERIN",
+     "state": "APPROVED",
      "votes": [
       "JOBO",
       "MEI",
       "ELLEN",
       "ERIN"
      ],
-     "state": "APPROVED"
+     "team": [
+      "JOBO",
+      "ERIN",
+      "ELLEN"
+     ]
     }
    ],
-   "state": "FAIL"
+   "state": "FAIL",
+   "numFails": 1
   },
   {
    "proposals": [
@@ -136,28 +81,28 @@
      ]
     }
    ],
-   "state": "FAIL",
-   "numFails": 1,
    "team": [
     "JOBO",
     "ALEX"
    ],
+   "state": "FAIL",
+   "numFails": 1,
    "failsRequired": 1,
    "teamSize": 2
   },
   {
+   "failsRequired": 1,
    "state": "PENDING",
-   "team": [],
-   "proposals": [],
    "teamSize": 3,
-   "failsRequired": 1
+   "team": [],
+   "proposals": []
   },
   {
-   "teamSize": 3,
-   "team": [],
-   "proposals": [],
    "state": "PENDING",
-   "failsRequired": 1
+   "proposals": [],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "team": []
   }
  ],
  "options": {
@@ -169,20 +114,75 @@
    "uid": "GHN9VQNiWmTnaktpPzw9WbLK3pn1"
   },
   {
-   "name": "ELLEN",
-   "uid": "sE2BaVbn1DXM89cSgKio35zM5ID2"
+   "uid": "sE2BaVbn1DXM89cSgKio35zM5ID2",
+   "name": "ELLEN"
   },
   {
    "name": "JOBO",
    "uid": "iWEQFaF2I8YybWmkWgysfKX8RGF3"
   },
   {
-   "uid": "dUpcYJXbonNxcv8oirNmIDZ9otl1",
-   "name": "MEI"
+   "name": "MEI",
+   "uid": "dUpcYJXbonNxcv8oirNmIDZ9otl1"
   },
   {
-   "name": "ALEX",
-   "uid": "KkOpLA2KRGYlF6oFKRyib4npJfr1"
+   "uid": "KkOpLA2KRGYlF6oFKRyib4npJfr1",
+   "name": "ALEX"
   }
- ]
+ ],
+ "outcome": {
+  "assassinated": null,
+  "votes": [
+   {
+    "MEI": true,
+    "ELLEN": false
+   },
+   {
+    "JOBO": true,
+    "ELLEN": false,
+    "ERIN": true
+   },
+   {
+    "ALEX": false,
+    "JOBO": true
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "JOBO"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MEI"
+   },
+   {
+    "name": "ELLEN",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "name": "ALEX",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "name": "ERIN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1592715155,
+  "_nanoseconds": 155000000
+ },
+ "timeFinished": {
+  "_seconds": 1592715525,
+  "_nanoseconds": 588000000
+ }
 }

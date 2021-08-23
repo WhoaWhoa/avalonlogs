@@ -1,4 +1,11 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1607849361,
+  "_nanoseconds": 356000000
+ },
  "players": [
   {
    "name": "MATT",
@@ -9,8 +16,8 @@
    "uid": "pomPXWnXirTTk5aOoYzJxqLz0lE3"
   },
   {
-   "uid": "gGmDTxLq3fdtYYJCJz0GhZ03Mli2",
-   "name": "GEORGE"
+   "name": "GEORGE",
+   "uid": "gGmDTxLq3fdtYYJCJz0GhZ03Mli2"
   },
   {
    "uid": "68FMpefMPcYPooRQbRDrqeaI4t83",
@@ -25,93 +32,19 @@
    "name": "COVIDREUBS"
   },
   {
-   "name": "CALEB",
-   "uid": "ynFZBTX5qvRoBnME4DO2Yo8wWJD2"
+   "uid": "ynFZBTX5qvRoBnME4DO2Yo8wWJD2",
+   "name": "CALEB"
   }
  ],
- "timeCreated": {
-  "_seconds": 1607848901,
-  "_nanoseconds": 243000000
- },
- "outcome": {
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "GEORGE",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "assassin": false,
-    "name": "MATT",
-    "role": "MORGANA"
-   },
-   {
-    "role": "MORDRED",
-    "assassin": true,
-    "name": "COVIDREUBS"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "CALEB"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "FIO",
-    "assassin": false
-   },
-   {
-    "name": "GLEN",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "DAMIEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "assassinated": "GLEN",
-  "message": "Merlin assassinated",
-  "votes": [
-   {
-    "GEORGE": true,
-    "GLEN": true
-   },
-   {
-    "GLEN": true,
-    "GEORGE": true,
-    "MATT": true
-   },
-   {
-    "MATT": false,
-    "DAMIEN": true,
-    "GEORGE": false
-   },
-   {
-    "GLEN": true,
-    "FIO": true,
-    "COVIDREUBS": false,
-    "DAMIEN": true
-   }
-  ]
- },
- "options": {
-  "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1607849361,
-  "_nanoseconds": 356000000
- },
  "missions": [
   {
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "GEORGE",
     "GLEN"
    ],
    "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
@@ -119,36 +52,31 @@
       "GEORGE",
       "GLEN"
      ],
+     "proposer": "GEORGE",
      "votes": [
       "GLEN",
       "FIO",
       "DAMIEN",
       "COVIDREUBS",
       "GEORGE"
-     ],
-     "proposer": "GEORGE"
+     ]
     }
    ],
-   "state": "SUCCESS",
    "teamSize": 2
   },
   {
-   "team": [
-    "GLEN",
-    "GEORGE",
-    "MATT"
-   ],
+   "failsRequired": 1,
+   "numFails": 0,
    "teamSize": 3,
-   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "GLEN",
      "state": "APPROVED",
      "team": [
       "GLEN",
       "GEORGE",
       "MATT"
      ],
+     "proposer": "GLEN",
      "votes": [
       "MATT",
       "FIO",
@@ -159,14 +87,27 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 0
+   "state": "SUCCESS",
+   "team": [
+    "GLEN",
+    "GEORGE",
+    "MATT"
+   ]
   },
   {
+   "team": [
+    "DAMIEN",
+    "MATT",
+    "GEORGE"
+   ],
+   "numFails": 2,
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "DAMIEN",
      "state": "APPROVED",
+     "proposer": "DAMIEN",
      "votes": [
       "MATT",
       "COVIDREUBS",
@@ -179,28 +120,19 @@
       "GEORGE"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "state": "FAIL",
-   "team": [
-    "DAMIEN",
-    "MATT",
-    "GEORGE"
-   ],
-   "numFails": 2
+   ]
   },
   {
-   "numFails": 1,
    "state": "SUCCESS",
+   "teamSize": 4,
    "team": [
     "COVIDREUBS",
     "GLEN",
     "DAMIEN",
     "FIO"
    ],
+   "numFails": 1,
    "failsRequired": 2,
-   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -211,23 +143,91 @@
       "GLEN",
       "CALEB"
      ],
+     "proposer": "COVIDREUBS",
      "team": [
       "COVIDREUBS",
       "GLEN",
       "DAMIEN",
       "FIO"
      ],
-     "state": "APPROVED",
-     "proposer": "COVIDREUBS"
+     "state": "APPROVED"
     }
    ]
   },
   {
+   "team": [],
+   "state": "PENDING",
    "failsRequired": 1,
    "proposals": [],
-   "teamSize": 4,
-   "state": "PENDING",
-   "team": []
+   "teamSize": 4
   }
- ]
+ ],
+ "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": "GLEN",
+  "votes": [
+   {
+    "GLEN": true,
+    "GEORGE": true
+   },
+   {
+    "MATT": true,
+    "GEORGE": true,
+    "GLEN": true
+   },
+   {
+    "MATT": false,
+    "DAMIEN": true,
+    "GEORGE": false
+   },
+   {
+    "DAMIEN": true,
+    "FIO": true,
+    "GLEN": true,
+    "COVIDREUBS": false
+   }
+  ],
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "name": "GEORGE",
+    "assassin": false,
+    "role": "OBERON"
+   },
+   {
+    "name": "MATT",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "role": "MORDRED",
+    "assassin": true,
+    "name": "COVIDREUBS"
+   },
+   {
+    "name": "CALEB",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "FIO",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "GLEN"
+   },
+   {
+    "name": "DAMIEN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1607848901,
+  "_nanoseconds": 243000000
+ }
 }

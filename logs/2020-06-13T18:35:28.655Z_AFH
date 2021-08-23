@@ -1,10 +1,63 @@
 {
- "timeCreated": {
-  "_seconds": 1592073328,
-  "_nanoseconds": 655000000
- },
  "options": {
   "inGameLog": false
+ },
+ "outcome": {
+  "assassinated": "GEORGE",
+  "roles": [
+   {
+    "name": "JUSTSWEE",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "name": "MATT",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "GLEN",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "name": "CALEB",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "GEORGE"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "JUSTSWEE": true,
+    "GEORGE": true
+   },
+   {
+    "MATT": true,
+    "JUSTSWEE": false,
+    "GEORGE": true
+   },
+   {
+    "CALEB": false,
+    "GLEN": true
+   },
+   {
+    "MATT": true,
+    "GEORGE": true,
+    "GLEN": true
+   },
+   {
+    "GEORGE": true,
+    "GLEN": true,
+    "MATT": true
+   }
+  ]
  },
  "players": [
   {
@@ -12,8 +65,8 @@
    "uid": "hkvwEHhYOiVIFrScBXl1186HZ1r1"
   },
   {
-   "name": "GEORGE",
-   "uid": "gGmDTxLq3fdtYYJCJz0GhZ03Mli2"
+   "uid": "gGmDTxLq3fdtYYJCJz0GhZ03Mli2",
+   "name": "GEORGE"
   },
   {
    "name": "MATT",
@@ -24,16 +77,27 @@
    "name": "GLEN"
   },
   {
-   "uid": "a1R4ajhXgzTtwBcXxpSXP3jitY72",
-   "name": "CALEB"
+   "name": "CALEB",
+   "uid": "a1R4ajhXgzTtwBcXxpSXP3jitY72"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1592073963,
+  "_nanoseconds": 167000000
+ },
  "missions": [
   {
-   "failsRequired": 1,
    "teamSize": 2,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "GEORGE",
+      "JUSTSWEE"
+     ],
+     "proposer": "GEORGE",
      "votes": [
       "GLEN",
       "CALEB",
@@ -41,71 +105,69 @@
       "JUSTSWEE",
       "MATT"
      ],
-     "team": [
-      "GEORGE",
-      "JUSTSWEE"
-     ],
-     "proposer": "GEORGE",
      "state": "APPROVED"
     }
    ],
-   "numFails": 0,
    "team": [
     "GEORGE",
     "JUSTSWEE"
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
    "state": "FAIL",
-   "teamSize": 3,
-   "failsRequired": 1,
    "team": [
     "MATT",
     "GEORGE",
     "JUSTSWEE"
    ],
+   "failsRequired": 1,
+   "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "MATT",
+      "GEORGE",
+      "JUSTSWEE"
+     ],
      "votes": [
       "MATT",
       "GEORGE",
       "JUSTSWEE"
      ],
-     "proposer": "MATT",
-     "team": [
-      "MATT",
-      "GEORGE",
-      "JUSTSWEE"
-     ]
+     "state": "APPROVED",
+     "proposer": "MATT"
     }
    ]
   },
   {
-   "numFails": 1,
    "teamSize": 2,
+   "team": [
+    "GLEN",
+    "CALEB"
+   ],
+   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
      "proposer": "GLEN",
-     "votes": [
+     "team": [
       "GLEN",
       "MATT"
      ],
      "state": "REJECTED",
-     "team": [
+     "votes": [
       "GLEN",
       "MATT"
      ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "GLEN",
       "CALEB",
       "GEORGE"
      ],
-     "state": "APPROVED",
      "proposer": "CALEB",
      "team": [
       "GLEN",
@@ -113,141 +175,79 @@
      ]
     }
    ],
-   "team": [
-    "GLEN",
-    "CALEB"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1
+   "state": "FAIL"
   },
   {
-   "proposals": [
-    {
-     "team": [
-      "JUSTSWEE",
-      "GLEN",
-      "MATT"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "JUSTSWEE",
-      "MATT"
-     ],
-     "proposer": "JUSTSWEE"
-    },
-    {
-     "state": "APPROVED",
-     "proposer": "GEORGE",
-     "votes": [
-      "GLEN",
-      "GEORGE",
-      "MATT"
-     ],
-     "team": [
-      "MATT",
-      "GEORGE",
-      "GLEN"
-     ]
-    }
-   ],
-   "state": "SUCCESS",
-   "team": [
-    "MATT",
-    "GEORGE",
-    "GLEN"
-   ],
    "failsRequired": 1,
    "teamSize": 3,
-   "numFails": 0
-  },
-  {
    "team": [
-    "GEORGE",
     "MATT",
+    "GEORGE",
     "GLEN"
    ],
    "state": "SUCCESS",
+   "numFails": 0,
+   "proposals": [
+    {
+     "votes": [
+      "JUSTSWEE",
+      "MATT"
+     ],
+     "team": [
+      "JUSTSWEE",
+      "GLEN",
+      "MATT"
+     ],
+     "proposer": "JUSTSWEE",
+     "state": "REJECTED"
+    },
+    {
+     "proposer": "GEORGE",
+     "state": "APPROVED",
+     "team": [
+      "MATT",
+      "GEORGE",
+      "GLEN"
+     ],
+     "votes": [
+      "GLEN",
+      "GEORGE",
+      "MATT"
+     ]
+    }
+   ]
+  },
+  {
+   "numFails": 0,
    "teamSize": 3,
    "proposals": [
     {
-     "proposer": "MATT",
-     "team": [
-      "GEORGE",
-      "MATT",
-      "GLEN"
-     ],
-     "state": "APPROVED",
      "votes": [
       "GLEN",
       "CALEB",
       "GEORGE",
       "MATT"
-     ]
+     ],
+     "team": [
+      "GEORGE",
+      "MATT",
+      "GLEN"
+     ],
+     "proposer": "MATT",
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "numFails": 0
+   "state": "SUCCESS",
+   "team": [
+    "GEORGE",
+    "MATT",
+    "GLEN"
+   ]
   }
  ],
- "timeFinished": {
-  "_seconds": 1592073963,
-  "_nanoseconds": 167000000
- },
- "outcome": {
-  "votes": [
-   {
-    "JUSTSWEE": true,
-    "GEORGE": true
-   },
-   {
-    "JUSTSWEE": false,
-    "MATT": true,
-    "GEORGE": true
-   },
-   {
-    "GLEN": true,
-    "CALEB": false
-   },
-   {
-    "GLEN": true,
-    "GEORGE": true,
-    "MATT": true
-   },
-   {
-    "MATT": true,
-    "GEORGE": true,
-    "GLEN": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "roles": [
-   {
-    "role": "MORDRED",
-    "name": "JUSTSWEE",
-    "assassin": true
-   },
-   {
-    "name": "MATT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "GLEN"
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "CALEB"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "GEORGE"
-   }
-  ],
-  "assassinated": "GEORGE",
-  "state": "EVIL_WIN"
+ "timeCreated": {
+  "_seconds": 1592073328,
+  "_nanoseconds": 655000000
  }
 }

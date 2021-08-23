@@ -1,20 +1,97 @@
 {
+ "outcome": {
+  "votes": [
+   {
+    "JERRY": true,
+    "NELSON": true
+   },
+   {
+    "JERRY": true,
+    "NELSON": false,
+    "SUSAN": false
+   },
+   {
+    "XIANG": true,
+    "CHERRY": true,
+    "HP": false
+   },
+   {
+    "XIANG": true,
+    "HP": true,
+    "CHERRY": true,
+    "HOWARD": true
+   },
+   {
+    "HOWARD": true,
+    "HP": false,
+    "NELSON": false,
+    "CHERRY": true
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "JERRY"
+   },
+   {
+    "name": "CHERRY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "name": "HP",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "XIANG",
+    "assassin": false
+   },
+   {
+    "name": "SUSAN",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "HOWARD",
+    "assassin": false
+   },
+   {
+    "name": "NELSON",
+    "assassin": false,
+    "role": "OBERON"
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1590456370,
+  "_nanoseconds": 568000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1590459653,
   "_nanoseconds": 740000000
  },
  "players": [
   {
-   "name": "SUSAN",
-   "uid": "R4fmZj79uDNSNHMlUvXLOlhN1x82"
+   "uid": "R4fmZj79uDNSNHMlUvXLOlhN1x82",
+   "name": "SUSAN"
   },
   {
    "name": "HOWARD",
    "uid": "CLZ73hWlzJUvwZMxmX40QFFBUZ93"
   },
   {
-   "uid": "3JciRBRAQNWIuxSTbBk6G2CQI6U2",
-   "name": "NELSON"
+   "name": "NELSON",
+   "uid": "3JciRBRAQNWIuxSTbBk6G2CQI6U2"
   },
   {
    "name": "JERRY",
@@ -33,14 +110,14 @@
    "uid": "Bk5EH82zTOZV3ZvsqhTGTgty2jJ3"
   }
  ],
- "timeCreated": {
-  "_seconds": 1590456370,
-  "_nanoseconds": 568000000
- },
  "missions": [
   {
+   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "NELSON",
+     "state": "APPROVED",
      "votes": [
       "JERRY",
       "CHERRY",
@@ -50,35 +127,26 @@
       "HOWARD",
       "NELSON"
      ],
-     "proposer": "NELSON",
-     "state": "APPROVED",
      "team": [
       "NELSON",
       "JERRY"
      ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "state": "SUCCESS",
    "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "NELSON",
     "JERRY"
    ]
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "SUSAN",
-    "NELSON",
-    "JERRY"
-   ],
    "state": "FAIL",
+   "failsRequired": 1,
    "numFails": 2,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "HOWARD",
       "NELSON",
@@ -93,51 +161,58 @@
       "NELSON",
       "JERRY"
      ],
+     "state": "APPROVED",
      "proposer": "JERRY"
     }
    ],
-   "teamSize": 3
+   "team": [
+    "SUSAN",
+    "NELSON",
+    "JERRY"
+   ]
   },
   {
-   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 3,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "team": [
+      "CHERRY",
+      "HP",
+      "XIANG"
+     ],
+     "proposer": "CHERRY",
+     "votes": [
+      "HOWARD",
+      "NELSON",
+      "JERRY",
+      "CHERRY",
+      "HP",
+      "XIANG",
+      "SUSAN"
+     ]
+    }
+   ],
    "failsRequired": 1,
    "team": [
     "CHERRY",
     "HP",
     "XIANG"
    ],
-   "teamSize": 3,
-   "state": "FAIL",
-   "proposals": [
-    {
-     "votes": [
-      "HOWARD",
-      "NELSON",
-      "JERRY",
-      "CHERRY",
-      "HP",
-      "XIANG",
-      "SUSAN"
-     ],
-     "state": "APPROVED",
-     "proposer": "CHERRY",
-     "team": [
-      "CHERRY",
-      "HP",
-      "XIANG"
-     ]
-    }
-   ]
+   "numFails": 1
   },
   {
+   "state": "SUCCESS",
+   "failsRequired": 2,
    "team": [
     "HOWARD",
     "XIANG",
     "HP",
     "CHERRY"
    ],
-   "teamSize": 4,
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -149,50 +224,48 @@
       "HP",
       "XIANG"
      ],
-     "proposer": "HP",
-     "state": "APPROVED",
      "team": [
       "HOWARD",
       "XIANG",
       "HP",
       "CHERRY"
-     ]
+     ],
+     "proposer": "HP",
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 2,
-   "state": "SUCCESS"
+   ]
   },
   {
+   "state": "FAIL",
    "proposals": [
     {
      "votes": [
       "SUSAN"
      ],
+     "proposer": "XIANG",
+     "state": "REJECTED",
      "team": [
       "HOWARD",
       "NELSON",
       "XIANG",
       "CHERRY"
-     ],
-     "proposer": "XIANG",
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "SUSAN"
      ],
+     "proposer": "SUSAN",
+     "state": "REJECTED",
      "team": [
       "SUSAN",
       "HOWARD",
       "NELSON",
       "JERRY"
-     ],
-     "proposer": "SUSAN"
+     ]
     },
     {
      "state": "APPROVED",
-     "proposer": "HOWARD",
      "votes": [
       "CHERRY",
       "HP",
@@ -205,92 +278,19 @@
       "CHERRY",
       "HP",
       "NELSON"
-     ]
+     ],
+     "proposer": "HOWARD"
     }
    ],
-   "numFails": 2,
    "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "HOWARD",
     "CHERRY",
     "HP",
     "NELSON"
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 2
   }
- ],
- "outcome": {
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "NELSON": true,
-    "JERRY": true
-   },
-   {
-    "SUSAN": false,
-    "NELSON": false,
-    "JERRY": true
-   },
-   {
-    "XIANG": true,
-    "HP": false,
-    "CHERRY": true
-   },
-   {
-    "HOWARD": true,
-    "CHERRY": true,
-    "HP": true,
-    "XIANG": true
-   },
-   {
-    "HOWARD": true,
-    "CHERRY": true,
-    "NELSON": false,
-    "HP": false
-   }
-  ],
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "JERRY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "name": "CHERRY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "HP",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "XIANG",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "SUSAN",
-    "assassin": true
-   },
-   {
-    "name": "HOWARD",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "NELSON",
-    "assassin": false,
-    "role": "OBERON"
-   }
-  ]
- },
- "options": {
-  "inGameLog": false
- }
+ ]
 }

@@ -1,18 +1,21 @@
 {
  "missions": [
   {
+   "failsRequired": 1,
    "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "HRUDHAI",
     "ROBOROBO"
    ],
    "teamSize": 2,
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "KILLER",
+     "team": [
+      "HRUDHAI",
+      "ROBOROBO"
+     ],
      "votes": [
       "HRICCHAI",
       "PRANAV",
@@ -21,18 +24,15 @@
       "HRUDHAI",
       "ROBOROBO"
      ],
-     "team": [
-      "HRUDHAI",
-      "ROBOROBO"
-     ]
+     "proposer": "KILLER"
     }
    ]
   },
   {
-   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "M",
       "PRANAV",
@@ -40,33 +40,33 @@
       "SNE",
       "HRUDHAI"
      ],
-     "proposer": "M",
+     "state": "APPROVED",
      "team": [
       "ROBOROBO",
       "HRICCHAI",
       "PRANAV"
-     ]
+     ],
+     "proposer": "M"
     }
    ],
-   "state": "FAIL",
    "team": [
     "ROBOROBO",
     "HRICCHAI",
     "PRANAV"
    ],
-   "failsRequired": 1,
+   "teamSize": 3,
    "numFails": 1
   },
   {
-   "numFails": 0,
    "teamSize": 3,
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "ROBOROBO",
     "HRUDHAI",
     "PRANAV"
    ],
    "state": "SUCCESS",
-   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -75,57 +75,58 @@
       "ROBOROBO",
       "HRICCHAI"
      ],
-     "proposer": "PRANAV",
      "team": [
       "ROBOROBO",
       "HRUDHAI",
       "PRANAV"
      ],
+     "proposer": "PRANAV",
      "state": "APPROVED"
     }
    ]
   },
   {
+   "proposals": [
+    {
+     "team": [
+      "SNE",
+      "M",
+      "HRUDHAI",
+      "ROBOROBO"
+     ],
+     "votes": [
+      "M",
+      "SNE",
+      "HRUDHAI",
+      "ROBOROBO"
+     ],
+     "state": "APPROVED",
+     "proposer": "ROBOROBO"
+    }
+   ],
+   "numFails": 2,
+   "failsRequired": 2,
    "team": [
     "SNE",
     "M",
     "HRUDHAI",
     "ROBOROBO"
    ],
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "proposer": "ROBOROBO",
-     "team": [
-      "SNE",
-      "M",
-      "HRUDHAI",
-      "ROBOROBO"
-     ],
-     "votes": [
-      "M",
-      "SNE",
-      "HRUDHAI",
-      "ROBOROBO"
-     ]
-    }
-   ],
-   "state": "FAIL",
-   "failsRequired": 2,
-   "numFails": 2,
-   "teamSize": 4
+   "teamSize": 4,
+   "state": "FAIL"
   },
   {
    "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "PRANAV",
       "SNE",
       "ROBOROBO"
      ],
      "proposer": "SNE",
+     "state": "REJECTED",
      "team": [
       "SNE",
       "ROBOROBO",
@@ -134,13 +135,6 @@
      ]
     },
     {
-     "team": [
-      "PRANAV",
-      "KILLER",
-      "HRUDHAI",
-      "ROBOROBO"
-     ],
-     "state": "APPROVED",
      "votes": [
       "PRANAV",
       "KILLER",
@@ -148,32 +142,72 @@
       "HRUDHAI",
       "ROBOROBO"
      ],
-     "proposer": "HRUDHAI"
+     "proposer": "HRUDHAI",
+     "state": "APPROVED",
+     "team": [
+      "PRANAV",
+      "KILLER",
+      "HRUDHAI",
+      "ROBOROBO"
+     ]
     }
    ],
    "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "PRANAV",
     "KILLER",
     "HRUDHAI",
     "ROBOROBO"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1
+   ]
   }
  ],
+ "timeCreated": {
+  "_seconds": 1590506844,
+  "_nanoseconds": 863000000
+ },
  "outcome": {
   "assassinated": "KILLER",
-  "roles": [
+  "state": "EVIL_WIN",
+  "votes": [
    {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "M"
+    "ROBOROBO": true,
+    "HRUDHAI": true
    },
    {
-    "assassin": false,
+    "HRICCHAI": false,
+    "ROBOROBO": true,
+    "PRANAV": true
+   },
+   {
+    "PRANAV": true,
+    "ROBOROBO": true,
+    "HRUDHAI": true
+   },
+   {
+    "M": false,
+    "HRUDHAI": true,
+    "ROBOROBO": true,
+    "SNE": false
+   },
+   {
+    "ROBOROBO": true,
+    "KILLER": true,
+    "PRANAV": true,
+    "HRUDHAI": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "name": "M",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
     "role": "LOYAL FOLLOWER",
-    "name": "PRANAV"
+    "name": "PRANAV",
+    "assassin": false
    },
    {
     "name": "KILLER",
@@ -182,55 +216,28 @@
    },
    {
     "name": "SNE",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
-    "name": "HRUDHAI",
     "role": "LOYAL FOLLOWER",
+    "name": "HRUDHAI",
     "assassin": false
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "ROBOROBO"
    },
    {
-    "role": "EVIL MINION",
+    "name": "HRICCHAI",
     "assassin": false,
-    "name": "HRICCHAI"
+    "role": "EVIL MINION"
    }
-  ],
-  "votes": [
-   {
-    "HRUDHAI": true,
-    "ROBOROBO": true
-   },
-   {
-    "ROBOROBO": true,
-    "PRANAV": true,
-    "HRICCHAI": false
-   },
-   {
-    "HRUDHAI": true,
-    "PRANAV": true,
-    "ROBOROBO": true
-   },
-   {
-    "M": false,
-    "SNE": false,
-    "ROBOROBO": true,
-    "HRUDHAI": true
-   },
-   {
-    "ROBOROBO": true,
-    "HRUDHAI": true,
-    "KILLER": true,
-    "PRANAV": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated"
+  ]
+ },
+ "options": {
+  "inGameLog": false
  },
  "timeFinished": {
   "_seconds": 1590507479,
@@ -242,12 +249,12 @@
    "uid": "tPOBnWGNdlMlLkELrLAQBWgejUp2"
   },
   {
-   "uid": "4wyOUES0NmVj4LAI5Kq4uOgbo2Y2",
-   "name": "SNE"
+   "name": "SNE",
+   "uid": "4wyOUES0NmVj4LAI5Kq4uOgbo2Y2"
   },
   {
-   "name": "HRUDHAI",
-   "uid": "U0nkFO6IHkRUEddg0dwFiLK11xP2"
+   "uid": "U0nkFO6IHkRUEddg0dwFiLK11xP2",
+   "name": "HRUDHAI"
   },
   {
    "name": "HRICCHAI",
@@ -258,19 +265,12 @@
    "uid": "dJk0zm45lpdRwzfgFhRzf21GThN2"
   },
   {
-   "name": "M",
-   "uid": "1uqw1GrUz1OPVk8uZZBc8ao1XFJ2"
+   "uid": "1uqw1GrUz1OPVk8uZZBc8ao1XFJ2",
+   "name": "M"
   },
   {
-   "name": "PRANAV",
-   "uid": "38unDnZjmGbcg7omgAXzEEtzgNn2"
+   "uid": "38unDnZjmGbcg7omgAXzEEtzgNn2",
+   "name": "PRANAV"
   }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1590506844,
-  "_nanoseconds": 863000000
- }
+ ]
 }

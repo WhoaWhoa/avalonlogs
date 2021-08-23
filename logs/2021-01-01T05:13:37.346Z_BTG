@@ -1,73 +1,37 @@
 {
- "timeFinished": {
-  "_seconds": 1609480011,
-  "_nanoseconds": 189000000
- },
- "players": [
-  {
-   "name": "NIKKI",
-   "uid": "o9zW16WJVqSCP6SrqpF1B5VthMb2"
-  },
-  {
-   "uid": "pPWd3N7h4SX7vd7DJfeORQbv95n2",
-   "name": "TALAR"
-  },
-  {
-   "name": "JOSH",
-   "uid": "jBohWhl3x5hmKWW1n1PZ9rZaqHA2"
-  },
-  {
-   "name": "NICOLE",
-   "uid": "u48yrax7ccQ70tGJ11gdag9utvR2"
-  },
-  {
-   "name": "RACHEL",
-   "uid": "dQqmpAlBGwRVS6Nj6O4Co2ptrAY2"
-  },
-  {
-   "name": "MELLY",
-   "uid": "WPhO7LzKPfQSjDK29B6Hs1OgF0n2"
-  },
-  {
-   "uid": "1H3kZJJR7eaE9T2U1LzfbNuX2zI3",
-   "name": "RICHARD"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1609478017,
-  "_nanoseconds": 346000000
+ "options": {
+  "inGameLog": false
  },
  "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "assassinated": "RACHEL",
   "votes": [
    {
     "RICHARD": true,
     "NICOLE": true
    },
    {
+    "RACHEL": true,
     "JOSH": false,
-    "RICHARD": false,
-    "RACHEL": true
+    "RICHARD": false
    },
    {
-    "NIKKI": true,
     "MELLY": true,
+    "NIKKI": true,
     "NICOLE": true
    },
    {
-    "TALAR": true,
-    "MELLY": true,
     "NIKKI": false,
+    "MELLY": true,
+    "TALAR": true,
     "NICOLE": true
    }
   ],
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
   "roles": [
    {
-    "name": "JOSH",
     "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "JOSH"
    },
    {
     "name": "RACHEL",
@@ -75,14 +39,14 @@
     "role": "PERCIVAL"
    },
    {
-    "assassin": true,
     "name": "RICHARD",
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
     "name": "TALAR",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "name": "NICOLE",
@@ -95,19 +59,19 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "name": "NIKKI",
+    "assassin": false,
     "role": "MORDRED"
    }
-  ]
+  ],
+  "assassinated": "RACHEL"
+ },
+ "timeFinished": {
+  "_seconds": 1609480011,
+  "_nanoseconds": 189000000
  },
  "missions": [
   {
-   "team": [
-    "NICOLE",
-    "RICHARD"
-   ],
-   "teamSize": 2,
    "proposals": [
     {
      "votes": [
@@ -127,18 +91,16 @@
      "state": "APPROVED"
     }
    ],
+   "numFails": 0,
+   "teamSize": 2,
    "failsRequired": 1,
    "state": "SUCCESS",
-   "numFails": 0
+   "team": [
+    "NICOLE",
+    "RICHARD"
+   ]
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "JOSH",
-    "RACHEL",
-    "RICHARD"
-   ],
    "proposals": [
     {
      "votes": [
@@ -152,26 +114,35 @@
       "RACHEL",
       "RICHARD"
      ],
-     "proposer": "MELLY",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "MELLY"
     }
+   ],
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "JOSH",
+    "RACHEL",
+    "RICHARD"
    ],
    "numFails": 2,
    "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
+     "votes": [
+      "RICHARD"
+     ],
      "team": [
       "NICOLE",
       "NIKKI",
       "TALAR"
      ],
      "proposer": "RICHARD",
-     "state": "REJECTED",
-     "votes": [
-      "RICHARD"
-     ]
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -180,18 +151,16 @@
       "NICOLE"
      ],
      "state": "APPROVED",
-     "proposer": "NIKKI",
      "votes": [
       "JOSH",
       "TALAR",
       "RICHARD",
       "NIKKI"
-     ]
+     ],
+     "proposer": "NIKKI"
     }
    ],
    "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
    "team": [
     "NIKKI",
     "MELLY",
@@ -200,9 +169,20 @@
    "teamSize": 3
   },
   {
+   "team": [
+    "NICOLE",
+    "NIKKI",
+    "MELLY",
+    "TALAR"
+   ],
+   "numFails": 1,
+   "state": "SUCCESS",
+   "teamSize": 4,
+   "failsRequired": 2,
    "proposals": [
     {
      "proposer": "TALAR",
+     "state": "APPROVED",
      "team": [
       "NICOLE",
       "NIKKI",
@@ -216,30 +196,50 @@
       "MELLY",
       "JOSH",
       "RACHEL"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "teamSize": 4,
-   "team": [
-    "NICOLE",
-    "NIKKI",
-    "MELLY",
-    "TALAR"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "numFails": 1
+   ]
   },
   {
    "team": [],
    "failsRequired": 1,
-   "state": "PENDING",
    "proposals": [],
-   "teamSize": 4
+   "teamSize": 4,
+   "state": "PENDING"
   }
  ],
- "options": {
-  "inGameLog": false
+ "players": [
+  {
+   "uid": "o9zW16WJVqSCP6SrqpF1B5VthMb2",
+   "name": "NIKKI"
+  },
+  {
+   "uid": "pPWd3N7h4SX7vd7DJfeORQbv95n2",
+   "name": "TALAR"
+  },
+  {
+   "uid": "jBohWhl3x5hmKWW1n1PZ9rZaqHA2",
+   "name": "JOSH"
+  },
+  {
+   "name": "NICOLE",
+   "uid": "u48yrax7ccQ70tGJ11gdag9utvR2"
+  },
+  {
+   "name": "RACHEL",
+   "uid": "dQqmpAlBGwRVS6Nj6O4Co2ptrAY2"
+  },
+  {
+   "name": "MELLY",
+   "uid": "WPhO7LzKPfQSjDK29B6Hs1OgF0n2"
+  },
+  {
+   "name": "RICHARD",
+   "uid": "1H3kZJJR7eaE9T2U1LzfbNuX2zI3"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1609478017,
+  "_nanoseconds": 346000000
  }
 }

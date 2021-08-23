@@ -1,4 +1,125 @@
 {
+ "players": [
+  {
+   "name": "SLIU",
+   "uid": "p91lXvRxnEUp4tMbXWAZ8LVymqQ2"
+  },
+  {
+   "uid": "u3TVamdjpbUaRe9Tqj8tX6wQOB73",
+   "name": "CAMERON"
+  },
+  {
+   "name": "VICTORIA",
+   "uid": "oTEkpBTJNtZGgfLOzfMljuXSQJN2"
+  },
+  {
+   "name": "DAN",
+   "uid": "MxAhknl43TYlFRNJYtis0t9oE7J2"
+  },
+  {
+   "name": "IANNA",
+   "uid": "qqPzlwAS8eRlCbosgbTfAGLUTfG3"
+  },
+  {
+   "uid": "GxxFIzqhWcXMVzswkfTjAp0DRTJ2",
+   "name": "AMY"
+  },
+  {
+   "uid": "gf4XYJPPOLU0YYvhgWf7flEeNzH2",
+   "name": "SARAHLI"
+  },
+  {
+   "name": "KK",
+   "uid": "GatN6sdou7fuqAX2DAB1BnI3vML2"
+  }
+ ],
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "SLIU": true,
+    "CAMERON": true,
+    "VICTORIA": true
+   },
+   {
+    "VICTORIA": true,
+    "CAMERON": true,
+    "SLIU": true,
+    "AMY": true
+   },
+   {
+    "VICTORIA": true,
+    "CAMERON": false,
+    "AMY": true,
+    "SLIU": true
+   },
+   {
+    "VICTORIA": true,
+    "SLIU": false,
+    "AMY": true,
+    "DAN": true,
+    "CAMERON": false
+   },
+   {
+    "IANNA": true,
+    "AMY": true,
+    "SLIU": false,
+    "SARAHLI": true,
+    "VICTORIA": true
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null,
+  "roles": [
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "DAN"
+   },
+   {
+    "assassin": true,
+    "name": "SLIU",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "VICTORIA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "AMY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "KK",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "SARAHLI"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "CAMERON"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "IANNA",
+    "assassin": false
+   }
+  ]
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1612590626,
+  "_nanoseconds": 361000000
+ },
  "missions": [
   {
    "state": "SUCCESS",
@@ -13,8 +134,8 @@
       "AMY",
       "SLIU"
      ],
-     "proposer": "VICTORIA",
      "state": "APPROVED",
+     "proposer": "VICTORIA",
      "team": [
       "VICTORIA",
       "SLIU",
@@ -22,48 +143,48 @@
      ]
     }
    ],
-   "teamSize": 3,
+   "numFails": 0,
    "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "VICTORIA",
     "SLIU",
     "CAMERON"
-   ],
-   "numFails": 0
+   ]
   },
   {
-   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "DAN",
      "votes": [
       "AMY",
       "DAN"
      ],
-     "proposer": "DAN",
      "team": [
       "VICTORIA",
       "SARAHLI",
       "CAMERON",
       "SLIU"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "SLIU",
-      "VICTORIA",
-      "IANNA"
-     ],
-     "proposer": "IANNA",
      "state": "REJECTED",
+     "proposer": "IANNA",
      "team": [
       "VICTORIA",
       "SLIU",
       "IANNA",
       "SARAHLI"
+     ],
+     "votes": [
+      "SLIU",
+      "VICTORIA",
+      "IANNA"
      ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "IANNA",
       "SLIU",
@@ -80,33 +201,32 @@
       "CAMERON",
       "SLIU"
      ],
-     "state": "APPROVED",
      "proposer": "AMY"
     }
    ],
+   "state": "SUCCESS",
+   "teamSize": 4,
    "numFails": 0,
-   "failsRequired": 1,
    "team": [
     "AMY",
     "VICTORIA",
     "CAMERON",
     "SLIU"
    ],
-   "teamSize": 4
+   "failsRequired": 1
   },
   {
-   "teamSize": 4,
-   "failsRequired": 1,
+   "state": "FAIL",
    "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "AMY",
+    "CAMERON",
+    "SLIU",
+    "VICTORIA"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "AMY",
-      "CAMERON",
-      "SLIU",
-      "VICTORIA"
-     ],
      "votes": [
       "SARAHLI",
       "VICTORIA",
@@ -116,22 +236,30 @@
       "CAMERON",
       "IANNA"
      ],
-     "proposer": "SARAHLI"
+     "state": "APPROVED",
+     "proposer": "SARAHLI",
+     "team": [
+      "AMY",
+      "CAMERON",
+      "SLIU",
+      "VICTORIA"
+     ]
     }
    ],
-   "team": [
-    "AMY",
-    "CAMERON",
-    "SLIU",
-    "VICTORIA"
-   ],
-   "state": "FAIL"
+   "teamSize": 4
   },
   {
-   "teamSize": 5,
+   "numFails": 2,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "KK",
+      "IANNA",
+      "SARAHLI",
+      "DAN"
+     ],
+     "proposer": "KK",
      "team": [
       "KK",
       "SARAHLI",
@@ -139,16 +267,10 @@
       "IANNA",
       "DAN"
      ],
-     "votes": [
-      "KK",
-      "IANNA",
-      "SARAHLI",
-      "DAN"
-     ],
-     "proposer": "KK"
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
+     "proposer": "SLIU",
      "votes": [
       "VICTORIA",
       "DAN",
@@ -159,7 +281,7 @@
       "AMY",
       "SLIU"
      ],
-     "proposer": "SLIU",
+     "state": "APPROVED",
      "team": [
       "SLIU",
       "VICTORIA",
@@ -169,9 +291,8 @@
      ]
     }
    ],
-   "state": "FAIL",
-   "numFails": 2,
    "failsRequired": 2,
+   "teamSize": 5,
    "team": [
     "SLIU",
     "VICTORIA",
@@ -181,26 +302,11 @@
    ]
   },
   {
-   "teamSize": 5,
-   "failsRequired": 1,
-   "team": [
-    "VICTORIA",
-    "IANNA",
-    "SARAHLI",
-    "AMY",
-    "SLIU"
-   ],
-   "numFails": 1,
    "state": "FAIL",
+   "teamSize": 5,
    "proposals": [
     {
      "state": "REJECTED",
-     "votes": [
-      "CAMERON",
-      "KK",
-      "AMY",
-      "IANNA"
-     ],
      "team": [
       "CAMERON",
       "IANNA",
@@ -208,9 +314,22 @@
       "AMY",
       "SARAHLI"
      ],
+     "votes": [
+      "CAMERON",
+      "KK",
+      "AMY",
+      "IANNA"
+     ],
      "proposer": "CAMERON"
     },
     {
+     "votes": [
+      "IANNA",
+      "SLIU",
+      "VICTORIA",
+      "KK",
+      "AMY"
+     ],
      "proposer": "VICTORIA",
      "team": [
       "VICTORIA",
@@ -219,139 +338,20 @@
       "AMY",
       "SLIU"
      ],
-     "state": "APPROVED",
-     "votes": [
-      "IANNA",
-      "SLIU",
-      "VICTORIA",
-      "KK",
-      "AMY"
-     ]
+     "state": "APPROVED"
     }
+   ],
+   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "VICTORIA",
+    "IANNA",
+    "SARAHLI",
+    "AMY",
+    "SLIU"
    ]
   }
  ],
- "players": [
-  {
-   "name": "SLIU",
-   "uid": "p91lXvRxnEUp4tMbXWAZ8LVymqQ2"
-  },
-  {
-   "name": "CAMERON",
-   "uid": "u3TVamdjpbUaRe9Tqj8tX6wQOB73"
-  },
-  {
-   "name": "VICTORIA",
-   "uid": "oTEkpBTJNtZGgfLOzfMljuXSQJN2"
-  },
-  {
-   "name": "DAN",
-   "uid": "MxAhknl43TYlFRNJYtis0t9oE7J2"
-  },
-  {
-   "uid": "qqPzlwAS8eRlCbosgbTfAGLUTfG3",
-   "name": "IANNA"
-  },
-  {
-   "name": "AMY",
-   "uid": "GxxFIzqhWcXMVzswkfTjAp0DRTJ2"
-  },
-  {
-   "uid": "gf4XYJPPOLU0YYvhgWf7flEeNzH2",
-   "name": "SARAHLI"
-  },
-  {
-   "name": "KK",
-   "uid": "GatN6sdou7fuqAX2DAB1BnI3vML2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1612590626,
-  "_nanoseconds": 361000000
- },
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "CAMERON": true,
-    "SLIU": true,
-    "VICTORIA": true
-   },
-   {
-    "SLIU": true,
-    "CAMERON": true,
-    "AMY": true,
-    "VICTORIA": true
-   },
-   {
-    "AMY": true,
-    "CAMERON": false,
-    "VICTORIA": true,
-    "SLIU": true
-   },
-   {
-    "AMY": true,
-    "SLIU": false,
-    "DAN": true,
-    "VICTORIA": true,
-    "CAMERON": false
-   },
-   {
-    "VICTORIA": true,
-    "SLIU": false,
-    "IANNA": true,
-    "SARAHLI": true,
-    "AMY": true
-   }
-  ],
-  "assassinated": null,
-  "roles": [
-   {
-    "name": "DAN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "SLIU",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "name": "VICTORIA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "AMY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "KK",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "SARAHLI"
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "CAMERON"
-   },
-   {
-    "assassin": false,
-    "name": "IANNA",
-    "role": "LOYAL FOLLOWER"
-   }
-  ]
- },
  "timeFinished": {
   "_seconds": 1612592302,
   "_nanoseconds": 859000000

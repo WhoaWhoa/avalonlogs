@@ -1,45 +1,130 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
    "name": "JUN",
    "uid": "dC2rhnbihPgT8jDmLeQKSigns8Q2"
   },
   {
-   "uid": "xdF3AA3GpWYH48o1Wl0qnKey2qh1",
-   "name": "CHEVIN"
+   "name": "CHEVIN",
+   "uid": "xdF3AA3GpWYH48o1Wl0qnKey2qh1"
   },
   {
-   "uid": "2sjc3XRTDFMvxy3fYcsDjtxGzSE2",
-   "name": "MICHAELP"
+   "name": "MICHAELP",
+   "uid": "2sjc3XRTDFMvxy3fYcsDjtxGzSE2"
   },
   {
    "name": "ARAVIND",
    "uid": "OExp95tV1pXrAmUtUIi9naRsFOs2"
   },
   {
-   "name": "HEISENBERG",
-   "uid": "zvsPHBqsb0cvuDIJECsA9KCcYjb2"
+   "uid": "zvsPHBqsb0cvuDIJECsA9KCcYjb2",
+   "name": "HEISENBERG"
   },
   {
    "uid": "0EwMN07DPLYjSQrNoWCOIyYmB8s1",
    "name": "JEDIAH"
   },
   {
-   "name": "MICHAELW",
-   "uid": "KEtn73LrQZXtZG4uZiw6vm5n2sj2"
+   "uid": "KEtn73LrQZXtZG4uZiw6vm5n2sj2",
+   "name": "MICHAELW"
   },
   {
    "name": "CLIFF",
    "uid": "uc5wEQfmukh20e0tr99KgsQgXTC2"
   }
  ],
+ "outcome": {
+  "assassinated": null,
+  "votes": [
+   {
+    "JUN": false,
+    "MICHAELW": true,
+    "CLIFF": true
+   },
+   {
+    "MICHAELW": true,
+    "CHEVIN": true,
+    "JEDIAH": false,
+    "CLIFF": true
+   },
+   {
+    "HEISENBERG": false,
+    "JEDIAH": false,
+    "MICHAELW": true,
+    "CHEVIN": true
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "OBERON",
+    "name": "HEISENBERG",
+    "assassin": false
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "CHEVIN"
+   },
+   {
+    "name": "MICHAELP",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "CLIFF",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MERLIN",
+    "name": "ARAVIND",
+    "assassin": false
+   },
+   {
+    "name": "JEDIAH",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": true,
+    "name": "JUN",
+    "role": "MORDRED"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "MICHAELW"
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1595030845,
+  "_nanoseconds": 345000000
+ },
+ "timeFinished": {
+  "_seconds": 1595031492,
+  "_nanoseconds": 240000000
+ },
  "missions": [
   {
+   "failsRequired": 1,
+   "teamSize": 3,
    "state": "FAIL",
+   "team": [
+    "JUN",
+    "CLIFF",
+    "MICHAELW"
+   ],
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "proposer": "CLIFF",
+     "state": "REJECTED",
      "votes": [],
      "team": [
       "MICHAELW",
@@ -63,21 +148,20 @@
       "MICHAELW"
      ]
     }
-   ],
-   "team": [
-    "JUN",
-    "CLIFF",
-    "MICHAELW"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1
+   ]
   },
   {
+   "numFails": 1,
+   "team": [
+    "CHEVIN",
+    "JEDIAH",
+    "MICHAELW",
+    "CLIFF"
+   ],
+   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "CHEVIN",
      "votes": [
       "MICHAELW",
       "CLIFF",
@@ -90,19 +174,12 @@
       "JEDIAH",
       "MICHAELW",
       "CLIFF"
-     ]
+     ],
+     "proposer": "CHEVIN",
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 4,
-   "numFails": 1,
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "CHEVIN",
-    "JEDIAH",
-    "MICHAELW",
-    "CLIFF"
-   ]
+   "failsRequired": 1
   },
   {
    "team": [
@@ -112,8 +189,6 @@
     "CHEVIN"
    ],
    "teamSize": 4,
-   "numFails": 2,
-   "failsRequired": 1,
    "proposals": [
     {
      "state": "REJECTED",
@@ -123,32 +198,31 @@
       "MICHAELP",
       "CHEVIN"
      ],
-     "proposer": "MICHAELP",
      "votes": [
       "HEISENBERG",
       "MICHAELP",
       "ARAVIND",
       "MICHAELW"
-     ]
+     ],
+     "proposer": "MICHAELP"
     },
     {
-     "votes": [
-      "CHEVIN",
-      "MICHAELP",
-      "ARAVIND"
-     ],
      "proposer": "ARAVIND",
-     "state": "REJECTED",
      "team": [
       "JUN",
       "ARAVIND",
       "MICHAELP",
       "CHEVIN"
-     ]
+     ],
+     "votes": [
+      "CHEVIN",
+      "MICHAELP",
+      "ARAVIND"
+     ],
+     "state": "REJECTED"
     },
     {
      "proposer": "HEISENBERG",
-     "state": "REJECTED",
      "votes": [
       "JUN",
       "HEISENBERG",
@@ -159,118 +233,44 @@
       "JEDIAH",
       "CHEVIN",
       "CLIFF"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "proposer": "JEDIAH",
+     "team": [
+      "JEDIAH",
+      "MICHAELW",
+      "HEISENBERG",
+      "CHEVIN"
+     ],
      "votes": [
       "MICHAELW",
       "JEDIAH",
       "CHEVIN",
       "HEISENBERG",
       "MICHAELP"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "JEDIAH",
-      "MICHAELW",
-      "HEISENBERG",
-      "CHEVIN"
      ]
     }
    ],
-   "state": "FAIL"
+   "numFails": 2,
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
+   "state": "PENDING",
+   "team": [],
+   "failsRequired": 2,
    "proposals": [],
-   "teamSize": 5,
-   "state": "PENDING",
-   "team": [],
-   "failsRequired": 2
+   "teamSize": 5
   },
   {
    "team": [],
-   "failsRequired": 1,
-   "teamSize": 5,
    "state": "PENDING",
-   "proposals": []
+   "failsRequired": 1,
+   "proposals": [],
+   "teamSize": 5
   }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1595031492,
-  "_nanoseconds": 240000000
- },
- "timeCreated": {
-  "_seconds": 1595030845,
-  "_nanoseconds": 345000000
- },
- "outcome": {
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "MICHAELW": true,
-    "JUN": false,
-    "CLIFF": true
-   },
-   {
-    "JEDIAH": false,
-    "CLIFF": true,
-    "MICHAELW": true,
-    "CHEVIN": true
-   },
-   {
-    "HEISENBERG": false,
-    "JEDIAH": false,
-    "MICHAELW": true,
-    "CHEVIN": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "role": "OBERON",
-    "name": "HEISENBERG"
-   },
-   {
-    "name": "CHEVIN",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MICHAELP"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "CLIFF"
-   },
-   {
-    "name": "ARAVIND",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "JEDIAH"
-   },
-   {
-    "role": "MORDRED",
-    "name": "JUN",
-    "assassin": true
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "MICHAELW",
-    "assassin": false
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN"
- }
+ ]
 }

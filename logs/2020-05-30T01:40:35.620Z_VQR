@@ -1,12 +1,18 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
+   "failsRequired": 1,
    "state": "SUCCESS",
+   "team": [
+    "IZZY",
+    "SCOTT"
+   ],
    "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "NICOLE",
       "LANA",
@@ -14,56 +20,53 @@
       "IZZY",
       "RAMYA"
      ],
+     "proposer": "IZZY",
+     "state": "APPROVED",
      "team": [
       "IZZY",
       "SCOTT"
-     ],
-     "proposer": "IZZY"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "IZZY",
-    "SCOTT"
-   ]
+   "teamSize": 2
   },
   {
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "SCOTT",
     "NICOLE",
     "RAMYA"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "SCOTT",
+     "team": [
+      "SCOTT",
+      "NICOLE",
+      "RAMYA"
+     ],
+     "state": "APPROVED",
      "votes": [
       "RAMYA",
       "SCOTT",
       "LANA",
       "IZZY"
-     ],
-     "proposer": "SCOTT",
-     "state": "APPROVED",
-     "team": [
-      "SCOTT",
-      "NICOLE",
-      "RAMYA"
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3,
+   "numFails": 1
   },
   {
-   "team": [
-    "ALKHANSA",
-    "LANA",
-    "SCOTT",
-    "RAMYA"
-   ],
    "proposals": [
     {
+     "team": [
+      "ALKHANSA",
+      "LANA",
+      "SCOTT",
+      "RAMYA"
+     ],
      "state": "APPROVED",
      "votes": [
       "LANA",
@@ -72,40 +75,35 @@
       "RAMYA",
       "NICOLE"
      ],
-     "team": [
-      "ALKHANSA",
-      "LANA",
-      "SCOTT",
-      "RAMYA"
-     ],
      "proposer": "LANA"
     }
    ],
-   "numFails": 0,
    "teamSize": 4,
-   "failsRequired": 1,
-   "state": "SUCCESS"
-  },
-  {
-   "state": "SUCCESS",
+   "numFails": 0,
    "failsRequired": 1,
    "team": [
     "ALKHANSA",
+    "LANA",
     "SCOTT",
-    "LANA"
+    "RAMYA"
    ],
+   "state": "SUCCESS"
+  },
+  {
+   "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "RAMYA"
-     ],
-     "proposer": "NICOLE",
      "team": [
       "ALKHANSA",
       "IZZY",
       "LANA"
-     ]
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "RAMYA"
+     ],
+     "proposer": "NICOLE"
     },
     {
      "team": [
@@ -113,6 +111,8 @@
       "SCOTT",
       "LANA"
      ],
+     "proposer": "RAMYA",
+     "state": "APPROVED",
      "votes": [
       "RAMYA",
       "NICOLE",
@@ -120,65 +120,63 @@
       "LANA",
       "ALKHANSA",
       "IZZY"
-     ],
-     "proposer": "RAMYA",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "numFails": 0,
-   "teamSize": 3
+   "failsRequired": 1,
+   "team": [
+    "ALKHANSA",
+    "SCOTT",
+    "LANA"
+   ],
+   "state": "SUCCESS"
   },
   {
    "proposals": [],
+   "teamSize": 4,
    "state": "PENDING",
    "failsRequired": 1,
-   "team": [],
-   "teamSize": 4
+   "team": []
   }
  ],
- "timeCreated": {
-  "_seconds": 1590802835,
-  "_nanoseconds": 620000000
- },
  "outcome": {
-  "assassinated": "IZZY",
-  "message": "Three successful missions",
+  "state": "GOOD_WIN",
   "votes": [
    {
-    "SCOTT": true,
-    "IZZY": true
-   },
-   {
-    "NICOLE": false,
-    "RAMYA": true,
+    "IZZY": true,
     "SCOTT": true
    },
    {
     "SCOTT": true,
-    "ALKHANSA": true,
-    "LANA": true,
-    "RAMYA": true
+    "RAMYA": true,
+    "NICOLE": false
    },
    {
-    "ALKHANSA": true,
     "SCOTT": true,
-    "LANA": true
+    "RAMYA": true,
+    "LANA": true,
+    "ALKHANSA": true
+   },
+   {
+    "LANA": true,
+    "SCOTT": true,
+    "ALKHANSA": true
    }
   ],
   "roles": [
    {
-    "name": "IZZY",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "IZZY"
    },
    {
+    "name": "RAMYA",
     "role": "MERLIN",
-    "assassin": false,
-    "name": "RAMYA"
+    "assassin": false
    },
    {
-    "role": "EVIL MINION",
     "name": "NICOLE",
+    "role": "EVIL MINION",
     "assassin": true
    },
    {
@@ -187,9 +185,9 @@
     "name": "SCOTT"
    },
    {
-    "assassin": false,
     "name": "LANA",
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "assassin": false
    },
    {
     "assassin": false,
@@ -197,20 +195,25 @@
     "name": "ALKHANSA"
    }
   ],
-  "state": "GOOD_WIN"
+  "assassinated": "IZZY",
+  "message": "Three successful missions"
+ },
+ "timeFinished": {
+  "_seconds": 1590803386,
+  "_nanoseconds": 859000000
  },
  "players": [
   {
-   "name": "RAMYA",
-   "uid": "ouXMorBTweWuQnGMWpQIBjDXcIG2"
+   "uid": "ouXMorBTweWuQnGMWpQIBjDXcIG2",
+   "name": "RAMYA"
   },
   {
-   "name": "ALKHANSA",
-   "uid": "QfWwliaTN3YURPy9X7iXBHFV67z1"
+   "uid": "QfWwliaTN3YURPy9X7iXBHFV67z1",
+   "name": "ALKHANSA"
   },
   {
-   "uid": "aAxDtaMVOchGac1r0JqSAu9AIsg2",
-   "name": "IZZY"
+   "name": "IZZY",
+   "uid": "aAxDtaMVOchGac1r0JqSAu9AIsg2"
   },
   {
    "uid": "v6wYFsp31RQ4T73zUw7UYJJsCaw1",
@@ -225,11 +228,8 @@
    "uid": "9DB1Y4HyYfTXq2A1WqX5zjwWg273"
   }
  ],
- "timeFinished": {
-  "_seconds": 1590803386,
-  "_nanoseconds": 859000000
- },
- "options": {
-  "inGameLog": false
+ "timeCreated": {
+  "_seconds": 1590802835,
+  "_nanoseconds": 620000000
  }
 }

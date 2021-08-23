@@ -1,60 +1,104 @@
 {
+ "timeFinished": {
+  "_seconds": 1596329324,
+  "_nanoseconds": 586000000
+ },
+ "timeCreated": {
+  "_seconds": 1596328300,
+  "_nanoseconds": 105000000
+ },
+ "players": [
+  {
+   "name": "JACK",
+   "uid": "qGnl9PV9udVrn9ltETPRqIv10912"
+  },
+  {
+   "uid": "9KWw9OZ2jJVSztWSMbeLLX0S6882",
+   "name": "MICHELE"
+  },
+  {
+   "uid": "fdt03gqMeHSY5yzoHNJUckoJr522",
+   "name": "NAT"
+  },
+  {
+   "uid": "ETSDsbTLzMeAH699whnDxiakPlo2",
+   "name": "LILY"
+  },
+  {
+   "name": "ALEX",
+   "uid": "BBy3QyepEIaC80N67HIcPTnEL2p1"
+  },
+  {
+   "name": "DL",
+   "uid": "ZyyzxhBD9eOQHwl4qqvk1eNMn4H2"
+  }
+ ],
  "missions": [
   {
    "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "ALEX",
-      "DL"
-     ],
-     "proposer": "ALEX",
      "votes": [
       "ALEX",
       "NAT",
       "MICHELE",
       "JACK"
      ],
-     "state": "APPROVED"
+     "proposer": "ALEX",
+     "state": "APPROVED",
+     "team": [
+      "ALEX",
+      "DL"
+     ]
     }
    ],
-   "numFails": 0,
+   "teamSize": 2,
    "team": [
     "ALEX",
     "DL"
    ],
-   "teamSize": 2,
+   "numFails": 0,
    "state": "SUCCESS"
   },
   {
-   "teamSize": 3,
    "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "DL",
     "LILY",
     "MICHELE"
    ],
-   "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "DL",
+      "LILY",
+      "MICHELE"
+     ],
      "votes": [
       "JACK",
       "DL",
       "MICHELE",
       "NAT"
      ],
-     "proposer": "DL",
-     "team": [
-      "DL",
-      "LILY",
-      "MICHELE"
-     ],
-     "state": "APPROVED"
+     "proposer": "DL"
     }
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "teamSize": 3
   },
   {
+   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "JACK",
+    "MICHELE",
+    "ALEX",
+    "LILY"
+   ],
    "proposals": [
     {
      "votes": [
@@ -72,28 +116,26 @@
       "LILY"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 1,
-   "team": [
-    "JACK",
-    "MICHELE",
-    "ALEX",
-    "LILY"
-   ],
-   "state": "FAIL"
+   ]
   },
   {
+   "failsRequired": 1,
    "teamSize": 3,
+   "team": [
+    "NAT",
+    "LILY",
+    "ALEX"
+   ],
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "MICHELE",
       "LILY",
       "ALEX"
      ],
-     "state": "REJECTED",
      "votes": [
       "MICHELE",
       "JACK"
@@ -101,12 +143,8 @@
      "proposer": "MICHELE"
     },
     {
+     "proposer": "NAT",
      "state": "APPROVED",
-     "team": [
-      "NAT",
-      "LILY",
-      "ALEX"
-     ],
      "votes": [
       "ALEX",
       "LILY",
@@ -114,21 +152,15 @@
       "MICHELE",
       "NAT"
      ],
-     "proposer": "NAT"
+     "team": [
+      "NAT",
+      "LILY",
+      "ALEX"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0,
-   "team": [
-    "NAT",
-    "LILY",
-    "ALEX"
    ]
   },
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "numFails": 0,
    "team": [
     "LILY",
@@ -136,41 +168,74 @@
     "NAT",
     "DL"
    ],
-   "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "NAT",
-      "JACK",
-      "ALEX",
-      "LILY",
-      "DL"
-     ],
+     "proposer": "LILY",
+     "state": "APPROVED",
      "team": [
       "LILY",
       "ALEX",
       "NAT",
       "DL"
      ],
-     "state": "APPROVED",
-     "proposer": "LILY"
+     "votes": [
+      "NAT",
+      "JACK",
+      "ALEX",
+      "LILY",
+      "DL"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
+   "state": "SUCCESS"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
-  "assassinated": "NAT",
   "state": "EVIL_WIN",
-  "roles": [
+  "assassinated": "NAT",
+  "votes": [
    {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "MICHELE"
+    "ALEX": true,
+    "DL": true
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "LILY": true,
+    "DL": true,
+    "MICHELE": false
+   },
+   {
+    "MICHELE": false,
+    "JACK": true,
+    "ALEX": true,
+    "LILY": true
+   },
+   {
+    "NAT": true,
+    "ALEX": true,
+    "LILY": true
+   },
+   {
+    "LILY": true,
+    "DL": true,
+    "ALEX": true,
+    "NAT": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "name": "MICHELE",
+    "role": "MORGANA"
+   },
+   {
     "name": "DL",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "role": "MERLIN",
@@ -183,81 +248,16 @@
     "role": "PERCIVAL"
    },
    {
-    "name": "JACK",
+    "role": "EVIL MINION",
     "assassin": true,
-    "role": "EVIL MINION"
+    "name": "JACK"
    },
    {
-    "assassin": false,
+    "name": "ALEX",
     "role": "LOYAL FOLLOWER",
-    "name": "ALEX"
-   }
-  ],
-  "votes": [
-   {
-    "DL": true,
-    "ALEX": true
-   },
-   {
-    "LILY": true,
-    "DL": true,
-    "MICHELE": false
-   },
-   {
-    "JACK": true,
-    "MICHELE": false,
-    "ALEX": true,
-    "LILY": true
-   },
-   {
-    "LILY": true,
-    "NAT": true,
-    "ALEX": true
-   },
-   {
-    "LILY": true,
-    "ALEX": true,
-    "NAT": true,
-    "DL": true
+    "assassin": false
    }
   ],
   "message": "Merlin assassinated"
- },
- "players": [
-  {
-   "name": "JACK",
-   "uid": "qGnl9PV9udVrn9ltETPRqIv10912"
-  },
-  {
-   "name": "MICHELE",
-   "uid": "9KWw9OZ2jJVSztWSMbeLLX0S6882"
-  },
-  {
-   "name": "NAT",
-   "uid": "fdt03gqMeHSY5yzoHNJUckoJr522"
-  },
-  {
-   "name": "LILY",
-   "uid": "ETSDsbTLzMeAH699whnDxiakPlo2"
-  },
-  {
-   "name": "ALEX",
-   "uid": "BBy3QyepEIaC80N67HIcPTnEL2p1"
-  },
-  {
-   "name": "DL",
-   "uid": "ZyyzxhBD9eOQHwl4qqvk1eNMn4H2"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1596329324,
-  "_nanoseconds": 586000000
- },
- "timeCreated": {
-  "_seconds": 1596328300,
-  "_nanoseconds": 105000000
- },
- "options": {
-  "inGameLog": false
  }
 }

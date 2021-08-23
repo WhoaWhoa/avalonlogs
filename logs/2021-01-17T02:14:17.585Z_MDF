@@ -1,13 +1,9 @@
 {
- "options": {
-  "inGameLog": false
- },
  "missions": [
   {
-   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "COLIN",
      "votes": [
       "DAVE",
       "LISA",
@@ -18,26 +14,36 @@
       "JESSICA",
       "TITIA"
      ],
-     "state": "APPROVED",
      "team": [
       "DAVE",
       "JESSICA",
       "MARK"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "COLIN"
     }
    ],
    "teamSize": 3,
+   "state": "SUCCESS",
    "team": [
     "DAVE",
     "JESSICA",
     "MARK"
    ],
-   "numFails": 0,
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
+   "team": [
+    "JESSICA",
+    "DAVE",
+    "MARK",
+    "VP"
+   ],
+   "state": "FAIL",
+   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "VP",
       "PAUL",
@@ -46,37 +52,24 @@
       "JESSICA",
       "DANSARA"
      ],
+     "proposer": "DANSARA",
      "team": [
       "JESSICA",
       "DAVE",
       "MARK",
       "VP"
-     ],
-     "state": "APPROVED",
-     "proposer": "DANSARA"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "JESSICA",
-    "DAVE",
-    "MARK",
-    "VP"
-   ],
    "numFails": 1,
-   "teamSize": 4
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "JESSICA",
-      "DANSARA",
-      "MARK",
-      "TITIA"
-     ],
-     "proposer": "JESSICA",
+     "state": "APPROVED",
      "votes": [
       "LISA",
       "TITIA",
@@ -85,23 +78,28 @@
       "DAVE",
       "COLIN"
      ],
-     "state": "APPROVED"
+     "proposer": "JESSICA",
+     "team": [
+      "JESSICA",
+      "DANSARA",
+      "MARK",
+      "TITIA"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0,
    "team": [
     "JESSICA",
     "DANSARA",
     "MARK",
     "TITIA"
    ],
-   "teamSize": 4
+   "teamSize": 4,
+   "state": "SUCCESS"
   },
   {
    "proposals": [
     {
+     "proposer": "TITIA",
      "votes": [
       "DAVE",
       "LISA",
@@ -110,7 +108,6 @@
       "COLIN",
       "TITIA"
      ],
-     "proposer": "TITIA",
      "state": "APPROVED",
      "team": [
       "DAVE",
@@ -121,24 +118,24 @@
      ]
     }
    ],
+   "state": "SUCCESS",
+   "teamSize": 5,
+   "numFails": 1,
+   "failsRequired": 2,
    "team": [
     "DAVE",
     "JESSICA",
     "MARK",
     "TITIA",
     "DANSARA"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "teamSize": 5,
-   "numFails": 1
+   ]
   },
   {
-   "failsRequired": 1,
    "state": "PENDING",
+   "proposals": [],
    "teamSize": 5,
-   "team": [],
-   "proposals": []
+   "failsRequired": 1,
+   "team": []
   }
  ],
  "timeCreated": {
@@ -146,13 +143,12 @@
   "_nanoseconds": 585000000
  },
  "outcome": {
-  "message": "Three successful missions",
   "state": "GOOD_WIN",
   "roles": [
    {
-    "role": "LOYAL FOLLOWER",
+    "name": "DAVE",
     "assassin": false,
-    "name": "DAVE"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
@@ -160,34 +156,34 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "TITIA",
-    "role": "LOYAL FOLLOWER",
     "assassin": false
    },
    {
-    "name": "PAUL",
     "role": "MERLIN",
+    "assassin": false,
+    "name": "PAUL"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "COLIN",
     "assassin": false
    },
    {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "COLIN"
+    "name": "VP",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "name": "MARK",
+    "assassin": true,
+    "role": "EVIL MINION"
    },
    {
     "assassin": false,
     "role": "EVIL MINION",
-    "name": "VP"
-   },
-   {
-    "assassin": true,
-    "name": "MARK",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "DANSARA",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "name": "DANSARA"
    },
    {
     "assassin": false,
@@ -195,38 +191,46 @@
     "name": "LISA"
    }
   ],
+  "message": "Three successful missions",
   "assassinated": "DAVE",
   "votes": [
    {
-    "JESSICA": true,
+    "DAVE": true,
     "MARK": true,
-    "DAVE": true
+    "JESSICA": true
    },
    {
-    "MARK": false,
-    "JESSICA": true,
     "VP": true,
-    "DAVE": true
-   },
-   {
-    "JESSICA": true,
-    "TITIA": true,
-    "DANSARA": true,
-    "MARK": true
-   },
-   {
     "MARK": false,
-    "TITIA": true,
-    "DANSARA": true,
     "DAVE": true,
     "JESSICA": true
+   },
+   {
+    "MARK": true,
+    "TITIA": true,
+    "JESSICA": true,
+    "DANSARA": true
+   },
+   {
+    "TITIA": true,
+    "JESSICA": true,
+    "DANSARA": true,
+    "MARK": false,
+    "DAVE": true
    }
   ]
  },
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1610850619,
+  "_nanoseconds": 306000000
+ },
  "players": [
   {
-   "name": "DANSARA",
-   "uid": "4kfTR56VMGXJD3uO5Ydd62Hn6i23"
+   "uid": "4kfTR56VMGXJD3uO5Ydd62Hn6i23",
+   "name": "DANSARA"
   },
   {
    "uid": "mPN3PIMVeVMvtD3YddGLDs9T6AX2",
@@ -245,8 +249,8 @@
    "uid": "7dw8qNUtOAgmPCgGTPoLoQ4LHmt1"
   },
   {
-   "uid": "PUworvEmwfSdLts2wo1dHmFyZgT2",
-   "name": "MARK"
+   "name": "MARK",
+   "uid": "PUworvEmwfSdLts2wo1dHmFyZgT2"
   },
   {
    "name": "LISA",
@@ -257,12 +261,8 @@
    "uid": "3H2UhJ1Cllfazu1TZ13e5SBrQOy1"
   },
   {
-   "uid": "nMxyYWSPrAOITAlL4L44bPv81ED3",
-   "name": "COLIN"
+   "name": "COLIN",
+   "uid": "nMxyYWSPrAOITAlL4L44bPv81ED3"
   }
- ],
- "timeFinished": {
-  "_seconds": 1610850619,
-  "_nanoseconds": 306000000
- }
+ ]
 }

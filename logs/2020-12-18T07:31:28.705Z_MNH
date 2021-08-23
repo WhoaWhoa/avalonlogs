@@ -2,96 +2,6 @@
  "options": {
   "inGameLog": false
  },
- "outcome": {
-  "roles": [
-   {
-    "assassin": false,
-    "name": "DANDAN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "LAU",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "GIL",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "JORDAN"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "ROCKY",
-    "assassin": true
-   },
-   {
-    "name": "BOY",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "name": "MNH",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "RICO"
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "JOSHUA"
-   },
-   {
-    "name": "GELZ",
-    "role": "MERLIN",
-    "assassin": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "assassinated": null,
-  "votes": [
-   {
-    "GELZ": true,
-    "JORDAN": false,
-    "LAU": false
-   },
-   {
-    "RICO": true,
-    "ROCKY": true,
-    "BOY": false,
-    "JOSHUA": true
-   },
-   {
-    "JOSHUA": true,
-    "GIL": true,
-    "GELZ": true,
-    "DANDAN": true
-   },
-   {
-    "GIL": true,
-    "JOSHUA": true,
-    "RICO": true,
-    "MNH": true,
-    "JORDAN": true
-   },
-   {
-    "ROCKY": false,
-    "GELZ": true,
-    "BOY": false,
-    "MNH": true,
-    "LAU": false
-   }
-  ]
- },
  "timeFinished": {
   "_seconds": 1608277648,
   "_nanoseconds": 873000000
@@ -99,10 +9,19 @@
  "missions": [
   {
    "state": "FAIL",
-   "numFails": 2,
+   "team": [
+    "GELZ",
+    "JORDAN",
+    "LAU"
+   ],
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "GELZ",
+      "JORDAN",
+      "LAU"
+     ],
      "votes": [
       "GELZ",
       "RICO",
@@ -115,37 +34,37 @@
       "MNH",
       "DANDAN"
      ],
-     "team": [
-      "GELZ",
-      "JORDAN",
-      "LAU"
-     ],
      "proposer": "GIL"
     }
    ],
    "failsRequired": 1,
-   "team": [
-    "GELZ",
-    "JORDAN",
-    "LAU"
-   ],
-   "teamSize": 3
+   "teamSize": 3,
+   "numFails": 2
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 4,
+   "team": [
+    "JOSHUA",
+    "ROCKY",
+    "BOY",
+    "RICO"
+   ],
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "JORDAN",
      "votes": [
       "JORDAN",
       "LAU"
      ],
-     "proposer": "JORDAN",
      "team": [
       "GELZ",
       "ROCKY",
       "DANDAN",
       "BOY"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -154,7 +73,6 @@
       "BOY",
       "RICO"
      ],
-     "state": "APPROVED",
      "proposer": "DANDAN",
      "votes": [
       "MNH",
@@ -166,40 +84,31 @@
       "LAU",
       "RICO",
       "JOSHUA"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "numFails": 1,
-   "team": [
-    "JOSHUA",
-    "ROCKY",
-    "BOY",
-    "RICO"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 4
+   "failsRequired": 1
   },
   {
    "proposals": [
     {
-     "proposer": "BOY",
+     "state": "REJECTED",
      "votes": [
       "GIL",
       "BOY",
       "JORDAN",
       "JOSHUA"
      ],
+     "proposer": "BOY",
      "team": [
       "GELZ",
       "LAU",
       "GIL",
       "JOSHUA"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "proposer": "GELZ",
      "state": "APPROVED",
      "votes": [
       "GELZ",
@@ -216,25 +125,24 @@
       "GELZ",
       "JOSHUA",
       "GIL"
-     ]
+     ],
+     "proposer": "GELZ"
     }
    ],
-   "numFails": 0,
-   "teamSize": 4,
    "team": [
     "DANDAN",
     "GELZ",
     "JOSHUA",
     "GIL"
    ],
+   "numFails": 0,
    "state": "SUCCESS",
+   "teamSize": 4,
    "failsRequired": 1
   },
   {
-   "failsRequired": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "GIL",
       "JOSHUA",
@@ -244,18 +152,17 @@
       "ROCKY",
       "LAU"
      ],
-     "proposer": "ROCKY",
      "team": [
       "JOSHUA",
       "RICO",
       "GIL",
       "JORDAN",
       "MNH"
-     ]
+     ],
+     "proposer": "ROCKY",
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0,
    "team": [
     "JOSHUA",
     "RICO",
@@ -263,13 +170,14 @@
     "JORDAN",
     "MNH"
    ],
-   "teamSize": 5
+   "teamSize": 5,
+   "failsRequired": 2,
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "MNH",
      "team": [
       "ROCKY",
       "BOY",
@@ -277,6 +185,7 @@
       "MNH",
       "GELZ"
      ],
+     "state": "APPROVED",
      "votes": [
       "JORDAN",
       "MNH",
@@ -284,11 +193,11 @@
       "GIL",
       "LAU",
       "DANDAN"
-     ]
+     ],
+     "proposer": "MNH"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
+   "numFails": 3,
    "team": [
     "ROCKY",
     "BOY",
@@ -296,26 +205,121 @@
     "MNH",
     "GELZ"
    ],
-   "numFails": 3,
+   "failsRequired": 1,
+   "state": "FAIL",
    "teamSize": 5
   }
  ],
+ "timeCreated": {
+  "_seconds": 1608276688,
+  "_nanoseconds": 705000000
+ },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "DANDAN"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "LAU",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "GIL"
+   },
+   {
+    "name": "JORDAN",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "ROCKY",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "BOY",
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MNH"
+   },
+   {
+    "assassin": false,
+    "name": "RICO",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "JOSHUA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "GELZ",
+    "role": "MERLIN"
+   }
+  ],
+  "votes": [
+   {
+    "GELZ": true,
+    "JORDAN": false,
+    "LAU": false
+   },
+   {
+    "RICO": true,
+    "JOSHUA": true,
+    "BOY": false,
+    "ROCKY": true
+   },
+   {
+    "GELZ": true,
+    "DANDAN": true,
+    "JOSHUA": true,
+    "GIL": true
+   },
+   {
+    "RICO": true,
+    "JOSHUA": true,
+    "JORDAN": true,
+    "MNH": true,
+    "GIL": true
+   },
+   {
+    "MNH": true,
+    "GELZ": true,
+    "BOY": false,
+    "ROCKY": false,
+    "LAU": false
+   }
+  ]
+ },
  "players": [
   {
    "name": "JOSHUA",
    "uid": "Es0TDOUFY3ZrZbHJGHPWxQmDUD13"
   },
   {
-   "name": "LAU",
-   "uid": "t03DnkuOXBVT0fG2wELRhbK9LNv2"
+   "uid": "t03DnkuOXBVT0fG2wELRhbK9LNv2",
+   "name": "LAU"
   },
   {
    "name": "RICO",
    "uid": "6RHZWAQLcpPx1ObG79zn9d0d7mJ3"
   },
   {
-   "name": "GIL",
-   "uid": "vAbDKpfsAJgGnnrGQ73C4fqdGKf2"
+   "uid": "vAbDKpfsAJgGnnrGQ73C4fqdGKf2",
+   "name": "GIL"
   },
   {
    "name": "JORDAN",
@@ -330,20 +334,16 @@
    "uid": "kC0ypFlKRBQeO5jmvH7TtgV58233"
   },
   {
-   "uid": "trfr53WQnme7ggBsZ8NDeeeoJ1w1",
-   "name": "GELZ"
+   "name": "GELZ",
+   "uid": "trfr53WQnme7ggBsZ8NDeeeoJ1w1"
   },
   {
-   "uid": "POupdwnPb4aoHLjb3s37xgF8ent1",
-   "name": "ROCKY"
+   "name": "ROCKY",
+   "uid": "POupdwnPb4aoHLjb3s37xgF8ent1"
   },
   {
    "name": "MNH",
    "uid": "fjAmSBM6boWj0hwJv175NcwvmBj1"
   }
- ],
- "timeCreated": {
-  "_seconds": 1608276688,
-  "_nanoseconds": 705000000
- }
+ ]
 }

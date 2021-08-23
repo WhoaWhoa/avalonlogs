@@ -25,21 +25,12 @@
    "uid": "X99cReEiRtY12RbRcgIdoXiqPPS2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1585973644,
-  "_nanoseconds": 407000000
- },
- "timeFinished": {
-  "_seconds": 1585974315,
-  "_nanoseconds": 166108000
- },
  "outcome": {
-  "message": "Three failed missions",
-  "assassinated": null,
+  "state": "EVIL_WIN",
   "roles": [
    {
-    "assassin": false,
     "name": "LZYPNDA",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
@@ -49,45 +40,47 @@
    },
    {
     "role": "MORGANA",
-    "name": "IMBETRAYER",
+    "assassin": false,
+    "name": "IMBETRAYER"
+   },
+   {
+    "role": "MORDRED",
+    "assassin": true,
+    "name": "BADGUY"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MALESA",
     "assassin": false
    },
    {
-    "name": "BADGUY",
-    "role": "MORDRED",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MALESA"
-   },
-   {
-    "assassin": false,
     "role": "MERLIN",
+    "assassin": false,
     "name": "EEVEE"
    }
   ],
+  "message": "Three failed missions",
+  "assassinated": null,
   "votes": [
    {
+    "LZYPNDA": true,
+    "BADGUY": true
+   },
+   {
+    "EEVEE": true,
     "BADGUY": true,
     "LZYPNDA": true
    },
    {
-    "LZYPNDA": true,
     "EEVEE": true,
-    "BADGUY": true
-   },
-   {
     "LZYPNDA": true,
-    "EEVEE": true,
-    "BADGUY": false,
-    "MALESA": true
-   },
-   {
-    "LZYPNDA": true,
-    "KIOTSUKETE": true,
+    "MALESA": true,
     "BADGUY": false
+   },
+   {
+    "BADGUY": false,
+    "KIOTSUKETE": true,
+    "LZYPNDA": true
    },
    {
     "EEVEE": true,
@@ -95,29 +88,28 @@
     "BADGUY": false,
     "MALESA": true
    }
-  ],
-  "state": "EVIL_WIN"
+  ]
  },
  "missions": [
   {
-   "numFails": 0,
-   "state": "SUCCESS",
-   "teamSize": 2,
+   "team": [
+    "BADGUY",
+    "LZYPNDA"
+   ],
    "proposals": [
     {
      "team": [
       "MALESA",
       "IMBETRAYER"
      ],
+     "proposer": "BADGUY",
      "state": "REJECTED",
      "votes": [
       "MALESA",
       "IMBETRAYER"
-     ],
-     "proposer": "BADGUY"
+     ]
     },
     {
-     "state": "REJECTED",
      "team": [
       "MALESA",
       "EEVEE"
@@ -127,9 +119,14 @@
       "EEVEE",
       "BADGUY"
      ],
+     "state": "REJECTED",
      "proposer": "MALESA"
     },
     {
+     "team": [
+      "BADGUY",
+      "LZYPNDA"
+     ],
      "votes": [
       "EEVEE",
       "LZYPNDA",
@@ -137,50 +134,47 @@
       "IMBETRAYER",
       "BADGUY"
      ],
-     "state": "APPROVED",
-     "team": [
-      "BADGUY",
-      "LZYPNDA"
-     ],
-     "proposer": "IMBETRAYER"
+     "proposer": "IMBETRAYER",
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "team": [
-    "BADGUY",
-    "LZYPNDA"
-   ]
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 2
   },
   {
-   "team": [
-    "EEVEE",
-    "LZYPNDA",
-    "BADGUY"
-   ],
-   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "IMBETRAYER",
       "BADGUY",
       "MALESA",
       "EEVEE"
      ],
+     "proposer": "EEVEE",
      "team": [
       "EEVEE",
       "LZYPNDA",
       "BADGUY"
-     ],
-     "proposer": "EEVEE",
-     "state": "APPROVED"
+     ]
     }
    ],
+   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 0
+   "team": [
+    "EEVEE",
+    "LZYPNDA",
+    "BADGUY"
+   ],
+   "failsRequired": 1
   },
   {
+   "state": "FAIL",
    "numFails": 1,
+   "teamSize": 4,
    "team": [
     "MALESA",
     "EEVEE",
@@ -194,31 +188,30 @@
       "EEVEE",
       "KIOTSUKETE"
      ],
-     "state": "REJECTED",
      "team": [
       "EEVEE",
       "KIOTSUKETE",
       "LZYPNDA",
       "BADGUY"
      ],
+     "state": "REJECTED",
      "proposer": "KIOTSUKETE"
     },
     {
+     "proposer": "LZYPNDA",
+     "votes": [
+      "IMBETRAYER",
+      "BADGUY"
+     ],
      "state": "REJECTED",
      "team": [
       "KIOTSUKETE",
       "LZYPNDA",
       "BADGUY",
       "IMBETRAYER"
-     ],
-     "proposer": "LZYPNDA",
-     "votes": [
-      "IMBETRAYER",
-      "BADGUY"
      ]
     },
     {
-     "proposer": "BADGUY",
      "state": "REJECTED",
      "team": [
       "MALESA",
@@ -230,10 +223,11 @@
       "KIOTSUKETE",
       "MALESA",
       "EEVEE"
-     ]
+     ],
+     "proposer": "BADGUY"
     },
     {
-     "state": "APPROVED",
+     "proposer": "MALESA",
      "votes": [
       "KIOTSUKETE",
       "BADGUY",
@@ -246,31 +240,36 @@
       "LZYPNDA",
       "BADGUY"
      ],
-     "proposer": "MALESA"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "teamSize": 4
+   "failsRequired": 1
   },
   {
+   "state": "FAIL",
+   "team": [
+    "LZYPNDA",
+    "KIOTSUKETE",
+    "BADGUY"
+   ],
+   "failsRequired": 1,
+   "numFails": 1,
    "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "IMBETRAYER"
-     ],
-     "proposer": "IMBETRAYER",
      "state": "REJECTED",
      "team": [
       "EEVEE",
       "BADGUY",
       "MALESA"
+     ],
+     "proposer": "IMBETRAYER",
+     "votes": [
+      "IMBETRAYER"
      ]
     },
     {
      "state": "APPROVED",
-     "proposer": "EEVEE",
      "votes": [
       "LZYPNDA",
       "KIOTSUKETE",
@@ -278,31 +277,24 @@
       "BADGUY",
       "EEVEE"
      ],
+     "proposer": "EEVEE",
      "team": [
       "LZYPNDA",
       "KIOTSUKETE",
       "BADGUY"
      ]
     }
-   ],
-   "numFails": 1,
-   "team": [
-    "LZYPNDA",
-    "KIOTSUKETE",
-    "BADGUY"
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
-   "team": [
-    "EEVEE",
-    "KIOTSUKETE",
-    "MALESA",
-    "BADGUY"
-   ],
    "proposals": [
     {
+     "votes": [
+      "IMBETRAYER",
+      "EEVEE",
+      "LZYPNDA",
+      "KIOTSUKETE"
+     ],
      "state": "APPROVED",
      "proposer": "KIOTSUKETE",
      "team": [
@@ -310,19 +302,27 @@
       "KIOTSUKETE",
       "MALESA",
       "BADGUY"
-     ],
-     "votes": [
-      "IMBETRAYER",
-      "EEVEE",
-      "LZYPNDA",
-      "KIOTSUKETE"
      ]
     }
    ],
    "teamSize": 4,
    "failsRequired": 1,
    "numFails": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "team": [
+    "EEVEE",
+    "KIOTSUKETE",
+    "MALESA",
+    "BADGUY"
+   ]
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1585973644,
+  "_nanoseconds": 407000000
+ },
+ "timeFinished": {
+  "_seconds": 1585974315,
+  "_nanoseconds": 166108000
+ }
 }

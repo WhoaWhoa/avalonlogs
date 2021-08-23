@@ -1,17 +1,16 @@
 {
- "timeFinished": {
-  "_seconds": 1585977875,
-  "_nanoseconds": 294996000
- },
  "timeCreated": {
   "_seconds": 1585977013,
   "_nanoseconds": 995000000
  },
  "missions": [
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "SABRINA",
       "SAET",
@@ -23,27 +22,26 @@
       "BITCH",
       "SABRINA"
      ],
-     "state": "APPROVED",
      "proposer": "BITCH"
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "team": [
     "BITCH",
     "SABRINA"
    ],
-   "numFails": 0
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 3,
+   "team": [
+    "AMARA",
+    "SABRINA",
+    "SAET"
+   ],
    "state": "FAIL",
    "numFails": 1,
-   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "AMARA",
      "votes": [
       "AMARA",
       "BITCH",
@@ -54,23 +52,27 @@
       "AMARA",
       "SABRINA",
       "SAET"
-     ]
+     ],
+     "proposer": "AMARA"
     }
    ],
-   "team": [
-    "AMARA",
-    "SABRINA",
-    "SAET"
-   ]
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "HANNAH",
+    "ROBBIE",
+    "AMARA",
+    "SABRINA"
+   ],
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "BITCH"
      ],
-     "state": "REJECTED",
      "proposer": "SABRINA",
      "team": [
       "SABRINA",
@@ -80,8 +82,13 @@
      ]
     },
     {
-     "proposer": "HANNAH",
      "state": "APPROVED",
+     "team": [
+      "HANNAH",
+      "ROBBIE",
+      "AMARA",
+      "SABRINA"
+     ],
      "votes": [
       "HANNAH",
       "ROBBIE",
@@ -89,110 +96,75 @@
       "SAET",
       "AMARA"
      ],
-     "team": [
-      "HANNAH",
-      "ROBBIE",
-      "AMARA",
-      "SABRINA"
-     ]
+     "proposer": "HANNAH"
     }
    ],
-   "team": [
-    "HANNAH",
-    "ROBBIE",
-    "AMARA",
-    "SABRINA"
-   ],
    "teamSize": 4,
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "numFails": 0
   },
   {
-   "state": "SUCCESS",
-   "numFails": 0,
    "team": [
     "SABRINA",
     "HANNAH",
     "ROBBIE"
    ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "ROBBIE",
       "SABRINA",
       "SAET",
       "HANNAH"
      ],
-     "proposer": "SAET",
      "team": [
       "SABRINA",
       "HANNAH",
       "ROBBIE"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "SAET"
     }
    ],
-   "teamSize": 3,
-   "failsRequired": 1
+   "numFails": 0
   },
   {
-   "proposals": [],
-   "teamSize": 4,
-   "team": [],
+   "state": "PENDING",
    "failsRequired": 1,
-   "state": "PENDING"
+   "team": [],
+   "teamSize": 4,
+   "proposals": []
   }
  ],
  "outcome": {
-  "votes": [
-   {
-    "BITCH": true,
-    "SABRINA": true
-   },
-   {
-    "AMARA": false,
-    "SABRINA": true,
-    "SAET": true
-   },
-   {
-    "ROBBIE": true,
-    "HANNAH": true,
-    "AMARA": true,
-    "SABRINA": true
-   },
-   {
-    "HANNAH": true,
-    "SABRINA": true,
-    "ROBBIE": true
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
   "roles": [
    {
-    "name": "BITCH",
+    "assassin": false,
     "role": "MORGANA",
-    "assassin": false
+    "name": "BITCH"
    },
    {
     "role": "MERLIN",
-    "name": "HANNAH",
-    "assassin": false
-   },
-   {
-    "name": "ROBBIE",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "SABRINA"
+    "name": "HANNAH"
    },
    {
     "role": "LOYAL FOLLOWER",
-    "name": "SAET",
+    "assassin": false,
+    "name": "ROBBIE"
+   },
+   {
+    "name": "SABRINA",
+    "role": "PERCIVAL",
     "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "SAET"
    },
    {
     "role": "MORDRED",
@@ -200,7 +172,35 @@
     "assassin": true
    }
   ],
-  "assassinated": "SABRINA"
+  "assassinated": "SABRINA",
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "SABRINA": true,
+    "BITCH": true
+   },
+   {
+    "SABRINA": true,
+    "SAET": true,
+    "AMARA": false
+   },
+   {
+    "HANNAH": true,
+    "AMARA": true,
+    "ROBBIE": true,
+    "SABRINA": true
+   },
+   {
+    "ROBBIE": true,
+    "HANNAH": true,
+    "SABRINA": true
+   }
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1585977875,
+  "_nanoseconds": 294996000
  },
  "players": [
   {
@@ -212,16 +212,16 @@
    "uid": "5aklLl6Q3chJCg3smZo3l6wD8Fq2"
   },
   {
-   "uid": "nowHfg30hAYsD1gVglHPALQ9Qpf2",
-   "name": "SAET"
+   "name": "SAET",
+   "uid": "nowHfg30hAYsD1gVglHPALQ9Qpf2"
   },
   {
    "name": "ROBBIE",
    "uid": "ep0Kqal19ZgQvmt3Dw1nJTe09R33"
   },
   {
-   "uid": "Bsq4LdJHTiRfTCdk2clkN0FOLjB3",
-   "name": "BITCH"
+   "name": "BITCH",
+   "uid": "Bsq4LdJHTiRfTCdk2clkN0FOLjB3"
   },
   {
    "uid": "I5735OfmMZXlG4m2vlBRPHN3wro1",

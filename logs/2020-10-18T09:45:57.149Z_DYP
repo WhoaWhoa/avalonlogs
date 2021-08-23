@@ -4,12 +4,10 @@
   "_nanoseconds": 649000000
  },
  "outcome": {
-  "assassinated": "ALBERT",
-  "state": "GOOD_WIN",
   "votes": [
    {
-    "SYD": true,
-    "DABID": true
+    "DABID": true,
+    "SYD": true
    },
    {
     "SYD": true,
@@ -17,48 +15,50 @@
     "DABID": false
    },
    {
-    "RYAN": true,
     "JAY": true,
+    "RYAN": true,
     "ALBERT": true
    },
    {
-    "SYD": true,
     "RYAN": false,
+    "ALBERT": true,
     "JAY": true,
-    "ALBERT": true
+    "SYD": true
    }
   ],
+  "assassinated": "ALBERT",
+  "state": "GOOD_WIN",
   "message": "Three successful missions",
   "roles": [
    {
-    "role": "OBERON",
     "name": "RYAN",
+    "role": "OBERON",
     "assassin": false
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "ALBERT"
    },
    {
-    "name": "JAY",
     "role": "MERLIN",
+    "name": "JAY",
     "assassin": false
    },
    {
-    "name": "ALLY",
     "role": "MORGANA",
-    "assassin": false
+    "assassin": false,
+    "name": "ALLY"
    },
    {
     "assassin": false,
-    "name": "MICHELLLE",
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "MICHELLLE"
    },
    {
     "name": "SYD",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": true,
@@ -67,15 +67,24 @@
    }
   ]
  },
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
-   "teamSize": 2,
    "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
+   "team": [
+    "SYD",
+    "DABID"
+   ],
+   "teamSize": 2,
    "proposals": [
     {
-     "proposer": "SYD",
+     "team": [
+      "SYD",
+      "DABID"
+     ],
+     "state": "APPROVED",
      "votes": [
       "RYAN",
       "MICHELLLE",
@@ -85,32 +94,23 @@
       "ALBERT",
       "DABID"
      ],
-     "team": [
-      "SYD",
-      "DABID"
-     ],
-     "state": "APPROVED"
+     "proposer": "SYD"
     }
    ],
-   "team": [
-    "SYD",
-    "DABID"
-   ]
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
    "teamSize": 3,
-   "numFails": 1,
+   "state": "FAIL",
    "team": [
     "SYD",
     "DABID",
     "ALBERT"
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "DABID",
-     "state": "APPROVED",
      "votes": [
       "JAY",
       "RYAN",
@@ -119,23 +119,26 @@
       "SYD",
       "DABID"
      ],
+     "proposer": "DABID",
      "team": [
       "SYD",
       "DABID",
       "ALBERT"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "numFails": 1
   },
   {
-   "numFails": 0,
-   "teamSize": 3,
-   "state": "SUCCESS",
    "team": [
     "ALBERT",
     "JAY",
     "RYAN"
    ],
+   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -143,6 +146,7 @@
       "JAY",
       "RYAN"
      ],
+     "state": "APPROVED",
      "proposer": "ALBERT",
      "votes": [
       "SYD",
@@ -151,16 +155,27 @@
       "ALBERT",
       "ALLY",
       "DABID"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "failsRequired": 1
   },
   {
+   "team": [
+    "RYAN",
+    "SYD",
+    "ALBERT",
+    "JAY"
+   ],
    "proposals": [
     {
      "proposer": "RYAN",
+     "team": [
+      "RYAN",
+      "SYD",
+      "ALBERT",
+      "JAY"
+     ],
      "votes": [
       "RYAN",
       "SYD",
@@ -168,38 +183,26 @@
       "JAY",
       "ALBERT"
      ],
-     "state": "APPROVED",
-     "team": [
-      "RYAN",
-      "SYD",
-      "ALBERT",
-      "JAY"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "numFails": 1,
+   "teamSize": 4,
    "state": "SUCCESS",
-   "team": [
-    "RYAN",
-    "SYD",
-    "ALBERT",
-    "JAY"
-   ],
-   "failsRequired": 2,
-   "teamSize": 4
+   "numFails": 1,
+   "failsRequired": 2
   },
   {
-   "proposals": [],
    "state": "PENDING",
-   "failsRequired": 1,
+   "proposals": [],
    "teamSize": 4,
+   "failsRequired": 1,
    "team": []
   }
  ],
  "players": [
   {
-   "uid": "9AvhmBxoE4exIMcCpQNx8MnuJTO2",
-   "name": "RYAN"
+   "name": "RYAN",
+   "uid": "9AvhmBxoE4exIMcCpQNx8MnuJTO2"
   },
   {
    "name": "MICHELLLE",
@@ -210,25 +213,22 @@
    "uid": "2YorulrFNHb2MdA2YHOao6nNfS52"
   },
   {
-   "name": "JAY",
-   "uid": "gwix1oO6aIT8R7vtBfwGdZEPFKG2"
+   "uid": "gwix1oO6aIT8R7vtBfwGdZEPFKG2",
+   "name": "JAY"
   },
   {
    "uid": "4uvSiTpxIDS1sgex94VmkunyQg42",
    "name": "SYD"
   },
   {
-   "name": "DABID",
-   "uid": "4u2kYJRmBXRqIwSOFjiiyChiKho2"
+   "uid": "4u2kYJRmBXRqIwSOFjiiyChiKho2",
+   "name": "DABID"
   },
   {
    "uid": "157gZNSdqchRlWTQuHm0KzOOkJG3",
    "name": "ALBERT"
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1603014357,
   "_nanoseconds": 149000000

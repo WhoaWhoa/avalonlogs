@@ -1,6 +1,39 @@
 {
+ "timeCreated": {
+  "_seconds": 1587002040,
+  "_nanoseconds": 131000000
+ },
  "outcome": {
+  "votes": [
+   {
+    "KELVIN": true,
+    "SAM": true
+   },
+   {
+    "KELVIN": true,
+    "SAM": true,
+    "ASTON": true
+   },
+   {
+    "THOMSON": false,
+    "SAM": true,
+    "ASTON": true,
+    "KELVIN": true
+   },
+   {
+    "ETHAN": true,
+    "THOMSON": false,
+    "KELVIN": true
+   },
+   {
+    "ASTON": true,
+    "KELVIN": true,
+    "THOMSON": false,
+    "SAM": true
+   }
+  ],
   "message": "Three failed missions",
+  "state": "EVIL_WIN",
   "roles": [
    {
     "name": "SAM",
@@ -8,8 +41,8 @@
     "assassin": false
    },
    {
-    "assassin": true,
     "name": "THOMSON",
+    "assassin": true,
     "role": "MORDRED"
    },
    {
@@ -18,61 +51,61 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "assassin": false,
     "role": "MORGANA",
-    "name": "ETHAN",
-    "assassin": false
+    "name": "ETHAN"
    },
    {
-    "name": "ASTON",
+    "role": "MERLIN",
     "assassin": false,
-    "role": "MERLIN"
+    "name": "ASTON"
    },
    {
-    "name": "ADRIAN",
     "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "ADRIAN"
    }
   ],
-  "votes": [
-   {
-    "KELVIN": true,
-    "SAM": true
-   },
-   {
-    "SAM": true,
-    "KELVIN": true,
-    "ASTON": true
-   },
-   {
-    "ASTON": true,
-    "KELVIN": true,
-    "THOMSON": false,
-    "SAM": true
-   },
-   {
-    "ETHAN": true,
-    "THOMSON": false,
-    "KELVIN": true
-   },
-   {
-    "KELVIN": true,
-    "THOMSON": false,
-    "SAM": true,
-    "ASTON": true
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN"
+  "assassinated": null
  },
+ "players": [
+  {
+   "name": "ETHAN",
+   "uid": "Y77Unrq5prgSaHEAzueTO5x9pAF3"
+  },
+  {
+   "name": "SAM",
+   "uid": "PyFnZWgR6pYN1SgJ1k5nRikqbIq2"
+  },
+  {
+   "name": "KELVIN",
+   "uid": "tQpgKDFOxBgz3AqqpGqocau1S0a2"
+  },
+  {
+   "name": "ADRIAN",
+   "uid": "jYAPv4IuMHcFuPCIWvpnB8CS0Nw2"
+  },
+  {
+   "uid": "O78yb4V9GnNff9YuBn8IRotwtf02",
+   "name": "THOMSON"
+  },
+  {
+   "uid": "mzNKoIt7o2gmdzkxYu68nXIRrJi2",
+   "name": "ASTON"
+  }
+ ],
  "missions": [
   {
-   "numFails": 0,
    "state": "SUCCESS",
    "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "KELVIN",
+    "SAM"
+   ],
    "proposals": [
     {
-     "proposer": "KELVIN",
-     "state": "APPROVED",
      "votes": [
       "ETHAN",
       "ASTON",
@@ -84,20 +117,22 @@
      "team": [
       "KELVIN",
       "SAM"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "KELVIN"
     }
-   ],
-   "failsRequired": 1,
-   "team": [
-    "KELVIN",
-    "SAM"
    ]
   },
   {
    "failsRequired": 1,
-   "teamSize": 3,
+   "team": [
+    "KELVIN",
+    "SAM",
+    "ASTON"
+   ],
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "SAM",
       "THOMSON",
@@ -106,38 +141,31 @@
       "ASTON",
       "ADRIAN"
      ],
-     "proposer": "ADRIAN",
-     "state": "APPROVED",
      "team": [
       "KELVIN",
       "SAM",
       "ASTON"
-     ]
+     ],
+     "proposer": "ADRIAN"
     }
    ],
    "numFails": 0,
    "state": "SUCCESS",
-   "team": [
-    "KELVIN",
-    "SAM",
-    "ASTON"
-   ]
+   "teamSize": 3
   },
   {
    "numFails": 1,
+   "state": "FAIL",
    "failsRequired": 1,
    "teamSize": 4,
-   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "THOMSON",
      "team": [
       "SAM",
       "KELVIN",
       "ASTON",
       "THOMSON"
      ],
-     "state": "APPROVED",
      "votes": [
       "ADRIAN",
       "SAM",
@@ -145,7 +173,9 @@
       "KELVIN",
       "ETHAN",
       "ASTON"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "THOMSON"
     }
    ],
    "team": [
@@ -157,66 +187,66 @@
   },
   {
    "failsRequired": 1,
-   "proposals": [
-    {
-     "proposer": "ASTON",
-     "votes": [
-      "ETHAN"
-     ],
-     "state": "REJECTED",
-     "team": [
-      "ASTON",
-      "ADRIAN",
-      "KELVIN"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "team": [
-      "ETHAN",
-      "KELVIN",
-      "THOMSON"
-     ],
-     "proposer": "ETHAN",
-     "votes": [
-      "ETHAN",
-      "ASTON",
-      "ADRIAN",
-      "SAM",
-      "THOMSON",
-      "KELVIN"
-     ]
-    }
-   ],
    "team": [
     "ETHAN",
     "KELVIN",
     "THOMSON"
    ],
-   "teamSize": 3,
    "state": "FAIL",
-   "numFails": 1
+   "proposals": [
+    {
+     "team": [
+      "ASTON",
+      "ADRIAN",
+      "KELVIN"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "ETHAN"
+     ],
+     "proposer": "ASTON"
+    },
+    {
+     "team": [
+      "ETHAN",
+      "KELVIN",
+      "THOMSON"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "ETHAN",
+      "ASTON",
+      "ADRIAN",
+      "SAM",
+      "THOMSON",
+      "KELVIN"
+     ],
+     "proposer": "ETHAN"
+    }
+   ],
+   "numFails": 1,
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
    "team": [
     "KELVIN",
     "SAM",
     "ASTON",
     "THOMSON"
    ],
-   "teamSize": 4,
    "failsRequired": 1,
+   "teamSize": 4,
    "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "SAM",
       "KELVIN",
       "ASTON",
       "ETHAN"
      ],
+     "state": "REJECTED",
      "votes": [
       "KELVIN",
       "ETHAN",
@@ -234,45 +264,15 @@
       "SAM",
       "THOMSON"
      ],
-     "proposer": "KELVIN",
      "team": [
       "KELVIN",
       "SAM",
       "ASTON",
       "THOMSON"
-     ]
+     ],
+     "proposer": "KELVIN"
     }
    ]
-  }
- ],
- "timeCreated": {
-  "_seconds": 1587002040,
-  "_nanoseconds": 131000000
- },
- "players": [
-  {
-   "uid": "Y77Unrq5prgSaHEAzueTO5x9pAF3",
-   "name": "ETHAN"
-  },
-  {
-   "uid": "PyFnZWgR6pYN1SgJ1k5nRikqbIq2",
-   "name": "SAM"
-  },
-  {
-   "name": "KELVIN",
-   "uid": "tQpgKDFOxBgz3AqqpGqocau1S0a2"
-  },
-  {
-   "name": "ADRIAN",
-   "uid": "jYAPv4IuMHcFuPCIWvpnB8CS0Nw2"
-  },
-  {
-   "name": "THOMSON",
-   "uid": "O78yb4V9GnNff9YuBn8IRotwtf02"
-  },
-  {
-   "uid": "mzNKoIt7o2gmdzkxYu68nXIRrJi2",
-   "name": "ASTON"
   }
  ],
  "options": {

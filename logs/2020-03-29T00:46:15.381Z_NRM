@@ -1,8 +1,8 @@
 {
  "players": [
   {
-   "name": "MATT",
-   "uid": "LfsnZWfJMPUdeRUf2QLd09SCAha2"
+   "uid": "LfsnZWfJMPUdeRUf2QLd09SCAha2",
+   "name": "MATT"
   },
   {
    "name": "STEPHEN",
@@ -13,36 +13,71 @@
    "name": "SOPHB"
   },
   {
-   "uid": "C9rcskwDQPT2VHmLeu9Go7HvtEN2",
-   "name": "KAT"
+   "name": "KAT",
+   "uid": "C9rcskwDQPT2VHmLeu9Go7HvtEN2"
   },
   {
    "uid": "iANucx29K0N9gi1UdbWovr9RudI3",
    "name": "PTHES"
   },
   {
-   "name": "BIANCA",
-   "uid": "4ofB37zDbSOgMt4yd9Un1WSavj43"
+   "uid": "4ofB37zDbSOgMt4yd9Un1WSavj43",
+   "name": "BIANCA"
   },
   {
-   "uid": "n6T7u02ke9XWOYMweSGpMyr7Nle2",
-   "name": "CK"
+   "name": "CK",
+   "uid": "n6T7u02ke9XWOYMweSGpMyr7Nle2"
   }
  ],
- "timeFinished": {
-  "_seconds": 1585443165,
-  "_nanoseconds": 306740000
- },
  "outcome": {
-  "votes": [
+  "state": "GOOD_WIN",
+  "roles": [
    {
-    "SOPHB": true,
-    "STEPHEN": true
+    "name": "MATT",
+    "assassin": false,
+    "role": "EVIL MINION"
    },
    {
+    "assassin": false,
+    "name": "SOPHB",
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MERLIN",
+    "name": "PTHES",
+    "assassin": false
+   },
+   {
+    "name": "KAT",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MORGANA",
+    "name": "CK",
+    "assassin": false
+   },
+   {
+    "name": "STEPHEN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "BIANCA",
+    "assassin": true,
+    "role": "EVIL MINION"
+   }
+  ],
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "STEPHEN": true,
+    "SOPHB": true
+   },
+   {
+    "STEPHEN": true,
     "KAT": true,
-    "SOPHB": true,
-    "STEPHEN": true
+    "SOPHB": true
    },
    {
     "KAT": true,
@@ -50,46 +85,7 @@
     "STEPHEN": true
    }
   ],
-  "state": "GOOD_WIN",
-  "assassinated": "CK",
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "name": "MATT",
-    "assassin": false
-   },
-   {
-    "name": "SOPHB",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "name": "PTHES",
-    "role": "MERLIN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "KAT",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "CK",
-    "role": "MORGANA"
-   },
-   {
-    "name": "STEPHEN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "BIANCA",
-    "role": "EVIL MINION",
-    "assassin": true
-   }
-  ]
+  "assassinated": "CK"
  },
  "timeCreated": {
   "_seconds": 1585442775,
@@ -97,42 +93,43 @@
  },
  "missions": [
   {
-   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "SOPHB",
+      "STEPHEN"
+     ],
      "votes": [
       "SOPHB",
       "PTHES",
       "KAT",
       "STEPHEN"
      ],
-     "team": [
-      "SOPHB",
-      "STEPHEN"
-     ],
      "proposer": "SOPHB"
     }
    ],
+   "failsRequired": 1,
    "state": "SUCCESS",
    "teamSize": 2,
    "team": [
     "SOPHB",
     "STEPHEN"
    ],
-   "failsRequired": 1
+   "numFails": 0
   },
   {
+   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "failsRequired": 1,
    "team": [
     "KAT",
     "SOPHB",
     "STEPHEN"
    ],
-   "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
-     "proposer": "KAT",
      "votes": [
       "SOPHB",
       "PTHES",
@@ -142,25 +139,20 @@
       "BIANCA",
       "MATT"
      ],
+     "state": "APPROVED",
      "team": [
       "KAT",
       "SOPHB",
       "STEPHEN"
      ],
-     "state": "APPROVED"
+     "proposer": "KAT"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
    "proposals": [
     {
-     "team": [
-      "SOPHB",
-      "KAT",
-      "STEPHEN"
-     ],
+     "state": "APPROVED",
      "votes": [
       "MATT",
       "SOPHB",
@@ -170,10 +162,15 @@
       "STEPHEN",
       "BIANCA"
      ],
-     "proposer": "PTHES",
-     "state": "APPROVED"
+     "team": [
+      "SOPHB",
+      "KAT",
+      "STEPHEN"
+     ],
+     "proposer": "PTHES"
     }
    ],
+   "failsRequired": 1,
    "teamSize": 3,
    "state": "SUCCESS",
    "numFails": 0,
@@ -181,22 +178,25 @@
     "SOPHB",
     "KAT",
     "STEPHEN"
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "team": [],
+   "teamSize": 4,
+   "proposals": [],
    "state": "PENDING",
+   "failsRequired": 2
+  },
+  {
    "teamSize": 4,
    "team": [],
-   "failsRequired": 2,
-   "proposals": []
-  },
-  {
-   "proposals": [],
-   "teamSize": 4,
-   "state": "PENDING",
    "failsRequired": 1,
-   "team": []
+   "proposals": [],
+   "state": "PENDING"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1585443165,
+  "_nanoseconds": 306740000
+ }
 }

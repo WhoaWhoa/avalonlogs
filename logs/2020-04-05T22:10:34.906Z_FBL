@@ -1,29 +1,25 @@
 {
- "timeCreated": {
-  "_seconds": 1586124634,
-  "_nanoseconds": 906000000
- },
  "timeFinished": {
   "_seconds": 1586125962,
   "_nanoseconds": 918877000
  },
  "outcome": {
-  "state": "EVIL_WIN",
+  "message": "Three failed missions",
   "roles": [
    {
-    "role": "EVIL MINION",
     "assassin": true,
-    "name": "SAM"
+    "name": "SAM",
+    "role": "EVIL MINION"
    },
    {
-    "role": "MORDRED",
-    "name": "NGO",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "name": "JOHNKEYNES"
+    "name": "NGO",
+    "role": "MORDRED"
+   },
+   {
+    "name": "JOHNKEYNES",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "role": "LOYAL FOLLOWER",
@@ -36,9 +32,9 @@
     "name": "STEVE"
    },
    {
-    "name": "HARRISON",
+    "assassin": false,
     "role": "MORGANA",
-    "assassin": false
+    "name": "HARRISON"
    },
    {
     "name": "MASON",
@@ -51,11 +47,13 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
+    "role": "MERLIN",
     "name": "GOOD",
-    "role": "MERLIN"
+    "assassin": false
    }
   ],
+  "state": "EVIL_WIN",
+  "assassinated": null,
   "votes": [
    {
     "HARRISON": true,
@@ -63,53 +61,58 @@
     "GOOD": true
    },
    {
-    "HARRISON": true,
     "GOOD": true,
     "NGO": true,
+    "SHAAN": true,
+    "HARRISON": true
+   },
+   {
+    "SHAAN": true,
+    "NGO": true,
+    "HARRISON": false,
+    "GOOD": true
+   },
+   {
+    "STEVE": true,
+    "GOOD": true,
+    "HARRISON": false,
+    "NGO": false,
     "SHAAN": true
    },
    {
-    "GOOD": true,
-    "SHAAN": true,
-    "HARRISON": false,
-    "NGO": true
-   },
-   {
-    "HARRISON": false,
-    "GOOD": true,
-    "SHAAN": true,
-    "STEVE": true,
-    "NGO": false
-   },
-   {
+    "ERIC": true,
     "GOOD": true,
     "NGO": false,
-    "ERIC": true,
-    "SAM": false,
-    "MASON": true
+    "MASON": true,
+    "SAM": false
    }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null
+  ]
  },
  "missions": [
   {
+   "team": [
+    "GOOD",
+    "HARRISON",
+    "SHAAN"
+   ],
+   "numFails": 0,
    "proposals": [
     {
+     "proposer": "HARRISON",
      "state": "REJECTED",
-     "team": [
-      "SHAAN",
-      "HARRISON",
-      "GOOD"
-     ],
      "votes": [
       "GOOD",
       "SHAAN",
       "ERIC"
      ],
-     "proposer": "HARRISON"
+     "team": [
+      "SHAAN",
+      "HARRISON",
+      "GOOD"
+     ]
     },
     {
+     "proposer": "GOOD",
      "votes": [
       "SHAAN",
       "HARRISON",
@@ -117,70 +120,53 @@
       "ERIC",
       "GOOD"
      ],
-     "proposer": "GOOD",
-     "state": "APPROVED",
      "team": [
       "GOOD",
       "HARRISON",
       "SHAAN"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS",
    "teamSize": 3,
-   "numFails": 0,
-   "team": [
-    "GOOD",
-    "HARRISON",
-    "SHAAN"
-   ]
+   "state": "SUCCESS"
   },
   {
+   "proposals": [
+    {
+     "votes": [
+      "HARRISON",
+      "MASON",
+      "ERIC",
+      "GOOD",
+      "NGO",
+      "SHAAN"
+     ],
+     "state": "APPROVED",
+     "proposer": "NGO",
+     "team": [
+      "GOOD",
+      "NGO",
+      "SHAAN",
+      "HARRISON"
+     ]
+    }
+   ],
+   "state": "SUCCESS",
    "team": [
     "GOOD",
     "NGO",
     "SHAAN",
     "HARRISON"
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "numFails": 0,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "GOOD",
-      "NGO",
-      "SHAAN",
-      "HARRISON"
-     ],
-     "votes": [
-      "HARRISON",
-      "MASON",
-      "ERIC",
-      "GOOD",
-      "NGO",
-      "SHAAN"
-     ],
-     "proposer": "NGO"
-    }
-   ],
+   "failsRequired": 1,
    "teamSize": 4
   },
   {
-   "numFails": 1,
-   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "NGO",
-      "GOOD",
-      "SHAAN",
-      "HARRISON"
-     ],
-     "proposer": "JOHNKEYNES",
      "votes": [
       "NGO",
       "JOHNKEYNES",
@@ -189,24 +175,51 @@
       "MASON",
       "ERIC",
       "GOOD"
-     ]
+     ],
+     "team": [
+      "NGO",
+      "GOOD",
+      "SHAAN",
+      "HARRISON"
+     ],
+     "proposer": "JOHNKEYNES",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
    "team": [
     "NGO",
     "GOOD",
     "SHAAN",
     "HARRISON"
    ],
-   "teamSize": 4
+   "teamSize": 4,
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1
   },
   {
+   "team": [
+    "GOOD",
+    "NGO",
+    "HARRISON",
+    "SHAAN",
+    "STEVE"
+   ],
+   "state": "FAIL",
+   "failsRequired": 2,
+   "teamSize": 5,
    "numFails": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "STEVE",
+     "state": "APPROVED",
+     "team": [
+      "GOOD",
+      "NGO",
+      "HARRISON",
+      "SHAAN",
+      "STEVE"
+     ],
      "votes": [
       "HARRISON",
       "MASON",
@@ -214,29 +227,12 @@
       "SAM",
       "NGO",
       "STEVE"
-     ],
-     "team": [
-      "GOOD",
-      "NGO",
-      "HARRISON",
-      "SHAAN",
-      "STEVE"
      ]
     }
-   ],
-   "teamSize": 5,
-   "state": "FAIL",
-   "failsRequired": 2,
-   "team": [
-    "GOOD",
-    "NGO",
-    "HARRISON",
-    "SHAAN",
-    "STEVE"
    ]
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "SAM",
     "MASON",
@@ -244,7 +240,6 @@
     "NGO",
     "ERIC"
    ],
-   "teamSize": 5,
    "proposals": [
     {
      "state": "APPROVED",
@@ -265,26 +260,27 @@
      ]
     }
    ],
-   "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 5,
    "numFails": 2
   }
  ],
  "players": [
   {
-   "uid": "IjhXYOllulUbZFkmCADyW9S62Qf1",
-   "name": "GOOD"
+   "name": "GOOD",
+   "uid": "IjhXYOllulUbZFkmCADyW9S62Qf1"
   },
   {
    "name": "NGO",
    "uid": "xx5rt7GKtfZSBHbRE3cGF89AyvH3"
   },
   {
-   "uid": "R6jA1OFpx9foHmSUwRN1zBL1ZaN2",
-   "name": "JOHNKEYNES"
+   "name": "JOHNKEYNES",
+   "uid": "R6jA1OFpx9foHmSUwRN1zBL1ZaN2"
   },
   {
-   "name": "STEVE",
-   "uid": "664jU9NeapbKK3lHbTNgzsil1pS2"
+   "uid": "664jU9NeapbKK3lHbTNgzsil1pS2",
+   "name": "STEVE"
   },
   {
    "uid": "tfAxVUGMIMWlEpSwv97Ds7iefTF3",
@@ -295,16 +291,20 @@
    "uid": "tcFFoqwSbKYiBl8DU0zcXjRMfJG3"
   },
   {
-   "uid": "epVJiKWYdNTrn7ZW9x5oQBYaQUl1",
-   "name": "MASON"
+   "name": "MASON",
+   "uid": "epVJiKWYdNTrn7ZW9x5oQBYaQUl1"
   },
   {
    "uid": "hG6Hr1rAHAahxZMTC1oJYR4jEgm1",
    "name": "SHAAN"
   },
   {
-   "uid": "PyR9uG2GcxVRqB3RsVtAsSrdHbk1",
-   "name": "HARRISON"
+   "name": "HARRISON",
+   "uid": "PyR9uG2GcxVRqB3RsVtAsSrdHbk1"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1586124634,
+  "_nanoseconds": 906000000
+ }
 }

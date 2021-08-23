@@ -1,10 +1,21 @@
 {
+ "timeFinished": {
+  "_seconds": 1585885801,
+  "_nanoseconds": 436400000
+ },
+ "timeCreated": {
+  "_seconds": 1585885249,
+  "_nanoseconds": 25000000
+ },
  "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "message": "Three failed missions",
   "roles": [
    {
     "assassin": true,
-    "name": "NINA",
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "name": "NINA"
    },
    {
     "role": "LOYAL FOLLOWER",
@@ -12,29 +23,26 @@
     "assassin": false
    },
    {
+    "name": "MINTY",
     "assassin": false,
-    "role": "MERLIN",
-    "name": "MINTY"
+    "role": "MERLIN"
    },
    {
-    "name": "ARUN",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "ARUN"
    },
    {
     "role": "PERCIVAL",
-    "name": "CHIPS",
-    "assassin": false
+    "assassin": false,
+    "name": "CHIPS"
    },
    {
-    "name": "JUSHJEN",
+    "assassin": false,
     "role": "MORGANA",
-    "assassin": false
+    "name": "JUSHJEN"
    }
   ],
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
   "votes": [
    {
     "SLUGHORN": true,
@@ -42,44 +50,41 @@
    },
    {
     "JUSHJEN": false,
-    "SLUGHORN": true,
-    "CHIPS": true
+    "CHIPS": true,
+    "SLUGHORN": true
    },
    {
-    "MINTY": true,
-    "CHIPS": true,
-    "NINA": false,
-    "ARUN": true
-   },
-   {
-    "CHIPS": true,
     "ARUN": true,
+    "NINA": false,
+    "CHIPS": true,
+    "MINTY": true
+   },
+   {
+    "ARUN": true,
+    "CHIPS": true,
     "MINTY": true
    },
    {
     "CHIPS": true,
-    "NINA": false,
     "ARUN": true,
+    "NINA": false,
     "MINTY": true
    }
   ]
  },
- "timeCreated": {
-  "_seconds": 1585885249,
-  "_nanoseconds": 25000000
- },
  "missions": [
   {
-   "numFails": 0,
    "teamSize": 2,
-   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "CHIPS",
     "SLUGHORN"
    ],
-   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "CHIPS",
+     "state": "APPROVED",
      "votes": [
       "NINA",
       "SLUGHORN",
@@ -91,18 +96,15 @@
      "team": [
       "CHIPS",
       "SLUGHORN"
-     ],
-     "state": "APPROVED",
-     "proposer": "CHIPS"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "JUSHJEN",
+     "state": "APPROVED",
      "votes": [
       "NINA",
       "SLUGHORN",
@@ -115,16 +117,18 @@
       "CHIPS",
       "SLUGHORN"
      ],
-     "state": "APPROVED"
+     "proposer": "JUSHJEN"
     }
    ],
    "state": "FAIL",
-   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "JUSHJEN",
     "CHIPS",
     "SLUGHORN"
-   ]
+   ],
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
    "team": [
@@ -135,10 +139,14 @@
    ],
    "numFails": 1,
    "teamSize": 4,
-   "state": "FAIL",
-   "failsRequired": 1,
    "proposals": [
     {
+     "votes": [
+      "ARUN",
+      "CHIPS",
+      "NINA",
+      "MINTY"
+     ],
      "team": [
       "ARUN",
       "MINTY",
@@ -146,38 +154,34 @@
       "NINA"
      ],
      "proposer": "ARUN",
-     "state": "APPROVED",
+     "state": "APPROVED"
+    }
+   ],
+   "state": "FAIL",
+   "failsRequired": 1
+  },
+  {
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 3,
+   "failsRequired": 1,
+   "proposals": [
+    {
      "votes": [
       "ARUN",
       "CHIPS",
       "NINA",
       "MINTY"
-     ]
-    }
-   ]
-  },
-  {
-   "teamSize": 3,
-   "proposals": [
-    {
+     ],
+     "state": "APPROVED",
+     "proposer": "MINTY",
      "team": [
       "MINTY",
       "CHIPS",
       "ARUN"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "ARUN",
-      "CHIPS",
-      "NINA",
-      "MINTY"
-     ],
-     "proposer": "MINTY"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
    "team": [
     "MINTY",
     "CHIPS",
@@ -185,18 +189,16 @@
    ]
   },
   {
-   "teamSize": 4,
-   "failsRequired": 1,
-   "state": "FAIL",
-   "numFails": 1,
    "team": [
     "CHIPS",
     "NINA",
     "MINTY",
     "ARUN"
    ],
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "CHIPS",
       "NINA",
@@ -208,31 +210,23 @@
       "ARUN",
       "CHIPS"
      ],
-     "proposer": "NINA",
-     "state": "REJECTED"
+     "proposer": "NINA"
     },
     {
-     "proposer": "SLUGHORN",
-     "votes": [
-      "SLUGHORN",
-      "JUSHJEN"
-     ],
      "team": [
       "JUSHJEN",
       "SLUGHORN",
       "NINA",
       "MINTY"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "SLUGHORN",
+      "JUSHJEN"
+     ],
+     "proposer": "SLUGHORN"
     },
     {
-     "team": [
-      "CHIPS",
-      "NINA",
-      "MINTY",
-      "ARUN"
-     ],
-     "proposer": "CHIPS",
      "votes": [
       "ARUN",
       "CHIPS",
@@ -240,19 +234,25 @@
       "NINA",
       "MINTY"
      ],
+     "team": [
+      "CHIPS",
+      "NINA",
+      "MINTY",
+      "ARUN"
+     ],
+     "proposer": "CHIPS",
      "state": "APPROVED"
     }
-   ]
+   ],
+   "teamSize": 4,
+   "state": "FAIL",
+   "numFails": 1
   }
  ],
- "timeFinished": {
-  "_seconds": 1585885801,
-  "_nanoseconds": 436400000
- },
  "players": [
   {
-   "uid": "YWPt61g9PKcsEfXSPVGlUwG3gI02",
-   "name": "ARUN"
+   "name": "ARUN",
+   "uid": "YWPt61g9PKcsEfXSPVGlUwG3gI02"
   },
   {
    "uid": "Uiea1JwCfqeqUYYtVoiy24W0TS32",
@@ -263,16 +263,16 @@
    "uid": "wBCDs6JBeNOU947Gh9jwrGGg6uf1"
   },
   {
-   "uid": "EAo3DC2OYQYzOpQ01qyQmLBYVc93",
-   "name": "SLUGHORN"
+   "name": "SLUGHORN",
+   "uid": "EAo3DC2OYQYzOpQ01qyQmLBYVc93"
   },
   {
-   "uid": "qBsI9bUIrjaFWWUrQEeh0g0X5VL2",
-   "name": "CHIPS"
+   "name": "CHIPS",
+   "uid": "qBsI9bUIrjaFWWUrQEeh0g0X5VL2"
   },
   {
-   "uid": "5K7RLYhzvsbWPsAXYsYqnpiKadS2",
-   "name": "JUSHJEN"
+   "name": "JUSHJEN",
+   "uid": "5K7RLYhzvsbWPsAXYsYqnpiKadS2"
   }
  ]
 }

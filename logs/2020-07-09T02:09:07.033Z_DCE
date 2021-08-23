@@ -1,100 +1,37 @@
 {
- "options": {
-  "inGameLog": false
- },
  "players": [
   {
    "name": "LONG",
    "uid": "fkXAhd677lekXNAxDTRvyrb5V9c2"
   },
   {
-   "uid": "OFOtJ6c1oSQXO3tSybBsrxlE6HA2",
-   "name": "LES"
+   "name": "LES",
+   "uid": "OFOtJ6c1oSQXO3tSybBsrxlE6HA2"
   },
   {
-   "uid": "fjQZGtOmRHVfbUPJfemn6Z6rzFk2",
-   "name": "CALEB"
+   "name": "CALEB",
+   "uid": "fjQZGtOmRHVfbUPJfemn6Z6rzFk2"
   },
   {
    "uid": "9k3jrZMe0wNdXeaOewWKRdcN1kl1",
    "name": "JUNE"
   },
   {
-   "uid": "IeXICrMA62QT4cmrASLOZr1z2d63",
-   "name": "MINI"
+   "name": "MINI",
+   "uid": "IeXICrMA62QT4cmrASLOZr1z2d63"
   },
   {
-   "name": "RACHEL",
-   "uid": "Ca3VT5d9X2SOfy4zFq3XplRuVlD3"
+   "uid": "Ca3VT5d9X2SOfy4zFq3XplRuVlD3",
+   "name": "RACHEL"
   },
   {
    "uid": "aRRmRdicv9VnUCPGxBXVokC8VTs2",
    "name": "JP"
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
-  "votes": [
-   {
-    "MINI": true,
-    "JUNE": true
-   },
-   {
-    "JUNE": true,
-    "RACHEL": true,
-    "MINI": true
-   },
-   {
-    "JP": false,
-    "MINI": true,
-    "RACHEL": true
-   },
-   {
-    "LES": true,
-    "RACHEL": true,
-    "JUNE": true,
-    "CALEB": true
-   }
-  ],
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "RACHEL"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "LONG"
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "JUNE"
-   },
-   {
-    "name": "CALEB",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "MINI",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "JP",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "name": "LES",
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "assassinated": "CALEB"
+ "timeFinished": {
+  "_seconds": 1594261333,
+  "_nanoseconds": 377000000
  },
  "timeCreated": {
   "_seconds": 1594260547,
@@ -102,16 +39,18 @@
  },
  "missions": [
   {
-   "numFails": 0,
    "state": "SUCCESS",
-   "teamSize": 2,
+   "team": [
+    "MINI",
+    "JUNE"
+   ],
    "proposals": [
     {
-     "proposer": "MINI",
      "team": [
       "MINI",
       "JUNE"
      ],
+     "proposer": "MINI",
      "votes": [
       "JUNE",
       "MINI",
@@ -122,15 +61,27 @@
      "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 2
+  },
+  {
+   "failsRequired": 1,
    "team": [
+    "RACHEL",
     "MINI",
     "JUNE"
    ],
-   "failsRequired": 1
-  },
-  {
+   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "team": [
+      "RACHEL",
+      "MINI",
+      "JUNE"
+     ],
+     "state": "APPROVED",
      "proposer": "RACHEL",
      "votes": [
       "LES",
@@ -138,38 +89,23 @@
       "JUNE",
       "MINI",
       "JP"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "RACHEL",
-      "MINI",
-      "JUNE"
      ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "teamSize": 3,
-   "team": [
-    "RACHEL",
-    "MINI",
-    "JUNE"
-   ],
-   "state": "SUCCESS"
+   "numFails": 0
   },
   {
-   "state": "FAIL",
    "numFails": 1,
-   "teamSize": 3,
-   "failsRequired": 1,
    "team": [
     "JP",
     "RACHEL",
     "MINI"
    ],
+   "state": "FAIL",
+   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "JP",
       "RACHEL",
@@ -181,13 +117,19 @@
       "MINI",
       "JP"
      ],
-     "proposer": "JP"
+     "proposer": "JP",
+     "state": "APPROVED"
     }
    ]
   },
   {
    "failsRequired": 2,
-   "teamSize": 4,
+   "team": [
+    "LES",
+    "CALEB",
+    "JUNE",
+    "RACHEL"
+   ],
    "proposals": [
     {
      "votes": [
@@ -201,16 +143,11 @@
       "RACHEL",
       "LES"
      ],
-     "state": "REJECTED",
-     "proposer": "LONG"
+     "proposer": "LONG",
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "LES",
-      "CALEB",
-      "JUNE",
-      "RACHEL"
-     ],
+     "state": "APPROVED",
      "votes": [
       "MINI",
       "LES",
@@ -219,29 +156,92 @@
       "JUNE",
       "CALEB"
      ],
-     "proposer": "LES",
-     "state": "APPROVED"
+     "team": [
+      "LES",
+      "CALEB",
+      "JUNE",
+      "RACHEL"
+     ],
+     "proposer": "LES"
     }
    ],
+   "teamSize": 4,
    "state": "SUCCESS",
-   "numFails": 0,
-   "team": [
-    "LES",
-    "CALEB",
-    "JUNE",
-    "RACHEL"
-   ]
+   "numFails": 0
   },
   {
-   "proposals": [],
-   "failsRequired": 1,
    "state": "PENDING",
    "teamSize": 4,
-   "team": []
+   "team": [],
+   "proposals": [],
+   "failsRequired": 1
   }
  ],
- "timeFinished": {
-  "_seconds": 1594261333,
-  "_nanoseconds": 377000000
+ "outcome": {
+  "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "name": "RACHEL",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "LONG"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "JUNE"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "CALEB"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "MINI"
+   },
+   {
+    "role": "MORDRED",
+    "name": "JP",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "LES"
+   }
+  ],
+  "assassinated": "CALEB",
+  "votes": [
+   {
+    "JUNE": true,
+    "MINI": true
+   },
+   {
+    "MINI": true,
+    "JUNE": true,
+    "RACHEL": true
+   },
+   {
+    "RACHEL": true,
+    "JP": false,
+    "MINI": true
+   },
+   {
+    "RACHEL": true,
+    "JUNE": true,
+    "LES": true,
+    "CALEB": true
+   }
+  ]
+ },
+ "options": {
+  "inGameLog": false
  }
 }

@@ -1,12 +1,98 @@
 {
+ "outcome": {
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "JIM": true,
+    "LUKE": true,
+    "BENJI": true
+   },
+   {
+    "JIM": true,
+    "AT": true,
+    "LUKE": false,
+    "BENJI": true
+   },
+   {
+    "LOHIT": true,
+    "TIM": false,
+    "ANDREW": true,
+    "BENJI": true
+   },
+   {
+    "LUKE": false,
+    "ET": true,
+    "ANDREW": true,
+    "TIM": false,
+    "JIM": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "AT"
+   },
+   {
+    "name": "LOHIT",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ET"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "LYDIA"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "LUKE"
+   },
+   {
+    "name": "BENJI",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "JIM"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ANDREW"
+   },
+   {
+    "name": "TIM",
+    "assassin": false,
+    "role": "MORDRED"
+   }
+  ],
+  "assassinated": null
+ },
+ "timeFinished": {
+  "_seconds": 1590368360,
+  "_nanoseconds": 301000000
+ },
+ "timeCreated": {
+  "_seconds": 1590367060,
+  "_nanoseconds": 829000000
+ },
  "players": [
   {
    "name": "AT",
    "uid": "kmvVYnSqwDhrjhjPQz54diyHqbE2"
   },
   {
-   "name": "LOHIT",
-   "uid": "OzBUlii3zPMY2dhPB4HlS4IxVaR2"
+   "uid": "OzBUlii3zPMY2dhPB4HlS4IxVaR2",
+   "name": "LOHIT"
   },
   {
    "name": "LYDIA",
@@ -21,20 +107,20 @@
    "uid": "0JHTg7ZXCBXtOUop3x2FaKZtnNq1"
   },
   {
-   "name": "LUKE",
-   "uid": "HlJgDn9a8HhCWhyNdeQ8ZOvjBcO2"
+   "uid": "HlJgDn9a8HhCWhyNdeQ8ZOvjBcO2",
+   "name": "LUKE"
   },
   {
-   "name": "TIM",
-   "uid": "zfr2eeTwc3SQ4uzShunRKL8opx13"
+   "uid": "zfr2eeTwc3SQ4uzShunRKL8opx13",
+   "name": "TIM"
   },
   {
    "name": "ET",
    "uid": "PphtkevnhCXLwYUn5EIguvBBKQx2"
   },
   {
-   "name": "ANDREW",
-   "uid": "nmJI7ofkNlbxH4hhwPTkPtfiniH3"
+   "uid": "nmJI7ofkNlbxH4hhwPTkPtfiniH3",
+   "name": "ANDREW"
   }
  ],
  "options": {
@@ -42,9 +128,14 @@
  },
  "missions": [
   {
-   "teamSize": 3,
    "failsRequired": 1,
    "state": "SUCCESS",
+   "teamSize": 3,
+   "team": [
+    "BENJI",
+    "JIM",
+    "LUKE"
+   ],
    "proposals": [
     {
      "team": [
@@ -53,29 +144,22 @@
       "LUKE"
      ],
      "proposer": "BENJI",
+     "state": "APPROVED",
      "votes": [
       "LUKE",
       "BENJI",
       "JIM",
       "AT",
       "ET"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "team": [
-    "BENJI",
-    "JIM",
-    "LUKE"
    ],
    "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
-   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "AT",
       "ET",
@@ -83,16 +167,18 @@
       "BENJI",
       "TIM"
      ],
-     "state": "APPROVED",
+     "proposer": "JIM",
      "team": [
       "JIM",
       "BENJI",
       "LUKE",
       "AT"
-     ],
-     "proposer": "JIM"
+     ]
     }
    ],
+   "teamSize": 4,
+   "state": "FAIL",
+   "failsRequired": 1,
    "numFails": 1,
    "team": [
     "JIM",
@@ -102,20 +188,8 @@
    ]
   },
   {
-   "numFails": 1,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "team": [
-    "TIM",
-    "LOHIT",
-    "ANDREW",
-    "BENJI"
-   ],
-   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "LUKE",
-     "state": "REJECTED",
      "votes": [
       "LUKE",
       "JIM",
@@ -127,69 +201,43 @@
       "JIM",
       "LOHIT",
       "ANDREW"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "LUKE"
     },
     {
-     "team": [
-      "TIM",
-      "LOHIT",
-      "ANDREW",
-      "BENJI"
-     ],
-     "state": "APPROVED",
-     "proposer": "TIM",
      "votes": [
       "BENJI",
       "TIM",
       "AT",
       "LOHIT",
       "ET"
-     ]
-    }
-   ]
-  },
-  {
-   "numFails": 2,
-   "proposals": [
-    {
-     "state": "REJECTED",
+     ],
      "team": [
       "TIM",
-      "LUKE",
-      "ET",
       "LOHIT",
-      "JIM"
-     ],
-     "proposer": "ET",
-     "votes": [
-      "AT",
-      "LOHIT",
-      "ET",
+      "ANDREW",
       "BENJI"
-     ]
-    },
-    {
-     "team": [
-      "ANDREW",
-      "JIM",
-      "LUKE",
-      "TIM",
-      "ET"
      ],
-     "proposer": "ANDREW",
-     "votes": [
-      "LUKE",
-      "JIM",
-      "ANDREW",
-      "TIM",
-      "AT",
-      "ET"
-     ],
+     "proposer": "TIM",
      "state": "APPROVED"
     }
    ],
-   "teamSize": 5,
+   "failsRequired": 1,
+   "teamSize": 4,
+   "team": [
+    "TIM",
+    "LOHIT",
+    "ANDREW",
+    "BENJI"
+   ],
+   "numFails": 1,
+   "state": "FAIL"
+  },
+  {
    "state": "FAIL",
+   "failsRequired": 2,
+   "numFails": 2,
    "team": [
     "ANDREW",
     "JIM",
@@ -197,100 +245,52 @@
     "TIM",
     "ET"
    ],
-   "failsRequired": 2
+   "proposals": [
+    {
+     "proposer": "ET",
+     "team": [
+      "TIM",
+      "LUKE",
+      "ET",
+      "LOHIT",
+      "JIM"
+     ],
+     "votes": [
+      "AT",
+      "LOHIT",
+      "ET",
+      "BENJI"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "votes": [
+      "LUKE",
+      "JIM",
+      "ANDREW",
+      "TIM",
+      "AT",
+      "ET"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "ANDREW",
+      "JIM",
+      "LUKE",
+      "TIM",
+      "ET"
+     ],
+     "proposer": "ANDREW"
+    }
+   ],
+   "teamSize": 5
   },
   {
-   "teamSize": 5,
-   "failsRequired": 1,
    "state": "PENDING",
+   "team": [],
    "proposals": [],
-   "team": []
+   "teamSize": 5,
+   "failsRequired": 1
   }
- ],
- "timeCreated": {
-  "_seconds": 1590367060,
-  "_nanoseconds": 829000000
- },
- "outcome": {
-  "votes": [
-   {
-    "JIM": true,
-    "BENJI": true,
-    "LUKE": true
-   },
-   {
-    "AT": true,
-    "LUKE": false,
-    "BENJI": true,
-    "JIM": true
-   },
-   {
-    "TIM": false,
-    "BENJI": true,
-    "ANDREW": true,
-    "LOHIT": true
-   },
-   {
-    "JIM": true,
-    "TIM": false,
-    "ET": true,
-    "ANDREW": true,
-    "LUKE": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "AT"
-   },
-   {
-    "name": "LOHIT",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "ET",
-    "assassin": false
-   },
-   {
-    "name": "LYDIA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "LUKE",
-    "role": "MORGANA"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "BENJI"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "JIM",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "ANDREW",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "TIM",
-    "assassin": false,
-    "role": "MORDRED"
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1590368360,
-  "_nanoseconds": 301000000
- }
+ ]
 }

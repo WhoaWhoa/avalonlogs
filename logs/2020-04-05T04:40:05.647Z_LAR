@@ -1,49 +1,12 @@
 {
- "timeFinished": {
-  "_seconds": 1586065391,
-  "_nanoseconds": 709941000
- },
  "outcome": {
   "state": "EVIL_WIN",
   "assassinated": null,
-  "votes": [
-   {
-    "ANOOVA": true,
-    "SHWETA": true,
-    "APARNA": true
-   },
-   {
-    "VISHAL": true,
-    "AMALICIOUS": true,
-    "SHWETA": false,
-    "APARNA": true
-   },
-   {
-    "ANOOVA": true,
-    "RAM": false,
-    "AMALICIOUS": true,
-    "APARNA": true
-   },
-   {
-    "ANOOVA": true,
-    "KESHA": true,
-    "SHWETA": true,
-    "VISHAL": true,
-    "KUSH": true
-   },
-   {
-    "MEGHS": false,
-    "ANOOVA": true,
-    "KESHA": true,
-    "AMALICIOUS": true,
-    "KUSH": true
-   }
-  ],
   "message": "Three failed missions",
   "roles": [
    {
-    "name": "RAM",
     "role": "EVIL MINION",
+    "name": "RAM",
     "assassin": false
    },
    {
@@ -53,28 +16,28 @@
    },
    {
     "role": "MERLIN",
-    "assassin": false,
-    "name": "KUSH"
+    "name": "KUSH",
+    "assassin": false
    },
    {
     "role": "EVIL MINION",
-    "name": "MEGHS",
-    "assassin": true
+    "assassin": true,
+    "name": "MEGHS"
    },
    {
-    "name": "VISHAL",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "VISHAL"
+   },
+   {
+    "name": "AMALICIOUS",
     "role": "LOYAL FOLLOWER",
     "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "AMALICIOUS",
-    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "ANOOVA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "JAMALANA",
@@ -82,14 +45,47 @@
     "assassin": false
    },
    {
-    "name": "SHWETA",
+    "role": "EVIL MINION",
     "assassin": false,
-    "role": "EVIL MINION"
+    "name": "SHWETA"
    },
    {
-    "assassin": false,
     "role": "PERCIVAL",
-    "name": "KESHA"
+    "name": "KESHA",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "SHWETA": true,
+    "ANOOVA": true,
+    "APARNA": true
+   },
+   {
+    "SHWETA": false,
+    "APARNA": true,
+    "VISHAL": true,
+    "AMALICIOUS": true
+   },
+   {
+    "APARNA": true,
+    "AMALICIOUS": true,
+    "ANOOVA": true,
+    "RAM": false
+   },
+   {
+    "SHWETA": true,
+    "KESHA": true,
+    "KUSH": true,
+    "ANOOVA": true,
+    "VISHAL": true
+   },
+   {
+    "KUSH": true,
+    "KESHA": true,
+    "ANOOVA": true,
+    "AMALICIOUS": true,
+    "MEGHS": false
    }
   ]
  },
@@ -99,22 +95,8 @@
  },
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "SHWETA",
-    "ANOOVA",
-    "APARNA"
-   ],
-   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "SHWETA",
-     "team": [
-      "SHWETA",
-      "ANOOVA",
-      "APARNA"
-     ],
      "votes": [
       "AMALICIOUS",
       "ANOOVA",
@@ -124,31 +106,39 @@
       "APARNA",
       "KUSH",
       "MEGHS"
-     ]
+     ],
+     "team": [
+      "SHWETA",
+      "ANOOVA",
+      "APARNA"
+     ],
+     "proposer": "SHWETA",
+     "state": "APPROVED"
     }
    ],
-   "numFails": 0,
-   "teamSize": 3
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "failsRequired": 1,
+   "team": [
+    "SHWETA",
+    "ANOOVA",
+    "APARNA"
+   ],
+   "numFails": 0
   },
   {
    "teamSize": 4,
-   "state": "FAIL",
    "team": [
     "VISHAL",
     "AMALICIOUS",
     "SHWETA",
     "APARNA"
    ],
+   "numFails": 1,
+   "state": "FAIL",
    "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "VISHAL",
-      "AMALICIOUS",
-      "SHWETA",
-      "APARNA"
-     ],
      "votes": [
       "RAM",
       "APARNA",
@@ -160,15 +150,21 @@
       "SHWETA",
       "KESHA"
      ],
-     "proposer": "AMALICIOUS"
+     "team": [
+      "VISHAL",
+      "AMALICIOUS",
+      "SHWETA",
+      "APARNA"
+     ],
+     "proposer": "AMALICIOUS",
+     "state": "APPROVED"
     }
-   ],
-   "numFails": 1
+   ]
   },
   {
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "APARNA",
       "MEGHS",
@@ -176,15 +172,18 @@
       "ANOOVA",
       "JAMALANA"
      ],
+     "proposer": "VISHAL",
      "team": [
       "VISHAL",
       "SHWETA",
       "APARNA",
       "MEGHS"
      ],
-     "proposer": "VISHAL"
+     "state": "REJECTED"
     },
     {
+     "proposer": "KESHA",
+     "state": "REJECTED",
      "votes": [
       "ANOOVA",
       "JAMALANA",
@@ -192,8 +191,6 @@
       "RAM",
       "APARNA"
      ],
-     "proposer": "KESHA",
-     "state": "REJECTED",
      "team": [
       "KESHA",
       "RAM",
@@ -209,21 +206,15 @@
       "KUSH",
       "ANOOVA"
      ],
-     "proposer": "JAMALANA",
      "votes": [
       "KUSH",
       "MEGHS",
       "VISHAL",
       "JAMALANA"
-     ]
+     ],
+     "proposer": "JAMALANA"
     },
     {
-     "team": [
-      "RAM",
-      "APARNA",
-      "ANOOVA",
-      "AMALICIOUS"
-     ],
      "votes": [
       "APARNA",
       "MEGHS",
@@ -233,33 +224,38 @@
       "SHWETA",
       "RAM"
      ],
-     "state": "APPROVED",
-     "proposer": "RAM"
+     "proposer": "RAM",
+     "team": [
+      "RAM",
+      "APARNA",
+      "ANOOVA",
+      "AMALICIOUS"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 4,
+   "numFails": 1,
    "team": [
     "RAM",
     "APARNA",
     "ANOOVA",
     "AMALICIOUS"
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "numFails": 1
+   "teamSize": 4,
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
    "failsRequired": 2,
-   "team": [
-    "KUSH",
-    "KESHA",
-    "VISHAL",
-    "SHWETA",
-    "ANOOVA"
-   ],
+   "state": "SUCCESS",
    "proposals": [
     {
+     "team": [
+      "KUSH",
+      "KESHA",
+      "VISHAL",
+      "SHWETA",
+      "ANOOVA"
+     ],
      "votes": [
       "ANOOVA",
       "JAMALANA",
@@ -269,37 +265,28 @@
       "VISHAL"
      ],
      "state": "APPROVED",
-     "team": [
-      "KUSH",
-      "KESHA",
-      "VISHAL",
-      "SHWETA",
-      "ANOOVA"
-     ],
      "proposer": "KUSH"
     }
    ],
    "numFails": 0,
-   "teamSize": 5
+   "teamSize": 5,
+   "team": [
+    "KUSH",
+    "KESHA",
+    "VISHAL",
+    "SHWETA",
+    "ANOOVA"
+   ]
   },
   {
-   "numFails": 1,
    "failsRequired": 1,
-   "team": [
-    "ANOOVA",
-    "KUSH",
-    "MEGHS",
-    "AMALICIOUS",
-    "KESHA"
-   ],
+   "numFails": 1,
+   "teamSize": 5,
+   "state": "FAIL",
    "proposals": [
     {
-     "votes": [
-      "ANOOVA",
-      "JAMALANA",
-      "SHWETA",
-      "MEGHS"
-     ],
+     "proposer": "MEGHS",
+     "state": "REJECTED",
      "team": [
       "KUSH",
       "VISHAL",
@@ -307,8 +294,12 @@
       "ANOOVA",
       "JAMALANA"
      ],
-     "state": "REJECTED",
-     "proposer": "MEGHS"
+     "votes": [
+      "ANOOVA",
+      "JAMALANA",
+      "SHWETA",
+      "MEGHS"
+     ]
     },
     {
      "votes": [
@@ -317,26 +308,18 @@
       "APARNA",
       "MEGHS"
      ],
-     "proposer": "APARNA",
-     "state": "REJECTED",
      "team": [
       "APARNA",
       "MEGHS",
       "ANOOVA",
       "KUSH",
       "AMALICIOUS"
-     ]
+     ],
+     "proposer": "APARNA",
+     "state": "REJECTED"
     },
     {
      "state": "APPROVED",
-     "team": [
-      "ANOOVA",
-      "KUSH",
-      "MEGHS",
-      "AMALICIOUS",
-      "KESHA"
-     ],
-     "proposer": "ANOOVA",
      "votes": [
       "AMALICIOUS",
       "ANOOVA",
@@ -346,17 +329,30 @@
       "RAM",
       "APARNA",
       "MEGHS"
-     ]
+     ],
+     "team": [
+      "ANOOVA",
+      "KUSH",
+      "MEGHS",
+      "AMALICIOUS",
+      "KESHA"
+     ],
+     "proposer": "ANOOVA"
     }
    ],
-   "state": "FAIL",
-   "teamSize": 5
+   "team": [
+    "ANOOVA",
+    "KUSH",
+    "MEGHS",
+    "AMALICIOUS",
+    "KESHA"
+   ]
   }
  ],
  "players": [
   {
-   "name": "RAM",
-   "uid": "sssKhfz7a9MFk0PWViXgO98omJ22"
+   "uid": "sssKhfz7a9MFk0PWViXgO98omJ22",
+   "name": "RAM"
   },
   {
    "name": "KUSH",
@@ -371,28 +367,32 @@
    "uid": "xF71me06y5M3WtCWZVv5DyK5mZc2"
   },
   {
-   "name": "ANOOVA",
-   "uid": "ul6RVxxcMxckjMIsd1FtPsVcKbA3"
+   "uid": "ul6RVxxcMxckjMIsd1FtPsVcKbA3",
+   "name": "ANOOVA"
   },
   {
-   "name": "SHWETA",
-   "uid": "ejFnZmLieSOxys5nXfyfP3BoCaz2"
+   "uid": "ejFnZmLieSOxys5nXfyfP3BoCaz2",
+   "name": "SHWETA"
   },
   {
-   "uid": "fwOiIJ6AwRUtMbGiNxLrvAHZRme2",
-   "name": "AMALICIOUS"
+   "name": "AMALICIOUS",
+   "uid": "fwOiIJ6AwRUtMbGiNxLrvAHZRme2"
   },
   {
    "name": "VISHAL",
    "uid": "lsAa4Du3uJQsX5cxwU973NTyJmO2"
   },
   {
-   "uid": "gV9hjrfmHhXXtZ7fK609y1JqSpt1",
-   "name": "KESHA"
+   "name": "KESHA",
+   "uid": "gV9hjrfmHhXXtZ7fK609y1JqSpt1"
   },
   {
    "name": "JAMALANA",
    "uid": "xHur8FX5X7WyMjrdASX9zSQ1jZM2"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1586065391,
+  "_nanoseconds": 709941000
+ }
 }

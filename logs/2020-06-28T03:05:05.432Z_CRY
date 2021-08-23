@@ -1,16 +1,90 @@
 {
- "options": {
-  "inGameLog": false
+ "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "BEN",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "name": "FRANK",
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "name": "KRISFATE",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ARCANELARP",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "KMK"
+   },
+   {
+    "name": "SABER",
+    "assassin": false,
+    "role": "PERCIVAL"
+   }
+  ],
+  "assassinated": null,
+  "votes": [
+   {
+    "ARCANELARP": true,
+    "FRANK": true
+   },
+   {
+    "BEN": true,
+    "ARCANELARP": true,
+    "KRISFATE": true
+   },
+   {
+    "ARCANELARP": true,
+    "BEN": false,
+    "KRISFATE": true,
+    "KMK": true
+   },
+   {
+    "BEN": false,
+    "KMK": true,
+    "SABER": true
+   },
+   {
+    "KRISFATE": true,
+    "BEN": false,
+    "SABER": true,
+    "FRANK": false
+   }
+  ]
  },
  "timeFinished": {
   "_seconds": 1593314733,
   "_nanoseconds": 100000000
  },
+ "timeCreated": {
+  "_seconds": 1593313505,
+  "_nanoseconds": 432000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
+   "team": [
+    "FRANK",
+    "ARCANELARP"
+   ],
    "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "FRANK",
       "KRISFATE",
@@ -20,7 +94,6 @@
       "BEN"
      ],
      "proposer": "ARCANELARP",
-     "state": "APPROVED",
      "team": [
       "FRANK",
       "ARCANELARP"
@@ -28,24 +101,19 @@
     }
    ],
    "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0,
-   "team": [
-    "FRANK",
-    "ARCANELARP"
-   ]
+   "teamSize": 2
   },
   {
    "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "ARCANELARP",
       "BEN",
       "KRISFATE"
      ],
-     "proposer": "SABER",
      "votes": [
       "FRANK",
       "KRISFATE",
@@ -53,60 +121,62 @@
       "KMK",
       "SABER",
       "BEN"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "SABER"
     }
    ],
-   "failsRequired": 1,
-   "numFails": 0,
    "team": [
     "ARCANELARP",
     "BEN",
     "KRISFATE"
    ],
+   "numFails": 0,
    "state": "SUCCESS"
   },
   {
-   "state": "FAIL",
    "teamSize": 4,
-   "numFails": 1,
    "proposals": [
     {
-     "votes": [
-      "FRANK",
-      "KRISFATE",
-      "ARCANELARP",
-      "KMK",
-      "BEN"
-     ],
+     "proposer": "KRISFATE",
      "team": [
       "ARCANELARP",
       "BEN",
       "KRISFATE",
       "KMK"
      ],
-     "proposer": "KRISFATE",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "votes": [
+      "FRANK",
+      "KRISFATE",
+      "ARCANELARP",
+      "KMK",
+      "BEN"
+     ]
     }
    ],
+   "failsRequired": 1,
    "team": [
     "ARCANELARP",
     "BEN",
     "KRISFATE",
     "KMK"
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "state": "FAIL"
   },
   {
    "state": "FAIL",
-   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3,
    "team": [
     "BEN",
     "SABER",
     "KMK"
    ],
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "KMK",
       "ARCANELARP",
@@ -116,11 +186,9 @@
       "ARCANELARP",
       "KMK"
      ],
-     "state": "REJECTED",
      "proposer": "KMK"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "FRANK",
       "KRISFATE"
@@ -130,11 +198,11 @@
       "SABER",
       "ARCANELARP"
      ],
+     "state": "REJECTED",
      "proposer": "FRANK"
     },
     {
      "state": "APPROVED",
-     "proposer": "BEN",
      "team": [
       "BEN",
       "SABER",
@@ -146,145 +214,77 @@
       "KMK",
       "SABER",
       "BEN"
-     ]
+     ],
+     "proposer": "BEN"
     }
    ],
-   "numFails": 1
+   "failsRequired": 1
   },
   {
    "numFails": 2,
-   "team": [
-    "BEN",
-    "SABER",
-    "KRISFATE",
-    "FRANK"
-   ],
    "state": "FAIL",
+   "teamSize": 4,
    "proposals": [
     {
      "state": "REJECTED",
      "proposer": "ARCANELARP",
-     "votes": [
-      "ARCANELARP",
-      "KMK"
-     ],
      "team": [
       "ARCANELARP",
       "SABER",
       "KRISFATE",
       "KMK"
+     ],
+     "votes": [
+      "ARCANELARP",
+      "KMK"
      ]
     },
     {
-     "proposer": "SABER",
-     "state": "APPROVED",
+     "team": [
+      "BEN",
+      "SABER",
+      "KRISFATE",
+      "FRANK"
+     ],
      "votes": [
       "FRANK",
       "KRISFATE",
       "SABER",
       "BEN"
      ],
-     "team": [
-      "BEN",
-      "SABER",
-      "KRISFATE",
-      "FRANK"
-     ]
+     "state": "APPROVED",
+     "proposer": "SABER"
     }
    ],
-   "teamSize": 4,
+   "team": [
+    "BEN",
+    "SABER",
+    "KRISFATE",
+    "FRANK"
+   ],
    "failsRequired": 1
   }
  ],
- "timeCreated": {
-  "_seconds": 1593313505,
-  "_nanoseconds": 432000000
- },
- "outcome": {
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "BEN",
-    "role": "MORDRED",
-    "assassin": true
-   },
-   {
-    "role": "MORGANA",
-    "name": "FRANK",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "KRISFATE"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "ARCANELARP"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "KMK"
-   },
-   {
-    "name": "SABER",
-    "role": "PERCIVAL",
-    "assassin": false
-   }
-  ],
-  "assassinated": null,
-  "votes": [
-   {
-    "FRANK": true,
-    "ARCANELARP": true
-   },
-   {
-    "BEN": true,
-    "ARCANELARP": true,
-    "KRISFATE": true
-   },
-   {
-    "ARCANELARP": true,
-    "KRISFATE": true,
-    "BEN": false,
-    "KMK": true
-   },
-   {
-    "KMK": true,
-    "BEN": false,
-    "SABER": true
-   },
-   {
-    "BEN": false,
-    "FRANK": false,
-    "SABER": true,
-    "KRISFATE": true
-   }
-  ],
-  "message": "Three failed missions"
- },
  "players": [
   {
-   "name": "BEN",
-   "uid": "ThdIVouIYXSExHJuJ4KyrXiJN992"
+   "uid": "ThdIVouIYXSExHJuJ4KyrXiJN992",
+   "name": "BEN"
   },
   {
    "name": "ARCANELARP",
    "uid": "aKqUSiReJsaUbxxzHrdNobflHzQ2"
   },
   {
-   "uid": "BJwVJhNHLyceJzyl4b8WSyLEVxv2",
-   "name": "SABER"
+   "name": "SABER",
+   "uid": "BJwVJhNHLyceJzyl4b8WSyLEVxv2"
   },
   {
    "uid": "LLENEBi4aCN8rhdSN4AznsBE8ih1",
    "name": "KRISFATE"
   },
   {
-   "name": "KMK",
-   "uid": "6sQZqQt0ieYIRBLGgoFJTXKzvbj2"
+   "uid": "6sQZqQt0ieYIRBLGgoFJTXKzvbj2",
+   "name": "KMK"
   },
   {
    "name": "FRANK",

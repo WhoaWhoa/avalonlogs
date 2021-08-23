@@ -1,18 +1,25 @@
 {
+ "timeCreated": {
+  "_seconds": 1585971045,
+  "_nanoseconds": 603000000
+ },
  "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "assassinated": null,
   "votes": [
    {
-    "TEAL": true,
-    "THICCEST": true
-   },
-   {
-    "BVF": true,
     "THICCEST": true,
-    "SUYOG": true
+    "TEAL": true
    },
    {
-    "BVF": false,
-    "SUYOG": true
+    "SUYOG": true,
+    "THICCEST": true,
+    "BVF": true
+   },
+   {
+    "SUYOG": true,
+    "BVF": false
    },
    {
     "MALEKA": true,
@@ -20,55 +27,52 @@
     "THICCEST": false
    },
    {
-    "THICCEST": false,
     "TEAL": true,
-    "SUYOG": true
+    "SUYOG": true,
+    "THICCEST": false
    }
   ],
-  "message": "Three failed missions",
   "roles": [
    {
     "assassin": true,
-    "name": "THICCEST",
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "THICCEST"
    },
    {
+    "name": "BVF",
     "assassin": false,
-    "role": "MORGANA",
-    "name": "BVF"
+    "role": "MORGANA"
    },
    {
-    "assassin": false,
     "name": "MALEKA",
+    "assassin": false,
     "role": "MERLIN"
    },
    {
-    "assassin": false,
+    "name": "SUYOG",
     "role": "PERCIVAL",
-    "name": "SUYOG"
+    "assassin": false
    },
    {
+    "name": "TEAL",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "TEAL"
+    "role": "LOYAL FOLLOWER"
    }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN"
- },
- "timeCreated": {
-  "_seconds": 1585971045,
-  "_nanoseconds": 603000000
+  ]
  },
  "missions": [
   {
+   "team": [
+    "TEAL",
+    "THICCEST"
+   ],
+   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "TEAL",
-      "THICCEST"
-     ],
      "state": "APPROVED",
+     "proposer": "TEAL",
      "votes": [
       "TEAL",
       "THICCEST",
@@ -76,105 +80,98 @@
       "MALEKA",
       "SUYOG"
      ],
-     "proposer": "TEAL"
+     "team": [
+      "TEAL",
+      "THICCEST"
+     ]
     }
    ],
-   "numFails": 0,
-   "failsRequired": 1,
-   "teamSize": 2,
-   "state": "SUCCESS",
-   "team": [
-    "TEAL",
-    "THICCEST"
-   ]
+   "teamSize": 2
   },
   {
-   "team": [
-    "THICCEST",
-    "BVF",
-    "SUYOG"
-   ],
    "proposals": [
     {
+     "team": [
+      "THICCEST",
+      "BVF",
+      "SUYOG"
+     ],
      "state": "APPROVED",
      "votes": [
       "MALEKA",
       "SUYOG",
       "THICCEST"
-     ],
-     "team": [
-      "THICCEST",
-      "BVF",
-      "SUYOG"
      ],
      "proposer": "THICCEST"
     }
    ],
    "teamSize": 3,
-   "failsRequired": 1,
+   "team": [
+    "THICCEST",
+    "BVF",
+    "SUYOG"
+   ],
    "state": "SUCCESS",
+   "failsRequired": 1,
    "numFails": 0
   },
   {
-   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
    "team": [
     "BVF",
     "SUYOG"
    ],
    "proposals": [
     {
-     "proposer": "BVF",
-     "team": [
-      "BVF",
-      "SUYOG"
-     ],
      "votes": [
       "THICCEST",
       "BVF",
       "SUYOG",
       "TEAL"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "BVF",
+      "SUYOG"
+     ],
+     "proposer": "BVF"
     }
    ],
-   "teamSize": 2,
-   "state": "FAIL",
-   "numFails": 1
+   "failsRequired": 1,
+   "teamSize": 2
   },
   {
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "MALEKA",
     "SUYOG",
     "THICCEST"
    ],
-   "failsRequired": 1,
-   "numFails": 1,
    "teamSize": 3,
-   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "SUYOG",
-     "team": [
-      "MALEKA",
-      "SUYOG",
-      "THICCEST"
-     ],
+     "state": "APPROVED",
      "votes": [
       "THICCEST",
       "BVF",
       "SUYOG",
       "TEAL"
      ],
-     "state": "APPROVED"
+     "proposer": "SUYOG",
+     "team": [
+      "MALEKA",
+      "SUYOG",
+      "THICCEST"
+     ]
     }
    ]
   },
   {
-   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "MALEKA",
      "votes": [
       "THICCEST",
       "BVF"
@@ -183,70 +180,73 @@
       "THICCEST",
       "BVF",
       "SUYOG"
-     ]
+     ],
+     "proposer": "MALEKA",
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "SUYOG",
       "TEAL"
      ],
+     "proposer": "TEAL",
+     "state": "REJECTED",
      "team": [
       "SUYOG",
       "MALEKA",
       "TEAL"
-     ],
-     "proposer": "TEAL"
+     ]
     },
     {
-     "team": [
-      "THICCEST",
-      "TEAL",
-      "SUYOG"
-     ],
      "state": "APPROVED",
      "proposer": "THICCEST",
      "votes": [
       "MALEKA",
       "THICCEST",
       "BVF"
+     ],
+     "team": [
+      "THICCEST",
+      "TEAL",
+      "SUYOG"
      ]
     }
    ],
-   "failsRequired": 1,
+   "numFails": 1,
    "state": "FAIL",
    "team": [
     "THICCEST",
     "TEAL",
     "SUYOG"
    ],
+   "failsRequired": 1,
    "teamSize": 3
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585971528,
+  "_nanoseconds": 406706000
+ },
  "players": [
   {
-   "name": "TEAL",
-   "uid": "lftPtsmuCkMK8BJeF3lIQrldZkP2"
+   "uid": "lftPtsmuCkMK8BJeF3lIQrldZkP2",
+   "name": "TEAL"
   },
   {
    "name": "THICCEST",
    "uid": "GU1Xb18l3NabjIrjUBhQU7ZGLjK2"
   },
   {
-   "uid": "nZ80apCwzHdvAXQ06kJT0lB0z6A2",
-   "name": "BVF"
+   "name": "BVF",
+   "uid": "nZ80apCwzHdvAXQ06kJT0lB0z6A2"
   },
   {
-   "uid": "ss9biBZDpgRWHH8EKz5QNbfI5JC3",
-   "name": "SUYOG"
+   "name": "SUYOG",
+   "uid": "ss9biBZDpgRWHH8EKz5QNbfI5JC3"
   },
   {
-   "uid": "P92IVg1C0cd1rMWSHi6566XZlwN2",
-   "name": "MALEKA"
+   "name": "MALEKA",
+   "uid": "P92IVg1C0cd1rMWSHi6566XZlwN2"
   }
- ],
- "timeFinished": {
-  "_seconds": 1585971528,
-  "_nanoseconds": 406706000
- }
+ ]
 }

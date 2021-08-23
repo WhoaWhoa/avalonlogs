@@ -7,10 +7,13 @@
   "_seconds": 1594938998,
   "_nanoseconds": 88000000
  },
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
-   "name": "KIMMERLIN",
-   "uid": "tVQNQuHDO8cihbBVOPRGTj0fm4I2"
+   "uid": "tVQNQuHDO8cihbBVOPRGTj0fm4I2",
+   "name": "KIMMERLIN"
   },
   {
    "name": "RAFMAN",
@@ -21,8 +24,8 @@
    "name": "KAREN"
   },
   {
-   "name": "ROCKY",
-   "uid": "zM9XPY9QEiM3EfKBXlgKk97GJAF3"
+   "uid": "zM9XPY9QEiM3EfKBXlgKk97GJAF3",
+   "name": "ROCKY"
   },
   {
    "uid": "VlJgElRD4VZXmlTxpA5QRET5Z4W2",
@@ -33,8 +36,8 @@
    "uid": "HXoN5uYy10RFdjSv5xUP6IW2TCb2"
   },
   {
-   "name": "GOODWIN",
-   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2"
+   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2",
+   "name": "GOODWIN"
   },
   {
    "uid": "lHx01lkWR8RJbNr7VOto3YG3qz33",
@@ -42,39 +45,63 @@
   }
  ],
  "outcome": {
-  "message": "Merlin assassinated",
-  "assassinated": "STEVE",
+  "votes": [
+   {
+    "KAREN": true,
+    "ROCKY": false,
+    "GOODWIN": true
+   },
+   {
+    "KIMMERLIN": true,
+    "TINA": true,
+    "STEVE": true,
+    "KAREN": true
+   },
+   {
+    "KAREN": true,
+    "KIMMERLIN": true,
+    "TINA": true,
+    "STEVE": true
+   },
+   {
+    "TOBY": false,
+    "KIMMERLIN": true,
+    "KAREN": true,
+    "STEVE": true,
+    "TINA": true
+   }
+  ],
   "state": "EVIL_WIN",
   "roles": [
    {
-    "assassin": false,
+    "role": "OBERON",
     "name": "ROCKY",
-    "role": "OBERON"
+    "assassin": false
    },
    {
     "role": "MERLIN",
-    "name": "STEVE",
-    "assassin": false
+    "assassin": false,
+    "name": "STEVE"
    },
    {
+    "assassin": false,
     "name": "TINA",
-    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "name": "GOODWIN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "KIMMERLIN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "RAFMAN",
-    "role": "MORGANA",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "KIMMERLIN"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "RAFMAN"
    },
    {
     "role": "MORDRED",
@@ -82,240 +109,205 @@
     "assassin": true
    },
    {
-    "assassin": false,
     "role": "PERCIVAL",
-    "name": "KAREN"
+    "name": "KAREN",
+    "assassin": false
    }
   ],
-  "votes": [
-   {
-    "GOODWIN": true,
-    "KAREN": true,
-    "ROCKY": false
-   },
-   {
-    "TINA": true,
-    "KAREN": true,
-    "KIMMERLIN": true,
-    "STEVE": true
-   },
-   {
-    "TINA": true,
-    "STEVE": true,
-    "KIMMERLIN": true,
-    "KAREN": true
-   },
-   {
-    "TINA": true,
-    "STEVE": true,
-    "KIMMERLIN": true,
-    "TOBY": false,
-    "KAREN": true
-   }
-  ]
+  "message": "Merlin assassinated",
+  "assassinated": "STEVE"
  },
  "missions": [
   {
-   "numFails": 1,
-   "state": "FAIL",
+   "proposals": [
+    {
+     "votes": [
+      "TOBY",
+      "TINA",
+      "STEVE"
+     ],
+     "proposer": "STEVE",
+     "state": "REJECTED",
+     "team": [
+      "STEVE",
+      "GOODWIN",
+      "TINA"
+     ]
+    },
+    {
+     "team": [
+      "KIMMERLIN",
+      "GOODWIN",
+      "KAREN"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "KIMMERLIN",
+      "KAREN",
+      "TOBY"
+     ],
+     "proposer": "KIMMERLIN"
+    },
+    {
+     "proposer": "RAFMAN",
+     "team": [
+      "RAFMAN",
+      "STEVE",
+      "KAREN"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "TOBY"
+     ]
+    },
+    {
+     "team": [
+      "KAREN",
+      "STEVE",
+      "KIMMERLIN"
+     ],
+     "votes": [
+      "STEVE",
+      "GOODWIN",
+      "KIMMERLIN",
+      "KAREN"
+     ],
+     "state": "REJECTED",
+     "proposer": "KAREN"
+    },
+    {
+     "state": "APPROVED",
+     "votes": [
+      "KAREN",
+      "GOODWIN",
+      "ROCKY",
+      "STEVE",
+      "TOBY",
+      "RAFMAN"
+     ],
+     "team": [
+      "ROCKY",
+      "GOODWIN",
+      "KAREN"
+     ],
+     "proposer": "ROCKY"
+    }
+   ],
    "failsRequired": 1,
    "team": [
     "ROCKY",
     "GOODWIN",
     "KAREN"
    ],
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3
+  },
+  {
    "proposals": [
     {
+     "votes": [],
+     "proposer": "TOBY",
      "state": "REJECTED",
-     "proposer": "STEVE",
      "team": [
+      "KIMMERLIN",
+      "TINA",
+      "RAFMAN",
+      "GOODWIN"
+     ]
+    },
+    {
+     "votes": [
       "STEVE",
+      "KAREN",
+      "TINA"
+     ],
+     "team": [
+      "TINA",
+      "KAREN",
+      "KIMMERLIN",
+      "STEVE"
+     ],
+     "proposer": "TINA",
+     "state": "REJECTED"
+    },
+    {
+     "state": "REJECTED",
+     "team": [
       "GOODWIN",
+      "KIMMERLIN",
+      "STEVE",
       "TINA"
      ],
      "votes": [
-      "TOBY",
-      "TINA",
-      "STEVE"
-     ]
-    },
-    {
-     "state": "REJECTED",
-     "team": [
-      "KIMMERLIN",
-      "GOODWIN",
-      "KAREN"
-     ],
-     "votes": [
-      "KIMMERLIN",
-      "KAREN",
       "TOBY"
      ],
-     "proposer": "KIMMERLIN"
+     "proposer": "GOODWIN"
     },
     {
-     "team": [
-      "RAFMAN",
-      "STEVE",
-      "KAREN"
-     ],
      "state": "REJECTED",
-     "proposer": "RAFMAN",
      "votes": [
-      "TOBY"
-     ]
-    },
-    {
-     "proposer": "KAREN",
-     "state": "REJECTED",
-     "team": [
       "KAREN",
       "STEVE",
       "KIMMERLIN"
      ],
-     "votes": [
+     "team": [
       "STEVE",
-      "GOODWIN",
-      "KIMMERLIN",
-      "KAREN"
-     ]
+      "TINA",
+      "KAREN",
+      "KIMMERLIN"
+     ],
+     "proposer": "STEVE"
     },
     {
-     "state": "APPROVED",
      "team": [
+      "KIMMERLIN",
+      "TINA",
+      "STEVE",
+      "KAREN"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "TOBY",
+      "KIMMERLIN",
       "ROCKY",
+      "STEVE",
+      "TINA",
       "GOODWIN",
       "KAREN"
      ],
-     "votes": [
-      "KAREN",
-      "GOODWIN",
-      "ROCKY",
-      "STEVE",
-      "TOBY",
-      "RAFMAN"
-     ],
-     "proposer": "ROCKY"
+     "proposer": "KIMMERLIN"
     }
    ],
-   "teamSize": 3
-  },
-  {
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "KIMMERLIN",
     "TINA",
     "STEVE",
     "KAREN"
    ],
-   "numFails": 0,
    "teamSize": 4,
-   "proposals": [
-    {
-     "team": [
-      "KIMMERLIN",
-      "TINA",
-      "RAFMAN",
-      "GOODWIN"
-     ],
-     "votes": [],
-     "proposer": "TOBY",
-     "state": "REJECTED"
-    },
-    {
-     "votes": [
-      "STEVE",
-      "KAREN",
-      "TINA"
-     ],
-     "state": "REJECTED",
-     "team": [
-      "TINA",
-      "KAREN",
-      "KIMMERLIN",
-      "STEVE"
-     ],
-     "proposer": "TINA"
-    },
-    {
-     "proposer": "GOODWIN",
-     "votes": [
-      "TOBY"
-     ],
-     "team": [
-      "GOODWIN",
-      "KIMMERLIN",
-      "STEVE",
-      "TINA"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "state": "REJECTED",
-     "proposer": "STEVE",
-     "team": [
-      "STEVE",
-      "TINA",
-      "KAREN",
-      "KIMMERLIN"
-     ],
-     "votes": [
-      "KAREN",
-      "STEVE",
-      "KIMMERLIN"
-     ]
-    },
-    {
-     "team": [
-      "KIMMERLIN",
-      "TINA",
-      "STEVE",
-      "KAREN"
-     ],
-     "votes": [
-      "TOBY",
-      "KIMMERLIN",
-      "ROCKY",
-      "STEVE",
-      "TINA",
-      "GOODWIN",
-      "KAREN"
-     ],
-     "state": "APPROVED",
-     "proposer": "KIMMERLIN"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0
   },
   {
-   "team": [
-    "KAREN",
-    "KIMMERLIN",
-    "TINA",
-    "STEVE"
-   ],
    "proposals": [
     {
-     "team": [
-      "KIMMERLIN",
-      "TINA",
-      "STEVE",
-      "GOODWIN"
-     ],
+     "proposer": "RAFMAN",
+     "state": "REJECTED",
      "votes": [
       "GOODWIN",
       "RAFMAN"
      ],
-     "state": "REJECTED",
-     "proposer": "RAFMAN"
-    },
-    {
      "team": [
-      "KAREN",
       "KIMMERLIN",
       "TINA",
-      "STEVE"
-     ],
+      "STEVE",
+      "GOODWIN"
+     ]
+    },
+    {
+     "proposer": "KAREN",
      "votes": [
       "STEVE",
       "KAREN",
@@ -323,27 +315,30 @@
       "KIMMERLIN",
       "ROCKY"
      ],
-     "proposer": "KAREN",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "KAREN",
+      "KIMMERLIN",
+      "TINA",
+      "STEVE"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "numFails": 0,
-   "teamSize": 4
+   "teamSize": 4,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "KAREN",
+    "KIMMERLIN",
+    "TINA",
+    "STEVE"
+   ]
   },
   {
-   "teamSize": 5,
-   "state": "SUCCESS",
-   "numFails": 1,
    "proposals": [
     {
-     "votes": [
-      "ROCKY",
-      "TOBY",
-      "KAREN",
-      "GOODWIN"
-     ],
+     "state": "REJECTED",
      "proposer": "ROCKY",
      "team": [
       "KAREN",
@@ -352,7 +347,12 @@
       "KIMMERLIN",
       "ROCKY"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "ROCKY",
+      "TOBY",
+      "KAREN",
+      "GOODWIN"
+     ]
     },
     {
      "team": [
@@ -362,30 +362,35 @@
       "TINA",
       "STEVE"
      ],
+     "proposer": "TOBY",
      "state": "REJECTED",
      "votes": [
       "TOBY",
       "KAREN",
       "GOODWIN"
-     ],
-     "proposer": "TOBY"
+     ]
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "GOODWIN",
-      "TOBY"
-     ],
-     "proposer": "TINA",
      "team": [
       "TINA",
       "STEVE",
       "KAREN",
       "KIMMERLIN",
       "RAFMAN"
-     ]
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "GOODWIN",
+      "TOBY"
+     ],
+     "proposer": "TINA"
     },
     {
+     "votes": [
+      "TOBY",
+      "GOODWIN",
+      "KAREN"
+     ],
      "team": [
       "STEVE",
       "GOODWIN",
@@ -393,16 +398,12 @@
       "KAREN",
       "KIMMERLIN"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "TOBY",
-      "GOODWIN",
-      "KAREN"
-     ],
-     "proposer": "GOODWIN"
+     "proposer": "GOODWIN",
+     "state": "REJECTED"
     },
     {
      "proposer": "STEVE",
+     "state": "APPROVED",
      "votes": [
       "GOODWIN",
       "KIMMERLIN",
@@ -412,7 +413,6 @@
       "TOBY",
       "ROCKY"
      ],
-     "state": "APPROVED",
      "team": [
       "STEVE",
       "TINA",
@@ -429,17 +429,17 @@
     "TOBY",
     "KAREN",
     "KIMMERLIN"
-   ]
+   ],
+   "numFails": 1,
+   "state": "SUCCESS",
+   "teamSize": 5
   },
   {
-   "proposals": [],
-   "teamSize": 5,
-   "failsRequired": 1,
    "state": "PENDING",
-   "team": []
+   "teamSize": 5,
+   "team": [],
+   "proposals": [],
+   "failsRequired": 1
   }
- ],
- "options": {
-  "inGameLog": false
- }
+ ]
 }

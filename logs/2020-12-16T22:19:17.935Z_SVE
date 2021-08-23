@@ -1,4 +1,70 @@
 {
+ "outcome": {
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "AANDC": true,
+    "BS": true
+   },
+   {
+    "AANDC": false,
+    "HEYYO": true,
+    "SVE": true
+   },
+   {
+    "AANDC": false,
+    "HEYYO": true,
+    "BS": true,
+    "JOHN": true
+   },
+   {
+    "AANDC": false,
+    "BS": true,
+    "KIRSTEN": false
+   }
+  ],
+  "roles": [
+   {
+    "name": "AANDC",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JOHN",
+    "assassin": false
+   },
+   {
+    "name": "BS",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "HEYYO",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "KIRSTEN",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "SVE"
+   }
+  ]
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1608157157,
+  "_nanoseconds": 935000000
+ },
  "timeFinished": {
   "_seconds": 1608157917,
   "_nanoseconds": 659000000
@@ -9,41 +75,36 @@
    "uid": "IzI4tdmmoYWspQuzug2fpEdArnm2"
   },
   {
-   "uid": "ErGTwbwEs8bD23ZLhGr1zcNE7ug1",
-   "name": "JOHN"
+   "name": "JOHN",
+   "uid": "ErGTwbwEs8bD23ZLhGr1zcNE7ug1"
   },
   {
-   "uid": "BlGpd05Qi5ei5NBtfVE0zbwMhyJ2",
-   "name": "BS"
+   "name": "BS",
+   "uid": "BlGpd05Qi5ei5NBtfVE0zbwMhyJ2"
   },
   {
-   "name": "HEYYO",
-   "uid": "pKJGWtquYlh2wpaaSoVZjmGVnTI2"
+   "uid": "pKJGWtquYlh2wpaaSoVZjmGVnTI2",
+   "name": "HEYYO"
   },
   {
    "name": "SVE",
    "uid": "KRXilZfLeHMBVEvPHGkNPP5IxWx2"
   },
   {
-   "uid": "jbIK9LbxBQbJ5EsW1Be0CZRY4LI2",
-   "name": "AANDC"
+   "name": "AANDC",
+   "uid": "jbIK9LbxBQbJ5EsW1Be0CZRY4LI2"
   }
  ],
  "missions": [
   {
    "failsRequired": 1,
-   "team": [
-    "BS",
-    "AANDC"
-   ],
-   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "BS",
       "AANDC"
      ],
+     "state": "APPROVED",
      "proposer": "BS",
      "votes": [
       "KIRSTEN",
@@ -55,19 +116,25 @@
      ]
     }
    ],
+   "team": [
+    "BS",
+    "AANDC"
+   ],
+   "state": "SUCCESS",
    "teamSize": 2,
-   "state": "SUCCESS"
+   "numFails": 0
   },
   {
    "numFails": 1,
+   "state": "FAIL",
+   "team": [
+    "HEYYO",
+    "AANDC",
+    "SVE"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "HEYYO",
-      "AANDC",
-      "SVE"
-     ],
      "proposer": "HEYYO",
      "votes": [
       "AANDC",
@@ -75,27 +142,28 @@
       "KIRSTEN",
       "BS",
       "SVE"
-     ]
+     ],
+     "team": [
+      "HEYYO",
+      "AANDC",
+      "SVE"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 3,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "team": [
-    "HEYYO",
-    "AANDC",
-    "SVE"
-   ]
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 1,
+   "state": "FAIL",
    "team": [
     "BS",
     "AANDC",
     "HEYYO",
     "JOHN"
    ],
-   "failsRequired": 1,
-   "numFails": 1,
    "proposals": [
     {
      "votes": [
@@ -104,133 +172,65 @@
       "SVE",
       "HEYYO"
      ],
+     "proposer": "SVE",
+     "state": "APPROVED",
      "team": [
       "BS",
       "AANDC",
       "HEYYO",
       "JOHN"
-     ],
-     "proposer": "SVE",
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "state": "FAIL",
-   "teamSize": 4
+   ]
   },
   {
-   "state": "FAIL",
-   "numFails": 2,
-   "team": [
-    "KIRSTEN",
-    "BS",
-    "AANDC"
-   ],
-   "teamSize": 3,
    "failsRequired": 1,
+   "numFails": 2,
    "proposals": [
     {
-     "votes": [
-      "KIRSTEN",
-      "AANDC",
-      "SVE"
-     ],
+     "proposer": "AANDC",
      "team": [
       "KIRSTEN",
       "JOHN",
       "AANDC"
      ],
-     "state": "REJECTED",
-     "proposer": "AANDC"
+     "votes": [
+      "KIRSTEN",
+      "AANDC",
+      "SVE"
+     ],
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "KIRSTEN",
-      "BS",
-      "AANDC"
-     ],
      "votes": [
       "SVE",
       "AANDC",
       "KIRSTEN",
       "BS"
      ],
-     "proposer": "KIRSTEN"
+     "proposer": "KIRSTEN",
+     "state": "APPROVED",
+     "team": [
+      "KIRSTEN",
+      "BS",
+      "AANDC"
+     ]
     }
-   ]
+   ],
+   "team": [
+    "KIRSTEN",
+    "BS",
+    "AANDC"
+   ],
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
-   "state": "PENDING",
-   "proposals": [],
    "teamSize": 4,
    "failsRequired": 1,
-   "team": []
+   "state": "PENDING",
+   "team": [],
+   "proposals": []
   }
- ],
- "timeCreated": {
-  "_seconds": 1608157157,
-  "_nanoseconds": 935000000
- },
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "votes": [
-   {
-    "BS": true,
-    "AANDC": true
-   },
-   {
-    "HEYYO": true,
-    "AANDC": false,
-    "SVE": true
-   },
-   {
-    "JOHN": true,
-    "BS": true,
-    "HEYYO": true,
-    "AANDC": false
-   },
-   {
-    "AANDC": false,
-    "KIRSTEN": false,
-    "BS": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "AANDC"
-   },
-   {
-    "assassin": false,
-    "name": "JOHN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "BS",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "HEYYO",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "KIRSTEN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "SVE",
-    "assassin": false
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "message": "Three failed missions"
- }
+ ]
 }

@@ -3,81 +3,18 @@
   "_seconds": 1589161597,
   "_nanoseconds": 229000000
  },
- "outcome": {
-  "votes": [
-   {
-    "CINDY": true,
-    "BILL": false
-   },
-   {
-    "ALAN": true,
-    "CATHY": true,
-    "BRIAN": false
-   },
-   {
-    "CATHY": true,
-    "CINDY": true,
-    "TARINI": true,
-    "ALAN": true
-   },
-   {
-    "TARINI": true,
-    "ALAN": true,
-    "CATHY": true
-   },
-   {
-    "CINDY": true,
-    "ALAN": true,
-    "TARINI": true,
-    "CATHY": true
-   }
-  ],
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "BILL"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "CINDY",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "BRIAN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "ALAN",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "CATHY",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "TARINI",
-    "assassin": false
-   }
-  ],
-  "assassinated": null,
-  "message": "Three missions succeeded"
+ "options": {
+  "inGameLog": false
  },
  "missions": [
   {
-   "numFails": 1,
-   "team": [
-    "CINDY",
-    "BILL"
-   ],
-   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "CINDY",
+      "BILL"
+     ],
      "votes": [
       "BILL",
       "CINDY",
@@ -85,26 +22,25 @@
       "ALAN",
       "CATHY",
       "TARINI"
-     ],
-     "team": [
-      "CINDY",
-      "BILL"
      ],
      "state": "APPROVED",
      "proposer": "BRIAN"
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 2
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 2,
+   "team": [
+    "CINDY",
+    "BILL"
+   ]
   },
   {
-   "team": [
-    "CATHY",
-    "ALAN",
-    "BRIAN"
-   ],
+   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "CATHY",
      "votes": [
       "BILL",
       "CINDY",
@@ -113,41 +49,23 @@
       "CATHY",
       "TARINI"
      ],
-     "proposer": "CATHY",
      "team": [
       "CATHY",
       "ALAN",
       "BRIAN"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "FAIL",
+   "team": [
+    "CATHY",
+    "ALAN",
+    "BRIAN"
+   ],
    "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 3
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
-   "teamSize": 4,
-   "proposals": [
-    {
-     "votes": [
-      "CINDY",
-      "BRIAN",
-      "ALAN",
-      "CATHY",
-      "TARINI"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "ALAN",
-      "CATHY",
-      "CINDY",
-      "TARINI"
-     ],
-     "proposer": "TARINI"
-    }
-   ],
    "state": "SUCCESS",
    "failsRequired": 1,
    "team": [
@@ -156,7 +74,27 @@
     "CINDY",
     "TARINI"
    ],
-   "numFails": 0
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "CINDY",
+      "BRIAN",
+      "ALAN",
+      "CATHY",
+      "TARINI"
+     ],
+     "proposer": "TARINI",
+     "team": [
+      "ALAN",
+      "CATHY",
+      "CINDY",
+      "TARINI"
+     ]
+    }
+   ],
+   "numFails": 0,
+   "teamSize": 4
   },
   {
    "proposals": [
@@ -169,10 +107,16 @@
       "BRIAN",
       "TARINI"
      ],
-     "state": "REJECTED",
-     "proposer": "BILL"
+     "proposer": "BILL",
+     "state": "REJECTED"
     },
     {
+     "proposer": "ALAN",
+     "team": [
+      "ALAN",
+      "CATHY",
+      "TARINI"
+     ],
      "state": "APPROVED",
      "votes": [
       "CINDY",
@@ -180,40 +124,22 @@
       "ALAN",
       "CATHY",
       "TARINI"
-     ],
-     "team": [
-      "ALAN",
-      "CATHY",
-      "TARINI"
-     ],
-     "proposer": "ALAN"
+     ]
     }
    ],
-   "failsRequired": 1,
    "numFails": 0,
    "team": [
-    "ALAN",
-    "CATHY",
-    "TARINI"
-   ],
-   "teamSize": 3,
-   "state": "SUCCESS"
-  },
-  {
-   "numFails": 0,
-   "teamSize": 4,
-   "team": [
-    "CINDY",
     "ALAN",
     "CATHY",
     "TARINI"
    ],
    "state": "SUCCESS",
    "failsRequired": 1,
+   "teamSize": 3
+  },
+  {
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "CINDY",
      "votes": [
       "CINDY",
       "ALAN",
@@ -225,22 +151,31 @@
       "ALAN",
       "CATHY",
       "TARINI"
-     ]
+     ],
+     "proposer": "CINDY",
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
+   "state": "SUCCESS",
+   "team": [
+    "CINDY",
+    "ALAN",
+    "CATHY",
+    "TARINI"
+   ],
+   "numFails": 0
   }
  ],
  "timeCreated": {
   "_seconds": 1589160689,
   "_nanoseconds": 759000000
  },
- "options": {
-  "inGameLog": false
- },
  "players": [
   {
-   "uid": "BSV8PXzydYaXtBuMWGVGx0eYPL02",
-   "name": "ALAN"
+   "name": "ALAN",
+   "uid": "BSV8PXzydYaXtBuMWGVGx0eYPL02"
   },
   {
    "name": "CINDY",
@@ -251,16 +186,81 @@
    "uid": "PMDQR64sYFOzhvoATRfQu5ay8ps1"
   },
   {
-   "name": "CATHY",
-   "uid": "9lEDnYZldlPbAqymqmKdhmK0KLH2"
+   "uid": "9lEDnYZldlPbAqymqmKdhmK0KLH2",
+   "name": "CATHY"
   },
   {
-   "uid": "MmHZeE5lXjfLcy3l8Pk0u3YvJLx1",
-   "name": "TARINI"
+   "name": "TARINI",
+   "uid": "MmHZeE5lXjfLcy3l8Pk0u3YvJLx1"
   },
   {
    "name": "BILL",
    "uid": "Mwdds1MZo2NCA2l26WGM0KIiBy42"
   }
- ]
+ ],
+ "outcome": {
+  "assassinated": null,
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "name": "BILL",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "CINDY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "BRIAN"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ALAN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "CATHY",
+    "assassin": false
+   },
+   {
+    "name": "TARINI",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "votes": [
+   {
+    "BILL": false,
+    "CINDY": true
+   },
+   {
+    "BRIAN": false,
+    "CATHY": true,
+    "ALAN": true
+   },
+   {
+    "CINDY": true,
+    "CATHY": true,
+    "ALAN": true,
+    "TARINI": true
+   },
+   {
+    "CATHY": true,
+    "TARINI": true,
+    "ALAN": true
+   },
+   {
+    "TARINI": true,
+    "CINDY": true,
+    "ALAN": true,
+    "CATHY": true
+   }
+  ],
+  "message": "Three missions succeeded"
+ }
 }

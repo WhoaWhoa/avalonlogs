@@ -1,7 +1,130 @@
 {
+ "outcome": {
+  "assassinated": "HONG",
+  "votes": [
+   {
+    "SUZIE": true,
+    "TAN": true,
+    "HONG": true
+   },
+   {
+    "MT": true,
+    "SUZIE": true,
+    "TAN": false,
+    "HONG": true
+   },
+   {
+    "TAN": true,
+    "FARMER": true,
+    "SUZIE": true,
+    "TUAN": true
+   },
+   {
+    "KHANH": true,
+    "TRUNG": true,
+    "HONG": true,
+    "FARMER": true,
+    "TUAN": false
+   }
+  ],
+  "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "name": "TAN",
+    "role": "MORDRED",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "name": "HONG",
+    "assassin": false
+   },
+   {
+    "name": "MT",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "SUZIE",
+    "assassin": false
+   },
+   {
+    "name": "TUAN",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "name": "KHANH",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "TRUNG",
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": true,
+    "name": "TAI",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "FARMER",
+    "assassin": false
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1585975142,
+  "_nanoseconds": 557000000
+ },
+ "timeFinished": {
+  "_seconds": 1585977908,
+  "_nanoseconds": 674438000
+ },
+ "players": [
+  {
+   "uid": "0MbIAF0r1uW42nYBBQYiabE1rfA3",
+   "name": "TAI"
+  },
+  {
+   "uid": "xt5TL4q8CeaF1wLZe4M1fZ1Lb5m1",
+   "name": "TAN"
+  },
+  {
+   "name": "HONG",
+   "uid": "h2u5S81sneWe4FV0BWKD69gnhhr1"
+  },
+  {
+   "name": "SUZIE",
+   "uid": "th6z2WXcgsYAFfWwJVcr9O8DPB62"
+  },
+  {
+   "uid": "eXJGirlgg6TsAAarKx2ixrUlXxK2",
+   "name": "KHANH"
+  },
+  {
+   "name": "MT",
+   "uid": "PqqH9sL7PobyStZWZO6sI2MocoA2"
+  },
+  {
+   "name": "FARMER",
+   "uid": "TRztwu55AsQ3w5mHXkEBBN63PQz2"
+  },
+  {
+   "uid": "EoXUoAlgNfY1fgy1g3EcwtUkZHm2",
+   "name": "TRUNG"
+  },
+  {
+   "name": "TUAN",
+   "uid": "aMIzs6qHXwOsx2l2sVGu3oJIXsp2"
+  }
+ ],
  "missions": [
   {
-   "state": "SUCCESS",
    "failsRequired": 1,
    "team": [
     "TAN",
@@ -11,6 +134,8 @@
    "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "TAN",
      "votes": [
       "TRUNG",
       "TAN",
@@ -18,8 +143,6 @@
       "SUZIE",
       "TUAN"
      ],
-     "proposer": "TAN",
-     "state": "APPROVED",
      "team": [
       "TAN",
       "HONG",
@@ -27,57 +150,63 @@
      ]
     }
    ],
-   "numFails": 0
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
-   "numFails": 1,
-   "failsRequired": 1,
-   "team": [
-    "TAN",
-    "HONG",
-    "SUZIE",
-    "MT"
-   ],
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "TAN",
+      "HONG",
+      "SUZIE",
+      "MT"
+     ],
      "proposer": "HONG",
+     "state": "APPROVED",
      "votes": [
       "SUZIE",
       "TRUNG",
       "TAI",
       "HONG",
       "MT"
-     ],
-     "team": [
-      "TAN",
-      "HONG",
-      "SUZIE",
-      "MT"
      ]
     }
    ],
-   "state": "FAIL",
-   "teamSize": 4
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 1,
+   "team": [
+    "TAN",
+    "HONG",
+    "SUZIE",
+    "MT"
+   ],
+   "state": "FAIL"
   },
   {
-   "teamSize": 4,
+   "team": [
+    "FARMER",
+    "TAN",
+    "SUZIE",
+    "TUAN"
+   ],
    "proposals": [
     {
-     "proposer": "SUZIE",
      "votes": [
       "SUZIE",
       "TUAN",
       "KHANH",
       "TRUNG"
      ],
+     "state": "REJECTED",
+     "proposer": "SUZIE",
      "team": [
       "SUZIE",
       "TAN",
       "KHANH",
       "TUAN"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "REJECTED",
@@ -95,57 +224,55 @@
      "proposer": "KHANH"
     },
     {
-     "votes": [
-      "TAI",
-      "MT"
-     ],
      "team": [
       "FARMER",
       "MT",
       "TAN",
       "TUAN"
      ],
+     "votes": [
+      "TAI",
+      "MT"
+     ],
      "proposer": "MT",
      "state": "REJECTED"
     },
     {
      "state": "APPROVED",
-     "votes": [
-      "TUAN",
-      "TAI",
-      "FARMER",
-      "TAN",
-      "MT"
-     ],
      "team": [
       "FARMER",
       "TAN",
       "SUZIE",
       "TUAN"
      ],
-     "proposer": "FARMER"
+     "proposer": "FARMER",
+     "votes": [
+      "TUAN",
+      "TAI",
+      "FARMER",
+      "TAN",
+      "MT"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "FARMER",
-    "TAN",
-    "SUZIE",
-    "TUAN"
-   ],
    "state": "SUCCESS",
-   "numFails": 0
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 4
   },
   {
+   "state": "SUCCESS",
+   "numFails": 1,
+   "failsRequired": 2,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "TUAN",
       "TRUNG",
       "TAI",
       "MT"
      ],
-     "state": "REJECTED",
      "proposer": "TRUNG",
      "team": [
       "TRUNG",
@@ -156,7 +283,6 @@
      ]
     },
     {
-     "proposer": "TUAN",
      "team": [
       "TAN",
       "TUAN",
@@ -169,10 +295,10 @@
       "SUZIE",
       "TUAN",
       "TAI"
-     ]
+     ],
+     "proposer": "TUAN"
     },
     {
-     "state": "REJECTED",
      "team": [
       "TAI",
       "TAN",
@@ -186,28 +312,28 @@
       "SUZIE",
       "TUAN"
      ],
+     "state": "REJECTED",
      "proposer": "TAI"
     },
     {
-     "votes": [
-      "TAI",
-      "FARMER",
-      "TAN",
-      "TUAN"
-     ],
-     "proposer": "TAN",
-     "state": "REJECTED",
      "team": [
       "TAN",
       "HONG",
       "TAI",
       "FARMER",
       "TUAN"
+     ],
+     "proposer": "TAN",
+     "state": "REJECTED",
+     "votes": [
+      "TAI",
+      "FARMER",
+      "TAN",
+      "TUAN"
      ]
     },
     {
      "proposer": "HONG",
-     "state": "APPROVED",
      "votes": [
       "TRUNG",
       "FARMER",
@@ -221,11 +347,10 @@
       "FARMER",
       "TUAN",
       "KHANH"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 2,
-   "numFails": 1,
    "teamSize": 5,
    "team": [
     "HONG",
@@ -233,139 +358,14 @@
     "FARMER",
     "TUAN",
     "KHANH"
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
+   "team": [],
+   "failsRequired": 1,
    "state": "PENDING",
    "proposals": [],
-   "teamSize": 5,
-   "team": [],
-   "failsRequired": 1
+   "teamSize": 5
   }
- ],
- "timeFinished": {
-  "_seconds": 1585977908,
-  "_nanoseconds": 674438000
- },
- "players": [
-  {
-   "uid": "0MbIAF0r1uW42nYBBQYiabE1rfA3",
-   "name": "TAI"
-  },
-  {
-   "name": "TAN",
-   "uid": "xt5TL4q8CeaF1wLZe4M1fZ1Lb5m1"
-  },
-  {
-   "name": "HONG",
-   "uid": "h2u5S81sneWe4FV0BWKD69gnhhr1"
-  },
-  {
-   "uid": "th6z2WXcgsYAFfWwJVcr9O8DPB62",
-   "name": "SUZIE"
-  },
-  {
-   "uid": "eXJGirlgg6TsAAarKx2ixrUlXxK2",
-   "name": "KHANH"
-  },
-  {
-   "uid": "PqqH9sL7PobyStZWZO6sI2MocoA2",
-   "name": "MT"
-  },
-  {
-   "name": "FARMER",
-   "uid": "TRztwu55AsQ3w5mHXkEBBN63PQz2"
-  },
-  {
-   "uid": "EoXUoAlgNfY1fgy1g3EcwtUkZHm2",
-   "name": "TRUNG"
-  },
-  {
-   "name": "TUAN",
-   "uid": "aMIzs6qHXwOsx2l2sVGu3oJIXsp2"
-  }
- ],
- "outcome": {
-  "message": "Merlin assassinated",
-  "roles": [
-   {
-    "name": "TAN",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "HONG"
-   },
-   {
-    "name": "MT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SUZIE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "TUAN",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "name": "KHANH",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "TRUNG",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "TAI",
-    "assassin": true
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "FARMER",
-    "assassin": false
-   }
-  ],
-  "assassinated": "HONG",
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "HONG": true,
-    "SUZIE": true,
-    "TAN": true
-   },
-   {
-    "HONG": true,
-    "SUZIE": true,
-    "MT": true,
-    "TAN": false
-   },
-   {
-    "TUAN": true,
-    "SUZIE": true,
-    "FARMER": true,
-    "TAN": true
-   },
-   {
-    "TRUNG": true,
-    "TUAN": false,
-    "HONG": true,
-    "KHANH": true,
-    "FARMER": true
-   }
-  ]
- },
- "timeCreated": {
-  "_seconds": 1585975142,
-  "_nanoseconds": 557000000
- }
+ ]
 }

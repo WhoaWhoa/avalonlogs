@@ -1,10 +1,35 @@
 {
- "timeCreated": {
-  "_seconds": 1601789788,
-  "_nanoseconds": 680000000
- },
+ "players": [
+  {
+   "name": "GRACE",
+   "uid": "Z0keEdE25UOAxGImOXN18dHRJuT2"
+  },
+  {
+   "name": "THOM",
+   "uid": "YIuP1CuFSAaGaOqaU3Luc2EYulD3"
+  },
+  {
+   "name": "DANIEL",
+   "uid": "BnLh4HaxjEMsIgpypW4KO6vfLQL2"
+  },
+  {
+   "name": "CINDAY",
+   "uid": "cwu8pVekhKS8E23X1KY13L499Sg1"
+  },
+  {
+   "uid": "cf4pYb8HjcP1EwpliBzsoe8gn5t2",
+   "name": "ZHIN"
+  },
+  {
+   "uid": "qvx2ckCvQqSWD2bdyS1ui08X3c92",
+   "name": "ALYSE"
+  },
+  {
+   "name": "ALYSSA",
+   "uid": "VqndAViy0qVtXv0UbgKGdiE02sy1"
+  }
+ ],
  "outcome": {
-  "state": "EVIL_WIN",
   "message": "Merlin assassinated",
   "votes": [
    {
@@ -12,42 +37,42 @@
     "ALYSE": true
    },
    {
-    "CINDAY": true,
     "GRACE": false,
-    "ZHIN": true
-   },
-   {
-    "ALYSSA": true,
-    "CINDAY": true,
-    "ALYSE": true
+    "ZHIN": true,
+    "CINDAY": true
    },
    {
     "ALYSE": true,
     "ALYSSA": true,
-    "CINDAY": true,
-    "ZHIN": true
+    "CINDAY": true
+   },
+   {
+    "ALYSE": true,
+    "ZHIN": true,
+    "ALYSSA": true,
+    "CINDAY": true
    }
   ],
   "roles": [
    {
-    "name": "ALYSE",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "ALYSE"
    },
    {
-    "assassin": false,
     "name": "ALYSSA",
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "assassin": false
    },
    {
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "THOM"
+    "name": "THOM",
+    "role": "EVIL MINION"
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "CINDAY",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
     "role": "MORGANA",
@@ -55,24 +80,27 @@
     "name": "GRACE"
    },
    {
-    "name": "ZHIN",
+    "role": "MERLIN",
     "assassin": false,
-    "role": "MERLIN"
+    "name": "ZHIN"
    },
    {
-    "role": "EVIL MINION",
     "assassin": false,
+    "role": "EVIL MINION",
     "name": "DANIEL"
    }
   ],
+  "state": "EVIL_WIN",
   "assassinated": "ZHIN"
+ },
+ "timeCreated": {
+  "_seconds": 1601789788,
+  "_nanoseconds": 680000000
  },
  "missions": [
   {
-   "numFails": 0,
-   "teamSize": 2,
-   "failsRequired": 1,
    "state": "SUCCESS",
+   "teamSize": 2,
    "proposals": [
     {
      "votes": [
@@ -85,27 +113,32 @@
       "ALYSE"
      ],
      "proposer": "THOM",
+     "state": "APPROVED",
      "team": [
       "ALYSE",
       "ALYSSA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "failsRequired": 1,
    "team": [
     "ALYSE",
     "ALYSSA"
-   ]
+   ],
+   "numFails": 0
   },
   {
+   "teamSize": 3,
+   "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "CINDAY",
+    "ZHIN",
+    "GRACE"
+   ],
    "proposals": [
     {
-     "team": [
-      "CINDAY",
-      "ZHIN",
-      "GRACE"
-     ],
-     "proposer": "DANIEL",
      "state": "APPROVED",
      "votes": [
       "GRACE",
@@ -114,121 +147,88 @@
       "ZHIN",
       "CINDAY",
       "DANIEL"
+     ],
+     "proposer": "DANIEL",
+     "team": [
+      "CINDAY",
+      "ZHIN",
+      "GRACE"
      ]
     }
-   ],
-   "team": [
-    "CINDAY",
-    "ZHIN",
-    "GRACE"
-   ],
-   "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 3
+   ]
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "CINDAY",
+     "state": "APPROVED",
      "team": [
       "CINDAY",
       "ALYSE",
       "ALYSSA"
      ],
+     "proposer": "CINDAY",
      "votes": [
       "ALYSSA",
       "CINDAY",
       "ALYSE",
       "THOM",
       "ZHIN"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "CINDAY",
     "ALYSE",
     "ALYSSA"
    ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
    "team": [
     "CINDAY",
     "ZHIN",
     "ALYSE",
     "ALYSSA"
    ],
+   "state": "SUCCESS",
    "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "CINDAY",
+      "ZHIN",
+      "ALYSE",
+      "ALYSSA"
+     ],
      "votes": [
       "ALYSE",
       "CINDAY",
       "ZHIN",
       "ALYSSA"
      ],
-     "proposer": "ZHIN",
-     "team": [
-      "CINDAY",
-      "ZHIN",
-      "ALYSE",
-      "ALYSSA"
-     ]
+     "proposer": "ZHIN"
     }
    ],
    "failsRequired": 2,
    "teamSize": 4
   },
   {
+   "proposals": [],
+   "teamSize": 4,
    "team": [],
    "failsRequired": 1,
-   "proposals": [],
-   "state": "PENDING",
-   "teamSize": 4
-  }
- ],
- "timeFinished": {
-  "_seconds": 1601790786,
-  "_nanoseconds": 309000000
- },
- "players": [
-  {
-   "uid": "Z0keEdE25UOAxGImOXN18dHRJuT2",
-   "name": "GRACE"
-  },
-  {
-   "name": "THOM",
-   "uid": "YIuP1CuFSAaGaOqaU3Luc2EYulD3"
-  },
-  {
-   "uid": "BnLh4HaxjEMsIgpypW4KO6vfLQL2",
-   "name": "DANIEL"
-  },
-  {
-   "name": "CINDAY",
-   "uid": "cwu8pVekhKS8E23X1KY13L499Sg1"
-  },
-  {
-   "uid": "cf4pYb8HjcP1EwpliBzsoe8gn5t2",
-   "name": "ZHIN"
-  },
-  {
-   "name": "ALYSE",
-   "uid": "qvx2ckCvQqSWD2bdyS1ui08X3c92"
-  },
-  {
-   "uid": "VqndAViy0qVtXv0UbgKGdiE02sy1",
-   "name": "ALYSSA"
+   "state": "PENDING"
   }
  ],
  "options": {
   "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1601790786,
+  "_nanoseconds": 309000000
  }
 }

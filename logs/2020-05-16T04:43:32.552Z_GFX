@@ -1,21 +1,20 @@
 {
- "options": {
-  "inGameLog": false
+ "timeCreated": {
+  "_seconds": 1589604212,
+  "_nanoseconds": 552000000
  },
  "outcome": {
   "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
   "roles": [
    {
+    "assassin": false,
     "name": "MOOG",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MORGANA",
     "name": "MICHELOSER",
-    "assassin": false
+    "assassin": false,
+    "role": "MORGANA"
    },
    {
     "name": "CAT",
@@ -23,16 +22,17 @@
     "assassin": false
    },
    {
-    "role": "MERLIN",
     "assassin": false,
-    "name": "VEEVEEYAN"
+    "name": "VEEVEEYAN",
+    "role": "MERLIN"
    },
    {
-    "assassin": true,
     "role": "MORDRED",
-    "name": "BOOMERANG"
+    "name": "BOOMERANG",
+    "assassin": true
    }
   ],
+  "assassinated": null,
   "votes": [
    {
     "MICHELOSER": true,
@@ -40,12 +40,12 @@
    },
    {
     "VEEVEEYAN": true,
-    "CAT": true,
-    "MICHELOSER": false
+    "MICHELOSER": false,
+    "CAT": true
    },
    {
-    "VEEVEEYAN": true,
-    "BOOMERANG": true
+    "BOOMERANG": true,
+    "VEEVEEYAN": true
    },
    {
     "BOOMERANG": false,
@@ -54,10 +54,11 @@
    },
    {
     "MICHELOSER": false,
-    "CAT": true,
-    "BOOMERANG": false
+    "BOOMERANG": false,
+    "CAT": true
    }
-  ]
+  ],
+  "state": "EVIL_WIN"
  },
  "players": [
   {
@@ -65,16 +66,16 @@
    "uid": "q5Uta53BFXYKCFqUcs0bP2CNxqa2"
   },
   {
-   "uid": "MXfhvCFFdjRR2IPpSJDLsUH05vn1",
-   "name": "BOOMERANG"
+   "name": "BOOMERANG",
+   "uid": "MXfhvCFFdjRR2IPpSJDLsUH05vn1"
   },
   {
    "name": "MOOG",
    "uid": "G5nyoePN6phYATkl4U3mDBgmTV52"
   },
   {
-   "uid": "gBHWZgF1xfdS8258pZB8dHq8oCz2",
-   "name": "MICHELOSER"
+   "name": "MICHELOSER",
+   "uid": "gBHWZgF1xfdS8258pZB8dHq8oCz2"
   },
   {
    "name": "VEEVEEYAN",
@@ -83,14 +84,12 @@
  ],
  "missions": [
   {
-   "team": [
-    "VEEVEEYAN",
-    "MICHELOSER"
-   ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "failsRequired": 1,
+   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "VEEVEEYAN",
      "votes": [
       "BOOMERANG",
       "MOOG",
@@ -98,36 +97,64 @@
       "CAT",
       "VEEVEEYAN"
      ],
+     "state": "APPROVED",
      "team": [
       "VEEVEEYAN",
       "MICHELOSER"
-     ],
-     "proposer": "VEEVEEYAN",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "teamSize": 2
+   "team": [
+    "VEEVEEYAN",
+    "MICHELOSER"
+   ],
+   "numFails": 0
   },
   {
+   "numFails": 1,
+   "teamSize": 3,
    "team": [
     "CAT",
     "MICHELOSER",
     "VEEVEEYAN"
    ],
-   "numFails": 1,
-   "failsRequired": 1,
    "state": "FAIL",
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "CAT",
      "team": [
       "CAT",
       "MICHELOSER",
       "VEEVEEYAN"
      ],
+     "votes": [
+      "MICHELOSER",
+      "CAT",
+      "VEEVEEYAN",
+      "BOOMERANG",
+      "MOOG"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "failsRequired": 1
+  },
+  {
+   "failsRequired": 1,
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "BOOMERANG",
+    "VEEVEEYAN"
+   ],
+   "proposals": [
+    {
+     "proposer": "BOOMERANG",
+     "team": [
+      "BOOMERANG",
+      "VEEVEEYAN"
+     ],
      "state": "APPROVED",
-     "proposer": "CAT",
      "votes": [
       "MICHELOSER",
       "CAT",
@@ -136,34 +163,8 @@
       "MOOG"
      ]
     }
-   ]
-  },
-  {
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS",
-   "teamSize": 2,
-   "team": [
-    "BOOMERANG",
-    "VEEVEEYAN"
    ],
-   "proposals": [
-    {
-     "votes": [
-      "MICHELOSER",
-      "CAT",
-      "VEEVEEYAN",
-      "BOOMERANG",
-      "MOOG"
-     ],
-     "team": [
-      "BOOMERANG",
-      "VEEVEEYAN"
-     ],
-     "state": "APPROVED",
-     "proposer": "BOOMERANG"
-    }
-   ]
+   "numFails": 0
   },
   {
    "team": [
@@ -171,8 +172,10 @@
     "BOOMERANG",
     "VEEVEEYAN"
    ],
-   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -182,23 +185,19 @@
       "VEEVEEYAN",
       "BOOMERANG"
      ],
-     "proposer": "MOOG",
      "team": [
       "MOOG",
       "BOOMERANG",
       "VEEVEEYAN"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "MOOG"
     }
-   ],
-   "state": "FAIL",
-   "failsRequired": 1
+   ]
   },
   {
-   "numFails": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "MICHELOSER",
      "votes": [
       "MOOG",
@@ -206,6 +205,7 @@
       "VEEVEEYAN",
       "BOOMERANG"
      ],
+     "state": "APPROVED",
      "team": [
       "MICHELOSER",
       "BOOMERANG",
@@ -213,19 +213,19 @@
      ]
     }
    ],
+   "numFails": 2,
+   "state": "FAIL",
    "failsRequired": 1,
    "team": [
     "MICHELOSER",
     "BOOMERANG",
     "CAT"
    ],
-   "teamSize": 3,
-   "state": "FAIL"
+   "teamSize": 3
   }
  ],
- "timeCreated": {
-  "_seconds": 1589604212,
-  "_nanoseconds": 552000000
+ "options": {
+  "inGameLog": false
  },
  "timeFinished": {
   "_seconds": 1589604702,

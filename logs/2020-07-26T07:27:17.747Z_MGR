@@ -1,27 +1,5 @@
 {
  "outcome": {
-  "votes": [
-   {
-    "KAUSHAL": true,
-    "SHRAVAN": true
-   },
-   {
-    "PRIDHVI": true,
-    "SHRAVAN": true,
-    "KAUSHAL": true
-   },
-   {
-    "KLAY": true,
-    "PRIDHVI": false,
-    "ROHAN": true,
-    "KAUSHAL": true
-   },
-   {
-    "SHRAVAN": true,
-    "KAUSHAL": true,
-    "ROHAN": true
-   }
-  ],
   "message": "Merlin assassinated",
   "roles": [
    {
@@ -30,24 +8,24 @@
     "assassin": false
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "KLAY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "role": "EVIL MINION",
+    "assassin": true,
     "name": "PRIDHVI",
-    "assassin": true
+    "role": "EVIL MINION"
    },
    {
+    "name": "KAUSHAL",
     "role": "MERLIN",
-    "assassin": false,
-    "name": "KAUSHAL"
+    "assassin": false
    },
    {
-    "assassin": false,
     "name": "SHRAVAN",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "assassin": false,
@@ -55,61 +33,46 @@
     "name": "AMEYA"
    }
   ],
+  "state": "EVIL_WIN",
   "assassinated": "KAUSHAL",
-  "state": "EVIL_WIN"
- },
- "timeFinished": {
-  "_seconds": 1595749157,
-  "_nanoseconds": 775000000
- },
- "options": {
-  "inGameLog": false
+  "votes": [
+   {
+    "SHRAVAN": true,
+    "KAUSHAL": true
+   },
+   {
+    "PRIDHVI": true,
+    "KAUSHAL": true,
+    "SHRAVAN": true
+   },
+   {
+    "KLAY": true,
+    "KAUSHAL": true,
+    "ROHAN": true,
+    "PRIDHVI": false
+   },
+   {
+    "KAUSHAL": true,
+    "SHRAVAN": true,
+    "ROHAN": true
+   }
+  ]
  },
  "timeCreated": {
   "_seconds": 1595748437,
   "_nanoseconds": 747000000
  },
- "players": [
-  {
-   "uid": "4GfCahioxqeJie6psB9eYJTCG793",
-   "name": "PRIDHVI"
-  },
-  {
-   "name": "KLAY",
-   "uid": "V4SAGCzS9KMfXt2eiWuWhKXSMm12"
-  },
-  {
-   "uid": "kxOTeulhGKcu2MOCO9lYm5giHP82",
-   "name": "ROHAN"
-  },
-  {
-   "name": "SHRAVAN",
-   "uid": "JbCckK6FAEQcLuHKAvN69wqbOS73"
-  },
-  {
-   "uid": "9zncAWQsozR4bbicTwcmgc58tT13",
-   "name": "AMEYA"
-  },
-  {
-   "name": "KAUSHAL",
-   "uid": "lHvH2Q0Vc1UbF40N06Zr6svg26i1"
-  }
- ],
  "missions": [
   {
-   "state": "SUCCESS",
+   "numFails": 0,
    "teamSize": 2,
-   "team": [
-    "KAUSHAL",
-    "SHRAVAN"
-   ],
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "KAUSHAL",
       "SHRAVAN"
      ],
-     "state": "APPROVED",
      "votes": [
       "AMEYA",
       "ROHAN",
@@ -121,21 +84,18 @@
      "proposer": "KAUSHAL"
     }
    ],
-   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "KAUSHAL",
+    "SHRAVAN"
+   ],
    "failsRequired": 1
   },
   {
    "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "PRIDHVI",
-    "KAUSHAL",
-    "SHRAVAN"
-   ],
-   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "SHRAVAN",
       "AMEYA",
@@ -144,49 +104,56 @@
       "PRIDHVI",
       "KAUSHAL"
      ],
-     "proposer": "PRIDHVI",
      "team": [
       "PRIDHVI",
       "KAUSHAL",
       "SHRAVAN"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "PRIDHVI"
     }
    ],
-   "teamSize": 3
+   "failsRequired": 1,
+   "team": [
+    "PRIDHVI",
+    "KAUSHAL",
+    "SHRAVAN"
+   ],
+   "numFails": 0
   },
   {
-   "teamSize": 4,
+   "team": [
+    "KLAY",
+    "ROHAN",
+    "PRIDHVI",
+    "KAUSHAL"
+   ],
    "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "KLAY",
+     "state": "APPROVED",
      "team": [
       "KLAY",
       "ROHAN",
       "PRIDHVI",
       "KAUSHAL"
      ],
-     "state": "APPROVED",
      "votes": [
       "PRIDHVI",
       "KAUSHAL",
       "AMEYA",
       "ROHAN",
       "KLAY"
-     ],
-     "proposer": "KLAY"
+     ]
     }
    ],
-   "team": [
-    "KLAY",
-    "ROHAN",
-    "PRIDHVI",
-    "KAUSHAL"
-   ]
+   "numFails": 1,
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
      "proposer": "ROHAN",
@@ -196,29 +163,62 @@
       "KLAY",
       "KAUSHAL"
      ],
-     "state": "APPROVED",
      "team": [
       "KAUSHAL",
       "ROHAN",
       "SHRAVAN"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "teamSize": 3,
    "team": [
     "KAUSHAL",
     "ROHAN",
     "SHRAVAN"
    ],
-   "numFails": 0
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "state": "PENDING",
    "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [],
    "team": [],
-   "failsRequired": 1
+   "state": "PENDING"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1595749157,
+  "_nanoseconds": 775000000
+ },
+ "players": [
+  {
+   "uid": "4GfCahioxqeJie6psB9eYJTCG793",
+   "name": "PRIDHVI"
+  },
+  {
+   "uid": "V4SAGCzS9KMfXt2eiWuWhKXSMm12",
+   "name": "KLAY"
+  },
+  {
+   "uid": "kxOTeulhGKcu2MOCO9lYm5giHP82",
+   "name": "ROHAN"
+  },
+  {
+   "name": "SHRAVAN",
+   "uid": "JbCckK6FAEQcLuHKAvN69wqbOS73"
+  },
+  {
+   "name": "AMEYA",
+   "uid": "9zncAWQsozR4bbicTwcmgc58tT13"
+  },
+  {
+   "name": "KAUSHAL",
+   "uid": "lHvH2Q0Vc1UbF40N06Zr6svg26i1"
   }
  ]
 }

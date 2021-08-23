@@ -1,16 +1,41 @@
 {
+ "timeCreated": {
+  "_seconds": 1590978850,
+  "_nanoseconds": 189000000
+ },
  "outcome": {
+  "assassinated": "TOBY",
   "state": "EVIL_WIN",
+  "votes": [
+   {
+    "TOBY": true,
+    "STEVE": true,
+    "RYAN": true
+   },
+   {
+    "STEVE": true,
+    "TOBY": true,
+    "RYAN": true,
+    "LASER": true
+   },
+   {
+    "RYAN": true,
+    "STEVE": true,
+    "TOBY": true,
+    "LASER": true
+   }
+  ],
+  "message": "Merlin assassinated",
   "roles": [
    {
     "name": "RYAN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "TYLER",
     "role": "MORGANA",
-    "assassin": false,
-    "name": "TYLER"
+    "assassin": false
    },
    {
     "name": "KAREN",
@@ -18,9 +43,9 @@
     "role": "EVIL MINION"
    },
    {
-    "name": "JENNA",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "JENNA"
    },
    {
     "role": "EVIL MINION",
@@ -29,63 +54,38 @@
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "LASER"
+    "name": "LASER",
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "STEVE",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "name": "TOBY",
     "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "votes": [
-   {
-    "STEVE": true,
-    "TOBY": true,
-    "RYAN": true
+    "name": "STEVE",
+    "role": "PERCIVAL"
    },
    {
-    "RYAN": true,
-    "TOBY": true,
-    "LASER": true,
-    "STEVE": true
-   },
-   {
-    "RYAN": true,
-    "LASER": true,
-    "TOBY": true,
-    "STEVE": true
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "TOBY"
    }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "TOBY"
- },
- "options": {
-  "inGameLog": false
+  ]
  },
  "missions": [
   {
-   "numFails": 0,
    "failsRequired": 1,
    "proposals": [
     {
      "state": "REJECTED",
+     "team": [
+      "LASER",
+      "TOBY",
+      "STEVE"
+     ],
      "votes": [
       "LASER",
       "TOBY",
       "GOODWIN"
      ],
-     "proposer": "LASER",
-     "team": [
-      "LASER",
-      "TOBY",
-      "STEVE"
-     ]
+     "proposer": "LASER"
     },
     {
      "votes": [
@@ -96,11 +96,10 @@
       "TYLER",
       "STEVE"
      ],
-     "proposer": "KAREN",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "KAREN"
     },
     {
-     "proposer": "RYAN",
      "state": "REJECTED",
      "votes": [
       "LASER",
@@ -112,9 +111,15 @@
       "RYAN",
       "LASER",
       "JENNA"
-     ]
+     ],
+     "proposer": "RYAN"
     },
     {
+     "team": [
+      "TYLER",
+      "JENNA",
+      "TOBY"
+     ],
      "votes": [
       "TYLER",
       "KAREN",
@@ -122,14 +127,10 @@
       "GOODWIN"
      ],
      "state": "REJECTED",
-     "team": [
-      "TYLER",
-      "JENNA",
-      "TOBY"
-     ],
      "proposer": "TYLER"
     },
     {
+     "proposer": "STEVE",
      "state": "APPROVED",
      "votes": [
       "RYAN",
@@ -145,37 +146,28 @@
       "STEVE",
       "TOBY",
       "RYAN"
-     ],
-     "proposer": "STEVE"
+     ]
     }
    ],
+   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "STEVE",
     "TOBY",
     "RYAN"
-   ],
-   "state": "SUCCESS",
-   "teamSize": 3
+   ]
   },
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "LASER",
     "TOBY",
     "STEVE",
     "RYAN"
    ],
-   "teamSize": 4,
-   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "votes": [
-      "LASER",
-      "STEVE",
-      "TOBY",
-      "RYAN"
-     ],
      "state": "REJECTED",
      "team": [
       "TOBY",
@@ -183,10 +175,15 @@
       "RYAN",
       "LASER"
      ],
+     "votes": [
+      "LASER",
+      "STEVE",
+      "TOBY",
+      "RYAN"
+     ],
      "proposer": "TOBY"
     },
     {
-     "proposer": "JENNA",
      "state": "REJECTED",
      "team": [
       "JENNA",
@@ -196,7 +193,8 @@
      ],
      "votes": [
       "JENNA"
-     ]
+     ],
+     "proposer": "JENNA"
     },
     {
      "team": [
@@ -212,13 +210,6 @@
      "proposer": "GOODWIN"
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "LASER",
-      "TOBY",
-      "STEVE",
-      "RYAN"
-     ],
      "votes": [
       "RYAN",
       "JENNA",
@@ -226,9 +217,19 @@
       "STEVE",
       "TOBY"
      ],
-     "proposer": "LASER"
+     "proposer": "LASER",
+     "state": "APPROVED",
+     "team": [
+      "LASER",
+      "TOBY",
+      "STEVE",
+      "RYAN"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 0
   },
   {
    "team": [
@@ -237,74 +238,77 @@
     "LASER",
     "TOBY"
    ],
-   "teamSize": 4,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "KAREN"
      ],
+     "proposer": "KAREN",
+     "state": "REJECTED",
      "team": [
       "KAREN",
       "RYAN",
       "STEVE",
       "LASER"
-     ],
-     "proposer": "KAREN"
+     ]
     },
     {
-     "team": [
-      "STEVE",
-      "RYAN",
-      "LASER",
-      "TOBY"
-     ],
-     "proposer": "RYAN",
-     "state": "APPROVED",
      "votes": [
       "RYAN",
       "TYLER",
       "JENNA",
       "LASER",
       "STEVE"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "STEVE",
+      "RYAN",
+      "LASER",
+      "TOBY"
+     ],
+     "proposer": "RYAN"
     }
    ],
-   "numFails": 0,
+   "teamSize": 4,
    "failsRequired": 1,
    "state": "SUCCESS"
   },
   {
+   "teamSize": 5,
    "state": "PENDING",
    "proposals": [],
-   "failsRequired": 2,
    "team": [],
-   "teamSize": 5
+   "failsRequired": 2
   },
   {
    "proposals": [],
-   "teamSize": 5,
    "team": [],
-   "state": "PENDING",
-   "failsRequired": 1
+   "teamSize": 5,
+   "failsRequired": 1,
+   "state": "PENDING"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1590980247,
   "_nanoseconds": 973000000
  },
  "players": [
   {
-   "uid": "VlJgElRD4VZXmlTxpA5QRET5Z4W2",
-   "name": "TOBY"
+   "name": "TOBY",
+   "uid": "VlJgElRD4VZXmlTxpA5QRET5Z4W2"
   },
   {
-   "uid": "GtnoqXEanyXtkUj99PorBMhxrlB2",
-   "name": "JENNA"
+   "name": "JENNA",
+   "uid": "GtnoqXEanyXtkUj99PorBMhxrlB2"
   },
   {
-   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2",
-   "name": "GOODWIN"
+   "name": "GOODWIN",
+   "uid": "EDXTH34DvjgBYoF6bMw6kUhvIoz2"
   },
   {
    "name": "LASER",
@@ -315,20 +319,16 @@
    "uid": "kYmaig4V9qPVwzFNPynJHaGGk8P2"
   },
   {
-   "uid": "FP5bENHJa0btJuQ704ASF8ekuwL2",
-   "name": "RYAN"
+   "name": "RYAN",
+   "uid": "FP5bENHJa0btJuQ704ASF8ekuwL2"
   },
   {
    "uid": "OffwbigM2SblJxpZUB0eHkoPheI2",
    "name": "TYLER"
   },
   {
-   "name": "STEVE",
-   "uid": "lHx01lkWR8RJbNr7VOto3YG3qz33"
+   "uid": "lHx01lkWR8RJbNr7VOto3YG3qz33",
+   "name": "STEVE"
   }
- ],
- "timeCreated": {
-  "_seconds": 1590978850,
-  "_nanoseconds": 189000000
- }
+ ]
 }

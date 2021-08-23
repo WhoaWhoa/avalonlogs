@@ -2,80 +2,23 @@
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1591413236,
-  "_nanoseconds": 271000000
- },
- "outcome": {
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "ALLIE": true,
-    "DELANEY": true
-   },
-   {
-    "DELANEY": true,
-    "ALLIE": true,
-    "CHRIS": false
-   },
-   {
-    "BIANCA": false,
-    "ALLIE": true,
-    "PAUL": true
-   },
-   {
-    "JACKSON": false,
-    "ALLIE": true,
-    "BIANCA": false,
-    "PAUL": true
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "DELANEY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "PAUL",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "RACHEL"
-   },
-   {
-    "name": "JACKSON",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "CHRIS",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "ALLIE"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "BIANCA",
-    "assassin": false
-   }
-  ]
- },
  "missions": [
   {
-   "numFails": 0,
+   "failsRequired": 1,
+   "team": [
+    "DELANEY",
+    "ALLIE"
+   ],
    "state": "SUCCESS",
+   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "DELANEY",
+      "ALLIE"
+     ],
+     "proposer": "DELANEY",
      "votes": [
       "RACHEL",
       "JACKSON",
@@ -83,28 +26,16 @@
       "ALLIE",
       "BIANCA",
       "DELANEY"
-     ],
-     "state": "APPROVED",
-     "proposer": "DELANEY",
-     "team": [
-      "DELANEY",
-      "ALLIE"
      ]
     }
    ],
-   "team": [
-    "DELANEY",
-    "ALLIE"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "CHRIS",
      "votes": [
       "ALLIE",
       "DELANEY",
@@ -116,7 +47,9 @@
       "DELANEY",
       "CHRIS",
       "ALLIE"
-     ]
+     ],
+     "proposer": "CHRIS",
+     "state": "APPROVED"
     }
    ],
    "team": [
@@ -124,22 +57,27 @@
     "CHRIS",
     "ALLIE"
    ],
-   "numFails": 1,
-   "state": "FAIL",
-   "teamSize": 3
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
    "team": [
     "BIANCA",
     "PAUL",
     "ALLIE"
    ],
+   "teamSize": 3,
+   "numFails": 1,
    "state": "FAIL",
    "proposals": [
     {
+     "proposer": "ALLIE",
      "state": "APPROVED",
+     "team": [
+      "BIANCA",
+      "PAUL",
+      "ALLIE"
+     ],
      "votes": [
       "ALLIE",
       "BIANCA",
@@ -147,58 +85,120 @@
       "RACHEL",
       "JACKSON",
       "CHRIS"
-     ],
-     "proposer": "ALLIE",
-     "team": [
-      "BIANCA",
-      "PAUL",
-      "ALLIE"
      ]
     }
    ],
-   "numFails": 1
+   "failsRequired": 1
   },
   {
-   "numFails": 2,
-   "teamSize": 4,
    "team": [
     "BIANCA",
     "ALLIE",
     "PAUL",
     "JACKSON"
    ],
-   "failsRequired": 2,
+   "teamSize": 4,
    "state": "FAIL",
+   "failsRequired": 2,
    "proposals": [
     {
+     "proposer": "BIANCA",
+     "votes": [
+      "RACHEL",
+      "JACKSON",
+      "CHRIS",
+      "BIANCA"
+     ],
      "team": [
       "BIANCA",
       "ALLIE",
       "PAUL",
       "JACKSON"
      ],
-     "proposer": "BIANCA",
-     "state": "APPROVED",
-     "votes": [
-      "RACHEL",
-      "JACKSON",
-      "CHRIS",
-      "BIANCA"
-     ]
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "numFails": 2
   },
   {
-   "state": "PENDING",
    "failsRequired": 1,
    "proposals": [],
-   "team": [],
-   "teamSize": 4
+   "state": "PENDING",
+   "teamSize": 4,
+   "team": []
   }
  ],
  "timeFinished": {
   "_seconds": 1591413541,
   "_nanoseconds": 146000000
+ },
+ "outcome": {
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "DELANEY"
+   },
+   {
+    "assassin": false,
+    "name": "PAUL",
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "RACHEL",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "JACKSON",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "CHRIS"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "ALLIE",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "BIANCA",
+    "role": "EVIL MINION"
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "ALLIE": true,
+    "DELANEY": true
+   },
+   {
+    "DELANEY": true,
+    "CHRIS": false,
+    "ALLIE": true
+   },
+   {
+    "BIANCA": false,
+    "PAUL": true,
+    "ALLIE": true
+   },
+   {
+    "ALLIE": true,
+    "JACKSON": false,
+    "BIANCA": false,
+    "PAUL": true
+   }
+  ],
+  "message": "Three failed missions"
+ },
+ "timeCreated": {
+  "_seconds": 1591413236,
+  "_nanoseconds": 271000000
  },
  "players": [
   {
@@ -214,20 +214,20 @@
    "uid": "TxkaF4mV8KY1Y3wNEEum1MCbwdc2"
   },
   {
-   "uid": "YXKXUhmBNCXG3BwDJl4oJ33rGWL2",
-   "name": "BIANCA"
+   "name": "BIANCA",
+   "uid": "YXKXUhmBNCXG3BwDJl4oJ33rGWL2"
   },
   {
-   "uid": "USsfTrNmTwh5aPw3jqAH9FjLeNv1",
-   "name": "PAUL"
+   "name": "PAUL",
+   "uid": "USsfTrNmTwh5aPw3jqAH9FjLeNv1"
   },
   {
-   "name": "RACHEL",
-   "uid": "RT4ujowS6YW9HvRMIirVZ6VWSgm1"
+   "uid": "RT4ujowS6YW9HvRMIirVZ6VWSgm1",
+   "name": "RACHEL"
   },
   {
-   "name": "JACKSON",
-   "uid": "rKrXZPSnPFNo8U4tqZMXL90B8I22"
+   "uid": "rKrXZPSnPFNo8U4tqZMXL90B8I22",
+   "name": "JACKSON"
   }
  ]
 }

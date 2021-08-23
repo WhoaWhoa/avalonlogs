@@ -5,39 +5,101 @@
    "name": "IVAN"
   },
   {
-   "uid": "rXG2tIZlUjacUDYclDzaDZVVfF92",
-   "name": "LAUREN"
+   "name": "LAUREN",
+   "uid": "rXG2tIZlUjacUDYclDzaDZVVfF92"
   },
   {
-   "name": "OLLIE",
-   "uid": "yvKKUOWJMwO3oZXmtqyCLVjsUr03"
+   "uid": "yvKKUOWJMwO3oZXmtqyCLVjsUr03",
+   "name": "OLLIE"
   },
   {
-   "uid": "omBKgF70XzaINDV4ZjpejpDDDEm2",
-   "name": "HANNAH"
+   "name": "HANNAH",
+   "uid": "omBKgF70XzaINDV4ZjpejpDDDEm2"
   },
   {
-   "uid": "xKhaP39lI2VJTpmTBjB8o0cJeME3",
-   "name": "NICK"
+   "name": "NICK",
+   "uid": "xKhaP39lI2VJTpmTBjB8o0cJeME3"
   },
   {
-   "uid": "e7z0W9ZAGbdlRQVXxb3DM1oLxGq2",
-   "name": "BROOKE"
+   "name": "BROOKE",
+   "uid": "e7z0W9ZAGbdlRQVXxb3DM1oLxGq2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1586004028,
-  "_nanoseconds": 804000000
- },
  "timeFinished": {
   "_seconds": 1586004708,
   "_nanoseconds": 895327000
  },
+ "outcome": {
+  "votes": [
+   {
+    "IVAN": true,
+    "HANNAH": true
+   },
+   {
+    "IVAN": true,
+    "NICK": true,
+    "HANNAH": true
+   },
+   {
+    "NICK": true,
+    "IVAN": false,
+    "HANNAH": true,
+    "OLLIE": true
+   },
+   {
+    "LAUREN": true,
+    "HANNAH": true,
+    "OLLIE": true
+   }
+  ],
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "name": "BROOKE",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "NICK"
+   },
+   {
+    "assassin": false,
+    "name": "IVAN",
+    "role": "MORGANA"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "OLLIE",
+    "assassin": false
+   },
+   {
+    "name": "HANNAH",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MERLIN",
+    "name": "LAUREN",
+    "assassin": false
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "HANNAH"
+ },
  "missions": [
   {
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "HANNAH",
+      "IVAN"
+     ],
+     "state": "APPROVED",
+     "proposer": "HANNAH",
      "votes": [
       "HANNAH",
       "LAUREN",
@@ -45,34 +107,29 @@
       "NICK",
       "IVAN",
       "OLLIE"
-     ],
-     "state": "APPROVED",
-     "proposer": "HANNAH",
-     "team": [
-      "HANNAH",
-      "IVAN"
      ]
     }
    ],
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "HANNAH",
     "IVAN"
    ],
-   "numFails": 0,
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
    "failsRequired": 1,
-   "state": "SUCCESS",
-   "teamSize": 3,
    "team": [
     "NICK",
     "IVAN",
     "HANNAH"
    ],
+   "numFails": 0,
+   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "NICK",
      "votes": [
       "BROOKE",
       "NICK",
@@ -86,23 +143,28 @@
       "IVAN",
       "HANNAH"
      ],
-     "proposer": "NICK",
      "state": "APPROVED"
     }
-   ],
-   "numFails": 0
+   ]
   },
   {
+   "numFails": 1,
    "state": "FAIL",
-   "failsRequired": 1,
    "teamSize": 4,
+   "failsRequired": 1,
+   "team": [
+    "IVAN",
+    "HANNAH",
+    "NICK",
+    "OLLIE"
+   ],
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "BROOKE",
      "votes": [
       "IVAN"
      ],
-     "proposer": "BROOKE",
-     "state": "REJECTED",
      "team": [
       "NICK",
       "HANNAH",
@@ -118,118 +180,56 @@
       "IVAN",
       "OLLIE"
      ],
+     "proposer": "IVAN",
      "state": "APPROVED",
      "team": [
       "IVAN",
       "HANNAH",
       "NICK",
       "OLLIE"
-     ],
-     "proposer": "IVAN"
+     ]
     }
-   ],
-   "team": [
-    "IVAN",
-    "HANNAH",
-    "NICK",
-    "OLLIE"
-   ],
-   "numFails": 1
+   ]
   },
   {
-   "team": [
-    "LAUREN",
-    "HANNAH",
-    "OLLIE"
-   ],
    "numFails": 0,
    "teamSize": 3,
-   "state": "SUCCESS",
    "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "LAUREN",
-      "HANNAH",
-      "OLLIE"
-     ],
-     "proposer": "LAUREN",
      "votes": [
       "BROOKE",
       "NICK",
       "OLLIE",
       "HANNAH",
       "LAUREN"
-     ]
+     ],
+     "team": [
+      "LAUREN",
+      "HANNAH",
+      "OLLIE"
+     ],
+     "proposer": "LAUREN"
     }
-   ]
+   ],
+   "team": [
+    "LAUREN",
+    "HANNAH",
+    "OLLIE"
+   ],
+   "state": "SUCCESS"
   },
   {
    "failsRequired": 1,
    "state": "PENDING",
    "teamSize": 4,
-   "team": [],
-   "proposals": []
+   "proposals": [],
+   "team": []
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "IVAN": true,
-    "HANNAH": true
-   },
-   {
-    "IVAN": true,
-    "NICK": true,
-    "HANNAH": true
-   },
-   {
-    "OLLIE": true,
-    "HANNAH": true,
-    "NICK": true,
-    "IVAN": false
-   },
-   {
-    "LAUREN": true,
-    "HANNAH": true,
-    "OLLIE": true
-   }
-  ],
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "name": "BROOKE",
-    "role": "MORDRED",
-    "assassin": true
-   },
-   {
-    "name": "NICK",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "IVAN",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "OLLIE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "HANNAH"
-   },
-   {
-    "role": "MERLIN",
-    "name": "LAUREN",
-    "assassin": false
-   }
-  ],
-  "state": "GOOD_WIN",
-  "assassinated": "HANNAH"
+ "timeCreated": {
+  "_seconds": 1586004028,
+  "_nanoseconds": 804000000
  }
 }

@@ -1,4 +1,26 @@
 {
+ "players": [
+  {
+   "name": "JIM",
+   "uid": "0JHTg7ZXCBXtOUop3x2FaKZtnNq1"
+  },
+  {
+   "uid": "g7rwHbTJRmedXlQtZs3cRtsYwR43",
+   "name": "SAMMIE"
+  },
+  {
+   "uid": "nLCLOI1U87Vr28IwWA1MNunueWf2",
+   "name": "SAL"
+  },
+  {
+   "uid": "mfU86kNSdCaFdLEfg76wxbGWS3c2",
+   "name": "NOAH"
+  },
+  {
+   "uid": "9YgRanEWgvcCaCDHzG8mnHK9eLU2",
+   "name": "CYRUS"
+  }
+ ],
  "options": {
   "inGameLog": false
  },
@@ -7,43 +29,14 @@
   "_nanoseconds": 5000000
  },
  "outcome": {
-  "roles": [
-   {
-    "name": "SAL",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "CYRUS",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "NOAH",
-    "assassin": false
-   },
-   {
-    "name": "JIM",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "SAMMIE",
-    "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN",
   "votes": [
    {
-    "JIM": true,
-    "CYRUS": true
+    "CYRUS": true,
+    "JIM": true
    },
    {
-    "NOAH": true,
     "SAL": true,
+    "NOAH": true,
     "SAMMIE": false
    },
    {
@@ -51,194 +44,201 @@
     "SAL": true
    },
    {
-    "SAL": true,
+    "CYRUS": true,
     "JIM": false,
-    "CYRUS": true
+    "SAL": true
    },
    {
-    "JIM": false,
     "SAL": true,
+    "JIM": false,
     "NOAH": true
    }
   ],
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "SAL"
+   },
+   {
+    "name": "CYRUS",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "NOAH"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "JIM"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "SAMMIE",
+    "assassin": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null,
   "message": "Three failed missions"
  },
- "players": [
+ "missions": [
   {
-   "uid": "0JHTg7ZXCBXtOUop3x2FaKZtnNq1",
-   "name": "JIM"
+   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 0,
+   "team": [
+    "JIM",
+    "CYRUS"
+   ],
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "SAL",
+      "CYRUS",
+      "NOAH",
+      "JIM",
+      "SAMMIE"
+     ],
+     "proposer": "JIM",
+     "team": [
+      "JIM",
+      "CYRUS"
+     ]
+    }
+   ],
+   "state": "SUCCESS"
   },
   {
-   "name": "SAMMIE",
-   "uid": "g7rwHbTJRmedXlQtZs3cRtsYwR43"
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 1,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "NOAH",
+      "JIM",
+      "SAMMIE",
+      "SAL",
+      "CYRUS"
+     ],
+     "team": [
+      "SAMMIE",
+      "SAL",
+      "NOAH"
+     ],
+     "proposer": "SAMMIE"
+    }
+   ],
+   "state": "FAIL",
+   "team": [
+    "SAMMIE",
+    "SAL",
+    "NOAH"
+   ]
   },
   {
-   "name": "SAL",
-   "uid": "nLCLOI1U87Vr28IwWA1MNunueWf2"
+   "team": [
+    "JIM",
+    "SAL"
+   ],
+   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 2,
+   "proposals": [
+    {
+     "proposer": "SAL",
+     "team": [
+      "JIM",
+      "SAL"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "SAL",
+      "CYRUS",
+      "NOAH",
+      "JIM",
+      "SAMMIE"
+     ]
+    }
+   ]
   },
   {
-   "name": "NOAH",
-   "uid": "mfU86kNSdCaFdLEfg76wxbGWS3c2"
+   "numFails": 1,
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "team": [
+      "JIM",
+      "SAMMIE",
+      "NOAH"
+     ],
+     "proposer": "NOAH",
+     "votes": [
+      "NOAH"
+     ]
+    },
+    {
+     "state": "APPROVED",
+     "team": [
+      "CYRUS",
+      "SAL",
+      "JIM"
+     ],
+     "proposer": "CYRUS",
+     "votes": [
+      "SAL",
+      "CYRUS",
+      "JIM",
+      "SAMMIE"
+     ]
+    }
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "CYRUS",
+    "SAL",
+    "JIM"
+   ]
   },
   {
-   "uid": "9YgRanEWgvcCaCDHzG8mnHK9eLU2",
-   "name": "CYRUS"
+   "team": [
+    "JIM",
+    "SAL",
+    "NOAH"
+   ],
+   "proposals": [
+    {
+     "team": [
+      "JIM",
+      "SAL",
+      "NOAH"
+     ],
+     "proposer": "JIM",
+     "votes": [
+      "SAL",
+      "NOAH",
+      "JIM"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "teamSize": 3,
+   "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL"
   }
  ],
  "timeCreated": {
   "_seconds": 1589155455,
   "_nanoseconds": 67000000
- },
- "missions": [
-  {
-   "state": "SUCCESS",
-   "teamSize": 2,
-   "proposals": [
-    {
-     "proposer": "JIM",
-     "votes": [
-      "SAL",
-      "CYRUS",
-      "NOAH",
-      "JIM",
-      "SAMMIE"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "JIM",
-      "CYRUS"
-     ]
-    }
-   ],
-   "numFails": 0,
-   "failsRequired": 1,
-   "team": [
-    "JIM",
-    "CYRUS"
-   ]
-  },
-  {
-   "team": [
-    "SAMMIE",
-    "SAL",
-    "NOAH"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
-   "proposals": [
-    {
-     "team": [
-      "SAMMIE",
-      "SAL",
-      "NOAH"
-     ],
-     "votes": [
-      "NOAH",
-      "JIM",
-      "SAMMIE",
-      "SAL",
-      "CYRUS"
-     ],
-     "state": "APPROVED",
-     "proposer": "SAMMIE"
-    }
-   ],
-   "state": "FAIL"
-  },
-  {
-   "numFails": 0,
-   "failsRequired": 1,
-   "team": [
-    "JIM",
-    "SAL"
-   ],
-   "state": "SUCCESS",
-   "teamSize": 2,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "JIM",
-      "SAL"
-     ],
-     "votes": [
-      "SAL",
-      "CYRUS",
-      "NOAH",
-      "JIM",
-      "SAMMIE"
-     ],
-     "proposer": "SAL"
-    }
-   ]
-  },
-  {
-   "team": [
-    "CYRUS",
-    "SAL",
-    "JIM"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "votes": [
-      "NOAH"
-     ],
-     "team": [
-      "JIM",
-      "SAMMIE",
-      "NOAH"
-     ],
-     "proposer": "NOAH"
-    },
-    {
-     "proposer": "CYRUS",
-     "state": "APPROVED",
-     "team": [
-      "CYRUS",
-      "SAL",
-      "JIM"
-     ],
-     "votes": [
-      "SAL",
-      "CYRUS",
-      "JIM",
-      "SAMMIE"
-     ]
-    }
-   ],
-   "state": "FAIL"
-  },
-  {
-   "team": [
-    "JIM",
-    "SAL",
-    "NOAH"
-   ],
-   "proposals": [
-    {
-     "team": [
-      "JIM",
-      "SAL",
-      "NOAH"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "SAL",
-      "NOAH",
-      "JIM"
-     ],
-     "proposer": "JIM"
-    }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
-   "state": "FAIL"
-  }
- ]
+ }
 }

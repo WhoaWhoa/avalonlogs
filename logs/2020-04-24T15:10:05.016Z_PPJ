@@ -1,74 +1,12 @@
 {
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1587741005,
   "_nanoseconds": 16000000
  },
- "outcome": {
-  "votes": [
-   {
-    "WHOYOU": true,
-    "NIXON": true
-   },
-   {
-    "WHOYOU": true,
-    "NIXON": true,
-    "CKY": true
-   },
-   {
-    "WHOYOU": true,
-    "CKY": false,
-    "NIXON": true,
-    "EZRA": true
-   },
-   {
-    "NIXON": true,
-    "EZRA": true,
-    "WHOYOU": true
-   }
-  ],
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "name": "CKY",
-    "role": "MORDRED",
-    "assassin": false
-   },
-   {
-    "name": "EZRA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "CLEM"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "NIXON"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "JO",
-    "assassin": true
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "WHOYOU",
-    "assassin": false
-   }
-  ],
-  "assassinated": "WHOYOU",
-  "state": "GOOD_WIN"
- },
  "players": [
   {
-   "uid": "oRg8pDtA2nY1MsB9q9HYrduDVOh1",
-   "name": "NIXON"
+   "name": "NIXON",
+   "uid": "oRg8pDtA2nY1MsB9q9HYrduDVOh1"
   },
   {
    "uid": "ha3HOOgvknSDpN42s6SKS2vxL0B3",
@@ -93,18 +31,13 @@
  ],
  "missions": [
   {
-   "teamSize": 2,
    "team": [
     "WHOYOU",
     "NIXON"
    ],
    "proposals": [
     {
-     "proposer": "WHOYOU",
-     "team": [
-      "WHOYOU",
-      "NIXON"
-     ],
+     "state": "APPROVED",
      "votes": [
       "NIXON",
       "JO",
@@ -113,20 +46,29 @@
       "EZRA",
       "CLEM"
      ],
-     "state": "APPROVED"
+     "team": [
+      "WHOYOU",
+      "NIXON"
+     ],
+     "proposer": "WHOYOU"
     }
    ],
    "numFails": 0,
    "state": "SUCCESS",
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 2
   },
   {
    "state": "SUCCESS",
-   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "CKY",
+     "team": [
+      "CKY",
+      "NIXON",
+      "WHOYOU"
+     ],
      "state": "APPROVED",
+     "proposer": "CKY",
      "votes": [
       "EZRA",
       "CLEM",
@@ -134,11 +76,6 @@
       "JO",
       "WHOYOU",
       "CKY"
-     ],
-     "team": [
-      "CKY",
-      "NIXON",
-      "WHOYOU"
      ]
     }
    ],
@@ -147,6 +84,7 @@
     "NIXON",
     "WHOYOU"
    ],
+   "failsRequired": 1,
    "teamSize": 3,
    "numFails": 0
   },
@@ -157,11 +95,8 @@
     "CKY",
     "NIXON"
    ],
-   "state": "FAIL",
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "EZRA",
       "WHOYOU",
@@ -176,29 +111,35 @@
       "CLEM",
       "NIXON"
      ],
+     "state": "APPROVED",
      "proposer": "EZRA"
     }
    ],
-   "failsRequired": 1,
-   "numFails": 1
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 4,
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
    "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [
+      "CKY",
+      "CLEM"
+     ],
      "team": [
       "EZRA",
       "JO",
       "CLEM"
      ],
-     "state": "REJECTED",
-     "proposer": "CLEM",
-     "votes": [
-      "CKY",
-      "CLEM"
-     ]
+     "proposer": "CLEM"
     },
     {
+     "proposer": "NIXON",
      "votes": [
       "NIXON",
       "WHOYOU",
@@ -210,7 +151,6 @@
       "WHOYOU",
       "EZRA"
      ],
-     "proposer": "NIXON",
      "state": "APPROVED"
     }
    ],
@@ -219,20 +159,80 @@
     "NIXON",
     "WHOYOU",
     "EZRA"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1
+   ]
   },
   {
-   "state": "PENDING",
    "failsRequired": 1,
-   "team": [],
+   "proposals": [],
+   "state": "PENDING",
    "teamSize": 4,
-   "proposals": []
+   "team": []
   }
  ],
+ "outcome": {
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "NIXON": true,
+    "WHOYOU": true
+   },
+   {
+    "WHOYOU": true,
+    "CKY": true,
+    "NIXON": true
+   },
+   {
+    "EZRA": true,
+    "NIXON": true,
+    "WHOYOU": true,
+    "CKY": false
+   },
+   {
+    "NIXON": true,
+    "WHOYOU": true,
+    "EZRA": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "CKY",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "EZRA",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "CLEM",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "name": "NIXON",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "JO"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "WHOYOU"
+   }
+  ],
+  "assassinated": "WHOYOU",
+  "message": "Three successful missions"
+ },
  "timeFinished": {
   "_seconds": 1587741514,
   "_nanoseconds": 322000000
+ },
+ "options": {
+  "inGameLog": false
  }
 }

@@ -1,68 +1,4 @@
 {
- "outcome": {
-  "roles": [
-   {
-    "name": "RACH",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "DUTCHALTER",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "JAMES",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MERLIN",
-    "name": "SHIN",
-    "assassin": false
-   },
-   {
-    "name": "CAELUM",
-    "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ],
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "SHIN": true,
-    "DUTCHALTER": true
-   },
-   {
-    "CAELUM": false,
-    "DUTCHALTER": true,
-    "SHIN": true
-   },
-   {
-    "SHIN": true,
-    "RACH": true
-   },
-   {
-    "SHIN": true,
-    "RACH": false,
-    "JAMES": true
-   },
-   {
-    "DUTCHALTER": true,
-    "RACH": false,
-    "JAMES": true
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN"
- },
- "options": {
-  "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1587483927,
-  "_nanoseconds": 776000000
- },
  "players": [
   {
    "name": "RACH",
@@ -81,44 +17,109 @@
    "name": "SHIN"
   },
   {
-   "name": "DUTCHALTER",
-   "uid": "mJ3TrC4EQlMXKRJAQFySlAb1OEI3"
+   "uid": "mJ3TrC4EQlMXKRJAQFySlAb1OEI3",
+   "name": "DUTCHALTER"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "assassinated": null,
+  "roles": [
+   {
+    "role": "MORGANA",
+    "name": "RACH",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "DUTCHALTER"
+   },
+   {
+    "name": "JAMES",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "SHIN"
+   },
+   {
+    "assassin": true,
+    "name": "CAELUM",
+    "role": "EVIL MINION"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "SHIN": true,
+    "DUTCHALTER": true
+   },
+   {
+    "DUTCHALTER": true,
+    "CAELUM": false,
+    "SHIN": true
+   },
+   {
+    "SHIN": true,
+    "RACH": true
+   },
+   {
+    "JAMES": true,
+    "SHIN": true,
+    "RACH": false
+   },
+   {
+    "RACH": false,
+    "JAMES": true,
+    "DUTCHALTER": true
+   }
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1587483927,
+  "_nanoseconds": 776000000
+ },
+ "timeCreated": {
+  "_seconds": 1587483217,
+  "_nanoseconds": 6000000
+ },
  "missions": [
   {
-   "numFails": 0,
-   "team": [
-    "SHIN",
-    "DUTCHALTER"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2,
-   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "SHIN",
-     "team": [
-      "SHIN",
-      "DUTCHALTER"
-     ],
      "votes": [
       "DUTCHALTER",
       "SHIN",
       "CAELUM"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "SHIN",
+      "DUTCHALTER"
+     ],
+     "proposer": "SHIN"
     }
-   ]
-  },
-  {
-   "teamSize": 3,
+   ],
+   "state": "SUCCESS",
+   "teamSize": 2,
    "failsRequired": 1,
    "team": [
-    "DUTCHALTER",
     "SHIN",
-    "CAELUM"
+    "DUTCHALTER"
    ],
+   "numFails": 0
+  },
+  {
+   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
      "votes": [
@@ -135,23 +136,19 @@
      "proposer": "DUTCHALTER"
     }
    ],
-   "state": "FAIL",
-   "numFails": 1
+   "team": [
+    "DUTCHALTER",
+    "SHIN",
+    "CAELUM"
+   ]
   },
   {
-   "team": [
-    "RACH",
-    "SHIN"
-   ],
-   "teamSize": 2,
+   "failsRequired": 1,
    "numFails": 0,
    "state": "SUCCESS",
+   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "RACH",
-      "SHIN"
-     ],
      "votes": [
       "DUTCHALTER",
       "JAMES",
@@ -160,22 +157,23 @@
       "RACH"
      ],
      "state": "APPROVED",
+     "team": [
+      "RACH",
+      "SHIN"
+     ],
      "proposer": "RACH"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "RACH",
+    "SHIN"
+   ]
   },
   {
-   "team": [
-    "JAMES",
-    "SHIN",
-    "RACH"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "JAMES",
+     "state": "REJECTED",
      "team": [
       "SHIN",
       "CAELUM",
@@ -184,67 +182,69 @@
      "votes": [
       "SHIN",
       "JAMES"
-     ],
-     "proposer": "JAMES",
-     "state": "REJECTED"
+     ]
     },
     {
+     "proposer": "CAELUM",
      "votes": [],
      "team": [
       "CAELUM",
       "DUTCHALTER",
       "JAMES"
      ],
-     "proposer": "CAELUM",
      "state": "REJECTED"
     },
     {
-     "votes": [
-      "SHIN",
-      "RACH",
-      "JAMES"
-     ],
-     "proposer": "SHIN",
      "state": "APPROVED",
+     "proposer": "SHIN",
      "team": [
       "JAMES",
       "SHIN",
       "RACH"
+     ],
+     "votes": [
+      "SHIN",
+      "RACH",
+      "JAMES"
      ]
     }
    ],
+   "teamSize": 3,
+   "state": "FAIL",
+   "team": [
+    "JAMES",
+    "SHIN",
+    "RACH"
+   ],
+   "failsRequired": 1,
    "numFails": 1
   },
   {
+   "teamSize": 3,
+   "state": "FAIL",
+   "numFails": 1,
    "failsRequired": 1,
-   "team": [
-    "JAMES",
-    "RACH",
-    "DUTCHALTER"
-   ],
    "proposals": [
     {
-     "team": [
-      "JAMES",
-      "RACH",
-      "DUTCHALTER"
-     ],
-     "proposer": "DUTCHALTER",
      "votes": [
       "DUTCHALTER",
       "JAMES",
       "CAELUM"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "JAMES",
+      "RACH",
+      "DUTCHALTER"
+     ],
+     "proposer": "DUTCHALTER"
     }
    ],
-   "state": "FAIL",
-   "numFails": 1,
-   "teamSize": 3
+   "team": [
+    "JAMES",
+    "RACH",
+    "DUTCHALTER"
+   ]
   }
- ],
- "timeCreated": {
-  "_seconds": 1587483217,
-  "_nanoseconds": 6000000
- }
+ ]
 }

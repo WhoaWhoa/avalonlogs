@@ -1,37 +1,41 @@
 {
- "players": [
-  {
-   "name": "ETHAN",
-   "uid": "uiEtJzl3kMcca36Gn2XBcpH9PwJ2"
-  },
-  {
-   "name": "JACOB",
-   "uid": "2kkT3FL8EsOPKj3k1U3nv1g07Ou1"
-  },
-  {
-   "uid": "l8JzD6xjccgDr0LeRniyX7zhlPP2",
-   "name": "MILLERTIME"
-  },
-  {
-   "name": "KEON",
-   "uid": "CRAo4cjSqXM6sZ3vr9VK2YLji003"
-  },
-  {
-   "name": "ALEXISBAE",
-   "uid": "XI0NWp0BEuZ5IIczE3V0461AdCh1"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1593306988,
-  "_nanoseconds": 530000000
+ "timeCreated": {
+  "_seconds": 1593306090,
+  "_nanoseconds": 422000000
  },
  "outcome": {
+  "message": "Three failed missions",
   "assassinated": null,
+  "votes": [
+   {
+    "KEON": true,
+    "MILLERTIME": true
+   },
+   {
+    "ALEXISBAE": false,
+    "KEON": true,
+    "MILLERTIME": true
+   },
+   {
+    "ETHAN": true,
+    "JACOB": true
+   },
+   {
+    "JACOB": true,
+    "ETHAN": false,
+    "KEON": true
+   },
+   {
+    "JACOB": true,
+    "ALEXISBAE": false,
+    "ETHAN": false
+   }
+  ],
   "roles": [
    {
     "name": "KEON",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "ETHAN",
@@ -39,78 +43,52 @@
     "role": "EVIL MINION"
    },
    {
-    "assassin": false,
     "name": "MILLERTIME",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "JACOB",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
    },
    {
-    "name": "ALEXISBAE",
     "role": "EVIL MINION",
+    "name": "ALEXISBAE",
     "assassin": false
    }
   ],
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "KEON": true,
-    "MILLERTIME": true
-   },
-   {
-    "KEON": true,
-    "MILLERTIME": true,
-    "ALEXISBAE": false
-   },
-   {
-    "ETHAN": true,
-    "JACOB": true
-   },
-   {
-    "KEON": true,
-    "JACOB": true,
-    "ETHAN": false
-   },
-   {
-    "ETHAN": false,
-    "JACOB": true,
-    "ALEXISBAE": false
-   }
-  ],
-  "message": "Three failed missions"
+  "state": "EVIL_WIN"
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "team": [
-    "KEON",
-    "MILLERTIME"
-   ],
    "numFails": 0,
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "KEON",
-     "team": [
-      "KEON",
-      "MILLERTIME"
-     ],
      "state": "APPROVED",
      "votes": [
       "MILLERTIME",
       "JACOB",
       "ALEXISBAE",
       "KEON"
-     ]
+     ],
+     "team": [
+      "KEON",
+      "MILLERTIME"
+     ],
+     "proposer": "KEON"
     }
    ],
+   "team": [
+    "KEON",
+    "MILLERTIME"
+   ],
+   "teamSize": 2,
    "state": "SUCCESS"
   },
   {
-   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
      "state": "APPROVED",
@@ -119,60 +97,53 @@
       "KEON",
       "MILLERTIME"
      ],
-     "proposer": "ALEXISBAE",
      "votes": [
       "ALEXISBAE",
       "KEON",
       "ETHAN",
       "MILLERTIME",
       "JACOB"
-     ]
+     ],
+     "proposer": "ALEXISBAE"
     }
    ],
-   "failsRequired": 1,
-   "numFails": 1,
    "teamSize": 3,
+   "state": "FAIL",
    "team": [
     "ALEXISBAE",
     "KEON",
     "MILLERTIME"
-   ]
+   ],
+   "failsRequired": 1
   },
   {
+   "teamSize": 2,
    "team": [
     "ETHAN",
     "JACOB"
    ],
-   "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "ETHAN",
-      "JACOB"
-     ],
-     "proposer": "ETHAN",
      "votes": [
       "KEON",
       "ETHAN",
       "JACOB",
       "ALEXISBAE"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "ETHAN",
+      "JACOB"
+     ],
+     "proposer": "ETHAN"
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0
+   "state": "SUCCESS"
   },
   {
-   "team": [
-    "JACOB",
-    "KEON",
-    "ETHAN"
-   ],
    "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 1,
    "proposals": [
     {
      "proposer": "JACOB",
@@ -190,45 +161,50 @@
      ]
     }
    ],
-   "state": "FAIL"
+   "state": "FAIL",
+   "team": [
+    "JACOB",
+    "KEON",
+    "ETHAN"
+   ],
+   "numFails": 1,
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
-   "numFails": 2,
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "MILLERTIME",
      "state": "REJECTED",
+     "votes": [
+      "MILLERTIME"
+     ],
      "team": [
       "MILLERTIME",
       "JACOB",
       "ALEXISBAE"
-     ],
-     "votes": [
-      "MILLERTIME"
-     ],
-     "proposer": "MILLERTIME"
+     ]
     },
     {
-     "votes": [
-      "JACOB",
-      "KEON"
-     ],
      "state": "REJECTED",
      "team": [
       "MILLERTIME",
       "JACOB",
       "KEON"
      ],
-     "proposer": "KEON"
+     "proposer": "KEON",
+     "votes": [
+      "JACOB",
+      "KEON"
+     ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "ALEXISBAE",
       "ETHAN",
       "JACOB"
      ],
+     "state": "APPROVED",
      "votes": [
       "ETHAN",
       "JACOB",
@@ -237,19 +213,43 @@
      "proposer": "ALEXISBAE"
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "FAIL",
    "team": [
     "ALEXISBAE",
     "ETHAN",
     "JACOB"
-   ]
+   ],
+   "numFails": 2
   }
  ],
- "timeCreated": {
-  "_seconds": 1593306090,
-  "_nanoseconds": 422000000
+ "timeFinished": {
+  "_seconds": 1593306988,
+  "_nanoseconds": 530000000
  },
  "options": {
   "inGameLog": false
- }
+ },
+ "players": [
+  {
+   "name": "ETHAN",
+   "uid": "uiEtJzl3kMcca36Gn2XBcpH9PwJ2"
+  },
+  {
+   "name": "JACOB",
+   "uid": "2kkT3FL8EsOPKj3k1U3nv1g07Ou1"
+  },
+  {
+   "name": "MILLERTIME",
+   "uid": "l8JzD6xjccgDr0LeRniyX7zhlPP2"
+  },
+  {
+   "name": "KEON",
+   "uid": "CRAo4cjSqXM6sZ3vr9VK2YLji003"
+  },
+  {
+   "name": "ALEXISBAE",
+   "uid": "XI0NWp0BEuZ5IIczE3V0461AdCh1"
+  }
+ ]
 }

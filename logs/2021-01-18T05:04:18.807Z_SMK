@@ -1,90 +1,74 @@
 {
- "timeFinished": {
-  "_seconds": 1610947087,
-  "_nanoseconds": 450000000
- },
  "outcome": {
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "HUNTY": true,
-    "EX": true
-   },
-   {
-    "EX": true,
-    "HUNTY": true,
-    "ANAND": true
-   },
-   {
-    "EX": false,
-    "HUNTY": true,
-    "BROWN": true,
-    "ANAND": true
-   },
-   {
-    "HUNTY": true,
-    "ANAND": false,
-    "EX": true
-   },
-   {
-    "HUNTY": true,
-    "ANAND": false,
-    "BROWN": true,
-    "WILL": true
-   }
-  ],
+  "state": "EVIL_WIN",
   "roles": [
    {
-    "role": "MORGANA",
+    "name": "EX",
     "assassin": false,
-    "name": "EX"
+    "role": "MORGANA"
    },
    {
+    "name": "BROWN",
     "role": "PERCIVAL",
-    "assassin": false,
-    "name": "BROWN"
+    "assassin": false
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "BIBBSRIBS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
+    "assassin": false,
     "name": "HUNTY",
-    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
+    "name": "WILL",
     "role": "MERLIN",
-    "name": "WILL"
+    "assassin": false
    },
    {
-    "assassin": true,
     "name": "ANAND",
+    "assassin": true,
     "role": "MORDRED"
    }
   ],
-  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "EX": true,
+    "HUNTY": true
+   },
+   {
+    "ANAND": true,
+    "EX": true,
+    "HUNTY": true
+   },
+   {
+    "ANAND": true,
+    "EX": false,
+    "HUNTY": true,
+    "BROWN": true
+   },
+   {
+    "ANAND": false,
+    "HUNTY": true,
+    "EX": true
+   },
+   {
+    "HUNTY": true,
+    "BROWN": true,
+    "WILL": true,
+    "ANAND": false
+   }
+  ],
+  "message": "Three failed missions",
   "assassinated": null
- },
- "timeCreated": {
-  "_seconds": 1610946258,
-  "_nanoseconds": 807000000
  },
  "missions": [
   {
-   "state": "SUCCESS",
-   "numFails": 0,
    "failsRequired": 1,
-   "team": [
-    "EX",
-    "HUNTY"
-   ],
-   "teamSize": 2,
    "proposals": [
     {
-     "proposer": "EX",
      "state": "APPROVED",
      "votes": [
       "HUNTY",
@@ -97,29 +81,24 @@
      "team": [
       "EX",
       "HUNTY"
-     ]
+     ],
+     "proposer": "EX"
     }
-   ]
-  },
-  {
-   "teamSize": 3,
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
+   ],
    "team": [
     "EX",
-    "ANAND",
     "HUNTY"
    ],
+   "state": "SUCCESS",
+   "teamSize": 2,
+   "numFails": 0
+  },
+  {
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
      "proposer": "ANAND",
-     "team": [
-      "EX",
-      "ANAND",
-      "HUNTY"
-     ],
      "votes": [
       "HUNTY",
       "BIBBSRIBS",
@@ -127,13 +106,24 @@
       "ANAND",
       "BROWN",
       "WILL"
+     ],
+     "team": [
+      "EX",
+      "ANAND",
+      "HUNTY"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "EX",
+    "ANAND",
+    "HUNTY"
+   ],
+   "numFails": 0
   },
   {
-   "numFails": 1,
-   "failsRequired": 1,
    "team": [
     "EX",
     "ANAND",
@@ -142,7 +132,7 @@
    ],
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "BROWN",
      "votes": [
       "BROWN",
       "EX",
@@ -155,18 +145,29 @@
       "BROWN",
       "HUNTY"
      ],
-     "proposer": "BROWN"
+     "state": "APPROVED"
     }
    ],
+   "numFails": 1,
    "state": "FAIL",
-   "teamSize": 4
+   "teamSize": 4,
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "HUNTY",
+    "EX",
+    "ANAND"
+   ],
+   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "proposer": "BIBBSRIBS",
      "votes": [],
+     "state": "REJECTED",
      "team": [
       "HUNTY",
       "BIBBSRIBS",
@@ -174,12 +175,6 @@
      ]
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "HUNTY",
-      "EX",
-      "ANAND"
-     ],
      "votes": [
       "BROWN",
       "ANAND",
@@ -187,58 +182,66 @@
       "BIBBSRIBS",
       "EX"
      ],
-     "proposer": "HUNTY"
+     "team": [
+      "HUNTY",
+      "EX",
+      "ANAND"
+     ],
+     "proposer": "HUNTY",
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "state": "FAIL",
-   "numFails": 1,
-   "team": [
-    "HUNTY",
-    "EX",
-    "ANAND"
    ]
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "WILL",
     "HUNTY",
     "ANAND",
     "BROWN"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "WILL",
-     "team": [
-      "WILL",
-      "HUNTY",
-      "ANAND",
-      "BROWN"
-     ],
      "state": "APPROVED",
+     "proposer": "WILL",
      "votes": [
       "ANAND",
       "WILL",
       "BROWN",
       "HUNTY"
+     ],
+     "team": [
+      "WILL",
+      "HUNTY",
+      "ANAND",
+      "BROWN"
      ]
     }
-   ],
-   "numFails": 1,
-   "state": "FAIL"
+   ]
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1610946258,
+  "_nanoseconds": 807000000
+ },
+ "timeFinished": {
+  "_seconds": 1610947087,
+  "_nanoseconds": 450000000
+ },
  "players": [
   {
-   "uid": "qxtQnzzURCX5yMWhjSzRFJs0t7n2",
-   "name": "EX"
+   "name": "EX",
+   "uid": "qxtQnzzURCX5yMWhjSzRFJs0t7n2"
   },
   {
-   "name": "ANAND",
-   "uid": "5PIMqoYxksaNFhOMC7CU3ZHRoRu2"
+   "uid": "5PIMqoYxksaNFhOMC7CU3ZHRoRu2",
+   "name": "ANAND"
   },
   {
    "name": "BROWN",
@@ -253,11 +256,8 @@
    "uid": "7DuKO44pyaQJcWJK7e4NwLrdyKd2"
   },
   {
-   "uid": "gR3uaPqRCteBifVza5NrmT4xRpt1",
-   "name": "WILL"
+   "name": "WILL",
+   "uid": "gR3uaPqRCteBifVza5NrmT4xRpt1"
   }
- ],
- "options": {
-  "inGameLog": false
- }
+ ]
 }

@@ -4,22 +4,58 @@
   "_nanoseconds": 352303000
  },
  "outcome": {
-  "message": "Three successful missions",
   "state": "GOOD_WIN",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "BEN",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "ARIEL"
+   },
+   {
+    "name": "ANTLAM",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "CONOR"
+   },
+   {
+    "assassin": false,
+    "name": "OMAR",
+    "role": "OBERON"
+   },
+   {
+    "name": "JEN",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "SEJU"
+   }
+  ],
   "votes": [
    {
-    "ANTLAM": true,
-    "BEN": true
-   },
-   {
-    "ANTLAM": true,
-    "ARIEL": true,
-    "BEN": true
-   },
-   {
-    "ANTLAM": true,
     "BEN": true,
-    "SEJU": false
+    "ANTLAM": true
+   },
+   {
+    "BEN": true,
+    "ARIEL": true,
+    "ANTLAM": true
+   },
+   {
+    "BEN": true,
+    "SEJU": false,
+    "ANTLAM": true
    },
    {
     "SEJU": false,
@@ -29,96 +65,47 @@
    },
    {
     "ANTLAM": true,
-    "ARIEL": true,
+    "BEN": true,
     "CONOR": true,
-    "BEN": true
+    "ARIEL": true
    }
   ],
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "BEN"
-   },
-   {
-    "role": "MERLIN",
-    "name": "ARIEL",
-    "assassin": false
-   },
-   {
-    "name": "ANTLAM",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "CONOR",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "OMAR",
-    "role": "OBERON"
-   },
-   {
-    "role": "MORGANA",
-    "name": "JEN",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "SEJU"
-   }
-  ],
+  "message": "Three successful missions",
   "assassinated": "CONOR"
  },
  "missions": [
   {
    "proposals": [
     {
+     "proposer": "BEN",
      "team": [
       "BEN",
       "ANTLAM"
      ],
-     "proposer": "BEN",
+     "state": "APPROVED",
      "votes": [
       "JEN",
       "BEN",
       "ARIEL",
       "OMAR"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "team": [
     "BEN",
     "ANTLAM"
    ],
    "state": "SUCCESS",
+   "teamSize": 2,
+   "failsRequired": 1,
    "numFails": 0
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "ARIEL",
-    "ANTLAM",
-    "BEN"
-   ],
-   "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
      "proposer": "ARIEL",
      "state": "APPROVED",
-     "team": [
-      "ARIEL",
-      "ANTLAM",
-      "BEN"
-     ],
      "votes": [
       "SEJU",
       "BEN",
@@ -126,13 +113,29 @@
       "ANTLAM",
       "CONOR",
       "JEN"
+     ],
+     "team": [
+      "ARIEL",
+      "ANTLAM",
+      "BEN"
      ]
     }
-   ]
+   ],
+   "numFails": 0,
+   "team": [
+    "ARIEL",
+    "ANTLAM",
+    "BEN"
+   ],
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
-   "teamSize": 3,
+   "team": [
+    "SEJU",
+    "ANTLAM",
+    "BEN"
+   ],
    "proposals": [
     {
      "state": "APPROVED",
@@ -152,15 +155,13 @@
      "proposer": "SEJU"
     }
    ],
-   "team": [
-    "SEJU",
-    "ANTLAM",
-    "BEN"
-   ],
-   "failsRequired": 1,
-   "numFails": 1
+   "numFails": 1,
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
+   "numFails": 3,
    "teamSize": 4,
    "team": [
     "JEN",
@@ -169,47 +170,45 @@
     "ANTLAM"
    ],
    "state": "FAIL",
-   "numFails": 3,
-   "failsRequired": 2,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "JEN",
+     "votes": [
+      "ANTLAM",
+      "JEN",
+      "SEJU"
+     ],
      "team": [
       "JEN",
       "SEJU",
       "ARIEL",
       "ANTLAM"
-     ],
-     "proposer": "JEN",
-     "state": "REJECTED",
-     "votes": [
-      "ANTLAM",
-      "JEN",
-      "SEJU"
      ]
     },
     {
+     "state": "APPROVED",
+     "proposer": "OMAR",
+     "team": [
+      "JEN",
+      "OMAR",
+      "SEJU",
+      "ANTLAM"
+     ],
      "votes": [
       "SEJU",
       "ARIEL",
       "OMAR",
       "JEN"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "JEN",
-      "OMAR",
-      "SEJU",
-      "ANTLAM"
-     ],
-     "proposer": "OMAR"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 2
   },
   {
-   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "ARIEL",
       "ANTLAM",
@@ -224,18 +223,19 @@
       "BEN",
       "ANTLAM"
      ],
-     "proposer": "CONOR"
+     "proposer": "CONOR",
+     "state": "APPROVED"
     }
    ],
-   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 4,
+   "state": "SUCCESS",
    "team": [
     "ARIEL",
     "CONOR",
     "BEN",
     "ANTLAM"
-   ],
-   "teamSize": 4,
-   "failsRequired": 1
+   ]
   }
  ],
  "players": [
@@ -244,8 +244,8 @@
    "uid": "a9tx35wVDCPFwO8gYd5LCJUvefR2"
   },
   {
-   "name": "SEJU",
-   "uid": "5LlIYsUH2XQYSDKPlKbLC0vEBq42"
+   "uid": "5LlIYsUH2XQYSDKPlKbLC0vEBq42",
+   "name": "SEJU"
   },
   {
    "name": "JEN",
@@ -260,8 +260,8 @@
    "uid": "V2YkyRDok0NghdPfIb6bslSkYI82"
   },
   {
-   "uid": "8lGOv17r6JXK69Uc64EgX8WXlz93",
-   "name": "ANTLAM"
+   "name": "ANTLAM",
+   "uid": "8lGOv17r6JXK69Uc64EgX8WXlz93"
   },
   {
    "name": "BEN",

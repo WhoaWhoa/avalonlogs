@@ -1,4 +1,8 @@
 {
+ "timeFinished": {
+  "_seconds": 1586474988,
+  "_nanoseconds": 566111000
+ },
  "players": [
   {
    "uid": "Zzp9HGk0zXQrqRDrwTrp2Z8FbpU2",
@@ -13,8 +17,8 @@
    "name": "KIMBERLY"
   },
   {
-   "uid": "VbUDJdM4SNRVWhkElP1RFmbhRyo2",
-   "name": "ROCIO"
+   "name": "ROCIO",
+   "uid": "VbUDJdM4SNRVWhkElP1RFmbhRyo2"
   },
   {
    "uid": "OffwbigM2SblJxpZUB0eHkoPheI2",
@@ -35,6 +39,8 @@
  ],
  "outcome": {
   "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "assassinated": "ROCIO",
   "roles": [
    {
     "name": "KIMBERLY",
@@ -43,47 +49,45 @@
    },
    {
     "name": "MIKE",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "name": "JENNA",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "JAMES"
-   },
-   {
-    "name": "LASER",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "TYLER",
-    "assassin": false,
+    "assassin": true,
     "role": "EVIL MINION"
    },
    {
-    "name": "TINA",
-    "role": "PERCIVAL",
+    "name": "JENNA",
+    "role": "MERLIN",
     "assassin": false
    },
    {
     "assassin": false,
-    "name": "ROCIO",
+    "name": "JAMES",
     "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "LASER"
+   },
+   {
+    "assassin": false,
+    "name": "TYLER",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "TINA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ROCIO"
    }
   ],
-  "assassinated": "ROCIO",
-  "message": "Three successful missions",
   "votes": [
    {
-    "TINA": true,
+    "JENNA": true,
     "JAMES": true,
-    "JENNA": true
+    "TINA": true
    },
    {
     "JAMES": true,
@@ -92,30 +96,26 @@
     "LASER": false
    },
    {
-    "TINA": true,
+    "JENNA": true,
     "TYLER": false,
-    "JENNA": true,
-    "JAMES": true
+    "JAMES": true,
+    "TINA": true
    },
    {
-    "MIKE": true,
-    "TINA": true,
-    "ROCIO": true,
     "KIMBERLY": true,
-    "JAMES": true
-   },
-   {
-    "JENNA": true,
+    "ROCIO": true,
     "TINA": true,
     "JAMES": true,
+    "MIKE": true
+   },
+   {
+    "JENNA": true,
+    "ROCIO": true,
     "KIMBERLY": true,
-    "ROCIO": true
+    "JAMES": true,
+    "TINA": true
    }
   ]
- },
- "timeFinished": {
-  "_seconds": 1586474988,
-  "_nanoseconds": 566111000
  },
  "timeCreated": {
   "_seconds": 1586471668,
@@ -123,11 +123,16 @@
  },
  "missions": [
   {
+   "numFails": 0,
+   "state": "SUCCESS",
    "failsRequired": 1,
-   "teamSize": 3,
+   "team": [
+    "JAMES",
+    "TINA",
+    "JENNA"
+   ],
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "JENNA",
       "LASER",
@@ -138,10 +143,11 @@
       "LASER",
       "JENNA"
      ],
+     "state": "REJECTED",
      "proposer": "TINA"
     },
     {
-     "state": "REJECTED",
+     "proposer": "LASER",
      "team": [
       "LASER",
       "TINA",
@@ -150,38 +156,37 @@
      "votes": [
       "LASER"
      ],
-     "proposer": "LASER"
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "proposer": "JENNA",
+     "votes": [
+      "TINA",
+      "JENNA"
+     ],
+     "state": "REJECTED",
      "team": [
       "JENNA",
       "TINA",
       "JAMES"
-     ],
-     "votes": [
-      "TINA",
-      "JENNA"
      ]
     },
     {
+     "proposer": "MIKE",
      "state": "REJECTED",
+     "team": [
+      "MIKE",
+      "TINA",
+      "JENNA"
+     ],
      "votes": [
       "TINA",
       "KIMBERLY",
       "MIKE",
       "LASER"
-     ],
-     "team": [
-      "MIKE",
-      "TINA",
-      "JENNA"
-     ],
-     "proposer": "MIKE"
+     ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "KIMBERLY",
       "MIKE",
@@ -191,32 +196,21 @@
       "TYLER",
       "TINA"
      ],
-     "proposer": "JAMES",
+     "state": "APPROVED",
      "team": [
       "JAMES",
       "TINA",
       "JENNA"
-     ]
+     ],
+     "proposer": "JAMES"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "JAMES",
-    "TINA",
-    "JENNA"
-   ],
-   "numFails": 0
+   "teamSize": 3
   },
   {
-   "teamSize": 4,
-   "state": "FAIL",
-   "team": [
-    "TINA",
-    "LASER",
-    "ROCIO",
-    "JAMES"
-   ],
+   "failsRequired": 1,
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -231,6 +225,7 @@
     },
     {
      "proposer": "ROCIO",
+     "state": "REJECTED",
      "votes": [
       "ROCIO"
      ],
@@ -239,8 +234,7 @@
       "TINA",
       "JENNA",
       "ROCIO"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "votes": [
@@ -257,28 +251,20 @@
      ]
     },
     {
-     "votes": [
-      "JENNA",
-      "JAMES"
-     ],
-     "proposer": "TINA",
      "team": [
       "TINA",
       "JENNA",
       "JAMES",
       "ROCIO"
      ],
-     "state": "REJECTED"
+     "proposer": "TINA",
+     "state": "REJECTED",
+     "votes": [
+      "JENNA",
+      "JAMES"
+     ]
     },
     {
-     "proposer": "LASER",
-     "state": "APPROVED",
-     "team": [
-      "TINA",
-      "LASER",
-      "ROCIO",
-      "JAMES"
-     ],
      "votes": [
       "ROCIO",
       "MIKE",
@@ -286,71 +272,87 @@
       "JAMES",
       "LASER",
       "TINA"
+     ],
+     "state": "APPROVED",
+     "proposer": "LASER",
+     "team": [
+      "TINA",
+      "LASER",
+      "ROCIO",
+      "JAMES"
      ]
     }
    ],
-   "failsRequired": 1
+   "state": "FAIL",
+   "team": [
+    "TINA",
+    "LASER",
+    "ROCIO",
+    "JAMES"
+   ]
   },
   {
    "teamSize": 4,
+   "numFails": 1,
+   "proposals": [
+    {
+     "votes": [
+      "TYLER"
+     ],
+     "state": "REJECTED",
+     "proposer": "JENNA",
+     "team": [
+      "JENNA",
+      "TINA",
+      "JAMES",
+      "TYLER"
+     ]
+    },
+    {
+     "state": "REJECTED",
+     "team": [
+      "MIKE",
+      "JENNA",
+      "TYLER",
+      "TINA"
+     ],
+     "votes": [],
+     "proposer": "MIKE"
+    },
+    {
+     "team": [
+      "JENNA",
+      "JAMES",
+      "TINA",
+      "TYLER"
+     ],
+     "proposer": "JAMES",
+     "state": "APPROVED",
+     "votes": [
+      "JENNA",
+      "JAMES",
+      "TYLER",
+      "TINA",
+      "ROCIO"
+     ]
+    }
+   ],
+   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "JENNA",
     "JAMES",
     "TINA",
     "TYLER"
-   ],
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "votes": [
-      "TYLER"
-     ],
-     "state": "REJECTED",
-     "team": [
-      "JENNA",
-      "TINA",
-      "JAMES",
-      "TYLER"
-     ],
-     "proposer": "JENNA"
-    },
-    {
-     "team": [
-      "MIKE",
-      "JENNA",
-      "TYLER",
-      "TINA"
-     ],
-     "state": "REJECTED",
-     "votes": [],
-     "proposer": "MIKE"
-    },
-    {
-     "state": "APPROVED",
-     "votes": [
-      "JENNA",
-      "JAMES",
-      "TYLER",
-      "TINA",
-      "ROCIO"
-     ],
-     "proposer": "JAMES",
-     "team": [
-      "JENNA",
-      "JAMES",
-      "TINA",
-      "TYLER"
-     ]
-    }
-   ],
-   "numFails": 1,
-   "state": "FAIL"
+   ]
   },
   {
    "teamSize": 5,
+   "failsRequired": 2,
    "proposals": [
     {
      "proposer": "KIMBERLY",
+     "state": "REJECTED",
      "team": [
       "KIMBERLY",
       "TYLER",
@@ -358,20 +360,11 @@
       "TINA",
       "ROCIO"
      ],
-     "state": "REJECTED",
      "votes": [
       "KIMBERLY"
      ]
     },
     {
-     "state": "APPROVED",
-     "votes": [
-      "JAMES",
-      "TYLER",
-      "ROCIO",
-      "MIKE",
-      "JENNA"
-     ],
      "team": [
       "ROCIO",
       "TINA",
@@ -379,9 +372,18 @@
       "MIKE",
       "KIMBERLY"
      ],
-     "proposer": "ROCIO"
+     "proposer": "ROCIO",
+     "state": "APPROVED",
+     "votes": [
+      "JAMES",
+      "TYLER",
+      "ROCIO",
+      "MIKE",
+      "JENNA"
+     ]
     }
    ],
+   "state": "SUCCESS",
    "team": [
     "ROCIO",
     "TINA",
@@ -389,13 +391,12 @@
     "MIKE",
     "KIMBERLY"
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 2
+   "numFails": 0
   },
   {
-   "numFails": 0,
    "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 5,
    "failsRequired": 1,
    "proposals": [
     {
@@ -413,7 +414,14 @@
      ]
     },
     {
-     "state": "APPROVED",
+     "votes": [
+      "JENNA",
+      "JAMES",
+      "LASER",
+      "TYLER",
+      "ROCIO",
+      "MIKE"
+     ],
      "team": [
       "TINA",
       "JAMES",
@@ -422,17 +430,9 @@
       "ROCIO"
      ],
      "proposer": "TINA",
-     "votes": [
-      "JENNA",
-      "JAMES",
-      "LASER",
-      "TYLER",
-      "ROCIO",
-      "MIKE"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 5,
    "team": [
     "TINA",
     "JAMES",

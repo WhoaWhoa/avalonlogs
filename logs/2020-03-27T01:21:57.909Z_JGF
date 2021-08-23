@@ -1,10 +1,39 @@
 {
  "outcome": {
+  "state": "GOOD_WIN",
   "message": "Three successful missions",
+  "assassinated": "CLAIRE",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "MEAGHANGAR"
+   },
+   {
+    "name": "ANDREW",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "name": "RICH",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "CLAIRE",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "DORR"
+   }
+  ],
   "votes": [
    {
-    "RICH": true,
-    "DORR": true
+    "DORR": true,
+    "RICH": true
    },
    {
     "CLAIRE": true,
@@ -15,43 +44,15 @@
     "RICH": true,
     "MEAGHANGAR": true
    }
-  ],
-  "roles": [
-   {
-    "role": "MERLIN",
-    "name": "MEAGHANGAR",
-    "assassin": false
-   },
-   {
-    "name": "ANDREW",
-    "role": "MORDRED",
-    "assassin": true
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "RICH",
-    "assassin": false
-   },
-   {
-    "name": "CLAIRE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MORGANA",
-    "name": "DORR",
-    "assassin": false
-   }
-  ],
-  "state": "GOOD_WIN",
-  "assassinated": "CLAIRE"
+  ]
  },
  "missions": [
   {
-   "teamSize": 2,
-   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "DORR",
+     "state": "APPROVED",
      "votes": [
       "DORR",
       "ANDREW",
@@ -61,17 +62,16 @@
      "team": [
       "DORR",
       "RICH"
-     ],
-     "proposer": "DORR",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "DORR",
     "RICH"
-   ]
+   ],
+   "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
    "team": [
@@ -79,50 +79,45 @@
     "RICH",
     "CLAIRE"
    ],
-   "numFails": 0,
+   "teamSize": 3,
    "state": "SUCCESS",
+   "numFails": 0,
    "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "MEAGHANGAR",
-      "DORR",
-      "RICH"
-     ],
-     "proposer": "RICH",
      "votes": [
       "RICH",
       "DORR"
      ],
-     "state": "REJECTED"
+     "proposer": "RICH",
+     "state": "REJECTED",
+     "team": [
+      "MEAGHANGAR",
+      "DORR",
+      "RICH"
+     ]
     },
     {
-     "votes": [
-      "DORR",
-      "MEAGHANGAR",
-      "ANDREW",
-      "CLAIRE"
-     ],
      "state": "APPROVED",
      "team": [
       "ANDREW",
       "RICH",
       "CLAIRE"
      ],
+     "votes": [
+      "DORR",
+      "MEAGHANGAR",
+      "ANDREW",
+      "CLAIRE"
+     ],
      "proposer": "ANDREW"
     }
-   ],
-   "teamSize": 3
+   ]
   },
   {
-   "team": [
-    "RICH",
-    "MEAGHANGAR"
-   ],
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "CLAIRE",
      "votes": [
       "MEAGHANGAR",
       "RICH",
@@ -131,57 +126,62 @@
      "team": [
       "RICH",
       "MEAGHANGAR"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "CLAIRE"
     }
    ],
-   "numFails": 0,
-   "failsRequired": 1,
+   "team": [
+    "RICH",
+    "MEAGHANGAR"
+   ],
    "teamSize": 2,
+   "numFails": 0,
    "state": "SUCCESS"
   },
   {
    "teamSize": 3,
-   "state": "PENDING",
-   "failsRequired": 1,
    "proposals": [],
+   "failsRequired": 1,
+   "state": "PENDING",
    "team": []
   },
   {
    "team": [],
    "failsRequired": 1,
-   "state": "PENDING",
    "proposals": [],
+   "state": "PENDING",
    "teamSize": 3
   }
  ],
- "timeFinished": {
-  "_seconds": 1585272531,
-  "_nanoseconds": 457400000
- },
- "timeCreated": {
-  "_seconds": 1585272117,
-  "_nanoseconds": 909000000
- },
  "players": [
   {
    "name": "CLAIRE",
    "uid": "AcKDJr0EHGfl3alp1V6FayMctpu1"
   },
   {
-   "name": "MEAGHANGAR",
-   "uid": "88WIrBU6nIgKNBU0dePbonmNB0l2"
+   "uid": "88WIrBU6nIgKNBU0dePbonmNB0l2",
+   "name": "MEAGHANGAR"
   },
   {
    "name": "DORR",
    "uid": "cauPgutiXkZq2BuIaDD6HCROzlu2"
   },
   {
-   "name": "RICH",
-   "uid": "c9sY30sLwUbSC6OnuuhVR1s3Zji2"
+   "uid": "c9sY30sLwUbSC6OnuuhVR1s3Zji2",
+   "name": "RICH"
   },
   {
-   "uid": "SNX54thj5aVx8QKiwwur2Rby8293",
-   "name": "ANDREW"
+   "name": "ANDREW",
+   "uid": "SNX54thj5aVx8QKiwwur2Rby8293"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1585272117,
+  "_nanoseconds": 909000000
+ },
+ "timeFinished": {
+  "_seconds": 1585272531,
+  "_nanoseconds": 457400000
+ }
 }

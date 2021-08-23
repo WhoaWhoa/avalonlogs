@@ -1,43 +1,10 @@
 {
- "timeCreated": {
-  "_seconds": 1586398870,
-  "_nanoseconds": 299000000
- },
- "timeFinished": {
-  "_seconds": 1586399555,
-  "_nanoseconds": 118751000
- },
- "players": [
-  {
-   "name": "AUSTIN",
-   "uid": "PdG76HczXYUkkfGByllhBBWwq892"
-  },
-  {
-   "name": "BECCA",
-   "uid": "RZ4n7c4sRZNnvPj5cWTPptMHDrH2"
-  },
-  {
-   "uid": "5S4t5k5ixNSoAhDqNOA6x7DJwX73",
-   "name": "LAUREN"
-  },
-  {
-   "uid": "fTftQUgbFQgHJzfjsRh0ymubOWK2",
-   "name": "LYSONDRA"
-  },
-  {
-   "name": "Q",
-   "uid": "CGg1guufy4TIMKdT0SDX4k3yi7Z2"
-  },
-  {
-   "name": "ROHOOOT",
-   "uid": "IJYhyXj9nLeftkL4e9GjLl5tdBJ2"
-  }
- ],
  "outcome": {
+  "message": "Merlin assassinated",
   "votes": [
    {
-    "BECCA": false,
-    "LAUREN": true
+    "LAUREN": true,
+    "BECCA": false
    },
    {
     "ROHOOOT": true,
@@ -45,18 +12,18 @@
     "AUSTIN": true
    },
    {
-    "ROHOOOT": true,
-    "LAUREN": true,
     "LYSONDRA": true,
+    "ROHOOOT": true,
+    "LAUREN": true,
     "AUSTIN": true
    },
    {
-    "LAUREN": true,
+    "AUSTIN": true,
     "ROHOOOT": true,
-    "AUSTIN": true
+    "LAUREN": true
    }
   ],
-  "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
   "roles": [
    {
     "role": "LOYAL FOLLOWER",
@@ -64,9 +31,9 @@
     "name": "AUSTIN"
    },
    {
+    "assassin": true,
     "role": "EVIL MINION",
-    "name": "LYSONDRA",
-    "assassin": true
+    "name": "LYSONDRA"
    },
    {
     "name": "ROHOOOT",
@@ -74,23 +41,26 @@
     "role": "MERLIN"
    },
    {
-    "name": "BECCA",
+    "assassin": false,
     "role": "MORGANA",
-    "assassin": false
+    "name": "BECCA"
    },
    {
-    "role": "PERCIVAL",
     "assassin": false,
-    "name": "Q"
+    "name": "Q",
+    "role": "PERCIVAL"
    },
    {
-    "name": "LAUREN",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "LAUREN"
    }
   ],
-  "assassinated": "ROHOOOT",
-  "state": "EVIL_WIN"
+  "assassinated": "ROHOOOT"
+ },
+ "timeCreated": {
+  "_seconds": 1586398870,
+  "_nanoseconds": 299000000
  },
  "missions": [
   {
@@ -98,40 +68,42 @@
     "LAUREN",
     "BECCA"
    ],
+   "state": "FAIL",
+   "numFails": 1,
    "teamSize": 2,
    "proposals": [
     {
-     "state": "REJECTED",
+     "team": [
+      "LAUREN",
+      "AUSTIN"
+     ],
+     "proposer": "AUSTIN",
      "votes": [
       "BECCA",
       "LAUREN",
       "AUSTIN"
      ],
-     "team": [
-      "LAUREN",
-      "AUSTIN"
-     ],
-     "proposer": "AUSTIN"
+     "state": "REJECTED"
     },
     {
      "votes": [
       "BECCA",
       "Q"
      ],
-     "state": "REJECTED",
      "team": [
       "BECCA",
       "LYSONDRA"
      ],
-     "proposer": "BECCA"
+     "proposer": "BECCA",
+     "state": "REJECTED"
     },
     {
      "proposer": "LAUREN",
-     "state": "APPROVED",
      "team": [
       "LAUREN",
       "BECCA"
      ],
+     "state": "APPROVED",
      "votes": [
       "BECCA",
       "Q",
@@ -140,23 +112,22 @@
      ]
     }
    ],
-   "numFails": 1,
-   "state": "FAIL",
    "failsRequired": 1
   },
   {
-   "numFails": 0,
    "teamSize": 3,
+   "state": "SUCCESS",
    "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "Q"
-     ],
      "team": [
       "LYSONDRA",
       "ROHOOOT",
+      "Q"
+     ],
+     "state": "REJECTED",
+     "votes": [
       "Q"
      ],
      "proposer": "LYSONDRA"
@@ -180,17 +151,15 @@
       "Q",
       "LYSONDRA"
      ],
+     "state": "REJECTED",
+     "proposer": "ROHOOOT",
      "team": [
       "ROHOOOT",
       "LAUREN",
       "Q"
-     ],
-     "proposer": "ROHOOOT",
-     "state": "REJECTED"
+     ]
     },
     {
-     "proposer": "AUSTIN",
-     "state": "APPROVED",
      "votes": [
       "ROHOOOT",
       "Q",
@@ -198,14 +167,15 @@
       "AUSTIN",
       "LYSONDRA"
      ],
+     "state": "APPROVED",
      "team": [
       "AUSTIN",
       "LAUREN",
       "ROHOOOT"
-     ]
+     ],
+     "proposer": "AUSTIN"
     }
    ],
-   "state": "SUCCESS",
    "team": [
     "AUSTIN",
     "LAUREN",
@@ -213,36 +183,33 @@
    ]
   },
   {
-   "team": [
-    "AUSTIN",
-    "LAUREN",
-    "LYSONDRA",
-    "ROHOOOT"
-   ],
    "teamSize": 4,
+   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [
+      "BECCA"
+     ],
+     "proposer": "BECCA",
      "team": [
       "Q",
       "LYSONDRA",
       "BECCA",
       "LAUREN"
-     ],
-     "proposer": "BECCA",
-     "state": "REJECTED",
-     "votes": [
-      "BECCA"
      ]
     },
     {
+     "state": "APPROVED",
+     "proposer": "LAUREN",
      "team": [
       "AUSTIN",
       "LAUREN",
       "LYSONDRA",
       "ROHOOOT"
      ],
-     "proposer": "LAUREN",
-     "state": "APPROVED",
      "votes": [
       "AUSTIN",
       "ROHOOOT",
@@ -251,15 +218,15 @@
      ]
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0
+   "team": [
+    "AUSTIN",
+    "LAUREN",
+    "LYSONDRA",
+    "ROHOOOT"
+   ]
   },
   {
-   "teamSize": 3,
-   "numFails": 0,
    "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "AUSTIN",
     "LAUREN",
@@ -267,11 +234,6 @@
    ],
    "proposals": [
     {
-     "team": [
-      "AUSTIN",
-      "LAUREN",
-      "ROHOOOT"
-     ],
      "state": "APPROVED",
      "votes": [
       "Q",
@@ -279,16 +241,54 @@
       "AUSTIN",
       "ROHOOOT"
      ],
-     "proposer": "LYSONDRA"
+     "proposer": "LYSONDRA",
+     "team": [
+      "AUSTIN",
+      "LAUREN",
+      "ROHOOOT"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 0
   },
   {
-   "proposals": [],
-   "teamSize": 4,
-   "team": [],
+   "state": "PENDING",
    "failsRequired": 1,
-   "state": "PENDING"
+   "team": [],
+   "proposals": [],
+   "teamSize": 4
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586399555,
+  "_nanoseconds": 118751000
+ },
+ "players": [
+  {
+   "name": "AUSTIN",
+   "uid": "PdG76HczXYUkkfGByllhBBWwq892"
+  },
+  {
+   "name": "BECCA",
+   "uid": "RZ4n7c4sRZNnvPj5cWTPptMHDrH2"
+  },
+  {
+   "uid": "5S4t5k5ixNSoAhDqNOA6x7DJwX73",
+   "name": "LAUREN"
+  },
+  {
+   "name": "LYSONDRA",
+   "uid": "fTftQUgbFQgHJzfjsRh0ymubOWK2"
+  },
+  {
+   "name": "Q",
+   "uid": "CGg1guufy4TIMKdT0SDX4k3yi7Z2"
+  },
+  {
+   "uid": "IJYhyXj9nLeftkL4e9GjLl5tdBJ2",
+   "name": "ROHOOOT"
   }
  ]
 }

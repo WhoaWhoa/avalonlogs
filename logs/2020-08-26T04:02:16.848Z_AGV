@@ -1,94 +1,11 @@
 {
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "YUNA"
-   },
-   {
-    "name": "AGV",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "JOSH",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "MICHAEL",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "assassin": true,
-    "name": "JUEL"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "JAAYY"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "SNAKE"
-   },
-   {
-    "name": "CHAERIM",
-    "assassin": false,
-    "role": "OBERON"
-   }
-  ],
-  "votes": [
-   {
-    "CHAERIM": true,
-    "JAAYY": true,
-    "AGV": true
-   },
-   {
-    "CHAERIM": true,
-    "JAAYY": true,
-    "JOSH": false,
-    "MICHAEL": true
-   },
-   {
-    "MICHAEL": true,
-    "JUEL": false,
-    "AGV": true,
-    "YUNA": true
-   },
-   {
-    "JAAYY": true,
-    "MICHAEL": true,
-    "SNAKE": true,
-    "AGV": true,
-    "JUEL": false
-   },
-   {
-    "JAAYY": true,
-    "JOSH": false,
-    "SNAKE": true,
-    "JUEL": false,
-    "CHAERIM": false
-   }
-  ]
+ "timeCreated": {
+  "_seconds": 1598414536,
+  "_nanoseconds": 848000000
  },
  "missions": [
   {
-   "team": [
-    "AGV",
-    "JAAYY",
-    "CHAERIM"
-   ],
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
@@ -110,22 +27,28 @@
      "proposer": "CHAERIM"
     }
    ],
+   "numFails": 0,
    "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0
+   "team": [
+    "AGV",
+    "JAAYY",
+    "CHAERIM"
+   ],
+   "teamSize": 3
   },
   {
-   "teamSize": 4,
-   "state": "FAIL",
+   "numFails": 1,
    "team": [
     "MICHAEL",
     "JOSH",
     "JAAYY",
     "CHAERIM"
    ],
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "JAAYY",
      "votes": [
       "JAAYY",
       "MICHAEL",
@@ -140,14 +63,20 @@
       "JOSH",
       "JAAYY",
       "CHAERIM"
-     ],
-     "proposer": "JAAYY"
+     ]
     }
    ],
-   "numFails": 1,
-   "failsRequired": 1
+   "teamSize": 4
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "AGV",
+    "YUNA",
+    "MICHAEL",
+    "JUEL"
+   ],
+   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -160,43 +89,25 @@
       "AGV",
       "SNAKE"
      ],
-     "proposer": "YUNA",
+     "state": "APPROVED",
      "team": [
       "AGV",
       "YUNA",
       "MICHAEL",
       "JUEL"
      ],
-     "state": "APPROVED"
+     "proposer": "YUNA"
     }
    ],
-   "numFails": 1,
    "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 4,
-   "team": [
-    "AGV",
-    "YUNA",
-    "MICHAEL",
-    "JUEL"
-   ]
+   "numFails": 1
   },
   {
-   "team": [
-    "SNAKE",
-    "AGV",
-    "JAAYY",
-    "JUEL",
-    "MICHAEL"
-   ],
    "failsRequired": 2,
-   "numFails": 1,
-   "teamSize": 5,
    "state": "SUCCESS",
+   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "JUEL",
      "votes": [
       "JUEL",
       "YUNA",
@@ -206,20 +117,33 @@
       "JAAYY",
       "JOSH"
      ],
+     "state": "APPROVED",
      "team": [
       "SNAKE",
       "AGV",
       "JAAYY",
       "JUEL",
       "MICHAEL"
-     ]
+     ],
+     "proposer": "JUEL"
     }
+   ],
+   "teamSize": 5,
+   "team": [
+    "SNAKE",
+    "AGV",
+    "JAAYY",
+    "JUEL",
+    "MICHAEL"
    ]
   },
   {
+   "state": "FAIL",
+   "numFails": 3,
+   "teamSize": 5,
    "proposals": [
     {
-     "proposer": "AGV",
+     "state": "REJECTED",
      "team": [
       "JUEL",
       "JAAYY",
@@ -227,7 +151,7 @@
       "YUNA",
       "AGV"
      ],
-     "state": "REJECTED",
+     "proposer": "AGV",
      "votes": [
       "YUNA",
       "AGV",
@@ -235,6 +159,8 @@
      ]
     },
     {
+     "state": "REJECTED",
+     "proposer": "SNAKE",
      "team": [
       "JAAYY",
       "JUEL",
@@ -242,8 +168,6 @@
       "SNAKE",
       "MICHAEL"
      ],
-     "proposer": "SNAKE",
-     "state": "REJECTED",
      "votes": [
       "CHAERIM",
       "JOSH",
@@ -251,12 +175,6 @@
      ]
     },
     {
-     "votes": [
-      "MICHAEL",
-      "JUEL",
-      "YUNA",
-      "AGV"
-     ],
      "team": [
       "MICHAEL",
       "JAAYY",
@@ -264,10 +182,17 @@
       "YUNA",
       "JUEL"
      ],
-     "state": "REJECTED",
-     "proposer": "MICHAEL"
+     "proposer": "MICHAEL",
+     "votes": [
+      "MICHAEL",
+      "JUEL",
+      "YUNA",
+      "AGV"
+     ],
+     "state": "REJECTED"
     },
     {
+     "proposer": "JOSH",
      "votes": [
       "JAAYY",
       "JOSH"
@@ -279,8 +204,7 @@
       "JOSH",
       "JUEL",
       "AGV"
-     ],
-     "proposer": "JOSH"
+     ]
     },
     {
      "state": "APPROVED",
@@ -291,14 +215,14 @@
       "JOSH",
       "JUEL"
      ],
+     "proposer": "CHAERIM",
      "team": [
       "CHAERIM",
       "JAAYY",
       "JUEL",
       "SNAKE",
       "JOSH"
-     ],
-     "proposer": "CHAERIM"
+     ]
     }
    ],
    "failsRequired": 1,
@@ -308,24 +232,93 @@
     "JUEL",
     "SNAKE",
     "JOSH"
-   ],
-   "teamSize": 5,
-   "numFails": 3,
-   "state": "FAIL"
+   ]
   }
  ],
- "timeFinished": {
-  "_seconds": 1598416387,
-  "_nanoseconds": 105000000
- },
- "timeCreated": {
-  "_seconds": 1598414536,
-  "_nanoseconds": 848000000
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "AGV": true,
+    "CHAERIM": true,
+    "JAAYY": true
+   },
+   {
+    "MICHAEL": true,
+    "JAAYY": true,
+    "CHAERIM": true,
+    "JOSH": false
+   },
+   {
+    "AGV": true,
+    "YUNA": true,
+    "JUEL": false,
+    "MICHAEL": true
+   },
+   {
+    "SNAKE": true,
+    "MICHAEL": true,
+    "JAAYY": true,
+    "JUEL": false,
+    "AGV": true
+   },
+   {
+    "CHAERIM": false,
+    "JOSH": false,
+    "JAAYY": true,
+    "JUEL": false,
+    "SNAKE": true
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "YUNA",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "AGV",
+    "assassin": false
+   },
+   {
+    "name": "JOSH",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "name": "MICHAEL",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "JUEL",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JAAYY",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "SNAKE",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "CHAERIM",
+    "assassin": false,
+    "role": "OBERON"
+   }
+  ]
  },
  "players": [
   {
-   "uid": "r3SrnsI1YThPQexYyMI4Slwp1J52",
-   "name": "SNAKE"
+   "name": "SNAKE",
+   "uid": "r3SrnsI1YThPQexYyMI4Slwp1J52"
   },
   {
    "name": "MICHAEL",
@@ -344,8 +337,8 @@
    "uid": "jnjiBk9njrOKJRG3HORrvXfIFNL2"
   },
   {
-   "name": "YUNA",
-   "uid": "PHcQ4SX95VVpVIpxH4P9YYA6pxj2"
+   "uid": "PHcQ4SX95VVpVIpxH4P9YYA6pxj2",
+   "name": "YUNA"
   },
   {
    "name": "JUEL",
@@ -355,5 +348,12 @@
    "uid": "Ut7gzGdy7AXJGfEyGrS5qdZxViv2",
    "name": "AGV"
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1598416387,
+  "_nanoseconds": 105000000
+ }
 }

@@ -1,11 +1,41 @@
 {
+ "timeFinished": {
+  "_seconds": 1600746541,
+  "_nanoseconds": 315000000
+ },
+ "timeCreated": {
+  "_seconds": 1600744680,
+  "_nanoseconds": 386000000
+ },
  "outcome": {
   "message": "Three failed missions",
+  "votes": [
+   {
+    "JOANNE": true,
+    "SAB": true
+   },
+   {
+    "TRASHLEY": true,
+    "JOJO": false,
+    "KEVIN": true
+   },
+   {
+    "HANNAH": true,
+    "SAB": true,
+    "NIC": false
+   },
+   {
+    "HANNAH": true,
+    "KEVIN": true,
+    "NIC": false,
+    "JOJO": false
+   }
+  ],
   "roles": [
    {
-    "role": "MERLIN",
+    "name": "SAB",
     "assassin": false,
-    "name": "SAB"
+    "role": "MERLIN"
    },
    {
     "role": "MORGANA",
@@ -18,9 +48,9 @@
     "name": "JOJO"
    },
    {
-    "role": "PERCIVAL",
+    "name": "HANNAH",
     "assassin": false,
-    "name": "HANNAH"
+    "role": "PERCIVAL"
    },
    {
     "name": "KEVIN",
@@ -28,81 +58,61 @@
     "assassin": false
    },
    {
-    "name": "TRASHLEY",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "TRASHLEY"
    },
    {
-    "assassin": true,
     "name": "NIC",
+    "assassin": true,
     "role": "EVIL MINION"
    }
   ],
-  "assassinated": null,
-  "votes": [
-   {
-    "JOANNE": true,
-    "SAB": true
-   },
-   {
-    "JOJO": false,
-    "KEVIN": true,
-    "TRASHLEY": true
-   },
-   {
-    "NIC": false,
-    "HANNAH": true,
-    "SAB": true
-   },
-   {
-    "NIC": false,
-    "JOJO": false,
-    "HANNAH": true,
-    "KEVIN": true
-   }
-  ],
-  "state": "EVIL_WIN"
- },
- "timeFinished": {
-  "_seconds": 1600746541,
-  "_nanoseconds": 315000000
+  "state": "EVIL_WIN",
+  "assassinated": null
  },
  "players": [
   {
-   "uid": "0vUemk06yJZx4OiLv3OXCvkKTOH2",
-   "name": "JOANNE"
+   "name": "JOANNE",
+   "uid": "0vUemk06yJZx4OiLv3OXCvkKTOH2"
   },
   {
    "name": "SAB",
    "uid": "knYmeZctt7Q998PSXA824I8o6Qz1"
   },
   {
-   "uid": "E7IPPgD0pMgV23EQMf7MEV0zpAj1",
-   "name": "NIC"
+   "name": "NIC",
+   "uid": "E7IPPgD0pMgV23EQMf7MEV0zpAj1"
   },
   {
-   "name": "HANNAH",
-   "uid": "zXFYbWo0ufPRsCPeHJv8FIIVs2q1"
+   "uid": "zXFYbWo0ufPRsCPeHJv8FIIVs2q1",
+   "name": "HANNAH"
   },
   {
-   "name": "KEVIN",
-   "uid": "VUNHKOPkhxNMkeWvcS1OJva6nwp1"
+   "uid": "VUNHKOPkhxNMkeWvcS1OJva6nwp1",
+   "name": "KEVIN"
   },
   {
-   "uid": "hgBOOMlMhWNsjVQRnsmsUSBdXRh2",
-   "name": "JOJO"
+   "name": "JOJO",
+   "uid": "hgBOOMlMhWNsjVQRnsmsUSBdXRh2"
   },
   {
    "uid": "y2uNLfbLD4ZtWiTRh6wiiN3Ndx23",
    "name": "TRASHLEY"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
+   "teamSize": 2,
    "team": [
     "JOANNE",
     "SAB"
    ],
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
      "team": [
@@ -122,24 +132,19 @@
      "proposer": "JOANNE"
     }
    ],
-   "teamSize": 2,
-   "state": "SUCCESS",
-   "numFails": 0,
    "failsRequired": 1
   },
   {
+   "teamSize": 3,
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "KEVIN",
     "JOJO",
     "TRASHLEY"
    ],
-   "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "SAB",
       "TRASHLEY",
@@ -154,21 +159,30 @@
       "JOJO",
       "TRASHLEY"
      ],
+     "state": "APPROVED",
      "proposer": "SAB"
     }
-   ]
+   ],
+   "numFails": 1
   },
   {
+   "state": "FAIL",
    "failsRequired": 1,
-   "numFails": 1,
    "team": [
     "SAB",
     "HANNAH",
     "NIC"
    ],
    "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
+     "team": [
+      "SAB",
+      "HANNAH",
+      "NIC"
+     ],
+     "state": "APPROVED",
      "votes": [
       "TRASHLEY",
       "JOANNE",
@@ -178,22 +192,13 @@
       "NIC",
       "KEVIN"
      ],
-     "team": [
-      "SAB",
-      "HANNAH",
-      "NIC"
-     ],
-     "proposer": "NIC",
-     "state": "APPROVED"
+     "proposer": "NIC"
     }
-   ],
-   "state": "FAIL"
+   ]
   },
   {
-   "failsRequired": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "HANNAH",
      "votes": [
       "NIC",
@@ -201,6 +206,7 @@
       "HANNAH",
       "JOANNE"
      ],
+     "state": "APPROVED",
      "team": [
       "JOJO",
       "HANNAH",
@@ -209,29 +215,23 @@
      ]
     }
    ],
+   "teamSize": 4,
+   "state": "FAIL",
+   "failsRequired": 2,
    "team": [
     "JOJO",
     "HANNAH",
     "NIC",
     "KEVIN"
    ],
-   "teamSize": 4,
-   "state": "FAIL",
    "numFails": 2
   },
   {
-   "team": [],
+   "teamSize": 4,
+   "state": "PENDING",
    "proposals": [],
    "failsRequired": 1,
-   "state": "PENDING",
-   "teamSize": 4
+   "team": []
   }
- ],
- "timeCreated": {
-  "_seconds": 1600744680,
-  "_nanoseconds": 386000000
- },
- "options": {
-  "inGameLog": false
- }
+ ]
 }

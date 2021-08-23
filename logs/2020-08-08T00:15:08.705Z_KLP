@@ -1,16 +1,23 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1596847797,
+  "_nanoseconds": 96000000
+ },
  "players": [
   {
-   "name": "ANDREW",
-   "uid": "6wBUhhlZQjPFbF1JYSuM4Inmiur1"
+   "uid": "6wBUhhlZQjPFbF1JYSuM4Inmiur1",
+   "name": "ANDREW"
   },
   {
-   "uid": "DPi4w4i2q5ZDvCld9mIc5QpEvi33",
-   "name": "JEREMIAH"
+   "name": "JEREMIAH",
+   "uid": "DPi4w4i2q5ZDvCld9mIc5QpEvi33"
   },
   {
-   "uid": "k5C6Gy8312dCPjYz5LXbMtwemj13",
-   "name": "ETHAN"
+   "name": "ETHAN",
+   "uid": "k5C6Gy8312dCPjYz5LXbMtwemj13"
   },
   {
    "name": "GRANT",
@@ -21,8 +28,8 @@
    "uid": "k7ARXyYR8oPMJoTXFWPOGB50ZBu2"
   },
   {
-   "uid": "olZLki63c0fM8bIO4DG5ru38Jm93",
-   "name": "CONNOR"
+   "name": "CONNOR",
+   "uid": "olZLki63c0fM8bIO4DG5ru38Jm93"
   },
   {
    "name": "JJ",
@@ -41,22 +48,16 @@
    "uid": "DqxUUlW7puW3czqsCW1dYTg5Lsj2"
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "outcome": {
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
   "roles": [
    {
-    "name": "JEREMIAH",
     "assassin": false,
+    "name": "JEREMIAH",
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": true,
     "role": "EVIL MINION",
+    "assassin": true,
     "name": "GRANT"
    },
    {
@@ -65,24 +66,24 @@
     "name": "MARE"
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "MEGAN"
-   },
-   {
-    "role": "MORDRED",
-    "name": "ETHAN",
+    "name": "MEGAN",
     "assassin": false
    },
    {
     "assassin": false,
-    "name": "ANDREW",
-    "role": "MERLIN"
+    "name": "ETHAN",
+    "role": "MORDRED"
    },
    {
-    "name": "ELLIE",
+    "name": "ANDREW",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "ELLIE"
    },
    {
     "assassin": false,
@@ -95,40 +96,40 @@
     "role": "PERCIVAL"
    },
    {
+    "role": "OBERON",
     "assassin": false,
-    "name": "JJ",
-    "role": "OBERON"
+    "name": "JJ"
    }
   ],
+  "message": "Three failed missions",
   "votes": [
    {
+    "GRANT": false,
     "CONNOR": true,
-    "DREWWW": true,
-    "GRANT": false
+    "DREWWW": true
    },
    {
-    "MEGAN": true,
-    "ELLIE": true,
     "MARE": false,
-    "CONNOR": true
+    "CONNOR": true,
+    "MEGAN": true,
+    "ELLIE": true
    },
    {
-    "CONNOR": true,
-    "ETHAN": false,
     "ANDREW": true,
-    "ELLIE": true
+    "ETHAN": false,
+    "ELLIE": true,
+    "CONNOR": true
    }
-  ]
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null
  },
  "missions": [
   {
-   "state": "FAIL",
-   "numFails": 1,
    "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "CONNOR",
-     "state": "APPROVED",
      "votes": [
       "ETHAN",
       "MEGAN",
@@ -138,6 +139,8 @@
       "ELLIE",
       "DREWWW"
      ],
+     "proposer": "CONNOR",
+     "state": "APPROVED",
      "team": [
       "CONNOR",
       "DREWWW",
@@ -145,17 +148,24 @@
      ]
     }
    ],
+   "state": "FAIL",
+   "numFails": 1,
    "team": [
     "CONNOR",
     "DREWWW",
     "GRANT"
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "team": [
+    "MEGAN",
+    "CONNOR",
+    "ELLIE",
+    "MARE"
+   ],
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "JJ",
       "ELLIE",
@@ -169,16 +179,10 @@
       "MEGAN",
       "CONNOR"
      ],
-     "proposer": "JJ"
+     "proposer": "JJ",
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "MEGAN",
-      "CONNOR",
-      "ELLIE",
-      "MARE"
-     ],
-     "proposer": "MEGAN",
      "state": "APPROVED",
      "votes": [
       "GRANT",
@@ -188,31 +192,33 @@
       "ETHAN",
       "JJ",
       "ELLIE"
+     ],
+     "proposer": "MEGAN",
+     "team": [
+      "MEGAN",
+      "CONNOR",
+      "ELLIE",
+      "MARE"
      ]
     }
    ],
-   "numFails": 1,
-   "team": [
-    "MEGAN",
-    "CONNOR",
-    "ELLIE",
-    "MARE"
-   ],
    "failsRequired": 1,
-   "state": "FAIL",
-   "teamSize": 4
+   "teamSize": 4,
+   "state": "FAIL"
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "ANDREW",
     "CONNOR",
     "ETHAN",
     "ELLIE"
    ],
-   "state": "FAIL",
+   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "ELLIE",
      "votes": [],
      "state": "REJECTED",
      "team": [
@@ -220,28 +226,22 @@
       "ELLIE",
       "MARE",
       "JEREMIAH"
-     ]
+     ],
+     "proposer": "ELLIE"
     },
     {
      "votes": [],
+     "state": "REJECTED",
+     "proposer": "MARE",
      "team": [
       "MARE",
       "MEGAN",
       "JEREMIAH",
       "ANDREW"
-     ],
-     "state": "REJECTED",
-     "proposer": "MARE"
+     ]
     },
     {
      "state": "APPROVED",
-     "team": [
-      "ANDREW",
-      "CONNOR",
-      "ETHAN",
-      "ELLIE"
-     ],
-     "proposer": "ANDREW",
      "votes": [
       "GRANT",
       "ETHAN",
@@ -249,32 +249,32 @@
       "CONNOR",
       "ANDREW",
       "DREWWW"
-     ]
+     ],
+     "team": [
+      "ANDREW",
+      "CONNOR",
+      "ETHAN",
+      "ELLIE"
+     ],
+     "proposer": "ANDREW"
     }
-   ],
-   "teamSize": 4,
-   "numFails": 1,
-   "failsRequired": 1
+   ]
   },
   {
-   "proposals": [],
-   "team": [],
    "state": "PENDING",
-   "failsRequired": 2,
-   "teamSize": 5
-  },
-  {
+   "proposals": [],
    "teamSize": 5,
-   "proposals": [],
-   "state": "PENDING",
    "team": [],
-   "failsRequired": 1
+   "failsRequired": 2
+  },
+  {
+   "state": "PENDING",
+   "proposals": [],
+   "failsRequired": 1,
+   "team": [],
+   "teamSize": 5
   }
  ],
- "timeFinished": {
-  "_seconds": 1596847797,
-  "_nanoseconds": 96000000
- },
  "timeCreated": {
   "_seconds": 1596845708,
   "_nanoseconds": 705000000

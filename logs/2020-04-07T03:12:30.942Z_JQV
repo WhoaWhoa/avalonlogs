@@ -4,22 +4,21 @@
   "_nanoseconds": 990035000
  },
  "outcome": {
-  "state": "EVIL_WIN",
   "roles": [
    {
-    "assassin": true,
+    "role": "EVIL MINION",
     "name": "GRAWG",
-    "role": "EVIL MINION"
+    "assassin": true
    },
    {
-    "assassin": false,
     "name": "ERIC",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
+    "assassin": false,
     "role": "MORGANA",
-    "name": "INYOURBASE",
-    "assassin": false
+    "name": "INYOURBASE"
    },
    {
     "name": "KEVINSGOOD",
@@ -27,29 +26,30 @@
     "role": "MERLIN"
    },
    {
-    "name": "ANDY",
     "role": "PERCIVAL",
-    "assassin": false
+    "assassin": false,
+    "name": "ANDY"
    }
   ],
+  "state": "EVIL_WIN",
   "votes": [
    {
-    "ANDY": true,
+    "ERIC": true,
+    "ANDY": true
+   },
+   {
+    "GRAWG": true,
+    "INYOURBASE": true,
     "ERIC": true
    },
    {
-    "INYOURBASE": true,
-    "ERIC": true,
-    "GRAWG": true
+    "KEVINSGOOD": true,
+    "GRAWG": false
    },
    {
-    "GRAWG": false,
-    "KEVINSGOOD": true
-   },
-   {
+    "ANDY": true,
     "INYOURBASE": true,
-    "ERIC": true,
-    "ANDY": true
+    "ERIC": true
    }
   ],
   "message": "Merlin assassinated",
@@ -61,8 +61,12 @@
  },
  "missions": [
   {
+   "state": "SUCCESS",
+   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "KEVINSGOOD",
+     "state": "APPROVED",
      "votes": [
       "ERIC",
       "INYOURBASE",
@@ -70,54 +74,58 @@
       "ANDY",
       "GRAWG"
      ],
-     "proposer": "KEVINSGOOD",
      "team": [
       "ERIC",
       "ANDY"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "teamSize": 2,
-   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "ERIC",
     "ANDY"
-   ],
-   "numFails": 0,
-   "failsRequired": 1
+   ]
   },
   {
-   "numFails": 0,
    "state": "SUCCESS",
+   "numFails": 0,
    "failsRequired": 1,
    "team": [
     "ERIC",
     "GRAWG",
     "INYOURBASE"
    ],
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "ANDY",
-      "GRAWG",
-      "INYOURBASE",
-      "KEVINSGOOD"
-     ],
-     "proposer": "ERIC",
      "state": "APPROVED",
      "team": [
       "ERIC",
       "GRAWG",
       "INYOURBASE"
+     ],
+     "proposer": "ERIC",
+     "votes": [
+      "ANDY",
+      "GRAWG",
+      "INYOURBASE",
+      "KEVINSGOOD"
      ]
     }
-   ],
-   "teamSize": 3
+   ]
   },
   {
+   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 1,
    "proposals": [
     {
+     "team": [
+      "GRAWG",
+      "KEVINSGOOD"
+     ],
      "votes": [
       "INYOURBASE",
       "KEVINSGOOD",
@@ -125,25 +133,15 @@
       "GRAWG"
      ],
      "proposer": "GRAWG",
-     "state": "APPROVED",
-     "team": [
-      "GRAWG",
-      "KEVINSGOOD"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 2,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1,
    "team": [
     "GRAWG",
     "KEVINSGOOD"
    ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
    "team": [
     "INYOURBASE",
     "ANDY",
@@ -152,34 +150,36 @@
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "INYOURBASE",
-      "ANDY",
-      "ERIC"
-     ],
+     "proposer": "INYOURBASE",
      "votes": [
       "ERIC",
       "INYOURBASE",
       "GRAWG"
      ],
-     "proposer": "INYOURBASE"
+     "team": [
+      "INYOURBASE",
+      "ANDY",
+      "ERIC"
+     ]
     }
    ],
+   "teamSize": 3,
    "numFails": 0,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
    "state": "PENDING",
-   "failsRequired": 1,
+   "teamSize": 3,
    "team": [],
    "proposals": [],
-   "teamSize": 3
+   "failsRequired": 1
   }
  ],
  "players": [
   {
-   "name": "ERIC",
-   "uid": "CuDkBmBqsHPzneqm9fpP77b1dvW2"
+   "uid": "CuDkBmBqsHPzneqm9fpP77b1dvW2",
+   "name": "ERIC"
   },
   {
    "uid": "8dX7v1ok1PReo4v9rmXQTT0k4Ku1",
@@ -190,12 +190,12 @@
    "uid": "zugJ7ZPlQTN26bqiabKM94JNDzm1"
   },
   {
-   "name": "ANDY",
-   "uid": "f2KIo09nXaPXxKBE9WB0Ur1VbyY2"
+   "uid": "f2KIo09nXaPXxKBE9WB0Ur1VbyY2",
+   "name": "ANDY"
   },
   {
-   "uid": "aMBrPx68jube972KXHvlYKbj0ys1",
-   "name": "KEVINSGOOD"
+   "name": "KEVINSGOOD",
+   "uid": "aMBrPx68jube972KXHvlYKbj0ys1"
   }
  ]
 }

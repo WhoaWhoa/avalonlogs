@@ -13,12 +13,12 @@
    "uid": "R4fmZj79uDNSNHMlUvXLOlhN1x82"
   },
   {
-   "uid": "CLZ73hWlzJUvwZMxmX40QFFBUZ93",
-   "name": "HOWARD"
+   "name": "HOWARD",
+   "uid": "CLZ73hWlzJUvwZMxmX40QFFBUZ93"
   },
   {
-   "name": "JERRY",
-   "uid": "o7jnlZPADTWhTHclholAWHDYjX32"
+   "uid": "o7jnlZPADTWhTHclholAWHDYjX32",
+   "name": "JERRY"
   },
   {
    "uid": "jgTdzzaNJOTb8j2fIvBzP44GSjf1",
@@ -29,8 +29,8 @@
    "name": "SUE"
   },
   {
-   "uid": "3BlA7BaJOydU9LsNuqSVlAJAKYK2",
-   "name": "TSUENG"
+   "name": "TSUENG",
+   "uid": "3BlA7BaJOydU9LsNuqSVlAJAKYK2"
   }
  ],
  "timeCreated": {
@@ -38,23 +38,45 @@
   "_nanoseconds": 442000000
  },
  "outcome": {
-  "state": "GOOD_WIN",
   "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "SUE": true,
+    "TSUENG": true
+   },
+   {
+    "TSUENG": false,
+    "SUSAN": true,
+    "SUE": true
+   },
+   {
+    "SUSAN": true,
+    "HOWARD": true,
+    "JERRY": true
+   },
+   {
+    "HOWARD": true,
+    "SUSAN": true,
+    "JERRY": true,
+    "FENG": true
+   }
+  ],
   "roles": [
    {
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "SUE"
+    "name": "SUE",
+    "role": "EVIL MINION"
    },
    {
-    "name": "SUSAN",
     "assassin": false,
+    "name": "SUSAN",
     "role": "LOYAL FOLLOWER"
    },
    {
     "name": "TSUENG",
-    "role": "MORGANA",
-    "assassin": false
+    "assassin": false,
+    "role": "MORGANA"
    },
    {
     "assassin": false,
@@ -67,52 +89,28 @@
     "role": "PERCIVAL"
    },
    {
-    "assassin": false,
+    "name": "HP",
     "role": "LOYAL FOLLOWER",
-    "name": "HP"
-   },
-   {
-    "name": "FENG",
-    "role": "OBERON",
     "assassin": false
-   }
-  ],
-  "votes": [
-   {
-    "TSUENG": true,
-    "SUE": true
    },
    {
-    "SUSAN": true,
-    "TSUENG": false,
-    "SUE": true
-   },
-   {
-    "JERRY": true,
-    "HOWARD": true,
-    "SUSAN": true
-   },
-   {
-    "JERRY": true,
-    "SUSAN": true,
-    "HOWARD": true,
-    "FENG": true
+    "assassin": false,
+    "name": "FENG",
+    "role": "OBERON"
    }
   ],
   "assassinated": "HP"
  },
  "missions": [
   {
-   "team": [
-    "TSUENG",
-    "SUE"
-   ],
    "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "TSUENG",
+      "SUE"
+     ],
      "votes": [
       "HOWARD",
       "JERRY",
@@ -122,25 +120,25 @@
       "TSUENG",
       "SUSAN"
      ],
-     "team": [
-      "TSUENG",
-      "SUE"
-     ],
      "proposer": "HP"
     }
    ],
-   "teamSize": 2
+   "state": "SUCCESS",
+   "teamSize": 2,
+   "team": [
+    "TSUENG",
+    "SUE"
+   ],
+   "numFails": 0
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "SUSAN",
     "SUE",
     "TSUENG"
    ],
    "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
@@ -157,18 +155,20 @@
       "SUSAN"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
-   "teamSize": 3,
+   "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
     "HOWARD",
     "JERRY",
     "SUSAN"
    ],
+   "teamSize": 3,
    "numFails": 0,
-   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -176,28 +176,29 @@
       "JERRY",
       "SUSAN"
      ],
+     "proposer": "HOWARD",
+     "state": "APPROVED",
      "votes": [
       "JERRY",
       "FENG",
       "SUSAN",
       "TSUENG",
       "HOWARD"
-     ],
-     "proposer": "HOWARD",
-     "state": "APPROVED"
+     ]
     }
    ]
   },
   {
+   "team": [
+    "HOWARD",
+    "SUSAN",
+    "JERRY",
+    "FENG"
+   ],
+   "numFails": 0,
+   "failsRequired": 2,
    "proposals": [
     {
-     "proposer": "JERRY",
-     "team": [
-      "HOWARD",
-      "SUSAN",
-      "JERRY",
-      "FENG"
-     ],
      "state": "APPROVED",
      "votes": [
       "SUE",
@@ -206,26 +207,25 @@
       "HOWARD",
       "JERRY",
       "FENG"
+     ],
+     "proposer": "JERRY",
+     "team": [
+      "HOWARD",
+      "SUSAN",
+      "JERRY",
+      "FENG"
      ]
     }
    ],
-   "failsRequired": 2,
-   "numFails": 0,
-   "state": "SUCCESS",
-   "team": [
-    "HOWARD",
-    "SUSAN",
-    "JERRY",
-    "FENG"
-   ],
-   "teamSize": 4
+   "teamSize": 4,
+   "state": "SUCCESS"
   },
   {
-   "state": "PENDING",
    "team": [],
-   "proposals": [],
+   "teamSize": 4,
    "failsRequired": 1,
-   "teamSize": 4
+   "proposals": [],
+   "state": "PENDING"
   }
  ],
  "options": {

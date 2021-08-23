@@ -3,11 +3,29 @@
   "_seconds": 1585077618,
   "_nanoseconds": 748050000
  },
- "timeCreated": {
-  "_seconds": 1585077186,
-  "_nanoseconds": 542000000
- },
  "outcome": {
+  "votes": [
+   {
+    "ARIANA": true,
+    "BILL": true
+   },
+   {
+    "GK": true,
+    "BILL": true,
+    "ARIANA": true
+   },
+   {
+    "CAM": true,
+    "BILL": false,
+    "ARIANA": true
+   },
+   {
+    "STEPH": false,
+    "BRADEN": true,
+    "CAM": true,
+    "PABLO": true
+   }
+  ],
   "roles": [
    {
     "name": "STEPH",
@@ -16,18 +34,18 @@
    },
    {
     "assassin": false,
-    "name": "BRADEN",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "BRADEN"
    },
    {
-    "name": "ARIANA",
     "assassin": false,
+    "name": "ARIANA",
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MERLIN",
     "name": "CAM",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
     "name": "BILL",
@@ -35,51 +53,29 @@
     "assassin": false
    },
    {
-    "name": "GK",
     "role": "EVIL MINION",
-    "assassin": true
+    "assassin": true,
+    "name": "GK"
    },
    {
-    "name": "PABLO",
     "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "name": "PABLO"
    }
   ],
-  "state": "GOOD_WIN",
   "assassinated": "ARIANA",
   "message": "Three successful missions",
-  "votes": [
-   {
-    "ARIANA": true,
-    "BILL": true
-   },
-   {
-    "BILL": true,
-    "ARIANA": true,
-    "GK": true
-   },
-   {
-    "BILL": false,
-    "CAM": true,
-    "ARIANA": true
-   },
-   {
-    "PABLO": true,
-    "STEPH": false,
-    "CAM": true,
-    "BRADEN": true
-   }
-  ]
+  "state": "GOOD_WIN"
+ },
+ "timeCreated": {
+  "_seconds": 1585077186,
+  "_nanoseconds": 542000000
  },
  "missions": [
   {
    "proposals": [
     {
-     "team": [
-      "BILL",
-      "ARIANA"
-     ],
-     "proposer": "ARIANA",
+     "state": "APPROVED",
      "votes": [
       "BILL",
       "GK",
@@ -89,12 +85,16 @@
       "ARIANA",
       "CAM"
      ],
-     "state": "APPROVED"
+     "proposer": "ARIANA",
+     "team": [
+      "BILL",
+      "ARIANA"
+     ]
     }
    ],
-   "teamSize": 2,
-   "failsRequired": 1,
    "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 2,
    "team": [
     "BILL",
     "ARIANA"
@@ -102,16 +102,16 @@
    "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "BILL",
-    "ARIANA",
-    "GK"
-   ],
    "teamSize": 3,
-   "state": "SUCCESS",
    "proposals": [
     {
+     "team": [
+      "BILL",
+      "ARIANA",
+      "GK"
+     ],
+     "state": "APPROVED",
+     "proposer": "GK",
      "votes": [
       "BRADEN",
       "ARIANA",
@@ -119,25 +119,20 @@
       "GK",
       "PABLO",
       "STEPH"
-     ],
-     "proposer": "GK",
-     "team": [
-      "BILL",
-      "ARIANA",
-      "GK"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "numFails": 0
-  },
-  {
+   "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "BILL",
     "ARIANA",
-    "CAM"
+    "GK"
    ],
-   "state": "FAIL",
+   "state": "SUCCESS"
+  },
+  {
+   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
@@ -158,13 +153,16 @@
      "proposer": "CAM"
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1
+   "numFails": 1,
+   "team": [
+    "BILL",
+    "ARIANA",
+    "CAM"
+   ],
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
-   "failsRequired": 2,
-   "state": "SUCCESS",
    "teamSize": 4,
    "team": [
     "CAM",
@@ -172,25 +170,27 @@
     "PABLO",
     "BRADEN"
    ],
-   "numFails": 1,
+   "failsRequired": 2,
    "proposals": [
     {
      "state": "APPROVED",
-     "votes": [
-      "STEPH",
-      "ARIANA",
-      "GK",
-      "PABLO"
-     ],
      "proposer": "STEPH",
      "team": [
       "CAM",
       "STEPH",
       "PABLO",
       "BRADEN"
+     ],
+     "votes": [
+      "STEPH",
+      "ARIANA",
+      "GK",
+      "PABLO"
      ]
     }
-   ]
+   ],
+   "state": "SUCCESS",
+   "numFails": 1
   },
   {
    "failsRequired": 1,
@@ -202,28 +202,28 @@
  ],
  "players": [
   {
-   "uid": "UujRccWhQud1VY8Tm52gIdO3LYG2",
-   "name": "BILL"
+   "name": "BILL",
+   "uid": "UujRccWhQud1VY8Tm52gIdO3LYG2"
   },
   {
-   "name": "ARIANA",
-   "uid": "9iSesCWJGEgTIL9aE6djKMZF2TE3"
+   "uid": "9iSesCWJGEgTIL9aE6djKMZF2TE3",
+   "name": "ARIANA"
   },
   {
-   "uid": "UvgSxNwtPQO3uTLsB7HdKjbnsev2",
-   "name": "GK"
+   "name": "GK",
+   "uid": "UvgSxNwtPQO3uTLsB7HdKjbnsev2"
   },
   {
-   "uid": "AM4ybv0SrvVnaGPbGdWOoHi3pFD3",
-   "name": "CAM"
+   "name": "CAM",
+   "uid": "AM4ybv0SrvVnaGPbGdWOoHi3pFD3"
   },
   {
-   "name": "STEPH",
-   "uid": "k9JVqmnKCaX2MpwXst2sG1hPvHB3"
+   "uid": "k9JVqmnKCaX2MpwXst2sG1hPvHB3",
+   "name": "STEPH"
   },
   {
-   "uid": "gWR9g1oPZqgBBIAyFMAuzj843JA3",
-   "name": "PABLO"
+   "name": "PABLO",
+   "uid": "gWR9g1oPZqgBBIAyFMAuzj843JA3"
   },
   {
    "name": "BRADEN",

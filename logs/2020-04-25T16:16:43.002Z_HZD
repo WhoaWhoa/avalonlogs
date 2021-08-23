@@ -1,42 +1,44 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
   "assassinated": null,
-  "message": "Three failed missions",
   "state": "EVIL_WIN",
   "roles": [
    {
-    "name": "BAOREN",
     "assassin": true,
+    "name": "BAOREN",
     "role": "EVIL MINION"
    },
    {
+    "role": "MORGANA",
     "assassin": false,
-    "name": "MARCUS",
-    "role": "MORGANA"
+    "name": "MARCUS"
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "name": "BERNARD",
     "assassin": false,
-    "name": "BERNARD"
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "XAVIER",
-    "assassin": false
-   },
-   {
     "assassin": false,
-    "name": "SY",
     "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
-    "name": "VINOLIA",
-    "role": "MERLIN"
+    "role": "LOYAL FOLLOWER",
+    "name": "SY"
    },
    {
     "assassin": false,
+    "role": "MERLIN",
+    "name": "VINOLIA"
+   },
+   {
     "name": "EVE",
+    "assassin": false,
     "role": "PERCIVAL"
    },
    {
@@ -52,30 +54,39 @@
   ],
   "votes": [
    {
-    "BRYAN": true,
     "CHARLES": false,
+    "BRYAN": true,
     "VINOLIA": true
    },
    {
-    "BERNARD": true,
-    "XAVIER": true,
     "BAOREN": true,
+    "XAVIER": true,
+    "BERNARD": true,
     "SY": true
    },
    {
     "BRYAN": true,
-    "BERNARD": true,
     "XAVIER": true,
-    "BAOREN": false
+    "BAOREN": false,
+    "BERNARD": true
    },
    {
-    "SY": true,
-    "CHARLES": false,
-    "BRYAN": true,
     "XAVIER": true,
-    "BAOREN": false
+    "CHARLES": false,
+    "BAOREN": false,
+    "BRYAN": true,
+    "SY": true
    }
-  ]
+  ],
+  "message": "Three failed missions"
+ },
+ "timeCreated": {
+  "_seconds": 1587831403,
+  "_nanoseconds": 2000000
+ },
+ "timeFinished": {
+  "_seconds": 1587832385,
+  "_nanoseconds": 600000000
  },
  "players": [
   {
@@ -83,12 +94,12 @@
    "uid": "YUtvEK4ewJTlAduV5kRXNdnfROr1"
   },
   {
-   "uid": "ApLexr3LFBXDVTeMpIUAteS8Vr93",
-   "name": "BRYAN"
+   "name": "BRYAN",
+   "uid": "ApLexr3LFBXDVTeMpIUAteS8Vr93"
   },
   {
-   "name": "VINOLIA",
-   "uid": "GiJ3o8YsEnZG0ktlOKtRLavNCcg2"
+   "uid": "GiJ3o8YsEnZG0ktlOKtRLavNCcg2",
+   "name": "VINOLIA"
   },
   {
    "uid": "cBIBuU49xQd3ZUnY9gF9nnd3tnM2",
@@ -103,8 +114,8 @@
    "uid": "P6eMzKxVqARhF8xmgb1SPfLMtaw1"
   },
   {
-   "uid": "EcgiqwCU9tWjLA0TVu8duTedWay1",
-   "name": "BERNARD"
+   "name": "BERNARD",
+   "uid": "EcgiqwCU9tWjLA0TVu8duTedWay1"
   },
   {
    "name": "XAVIER",
@@ -117,21 +128,18 @@
  ],
  "missions": [
   {
-   "numFails": 1,
-   "team": [
-    "CHARLES",
-    "BRYAN",
-    "VINOLIA"
-   ],
+   "teamSize": 3,
    "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "CHARLES",
       "BRYAN",
       "VINOLIA"
      ],
+     "proposer": "MARCUS",
+     "state": "APPROVED",
      "votes": [
       "BRYAN",
       "CHARLES",
@@ -142,15 +150,20 @@
       "SY",
       "VINOLIA",
       "EVE"
-     ],
-     "proposer": "MARCUS"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3
+   "team": [
+    "CHARLES",
+    "BRYAN",
+    "VINOLIA"
+   ],
+   "numFails": 1
   },
   {
-   "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "XAVIER",
     "BERNARD",
@@ -159,6 +172,13 @@
    ],
    "proposals": [
     {
+     "team": [
+      "XAVIER",
+      "BERNARD",
+      "BAOREN",
+      "SY"
+     ],
+     "state": "APPROVED",
      "votes": [
       "BRYAN",
       "CHARLES",
@@ -167,32 +187,14 @@
       "EVE",
       "SY"
      ],
-     "proposer": "CHARLES",
-     "state": "APPROVED",
-     "team": [
-      "XAVIER",
-      "BERNARD",
-      "BAOREN",
-      "SY"
-     ]
+     "proposer": "CHARLES"
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0
+   "teamSize": 4
   },
   {
-   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "XAVIER",
-      "BRYAN",
-      "BAOREN",
-      "BERNARD"
-     ],
-     "proposer": "BRYAN",
      "votes": [
       "BAOREN",
       "MARCUS",
@@ -201,10 +203,17 @@
       "VINOLIA",
       "BRYAN",
       "CHARLES"
+     ],
+     "state": "APPROVED",
+     "proposer": "BRYAN",
+     "team": [
+      "XAVIER",
+      "BRYAN",
+      "BAOREN",
+      "BERNARD"
      ]
     }
    ],
-   "state": "FAIL",
    "failsRequired": 1,
    "teamSize": 4,
    "team": [
@@ -212,10 +221,11 @@
     "BRYAN",
     "BAOREN",
     "BERNARD"
-   ]
+   ],
+   "state": "FAIL",
+   "numFails": 1
   },
   {
-   "teamSize": 5,
    "team": [
     "BAOREN",
     "BRYAN",
@@ -223,9 +233,9 @@
     "SY",
     "XAVIER"
    ],
-   "state": "FAIL",
    "numFails": 2,
-   "failsRequired": 2,
+   "teamSize": 5,
+   "state": "FAIL",
    "proposals": [
     {
      "team": [
@@ -235,8 +245,8 @@
       "BERNARD",
       "SY"
      ],
-     "proposer": "VINOLIA",
      "state": "REJECTED",
+     "proposer": "VINOLIA",
      "votes": [
       "VINOLIA"
      ]
@@ -249,30 +259,35 @@
       "BERNARD",
       "BAOREN"
      ],
+     "state": "REJECTED",
+     "proposer": "EVE",
      "votes": [
       "SY",
       "VINOLIA"
-     ],
-     "proposer": "EVE",
-     "state": "REJECTED"
+     ]
     },
     {
-     "proposer": "SY",
+     "votes": [
+      "SY"
+     ],
      "state": "REJECTED",
+     "proposer": "SY",
      "team": [
       "CHARLES",
       "SY",
       "BAOREN",
       "BERNARD",
       "EVE"
-     ],
-     "votes": [
-      "SY"
      ]
     },
     {
-     "proposer": "BAOREN",
-     "state": "APPROVED",
+     "votes": [
+      "BRYAN",
+      "CHARLES",
+      "BAOREN",
+      "XAVIER",
+      "SY"
+     ],
      "team": [
       "BAOREN",
       "BRYAN",
@@ -280,33 +295,18 @@
       "SY",
       "XAVIER"
      ],
-     "votes": [
-      "BRYAN",
-      "CHARLES",
-      "BAOREN",
-      "XAVIER",
-      "SY"
-     ]
+     "state": "APPROVED",
+     "proposer": "BAOREN"
     }
-   ]
+   ],
+   "failsRequired": 2
   },
   {
    "team": [],
    "failsRequired": 1,
-   "teamSize": 5,
    "state": "PENDING",
-   "proposals": []
+   "proposals": [],
+   "teamSize": 5
   }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587831403,
-  "_nanoseconds": 2000000
- },
- "timeFinished": {
-  "_seconds": 1587832385,
-  "_nanoseconds": 600000000
- }
+ ]
 }

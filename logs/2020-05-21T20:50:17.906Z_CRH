@@ -1,25 +1,14 @@
 {
- "timeFinished": {
-  "_seconds": 1590094688,
-  "_nanoseconds": 502000000
- },
- "timeCreated": {
-  "_seconds": 1590094217,
-  "_nanoseconds": 906000000
- },
- "options": {
-  "inGameLog": false
- },
  "missions": [
   {
+   "teamSize": 2,
    "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "EMMA",
     "CLAIRE"
    ],
    "failsRequired": 1,
-   "state": "SUCCESS",
-   "teamSize": 2,
    "proposals": [
     {
      "votes": [
@@ -29,21 +18,18 @@
       "EMMA",
       "CLAIRE"
      ],
-     "proposer": "EMMA",
      "team": [
       "EMMA",
       "CLAIRE"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "EMMA"
     }
    ]
   },
   {
-   "failsRequired": 1,
-   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "SARAH",
       "MOONEY",
@@ -51,23 +37,33 @@
       "EMMA",
       "CLAIRE"
      ],
+     "proposer": "CLAIRE",
+     "state": "APPROVED",
      "team": [
       "CLAIRE",
       "EMMA",
       "SARAH"
-     ],
-     "proposer": "CLAIRE"
+     ]
     }
    ],
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 3,
+   "failsRequired": 1,
    "team": [
     "CLAIRE",
     "EMMA",
     "SARAH"
-   ],
-   "teamSize": 3,
-   "state": "FAIL"
+   ]
   },
   {
+   "team": [
+    "CLAIRE",
+    "MOONEY"
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -84,25 +80,18 @@
      "proposer": "MOONEY"
     }
    ],
-   "team": [
-    "CLAIRE",
-    "MOONEY"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1,
    "teamSize": 2
   },
   {
    "state": "FAIL",
    "proposals": [
     {
+     "proposer": "SARAH",
+     "state": "REJECTED",
      "votes": [
       "ANDY",
       "SARAH"
      ],
-     "state": "REJECTED",
-     "proposer": "SARAH",
      "team": [
       "SARAH",
       "MOONEY",
@@ -110,35 +99,41 @@
      ]
     },
     {
-     "state": "APPROVED",
+     "proposer": "ANDY",
      "team": [
       "MOONEY",
       "EMMA",
       "ANDY"
      ],
+     "state": "APPROVED",
      "votes": [
       "CLAIRE",
       "SARAH",
       "MOONEY",
       "ANDY"
-     ],
-     "proposer": "ANDY"
+     ]
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 3,
    "numFails": 1,
    "team": [
     "MOONEY",
     "EMMA",
     "ANDY"
    ],
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
    "teamSize": 3,
-   "failsRequired": 1,
+   "team": [
+    "EMMA",
+    "CLAIRE",
+    "MOONEY"
+   ],
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "ANDY",
       "EMMA",
@@ -151,23 +146,28 @@
       "CLAIRE",
       "MOONEY"
      ],
-     "proposer": "EMMA",
-     "state": "APPROVED"
+     "proposer": "EMMA"
     }
    ],
-   "team": [
-    "EMMA",
-    "CLAIRE",
-    "MOONEY"
-   ],
-   "state": "FAIL",
+   "failsRequired": 1,
    "numFails": 1
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1590094217,
+  "_nanoseconds": 906000000
+ },
+ "timeFinished": {
+  "_seconds": 1590094688,
+  "_nanoseconds": 502000000
+ },
  "players": [
   {
-   "name": "EMMA",
-   "uid": "oNcAFYhJ1TZ7v93ksYEwoXXKsBm1"
+   "uid": "oNcAFYhJ1TZ7v93ksYEwoXXKsBm1",
+   "name": "EMMA"
   },
   {
    "name": "CLAIRE",
@@ -187,39 +187,10 @@
   }
  ],
  "outcome": {
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "CLAIRE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SARAH",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "name": "MOONEY",
-    "role": "MORDRED"
-   },
-   {
-    "name": "ANDY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "name": "EMMA",
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
   "votes": [
    {
-    "CLAIRE": true,
-    "EMMA": true
+    "EMMA": true,
+    "CLAIRE": true
    },
    {
     "EMMA": true,
@@ -231,16 +202,45 @@
     "MOONEY": true
    },
    {
+    "EMMA": true,
     "ANDY": true,
-    "MOONEY": false,
-    "EMMA": true
+    "MOONEY": false
    },
    {
+    "EMMA": true,
     "MOONEY": false,
-    "CLAIRE": true,
-    "EMMA": true
+    "CLAIRE": true
    }
   ],
-  "assassinated": null
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "CLAIRE"
+   },
+   {
+    "name": "SARAH",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "name": "MOONEY",
+    "role": "MORDRED",
+    "assassin": false
+   },
+   {
+    "name": "ANDY",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "EMMA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions"
  }
 }

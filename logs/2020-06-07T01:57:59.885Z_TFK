@@ -1,16 +1,20 @@
 {
  "missions": [
   {
-   "state": "SUCCESS",
    "team": [
     "KATHRYN",
     "ZAURBEK"
    ],
+   "failsRequired": 1,
+   "numFails": 0,
    "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "KATHRYN",
+      "ZAURBEK"
+     ],
      "proposer": "CLAIRE",
-     "state": "APPROVED",
      "votes": [
       "ZAURBEK",
       "KATHRYN",
@@ -18,57 +22,54 @@
       "DAVID",
       "KEVIN"
      ],
-     "team": [
-      "KATHRYN",
-      "ZAURBEK"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "numFails": 0,
-   "failsRequired": 1
+   "state": "SUCCESS"
   },
   {
-   "state": "FAIL",
+   "numFails": 1,
    "team": [
     "KATHRYN",
     "ZAURBEK",
     "DAVID"
    ],
-   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
      "proposer": "KATHRYN",
+     "state": "APPROVED",
+     "team": [
+      "KATHRYN",
+      "ZAURBEK",
+      "DAVID"
+     ],
      "votes": [
       "ZAURBEK",
       "KATHRYN",
       "CLAIRE",
       "DAVID",
       "KEVIN"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "KATHRYN",
-      "ZAURBEK",
-      "DAVID"
      ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 1
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
    "state": "SUCCESS",
-   "teamSize": 4,
-   "numFails": 0,
    "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "MILENA",
     "KEVIN",
     "ZAURBEK",
     "CLAIRE"
    ],
+   "teamSize": 4,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "DAVID",
       "KATHRYN",
@@ -76,7 +77,6 @@
       "MILENA"
      ],
      "proposer": "ZAURBEK",
-     "state": "REJECTED",
      "votes": [
       "DAVID",
       "KEVIN",
@@ -84,26 +84,31 @@
      ]
     },
     {
-     "votes": [
-      "CLAIRE",
-      "KEVIN",
-      "MILENA",
-      "ZAURBEK"
-     ],
-     "proposer": "MILENA",
      "team": [
       "MILENA",
       "KEVIN",
       "ZAURBEK",
       "CLAIRE"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "votes": [
+      "CLAIRE",
+      "KEVIN",
+      "MILENA",
+      "ZAURBEK"
+     ],
+     "proposer": "MILENA"
     }
    ]
   },
   {
    "proposals": [
     {
+     "team": [
+      "CLAIRE",
+      "KATHRYN",
+      "ZAURBEK"
+     ],
      "proposer": "KEVIN",
      "state": "APPROVED",
      "votes": [
@@ -111,49 +116,37 @@
       "KEVIN",
       "ZAURBEK",
       "KATHRYN"
-     ],
-     "team": [
-      "CLAIRE",
-      "KATHRYN",
-      "ZAURBEK"
      ]
     }
    ],
-   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "CLAIRE",
     "KATHRYN",
     "ZAURBEK"
    ],
-   "numFails": 2,
-   "failsRequired": 1,
-   "teamSize": 3
+   "state": "FAIL",
+   "numFails": 2
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "KEVIN",
-    "DAVID",
-    "MILENA",
-    "CLAIRE"
-   ],
-   "state": "FAIL",
    "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
-     "votes": [
-      "KEVIN",
-      "CLAIRE",
-      "DAVID"
-     ],
-     "proposer": "DAVID",
-     "state": "REJECTED",
      "team": [
       "DAVID",
       "KEVIN",
       "MILENA",
       "CLAIRE"
-     ]
+     ],
+     "proposer": "DAVID",
+     "votes": [
+      "KEVIN",
+      "CLAIRE",
+      "DAVID"
+     ],
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -162,29 +155,94 @@
       "KEVIN",
       "ZAURBEK"
      ],
-     "state": "APPROVED",
      "team": [
       "KEVIN",
       "DAVID",
       "MILENA",
       "CLAIRE"
      ],
+     "state": "APPROVED",
      "proposer": "CLAIRE"
     }
    ],
-   "numFails": 1
+   "numFails": 1,
+   "team": [
+    "KEVIN",
+    "DAVID",
+    "MILENA",
+    "CLAIRE"
+   ],
+   "failsRequired": 1
   }
  ],
  "timeCreated": {
   "_seconds": 1591495079,
   "_nanoseconds": 885000000
  },
- "timeFinished": {
-  "_seconds": 1591495853,
-  "_nanoseconds": 625000000
- },
- "options": {
-  "inGameLog": false
+ "outcome": {
+  "votes": [
+   {
+    "KATHRYN": true,
+    "ZAURBEK": true
+   },
+   {
+    "ZAURBEK": true,
+    "KATHRYN": false,
+    "DAVID": true
+   },
+   {
+    "ZAURBEK": true,
+    "KEVIN": true,
+    "CLAIRE": true,
+    "MILENA": true
+   },
+   {
+    "ZAURBEK": true,
+    "KATHRYN": false,
+    "CLAIRE": false
+   },
+   {
+    "CLAIRE": false,
+    "KEVIN": true,
+    "MILENA": true,
+    "DAVID": true
+   }
+  ],
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "KATHRYN"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "CLAIRE"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "DAVID"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "KEVIN"
+   },
+   {
+    "role": "MERLIN",
+    "name": "MILENA",
+    "assassin": false
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "ZAURBEK",
+    "assassin": false
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN"
  },
  "players": [
   {
@@ -204,77 +262,19 @@
    "name": "MILENA"
   },
   {
-   "uid": "65p0DKd8d4PCxZ9E2jv2WVbn4sH2",
-   "name": "KEVIN"
+   "name": "KEVIN",
+   "uid": "65p0DKd8d4PCxZ9E2jv2WVbn4sH2"
   },
   {
    "name": "DAVID",
    "uid": "i6qXiZfw8mNK1HUp6CuS8Cjgr5w2"
   }
  ],
- "outcome": {
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "KATHRYN"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "CLAIRE",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "name": "DAVID",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "KEVIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "MILENA"
-   },
-   {
-    "assassin": false,
-    "name": "ZAURBEK",
-    "role": "PERCIVAL"
-   }
-  ],
-  "votes": [
-   {
-    "ZAURBEK": true,
-    "KATHRYN": true
-   },
-   {
-    "ZAURBEK": true,
-    "DAVID": true,
-    "KATHRYN": false
-   },
-   {
-    "CLAIRE": true,
-    "MILENA": true,
-    "KEVIN": true,
-    "ZAURBEK": true
-   },
-   {
-    "KATHRYN": false,
-    "ZAURBEK": true,
-    "CLAIRE": false
-   },
-   {
-    "CLAIRE": false,
-    "MILENA": true,
-    "DAVID": true,
-    "KEVIN": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "assassinated": null
+ "timeFinished": {
+  "_seconds": 1591495853,
+  "_nanoseconds": 625000000
+ },
+ "options": {
+  "inGameLog": false
  }
 }

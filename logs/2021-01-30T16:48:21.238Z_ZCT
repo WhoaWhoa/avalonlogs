@@ -3,14 +3,62 @@
   "_seconds": 1612026105,
   "_nanoseconds": 429000000
  },
+ "players": [
+  {
+   "name": "GENIUS",
+   "uid": "50aUkbSfd0XgiZCQ5pxa0nEIuKz2"
+  },
+  {
+   "name": "CURTISSS",
+   "uid": "w1KIfZQMjrQc5sjIuIa74tCAET03"
+  },
+  {
+   "name": "PEPE",
+   "uid": "hcoByAZjLLTYSIgpxJllhzWP9Cr2"
+  },
+  {
+   "uid": "iaDlIUCSayMIDBcQbrTbAfwjkSj2",
+   "name": "VINCENT"
+  },
+  {
+   "name": "FROGGIE",
+   "uid": "sEsYhmIrsrhIgR2KHM9hmeFOLaI2"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
-  "assassinated": null,
-  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "CURTISSS": true,
+    "PEPE": true
+   },
+   {
+    "PEPE": true,
+    "CURTISSS": true,
+    "VINCENT": true
+   },
+   {
+    "PEPE": false,
+    "VINCENT": true
+   },
+   {
+    "PEPE": false,
+    "CURTISSS": true,
+    "GENIUS": true
+   },
+   {
+    "VINCENT": false,
+    "GENIUS": true,
+    "CURTISSS": true
+   }
+  ],
   "roles": [
    {
     "name": "CURTISSS",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
     "name": "PEPE",
@@ -19,56 +67,38 @@
    },
    {
     "name": "VINCENT",
-    "role": "EVIL MINION",
-    "assassin": true
+    "assassin": true,
+    "role": "EVIL MINION"
    },
    {
-    "name": "FROGGIE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "GENIUS"
+    "name": "FROGGIE",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "GENIUS",
+    "assassin": false
    }
   ],
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "PEPE": true,
-    "CURTISSS": true
-   },
-   {
-    "VINCENT": true,
-    "CURTISSS": true,
-    "PEPE": true
-   },
-   {
-    "VINCENT": true,
-    "PEPE": false
-   },
-   {
-    "PEPE": false,
-    "CURTISSS": true,
-    "GENIUS": true
-   },
-   {
-    "CURTISSS": true,
-    "VINCENT": false,
-    "GENIUS": true
-   }
-  ]
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions"
+ },
+ "timeCreated": {
+  "_seconds": 1612025301,
+  "_nanoseconds": 238000000
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
      "proposer": "CURTISSS",
-     "state": "APPROVED",
+     "team": [
+      "PEPE",
+      "CURTISSS"
+     ],
      "votes": [
       "CURTISSS",
       "PEPE",
@@ -76,24 +106,28 @@
       "GENIUS",
       "FROGGIE"
      ],
-     "team": [
-      "PEPE",
-      "CURTISSS"
-     ]
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "PEPE",
     "CURTISSS"
-   ],
-   "teamSize": 2
+   ]
   },
   {
    "failsRequired": 1,
+   "team": [
+    "PEPE",
+    "VINCENT",
+    "CURTISSS"
+   ],
+   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "PEPE",
      "votes": [
       "FROGGIE",
       "VINCENT",
@@ -103,24 +137,20 @@
       "PEPE",
       "VINCENT",
       "CURTISSS"
-     ]
+     ],
+     "proposer": "PEPE"
     }
    ],
-   "numFails": 0,
-   "teamSize": 3,
    "state": "SUCCESS",
-   "team": [
-    "PEPE",
-    "VINCENT",
-    "CURTISSS"
-   ]
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "PEPE",
     "VINCENT"
    ],
-   "teamSize": 2,
    "proposals": [
     {
      "team": [
@@ -128,24 +158,27 @@
       "VINCENT"
      ],
      "state": "APPROVED",
-     "proposer": "VINCENT",
      "votes": [
       "CURTISSS",
       "PEPE",
       "GENIUS",
       "FROGGIE",
       "VINCENT"
-     ]
+     ],
+     "proposer": "VINCENT"
     }
    ],
-   "state": "FAIL",
    "numFails": 1,
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
-   "teamSize": 3,
-   "state": "FAIL",
    "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "PEPE",
+    "CURTISSS",
+    "GENIUS"
+   ],
    "proposals": [
     {
      "proposer": "FROGGIE",
@@ -161,36 +194,25 @@
     },
     {
      "state": "APPROVED",
-     "team": [
-      "PEPE",
-      "CURTISSS",
-      "GENIUS"
-     ],
+     "proposer": "GENIUS",
      "votes": [
       "FROGGIE",
       "CURTISSS",
       "GENIUS",
       "PEPE"
      ],
-     "proposer": "GENIUS"
+     "team": [
+      "PEPE",
+      "CURTISSS",
+      "GENIUS"
+     ]
     }
    ],
    "numFails": 1,
-   "team": [
-    "PEPE",
-    "CURTISSS",
-    "GENIUS"
-   ]
+   "state": "FAIL"
   },
   {
-   "team": [
-    "GENIUS",
-    "CURTISSS",
-    "VINCENT"
-   ],
-   "state": "FAIL",
-   "teamSize": 3,
-   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
      "team": [
@@ -198,8 +220,8 @@
       "GENIUS",
       "FROGGIE"
      ],
-     "proposer": "CURTISSS",
      "state": "REJECTED",
+     "proposer": "CURTISSS",
      "votes": [
       "CURTISSS",
       "FROGGIE"
@@ -209,85 +231,63 @@
      "votes": [
       "PEPE"
      ],
-     "state": "REJECTED",
      "team": [
       "VINCENT",
       "CURTISSS",
       "PEPE"
      ],
+     "state": "REJECTED",
      "proposer": "PEPE"
     },
     {
+     "proposer": "VINCENT",
      "state": "REJECTED",
+     "votes": [
+      "GENIUS",
+      "VINCENT"
+     ],
      "team": [
       "VINCENT",
       "CURTISSS",
       "GENIUS"
-     ],
-     "proposer": "VINCENT",
-     "votes": [
-      "GENIUS",
-      "VINCENT"
      ]
     },
     {
+     "proposer": "FROGGIE",
      "state": "REJECTED",
+     "team": [
+      "FROGGIE",
+      "CURTISSS",
+      "PEPE"
+     ],
      "votes": [
       "FROGGIE",
       "PEPE"
-     ],
-     "team": [
-      "FROGGIE",
-      "CURTISSS",
-      "PEPE"
-     ],
-     "proposer": "FROGGIE"
+     ]
     },
     {
-     "proposer": "GENIUS",
-     "team": [
-      "GENIUS",
-      "CURTISSS",
-      "VINCENT"
-     ],
      "state": "APPROVED",
      "votes": [
       "CURTISSS",
       "GENIUS",
       "VINCENT"
-     ]
+     ],
+     "team": [
+      "GENIUS",
+      "CURTISSS",
+      "VINCENT"
+     ],
+     "proposer": "GENIUS"
     }
    ],
-   "numFails": 1
+   "failsRequired": 1,
+   "team": [
+    "GENIUS",
+    "CURTISSS",
+    "VINCENT"
+   ],
+   "teamSize": 3,
+   "state": "FAIL"
   }
- ],
- "players": [
-  {
-   "uid": "50aUkbSfd0XgiZCQ5pxa0nEIuKz2",
-   "name": "GENIUS"
-  },
-  {
-   "name": "CURTISSS",
-   "uid": "w1KIfZQMjrQc5sjIuIa74tCAET03"
-  },
-  {
-   "uid": "hcoByAZjLLTYSIgpxJllhzWP9Cr2",
-   "name": "PEPE"
-  },
-  {
-   "name": "VINCENT",
-   "uid": "iaDlIUCSayMIDBcQbrTbAfwjkSj2"
-  },
-  {
-   "name": "FROGGIE",
-   "uid": "sEsYhmIrsrhIgR2KHM9hmeFOLaI2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1612025301,
-  "_nanoseconds": 238000000
- },
- "options": {
-  "inGameLog": false
- }
+ ]
 }

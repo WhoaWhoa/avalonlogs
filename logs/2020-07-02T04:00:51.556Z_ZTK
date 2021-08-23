@@ -1,77 +1,60 @@
 {
- "options": {
-  "inGameLog": false
- },
  "players": [
   {
    "name": "SEAN",
    "uid": "WQADefDBh7Prh3zmvSwKuztnx6k1"
   },
   {
-   "name": "CAROLYN",
-   "uid": "77YL8JTSCaaePyCaiNEhlXGOKi03"
+   "uid": "77YL8JTSCaaePyCaiNEhlXGOKi03",
+   "name": "CAROLYN"
   },
   {
    "name": "MARTIN",
    "uid": "53uOcfwlsAOBEB13wST6QEujf052"
   },
   {
-   "name": "EST",
-   "uid": "mdoW1bC9sWgcXtzysZUqubZwlWJ2"
+   "uid": "mdoW1bC9sWgcXtzysZUqubZwlWJ2",
+   "name": "EST"
   },
   {
-   "name": "BRIAN",
-   "uid": "lDv3n2rXuefDsSk0t8ZMDtKKG9k1"
+   "uid": "lDv3n2rXuefDsSk0t8ZMDtKKG9k1",
+   "name": "BRIAN"
   },
   {
    "name": "MAGPIE",
    "uid": "0GOuaMQNqBZLOORqOZTB6Q4Uujy1"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1593663165,
+  "_nanoseconds": 331000000
+ },
  "outcome": {
+  "assassinated": "EST",
   "message": "Three successful missions",
   "state": "GOOD_WIN",
-  "votes": [
-   {
-    "EST": true,
-    "MAGPIE": true
-   },
-   {
-    "SEAN": true,
-    "EST": true,
-    "MAGPIE": true
-   },
-   {
-    "MAGPIE": true,
-    "EST": true,
-    "MARTIN": false,
-    "SEAN": true
-   },
-   {
-    "SEAN": true,
-    "EST": true,
-    "MAGPIE": true
-   }
-  ],
   "roles": [
    {
     "role": "PERCIVAL",
-    "name": "EST",
-    "assassin": false
+    "assassin": false,
+    "name": "EST"
    },
    {
-    "role": "MORDRED",
     "assassin": true,
+    "role": "MORDRED",
     "name": "BRIAN"
    },
    {
     "name": "CAROLYN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "SEAN"
    },
    {
@@ -80,98 +63,109 @@
     "role": "MERLIN"
    },
    {
-    "assassin": false,
+    "role": "MORGANA",
     "name": "MARTIN",
-    "role": "MORGANA"
+    "assassin": false
    }
   ],
-  "assassinated": "EST"
+  "votes": [
+   {
+    "MAGPIE": true,
+    "EST": true
+   },
+   {
+    "EST": true,
+    "MAGPIE": true,
+    "SEAN": true
+   },
+   {
+    "SEAN": true,
+    "MARTIN": false,
+    "EST": true,
+    "MAGPIE": true
+   },
+   {
+    "EST": true,
+    "SEAN": true,
+    "MAGPIE": true
+   }
+  ]
  },
  "missions": [
   {
-   "teamSize": 2,
-   "state": "SUCCESS",
-   "team": [
-    "MAGPIE",
-    "EST"
-   ],
    "proposals": [
     {
      "team": [
       "MAGPIE",
       "EST"
      ],
+     "proposer": "MAGPIE",
+     "state": "APPROVED",
      "votes": [
       "EST",
       "BRIAN",
       "CAROLYN",
       "MAGPIE",
       "MARTIN"
-     ],
-     "state": "APPROVED",
-     "proposer": "MAGPIE"
+     ]
     }
    ],
+   "team": [
+    "MAGPIE",
+    "EST"
+   ],
+   "numFails": 0,
+   "teamSize": 2,
    "failsRequired": 1,
-   "numFails": 0
+   "state": "SUCCESS"
   },
   {
-   "proposals": [
-    {
-     "votes": [
-      "MAGPIE",
-      "MARTIN",
-      "BRIAN",
-      "CAROLYN",
-      "SEAN"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "SEAN",
-      "EST",
-      "MAGPIE"
-     ],
-     "proposer": "SEAN"
-    }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "SEAN",
     "EST",
     "MAGPIE"
    ],
    "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "team": [
+      "SEAN",
+      "EST",
+      "MAGPIE"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "MAGPIE",
+      "MARTIN",
+      "BRIAN",
+      "CAROLYN",
+      "SEAN"
+     ],
+     "proposer": "SEAN"
+    }
+   ],
    "teamSize": 3
   },
   {
-   "team": [
-    "EST",
-    "MAGPIE",
-    "SEAN",
-    "MARTIN"
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
    "numFails": 1,
    "proposals": [
     {
-     "votes": [
-      "BRIAN",
-      "CAROLYN"
-     ],
+     "state": "REJECTED",
      "team": [
       "CAROLYN",
       "MARTIN",
       "BRIAN",
       "SEAN"
      ],
-     "state": "REJECTED",
+     "votes": [
+      "BRIAN",
+      "CAROLYN"
+     ],
      "proposer": "CAROLYN"
     },
     {
-     "proposer": "MARTIN",
-     "state": "APPROVED",
      "votes": [
       "BRIAN",
       "CAROLYN",
@@ -179,35 +173,44 @@
       "MAGPIE",
       "MARTIN"
      ],
+     "state": "APPROVED",
      "team": [
       "EST",
       "MAGPIE",
       "SEAN",
       "MARTIN"
-     ]
+     ],
+     "proposer": "MARTIN"
     }
    ],
-   "teamSize": 4
+   "failsRequired": 1,
+   "teamSize": 4,
+   "state": "FAIL",
+   "team": [
+    "EST",
+    "MAGPIE",
+    "SEAN",
+    "MARTIN"
+   ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "MAGPIE",
     "SEAN",
     "EST"
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "MAGPIE",
       "SEAN",
       "EST"
      ],
      "proposer": "EST",
+     "state": "APPROVED",
      "votes": [
       "MAGPIE",
       "EST",
@@ -216,20 +219,17 @@
       "SEAN"
      ]
     }
-   ]
+   ],
+   "teamSize": 3
   },
   {
-   "failsRequired": 1,
-   "state": "PENDING",
+   "team": [],
    "teamSize": 4,
+   "state": "PENDING",
    "proposals": [],
-   "team": []
+   "failsRequired": 1
   }
  ],
- "timeFinished": {
-  "_seconds": 1593663165,
-  "_nanoseconds": 331000000
- },
  "timeCreated": {
   "_seconds": 1593662451,
   "_nanoseconds": 556000000

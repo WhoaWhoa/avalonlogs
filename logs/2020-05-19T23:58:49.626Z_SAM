@@ -1,112 +1,17 @@
 {
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "votes": [
-   {
-    "MATTKAT": true,
-    "LILA": true
-   },
-   {
-    "STEVIE": true,
-    "MATTKAT": false,
-    "LILA": true
-   },
-   {
-    "BOSSMAN": true,
-    "MATTKAT": true,
-    "LILA": true,
-    "ZANE": true
-   },
-   {
-    "MATTKAT": false,
-    "LILA": true,
-    "BOSSMAN": true
-   },
-   {
-    "ZANE": true,
-    "LILA": true,
-    "MOLLY": false,
-    "STEVIE": true
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "MATTKAT",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "STEVIE"
-   },
-   {
-    "name": "LILA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "MOLLY"
-   },
-   {
-    "role": "MERLIN",
-    "name": "ZANE",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "BOSSMAN",
-    "role": "LOYAL FOLLOWER"
-   }
-  ]
- },
- "players": [
-  {
-   "name": "BOSSMAN",
-   "uid": "q78WRgUspVfBbMzCvgFevSnJmsn2"
-  },
-  {
-   "uid": "zdvC07a1eaPql6KBUY3UYl9Lvei2",
-   "name": "MATTKAT"
-  },
-  {
-   "uid": "3WzafTfMWAbX1WqnwotDxobvbXX2",
-   "name": "STEVIE"
-  },
-  {
-   "uid": "qkxybfPNDlbBpVMbeJZ7TMnat7x1",
-   "name": "MOLLY"
-  },
-  {
-   "uid": "EMOBttK1juWdaQm7VFCy6WhMypK2",
-   "name": "ZANE"
-  },
-  {
-   "name": "LILA",
-   "uid": "RsfGbtxhdNZy8oUKyXYmLvOBux72"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1589933695,
-  "_nanoseconds": 993000000
- },
  "missions": [
   {
-   "team": [
-    "MATTKAT",
-    "LILA"
-   ],
    "state": "SUCCESS",
    "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
+     "proposer": "MATTKAT",
+     "team": [
+      "MATTKAT",
+      "LILA"
+     ],
+     "state": "APPROVED",
      "votes": [
       "MATTKAT",
       "STEVIE",
@@ -114,17 +19,14 @@
       "MOLLY",
       "ZANE",
       "BOSSMAN"
-     ],
-     "team": [
-      "MATTKAT",
-      "LILA"
-     ],
-     "state": "APPROVED",
-     "proposer": "MATTKAT"
+     ]
     }
    ],
    "failsRequired": 1,
-   "numFails": 0
+   "team": [
+    "MATTKAT",
+    "LILA"
+   ]
   },
   {
    "team": [
@@ -132,8 +34,10 @@
     "MATTKAT",
     "LILA"
    ],
-   "teamSize": 3,
+   "state": "FAIL",
    "numFails": 1,
+   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -144,27 +48,20 @@
       "ZANE",
       "BOSSMAN"
      ],
-     "proposer": "STEVIE",
-     "state": "APPROVED",
      "team": [
       "STEVIE",
       "MATTKAT",
       "LILA"
-     ]
+     ],
+     "proposer": "STEVIE",
+     "state": "APPROVED"
     }
-   ],
-   "state": "FAIL",
-   "failsRequired": 1
+   ]
   },
   {
-   "teamSize": 4,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "votes": [
-      "MOLLY",
-      "ZANE",
-      "BOSSMAN"
-     ],
      "proposer": "MOLLY",
      "team": [
       "MATTKAT",
@@ -172,10 +69,21 @@
       "MOLLY",
       "BOSSMAN"
      ],
+     "votes": [
+      "MOLLY",
+      "ZANE",
+      "BOSSMAN"
+     ],
      "state": "REJECTED"
     },
     {
      "state": "APPROVED",
+     "team": [
+      "BOSSMAN",
+      "MATTKAT",
+      "ZANE",
+      "LILA"
+     ],
      "proposer": "ZANE",
      "votes": [
       "MATTKAT",
@@ -183,17 +91,11 @@
       "MOLLY",
       "ZANE",
       "BOSSMAN"
-     ],
-     "team": [
-      "BOSSMAN",
-      "MATTKAT",
-      "ZANE",
-      "LILA"
      ]
     }
    ],
+   "teamSize": 4,
    "numFails": 0,
-   "state": "SUCCESS",
    "team": [
     "BOSSMAN",
     "MATTKAT",
@@ -203,66 +105,73 @@
    "failsRequired": 1
   },
   {
+   "state": "FAIL",
    "failsRequired": 1,
    "team": [
     "LILA",
     "MATTKAT",
     "BOSSMAN"
    ],
-   "teamSize": 3,
-   "state": "FAIL",
-   "numFails": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "LILA",
-      "MATTKAT",
-      "BOSSMAN"
-     ],
-     "proposer": "LILA",
      "votes": [
       "MATTKAT",
       "LILA",
       "MOLLY",
       "ZANE",
       "BOSSMAN"
+     ],
+     "proposer": "LILA",
+     "team": [
+      "LILA",
+      "MATTKAT",
+      "BOSSMAN"
      ]
     }
-   ]
+   ],
+   "teamSize": 3,
+   "numFails": 1
   },
   {
-   "state": "FAIL",
+   "teamSize": 4,
    "failsRequired": 1,
+   "team": [
+    "STEVIE",
+    "MOLLY",
+    "ZANE",
+    "LILA"
+   ],
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "state": "REJECTED",
-     "votes": [
-      "BOSSMAN"
-     ],
      "proposer": "BOSSMAN",
      "team": [
       "BOSSMAN",
       "STEVIE",
       "MOLLY",
       "LILA"
+     ],
+     "votes": [
+      "BOSSMAN"
      ]
     },
     {
-     "votes": [
-      "MOLLY"
-     ],
+     "state": "REJECTED",
+     "proposer": "MATTKAT",
      "team": [
       "MATTKAT",
       "ZANE",
       "LILA",
       "BOSSMAN"
      ],
-     "proposer": "MATTKAT",
-     "state": "REJECTED"
+     "votes": [
+      "MOLLY"
+     ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "STEVIE",
       "LILA",
@@ -270,27 +179,118 @@
       "ZANE",
       "MATTKAT"
      ],
+     "state": "APPROVED",
+     "proposer": "STEVIE",
      "team": [
       "STEVIE",
       "MOLLY",
       "ZANE",
       "LILA"
-     ],
-     "proposer": "STEVIE"
+     ]
     }
-   ],
-   "teamSize": 4,
-   "numFails": 1,
-   "team": [
-    "STEVIE",
-    "MOLLY",
-    "ZANE",
-    "LILA"
    ]
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "players": [
+  {
+   "name": "BOSSMAN",
+   "uid": "q78WRgUspVfBbMzCvgFevSnJmsn2"
+  },
+  {
+   "name": "MATTKAT",
+   "uid": "zdvC07a1eaPql6KBUY3UYl9Lvei2"
+  },
+  {
+   "name": "STEVIE",
+   "uid": "3WzafTfMWAbX1WqnwotDxobvbXX2"
+  },
+  {
+   "name": "MOLLY",
+   "uid": "qkxybfPNDlbBpVMbeJZ7TMnat7x1"
+  },
+  {
+   "name": "ZANE",
+   "uid": "EMOBttK1juWdaQm7VFCy6WhMypK2"
+  },
+  {
+   "uid": "RsfGbtxhdNZy8oUKyXYmLvOBux72",
+   "name": "LILA"
   }
  ],
  "timeCreated": {
   "_seconds": 1589932729,
   "_nanoseconds": 626000000
+ },
+ "outcome": {
+  "roles": [
+   {
+    "assassin": true,
+    "name": "MATTKAT",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "STEVIE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "LILA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "MOLLY",
+    "role": "MORDRED",
+    "assassin": false
+   },
+   {
+    "name": "ZANE",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "BOSSMAN"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "MATTKAT": true,
+    "LILA": true
+   },
+   {
+    "MATTKAT": false,
+    "LILA": true,
+    "STEVIE": true
+   },
+   {
+    "LILA": true,
+    "ZANE": true,
+    "MATTKAT": true,
+    "BOSSMAN": true
+   },
+   {
+    "MATTKAT": false,
+    "BOSSMAN": true,
+    "LILA": true
+   },
+   {
+    "ZANE": true,
+    "STEVIE": true,
+    "LILA": true,
+    "MOLLY": false
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions"
+ },
+ "timeFinished": {
+  "_seconds": 1589933695,
+  "_nanoseconds": 993000000
  }
 }

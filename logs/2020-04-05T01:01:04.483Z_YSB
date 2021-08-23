@@ -1,28 +1,25 @@
 {
  "outcome": {
-  "assassinated": "BENJI",
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
   "roles": [
    {
-    "name": "EVAN",
     "assassin": false,
+    "name": "EVAN",
     "role": "LOYAL FOLLOWER"
    },
    {
+    "role": "MORDRED",
     "name": "LAUREN",
-    "assassin": false,
-    "role": "MORDRED"
+    "assassin": false
    },
    {
-    "assassin": false,
     "name": "AUDREY",
+    "assassin": false,
     "role": "MERLIN"
    },
    {
     "name": "NOELLE",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
@@ -35,66 +32,53 @@
     "name": "BENJI"
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "DAN",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": true,
+    "role": "EVIL MINION",
     "name": "CONRAR",
-    "role": "EVIL MINION"
+    "assassin": true
    },
    {
     "assassin": false,
-    "name": "NICK",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "NICK"
    }
   ],
   "votes": [
    {
-    "CONRAR": true,
     "NOELLE": true,
+    "CONRAR": true,
     "DAN": true
    },
    {
+    "CONRAR": true,
     "NOELLE": true,
-    "DAN": true,
     "LAUREN": true,
-    "CONRAR": true
+    "DAN": true
    },
    {
-    "DAN": true,
     "CONRAR": false,
-    "LAUREN": false,
-    "NOELLE": true
+    "DAN": true,
+    "NOELLE": true,
+    "LAUREN": false
    },
    {
+    "EVAN": true,
     "EMMA": true,
     "AUDREY": true,
-    "EVAN": true,
-    "NICK": true,
-    "BENJI": true
+    "BENJI": true,
+    "NICK": true
    }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1586049197,
-  "_nanoseconds": 969804000
- },
- "timeCreated": {
-  "_seconds": 1586048464,
-  "_nanoseconds": 483000000
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "BENJI",
+  "message": "Three successful missions"
  },
  "missions": [
   {
-   "teamSize": 3,
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "NOELLE",
-    "DAN",
-    "CONRAR"
-   ],
    "proposals": [
     {
      "team": [
@@ -113,12 +97,12 @@
     },
     {
      "proposer": "CONRAR",
-     "state": "APPROVED",
      "team": [
       "NOELLE",
       "DAN",
       "CONRAR"
      ],
+     "state": "APPROVED",
      "votes": [
       "EVAN",
       "LAUREN",
@@ -129,13 +113,29 @@
      ]
     }
    ],
+   "state": "SUCCESS",
+   "team": [
+    "NOELLE",
+    "DAN",
+    "CONRAR"
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
    "numFails": 0
   },
   {
+   "team": [
+    "LAUREN",
+    "CONRAR",
+    "NOELLE",
+    "DAN"
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 4,
    "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "LAUREN",
       "NOELLE",
@@ -150,28 +150,22 @@
       "CONRAR",
       "NOELLE",
       "DAN"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "team": [
-    "LAUREN",
-    "CONRAR",
-    "NOELLE",
-    "DAN"
-   ],
-   "teamSize": 4,
-   "failsRequired": 1,
-   "numFails": 0
+   ]
   },
   {
-   "team": [
-    "LAUREN",
-    "CONRAR",
-    "NOELLE",
-    "DAN"
-   ],
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "LAUREN",
+      "CONRAR",
+      "NOELLE",
+      "DAN"
+     ],
+     "proposer": "BENJI",
      "votes": [
       "LAUREN",
       "NOELLE",
@@ -180,34 +174,27 @@
       "DAN",
       "CONRAR",
       "NICK"
-     ],
-     "team": [
-      "LAUREN",
-      "CONRAR",
-      "NOELLE",
-      "DAN"
-     ],
-     "proposer": "BENJI",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "FAIL",
+   "failsRequired": 1,
    "numFails": 2,
-   "teamSize": 4,
-   "failsRequired": 1
+   "state": "FAIL",
+   "team": [
+    "LAUREN",
+    "CONRAR",
+    "NOELLE",
+    "DAN"
+   ],
+   "teamSize": 4
   },
   {
-   "team": [
-    "BENJI",
-    "NICK",
-    "EVAN",
-    "AUDREY",
-    "EMMA"
-   ],
-   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 5,
    "failsRequired": 2,
    "proposals": [
     {
+     "proposer": "NICK",
      "votes": [
       "EMMA",
       "BENJI",
@@ -219,7 +206,6 @@
       "NOELLE"
      ],
      "state": "APPROVED",
-     "proposer": "NICK",
      "team": [
       "BENJI",
       "NICK",
@@ -229,53 +215,67 @@
      ]
     }
    ],
-   "state": "SUCCESS",
-   "teamSize": 5
+   "team": [
+    "BENJI",
+    "NICK",
+    "EVAN",
+    "AUDREY",
+    "EMMA"
+   ],
+   "numFails": 0
   },
   {
-   "state": "PENDING",
-   "team": [],
-   "failsRequired": 1,
+   "teamSize": 5,
    "proposals": [],
-   "teamSize": 5
+   "state": "PENDING",
+   "failsRequired": 1,
+   "team": []
   }
  ],
+ "timeFinished": {
+  "_seconds": 1586049197,
+  "_nanoseconds": 969804000
+ },
  "players": [
   {
-   "uid": "OCypTTTRUrMI0AsRtVujFqHTCpI3",
-   "name": "DAN"
+   "name": "DAN",
+   "uid": "OCypTTTRUrMI0AsRtVujFqHTCpI3"
   },
   {
-   "name": "EMMA",
-   "uid": "qIQVrIuhsJc5Wz1m7frwlEBFxvK2"
+   "uid": "qIQVrIuhsJc5Wz1m7frwlEBFxvK2",
+   "name": "EMMA"
   },
   {
    "name": "CONRAR",
    "uid": "p2lTmjDsLxeXEtZYl5pupB85fUl1"
   },
   {
-   "name": "LAUREN",
-   "uid": "XaFyNO0EIWdq5qKw0HG0yhUEEWl1"
+   "uid": "XaFyNO0EIWdq5qKw0HG0yhUEEWl1",
+   "name": "LAUREN"
   },
   {
    "name": "BENJI",
    "uid": "X62C93H6nRWGv3s4cDyjC29hzck2"
   },
   {
-   "uid": "aIoMjrmGtEMpWdH4ILjrE8DiVxv1",
-   "name": "NICK"
+   "name": "NICK",
+   "uid": "aIoMjrmGtEMpWdH4ILjrE8DiVxv1"
   },
   {
-   "uid": "vaixXJush0XOXielDpYoC4hRyCe2",
-   "name": "EVAN"
+   "name": "EVAN",
+   "uid": "vaixXJush0XOXielDpYoC4hRyCe2"
   },
   {
    "uid": "VrdDZPfytdOb4rdIqYReAhwkOdj1",
    "name": "NOELLE"
   },
   {
-   "uid": "6CpDpa5bc5VWkvMhXjSBauzqtHg2",
-   "name": "AUDREY"
+   "name": "AUDREY",
+   "uid": "6CpDpa5bc5VWkvMhXjSBauzqtHg2"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1586048464,
+  "_nanoseconds": 483000000
+ }
 }

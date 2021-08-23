@@ -1,17 +1,95 @@
 {
+ "outcome": {
+  "roles": [
+   {
+    "name": "TIM",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "THOMAS"
+   },
+   {
+    "assassin": false,
+    "name": "BERT",
+    "role": "OBERON"
+   },
+   {
+    "assassin": false,
+    "name": "DAVID",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "name": "MICHELLE",
+    "role": "MORDRED"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "CONNIE",
+    "assassin": false
+   },
+   {
+    "name": "DIANA",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "CHRIS"
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "THOMAS",
+  "votes": [
+   {
+    "THOMAS": true,
+    "DIANA": true,
+    "DAVID": true
+   },
+   {
+    "DAVID": true,
+    "THOMAS": true,
+    "DIANA": true,
+    "CHRIS": true
+   },
+   {
+    "DAVID": true,
+    "THOMAS": true,
+    "DIANA": false,
+    "CHRIS": true
+   },
+   {
+    "MICHELLE": false,
+    "CONNIE": true,
+    "THOMAS": true,
+    "DAVID": true,
+    "CHRIS": true
+   }
+  ],
+  "message": "Three successful missions"
+ },
  "missions": [
   {
-   "state": "SUCCESS",
-   "numFails": 0,
    "team": [
     "DIANA",
     "DAVID",
     "THOMAS"
    ],
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "DIANA",
      "state": "APPROVED",
+     "team": [
+      "DIANA",
+      "DAVID",
+      "THOMAS"
+     ],
+     "proposer": "DIANA",
      "votes": [
       "DAVID",
       "MICHELLE",
@@ -19,29 +97,27 @@
       "DIANA",
       "TIM",
       "THOMAS"
-     ],
-     "team": [
-      "DIANA",
-      "DAVID",
-      "THOMAS"
      ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
+   "teamSize": 4,
    "state": "SUCCESS",
+   "team": [
+    "DAVID",
+    "DIANA",
+    "THOMAS",
+    "CHRIS"
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "DAVID",
-      "DIANA",
-      "THOMAS",
-      "CHRIS"
-     ],
-     "proposer": "DAVID",
      "state": "APPROVED",
+     "proposer": "DAVID",
      "votes": [
       "CHRIS",
       "TIM",
@@ -49,38 +125,19 @@
       "DAVID",
       "MICHELLE",
       "DIANA"
+     ],
+     "team": [
+      "DAVID",
+      "DIANA",
+      "THOMAS",
+      "CHRIS"
      ]
     }
-   ],
-   "numFails": 0,
-   "teamSize": 4,
-   "failsRequired": 1,
-   "team": [
-    "DAVID",
-    "DIANA",
-    "THOMAS",
-    "CHRIS"
    ]
   },
   {
-   "team": [
-    "DIANA",
-    "CHRIS",
-    "THOMAS",
-    "DAVID"
-   ],
-   "state": "FAIL",
-   "numFails": 1,
-   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "DIANA",
-      "CHRIS",
-      "THOMAS",
-      "DAVID"
-     ],
-     "proposer": "CHRIS",
      "state": "APPROVED",
      "votes": [
       "MICHELLE",
@@ -89,23 +146,28 @@
       "TIM",
       "THOMAS",
       "DAVID"
+     ],
+     "proposer": "CHRIS",
+     "team": [
+      "DIANA",
+      "CHRIS",
+      "THOMAS",
+      "DAVID"
      ]
     }
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "DIANA",
+    "CHRIS",
+    "THOMAS",
+    "DAVID"
+   ],
+   "teamSize": 4
   },
   {
-   "state": "SUCCESS",
-   "teamSize": 5,
-   "numFails": 1,
-   "failsRequired": 2,
-   "team": [
-    "THOMAS",
-    "MICHELLE",
-    "CHRIS",
-    "DAVID",
-    "CONNIE"
-   ],
    "proposals": [
     {
      "state": "REJECTED",
@@ -122,7 +184,6 @@
      ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "MICHELLE",
       "CONNIE",
@@ -132,105 +193,44 @@
       "THOMAS",
       "DAVID"
      ],
-     "proposer": "THOMAS",
      "team": [
       "THOMAS",
       "MICHELLE",
       "CHRIS",
       "DAVID",
       "CONNIE"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "THOMAS"
     }
-   ]
+   ],
+   "numFails": 1,
+   "teamSize": 5,
+   "team": [
+    "THOMAS",
+    "MICHELLE",
+    "CHRIS",
+    "DAVID",
+    "CONNIE"
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 2
   },
   {
    "team": [],
-   "state": "PENDING",
    "teamSize": 5,
    "proposals": [],
+   "state": "PENDING",
    "failsRequired": 1
   }
  ],
- "timeCreated": {
-  "_seconds": 1585875979,
-  "_nanoseconds": 343000000
- },
  "timeFinished": {
   "_seconds": 1585876520,
   "_nanoseconds": 379722000
  },
- "outcome": {
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "TIM"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "THOMAS"
-   },
-   {
-    "name": "BERT",
-    "role": "OBERON",
-    "assassin": false
-   },
-   {
-    "name": "DAVID",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "assassin": true,
-    "name": "MICHELLE"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "CONNIE",
-    "assassin": false
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "DIANA"
-   },
-   {
-    "assassin": false,
-    "name": "CHRIS",
-    "role": "MERLIN"
-   }
-  ],
-  "assassinated": "THOMAS",
-  "votes": [
-   {
-    "DAVID": true,
-    "DIANA": true,
-    "THOMAS": true
-   },
-   {
-    "CHRIS": true,
-    "DAVID": true,
-    "DIANA": true,
-    "THOMAS": true
-   },
-   {
-    "THOMAS": true,
-    "DAVID": true,
-    "CHRIS": true,
-    "DIANA": false
-   },
-   {
-    "THOMAS": true,
-    "CONNIE": true,
-    "MICHELLE": false,
-    "CHRIS": true,
-    "DAVID": true
-   }
-  ],
-  "message": "Three successful missions"
+ "timeCreated": {
+  "_seconds": 1585875979,
+  "_nanoseconds": 343000000
  },
  "players": [
   {
@@ -238,16 +238,16 @@
    "uid": "SqiaA6X0CjVOxMDPmyjFvcsayX03"
   },
   {
-   "name": "DAVID",
-   "uid": "UQJFUagMgcQ2aPTmCXk2tN18Gp73"
+   "uid": "UQJFUagMgcQ2aPTmCXk2tN18Gp73",
+   "name": "DAVID"
   },
   {
-   "name": "CHRIS",
-   "uid": "WW9UDSJTWjcv5IEHdIzn4W3pC0F3"
+   "uid": "WW9UDSJTWjcv5IEHdIzn4W3pC0F3",
+   "name": "CHRIS"
   },
   {
-   "uid": "NRa4Y5BvIRUu0NJtNcgsbihHeRV2",
-   "name": "MICHELLE"
+   "name": "MICHELLE",
+   "uid": "NRa4Y5BvIRUu0NJtNcgsbihHeRV2"
   },
   {
    "uid": "U3BfWb5BfHQ0FbnqlzsGEnbrg5p2",
@@ -258,8 +258,8 @@
    "uid": "EZ6man5jV1Ws1fTtrxeAIajz8ky2"
   },
   {
-   "uid": "nDW0mIuS9idaEFCyUTBMi9vFZC22",
-   "name": "CONNIE"
+   "name": "CONNIE",
+   "uid": "nDW0mIuS9idaEFCyUTBMi9vFZC22"
   },
   {
    "uid": "eCKmhiK0TkYGWHSphHGtFfli6Wt2",

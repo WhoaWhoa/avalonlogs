@@ -1,96 +1,17 @@
 {
- "outcome": {
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "ANIKAH": true,
-    "MAHIR": false,
-    "SMITA": false
-   },
-   {
-    "RAIYAN": true,
-    "ANIKAH": true,
-    "GOATMAN": true,
-    "SAMI": true
-   },
-   {
-    "ANIKAH": true,
-    "SAMI": true,
-    "RAIYAN": true,
-    "YAMIN": true
-   },
-   {
-    "SAMI": true,
-    "MAHIR": true,
-    "ANIKAH": true,
-    "MNR": true,
-    "YAMIN": true
-   }
-  ],
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "name": "MNR",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SAMI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SMITA",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "GOATMAN"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "MAHIR",
-    "assassin": false
-   },
-   {
-    "name": "RAIYAN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "YAMIN"
-   },
-   {
-    "assassin": false,
-    "name": "ANIKAH",
-    "role": "MERLIN"
-   }
-  ],
-  "assassinated": "MAHIR"
- },
  "missions": [
   {
+   "teamSize": 3,
    "state": "FAIL",
    "numFails": 2,
-   "failsRequired": 1,
-   "team": [
-    "ANIKAH",
-    "MAHIR",
-    "SMITA"
-   ],
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "ANIKAH",
      "team": [
       "ANIKAH",
       "MAHIR",
       "SMITA"
      ],
+     "proposer": "ANIKAH",
      "state": "APPROVED",
      "votes": [
       "MAHIR",
@@ -101,13 +22,33 @@
       "SMITA"
      ]
     }
+   ],
+   "failsRequired": 1,
+   "team": [
+    "ANIKAH",
+    "MAHIR",
+    "SMITA"
    ]
   },
   {
+   "team": [
+    "RAIYAN",
+    "GOATMAN",
+    "ANIKAH",
+    "SAMI"
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "SMITA",
+     "team": [
+      "RAIYAN",
+      "GOATMAN",
+      "ANIKAH",
+      "SAMI"
+     ],
      "votes": [
       "MNR",
       "SAMI",
@@ -116,29 +57,14 @@
       "RAIYAN",
       "YAMIN"
      ],
-     "team": [
-      "RAIYAN",
-      "GOATMAN",
-      "ANIKAH",
-      "SAMI"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 4,
-   "team": [
-    "RAIYAN",
-    "GOATMAN",
-    "ANIKAH",
-    "SAMI"
-   ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS"
+   "numFails": 0
   },
   {
-   "state": "SUCCESS",
-   "numFails": 0,
    "failsRequired": 1,
+   "teamSize": 4,
    "team": [
     "ANIKAH",
     "RAIYAN",
@@ -147,8 +73,13 @@
    ],
    "proposals": [
     {
-     "proposer": "MNR",
      "state": "APPROVED",
+     "team": [
+      "ANIKAH",
+      "RAIYAN",
+      "SAMI",
+      "YAMIN"
+     ],
      "votes": [
       "MNR",
       "SAMI",
@@ -157,21 +88,25 @@
       "RAIYAN",
       "YAMIN"
      ],
-     "team": [
-      "ANIKAH",
-      "RAIYAN",
-      "SAMI",
-      "YAMIN"
-     ]
+     "proposer": "MNR"
     }
    ],
-   "teamSize": 4
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
+   "numFails": 0,
+   "team": [
+    "MNR",
+    "ANIKAH",
+    "SAMI",
+    "YAMIN",
+    "MAHIR"
+   ],
+   "failsRequired": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "MAHIR",
      "votes": [
       "MNR",
       "SAMI",
@@ -187,27 +122,19 @@
       "SAMI",
       "YAMIN",
       "MAHIR"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "MAHIR"
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "team": [
-    "MNR",
-    "ANIKAH",
-    "SAMI",
-    "YAMIN",
-    "MAHIR"
-   ],
-   "numFails": 0,
    "teamSize": 5
   },
   {
    "teamSize": 5,
    "state": "PENDING",
-   "proposals": [],
+   "team": [],
    "failsRequired": 1,
-   "team": []
+   "proposals": []
   }
  ],
  "options": {
@@ -217,14 +144,91 @@
   "_seconds": 1590294362,
   "_nanoseconds": 134000000
  },
+ "outcome": {
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MNR",
+    "assassin": false
+   },
+   {
+    "name": "SAMI",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "SMITA",
+    "role": "MORGANA"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "GOATMAN",
+    "assassin": false
+   },
+   {
+    "name": "MAHIR",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "RAIYAN",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "YAMIN"
+   },
+   {
+    "assassin": false,
+    "name": "ANIKAH",
+    "role": "MERLIN"
+   }
+  ],
+  "votes": [
+   {
+    "ANIKAH": true,
+    "MAHIR": false,
+    "SMITA": false
+   },
+   {
+    "GOATMAN": true,
+    "RAIYAN": true,
+    "ANIKAH": true,
+    "SAMI": true
+   },
+   {
+    "YAMIN": true,
+    "ANIKAH": true,
+    "RAIYAN": true,
+    "SAMI": true
+   },
+   {
+    "YAMIN": true,
+    "SAMI": true,
+    "MAHIR": true,
+    "ANIKAH": true,
+    "MNR": true
+   }
+  ],
+  "assassinated": "MAHIR"
+ },
+ "timeFinished": {
+  "_seconds": 1590295134,
+  "_nanoseconds": 732000000
+ },
  "players": [
   {
    "uid": "ZfYkRxOjOueo9q2aiXdkO1Z47QI2",
    "name": "YAMIN"
   },
   {
-   "name": "SAMI",
-   "uid": "a9OvpmGcaBf7HoeckyMTs7jkN2T2"
+   "uid": "a9OvpmGcaBf7HoeckyMTs7jkN2T2",
+   "name": "SAMI"
   },
   {
    "name": "RAIYAN",
@@ -235,8 +239,8 @@
    "uid": "jJfenBY0uDWCfNPmbKTZhk57gvd2"
   },
   {
-   "name": "SMITA",
-   "uid": "i6YPjBp2mPQeKMlrIacyHZzAUWx1"
+   "uid": "i6YPjBp2mPQeKMlrIacyHZzAUWx1",
+   "name": "SMITA"
   },
   {
    "name": "MNR",
@@ -250,9 +254,5 @@
    "name": "GOATMAN",
    "uid": "nndJQWJUs0ZM7phFfyKMLzbEbG53"
   }
- ],
- "timeFinished": {
-  "_seconds": 1590295134,
-  "_nanoseconds": 732000000
- }
+ ]
 }

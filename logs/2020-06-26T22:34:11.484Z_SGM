@@ -8,14 +8,15 @@
  },
  "missions": [
   {
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "LOUIS",
-     "state": "APPROVED",
      "team": [
       "LOUIS",
       "YANNY"
      ],
+     "proposer": "LOUIS",
      "votes": [
       "EVAN",
       "JESSICA",
@@ -24,63 +25,53 @@
       "LOUIS",
       "JAY",
       "KORITKO"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS",
-   "teamSize": 2,
    "team": [
     "LOUIS",
     "YANNY"
-   ]
+   ],
+   "teamSize": 2,
+   "numFails": 0
   },
   {
    "numFails": 1,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "YANNY",
-      "LOUIS",
-      "JOHN"
-     ],
-     "proposer": "JOHN",
-     "votes": [
-      "KORITKO",
-      "EVAN",
-      "JESSICA",
-      "JOHN",
-      "YANNY",
-      "LOUIS",
-      "JAY"
-     ]
-    }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "team": [
     "YANNY",
     "LOUIS",
     "JOHN"
    ],
-   "state": "FAIL"
-  },
-  {
-   "team": [
-    "KORITKO",
-    "JOHN",
-    "JAY"
-   ],
-   "numFails": 1,
    "teamSize": 3,
-   "failsRequired": 1,
-   "state": "FAIL",
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "KORITKO",
+     "votes": [
+      "KORITKO",
+      "EVAN",
+      "JESSICA",
+      "JOHN",
+      "YANNY",
+      "LOUIS",
+      "JAY"
+     ],
+     "team": [
+      "YANNY",
+      "LOUIS",
+      "JOHN"
+     ],
+     "proposer": "JOHN"
+    }
+   ],
+   "state": "FAIL",
+   "failsRequired": 1
+  },
+  {
+   "teamSize": 3,
+   "failsRequired": 1,
+   "proposals": [
+    {
      "votes": [
       "KORITKO",
       "EVAN",
@@ -89,33 +80,33 @@
       "LOUIS",
       "JAY"
      ],
+     "proposer": "KORITKO",
+     "state": "APPROVED",
      "team": [
       "KORITKO",
       "JOHN",
       "JAY"
      ]
     }
-   ]
+   ],
+   "state": "FAIL",
+   "team": [
+    "KORITKO",
+    "JOHN",
+    "JAY"
+   ],
+   "numFails": 1
   },
   {
-   "failsRequired": 2,
-   "team": [
-    "JAY",
-    "JOHN",
-    "EVAN",
-    "LOUIS"
-   ],
-   "teamSize": 4,
-   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "JAY",
      "team": [
       "JAY",
       "JOHN",
       "EVAN",
       "LOUIS"
      ],
-     "proposer": "JAY",
      "state": "APPROVED",
      "votes": [
       "JESSICA",
@@ -125,24 +116,97 @@
      ]
     }
    ],
-   "numFails": 2
+   "teamSize": 4,
+   "failsRequired": 2,
+   "numFails": 2,
+   "state": "FAIL",
+   "team": [
+    "JAY",
+    "JOHN",
+    "EVAN",
+    "LOUIS"
+   ]
   },
   {
-   "teamSize": 4,
-   "failsRequired": 1,
    "state": "PENDING",
+   "team": [],
+   "teamSize": 4,
    "proposals": [],
-   "team": []
+   "failsRequired": 1
   }
  ],
  "timeFinished": {
   "_seconds": 1593211387,
   "_nanoseconds": 407000000
  },
+ "outcome": {
+  "roles": [
+   {
+    "name": "LOUIS",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "JAY",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "KORITKO"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "EVAN",
+    "assassin": false
+   },
+   {
+    "name": "JESSICA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "JOHN"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "YANNY"
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "YANNY": true,
+    "LOUIS": true
+   },
+   {
+    "JOHN": true,
+    "YANNY": false,
+    "LOUIS": true
+   },
+   {
+    "JOHN": true,
+    "JAY": false,
+    "KORITKO": true
+   },
+   {
+    "EVAN": false,
+    "LOUIS": true,
+    "JOHN": true,
+    "JAY": false
+   }
+  ],
+  "assassinated": null
+ },
  "players": [
   {
-   "uid": "dGxWpetP0XNBvHhWS0nICIXeK4Y2",
-   "name": "EVAN"
+   "name": "EVAN",
+   "uid": "dGxWpetP0XNBvHhWS0nICIXeK4Y2"
   },
   {
    "uid": "r8gOHrrtdlbojdqbzaggtsuIAgY2",
@@ -157,80 +221,16 @@
    "uid": "FxNVnPh3OQhH9a24DbpHwR8uJLU2"
   },
   {
-   "uid": "sbo25FQlZGTCEaJOSBGl3evpqCn1",
-   "name": "JOHN"
+   "name": "JOHN",
+   "uid": "sbo25FQlZGTCEaJOSBGl3evpqCn1"
   },
   {
    "uid": "gDWnsaaToTO3W2wuBJnyv2xC70k1",
    "name": "KORITKO"
   },
   {
-   "uid": "SdWHqhHFvOgsxfNEoMR5CadQJHH2",
-   "name": "JAY"
+   "name": "JAY",
+   "uid": "SdWHqhHFvOgsxfNEoMR5CadQJHH2"
   }
- ],
- "outcome": {
-  "assassinated": null,
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "LOUIS"
-   },
-   {
-    "name": "JAY",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "name": "KORITKO",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "EVAN",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JESSICA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JOHN"
-   },
-   {
-    "name": "YANNY",
-    "assassin": false,
-    "role": "EVIL MINION"
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "YANNY": true,
-    "LOUIS": true
-   },
-   {
-    "LOUIS": true,
-    "YANNY": false,
-    "JOHN": true
-   },
-   {
-    "KORITKO": true,
-    "JOHN": true,
-    "JAY": false
-   },
-   {
-    "LOUIS": true,
-    "EVAN": false,
-    "JOHN": true,
-    "JAY": false
-   }
-  ]
- }
+ ]
 }

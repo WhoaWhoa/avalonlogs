@@ -1,40 +1,14 @@
 {
+ "timeCreated": {
+  "_seconds": 1585967503,
+  "_nanoseconds": 831000000
+ },
  "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "JUSTIN": true,
-    "EUNICE": true
-   },
-   {
-    "JUSTIN": true,
-    "EUNICE": false,
-    "PRJ": true
-   },
-   {
-    "JUSTIN": true,
-    "EUNICE": false,
-    "CARBON": true
-   },
-   {
-    "EUNICE": false,
-    "PRJ": true,
-    "MICHAEL": true,
-    "HAMRY": true
-   },
-   {
-    "HAMRY": true,
-    "CARBON": true,
-    "EUNICE": false,
-    "ZZZ": false
-   }
-  ],
   "roles": [
    {
+    "role": "MORGANA",
     "name": "MICHAEL",
-    "assassin": false,
-    "role": "MORGANA"
+    "assassin": false
    },
    {
     "role": "LOYAL FOLLOWER",
@@ -43,13 +17,13 @@
    },
    {
     "assassin": true,
-    "name": "ZZZ",
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "ZZZ"
    },
    {
-    "assassin": false,
     "name": "CARBON",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "assassin": false,
@@ -58,32 +32,51 @@
    },
    {
     "role": "MERLIN",
-    "assassin": false,
-    "name": "PRJ"
+    "name": "PRJ",
+    "assassin": false
    },
    {
+    "name": "HAMRY",
     "assassin": false,
-    "role": "PERCIVAL",
-    "name": "HAMRY"
+    "role": "PERCIVAL"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "EUNICE": true,
+    "JUSTIN": true
+   },
+   {
+    "PRJ": true,
+    "EUNICE": false,
+    "JUSTIN": true
+   },
+   {
+    "EUNICE": false,
+    "JUSTIN": true,
+    "CARBON": true
+   },
+   {
+    "MICHAEL": true,
+    "HAMRY": true,
+    "PRJ": true,
+    "EUNICE": false
+   },
+   {
+    "HAMRY": true,
+    "EUNICE": false,
+    "ZZZ": false,
+    "CARBON": true
    }
   ],
   "assassinated": null
  },
  "missions": [
   {
-   "team": [
-    "JUSTIN",
-    "EUNICE"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "JUSTIN",
-      "EUNICE"
-     ],
      "proposer": "EUNICE",
      "votes": [
       "MICHAEL",
@@ -93,30 +86,35 @@
       "EUNICE",
       "PRJ",
       "HAMRY"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "JUSTIN",
+      "EUNICE"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "JUSTIN",
+    "EUNICE"
+   ],
+   "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
    "numFails": 1,
+   "teamSize": 3,
    "team": [
     "JUSTIN",
     "EUNICE",
     "PRJ"
    ],
-   "teamSize": 3,
-   "state": "FAIL",
    "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "JUSTIN",
-      "EUNICE",
-      "PRJ"
-     ],
      "votes": [
       "MICHAEL",
       "JUSTIN",
@@ -125,18 +123,26 @@
       "PRJ",
       "HAMRY"
      ],
-     "proposer": "JUSTIN"
+     "team": [
+      "JUSTIN",
+      "EUNICE",
+      "PRJ"
+     ],
+     "proposer": "JUSTIN",
+     "state": "APPROVED"
     }
    ]
   },
   {
+   "teamSize": 3,
+   "numFails": 1,
    "failsRequired": 1,
-   "state": "FAIL",
    "team": [
     "JUSTIN",
     "CARBON",
     "EUNICE"
    ],
+   "state": "FAIL",
    "proposals": [
     {
      "team": [
@@ -145,6 +151,7 @@
       "EUNICE"
      ],
      "state": "APPROVED",
+     "proposer": "CARBON",
      "votes": [
       "CARBON",
       "EUNICE",
@@ -152,67 +159,54 @@
       "MICHAEL",
       "JUSTIN",
       "ZZZ"
-     ],
-     "proposer": "CARBON"
+     ]
     }
-   ],
-   "numFails": 1,
-   "teamSize": 3
+   ]
   },
   {
-   "state": "SUCCESS",
-   "numFails": 1,
-   "teamSize": 4,
-   "failsRequired": 2,
    "team": [
     "MICHAEL",
     "HAMRY",
     "PRJ",
     "EUNICE"
    ],
+   "numFails": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "team": [
+      "MICHAEL",
+      "HAMRY",
+      "PRJ",
+      "EUNICE"
+     ],
+     "proposer": "HAMRY",
      "state": "APPROVED",
      "votes": [
       "CARBON",
       "EUNICE",
       "HAMRY",
       "MICHAEL"
-     ],
-     "proposer": "HAMRY",
-     "team": [
-      "MICHAEL",
-      "HAMRY",
-      "PRJ",
-      "EUNICE"
      ]
     }
-   ]
+   ],
+   "failsRequired": 2,
+   "teamSize": 4
   },
   {
-   "team": [
-    "HAMRY",
-    "ZZZ",
-    "CARBON",
-    "EUNICE"
-   ],
-   "teamSize": 4,
-   "failsRequired": 1,
-   "state": "FAIL",
-   "numFails": 2,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "PRJ",
       "JUSTIN",
       "CARBON",
       "HAMRY"
      ],
+     "proposer": "PRJ",
      "votes": [
       "PRJ"
-     ],
-     "state": "REJECTED",
-     "proposer": "PRJ"
+     ]
     },
     {
      "team": [
@@ -221,27 +215,28 @@
       "JUSTIN",
       "CARBON"
      ],
+     "proposer": "MICHAEL",
+     "state": "REJECTED",
      "votes": [
       "MICHAEL"
-     ],
-     "proposer": "MICHAEL",
-     "state": "REJECTED"
+     ]
     },
     {
-     "votes": [
-      "ZZZ",
-      "CARBON"
-     ],
      "team": [
       "PRJ",
       "HAMRY",
       "CARBON",
       "ZZZ"
      ],
+     "state": "REJECTED",
      "proposer": "ZZZ",
-     "state": "REJECTED"
+     "votes": [
+      "ZZZ",
+      "CARBON"
+     ]
     },
     {
+     "proposer": "EUNICE",
      "votes": [
       "CARBON",
       "EUNICE",
@@ -254,46 +249,51 @@
       "ZZZ",
       "CARBON",
       "EUNICE"
-     ],
-     "proposer": "EUNICE"
+     ]
     }
-   ]
+   ],
+   "state": "FAIL",
+   "numFails": 2,
+   "failsRequired": 1,
+   "team": [
+    "HAMRY",
+    "ZZZ",
+    "CARBON",
+    "EUNICE"
+   ],
+   "teamSize": 4
   }
  ],
  "players": [
   {
-   "uid": "gX0qMBV9PoPXFV6RxzkAScsVnvi1",
-   "name": "JUSTIN"
+   "name": "JUSTIN",
+   "uid": "gX0qMBV9PoPXFV6RxzkAScsVnvi1"
   },
   {
-   "uid": "n9TyNxK9NtYDdJ8ChiK0dbfc5kv1",
-   "name": "CARBON"
+   "name": "CARBON",
+   "uid": "n9TyNxK9NtYDdJ8ChiK0dbfc5kv1"
   },
   {
-   "name": "HAMRY",
-   "uid": "1omxh2A7N7edZaqhuux9XeBaqEg2"
+   "uid": "1omxh2A7N7edZaqhuux9XeBaqEg2",
+   "name": "HAMRY"
   },
   {
-   "uid": "P1FSbeqcwIPBrmOC3h2GtQ1i0H43",
-   "name": "PRJ"
+   "name": "PRJ",
+   "uid": "P1FSbeqcwIPBrmOC3h2GtQ1i0H43"
   },
   {
-   "uid": "5Zgy589AxyckV0c5lQL0TSvUekT2",
-   "name": "MICHAEL"
+   "name": "MICHAEL",
+   "uid": "5Zgy589AxyckV0c5lQL0TSvUekT2"
   },
   {
    "name": "ZZZ",
    "uid": "LCQ1Y2NGCeM5qrONxWQsKwXiWLw1"
   },
   {
-   "uid": "bCTYAa6xbvepWwb9L9qRjViMzQI2",
-   "name": "EUNICE"
+   "name": "EUNICE",
+   "uid": "bCTYAa6xbvepWwb9L9qRjViMzQI2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1585967503,
-  "_nanoseconds": 831000000
- },
  "timeFinished": {
   "_seconds": 1585969030,
   "_nanoseconds": 7624000

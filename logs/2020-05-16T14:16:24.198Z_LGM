@@ -7,61 +7,39 @@
   "_seconds": 1589639312,
   "_nanoseconds": 721000000
  },
- "players": [
-  {
-   "name": "XINYI",
-   "uid": "GsarUOunw1aPorziBGGviN8w3Sf2"
-  },
-  {
-   "name": "YONGYING",
-   "uid": "O8nPJwq35xXTvRbaz0U9vc3jHD72"
-  },
-  {
-   "uid": "zNOaHGIgj4MJ86fMDod8MkvsSgv1",
-   "name": "MILO"
-  },
-  {
-   "name": "RICE",
-   "uid": "KHd7f1J5sNToZhvW1LJjVpVRL0v1"
-  },
-  {
-   "name": "WENWENZZZ",
-   "uid": "YwxOwcgzEyNYmfcV0d3PJxiimQ03"
-  }
- ],
  "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
   "assassinated": "XINYI",
   "votes": [
-   {
-    "RICE": true,
-    "YONGYING": true
-   },
-   {
-    "XINYI": true,
-    "WENWENZZZ": false,
-    "MILO": true
-   },
    {
     "YONGYING": true,
     "RICE": true
    },
    {
+    "WENWENZZZ": false,
     "XINYI": true,
-    "RICE": true,
-    "YONGYING": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "YONGYING",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "MILO": true
    },
    {
-    "name": "MILO",
+    "RICE": true,
+    "YONGYING": true
+   },
+   {
+    "YONGYING": true,
+    "RICE": true,
+    "XINYI": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "YONGYING"
+   },
+   {
     "assassin": true,
+    "name": "MILO",
     "role": "EVIL MINION"
    },
    {
@@ -70,23 +48,24 @@
     "role": "PERCIVAL"
    },
    {
-    "assassin": false,
+    "name": "XINYI",
     "role": "MERLIN",
-    "name": "XINYI"
+    "assassin": false
    },
    {
-    "assassin": false,
     "name": "WENWENZZZ",
+    "assassin": false,
     "role": "MORGANA"
    }
   ]
  },
- "options": {
-  "inGameLog": false
- },
  "missions": [
   {
-   "teamSize": 2,
+   "team": [
+    "RICE",
+    "YONGYING"
+   ],
+   "state": "SUCCESS",
    "proposals": [
     {
      "votes": [
@@ -97,100 +76,93 @@
       "MILO"
      ],
      "proposer": "YONGYING",
+     "state": "APPROVED",
      "team": [
       "RICE",
       "YONGYING"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "SUCCESS",
    "failsRequired": 1,
    "numFails": 0,
-   "team": [
-    "RICE",
-    "YONGYING"
-   ]
+   "teamSize": 2
   },
   {
-   "state": "FAIL",
    "teamSize": 3,
    "team": [
     "XINYI",
     "WENWENZZZ",
     "MILO"
    ],
+   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "XINYI",
-      "WENWENZZZ",
-      "MILO"
-     ],
      "votes": [
       "YONGYING",
       "MILO",
       "XINYI"
      ],
-     "proposer": "MILO"
+     "proposer": "MILO",
+     "state": "APPROVED",
+     "team": [
+      "XINYI",
+      "WENWENZZZ",
+      "MILO"
+     ]
     }
    ],
-   "numFails": 1,
-   "failsRequired": 1
+   "state": "FAIL"
   },
   {
-   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 0,
    "team": [
     "YONGYING",
     "RICE"
    ],
-   "numFails": 0,
    "state": "SUCCESS",
-   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "YONGYING",
-      "RICE"
-     ],
-     "proposer": "RICE",
-     "state": "APPROVED",
      "votes": [
       "RICE",
       "XINYI",
       "WENWENZZZ",
       "YONGYING"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "YONGYING",
+      "RICE"
+     ],
+     "proposer": "RICE"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "numFails": 0,
    "state": "SUCCESS",
-   "teamSize": 3,
-   "failsRequired": 1,
    "team": [
     "XINYI",
     "YONGYING",
     "RICE"
    ],
+   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "WENWENZZZ",
+     "state": "REJECTED",
+     "votes": [
+      "WENWENZZZ",
+      "MILO"
+     ],
      "team": [
       "MILO",
       "RICE",
       "WENWENZZZ"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "WENWENZZZ",
-      "MILO"
-     ]
+     "proposer": "WENWENZZZ"
     },
     {
-     "state": "APPROVED",
      "votes": [
       "RICE",
       "XINYI",
@@ -199,20 +171,48 @@
       "MILO"
      ],
      "proposer": "XINYI",
+     "state": "APPROVED",
      "team": [
       "XINYI",
       "YONGYING",
       "RICE"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "state": "PENDING",
+   "team": [],
    "failsRequired": 1,
-   "teamSize": 3,
    "proposals": [],
-   "team": []
+   "teamSize": 3,
+   "state": "PENDING"
   }
- ]
+ ],
+ "players": [
+  {
+   "name": "XINYI",
+   "uid": "GsarUOunw1aPorziBGGviN8w3Sf2"
+  },
+  {
+   "uid": "O8nPJwq35xXTvRbaz0U9vc3jHD72",
+   "name": "YONGYING"
+  },
+  {
+   "uid": "zNOaHGIgj4MJ86fMDod8MkvsSgv1",
+   "name": "MILO"
+  },
+  {
+   "uid": "KHd7f1J5sNToZhvW1LJjVpVRL0v1",
+   "name": "RICE"
+  },
+  {
+   "uid": "YwxOwcgzEyNYmfcV0d3PJxiimQ03",
+   "name": "WENWENZZZ"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ }
 }

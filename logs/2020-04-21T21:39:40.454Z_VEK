@@ -1,18 +1,101 @@
 {
- "timeCreated": {
-  "_seconds": 1587505180,
-  "_nanoseconds": 454000000
+ "timeFinished": {
+  "_seconds": 1587506313,
+  "_nanoseconds": 921000000
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "roles": [
+   {
+    "name": "GARY",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "YIHAN",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "name": "YING",
+    "role": "MORGANA"
+   },
+   {
+    "name": "JEREMIAH",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "JOBANI"
+   },
+   {
+    "assassin": false,
+    "name": "SUBRINAZ",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JD",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "BOXUN",
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "DBAR",
+    "assassin": false
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "GARY": true,
+    "YIHAN": true,
+    "JD": true
+   },
+   {
+    "JEREMIAH": true,
+    "JD": true,
+    "JOBANI": false,
+    "YIHAN": true
+   },
+   {
+    "YIHAN": true,
+    "JOBANI": false,
+    "JD": true,
+    "GARY": true
+   },
+   {
+    "JEREMIAH": true,
+    "GARY": false,
+    "BOXUN": true,
+    "DBAR": true,
+    "YING": true
+   },
+   {
+    "SUBRINAZ": true,
+    "BOXUN": true,
+    "YING": false,
+    "DBAR": true,
+    "JEREMIAH": true
+   }
+  ]
  },
  "missions": [
   {
-   "teamSize": 3,
-   "team": [
-    "YIHAN",
-    "GARY",
-    "JD"
-   ],
    "state": "SUCCESS",
-   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
      "proposer": "YING",
@@ -32,13 +115,25 @@
      ]
     }
    ],
-   "numFails": 0
+   "failsRequired": 1,
+   "team": [
+    "YIHAN",
+    "GARY",
+    "JD"
+   ]
   },
   {
+   "teamSize": 4,
+   "team": [
+    "YIHAN",
+    "JD",
+    "JEREMIAH",
+    "JOBANI"
+   ],
    "proposals": [
     {
-     "proposer": "YIHAN",
      "state": "APPROVED",
+     "proposer": "YIHAN",
      "votes": [
       "JEREMIAH",
       "JD",
@@ -56,48 +151,35 @@
    ],
    "failsRequired": 1,
    "state": "FAIL",
-   "team": [
-    "YIHAN",
-    "JD",
-    "JEREMIAH",
-    "JOBANI"
-   ],
-   "numFails": 1,
-   "teamSize": 4
+   "numFails": 1
   },
   {
+   "failsRequired": 1,
    "team": [
     "JOBANI",
     "GARY",
     "YIHAN",
     "JD"
    ],
-   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [
+      "JEREMIAH",
+      "SUBRINAZ",
+      "YING"
+     ],
      "team": [
       "GARY",
       "SUBRINAZ",
       "JOBANI",
       "YING"
      ],
-     "votes": [
-      "JEREMIAH",
-      "SUBRINAZ",
-      "YING"
-     ],
-     "proposer": "SUBRINAZ",
-     "state": "REJECTED"
+     "proposer": "SUBRINAZ"
     },
     {
-     "votes": [
-      "JEREMIAH",
-      "SUBRINAZ",
-      "JD",
-      "BOXUN",
-      "GARY",
-      "YING"
-     ],
+     "state": "APPROVED",
      "proposer": "JOBANI",
      "team": [
       "JOBANI",
@@ -105,19 +187,23 @@
       "YIHAN",
       "JD"
      ],
-     "state": "APPROVED"
+     "votes": [
+      "JEREMIAH",
+      "SUBRINAZ",
+      "JD",
+      "BOXUN",
+      "GARY",
+      "YING"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "numFails": 1
+   "numFails": 1,
+   "teamSize": 4
   },
   {
-   "teamSize": 5,
-   "numFails": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "JEREMIAH",
       "JOBANI",
@@ -134,9 +220,12 @@
       "DBAR",
       "GARY"
      ],
+     "state": "APPROVED",
      "proposer": "JEREMIAH"
     }
    ],
+   "teamSize": 5,
+   "numFails": 1,
    "team": [
     "YING",
     "JEREMIAH",
@@ -144,11 +233,9 @@
     "DBAR",
     "GARY"
    ],
-   "state": "SUCCESS",
    "failsRequired": 2
   },
   {
-   "state": "FAIL",
    "numFails": 1,
    "failsRequired": 1,
    "team": [
@@ -158,25 +245,31 @@
     "DBAR",
     "SUBRINAZ"
    ],
-   "teamSize": 5,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "YING",
       "JEREMIAH",
       "JD"
      ],
-     "state": "REJECTED",
+     "proposer": "JD",
      "team": [
       "GARY",
       "BOXUN",
       "JEREMIAH",
       "SUBRINAZ",
       "YING"
-     ],
-     "proposer": "JD"
+     ]
     },
     {
+     "team": [
+      "YING",
+      "JEREMIAH",
+      "BOXUN",
+      "DBAR",
+      "SUBRINAZ"
+     ],
      "state": "APPROVED",
      "votes": [
       "JEREMIAH",
@@ -187,102 +280,16 @@
       "YIHAN",
       "YING"
      ],
-     "proposer": "BOXUN",
-     "team": [
-      "YING",
-      "JEREMIAH",
-      "BOXUN",
-      "DBAR",
-      "SUBRINAZ"
-     ]
+     "proposer": "BOXUN"
     }
-   ]
+   ],
+   "teamSize": 5,
+   "state": "FAIL"
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "JD": true,
-    "YIHAN": true,
-    "GARY": true
-   },
-   {
-    "JD": true,
-    "JEREMIAH": true,
-    "JOBANI": false,
-    "YIHAN": true
-   },
-   {
-    "GARY": true,
-    "JD": true,
-    "JOBANI": false,
-    "YIHAN": true
-   },
-   {
-    "GARY": false,
-    "JEREMIAH": true,
-    "DBAR": true,
-    "BOXUN": true,
-    "YING": true
-   },
-   {
-    "SUBRINAZ": true,
-    "BOXUN": true,
-    "JEREMIAH": true,
-    "DBAR": true,
-    "YING": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "GARY"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "YIHAN"
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "YING"
-   },
-   {
-    "assassin": false,
-    "name": "JEREMIAH",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "name": "JOBANI",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "SUBRINAZ",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "JD",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "BOXUN"
-   },
-   {
-    "assassin": false,
-    "name": "DBAR",
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "assassinated": null,
-  "message": "Three failed missions"
+ "timeCreated": {
+  "_seconds": 1587505180,
+  "_nanoseconds": 454000000
  },
  "players": [
   {
@@ -294,8 +301,8 @@
    "name": "YIHAN"
   },
   {
-   "name": "SUBRINAZ",
-   "uid": "aBdtYaQOunOEZ997SlRyYfPuCOF3"
+   "uid": "aBdtYaQOunOEZ997SlRyYfPuCOF3",
+   "name": "SUBRINAZ"
   },
   {
    "uid": "IiXnZUqESobua5vk1ciXTzt6qZQ2",
@@ -321,12 +328,5 @@
    "uid": "veHucatVagNonmFL1GEz1cN9T853",
    "name": "GARY"
   }
- ],
- "timeFinished": {
-  "_seconds": 1587506313,
-  "_nanoseconds": 921000000
- },
- "options": {
-  "inGameLog": false
- }
+ ]
 }

@@ -1,9 +1,45 @@
 {
+ "players": [
+  {
+   "name": "RAMI",
+   "uid": "aXyWAs6lFxQYL6ENgLDofLNSW9S2"
+  },
+  {
+   "uid": "98Dbz4oinPTUkhUWWpzm0NMSmpw2",
+   "name": "MAGED"
+  },
+  {
+   "uid": "Zebxsj0YjyQQIgGQa5iGRnSBQci1",
+   "name": "ABDALLAH"
+  },
+  {
+   "name": "LAILA",
+   "uid": "NGwtR6bIblgNhbZYVqmwW01U3cQ2"
+  },
+  {
+   "uid": "ANxIu32jyUXUe5BpkgZ1TB4wuhb2",
+   "name": "KAREN"
+  },
+  {
+   "name": "MARINA",
+   "uid": "e0TSR0DJhgTKgjitrc9euTJTG8u1"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1589743691,
+  "_nanoseconds": 73000000
+ },
+ "timeFinished": {
+  "_seconds": 1589745875,
+  "_nanoseconds": 774000000
+ },
  "options": {
   "inGameLog": false
  },
  "outcome": {
+  "message": "Three failed missions",
   "state": "EVIL_WIN",
+  "assassinated": null,
   "votes": [
    {
     "KAREN": true,
@@ -15,92 +51,60 @@
     "ABDALLAH": true
    },
    {
-    "MARINA": true,
     "KAREN": false,
+    "ABDALLAH": true,
     "LAILA": true,
-    "ABDALLAH": true
+    "MARINA": true
    },
    {
-    "KAREN": false,
     "LAILA": true,
+    "KAREN": false,
     "RAMI": true
    }
   ],
-  "message": "Three failed missions",
   "roles": [
    {
-    "role": "MERLIN",
     "name": "ABDALLAH",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "LAILA",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "MAGED",
-    "role": "MORDRED"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "KAREN",
-    "assassin": true
-   },
-   {
-    "name": "MARINA",
-    "role": "PERCIVAL",
+    "role": "MERLIN",
     "assassin": false
    },
    {
     "role": "LOYAL FOLLOWER",
+    "name": "LAILA",
+    "assassin": false
+   },
+   {
+    "name": "MAGED",
     "assassin": false,
-    "name": "RAMI"
+    "role": "MORDRED"
+   },
+   {
+    "name": "KAREN",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "name": "MARINA",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "RAMI",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    }
-  ],
-  "assassinated": null
- },
- "players": [
-  {
-   "name": "RAMI",
-   "uid": "aXyWAs6lFxQYL6ENgLDofLNSW9S2"
-  },
-  {
-   "uid": "98Dbz4oinPTUkhUWWpzm0NMSmpw2",
-   "name": "MAGED"
-  },
-  {
-   "name": "ABDALLAH",
-   "uid": "Zebxsj0YjyQQIgGQa5iGRnSBQci1"
-  },
-  {
-   "uid": "NGwtR6bIblgNhbZYVqmwW01U3cQ2",
-   "name": "LAILA"
-  },
-  {
-   "name": "KAREN",
-   "uid": "ANxIu32jyUXUe5BpkgZ1TB4wuhb2"
-  },
-  {
-   "name": "MARINA",
-   "uid": "e0TSR0DJhgTKgjitrc9euTJTG8u1"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1589745875,
-  "_nanoseconds": 774000000
- },
- "timeCreated": {
-  "_seconds": 1589743691,
-  "_nanoseconds": 73000000
+  ]
  },
  "missions": [
   {
-   "failsRequired": 1,
+   "team": [
+    "LAILA",
+    "KAREN"
+   ],
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "MAGED",
      "votes": [
       "ABDALLAH"
      ],
@@ -108,28 +112,29 @@
      "team": [
       "MAGED",
       "ABDALLAH"
-     ]
+     ],
+     "proposer": "MAGED"
     },
     {
-     "proposer": "ABDALLAH",
+     "team": [
+      "ABDALLAH",
+      "MAGED"
+     ],
      "votes": [
       "ABDALLAH",
       "LAILA",
       "MARINA"
      ],
      "state": "REJECTED",
-     "team": [
-      "ABDALLAH",
-      "MAGED"
-     ]
+     "proposer": "ABDALLAH"
     },
     {
-     "proposer": "LAILA",
+     "state": "APPROVED",
      "team": [
       "LAILA",
       "KAREN"
      ],
-     "state": "APPROVED",
+     "proposer": "LAILA",
      "votes": [
       "RAMI",
       "ABDALLAH",
@@ -138,50 +143,44 @@
      ]
     }
    ],
-   "team": [
-    "LAILA",
-    "KAREN"
-   ],
-   "teamSize": 2,
-   "numFails": 0,
-   "state": "SUCCESS"
+   "failsRequired": 1,
+   "teamSize": 2
   },
   {
-   "state": "FAIL",
    "proposals": [
     {
-     "votes": [
-      "LAILA",
-      "KAREN",
-      "MARINA"
-     ],
      "team": [
       "KAREN",
       "LAILA",
       "MARINA"
      ],
+     "proposer": "KAREN",
      "state": "REJECTED",
-     "proposer": "KAREN"
+     "votes": [
+      "LAILA",
+      "KAREN",
+      "MARINA"
+     ]
     },
     {
+     "state": "REJECTED",
+     "proposer": "MARINA",
      "team": [
       "KAREN",
       "MARINA",
       "ABDALLAH"
      ],
-     "proposer": "MARINA",
-     "state": "REJECTED",
      "votes": [
       "MARINA"
      ]
     },
     {
+     "proposer": "RAMI",
      "team": [
       "RAMI",
       "MAGED",
       "KAREN"
      ],
-     "proposer": "RAMI",
      "state": "REJECTED",
      "votes": [
       "RAMI",
@@ -190,6 +189,7 @@
      ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "RAMI",
       "ABDALLAH",
@@ -197,58 +197,57 @@
       "MAGED",
       "KAREN"
      ],
-     "state": "APPROVED",
-     "proposer": "MAGED",
      "team": [
       "ABDALLAH",
       "MAGED",
       "RAMI"
-     ]
+     ],
+     "proposer": "MAGED"
     }
    ],
+   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "ABDALLAH",
     "MAGED",
     "RAMI"
    ],
    "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1
   },
   {
-   "state": "FAIL",
-   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "ABDALLAH",
       "MARINA"
      ],
+     "proposer": "ABDALLAH",
+     "state": "REJECTED",
      "team": [
       "MAGED",
       "ABDALLAH",
       "LAILA",
       "MARINA"
-     ],
-     "proposer": "ABDALLAH"
+     ]
     },
     {
+     "votes": [
+      "RAMI",
+      "LAILA",
+      "KAREN"
+     ],
+     "proposer": "LAILA",
      "team": [
       "LAILA",
       "KAREN",
       "MARINA",
       "RAMI"
      ],
-     "proposer": "LAILA",
-     "state": "REJECTED",
-     "votes": [
-      "RAMI",
-      "LAILA",
-      "KAREN"
-     ]
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "team": [
       "KAREN",
       "LAILA",
@@ -256,7 +255,6 @@
       "MARINA"
      ],
      "proposer": "KAREN",
-     "state": "APPROVED",
      "votes": [
       "ABDALLAH",
       "LAILA",
@@ -266,25 +264,29 @@
     }
    ],
    "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 4,
    "team": [
     "KAREN",
     "LAILA",
     "ABDALLAH",
     "MARINA"
-   ],
-   "numFails": 1
+   ]
   },
   {
    "state": "FAIL",
-   "failsRequired": 1,
    "team": [
     "RAMI",
     "LAILA",
     "KAREN"
    ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "MARINA",
      "votes": [
       "MARINA"
      ],
@@ -293,7 +295,7 @@
       "ABDALLAH",
       "MARINA"
      ],
-     "proposer": "MARINA"
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -301,25 +303,25 @@
       "KAREN",
       "RAMI"
      ],
+     "state": "REJECTED",
      "proposer": "RAMI",
      "team": [
       "RAMI",
       "LAILA",
       "KAREN"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "votes": [
       "MAGED"
      ],
-     "proposer": "MAGED",
-     "state": "REJECTED",
      "team": [
       "MAGED",
       "RAMI",
       "LAILA"
-     ]
+     ],
+     "proposer": "MAGED",
+     "state": "REJECTED"
     },
     {
      "state": "REJECTED",
@@ -327,15 +329,21 @@
       "ABDALLAH",
       "MARINA"
      ],
+     "proposer": "ABDALLAH",
      "team": [
       "ABDALLAH",
       "LAILA",
       "MARINA"
-     ],
-     "proposer": "ABDALLAH"
+     ]
     },
     {
+     "team": [
+      "RAMI",
+      "LAILA",
+      "KAREN"
+     ],
      "state": "APPROVED",
+     "proposer": "LAILA",
      "votes": [
       "RAMI",
       "ABDALLAH",
@@ -343,24 +351,16 @@
       "MAGED",
       "KAREN",
       "MARINA"
-     ],
-     "proposer": "LAILA",
-     "team": [
-      "RAMI",
-      "LAILA",
-      "KAREN"
      ]
     }
-   ],
-   "numFails": 1,
-   "teamSize": 3
+   ]
   },
   {
+   "team": [],
    "state": "PENDING",
    "teamSize": 4,
-   "proposals": [],
-   "team": [],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "proposals": []
   }
  ]
 }

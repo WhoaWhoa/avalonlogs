@@ -1,4 +1,74 @@
 {
+ "outcome": {
+  "roles": [
+   {
+    "name": "OKSWAG",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "RIAN"
+   },
+   {
+    "name": "DANI",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "PISTACHIO",
+    "role": "MERLIN"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "PHATDUDE"
+   },
+   {
+    "role": "OBERON",
+    "name": "T",
+    "assassin": false
+   },
+   {
+    "name": "DAN",
+    "assassin": true,
+    "role": "MORDRED"
+   }
+  ],
+  "assassinated": "T",
+  "votes": [
+   {
+    "OKSWAG": true,
+    "PHATDUDE": true
+   },
+   {
+    "DAN": false,
+    "PISTACHIO": true,
+    "PHATDUDE": true
+   },
+   {
+    "T": false,
+    "OKSWAG": true,
+    "RIAN": true
+   },
+   {
+    "PHATDUDE": true,
+    "OKSWAG": true,
+    "DAN": false,
+    "PISTACHIO": true
+   },
+   {
+    "PISTACHIO": true,
+    "OKSWAG": true,
+    "RIAN": true,
+    "PHATDUDE": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "message": "Three successful missions"
+ },
  "timeCreated": {
   "_seconds": 1585982095,
   "_nanoseconds": 484000000
@@ -9,13 +79,16 @@
  },
  "missions": [
   {
+   "failsRequired": 1,
    "team": [
     "PHATDUDE",
     "OKSWAG"
    ],
-   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "PHATDUDE",
      "votes": [
       "DAN",
       "OKSWAG",
@@ -25,23 +98,27 @@
       "PHATDUDE",
       "T"
      ],
-     "state": "APPROVED",
      "team": [
       "PHATDUDE",
       "OKSWAG"
      ],
-     "proposer": "PHATDUDE"
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 2,
-   "numFails": 0,
-   "failsRequired": 1
+   "state": "SUCCESS"
   },
   {
+   "teamSize": 3,
    "state": "FAIL",
    "numFails": 1,
+   "team": [
+    "PISTACHIO",
+    "PHATDUDE",
+    "DAN"
+   ],
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "DAN",
       "RIAN",
@@ -52,11 +129,14 @@
       "DAN",
       "RIAN"
      ],
-     "state": "REJECTED",
      "proposer": "DANI"
     },
     {
-     "state": "APPROVED",
+     "team": [
+      "PISTACHIO",
+      "PHATDUDE",
+      "DAN"
+     ],
      "proposer": "PISTACHIO",
      "votes": [
       "DAN",
@@ -64,53 +144,47 @@
       "PISTACHIO",
       "PHATDUDE"
      ],
-     "team": [
-      "PISTACHIO",
-      "PHATDUDE",
-      "DAN"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "team": [
-    "PISTACHIO",
-    "PHATDUDE",
-    "DAN"
-   ]
+   "failsRequired": 1
   },
   {
+   "state": "FAIL",
    "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
+     "team": [
+      "DAN",
+      "OKSWAG",
+      "PHATDUDE"
+     ],
      "votes": [
       "DAN",
       "OKSWAG",
       "PHATDUDE"
      ],
-     "team": [
-      "DAN",
-      "OKSWAG",
-      "PHATDUDE"
-     ],
+     "state": "REJECTED",
      "proposer": "DAN"
     },
     {
+     "state": "REJECTED",
+     "team": [
+      "T",
+      "RIAN",
+      "PHATDUDE"
+     ],
      "votes": [
       "T",
       "RIAN",
       "DANI"
      ],
-     "team": [
-      "T",
-      "RIAN",
-      "PHATDUDE"
-     ],
-     "proposer": "T",
-     "state": "REJECTED"
+     "proposer": "T"
     },
     {
+     "proposer": "RIAN",
      "votes": [
       "T",
       "DAN",
@@ -122,24 +196,20 @@
       "RIAN",
       "T",
       "OKSWAG"
-     ],
-     "proposer": "RIAN"
+     ]
     }
    ],
    "team": [
     "RIAN",
     "T",
     "OKSWAG"
-   ],
-   "state": "FAIL",
-   "numFails": 1,
-   "teamSize": 3
+   ]
   },
   {
    "state": "SUCCESS",
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "OKSWAG",
       "PISTACHIO",
@@ -147,46 +217,26 @@
       "T",
       "DAN"
      ],
+     "state": "APPROVED",
+     "proposer": "OKSWAG",
      "team": [
       "OKSWAG",
       "PHATDUDE",
       "DAN",
       "PISTACHIO"
-     ],
-     "proposer": "OKSWAG"
+     ]
     }
    ],
    "numFails": 1,
+   "failsRequired": 2,
    "team": [
     "OKSWAG",
     "PHATDUDE",
     "DAN",
     "PISTACHIO"
-   ],
-   "failsRequired": 2,
-   "teamSize": 4
+   ]
   },
   {
-   "numFails": 0,
-   "proposals": [
-    {
-     "team": [
-      "PHATDUDE",
-      "OKSWAG",
-      "PISTACHIO",
-      "RIAN"
-     ],
-     "state": "APPROVED",
-     "proposer": "PHATDUDE",
-     "votes": [
-      "T",
-      "RIAN",
-      "PISTACHIO",
-      "PHATDUDE"
-     ]
-    }
-   ],
-   "teamSize": 4,
    "failsRequired": 1,
    "state": "SUCCESS",
    "team": [
@@ -194,99 +244,49 @@
     "OKSWAG",
     "PISTACHIO",
     "RIAN"
-   ]
+   ],
+   "numFails": 0,
+   "proposals": [
+    {
+     "proposer": "PHATDUDE",
+     "votes": [
+      "T",
+      "RIAN",
+      "PISTACHIO",
+      "PHATDUDE"
+     ],
+     "team": [
+      "PHATDUDE",
+      "OKSWAG",
+      "PISTACHIO",
+      "RIAN"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "teamSize": 4
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "OKSWAG": true,
-    "PHATDUDE": true
-   },
-   {
-    "PHATDUDE": true,
-    "PISTACHIO": true,
-    "DAN": false
-   },
-   {
-    "OKSWAG": true,
-    "RIAN": true,
-    "T": false
-   },
-   {
-    "DAN": false,
-    "PHATDUDE": true,
-    "OKSWAG": true,
-    "PISTACHIO": true
-   },
-   {
-    "PHATDUDE": true,
-    "RIAN": true,
-    "PISTACHIO": true,
-    "OKSWAG": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "OKSWAG",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "RIAN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "DANI"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "PISTACHIO"
-   },
-   {
-    "assassin": false,
-    "name": "PHATDUDE",
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "T",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "DAN",
-    "assassin": true,
-    "role": "MORDRED"
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "T",
-  "state": "GOOD_WIN"
- },
  "players": [
   {
    "name": "DAN",
    "uid": "lBs7HTfpmwguADs2qdGYdul0oTo2"
   },
   {
-   "name": "T",
-   "uid": "X5GiVMP6pHN5dQLtDvP03TSIuOk1"
+   "uid": "X5GiVMP6pHN5dQLtDvP03TSIuOk1",
+   "name": "T"
   },
   {
    "name": "RIAN",
    "uid": "gF6kBgZToWaTVDdc8YwpIkf3DqV2"
   },
   {
-   "uid": "DpyoWEBuc4fGBYjo2tBdCtRfBH53",
-   "name": "OKSWAG"
+   "name": "OKSWAG",
+   "uid": "DpyoWEBuc4fGBYjo2tBdCtRfBH53"
   },
   {
-   "name": "PHATDUDE",
-   "uid": "2U36fSJyZ9aNTJFNBJIs9Rd7WK22"
+   "uid": "2U36fSJyZ9aNTJFNBJIs9Rd7WK22",
+   "name": "PHATDUDE"
   },
   {
    "name": "DANI",

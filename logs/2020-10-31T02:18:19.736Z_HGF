@@ -1,65 +1,135 @@
 {
- "options": {
-  "inGameLog": false
+ "timeFinished": {
+  "_seconds": 1604112064,
+  "_nanoseconds": 336000000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "ABBY": true,
+    "SHEY": false,
+    "YELIN": true
+   },
+   {
+    "DAVID": true,
+    "ABBY": true,
+    "STEPH": true,
+    "KARLIN": true
+   },
+   {
+    "STEPH": true,
+    "KARLIN": true,
+    "DAVID": true,
+    "ABBY": true
+   },
+   {
+    "ABBY": true,
+    "STEPH": true,
+    "JAMES": false,
+    "KARLIN": true,
+    "DAVID": true
+   }
+  ],
+  "assassinated": "KARLIN",
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "name": "DAVID",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "MORDRED",
+    "name": "JAMES"
+   },
+   {
+    "assassin": false,
+    "name": "YELIN",
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "ABBY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "SHEY",
+    "role": "OBERON"
+   },
+   {
+    "name": "KARLIN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "STEPH"
+   },
+   {
+    "name": "AARON",
+    "assassin": false,
+    "role": "MORGANA"
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1604110699,
+  "_nanoseconds": 736000000
  },
  "missions": [
   {
-   "teamSize": 3,
-   "numFails": 1,
    "state": "FAIL",
-   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "ABBY",
     "SHEY",
     "YELIN"
    ],
+   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "ABBY",
-      "JAMES",
-      "STEPH",
-      "AARON",
-      "YELIN"
-     ],
+     "state": "APPROVED",
      "team": [
       "ABBY",
       "SHEY",
       "YELIN"
      ],
      "proposer": "ABBY",
-     "state": "APPROVED"
+     "votes": [
+      "ABBY",
+      "JAMES",
+      "STEPH",
+      "AARON",
+      "YELIN"
+     ]
     }
    ]
   },
   {
-   "numFails": 0,
    "state": "SUCCESS",
    "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "KARLIN",
-      "SHEY",
-      "STEPH"
-     ],
      "team": [
       "KARLIN",
       "AARON",
       "JAMES",
       "STEPH"
      ],
-     "state": "REJECTED",
-     "proposer": "KARLIN"
-    },
-    {
-     "team": [
+     "votes": [
       "KARLIN",
-      "DAVID",
-      "ABBY",
+      "SHEY",
       "STEPH"
      ],
-     "proposer": "STEPH",
+     "proposer": "KARLIN",
+     "state": "REJECTED"
+    },
+    {
      "state": "APPROVED",
      "votes": [
       "JAMES",
@@ -67,30 +137,37 @@
       "SHEY",
       "STEPH",
       "ABBY"
+     ],
+     "proposer": "STEPH",
+     "team": [
+      "KARLIN",
+      "DAVID",
+      "ABBY",
+      "STEPH"
      ]
     }
    ],
-   "team": [
-    "KARLIN",
-    "DAVID",
-    "ABBY",
-    "STEPH"
-   ],
-   "failsRequired": 1
-  },
-  {
    "failsRequired": 1,
-   "teamSize": 4,
-   "state": "SUCCESS",
    "numFails": 0,
    "team": [
     "KARLIN",
-    "ABBY",
     "DAVID",
+    "ABBY",
     "STEPH"
-   ],
+   ]
+  },
+  {
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "KARLIN",
+      "ABBY",
+      "DAVID",
+      "STEPH"
+     ],
      "votes": [
       "JAMES",
       "ABBY",
@@ -100,18 +177,20 @@
       "YELIN",
       "DAVID"
      ],
-     "team": [
-      "KARLIN",
-      "ABBY",
-      "DAVID",
-      "STEPH"
-     ],
-     "proposer": "JAMES",
-     "state": "APPROVED"
+     "proposer": "JAMES"
     }
-   ]
+   ],
+   "team": [
+    "KARLIN",
+    "ABBY",
+    "DAVID",
+    "STEPH"
+   ],
+   "teamSize": 4,
+   "failsRequired": 1
   },
   {
+   "numFails": 1,
    "team": [
     "JAMES",
     "STEPH",
@@ -120,11 +199,8 @@
     "DAVID"
    ],
    "failsRequired": 2,
-   "numFails": 1,
    "proposals": [
     {
-     "proposer": "YELIN",
-     "state": "REJECTED",
      "votes": [
       "STEPH",
       "YELIN",
@@ -136,16 +212,11 @@
       "KARLIN",
       "ABBY",
       "DAVID"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "YELIN"
     },
     {
-     "team": [
-      "JAMES",
-      "STEPH",
-      "ABBY",
-      "KARLIN",
-      "DAVID"
-     ],
      "votes": [
       "SHEY",
       "AARON",
@@ -154,101 +225,27 @@
       "DAVID"
      ],
      "proposer": "SHEY",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "JAMES",
+      "STEPH",
+      "ABBY",
+      "KARLIN",
+      "DAVID"
+     ]
     }
    ],
-   "teamSize": 5,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "teamSize": 5
   },
   {
-   "team": [],
    "failsRequired": 1,
    "teamSize": 5,
    "state": "PENDING",
+   "team": [],
    "proposals": []
   }
  ],
- "timeFinished": {
-  "_seconds": 1604112064,
-  "_nanoseconds": 336000000
- },
- "outcome": {
-  "roles": [
-   {
-    "name": "DAVID",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "JAMES"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "YELIN",
-    "assassin": false
-   },
-   {
-    "name": "ABBY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SHEY",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "KARLIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "STEPH",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "AARON",
-    "role": "MORGANA"
-   }
-  ],
-  "message": "Three successful missions",
-  "votes": [
-   {
-    "ABBY": true,
-    "SHEY": false,
-    "YELIN": true
-   },
-   {
-    "KARLIN": true,
-    "DAVID": true,
-    "STEPH": true,
-    "ABBY": true
-   },
-   {
-    "KARLIN": true,
-    "ABBY": true,
-    "DAVID": true,
-    "STEPH": true
-   },
-   {
-    "DAVID": true,
-    "STEPH": true,
-    "KARLIN": true,
-    "JAMES": false,
-    "ABBY": true
-   }
-  ],
-  "state": "GOOD_WIN",
-  "assassinated": "KARLIN"
- },
- "timeCreated": {
-  "_seconds": 1604110699,
-  "_nanoseconds": 736000000
- },
  "players": [
   {
    "name": "STEPH",
@@ -259,28 +256,31 @@
    "uid": "GF0BaVfxNBZFk9LHgQCRSbZg5g93"
   },
   {
-   "name": "YELIN",
-   "uid": "Cz3L5keyzrOXsD1Vw3ywRib6jJT2"
+   "uid": "Cz3L5keyzrOXsD1Vw3ywRib6jJT2",
+   "name": "YELIN"
   },
   {
-   "uid": "HU80N0QNAGNSrm1RFwtJeoJGChE2",
-   "name": "SHEY"
+   "name": "SHEY",
+   "uid": "HU80N0QNAGNSrm1RFwtJeoJGChE2"
   },
   {
    "uid": "lxFDHiv22QVenaOVEihq4yoNjMY2",
    "name": "DAVID"
   },
   {
-   "uid": "wQXOXeat5SOhT2nHWp1SrqzBU292",
-   "name": "AARON"
+   "name": "AARON",
+   "uid": "wQXOXeat5SOhT2nHWp1SrqzBU292"
   },
   {
    "name": "ABBY",
    "uid": "evKDRoGMNibWHGjdXUJncUOvYL93"
   },
   {
-   "name": "KARLIN",
-   "uid": "v9qEYBLTH6anIt55z2vb3kTm08W2"
+   "uid": "v9qEYBLTH6anIt55z2vb3kTm08W2",
+   "name": "KARLIN"
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ }
 }

@@ -1,22 +1,120 @@
 {
+ "timeFinished": {
+  "_seconds": 1609226606,
+  "_nanoseconds": 998000000
+ },
+ "timeCreated": {
+  "_seconds": 1609226009,
+  "_nanoseconds": 53000000
+ },
+ "outcome": {
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "name": "BRIT",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "DRAKE",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "KRIS"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "TOM"
+   },
+   {
+    "assassin": false,
+    "name": "SYD",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "BRONK",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ],
+  "votes": [
+   {
+    "DRAKE": false,
+    "TOM": true
+   },
+   {
+    "BRONK": true,
+    "SYD": true,
+    "BRIT": true
+   },
+   {
+    "TOM": true,
+    "KRIS": true,
+    "BRIT": true,
+    "SYD": true
+   },
+   {
+    "BRONK": true,
+    "TOM": true,
+    "BRIT": true
+   }
+  ],
+  "assassinated": "SYD",
+  "state": "GOOD_WIN"
+ },
+ "players": [
+  {
+   "name": "SYD",
+   "uid": "CbHppuFLaHSPTWtSB3WBoo2YZjV2"
+  },
+  {
+   "name": "DRAKE",
+   "uid": "J7LtNUhbz7bMPPb0yGP7wLokzZB3"
+  },
+  {
+   "uid": "9qrXbIuI2af5j0tnRu9KvB0yoEE2",
+   "name": "TOM"
+  },
+  {
+   "name": "BRONK",
+   "uid": "PALRFbv8pHW4p9sBz2FvIT3RLo92"
+  },
+  {
+   "uid": "RjIzKWh3vDMtM04MmCUdeUC62hc2",
+   "name": "BRIT"
+  },
+  {
+   "uid": "N1h1UMLuWPfhmNDkE9PC1KhGwvh2",
+   "name": "KRIS"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
-   "state": "FAIL",
-   "failsRequired": 1,
+   "team": [
+    "TOM",
+    "DRAKE"
+   ],
    "numFails": 1,
    "proposals": [
     {
-     "proposer": "BRIT",
      "state": "REJECTED",
+     "team": [
+      "BRIT",
+      "BRONK"
+     ],
      "votes": [
       "BRIT",
       "SYD",
       "BRONK"
      ],
-     "team": [
-      "BRIT",
-      "BRONK"
-     ]
+     "proposer": "BRIT"
     },
     {
      "proposer": "KRIS",
@@ -33,18 +131,20 @@
      "state": "APPROVED"
     }
    ],
-   "team": [
-    "TOM",
-    "DRAKE"
-   ],
+   "state": "FAIL",
+   "failsRequired": 1,
    "teamSize": 2
   },
   {
+   "team": [
+    "SYD",
+    "BRONK",
+    "BRIT"
+   ],
+   "failsRequired": 1,
    "numFails": 0,
-   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "SYD",
       "BRONK",
@@ -56,28 +156,29 @@
       "BRIT",
       "BRONK"
      ],
+     "state": "APPROVED",
      "proposer": "SYD"
     }
    ],
    "teamSize": 3,
-   "failsRequired": 1,
-   "team": [
-    "SYD",
-    "BRONK",
-    "BRIT"
-   ]
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
+   "state": "SUCCESS",
    "team": [
     "TOM",
     "SYD",
     "BRIT",
     "KRIS"
    ],
+   "teamSize": 4,
    "proposals": [
     {
+     "votes": [
+      "TOM",
+      "DRAKE",
+      "KRIS"
+     ],
      "team": [
       "TOM",
       "DRAKE",
@@ -85,14 +186,10 @@
       "BRIT"
      ],
      "state": "REJECTED",
-     "votes": [
-      "TOM",
-      "DRAKE",
-      "KRIS"
-     ],
      "proposer": "DRAKE"
     },
     {
+     "state": "APPROVED",
      "proposer": "TOM",
      "votes": [
       "KRIS",
@@ -101,7 +198,6 @@
       "BRIT",
       "SYD"
      ],
-     "state": "APPROVED",
      "team": [
       "TOM",
       "SYD",
@@ -111,32 +207,33 @@
     }
    ],
    "numFails": 0,
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
+   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 3,
+   "team": [
+    "TOM",
+    "BRIT",
+    "BRONK"
+   ],
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "BRONK",
       "BRIT",
       "SYD"
      ],
-     "proposer": "BRONK",
      "team": [
       "BRONK",
       "SYD",
       "BRIT"
      ],
-     "state": "REJECTED"
+     "proposer": "BRONK"
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "TOM",
-      "BRIT",
-      "BRONK"
-     ],
      "votes": [
       "KRIS",
       "BRIT",
@@ -145,120 +242,23 @@
       "SYD",
       "TOM"
      ],
+     "state": "APPROVED",
+     "team": [
+      "TOM",
+      "BRIT",
+      "BRONK"
+     ],
      "proposer": "BRIT"
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "TOM",
-    "BRIT",
-    "BRONK"
-   ],
-   "numFails": 0
+   "failsRequired": 1
   },
   {
    "teamSize": 4,
-   "failsRequired": 1,
-   "team": [],
    "state": "PENDING",
-   "proposals": []
+   "proposals": [],
+   "team": [],
+   "failsRequired": 1
   }
- ],
- "timeFinished": {
-  "_seconds": 1609226606,
-  "_nanoseconds": 998000000
- },
- "timeCreated": {
-  "_seconds": 1609226009,
-  "_nanoseconds": 53000000
- },
- "outcome": {
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "name": "BRIT",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "name": "DRAKE",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "role": "MORGANA",
-    "name": "KRIS",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "TOM"
-   },
-   {
-    "name": "SYD",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "BRONK",
-    "role": "MERLIN"
-   }
-  ],
-  "assassinated": "SYD",
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "TOM": true,
-    "DRAKE": false
-   },
-   {
-    "BRONK": true,
-    "SYD": true,
-    "BRIT": true
-   },
-   {
-    "KRIS": true,
-    "BRIT": true,
-    "TOM": true,
-    "SYD": true
-   },
-   {
-    "BRONK": true,
-    "BRIT": true,
-    "TOM": true
-   }
-  ]
- },
- "players": [
-  {
-   "name": "SYD",
-   "uid": "CbHppuFLaHSPTWtSB3WBoo2YZjV2"
-  },
-  {
-   "uid": "J7LtNUhbz7bMPPb0yGP7wLokzZB3",
-   "name": "DRAKE"
-  },
-  {
-   "name": "TOM",
-   "uid": "9qrXbIuI2af5j0tnRu9KvB0yoEE2"
-  },
-  {
-   "name": "BRONK",
-   "uid": "PALRFbv8pHW4p9sBz2FvIT3RLo92"
-  },
-  {
-   "name": "BRIT",
-   "uid": "RjIzKWh3vDMtM04MmCUdeUC62hc2"
-  },
-  {
-   "uid": "N1h1UMLuWPfhmNDkE9PC1KhGwvh2",
-   "name": "KRIS"
-  }
- ],
- "options": {
-  "inGameLog": false
- }
+ ]
 }

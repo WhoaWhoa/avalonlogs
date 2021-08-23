@@ -1,115 +1,18 @@
 {
- "options": {
-  "inGameLog": false
- },
- "players": [
-  {
-   "uid": "XjNRC3AOPVdXF64YbxI05ZAqKXU2",
-   "name": "JEN"
-  },
-  {
-   "name": "JOEBIDEN",
-   "uid": "5M9lxOesmddojA9xVTFSY0BXId53"
-  },
-  {
-   "uid": "Pauy4Wk9z7M8xPFDIWCZYshRXI73",
-   "name": "WILL"
-  },
-  {
-   "uid": "ZIp49Ovt7VWcLpvyRPl4tEamrba2",
-   "name": "SIMON"
-  },
-  {
-   "name": "CALEB",
-   "uid": "fjQZGtOmRHVfbUPJfemn6Z6rzFk2"
-  },
-  {
-   "name": "LONG",
-   "uid": "fkXAhd677lekXNAxDTRvyrb5V9c2"
-  },
-  {
-   "uid": "OFOtJ6c1oSQXO3tSybBsrxlE6HA2",
-   "name": "LES"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1596596170,
-  "_nanoseconds": 272000000
- },
  "timeCreated": {
   "_seconds": 1596595491,
   "_nanoseconds": 4000000
  },
- "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "votes": [
-   {
-    "LONG": true,
-    "LES": true
-   },
-   {
-    "LES": true,
-    "CALEB": true,
-    "LONG": true
-   },
-   {
-    "LONG": true,
-    "WILL": false,
-    "CALEB": true
-   },
-   {
-    "LES": true,
-    "CALEB": true,
-    "LONG": true,
-    "WILL": false
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "name": "LES",
-    "role": "MERLIN"
-   },
-   {
-    "name": "JOEBIDEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "SIMON",
-    "assassin": true
-   },
-   {
-    "name": "JEN",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "name": "WILL",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "LONG"
-   },
-   {
-    "assassin": false,
-    "name": "CALEB",
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "assassinated": "CALEB"
- },
  "missions": [
   {
+   "numFails": 0,
    "teamSize": 2,
+   "team": [
+    "LONG",
+    "LES"
+   ],
    "proposals": [
     {
-     "proposer": "LONG",
      "state": "APPROVED",
      "votes": [
       "SIMON",
@@ -120,48 +23,51 @@
      "team": [
       "LONG",
       "LES"
-     ]
+     ],
+     "proposer": "LONG"
     }
    ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "team": [
-    "LONG",
-    "LES"
-   ],
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
    "teamSize": 3,
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "LES",
     "LONG",
     "CALEB"
    ],
-   "failsRequired": 1,
    "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "LES",
+     "team": [
+      "LES",
+      "LONG",
+      "CALEB"
+     ],
+     "state": "APPROVED",
      "votes": [
       "LONG",
       "SIMON",
       "JEN",
       "LES"
-     ],
-     "team": [
-      "LES",
-      "LONG",
-      "CALEB"
      ]
     }
    ]
   },
   {
-   "failsRequired": 1,
+   "team": [
+    "LONG",
+    "CALEB",
+    "WILL"
+   ],
+   "teamSize": 3,
    "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "proposer": "JEN",
@@ -170,21 +76,21 @@
       "JOEBIDEN",
       "SIMON"
      ],
-     "state": "REJECTED",
      "team": [
       "JEN",
       "LONG",
       "LES"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "SIMON",
       "JEN",
       "JOEBIDEN"
      ],
      "proposer": "JOEBIDEN",
+     "state": "REJECTED",
      "team": [
       "JOEBIDEN",
       "JEN",
@@ -192,31 +98,32 @@
      ]
     },
     {
+     "team": [
+      "LONG",
+      "CALEB",
+      "WILL"
+     ],
+     "proposer": "WILL",
      "votes": [
       "SIMON",
       "WILL",
       "JOEBIDEN",
       "JEN"
      ],
-     "proposer": "WILL",
-     "state": "APPROVED",
-     "team": [
-      "LONG",
-      "CALEB",
-      "WILL"
-     ]
+     "state": "APPROVED"
     }
-   ],
-   "state": "FAIL",
-   "team": [
-    "LONG",
-    "CALEB",
-    "WILL"
-   ],
-   "teamSize": 3
+   ]
   },
   {
-   "numFails": 1,
+   "team": [
+    "CALEB",
+    "LONG",
+    "LES",
+    "WILL"
+   ],
+   "teamSize": 4,
+   "state": "SUCCESS",
+   "failsRequired": 2,
    "proposals": [
     {
      "state": "REJECTED",
@@ -234,6 +141,12 @@
      "proposer": "SIMON"
     },
     {
+     "team": [
+      "CALEB",
+      "LONG",
+      "LES",
+      "WILL"
+     ],
      "state": "APPROVED",
      "votes": [
       "LONG",
@@ -243,31 +156,118 @@
       "JOEBIDEN",
       "LES"
      ],
-     "team": [
-      "CALEB",
-      "LONG",
-      "LES",
-      "WILL"
-     ],
      "proposer": "CALEB"
     }
    ],
-   "teamSize": 4,
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "team": [
-    "CALEB",
-    "LONG",
-    "LES",
-    "WILL"
-   ]
+   "numFails": 1
   },
   {
-   "failsRequired": 1,
-   "team": [],
-   "state": "PENDING",
    "proposals": [],
-   "teamSize": 4
+   "state": "PENDING",
+   "teamSize": 4,
+   "team": [],
+   "failsRequired": 1
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1596596170,
+  "_nanoseconds": 272000000
+ },
+ "outcome": {
+  "roles": [
+   {
+    "role": "MERLIN",
+    "name": "LES",
+    "assassin": false
+   },
+   {
+    "name": "JOEBIDEN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "SIMON",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "JEN",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "name": "WILL",
+    "role": "MORDRED"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "LONG"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "CALEB"
+   }
+  ],
+  "votes": [
+   {
+    "LONG": true,
+    "LES": true
+   },
+   {
+    "CALEB": true,
+    "LONG": true,
+    "LES": true
+   },
+   {
+    "WILL": false,
+    "LONG": true,
+    "CALEB": true
+   },
+   {
+    "LES": true,
+    "CALEB": true,
+    "LONG": true,
+    "WILL": false
+   }
+  ],
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "assassinated": "CALEB"
+ },
+ "players": [
+  {
+   "name": "JEN",
+   "uid": "XjNRC3AOPVdXF64YbxI05ZAqKXU2"
+  },
+  {
+   "name": "JOEBIDEN",
+   "uid": "5M9lxOesmddojA9xVTFSY0BXId53"
+  },
+  {
+   "uid": "Pauy4Wk9z7M8xPFDIWCZYshRXI73",
+   "name": "WILL"
+  },
+  {
+   "name": "SIMON",
+   "uid": "ZIp49Ovt7VWcLpvyRPl4tEamrba2"
+  },
+  {
+   "name": "CALEB",
+   "uid": "fjQZGtOmRHVfbUPJfemn6Z6rzFk2"
+  },
+  {
+   "name": "LONG",
+   "uid": "fkXAhd677lekXNAxDTRvyrb5V9c2"
+  },
+  {
+   "name": "LES",
+   "uid": "OFOtJ6c1oSQXO3tSybBsrxlE6HA2"
   }
  ]
 }

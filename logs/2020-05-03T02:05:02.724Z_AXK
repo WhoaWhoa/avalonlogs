@@ -1,21 +1,72 @@
 {
- "options": {
-  "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1588472303,
-  "_nanoseconds": 314000000
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "EM": true,
+    "NICK": true
+   },
+   {
+    "NICK": false,
+    "BECK": true,
+    "EM": true
+   },
+   {
+    "NICK": true,
+    "EM": true
+   },
+   {
+    "BROLGA": false,
+    "EM": true,
+    "NICK": true
+   },
+   {
+    "BECK": true,
+    "HERESY": true,
+    "BROLGA": false
+   }
+  ],
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "BECK",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "BROLGA",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "NICK"
+   },
+   {
+    "name": "HERESY",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "name": "EM",
+    "role": "PERCIVAL"
+   }
+  ],
+  "assassinated": null
  },
  "missions": [
   {
-   "team": [
-    "EM",
-    "NICK"
-   ],
-   "numFails": 0,
+   "teamSize": 2,
    "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "EM",
+      "NICK"
+     ],
      "votes": [
       "HERESY",
       "EM",
@@ -23,23 +74,23 @@
       "BROLGA",
       "NICK"
      ],
-     "state": "APPROVED",
-     "proposer": "EM",
-     "team": [
-      "EM",
-      "NICK"
-     ]
+     "proposer": "EM"
     }
    ],
-   "teamSize": 2,
+   "team": [
+    "EM",
+    "NICK"
+   ],
+   "numFails": 0,
    "failsRequired": 1
   },
   {
+   "teamSize": 3,
+   "failsRequired": 1,
    "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "BECK",
      "team": [
       "BECK",
       "EM",
@@ -50,12 +101,11 @@
       "EM",
       "BECK",
       "BROLGA"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "BECK"
     }
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 3,
    "team": [
     "BECK",
     "EM",
@@ -64,8 +114,14 @@
   },
   {
    "state": "SUCCESS",
+   "team": [
+    "EM",
+    "NICK"
+   ],
+   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "HERESY",
       "EM",
@@ -73,36 +129,24 @@
       "BROLGA",
       "NICK"
      ],
-     "proposer": "NICK",
      "team": [
       "EM",
       "NICK"
      ],
-     "state": "APPROVED"
+     "proposer": "NICK"
     }
    ],
    "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0,
-   "team": [
-    "EM",
-    "NICK"
-   ]
+   "numFails": 0
   },
   {
-   "numFails": 1,
-   "team": [
-    "EM",
-    "NICK",
-    "BROLGA"
-   ],
    "proposals": [
     {
+     "proposer": "BROLGA",
      "state": "REJECTED",
      "votes": [
       "BROLGA"
      ],
-     "proposer": "BROLGA",
      "team": [
       "EM",
       "BECK",
@@ -110,21 +154,19 @@
      ]
     },
     {
+     "state": "REJECTED",
      "team": [
       "EM",
       "HERESY",
       "BECK"
      ],
-     "state": "REJECTED",
-     "proposer": "HERESY",
      "votes": [
       "HERESY",
       "BECK"
-     ]
+     ],
+     "proposer": "HERESY"
     },
     {
-     "state": "APPROVED",
-     "proposer": "EM",
      "votes": [
       "EM",
       "BROLGA",
@@ -134,23 +176,24 @@
       "EM",
       "NICK",
       "BROLGA"
-     ]
+     ],
+     "proposer": "EM",
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "EM",
+    "NICK",
+    "BROLGA"
+   ],
    "teamSize": 3,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
    "numFails": 1,
    "teamSize": 3,
-   "team": [
-    "BECK",
-    "BROLGA",
-    "HERESY"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -158,17 +201,28 @@
       "BROLGA",
       "HERESY"
      ],
+     "state": "APPROVED",
+     "proposer": "BECK",
      "team": [
       "BECK",
       "BROLGA",
       "HERESY"
-     ],
-     "state": "APPROVED",
-     "proposer": "BECK"
+     ]
     }
-   ]
+   ],
+   "team": [
+    "BECK",
+    "BROLGA",
+    "HERESY"
+   ],
+   "state": "FAIL",
+   "failsRequired": 1
   }
  ],
+ "timeFinished": {
+  "_seconds": 1588472303,
+  "_nanoseconds": 314000000
+ },
  "timeCreated": {
   "_seconds": 1588471502,
   "_nanoseconds": 724000000
@@ -183,73 +237,19 @@
    "uid": "ceUcXyDbrCfgKdWvwzp27GhPS1K2"
   },
   {
-   "name": "BECK",
-   "uid": "C934hC190ZSgBbyog9WCaSqoaj02"
+   "uid": "C934hC190ZSgBbyog9WCaSqoaj02",
+   "name": "BECK"
   },
   {
    "name": "NICK",
    "uid": "AhsotrQ677MLw8IldgNuiV0Cthq1"
   },
   {
-   "name": "BROLGA",
-   "uid": "dABFikatRJPuCGpfPDCPWZBbiiG3"
+   "uid": "dABFikatRJPuCGpfPDCPWZBbiiG3",
+   "name": "BROLGA"
   }
  ],
- "outcome": {
-  "assassinated": null,
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "EM": true,
-    "NICK": true
-   },
-   {
-    "NICK": false,
-    "EM": true,
-    "BECK": true
-   },
-   {
-    "NICK": true,
-    "EM": true
-   },
-   {
-    "BROLGA": false,
-    "NICK": true,
-    "EM": true
-   },
-   {
-    "BROLGA": false,
-    "BECK": true,
-    "HERESY": true
-   }
-  ],
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "BECK",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "name": "BROLGA",
-    "role": "MORDRED"
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "NICK"
-   },
-   {
-    "role": "MERLIN",
-    "name": "HERESY",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "EM",
-    "role": "PERCIVAL"
-   }
-  ],
-  "state": "EVIL_WIN"
+ "options": {
+  "inGameLog": false
  }
 }

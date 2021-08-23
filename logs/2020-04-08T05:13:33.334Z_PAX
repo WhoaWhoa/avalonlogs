@@ -1,11 +1,95 @@
 {
+ "timeFinished": {
+  "_seconds": 1586323488,
+  "_nanoseconds": 765567000
+ },
+ "timeCreated": {
+  "_seconds": 1586322813,
+  "_nanoseconds": 334000000
+ },
+ "outcome": {
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "ELF",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "name": "HL",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "YANGSTY",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "CHRIS",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "CATHEAD",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "AARON"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "ANDY",
+    "assassin": false
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "CHRIS": true,
+    "YANGSTY": true
+   },
+   {
+    "YANGSTY": true,
+    "ANDY": true,
+    "CHRIS": false
+   },
+   {
+    "CHRIS": false,
+    "AARON": true,
+    "ANDY": true
+   },
+   {
+    "CHRIS": false,
+    "HL": true,
+    "AARON": true,
+    "YANGSTY": true
+   },
+   {
+    "CATHEAD": true,
+    "CHRIS": false,
+    "ANDY": false,
+    "HL": true
+   }
+  ],
+  "assassinated": null
+ },
  "missions": [
   {
-   "failsRequired": 1,
+   "team": [
+    "CHRIS",
+    "YANGSTY"
+   ],
    "teamSize": 2,
-   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "CHRIS",
+      "YANGSTY"
+     ],
      "proposer": "CHRIS",
      "state": "APPROVED",
      "votes": [
@@ -16,29 +100,24 @@
       "ELF",
       "HL",
       "YANGSTY"
-     ],
-     "team": [
-      "CHRIS",
-      "YANGSTY"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "CHRIS",
-    "YANGSTY"
-   ]
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
-   "state": "FAIL",
+   "team": [
+    "CHRIS",
+    "ANDY",
+    "YANGSTY"
+   ],
+   "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "CHRIS",
-      "ANDY",
-      "YANGSTY"
-     ],
      "state": "APPROVED",
+     "proposer": "ANDY",
      "votes": [
       "CHRIS",
       "CATHEAD",
@@ -48,23 +127,28 @@
       "HL",
       "YANGSTY"
      ],
-     "proposer": "ANDY"
+     "team": [
+      "CHRIS",
+      "ANDY",
+      "YANGSTY"
+     ]
     }
    ],
-   "numFails": 1,
+   "state": "FAIL",
    "failsRequired": 1,
-   "team": [
-    "CHRIS",
-    "ANDY",
-    "YANGSTY"
-   ],
    "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "AARON",
+    "ANDY",
+    "CHRIS"
+   ],
    "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "AARON",
      "state": "APPROVED",
      "votes": [
       "CHRIS",
@@ -74,7 +158,6 @@
       "ELF",
       "HL"
      ],
-     "proposer": "AARON",
      "team": [
       "AARON",
       "ANDY",
@@ -82,19 +165,21 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "AARON",
-    "ANDY",
-    "CHRIS"
-   ],
-   "state": "FAIL"
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
+   "failsRequired": 2,
    "teamSize": 4,
+   "numFails": 1,
    "proposals": [
     {
-     "proposer": "YANGSTY",
+     "team": [
+      "YANGSTY",
+      "HL",
+      "AARON",
+      "CHRIS"
+     ],
      "state": "APPROVED",
      "votes": [
       "AARON",
@@ -102,17 +187,10 @@
       "YANGSTY",
       "CHRIS"
      ],
-     "team": [
-      "YANGSTY",
-      "HL",
-      "AARON",
-      "CHRIS"
-     ]
+     "proposer": "YANGSTY"
     }
    ],
-   "numFails": 1,
    "state": "SUCCESS",
-   "failsRequired": 2,
    "team": [
     "YANGSTY",
     "HL",
@@ -121,28 +199,24 @@
    ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 4,
    "numFails": 2,
-   "team": [
-    "HL",
-    "CATHEAD",
-    "ANDY",
-    "CHRIS"
-   ],
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "YANGSTY",
       "AARON",
       "HL"
      ],
-     "proposer": "HL",
      "team": [
       "HL",
       "AARON",
       "YANGSTY",
       "CATHEAD"
      ],
-     "state": "REJECTED"
+     "proposer": "HL"
     },
     {
      "votes": [
@@ -151,25 +225,25 @@
       "ANDY",
       "ELF"
      ],
+     "state": "APPROVED",
+     "proposer": "CATHEAD",
      "team": [
       "HL",
       "CATHEAD",
       "ANDY",
       "CHRIS"
-     ],
-     "proposer": "CATHEAD",
-     "state": "APPROVED"
+     ]
     }
    ],
    "state": "FAIL",
-   "teamSize": 4,
-   "failsRequired": 1
+   "team": [
+    "HL",
+    "CATHEAD",
+    "ANDY",
+    "CHRIS"
+   ]
   }
  ],
- "timeFinished": {
-  "_seconds": 1586323488,
-  "_nanoseconds": 765567000
- },
  "players": [
   {
    "uid": "Zg0Av02GTEgrLDruIKHmkAU9oWe2",
@@ -192,86 +266,12 @@
    "uid": "y24qMolzKKOG4APBdqXuvki9q8G3"
   },
   {
-   "uid": "RfeUiDZP81VGqb1CdWiGaqB4Kgi1",
-   "name": "AARON"
+   "name": "AARON",
+   "uid": "RfeUiDZP81VGqb1CdWiGaqB4Kgi1"
   },
   {
    "name": "YANGSTY",
    "uid": "lT591m4GEBfV4QFvrxhuni6PvUF2"
   }
- ],
- "outcome": {
-  "assassinated": null,
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "ELF"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "HL"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "YANGSTY"
-   },
-   {
-    "assassin": false,
-    "name": "CHRIS",
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "CATHEAD"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "AARON"
-   },
-   {
-    "name": "ANDY",
-    "role": "EVIL MINION",
-    "assassin": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "CHRIS": true,
-    "YANGSTY": true
-   },
-   {
-    "ANDY": true,
-    "YANGSTY": true,
-    "CHRIS": false
-   },
-   {
-    "AARON": true,
-    "CHRIS": false,
-    "ANDY": true
-   },
-   {
-    "YANGSTY": true,
-    "HL": true,
-    "AARON": true,
-    "CHRIS": false
-   },
-   {
-    "ANDY": false,
-    "CATHEAD": true,
-    "CHRIS": false,
-    "HL": true
-   }
-  ],
-  "message": "Three failed missions"
- },
- "timeCreated": {
-  "_seconds": 1586322813,
-  "_nanoseconds": 334000000
- }
+ ]
 }

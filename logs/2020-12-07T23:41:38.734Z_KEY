@@ -1,4 +1,80 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "assassinated": "BROOKS",
+  "votes": [
+   {
+    "BROOKS": true,
+    "RO": true,
+    "KAI": false
+   },
+   {
+    "THOMAS": true,
+    "RO": true,
+    "DAVID": true,
+    "JON": true
+   },
+   {
+    "RO": true,
+    "DAVID": true,
+    "JON": true,
+    "THOMAS": true
+   },
+   {
+    "RO": true,
+    "YIQI": true,
+    "DAVID": true,
+    "THOMAS": false,
+    "JON": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JON",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "BROOKS"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "RO"
+   },
+   {
+    "assassin": false,
+    "name": "THOMAS",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "KAI",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "YIQI",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "MARTIN",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "DAVID"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated"
+ },
  "players": [
   {
    "name": "KAI",
@@ -33,95 +109,21 @@
    "name": "RO"
   }
  ],
- "outcome": {
-  "roles": [
-   {
-    "name": "JON",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "BROOKS"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "RO",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "THOMAS",
-    "assassin": false
-   },
-   {
-    "name": "KAI",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "name": "YIQI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "MARTIN"
-   },
-   {
-    "name": "DAVID",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   }
-  ],
-  "assassinated": "BROOKS",
-  "votes": [
-   {
-    "RO": true,
-    "BROOKS": true,
-    "KAI": false
-   },
-   {
-    "JON": true,
-    "RO": true,
-    "THOMAS": true,
-    "DAVID": true
-   },
-   {
-    "RO": true,
-    "DAVID": true,
-    "JON": true,
-    "THOMAS": true
-   },
-   {
-    "DAVID": true,
-    "JON": true,
-    "YIQI": true,
-    "RO": true,
-    "THOMAS": false
-   }
-  ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN"
- },
  "timeFinished": {
   "_seconds": 1607387299,
   "_nanoseconds": 212000000
  },
- "options": {
-  "inGameLog": false
- },
  "missions": [
   {
    "failsRequired": 1,
-   "teamSize": 3,
    "team": [
     "KAI",
     "RO",
     "BROOKS"
    ],
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -129,17 +131,16 @@
       "THOMAS",
       "MARTIN"
      ],
+     "proposer": "MARTIN",
      "state": "REJECTED",
      "team": [
       "MARTIN",
       "THOMAS",
       "JON"
-     ],
-     "proposer": "MARTIN"
+     ]
     },
     {
      "proposer": "THOMAS",
-     "state": "APPROVED",
      "votes": [
       "KAI",
       "BROOKS",
@@ -153,13 +154,18 @@
       "KAI",
       "RO",
       "BROOKS"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "state": "FAIL",
-   "numFails": 1
+   ]
   },
   {
+   "team": [
+    "DAVID",
+    "RO",
+    "JON",
+    "THOMAS"
+   ],
    "proposals": [
     {
      "votes": [
@@ -179,22 +185,17 @@
      ]
     }
    ],
+   "numFails": 0,
    "teamSize": 4,
-   "failsRequired": 1,
    "state": "SUCCESS",
-   "team": [
-    "DAVID",
-    "RO",
-    "JON",
-    "THOMAS"
-   ],
-   "numFails": 0
+   "failsRequired": 1
   },
   {
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "BROOKS",
      "state": "REJECTED",
+     "proposer": "BROOKS",
      "votes": [
       "KAI",
       "MARTIN",
@@ -208,14 +209,6 @@
      ]
     },
     {
-     "team": [
-      "DAVID",
-      "RO",
-      "JON",
-      "THOMAS"
-     ],
-     "proposer": "JON",
-     "state": "APPROVED",
      "votes": [
       "MARTIN",
       "RO",
@@ -223,13 +216,20 @@
       "YIQI",
       "THOMAS",
       "KAI"
-     ]
+     ],
+     "team": [
+      "DAVID",
+      "RO",
+      "JON",
+      "THOMAS"
+     ],
+     "state": "APPROVED",
+     "proposer": "JON"
     }
    ],
-   "failsRequired": 1,
    "teamSize": 4,
    "state": "SUCCESS",
-   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "DAVID",
     "RO",
@@ -238,18 +238,16 @@
    ]
   },
   {
-   "team": [
-    "YIQI",
-    "RO",
-    "JON",
-    "DAVID",
-    "THOMAS"
-   ],
+   "teamSize": 5,
+   "state": "SUCCESS",
    "failsRequired": 2,
-   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "RO",
+      "THOMAS",
+      "BROOKS"
+     ],
      "team": [
       "RO",
       "JON",
@@ -258,26 +256,22 @@
       "MARTIN"
      ],
      "proposer": "RO",
-     "votes": [
-      "RO",
-      "THOMAS",
-      "BROOKS"
-     ]
+     "state": "REJECTED"
     },
     {
-     "proposer": "KAI",
-     "state": "REJECTED",
      "votes": [
       "KAI",
       "THOMAS"
      ],
+     "proposer": "KAI",
      "team": [
       "KAI",
       "MARTIN",
       "THOMAS",
       "JON",
       "RO"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "state": "APPROVED",
@@ -298,15 +292,21 @@
      ]
     }
    ],
-   "state": "SUCCESS",
-   "teamSize": 5
+   "team": [
+    "YIQI",
+    "RO",
+    "JON",
+    "DAVID",
+    "THOMAS"
+   ],
+   "numFails": 1
   },
   {
+   "proposals": [],
    "teamSize": 5,
    "team": [],
    "state": "PENDING",
-   "failsRequired": 1,
-   "proposals": []
+   "failsRequired": 1
   }
  ],
  "timeCreated": {

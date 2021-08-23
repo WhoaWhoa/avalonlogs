@@ -1,4 +1,65 @@
 {
+ "timeCreated": {
+  "_seconds": 1585871488,
+  "_nanoseconds": 131000000
+ },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "RYAN": true,
+    "CHOWDADDY": true
+   },
+   {
+    "CHOWDADDY": false,
+    "RYAN": true,
+    "G": true
+   },
+   {
+    "RYAN": true,
+    "CHOWDADDY": true
+   },
+   {
+    "CHOWDADDY": false,
+    "BIGJIM": true,
+    "RYAN": true
+   },
+   {
+    "RYAN": true,
+    "BIGJIM": true,
+    "G": true
+   }
+  ],
+  "assassinated": "G",
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "name": "RYAN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MORDRED",
+    "name": "ZMART"
+   },
+   {
+    "name": "G",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "CHOWDADDY",
+    "assassin": true
+   },
+   {
+    "name": "BIGJIM",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ]
+ },
  "timeFinished": {
   "_seconds": 1585872650,
   "_nanoseconds": 2631000
@@ -17,22 +78,20 @@
    "uid": "1ZOMYITvk7SXNxbnxxdfb4JuZXp1"
   },
   {
-   "name": "G",
-   "uid": "mdCRb2Ojk3bGBwhz8lyC8EOn0ee2"
+   "uid": "mdCRb2Ojk3bGBwhz8lyC8EOn0ee2",
+   "name": "G"
   },
   {
    "name": "BIGJIM",
    "uid": "nQnGIQTOzQUmhzIYAglt17tjwn62"
   }
  ],
- "timeCreated": {
-  "_seconds": 1585871488,
-  "_nanoseconds": 131000000
- },
  "missions": [
   {
-   "numFails": 0,
-   "state": "SUCCESS",
+   "team": [
+    "RYAN",
+    "CHOWDADDY"
+   ],
    "proposals": [
     {
      "votes": [
@@ -40,86 +99,83 @@
       "CHOWDADDY",
       "ZMART"
      ],
-     "proposer": "BIGJIM",
      "state": "APPROVED",
+     "proposer": "BIGJIM",
      "team": [
       "RYAN",
       "CHOWDADDY"
      ]
     }
    ],
+   "state": "SUCCESS",
+   "teamSize": 2,
    "failsRequired": 1,
-   "team": [
-    "RYAN",
-    "CHOWDADDY"
-   ],
-   "teamSize": 2
+   "numFails": 0
   },
   {
-   "state": "FAIL",
-   "proposals": [
-    {
-     "team": [
-      "RYAN",
-      "CHOWDADDY",
-      "G"
-     ],
-     "proposer": "RYAN",
-     "votes": [
-      "ZMART",
-      "G",
-      "RYAN"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "teamSize": 3,
-   "failsRequired": 1,
    "team": [
     "RYAN",
     "CHOWDADDY",
     "G"
    ],
-   "numFails": 1
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "proposer": "RYAN",
+     "state": "APPROVED",
+     "team": [
+      "RYAN",
+      "CHOWDADDY",
+      "G"
+     ],
+     "votes": [
+      "ZMART",
+      "G",
+      "RYAN"
+     ]
+    }
+   ],
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
    "team": [
     "CHOWDADDY",
     "RYAN"
    ],
-   "teamSize": 2,
    "failsRequired": 1,
    "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "CHOWDADDY",
-      "RYAN"
-     ],
-     "proposer": "CHOWDADDY",
      "state": "APPROVED",
+     "proposer": "CHOWDADDY",
      "votes": [
       "G",
       "CHOWDADDY",
       "RYAN"
+     ],
+     "team": [
+      "CHOWDADDY",
+      "RYAN"
      ]
     }
-   ]
+   ],
+   "state": "SUCCESS",
+   "teamSize": 2
   },
   {
+   "numFails": 1,
+   "teamSize": 3,
+   "state": "FAIL",
    "failsRequired": 1,
    "team": [
     "BIGJIM",
     "CHOWDADDY",
     "RYAN"
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "ZMART",
      "votes": [
       "ZMART"
      ],
@@ -127,120 +183,64 @@
       "CHOWDADDY",
       "ZMART",
       "G"
-     ]
-    },
-    {
-     "proposer": "G",
-     "votes": [
-      "G"
      ],
      "state": "REJECTED",
+     "proposer": "ZMART"
+    },
+    {
      "team": [
       "G",
       "RYAN",
       "BIGJIM"
+     ],
+     "proposer": "G",
+     "state": "REJECTED",
+     "votes": [
+      "G"
      ]
     },
     {
      "state": "APPROVED",
-     "votes": [
-      "ZMART",
-      "CHOWDADDY",
-      "BIGJIM"
-     ],
      "proposer": "BIGJIM",
      "team": [
       "BIGJIM",
       "CHOWDADDY",
       "RYAN"
+     ],
+     "votes": [
+      "ZMART",
+      "CHOWDADDY",
+      "BIGJIM"
+     ]
+    }
+   ]
+  },
+  {
+   "failsRequired": 1,
+   "numFails": 0,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "RYAN",
+      "G",
+      "BIGJIM"
+     ],
+     "proposer": "RYAN",
+     "team": [
+      "BIGJIM",
+      "G",
+      "RYAN"
      ]
     }
    ],
-   "state": "FAIL"
-  },
-  {
+   "state": "SUCCESS",
    "teamSize": 3,
    "team": [
     "BIGJIM",
     "G",
     "RYAN"
-   ],
-   "state": "SUCCESS",
-   "proposals": [
-    {
-     "proposer": "RYAN",
-     "state": "APPROVED",
-     "team": [
-      "BIGJIM",
-      "G",
-      "RYAN"
-     ],
-     "votes": [
-      "RYAN",
-      "G",
-      "BIGJIM"
-     ]
-    }
-   ],
-   "numFails": 0,
-   "failsRequired": 1
+   ]
   }
- ],
- "outcome": {
-  "votes": [
-   {
-    "RYAN": true,
-    "CHOWDADDY": true
-   },
-   {
-    "G": true,
-    "RYAN": true,
-    "CHOWDADDY": false
-   },
-   {
-    "CHOWDADDY": true,
-    "RYAN": true
-   },
-   {
-    "BIGJIM": true,
-    "RYAN": true,
-    "CHOWDADDY": false
-   },
-   {
-    "G": true,
-    "RYAN": true,
-    "BIGJIM": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
-  "assassinated": "G",
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "RYAN",
-    "assassin": false
-   },
-   {
-    "name": "ZMART",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "role": "MERLIN",
-    "name": "G",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "name": "CHOWDADDY",
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "BIGJIM"
-   }
-  ]
- }
+ ]
 }

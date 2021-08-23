@@ -1,15 +1,77 @@
 {
+ "outcome": {
+  "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "ANDREW": true,
+    "JENNY": true
+   },
+   {
+    "JENNY": true,
+    "ANNA": false,
+    "ANDREW": true
+   },
+   {
+    "SHIVI": true,
+    "JENNY": true,
+    "ANDREW": true,
+    "RYANJIANG": true
+   },
+   {
+    "ANDREW": true,
+    "SHIVI": true,
+    "RYANJIANG": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "PERCIVAL",
+    "name": "RYANJIANG",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ANDREW"
+   },
+   {
+    "name": "JENNY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "SHIVI",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "ANNA"
+   },
+   {
+    "assassin": true,
+    "name": "SCOTT",
+    "role": "MORDRED"
+   }
+  ],
+  "assassinated": "SHIVI"
+ },
  "missions": [
   {
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "ANDREW",
+     "state": "REJECTED",
      "team": [
       "ANDREW",
       "ANNA"
      ],
-     "proposer": "ANDREW",
-     "state": "REJECTED",
      "votes": [
       "JENNY",
       "ANNA",
@@ -17,19 +79,20 @@
      ]
     },
     {
+     "team": [
+      "SHIVI",
+      "JENNY"
+     ],
      "proposer": "SHIVI",
+     "state": "REJECTED",
      "votes": [
       "ANDREW",
       "JENNY",
       "SHIVI"
-     ],
-     "state": "REJECTED",
-     "team": [
-      "SHIVI",
-      "JENNY"
      ]
     },
     {
+     "proposer": "JENNY",
      "state": "APPROVED",
      "votes": [
       "JENNY",
@@ -37,7 +100,6 @@
       "RYANJIANG",
       "ANDREW"
      ],
-     "proposer": "JENNY",
      "team": [
       "JENNY",
       "ANDREW"
@@ -47,58 +109,58 @@
    "team": [
     "JENNY",
     "ANDREW"
-   ],
-   "teamSize": 2,
-   "state": "SUCCESS",
-   "failsRequired": 1
+   ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
+   "state": "FAIL",
+   "team": [
+    "ANDREW",
+    "JENNY",
+    "ANNA"
+   ],
    "proposals": [
     {
+     "proposer": "SCOTT",
+     "votes": [
+      "JENNY",
+      "SCOTT"
+     ],
      "team": [
       "SCOTT",
       "JENNY",
       "ANDREW"
      ],
-     "state": "REJECTED",
-     "proposer": "SCOTT",
-     "votes": [
-      "JENNY",
-      "SCOTT"
-     ]
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "ANDREW",
-      "JENNY",
-      "RYANJIANG"
-     ],
+     "proposer": "RYANJIANG",
      "state": "REJECTED",
      "votes": [
       "ANDREW",
       "JENNY",
       "SHIVI"
      ],
-     "proposer": "RYANJIANG"
-    },
-    {
-     "votes": [
+     "team": [
       "ANDREW",
       "JENNY",
-      "ANNA"
-     ],
-     "proposer": "ANNA",
+      "RYANJIANG"
+     ]
+    },
+    {
      "state": "REJECTED",
      "team": [
       "ANNA",
       "ANDREW",
       "JENNY"
-     ]
+     ],
+     "votes": [
+      "ANDREW",
+      "JENNY",
+      "ANNA"
+     ],
+     "proposer": "ANNA"
     },
     {
-     "state": "APPROVED",
      "votes": [
       "ANDREW",
       "JENNY",
@@ -106,58 +168,21 @@
       "SCOTT",
       "RYANJIANG"
      ],
+     "state": "APPROVED",
+     "proposer": "ANDREW",
      "team": [
       "ANDREW",
       "JENNY",
       "ANNA"
-     ],
-     "proposer": "ANDREW"
+     ]
     }
    ],
-   "state": "FAIL",
+   "failsRequired": 1,
    "numFails": 1,
-   "team": [
-    "ANDREW",
-    "JENNY",
-    "ANNA"
-   ]
+   "teamSize": 3
   },
   {
-   "numFails": 0,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "team": [
-      "ANDREW",
-      "SHIVI",
-      "JENNY",
-      "RYANJIANG"
-     ],
-     "votes": [
-      "JENNY",
-      "SHIVI",
-      "RYANJIANG"
-     ],
-     "proposer": "SHIVI"
-    },
-    {
-     "votes": [
-      "RYANJIANG",
-      "ANDREW",
-      "JENNY",
-      "SHIVI"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "RYANJIANG",
-      "ANDREW",
-      "SHIVI",
-      "JENNY"
-     ],
-     "proposer": "JENNY"
-    }
-   ],
-   "state": "SUCCESS",
+   "teamSize": 4,
    "team": [
     "RYANJIANG",
     "ANDREW",
@@ -165,36 +190,72 @@
     "JENNY"
    ],
    "failsRequired": 1,
-   "teamSize": 4
+   "numFails": 0,
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "votes": [
+      "JENNY",
+      "SHIVI",
+      "RYANJIANG"
+     ],
+     "team": [
+      "ANDREW",
+      "SHIVI",
+      "JENNY",
+      "RYANJIANG"
+     ],
+     "proposer": "SHIVI",
+     "state": "REJECTED"
+    },
+    {
+     "votes": [
+      "RYANJIANG",
+      "ANDREW",
+      "JENNY",
+      "SHIVI"
+     ],
+     "team": [
+      "RYANJIANG",
+      "ANDREW",
+      "SHIVI",
+      "JENNY"
+     ],
+     "proposer": "JENNY",
+     "state": "APPROVED"
+    }
+   ]
   },
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "SCOTT",
      "team": [
       "SCOTT",
       "ANDREW",
       "JENNY"
      ],
+     "state": "REJECTED",
+     "proposer": "SCOTT",
      "votes": [
       "SCOTT"
      ]
     },
     {
+     "team": [
+      "RYANJIANG",
+      "ANDREW",
+      "SHIVI"
+     ],
+     "state": "APPROVED",
+     "proposer": "RYANJIANG",
      "votes": [
       "ANDREW",
       "JENNY",
       "SHIVI",
       "RYANJIANG"
-     ],
-     "proposer": "RYANJIANG",
-     "state": "APPROVED",
-     "team": [
-      "RYANJIANG",
-      "ANDREW",
-      "SHIVI"
      ]
     }
    ],
@@ -203,97 +264,32 @@
     "ANDREW",
     "SHIVI"
    ],
-   "numFails": 0,
-   "failsRequired": 1,
    "state": "SUCCESS"
   },
   {
    "failsRequired": 1,
    "state": "PENDING",
-   "proposals": [],
+   "teamSize": 4,
    "team": [],
-   "teamSize": 4
+   "proposals": []
   }
  ],
- "outcome": {
-  "roles": [
-   {
-    "name": "RYANJIANG",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "ANDREW",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JENNY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SHIVI",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "ANNA",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "SCOTT",
-    "assassin": true,
-    "role": "MORDRED"
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "SHIVI",
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "JENNY": true,
-    "ANDREW": true
-   },
-   {
-    "JENNY": true,
-    "ANNA": false,
-    "ANDREW": true
-   },
-   {
-    "ANDREW": true,
-    "SHIVI": true,
-    "JENNY": true,
-    "RYANJIANG": true
-   },
-   {
-    "RYANJIANG": true,
-    "ANDREW": true,
-    "SHIVI": true
-   }
-  ]
- },
- "timeCreated": {
-  "_seconds": 1585455029,
-  "_nanoseconds": 175000000
- },
  "players": [
   {
-   "name": "SCOTT",
-   "uid": "E1N7D9RLkxQH9AtqBRPvymtdwPv2"
+   "uid": "E1N7D9RLkxQH9AtqBRPvymtdwPv2",
+   "name": "SCOTT"
   },
   {
    "uid": "PajOdSE56YYkVUu5hwFqkxbR2C72",
    "name": "RYANJIANG"
   },
   {
-   "name": "ANNA",
-   "uid": "4cJd5Mag2HV1U5XcWciEkXDDlae2"
+   "uid": "4cJd5Mag2HV1U5XcWciEkXDDlae2",
+   "name": "ANNA"
   },
   {
-   "name": "ANDREW",
-   "uid": "GqkRdXH8zDQsqJXRumZnsmsZvUn1"
+   "uid": "GqkRdXH8zDQsqJXRumZnsmsZvUn1",
+   "name": "ANDREW"
   },
   {
    "name": "SHIVI",
@@ -307,5 +303,9 @@
  "timeFinished": {
   "_seconds": 1585456119,
   "_nanoseconds": 959275000
+ },
+ "timeCreated": {
+  "_seconds": 1585455029,
+  "_nanoseconds": 175000000
  }
 }

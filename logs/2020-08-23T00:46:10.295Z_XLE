@@ -1,37 +1,19 @@
 {
- "options": {
-  "inGameLog": false
- },
- "players": [
-  {
-   "uid": "AzTgDwYlkDRsC5bpZ4k7lAMh28J2",
-   "name": "HOLLY"
-  },
-  {
-   "uid": "mPN3PIMVeVMvtD3YddGLDs9T6AX2",
-   "name": "JESSICA"
-  },
-  {
-   "name": "GALAHAD",
-   "uid": "MUkHhrDx39WTzDXqq3cEgrmO4wb2"
-  },
-  {
-   "name": "SAMANTHA",
-   "uid": "UwSUHshg1KPDngx3YUSi1pUTIjL2"
-  },
-  {
-   "name": "PAUL",
-   "uid": "3H2UhJ1Cllfazu1TZ13e5SBrQOy1"
-  },
-  {
-   "uid": "ugnKNhZPRZbqhZ9wVoBGmuiQDhx1",
-   "name": "GLEN"
-  }
- ],
  "missions": [
   {
+   "failsRequired": 1,
+   "team": [
+    "HOLLY",
+    "SAMANTHA"
+   ],
+   "state": "FAIL",
+   "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "HOLLY",
+      "SAMANTHA"
+     ],
      "state": "APPROVED",
      "proposer": "SAMANTHA",
      "votes": [
@@ -39,33 +21,22 @@
       "HOLLY",
       "GALAHAD",
       "SAMANTHA"
-     ],
-     "team": [
-      "HOLLY",
-      "SAMANTHA"
      ]
     }
    ],
-   "state": "FAIL",
-   "numFails": 1,
-   "team": [
-    "HOLLY",
-    "SAMANTHA"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2
+   "numFails": 1
   },
   {
-   "state": "FAIL",
+   "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "GALAHAD",
       "SAMANTHA",
       "PAUL"
      ],
-     "state": "REJECTED",
      "votes": [
       "PAUL",
       "SAMANTHA",
@@ -74,7 +45,7 @@
      "proposer": "PAUL"
     },
     {
-     "state": "APPROVED",
+     "proposer": "GLEN",
      "votes": [
       "GLEN",
       "GALAHAD",
@@ -82,7 +53,7 @@
       "SAMANTHA",
       "PAUL"
      ],
-     "proposer": "GLEN",
+     "state": "APPROVED",
      "team": [
       "GLEN",
       "JESSICA",
@@ -90,15 +61,25 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "team": [
     "GLEN",
     "JESSICA",
     "PAUL"
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
+   "team": [
+    "GALAHAD",
+    "SAMANTHA",
+    "PAUL",
+    "JESSICA"
+   ],
+   "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "team": [
@@ -115,51 +96,74 @@
      "state": "REJECTED"
     },
     {
-     "team": [
-      "GALAHAD",
-      "SAMANTHA",
-      "PAUL",
-      "JESSICA"
-     ],
-     "state": "APPROVED",
      "votes": [
       "SAMANTHA",
       "JESSICA",
       "PAUL",
       "HOLLY"
      ],
-     "proposer": "JESSICA"
+     "state": "APPROVED",
+     "proposer": "JESSICA",
+     "team": [
+      "GALAHAD",
+      "SAMANTHA",
+      "PAUL",
+      "JESSICA"
+     ]
     }
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 4,
-   "team": [
-    "GALAHAD",
-    "SAMANTHA",
-    "PAUL",
-    "JESSICA"
-   ],
-   "numFails": 1
+   ]
   },
   {
-   "state": "PENDING",
-   "teamSize": 3,
    "failsRequired": 1,
    "proposals": [],
-   "team": []
+   "state": "PENDING",
+   "team": [],
+   "teamSize": 3
   },
   {
-   "proposals": [],
+   "team": [],
    "state": "PENDING",
-   "teamSize": 4,
+   "proposals": [],
    "failsRequired": 1,
-   "team": []
+   "teamSize": 4
   }
  ],
  "outcome": {
   "message": "Three failed missions",
+  "assassinated": null,
   "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": true,
+    "role": "MORDRED",
+    "name": "JESSICA"
+   },
+   {
+    "assassin": false,
+    "name": "SAMANTHA",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "GLEN"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "PAUL",
+    "assassin": false
+   },
+   {
+    "name": "GALAHAD",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "HOLLY"
+   }
+  ],
   "votes": [
    {
     "SAMANTHA": true,
@@ -167,56 +171,52 @@
    },
    {
     "JESSICA": false,
-    "PAUL": true,
-    "GLEN": true
+    "GLEN": true,
+    "PAUL": true
    },
    {
-    "SAMANTHA": true,
     "GALAHAD": true,
     "JESSICA": false,
+    "SAMANTHA": true,
     "PAUL": true
    }
-  ],
-  "roles": [
-   {
-    "assassin": true,
-    "name": "JESSICA",
-    "role": "MORDRED"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "SAMANTHA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "GLEN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "PAUL"
-   },
-   {
-    "assassin": false,
-    "name": "GALAHAD",
-    "role": "MERLIN"
-   },
-   {
-    "name": "HOLLY",
-    "role": "MORGANA",
-    "assassin": false
-   }
-  ],
-  "assassinated": null
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1598143894,
+  "_nanoseconds": 982000000
  },
  "timeCreated": {
   "_seconds": 1598143570,
   "_nanoseconds": 295000000
  },
- "timeFinished": {
-  "_seconds": 1598143894,
-  "_nanoseconds": 982000000
+ "players": [
+  {
+   "name": "HOLLY",
+   "uid": "AzTgDwYlkDRsC5bpZ4k7lAMh28J2"
+  },
+  {
+   "name": "JESSICA",
+   "uid": "mPN3PIMVeVMvtD3YddGLDs9T6AX2"
+  },
+  {
+   "name": "GALAHAD",
+   "uid": "MUkHhrDx39WTzDXqq3cEgrmO4wb2"
+  },
+  {
+   "uid": "UwSUHshg1KPDngx3YUSi1pUTIjL2",
+   "name": "SAMANTHA"
+  },
+  {
+   "name": "PAUL",
+   "uid": "3H2UhJ1Cllfazu1TZ13e5SBrQOy1"
+  },
+  {
+   "name": "GLEN",
+   "uid": "ugnKNhZPRZbqhZ9wVoBGmuiQDhx1"
+  }
+ ],
+ "options": {
+  "inGameLog": false
  }
 }

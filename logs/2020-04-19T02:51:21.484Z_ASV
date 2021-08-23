@@ -1,52 +1,82 @@
 {
- "players": [
-  {
-   "name": "RAHUL",
-   "uid": "7QifjUCY46TIhGd8uMfK41WSrIo1"
-  },
-  {
-   "name": "RAAS",
-   "uid": "oJoeG2DBmBcntH1iFhM8MdYn3ox2"
-  },
-  {
-   "name": "MAFAZLA",
-   "uid": "aZqL41Bbh3RbhHBKbl58qifvaV23"
-  },
-  {
-   "uid": "b25KDZonqXVnJg1BnaKXhGQCFUt1",
-   "name": "URWAH"
-  },
-  {
-   "uid": "Q9QyQdvthvf35Nfsq1nAHi9cUJv2",
-   "name": "ASIM"
-  },
-  {
-   "name": "SANJY",
-   "uid": "IO3NiZdJh1Oy7IS0BAN6ZSsAe073"
-  },
-  {
-   "name": "SAAD",
-   "uid": "CNDU2KmpIlMMrwYJZzd4YJbOh223"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1587264681,
-  "_nanoseconds": 484000000
- },
  "timeFinished": {
   "_seconds": 1587267269,
   "_nanoseconds": 662000000
  },
+ "outcome": {
+  "roles": [
+   {
+    "assassin": false,
+    "name": "MAFAZLA",
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "RAHUL"
+   },
+   {
+    "role": "MORDRED",
+    "name": "SAAD",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "ASIM",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "SANJY",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "RAAS"
+   },
+   {
+    "assassin": false,
+    "name": "URWAH",
+    "role": "MERLIN"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "MAFAZLA": true,
+    "RAAS": true
+   },
+   {
+    "MAFAZLA": true,
+    "SAAD": true,
+    "RAAS": true
+   },
+   {
+    "MAFAZLA": true,
+    "SAAD": false,
+    "RAAS": true
+   },
+   {
+    "RAAS": true,
+    "SAAD": false,
+    "MAFAZLA": true,
+    "RAHUL": false
+   },
+   {
+    "URWAH": true,
+    "RAHUL": true,
+    "SANJY": true,
+    "RAAS": true
+   }
+  ],
+  "assassinated": "URWAH"
+ },
  "missions": [
   {
-   "failsRequired": 1,
-   "team": [
-    "RAAS",
-    "MAFAZLA"
-   ],
-   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -56,28 +86,33 @@
       "ASIM",
       "SANJY"
      ],
+     "proposer": "RAAS",
      "state": "APPROVED",
      "team": [
       "RAAS",
       "MAFAZLA"
-     ],
-     "proposer": "RAAS"
+     ]
     }
-   ]
+   ],
+   "team": [
+    "RAAS",
+    "MAFAZLA"
+   ],
+   "teamSize": 2,
+   "state": "SUCCESS"
   },
   {
+   "state": "SUCCESS",
+   "numFails": 0,
    "failsRequired": 1,
    "team": [
     "RAAS",
     "MAFAZLA",
     "SAAD"
    ],
-   "numFails": 0,
    "teamSize": 3,
-   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "MAFAZLA",
      "state": "APPROVED",
      "team": [
       "RAAS",
@@ -89,21 +124,25 @@
       "URWAH",
       "MAFAZLA",
       "SAAD"
-     ]
+     ],
+     "proposer": "MAFAZLA"
     }
    ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "MAFAZLA",
     "SAAD",
     "RAAS"
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
+   "numFails": 1,
    "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "URWAH",
      "votes": [
       "ASIM",
       "SANJY",
@@ -113,19 +152,16 @@
       "RAHUL",
       "SAAD"
      ],
-     "state": "APPROVED",
-     "proposer": "URWAH",
      "team": [
       "MAFAZLA",
       "SAAD",
       "RAAS"
      ]
     }
-   ],
-   "numFails": 1
+   ]
   },
   {
-   "numFails": 2,
+   "teamSize": 4,
    "state": "FAIL",
    "team": [
     "RAAS",
@@ -133,21 +169,22 @@
     "SAAD",
     "RAHUL"
    ],
-   "teamSize": 4,
+   "numFails": 2,
+   "failsRequired": 2,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "SAAD",
       "ASIM"
      ],
+     "proposer": "ASIM",
+     "state": "REJECTED",
      "team": [
       "SAAD",
       "MAFAZLA",
       "RAAS",
       "ASIM"
-     ],
-     "proposer": "ASIM"
+     ]
     },
     {
      "state": "REJECTED",
@@ -165,12 +202,12 @@
      "proposer": "SANJY"
     },
     {
-     "proposer": "SAAD",
-     "state": "REJECTED",
      "votes": [
       "SAAD",
       "ASIM"
      ],
+     "proposer": "SAAD",
+     "state": "REJECTED",
      "team": [
       "SAAD",
       "ASIM",
@@ -179,14 +216,7 @@
      ]
     },
     {
-     "votes": [
-      "RAAS",
-      "MAFAZLA",
-      "RAHUL",
-      "SAAD",
-      "ASIM",
-      "SANJY"
-     ],
+     "proposer": "RAHUL",
      "team": [
       "RAAS",
       "MAFAZLA",
@@ -194,15 +224,35 @@
       "RAHUL"
      ],
      "state": "APPROVED",
-     "proposer": "RAHUL"
+     "votes": [
+      "RAAS",
+      "MAFAZLA",
+      "RAHUL",
+      "SAAD",
+      "ASIM",
+      "SANJY"
+     ]
     }
-   ],
-   "failsRequired": 2
+   ]
   },
   {
+   "teamSize": 4,
+   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "RAHUL",
+    "RAAS",
+    "SANJY",
+    "URWAH"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "RAHUL",
+      "RAAS",
+      "SANJY",
+      "URWAH"
+     ],
      "proposer": "RAAS",
      "votes": [
       "RAHUL",
@@ -212,96 +262,46 @@
       "RAAS",
       "URWAH"
      ],
-     "team": [
-      "RAHUL",
-      "RAAS",
-      "SANJY",
-      "URWAH"
-     ]
+     "state": "APPROVED"
     }
-   ],
-   "state": "SUCCESS",
-   "teamSize": 4,
-   "numFails": 0,
-   "team": [
-    "RAHUL",
-    "RAAS",
-    "SANJY",
-    "URWAH"
    ],
    "failsRequired": 1
   }
  ],
- "outcome": {
-  "assassinated": "URWAH",
-  "votes": [
-   {
-    "MAFAZLA": true,
-    "RAAS": true
-   },
-   {
-    "MAFAZLA": true,
-    "RAAS": true,
-    "SAAD": true
-   },
-   {
-    "MAFAZLA": true,
-    "SAAD": false,
-    "RAAS": true
-   },
-   {
-    "SAAD": false,
-    "RAHUL": false,
-    "RAAS": true,
-    "MAFAZLA": true
-   },
-   {
-    "URWAH": true,
-    "RAHUL": true,
-    "SANJY": true,
-    "RAAS": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "name": "MAFAZLA",
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "MORGANA",
-    "name": "RAHUL",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "SAAD",
-    "role": "MORDRED"
-   },
-   {
-    "assassin": true,
-    "name": "ASIM",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "SANJY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "RAAS",
-    "assassin": false
-   },
-   {
-    "name": "URWAH",
-    "role": "MERLIN",
-    "assassin": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated"
+ "timeCreated": {
+  "_seconds": 1587264681,
+  "_nanoseconds": 484000000
  },
+ "players": [
+  {
+   "uid": "7QifjUCY46TIhGd8uMfK41WSrIo1",
+   "name": "RAHUL"
+  },
+  {
+   "name": "RAAS",
+   "uid": "oJoeG2DBmBcntH1iFhM8MdYn3ox2"
+  },
+  {
+   "name": "MAFAZLA",
+   "uid": "aZqL41Bbh3RbhHBKbl58qifvaV23"
+  },
+  {
+   "uid": "b25KDZonqXVnJg1BnaKXhGQCFUt1",
+   "name": "URWAH"
+  },
+  {
+   "name": "ASIM",
+   "uid": "Q9QyQdvthvf35Nfsq1nAHi9cUJv2"
+  },
+  {
+   "uid": "IO3NiZdJh1Oy7IS0BAN6ZSsAe073",
+   "name": "SANJY"
+  },
+  {
+   "name": "SAAD",
+   "uid": "CNDU2KmpIlMMrwYJZzd4YJbOh223"
+  }
+ ],
  "options": {
   "inGameLog": false
  }

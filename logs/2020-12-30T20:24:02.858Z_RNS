@@ -1,20 +1,83 @@
 {
+ "timeFinished": {
+  "_seconds": 1609361290,
+  "_nanoseconds": 203000000
+ },
  "timeCreated": {
   "_seconds": 1609359842,
   "_nanoseconds": 858000000
  },
+ "outcome": {
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "LENA": true,
+    "MEERA": true
+   },
+   {
+    "LENA": true,
+    "MEERA": true,
+    "PARAAG": true
+   },
+   {
+    "LENA": true,
+    "PARAAG": true,
+    "KALPA": true,
+    "HEMAL": false
+   },
+   {
+    "STEVE": true,
+    "PARAAG": true,
+    "KALPA": true
+   }
+  ],
+  "message": "Three missions succeeded",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MEERA",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "STEVE",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "HEMAL",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "KALPA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "LENA",
+    "assassin": false
+   },
+   {
+    "name": "PARAAG",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "assassinated": null
+ },
  "players": [
   {
-   "uid": "tPONeMAmqneWMarCscrGBO8Xuce2",
-   "name": "HEMAL"
+   "name": "HEMAL",
+   "uid": "tPONeMAmqneWMarCscrGBO8Xuce2"
   },
   {
-   "uid": "cyza35QKWBNPODvGjbaQFwUe2SC3",
-   "name": "LENA"
+   "name": "LENA",
+   "uid": "cyza35QKWBNPODvGjbaQFwUe2SC3"
   },
   {
-   "name": "STEVE",
-   "uid": "xMdI4E5u7VSIiy6AJeacY15ZMxf1"
+   "uid": "xMdI4E5u7VSIiy6AJeacY15ZMxf1",
+   "name": "STEVE"
   },
   {
    "uid": "sIdRynFlyWNrAzmdHcuHNzqXa232",
@@ -25,18 +88,20 @@
    "uid": "4Jlz7InJ6zcAMa7WQK4kdOUWr6v1"
   },
   {
-   "name": "PARAAG",
-   "uid": "0bpbQGNpviXk9ICeAyDulsSch8W2"
+   "uid": "0bpbQGNpviXk9ICeAyDulsSch8W2",
+   "name": "PARAAG"
   }
  ],
  "missions": [
   {
-   "teamSize": 2,
    "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 2,
    "team": [
     "MEERA",
     "LENA"
    ],
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -54,18 +119,9 @@
       "LENA"
      ]
     }
-   ],
-   "state": "SUCCESS",
-   "numFails": 0
+   ]
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "MEERA",
-    "LENA",
-    "PARAAG"
-   ],
-   "numFails": 0,
    "state": "SUCCESS",
    "proposals": [
     {
@@ -85,68 +141,76 @@
      ]
     }
    ],
-   "teamSize": 3
+   "team": [
+    "MEERA",
+    "LENA",
+    "PARAAG"
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "numFails": 1,
-   "state": "FAIL",
-   "failsRequired": 1,
+   "proposals": [
+    {
+     "votes": [
+      "LENA",
+      "PARAAG",
+      "KALPA",
+      "HEMAL",
+      "STEVE"
+     ],
+     "proposer": "HEMAL",
+     "state": "APPROVED",
+     "team": [
+      "HEMAL",
+      "LENA",
+      "KALPA",
+      "PARAAG"
+     ]
+    }
+   ],
    "team": [
     "HEMAL",
     "LENA",
     "KALPA",
     "PARAAG"
    ],
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "LENA",
-      "PARAAG",
-      "KALPA",
-      "HEMAL",
-      "STEVE"
-     ],
-     "team": [
-      "HEMAL",
-      "LENA",
-      "KALPA",
-      "PARAAG"
-     ],
-     "proposer": "HEMAL"
-    }
-   ],
-   "teamSize": 4
+   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 4,
+   "numFails": 1
   },
   {
-   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "LENA",
-      "PARAAG",
-      "KALPA"
-     ],
+     "proposer": "LENA",
      "state": "REJECTED",
      "votes": [
       "LENA",
       "PARAAG",
       "STEVE"
      ],
-     "proposer": "LENA"
+     "team": [
+      "LENA",
+      "PARAAG",
+      "KALPA"
+     ]
     },
     {
      "votes": [
       "KALPA",
       "HEMAL"
      ],
-     "proposer": "STEVE",
      "team": [
       "HEMAL",
       "PARAAG",
       "LENA"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "STEVE"
     },
     {
      "state": "REJECTED",
@@ -161,19 +225,24 @@
      "proposer": "KALPA"
     },
     {
+     "votes": [
+      "KALPA",
+      "MEERA"
+     ],
      "team": [
       "STEVE",
       "PARAAG",
       "MEERA"
      ],
-     "votes": [
-      "KALPA",
-      "MEERA"
-     ],
-     "state": "REJECTED",
-     "proposer": "MEERA"
+     "proposer": "MEERA",
+     "state": "REJECTED"
     },
     {
+     "team": [
+      "PARAAG",
+      "STEVE",
+      "KALPA"
+     ],
      "votes": [
       "STEVE",
       "PARAAG",
@@ -182,96 +251,27 @@
       "KALPA",
       "HEMAL"
      ],
-     "team": [
-      "PARAAG",
-      "STEVE",
-      "KALPA"
-     ],
      "proposer": "PARAAG",
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "PARAAG",
     "STEVE",
     "KALPA"
    ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "proposals": [],
    "team": [],
    "teamSize": 4,
-   "failsRequired": 1,
-   "state": "PENDING",
-   "proposals": []
+   "state": "PENDING"
   }
  ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three missions succeeded",
-  "assassinated": null,
-  "votes": [
-   {
-    "MEERA": true,
-    "LENA": true
-   },
-   {
-    "LENA": true,
-    "MEERA": true,
-    "PARAAG": true
-   },
-   {
-    "PARAAG": true,
-    "HEMAL": false,
-    "KALPA": true,
-    "LENA": true
-   },
-   {
-    "KALPA": true,
-    "STEVE": true,
-    "PARAAG": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "name": "MEERA",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "STEVE",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "HEMAL",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "KALPA",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "LENA"
-   },
-   {
-    "name": "PARAAG",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ]
- },
  "options": {
   "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1609361290,
-  "_nanoseconds": 203000000
  }
 }

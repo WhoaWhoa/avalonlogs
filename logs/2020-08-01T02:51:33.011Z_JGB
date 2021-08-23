@@ -3,44 +3,40 @@
   "_seconds": 1596250293,
   "_nanoseconds": 11000000
  },
- "options": {
-  "inGameLog": false
- },
  "outcome": {
-  "message": "Three failed missions",
+  "state": "EVIL_WIN",
   "roles": [
    {
     "name": "KLAUDIA",
-    "role": "MORDRED",
-    "assassin": true
+    "assassin": true,
+    "role": "MORDRED"
    },
    {
-    "assassin": false,
+    "role": "MORGANA",
     "name": "JET",
-    "role": "MORGANA"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "NIKHIL",
     "assassin": false
    },
    {
     "assassin": false,
-    "role": "MERLIN",
-    "name": "ANINDYA"
-   },
-   {
-    "name": "NIKOLAI",
     "role": "LOYAL FOLLOWER",
+    "name": "NIKHIL"
+   },
+   {
+    "name": "ANINDYA",
+    "role": "MERLIN",
     "assassin": false
    },
    {
-    "role": "PERCIVAL",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "NIKOLAI"
+   },
+   {
     "name": "DAIVIK",
-    "assassin": false
+    "assassin": false,
+    "role": "PERCIVAL"
    }
   ],
-  "state": "EVIL_WIN",
   "votes": [
    {
     "ANINDYA": true,
@@ -52,9 +48,9 @@
     "ANINDYA": true
    },
    {
-    "KLAUDIA": false,
     "DAIVIK": true,
     "ANINDYA": true,
+    "KLAUDIA": false,
     "NIKOLAI": true
    },
    {
@@ -63,34 +59,39 @@
     "ANINDYA": true
    },
    {
-    "NIKHIL": true,
     "KLAUDIA": false,
-    "ANINDYA": true,
-    "DAIVIK": true
+    "NIKHIL": true,
+    "DAIVIK": true,
+    "ANINDYA": true
    }
   ],
+  "message": "Three failed missions",
   "assassinated": null
+ },
+ "timeFinished": {
+  "_seconds": 1596251319,
+  "_nanoseconds": 474000000
  },
  "players": [
   {
-   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2",
-   "name": "ANINDYA"
+   "name": "ANINDYA",
+   "uid": "J17GkcYwZBNJxVolkWs5PaqUKye2"
   },
   {
    "name": "NIKOLAI",
    "uid": "JAPBZxxk0fMO1c5d7Dli45JF9D23"
   },
   {
-   "uid": "GbFDeqFYRySq9Gq25zvHKULUSdC3",
-   "name": "JET"
+   "name": "JET",
+   "uid": "GbFDeqFYRySq9Gq25zvHKULUSdC3"
   },
   {
-   "uid": "V3CYobIAZwWneimGk4cLt7fQYEB3",
-   "name": "NIKHIL"
+   "name": "NIKHIL",
+   "uid": "V3CYobIAZwWneimGk4cLt7fQYEB3"
   },
   {
-   "name": "KLAUDIA",
-   "uid": "zbmVWflTTrfBLHCGFWZsGfzu5YR2"
+   "uid": "zbmVWflTTrfBLHCGFWZsGfzu5YR2",
+   "name": "KLAUDIA"
   },
   {
    "name": "DAIVIK",
@@ -99,11 +100,16 @@
  ],
  "missions": [
   {
+   "state": "SUCCESS",
+   "team": [
+    "ANINDYA",
+    "NIKOLAI"
+   ],
    "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "ANINDYA",
      "team": [
       "ANINDYA",
       "NIKOLAI"
@@ -113,60 +119,61 @@
       "ANINDYA",
       "JET",
       "NIKOLAI"
-     ],
-     "proposer": "ANINDYA"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "ANINDYA",
-    "NIKOLAI"
-   ],
-   "state": "SUCCESS"
+   "teamSize": 2,
+   "failsRequired": 1
   },
   {
    "state": "SUCCESS",
-   "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "NIKOLAI",
+    "ANINDYA",
+    "KLAUDIA"
+   ],
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "NIKOLAI",
-     "state": "REJECTED",
      "votes": [
       "NIKOLAI",
       "JET",
       "ANINDYA"
      ],
+     "proposer": "NIKOLAI",
      "team": [
       "NIKOLAI",
       "ANINDYA",
-      "JET"
-     ]
-    },
-    {
-     "team": [
-      "ANINDYA",
-      "NIKOLAI",
       "JET"
      ],
-     "proposer": "JET",
-     "state": "REJECTED",
+     "state": "REJECTED"
+    },
+    {
      "votes": [
       "ANINDYA",
       "JET",
       "NIKOLAI"
-     ]
+     ],
+     "proposer": "JET",
+     "team": [
+      "ANINDYA",
+      "NIKOLAI",
+      "JET"
+     ],
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "NIKHIL",
-      "NIKOLAI",
-      "KLAUDIA"
-     ],
-     "proposer": "NIKHIL",
      "state": "REJECTED",
      "votes": [
       "DAIVIK",
       "NIKHIL"
+     ],
+     "proposer": "NIKHIL",
+     "team": [
+      "NIKHIL",
+      "NIKOLAI",
+      "KLAUDIA"
      ]
     },
     {
@@ -185,15 +192,11 @@
      ]
     }
    ],
-   "numFails": 0,
-   "team": [
-    "NIKOLAI",
-    "ANINDYA",
-    "KLAUDIA"
-   ],
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
+   "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "NIKOLAI",
     "ANINDYA",
@@ -202,167 +205,165 @@
    ],
    "numFails": 1,
    "state": "FAIL",
-   "teamSize": 4,
-   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [
+      "DAIVIK"
+     ],
      "team": [
       "JET",
       "NIKOLAI",
       "DAIVIK",
       "KLAUDIA"
      ],
-     "proposer": "DAIVIK",
-     "state": "REJECTED",
-     "votes": [
-      "DAIVIK"
-     ]
+     "proposer": "DAIVIK"
     },
     {
+     "state": "REJECTED",
      "proposer": "ANINDYA",
+     "votes": [
+      "DAIVIK",
+      "ANINDYA"
+     ],
      "team": [
       "ANINDYA",
       "NIKOLAI",
       "KLAUDIA",
       "DAIVIK"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "DAIVIK",
-      "ANINDYA"
      ]
     },
     {
+     "proposer": "NIKOLAI",
      "votes": [
       "DAIVIK",
       "KLAUDIA",
       "NIKOLAI",
       "ANINDYA"
      ],
-     "proposer": "NIKOLAI",
+     "state": "APPROVED",
      "team": [
       "NIKOLAI",
       "ANINDYA",
       "KLAUDIA",
       "DAIVIK"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ]
   },
   {
-   "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1,
-   "team": [
-    "ANINDYA",
-    "KLAUDIA",
-    "NIKOLAI"
-   ],
    "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "JET",
       "DAIVIK"
      ],
-     "proposer": "JET",
+     "state": "REJECTED",
      "team": [
       "ANINDYA",
       "NIKOLAI",
       "JET"
-     ]
-    },
-    {
-     "votes": [
-      "NIKHIL"
-     ],
-     "team": [
-      "NIKHIL",
-      "KLAUDIA",
-      "ANINDYA"
-     ],
-     "state": "REJECTED",
-     "proposer": "NIKHIL"
-    },
-    {
-     "team": [
-      "ANINDYA",
-      "NIKOLAI",
-      "KLAUDIA"
-     ],
-     "votes": [
-      "NIKOLAI",
-      "ANINDYA",
-      "KLAUDIA"
-     ],
-     "state": "REJECTED",
-     "proposer": "KLAUDIA"
-    },
-    {
-     "state": "REJECTED",
-     "proposer": "DAIVIK",
-     "team": [
-      "ANINDYA",
-      "DAIVIK",
-      "NIKOLAI"
-     ],
-     "votes": [
-      "DAIVIK"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "team": [
-      "ANINDYA",
-      "KLAUDIA",
-      "NIKOLAI"
-     ],
-     "votes": [
-      "ANINDYA",
-      "NIKOLAI",
-      "DAIVIK",
-      "KLAUDIA"
-     ],
-     "proposer": "ANINDYA"
-    }
-   ]
-  },
-  {
-   "numFails": 1,
-   "teamSize": 4,
-   "proposals": [
-    {
-     "team": [
-      "NIKOLAI",
-      "JET",
-      "ANINDYA",
-      "NIKHIL"
-     ],
-     "votes": [
-      "NIKOLAI"
-     ],
-     "state": "REJECTED",
-     "proposer": "NIKOLAI"
-    },
-    {
-     "state": "REJECTED",
-     "votes": [
-      "NIKOLAI",
-      "JET"
-     ],
-     "team": [
-      "ANINDYA",
-      "NIKOLAI",
-      "JET",
-      "DAIVIK"
      ],
      "proposer": "JET"
     },
     {
      "state": "REJECTED",
      "votes": [
+      "NIKHIL"
+     ],
+     "team": [
+      "NIKHIL",
+      "KLAUDIA",
+      "ANINDYA"
+     ],
+     "proposer": "NIKHIL"
+    },
+    {
+     "state": "REJECTED",
+     "votes": [
+      "NIKOLAI",
+      "ANINDYA",
+      "KLAUDIA"
+     ],
+     "team": [
+      "ANINDYA",
+      "NIKOLAI",
+      "KLAUDIA"
+     ],
+     "proposer": "KLAUDIA"
+    },
+    {
+     "team": [
+      "ANINDYA",
+      "DAIVIK",
+      "NIKOLAI"
+     ],
+     "proposer": "DAIVIK",
+     "state": "REJECTED",
+     "votes": [
+      "DAIVIK"
+     ]
+    },
+    {
+     "votes": [
+      "ANINDYA",
+      "NIKOLAI",
+      "DAIVIK",
+      "KLAUDIA"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "ANINDYA",
+      "KLAUDIA",
+      "NIKOLAI"
+     ],
+     "proposer": "ANINDYA"
+    }
+   ],
+   "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "ANINDYA",
+    "KLAUDIA",
+    "NIKOLAI"
+   ]
+  },
+  {
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "proposer": "NIKOLAI",
+     "team": [
+      "NIKOLAI",
+      "JET",
+      "ANINDYA",
+      "NIKHIL"
+     ],
+     "votes": [
+      "NIKOLAI"
+     ]
+    },
+    {
+     "state": "REJECTED",
+     "team": [
+      "ANINDYA",
+      "NIKOLAI",
+      "JET",
+      "DAIVIK"
+     ],
+     "votes": [
+      "NIKOLAI",
+      "JET"
+     ],
+     "proposer": "JET"
+    },
+    {
+     "state": "REJECTED",
+     "proposer": "NIKHIL",
+     "votes": [
       "NIKHIL",
       "ANINDYA",
       "DAIVIK"
@@ -372,8 +373,7 @@
       "ANINDYA",
       "DAIVIK",
       "KLAUDIA"
-     ],
-     "proposer": "NIKHIL"
+     ]
     },
     {
      "team": [
@@ -408,18 +408,18 @@
      ]
     }
    ],
+   "teamSize": 4,
+   "state": "FAIL",
+   "numFails": 1,
    "team": [
     "DAIVIK",
     "KLAUDIA",
     "ANINDYA",
     "NIKHIL"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1
+   ]
   }
  ],
- "timeFinished": {
-  "_seconds": 1596251319,
-  "_nanoseconds": 474000000
+ "options": {
+  "inGameLog": false
  }
 }

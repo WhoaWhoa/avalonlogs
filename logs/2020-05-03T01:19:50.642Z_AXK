@@ -1,38 +1,19 @@
 {
- "players": [
-  {
-   "uid": "AhsotrQ677MLw8IldgNuiV0Cthq1",
-   "name": "NICK"
-  },
-  {
-   "uid": "S35ndHVwNJgu6udlkAzm8IJbjE62",
-   "name": "HERESY"
-  },
-  {
-   "uid": "E4YRYLW3MFZDmX8EH2ZogQpIRV23",
-   "name": "AMELIA"
-  },
-  {
-   "name": "BECK",
-   "uid": "C934hC190ZSgBbyog9WCaSqoaj02"
-  },
-  {
-   "uid": "ceUcXyDbrCfgKdWvwzp27GhPS1K2",
-   "name": "EM"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1588469562,
-  "_nanoseconds": 883000000
- },
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1588468790,
   "_nanoseconds": 642000000
  },
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1588469562,
+  "_nanoseconds": 883000000
+ },
  "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "message": "Three failed missions",
   "votes": [
    {
     "EM": true,
@@ -40,64 +21,83 @@
    },
    {
     "BECK": true,
-    "AMELIA": true,
-    "NICK": true
-   },
-   {
     "NICK": true,
-    "BECK": true
+    "AMELIA": true
    },
    {
-    "BECK": false,
-    "EM": true,
+    "BECK": true,
     "NICK": true
    },
    {
     "NICK": true,
     "BECK": false,
-    "HERESY": true
+    "EM": true
+   },
+   {
+    "BECK": false,
+    "HERESY": true,
+    "NICK": true
    }
   ],
-  "message": "Three failed missions",
   "roles": [
    {
     "name": "HERESY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
-    "role": "EVIL MINION",
     "assassin": true,
-    "name": "AMELIA"
+    "name": "AMELIA",
+    "role": "EVIL MINION"
    },
    {
+    "assassin": false,
     "name": "EM",
-    "role": "MERLIN",
-    "assassin": false
+    "role": "MERLIN"
    },
    {
+    "assassin": false,
     "name": "BECK",
-    "role": "MORDRED",
-    "assassin": false
+    "role": "MORDRED"
    },
    {
     "name": "NICK",
     "assassin": false,
     "role": "LOYAL FOLLOWER"
    }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN"
+  ]
  },
+ "players": [
+  {
+   "uid": "AhsotrQ677MLw8IldgNuiV0Cthq1",
+   "name": "NICK"
+  },
+  {
+   "name": "HERESY",
+   "uid": "S35ndHVwNJgu6udlkAzm8IJbjE62"
+  },
+  {
+   "name": "AMELIA",
+   "uid": "E4YRYLW3MFZDmX8EH2ZogQpIRV23"
+  },
+  {
+   "name": "BECK",
+   "uid": "C934hC190ZSgBbyog9WCaSqoaj02"
+  },
+  {
+   "name": "EM",
+   "uid": "ceUcXyDbrCfgKdWvwzp27GhPS1K2"
+  }
+ ],
  "missions": [
   {
+   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "EM",
-      "AMELIA"
-     ],
      "proposer": "BECK",
+     "state": "APPROVED",
      "votes": [
       "BECK",
       "NICK",
@@ -105,45 +105,40 @@
       "AMELIA",
       "EM"
      ],
-     "state": "APPROVED"
+     "team": [
+      "EM",
+      "AMELIA"
+     ]
     }
    ],
-   "failsRequired": 1,
    "team": [
     "EM",
     "AMELIA"
    ],
-   "numFails": 1,
-   "teamSize": 2,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "NICK",
-    "BECK",
-    "AMELIA"
-   ],
-   "failsRequired": 1,
    "teamSize": 3,
+   "failsRequired": 1,
    "numFails": 0,
    "proposals": [
     {
-     "proposer": "EM",
-     "votes": [
-      "HERESY",
-      "EM"
-     ],
+     "state": "REJECTED",
      "team": [
       "EM",
       "HERESY",
       "BECK"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "HERESY",
+      "EM"
+     ],
+     "proposer": "EM"
     },
     {
-     "state": "APPROVED",
      "proposer": "NICK",
+     "state": "APPROVED",
      "votes": [
       "HERESY",
       "AMELIA",
@@ -155,22 +150,26 @@
       "AMELIA"
      ]
     }
+   ],
+   "team": [
+    "NICK",
+    "BECK",
+    "AMELIA"
    ]
   },
   {
+   "numFails": 0,
+   "teamSize": 2,
    "state": "SUCCESS",
-   "team": [
-    "NICK",
-    "BECK"
-   ],
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
       "NICK",
       "BECK"
      ],
-     "proposer": "HERESY",
      "state": "APPROVED",
+     "proposer": "HERESY",
      "votes": [
       "NICK",
       "HERESY",
@@ -179,30 +178,27 @@
      ]
     }
    ],
-   "teamSize": 2,
-   "numFails": 0,
-   "failsRequired": 1
+   "team": [
+    "NICK",
+    "BECK"
+   ]
   },
   {
-   "numFails": 1,
-   "team": [
-    "BECK",
-    "NICK",
-    "EM"
-   ],
+   "teamSize": 3,
+   "failsRequired": 1,
    "state": "FAIL",
    "proposals": [
     {
-     "proposer": "AMELIA",
-     "votes": [
-      "AMELIA"
-     ],
-     "state": "REJECTED",
      "team": [
       "BECK",
       "NICK",
       "AMELIA"
-     ]
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "AMELIA"
+     ],
+     "proposer": "AMELIA"
     },
     {
      "team": [
@@ -210,31 +206,28 @@
       "NICK",
       "EM"
      ],
-     "proposer": "BECK",
      "state": "APPROVED",
      "votes": [
       "BECK",
       "NICK",
       "HERESY",
       "EM"
-     ]
+     ],
+     "proposer": "BECK"
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3
+   "team": [
+    "BECK",
+    "NICK",
+    "EM"
+   ],
+   "numFails": 1
   },
   {
-   "teamSize": 3,
-   "team": [
-    "HERESY",
-    "NICK",
-    "BECK"
-   ],
-   "failsRequired": 1,
    "state": "FAIL",
-   "numFails": 1,
    "proposals": [
     {
+     "proposer": "EM",
      "votes": [
       "EM"
      ],
@@ -243,7 +236,6 @@
       "HERESY",
       "BECK"
      ],
-     "proposer": "EM",
      "state": "REJECTED"
     },
     {
@@ -251,27 +243,35 @@
       "AMELIA"
      ],
      "state": "REJECTED",
-     "proposer": "NICK",
      "team": [
       "NICK",
       "AMELIA",
       "BECK"
-     ]
+     ],
+     "proposer": "NICK"
     },
     {
-     "team": [
-      "HERESY",
-      "NICK",
-      "BECK"
-     ],
      "state": "APPROVED",
+     "proposer": "HERESY",
      "votes": [
       "HERESY",
       "AMELIA",
       "BECK"
      ],
-     "proposer": "HERESY"
+     "team": [
+      "HERESY",
+      "NICK",
+      "BECK"
+     ]
     }
+   ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3,
+   "team": [
+    "HERESY",
+    "NICK",
+    "BECK"
    ]
   }
  ]

@@ -1,46 +1,82 @@
 {
- "timeFinished": {
-  "_seconds": 1589062592,
-  "_nanoseconds": 377000000
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
-   "name": "KARL",
-   "uid": "rLlw5o67cwZVDwpeTLxyGWKXS1H3"
+   "uid": "rLlw5o67cwZVDwpeTLxyGWKXS1H3",
+   "name": "KARL"
   },
   {
    "name": "NICK",
    "uid": "3BZDbZZUidhTK3mWnTiu3F3bNXI3"
   },
   {
-   "name": "CHRISTOPH",
-   "uid": "Tzfj8KypC2NvafKDnRgrbYdDtk42"
+   "uid": "Tzfj8KypC2NvafKDnRgrbYdDtk42",
+   "name": "CHRISTOPH"
   },
   {
-   "uid": "mRt3Q8chi3VkwBRXnqGZqf8l0gj2",
-   "name": "MARKUS"
+   "name": "MARKUS",
+   "uid": "mRt3Q8chi3VkwBRXnqGZqf8l0gj2"
   },
   {
    "uid": "ACKpLvD5HMNJPjbaoVuC4C7gdNA2",
    "name": "INGO"
   },
   {
-   "name": "JONAS",
-   "uid": "pI1TOu36TlScMCZ9OXJxqLYuMPx1"
+   "uid": "pI1TOu36TlScMCZ9OXJxqLYuMPx1",
+   "name": "JONAS"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1589062592,
+  "_nanoseconds": 377000000
+ },
+ "timeCreated": {
+  "_seconds": 1589062146,
+  "_nanoseconds": 914000000
+ },
  "outcome": {
-  "message": "Merlin assassinated",
-  "roles": [
+  "votes": [
    {
-    "name": "MARKUS",
-    "assassin": false,
-    "role": "PERCIVAL"
+    "JONAS": true,
+    "INGO": true
    },
    {
+    "CHRISTOPH": true,
+    "JONAS": false,
+    "NICK": true
+   },
+   {
+    "KARL": true,
+    "INGO": true,
+    "JONAS": false,
+    "MARKUS": true
+   },
+   {
+    "INGO": true,
+    "MARKUS": true,
+    "CHRISTOPH": true
+   },
+   {
+    "INGO": true,
+    "CHRISTOPH": true,
+    "MARKUS": true,
+    "KARL": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "KARL",
+  "roles": [
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "MARKUS"
+   },
+   {
+    "assassin": true,
     "name": "NICK",
-    "role": "EVIL MINION",
-    "assassin": true
+    "role": "EVIL MINION"
    },
    {
     "name": "CHRISTOPH",
@@ -49,88 +85,53 @@
    },
    {
     "name": "KARL",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "JONAS",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "INGO",
+    "role": "MERLIN",
     "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "JONAS"
+   },
+   {
+    "name": "INGO",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    }
   ],
-  "votes": [
-   {
-    "INGO": true,
-    "JONAS": true
-   },
-   {
-    "NICK": true,
-    "CHRISTOPH": true,
-    "JONAS": false
-   },
-   {
-    "INGO": true,
-    "MARKUS": true,
-    "KARL": true,
-    "JONAS": false
-   },
-   {
-    "INGO": true,
-    "CHRISTOPH": true,
-    "MARKUS": true
-   },
-   {
-    "MARKUS": true,
-    "KARL": true,
-    "INGO": true,
-    "CHRISTOPH": true
-   }
-  ],
-  "assassinated": "KARL",
   "state": "EVIL_WIN"
- },
- "timeCreated": {
-  "_seconds": 1589062146,
-  "_nanoseconds": 914000000
  },
  "missions": [
   {
-   "state": "SUCCESS",
+   "team": [
+    "JONAS",
+    "INGO"
+   ],
    "failsRequired": 1,
+   "numFails": 0,
    "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "JONAS",
-      "INGO"
-     ],
      "votes": [
       "JONAS",
       "INGO",
       "MARKUS",
       "KARL"
      ],
+     "team": [
+      "JONAS",
+      "INGO"
+     ],
+     "state": "APPROVED",
      "proposer": "MARKUS"
     }
-   ],
-   "numFails": 0,
-   "team": [
-    "JONAS",
-    "INGO"
    ]
   },
   {
    "failsRequired": 1,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "INGO",
      "votes": [
       "INGO",
       "NICK",
@@ -140,74 +141,76 @@
       "NICK",
       "CHRISTOPH",
       "INGO"
-     ]
+     ],
+     "proposer": "INGO",
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
      "proposer": "JONAS",
-     "team": [
-      "JONAS",
-      "CHRISTOPH",
-      "NICK"
-     ],
      "votes": [
       "KARL",
       "JONAS",
       "NICK",
       "CHRISTOPH"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "JONAS",
+      "CHRISTOPH",
+      "NICK"
      ]
     }
    ],
-   "state": "FAIL",
    "team": [
     "JONAS",
     "CHRISTOPH",
     "NICK"
    ],
+   "teamSize": 3,
    "numFails": 1,
-   "teamSize": 3
+   "state": "FAIL"
   },
   {
-   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "INGO",
     "MARKUS",
     "KARL",
     "JONAS"
    ],
-   "teamSize": 4,
-   "state": "FAIL",
    "proposals": [
     {
      "state": "REJECTED",
-     "proposer": "KARL",
-     "votes": [
-      "KARL",
-      "MARKUS"
-     ],
      "team": [
       "KARL",
       "CHRISTOPH",
       "MARKUS",
       "INGO"
-     ]
+     ],
+     "votes": [
+      "KARL",
+      "MARKUS"
+     ],
+     "proposer": "KARL"
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "NICK",
-      "CHRISTOPH",
-      "KARL"
-     ],
      "proposer": "NICK",
      "team": [
       "NICK",
       "INGO",
       "CHRISTOPH",
       "KARL"
-     ]
+     ],
+     "votes": [
+      "NICK",
+      "CHRISTOPH",
+      "KARL"
+     ],
+     "state": "REJECTED"
     },
     {
+     "proposer": "CHRISTOPH",
+     "state": "REJECTED",
      "team": [
       "NICK",
       "CHRISTOPH",
@@ -218,67 +221,69 @@
       "NICK",
       "CHRISTOPH",
       "KARL"
-     ],
-     "state": "REJECTED",
-     "proposer": "CHRISTOPH"
+     ]
     },
     {
-     "votes": [
-      "MARKUS",
-      "CHRISTOPH",
-      "JONAS"
-     ],
-     "proposer": "MARKUS",
-     "state": "REJECTED",
      "team": [
       "JONAS",
       "INGO",
       "MARKUS",
       "CHRISTOPH"
-     ]
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "MARKUS",
+      "CHRISTOPH",
+      "JONAS"
+     ],
+     "proposer": "MARKUS"
     },
     {
      "state": "APPROVED",
+     "team": [
+      "INGO",
+      "MARKUS",
+      "KARL",
+      "JONAS"
+     ],
      "proposer": "INGO",
      "votes": [
       "NICK",
       "KARL",
       "JONAS",
       "INGO"
-     ],
-     "team": [
-      "INGO",
-      "MARKUS",
-      "KARL",
-      "JONAS"
      ]
     }
    ],
+   "teamSize": 4,
+   "failsRequired": 1,
    "numFails": 1
   },
   {
+   "teamSize": 3,
    "failsRequired": 1,
+   "team": [
+    "CHRISTOPH",
+    "MARKUS",
+    "INGO"
+   ],
    "proposals": [
     {
+     "proposer": "JONAS",
+     "team": [
+      "MARKUS",
+      "INGO",
+      "JONAS"
+     ],
      "state": "REJECTED",
      "votes": [
       "JONAS",
       "INGO",
       "MARKUS"
-     ],
-     "team": [
-      "MARKUS",
-      "INGO",
-      "JONAS"
-     ],
-     "proposer": "JONAS"
+     ]
     },
     {
-     "team": [
-      "CHRISTOPH",
-      "MARKUS",
-      "INGO"
-     ],
+     "state": "APPROVED",
      "votes": [
       "INGO",
       "MARKUS",
@@ -286,19 +291,19 @@
       "KARL"
      ],
      "proposer": "KARL",
-     "state": "APPROVED"
+     "team": [
+      "CHRISTOPH",
+      "MARKUS",
+      "INGO"
+     ]
     }
    ],
-   "team": [
-    "CHRISTOPH",
-    "MARKUS",
-    "INGO"
-   ],
    "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 3
+   "numFails": 0
   },
   {
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "KARL",
     "CHRISTOPH",
@@ -306,22 +311,29 @@
     "INGO"
    ],
    "teamSize": 4,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "JONAS",
-      "NICK"
-     ],
-     "proposer": "NICK",
      "team": [
       "INGO",
       "MARKUS",
       "CHRISTOPH",
       "NICK"
-     ]
+     ],
+     "votes": [
+      "JONAS",
+      "NICK"
+     ],
+     "state": "REJECTED",
+     "proposer": "NICK"
     },
     {
+     "team": [
+      "KARL",
+      "CHRISTOPH",
+      "MARKUS",
+      "INGO"
+     ],
      "state": "APPROVED",
      "votes": [
       "CHRISTOPH",
@@ -330,21 +342,9 @@
       "MARKUS",
       "NICK"
      ],
-     "team": [
-      "KARL",
-      "CHRISTOPH",
-      "MARKUS",
-      "INGO"
-     ],
      "proposer": "CHRISTOPH"
     }
-   ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS"
+   ]
   }
- ],
- "options": {
-  "inGameLog": false
- }
+ ]
 }

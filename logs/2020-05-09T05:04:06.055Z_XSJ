@@ -1,7 +1,73 @@
 {
- "timeFinished": {
-  "_seconds": 1589001619,
-  "_nanoseconds": 932000000
+ "outcome": {
+  "assassinated": "CHAI",
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "name": "PRANA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "MARLIN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "ABHIJIT",
+    "assassin": false,
+    "role": "OBERON"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "BANANA",
+    "assassin": true
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "CHAI"
+   },
+   {
+    "role": "MORDRED",
+    "name": "KARAN",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "NITWIT",
+    "assassin": false
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "KARAN": true,
+    "PRANA": true
+   },
+   {
+    "PRANA": true,
+    "KARAN": false,
+    "CHAI": true
+   },
+   {
+    "ABHIJIT": false,
+    "MARLIN": true,
+    "NITWIT": true
+   },
+   {
+    "ABHIJIT": true,
+    "CHAI": true,
+    "BANANA": true,
+    "PRANA": true
+   },
+   {
+    "NITWIT": true,
+    "CHAI": true,
+    "MARLIN": true,
+    "PRANA": true
+   }
+  ]
  },
  "timeCreated": {
   "_seconds": 1589000646,
@@ -10,14 +76,18 @@
  "options": {
   "inGameLog": false
  },
+ "timeFinished": {
+  "_seconds": 1589001619,
+  "_nanoseconds": 932000000
+ },
  "players": [
   {
-   "name": "BANANA",
-   "uid": "weox9NOyNDZiyKTtPDAXxvazdFV2"
+   "uid": "weox9NOyNDZiyKTtPDAXxvazdFV2",
+   "name": "BANANA"
   },
   {
-   "name": "ABHIJIT",
-   "uid": "EccvBFC0axSC6fAdNR0WC6sNsB33"
+   "uid": "EccvBFC0axSC6fAdNR0WC6sNsB33",
+   "name": "ABHIJIT"
   },
   {
    "uid": "cAjDOV1WbPRqRjv28SDq7BYb6Up2",
@@ -28,96 +98,98 @@
    "name": "KARAN"
   },
   {
-   "uid": "MZNNYGz2dyObT9G5nUSdpYmwN652",
-   "name": "PRANA"
+   "name": "PRANA",
+   "uid": "MZNNYGz2dyObT9G5nUSdpYmwN652"
   },
   {
-   "name": "MARLIN",
-   "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3"
+   "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3",
+   "name": "MARLIN"
   },
   {
-   "uid": "M9nSGFmZJLediRJeU20AOG8aVjU2",
-   "name": "NITWIT"
+   "name": "NITWIT",
+   "uid": "M9nSGFmZJLediRJeU20AOG8aVjU2"
   }
  ],
  "missions": [
   {
+   "numFails": 0,
    "state": "SUCCESS",
    "failsRequired": 1,
    "teamSize": 2,
-   "team": [
-    "KARAN",
-    "PRANA"
-   ],
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "KARAN",
       "PRANA"
      ],
+     "state": "APPROVED",
+     "proposer": "KARAN",
      "votes": [
       "CHAI",
       "KARAN",
       "NITWIT",
       "PRANA"
-     ],
-     "proposer": "KARAN"
+     ]
     }
    ],
-   "numFails": 0
+   "team": [
+    "KARAN",
+    "PRANA"
+   ]
   },
   {
-   "team": [
-    "PRANA",
-    "KARAN",
-    "CHAI"
-   ],
-   "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 1,
-   "state": "FAIL",
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "PRANA",
      "votes": [
       "PRANA",
       "CHAI",
       "KARAN",
       "NITWIT"
      ],
+     "proposer": "PRANA",
      "team": [
       "PRANA",
       "KARAN",
       "CHAI"
      ]
     }
-   ]
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "PRANA",
+    "KARAN",
+    "CHAI"
+   ],
+   "numFails": 1
   },
   {
+   "teamSize": 3,
+   "team": [
+    "ABHIJIT",
+    "NITWIT",
+    "MARLIN"
+   ],
+   "numFails": 1,
    "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "MARLIN",
-      "PRANA",
-      "KARAN"
-     ],
+     "proposer": "MARLIN",
+     "state": "REJECTED",
      "votes": [
       "MARLIN",
       "NITWIT"
      ],
-     "state": "REJECTED",
-     "proposer": "MARLIN"
+     "team": [
+      "MARLIN",
+      "PRANA",
+      "KARAN"
+     ]
     },
     {
-     "team": [
-      "ABHIJIT",
-      "NITWIT",
-      "MARLIN"
-     ],
-     "state": "APPROVED",
      "votes": [
       "NITWIT",
       "MARLIN",
@@ -125,17 +197,15 @@
       "CHAI",
       "KARAN"
      ],
-     "proposer": "NITWIT"
+     "proposer": "NITWIT",
+     "state": "APPROVED",
+     "team": [
+      "ABHIJIT",
+      "NITWIT",
+      "MARLIN"
+     ]
     }
-   ],
-   "team": [
-    "ABHIJIT",
-    "NITWIT",
-    "MARLIN"
-   ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 3
+   ]
   },
   {
    "team": [
@@ -145,6 +215,7 @@
     "PRANA"
    ],
    "numFails": 0,
+   "failsRequired": 2,
    "proposals": [
     {
      "state": "REJECTED",
@@ -162,6 +233,12 @@
      "proposer": "BANANA"
     },
     {
+     "team": [
+      "ABHIJIT",
+      "BANANA",
+      "CHAI",
+      "PRANA"
+     ],
      "proposer": "ABHIJIT",
      "state": "APPROVED",
      "votes": [
@@ -171,20 +248,19 @@
       "BANANA",
       "KARAN",
       "NITWIT"
-     ],
-     "team": [
-      "ABHIJIT",
-      "BANANA",
-      "CHAI",
-      "PRANA"
      ]
     }
    ],
    "teamSize": 4,
-   "failsRequired": 2,
    "state": "SUCCESS"
   },
   {
+   "team": [
+    "PRANA",
+    "CHAI",
+    "MARLIN",
+    "NITWIT"
+   ],
    "proposals": [
     {
      "votes": [
@@ -192,21 +268,21 @@
       "PRANA",
       "MARLIN"
      ],
+     "state": "REJECTED",
      "team": [
       "CHAI",
       "PRANA",
       "MARLIN",
       "NITWIT"
      ],
-     "proposer": "CHAI",
-     "state": "REJECTED"
+     "proposer": "CHAI"
     },
     {
-     "proposer": "KARAN",
      "state": "REJECTED",
      "votes": [
       "KARAN"
      ],
+     "proposer": "KARAN",
      "team": [
       "MARLIN",
       "PRANA",
@@ -215,102 +291,26 @@
      ]
     },
     {
-     "state": "APPROVED",
-     "votes": [
-      "NITWIT",
-      "PRANA",
-      "MARLIN",
-      "CHAI"
-     ],
      "team": [
       "PRANA",
       "CHAI",
       "MARLIN",
       "NITWIT"
      ],
-     "proposer": "PRANA"
+     "state": "APPROVED",
+     "proposer": "PRANA",
+     "votes": [
+      "NITWIT",
+      "PRANA",
+      "MARLIN",
+      "CHAI"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "PRANA",
-    "CHAI",
-    "MARLIN",
-    "NITWIT"
-   ],
-   "numFails": 0,
    "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 4
   }
- ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "PRANA": true,
-    "KARAN": true
-   },
-   {
-    "KARAN": false,
-    "PRANA": true,
-    "CHAI": true
-   },
-   {
-    "ABHIJIT": false,
-    "MARLIN": true,
-    "NITWIT": true
-   },
-   {
-    "PRANA": true,
-    "BANANA": true,
-    "CHAI": true,
-    "ABHIJIT": true
-   },
-   {
-    "PRANA": true,
-    "NITWIT": true,
-    "CHAI": true,
-    "MARLIN": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "CHAI",
-  "roles": [
-   {
-    "name": "PRANA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "MARLIN",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "ABHIJIT",
-    "role": "OBERON"
-   },
-   {
-    "assassin": true,
-    "name": "BANANA",
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "CHAI",
-    "role": "MERLIN"
-   },
-   {
-    "role": "MORDRED",
-    "assassin": false,
-    "name": "KARAN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "NITWIT",
-    "assassin": false
-   }
-  ]
- }
+ ]
 }

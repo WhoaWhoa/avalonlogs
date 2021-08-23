@@ -1,7 +1,8 @@
 {
  "missions": [
   {
-   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 2,
    "proposals": [
     {
      "votes": [
@@ -10,56 +11,63 @@
       "KEEKS",
       "HAIYA"
      ],
+     "state": "APPROVED",
+     "proposer": "AJ",
      "team": [
       "EGGNESS",
       "KEEKS"
-     ],
-     "state": "APPROVED",
-     "proposer": "AJ"
+     ]
     }
    ],
-   "state": "SUCCESS",
    "failsRequired": 1,
-   "teamSize": 2,
    "team": [
     "EGGNESS",
     "KEEKS"
-   ]
+   ],
+   "numFails": 0
   },
   {
    "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "EGGNESS",
     "HAIYA",
     "HOWDY"
    ],
    "teamSize": 3,
-   "numFails": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "EGGNESS",
-      "HAIYA",
-      "HOWDY"
-     ],
-     "proposer": "KEEKS",
      "votes": [
       "HOWDY",
       "HAIYA",
       "AJ"
+     ],
+     "proposer": "KEEKS",
+     "team": [
+      "EGGNESS",
+      "HAIYA",
+      "HOWDY"
      ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "state": "FAIL",
+   "numFails": 1,
    "failsRequired": 1,
+   "team": [
+    "EGGNESS",
+    "KEEKS"
+   ],
    "teamSize": 2,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "EGGNESS",
+      "KEEKS"
+     ],
      "votes": [
       "HOWDY",
       "KEEKS",
@@ -67,43 +75,35 @@
       "AJ"
      ],
      "proposer": "HOWDY",
-     "team": [
-      "EGGNESS",
-      "KEEKS"
-     ]
+     "state": "APPROVED"
     }
-   ],
-   "numFails": 1,
-   "team": [
-    "EGGNESS",
-    "KEEKS"
    ]
   },
   {
-   "team": [
-    "KEEKS",
-    "HOWDY",
-    "HAIYA"
-   ],
    "teamSize": 3,
    "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "KEEKS",
+      "HOWDY",
+      "HAIYA"
+     ],
+     "proposer": "HAIYA",
      "state": "APPROVED",
      "votes": [
       "HOWDY",
       "KEEKS",
       "HAIYA"
-     ],
-     "proposer": "HAIYA",
-     "team": [
-      "KEEKS",
-      "HOWDY",
-      "HAIYA"
      ]
     }
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "KEEKS",
+    "HOWDY",
+    "HAIYA"
    ]
   },
   {
@@ -112,6 +112,10 @@
     "EGGNESS",
     "KEEKS"
    ],
+   "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 3,
    "proposals": [
     {
      "state": "REJECTED",
@@ -140,35 +144,78 @@
      "proposer": "AJ",
      "state": "APPROVED"
     }
-   ],
-   "numFails": 1,
-   "state": "FAIL",
-   "teamSize": 3,
-   "failsRequired": 1
+   ]
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1587772367,
   "_nanoseconds": 243000000
  },
+ "players": [
+  {
+   "uid": "51hiYVW5Y8UmIhQmH9ygkvEfEzH2",
+   "name": "AJ"
+  },
+  {
+   "name": "KEEKS",
+   "uid": "DBelBpc0Qxd2UxEyWgMcBV9vcLk1"
+  },
+  {
+   "name": "HOWDY",
+   "uid": "xVXcyAaxLXhE5k5rcYxaTH795BK2"
+  },
+  {
+   "name": "HAIYA",
+   "uid": "yzthFeHrBnSDmZOpUW3VgLYg9Sl2"
+  },
+  {
+   "name": "EGGNESS",
+   "uid": "mFxjEkeMrNcfm4M80eqbkyqKika2"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1587771596,
   "_nanoseconds": 883000000
  },
  "outcome": {
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "KEEKS": true,
+    "EGGNESS": true
+   },
+   {
+    "HAIYA": true,
+    "EGGNESS": true,
+    "HOWDY": false
+   },
+   {
+    "EGGNESS": true,
+    "KEEKS": false
+   },
+   {
+    "HAIYA": true,
+    "HOWDY": true,
+    "KEEKS": true
+   },
+   {
+    "KEEKS": false,
+    "AJ": true,
+    "EGGNESS": true
+   }
+  ],
   "roles": [
    {
-    "name": "HOWDY",
     "assassin": false,
+    "name": "HOWDY",
     "role": "MORGANA"
    },
    {
-    "name": "KEEKS",
+    "role": "EVIL MINION",
     "assassin": true,
-    "role": "EVIL MINION"
+    "name": "KEEKS"
    },
    {
     "assassin": false,
@@ -176,65 +223,18 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MERLIN",
     "name": "EGGNESS",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
-    "assassin": false,
+    "role": "PERCIVAL",
     "name": "AJ",
-    "role": "PERCIVAL"
+    "assassin": false
    }
   ],
-  "votes": [
-   {
-    "EGGNESS": true,
-    "KEEKS": true
-   },
-   {
-    "HOWDY": false,
-    "EGGNESS": true,
-    "HAIYA": true
-   },
-   {
-    "KEEKS": false,
-    "EGGNESS": true
-   },
-   {
-    "KEEKS": true,
-    "HOWDY": true,
-    "HAIYA": true
-   },
-   {
-    "EGGNESS": true,
-    "KEEKS": false,
-    "AJ": true
-   }
-  ]
- },
- "options": {
-  "inGameLog": false
- },
- "players": [
-  {
-   "name": "AJ",
-   "uid": "51hiYVW5Y8UmIhQmH9ygkvEfEzH2"
-  },
-  {
-   "uid": "DBelBpc0Qxd2UxEyWgMcBV9vcLk1",
-   "name": "KEEKS"
-  },
-  {
-   "name": "HOWDY",
-   "uid": "xVXcyAaxLXhE5k5rcYxaTH795BK2"
-  },
-  {
-   "uid": "yzthFeHrBnSDmZOpUW3VgLYg9Sl2",
-   "name": "HAIYA"
-  },
-  {
-   "uid": "mFxjEkeMrNcfm4M80eqbkyqKika2",
-   "name": "EGGNESS"
-  }
- ]
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions"
+ }
 }

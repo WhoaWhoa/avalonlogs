@@ -1,4 +1,72 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1586896734,
+  "_nanoseconds": 519887000
+ },
+ "outcome": {
+  "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
+  "assassinated": "ITBELLIX",
+  "roles": [
+   {
+    "name": "CRI",
+    "role": "MORDRED",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "ANDRE"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "VE",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "name": "ITBELLIX",
+    "assassin": false
+   },
+   {
+    "name": "STEFANO",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "votes": [
+   {
+    "STEFANO": true,
+    "CRI": true
+   },
+   {
+    "CRI": true,
+    "STEFANO": true,
+    "VE": true
+   },
+   {
+    "CRI": false,
+    "STEFANO": true
+   },
+   {
+    "STEFANO": true,
+    "VE": true,
+    "ANDRE": false
+   },
+   {
+    "VE": true,
+    "ITBELLIX": true,
+    "STEFANO": true
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1586896137,
+  "_nanoseconds": 636000000
+ },
  "players": [
   {
    "uid": "wE8aFeCmYLfakTvI1hDkvQHFYoG2",
@@ -17,115 +85,56 @@
    "name": "CRI"
   },
   {
-   "uid": "quPxq56Z2xd8eeB2uKl2278qcxJ3",
-   "name": "STEFANO"
+   "name": "STEFANO",
+   "uid": "quPxq56Z2xd8eeB2uKl2278qcxJ3"
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "message": "Merlin assassinated",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "CRI",
-    "role": "MORDRED"
-   },
-   {
-    "name": "ANDRE",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "VE"
-   },
-   {
-    "name": "ITBELLIX",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "STEFANO",
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "assassinated": "ITBELLIX",
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "STEFANO": true,
-    "CRI": true
-   },
-   {
-    "VE": true,
-    "CRI": true,
-    "STEFANO": true
-   },
-   {
-    "STEFANO": true,
-    "CRI": false
-   },
-   {
-    "ANDRE": false,
-    "STEFANO": true,
-    "VE": true
-   },
-   {
-    "VE": true,
-    "STEFANO": true,
-    "ITBELLIX": true
-   }
-  ]
- },
  "missions": [
   {
-   "state": "SUCCESS",
-   "numFails": 0,
    "failsRequired": 1,
    "teamSize": 2,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "team": [
+    "STEFANO",
+    "CRI"
+   ],
    "proposals": [
     {
-     "team": [
-      "STEFANO",
-      "CRI"
-     ],
      "state": "APPROVED",
-     "proposer": "STEFANO",
      "votes": [
       "CRI",
       "ANDRE",
       "VE",
       "ITBELLIX",
       "STEFANO"
+     ],
+     "proposer": "STEFANO",
+     "team": [
+      "STEFANO",
+      "CRI"
      ]
     }
-   ],
-   "team": [
-    "STEFANO",
-    "CRI"
    ]
   },
   {
    "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "VE",
+     "votes": [
+      "STEFANO",
+      "CRI",
+      "ANDRE",
+      "VE"
+     ],
      "state": "APPROVED",
      "team": [
       "CRI",
       "STEFANO",
       "VE"
      ],
-     "votes": [
-      "STEFANO",
-      "CRI",
-      "ANDRE",
-      "VE"
-     ]
+     "proposer": "VE"
     }
    ],
    "state": "SUCCESS",
@@ -134,26 +143,24 @@
     "STEFANO",
     "VE"
    ],
-   "numFails": 0,
    "failsRequired": 1
   },
   {
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "ITBELLIX",
      "votes": [
       "ITBELLIX",
       "STEFANO"
      ],
+     "state": "REJECTED",
      "team": [
       "ANDRE",
       "STEFANO"
-     ],
-     "proposer": "ITBELLIX"
+     ]
     },
     {
-     "proposer": "ANDRE",
-     "state": "APPROVED",
      "votes": [
       "STEFANO",
       "CRI",
@@ -163,10 +170,11 @@
      "team": [
       "CRI",
       "STEFANO"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "ANDRE"
     }
    ],
-   "teamSize": 2,
    "failsRequired": 1,
    "numFails": 1,
    "team": [
@@ -181,38 +189,35 @@
     "ANDRE",
     "STEFANO"
    ],
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
+     "team": [
+      "VE",
+      "ANDRE",
+      "STEFANO"
+     ],
      "votes": [
       "CRI",
       "ANDRE",
       "VE",
       "ITBELLIX"
      ],
-     "state": "APPROVED",
      "proposer": "CRI",
-     "team": [
-      "VE",
-      "ANDRE",
-      "STEFANO"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "state": "FAIL",
    "numFails": 1,
-   "teamSize": 3,
-   "failsRequired": 1
+   "teamSize": 3
   },
   {
-   "teamSize": 3,
    "team": [
     "STEFANO",
     "VE",
     "ITBELLIX"
    ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS",
+   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -221,23 +226,18 @@
       "VE",
       "ITBELLIX"
      ],
-     "proposer": "STEFANO",
-     "state": "APPROVED",
      "team": [
       "STEFANO",
       "VE",
       "ITBELLIX"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "STEFANO"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0
   }
- ],
- "timeFinished": {
-  "_seconds": 1586896734,
-  "_nanoseconds": 519887000
- },
- "timeCreated": {
-  "_seconds": 1586896137,
-  "_nanoseconds": 636000000
- }
+ ]
 }

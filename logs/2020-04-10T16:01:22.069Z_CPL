@@ -1,62 +1,10 @@
 {
- "timeCreated": {
-  "_seconds": 1586534482,
-  "_nanoseconds": 69000000
- },
- "players": [
-  {
-   "name": "CPL",
-   "uid": "nnPP02SUyWeF3gpWyfI8T9OzF053"
-  },
-  {
-   "uid": "aDJx4bobm4WBZGlfm1oaTKVwtkw2",
-   "name": "LOC"
-  },
-  {
-   "name": "MICHEL",
-   "uid": "9xvziqOuVSMznhIGczBkRjK1jO72"
-  },
-  {
-   "uid": "5DYiPpm4MIhsr9IGXKijFcB0Gnq2",
-   "name": "PERRY"
-  },
-  {
-   "uid": "M2GRgkRti9aSFRdxOs2Inth39Vz1",
-   "name": "WES"
-  }
- ],
  "outcome": {
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "LOC": true,
-    "CPL": true
-   },
-   {
-    "CPL": true,
-    "LOC": false,
-    "WES": true
-   },
-   {
-    "MICHEL": true,
-    "CPL": true
-   },
-   {
-    "PERRY": true,
-    "LOC": false,
-    "CPL": true
-   },
-   {
-    "CPL": true,
-    "WES": true,
-    "PERRY": true
-   }
-  ],
   "roles": [
    {
+    "role": "MERLIN",
     "assassin": false,
-    "name": "WES",
-    "role": "MERLIN"
+    "name": "WES"
    },
    {
     "name": "CPL",
@@ -64,9 +12,9 @@
     "assassin": false
    },
    {
-    "role": "MORGANA",
+    "assassin": false,
     "name": "MICHEL",
-    "assassin": false
+    "role": "MORGANA"
    },
    {
     "name": "PERRY",
@@ -74,127 +22,159 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "role": "MORDRED",
     "name": "LOC",
-    "assassin": true,
-    "role": "MORDRED"
+    "assassin": true
+   }
+  ],
+  "votes": [
+   {
+    "LOC": true,
+    "CPL": true
+   },
+   {
+    "WES": true,
+    "LOC": false,
+    "CPL": true
+   },
+   {
+    "CPL": true,
+    "MICHEL": true
+   },
+   {
+    "CPL": true,
+    "LOC": false,
+    "PERRY": true
+   },
+   {
+    "CPL": true,
+    "PERRY": true,
+    "WES": true
    }
   ],
   "message": "Merlin assassinated",
-  "assassinated": "WES"
+  "assassinated": "WES",
+  "state": "EVIL_WIN"
  },
  "missions": [
   {
-   "numFails": 0,
+   "proposals": [
+    {
+     "votes": [
+      "WES",
+      "CPL",
+      "MICHEL",
+      "PERRY",
+      "LOC"
+     ],
+     "proposer": "LOC",
+     "state": "APPROVED",
+     "team": [
+      "LOC",
+      "CPL"
+     ]
+    }
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 2,
    "team": [
     "LOC",
     "CPL"
    ],
-   "proposals": [
-    {
-     "proposer": "LOC",
-     "team": [
-      "LOC",
-      "CPL"
-     ],
-     "votes": [
-      "WES",
-      "CPL",
-      "MICHEL",
-      "PERRY",
-      "LOC"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "state": "SUCCESS",
-   "teamSize": 2,
-   "failsRequired": 1
+   "numFails": 0
   },
   {
    "failsRequired": 1,
    "state": "FAIL",
-   "numFails": 1,
-   "teamSize": 3,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "votes": [
-      "LOC",
-      "CPL"
-     ],
-     "proposer": "MICHEL",
-     "team": [
-      "CPL",
-      "LOC",
-      "MICHEL"
-     ]
-    },
-    {
-     "team": [
-      "PERRY",
-      "LOC",
-      "CPL"
-     ],
-     "proposer": "PERRY",
-     "votes": [
-      "PERRY",
-      "LOC"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "votes": [
-      "LOC",
-      "WES",
-      "CPL"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "WES",
-      "CPL",
-      "LOC"
-     ],
-     "proposer": "WES"
-    }
-   ],
    "team": [
     "WES",
     "CPL",
     "LOC"
-   ]
+   ],
+   "numFails": 1,
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "proposer": "MICHEL",
+     "votes": [
+      "LOC",
+      "CPL"
+     ],
+     "team": [
+      "CPL",
+      "LOC",
+      "MICHEL"
+     ]
+    },
+    {
+     "proposer": "PERRY",
+     "state": "REJECTED",
+     "votes": [
+      "PERRY",
+      "LOC"
+     ],
+     "team": [
+      "PERRY",
+      "LOC",
+      "CPL"
+     ]
+    },
+    {
+     "state": "APPROVED",
+     "votes": [
+      "LOC",
+      "WES",
+      "CPL"
+     ],
+     "proposer": "WES",
+     "team": [
+      "WES",
+      "CPL",
+      "LOC"
+     ]
+    }
+   ],
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
      "proposer": "CPL",
+     "state": "APPROVED",
      "votes": [
       "PERRY",
       "WES",
       "CPL",
       "MICHEL"
      ],
-     "state": "APPROVED",
      "team": [
       "MICHEL",
       "CPL"
      ]
     }
    ],
+   "state": "SUCCESS",
    "team": [
     "MICHEL",
     "CPL"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1,
-   "teamSize": 2
+   ]
   },
   {
+   "numFails": 1,
    "teamSize": 3,
+   "team": [
+    "CPL",
+    "LOC",
+    "PERRY"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "REJECTED",
-     "proposer": "LOC",
      "team": [
       "LOC",
       "CPL",
@@ -203,17 +183,18 @@
      "votes": [
       "PERRY",
       "LOC"
-     ]
+     ],
+     "proposer": "LOC"
     },
     {
+     "votes": [
+      "MICHEL"
+     ],
+     "state": "REJECTED",
      "team": [
       "CPL",
       "MICHEL",
       "PERRY"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "MICHEL"
      ],
      "proposer": "MICHEL"
     },
@@ -224,54 +205,73 @@
       "LOC"
      ],
      "proposer": "PERRY",
+     "state": "APPROVED",
      "team": [
       "CPL",
       "LOC",
       "PERRY"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "state": "FAIL",
-   "team": [
-    "CPL",
-    "LOC",
-    "PERRY"
-   ]
+   "state": "FAIL"
   },
   {
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "failsRequired": 1,
+   "team": [
+    "CPL",
+    "WES",
+    "PERRY"
+   ],
    "proposals": [
     {
-     "votes": [
-      "PERRY",
-      "LOC",
-      "WES",
-      "CPL"
-     ],
      "team": [
       "CPL",
       "WES",
       "PERRY"
      ],
      "proposer": "WES",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "votes": [
+      "PERRY",
+      "LOC",
+      "WES",
+      "CPL"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "teamSize": 3,
-   "team": [
-    "CPL",
-    "WES",
-    "PERRY"
-   ],
-   "failsRequired": 1,
    "numFails": 0
   }
  ],
  "timeFinished": {
   "_seconds": 1586534933,
   "_nanoseconds": 489071000
- }
+ },
+ "timeCreated": {
+  "_seconds": 1586534482,
+  "_nanoseconds": 69000000
+ },
+ "players": [
+  {
+   "uid": "nnPP02SUyWeF3gpWyfI8T9OzF053",
+   "name": "CPL"
+  },
+  {
+   "name": "LOC",
+   "uid": "aDJx4bobm4WBZGlfm1oaTKVwtkw2"
+  },
+  {
+   "name": "MICHEL",
+   "uid": "9xvziqOuVSMznhIGczBkRjK1jO72"
+  },
+  {
+   "uid": "5DYiPpm4MIhsr9IGXKijFcB0Gnq2",
+   "name": "PERRY"
+  },
+  {
+   "name": "WES",
+   "uid": "M2GRgkRti9aSFRdxOs2Inth39Vz1"
+  }
+ ]
 }

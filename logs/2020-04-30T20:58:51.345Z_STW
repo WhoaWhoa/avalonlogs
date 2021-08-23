@@ -1,110 +1,20 @@
 {
- "outcome": {
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "SEAN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "FREDDIE",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "BIANCA",
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "name": "TAYLOR",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "GEE",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "MINKY",
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "KIKA"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "TEODORA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "LAURA",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "LUIZA"
-   }
-  ],
-  "assassinated": null,
-  "votes": [
-   {
-    "MINKY": true,
-    "FREDDIE": true,
-    "KIKA": true
-   },
-   {
-    "SEAN": false,
-    "LAURA": true,
-    "FREDDIE": true,
-    "KIKA": true
-   },
-   {
-    "BIANCA": true,
-    "LUIZA": false,
-    "TAYLOR": true,
-    "LAURA": true
-   },
-   {
-    "KIKA": true,
-    "LUIZA": false,
-    "LAURA": true,
-    "MINKY": false,
-    "FREDDIE": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Three failed missions"
- },
  "options": {
   "inGameLog": false
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
-   "state": "SUCCESS",
    "team": [
     "FREDDIE",
     "MINKY",
     "KIKA"
    ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "FREDDIE",
-      "MINKY",
-      "KIKA"
-     ],
-     "proposer": "FREDDIE",
-     "state": "APPROVED",
      "votes": [
       "TAYLOR",
       "GEE",
@@ -115,23 +25,28 @@
       "LUIZA",
       "SEAN",
       "FREDDIE"
-     ]
+     ],
+     "team": [
+      "FREDDIE",
+      "MINKY",
+      "KIKA"
+     ],
+     "state": "APPROVED",
+     "proposer": "FREDDIE"
     }
    ]
   },
   {
-   "numFails": 1,
+   "state": "FAIL",
    "team": [
     "FREDDIE",
     "KIKA",
     "LAURA",
     "SEAN"
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "SEAN",
       "BIANCA",
@@ -148,22 +63,22 @@
       "LAURA",
       "SEAN"
      ],
-     "proposer": "MINKY",
-     "state": "APPROVED"
+     "proposer": "MINKY"
     }
-   ]
+   ],
+   "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
-   "team": [
-    "TAYLOR",
-    "LUIZA",
-    "LAURA",
-    "BIANCA"
-   ],
-   "numFails": 1,
    "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "TAYLOR",
      "votes": [
       "TAYLOR",
       "GEE",
@@ -173,32 +88,25 @@
       "LUIZA",
       "SEAN"
      ],
-     "state": "APPROVED",
      "team": [
       "TAYLOR",
       "LUIZA",
       "LAURA",
       "BIANCA"
-     ],
-     "proposer": "TAYLOR"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 4
+   "team": [
+    "TAYLOR",
+    "LUIZA",
+    "LAURA",
+    "BIANCA"
+   ]
   },
   {
-   "numFails": 2,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "LAURA",
-     "team": [
-      "MINKY",
-      "LAURA",
-      "LUIZA",
-      "KIKA",
-      "FREDDIE"
-     ],
      "votes": [
       "TAYLOR",
       "MINKY",
@@ -206,9 +114,20 @@
       "LAURA",
       "LUIZA",
       "FREDDIE"
-     ]
+     ],
+     "team": [
+      "MINKY",
+      "LAURA",
+      "LUIZA",
+      "KIKA",
+      "FREDDIE"
+     ],
+     "proposer": "LAURA",
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 2,
+   "teamSize": 5,
    "team": [
     "MINKY",
     "LAURA",
@@ -216,26 +135,115 @@
     "KIKA",
     "FREDDIE"
    ],
-   "failsRequired": 2,
-   "state": "FAIL",
-   "teamSize": 5
+   "numFails": 2
   },
   {
-   "proposals": [],
    "failsRequired": 1,
-   "state": "PENDING",
    "team": [],
-   "teamSize": 5
+   "teamSize": 5,
+   "state": "PENDING",
+   "proposals": []
   }
  ],
+ "outcome": {
+  "message": "Three failed missions",
+  "assassinated": null,
+  "votes": [
+   {
+    "MINKY": true,
+    "KIKA": true,
+    "FREDDIE": true
+   },
+   {
+    "KIKA": true,
+    "SEAN": false,
+    "LAURA": true,
+    "FREDDIE": true
+   },
+   {
+    "BIANCA": true,
+    "LAURA": true,
+    "LUIZA": false,
+    "TAYLOR": true
+   },
+   {
+    "LUIZA": false,
+    "FREDDIE": true,
+    "KIKA": true,
+    "LAURA": true,
+    "MINKY": false
+   }
+  ],
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "name": "SEAN",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "FREDDIE"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "BIANCA"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "TAYLOR"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "GEE",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "MINKY",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "KIKA"
+   },
+   {
+    "name": "TEODORA",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "name": "LAURA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "LUIZA",
+    "assassin": true,
+    "role": "EVIL MINION"
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1588280331,
+  "_nanoseconds": 345000000
+ },
+ "timeFinished": {
+  "_seconds": 1588281275,
+  "_nanoseconds": 22000000
+ },
  "players": [
   {
-   "name": "MINKY",
-   "uid": "MY50M3zkIHd1JD4Yx6ffYObdgPB3"
+   "uid": "MY50M3zkIHd1JD4Yx6ffYObdgPB3",
+   "name": "MINKY"
   },
   {
-   "uid": "QrngK0pRSpaLUlqss4rZZps6jOp1",
-   "name": "TAYLOR"
+   "name": "TAYLOR",
+   "uid": "QrngK0pRSpaLUlqss4rZZps6jOp1"
   },
   {
    "uid": "xeGYM9ooygVooAz0u9B3u47BE713",
@@ -246,36 +254,28 @@
    "name": "BIANCA"
   },
   {
-   "name": "TEODORA",
-   "uid": "ob1Yo5YeByUacgqn6sG2Qi3QqR32"
+   "uid": "ob1Yo5YeByUacgqn6sG2Qi3QqR32",
+   "name": "TEODORA"
   },
   {
    "uid": "Sv5Lyfvlh2YJ0pcNRBxZRxm2wMP2",
    "name": "SEAN"
   },
   {
-   "name": "GEE",
-   "uid": "hloujrLtPTOi3KmGuasKc9wYkKn2"
+   "uid": "hloujrLtPTOi3KmGuasKc9wYkKn2",
+   "name": "GEE"
   },
   {
    "uid": "jrN9QSHvH3gcir13Hgfi87OW7oz1",
    "name": "KIKA"
   },
   {
-   "name": "LUIZA",
-   "uid": "62u7MvVBfqNJVODFcpzkIoKRR442"
+   "uid": "62u7MvVBfqNJVODFcpzkIoKRR442",
+   "name": "LUIZA"
   },
   {
    "name": "FREDDIE",
    "uid": "GcYuSH1tHZRonLfuJ5eOre1XuZJ3"
   }
- ],
- "timeFinished": {
-  "_seconds": 1588281275,
-  "_nanoseconds": 22000000
- },
- "timeCreated": {
-  "_seconds": 1588280331,
-  "_nanoseconds": 345000000
- }
+ ]
 }

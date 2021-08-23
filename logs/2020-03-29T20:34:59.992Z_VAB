@@ -1,61 +1,4 @@
 {
- "outcome": {
-  "votes": [
-   {
-    "EVA": false,
-    "LOGAN": true
-   },
-   {
-    "JOE": true,
-    "EVA": true,
-    "MAX": false
-   },
-   {
-    "IDO": true,
-    "JOE": true
-   },
-   {
-    "JOE": true,
-    "LOGAN": true,
-    "IDO": true
-   },
-   {
-    "LOGAN": true,
-    "IDO": true,
-    "JOE": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "JOE",
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "EVA"
-   },
-   {
-    "name": "MAX",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "JOE",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "IDO",
-    "assassin": false
-   },
-   {
-    "name": "LOGAN",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "state": "GOOD_WIN"
- },
  "timeFinished": {
   "_seconds": 1585514469,
   "_nanoseconds": 995813000
@@ -64,22 +7,80 @@
   "_seconds": 1585514099,
   "_nanoseconds": 992000000
  },
+ "outcome": {
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "EVA": false,
+    "LOGAN": true
+   },
+   {
+    "JOE": true,
+    "MAX": false,
+    "EVA": true
+   },
+   {
+    "JOE": true,
+    "IDO": true
+   },
+   {
+    "IDO": true,
+    "JOE": true,
+    "LOGAN": true
+   },
+   {
+    "JOE": true,
+    "IDO": true,
+    "LOGAN": true
+   }
+  ],
+  "assassinated": "JOE",
+  "roles": [
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "EVA"
+   },
+   {
+    "name": "MAX",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JOE",
+    "assassin": false
+   },
+   {
+    "name": "IDO",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "LOGAN",
+    "role": "MERLIN"
+   }
+  ]
+ },
  "missions": [
   {
-   "teamSize": 2,
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "IDO",
      "state": "REJECTED",
-     "votes": [
-      "IDO"
-     ],
      "team": [
       "IDO",
       "MAX"
      ],
-     "proposer": "IDO"
+     "votes": [
+      "IDO"
+     ]
     },
     {
+     "proposer": "MAX",
      "state": "APPROVED",
      "votes": [
       "EVA",
@@ -88,55 +89,48 @@
       "IDO",
       "LOGAN"
      ],
-     "proposer": "MAX",
      "team": [
       "EVA",
       "LOGAN"
      ]
     }
    ],
-   "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1,
    "team": [
     "EVA",
     "LOGAN"
-   ]
+   ],
+   "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
-   "numFails": 1,
-   "team": [
-    "JOE",
-    "MAX",
-    "EVA"
-   ],
    "teamSize": 3,
-   "failsRequired": 1,
    "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "EVA"
+     ],
      "team": [
       "LOGAN",
       "JOE",
       "MAX"
      ],
-     "votes": [
-      "EVA"
-     ],
-     "proposer": "EVA"
+     "proposer": "EVA",
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "IDO",
-      "LOGAN"
-     ],
-     "proposer": "LOGAN",
      "team": [
       "MAX",
       "LOGAN",
       "JOE"
      ],
+     "votes": [
+      "IDO",
+      "LOGAN"
+     ],
+     "proposer": "LOGAN",
      "state": "REJECTED"
     },
     {
@@ -146,72 +140,82 @@
       "MAX",
       "EVA"
      ],
-     "proposer": "JOE",
      "votes": [
       "EVA",
       "MAX",
       "JOE",
       "IDO"
-     ]
+     ],
+     "proposer": "JOE"
     }
+   ],
+   "failsRequired": 1,
+   "team": [
+    "JOE",
+    "MAX",
+    "EVA"
    ]
   },
   {
-   "failsRequired": 1,
    "team": [
     "IDO",
     "JOE"
    ],
    "numFails": 0,
    "teamSize": 2,
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "IDO",
-      "JOE"
-     ],
-     "proposer": "IDO",
      "votes": [
       "MAX",
       "JOE",
       "IDO",
       "LOGAN"
-     ]
+     ],
+     "team": [
+      "IDO",
+      "JOE"
+     ],
+     "proposer": "IDO"
     }
-   ]
+   ],
+   "state": "SUCCESS"
   },
   {
+   "team": [
+    "IDO",
+    "LOGAN",
+    "JOE"
+   ],
+   "state": "SUCCESS",
    "failsRequired": 1,
    "numFails": 0,
-   "teamSize": 3,
-   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "MAX",
       "EVA",
       "LOGAN"
      ],
+     "state": "REJECTED",
+     "proposer": "MAX",
      "votes": [
       "EVA",
       "MAX"
-     ],
-     "proposer": "MAX"
+     ]
     },
     {
-     "proposer": "EVA",
      "state": "REJECTED",
+     "votes": [
+      "MAX",
+      "EVA"
+     ],
+     "proposer": "EVA",
      "team": [
       "IDO",
       "MAX",
       "JOE"
-     ],
-     "votes": [
-      "MAX",
-      "EVA"
      ]
     },
     {
@@ -220,47 +224,43 @@
       "IDO",
       "LOGAN"
      ],
+     "proposer": "LOGAN",
      "team": [
       "IDO",
       "LOGAN",
       "JOE"
      ],
-     "proposer": "LOGAN",
      "state": "APPROVED"
     }
    ],
-   "team": [
-    "IDO",
-    "LOGAN",
-    "JOE"
-   ]
+   "teamSize": 3
   },
   {
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "IDO",
-      "LOGAN",
-      "JOE"
-     ],
-     "state": "APPROVED",
+     "proposer": "JOE",
      "votes": [
       "JOE",
       "IDO",
       "LOGAN"
      ],
-     "proposer": "JOE"
+     "team": [
+      "IDO",
+      "LOGAN",
+      "JOE"
+     ],
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "IDO",
     "LOGAN",
     "JOE"
-   ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS"
+   ]
   }
  ],
  "players": [
@@ -269,8 +269,8 @@
    "uid": "xktobEw95VdYv7fAUX53tMzb0Ku1"
   },
   {
-   "uid": "Mlkq7mGszSga6WTayYuf5WN5r0o2",
-   "name": "MAX"
+   "name": "MAX",
+   "uid": "Mlkq7mGszSga6WTayYuf5WN5r0o2"
   },
   {
    "uid": "RvCdx31U97Yz8GEQpVLXnliU19p1",

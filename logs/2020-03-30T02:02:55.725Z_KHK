@@ -1,40 +1,48 @@
 {
- "players": [
-  {
-   "uid": "bXYbb4CYqubU5e195i3vDgmokEf1",
-   "name": "OGWHITEBOY"
-  },
-  {
-   "name": "SAHANA",
-   "uid": "HCuU9ZfUODSdUOgTREEB4DBxor03"
-  },
-  {
-   "name": "ANH",
-   "uid": "01AjMAuWy5ZSXc8S8EBTPEvX0lf1"
-  },
-  {
-   "name": "JAI",
-   "uid": "PxnNzsqMuNaURgEyqSeHxOKJITS2"
-  },
-  {
-   "name": "SLATYAF",
-   "uid": "3wq6wB5nUmPSCwGmtyBf8uumBsi2"
-  }
- ],
  "outcome": {
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "SLATYAF"
+   },
+   {
+    "assassin": false,
+    "name": "SAHANA",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "ANH",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "JAI"
+   },
+   {
+    "name": "OGWHITEBOY",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "message": "Three failed missions",
   "votes": [
    {
-    "JAI": true,
-    "OGWHITEBOY": true
+    "OGWHITEBOY": true,
+    "JAI": true
    },
    {
-    "SAHANA": true,
+    "JAI": false,
     "SLATYAF": false,
-    "JAI": false
+    "SAHANA": true
    },
    {
-    "ANH": true,
-    "SLATYAF": true
+    "SLATYAF": true,
+    "ANH": true
    },
    {
     "OGWHITEBOY": true,
@@ -46,76 +54,36 @@
     "OGWHITEBOY": true,
     "SLATYAF": true
    }
-  ],
-  "roles": [
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "SLATYAF"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SAHANA"
-   },
-   {
-    "name": "ANH",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "name": "JAI",
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "MERLIN",
-    "name": "OGWHITEBOY",
-    "assassin": false
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "message": "Three failed missions"
- },
- "timeFinished": {
-  "_seconds": 1585534146,
-  "_nanoseconds": 214461000
+  ]
  },
  "missions": [
   {
+   "numFails": 0,
    "proposals": [
     {
      "team": [
       "JAI",
       "OGWHITEBOY"
      ],
+     "proposer": "OGWHITEBOY",
      "votes": [
       "SAHANA",
       "ANH",
       "OGWHITEBOY"
      ],
-     "proposer": "OGWHITEBOY",
      "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0,
+   "teamSize": 2,
    "failsRequired": 1,
    "team": [
     "JAI",
     "OGWHITEBOY"
    ],
-   "teamSize": 2
+   "state": "SUCCESS"
   },
   {
-   "team": [
-    "SAHANA",
-    "JAI",
-    "SLATYAF"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
+   "numFails": 2,
    "proposals": [
     {
      "proposer": "SAHANA",
@@ -133,20 +101,23 @@
      ]
     }
    ],
-   "numFails": 2,
+   "team": [
+    "SAHANA",
+    "JAI",
+    "SLATYAF"
+   ],
+   "failsRequired": 1,
+   "state": "FAIL",
    "teamSize": 3
   },
   {
-   "teamSize": 2,
+   "failsRequired": 1,
    "team": [
     "ANH",
     "SLATYAF"
    ],
-   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "ANH",
-     "state": "APPROVED",
      "votes": [
       "SLATYAF",
       "SAHANA",
@@ -154,86 +125,115 @@
       "JAI",
       "OGWHITEBOY"
      ],
+     "proposer": "ANH",
      "team": [
       "ANH",
       "SLATYAF"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
+   "numFails": 0,
    "state": "SUCCESS",
-   "numFails": 0
+   "teamSize": 2
   },
   {
-   "team": [
-    "OGWHITEBOY",
-    "JAI",
-    "SAHANA"
-   ],
+   "numFails": 1,
    "failsRequired": 1,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "SAHANA",
+      "JAI"
+     ],
+     "proposer": "JAI",
      "team": [
       "JAI",
       "SAHANA",
       "ANH"
      ],
-     "proposer": "JAI",
-     "votes": [
-      "SAHANA",
-      "JAI"
-     ]
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "SLATYAF",
-      "SAHANA",
-      "JAI"
-     ],
      "state": "APPROVED",
      "team": [
       "OGWHITEBOY",
       "JAI",
       "SAHANA"
      ],
+     "votes": [
+      "SLATYAF",
+      "SAHANA",
+      "JAI"
+     ],
      "proposer": "SLATYAF"
     }
    ],
-   "numFails": 1,
    "teamSize": 3,
-   "state": "FAIL"
-  },
-  {
-   "teamSize": 3,
-   "numFails": 1,
    "team": [
     "OGWHITEBOY",
     "JAI",
-    "SLATYAF"
+    "SAHANA"
    ],
+   "state": "FAIL"
+  },
+  {
+   "numFails": 1,
    "state": "FAIL",
+   "teamSize": 3,
    "proposals": [
     {
+     "votes": [
+      "JAI",
+      "OGWHITEBOY",
+      "SLATYAF",
+      "SAHANA"
+     ],
+     "state": "APPROVED",
      "team": [
       "OGWHITEBOY",
       "JAI",
       "SLATYAF"
      ],
-     "proposer": "OGWHITEBOY",
-     "state": "APPROVED",
-     "votes": [
-      "JAI",
-      "OGWHITEBOY",
-      "SLATYAF",
-      "SAHANA"
-     ]
+     "proposer": "OGWHITEBOY"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "team": [
+    "OGWHITEBOY",
+    "JAI",
+    "SLATYAF"
+   ]
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585534146,
+  "_nanoseconds": 214461000
+ },
  "timeCreated": {
   "_seconds": 1585533775,
   "_nanoseconds": 725000000
- }
+ },
+ "players": [
+  {
+   "name": "OGWHITEBOY",
+   "uid": "bXYbb4CYqubU5e195i3vDgmokEf1"
+  },
+  {
+   "name": "SAHANA",
+   "uid": "HCuU9ZfUODSdUOgTREEB4DBxor03"
+  },
+  {
+   "name": "ANH",
+   "uid": "01AjMAuWy5ZSXc8S8EBTPEvX0lf1"
+  },
+  {
+   "name": "JAI",
+   "uid": "PxnNzsqMuNaURgEyqSeHxOKJITS2"
+  },
+  {
+   "uid": "3wq6wB5nUmPSCwGmtyBf8uumBsi2",
+   "name": "SLATYAF"
+  }
+ ]
 }

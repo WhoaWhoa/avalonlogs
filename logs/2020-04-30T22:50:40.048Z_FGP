@@ -1,50 +1,84 @@
 {
- "players": [
-  {
-   "uid": "7Xm1c0IQ1iO7OoE3lbqe2NFpLkl2",
-   "name": "INYV"
-  },
-  {
-   "uid": "GP6Hh7AyTIMxE4CVPP7kvZv7Qum1",
-   "name": "JPLINHARES"
-  },
-  {
-   "name": "DYAL",
-   "uid": "6wOORk5ULIT0TdxEfizH8nBMurB3"
-  },
-  {
-   "uid": "pFa1Tolc8KcNnSR4Gk5NNKKCFnc2",
-   "name": "SAIYAN"
-  },
-  {
-   "name": "SRKIT",
-   "uid": "JfCOxy5BGZYQy4ZDk8VKQPveASC2"
-  },
-  {
-   "name": "MOJO",
-   "uid": "r3UIwIvwwTbuTYpVEgh6C9WkngO2"
-  }
- ],
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1588287040,
   "_nanoseconds": 48000000
  },
+ "outcome": {
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "SRKIT"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MOJO"
+   },
+   {
+    "name": "JPLINHARES",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "DYAL"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "SAIYAN"
+   },
+   {
+    "assassin": false,
+    "name": "INYV",
+    "role": "MORDRED"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "votes": [
+   {
+    "SAIYAN": true,
+    "INYV": true
+   },
+   {
+    "SRKIT": true,
+    "INYV": true,
+    "SAIYAN": true
+   },
+   {
+    "SAIYAN": true,
+    "MOJO": true,
+    "INYV": false,
+    "SRKIT": true
+   },
+   {
+    "SAIYAN": true,
+    "SRKIT": true,
+    "INYV": false
+   },
+   {
+    "SAIYAN": true,
+    "DYAL": true,
+    "MOJO": true,
+    "INYV": false
+   }
+  ],
+  "message": "Three failed missions"
+ },
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
-   "team": [
-    "SAIYAN",
-    "INYV"
-   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "SAIYAN",
-      "INYV"
-     ],
      "votes": [
       "SRKIT",
       "MOJO",
@@ -52,23 +86,23 @@
       "DYAL",
       "SAIYAN"
      ],
-     "proposer": "SAIYAN",
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS"
-  },
-  {
-   "teamSize": 3,
-   "proposals": [
-    {
+     "state": "APPROVED",
      "team": [
-      "SRKIT",
       "SAIYAN",
       "INYV"
      ],
+     "proposer": "SAIYAN"
+    }
+   ],
+   "team": [
+    "SAIYAN",
+    "INYV"
+   ]
+  },
+  {
+   "proposals": [
+    {
+     "state": "APPROVED",
      "votes": [
       "MOJO",
       "DYAL",
@@ -76,63 +110,61 @@
       "INYV",
       "SRKIT"
      ],
-     "state": "APPROVED",
+     "team": [
+      "SRKIT",
+      "SAIYAN",
+      "INYV"
+     ],
      "proposer": "SRKIT"
     }
    ],
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "numFails": 0,
    "team": [
     "SRKIT",
     "SAIYAN",
     "INYV"
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "state": "SUCCESS"
   },
   {
-   "state": "FAIL",
-   "teamSize": 4,
    "team": [
     "MOJO",
     "SRKIT",
     "SAIYAN",
     "INYV"
    ],
-   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
-     "proposer": "MOJO",
-     "team": [
-      "MOJO",
-      "SRKIT",
-      "SAIYAN",
-      "INYV"
-     ],
+     "state": "APPROVED",
      "votes": [
       "SRKIT",
       "MOJO",
       "SAIYAN",
       "INYV"
      ],
-     "state": "APPROVED"
+     "team": [
+      "MOJO",
+      "SRKIT",
+      "SAIYAN",
+      "INYV"
+     ],
+     "proposer": "MOJO"
     }
    ],
-   "numFails": 1
+   "failsRequired": 1,
+   "teamSize": 4,
+   "state": "FAIL"
   },
   {
-   "team": [
-    "INYV",
-    "SRKIT",
-    "SAIYAN"
-   ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 3,
    "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "INYV",
+     "state": "APPROVED",
      "team": [
       "INYV",
       "SRKIT",
@@ -146,15 +178,26 @@
       "SRKIT"
      ]
     }
-   ]
+   ],
+   "team": [
+    "INYV",
+    "SRKIT",
+    "SAIYAN"
+   ],
+   "numFails": 1,
+   "teamSize": 3
   },
   {
    "state": "FAIL",
-   "failsRequired": 1,
    "numFails": 1,
+   "team": [
+    "INYV",
+    "DYAL",
+    "SAIYAN",
+    "MOJO"
+   ],
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "JPLINHARES"
      ],
@@ -164,6 +207,7 @@
       "INYV",
       "DYAL"
      ],
+     "state": "REJECTED",
      "proposer": "JPLINHARES"
     },
     {
@@ -179,86 +223,42 @@
       "SAIYAN",
       "MOJO"
      ],
-     "proposer": "DYAL",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "DYAL"
     }
    ],
-   "team": [
-    "INYV",
-    "DYAL",
-    "SAIYAN",
-    "MOJO"
-   ],
+   "failsRequired": 1,
    "teamSize": 4
+  }
+ ],
+ "players": [
+  {
+   "uid": "7Xm1c0IQ1iO7OoE3lbqe2NFpLkl2",
+   "name": "INYV"
+  },
+  {
+   "name": "JPLINHARES",
+   "uid": "GP6Hh7AyTIMxE4CVPP7kvZv7Qum1"
+  },
+  {
+   "name": "DYAL",
+   "uid": "6wOORk5ULIT0TdxEfizH8nBMurB3"
+  },
+  {
+   "name": "SAIYAN",
+   "uid": "pFa1Tolc8KcNnSR4Gk5NNKKCFnc2"
+  },
+  {
+   "name": "SRKIT",
+   "uid": "JfCOxy5BGZYQy4ZDk8VKQPveASC2"
+  },
+  {
+   "name": "MOJO",
+   "uid": "r3UIwIvwwTbuTYpVEgh6C9WkngO2"
   }
  ],
  "timeFinished": {
   "_seconds": 1588287427,
   "_nanoseconds": 349000000
- },
- "outcome": {
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "INYV": true,
-    "SAIYAN": true
-   },
-   {
-    "SRKIT": true,
-    "INYV": true,
-    "SAIYAN": true
-   },
-   {
-    "SRKIT": true,
-    "SAIYAN": true,
-    "MOJO": true,
-    "INYV": false
-   },
-   {
-    "SAIYAN": true,
-    "SRKIT": true,
-    "INYV": false
-   },
-   {
-    "MOJO": true,
-    "INYV": false,
-    "SAIYAN": true,
-    "DYAL": true
-   }
-  ],
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "SRKIT"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "MOJO",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "name": "JPLINHARES",
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "DYAL",
-    "role": "MERLIN"
-   },
-   {
-    "name": "SAIYAN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "name": "INYV",
-    "assassin": false
-   }
-  ]
  }
 }

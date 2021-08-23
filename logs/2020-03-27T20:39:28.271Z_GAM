@@ -1,64 +1,56 @@
 {
- "timeFinished": {
-  "_seconds": 1585342974,
-  "_nanoseconds": 23484000
- },
- "timeCreated": {
-  "_seconds": 1585341568,
-  "_nanoseconds": 271000000
- },
  "outcome": {
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
   "assassinated": "ALEX",
   "votes": [
    {
+    "CHRIS": true,
     "KAY": true,
-    "GOODGNOME": true,
-    "CHRIS": true
-   },
-   {
-    "LOU": true,
-    "LYNSAY": false,
-    "LUCY": true,
-    "ALEX": true
-   },
-   {
-    "ALEX": true,
-    "KAY": true,
-    "LUCY": false,
     "GOODGNOME": true
    },
    {
+    "LYNSAY": false,
+    "ALEX": true,
+    "LUCY": true,
+    "LOU": true
+   },
+   {
+    "ALEX": true,
+    "LUCY": false,
+    "KAY": true,
+    "GOODGNOME": true
+   },
+   {
+    "LYNSAY": false,
+    "CHRIS": true,
     "LOU": true,
     "GOODGNOME": true,
-    "KAY": true,
-    "LYNSAY": false,
-    "CHRIS": true
+    "KAY": true
    },
    {
+    "LOU": true,
     "GOODGNOME": true,
     "CHRIS": true,
-    "ALEX": true,
     "CRAIG": true,
-    "LOU": true
+    "ALEX": true
    }
   ],
+  "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
   "roles": [
    {
-    "role": "PERCIVAL",
     "assassin": false,
-    "name": "LOU"
+    "name": "LOU",
+    "role": "PERCIVAL"
    },
    {
-    "name": "CHRIS",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "CHRIS"
    },
    {
+    "role": "MERLIN",
     "name": "ALEX",
-    "assassin": false,
-    "role": "MERLIN"
+    "assassin": false
    },
    {
     "assassin": false,
@@ -77,20 +69,28 @@
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "KAY"
+    "name": "KAY",
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "OBERON",
     "name": "LUCY",
+    "role": "OBERON",
     "assassin": false
    },
    {
     "name": "CRAIG",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    }
   ]
+ },
+ "timeCreated": {
+  "_seconds": 1585341568,
+  "_nanoseconds": 271000000
+ },
+ "timeFinished": {
+  "_seconds": 1585342974,
+  "_nanoseconds": 23484000
  },
  "players": [
   {
@@ -102,20 +102,20 @@
    "name": "CRAIG"
   },
   {
-   "uid": "1O3WL0c9OOTaLvnIr9ms4pfRoAD2",
-   "name": "CHRIS"
+   "name": "CHRIS",
+   "uid": "1O3WL0c9OOTaLvnIr9ms4pfRoAD2"
   },
   {
-   "uid": "B3dIGQ7WXgewfhznH9dIDyMySrE2",
-   "name": "ALEX"
+   "name": "ALEX",
+   "uid": "B3dIGQ7WXgewfhznH9dIDyMySrE2"
   },
   {
-   "uid": "nS6rn9jv3xZLebCyTB7oMLVfIFZ2",
-   "name": "LYNSAY"
+   "name": "LYNSAY",
+   "uid": "nS6rn9jv3xZLebCyTB7oMLVfIFZ2"
   },
   {
-   "name": "LUCY",
-   "uid": "6OZFofuCCOS7buk323SeMe48hzu1"
+   "uid": "6OZFofuCCOS7buk323SeMe48hzu1",
+   "name": "LUCY"
   },
   {
    "uid": "TDoNzDkhStY8nqywPpNFI0E5USh2",
@@ -132,13 +132,15 @@
  ],
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "state": "SUCCESS",
+   "team": [
+    "KAY",
+    "CHRIS",
+    "GOODGNOME"
+   ],
+   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "CRAIG",
      "team": [
       "KAY",
       "CHRIS",
@@ -152,42 +154,31 @@
       "CRAIG",
       "LOU",
       "CHRIS"
-     ]
+     ],
+     "proposer": "CRAIG"
     }
    ],
-   "numFails": 0,
-   "team": [
-    "KAY",
-    "CHRIS",
-    "GOODGNOME"
-   ]
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
-   "teamSize": 4,
-   "failsRequired": 1,
-   "team": [
-    "ALEX",
-    "LYNSAY",
-    "LUCY",
-    "LOU"
-   ],
-   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "KAY",
       "CRAIG",
       "LOU",
       "CHRIS"
      ],
+     "proposer": "CHRIS",
+     "state": "REJECTED",
      "team": [
       "GOODGNOME",
       "CHRIS",
       "KAY",
       "CRAIG"
-     ],
-     "proposer": "CHRIS"
+     ]
     },
     {
      "team": [
@@ -196,6 +187,7 @@
       "LUCY",
       "LOU"
      ],
+     "state": "APPROVED",
      "votes": [
       "KAT",
       "LUCY",
@@ -203,33 +195,56 @@
       "LOU",
       "ALEX"
      ],
-     "state": "APPROVED",
      "proposer": "ALEX"
     }
    ],
-   "numFails": 1
-  },
-  {
-   "teamSize": 4,
+   "numFails": 1,
    "state": "FAIL",
    "failsRequired": 1,
+   "teamSize": 4,
+   "team": [
+    "ALEX",
+    "LYNSAY",
+    "LUCY",
+    "LOU"
+   ]
+  },
+  {
+   "failsRequired": 1,
+   "team": [
+    "GOODGNOME",
+    "KAY",
+    "ALEX",
+    "LUCY"
+   ],
+   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "KAT",
-      "LOU",
-      "CRAIG",
-      "LYNSAY"
-     ],
-     "proposer": "LYNSAY",
      "votes": [
       "KAT",
       "LOU",
       "LYNSAY"
      ],
-     "state": "REJECTED"
+     "proposer": "LYNSAY",
+     "state": "REJECTED",
+     "team": [
+      "KAT",
+      "LOU",
+      "CRAIG",
+      "LYNSAY"
+     ]
     },
     {
+     "votes": [
+      "KAT",
+      "KAY",
+      "LUCY",
+      "CRAIG",
+      "CHRIS",
+      "GOODGNOME"
+     ],
      "state": "APPROVED",
      "team": [
       "GOODGNOME",
@@ -237,26 +252,20 @@
       "ALEX",
       "LUCY"
      ],
-     "proposer": "LUCY",
-     "votes": [
-      "KAT",
-      "KAY",
-      "LUCY",
-      "CRAIG",
-      "CHRIS",
-      "GOODGNOME"
-     ]
+     "proposer": "LUCY"
     }
-   ],
-   "team": [
-    "GOODGNOME",
-    "KAY",
-    "ALEX",
-    "LUCY"
-   ],
-   "numFails": 1
+   ]
   },
   {
+   "numFails": 1,
+   "state": "SUCCESS",
+   "team": [
+    "KAY",
+    "CHRIS",
+    "GOODGNOME",
+    "LYNSAY",
+    "LOU"
+   ],
    "teamSize": 5,
    "proposals": [
     {
@@ -269,7 +278,7 @@
       "ALEX",
       "LYNSAY"
      ],
-     "state": "APPROVED",
+     "proposer": "KAY",
      "team": [
       "KAY",
       "CHRIS",
@@ -277,32 +286,25 @@
       "LYNSAY",
       "LOU"
      ],
-     "proposer": "KAY"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 2,
-   "numFails": 1,
-   "team": [
-    "KAY",
-    "CHRIS",
-    "GOODGNOME",
-    "LYNSAY",
-    "LOU"
-   ],
-   "state": "SUCCESS"
+   "failsRequired": 2
   },
   {
-   "teamSize": 5,
+   "state": "SUCCESS",
+   "team": [
+    "GOODGNOME",
+    "ALEX",
+    "LOU",
+    "CRAIG",
+    "CHRIS"
+   ],
    "numFails": 0,
-   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "LYNSAY",
-      "KAT",
-      "CRAIG"
-     ],
      "state": "REJECTED",
+     "proposer": "KAT",
      "team": [
       "KAT",
       "KAY",
@@ -310,9 +312,15 @@
       "CRAIG",
       "ALEX"
      ],
-     "proposer": "KAT"
+     "votes": [
+      "LYNSAY",
+      "KAT",
+      "CRAIG"
+     ]
     },
     {
+     "state": "REJECTED",
+     "proposer": "LOU",
      "team": [
       "ALEX",
       "GOODGNOME",
@@ -324,9 +332,7 @@
       "LOU",
       "CHRIS",
       "ALEX"
-     ],
-     "proposer": "LOU",
-     "state": "REJECTED"
+     ]
     },
     {
      "team": [
@@ -336,6 +342,8 @@
       "CRAIG",
       "CHRIS"
      ],
+     "state": "APPROVED",
+     "proposer": "GOODGNOME",
      "votes": [
       "CRAIG",
       "LOU",
@@ -343,19 +351,11 @@
       "ALEX",
       "GOODGNOME",
       "LYNSAY"
-     ],
-     "proposer": "GOODGNOME",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "GOODGNOME",
-    "ALEX",
-    "LOU",
-    "CRAIG",
-    "CHRIS"
-   ]
+   "teamSize": 5,
+   "failsRequired": 1
   }
  ]
 }

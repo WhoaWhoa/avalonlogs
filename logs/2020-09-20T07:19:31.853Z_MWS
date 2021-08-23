@@ -1,7 +1,83 @@
 {
- "timeFinished": {
-  "_seconds": 1600589655,
-  "_nanoseconds": 636000000
+ "outcome": {
+  "message": "Three failed missions",
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "EMILY": true,
+    "MEGAN": true,
+    "WILLA": true
+   },
+   {
+    "WILLA": true,
+    "MIKE": false,
+    "MEGAN": false,
+    "ALBERT": true
+   },
+   {
+    "CHANCHAN": true,
+    "ANDRY": true,
+    "MEGAN": false,
+    "EMILY": true
+   },
+   {
+    "ANDREW": false,
+    "MEGAN": true,
+    "CHANCHAN": true,
+    "EMILY": true,
+    "WILLA": true
+   },
+   {
+    "EMILY": true,
+    "WILLA": true,
+    "ANDREW": false,
+    "MEGAN": false,
+    "ANDRY": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "ALBERT",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "MIKE"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "CHANCHAN"
+   },
+   {
+    "name": "EMILY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ANDREW",
+    "assassin": false,
+    "role": "OBERON"
+   },
+   {
+    "role": "MORDRED",
+    "name": "MEGAN",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "WILLA",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ANDRY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
  },
  "players": [
   {
@@ -9,8 +85,8 @@
    "name": "EMILY"
   },
   {
-   "uid": "a9zinWFXOuRCFGdnneS5bJQPuRF2",
-   "name": "ALBERT"
+   "name": "ALBERT",
+   "uid": "a9zinWFXOuRCFGdnneS5bJQPuRF2"
   },
   {
    "uid": "L6cFKHEED6YMGL2rnCfSlDbDPxr2",
@@ -25,8 +101,8 @@
    "name": "WILLA"
   },
   {
-   "name": "MIKE",
-   "uid": "o2le7m7rXvQDAWZ9hTXakkMVOZ53"
+   "uid": "o2le7m7rXvQDAWZ9hTXakkMVOZ53",
+   "name": "MIKE"
   },
   {
    "name": "CHANCHAN",
@@ -39,9 +115,17 @@
  ],
  "missions": [
   {
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3,
+   "team": [
+    "WILLA",
+    "MEGAN",
+    "EMILY"
+   ],
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "CHANCHAN",
       "WILLA",
@@ -54,30 +138,22 @@
       "MEGAN",
       "EMILY"
      ],
-     "proposer": "WILLA"
+     "proposer": "WILLA",
+     "state": "APPROVED"
     }
-   ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 3,
-   "team": [
-    "WILLA",
-    "MEGAN",
-    "EMILY"
    ]
   },
   {
-   "numFails": 2,
+   "teamSize": 4,
+   "state": "FAIL",
+   "team": [
+    "MIKE",
+    "WILLA",
+    "MEGAN",
+    "ALBERT"
+   ],
    "proposals": [
     {
-     "team": [
-      "MIKE",
-      "WILLA",
-      "MEGAN",
-      "ALBERT"
-     ],
-     "proposer": "MIKE",
      "state": "APPROVED",
      "votes": [
       "CHANCHAN",
@@ -85,33 +161,26 @@
       "WILLA",
       "ALBERT",
       "MIKE"
-     ]
+     ],
+     "team": [
+      "MIKE",
+      "WILLA",
+      "MEGAN",
+      "ALBERT"
+     ],
+     "proposer": "MIKE"
     }
    ],
-   "team": [
-    "MIKE",
-    "WILLA",
-    "MEGAN",
-    "ALBERT"
-   ],
-   "teamSize": 4,
    "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 2
   },
   {
    "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1,
    "teamSize": 4,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "CHANCHAN",
-      "MEGAN",
-      "ANDRY",
-      "EMILY"
-     ],
+     "proposer": "CHANCHAN",
      "votes": [
       "EMILY",
       "MIKE",
@@ -122,9 +191,16 @@
       "WILLA",
       "MEGAN"
      ],
-     "proposer": "CHANCHAN"
+     "team": [
+      "CHANCHAN",
+      "MEGAN",
+      "ANDRY",
+      "EMILY"
+     ]
     }
    ],
+   "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "CHANCHAN",
     "MEGAN",
@@ -133,14 +209,20 @@
    ]
   },
   {
+   "numFails": 1,
+   "team": [
+    "EMILY",
+    "WILLA",
+    "MEGAN",
+    "CHANCHAN",
+    "ANDREW"
+   ],
    "teamSize": 5,
    "failsRequired": 2,
    "state": "SUCCESS",
-   "numFails": 1,
    "proposals": [
     {
      "proposer": "MEGAN",
-     "state": "REJECTED",
      "team": [
       "MEGAN",
       "WILLA",
@@ -151,11 +233,12 @@
      "votes": [
       "WILLA",
       "MEGAN"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "proposer": "EMILY",
      "state": "APPROVED",
+     "proposer": "EMILY",
      "votes": [
       "ANDREW",
       "ALBERT",
@@ -171,13 +254,6 @@
       "ANDREW"
      ]
     }
-   ],
-   "team": [
-    "EMILY",
-    "WILLA",
-    "MEGAN",
-    "CHANCHAN",
-    "ANDREW"
    ]
   },
   {
@@ -197,13 +273,13 @@
      "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "CHANCHAN",
       "MIKE",
       "ANDREW",
       "MEGAN"
      ],
-     "state": "REJECTED",
      "team": [
       "ANDREW",
       "MEGAN",
@@ -214,6 +290,12 @@
      "proposer": "ANDREW"
     },
     {
+     "votes": [
+      "WILLA",
+      "EMILY",
+      "ANDRY",
+      "ANDREW"
+     ],
      "team": [
       "EMILY",
       "ANDREW",
@@ -221,14 +303,8 @@
       "WILLA",
       "MEGAN"
      ],
-     "proposer": "ANDRY",
      "state": "REJECTED",
-     "votes": [
-      "WILLA",
-      "EMILY",
-      "ANDRY",
-      "ANDREW"
-     ]
+     "proposer": "ANDRY"
     },
     {
      "team": [
@@ -238,8 +314,8 @@
       "ANDRY",
       "ANDREW"
      ],
-     "state": "APPROVED",
      "proposer": "WILLA",
+     "state": "APPROVED",
      "votes": [
       "ANDRY",
       "WILLA",
@@ -249,7 +325,8 @@
      ]
     }
    ],
-   "teamSize": 5,
+   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "WILLA",
     "EMILY",
@@ -257,96 +334,19 @@
     "ANDRY",
     "ANDREW"
    ],
-   "state": "FAIL",
    "numFails": 2,
-   "failsRequired": 1
+   "teamSize": 5
   }
  ],
- "options": {
-  "inGameLog": false
+ "timeFinished": {
+  "_seconds": 1600589655,
+  "_nanoseconds": 636000000
  },
  "timeCreated": {
   "_seconds": 1600586371,
   "_nanoseconds": 853000000
  },
- "outcome": {
-  "message": "Three failed missions",
-  "assassinated": null,
-  "votes": [
-   {
-    "WILLA": true,
-    "EMILY": true,
-    "MEGAN": true
-   },
-   {
-    "WILLA": true,
-    "MIKE": false,
-    "ALBERT": true,
-    "MEGAN": false
-   },
-   {
-    "MEGAN": false,
-    "CHANCHAN": true,
-    "EMILY": true,
-    "ANDRY": true
-   },
-   {
-    "MEGAN": true,
-    "EMILY": true,
-    "ANDREW": false,
-    "WILLA": true,
-    "CHANCHAN": true
-   },
-   {
-    "EMILY": true,
-    "MEGAN": false,
-    "ANDRY": true,
-    "WILLA": true,
-    "ANDREW": false
-   }
-  ],
-  "roles": [
-   {
-    "role": "MERLIN",
-    "name": "ALBERT",
-    "assassin": false
-   },
-   {
-    "name": "MIKE",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "CHANCHAN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "EMILY",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "ANDREW",
-    "role": "OBERON"
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "MEGAN"
-   },
-   {
-    "name": "WILLA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ANDRY"
-   }
-  ],
-  "state": "EVIL_WIN"
+ "options": {
+  "inGameLog": false
  }
 }

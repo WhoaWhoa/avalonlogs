@@ -1,4 +1,26 @@
 {
+ "players": [
+  {
+   "uid": "XS5ktIO9CodAkKz5gtnDb5JxGCK2",
+   "name": "BRIAN"
+  },
+  {
+   "name": "STEVE",
+   "uid": "3nKOx7hRriT1kcsbCjKo2aRnpwI2"
+  },
+  {
+   "uid": "8X8DgZcy7XgkuTqMMdmoAGXgv5a2",
+   "name": "JOVI"
+  },
+  {
+   "uid": "iHBcs5gGOvOAP9X5Vpacbnil04b2",
+   "name": "NAS"
+  },
+  {
+   "uid": "OIaeC5D24ubB1wcPh7szOl7JPLg2",
+   "name": "DAVIDF"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1584914010,
   "_nanoseconds": 936000000
@@ -7,29 +29,8 @@
   "_seconds": 1584914935,
   "_nanoseconds": 410746000
  },
- "players": [
-  {
-   "name": "BRIAN",
-   "uid": "XS5ktIO9CodAkKz5gtnDb5JxGCK2"
-  },
-  {
-   "uid": "3nKOx7hRriT1kcsbCjKo2aRnpwI2",
-   "name": "STEVE"
-  },
-  {
-   "uid": "8X8DgZcy7XgkuTqMMdmoAGXgv5a2",
-   "name": "JOVI"
-  },
-  {
-   "name": "NAS",
-   "uid": "iHBcs5gGOvOAP9X5Vpacbnil04b2"
-  },
-  {
-   "name": "DAVIDF",
-   "uid": "OIaeC5D24ubB1wcPh7szOl7JPLg2"
-  }
- ],
  "outcome": {
+  "state": "GOOD_WIN",
   "assassinated": null,
   "votes": [
    {
@@ -46,23 +47,22 @@
     "JOVI": true
    },
    {
-    "JOVI": true,
     "BRIAN": false,
-    "STEVE": true
+    "STEVE": true,
+    "JOVI": true
    },
    {
-    "STEVE": true,
+    "JOVI": true,
     "DAVIDF": true,
-    "JOVI": true
+    "STEVE": true
    }
   ],
-  "state": "GOOD_WIN",
   "message": "Three missions succeeded",
   "roles": [
    {
-    "assassin": false,
+    "role": "EVIL MINION",
     "name": "BRIAN",
-    "role": "EVIL MINION"
+    "assassin": false
    },
    {
     "assassin": false,
@@ -70,51 +70,59 @@
     "name": "NAS"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "DAVIDF",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "name": "STEVE",
     "assassin": false,
-    "name": "STEVE"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "JOVI",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    }
   ]
  },
  "missions": [
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "DAVIDF",
+    "BRIAN"
+   ],
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "DAVIDF",
       "BRIAN"
      ],
+     "proposer": "DAVIDF",
      "votes": [
       "NAS",
       "DAVIDF",
       "STEVE",
       "JOVI",
       "BRIAN"
-     ],
-     "proposer": "DAVIDF",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "DAVIDF",
-    "BRIAN"
-   ],
-   "teamSize": 2,
+   "state": "SUCCESS",
    "numFails": 0
   },
   {
+   "team": [
+    "BRIAN",
+    "DAVIDF",
+    "STEVE"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 1,
    "state": "FAIL",
    "proposals": [
     {
@@ -123,36 +131,22 @@
       "DAVIDF",
       "STEVE"
      ],
+     "state": "APPROVED",
+     "proposer": "BRIAN",
      "votes": [
       "BRIAN",
       "NAS",
       "DAVIDF",
       "STEVE",
       "JOVI"
-     ],
-     "state": "APPROVED",
-     "proposer": "BRIAN"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
-   "team": [
-    "BRIAN",
-    "DAVIDF",
-    "STEVE"
    ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 2,
-   "team": [
-    "JOVI",
-    "STEVE"
-   ],
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "STEVE",
      "votes": [
       "STEVE",
       "DAVIDF"
@@ -161,24 +155,30 @@
       "STEVE",
       "DAVIDF"
      ],
-     "proposer": "STEVE"
+     "state": "REJECTED"
     },
     {
      "state": "APPROVED",
-     "proposer": "JOVI",
-     "team": [
-      "JOVI",
-      "STEVE"
-     ],
      "votes": [
       "DAVIDF",
       "STEVE",
       "JOVI",
       "NAS"
-     ]
+     ],
+     "team": [
+      "JOVI",
+      "STEVE"
+     ],
+     "proposer": "JOVI"
     }
    ],
    "numFails": 0,
+   "teamSize": 2,
+   "failsRequired": 1,
+   "team": [
+    "JOVI",
+    "STEVE"
+   ],
    "state": "SUCCESS"
   },
   {
@@ -187,53 +187,53 @@
     "STEVE",
     "JOVI"
    ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "BRIAN",
-      "DAVIDF",
-      "NAS"
-     ],
+     "proposer": "NAS",
      "state": "REJECTED",
      "votes": [
       "NAS"
      ],
-     "proposer": "NAS"
+     "team": [
+      "BRIAN",
+      "DAVIDF",
+      "NAS"
+     ]
     },
     {
-     "state": "REJECTED",
+     "votes": [
+      "DAVIDF",
+      "NAS"
+     ],
      "team": [
       "DAVIDF",
       "JOVI",
       "BRIAN"
      ],
-     "votes": [
-      "DAVIDF",
-      "NAS"
-     ],
-     "proposer": "DAVIDF"
+     "proposer": "DAVIDF",
+     "state": "REJECTED"
     },
     {
+     "proposer": "BRIAN",
      "state": "APPROVED",
+     "team": [
+      "BRIAN",
+      "STEVE",
+      "JOVI"
+     ],
      "votes": [
       "NAS",
       "DAVIDF",
       "STEVE",
       "JOVI",
       "BRIAN"
-     ],
-     "team": [
-      "BRIAN",
-      "STEVE",
-      "JOVI"
-     ],
-     "proposer": "BRIAN"
+     ]
     }
-   ],
-   "numFails": 1,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 3
+   ]
   },
   {
    "proposals": [
@@ -242,38 +242,38 @@
       "STEVE",
       "JOVI"
      ],
+     "state": "REJECTED",
+     "proposer": "STEVE",
      "team": [
       "STEVE",
       "JOVI",
       "DAVIDF"
-     ],
-     "state": "REJECTED",
-     "proposer": "STEVE"
+     ]
     },
     {
-     "proposer": "JOVI",
-     "team": [
-      "STEVE",
-      "JOVI",
-      "DAVIDF"
-     ],
      "votes": [
       "STEVE",
       "JOVI",
       "DAVIDF"
      ],
-     "state": "APPROVED"
+     "proposer": "JOVI",
+     "state": "APPROVED",
+     "team": [
+      "STEVE",
+      "JOVI",
+      "DAVIDF"
+     ]
     }
    ],
-   "teamSize": 3,
    "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3,
    "team": [
     "STEVE",
     "JOVI",
     "DAVIDF"
-   ],
-   "numFails": 0,
-   "failsRequired": 1
+   ]
   }
  ]
 }

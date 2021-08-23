@@ -1,26 +1,4 @@
 {
- "players": [
-  {
-   "name": "COOPER",
-   "uid": "PS1ny6F7dmT3QqGw9DhtjZcRUqI3"
-  },
-  {
-   "uid": "IOClB4U513Wve2APTDLuYAd489M2",
-   "name": "TYSON"
-  },
-  {
-   "uid": "T2817FwZvsSxPUTcCi0S0dUGOzA3",
-   "name": "LUKE"
-  },
-  {
-   "uid": "LSZi414G65axtsbLxOlyWbq8NKG2",
-   "name": "NATE"
-  },
-  {
-   "name": "KATHRYN",
-   "uid": "AleHpgXwpXVnKgoYrhnsoguTREw2"
-  }
- ],
  "options": {
   "inGameLog": false
  },
@@ -28,18 +6,89 @@
   "_seconds": 1606616982,
   "_nanoseconds": 571000000
  },
+ "players": [
+  {
+   "uid": "PS1ny6F7dmT3QqGw9DhtjZcRUqI3",
+   "name": "COOPER"
+  },
+  {
+   "name": "TYSON",
+   "uid": "IOClB4U513Wve2APTDLuYAd489M2"
+  },
+  {
+   "uid": "T2817FwZvsSxPUTcCi0S0dUGOzA3",
+   "name": "LUKE"
+  },
+  {
+   "name": "NATE",
+   "uid": "LSZi414G65axtsbLxOlyWbq8NKG2"
+  },
+  {
+   "name": "KATHRYN",
+   "uid": "AleHpgXwpXVnKgoYrhnsoguTREw2"
+  }
+ ],
+ "outcome": {
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "COOPER": true,
+    "NATE": true
+   },
+   {
+    "TYSON": true,
+    "NATE": true,
+    "COOPER": false
+   },
+   {
+    "NATE": true,
+    "LUKE": true
+   },
+   {
+    "NATE": true,
+    "LUKE": true,
+    "TYSON": true
+   }
+  ],
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "LUKE"
+   },
+   {
+    "name": "NATE",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "name": "COOPER",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "name": "TYSON",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "name": "KATHRYN",
+    "role": "MORGANA"
+   }
+  ],
+  "assassinated": "TYSON"
+ },
  "timeFinished": {
   "_seconds": 1606617968,
   "_nanoseconds": 135000000
  },
  "missions": [
   {
-   "team": [
-    "NATE",
-    "COOPER"
-   ],
    "proposals": [
     {
+     "proposer": "NATE",
      "votes": [
       "KATHRYN",
       "COOPER",
@@ -49,96 +98,98 @@
      "team": [
       "NATE",
       "COOPER"
-     ],
-     "proposer": "NATE"
+     ]
     }
+   ],
+   "teamSize": 2,
+   "team": [
+    "NATE",
+    "COOPER"
    ],
    "state": "SUCCESS",
    "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0
   },
   {
-   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "KATHRYN",
-      "LUKE"
-     ],
+     "state": "REJECTED",
      "team": [
       "KATHRYN",
       "NATE",
       "LUKE"
      ],
-     "state": "REJECTED",
-     "proposer": "KATHRYN"
-    },
-    {
+     "proposer": "KATHRYN",
      "votes": [
       "KATHRYN",
+      "LUKE"
+     ]
+    },
+    {
+     "team": [
+      "KATHRYN",
+      "NATE",
       "COOPER"
      ],
      "proposer": "COOPER",
-     "team": [
+     "votes": [
       "KATHRYN",
-      "NATE",
       "COOPER"
      ],
      "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "TYSON",
-      "NATE",
-      "COOPER"
-     ],
+     "proposer": "TYSON",
      "votes": [
       "NATE",
       "TYSON",
       "COOPER"
      ],
-     "proposer": "TYSON"
+     "team": [
+      "TYSON",
+      "NATE",
+      "COOPER"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 3,
    "numFails": 1,
-   "state": "FAIL",
    "team": [
     "TYSON",
     "NATE",
     "COOPER"
-   ]
+   ],
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
-   "team": [
-    "LUKE",
-    "NATE"
-   ],
-   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "LUKE",
       "NATE"
      ],
+     "proposer": "LUKE",
      "votes": [
       "KATHRYN",
       "LUKE",
       "TYSON",
       "NATE"
-     ],
-     "proposer": "LUKE",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "numFails": 0,
    "teamSize": 2,
-   "failsRequired": 1
+   "failsRequired": 1,
+   "team": [
+    "LUKE",
+    "NATE"
+   ],
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 3,
    "failsRequired": 1,
    "proposals": [
     {
@@ -147,81 +198,30 @@
       "NATE",
       "TYSON"
      ],
+     "state": "APPROVED",
      "proposer": "NATE",
      "votes": [
       "NATE",
       "LUKE",
       "TYSON"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
+   "teamSize": 3,
+   "state": "SUCCESS",
    "numFails": 0,
    "team": [
     "LUKE",
     "NATE",
     "TYSON"
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
-   "failsRequired": 1,
-   "state": "PENDING",
-   "team": [],
    "teamSize": 3,
-   "proposals": []
+   "state": "PENDING",
+   "proposals": [],
+   "team": [],
+   "failsRequired": 1
   }
- ],
- "outcome": {
-  "message": "Three successful missions",
-  "assassinated": "TYSON",
-  "votes": [
-   {
-    "NATE": true,
-    "COOPER": true
-   },
-   {
-    "COOPER": false,
-    "TYSON": true,
-    "NATE": true
-   },
-   {
-    "LUKE": true,
-    "NATE": true
-   },
-   {
-    "TYSON": true,
-    "LUKE": true,
-    "NATE": true
-   }
-  ],
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "LUKE",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "name": "NATE",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "name": "COOPER",
-    "role": "MORDRED"
-   },
-   {
-    "name": "TYSON",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "role": "MORGANA",
-    "name": "KATHRYN",
-    "assassin": false
-   }
-  ]
- }
+ ]
 }

@@ -1,8 +1,12 @@
 {
+ "timeCreated": {
+  "_seconds": 1585972075,
+  "_nanoseconds": 813000000
+ },
  "players": [
   {
-   "uid": "tWxpViM7VZdcNG0WGfLcAlsWGR82",
-   "name": "ALI"
+   "name": "ALI",
+   "uid": "tWxpViM7VZdcNG0WGfLcAlsWGR82"
   },
   {
    "name": "MARK",
@@ -13,36 +17,87 @@
    "uid": "B5RwU1QXOAWgJaQQEjSIc5ahNv72"
   },
   {
-   "uid": "CVA3edTHztOwZKjv87RQXqdW1952",
-   "name": "BRETT"
+   "name": "BRETT",
+   "uid": "CVA3edTHztOwZKjv87RQXqdW1952"
   },
   {
-   "name": "SHARON",
-   "uid": "obRaCJ2nvCdsxsyjFCsLG7qp29g1"
+   "uid": "obRaCJ2nvCdsxsyjFCsLG7qp29g1",
+   "name": "SHARON"
   },
   {
-   "uid": "WVod4LPyGVbkQdSGCbh21BJNJcE2",
-   "name": "CAITLIN"
+   "name": "CAITLIN",
+   "uid": "WVod4LPyGVbkQdSGCbh21BJNJcE2"
   }
  ],
+ "outcome": {
+  "votes": [
+   {
+    "SHARON": true,
+    "DAN": true
+   },
+   {
+    "CAITLIN": true,
+    "DAN": true,
+    "SHARON": true
+   },
+   {
+    "BRETT": false,
+    "SHARON": true,
+    "MARK": true,
+    "DAN": true
+   },
+   {
+    "SHARON": true,
+    "CAITLIN": true,
+    "MARK": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "SHARON"
+   },
+   {
+    "name": "ALI",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "BRETT",
+    "assassin": true
+   },
+   {
+    "name": "DAN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "MARK",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "CAITLIN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "assassinated": "CAITLIN",
+  "state": "GOOD_WIN",
+  "message": "Three successful missions"
+ },
  "timeFinished": {
   "_seconds": 1585974753,
   "_nanoseconds": 607354000
  },
- "timeCreated": {
-  "_seconds": 1585972075,
-  "_nanoseconds": 813000000
- },
  "missions": [
   {
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "SHARON",
-      "DAN"
-     ],
-     "proposer": "SHARON",
      "votes": [
       "ALI",
       "BRETT",
@@ -50,25 +105,34 @@
       "MARK",
       "SHARON"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "SHARON",
+      "DAN"
+     ],
+     "proposer": "SHARON"
     }
    ],
+   "failsRequired": 1,
    "team": [
     "SHARON",
     "DAN"
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
+   "failsRequired": 1,
    "state": "SUCCESS",
    "numFails": 0,
+   "team": [
+    "DAN",
+    "SHARON",
+    "CAITLIN"
+   ],
    "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "CAITLIN",
+     "state": "APPROVED",
      "team": [
       "DAN",
       "SHARON",
@@ -80,28 +144,13 @@
       "SHARON",
       "ALI"
      ],
-     "state": "APPROVED"
+     "proposer": "CAITLIN"
     }
-   ],
-   "team": [
-    "DAN",
-    "SHARON",
-    "CAITLIN"
    ]
   },
   {
-   "teamSize": 4,
-   "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "ALI",
-      "BRETT",
-      "DAN",
-      "MARK"
-     ],
      "proposer": "ALI",
      "team": [
       "BRETT",
@@ -109,9 +158,19 @@
       "DAN",
       "SHARON"
      ],
+     "votes": [
+      "ALI",
+      "BRETT",
+      "DAN",
+      "MARK"
+     ],
      "state": "APPROVED"
     }
    ],
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "BRETT",
     "MARK",
@@ -120,39 +179,45 @@
    ]
   },
   {
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "CAITLIN",
+    "MARK",
+    "SHARON"
+   ],
    "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
-     "proposer": "MARK",
-     "votes": [
-      "MARK",
-      "CAITLIN",
-      "SHARON"
-     ],
      "state": "REJECTED",
      "team": [
       "MARK",
       "SHARON",
       "CAITLIN"
+     ],
+     "proposer": "MARK",
+     "votes": [
+      "MARK",
+      "CAITLIN",
+      "SHARON"
      ]
     },
     {
-     "votes": [
-      "DAN",
-      "CAITLIN",
-      "SHARON"
-     ],
-     "proposer": "DAN",
+     "state": "REJECTED",
      "team": [
       "DAN",
       "SHARON",
       "CAITLIN"
      ],
-     "state": "REJECTED"
+     "proposer": "DAN",
+     "votes": [
+      "DAN",
+      "CAITLIN",
+      "SHARON"
+     ]
     },
     {
+     "state": "REJECTED",
+     "proposer": "BRETT",
      "votes": [
       "MARK",
       "BRETT"
@@ -161,9 +226,7 @@
       "SHARON",
       "MARK",
       "ALI"
-     ],
-     "proposer": "BRETT",
-     "state": "REJECTED"
+     ]
     },
     {
      "votes": [
@@ -178,82 +241,19 @@
       "MARK",
       "SHARON"
      ],
-     "state": "APPROVED",
-     "proposer": "SHARON"
+     "proposer": "SHARON",
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "CAITLIN",
-    "MARK",
-    "SHARON"
-   ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
-   "state": "PENDING",
+   "proposals": [],
+   "team": [],
    "failsRequired": 1,
    "teamSize": 4,
-   "team": [],
-   "proposals": []
+   "state": "PENDING"
   }
- ],
- "outcome": {
-  "roles": [
-   {
-    "name": "SHARON",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "ALI"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "BRETT",
-    "assassin": true
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "DAN",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "MARK"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "CAITLIN",
-    "assassin": false
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "DAN": true,
-    "SHARON": true
-   },
-   {
-    "SHARON": true,
-    "DAN": true,
-    "CAITLIN": true
-   },
-   {
-    "SHARON": true,
-    "BRETT": false,
-    "DAN": true,
-    "MARK": true
-   },
-   {
-    "CAITLIN": true,
-    "MARK": true,
-    "SHARON": true
-   }
-  ],
-  "assassinated": "CAITLIN"
- }
+ ]
 }

@@ -1,63 +1,144 @@
 {
+ "players": [
+  {
+   "uid": "NIKf5JTarXgYjDJPCzxGpoRo0gP2",
+   "name": "MARC"
+  },
+  {
+   "name": "CRAIG",
+   "uid": "4sNqa4aD3MWk2zEPWcJKx4sKBXf1"
+  },
+  {
+   "name": "ED",
+   "uid": "QIEV9YNVkJaKEKM5JpXp6RokGTd2"
+  },
+  {
+   "name": "EYAD",
+   "uid": "njelh8nXWIMhoXN2oUH8fSyNPNI2"
+  },
+  {
+   "uid": "yPyTOsJEPEXTQQj4L7r9zhvbdGy2",
+   "name": "AARON"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1588821089,
+  "_nanoseconds": 877000000
+ },
+ "outcome": {
+  "roles": [
+   {
+    "role": "MERLIN",
+    "name": "CRAIG",
+    "assassin": false
+   },
+   {
+    "name": "MARC",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ED",
+    "assassin": true,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "EYAD"
+   },
+   {
+    "name": "AARON",
+    "assassin": false,
+    "role": "OBERON"
+   }
+  ],
+  "message": "Five team proposals in a row rejected",
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "AARON": true,
+    "ED": true
+   },
+   {
+    "AARON": true,
+    "CRAIG": true,
+    "ED": true
+   },
+   {
+    "ED": false,
+    "CRAIG": true
+   },
+   {
+    "MARC": true,
+    "AARON": false,
+    "CRAIG": true
+   }
+  ]
+ },
  "missions": [
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "proposals": [
     {
+     "votes": [
+      "ED",
+      "AARON"
+     ],
      "team": [
       "ED",
       "AARON"
      ],
      "proposer": "ED",
-     "votes": [
-      "ED",
-      "AARON"
-     ],
      "state": "REJECTED"
     },
     {
+     "team": [
+      "EYAD",
+      "ED"
+     ],
      "proposer": "EYAD",
      "state": "REJECTED",
      "votes": [
       "ED",
       "EYAD"
-     ],
-     "team": [
-      "EYAD",
-      "ED"
      ]
     },
     {
+     "state": "APPROVED",
+     "team": [
+      "AARON",
+      "ED"
+     ],
      "proposer": "AARON",
      "votes": [
       "ED",
       "EYAD",
       "AARON"
-     ],
-     "team": [
-      "AARON",
-      "ED"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "AARON",
     "ED"
    ],
-   "teamSize": 2
+   "teamSize": 2,
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
    "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "ED",
     "AARON",
     "CRAIG"
    ],
-   "teamSize": 3,
-   "state": "SUCCESS",
    "proposals": [
     {
      "state": "REJECTED",
@@ -65,45 +146,40 @@
       "MARC",
       "CRAIG"
      ],
+     "proposer": "MARC",
      "team": [
       "CRAIG",
       "EYAD",
       "MARC"
-     ],
-     "proposer": "MARC"
+     ]
     },
     {
-     "proposer": "CRAIG",
+     "votes": [
+      "CRAIG",
+      "ED",
+      "EYAD",
+      "AARON"
+     ],
      "state": "APPROVED",
      "team": [
       "ED",
       "AARON",
       "CRAIG"
      ],
-     "votes": [
-      "CRAIG",
-      "ED",
-      "EYAD",
-      "AARON"
-     ]
+     "proposer": "CRAIG"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3
   },
   {
-   "numFails": 1,
-   "teamSize": 2,
    "state": "FAIL",
    "team": [
     "ED",
     "CRAIG"
    ],
+   "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "ED",
-      "CRAIG"
-     ],
      "state": "APPROVED",
      "votes": [
       "MARC",
@@ -111,18 +187,26 @@
       "EYAD",
       "AARON"
      ],
+     "team": [
+      "ED",
+      "CRAIG"
+     ],
      "proposer": "ED"
     }
    ],
+   "teamSize": 2,
    "failsRequired": 1
   },
   {
+   "team": [
+    "AARON",
+    "CRAIG",
+    "MARC"
+   ],
    "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "EYAD",
      "votes": [
       "ED",
       "EYAD"
@@ -132,15 +216,16 @@
       "ED",
       "AARON",
       "EYAD"
-     ]
+     ],
+     "proposer": "EYAD"
     },
     {
+     "proposer": "AARON",
      "team": [
       "AARON",
       "CRAIG",
       "MARC"
      ],
-     "proposer": "AARON",
      "votes": [
       "AARON",
       "MARC",
@@ -149,54 +234,51 @@
      "state": "APPROVED"
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "AARON",
-    "CRAIG",
-    "MARC"
-   ]
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
    "state": "PENDING",
+   "teamSize": 3,
    "failsRequired": 1,
    "proposals": [
     {
+     "votes": [
+      "ED"
+     ],
      "team": [
       "ED",
       "AARON",
       "MARC"
      ],
      "proposer": "MARC",
-     "state": "REJECTED",
-     "votes": [
-      "ED"
-     ]
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "MARC",
+      "CRAIG"
+     ],
+     "proposer": "CRAIG",
      "team": [
       "CRAIG",
       "MARC",
       "EYAD"
      ],
-     "proposer": "CRAIG",
-     "votes": [
-      "MARC",
-      "CRAIG"
-     ],
      "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "ED",
-      "EYAD"
-     ],
      "team": [
       "ED",
       "AARON",
       "EYAD"
      ],
-     "proposer": "ED"
+     "proposer": "ED",
+     "state": "REJECTED",
+     "votes": [
+      "ED",
+      "EYAD"
+     ]
     },
     {
      "state": "REJECTED",
@@ -212,104 +294,22 @@
      "proposer": "EYAD"
     },
     {
-     "state": "REJECTED",
-     "proposer": "AARON",
      "votes": [
       "ED",
       "EYAD"
      ],
+     "proposer": "AARON",
      "team": [
       "AARON",
       "EYAD",
       "ED"
-     ]
+     ],
+     "state": "REJECTED"
     }
    ],
-   "team": [],
-   "teamSize": 3
+   "team": []
   }
  ],
- "outcome": {
-  "assassinated": null,
-  "votes": [
-   {
-    "ED": true,
-    "AARON": true
-   },
-   {
-    "CRAIG": true,
-    "ED": true,
-    "AARON": true
-   },
-   {
-    "CRAIG": true,
-    "ED": false
-   },
-   {
-    "AARON": false,
-    "MARC": true,
-    "CRAIG": true
-   }
-  ],
-  "message": "Five team proposals in a row rejected",
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "CRAIG",
-    "role": "MERLIN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "MARC"
-   },
-   {
-    "role": "MORGANA",
-    "name": "ED",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "EYAD"
-   },
-   {
-    "name": "AARON",
-    "assassin": false,
-    "role": "OBERON"
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1588821089,
-  "_nanoseconds": 877000000
- },
- "players": [
-  {
-   "name": "MARC",
-   "uid": "NIKf5JTarXgYjDJPCzxGpoRo0gP2"
-  },
-  {
-   "uid": "4sNqa4aD3MWk2zEPWcJKx4sKBXf1",
-   "name": "CRAIG"
-  },
-  {
-   "uid": "QIEV9YNVkJaKEKM5JpXp6RokGTd2",
-   "name": "ED"
-  },
-  {
-   "name": "EYAD",
-   "uid": "njelh8nXWIMhoXN2oUH8fSyNPNI2"
-  },
-  {
-   "uid": "yPyTOsJEPEXTQQj4L7r9zhvbdGy2",
-   "name": "AARON"
-  }
- ],
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1588819895,
   "_nanoseconds": 526000000

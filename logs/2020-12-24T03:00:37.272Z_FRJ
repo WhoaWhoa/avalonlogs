@@ -1,11 +1,88 @@
 {
- "timeFinished": {
-  "_seconds": 1608780232,
-  "_nanoseconds": 6000000
- },
- "timeCreated": {
-  "_seconds": 1608778837,
-  "_nanoseconds": 272000000
+ "outcome": {
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "MARIA"
+   },
+   {
+    "assassin": true,
+    "role": "MORDRED",
+    "name": "MEGAN"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "AMY"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JOANNA",
+    "assassin": false
+   },
+   {
+    "name": "MICHAEL",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "PAT",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "name": "CARRY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MORGANA",
+    "name": "RAY",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "OBERON",
+    "name": "JOCELYN"
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "PAT",
+  "votes": [
+   {
+    "MICHAEL": true,
+    "CARRY": true,
+    "MARIA": true
+   },
+   {
+    "RAY": false,
+    "MICHAEL": true,
+    "JOCELYN": true,
+    "MARIA": true
+   },
+   {
+    "JOANNA": true,
+    "MEGAN": false,
+    "RAY": false,
+    "JOCELYN": true
+   },
+   {
+    "MEGAN": true,
+    "MARIA": true,
+    "JOANNA": true,
+    "AMY": true,
+    "CARRY": true
+   },
+   {
+    "JOANNA": true,
+    "MICHAEL": true,
+    "CARRY": true,
+    "MARIA": true,
+    "AMY": true
+   }
+  ],
+  "state": "EVIL_WIN"
  },
  "players": [
   {
@@ -17,8 +94,8 @@
    "uid": "1eUIiseT0oO7JpusRnhOdWxvd5C2"
   },
   {
-   "name": "MICHAEL",
-   "uid": "DTR3n8Cua9bsppoSXYkf7pGe3mo2"
+   "uid": "DTR3n8Cua9bsppoSXYkf7pGe3mo2",
+   "name": "MICHAEL"
   },
   {
    "uid": "R8mD8HNGlQT1oNADYgKyrPwL4M53",
@@ -33,18 +110,29 @@
    "uid": "Vrhs4EYYChcWMsYLAswOhqLE6Ba2"
   },
   {
-   "uid": "Bp7D88Hb12NjketvwcIGCwrUEVV2",
-   "name": "AMY"
+   "name": "AMY",
+   "uid": "Bp7D88Hb12NjketvwcIGCwrUEVV2"
   },
   {
-   "uid": "aNEAP0k3nsb8JN9KFqsQyDX2AUW2",
-   "name": "CARRY"
+   "name": "CARRY",
+   "uid": "aNEAP0k3nsb8JN9KFqsQyDX2AUW2"
   },
   {
    "uid": "0Lug9NQQc2MyTRBKN7IvIhWdjNt2",
    "name": "MARIA"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1608778837,
+  "_nanoseconds": 272000000
+ },
+ "timeFinished": {
+  "_seconds": 1608780232,
+  "_nanoseconds": 6000000
+ },
  "missions": [
   {
    "team": [
@@ -52,13 +140,15 @@
     "MARIA",
     "CARRY"
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "MICHAEL",
+     "team": [
+      "MICHAEL",
+      "MARIA",
+      "CARRY"
+     ],
      "votes": [
       "MICHAEL",
       "JOCELYN",
@@ -70,19 +160,24 @@
       "RAY",
       "MEGAN"
      ],
-     "team": [
-      "MICHAEL",
-      "MARIA",
-      "CARRY"
-     ]
+     "state": "APPROVED",
+     "proposer": "MICHAEL"
     }
    ],
+   "failsRequired": 1,
    "numFails": 0
   },
   {
-   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
+     "team": [
+      "RAY",
+      "MICHAEL",
+      "JOCELYN",
+      "MARIA"
+     ],
+     "proposer": "RAY",
      "votes": [
       "MEGAN",
       "MICHAEL",
@@ -90,46 +185,53 @@
       "MARIA",
       "JOANNA"
      ],
-     "proposer": "RAY",
-     "state": "APPROVED",
-     "team": [
-      "RAY",
-      "MICHAEL",
-      "JOCELYN",
-      "MARIA"
-     ]
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
+   "teamSize": 4,
    "team": [
     "RAY",
     "MICHAEL",
     "JOCELYN",
     "MARIA"
    ],
-   "state": "FAIL",
-   "teamSize": 4,
-   "failsRequired": 1
+   "numFails": 1
   },
   {
+   "numFails": 2,
+   "team": [
+    "RAY",
+    "JOCELYN",
+    "JOANNA",
+    "MEGAN"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "PAT",
+      "JOCELYN",
+      "JOANNA",
+      "RAY"
+     ],
+     "state": "REJECTED",
      "votes": [
       "CARRY",
       "RAY",
       "MICHAEL",
       "JOCELYN"
      ],
-     "proposer": "JOCELYN",
-     "state": "REJECTED",
-     "team": [
-      "PAT",
-      "JOCELYN",
-      "JOANNA",
-      "RAY"
-     ]
+     "proposer": "JOCELYN"
     },
     {
-     "state": "APPROVED",
+     "proposer": "PAT",
+     "team": [
+      "RAY",
+      "JOCELYN",
+      "JOANNA",
+      "MEGAN"
+     ],
      "votes": [
       "CARRY",
       "AMY",
@@ -138,28 +240,38 @@
       "JOCELYN",
       "RAY"
      ],
-     "proposer": "PAT",
-     "team": [
-      "RAY",
-      "JOCELYN",
-      "JOANNA",
-      "MEGAN"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "RAY",
-    "JOCELYN",
-    "JOANNA",
-    "MEGAN"
-   ],
    "teamSize": 4,
-   "failsRequired": 1,
-   "numFails": 2,
    "state": "FAIL"
   },
   {
-   "teamSize": 5,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "proposer": "AMY",
+     "team": [
+      "JOANNA",
+      "MEGAN",
+      "CARRY",
+      "MARIA",
+      "AMY"
+     ],
+     "votes": [
+      "RAY",
+      "MICHAEL",
+      "MEGAN",
+      "MARIA",
+      "JOCELYN",
+      "PAT",
+      "JOANNA",
+      "CARRY",
+      "AMY"
+     ]
+    }
+   ],
+   "state": "SUCCESS",
    "failsRequired": 2,
    "team": [
     "JOANNA",
@@ -168,34 +280,11 @@
     "MARIA",
     "AMY"
    ],
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "JOANNA",
-      "MEGAN",
-      "CARRY",
-      "MARIA",
-      "AMY"
-     ],
-     "votes": [
-      "RAY",
-      "MICHAEL",
-      "MEGAN",
-      "MARIA",
-      "JOCELYN",
-      "PAT",
-      "JOANNA",
-      "CARRY",
-      "AMY"
-     ],
-     "proposer": "AMY"
-    }
-   ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "numFails": 0,
+   "teamSize": 5
   },
   {
+   "teamSize": 5,
    "team": [
     "JOANNA",
     "MARIA",
@@ -203,11 +292,8 @@
     "AMY",
     "MICHAEL"
    ],
-   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "CARRY",
-     "state": "APPROVED",
      "votes": [
       "CARRY",
       "MARIA",
@@ -218,106 +304,20 @@
       "AMY",
       "JOANNA"
      ],
+     "state": "APPROVED",
      "team": [
       "JOANNA",
       "MARIA",
       "CARRY",
       "AMY",
       "MICHAEL"
-     ]
+     ],
+     "proposer": "CARRY"
     }
    ],
-   "teamSize": 5,
-   "failsRequired": 1,
-   "numFails": 0
+   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1
   }
- ],
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "roles": [
-   {
-    "name": "MARIA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "MEGAN",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "AMY",
-    "assassin": false
-   },
-   {
-    "name": "JOANNA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MICHAEL"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "PAT"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "CARRY"
-   },
-   {
-    "name": "RAY",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "role": "OBERON",
-    "name": "JOCELYN",
-    "assassin": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
-  "votes": [
-   {
-    "CARRY": true,
-    "MARIA": true,
-    "MICHAEL": true
-   },
-   {
-    "MARIA": true,
-    "RAY": false,
-    "JOCELYN": true,
-    "MICHAEL": true
-   },
-   {
-    "MEGAN": false,
-    "JOCELYN": true,
-    "JOANNA": true,
-    "RAY": false
-   },
-   {
-    "JOANNA": true,
-    "CARRY": true,
-    "MEGAN": true,
-    "MARIA": true,
-    "AMY": true
-   },
-   {
-    "MICHAEL": true,
-    "JOANNA": true,
-    "CARRY": true,
-    "MARIA": true,
-    "AMY": true
-   }
-  ],
-  "assassinated": "PAT"
- }
+ ]
 }

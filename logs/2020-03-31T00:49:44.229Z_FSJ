@@ -1,19 +1,8 @@
 {
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "CHRIS",
-    "DIANA"
-   ],
    "proposals": [
     {
-     "team": [
-      "CHRIS",
-      "DIANA"
-     ],
-     "proposer": "CHRIS",
-     "state": "APPROVED",
      "votes": [
       "MICHELLE",
       "DIANA",
@@ -21,61 +10,70 @@
       "STEPHAN",
       "TIM",
       "DAVID"
+     ],
+     "proposer": "CHRIS",
+     "state": "APPROVED",
+     "team": [
+      "CHRIS",
+      "DIANA"
      ]
     }
    ],
-   "numFails": 0,
    "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "CHRIS",
+    "DIANA"
+   ],
+   "numFails": 0,
    "teamSize": 2
   },
   {
-   "numFails": 1,
+   "team": [
+    "CHRIS",
+    "DIANA",
+    "MICHELLE"
+   ],
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "DIANA",
      "team": [
       "CHRIS",
       "DIANA",
       "MICHELLE"
      ],
-     "proposer": "DIANA",
      "votes": [
       "MICHELLE",
       "DIANA",
       "CHRIS",
       "STEPHAN",
       "TIM"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "team": [
-    "CHRIS",
-    "DIANA",
-    "MICHELLE"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "state": "FAIL"
-  },
-  {
    "numFails": 1,
    "state": "FAIL",
    "failsRequired": 1,
+   "teamSize": 3
+  },
+  {
+   "teamSize": 4,
    "proposals": [
     {
+     "votes": [
+      "STEPHAN",
+      "TIM",
+      "MICHELLE",
+      "DIANA"
+     ],
+     "state": "APPROVED",
      "proposer": "MICHELLE",
      "team": [
       "MICHELLE",
       "DIANA",
       "TIM",
       "STEPHAN"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "STEPHAN",
-      "TIM",
-      "MICHELLE",
-      "DIANA"
      ]
     }
    ],
@@ -85,21 +83,55 @@
     "TIM",
     "STEPHAN"
    ],
-   "teamSize": 4
+   "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
+   "state": "SUCCESS",
+   "teamSize": 3,
    "failsRequired": 1,
+   "numFails": 0,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "proposer": "TIM",
+     "team": [
+      "DIANA",
+      "CHRIS",
+      "TIM"
+     ],
+     "votes": [
+      "DIANA",
+      "CHRIS",
+      "STEPHAN",
+      "TIM",
+      "DAVID"
+     ]
+    }
+   ],
    "team": [
     "DIANA",
     "CHRIS",
     "TIM"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 3,
+   ]
+  },
+  {
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "STEPHAN",
+     "votes": [
+      "STEPHAN"
+     ],
+     "team": [
+      "STEPHAN",
+      "DIANA",
+      "CHRIS",
+      "DAVID"
+     ],
+     "state": "REJECTED"
+    },
+    {
      "votes": [
       "DIANA",
       "CHRIS",
@@ -107,57 +139,25 @@
       "TIM",
       "DAVID"
      ],
-     "proposer": "TIM",
+     "state": "APPROVED",
      "team": [
+      "DAVID",
       "DIANA",
       "CHRIS",
       "TIM"
-     ]
+     ],
+     "proposer": "DAVID"
     }
-   ]
-  },
-  {
+   ],
+   "state": "SUCCESS",
+   "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "DAVID",
     "DIANA",
     "CHRIS",
     "TIM"
    ],
-   "proposals": [
-    {
-     "votes": [
-      "STEPHAN"
-     ],
-     "proposer": "STEPHAN",
-     "state": "REJECTED",
-     "team": [
-      "STEPHAN",
-      "DIANA",
-      "CHRIS",
-      "DAVID"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "proposer": "DAVID",
-     "votes": [
-      "DIANA",
-      "CHRIS",
-      "STEPHAN",
-      "TIM",
-      "DAVID"
-     ],
-     "team": [
-      "DAVID",
-      "DIANA",
-      "CHRIS",
-      "TIM"
-     ]
-    }
-   ],
-   "state": "SUCCESS",
-   "teamSize": 4,
-   "failsRequired": 1,
    "numFails": 0
   }
  ],
@@ -166,12 +166,41 @@
   "_nanoseconds": 179261000
  },
  "outcome": {
+  "votes": [
+   {
+    "CHRIS": true,
+    "DIANA": true
+   },
+   {
+    "DIANA": true,
+    "MICHELLE": false,
+    "CHRIS": true
+   },
+   {
+    "DIANA": true,
+    "STEPHAN": false,
+    "MICHELLE": true,
+    "TIM": true
+   },
+   {
+    "CHRIS": true,
+    "DIANA": true,
+    "TIM": true
+   },
+   {
+    "DAVID": true,
+    "DIANA": true,
+    "TIM": true,
+    "CHRIS": true
+   }
+  ],
+  "state": "EVIL_WIN",
   "assassinated": "TIM",
   "message": "Merlin assassinated",
   "roles": [
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "DIANA"
    },
    {
@@ -180,59 +209,26 @@
     "assassin": false
    },
    {
+    "name": "STEPHAN",
     "assassin": false,
-    "role": "MORGANA",
-    "name": "STEPHAN"
+    "role": "MORGANA"
    },
    {
-    "name": "TIM",
+    "assassin": false,
     "role": "MERLIN",
-    "assassin": false
+    "name": "TIM"
    },
    {
-    "name": "DAVID",
     "assassin": false,
+    "name": "DAVID",
     "role": "PERCIVAL"
    },
    {
     "name": "MICHELLE",
-    "role": "MORDRED",
-    "assassin": true
+    "assassin": true,
+    "role": "MORDRED"
    }
-  ],
-  "votes": [
-   {
-    "DIANA": true,
-    "CHRIS": true
-   },
-   {
-    "CHRIS": true,
-    "DIANA": true,
-    "MICHELLE": false
-   },
-   {
-    "DIANA": true,
-    "TIM": true,
-    "MICHELLE": true,
-    "STEPHAN": false
-   },
-   {
-    "TIM": true,
-    "CHRIS": true,
-    "DIANA": true
-   },
-   {
-    "DIANA": true,
-    "TIM": true,
-    "CHRIS": true,
-    "DAVID": true
-   }
-  ],
-  "state": "EVIL_WIN"
- },
- "timeCreated": {
-  "_seconds": 1585615784,
-  "_nanoseconds": 229000000
+  ]
  },
  "players": [
   {
@@ -244,20 +240,24 @@
    "uid": "xfeWamKVLFheiWITES5u0VW6EC13"
   },
   {
-   "uid": "NRa4Y5BvIRUu0NJtNcgsbihHeRV2",
-   "name": "MICHELLE"
+   "name": "MICHELLE",
+   "uid": "NRa4Y5BvIRUu0NJtNcgsbihHeRV2"
   },
   {
-   "uid": "EZ6man5jV1Ws1fTtrxeAIajz8ky2",
-   "name": "TIM"
+   "name": "TIM",
+   "uid": "EZ6man5jV1Ws1fTtrxeAIajz8ky2"
   },
   {
-   "uid": "M9vxQxeQSFRkcnaRzCdRXSNSNTE2",
-   "name": "STEPHAN"
+   "name": "STEPHAN",
+   "uid": "M9vxQxeQSFRkcnaRzCdRXSNSNTE2"
   },
   {
-   "name": "DAVID",
-   "uid": "UQJFUagMgcQ2aPTmCXk2tN18Gp73"
+   "uid": "UQJFUagMgcQ2aPTmCXk2tN18Gp73",
+   "name": "DAVID"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1585615784,
+  "_nanoseconds": 229000000
+ }
 }

@@ -1,57 +1,15 @@
 {
+ "timeFinished": {
+  "_seconds": 1590630903,
+  "_nanoseconds": 323000000
+ },
  "options": {
   "inGameLog": false
  },
- "players": [
-  {
-   "uid": "S56JnMQWPxdeVzmrFAMPMlVXeWx1",
-   "name": "ALEXIS"
-  },
-  {
-   "name": "MADISON",
-   "uid": "6ji7qI2QW5dtxhgFZJ2eYBVcKsL2"
-  },
-  {
-   "name": "SAM",
-   "uid": "GtyBet2MaATTBeDpYJqmKQKHl712"
-  },
-  {
-   "uid": "Uns8jizFJ3U0iQSzyz3MosQUjev1",
-   "name": "EZRA"
-  },
-  {
-   "uid": "4DZEZjkhrrVxFVZP7D2xK1M6ur92",
-   "name": "JBAE"
-  }
- ],
  "outcome": {
-  "roles": [
-   {
-    "name": "ALEXIS",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "name": "JBAE",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "EZRA",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "MADISON"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "SAM"
-   }
-  ],
+  "state": "EVIL_WIN",
+  "assassinated": "ALEXIS",
+  "message": "Merlin assassinated",
   "votes": [
    {
     "MADISON": true,
@@ -59,91 +17,117 @@
    },
    {
     "JBAE": true,
-    "SAM": false,
-    "EZRA": true
+    "EZRA": true,
+    "SAM": false
    },
    {
-    "JBAE": true,
-    "EZRA": true
+    "EZRA": true,
+    "JBAE": true
    },
    {
-    "JBAE": true,
     "ALEXIS": true,
-    "EZRA": true
+    "EZRA": true,
+    "JBAE": true
    }
   ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "ALEXIS"
+  "roles": [
+   {
+    "assassin": false,
+    "name": "ALEXIS",
+    "role": "MERLIN"
+   },
+   {
+    "name": "JBAE",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "EZRA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "MADISON",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "SAM",
+    "assassin": false
+   }
+  ]
  },
  "missions": [
   {
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "MADISON",
+      "SAM"
+     ],
+     "proposer": "MADISON",
+     "state": "APPROVED",
      "votes": [
       "MADISON",
       "SAM",
       "ALEXIS",
       "JBAE"
-     ],
-     "proposer": "MADISON",
-     "state": "APPROVED",
-     "team": [
-      "MADISON",
-      "SAM"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "teamSize": 2,
    "team": [
     "MADISON",
     "SAM"
-   ]
+   ],
+   "teamSize": 2,
+   "failsRequired": 1
   },
   {
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3,
+   "team": [
+    "SAM",
+    "JBAE",
+    "EZRA"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "SAM",
-      "JBAE",
-      "EZRA"
-     ],
-     "proposer": "SAM",
      "votes": [
       "ALEXIS",
       "JBAE",
       "EZRA",
       "MADISON",
       "SAM"
-     ]
+     ],
+     "team": [
+      "SAM",
+      "JBAE",
+      "EZRA"
+     ],
+     "state": "APPROVED",
+     "proposer": "SAM"
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "state": "FAIL",
-   "team": [
-    "SAM",
-    "JBAE",
-    "EZRA"
-   ],
-   "numFails": 1
+   ]
   },
   {
    "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "EZRA",
      "votes": [
       "JBAE",
       "EZRA",
       "MADISON",
       "ALEXIS"
      ],
-     "proposer": "EZRA",
+     "state": "APPROVED",
      "team": [
       "EZRA",
       "JBAE"
@@ -154,14 +138,24 @@
     "EZRA",
     "JBAE"
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "numFails": 0
   },
   {
+   "team": [
+    "EZRA",
+    "JBAE",
+    "ALEXIS"
+   ],
    "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
+     "proposer": "JBAE",
+     "team": [
+      "EZRA",
+      "JBAE",
+      "ALEXIS"
+     ],
      "state": "APPROVED",
      "votes": [
       "JBAE",
@@ -169,38 +163,44 @@
       "MADISON",
       "SAM",
       "ALEXIS"
-     ],
-     "team": [
-      "EZRA",
-      "JBAE",
-      "ALEXIS"
-     ],
-     "proposer": "JBAE"
+     ]
     }
    ],
    "state": "SUCCESS",
-   "teamSize": 3,
-   "team": [
-    "EZRA",
-    "JBAE",
-    "ALEXIS"
-   ],
-   "numFails": 0
+   "teamSize": 3
   },
   {
-   "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1,
    "teamSize": 3,
-   "team": []
+   "team": [],
+   "failsRequired": 1,
+   "state": "PENDING"
+  }
+ ],
+ "players": [
+  {
+   "uid": "S56JnMQWPxdeVzmrFAMPMlVXeWx1",
+   "name": "ALEXIS"
+  },
+  {
+   "uid": "6ji7qI2QW5dtxhgFZJ2eYBVcKsL2",
+   "name": "MADISON"
+  },
+  {
+   "uid": "GtyBet2MaATTBeDpYJqmKQKHl712",
+   "name": "SAM"
+  },
+  {
+   "uid": "Uns8jizFJ3U0iQSzyz3MosQUjev1",
+   "name": "EZRA"
+  },
+  {
+   "name": "JBAE",
+   "uid": "4DZEZjkhrrVxFVZP7D2xK1M6ur92"
   }
  ],
  "timeCreated": {
   "_seconds": 1590630735,
   "_nanoseconds": 3000000
- },
- "timeFinished": {
-  "_seconds": 1590630903,
-  "_nanoseconds": 323000000
  }
 }

@@ -1,10 +1,68 @@
 {
- "timeCreated": {
-  "_seconds": 1595639255,
-  "_nanoseconds": 946000000
- },
- "options": {
-  "inGameLog": false
+ "outcome": {
+  "votes": [
+   {
+    "BIGSEAN": true,
+    "JAN": true
+   },
+   {
+    "TAMSIN": true,
+    "BIGSEAN": true,
+    "JWJ": true
+   },
+   {
+    "TAMSIN": false,
+    "JAN": true,
+    "JWJ": true,
+    "BIGSEAN": true
+   },
+   {
+    "TAMSIN": false,
+    "JAN": true,
+    "AL": true
+   },
+   {
+    "BIGSEAN": true,
+    "AL": true,
+    "JWJ": true,
+    "JAN": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "name": "CAT",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "TAMSIN",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JAN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "JWJ"
+   },
+   {
+    "name": "AL",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "BIGSEAN",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ],
+  "assassinated": "AL",
+  "message": "Three successful missions",
+  "state": "GOOD_WIN"
  },
  "players": [
   {
@@ -16,8 +74,8 @@
    "name": "AL"
   },
   {
-   "name": "BIGSEAN",
-   "uid": "uU9NcraRO7XFdadCM4amln4SJp22"
+   "uid": "uU9NcraRO7XFdadCM4amln4SJp22",
+   "name": "BIGSEAN"
   },
   {
    "uid": "q9EeBexCuKTYhAsoarEEErhnc0r1",
@@ -34,48 +92,49 @@
  ],
  "missions": [
   {
-   "team": [
-    "JAN",
-    "BIGSEAN"
-   ],
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "JAN",
+      "BIGSEAN"
+     ],
      "proposer": "JAN",
+     "state": "APPROVED",
      "votes": [
       "TAMSIN",
       "JAN",
       "JWJ",
       "BIGSEAN",
       "CAT"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "JAN",
-      "BIGSEAN"
      ]
     }
    ],
    "numFails": 0,
+   "team": [
+    "JAN",
+    "BIGSEAN"
+   ],
    "state": "SUCCESS",
-   "teamSize": 2,
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
+   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "JWJ",
+      "BIGSEAN",
+      "TAMSIN"
+     ],
+     "proposer": "JWJ",
      "state": "APPROVED",
      "votes": [
       "CAT",
       "TAMSIN",
       "JAN",
       "JWJ"
-     ],
-     "team": [
-      "JWJ",
-      "BIGSEAN",
-      "TAMSIN"
-     ],
-     "proposer": "JWJ"
+     ]
     }
    ],
    "state": "SUCCESS",
@@ -84,15 +143,22 @@
     "BIGSEAN",
     "TAMSIN"
    ],
-   "numFails": 0,
    "failsRequired": 1,
    "teamSize": 3
   },
   {
+   "teamSize": 4,
+   "team": [
+    "TAMSIN",
+    "JWJ",
+    "JAN",
+    "BIGSEAN"
+   ],
+   "numFails": 1,
    "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "TAMSIN",
      "state": "APPROVED",
      "votes": [
       "JWJ",
@@ -105,60 +171,58 @@
       "JWJ",
       "JAN",
       "BIGSEAN"
-     ]
+     ],
+     "proposer": "TAMSIN"
     }
-   ],
-   "team": [
-    "TAMSIN",
-    "JWJ",
-    "JAN",
-    "BIGSEAN"
-   ],
-   "teamSize": 4,
-   "state": "FAIL",
-   "numFails": 1
+   ]
   },
   {
-   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "AL",
      "votes": [
       "TAMSIN",
       "JAN",
       "AL",
       "CAT"
      ],
+     "state": "APPROVED",
      "team": [
       "AL",
       "JAN",
       "TAMSIN"
-     ],
-     "proposer": "AL"
+     ]
     }
    ],
-   "teamSize": 3,
-   "state": "FAIL",
    "team": [
     "AL",
     "JAN",
     "TAMSIN"
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "numFails": 1,
+   "state": "FAIL"
   },
   {
+   "team": [
+    "JAN",
+    "JWJ",
+    "AL",
+    "BIGSEAN"
+   ],
    "proposals": [
     {
-     "team": [
+     "state": "APPROVED",
+     "votes": [
+      "CAT",
       "JAN",
       "JWJ",
       "AL",
       "BIGSEAN"
      ],
-     "state": "APPROVED",
      "proposer": "BIGSEAN",
-     "votes": [
-      "CAT",
+     "team": [
       "JAN",
       "JWJ",
       "AL",
@@ -166,85 +230,21 @@
      ]
     }
    ],
-   "numFails": 0,
-   "team": [
-    "JAN",
-    "JWJ",
-    "AL",
-    "BIGSEAN"
-   ],
-   "teamSize": 4,
    "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 4,
    "state": "SUCCESS"
   }
  ],
+ "timeCreated": {
+  "_seconds": 1595639255,
+  "_nanoseconds": 946000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1595640253,
   "_nanoseconds": 581000000
- },
- "outcome": {
-  "assassinated": "AL",
-  "message": "Three successful missions",
-  "votes": [
-   {
-    "BIGSEAN": true,
-    "JAN": true
-   },
-   {
-    "JWJ": true,
-    "TAMSIN": true,
-    "BIGSEAN": true
-   },
-   {
-    "TAMSIN": false,
-    "JWJ": true,
-    "JAN": true,
-    "BIGSEAN": true
-   },
-   {
-    "TAMSIN": false,
-    "JAN": true,
-    "AL": true
-   },
-   {
-    "JAN": true,
-    "AL": true,
-    "BIGSEAN": true,
-    "JWJ": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "CAT"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "TAMSIN"
-   },
-   {
-    "name": "JAN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "JWJ"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "AL"
-   },
-   {
-    "name": "BIGSEAN",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "state": "GOOD_WIN"
  }
 }

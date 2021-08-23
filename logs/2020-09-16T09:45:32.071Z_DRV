@@ -1,76 +1,145 @@
 {
+ "outcome": {
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "role": "PERCIVAL",
+    "name": "HABI",
+    "assassin": false
+   },
+   {
+    "name": "ANDYMANCY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "ENZO"
+   },
+   {
+    "name": "KUNGFUHRER",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "name": "GABE",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "RINTAM",
+    "role": "MERLIN"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "GABE": false,
+    "ENZO": true
+   },
+   {
+    "ANDYMANCY": true,
+    "KUNGFUHRER": true,
+    "HABI": true
+   },
+   {
+    "HABI": true,
+    "GABE": false,
+    "KUNGFUHRER": true,
+    "ANDYMANCY": true
+   },
+   {
+    "ANDYMANCY": true,
+    "KUNGFUHRER": true,
+    "HABI": true
+   },
+   {
+    "ANDYMANCY": true,
+    "HABI": true,
+    "ENZO": false,
+    "KUNGFUHRER": true
+   }
+  ],
+  "assassinated": null
+ },
  "missions": [
   {
    "state": "FAIL",
-   "proposals": [
-    {
-     "proposer": "RINTAM",
-     "team": [
-      "ENZO",
-      "GABE"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "ENZO",
-      "HABI",
-      "ANDYMANCY",
-      "GABE",
-      "RINTAM"
-     ]
-    }
-   ],
+   "numFails": 1,
+   "teamSize": 2,
    "team": [
     "ENZO",
     "GABE"
    ],
    "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 2
+   "proposals": [
+    {
+     "team": [
+      "ENZO",
+      "GABE"
+     ],
+     "proposer": "RINTAM",
+     "votes": [
+      "ENZO",
+      "HABI",
+      "ANDYMANCY",
+      "GABE",
+      "RINTAM"
+     ],
+     "state": "APPROVED"
+    }
+   ]
   },
   {
    "failsRequired": 1,
+   "numFails": 0,
    "teamSize": 3,
    "state": "SUCCESS",
+   "team": [
+    "HABI",
+    "KUNGFUHRER",
+    "ANDYMANCY"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "HABI",
-     "team": [
-      "HABI",
-      "KUNGFUHRER",
-      "ANDYMANCY"
-     ],
      "votes": [
       "HABI",
       "RINTAM",
       "KUNGFUHRER",
       "ANDYMANCY",
       "ENZO"
-     ]
+     ],
+     "team": [
+      "HABI",
+      "KUNGFUHRER",
+      "ANDYMANCY"
+     ],
+     "proposer": "HABI",
+     "state": "APPROVED"
     }
-   ],
-   "team": [
-    "HABI",
-    "KUNGFUHRER",
-    "ANDYMANCY"
-   ],
-   "numFails": 0
+   ]
   },
   {
-   "state": "FAIL",
+   "team": [
+    "GABE",
+    "ANDYMANCY",
+    "KUNGFUHRER",
+    "HABI"
+   ],
    "numFails": 1,
    "teamSize": 4,
-   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "GABE",
      "votes": [
       "ANDYMANCY",
       "GABE",
       "HABI",
       "KUNGFUHRER"
      ],
-     "proposer": "GABE",
-     "state": "APPROVED",
      "team": [
       "GABE",
       "ANDYMANCY",
@@ -79,43 +148,48 @@
      ]
     }
    ],
-   "team": [
-    "GABE",
-    "ANDYMANCY",
-    "KUNGFUHRER",
-    "HABI"
-   ]
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
    "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "ANDYMANCY",
+    "KUNGFUHRER",
+    "HABI"
+   ],
+   "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "ANDYMANCY",
+     "state": "REJECTED",
      "team": [
       "ANDYMANCY",
       "KUNGFUHRER",
       "ENZO"
      ],
-     "state": "REJECTED",
      "votes": [
       "ANDYMANCY"
-     ]
+     ],
+     "proposer": "ANDYMANCY"
     },
     {
+     "team": [
+      "ANDYMANCY",
+      "RINTAM",
+      "HABI"
+     ],
      "votes": [
       "ENZO",
       "RINTAM",
       "HABI"
      ],
      "state": "REJECTED",
-     "proposer": "ENZO",
-     "team": [
-      "ANDYMANCY",
-      "RINTAM",
-      "HABI"
-     ]
+     "proposer": "ENZO"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "RINTAM"
      ],
@@ -124,48 +198,31 @@
       "RINTAM",
       "HABI"
      ],
-     "state": "REJECTED",
      "proposer": "KUNGFUHRER"
     },
     {
-     "team": [
-      "ANDYMANCY",
-      "KUNGFUHRER",
-      "HABI"
-     ],
+     "state": "APPROVED",
+     "proposer": "RINTAM",
      "votes": [
       "HABI",
       "RINTAM",
       "ANDYMANCY",
       "ENZO"
      ],
-     "proposer": "RINTAM",
-     "state": "APPROVED"
+     "team": [
+      "ANDYMANCY",
+      "KUNGFUHRER",
+      "HABI"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "team": [
-    "ANDYMANCY",
-    "KUNGFUHRER",
-    "HABI"
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   ]
   },
   {
-   "team": [
-    "ANDYMANCY",
-    "ENZO",
-    "HABI",
-    "KUNGFUHRER"
-   ],
-   "numFails": 1,
+   "failsRequired": 1,
    "teamSize": 4,
-   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
-     "proposer": "HABI",
-     "state": "REJECTED",
      "team": [
       "ENZO",
       "ANDYMANCY",
@@ -176,22 +233,24 @@
       "ANDYMANCY",
       "ENZO",
       "HABI"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "HABI"
     },
     {
-     "votes": [],
-     "state": "REJECTED",
      "proposer": "GABE",
+     "votes": [],
      "team": [
       "GABE",
       "KUNGFUHRER",
       "ANDYMANCY",
       "HABI"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "proposer": "ANDYMANCY",
+     "state": "REJECTED",
      "votes": [
       "HABI",
       "ANDYMANCY",
@@ -205,28 +264,31 @@
      ]
     },
     {
-     "state": "APPROVED",
-     "proposer": "ENZO",
      "team": [
       "ANDYMANCY",
       "ENZO",
       "HABI",
       "KUNGFUHRER"
      ],
+     "proposer": "ENZO",
      "votes": [
       "HABI",
       "KUNGFUHRER",
       "ENZO",
       "ANDYMANCY"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "state": "FAIL",
+   "team": [
+    "ANDYMANCY",
+    "ENZO",
+    "HABI",
+    "KUNGFUHRER"
+   ]
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "players": [
   {
    "name": "GABE",
@@ -237,93 +299,31 @@
    "name": "ANDYMANCY"
   },
   {
-   "uid": "v0i5er4D89NXgqrwWyYrmBEzbvr2",
-   "name": "ENZO"
+   "name": "ENZO",
+   "uid": "v0i5er4D89NXgqrwWyYrmBEzbvr2"
   },
   {
    "name": "KUNGFUHRER",
    "uid": "qeaFgJIULcUKoaHBsLgyz4IYuME2"
   },
   {
-   "name": "RINTAM",
-   "uid": "anzyH2cEw2NA0Q9uSUd0M6A6OyI2"
+   "uid": "anzyH2cEw2NA0Q9uSUd0M6A6OyI2",
+   "name": "RINTAM"
   },
   {
-   "uid": "HOeF37Zq5HeJaSpNIaIkSftPywt2",
-   "name": "HABI"
+   "name": "HABI",
+   "uid": "HOeF37Zq5HeJaSpNIaIkSftPywt2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1600249532,
-  "_nanoseconds": 71000000
+ "options": {
+  "inGameLog": false
  },
  "timeFinished": {
   "_seconds": 1600251236,
   "_nanoseconds": 592000000
  },
- "outcome": {
-  "roles": [
-   {
-    "role": "PERCIVAL",
-    "name": "HABI",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "ANDYMANCY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ENZO",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "KUNGFUHRER"
-   },
-   {
-    "assassin": true,
-    "name": "GABE",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "RINTAM",
-    "role": "MERLIN",
-    "assassin": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "GABE": false,
-    "ENZO": true
-   },
-   {
-    "KUNGFUHRER": true,
-    "ANDYMANCY": true,
-    "HABI": true
-   },
-   {
-    "HABI": true,
-    "ANDYMANCY": true,
-    "GABE": false,
-    "KUNGFUHRER": true
-   },
-   {
-    "HABI": true,
-    "ANDYMANCY": true,
-    "KUNGFUHRER": true
-   },
-   {
-    "ENZO": false,
-    "ANDYMANCY": true,
-    "KUNGFUHRER": true,
-    "HABI": true
-   }
-  ],
-  "assassinated": null
+ "timeCreated": {
+  "_seconds": 1600249532,
+  "_nanoseconds": 71000000
  }
 }

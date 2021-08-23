@@ -1,47 +1,50 @@
 {
- "timeFinished": {
-  "_seconds": 1612601345,
-  "_nanoseconds": 803000000
+ "players": [
+  {
+   "name": "ROHAN",
+   "uid": "kxOTeulhGKcu2MOCO9lYm5giHP82"
+  },
+  {
+   "uid": "bPC4ngKgF1UioBVRuUmIGyPEOw03",
+   "name": "NOBODY"
+  },
+  {
+   "name": "SHRAVAN",
+   "uid": "JbCckK6FAEQcLuHKAvN69wqbOS73"
+  },
+  {
+   "uid": "U6scF13Z1JREsmyEZfa2cjw35qB3",
+   "name": "BRYANT"
+  },
+  {
+   "name": "AMEYA",
+   "uid": "9zncAWQsozR4bbicTwcmgc58tT13"
+  },
+  {
+   "uid": "V4SAGCzS9KMfXt2eiWuWhKXSMm12",
+   "name": "KLAY"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1612599480,
+  "_nanoseconds": 216000000
  },
  "outcome": {
-  "votes": [
-   {
-    "SHRAVAN": true,
-    "NOBODY": true
-   },
-   {
-    "SHRAVAN": true,
-    "BRYANT": true,
-    "NOBODY": false
-   },
-   {
-    "KLAY": true,
-    "ROHAN": true,
-    "SHRAVAN": false,
-    "BRYANT": true
-   },
-   {
-    "NOBODY": false,
-    "KLAY": true,
-    "BRYANT": true
-   }
-  ],
-  "state": "EVIL_WIN",
   "roles": [
    {
-    "name": "NOBODY",
     "assassin": false,
+    "name": "NOBODY",
     "role": "MORGANA"
    },
    {
-    "assassin": false,
+    "role": "LOYAL FOLLOWER",
     "name": "AMEYA",
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "role": "PERCIVAL",
     "assassin": false,
-    "name": "KLAY"
+    "name": "KLAY",
+    "role": "PERCIVAL"
    },
    {
     "role": "MORDRED",
@@ -50,8 +53,8 @@
    },
    {
     "assassin": false,
-    "role": "MERLIN",
-    "name": "ROHAN"
+    "name": "ROHAN",
+    "role": "MERLIN"
    },
    {
     "role": "LOYAL FOLLOWER",
@@ -59,19 +62,40 @@
     "assassin": false
    }
   ],
-  "assassinated": null,
-  "message": "Three failed missions"
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "NOBODY": true,
+    "SHRAVAN": true
+   },
+   {
+    "SHRAVAN": true,
+    "NOBODY": false,
+    "BRYANT": true
+   },
+   {
+    "ROHAN": true,
+    "BRYANT": true,
+    "SHRAVAN": false,
+    "KLAY": true
+   },
+   {
+    "KLAY": true,
+    "NOBODY": false,
+    "BRYANT": true
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null
+ },
+ "timeFinished": {
+  "_seconds": 1612601345,
+  "_nanoseconds": 803000000
  },
  "missions": [
   {
-   "team": [
-    "SHRAVAN",
-    "NOBODY"
-   ],
-   "teamSize": 2,
-   "failsRequired": 1,
    "state": "SUCCESS",
-   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
      "team": [
@@ -89,11 +113,25 @@
       "NOBODY"
      ]
     }
-   ]
+   ],
+   "numFails": 0,
+   "team": [
+    "SHRAVAN",
+    "NOBODY"
+   ],
+   "failsRequired": 1
   },
   {
+   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "BRYANT",
+     "state": "APPROVED",
+     "team": [
+      "BRYANT",
+      "SHRAVAN",
+      "NOBODY"
+     ],
      "votes": [
       "SHRAVAN",
       "ROHAN",
@@ -101,66 +139,64 @@
       "AMEYA",
       "NOBODY",
       "BRYANT"
-     ],
-     "team": [
-      "BRYANT",
-      "SHRAVAN",
-      "NOBODY"
-     ],
-     "proposer": "BRYANT",
-     "state": "APPROVED"
+     ]
     }
    ],
    "state": "FAIL",
-   "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 1,
    "team": [
     "BRYANT",
     "SHRAVAN",
     "NOBODY"
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 1,
+   "state": "FAIL",
    "team": [
     "ROHAN",
     "SHRAVAN",
     "BRYANT",
     "KLAY"
    ],
+   "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "AMEYA",
+     "state": "REJECTED",
      "votes": [
       "AMEYA"
      ],
-     "state": "REJECTED",
      "team": [
       "AMEYA",
       "KLAY",
       "BRYANT",
       "SHRAVAN"
-     ],
-     "proposer": "AMEYA"
+     ]
     },
     {
+     "votes": [
+      "SHRAVAN",
+      "ROHAN",
+      "KLAY"
+     ],
      "team": [
       "BRYANT",
       "ROHAN",
       "SHRAVAN",
       "KLAY"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "SHRAVAN",
-      "ROHAN",
-      "KLAY"
-     ],
-     "proposer": "KLAY"
+     "proposer": "KLAY",
+     "state": "REJECTED"
     },
     {
+     "team": [
+      "ROHAN",
+      "SHRAVAN",
+      "BRYANT",
+      "KLAY"
+     ],
      "state": "APPROVED",
      "votes": [
       "ROHAN",
@@ -168,79 +204,75 @@
       "KLAY",
       "SHRAVAN"
      ],
-     "proposer": "ROHAN",
-     "team": [
-      "ROHAN",
-      "SHRAVAN",
-      "BRYANT",
-      "KLAY"
-     ]
+     "proposer": "ROHAN"
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "NOBODY",
-    "BRYANT",
-    "KLAY"
-   ],
+   "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
+     "proposer": "NOBODY",
      "votes": [
       "BRYANT",
       "KLAY",
       "NOBODY"
      ],
-     "state": "REJECTED",
      "team": [
       "NOBODY",
       "BRYANT",
       "KLAY"
      ],
-     "proposer": "NOBODY"
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "SHRAVAN",
-      "ROHAN",
-      "AMEYA"
-     ],
      "state": "REJECTED",
      "votes": [
       "SHRAVAN",
       "ROHAN"
      ],
+     "team": [
+      "SHRAVAN",
+      "ROHAN",
+      "AMEYA"
+     ],
      "proposer": "SHRAVAN"
     },
     {
+     "team": [
+      "NOBODY",
+      "BRYANT",
+      "KLAY"
+     ],
      "votes": [
       "KLAY",
       "BRYANT",
       "NOBODY"
      ],
      "proposer": "BRYANT",
-     "state": "REJECTED",
-     "team": [
-      "NOBODY",
-      "BRYANT",
-      "KLAY"
-     ]
+     "state": "REJECTED"
     },
     {
      "state": "REJECTED",
-     "votes": [
-      "AMEYA"
-     ],
+     "proposer": "AMEYA",
      "team": [
       "BRYANT",
       "AMEYA",
       "KLAY"
      ],
-     "proposer": "AMEYA"
+     "votes": [
+      "AMEYA"
+     ]
     },
     {
+     "team": [
+      "NOBODY",
+      "BRYANT",
+      "KLAY"
+     ],
+     "proposer": "KLAY",
      "votes": [
       "NOBODY",
       "ROHAN",
@@ -249,58 +281,26 @@
       "BRYANT",
       "AMEYA"
      ],
-     "state": "APPROVED",
-     "team": [
-      "NOBODY",
-      "BRYANT",
-      "KLAY"
-     ],
-     "proposer": "KLAY"
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 3,
-   "state": "FAIL",
-   "numFails": 1
+   "failsRequired": 1,
+   "team": [
+    "NOBODY",
+    "BRYANT",
+    "KLAY"
+   ],
+   "state": "FAIL"
   },
   {
-   "team": [],
-   "teamSize": 4,
-   "failsRequired": 1,
    "state": "PENDING",
+   "teamSize": 4,
+   "team": [],
+   "failsRequired": 1,
    "proposals": []
   }
  ],
- "timeCreated": {
-  "_seconds": 1612599480,
-  "_nanoseconds": 216000000
- },
  "options": {
   "inGameLog": false
- },
- "players": [
-  {
-   "name": "ROHAN",
-   "uid": "kxOTeulhGKcu2MOCO9lYm5giHP82"
-  },
-  {
-   "uid": "bPC4ngKgF1UioBVRuUmIGyPEOw03",
-   "name": "NOBODY"
-  },
-  {
-   "name": "SHRAVAN",
-   "uid": "JbCckK6FAEQcLuHKAvN69wqbOS73"
-  },
-  {
-   "name": "BRYANT",
-   "uid": "U6scF13Z1JREsmyEZfa2cjw35qB3"
-  },
-  {
-   "name": "AMEYA",
-   "uid": "9zncAWQsozR4bbicTwcmgc58tT13"
-  },
-  {
-   "uid": "V4SAGCzS9KMfXt2eiWuWhKXSMm12",
-   "name": "KLAY"
-  }
- ]
+ }
 }

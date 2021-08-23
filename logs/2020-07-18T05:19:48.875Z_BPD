@@ -1,54 +1,35 @@
 {
  "players": [
   {
-   "uid": "oAKoclwIhWPRVFLoV4XY8kdbzy53",
-   "name": "NAV"
+   "name": "NAV",
+   "uid": "oAKoclwIhWPRVFLoV4XY8kdbzy53"
   },
   {
    "name": "ADVAY",
    "uid": "GWEKkkqBdnWFKYP7BAdpIn6EjUj2"
   },
   {
-   "uid": "IvcSXXr544ZK52A1fru6UAcYMwl2",
-   "name": "AKKA"
+   "name": "AKKA",
+   "uid": "IvcSXXr544ZK52A1fru6UAcYMwl2"
   },
   {
-   "name": "ADI",
-   "uid": "ZdO9RWNjU6M9LAJAsoAo5dsQ3Hy2"
+   "uid": "ZdO9RWNjU6M9LAJAsoAo5dsQ3Hy2",
+   "name": "ADI"
   },
   {
-   "name": "MANGYA",
-   "uid": "bgoHsbBn1VUOxUgvS114ZD97ZSy2"
+   "uid": "bgoHsbBn1VUOxUgvS114ZD97ZSy2",
+   "name": "MANGYA"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1595050091,
+  "_nanoseconds": 735000000
+ },
+ "timeCreated": {
+  "_seconds": 1595049588,
+  "_nanoseconds": 875000000
+ },
  "outcome": {
-  "message": "Merlin assassinated",
-  "assassinated": "ADVAY",
-  "votes": [
-   {
-    "ADVAY": true,
-    "NAV": true
-   },
-   {
-    "AKKA": false,
-    "ADVAY": true,
-    "ADI": true
-   },
-   {
-    "ADI": true,
-    "MANGYA": false
-   },
-   {
-    "ADVAY": true,
-    "ADI": true,
-    "NAV": true
-   },
-   {
-    "ADVAY": true,
-    "ADI": true,
-    "NAV": true
-   }
-  ],
   "roles": [
    {
     "name": "ADVAY",
@@ -56,14 +37,14 @@
     "role": "MERLIN"
    },
    {
-    "assassin": false,
     "name": "AKKA",
-    "role": "OBERON"
+    "role": "OBERON",
+    "assassin": false
    },
    {
-    "role": "PERCIVAL",
     "assassin": false,
-    "name": "ADI"
+    "name": "ADI",
+    "role": "PERCIVAL"
    },
    {
     "role": "MORGANA",
@@ -71,84 +52,110 @@
     "assassin": true
    },
    {
-    "name": "NAV",
     "role": "LOYAL FOLLOWER",
+    "name": "NAV",
     "assassin": false
    }
   ],
-  "state": "EVIL_WIN"
+  "assassinated": "ADVAY",
+  "votes": [
+   {
+    "ADVAY": true,
+    "NAV": true
+   },
+   {
+    "ADVAY": true,
+    "AKKA": false,
+    "ADI": true
+   },
+   {
+    "MANGYA": false,
+    "ADI": true
+   },
+   {
+    "ADVAY": true,
+    "ADI": true,
+    "NAV": true
+   },
+   {
+    "ADI": true,
+    "ADVAY": true,
+    "NAV": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated"
+ },
+ "options": {
+  "inGameLog": false
  },
  "missions": [
   {
-   "teamSize": 2,
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "ADVAY",
     "NAV"
    ],
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "ADVAY",
-      "NAV"
-     ],
-     "proposer": "ADVAY",
      "votes": [
       "MANGYA",
       "ADVAY",
       "NAV",
       "AKKA",
       "ADI"
-     ]
+     ],
+     "team": [
+      "ADVAY",
+      "NAV"
+     ],
+     "state": "APPROVED",
+     "proposer": "ADVAY"
     }
    ],
-   "numFails": 0,
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 2,
+   "failsRequired": 1
   },
   {
-   "team": [
-    "AKKA",
-    "ADVAY",
-    "ADI"
-   ],
    "teamSize": 3,
-   "numFails": 1,
-   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "AKKA",
-      "ADVAY",
-      "ADI"
-     ],
-     "proposer": "AKKA",
      "votes": [
       "ADI",
       "MANGYA",
       "ADVAY",
       "AKKA",
       "NAV"
+     ],
+     "state": "APPROVED",
+     "proposer": "AKKA",
+     "team": [
+      "AKKA",
+      "ADVAY",
+      "ADI"
      ]
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "AKKA",
+    "ADVAY",
+    "ADI"
+   ],
+   "numFails": 1,
+   "state": "FAIL"
   },
   {
-   "state": "FAIL",
    "team": [
     "ADI",
     "MANGYA"
    ],
+   "failsRequired": 1,
    "teamSize": 2,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "ADI",
-      "MANGYA"
-     ],
      "votes": [
       "MANGYA",
       "NAV",
@@ -156,43 +163,45 @@
       "ADI",
       "AKKA"
      ],
-     "proposer": "ADI"
+     "state": "APPROVED",
+     "proposer": "ADI",
+     "team": [
+      "ADI",
+      "MANGYA"
+     ]
     }
    ],
-   "numFails": 1,
-   "failsRequired": 1
+   "numFails": 1
   },
   {
    "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS",
    "proposals": [
     {
-     "votes": [
-      "NAV",
-      "MANGYA"
-     ],
-     "proposer": "MANGYA",
      "team": [
       "AKKA",
       "ADVAY",
       "NAV"
      ],
+     "votes": [
+      "NAV",
+      "MANGYA"
+     ],
+     "proposer": "MANGYA",
      "state": "REJECTED"
     },
     {
-     "proposer": "NAV",
-     "team": [
-      "NAV",
-      "ADI",
-      "ADVAY"
-     ],
      "state": "APPROVED",
      "votes": [
       "NAV",
       "ADVAY",
       "AKKA",
       "ADI"
+     ],
+     "proposer": "NAV",
+     "team": [
+      "NAV",
+      "ADI",
+      "ADVAY"
      ]
     }
    ],
@@ -201,45 +210,36 @@
     "ADI",
     "ADVAY"
    ],
-   "teamSize": 3
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "proposer": "ADVAY",
+     "votes": [
+      "ADVAY",
+      "ADI",
+      "NAV"
+     ],
+     "team": [
+      "NAV",
+      "ADVAY",
+      "ADI"
+     ]
+    }
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 3,
    "team": [
     "NAV",
     "ADVAY",
     "ADI"
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "proposals": [
-    {
-     "team": [
-      "NAV",
-      "ADVAY",
-      "ADI"
-     ],
-     "votes": [
-      "ADVAY",
-      "ADI",
-      "NAV"
-     ],
-     "state": "APPROVED",
-     "proposer": "ADVAY"
-    }
-   ],
-   "failsRequired": 1
+   "state": "SUCCESS"
   }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1595049588,
-  "_nanoseconds": 875000000
- },
- "timeFinished": {
-  "_seconds": 1595050091,
-  "_nanoseconds": 735000000
- }
+ ]
 }

@@ -1,101 +1,9 @@
 {
- "players": [
-  {
-   "uid": "fuUBwCMBwxW9wHQrpvOSd4cRPdt2",
-   "name": "MELANIE"
-  },
-  {
-   "name": "COLE",
-   "uid": "Td5DAg0S2ARnrnOJRV051Z5OtRw2"
-  },
-  {
-   "uid": "5G7IiR2KVzgHkcPqE6IDj1VOTyj2",
-   "name": "JACOB"
-  },
-  {
-   "uid": "bd9KJZmSnmNaUGoQOjtVzhAZjJb2",
-   "name": "JESSICA"
-  },
-  {
-   "uid": "63X0O4PSUJhlkZJLTU7tyvXUvmK2",
-   "name": "BRIDGET"
-  },
-  {
-   "name": "GRACE",
-   "uid": "nlGVMFhONQXinGprn9jUxy4YQgI2"
-  }
- ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "COLE"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "JESSICA"
-   },
-   {
-    "name": "MELANIE",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "BRIDGET"
-   },
-   {
-    "name": "JACOB",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "GRACE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "BRIDGET": true,
-    "MELANIE": true
-   },
-   {
-    "MELANIE": false,
-    "JACOB": true,
-    "BRIDGET": true
-   },
-   {
-    "GRACE": true,
-    "COLE": true,
-    "BRIDGET": true,
-    "MELANIE": false
-   },
-   {
-    "COLE": true,
-    "JESSICA": false,
-    "JACOB": true
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null
- },
- "timeFinished": {
-  "_seconds": 1586580425,
-  "_nanoseconds": 789039000
- },
- "timeCreated": {
-  "_seconds": 1586579501,
-  "_nanoseconds": 687000000
- },
  "missions": [
   {
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "COLE",
       "MELANIE"
@@ -104,36 +12,33 @@
       "MELANIE",
       "COLE"
      ],
-     "proposer": "MELANIE",
-     "state": "REJECTED"
+     "proposer": "MELANIE"
     },
     {
-     "state": "REJECTED",
-     "proposer": "COLE",
+     "team": [
+      "COLE",
+      "JACOB"
+     ],
      "votes": [
       "JACOB",
       "COLE"
      ],
-     "team": [
-      "COLE",
-      "JACOB"
-     ]
+     "state": "REJECTED",
+     "proposer": "COLE"
     },
     {
-     "team": [
-      "JACOB",
-      "JESSICA"
-     ],
      "state": "REJECTED",
      "votes": [
       "JESSICA",
       "JACOB"
      ],
-     "proposer": "JACOB"
+     "proposer": "JACOB",
+     "team": [
+      "JACOB",
+      "JESSICA"
+     ]
     },
     {
-     "state": "REJECTED",
-     "proposer": "JESSICA",
      "votes": [
       "JESSICA",
       "MELANIE",
@@ -142,14 +47,13 @@
      "team": [
       "JACOB",
       "JESSICA"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "JESSICA"
     },
     {
      "state": "APPROVED",
-     "team": [
-      "BRIDGET",
-      "MELANIE"
-     ],
+     "proposer": "BRIDGET",
      "votes": [
       "COLE",
       "JESSICA",
@@ -158,33 +62,37 @@
       "JACOB",
       "GRACE"
      ],
-     "proposer": "BRIDGET"
+     "team": [
+      "BRIDGET",
+      "MELANIE"
+     ]
     }
    ],
-   "numFails": 0,
-   "teamSize": 2,
    "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "BRIDGET",
     "MELANIE"
-   ]
+   ],
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
+   "state": "FAIL",
    "proposals": [
     {
-     "votes": [
-      "COLE",
-      "MELANIE",
-      "GRACE"
-     ],
-     "state": "REJECTED",
      "team": [
       "GRACE",
       "BRIDGET",
       "MELANIE"
      ],
-     "proposer": "GRACE"
+     "proposer": "GRACE",
+     "state": "REJECTED",
+     "votes": [
+      "COLE",
+      "MELANIE",
+      "GRACE"
+     ]
     },
     {
      "team": [
@@ -193,25 +101,26 @@
       "JESSICA"
      ],
      "state": "REJECTED",
+     "proposer": "MELANIE",
      "votes": [
       "MELANIE"
-     ],
-     "proposer": "MELANIE"
+     ]
     },
     {
      "state": "REJECTED",
-     "proposer": "COLE",
      "team": [
       "COLE",
       "MELANIE",
       "BRIDGET"
      ],
+     "proposer": "COLE",
      "votes": [
       "MELANIE",
       "COLE"
      ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "JESSICA",
       "MELANIE",
@@ -219,42 +128,37 @@
       "JACOB",
       "GRACE"
      ],
-     "proposer": "JACOB",
-     "state": "APPROVED",
      "team": [
       "MELANIE",
       "JACOB",
       "BRIDGET"
-     ]
+     ],
+     "proposer": "JACOB"
     }
    ],
-   "numFails": 1,
    "team": [
     "MELANIE",
     "JACOB",
     "BRIDGET"
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "teamSize": 3
+   "numFails": 1,
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
-   "team": [
-    "GRACE",
-    "BRIDGET",
-    "COLE",
-    "MELANIE"
-   ],
+   "numFails": 1,
+   "teamSize": 4,
    "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "JESSICA",
       "JACOB",
       "MELANIE",
       "COLE"
      ],
-     "state": "REJECTED",
      "votes": [
       "JESSICA",
       "MELANIE",
@@ -263,113 +167,209 @@
      "proposer": "JESSICA"
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "GRACE",
-      "COLE",
-      "MELANIE"
-     ],
-     "proposer": "BRIDGET",
      "team": [
       "BRIDGET",
       "MELANIE",
       "COLE",
       "GRACE"
+     ],
+     "proposer": "BRIDGET",
+     "state": "REJECTED",
+     "votes": [
+      "GRACE",
+      "COLE",
+      "MELANIE"
      ]
     },
     {
+     "team": [
+      "GRACE",
+      "BRIDGET",
+      "COLE",
+      "MELANIE"
+     ],
+     "proposer": "GRACE",
      "votes": [
       "MELANIE",
       "BRIDGET",
       "GRACE",
       "COLE"
      ],
-     "team": [
-      "GRACE",
-      "BRIDGET",
-      "COLE",
-      "MELANIE"
-     ],
-     "state": "APPROVED",
-     "proposer": "GRACE"
+     "state": "APPROVED"
     }
    ],
-   "numFails": 1,
-   "teamSize": 4,
-   "failsRequired": 1
+   "team": [
+    "GRACE",
+    "BRIDGET",
+    "COLE",
+    "MELANIE"
+   ]
   },
   {
-   "state": "FAIL",
-   "failsRequired": 1,
-   "team": [
-    "JESSICA",
-    "JACOB",
-    "COLE"
-   ],
+   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "MELANIE",
+     "votes": [
+      "MELANIE"
+     ],
      "team": [
       "MELANIE",
       "GRACE",
       "JESSICA"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "MELANIE"
-     ],
-     "proposer": "MELANIE"
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "COLE",
+      "JESSICA",
+      "MELANIE"
+     ],
+     "proposer": "COLE",
      "state": "REJECTED",
      "team": [
       "COLE",
       "JESSICA",
       "GRACE"
-     ],
-     "votes": [
-      "COLE",
-      "JESSICA",
-      "MELANIE"
-     ],
-     "proposer": "COLE"
+     ]
     },
     {
+     "votes": [
+      "MELANIE"
+     ],
      "team": [
       "JACOB",
       "COLE",
       "MELANIE"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "MELANIE"
-     ],
-     "proposer": "JACOB"
+     "proposer": "JACOB",
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
+     "team": [
+      "JESSICA",
+      "JACOB",
+      "COLE"
+     ],
      "proposer": "JESSICA",
+     "state": "APPROVED",
      "votes": [
       "JESSICA",
       "MELANIE",
       "JACOB",
       "COLE"
-     ],
-     "team": [
-      "JESSICA",
-      "JACOB",
-      "COLE"
      ]
     }
    ],
-   "numFails": 1,
-   "teamSize": 3
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "JESSICA",
+    "JACOB",
+    "COLE"
+   ],
+   "numFails": 1
   },
   {
    "proposals": [],
-   "teamSize": 4,
+   "failsRequired": 1,
    "state": "PENDING",
-   "team": [],
-   "failsRequired": 1
+   "teamSize": 4,
+   "team": []
   }
- ]
+ ],
+ "players": [
+  {
+   "name": "MELANIE",
+   "uid": "fuUBwCMBwxW9wHQrpvOSd4cRPdt2"
+  },
+  {
+   "uid": "Td5DAg0S2ARnrnOJRV051Z5OtRw2",
+   "name": "COLE"
+  },
+  {
+   "uid": "5G7IiR2KVzgHkcPqE6IDj1VOTyj2",
+   "name": "JACOB"
+  },
+  {
+   "name": "JESSICA",
+   "uid": "bd9KJZmSnmNaUGoQOjtVzhAZjJb2"
+  },
+  {
+   "name": "BRIDGET",
+   "uid": "63X0O4PSUJhlkZJLTU7tyvXUvmK2"
+  },
+  {
+   "name": "GRACE",
+   "uid": "nlGVMFhONQXinGprn9jUxy4YQgI2"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1586579501,
+  "_nanoseconds": 687000000
+ },
+ "outcome": {
+  "roles": [
+   {
+    "role": "PERCIVAL",
+    "name": "COLE",
+    "assassin": false
+   },
+   {
+    "name": "JESSICA",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "MELANIE",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "BRIDGET"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "JACOB"
+   },
+   {
+    "assassin": false,
+    "name": "GRACE",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "votes": [
+   {
+    "MELANIE": true,
+    "BRIDGET": true
+   },
+   {
+    "JACOB": true,
+    "BRIDGET": true,
+    "MELANIE": false
+   },
+   {
+    "COLE": true,
+    "BRIDGET": true,
+    "MELANIE": false,
+    "GRACE": true
+   },
+   {
+    "JACOB": true,
+    "COLE": true,
+    "JESSICA": false
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "message": "Three failed missions"
+ },
+ "timeFinished": {
+  "_seconds": 1586580425,
+  "_nanoseconds": 789039000
+ }
 }

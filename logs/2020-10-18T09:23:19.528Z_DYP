@@ -1,8 +1,40 @@
 {
+ "timeCreated": {
+  "_seconds": 1603012999,
+  "_nanoseconds": 528000000
+ },
+ "players": [
+  {
+   "name": "RYAN",
+   "uid": "9AvhmBxoE4exIMcCpQNx8MnuJTO2"
+  },
+  {
+   "name": "MICHELLLE",
+   "uid": "DpYRwJ0fVHRYMVose9vjdSs25Ww1"
+  },
+  {
+   "uid": "2YorulrFNHb2MdA2YHOao6nNfS52",
+   "name": "ALLY"
+  },
+  {
+   "name": "JAY",
+   "uid": "gwix1oO6aIT8R7vtBfwGdZEPFKG2"
+  },
+  {
+   "uid": "4uvSiTpxIDS1sgex94VmkunyQg42",
+   "name": "SYD"
+  },
+  {
+   "uid": "4u2kYJRmBXRqIwSOFjiiyChiKho2",
+   "name": "DABID"
+  }
+ ],
  "missions": [
   {
-   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
      "proposer": "SYD",
@@ -14,24 +46,21 @@
       "JAY",
       "DABID"
      ],
+     "state": "APPROVED",
      "team": [
       "SYD",
       "ALLY"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "team": [
     "SYD",
     "ALLY"
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "numFails": 0,
    "state": "SUCCESS",
-   "teamSize": 3,
+   "numFails": 0,
    "team": [
     "SYD",
     "ALLY",
@@ -54,11 +83,12 @@
      "proposer": "DABID"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
+   "numFails": 1,
    "teamSize": 4,
-   "state": "FAIL",
    "failsRequired": 1,
    "proposals": [
     {
@@ -78,19 +108,15 @@
      ]
     }
    ],
+   "state": "FAIL",
    "team": [
     "MICHELLLE",
     "RYAN",
     "DABID",
     "SYD"
-   ],
-   "numFails": 1
+   ]
   },
   {
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 3,
-   "state": "FAIL",
    "proposals": [
     {
      "votes": [
@@ -98,26 +124,26 @@
       "MICHELLLE",
       "SYD"
      ],
-     "proposer": "MICHELLLE",
-     "state": "REJECTED",
      "team": [
       "SYD",
       "RYAN",
       "MICHELLLE"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "MICHELLLE"
     },
     {
      "votes": [
       "ALLY",
       "MICHELLLE"
      ],
-     "proposer": "ALLY",
      "team": [
       "ALLY",
       "JAY",
       "SYD"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "ALLY"
     },
     {
      "votes": [
@@ -127,15 +153,19 @@
       "DABID",
       "RYAN"
      ],
+     "state": "APPROVED",
+     "proposer": "JAY",
      "team": [
       "JAY",
       "MICHELLLE",
       "SYD"
-     ],
-     "proposer": "JAY",
-     "state": "APPROVED"
+     ]
     }
    ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "JAY",
     "MICHELLLE",
@@ -144,23 +174,23 @@
   },
   {
    "state": "SUCCESS",
-   "failsRequired": 1,
+   "teamSize": 4,
    "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
-     "votes": [
-      "RYAN",
-      "MICHELLLE",
-      "SYD",
-      "ALLY"
-     ],
      "proposer": "SYD",
+     "state": "APPROVED",
      "team": [
       "ALLY",
       "MICHELLLE",
       "RYAN",
       "SYD"
+     ],
+     "votes": [
+      "RYAN",
+      "MICHELLLE",
+      "SYD",
+      "ALLY"
      ]
     }
    ],
@@ -170,16 +200,42 @@
     "RYAN",
     "SYD"
    ],
-   "teamSize": 4
+   "failsRequired": 1
   }
  ],
- "timeFinished": {
-  "_seconds": 1603013966,
-  "_nanoseconds": 552000000
- },
  "outcome": {
-  "message": "Three successful missions",
-  "assassinated": "SYD",
+  "roles": [
+   {
+    "name": "JAY",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "DABID"
+   },
+   {
+    "name": "ALLY",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "MICHELLLE",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "SYD"
+   },
+   {
+    "name": "RYAN",
+    "role": "MERLIN",
+    "assassin": false
+   }
+  ],
   "state": "GOOD_WIN",
   "votes": [
    {
@@ -187,14 +243,14 @@
     "ALLY": true
    },
    {
-    "SYD": true,
     "DABID": true,
+    "SYD": true,
     "ALLY": true
    },
    {
-    "DABID": false,
-    "RYAN": true,
     "SYD": true,
+    "RYAN": true,
+    "DABID": false,
     "MICHELLLE": true
    },
    {
@@ -204,74 +260,18 @@
    },
    {
     "RYAN": true,
-    "MICHELLLE": true,
+    "ALLY": true,
     "SYD": true,
-    "ALLY": true
+    "MICHELLLE": true
    }
   ],
-  "roles": [
-   {
-    "role": "MORDRED",
-    "name": "JAY",
-    "assassin": true
-   },
-   {
-    "name": "DABID",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "ALLY",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "MICHELLLE",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SYD"
-   },
-   {
-    "assassin": false,
-    "name": "RYAN",
-    "role": "MERLIN"
-   }
-  ]
+  "message": "Three successful missions",
+  "assassinated": "SYD"
  },
- "timeCreated": {
-  "_seconds": 1603012999,
-  "_nanoseconds": 528000000
+ "timeFinished": {
+  "_seconds": 1603013966,
+  "_nanoseconds": 552000000
  },
- "players": [
-  {
-   "name": "RYAN",
-   "uid": "9AvhmBxoE4exIMcCpQNx8MnuJTO2"
-  },
-  {
-   "uid": "DpYRwJ0fVHRYMVose9vjdSs25Ww1",
-   "name": "MICHELLLE"
-  },
-  {
-   "uid": "2YorulrFNHb2MdA2YHOao6nNfS52",
-   "name": "ALLY"
-  },
-  {
-   "name": "JAY",
-   "uid": "gwix1oO6aIT8R7vtBfwGdZEPFKG2"
-  },
-  {
-   "name": "SYD",
-   "uid": "4uvSiTpxIDS1sgex94VmkunyQg42"
-  },
-  {
-   "name": "DABID",
-   "uid": "4u2kYJRmBXRqIwSOFjiiyChiKho2"
-  }
- ],
  "options": {
   "inGameLog": false
  }

@@ -1,4 +1,125 @@
 {
+ "players": [
+  {
+   "name": "QRK",
+   "uid": "TZNSqDQMHZfE3qXhSnmlpyVagql2"
+  },
+  {
+   "uid": "70y1BM88JkXYUx7PfWexu81wIXs2",
+   "name": "JOSH"
+  },
+  {
+   "uid": "H9Hhvq97KZa70e8Z9IwMvMea7D33",
+   "name": "AL"
+  },
+  {
+   "uid": "hvOYTqlTLRS6wFWzcp3Yu0q8oTj1",
+   "name": "GRAS"
+  },
+  {
+   "uid": "7vHzGgUq61QaJ6jYbkcWdS4EEpk1",
+   "name": "JUNE"
+  },
+  {
+   "uid": "hX2k2KDQRzN83orHvjqJaR0I2Ck1",
+   "name": "BAGUETTE"
+  },
+  {
+   "uid": "Z623jBDKQKeIwKWhx8KTUYgOZOy2",
+   "name": "HEYCH"
+  },
+  {
+   "name": "NADSTER",
+   "uid": "NoiR9C8awxZuXgQVX15D73qaVAg2"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "HEYCH"
+   },
+   {
+    "name": "QRK",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JOSH",
+    "assassin": false
+   },
+   {
+    "name": "NADSTER",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "name": "AL",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "GRAS",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "JUNE",
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "name": "BAGUETTE",
+    "role": "MORDRED"
+   }
+  ],
+  "votes": [
+   {
+    "AL": true,
+    "GRAS": true,
+    "HEYCH": true
+   },
+   {
+    "BAGUETTE": false,
+    "GRAS": true,
+    "HEYCH": true,
+    "JUNE": true
+   },
+   {
+    "BAGUETTE": false,
+    "JUNE": true,
+    "QRK": false,
+    "NADSTER": true
+   },
+   {
+    "JUNE": true,
+    "AL": true,
+    "HEYCH": true,
+    "NADSTER": false,
+    "GRAS": true
+   },
+   {
+    "NADSTER": false,
+    "BAGUETTE": false,
+    "AL": true,
+    "JUNE": true,
+    "HEYCH": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null
+ },
+ "timeFinished": {
+  "_seconds": 1587961171,
+  "_nanoseconds": 555000000
+ },
  "missions": [
   {
    "team": [
@@ -6,7 +127,6 @@
     "HEYCH",
     "AL"
    ],
-   "teamSize": 3,
    "failsRequired": 1,
    "numFails": 0,
    "state": "SUCCESS",
@@ -29,12 +149,23 @@
      ],
      "proposer": "GRAS"
     }
-   ]
+   ],
+   "teamSize": 3
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "GRAS",
+    "JUNE",
+    "BAGUETTE",
+    "HEYCH"
+   ],
    "proposals": [
     {
      "proposer": "JUNE",
+     "state": "APPROVED",
      "votes": [
       "AL",
       "GRAS",
@@ -43,7 +174,6 @@
       "HEYCH",
       "QRK"
      ],
-     "state": "APPROVED",
      "team": [
       "GRAS",
       "JUNE",
@@ -52,27 +182,19 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "team": [
-    "GRAS",
-    "JUNE",
-    "BAGUETTE",
-    "HEYCH"
-   ],
-   "state": "FAIL",
    "teamSize": 4
   },
   {
+   "failsRequired": 1,
    "team": [
     "NADSTER",
     "JUNE",
     "QRK",
     "BAGUETTE"
    ],
-   "numFails": 2,
-   "failsRequired": 1,
+   "state": "FAIL",
    "teamSize": 4,
+   "numFails": 2,
    "proposals": [
     {
      "votes": [
@@ -83,41 +205,21 @@
       "BAGUETTE",
       "HEYCH"
      ],
+     "proposer": "BAGUETTE",
+     "state": "APPROVED",
      "team": [
       "NADSTER",
       "JUNE",
       "QRK",
       "BAGUETTE"
-     ],
-     "proposer": "BAGUETTE",
-     "state": "APPROVED"
-    }
-   ],
-   "state": "FAIL"
-  },
-  {
-   "proposals": [
-    {
-     "votes": [
-      "QRK",
-      "NADSTER",
-      "AL",
-      "GRAS",
-      "JUNE",
-      "BAGUETTE",
-      "HEYCH"
-     ],
-     "state": "APPROVED",
-     "proposer": "HEYCH",
-     "team": [
-      "NADSTER",
-      "AL",
-      "HEYCH",
-      "GRAS",
-      "JUNE"
      ]
     }
-   ],
+   ]
+  },
+  {
+   "numFails": 1,
+   "failsRequired": 2,
+   "state": "SUCCESS",
    "team": [
     "NADSTER",
     "AL",
@@ -125,25 +227,41 @@
     "GRAS",
     "JUNE"
    ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
-   "numFails": 1,
-   "teamSize": 5
-  },
-  {
    "teamSize": 5,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 2,
-   "team": [
-    "NADSTER",
-    "BAGUETTE",
-    "HEYCH",
-    "AL",
-    "JUNE"
-   ],
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "NADSTER",
+      "AL",
+      "HEYCH",
+      "GRAS",
+      "JUNE"
+     ],
+     "proposer": "HEYCH",
+     "votes": [
+      "QRK",
+      "NADSTER",
+      "AL",
+      "GRAS",
+      "JUNE",
+      "BAGUETTE",
+      "HEYCH"
+     ]
+    }
+   ]
+  },
+  {
+   "state": "FAIL",
+   "proposals": [
+    {
+     "team": [
+      "NADSTER",
+      "BAGUETTE",
+      "HEYCH",
+      "AL",
+      "JUNE"
+     ],
      "state": "APPROVED",
      "votes": [
       "NADSTER",
@@ -152,141 +270,23 @@
       "BAGUETTE",
       "HEYCH"
      ],
-     "team": [
-      "NADSTER",
-      "BAGUETTE",
-      "HEYCH",
-      "AL",
-      "JUNE"
-     ],
      "proposer": "NADSTER"
     }
+   ],
+   "numFails": 2,
+   "failsRequired": 1,
+   "teamSize": 5,
+   "team": [
+    "NADSTER",
+    "BAGUETTE",
+    "HEYCH",
+    "AL",
+    "JUNE"
    ]
   }
  ],
- "timeFinished": {
-  "_seconds": 1587961171,
-  "_nanoseconds": 555000000
- },
- "players": [
-  {
-   "name": "QRK",
-   "uid": "TZNSqDQMHZfE3qXhSnmlpyVagql2"
-  },
-  {
-   "name": "JOSH",
-   "uid": "70y1BM88JkXYUx7PfWexu81wIXs2"
-  },
-  {
-   "name": "AL",
-   "uid": "H9Hhvq97KZa70e8Z9IwMvMea7D33"
-  },
-  {
-   "name": "GRAS",
-   "uid": "hvOYTqlTLRS6wFWzcp3Yu0q8oTj1"
-  },
-  {
-   "uid": "7vHzGgUq61QaJ6jYbkcWdS4EEpk1",
-   "name": "JUNE"
-  },
-  {
-   "uid": "hX2k2KDQRzN83orHvjqJaR0I2Ck1",
-   "name": "BAGUETTE"
-  },
-  {
-   "uid": "Z623jBDKQKeIwKWhx8KTUYgOZOy2",
-   "name": "HEYCH"
-  },
-  {
-   "uid": "NoiR9C8awxZuXgQVX15D73qaVAg2",
-   "name": "NADSTER"
-  }
- ],
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1587960006,
   "_nanoseconds": 902000000
- },
- "outcome": {
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "assassinated": null,
-  "roles": [
-   {
-    "assassin": false,
-    "name": "HEYCH",
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "QRK",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "JOSH",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "NADSTER",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "AL",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "GRAS",
-    "assassin": false
-   },
-   {
-    "name": "JUNE",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "BAGUETTE",
-    "role": "MORDRED",
-    "assassin": false
-   }
-  ],
-  "votes": [
-   {
-    "AL": true,
-    "GRAS": true,
-    "HEYCH": true
-   },
-   {
-    "GRAS": true,
-    "BAGUETTE": false,
-    "JUNE": true,
-    "HEYCH": true
-   },
-   {
-    "NADSTER": true,
-    "QRK": false,
-    "BAGUETTE": false,
-    "JUNE": true
-   },
-   {
-    "GRAS": true,
-    "AL": true,
-    "HEYCH": true,
-    "NADSTER": false,
-    "JUNE": true
-   },
-   {
-    "HEYCH": true,
-    "NADSTER": false,
-    "JUNE": true,
-    "BAGUETTE": false,
-    "AL": true
-   }
-  ]
  }
 }

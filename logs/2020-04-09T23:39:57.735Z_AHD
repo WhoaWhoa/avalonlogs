@@ -1,108 +1,21 @@
 {
- "players": [
-  {
-   "uid": "90g2Q0d6rYhqusSQ8I6iLSNV5qE2",
-   "name": "ELIOT"
-  },
-  {
-   "name": "CAROL",
-   "uid": "HXPQEhFDhVWmHhZAHENWLvz3S2R2"
-  },
-  {
-   "name": "MARCUS",
-   "uid": "Kc36t0APpneg2jLX9yJ5N5K0ULx2"
-  },
-  {
-   "name": "PLEE",
-   "uid": "Bx2bdYkKmwZPmZ8eDZ9vnWUByon2"
-  },
-  {
-   "uid": "00Jhs9xNePYm7Ifmd1U624nQVZL2",
-   "name": "MEG"
-  },
-  {
-   "uid": "I2VJpXDJoGQK0Ln5YGxa5bAFPSb2",
-   "name": "MIKE"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586475597,
-  "_nanoseconds": 735000000
- },
- "outcome": {
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "MARCUS",
-    "assassin": false
-   },
-   {
-    "name": "CAROL",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "ELIOT"
-   },
-   {
-    "name": "PLEE",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "MEG",
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "MIKE",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "votes": [
-   {
-    "MEG": true,
-    "CAROL": true
-   },
-   {
-    "MEG": true,
-    "MARCUS": true,
-    "CAROL": false
-   },
-   {
-    "ELIOT": true,
-    "PLEE": false,
-    "MEG": true,
-    "MIKE": true
-   },
-   {
-    "CAROL": false,
-    "PLEE": false,
-    "ELIOT": true
-   }
-  ]
- },
  "missions": [
   {
    "failsRequired": 1,
+   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "CAROL",
+     "team": [
+      "MEG",
+      "CAROL"
+     ],
      "votes": [
       "PLEE",
       "MEG",
       "MIKE",
-      "CAROL"
-     ],
-     "proposer": "CAROL",
-     "state": "APPROVED",
-     "team": [
-      "MEG",
       "CAROL"
      ]
     }
@@ -111,19 +24,21 @@
     "MEG",
     "CAROL"
    ],
-   "numFails": 0,
-   "teamSize": 2,
-   "state": "SUCCESS"
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
    "team": [
     "MEG",
     "CAROL",
     "MARCUS"
    ],
+   "numFails": 1,
+   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "MARCUS",
+     "state": "APPROVED",
      "votes": [
       "MEG",
       "MIKE",
@@ -135,36 +50,31 @@
       "MEG",
       "CAROL",
       "MARCUS"
-     ],
-     "proposer": "MARCUS",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "teamSize": 3,
-   "state": "FAIL",
-   "numFails": 1
+   "state": "FAIL"
   },
   {
-   "numFails": 1,
-   "state": "FAIL",
    "teamSize": 4,
-   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
+     "proposer": "PLEE",
      "state": "APPROVED",
+     "team": [
+      "MIKE",
+      "ELIOT",
+      "PLEE",
+      "MEG"
+     ],
      "votes": [
       "CAROL",
       "ELIOT",
       "PLEE",
       "MEG",
       "MIKE"
-     ],
-     "proposer": "PLEE",
-     "team": [
-      "MIKE",
-      "ELIOT",
-      "PLEE",
-      "MEG"
      ]
     }
    ],
@@ -173,46 +83,45 @@
     "ELIOT",
     "PLEE",
     "MEG"
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
    "team": [
     "ELIOT",
     "PLEE",
     "CAROL"
    ],
-   "numFails": 2,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "MEG",
       "CAROL"
      ],
+     "state": "REJECTED",
+     "proposer": "MEG",
      "team": [
       "CAROL",
       "PLEE",
       "MEG"
-     ],
-     "proposer": "MEG"
+     ]
     },
     {
+     "state": "REJECTED",
      "votes": [
       "MARCUS",
       "MEG",
       "MIKE"
      ],
+     "proposer": "MIKE",
      "team": [
       "ELIOT",
       "MARCUS",
       "MIKE"
-     ],
-     "proposer": "MIKE",
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "APPROVED",
      "proposer": "ELIOT",
      "votes": [
       "MEG",
@@ -220,6 +129,7 @@
       "ELIOT",
       "PLEE"
      ],
+     "state": "APPROVED",
      "team": [
       "ELIOT",
       "PLEE",
@@ -227,19 +137,109 @@
      ]
     }
    ],
+   "failsRequired": 1,
    "state": "FAIL",
-   "teamSize": 3
+   "numFails": 2
   },
   {
-   "state": "PENDING",
-   "proposals": [],
    "failsRequired": 1,
    "teamSize": 4,
+   "state": "PENDING",
+   "proposals": [],
    "team": []
   }
  ],
+ "timeCreated": {
+  "_seconds": 1586475597,
+  "_nanoseconds": 735000000
+ },
  "timeFinished": {
   "_seconds": 1586477020,
   "_nanoseconds": 84639000
- }
+ },
+ "outcome": {
+  "assassinated": null,
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "MEG": true,
+    "CAROL": true
+   },
+   {
+    "CAROL": false,
+    "MARCUS": true,
+    "MEG": true
+   },
+   {
+    "ELIOT": true,
+    "PLEE": false,
+    "MIKE": true,
+    "MEG": true
+   },
+   {
+    "PLEE": false,
+    "ELIOT": true,
+    "CAROL": false
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MARCUS"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "CAROL"
+   },
+   {
+    "assassin": false,
+    "name": "ELIOT",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "name": "PLEE",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "MEG"
+   },
+   {
+    "name": "MIKE",
+    "role": "MERLIN",
+    "assassin": false
+   }
+  ]
+ },
+ "players": [
+  {
+   "uid": "90g2Q0d6rYhqusSQ8I6iLSNV5qE2",
+   "name": "ELIOT"
+  },
+  {
+   "uid": "HXPQEhFDhVWmHhZAHENWLvz3S2R2",
+   "name": "CAROL"
+  },
+  {
+   "uid": "Kc36t0APpneg2jLX9yJ5N5K0ULx2",
+   "name": "MARCUS"
+  },
+  {
+   "uid": "Bx2bdYkKmwZPmZ8eDZ9vnWUByon2",
+   "name": "PLEE"
+  },
+  {
+   "name": "MEG",
+   "uid": "00Jhs9xNePYm7Ifmd1U624nQVZL2"
+  },
+  {
+   "uid": "I2VJpXDJoGQK0Ln5YGxa5bAFPSb2",
+   "name": "MIKE"
+  }
+ ]
 }

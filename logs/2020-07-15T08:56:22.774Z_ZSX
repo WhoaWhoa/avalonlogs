@@ -1,41 +1,44 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
-  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "assassinated": "DUC",
   "votes": [
    {
-    "TRANG": true,
     "NGOC": true,
-    "HUNG": true
+    "HUNG": true,
+    "TRANG": true
    },
    {
+    "HUNG": true,
     "TRANG": true,
-    "RAY": true,
     "NGOC": true,
-    "HUNG": true
+    "RAY": true
    },
    {
     "RAY": true,
-    "TRANG": true,
     "NGOC": true,
-    "HUNG": true
+    "HUNG": true,
+    "TRANG": true
    }
   ],
-  "assassinated": "DUC",
   "roles": [
    {
     "role": "OBERON",
-    "name": "MARCUS",
-    "assassin": false
-   },
-   {
-    "name": "DUC",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "name": "MARCUS"
    },
    {
     "assassin": false,
+    "name": "DUC",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
     "name": "TRANG",
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "assassin": false
    },
    {
     "name": "HIEU",
@@ -43,14 +46,14 @@
     "role": "MORGANA"
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "HUNG"
+    "name": "HUNG",
+    "assassin": false
    },
    {
+    "role": "MORDRED",
     "name": "TRAM",
-    "assassin": true,
-    "role": "MORDRED"
+    "assassin": true
    },
    {
     "assassin": false,
@@ -58,17 +61,17 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MERLIN",
     "name": "CHI",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
-    "assassin": false,
     "name": "NGOC",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    }
   ],
-  "message": "Three successful missions"
+  "state": "GOOD_WIN"
  },
  "players": [
   {
@@ -80,34 +83,38 @@
    "name": "TRANG"
   },
   {
-   "uid": "9DoVOwaoW0TPpG2wH1nmG1VlGx52",
-   "name": "NGOC"
+   "name": "NGOC",
+   "uid": "9DoVOwaoW0TPpG2wH1nmG1VlGx52"
   },
   {
    "uid": "J7NPSQuBcFPhK6GLnRpI6uGYy7V2",
    "name": "TRAM"
   },
   {
-   "name": "RAY",
-   "uid": "vCgfTDmgmJcSPZMThKCn5Wnq2Mu1"
+   "uid": "vCgfTDmgmJcSPZMThKCn5Wnq2Mu1",
+   "name": "RAY"
   },
   {
    "uid": "tiHyByErW9PB0p3NZm0AXyxQ1Xu2",
    "name": "HIEU"
   },
   {
-   "uid": "Xuqy4N6BAqgJtQ36IUHriiKDvQK2",
-   "name": "HUNG"
+   "name": "HUNG",
+   "uid": "Xuqy4N6BAqgJtQ36IUHriiKDvQK2"
   },
   {
-   "uid": "sQQkC4qMkMUvuiwj87SfStRCLZr2",
-   "name": "DUC"
+   "name": "DUC",
+   "uid": "sQQkC4qMkMUvuiwj87SfStRCLZr2"
   },
   {
-   "uid": "pF914aflfNXofcJzKnGiraoy0xF2",
-   "name": "MARCUS"
+   "name": "MARCUS",
+   "uid": "pF914aflfNXofcJzKnGiraoy0xF2"
   }
  ],
+ "timeCreated": {
+  "_seconds": 1594803382,
+  "_nanoseconds": 774000000
+ },
  "timeFinished": {
   "_seconds": 1594803885,
   "_nanoseconds": 135000000
@@ -115,9 +122,20 @@
  "missions": [
   {
    "numFails": 0,
-   "teamSize": 3,
+   "team": [
+    "NGOC",
+    "TRANG",
+    "HUNG"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "NGOC",
+      "TRANG",
+      "HUNG"
+     ],
+     "proposer": "NGOC",
      "votes": [
       "RAY",
       "CHI",
@@ -128,29 +146,22 @@
       "HIEU",
       "HUNG"
      ],
-     "proposer": "NGOC",
-     "state": "APPROVED",
-     "team": [
-      "NGOC",
-      "TRANG",
-      "HUNG"
-     ]
+     "state": "APPROVED"
     }
    ],
+   "teamSize": 3,
+   "state": "SUCCESS"
+  },
+  {
    "team": [
+    "RAY",
     "NGOC",
     "TRANG",
     "HUNG"
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1
-  },
-  {
+   "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "HIEU"
-     ],
      "state": "REJECTED",
      "team": [
       "NGOC",
@@ -158,9 +169,13 @@
       "HUNG",
       "HIEU"
      ],
+     "votes": [
+      "HIEU"
+     ],
      "proposer": "TRAM"
     },
     {
+     "state": "APPROVED",
      "votes": [
       "TRANG",
       "HIEU",
@@ -172,53 +187,46 @@
       "MARCUS",
       "DUC"
      ],
+     "proposer": "RAY",
      "team": [
       "RAY",
       "NGOC",
       "TRANG",
       "HUNG"
-     ],
-     "state": "APPROVED",
-     "proposer": "RAY"
+     ]
     }
    ],
    "state": "SUCCESS",
-   "team": [
-    "RAY",
-    "NGOC",
-    "TRANG",
-    "HUNG"
-   ],
-   "teamSize": 4,
-   "numFails": 0,
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
+   "numFails": 0,
    "team": [
     "HUNG",
     "RAY",
     "NGOC",
     "TRANG"
    ],
-   "teamSize": 4,
    "state": "SUCCESS",
    "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "DUC",
-      "HIEU"
-     ],
      "state": "REJECTED",
-     "proposer": "HIEU",
      "team": [
       "RAY",
       "NGOC",
       "HUNG",
       "HIEU"
+     ],
+     "proposer": "HIEU",
+     "votes": [
+      "DUC",
+      "HIEU"
      ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "HUNG",
       "TRAM",
@@ -229,38 +237,30 @@
       "TRANG",
       "HIEU"
      ],
+     "proposer": "HUNG",
      "team": [
       "HUNG",
       "RAY",
       "NGOC",
       "TRANG"
-     ],
-     "state": "APPROVED",
-     "proposer": "HUNG"
+     ]
     }
    ],
-   "numFails": 0
+   "teamSize": 4
   },
   {
-   "state": "PENDING",
-   "team": [],
-   "teamSize": 5,
    "proposals": [],
-   "failsRequired": 2
+   "team": [],
+   "state": "PENDING",
+   "failsRequired": 2,
+   "teamSize": 5
   },
   {
-   "failsRequired": 1,
-   "team": [],
-   "teamSize": 5,
    "state": "PENDING",
-   "proposals": []
+   "proposals": [],
+   "teamSize": 5,
+   "team": [],
+   "failsRequired": 1
   }
- ],
- "timeCreated": {
-  "_seconds": 1594803382,
-  "_nanoseconds": 774000000
- },
- "options": {
-  "inGameLog": false
- }
+ ]
 }

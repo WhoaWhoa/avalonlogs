@@ -13,8 +13,8 @@
    "uid": "5Nl0zBHVy1V9rmkYhtGINyXaWaj1"
   },
   {
-   "name": "WENO",
-   "uid": "BsKHDR2tcCTGSxFjjtq0oIkN0xf1"
+   "uid": "BsKHDR2tcCTGSxFjjtq0oIkN0xf1",
+   "name": "WENO"
   },
   {
    "uid": "JAPBZxxk0fMO1c5d7Dli45JF9D23",
@@ -22,16 +22,18 @@
   }
  ],
  "outcome": {
+  "assassinated": "NIKOLAI",
+  "message": "Merlin assassinated",
   "roles": [
    {
+    "role": "MORGANA",
     "assassin": false,
-    "name": "WENO",
-    "role": "MORGANA"
+    "name": "WENO"
    },
    {
-    "name": "CRAIG",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "CRAIG"
    },
    {
     "assassin": false,
@@ -39,17 +41,17 @@
     "role": "PERCIVAL"
    },
    {
+    "role": "EVIL MINION",
     "name": "ADAM",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "assassin": true
    },
    {
-    "role": "MERLIN",
     "name": "NIKOLAI",
+    "role": "MERLIN",
     "assassin": false
    }
   ],
-  "assassinated": "NIKOLAI",
+  "state": "EVIL_WIN",
   "votes": [
    {
     "NIKOLAI": true,
@@ -65,13 +67,11 @@
     "NIKOLAI": true
    },
    {
-    "JET": true,
     "NIKOLAI": true,
+    "JET": true,
     "CRAIG": true
    }
-  ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN"
+  ]
  },
  "timeFinished": {
   "_seconds": 1595906666,
@@ -79,44 +79,47 @@
  },
  "missions": [
   {
+   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "JET",
      "state": "REJECTED",
+     "team": [
+      "CRAIG",
+      "ADAM"
+     ],
      "votes": [
       "JET",
       "ADAM"
-     ],
-     "team": [
-      "CRAIG",
-      "ADAM"
-     ],
-     "proposer": "JET"
+     ]
     },
     {
-     "team": [
-      "ADAM",
-      "CRAIG"
-     ],
+     "proposer": "ADAM",
      "state": "REJECTED",
      "votes": [
       "CRAIG",
       "ADAM"
      ],
-     "proposer": "ADAM"
+     "team": [
+      "ADAM",
+      "CRAIG"
+     ]
     },
     {
-     "proposer": "WENO",
-     "team": [
-      "WENO",
-      "ADAM"
-     ],
      "state": "REJECTED",
      "votes": [
       "ADAM",
       "WENO"
+     ],
+     "proposer": "WENO",
+     "team": [
+      "WENO",
+      "ADAM"
      ]
     },
     {
+     "state": "APPROVED",
+     "proposer": "NIKOLAI",
      "votes": [
       "JET",
       "ADAM",
@@ -125,113 +128,104 @@
      "team": [
       "ADAM",
       "NIKOLAI"
-     ],
-     "state": "APPROVED",
-     "proposer": "NIKOLAI"
+     ]
     }
    ],
-   "state": "FAIL",
    "team": [
     "ADAM",
     "NIKOLAI"
    ],
+   "numFails": 1,
    "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 1
+   "state": "FAIL"
   },
   {
    "failsRequired": 1,
-   "proposals": [
-    {
-     "proposer": "CRAIG",
-     "state": "REJECTED",
-     "team": [
-      "CRAIG",
-      "WENO",
-      "NIKOLAI"
-     ],
-     "votes": [
-      "CRAIG"
-     ]
-    },
-    {
-     "team": [
-      "JET",
-      "ADAM",
-      "WENO"
-     ],
-     "votes": [
-      "JET"
-     ],
-     "proposer": "JET",
-     "state": "REJECTED"
-    },
-    {
-     "votes": [
-      "ADAM"
-     ],
-     "team": [
-      "ADAM",
-      "CRAIG",
-      "WENO"
-     ],
-     "proposer": "ADAM",
-     "state": "REJECTED"
-    },
-    {
-     "proposer": "WENO",
-     "state": "REJECTED",
-     "team": [
-      "WENO",
-      "ADAM",
-      "JET"
-     ],
-     "votes": [
-      "JET",
-      "ADAM"
-     ]
-    },
-    {
-     "team": [
-      "NIKOLAI",
-      "CRAIG",
-      "JET"
-     ],
-     "proposer": "NIKOLAI",
-     "state": "APPROVED",
-     "votes": [
-      "WENO",
-      "CRAIG",
-      "ADAM",
-      "NIKOLAI"
-     ]
-    }
-   ],
+   "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "NIKOLAI",
     "CRAIG",
     "JET"
    ],
-   "state": "SUCCESS",
-   "teamSize": 3,
-   "numFails": 0
+   "numFails": 0,
+   "proposals": [
+    {
+     "proposer": "CRAIG",
+     "votes": [
+      "CRAIG"
+     ],
+     "team": [
+      "CRAIG",
+      "WENO",
+      "NIKOLAI"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "state": "REJECTED",
+     "team": [
+      "JET",
+      "ADAM",
+      "WENO"
+     ],
+     "proposer": "JET",
+     "votes": [
+      "JET"
+     ]
+    },
+    {
+     "team": [
+      "ADAM",
+      "CRAIG",
+      "WENO"
+     ],
+     "votes": [
+      "ADAM"
+     ],
+     "state": "REJECTED",
+     "proposer": "ADAM"
+    },
+    {
+     "proposer": "WENO",
+     "votes": [
+      "JET",
+      "ADAM"
+     ],
+     "state": "REJECTED",
+     "team": [
+      "WENO",
+      "ADAM",
+      "JET"
+     ]
+    },
+    {
+     "state": "APPROVED",
+     "proposer": "NIKOLAI",
+     "votes": [
+      "WENO",
+      "CRAIG",
+      "ADAM",
+      "NIKOLAI"
+     ],
+     "team": [
+      "NIKOLAI",
+      "CRAIG",
+      "JET"
+     ]
+    }
+   ]
   },
   {
-   "teamSize": 2,
-   "team": [
-    "CRAIG",
-    "NIKOLAI"
-   ],
-   "state": "SUCCESS",
    "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "CRAIG",
+     "state": "APPROVED",
      "team": [
       "CRAIG",
       "NIKOLAI"
      ],
-     "proposer": "CRAIG",
-     "state": "APPROVED",
      "votes": [
       "CRAIG",
       "JET",
@@ -239,41 +233,47 @@
      ]
     }
    ],
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "CRAIG",
+    "NIKOLAI"
+   ],
    "numFails": 0
   },
   {
-   "teamSize": 3,
+   "failsRequired": 1,
    "numFails": 0,
+   "teamSize": 3,
+   "team": [
+    "CRAIG",
+    "JET",
+    "NIKOLAI"
+   ],
    "proposals": [
     {
-     "team": [
-      "CRAIG",
-      "JET",
-      "NIKOLAI"
-     ],
-     "state": "APPROVED",
      "votes": [
       "JET",
       "NIKOLAI",
       "CRAIG"
      ],
-     "proposer": "JET"
+     "state": "APPROVED",
+     "proposer": "JET",
+     "team": [
+      "CRAIG",
+      "JET",
+      "NIKOLAI"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "CRAIG",
-    "JET",
-    "NIKOLAI"
-   ]
+   "state": "SUCCESS"
   },
   {
+   "team": [],
    "teamSize": 3,
-   "state": "PENDING",
    "proposals": [],
    "failsRequired": 1,
-   "team": []
+   "state": "PENDING"
   }
  ],
  "options": {

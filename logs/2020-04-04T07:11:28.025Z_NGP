@@ -1,22 +1,68 @@
 {
- "timeFinished": {
-  "_seconds": 1585984504,
-  "_nanoseconds": 689319000
- },
- "timeCreated": {
-  "_seconds": 1585984288,
-  "_nanoseconds": 25000000
+ "outcome": {
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "ADITHYA": true,
+    "PUCKHOE": true
+   },
+   {
+    "ADITHYA": true,
+    "PUCKHOE": true,
+    "CHANDAN": true
+   },
+   {
+    "GAUTIST": false,
+    "NGP": true,
+    "RAHUL": true,
+    "PUCKHOE": false
+   },
+   {
+    "CHANDAN": true,
+    "NGP": true,
+    "ADITHYA": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "name": "PUCKHOE",
+    "role": "MORGANA"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "ADITHYA",
+    "assassin": false
+   },
+   {
+    "name": "NGP",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "GAUTIST",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "CHANDAN"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "RAHUL"
+   }
+  ],
+  "assassinated": "ADITHYA"
  },
  "missions": [
   {
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "ADITHYA",
-      "PUCKHOE"
-     ],
-     "state": "APPROVED",
-     "proposer": "ADITHYA",
      "votes": [
       "CHANDAN",
       "RAHUL",
@@ -24,74 +70,78 @@
       "ADITHYA",
       "NGP",
       "GAUTIST"
+     ],
+     "state": "APPROVED",
+     "proposer": "ADITHYA",
+     "team": [
+      "ADITHYA",
+      "PUCKHOE"
      ]
     }
    ],
    "numFails": 0,
-   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 2,
    "team": [
     "ADITHYA",
     "PUCKHOE"
-   ],
-   "failsRequired": 1,
-   "teamSize": 2
+   ]
   },
   {
-   "proposals": [
-    {
-     "votes": [
-      "CHANDAN",
-      "RAHUL",
-      "PUCKHOE",
-      "ADITHYA",
-      "NGP",
-      "GAUTIST"
-     ],
-     "state": "APPROVED",
-     "proposer": "CHANDAN",
-     "team": [
-      "CHANDAN",
-      "ADITHYA",
-      "PUCKHOE"
-     ]
-    }
-   ],
    "team": [
     "CHANDAN",
     "ADITHYA",
     "PUCKHOE"
    ],
    "failsRequired": 1,
+   "numFails": 0,
    "teamSize": 3,
    "state": "SUCCESS",
-   "numFails": 0
-  },
-  {
-   "numFails": 2,
-   "state": "FAIL",
    "proposals": [
     {
+     "team": [
+      "CHANDAN",
+      "ADITHYA",
+      "PUCKHOE"
+     ],
+     "proposer": "CHANDAN",
+     "state": "APPROVED",
+     "votes": [
+      "CHANDAN",
+      "RAHUL",
+      "PUCKHOE",
+      "ADITHYA",
+      "NGP",
+      "GAUTIST"
+     ]
+    }
+   ]
+  },
+  {
+   "team": [
+    "PUCKHOE",
+    "GAUTIST",
+    "NGP",
+    "RAHUL"
+   ],
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "proposer": "GAUTIST",
+     "votes": [
+      "PUCKHOE",
+      "ADITHYA",
+      "NGP"
+     ],
      "team": [
       "GAUTIST",
       "PUCKHOE",
       "CHANDAN",
       "ADITHYA"
      ],
-     "proposer": "GAUTIST",
-     "state": "REJECTED",
-     "votes": [
-      "PUCKHOE",
-      "ADITHYA",
-      "NGP"
-     ]
+     "state": "REJECTED"
     },
     {
-     "team": [
-      "PUCKHOE",
-      "GAUTIST",
-      "NGP",
-      "RAHUL"
-     ],
      "state": "APPROVED",
      "votes": [
       "NGP",
@@ -99,42 +149,43 @@
       "RAHUL",
       "PUCKHOE"
      ],
-     "proposer": "PUCKHOE"
+     "proposer": "PUCKHOE",
+     "team": [
+      "PUCKHOE",
+      "GAUTIST",
+      "NGP",
+      "RAHUL"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "PUCKHOE",
-    "GAUTIST",
-    "NGP",
-    "RAHUL"
-   ],
-   "teamSize": 4
+   "teamSize": 4,
+   "numFails": 2,
+   "state": "FAIL"
   },
   {
+   "teamSize": 3,
    "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "NGP",
     "ADITHYA",
     "CHANDAN"
    ],
-   "state": "SUCCESS",
-   "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "NGP",
-      "RAHUL",
-      "ADITHYA"
-     ],
      "team": [
       "CHANDAN",
       "RAHUL",
       "NGP"
      ],
+     "proposer": "RAHUL",
      "state": "REJECTED",
-     "proposer": "RAHUL"
+     "votes": [
+      "NGP",
+      "RAHUL",
+      "ADITHYA"
+     ]
     },
     {
      "votes": [
@@ -155,91 +206,40 @@
   },
   {
    "team": [],
-   "proposals": [],
    "teamSize": 4,
    "state": "PENDING",
+   "proposals": [],
    "failsRequired": 1
   }
  ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "PUCKHOE": true,
-    "ADITHYA": true
-   },
-   {
-    "ADITHYA": true,
-    "CHANDAN": true,
-    "PUCKHOE": true
-   },
-   {
-    "GAUTIST": false,
-    "PUCKHOE": false,
-    "RAHUL": true,
-    "NGP": true
-   },
-   {
-    "ADITHYA": true,
-    "CHANDAN": true,
-    "NGP": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "ADITHYA",
-  "roles": [
-   {
-    "name": "PUCKHOE",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "ADITHYA",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "NGP"
-   },
-   {
-    "name": "GAUTIST",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "name": "CHANDAN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "RAHUL",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ]
+ "timeCreated": {
+  "_seconds": 1585984288,
+  "_nanoseconds": 25000000
+ },
+ "timeFinished": {
+  "_seconds": 1585984504,
+  "_nanoseconds": 689319000
  },
  "players": [
   {
-   "uid": "zPBITAoA8mUfSa0lFBJTz9FPat02",
-   "name": "ADITHYA"
+   "name": "ADITHYA",
+   "uid": "zPBITAoA8mUfSa0lFBJTz9FPat02"
   },
   {
    "uid": "c0nahfL5laM56X72EMpxST5yEcA2",
    "name": "CHANDAN"
   },
   {
-   "name": "GAUTIST",
-   "uid": "HmQ2lErT1sQwh7KK6ll3iiQVkgx2"
+   "uid": "HmQ2lErT1sQwh7KK6ll3iiQVkgx2",
+   "name": "GAUTIST"
   },
   {
    "uid": "l2WfetfYI1hqg5MzQyeUKIpuZ2F3",
    "name": "PUCKHOE"
   },
   {
-   "name": "RAHUL",
-   "uid": "tx0kcEK6OLReXSxfyfrW6pENoTC3"
+   "uid": "tx0kcEK6OLReXSxfyfrW6pENoTC3",
+   "name": "RAHUL"
   },
   {
    "name": "NGP",

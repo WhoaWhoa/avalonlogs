@@ -1,20 +1,29 @@
 {
+ "timeCreated": {
+  "_seconds": 1586493216,
+  "_nanoseconds": 529000000
+ },
+ "timeFinished": {
+  "_seconds": 1586496093,
+  "_nanoseconds": 692127000
+ },
  "outcome": {
+  "assassinated": "ALEXK",
   "votes": [
    {
     "ADITYA": true,
     "T": true
    },
    {
-    "ADITYA": true,
     "T": true,
-    "PATRICK": true
+    "PATRICK": true,
+    "ADITYA": true
    },
    {
-    "PATRICK": true,
-    "ALEXL": false,
     "ADITYA": true,
-    "T": true
+    "T": true,
+    "PATRICK": true,
+    "ALEXL": false
    },
    {
     "ALEXL": false,
@@ -22,28 +31,27 @@
     "T": true
    },
    {
-    "T": true,
+    "ADITYA": true,
     "ALEXK": true,
-    "PATRICK": true,
-    "ADITYA": true
+    "T": true,
+    "PATRICK": true
    }
   ],
-  "message": "Merlin assassinated",
   "roles": [
    {
-    "assassin": false,
     "name": "PATRICK",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
     "name": "T",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "SUV",
     "role": "EVIL MINION",
-    "assassin": true,
-    "name": "SUV"
+    "assassin": true
    },
    {
     "assassin": false,
@@ -51,8 +59,8 @@
     "role": "PERCIVAL"
    },
    {
-    "assassin": false,
     "role": "MERLIN",
+    "assassin": false,
     "name": "ALEXK"
    },
    {
@@ -62,22 +70,15 @@
    }
   ],
   "state": "EVIL_WIN",
-  "assassinated": "ALEXK"
- },
- "timeCreated": {
-  "_seconds": 1586493216,
-  "_nanoseconds": 529000000
- },
- "timeFinished": {
-  "_seconds": 1586496093,
-  "_nanoseconds": 692127000
+  "message": "Merlin assassinated"
  },
  "missions": [
   {
-   "failsRequired": 1,
    "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "ALEXL",
       "SUV"
@@ -86,24 +87,24 @@
       "SUV",
       "ALEXK"
      ],
-     "state": "REJECTED",
      "proposer": "SUV"
     },
     {
-     "votes": [
-      "T",
-      "SUV",
-      "ALEXL"
-     ],
      "team": [
       "T",
       "SUV"
      ],
      "state": "REJECTED",
-     "proposer": "T"
+     "proposer": "T",
+     "votes": [
+      "T",
+      "SUV",
+      "ALEXL"
+     ]
     },
     {
      "proposer": "ADITYA",
+     "state": "APPROVED",
      "votes": [
       "ADITYA",
       "ALEXL",
@@ -113,30 +114,25 @@
      "team": [
       "ADITYA",
       "T"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "numFails": 0,
    "team": [
     "ADITYA",
     "T"
    ],
+   "numFails": 0,
    "teamSize": 2
   },
   {
-   "state": "SUCCESS",
+   "teamSize": 3,
    "team": [
     "ADITYA",
     "PATRICK",
     "T"
    ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "PATRICK",
       "T",
@@ -148,43 +144,49 @@
       "PATRICK",
       "T"
      ],
+     "state": "APPROVED",
      "proposer": "PATRICK"
     }
-   ]
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
+   "state": "FAIL",
    "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "ALEXK",
       "ALEXL",
       "T",
       "ADITYA"
      ],
+     "proposer": "ALEXL",
      "team": [
       "ALEXL",
       "PATRICK",
       "ADITYA",
       "T"
      ],
-     "proposer": "ALEXL"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
    "team": [
     "ALEXL",
     "PATRICK",
     "ADITYA",
     "T"
    ],
-   "state": "FAIL",
-   "teamSize": 4
+   "teamSize": 4,
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 3,
    "numFails": 2,
+   "failsRequired": 1,
    "team": [
     "ALEXL",
     "T",
@@ -192,27 +194,27 @@
    ],
    "proposals": [
     {
-     "proposer": "ALEXK",
      "team": [
       "ADITYA",
       "T",
       "PATRICK"
      ],
      "state": "REJECTED",
+     "proposer": "ALEXK",
      "votes": []
     },
     {
-     "proposer": "SUV",
-     "team": [
-      "T",
-      "ADITYA",
-      "ALEXL"
-     ],
-     "state": "REJECTED",
      "votes": [
       "ADITYA",
       "T",
       "SUV"
+     ],
+     "proposer": "SUV",
+     "state": "REJECTED",
+     "team": [
+      "T",
+      "ADITYA",
+      "ALEXL"
      ]
     },
     {
@@ -221,34 +223,40 @@
       "T",
       "SUV"
      ],
+     "state": "APPROVED",
      "votes": [
       "ADITYA",
       "ALEXL",
       "T",
       "SUV"
      ],
-     "proposer": "T",
-     "state": "APPROVED"
+     "proposer": "T"
     }
-   ],
-   "teamSize": 3,
-   "state": "FAIL"
+   ]
   },
   {
-   "numFails": 0,
+   "failsRequired": 1,
+   "team": [
+    "PATRICK",
+    "ADITYA",
+    "T",
+    "ALEXK"
+   ],
+   "teamSize": 4,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "ADITYA",
      "votes": [
       "ADITYA"
      ],
+     "proposer": "ADITYA",
      "team": [
       "SUV",
       "ALEXL",
       "PATRICK",
       "ADITYA"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -258,10 +266,11 @@
       "T"
      ],
      "proposer": "PATRICK",
-     "votes": [],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": []
     },
     {
+     "proposer": "ALEXL",
      "votes": [
       "ALEXL"
      ],
@@ -271,11 +280,9 @@
       "PATRICK",
       "ADITYA"
      ],
-     "state": "REJECTED",
-     "proposer": "ALEXL"
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
      "team": [
       "PATRICK",
       "ADITYA",
@@ -283,6 +290,7 @@
       "ALEXK"
      ],
      "proposer": "ALEXK",
+     "state": "APPROVED",
      "votes": [
       "PATRICK",
       "T",
@@ -291,15 +299,7 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
-   "state": "SUCCESS",
-   "team": [
-    "PATRICK",
-    "ADITYA",
-    "T",
-    "ALEXK"
-   ]
+   "numFails": 0
   }
  ],
  "players": [

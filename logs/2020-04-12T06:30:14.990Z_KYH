@@ -1,20 +1,79 @@
 {
- "timeCreated": {
-  "_seconds": 1586673014,
-  "_nanoseconds": 990000000
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "SAAK": true,
+    "PURU": true
+   },
+   {
+    "PURU": true,
+    "SAAK": true,
+    "AD": false
+   },
+   {
+    "MARWIE": true,
+    "SAAK": true
+   },
+   {
+    "SAAK": true,
+    "AD": false,
+    "AVI": true
+   },
+   {
+    "PURU": true,
+    "SAAK": true,
+    "MARWIE": false
+   }
+  ],
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "SAAK"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "PURU",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "AD",
+    "assassin": true
+   },
+   {
+    "name": "MARWIE",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "name": "AVI",
+    "role": "MERLIN"
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions"
+ },
+ "timeFinished": {
+  "_seconds": 1586673655,
+  "_nanoseconds": 939967000
  },
  "missions": [
   {
-   "teamSize": 2,
-   "state": "SUCCESS",
+   "team": [
+    "PURU",
+    "SAAK"
+   ],
    "proposals": [
     {
+     "proposer": "AVI",
+     "state": "APPROVED",
      "team": [
       "PURU",
       "SAAK"
      ],
-     "state": "APPROVED",
-     "proposer": "AVI",
      "votes": [
       "MARWIE",
       "AVI",
@@ -24,16 +83,24 @@
      ]
     }
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 2,
+   "numFails": 0
+  },
+  {
+   "failsRequired": 1,
    "team": [
+    "AD",
     "PURU",
     "SAAK"
    ],
-   "numFails": 0,
-   "failsRequired": 1
-  },
-  {
+   "teamSize": 3,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "SAAK",
       "PURU",
@@ -41,45 +108,35 @@
       "MARWIE",
       "AVI"
      ],
-     "proposer": "PURU",
-     "state": "APPROVED",
      "team": [
       "AD",
       "PURU",
       "SAAK"
-     ]
+     ],
+     "proposer": "PURU"
     }
-   ],
-   "teamSize": 3,
-   "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1,
-   "team": [
-    "AD",
-    "PURU",
-    "SAAK"
    ]
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "MARWIE",
-    "SAAK"
-   ],
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "MARWIE",
       "PURU"
      ],
      "proposer": "MARWIE",
-     "state": "REJECTED",
      "team": [
       "PURU",
       "AD"
      ]
     },
     {
+     "state": "APPROVED",
+     "team": [
+      "MARWIE",
+      "SAAK"
+     ],
      "votes": [
       "MARWIE",
       "AVI",
@@ -87,64 +144,69 @@
       "PURU",
       "AD"
      ],
-     "state": "APPROVED",
-     "team": [
-      "MARWIE",
-      "SAAK"
-     ],
      "proposer": "AD"
     }
    ],
-   "numFails": 0,
    "teamSize": 2,
+   "numFails": 0,
+   "failsRequired": 1,
+   "team": [
+    "MARWIE",
+    "SAAK"
+   ],
    "state": "SUCCESS"
   },
   {
    "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "AD",
     "SAAK",
     "AVI"
    ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "SAAK",
-     "team": [
-      "AD",
-      "SAAK",
-      "AVI"
-     ],
      "votes": [
       "MARWIE",
       "SAAK",
       "AD"
      ],
-     "state": "APPROVED"
+     "proposer": "SAAK",
+     "state": "APPROVED",
+     "team": [
+      "AD",
+      "SAAK",
+      "AVI"
+     ]
     }
-   ]
+   ],
+   "teamSize": 3
   },
   {
-   "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 3,
    "proposals": [
     {
      "votes": [
       "AVI",
       "SAAK"
      ],
-     "state": "REJECTED",
      "team": [
       "AVI",
       "SAAK",
       "PURU"
      ],
-     "proposer": "AVI"
+     "proposer": "AVI",
+     "state": "REJECTED"
     },
     {
-     "proposer": "PURU",
      "state": "APPROVED",
+     "team": [
+      "MARWIE",
+      "SAAK",
+      "PURU"
+     ],
      "votes": [
       "MARWIE",
       "AVI",
@@ -152,23 +214,22 @@
       "PURU",
       "AD"
      ],
-     "team": [
-      "MARWIE",
-      "SAAK",
-      "PURU"
-     ]
+     "proposer": "PURU"
     }
    ],
-   "teamSize": 3,
+   "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "MARWIE",
     "SAAK",
     "PURU"
-   ],
-   "state": "FAIL",
-   "numFails": 1
+   ]
   }
  ],
+ "timeCreated": {
+  "_seconds": 1586673014,
+  "_nanoseconds": 990000000
+ },
  "players": [
   {
    "uid": "lLbnA05okrbSr3qNJsd0AKcpQPN2",
@@ -183,73 +244,12 @@
    "uid": "jl92e22KDCaALa0JCcLWwOMN5jo1"
   },
   {
-   "name": "MARWIE",
-   "uid": "DhUsOXH1LhSIgj7hiLECw5H0pc23"
+   "uid": "DhUsOXH1LhSIgj7hiLECw5H0pc23",
+   "name": "MARWIE"
   },
   {
-   "uid": "rMFSK1y64ocxqhydlDLxOeMgWfi2",
-   "name": "AD"
+   "name": "AD",
+   "uid": "rMFSK1y64ocxqhydlDLxOeMgWfi2"
   }
- ],
- "timeFinished": {
-  "_seconds": 1586673655,
-  "_nanoseconds": 939967000
- },
- "outcome": {
-  "roles": [
-   {
-    "name": "SAAK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "PURU",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "AD",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "name": "MARWIE",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "AVI",
-    "role": "MERLIN",
-    "assassin": false
-   }
-  ],
-  "votes": [
-   {
-    "SAAK": true,
-    "PURU": true
-   },
-   {
-    "SAAK": true,
-    "AD": false,
-    "PURU": true
-   },
-   {
-    "SAAK": true,
-    "MARWIE": true
-   },
-   {
-    "AD": false,
-    "SAAK": true,
-    "AVI": true
-   },
-   {
-    "SAAK": true,
-    "MARWIE": false,
-    "PURU": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "assassinated": null
- }
+ ]
 }

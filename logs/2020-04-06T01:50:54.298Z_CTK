@@ -3,10 +3,6 @@
   "_seconds": 1586137854,
   "_nanoseconds": 298000000
  },
- "timeFinished": {
-  "_seconds": 1586138876,
-  "_nanoseconds": 135052000
- },
  "players": [
   {
    "uid": "Qy7QWXGWbIMiF4Uy8DDvnwkIYHD3",
@@ -21,16 +17,16 @@
    "uid": "W0Mf4cMpO2gj6IMG32Xy3efJDaS2"
   },
   {
-   "name": "CRAIG",
-   "uid": "S0hyXdfkKiO8ldnjw1fkdDNfPYo1"
+   "uid": "S0hyXdfkKiO8ldnjw1fkdDNfPYo1",
+   "name": "CRAIG"
   },
   {
    "uid": "zOlHDUyNQ9T1QVeAI5ZwSdeqN9V2",
    "name": "LINDSAY"
   },
   {
-   "name": "POLLACK",
-   "uid": "SPUr44StJCatwplCxrRHFBs6BNC2"
+   "uid": "SPUr44StJCatwplCxrRHFBs6BNC2",
+   "name": "POLLACK"
   },
   {
    "uid": "toh2RWFdIXdrXa639JZ7PkTez7j1",
@@ -38,26 +34,27 @@
   }
  ],
  "outcome": {
+  "state": "EVIL_WIN",
   "votes": [
    {
-    "LINDSAY": true,
-    "CRAIG": true
-   },
-   {
-    "CRAIG": false,
-    "AARON": true,
+    "CRAIG": true,
     "LINDSAY": true
    },
    {
     "LINDSAY": true,
     "CRAIG": false,
+    "AARON": true
+   },
+   {
+    "CRAIG": false,
+    "LINDSAY": true,
     "MARC": true
    },
    {
-    "ED": true,
-    "LINDSAY": true,
+    "AARON": true,
     "MARC": true,
-    "AARON": true
+    "ED": true,
+    "LINDSAY": true
    },
    {
     "MARC": true,
@@ -66,38 +63,36 @@
     "AARON": true
    }
   ],
-  "message": "Three failed missions",
   "assassinated": null,
-  "state": "EVIL_WIN",
   "roles": [
    {
+    "name": "LINDSAY",
     "role": "PERCIVAL",
-    "assassin": false,
-    "name": "LINDSAY"
+    "assassin": false
    },
    {
-    "role": "EVIL MINION",
     "name": "POLLACK",
+    "role": "EVIL MINION",
     "assassin": true
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "MARC",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
+    "assassin": false,
     "role": "MORGANA",
-    "name": "CRAIG",
-    "assassin": false
+    "name": "CRAIG"
    },
    {
     "name": "ETHANN",
-    "role": "EVIL MINION",
-    "assassin": false
+    "assassin": false,
+    "role": "EVIL MINION"
    },
    {
-    "role": "MERLIN",
     "assassin": false,
+    "role": "MERLIN",
     "name": "ED"
    },
    {
@@ -105,18 +100,18 @@
     "assassin": false,
     "name": "AARON"
    }
-  ]
+  ],
+  "message": "Three failed missions"
+ },
+ "timeFinished": {
+  "_seconds": 1586138876,
+  "_nanoseconds": 135052000
  },
  "missions": [
   {
-   "team": [
-    "LINDSAY",
-    "CRAIG"
-   ],
-   "numFails": 0,
-   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "LINDSAY",
      "votes": [
       "POLLACK",
       "CRAIG",
@@ -127,30 +122,34 @@
       "LINDSAY",
       "CRAIG"
      ],
-     "proposer": "LINDSAY",
      "state": "APPROVED"
     }
    ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 2,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "team": [
+    "LINDSAY",
+    "CRAIG"
+   ]
   },
   {
-   "state": "FAIL",
-   "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
+     "votes": [
+      "AARON",
+      "LINDSAY",
+      "POLLACK"
+     ],
      "team": [
       "LINDSAY",
       "CRAIG",
       "AARON"
      ],
-     "state": "REJECTED",
      "proposer": "POLLACK",
-     "votes": [
-      "AARON",
-      "LINDSAY",
-      "POLLACK"
-     ]
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -159,76 +158,69 @@
       "POLLACK",
       "CRAIG"
      ],
-     "proposer": "AARON",
-     "state": "APPROVED",
      "team": [
       "AARON",
       "CRAIG",
       "LINDSAY"
-     ]
+     ],
+     "proposer": "AARON",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "AARON",
     "CRAIG",
     "LINDSAY"
    ],
-   "numFails": 1
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
    "teamSize": 3,
-   "state": "FAIL",
    "numFails": 1,
-   "failsRequired": 1,
+   "team": [
+    "LINDSAY",
+    "CRAIG",
+    "MARC"
+   ],
    "proposals": [
     {
-     "state": "REJECTED",
      "proposer": "ED",
-     "votes": [
-      "ED",
-      "AARON",
-      "LINDSAY"
-     ],
      "team": [
       "ED",
       "LINDSAY",
       "AARON"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "ED",
+      "AARON",
+      "LINDSAY"
      ]
     },
     {
-     "proposer": "MARC",
+     "team": [
+      "LINDSAY",
+      "CRAIG",
+      "MARC"
+     ],
      "state": "APPROVED",
+     "proposer": "MARC",
      "votes": [
       "LINDSAY",
       "POLLACK",
       "MARC",
       "ED"
-     ],
-     "team": [
-      "LINDSAY",
-      "CRAIG",
-      "MARC"
      ]
     }
    ],
-   "team": [
-    "LINDSAY",
-    "CRAIG",
-    "MARC"
-   ]
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
-   "team": [
-    "ED",
-    "AARON",
-    "LINDSAY",
-    "MARC"
-   ],
-   "numFails": 0,
-   "failsRequired": 2,
-   "teamSize": 4,
    "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
      "state": "REJECTED",
@@ -253,35 +245,52 @@
       "POLLACK",
       "AARON"
      ],
+     "proposer": "CRAIG",
      "votes": [
       "POLLACK"
-     ],
-     "proposer": "CRAIG"
+     ]
     },
     {
      "state": "APPROVED",
-     "votes": [
-      "CRAIG",
-      "MARC",
-      "ED",
-      "AARON",
-      "LINDSAY"
-     ],
      "proposer": "LINDSAY",
      "team": [
       "ED",
       "AARON",
       "LINDSAY",
       "MARC"
+     ],
+     "votes": [
+      "CRAIG",
+      "MARC",
+      "ED",
+      "AARON",
+      "LINDSAY"
      ]
     }
-   ]
+   ],
+   "failsRequired": 2,
+   "team": [
+    "ED",
+    "AARON",
+    "LINDSAY",
+    "MARC"
+   ],
+   "teamSize": 4
   },
   {
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL",
+   "team": [
+    "ED",
+    "MARC",
+    "AARON",
+    "ETHANN"
+   ],
    "proposals": [
     {
      "proposer": "POLLACK",
-     "state": "APPROVED",
      "votes": [
       "CRAIG",
       "ETHANN",
@@ -293,19 +302,10 @@
       "MARC",
       "AARON",
       "ETHANN"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "team": [
-    "ED",
-    "MARC",
-    "AARON",
-    "ETHANN"
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "teamSize": 4,
-   "numFails": 1
+   ]
   }
  ]
 }

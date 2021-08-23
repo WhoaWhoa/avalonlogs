@@ -1,4 +1,67 @@
 {
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "ETHAN": true,
+    "THOMSON": true
+   },
+   {
+    "KELVIN": true,
+    "ETHAN": false,
+    "THOMSON": true
+   },
+   {
+    "THOMSON": true,
+    "ASTON": true,
+    "ETHAN": false,
+    "ADRIAN": true
+   },
+   {
+    "KELVIN": true,
+    "THOMSON": true,
+    "ASTON": false
+   }
+  ],
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "ADRIAN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "SAM",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "THOMSON",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "KELVIN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": true,
+    "role": "MORDRED",
+    "name": "ETHAN"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "ASTON"
+   }
+  ],
+  "assassinated": null
+ },
+ "timeCreated": {
+  "_seconds": 1587003093,
+  "_nanoseconds": 806000000
+ },
  "timeFinished": {
   "_seconds": 1587003848,
   "_nanoseconds": 797583000
@@ -9,121 +72,60 @@
    "uid": "Y77Unrq5prgSaHEAzueTO5x9pAF3"
   },
   {
-   "name": "SAM",
-   "uid": "PyFnZWgR6pYN1SgJ1k5nRikqbIq2"
+   "uid": "PyFnZWgR6pYN1SgJ1k5nRikqbIq2",
+   "name": "SAM"
   },
   {
-   "name": "KELVIN",
-   "uid": "tQpgKDFOxBgz3AqqpGqocau1S0a2"
+   "uid": "tQpgKDFOxBgz3AqqpGqocau1S0a2",
+   "name": "KELVIN"
   },
   {
-   "uid": "jYAPv4IuMHcFuPCIWvpnB8CS0Nw2",
-   "name": "ADRIAN"
+   "name": "ADRIAN",
+   "uid": "jYAPv4IuMHcFuPCIWvpnB8CS0Nw2"
   },
   {
-   "uid": "O78yb4V9GnNff9YuBn8IRotwtf02",
-   "name": "THOMSON"
+   "name": "THOMSON",
+   "uid": "O78yb4V9GnNff9YuBn8IRotwtf02"
   },
   {
    "name": "ASTON",
    "uid": "mzNKoIt7o2gmdzkxYu68nXIRrJi2"
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "ETHAN": true,
-    "THOMSON": true
-   },
-   {
-    "THOMSON": true,
-    "KELVIN": true,
-    "ETHAN": false
-   },
-   {
-    "ADRIAN": true,
-    "ASTON": true,
-    "THOMSON": true,
-    "ETHAN": false
-   },
-   {
-    "THOMSON": true,
-    "ASTON": false,
-    "KELVIN": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "name": "ADRIAN",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SAM",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "THOMSON"
-   },
-   {
-    "assassin": false,
-    "name": "KELVIN",
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "ETHAN",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "role": "MORGANA",
-    "name": "ASTON",
-    "assassin": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "assassinated": null
- },
- "timeCreated": {
-  "_seconds": 1587003093,
-  "_nanoseconds": 806000000
- },
  "missions": [
   {
+   "state": "SUCCESS",
    "team": [
     "ETHAN",
     "THOMSON"
    ],
+   "failsRequired": 1,
    "numFails": 0,
    "teamSize": 2,
-   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "ETHAN",
-      "THOMSON"
-     ],
-     "state": "APPROVED",
-     "proposer": "ETHAN",
      "votes": [
       "KELVIN",
       "ETHAN",
       "ASTON",
       "SAM",
       "THOMSON"
-     ]
+     ],
+     "proposer": "ETHAN",
+     "team": [
+      "ETHAN",
+      "THOMSON"
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
-   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "SAM",
      "votes": [
       "SAM",
       "ETHAN",
@@ -133,11 +135,10 @@
       "ETHAN",
       "SAM",
       "THOMSON"
-     ],
-     "proposer": "SAM",
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "KELVIN",
       "ETHAN",
@@ -146,63 +147,57 @@
       "SAM",
       "THOMSON"
      ],
-     "proposer": "KELVIN",
-     "state": "APPROVED",
      "team": [
       "KELVIN",
       "ETHAN",
       "THOMSON"
-     ]
+     ],
+     "proposer": "KELVIN"
     }
    ],
+   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "KELVIN",
     "ETHAN",
     "THOMSON"
    ],
-   "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 1
+   "failsRequired": 1
   },
   {
-   "teamSize": 4,
+   "proposals": [
+    {
+     "votes": [
+      "ETHAN",
+      "ASTON",
+      "ADRIAN",
+      "THOMSON",
+      "KELVIN"
+     ],
+     "team": [
+      "ETHAN",
+      "THOMSON",
+      "ADRIAN",
+      "ASTON"
+     ],
+     "proposer": "ADRIAN",
+     "state": "APPROVED"
+    }
+   ],
    "state": "FAIL",
-   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "ETHAN",
     "THOMSON",
     "ADRIAN",
     "ASTON"
    ],
-   "proposals": [
-    {
-     "votes": [
-      "ETHAN",
-      "ASTON",
-      "ADRIAN",
-      "THOMSON",
-      "KELVIN"
-     ],
-     "state": "APPROVED",
-     "proposer": "ADRIAN",
-     "team": [
-      "ETHAN",
-      "THOMSON",
-      "ADRIAN",
-      "ASTON"
-     ]
-    }
-   ],
-   "numFails": 1
+   "failsRequired": 1,
+   "teamSize": 4
   },
   {
-   "state": "FAIL",
+   "teamSize": 3,
    "failsRequired": 1,
-   "team": [
-    "THOMSON",
-    "ASTON",
-    "KELVIN"
-   ],
    "proposals": [
     {
      "state": "APPROVED",
@@ -211,24 +206,29 @@
       "ASTON",
       "KELVIN"
      ],
+     "proposer": "THOMSON",
      "votes": [
       "ETHAN",
       "ASTON",
       "ADRIAN",
       "THOMSON"
-     ],
-     "proposer": "THOMSON"
+     ]
     }
    ],
-   "numFails": 1,
-   "teamSize": 3
+   "state": "FAIL",
+   "team": [
+    "THOMSON",
+    "ASTON",
+    "KELVIN"
+   ],
+   "numFails": 1
   },
   {
-   "team": [],
-   "failsRequired": 1,
    "proposals": [],
    "state": "PENDING",
-   "teamSize": 4
+   "team": [],
+   "teamSize": 4,
+   "failsRequired": 1
   }
  ],
  "options": {

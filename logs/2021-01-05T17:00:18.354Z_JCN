@@ -1,41 +1,43 @@
 {
  "missions": [
   {
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "BRI",
     "JCN"
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "team": [
+      "BRI",
+      "JCN"
+     ],
+     "state": "APPROVED",
+     "proposer": "FRANKIE",
      "votes": [
       "BRI",
       "JCN",
       "FRANKIE",
       "SCUTAR",
       "KGB"
-     ],
-     "proposer": "FRANKIE",
-     "state": "APPROVED",
-     "team": [
-      "BRI",
-      "JCN"
      ]
     }
    ]
   },
   {
-   "numFails": 0,
    "failsRequired": 1,
-   "teamSize": 3,
-   "state": "SUCCESS",
+   "team": [
+    "BRI",
+    "JCN",
+    "KGB"
+   ],
+   "numFails": 0,
    "proposals": [
     {
      "proposer": "KGB",
-     "state": "APPROVED",
      "votes": [
       "KGB",
       "SCUTAR",
@@ -43,6 +45,7 @@
       "JCN",
       "BRI"
      ],
+     "state": "APPROVED",
      "team": [
       "BRI",
       "JCN",
@@ -50,53 +53,51 @@
      ]
     }
    ],
-   "team": [
-    "BRI",
-    "JCN",
-    "KGB"
-   ]
+   "state": "SUCCESS",
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "SCUTAR",
+    "FRANKIE"
+   ],
+   "numFails": 2,
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "BRI",
-     "team": [
-      "JCN",
-      "KGB"
-     ],
      "votes": [
       "BRI",
       "JCN"
+     ],
+     "proposer": "BRI",
+     "state": "REJECTED",
+     "team": [
+      "JCN",
+      "KGB"
      ]
     },
     {
      "state": "APPROVED",
-     "team": [
-      "SCUTAR",
-      "FRANKIE"
-     ],
-     "proposer": "JCN",
      "votes": [
       "BRI",
       "JCN",
       "SCUTAR",
       "FRANKIE",
       "KGB"
-     ]
+     ],
+     "team": [
+      "SCUTAR",
+      "FRANKIE"
+     ],
+     "proposer": "JCN"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "numFails": 2,
-   "team": [
-    "SCUTAR",
-    "FRANKIE"
-   ],
-   "teamSize": 2
+   "state": "FAIL"
   },
   {
    "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "SCUTAR",
     "FRANKIE",
@@ -104,13 +105,13 @@
    ],
    "proposals": [
     {
+     "proposer": "SCUTAR",
+     "state": "APPROVED",
      "votes": [
       "JCN",
       "SCUTAR",
       "FRANKIE"
      ],
-     "state": "APPROVED",
-     "proposer": "SCUTAR",
      "team": [
       "SCUTAR",
       "FRANKIE",
@@ -119,21 +120,24 @@
     }
    ],
    "teamSize": 3,
-   "numFails": 2,
-   "failsRequired": 1
+   "numFails": 2
   },
   {
-   "numFails": 2,
+   "team": [
+    "SCUTAR",
+    "FRANKIE",
+    "JCN"
+   ],
    "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "FRANKIE",
+     "state": "APPROVED",
      "team": [
       "SCUTAR",
       "FRANKIE",
       "JCN"
      ],
-     "state": "APPROVED",
+     "proposer": "FRANKIE",
      "votes": [
       "KGB",
       "SCUTAR",
@@ -141,54 +145,47 @@
      ]
     }
    ],
-   "team": [
-    "SCUTAR",
-    "FRANKIE",
-    "JCN"
-   ],
+   "state": "FAIL",
    "teamSize": 3,
-   "state": "FAIL"
+   "numFails": 2
   }
  ],
  "timeCreated": {
   "_seconds": 1609866018,
   "_nanoseconds": 354000000
  },
- "timeFinished": {
-  "_seconds": 1609866874,
-  "_nanoseconds": 17000000
- },
  "options": {
   "inGameLog": false
  },
  "outcome": {
+  "assassinated": null,
   "votes": [
    {
+    "BRI": true,
+    "JCN": true
+   },
+   {
+    "BRI": true,
     "JCN": true,
-    "BRI": true
-   },
-   {
-    "KGB": true,
-    "JCN": true,
-    "BRI": true
-   },
-   {
-    "SCUTAR": false,
-    "FRANKIE": false
-   },
-   {
-    "KGB": true,
-    "SCUTAR": false,
-    "FRANKIE": false
+    "KGB": true
    },
    {
     "FRANKIE": false,
-    "JCN": true,
     "SCUTAR": false
+   },
+   {
+    "KGB": true,
+    "SCUTAR": false,
+    "FRANKIE": false
+   },
+   {
+    "JCN": true,
+    "SCUTAR": false,
+    "FRANKIE": false
    }
   ],
+  "message": "Three failed missions",
   "state": "EVIL_WIN",
-  "assassinated": null,
   "roles": [
    {
     "role": "MORGANA",
@@ -196,27 +193,30 @@
     "name": "FRANKIE"
    },
    {
-    "name": "BRI",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "BRI"
    },
    {
     "role": "PERCIVAL",
-    "name": "JCN",
-    "assassin": false
+    "assassin": false,
+    "name": "JCN"
    },
    {
+    "assassin": false,
     "name": "KGB",
-    "role": "MERLIN",
-    "assassin": false
+    "role": "MERLIN"
    },
    {
     "role": "MORDRED",
     "name": "SCUTAR",
     "assassin": true
    }
-  ],
-  "message": "Three failed missions"
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1609866874,
+  "_nanoseconds": 17000000
  },
  "players": [
   {
@@ -224,20 +224,20 @@
    "uid": "dMnVnXqH21YGfETIwKrG9o3TOVo2"
   },
   {
-   "name": "BRI",
-   "uid": "XvV4vkKnBHgbJ1Cqj8ei1fycOv82"
+   "uid": "XvV4vkKnBHgbJ1Cqj8ei1fycOv82",
+   "name": "BRI"
   },
   {
-   "name": "JCN",
-   "uid": "pEHnyNLicaQgVKcRtXaEl9A9Ocm1"
+   "uid": "pEHnyNLicaQgVKcRtXaEl9A9Ocm1",
+   "name": "JCN"
   },
   {
    "name": "SCUTAR",
    "uid": "lnZQexKubrUTQdBUqVMDV1FZO6T2"
   },
   {
-   "uid": "V63okYOjqvOVD2pjUFMN5512Mbj2",
-   "name": "FRANKIE"
+   "name": "FRANKIE",
+   "uid": "V63okYOjqvOVD2pjUFMN5512Mbj2"
   }
  ]
 }

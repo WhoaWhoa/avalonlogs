@@ -1,16 +1,14 @@
 {
  "missions": [
   {
-   "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "NYADLNYA",
     "TARUN"
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "AMEYA",
       "SHARON",
@@ -19,19 +17,20 @@
       "SHAWN",
       "EQIU"
      ],
-     "proposer": "NYADLNYA",
      "team": [
       "NYADLNYA",
       "TARUN"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "NYADLNYA"
     }
    ],
+   "numFails": 1,
    "teamSize": 2
   },
   {
    "failsRequired": 1,
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
      "team": [
@@ -39,6 +38,7 @@
       "AMEYA",
       "EQIU"
      ],
+     "proposer": "AMEYA",
      "votes": [
       "SHAWN",
       "EQIU",
@@ -47,11 +47,11 @@
       "TARUN",
       "NYADLNYA"
      ],
-     "proposer": "AMEYA",
      "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 3,
    "team": [
     "TARUN",
     "AMEYA",
@@ -59,11 +59,10 @@
    ]
   },
   {
-   "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "AMEYA",
       "SHARON",
@@ -78,7 +77,8 @@
       "TARUN",
       "SHAWN"
      ],
-     "proposer": "EQIU"
+     "proposer": "EQIU",
+     "state": "APPROVED"
     }
    ],
    "team": [
@@ -87,11 +87,12 @@
     "TARUN",
     "SHAWN"
    ],
-   "numFails": 0,
-   "teamSize": 4
+   "teamSize": 4,
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
      "team": [
@@ -100,31 +101,30 @@
       "SHAWN"
      ],
      "proposer": "SHARON",
-     "state": "REJECTED",
      "votes": [
       "SHARON"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "proposer": "SHAWN",
-     "state": "APPROVED",
-     "team": [
-      "TARUN",
-      "EQIU",
-      "AMEYA"
-     ],
      "votes": [
       "AMEYA",
       "TARUN",
       "NYADLNYA",
       "SHAWN",
       "EQIU"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "TARUN",
+      "EQIU",
+      "AMEYA"
+     ],
+     "proposer": "SHAWN"
     }
    ],
    "teamSize": 3,
-   "numFails": 0,
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "TARUN",
     "EQIU",
@@ -133,28 +133,32 @@
   },
   {
    "state": "PENDING",
-   "teamSize": 4,
    "proposals": [],
-   "team": [],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 4,
+   "team": []
   }
  ],
+ "timeFinished": {
+  "_seconds": 1591170118,
+  "_nanoseconds": 573000000
+ },
  "players": [
   {
    "uid": "S7z8EEjepUVBwuJtbPrp8Sq3w873",
    "name": "AMEYA"
   },
   {
-   "name": "EQIU",
-   "uid": "cyLYTetZAFSunBJ6wuorwRF5bLe2"
+   "uid": "cyLYTetZAFSunBJ6wuorwRF5bLe2",
+   "name": "EQIU"
   },
   {
-   "name": "SHARON",
-   "uid": "QNWqunR9JBQRP09UChJjsLZOyol2"
+   "uid": "QNWqunR9JBQRP09UChJjsLZOyol2",
+   "name": "SHARON"
   },
   {
-   "uid": "N7un5nj5FQaBYtUkaYQMyYAAUfv2",
-   "name": "SHAWN"
+   "name": "SHAWN",
+   "uid": "N7un5nj5FQaBYtUkaYQMyYAAUfv2"
   },
   {
    "uid": "hJvhBX1TWLd6rds8e2E3fN7FQCh2",
@@ -165,21 +169,25 @@
    "name": "NYADLNYA"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "timeCreated": {
   "_seconds": 1591169913,
   "_nanoseconds": 472000000
  },
  "outcome": {
+  "message": "Three successful missions",
   "roles": [
    {
-    "role": "EVIL MINION",
     "name": "SHARON",
-    "assassin": true
+    "assassin": true,
+    "role": "EVIL MINION"
    },
    {
-    "name": "TARUN",
+    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "name": "TARUN"
    },
    {
     "role": "MORGANA",
@@ -187,52 +195,44 @@
     "assassin": false
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "SHAWN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "EQIU"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "AMEYA",
     "assassin": false
+   },
+   {
+    "name": "EQIU",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "AMEYA",
+    "assassin": false,
+    "role": "PERCIVAL"
    }
   ],
   "state": "GOOD_WIN",
-  "assassinated": "AMEYA",
-  "message": "Three successful missions",
   "votes": [
    {
     "TARUN": true,
     "NYADLNYA": false
    },
    {
+    "EQIU": true,
+    "TARUN": true,
+    "AMEYA": true
+   },
+   {
     "AMEYA": true,
     "EQIU": true,
+    "SHAWN": true,
     "TARUN": true
    },
    {
+    "TARUN": true,
     "AMEYA": true,
-    "EQIU": true,
-    "TARUN": true,
-    "SHAWN": true
-   },
-   {
-    "TARUN": true,
-    "EQIU": true,
-    "AMEYA": true
+    "EQIU": true
    }
-  ]
- },
- "options": {
-  "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1591170118,
-  "_nanoseconds": 573000000
+  ],
+  "assassinated": "AMEYA"
  }
 }

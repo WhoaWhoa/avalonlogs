@@ -1,74 +1,18 @@
 {
- "outcome": {
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "TOM",
-    "assassin": false
-   },
-   {
-    "name": "EMROSE",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "name": "ANNA",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "QUIM",
-    "role": "OBERON"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "ANGUS"
-   }
-  ],
-  "message": "Three missions succeeded",
-  "assassinated": null,
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "TOM": true,
-    "EMROSE": true
-   },
-   {
-    "EMROSE": false,
-    "ANNA": true,
-    "TOM": true
-   },
-   {
-    "TOM": true,
-    "EMROSE": false
-   },
-   {
-    "TOM": true,
-    "ANGUS": true,
-    "ANNA": true
-   },
-   {
-    "ANGUS": true,
-    "ANNA": true,
-    "TOM": true
-   }
-  ]
+ "options": {
+  "inGameLog": false
  },
  "missions": [
   {
-   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 2,
    "team": [
     "EMROSE",
     "TOM"
    ],
    "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "proposer": "EMROSE",
      "votes": [
       "EMROSE",
       "TOM",
@@ -76,50 +20,46 @@
       "ANNA",
       "ANGUS"
      ],
+     "state": "APPROVED",
      "team": [
       "EMROSE",
       "TOM"
      ],
-     "state": "APPROVED"
+     "proposer": "EMROSE"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
    "teamSize": 3,
-   "failsRequired": 1,
    "numFails": 1,
+   "proposals": [
+    {
+     "team": [
+      "ANNA",
+      "EMROSE",
+      "TOM"
+     ],
+     "proposer": "ANNA",
+     "state": "APPROVED",
+     "votes": [
+      "EMROSE",
+      "ANNA",
+      "QUIM",
+      "TOM",
+      "ANGUS"
+     ]
+    }
+   ],
    "team": [
     "ANNA",
     "EMROSE",
     "TOM"
    ],
-   "proposals": [
-    {
-     "team": [
-      "ANNA",
-      "EMROSE",
-      "TOM"
-     ],
-     "votes": [
-      "EMROSE",
-      "ANNA",
-      "QUIM",
-      "TOM",
-      "ANGUS"
-     ],
-     "state": "APPROVED",
-     "proposer": "ANNA"
-    }
-   ],
-   "state": "FAIL"
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
-   "team": [
-    "EMROSE",
-    "TOM"
-   ],
-   "teamSize": 2,
    "proposals": [
     {
      "votes": [
@@ -128,41 +68,50 @@
       "ANGUS",
       "QUIM"
      ],
+     "state": "APPROVED",
      "team": [
       "EMROSE",
       "TOM"
      ],
-     "state": "APPROVED",
      "proposer": "TOM"
     }
    ],
+   "teamSize": 2,
+   "numFails": 1,
+   "state": "FAIL",
    "failsRequired": 1,
-   "numFails": 1
+   "team": [
+    "EMROSE",
+    "TOM"
+   ]
   },
   {
-   "state": "SUCCESS",
-   "numFails": 0,
    "failsRequired": 1,
+   "team": [
+    "ANNA",
+    "TOM",
+    "ANGUS"
+   ],
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [
+      "EMROSE"
+     ],
      "team": [
       "ANGUS",
       "ANNA",
       "EMROSE"
      ],
-     "state": "REJECTED",
-     "proposer": "ANGUS",
-     "votes": [
-      "EMROSE"
-     ]
+     "proposer": "ANGUS"
     },
     {
+     "state": "REJECTED",
      "team": [
       "QUIM",
       "TOM",
       "ANNA"
      ],
-     "state": "REJECTED",
      "votes": [
       "QUIM"
      ],
@@ -181,6 +130,8 @@
      "proposer": "EMROSE"
     },
     {
+     "proposer": "ANNA",
+     "state": "APPROVED",
      "votes": [
       "ANNA",
       "ANGUS",
@@ -190,17 +141,12 @@
       "ANNA",
       "TOM",
       "ANGUS"
-     ],
-     "state": "APPROVED",
-     "proposer": "ANNA"
+     ]
     }
    ],
-   "team": [
-    "ANNA",
-    "TOM",
-    "ANGUS"
-   ],
-   "teamSize": 3
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "numFails": 0
   },
   {
    "state": "SUCCESS",
@@ -209,56 +155,110 @@
     "ANGUS",
     "ANNA"
    ],
-   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "TOM",
-      "ANGUS",
-      "ANNA"
-     ],
-     "state": "APPROVED",
      "votes": [
       "EMROSE",
       "ANNA",
       "TOM"
      ],
-     "proposer": "TOM"
+     "team": [
+      "TOM",
+      "ANGUS",
+      "ANNA"
+     ],
+     "proposer": "TOM",
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 3,
+   "numFails": 0,
    "failsRequired": 1
   }
  ],
+ "outcome": {
+  "message": "Three missions succeeded",
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "name": "TOM",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "EMROSE",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "ANNA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "OBERON",
+    "name": "QUIM"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "ANGUS"
+   }
+  ],
+  "assassinated": null,
+  "votes": [
+   {
+    "TOM": true,
+    "EMROSE": true
+   },
+   {
+    "TOM": true,
+    "EMROSE": false,
+    "ANNA": true
+   },
+   {
+    "EMROSE": false,
+    "TOM": true
+   },
+   {
+    "ANNA": true,
+    "TOM": true,
+    "ANGUS": true
+   },
+   {
+    "TOM": true,
+    "ANNA": true,
+    "ANGUS": true
+   }
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1598395667,
+  "_nanoseconds": 519000000
+ },
  "players": [
   {
-   "name": "TOM",
-   "uid": "p77jTIdrcKeIntD6HbDl0ZDpiQx2"
+   "uid": "p77jTIdrcKeIntD6HbDl0ZDpiQx2",
+   "name": "TOM"
   },
   {
-   "uid": "aHK4G29y7WPRTYwAKQXPhjvoRCr1",
-   "name": "ANGUS"
+   "name": "ANGUS",
+   "uid": "aHK4G29y7WPRTYwAKQXPhjvoRCr1"
   },
   {
-   "uid": "uUf9wrCxgaN8hzazHS2Na4T8dPs2",
-   "name": "QUIM"
+   "name": "QUIM",
+   "uid": "uUf9wrCxgaN8hzazHS2Na4T8dPs2"
   },
   {
-   "name": "EMROSE",
-   "uid": "q7Hc5ZxprocXH4PMYLLm6N1NZWw1"
+   "uid": "q7Hc5ZxprocXH4PMYLLm6N1NZWw1",
+   "name": "EMROSE"
   },
   {
    "name": "ANNA",
    "uid": "KwkjBurWakhREmvyWDjRi3d2ti32"
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1598395667,
-  "_nanoseconds": 519000000
- },
  "timeCreated": {
   "_seconds": 1598394679,
   "_nanoseconds": 325000000

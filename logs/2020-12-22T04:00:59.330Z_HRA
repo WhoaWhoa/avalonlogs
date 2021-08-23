@@ -1,62 +1,63 @@
 {
  "outcome": {
-  "state": "GOOD_WIN",
+  "assassinated": "VANDOD",
   "votes": [
    {
-    "LILVICKY": true,
-    "CONNOR": true,
-    "CHEEKS": true
-   },
-   {
     "CHEEKS": true,
-    "VANDOD": true,
     "LILVICKY": true,
     "CONNOR": true
    },
    {
     "LILVICKY": true,
-    "VANDOD": true,
     "CONNOR": true,
-    "NATE": false
+    "CHEEKS": true,
+    "VANDOD": true
    },
    {
-    "CONNOR": true,
-    "LILVICKY": true,
-    "MARY": true,
     "VANDOD": true,
-    "NATE": false
+    "NATE": false,
+    "CONNOR": true,
+    "LILVICKY": true
+   },
+   {
+    "NATE": false,
+    "MARY": true,
+    "CONNOR": true,
+    "VANDOD": true,
+    "LILVICKY": true
    }
   ],
   "message": "Three successful missions",
+  "state": "GOOD_WIN",
   "roles": [
    {
-    "name": "LILVICKY",
     "assassin": false,
+    "name": "LILVICKY",
     "role": "MERLIN"
    },
    {
-    "name": "VANDOD",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "name": "CONNOR"
+    "role": "LOYAL FOLLOWER",
+    "name": "VANDOD"
    },
    {
-    "role": "MORDRED",
+    "assassin": false,
+    "name": "CONNOR",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
     "name": "NATE",
-    "assassin": false
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "JEROME"
    },
    {
     "assassin": false,
-    "name": "JEROME",
-    "role": "MORGANA"
-   },
-   {
     "name": "MARY",
-    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
@@ -66,11 +67,55 @@
    },
    {
     "name": "DAVID",
-    "role": "PERCIVAL",
-    "assassin": false
+    "assassin": false,
+    "role": "PERCIVAL"
    }
-  ],
-  "assassinated": "VANDOD"
+  ]
+ },
+ "players": [
+  {
+   "uid": "kxwHsfQKRcXJdTfAxj54pEW3cxP2",
+   "name": "CHEEKS"
+  },
+  {
+   "uid": "RbBznkdQa9M9U8Q7iQZORSR7yfP2",
+   "name": "LILVICKY"
+  },
+  {
+   "name": "CONNOR",
+   "uid": "1vkpZc0CupeI1Qigif8tWxMfZAf1"
+  },
+  {
+   "name": "VANDOD",
+   "uid": "wnoNZsJyqkYxzetUjgDM8WC9xbE3"
+  },
+  {
+   "name": "NATE",
+   "uid": "njE9lR462eaewWEceR23nr32CNx2"
+  },
+  {
+   "uid": "oXYMWdGfqTUdh0obOlr1jDy4myE2",
+   "name": "DAVID"
+  },
+  {
+   "name": "JEROME",
+   "uid": "FonMwIIh1mhgg57n39DtCibhDOx2"
+  },
+  {
+   "uid": "2iLS2EXvRSZzYKSkNYpuvtRac533",
+   "name": "MARY"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1608609659,
+  "_nanoseconds": 330000000
+ },
+ "timeFinished": {
+  "_seconds": 1608610817,
+  "_nanoseconds": 768000000
  },
  "missions": [
   {
@@ -79,9 +124,18 @@
     "LILVICKY",
     "CONNOR"
    ],
-   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "CHEEKS",
+      "LILVICKY",
+      "CONNOR"
+     ],
+     "proposer": "CONNOR",
      "votes": [
       "MARY",
       "JEROME",
@@ -91,30 +145,17 @@
       "CONNOR",
       "NATE",
       "CHEEKS"
-     ],
-     "proposer": "CONNOR",
-     "state": "APPROVED",
-     "team": [
-      "CHEEKS",
-      "LILVICKY",
-      "CONNOR"
      ]
     }
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1
+   "teamSize": 3
   },
   {
    "state": "SUCCESS",
+   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "VANDOD",
-      "CONNOR",
-      "LILVICKY",
-      "CHEEKS"
-     ],
      "votes": [
       "CONNOR",
       "CHEEKS",
@@ -125,19 +166,23 @@
       "NATE",
       "DAVID"
      ],
+     "proposer": "VANDOD",
      "state": "APPROVED",
-     "proposer": "VANDOD"
+     "team": [
+      "VANDOD",
+      "CONNOR",
+      "LILVICKY",
+      "CHEEKS"
+     ]
     }
    ],
    "numFails": 0,
-   "failsRequired": 1,
    "team": [
     "VANDOD",
     "CONNOR",
     "LILVICKY",
     "CHEEKS"
-   ],
-   "teamSize": 4
+   ]
   },
   {
    "team": [
@@ -147,6 +192,8 @@
     "VANDOD"
    ],
    "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 1,
    "state": "FAIL",
    "proposals": [
     {
@@ -160,22 +207,17 @@
       "NATE",
       "DAVID"
      ],
+     "state": "APPROVED",
      "team": [
       "CONNOR",
       "LILVICKY",
       "NATE",
       "VANDOD"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "numFails": 1,
-   "failsRequired": 1
+   ]
   },
   {
-   "failsRequired": 2,
-   "teamSize": 5,
-   "state": "SUCCESS",
    "numFails": 1,
    "proposals": [
     {
@@ -194,12 +236,12 @@
      "proposer": "DAVID"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "MARY",
       "CONNOR"
      ],
      "proposer": "JEROME",
-     "state": "REJECTED",
      "team": [
       "CONNOR",
       "LILVICKY",
@@ -209,7 +251,6 @@
      ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "MARY",
       "LILVICKY",
@@ -226,68 +267,27 @@
       "CHEEKS",
       "VANDOD",
       "MARY"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
+   "state": "SUCCESS",
+   "failsRequired": 2,
    "team": [
     "MARY",
     "LILVICKY",
     "CONNOR",
     "NATE",
     "VANDOD"
-   ]
+   ],
+   "teamSize": 5
   },
   {
    "state": "PENDING",
+   "team": [],
    "proposals": [],
    "teamSize": 5,
-   "team": [],
    "failsRequired": 1
-  }
- ],
- "timeFinished": {
-  "_seconds": 1608610817,
-  "_nanoseconds": 768000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1608609659,
-  "_nanoseconds": 330000000
- },
- "players": [
-  {
-   "name": "CHEEKS",
-   "uid": "kxwHsfQKRcXJdTfAxj54pEW3cxP2"
-  },
-  {
-   "name": "LILVICKY",
-   "uid": "RbBznkdQa9M9U8Q7iQZORSR7yfP2"
-  },
-  {
-   "uid": "1vkpZc0CupeI1Qigif8tWxMfZAf1",
-   "name": "CONNOR"
-  },
-  {
-   "name": "VANDOD",
-   "uid": "wnoNZsJyqkYxzetUjgDM8WC9xbE3"
-  },
-  {
-   "uid": "njE9lR462eaewWEceR23nr32CNx2",
-   "name": "NATE"
-  },
-  {
-   "uid": "oXYMWdGfqTUdh0obOlr1jDy4myE2",
-   "name": "DAVID"
-  },
-  {
-   "uid": "FonMwIIh1mhgg57n39DtCibhDOx2",
-   "name": "JEROME"
-  },
-  {
-   "name": "MARY",
-   "uid": "2iLS2EXvRSZzYKSkNYpuvtRac533"
   }
  ]
 }

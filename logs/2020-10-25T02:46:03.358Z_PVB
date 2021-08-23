@@ -1,10 +1,33 @@
 {
  "outcome": {
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "NEHA": true,
+    "OPU": true
+   },
+   {
+    "NEHA": true,
+    "SUKRANT": false,
+    "YASHIKA": true
+   },
+   {
+    "OPU": true,
+    "NEHA": true,
+    "YASHIKA": true,
+    "SAYAN": true
+   },
+   {
+    "OPU": true,
+    "NEHA": true,
+    "SAYAN": true
+   }
+  ],
   "roles": [
    {
-    "name": "OPU",
+    "assassin": false,
     "role": "PERCIVAL",
-    "assassin": false
+    "name": "OPU"
    },
    {
     "assassin": true,
@@ -12,50 +35,27 @@
     "role": "MORDRED"
    },
    {
-    "assassin": false,
     "role": "MERLIN",
-    "name": "SAYAN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "YASHIKA",
+    "name": "SAYAN",
     "assassin": false
    },
    {
     "assassin": false,
+    "name": "YASHIKA",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
     "role": "LOYAL FOLLOWER",
-    "name": "NEHA"
+    "name": "NEHA",
+    "assassin": false
    },
    {
     "name": "SHUBH",
-    "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "assassin": false
    }
   ],
   "state": "GOOD_WIN",
-  "votes": [
-   {
-    "NEHA": true,
-    "OPU": true
-   },
-   {
-    "YASHIKA": true,
-    "SUKRANT": false,
-    "NEHA": true
-   },
-   {
-    "NEHA": true,
-    "OPU": true,
-    "YASHIKA": true,
-    "SAYAN": true
-   },
-   {
-    "OPU": true,
-    "NEHA": true,
-    "SAYAN": true
-   }
-  ],
-  "message": "Three successful missions",
   "assassinated": "YASHIKA"
  },
  "players": [
@@ -68,81 +68,87 @@
    "name": "SAYAN"
   },
   {
-   "uid": "WaaTkVe240Z8sC5Kuz32Knv1sm03",
-   "name": "YASHIKA"
+   "name": "YASHIKA",
+   "uid": "WaaTkVe240Z8sC5Kuz32Knv1sm03"
   },
   {
-   "uid": "yhIQStcrneWmuukGhvpKFNNK5ub2",
-   "name": "SHUBH"
+   "name": "SHUBH",
+   "uid": "yhIQStcrneWmuukGhvpKFNNK5ub2"
   },
   {
-   "name": "OPU",
-   "uid": "WJ6hKmfWByOKA8pujeq1hgU4PeE3"
+   "uid": "WJ6hKmfWByOKA8pujeq1hgU4PeE3",
+   "name": "OPU"
   },
   {
-   "name": "SUKRANT",
-   "uid": "CGquxid3gVaeUEnxHvCVyVejOb12"
+   "uid": "CGquxid3gVaeUEnxHvCVyVejOb12",
+   "name": "SUKRANT"
   }
  ],
  "missions": [
   {
+   "failsRequired": 1,
+   "teamSize": 2,
+   "state": "SUCCESS",
    "team": [
     "OPU",
     "NEHA"
    ],
-   "teamSize": 2,
    "numFails": 0,
-   "state": "SUCCESS",
    "proposals": [
     {
      "state": "REJECTED",
+     "votes": [],
      "team": [
       "SHUBH",
       "OPU"
      ],
-     "proposer": "OPU",
-     "votes": []
+     "proposer": "OPU"
     },
     {
-     "team": [
-      "SUKRANT",
-      "NEHA"
-     ],
      "votes": [
       "SAYAN",
       "NEHA"
      ],
      "state": "REJECTED",
+     "team": [
+      "SUKRANT",
+      "NEHA"
+     ],
      "proposer": "SUKRANT"
     },
     {
-     "team": [
-      "OPU",
-      "NEHA"
-     ],
-     "proposer": "NEHA",
      "state": "APPROVED",
      "votes": [
       "OPU",
       "YASHIKA",
       "NEHA",
       "SHUBH"
+     ],
+     "proposer": "NEHA",
+     "team": [
+      "OPU",
+      "NEHA"
      ]
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
+   "team": [
+    "SUKRANT",
+    "YASHIKA",
+    "NEHA"
+   ],
+   "numFails": 1,
    "state": "FAIL",
    "failsRequired": 1,
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "SAYAN",
      "votes": [
       "SAYAN",
       "OPU"
      ],
-     "proposer": "SAYAN",
+     "state": "REJECTED",
      "team": [
       "SAYAN",
       "NEHA",
@@ -150,26 +156,26 @@
      ]
     },
     {
-     "state": "REJECTED",
      "team": [
       "NEHA",
       "OPU",
       "YASHIKA"
      ],
-     "proposer": "YASHIKA",
+     "state": "REJECTED",
      "votes": [
       "YASHIKA",
       "OPU",
       "NEHA"
-     ]
+     ],
+     "proposer": "YASHIKA"
     },
     {
-     "state": "REJECTED",
      "team": [
       "SAYAN",
       "SHUBH",
       "NEHA"
      ],
+     "state": "REJECTED",
      "votes": [
       "OPU",
       "SHUBH"
@@ -177,20 +183,21 @@
      "proposer": "SHUBH"
     },
     {
-     "votes": [
-      "YASHIKA",
-      "NEHA",
-      "OPU"
-     ],
      "proposer": "OPU",
      "state": "REJECTED",
      "team": [
       "OPU",
       "SAYAN",
       "NEHA"
+     ],
+     "votes": [
+      "YASHIKA",
+      "NEHA",
+      "OPU"
      ]
     },
     {
+     "state": "APPROVED",
      "proposer": "SUKRANT",
      "votes": [
       "SAYAN",
@@ -200,7 +207,6 @@
       "SUKRANT",
       "NEHA"
      ],
-     "state": "APPROVED",
      "team": [
       "SUKRANT",
       "YASHIKA",
@@ -208,71 +214,65 @@
      ]
     }
    ],
-   "team": [
-    "SUKRANT",
-    "YASHIKA",
-    "NEHA"
-   ],
-   "teamSize": 3,
-   "numFails": 1
+   "teamSize": 3
   },
   {
-   "team": [
-    "SAYAN",
-    "OPU",
-    "YASHIKA",
-    "NEHA"
-   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "NEHA",
+     "state": "APPROVED",
      "votes": [
       "SAYAN",
       "YASHIKA",
       "NEHA",
       "OPU"
      ],
-     "state": "APPROVED",
      "team": [
       "SAYAN",
       "OPU",
       "YASHIKA",
       "NEHA"
-     ]
+     ],
+     "proposer": "NEHA"
     }
    ],
    "teamSize": 4,
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0
+   "team": [
+    "SAYAN",
+    "OPU",
+    "YASHIKA",
+    "NEHA"
+   ]
   },
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "OPU",
-    "NEHA",
-    "SAYAN"
-   ],
-   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "YASHIKA",
       "SAYAN",
       "OPU",
       "NEHA"
      ],
-     "state": "APPROVED",
-     "proposer": "SAYAN",
      "team": [
       "OPU",
       "NEHA",
       "SAYAN"
-     ]
+     ],
+     "proposer": "SAYAN"
     }
    ],
-   "teamSize": 3
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "OPU",
+    "NEHA",
+    "SAYAN"
+   ]
   },
   {
    "teamSize": 4,
@@ -285,12 +285,12 @@
  "options": {
   "inGameLog": false
  },
- "timeFinished": {
-  "_seconds": 1603594847,
-  "_nanoseconds": 606000000
- },
  "timeCreated": {
   "_seconds": 1603593963,
   "_nanoseconds": 358000000
+ },
+ "timeFinished": {
+  "_seconds": 1603594847,
+  "_nanoseconds": 606000000
  }
 }

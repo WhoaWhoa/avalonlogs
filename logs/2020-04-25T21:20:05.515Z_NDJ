@@ -1,6 +1,8 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
-  "assassinated": null,
   "roles": [
    {
     "assassin": false,
@@ -8,8 +10,8 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "ARKA",
     "role": "LOYAL FOLLOWER",
+    "name": "ARKA",
     "assassin": false
    },
    {
@@ -19,13 +21,13 @@
    },
    {
     "name": "BHARATH",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "EVIL MINION",
     "name": "VINAY",
-    "assassin": false
+    "assassin": false,
+    "role": "EVIL MINION"
    },
    {
     "assassin": false,
@@ -33,6 +35,8 @@
     "name": "HBMB"
    }
   ],
+  "message": "Three failed missions",
+  "assassinated": null,
   "state": "EVIL_WIN",
   "votes": [
    {
@@ -45,36 +49,22 @@
     "BHU": true
    },
    {
-    "DHIVYA": true,
-    "HBMB": true,
     "VINAY": false,
-    "ARKA": true
+    "ARKA": true,
+    "HBMB": true,
+    "DHIVYA": true
    },
    {
-    "BHARATH": true,
     "VINAY": false,
+    "BHARATH": true,
     "HBMB": true
    }
-  ],
-  "message": "Three failed missions"
- },
- "timeCreated": {
-  "_seconds": 1587849605,
-  "_nanoseconds": 515000000
+  ]
  },
  "missions": [
   {
-   "state": "SUCCESS",
-   "team": [
-    "DHIVYA",
-    "BHU"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "DHIVYA",
      "votes": [
       "VINAY",
       "HBMB",
@@ -86,17 +76,38 @@
      "team": [
       "DHIVYA",
       "BHU"
-     ]
+     ],
+     "proposer": "DHIVYA",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 2,
+   "team": [
+    "DHIVYA",
+    "BHU"
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 3,
+   "team": [
+    "BHU",
+    "DHIVYA",
+    "BHARATH"
+   ],
+   "numFails": 1,
    "proposals": [
     {
-     "proposer": "BHARATH",
      "state": "APPROVED",
+     "team": [
+      "BHU",
+      "DHIVYA",
+      "BHARATH"
+     ],
+     "proposer": "BHARATH",
      "votes": [
       "DHIVYA",
       "BHARATH",
@@ -104,80 +115,65 @@
       "HBMB",
       "BHU",
       "ARKA"
-     ],
-     "team": [
-      "BHU",
-      "DHIVYA",
-      "BHARATH"
      ]
     }
    ],
-   "state": "FAIL",
-   "teamSize": 3,
-   "numFails": 1,
-   "team": [
-    "BHU",
-    "DHIVYA",
-    "BHARATH"
-   ]
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
    "state": "FAIL",
    "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "VINAY",
-      "HBMB",
-      "ARKA",
-      "DHIVYA",
-      "BHARATH"
-     ],
-     "proposer": "VINAY",
      "team": [
       "DHIVYA",
       "HBMB",
       "ARKA",
       "VINAY"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "VINAY",
+     "votes": [
+      "VINAY",
+      "HBMB",
+      "ARKA",
+      "DHIVYA",
+      "BHARATH"
+     ]
     }
    ],
-   "numFails": 1,
    "team": [
     "DHIVYA",
     "HBMB",
     "ARKA",
     "VINAY"
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
-   "numFails": 1,
    "team": [
     "BHARATH",
     "HBMB",
     "VINAY"
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "DHIVYA",
+      "BHU",
+      "ARKA"
+     ],
      "state": "REJECTED",
-     "proposer": "ARKA",
      "votes": [
       "ARKA",
       "DHIVYA",
       "BHU"
      ],
-     "team": [
-      "DHIVYA",
-      "BHU",
-      "ARKA"
-     ]
+     "proposer": "ARKA"
     },
     {
-     "proposer": "HBMB",
      "state": "REJECTED",
      "votes": [
       "ARKA",
@@ -188,15 +184,16 @@
       "HBMB",
       "ARKA",
       "BHARATH"
-     ]
+     ],
+     "proposer": "HBMB"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "BHARATH",
       "VINAY",
       "BHU"
      ],
-     "state": "REJECTED",
      "team": [
       "BHU",
       "BHARATH",
@@ -205,26 +202,20 @@
      "proposer": "BHU"
     },
     {
-     "state": "REJECTED",
      "team": [
       "DHIVYA",
       "BHU",
       "HBMB"
      ],
-     "proposer": "DHIVYA",
      "votes": [
       "DHIVYA",
       "VINAY"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "DHIVYA"
     },
     {
-     "team": [
-      "BHARATH",
-      "HBMB",
-      "VINAY"
-     ],
      "state": "APPROVED",
-     "proposer": "BHARATH",
      "votes": [
       "VINAY",
       "HBMB",
@@ -232,15 +223,23 @@
       "ARKA",
       "DHIVYA",
       "BHARATH"
-     ]
+     ],
+     "team": [
+      "BHARATH",
+      "HBMB",
+      "VINAY"
+     ],
+     "proposer": "BHARATH"
     }
    ],
-   "teamSize": 3
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
-   "state": "PENDING",
-   "teamSize": 4,
    "proposals": [],
+   "teamSize": 4,
+   "state": "PENDING",
    "failsRequired": 1,
    "team": []
   }
@@ -255,24 +254,25 @@
    "uid": "4jifahPJs3farGhbNQRVbsa2kfB3"
   },
   {
-   "name": "BHU",
-   "uid": "JclZofqQLIeRLaxT4FcAHEibOZQ2"
+   "uid": "JclZofqQLIeRLaxT4FcAHEibOZQ2",
+   "name": "BHU"
   },
   {
    "name": "DHIVYA",
    "uid": "MK1EX0VtLOhvaJXm0iWgfsZi05T2"
   },
   {
-   "uid": "nKURsSLHmLaTx26ba2ocaSi7rTh2",
-   "name": "BHARATH"
+   "name": "BHARATH",
+   "uid": "nKURsSLHmLaTx26ba2ocaSi7rTh2"
   },
   {
-   "uid": "5y4K0ekmEecyZJ5KkxHNMd8xesr2",
-   "name": "VINAY"
+   "name": "VINAY",
+   "uid": "5y4K0ekmEecyZJ5KkxHNMd8xesr2"
   }
  ],
- "options": {
-  "inGameLog": false
+ "timeCreated": {
+  "_seconds": 1587849605,
+  "_nanoseconds": 515000000
  },
  "timeFinished": {
   "_seconds": 1587852595,

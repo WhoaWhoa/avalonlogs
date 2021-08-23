@@ -1,12 +1,14 @@
 {
- "options": {
-  "inGameLog": false
+ "timeCreated": {
+  "_seconds": 1592028449,
+  "_nanoseconds": 802000000
  },
  "missions": [
   {
+   "teamSize": 2,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "MAHO",
       "SK",
@@ -16,6 +18,7 @@
       "JOSHUA",
       "DWONG"
      ],
+     "state": "APPROVED",
      "team": [
       "GFFLEE",
       "JOSHUA"
@@ -23,25 +26,19 @@
      "proposer": "SK"
     }
    ],
+   "failsRequired": 1,
    "team": [
     "GFFLEE",
     "JOSHUA"
    ],
-   "teamSize": 2,
-   "failsRequired": 1,
-   "state": "FAIL",
    "numFails": 1
   },
   {
    "teamSize": 3,
-   "team": [
-    "BEAT",
-    "JOSHUA",
-    "SK"
-   ],
    "proposals": [
     {
      "proposer": "BEAT",
+     "state": "APPROVED",
      "votes": [
       "SK",
       "BEAT",
@@ -52,51 +49,56 @@
       "BEAT",
       "JOSHUA",
       "SK"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1
+   "team": [
+    "BEAT",
+    "JOSHUA",
+    "SK"
+   ],
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
    "failsRequired": 1,
    "state": "FAIL",
    "numFails": 1,
-   "teamSize": 3,
    "team": [
     "JOSHUA",
     "SK",
     "BEAT"
    ],
+   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "CHERYL",
-     "state": "APPROVED",
+     "team": [
+      "JOSHUA",
+      "SK",
+      "BEAT"
+     ],
      "votes": [
       "SK",
       "BEAT",
       "JOSHUA",
       "MAHO"
      ],
-     "team": [
-      "JOSHUA",
-      "SK",
-      "BEAT"
-     ]
+     "proposer": "CHERYL",
+     "state": "APPROVED"
     }
    ]
   },
   {
-   "failsRequired": 2,
-   "numFails": 1,
    "team": [
     "JOSHUA",
     "MAHO",
     "CHERYL",
     "DWONG"
    ],
+   "teamSize": 4,
+   "failsRequired": 2,
+   "numFails": 1,
    "proposals": [
     {
      "votes": [
@@ -105,30 +107,37 @@
       "CHERYL",
       "JOSHUA"
      ],
-     "state": "APPROVED",
      "team": [
       "JOSHUA",
       "MAHO",
       "CHERYL",
       "DWONG"
      ],
+     "state": "APPROVED",
      "proposer": "JOSHUA"
     }
    ],
-   "state": "SUCCESS",
-   "teamSize": 4
+   "state": "SUCCESS"
   },
   {
+   "teamSize": 4,
+   "team": [
+    "SK",
+    "GFFLEE",
+    "BEAT",
+    "CHERYL"
+   ],
    "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "SK",
       "GFFLEE",
       "BEAT",
       "CHERYL"
      ],
-     "state": "APPROVED",
      "votes": [
       "CHERYL",
       "JOSHUA",
@@ -140,71 +149,29 @@
      "proposer": "GFFLEE"
     }
    ],
-   "team": [
-    "SK",
-    "GFFLEE",
-    "BEAT",
-    "CHERYL"
-   ],
-   "state": "FAIL",
-   "numFails": 1,
-   "teamSize": 4
+   "state": "FAIL"
   }
  ],
- "timeCreated": {
-  "_seconds": 1592028449,
-  "_nanoseconds": 802000000
- },
  "timeFinished": {
   "_seconds": 1592028796,
   "_nanoseconds": 243000000
  },
  "outcome": {
   "state": "EVIL_WIN",
-  "assassinated": null,
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "JOSHUA": true,
-    "GFFLEE": false
-   },
-   {
-    "JOSHUA": true,
-    "BEAT": true,
-    "SK": true
-   },
-   {
-    "SK": true,
-    "BEAT": true,
-    "JOSHUA": false
-   },
-   {
-    "CHERYL": true,
-    "JOSHUA": false,
-    "DWONG": true,
-    "MAHO": true
-   },
-   {
-    "CHERYL": true,
-    "BEAT": true,
-    "SK": true,
-    "GFFLEE": false
-   }
-  ],
   "roles": [
    {
-    "name": "DWONG",
+    "assassin": false,
     "role": "MORGANA",
-    "assassin": false
+    "name": "DWONG"
    },
    {
-    "role": "PERCIVAL",
     "name": "MAHO",
+    "role": "PERCIVAL",
     "assassin": false
    },
    {
-    "name": "SK",
     "role": "LOYAL FOLLOWER",
+    "name": "SK",
     "assassin": false
    },
    {
@@ -214,18 +181,48 @@
    },
    {
     "assassin": false,
-    "name": "BEAT",
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "name": "BEAT"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "CHERYL",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "role": "MORDRED",
     "assassin": false,
-    "name": "JOSHUA"
+    "name": "JOSHUA",
+    "role": "MORDRED"
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "GFFLEE": false,
+    "JOSHUA": true
+   },
+   {
+    "BEAT": true,
+    "SK": true,
+    "JOSHUA": true
+   },
+   {
+    "SK": true,
+    "BEAT": true,
+    "JOSHUA": false
+   },
+   {
+    "CHERYL": true,
+    "MAHO": true,
+    "DWONG": true,
+    "JOSHUA": false
+   },
+   {
+    "CHERYL": true,
+    "BEAT": true,
+    "SK": true,
+    "GFFLEE": false
    }
   ]
  },
@@ -239,8 +236,8 @@
    "name": "GFFLEE"
   },
   {
-   "name": "MAHO",
-   "uid": "jRGiaB81cUe9pjEQrSy4CyYZF6q1"
+   "uid": "jRGiaB81cUe9pjEQrSy4CyYZF6q1",
+   "name": "MAHO"
   },
   {
    "uid": "QPYntVhqCSa0lph3dqjPNN5Uo1F2",
@@ -258,5 +255,8 @@
    "uid": "8t4s1QFBHbg7yAd9CoJmBRosjsf2",
    "name": "CHERYL"
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ }
 }

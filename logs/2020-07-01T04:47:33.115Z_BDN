@@ -1,76 +1,277 @@
 {
- "timeFinished": {
-  "_seconds": 1593580425,
-  "_nanoseconds": 426000000
- },
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "votes": [
-   {
-    "AN": true,
-    "CHEVIN": true
-   },
-   {
-    "CHEVIN": true,
-    "AN": true,
-    "LL": true
-   },
-   {
-    "LL": true,
-    "SEAN": true,
-    "AN": true,
-    "CHEVIN": false
-   },
-   {
-    "CHEVIN": false,
-    "LL": true,
-    "YI": true
-   },
-   {
-    "AN": true,
-    "PRAVEEN": true,
-    "LL": true,
-    "SEAN": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "PRAVEEN"
-   },
-   {
-    "name": "AN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "SEAN"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "LL"
-   },
-   {
-    "assassin": false,
-    "name": "CHEVIN",
-    "role": "MORGANA"
-   },
-   {
-    "role": "MORDRED",
-    "name": "YI",
-    "assassin": true
-   }
-  ],
-  "assassinated": "PRAVEEN",
-  "message": "Merlin assassinated"
- },
+ "missions": [
+  {
+   "proposals": [
+    {
+     "team": [
+      "AN",
+      "CHEVIN"
+     ],
+     "proposer": "AN",
+     "state": "REJECTED",
+     "votes": [
+      "AN",
+      "CHEVIN"
+     ]
+    },
+    {
+     "team": [
+      "SEAN",
+      "CHEVIN"
+     ],
+     "votes": [
+      "SEAN",
+      "CHEVIN",
+      "YI"
+     ],
+     "state": "REJECTED",
+     "proposer": "SEAN"
+    },
+    {
+     "state": "REJECTED",
+     "team": [
+      "LL",
+      "CHEVIN"
+     ],
+     "votes": [
+      "SEAN",
+      "CHEVIN"
+     ],
+     "proposer": "LL"
+    },
+    {
+     "proposer": "CHEVIN",
+     "votes": [
+      "AN",
+      "LL",
+      "YI",
+      "CHEVIN"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "CHEVIN",
+      "AN"
+     ]
+    }
+   ],
+   "failsRequired": 1,
+   "team": [
+    "CHEVIN",
+    "AN"
+   ],
+   "teamSize": 2,
+   "numFails": 0,
+   "state": "SUCCESS"
+  },
+  {
+   "team": [
+    "LL",
+    "CHEVIN",
+    "AN"
+   ],
+   "numFails": 0,
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "team": [
+      "PRAVEEN",
+      "CHEVIN",
+      "AN"
+     ],
+     "proposer": "PRAVEEN",
+     "votes": [],
+     "state": "REJECTED"
+    },
+    {
+     "votes": [
+      "YI",
+      "CHEVIN"
+     ],
+     "state": "REJECTED",
+     "proposer": "YI",
+     "team": [
+      "YI",
+      "CHEVIN",
+      "AN"
+     ]
+    },
+    {
+     "votes": [
+      "LL",
+      "CHEVIN"
+     ],
+     "team": [
+      "AN",
+      "CHEVIN",
+      "LL"
+     ],
+     "proposer": "AN",
+     "state": "REJECTED"
+    },
+    {
+     "state": "REJECTED",
+     "votes": [
+      "SEAN",
+      "CHEVIN"
+     ],
+     "proposer": "SEAN",
+     "team": [
+      "SEAN",
+      "CHEVIN",
+      "AN"
+     ]
+    },
+    {
+     "state": "APPROVED",
+     "team": [
+      "LL",
+      "CHEVIN",
+      "AN"
+     ],
+     "proposer": "LL",
+     "votes": [
+      "PRAVEEN",
+      "AN",
+      "SEAN",
+      "LL",
+      "CHEVIN",
+      "YI"
+     ]
+    }
+   ]
+  },
+  {
+   "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 1,
+   "proposals": [
+    {
+     "votes": [
+      "AN",
+      "SEAN",
+      "LL",
+      "CHEVIN"
+     ],
+     "state": "APPROVED",
+     "proposer": "CHEVIN",
+     "team": [
+      "CHEVIN",
+      "LL",
+      "SEAN",
+      "AN"
+     ]
+    }
+   ],
+   "state": "FAIL",
+   "team": [
+    "CHEVIN",
+    "LL",
+    "SEAN",
+    "AN"
+   ]
+  },
+  {
+   "failsRequired": 1,
+   "team": [
+    "YI",
+    "LL",
+    "CHEVIN"
+   ],
+   "numFails": 1,
+   "state": "FAIL",
+   "proposals": [
+    {
+     "proposer": "PRAVEEN",
+     "state": "REJECTED",
+     "votes": [
+      "PRAVEEN",
+      "AN"
+     ],
+     "team": [
+      "PRAVEEN",
+      "LL",
+      "AN"
+     ]
+    },
+    {
+     "votes": [
+      "AN",
+      "SEAN",
+      "LL",
+      "CHEVIN",
+      "YI"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "YI",
+      "LL",
+      "CHEVIN"
+     ],
+     "proposer": "YI"
+    }
+   ],
+   "teamSize": 3
+  },
+  {
+   "state": "SUCCESS",
+   "numFails": 0,
+   "proposals": [
+    {
+     "votes": [],
+     "team": [
+      "AN",
+      "LL",
+      "PRAVEEN",
+      "CHEVIN"
+     ],
+     "state": "REJECTED",
+     "proposer": "AN"
+    },
+    {
+     "proposer": "SEAN",
+     "votes": [
+      "AN",
+      "SEAN",
+      "YI"
+     ],
+     "team": [
+      "SEAN",
+      "AN",
+      "CHEVIN",
+      "YI"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "proposer": "LL",
+     "team": [
+      "SEAN",
+      "LL",
+      "AN",
+      "PRAVEEN"
+     ],
+     "votes": [
+      "PRAVEEN",
+      "AN",
+      "SEAN",
+      "LL",
+      "CHEVIN"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "teamSize": 4,
+   "failsRequired": 1,
+   "team": [
+    "SEAN",
+    "LL",
+    "AN",
+    "PRAVEEN"
+   ]
+  }
+ ],
  "players": [
   {
    "uid": "fkS5ZYpOT3N3cgqn0bzao5y0aaY2",
@@ -81,295 +282,94 @@
    "uid": "hX6Ojw74Z1RCWOKVx2qAk1o09o22"
   },
   {
-   "uid": "1bkbk09boMYSV5pWJPdUEBUELvf2",
-   "name": "LL"
+   "name": "LL",
+   "uid": "1bkbk09boMYSV5pWJPdUEBUELvf2"
   },
   {
-   "name": "CHEVIN",
-   "uid": "xdF3AA3GpWYH48o1Wl0qnKey2qh1"
+   "uid": "xdF3AA3GpWYH48o1Wl0qnKey2qh1",
+   "name": "CHEVIN"
   },
   {
    "name": "PRAVEEN",
    "uid": "EHVzw875RhONc4GJh5xay65sbsE2"
   },
   {
-   "name": "YI",
-   "uid": "hJeFLpAxnFMEypzHti9SffWE3px1"
+   "uid": "hJeFLpAxnFMEypzHti9SffWE3px1",
+   "name": "YI"
   }
  ],
- "missions": [
-  {
-   "state": "SUCCESS",
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "team": [
-      "AN",
-      "CHEVIN"
-     ],
-     "votes": [
-      "AN",
-      "CHEVIN"
-     ],
-     "proposer": "AN"
-    },
-    {
-     "votes": [
-      "SEAN",
-      "CHEVIN",
-      "YI"
-     ],
-     "team": [
-      "SEAN",
-      "CHEVIN"
-     ],
-     "proposer": "SEAN",
-     "state": "REJECTED"
-    },
-    {
-     "proposer": "LL",
-     "state": "REJECTED",
-     "team": [
-      "LL",
-      "CHEVIN"
-     ],
-     "votes": [
-      "SEAN",
-      "CHEVIN"
-     ]
-    },
-    {
-     "team": [
-      "CHEVIN",
-      "AN"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "AN",
-      "LL",
-      "YI",
-      "CHEVIN"
-     ],
-     "proposer": "CHEVIN"
-    }
-   ],
-   "numFails": 0,
-   "failsRequired": 1,
-   "team": [
-    "CHEVIN",
-    "AN"
-   ],
-   "teamSize": 2
-  },
-  {
-   "team": [
-    "LL",
-    "CHEVIN",
-    "AN"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 3,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "team": [
-      "PRAVEEN",
-      "CHEVIN",
-      "AN"
-     ],
-     "votes": [],
-     "proposer": "PRAVEEN"
-    },
-    {
-     "votes": [
-      "YI",
-      "CHEVIN"
-     ],
-     "team": [
-      "YI",
-      "CHEVIN",
-      "AN"
-     ],
-     "state": "REJECTED",
-     "proposer": "YI"
-    },
-    {
-     "state": "REJECTED",
-     "votes": [
-      "LL",
-      "CHEVIN"
-     ],
-     "proposer": "AN",
-     "team": [
-      "AN",
-      "CHEVIN",
-      "LL"
-     ]
-    },
-    {
-     "votes": [
-      "SEAN",
-      "CHEVIN"
-     ],
-     "team": [
-      "SEAN",
-      "CHEVIN",
-      "AN"
-     ],
-     "state": "REJECTED",
-     "proposer": "SEAN"
-    },
-    {
-     "votes": [
-      "PRAVEEN",
-      "AN",
-      "SEAN",
-      "LL",
-      "CHEVIN",
-      "YI"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "LL",
-      "CHEVIN",
-      "AN"
-     ],
-     "proposer": "LL"
-    }
-   ],
-   "failsRequired": 1
-  },
-  {
-   "team": [
-    "CHEVIN",
-    "LL",
-    "SEAN",
-    "AN"
-   ],
-   "proposals": [
-    {
-     "team": [
-      "CHEVIN",
-      "LL",
-      "SEAN",
-      "AN"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "AN",
-      "SEAN",
-      "LL",
-      "CHEVIN"
-     ],
-     "proposer": "CHEVIN"
-    }
-   ],
-   "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 4
-  },
-  {
-   "teamSize": 3,
-   "state": "FAIL",
-   "team": [
-    "YI",
-    "LL",
-    "CHEVIN"
-   ],
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "votes": [
-      "PRAVEEN",
-      "AN"
-     ],
-     "proposer": "PRAVEEN",
-     "team": [
-      "PRAVEEN",
-      "LL",
-      "AN"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "state": "APPROVED",
-     "team": [
-      "YI",
-      "LL",
-      "CHEVIN"
-     ],
-     "proposer": "YI",
-     "votes": [
-      "AN",
-      "SEAN",
-      "LL",
-      "CHEVIN",
-      "YI"
-     ]
-    }
-   ],
-   "numFails": 1
-  },
-  {
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "proposer": "AN",
-     "state": "REJECTED",
-     "votes": [],
-     "team": [
-      "AN",
-      "LL",
-      "PRAVEEN",
-      "CHEVIN"
-     ]
-    },
-    {
-     "state": "REJECTED",
-     "team": [
-      "SEAN",
-      "AN",
-      "CHEVIN",
-      "YI"
-     ],
-     "votes": [
-      "AN",
-      "SEAN",
-      "YI"
-     ],
-     "proposer": "SEAN"
-    },
-    {
-     "proposer": "LL",
-     "votes": [
-      "PRAVEEN",
-      "AN",
-      "SEAN",
-      "LL",
-      "CHEVIN"
-     ],
-     "team": [
-      "SEAN",
-      "LL",
-      "AN",
-      "PRAVEEN"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "teamSize": 4,
-   "numFails": 0,
-   "team": [
-    "SEAN",
-    "LL",
-    "AN",
-    "PRAVEEN"
-   ]
-  }
- ],
+ "outcome": {
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "PRAVEEN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "AN",
+    "assassin": false
+   },
+   {
+    "name": "SEAN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "LL"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "CHEVIN"
+   },
+   {
+    "assassin": true,
+    "name": "YI",
+    "role": "MORDRED"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "CHEVIN": true,
+    "AN": true
+   },
+   {
+    "CHEVIN": true,
+    "AN": true,
+    "LL": true
+   },
+   {
+    "LL": true,
+    "SEAN": true,
+    "CHEVIN": false,
+    "AN": true
+   },
+   {
+    "YI": true,
+    "CHEVIN": false,
+    "LL": true
+   },
+   {
+    "AN": true,
+    "LL": true,
+    "PRAVEEN": true,
+    "SEAN": true
+   }
+  ],
+  "assassinated": "PRAVEEN"
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1593580425,
+  "_nanoseconds": 426000000
+ },
  "timeCreated": {
   "_seconds": 1593578853,
   "_nanoseconds": 115000000

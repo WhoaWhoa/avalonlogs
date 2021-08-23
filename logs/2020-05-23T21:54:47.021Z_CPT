@@ -1,52 +1,84 @@
 {
- "players": [
-  {
-   "name": "PATRICK",
-   "uid": "PYYzqvbAyGeFXfpEIFus8sRMaWP2"
-  },
-  {
-   "uid": "3BZDbZZUidhTK3mWnTiu3F3bNXI3",
-   "name": "NICK"
-  },
-  {
-   "name": "CHRISTOPH",
-   "uid": "Tzfj8KypC2NvafKDnRgrbYdDtk42"
-  },
-  {
-   "name": "MARKUS",
-   "uid": "mRt3Q8chi3VkwBRXnqGZqf8l0gj2"
-  },
-  {
-   "name": "STEFAN",
-   "uid": "vVd0Puuj52doSnLo6hThDUAAKLz1"
-  },
-  {
-   "uid": "ACKpLvD5HMNJPjbaoVuC4C7gdNA2",
-   "name": "INGO"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1590272209,
-  "_nanoseconds": 500000000
+ "outcome": {
+  "votes": [
+   {
+    "INGO": true,
+    "PATRICK": true
+   },
+   {
+    "STEFAN": true,
+    "PATRICK": true,
+    "INGO": true
+   },
+   {
+    "CHRISTOPH": true,
+    "INGO": true,
+    "STEFAN": false,
+    "PATRICK": true
+   },
+   {
+    "CHRISTOPH": true,
+    "PATRICK": true,
+    "NICK": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "CHRISTOPH",
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "NICK",
+    "assassin": false
+   },
+   {
+    "name": "MARKUS",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "CHRISTOPH",
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "PATRICK",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "INGO",
+    "role": "MERLIN"
+   },
+   {
+    "name": "STEFAN",
+    "assassin": true,
+    "role": "EVIL MINION"
+   }
+  ]
  },
  "missions": [
   {
    "teamSize": 2,
-   "numFails": 0,
    "failsRequired": 1,
-   "state": "SUCCESS",
+   "team": [
+    "INGO",
+    "PATRICK"
+   ],
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "PATRICK",
-      "NICK"
-     ],
      "state": "REJECTED",
      "votes": [
       "PATRICK",
       "INGO"
      ],
-     "proposer": "PATRICK"
+     "proposer": "PATRICK",
+     "team": [
+      "PATRICK",
+      "NICK"
+     ]
     },
     {
      "votes": [
@@ -56,20 +88,22 @@
       "STEFAN",
       "NICK"
      ],
-     "state": "APPROVED",
      "proposer": "NICK",
      "team": [
       "INGO",
       "PATRICK"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "INGO",
-    "PATRICK"
-   ]
+   "state": "SUCCESS"
   },
   {
+   "team": [
+    "PATRICK",
+    "INGO",
+    "STEFAN"
+   ],
    "state": "SUCCESS",
    "proposals": [
     {
@@ -88,156 +122,122 @@
      "proposer": "CHRISTOPH"
     }
    ],
+   "failsRequired": 1,
    "numFails": 0,
-   "team": [
-    "PATRICK",
-    "INGO",
-    "STEFAN"
-   ],
-   "teamSize": 3,
-   "failsRequired": 1
+   "teamSize": 3
   },
   {
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "proposer": "MARKUS",
-     "votes": [
-      "MARKUS",
-      "CHRISTOPH",
-      "PATRICK",
-      "STEFAN"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "INGO",
-      "STEFAN",
-      "CHRISTOPH",
-      "PATRICK"
-     ]
-    }
-   ],
-   "state": "FAIL",
-   "teamSize": 4,
    "team": [
     "INGO",
     "STEFAN",
     "CHRISTOPH",
     "PATRICK"
    ],
-   "numFails": 1
-  },
-  {
-   "numFails": 0,
-   "team": [
-    "PATRICK",
-    "NICK",
-    "CHRISTOPH"
-   ],
    "failsRequired": 1,
-   "teamSize": 3,
-   "state": "SUCCESS",
    "proposals": [
     {
+     "team": [
+      "INGO",
+      "STEFAN",
+      "CHRISTOPH",
+      "PATRICK"
+     ],
+     "state": "APPROVED",
+     "proposer": "MARKUS",
+     "votes": [
+      "MARKUS",
+      "CHRISTOPH",
+      "PATRICK",
+      "STEFAN"
+     ]
+    }
+   ],
+   "numFails": 1,
+   "teamSize": 4,
+   "state": "FAIL"
+  },
+  {
+   "failsRequired": 1,
+   "teamSize": 3,
+   "proposals": [
+    {
+     "team": [
+      "NICK",
+      "CHRISTOPH",
+      "MARKUS"
+     ],
      "votes": [
       "MARKUS",
       "CHRISTOPH",
       "STEFAN"
      ],
      "proposer": "STEFAN",
-     "state": "REJECTED",
-     "team": [
-      "NICK",
-      "CHRISTOPH",
-      "MARKUS"
-     ]
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
-     "proposer": "INGO",
      "votes": [
       "PATRICK",
       "INGO",
       "NICK",
       "CHRISTOPH"
      ],
+     "proposer": "INGO",
+     "state": "APPROVED",
      "team": [
       "PATRICK",
       "NICK",
       "CHRISTOPH"
      ]
     }
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "team": [
+    "PATRICK",
+    "NICK",
+    "CHRISTOPH"
    ]
   },
   {
-   "proposals": [],
    "state": "PENDING",
    "teamSize": 4,
    "failsRequired": 1,
-   "team": []
+   "team": [],
+   "proposals": []
   }
  ],
  "options": {
   "inGameLog": false
  },
- "outcome": {
-  "assassinated": "CHRISTOPH",
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "NICK",
-    "assassin": false
-   },
-   {
-    "role": "MORGANA",
-    "name": "MARKUS",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "CHRISTOPH",
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "PATRICK",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "INGO",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "STEFAN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ],
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "PATRICK": true,
-    "INGO": true
-   },
-   {
-    "PATRICK": true,
-    "STEFAN": true,
-    "INGO": true
-   },
-   {
-    "INGO": true,
-    "CHRISTOPH": true,
-    "STEFAN": false,
-    "PATRICK": true
-   },
-   {
-    "CHRISTOPH": true,
-    "NICK": true,
-    "PATRICK": true
-   }
-  ]
+ "players": [
+  {
+   "name": "PATRICK",
+   "uid": "PYYzqvbAyGeFXfpEIFus8sRMaWP2"
+  },
+  {
+   "name": "NICK",
+   "uid": "3BZDbZZUidhTK3mWnTiu3F3bNXI3"
+  },
+  {
+   "uid": "Tzfj8KypC2NvafKDnRgrbYdDtk42",
+   "name": "CHRISTOPH"
+  },
+  {
+   "name": "MARKUS",
+   "uid": "mRt3Q8chi3VkwBRXnqGZqf8l0gj2"
+  },
+  {
+   "uid": "vVd0Puuj52doSnLo6hThDUAAKLz1",
+   "name": "STEFAN"
+  },
+  {
+   "name": "INGO",
+   "uid": "ACKpLvD5HMNJPjbaoVuC4C7gdNA2"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1590272209,
+  "_nanoseconds": 500000000
  },
  "timeCreated": {
   "_seconds": 1590270887,

@@ -1,31 +1,39 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
-   "name": "DAVID",
-   "uid": "ufflFphIMSdIYXOtFILMoS3nabD2"
+   "uid": "ufflFphIMSdIYXOtFILMoS3nabD2",
+   "name": "DAVID"
   },
   {
    "name": "KEVIN",
    "uid": "lYMqN6mQoJV5AHlv1axUTCIDBRx1"
   },
   {
-   "name": "RAY",
-   "uid": "XioFhjScrRWp9ZHCmhUAwFXl5K73"
+   "uid": "XioFhjScrRWp9ZHCmhUAwFXl5K73",
+   "name": "RAY"
   },
   {
-   "uid": "NUdOpKTS7lgfTGkvtvptHog5QfP2",
-   "name": "STEPH"
+   "name": "STEPH",
+   "uid": "NUdOpKTS7lgfTGkvtvptHog5QfP2"
   },
   {
-   "name": "MACARONI",
-   "uid": "VtiylSg4BoRBQzhlTTrgyDodSS83"
+   "uid": "VtiylSg4BoRBQzhlTTrgyDodSS83",
+   "name": "MACARONI"
   },
   {
    "name": "BEV",
    "uid": "QvdtGQ4RXkUPgTSrCu0sPfbnzjg2"
   }
  ],
+ "timeCreated": {
+  "_seconds": 1590470142,
+  "_nanoseconds": 137000000
+ },
  "outcome": {
+  "message": "Merlin assassinated",
   "votes": [
    {
     "DAVID": true,
@@ -37,24 +45,24 @@
     "KEVIN": true
    },
    {
-    "KEVIN": false,
-    "RAY": false,
+    "DAVID": true,
     "MACARONI": true,
-    "DAVID": true
+    "RAY": false,
+    "KEVIN": false
    },
    {
-    "BEV": true,
     "RAY": false,
-    "STEPH": true
-   },
-   {
-    "MACARONI": true,
-    "BEV": true,
     "STEPH": true,
-    "DAVID": true
+    "BEV": true
+   },
+   {
+    "MACARONI": true,
+    "DAVID": true,
+    "STEPH": true,
+    "BEV": true
    }
   ],
-  "state": "EVIL_WIN",
+  "assassinated": "MACARONI",
   "roles": [
    {
     "assassin": false,
@@ -62,19 +70,19 @@
     "role": "MERLIN"
    },
    {
-    "assassin": false,
+    "role": "PERCIVAL",
     "name": "STEPH",
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "DAVID",
     "assassin": false
    },
    {
-    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "name": "BEV"
+    "name": "DAVID",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "BEV",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "role": "MORGANA",
@@ -82,31 +90,40 @@
     "assassin": false
    },
    {
-    "name": "RAY",
+    "role": "MORDRED",
     "assassin": true,
-    "role": "MORDRED"
+    "name": "RAY"
    }
   ],
-  "message": "Merlin assassinated",
-  "assassinated": "MACARONI"
+  "state": "EVIL_WIN"
+ },
+ "timeFinished": {
+  "_seconds": 1590473225,
+  "_nanoseconds": 141000000
  },
  "missions": [
   {
-   "numFails": 0,
    "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "DAVID",
+    "KEVIN"
+   ],
+   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "RAY",
      "team": [
       "RAY",
       "STEPH"
      ],
-     "state": "REJECTED",
      "votes": [
       "MACARONI",
       "STEPH",
       "BEV"
      ],
-     "proposer": "RAY"
+     "state": "REJECTED"
     },
     {
      "state": "REJECTED",
@@ -125,29 +142,32 @@
       "MACARONI",
       "BEV"
      ],
-     "proposer": "MACARONI",
      "state": "REJECTED",
      "team": [
       "MACARONI",
       "BEV"
-     ]
+     ],
+     "proposer": "MACARONI"
     },
     {
      "state": "REJECTED",
+     "team": [
+      "DAVID",
+      "BEV"
+     ],
      "votes": [
       "DAVID",
       "BEV",
       "STEPH"
      ],
-     "proposer": "BEV",
-     "team": [
-      "DAVID",
-      "BEV"
-     ]
+     "proposer": "BEV"
     },
     {
      "state": "APPROVED",
-     "proposer": "DAVID",
+     "team": [
+      "DAVID",
+      "KEVIN"
+     ],
      "votes": [
       "STEPH",
       "DAVID",
@@ -156,21 +176,17 @@
       "RAY",
       "MACARONI"
      ],
-     "team": [
-      "DAVID",
-      "KEVIN"
-     ]
+     "proposer": "DAVID"
     }
-   ],
-   "teamSize": 2,
-   "team": [
-    "DAVID",
-    "KEVIN"
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
    "numFails": 0,
+   "team": [
+    "RAY",
+    "MACARONI",
+    "KEVIN"
+   ],
    "proposals": [
     {
      "team": [
@@ -179,42 +195,43 @@
       "RAY"
      ],
      "proposer": "KEVIN",
-     "state": "REJECTED",
      "votes": [
       "DAVID",
       "KEVIN",
       "RAY"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "proposer": "RAY",
-     "team": [
-      "RAY",
-      "MACARONI",
-      "KEVIN"
-     ],
      "state": "APPROVED",
      "votes": [
       "KEVIN",
       "RAY",
       "MACARONI",
       "BEV"
+     ],
+     "team": [
+      "RAY",
+      "MACARONI",
+      "KEVIN"
      ]
     }
    ],
-   "teamSize": 3,
-   "team": [
-    "RAY",
-    "MACARONI",
-    "KEVIN"
-   ],
+   "state": "SUCCESS",
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 3
   },
   {
+   "teamSize": 4,
+   "team": [
+    "KEVIN",
+    "MACARONI",
+    "DAVID",
+    "RAY"
+   ],
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "STEPH",
       "BEV",
@@ -226,11 +243,10 @@
       "BEV",
       "RAY"
      ],
-     "proposer": "STEPH"
+     "proposer": "STEPH",
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
-     "proposer": "MACARONI",
      "votes": [
       "RAY",
       "MACARONI",
@@ -238,6 +254,8 @@
       "DAVID",
       "KEVIN"
      ],
+     "proposer": "MACARONI",
+     "state": "APPROVED",
      "team": [
       "KEVIN",
       "MACARONI",
@@ -246,86 +264,68 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "KEVIN",
-    "MACARONI",
-    "DAVID",
-    "RAY"
-   ],
-   "teamSize": 4,
    "numFails": 2,
+   "failsRequired": 1,
    "state": "FAIL"
   },
   {
-   "team": [
-    "STEPH",
-    "BEV",
-    "RAY"
-   ],
-   "state": "FAIL",
-   "teamSize": 3,
-   "numFails": 1,
    "proposals": [
     {
+     "votes": [
+      "STEPH",
+      "DAVID",
+      "BEV",
+      "RAY",
+      "MACARONI"
+     ],
      "team": [
       "STEPH",
       "BEV",
       "RAY"
      ],
-     "proposer": "BEV",
      "state": "APPROVED",
+     "proposer": "BEV"
+    }
+   ],
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
+   "team": [
+    "STEPH",
+    "BEV",
+    "RAY"
+   ]
+  },
+  {
+   "proposals": [
+    {
      "votes": [
       "STEPH",
       "DAVID",
-      "BEV",
       "RAY",
       "MACARONI"
-     ]
-    }
-   ],
-   "failsRequired": 1
-  },
-  {
-   "numFails": 0,
-   "failsRequired": 1,
-   "team": [
-    "DAVID",
-    "STEPH",
-    "BEV",
-    "MACARONI"
-   ],
-   "proposals": [
-    {
+     ],
      "state": "APPROVED",
+     "proposer": "DAVID",
      "team": [
       "DAVID",
       "STEPH",
       "BEV",
       "MACARONI"
-     ],
-     "votes": [
-      "STEPH",
-      "DAVID",
-      "RAY",
-      "MACARONI"
-     ],
-     "proposer": "DAVID"
+     ]
     }
    ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 4,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "team": [
+    "DAVID",
+    "STEPH",
+    "BEV",
+    "MACARONI"
+   ]
   }
- ],
- "timeCreated": {
-  "_seconds": 1590470142,
-  "_nanoseconds": 137000000
- },
- "timeFinished": {
-  "_seconds": 1590473225,
-  "_nanoseconds": 141000000
- },
- "options": {
-  "inGameLog": false
- }
+ ]
 }

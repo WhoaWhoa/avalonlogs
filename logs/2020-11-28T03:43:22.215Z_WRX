@@ -1,14 +1,14 @@
 {
- "options": {
-  "inGameLog": false
+ "timeFinished": {
+  "_seconds": 1606535725,
+  "_nanoseconds": 296000000
  },
  "timeCreated": {
   "_seconds": 1606535002,
   "_nanoseconds": 215000000
  },
- "timeFinished": {
-  "_seconds": 1606535725,
-  "_nanoseconds": 296000000
+ "options": {
+  "inGameLog": false
  },
  "outcome": {
   "state": "EVIL_WIN",
@@ -24,27 +24,27 @@
    },
    {
     "SEAN": true,
-    "KEVIN": false,
-    "KILLA": true
+    "KILLA": true,
+    "KEVIN": false
    },
    {
+    "KEENER": false,
     "JON": true,
-    "LAUREN": false,
     "SEAN": true,
-    "KEENER": false
+    "LAUREN": false
    }
   ],
-  "assassinated": null,
+  "message": "Three failed missions",
   "roles": [
    {
-    "assassin": false,
     "name": "KEVIN",
+    "assassin": false,
     "role": "EVIL MINION"
    },
    {
     "role": "LOYAL FOLLOWER",
-    "name": "MATTS",
-    "assassin": false
+    "assassin": false,
+    "name": "MATTS"
    },
    {
     "assassin": false,
@@ -52,9 +52,9 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "JON",
     "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "name": "JON"
    },
    {
     "name": "KEENER",
@@ -62,60 +62,29 @@
     "role": "EVIL MINION"
    },
    {
-    "name": "LAUREN",
     "assassin": false,
+    "name": "LAUREN",
     "role": "EVIL MINION"
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "SEAN",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    }
   ],
-  "message": "Three failed missions"
+  "assassinated": null
  },
- "players": [
-  {
-   "name": "KEVIN",
-   "uid": "JLgsrfDcH5O5HmyHZxFg2Mfcdbb2"
-  },
-  {
-   "uid": "wCLYhfYFiaWUgfyfEfpGX5qoY4s1",
-   "name": "KEENER"
-  },
-  {
-   "name": "SEAN",
-   "uid": "MO11jCrvm3g8vxsENz2pxHwb4lo1"
-  },
-  {
-   "uid": "8GUWgdf1l8eBM5EYMbOoy4doruC2",
-   "name": "KILLA"
-  },
-  {
-   "name": "JON",
-   "uid": "aQ7oAYul2beUMiYbzw7zQDXYbBs2"
-  },
-  {
-   "name": "LAUREN",
-   "uid": "Utr0mS431dRj9VrQTMKeAkDkz562"
-  },
-  {
-   "name": "MATTS",
-   "uid": "EeD3sEXk0iZD0t7RoEl13IMSx402"
-  }
- ],
  "missions": [
   {
    "teamSize": 2,
-   "numFails": 0,
-   "state": "SUCCESS",
    "team": [
     "KILLA",
     "KEVIN"
    ],
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "SEAN",
       "JON",
@@ -128,25 +97,28 @@
       "KILLA",
       "KEVIN"
      ],
+     "state": "APPROVED",
      "proposer": "KILLA"
     }
    ],
    "failsRequired": 1
   },
   {
-   "teamSize": 3,
+   "numFails": 1,
+   "state": "FAIL",
    "team": [
     "KEVIN",
     "KILLA",
     "JON"
    ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "state": "FAIL",
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "JON",
+     "team": [
+      "KEVIN",
+      "KILLA",
+      "JON"
+     ],
      "votes": [
       "KEVIN",
       "MATTS",
@@ -156,23 +128,13 @@
       "KEENER",
       "KILLA"
      ],
-     "team": [
-      "KEVIN",
-      "KILLA",
-      "JON"
-     ]
+     "state": "APPROVED",
+     "proposer": "JON"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "KILLA",
-    "SEAN",
-    "KEVIN"
-   ],
    "proposals": [
     {
      "votes": [
@@ -180,17 +142,17 @@
       "JON",
       "LAUREN"
      ],
+     "proposer": "LAUREN",
      "team": [
       "LAUREN",
       "KEENER",
       "MATTS"
      ],
-     "state": "REJECTED",
-     "proposer": "LAUREN"
+     "state": "REJECTED"
     },
     {
-     "proposer": "MATTS",
      "state": "REJECTED",
+     "proposer": "MATTS",
      "votes": [
       "MATTS",
       "LAUREN"
@@ -210,52 +172,90 @@
       "KEENER",
       "KEVIN"
      ],
-     "proposer": "KEVIN",
      "team": [
       "KILLA",
       "SEAN",
       "KEVIN"
-     ]
+     ],
+     "proposer": "KEVIN"
     }
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "FAIL",
+   "team": [
+    "KILLA",
+    "SEAN",
+    "KEVIN"
    ],
    "numFails": 1
   },
   {
-   "team": [
-    "KEENER",
-    "LAUREN",
-    "SEAN",
-    "JON"
-   ],
-   "numFails": 2,
-   "teamSize": 4,
-   "state": "FAIL",
-   "failsRequired": 2,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "KEENER",
      "team": [
       "KEENER",
       "LAUREN",
       "SEAN",
       "JON"
      ],
-     "proposer": "KEENER",
      "votes": [
       "KEENER",
       "KILLA",
       "LAUREN",
       "JON"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "numFails": 2,
+   "teamSize": 4,
+   "state": "FAIL",
+   "team": [
+    "KEENER",
+    "LAUREN",
+    "SEAN",
+    "JON"
+   ],
+   "failsRequired": 2
   },
   {
-   "team": [],
-   "teamSize": 4,
    "failsRequired": 1,
+   "team": [],
    "state": "PENDING",
+   "teamSize": 4,
    "proposals": []
+  }
+ ],
+ "players": [
+  {
+   "name": "KEVIN",
+   "uid": "JLgsrfDcH5O5HmyHZxFg2Mfcdbb2"
+  },
+  {
+   "uid": "wCLYhfYFiaWUgfyfEfpGX5qoY4s1",
+   "name": "KEENER"
+  },
+  {
+   "uid": "MO11jCrvm3g8vxsENz2pxHwb4lo1",
+   "name": "SEAN"
+  },
+  {
+   "uid": "8GUWgdf1l8eBM5EYMbOoy4doruC2",
+   "name": "KILLA"
+  },
+  {
+   "name": "JON",
+   "uid": "aQ7oAYul2beUMiYbzw7zQDXYbBs2"
+  },
+  {
+   "name": "LAUREN",
+   "uid": "Utr0mS431dRj9VrQTMKeAkDkz562"
+  },
+  {
+   "uid": "EeD3sEXk0iZD0t7RoEl13IMSx402",
+   "name": "MATTS"
   }
  ]
 }

@@ -1,7 +1,111 @@
 {
+ "players": [
+  {
+   "name": "ALEXIS",
+   "uid": "1RYO2y1AXjg1c39JkDr17a7Dqiv1"
+  },
+  {
+   "name": "SOLO",
+   "uid": "wrAHflgj8kTu46wuye8u0EBEfTf1"
+  },
+  {
+   "name": "HUGO",
+   "uid": "zx64bjSqpoQ0gxEWNcU2XLyMtYE3"
+  },
+  {
+   "uid": "7dpomMimcxXQADTrGwva8fu8X1j2",
+   "name": "CHARLES"
+  },
+  {
+   "uid": "RvLBAdNaQcOAupTY9HTZD4u0rpI3",
+   "name": "ROBIN"
+  },
+  {
+   "uid": "l27YccYUOXPD6hmimcLrx0DT84V2",
+   "name": "CAAAAAAATS"
+  },
+  {
+   "name": "RAYGUN",
+   "uid": "gPGqrpYPqTeawakh1s61gHnDoeo2"
+  }
+ ],
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "SOLO": true,
+    "HUGO": true
+   },
+   {
+    "CHARLES": true,
+    "ALEXIS": false,
+    "RAYGUN": true
+   },
+   {
+    "SOLO": true,
+    "CAAAAAAATS": true,
+    "HUGO": false
+   },
+   {
+    "SOLO": true,
+    "ALEXIS": false,
+    "HUGO": false,
+    "CHARLES": true
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null,
+  "roles": [
+   {
+    "role": "PERCIVAL",
+    "name": "SOLO",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "ROBIN"
+   },
+   {
+    "name": "CHARLES",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "CAAAAAAATS",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "HUGO",
+    "role": "OBERON"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "RAYGUN"
+   },
+   {
+    "name": "ALEXIS",
+    "role": "MORDRED",
+    "assassin": true
+   }
+  ]
+ },
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
    "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "SOLO",
+    "HUGO"
+   ],
    "proposals": [
     {
      "votes": [
@@ -13,23 +117,18 @@
       "SOLO",
       "CAAAAAAATS"
      ],
-     "state": "APPROVED",
      "team": [
       "SOLO",
       "HUGO"
      ],
-     "proposer": "RAYGUN"
+     "proposer": "RAYGUN",
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0,
-   "team": [
-    "SOLO",
-    "HUGO"
    ]
   },
   {
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "votes": [
@@ -41,37 +140,26 @@
       "RAYGUN",
       "HUGO"
      ],
+     "state": "APPROVED",
      "team": [
       "ALEXIS",
       "CHARLES",
       "RAYGUN"
      ],
-     "proposer": "ALEXIS",
-     "state": "APPROVED"
+     "proposer": "ALEXIS"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
+   "teamSize": 3,
+   "numFails": 1,
    "team": [
     "ALEXIS",
     "CHARLES",
     "RAYGUN"
-   ],
-   "teamSize": 3,
-   "numFails": 1
+   ]
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "CAAAAAAATS",
-      "SOLO",
-      "HUGO"
-     ],
-     "proposer": "SOLO",
      "votes": [
       "HUGO",
       "ALEXIS",
@@ -79,29 +167,46 @@
       "RAYGUN",
       "SOLO",
       "ROBIN"
+     ],
+     "state": "APPROVED",
+     "proposer": "SOLO",
+     "team": [
+      "CAAAAAAATS",
+      "SOLO",
+      "HUGO"
      ]
     }
    ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3,
    "team": [
     "CAAAAAAATS",
     "SOLO",
     "HUGO"
    ],
-   "numFails": 1,
    "state": "FAIL"
   },
   {
-   "failsRequired": 2,
+   "numFails": 2,
    "team": [
     "CHARLES",
     "ALEXIS",
     "SOLO",
     "HUGO"
    ],
+   "state": "FAIL",
    "teamSize": 4,
-   "numFails": 2,
+   "failsRequired": 2,
    "proposals": [
     {
+     "proposer": "HUGO",
+     "team": [
+      "CHARLES",
+      "ALEXIS",
+      "SOLO",
+      "HUGO"
+     ],
      "votes": [
       "CAAAAAAATS",
       "ROBIN",
@@ -110,127 +215,22 @@
       "ALEXIS",
       "HUGO"
      ],
-     "proposer": "HUGO",
-     "state": "APPROVED",
-     "team": [
-      "CHARLES",
-      "ALEXIS",
-      "SOLO",
-      "HUGO"
-     ]
+     "state": "APPROVED"
     }
-   ],
-   "state": "FAIL"
+   ]
   },
   {
+   "failsRequired": 1,
+   "teamSize": 4,
    "team": [],
    "proposals": [],
-   "state": "PENDING",
-   "teamSize": 4,
-   "failsRequired": 1
+   "state": "PENDING"
   }
  ],
  "timeFinished": {
   "_seconds": 1597196273,
   "_nanoseconds": 392000000
  },
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "roles": [
-   {
-    "name": "SOLO",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "MORGANA",
-    "name": "ROBIN",
-    "assassin": false
-   },
-   {
-    "name": "CHARLES",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "CAAAAAAATS",
-    "assassin": false
-   },
-   {
-    "name": "HUGO",
-    "role": "OBERON",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "RAYGUN",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "ALEXIS"
-   }
-  ],
-  "votes": [
-   {
-    "SOLO": true,
-    "HUGO": true
-   },
-   {
-    "ALEXIS": false,
-    "CHARLES": true,
-    "RAYGUN": true
-   },
-   {
-    "CAAAAAAATS": true,
-    "HUGO": false,
-    "SOLO": true
-   },
-   {
-    "SOLO": true,
-    "ALEXIS": false,
-    "CHARLES": true,
-    "HUGO": false
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "message": "Three failed missions"
- },
- "players": [
-  {
-   "name": "ALEXIS",
-   "uid": "1RYO2y1AXjg1c39JkDr17a7Dqiv1"
-  },
-  {
-   "name": "SOLO",
-   "uid": "wrAHflgj8kTu46wuye8u0EBEfTf1"
-  },
-  {
-   "uid": "zx64bjSqpoQ0gxEWNcU2XLyMtYE3",
-   "name": "HUGO"
-  },
-  {
-   "name": "CHARLES",
-   "uid": "7dpomMimcxXQADTrGwva8fu8X1j2"
-  },
-  {
-   "name": "ROBIN",
-   "uid": "RvLBAdNaQcOAupTY9HTZD4u0rpI3"
-  },
-  {
-   "uid": "l27YccYUOXPD6hmimcLrx0DT84V2",
-   "name": "CAAAAAAATS"
-  },
-  {
-   "name": "RAYGUN",
-   "uid": "gPGqrpYPqTeawakh1s61gHnDoeo2"
-  }
- ],
  "timeCreated": {
   "_seconds": 1597195407,
   "_nanoseconds": 890000000

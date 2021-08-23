@@ -1,13 +1,19 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
-   "numFails": 0,
-   "failsRequired": 1,
-   "state": "SUCCESS",
+   "teamSize": 3,
+   "team": [
+    "AMMAD",
+    "AZIM",
+    "ALI"
+   ],
    "proposals": [
     {
-     "proposer": "AMMAD",
      "state": "APPROVED",
+     "proposer": "AMMAD",
      "votes": [
       "AMMAD",
       "AZIM",
@@ -26,25 +32,29 @@
      ]
     }
    ],
-   "teamSize": 3,
-   "team": [
-    "AMMAD",
-    "AZIM",
-    "ALI"
-   ]
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
-   "state": "SUCCESS",
+   "team": [
+    "AMMAD",
+    "MUBS",
+    "ALI",
+    "AZIM"
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "MUBS",
+     "state": "APPROVED",
      "team": [
       "AMMAD",
       "MUBS",
       "ALI",
       "AZIM"
      ],
-     "proposer": "MUBS",
-     "state": "APPROVED",
      "votes": [
       "ALI",
       "INARRA",
@@ -54,15 +64,8 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "AMMAD",
-    "MUBS",
-    "ALI",
-    "AZIM"
-   ],
    "numFails": 0,
-   "teamSize": 4
+   "state": "SUCCESS"
   },
   {
    "team": [
@@ -72,6 +75,8 @@
     "AMMAD"
    ],
    "teamSize": 4,
+   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
      "state": "APPROVED",
@@ -83,23 +88,22 @@
       "AMMAD",
       "AZIM"
      ],
-     "proposer": "MAHIN",
      "team": [
       "MUBS",
       "ALI",
       "AZIM",
       "AMMAD"
-     ]
+     ],
+     "proposer": "MAHIN"
     }
    ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "failsRequired": 2,
    "numFails": 0,
    "teamSize": 5,
+   "state": "SUCCESS",
+   "failsRequired": 2,
    "team": [
     "MAHIN",
     "ALI",
@@ -107,10 +111,16 @@
     "AZIM",
     "ANUSHA"
    ],
-   "state": "SUCCESS",
    "proposals": [
     {
      "proposer": "ALI",
+     "team": [
+      "MAHIN",
+      "ALI",
+      "MUBS",
+      "AZIM",
+      "ANUSHA"
+     ],
      "state": "APPROVED",
      "votes": [
       "ANUSHA",
@@ -119,57 +129,46 @@
       "SAFAN",
       "MUBS",
       "MAHIN"
-     ],
-     "team": [
-      "MAHIN",
-      "ALI",
-      "MUBS",
-      "AZIM",
-      "ANUSHA"
      ]
     }
    ]
   },
   {
-   "team": [],
-   "proposals": [],
+   "state": "PENDING",
    "teamSize": 5,
    "failsRequired": 1,
-   "state": "PENDING"
+   "proposals": [],
+   "team": []
   }
  ],
- "timeFinished": {
-  "_seconds": 1613545477,
-  "_nanoseconds": 290000000
- },
  "players": [
   {
    "uid": "GEyVFBdcQlO0IJzeTL948ZebUE63",
    "name": "SAFAN"
   },
   {
-   "uid": "ympyXZiI6JWAD5KFemwK6BO7tSD2",
-   "name": "ANUSHA"
+   "name": "ANUSHA",
+   "uid": "ympyXZiI6JWAD5KFemwK6BO7tSD2"
   },
   {
    "uid": "97zJ6RPMVOZAlp03HTtdxdR7bID3",
    "name": "SALMAN"
   },
   {
-   "name": "AMMAD",
-   "uid": "NYf4TAprohetijt3R5tQ6Aula502"
+   "uid": "NYf4TAprohetijt3R5tQ6Aula502",
+   "name": "AMMAD"
   },
   {
-   "name": "MUBS",
-   "uid": "eD3z7D1FevdhSeH4hqQXOUNLKsf2"
+   "uid": "eD3z7D1FevdhSeH4hqQXOUNLKsf2",
+   "name": "MUBS"
   },
   {
-   "name": "MAHIN",
-   "uid": "Q5IeHRPiaie0r6t0mUQAxrRsGJu2"
+   "uid": "Q5IeHRPiaie0r6t0mUQAxrRsGJu2",
+   "name": "MAHIN"
   },
   {
-   "uid": "ao9rD3nwTrb7tVVxDo9yJIDcwqQ2",
-   "name": "ALI"
+   "name": "ALI",
+   "uid": "ao9rD3nwTrb7tVVxDo9yJIDcwqQ2"
   },
   {
    "uid": "7FFmesVvk9WPatCONMnSo7hgvuC3",
@@ -180,27 +179,60 @@
    "uid": "F284lByIIAQK9qwrIpDCByVfHt83"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1613545477,
+  "_nanoseconds": 290000000
+ },
  "outcome": {
+  "votes": [
+   {
+    "AZIM": true,
+    "ALI": true,
+    "AMMAD": true
+   },
+   {
+    "AZIM": true,
+    "AMMAD": true,
+    "MUBS": true,
+    "ALI": true
+   },
+   {
+    "ALI": true,
+    "AZIM": true,
+    "AMMAD": false,
+    "MUBS": true
+   },
+   {
+    "MAHIN": true,
+    "ALI": true,
+    "AZIM": true,
+    "MUBS": true,
+    "ANUSHA": true
+   }
+  ],
+  "assassinated": "MUBS",
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
   "roles": [
    {
+    "name": "AMMAD",
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "AMMAD"
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "MAHIN",
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
     "assassin": false,
-    "role": "MERLIN",
-    "name": "MAHIN"
-   },
-   {
     "name": "MUBS",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MORGANA",
+    "assassin": false,
     "name": "INARRA",
-    "assassin": false
+    "role": "MORGANA"
    },
    {
     "name": "ANUSHA",
@@ -209,8 +241,8 @@
    },
    {
     "name": "ALI",
-    "role": "PERCIVAL",
-    "assassin": false
+    "assassin": false,
+    "role": "PERCIVAL"
    },
    {
     "assassin": false,
@@ -218,48 +250,16 @@
     "name": "AZIM"
    },
    {
-    "assassin": false,
     "name": "SALMAN",
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "assassin": false
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "SAFAN",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
    }
-  ],
-  "votes": [
-   {
-    "AMMAD": true,
-    "AZIM": true,
-    "ALI": true
-   },
-   {
-    "ALI": true,
-    "AMMAD": true,
-    "MUBS": true,
-    "AZIM": true
-   },
-   {
-    "ALI": true,
-    "MUBS": true,
-    "AMMAD": false,
-    "AZIM": true
-   },
-   {
-    "ALI": true,
-    "AZIM": true,
-    "MAHIN": true,
-    "MUBS": true,
-    "ANUSHA": true
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "MUBS"
- },
- "options": {
-  "inGameLog": false
+  ]
  },
  "timeCreated": {
   "_seconds": 1613544852,

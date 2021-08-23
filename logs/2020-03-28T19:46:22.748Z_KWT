@@ -1,11 +1,109 @@
 {
- "timeCreated": {
-  "_seconds": 1585424782,
-  "_nanoseconds": 748000000
+ "outcome": {
+  "roles": [
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "DAVID"
+   },
+   {
+    "assassin": true,
+    "name": "EGAN",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "AMY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JEREMY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "JULIE",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "GLORIA",
+    "role": "MORGANA"
+   },
+   {
+    "name": "KODY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "SOYOUNG",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "SKIP",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "JONATHAN",
+    "role": "MORDRED"
+   }
+  ],
+  "votes": [
+   {
+    "JEREMY": true,
+    "JULIE": true,
+    "JONATHAN": true
+   },
+   {
+    "JULIE": true,
+    "JONATHAN": true,
+    "EGAN": true,
+    "JEREMY": true
+   },
+   {
+    "JULIE": true,
+    "EGAN": true,
+    "JEREMY": true,
+    "JONATHAN": false
+   },
+   {
+    "KODY": true,
+    "JULIE": true,
+    "JEREMY": true,
+    "EGAN": false,
+    "JONATHAN": false
+   },
+   {
+    "JONATHAN": false,
+    "DAVID": false,
+    "GLORIA": false,
+    "SKIP": true,
+    "EGAN": false
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions",
+  "state": "EVIL_WIN"
+ },
+ "timeFinished": {
+  "_seconds": 1585426601,
+  "_nanoseconds": 710676000
  },
  "missions": [
   {
+   "numFails": 0,
    "state": "SUCCESS",
+   "team": [
+    "JEREMY",
+    "JONATHAN",
+    "JULIE"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "state": "APPROVED",
@@ -20,26 +118,26 @@
       "JONATHAN",
       "DAVID"
      ],
-     "proposer": "JEREMY",
      "team": [
       "JEREMY",
       "JONATHAN",
       "JULIE"
-     ]
+     ],
+     "proposer": "JEREMY"
     }
-   ],
-   "numFails": 0,
-   "team": [
-    "JEREMY",
-    "JONATHAN",
-    "JULIE"
-   ],
-   "teamSize": 3,
-   "failsRequired": 1
+   ]
   },
   {
    "proposals": [
     {
+     "team": [
+      "EGAN",
+      "JONATHAN",
+      "JULIE",
+      "JEREMY"
+     ],
+     "state": "APPROVED",
+     "proposer": "JONATHAN",
      "votes": [
       "EGAN",
       "AMY",
@@ -50,38 +148,25 @@
       "SOYOUNG",
       "SKIP",
       "JONATHAN"
-     ],
-     "state": "APPROVED",
-     "proposer": "JONATHAN",
-     "team": [
-      "EGAN",
-      "JONATHAN",
-      "JULIE",
-      "JEREMY"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "teamSize": 4,
-   "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "EGAN",
     "JONATHAN",
     "JULIE",
     "JEREMY"
    ],
-   "numFails": 0
+   "teamSize": 4,
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "JULIE",
-      "EGAN",
-      "JEREMY",
-      "JONATHAN"
-     ],
+     "state": "APPROVED",
+     "proposer": "JULIE",
      "votes": [
       "DAVID",
       "EGAN",
@@ -94,8 +179,12 @@
       "SKIP",
       "JONATHAN"
      ],
-     "proposer": "JULIE",
-     "state": "APPROVED"
+     "team": [
+      "JULIE",
+      "EGAN",
+      "JEREMY",
+      "JONATHAN"
+     ]
     }
    ],
    "team": [
@@ -104,17 +193,25 @@
     "JEREMY",
     "JONATHAN"
    ],
+   "numFails": 1,
+   "teamSize": 4,
    "failsRequired": 1,
-   "state": "FAIL",
-   "numFails": 1
+   "state": "FAIL"
   },
   {
-   "state": "FAIL",
-   "teamSize": 5,
    "failsRequired": 2,
-   "numFails": 2,
+   "team": [
+    "JULIE",
+    "JONATHAN",
+    "JEREMY",
+    "EGAN",
+    "KODY"
+   ],
+   "teamSize": 5,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "KODY",
      "votes": [
       "GLORIA",
       "KODY",
@@ -127,28 +224,19 @@
       "JEREMY",
       "JULIE"
      ],
-     "state": "APPROVED",
      "team": [
       "JULIE",
       "JONATHAN",
       "JEREMY",
       "EGAN",
       "KODY"
-     ],
-     "proposer": "KODY"
+     ]
     }
    ],
-   "team": [
-    "JULIE",
-    "JONATHAN",
-    "JEREMY",
-    "EGAN",
-    "KODY"
-   ]
+   "numFails": 2,
+   "state": "FAIL"
   },
   {
-   "state": "FAIL",
-   "teamSize": 5,
    "team": [
     "DAVID",
     "SKIP",
@@ -156,8 +244,18 @@
     "EGAN",
     "GLORIA"
    ],
+   "failsRequired": 1,
+   "teamSize": 5,
    "proposals": [
     {
+     "votes": [
+      "GLORIA",
+      "SKIP",
+      "JONATHAN",
+      "EGAN",
+      "AMY"
+     ],
+     "state": "REJECTED",
      "team": [
       "SOYOUNG",
       "DAVID",
@@ -165,25 +263,11 @@
       "AMY",
       "SKIP"
      ],
-     "proposer": "SKIP",
-     "state": "REJECTED",
-     "votes": [
-      "GLORIA",
-      "SKIP",
-      "JONATHAN",
-      "EGAN",
-      "AMY"
-     ]
+     "proposer": "SKIP"
     },
     {
-     "team": [
-      "JEREMY",
-      "JULIE",
-      "SOYOUNG",
-      "SKIP",
-      "KODY"
-     ],
      "proposer": "SOYOUNG",
+     "state": "REJECTED",
      "votes": [
       "SKIP",
       "AMY",
@@ -191,16 +275,15 @@
       "JULIE",
       "SOYOUNG"
      ],
-     "state": "REJECTED"
+     "team": [
+      "JEREMY",
+      "JULIE",
+      "SOYOUNG",
+      "SKIP",
+      "KODY"
+     ]
     },
     {
-     "team": [
-      "DAVID",
-      "SKIP",
-      "JONATHAN",
-      "EGAN",
-      "GLORIA"
-     ],
      "proposer": "DAVID",
      "state": "APPROVED",
      "votes": [
@@ -210,16 +293,23 @@
       "EGAN",
       "GLORIA",
       "KODY"
+     ],
+     "team": [
+      "DAVID",
+      "SKIP",
+      "JONATHAN",
+      "EGAN",
+      "GLORIA"
      ]
     }
    ],
-   "failsRequired": 1,
+   "state": "FAIL",
    "numFails": 4
   }
  ],
- "timeFinished": {
-  "_seconds": 1585426601,
-  "_nanoseconds": 710676000
+ "timeCreated": {
+  "_seconds": 1585424782,
+  "_nanoseconds": 748000000
  },
  "players": [
   {
@@ -227,130 +317,40 @@
    "uid": "ck8LeknrcXWD0CcvypA7iUy6ugb2"
   },
   {
-   "name": "EGAN",
-   "uid": "692gIY7mvDdxMXaxrTa4vh68qr32"
+   "uid": "692gIY7mvDdxMXaxrTa4vh68qr32",
+   "name": "EGAN"
   },
   {
-   "name": "GLORIA",
-   "uid": "ti0BJUjCUxdKX89YtFJO4m7K5ov2"
+   "uid": "ti0BJUjCUxdKX89YtFJO4m7K5ov2",
+   "name": "GLORIA"
   },
   {
    "uid": "zxVdkRr6Acc2pYewrFGTXspp6fk2",
    "name": "JEREMY"
   },
   {
-   "uid": "9v6f8L9n0UZevD5uGQC7R6WfxeE2",
-   "name": "JONATHAN"
+   "name": "JONATHAN",
+   "uid": "9v6f8L9n0UZevD5uGQC7R6WfxeE2"
   },
   {
-   "name": "JULIE",
-   "uid": "S9fyOWZIg5bTsQZ2PRyyc496wcx1"
+   "uid": "S9fyOWZIg5bTsQZ2PRyyc496wcx1",
+   "name": "JULIE"
   },
   {
    "uid": "dJUdyTE0srfDP7eKeeY96JvmHBn1",
    "name": "KODY"
   },
   {
-   "uid": "7nZG7rog8IXfmZcu5yZSp5SCU892",
-   "name": "SKIP"
+   "name": "SKIP",
+   "uid": "7nZG7rog8IXfmZcu5yZSp5SCU892"
   },
   {
-   "uid": "j5JFosHwxNUEmRdIfawGoJYdQxk2",
-   "name": "SOYOUNG"
+   "name": "SOYOUNG",
+   "uid": "j5JFosHwxNUEmRdIfawGoJYdQxk2"
   },
   {
    "name": "DAVID",
    "uid": "bjVZRvaPuXV4vLX3kH9Uf3ilVh12"
   }
- ],
- "outcome": {
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "JULIE": true,
-    "JONATHAN": true,
-    "JEREMY": true
-   },
-   {
-    "JONATHAN": true,
-    "JULIE": true,
-    "JEREMY": true,
-    "EGAN": true
-   },
-   {
-    "EGAN": true,
-    "JONATHAN": false,
-    "JULIE": true,
-    "JEREMY": true
-   },
-   {
-    "KODY": true,
-    "JONATHAN": false,
-    "JULIE": true,
-    "JEREMY": true,
-    "EGAN": false
-   },
-   {
-    "SKIP": true,
-    "EGAN": false,
-    "DAVID": false,
-    "GLORIA": false,
-    "JONATHAN": false
-   }
-  ],
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "DAVID",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "EGAN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "AMY"
-   },
-   {
-    "name": "JEREMY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "JULIE"
-   },
-   {
-    "role": "MORGANA",
-    "name": "GLORIA",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "KODY",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "SOYOUNG",
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SKIP"
-   },
-   {
-    "name": "JONATHAN",
-    "assassin": false,
-    "role": "MORDRED"
-   }
-  ]
- }
+ ]
 }

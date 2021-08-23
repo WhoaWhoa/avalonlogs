@@ -1,12 +1,23 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1587178142,
+  "_nanoseconds": 188000000
+ },
+ "timeFinished": {
+  "_seconds": 1587179852,
+  "_nanoseconds": 325000000
+ },
  "players": [
   {
    "name": "CHAITHANYA",
    "uid": "cAjDOV1WbPRqRjv28SDq7BYb6Up2"
   },
   {
-   "uid": "KH4ZmjI5XOUYu4rOwmw4oDElxue2",
-   "name": "SUSHHI"
+   "name": "SUSHHI",
+   "uid": "KH4ZmjI5XOUYu4rOwmw4oDElxue2"
   },
   {
    "name": "ABHIJIT",
@@ -21,57 +32,64 @@
    "name": "PKBOOLEAN"
   },
   {
-   "uid": "RMh8asPf7khAo3YWIMNdy1EDHDp2",
-   "name": "AVI"
+   "name": "AVI",
+   "uid": "RMh8asPf7khAo3YWIMNdy1EDHDp2"
   },
   {
-   "uid": "M9nSGFmZJLediRJeU20AOG8aVjU2",
-   "name": "NITWIT"
+   "name": "NITWIT",
+   "uid": "M9nSGFmZJLediRJeU20AOG8aVjU2"
   },
   {
    "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3",
    "name": "MERWIN"
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587178142,
-  "_nanoseconds": 188000000
- },
- "timeFinished": {
-  "_seconds": 1587179852,
-  "_nanoseconds": 325000000
- },
  "outcome": {
   "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "roles": [
+  "votes": [
    {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "CHAITHANYA"
+    "MERWIN": true,
+    "NITWIT": false,
+    "AVI": true
    },
    {
+    "BANANA": false,
+    "PKBOOLEAN": true,
+    "ABHIJIT": true,
+    "AVI": true
+   },
+   {
+    "BANANA": false,
+    "MERWIN": true,
+    "SUSHHI": true,
+    "NITWIT": false
+   }
+  ],
+  "roles": [
+   {
+    "name": "CHAITHANYA",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "name": "ABHIJIT",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ABHIJIT"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "BANANA"
+    "name": "BANANA",
+    "role": "EVIL MINION"
    },
    {
-    "assassin": false,
+    "name": "SUSHHI",
     "role": "LOYAL FOLLOWER",
-    "name": "SUSHHI"
+    "assassin": false
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "MERWIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
     "assassin": false,
@@ -80,50 +98,33 @@
    },
    {
     "name": "AVI",
-    "role": "PERCIVAL",
-    "assassin": false
+    "assassin": false,
+    "role": "PERCIVAL"
    },
    {
-    "assassin": false,
     "name": "NITWIT",
+    "assassin": false,
     "role": "EVIL MINION"
    }
   ],
-  "assassinated": null,
-  "votes": [
-   {
-    "AVI": true,
-    "NITWIT": false,
-    "MERWIN": true
-   },
-   {
-    "ABHIJIT": true,
-    "AVI": true,
-    "BANANA": false,
-    "PKBOOLEAN": true
-   },
-   {
-    "SUSHHI": true,
-    "MERWIN": true,
-    "NITWIT": false,
-    "BANANA": false
-   }
-  ]
+  "state": "EVIL_WIN",
+  "assassinated": null
  },
  "missions": [
   {
-   "teamSize": 3,
+   "state": "FAIL",
    "numFails": 1,
+   "team": [
+    "MERWIN",
+    "NITWIT",
+    "AVI"
+   ],
    "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "NITWIT",
-     "team": [
-      "MERWIN",
-      "NITWIT",
-      "AVI"
-     ],
+     "state": "APPROVED",
      "votes": [
       "BANANA",
       "SUSHHI",
@@ -132,24 +133,20 @@
       "AVI",
       "NITWIT",
       "CHAITHANYA"
+     ],
+     "team": [
+      "MERWIN",
+      "NITWIT",
+      "AVI"
      ]
     }
-   ],
-   "team": [
-    "MERWIN",
-    "NITWIT",
-    "AVI"
-   ],
-   "state": "FAIL"
+   ]
   },
   {
-   "failsRequired": 1,
-   "numFails": 1,
-   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "MERWIN",
      "state": "REJECTED",
+     "proposer": "MERWIN",
      "team": [
       "MERWIN",
       "PKBOOLEAN",
@@ -162,7 +159,9 @@
      ]
     },
     {
-     "state": "REJECTED",
+     "votes": [
+      "MERWIN"
+     ],
      "proposer": "CHAITHANYA",
      "team": [
       "CHAITHANYA",
@@ -170,18 +169,16 @@
       "PKBOOLEAN",
       "BANANA"
      ],
-     "votes": [
-      "MERWIN"
-     ]
+     "state": "REJECTED"
     },
     {
-     "proposer": "SUSHHI",
      "state": "REJECTED",
      "votes": [
       "SUSHHI",
       "MERWIN",
       "NITWIT"
      ],
+     "proposer": "SUSHHI",
      "team": [
       "SUSHHI",
       "PKBOOLEAN",
@@ -190,12 +187,7 @@
      ]
     },
     {
-     "team": [
-      "ABHIJIT",
-      "BANANA",
-      "AVI",
-      "PKBOOLEAN"
-     ],
+     "state": "APPROVED",
      "votes": [
       "ABHIJIT",
       "BANANA",
@@ -203,37 +195,46 @@
       "NITWIT",
       "CHAITHANYA"
      ],
-     "proposer": "ABHIJIT",
-     "state": "APPROVED"
+     "team": [
+      "ABHIJIT",
+      "BANANA",
+      "AVI",
+      "PKBOOLEAN"
+     ],
+     "proposer": "ABHIJIT"
     }
    ],
+   "teamSize": 4,
    "team": [
     "ABHIJIT",
     "BANANA",
     "AVI",
     "PKBOOLEAN"
    ],
-   "teamSize": 4
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [
+      "BANANA",
+      "SUSHHI",
+      "MERWIN"
+     ],
      "team": [
       "SUSHHI",
       "BANANA",
       "PKBOOLEAN",
       "MERWIN"
      ],
-     "proposer": "BANANA",
-     "state": "REJECTED",
-     "votes": [
-      "BANANA",
-      "SUSHHI",
-      "MERWIN"
-     ]
+     "proposer": "BANANA"
     },
     {
+     "proposer": "PKBOOLEAN",
+     "state": "REJECTED",
      "team": [
       "PKBOOLEAN",
       "ABHIJIT",
@@ -243,26 +244,30 @@
      "votes": [
       "ABHIJIT",
       "PKBOOLEAN"
-     ],
-     "state": "REJECTED",
-     "proposer": "PKBOOLEAN"
+     ]
     },
     {
      "state": "REJECTED",
-     "votes": [
-      "SUSHHI",
-      "AVI",
-      "CHAITHANYA"
-     ],
+     "proposer": "AVI",
      "team": [
       "AVI",
       "CHAITHANYA",
       "NITWIT",
       "MERWIN"
      ],
-     "proposer": "AVI"
+     "votes": [
+      "SUSHHI",
+      "AVI",
+      "CHAITHANYA"
+     ]
     },
     {
+     "team": [
+      "MERWIN",
+      "NITWIT",
+      "SUSHHI",
+      "BANANA"
+     ],
      "votes": [
       "CHAITHANYA",
       "BANANA",
@@ -271,19 +276,14 @@
       "AVI",
       "NITWIT"
      ],
-     "team": [
-      "MERWIN",
-      "NITWIT",
-      "SUSHHI",
-      "BANANA"
-     ],
-     "proposer": "NITWIT",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "NITWIT"
     }
    ],
    "numFails": 2,
-   "teamSize": 4,
+   "state": "FAIL",
    "failsRequired": 1,
+   "teamSize": 4,
    "team": [
     "MERWIN",
     "NITWIT",
@@ -292,18 +292,18 @@
    ]
   },
   {
+   "team": [],
    "state": "PENDING",
-   "teamSize": 5,
-   "failsRequired": 2,
    "proposals": [],
-   "team": []
+   "teamSize": 5,
+   "failsRequired": 2
   },
   {
-   "state": "PENDING",
-   "proposals": [],
    "failsRequired": 1,
+   "state": "PENDING",
    "teamSize": 5,
-   "team": []
+   "team": [],
+   "proposals": []
   }
  ]
 }

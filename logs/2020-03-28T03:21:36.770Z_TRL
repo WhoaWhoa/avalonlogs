@@ -1,80 +1,14 @@
 {
- "outcome": {
-  "roles": [
-   {
-    "assassin": false,
-    "name": "BRENDA",
-    "role": "MORDRED"
-   },
-   {
-    "name": "MERYL",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "IMMERLIN"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "JACKASS"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "JENSEN"
-   },
-   {
-    "assassin": false,
-    "name": "PERLOJR",
-    "role": "MORGANA"
-   },
-   {
-    "name": "RICHARD",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "votes": [
-   {
-    "RICHARD": true,
-    "PERLOJR": true
-   },
-   {
-    "PERLOJR": false,
-    "RICHARD": true,
-    "MERYL": true
-   },
-   {
-    "IMMERLIN": true,
-    "JENSEN": true,
-    "RICHARD": true
-   },
-   {
-    "MERYL": true,
-    "RICHARD": true,
-    "JENSEN": true,
-    "IMMERLIN": true
-   }
-  ],
-  "assassinated": "MERYL"
- },
  "missions": [
   {
    "team": [
     "PERLOJR",
     "RICHARD"
    ],
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "PERLOJR",
-      "RICHARD"
-     ],
      "votes": [
       "JENSEN",
       "PERLOJR",
@@ -84,34 +18,28 @@
       "IMMERLIN",
       "JACKASS"
      ],
-     "state": "APPROVED",
-     "proposer": "PERLOJR"
+     "team": [
+      "PERLOJR",
+      "RICHARD"
+     ],
+     "proposer": "PERLOJR",
+     "state": "APPROVED"
     }
    ],
    "teamSize": 2,
-   "failsRequired": 1,
-   "numFails": 0,
    "state": "SUCCESS"
   },
   {
-   "team": [
-    "RICHARD",
-    "PERLOJR",
-    "MERYL"
-   ],
-   "state": "FAIL",
-   "numFails": 1,
    "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "MERYL",
      "state": "APPROVED",
      "team": [
       "RICHARD",
       "PERLOJR",
       "MERYL"
      ],
-     "proposer": "MERYL",
      "votes": [
       "PERLOJR",
       "RICHARD",
@@ -121,7 +49,15 @@
       "JACKASS"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "RICHARD",
+    "PERLOJR",
+    "MERYL"
+   ],
+   "numFails": 1
   },
   {
    "state": "SUCCESS",
@@ -130,20 +66,21 @@
     "IMMERLIN",
     "JENSEN"
    ],
+   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "BRENDA",
       "MERYL",
       "JACKASS"
      ],
-     "proposer": "JACKASS",
      "team": [
       "PERLOJR",
       "MERYL",
       "JACKASS"
-     ]
+     ],
+     "proposer": "JACKASS",
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -151,25 +88,34 @@
       "IMMERLIN",
       "JENSEN"
      ],
+     "proposer": "RICHARD",
+     "state": "APPROVED",
      "votes": [
       "IMMERLIN",
       "JENSEN",
       "PERLOJR",
       "RICHARD",
       "MERYL"
-     ],
-     "state": "APPROVED",
-     "proposer": "RICHARD"
+     ]
     }
    ],
-   "numFails": 0,
    "failsRequired": 1,
    "teamSize": 3
   },
   {
    "teamSize": 4,
+   "state": "SUCCESS",
+   "failsRequired": 2,
+   "team": [
+    "IMMERLIN",
+    "RICHARD",
+    "JENSEN",
+    "MERYL"
+   ],
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "RICHARD",
       "BRENDA",
@@ -177,7 +123,6 @@
       "IMMERLIN",
       "JENSEN"
      ],
-     "state": "APPROVED",
      "team": [
       "IMMERLIN",
       "RICHARD",
@@ -186,28 +131,79 @@
      ],
      "proposer": "IMMERLIN"
     }
-   ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "team": [
-    "IMMERLIN",
-    "RICHARD",
-    "JENSEN",
-    "MERYL"
    ]
   },
   {
-   "team": [],
-   "failsRequired": 1,
    "state": "PENDING",
+   "failsRequired": 1,
    "proposals": [],
+   "team": [],
    "teamSize": 4
   }
  ],
- "timeFinished": {
-  "_seconds": 1585366089,
-  "_nanoseconds": 364697000
+ "outcome": {
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MORDRED",
+    "name": "BRENDA"
+   },
+   {
+    "name": "MERYL",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "IMMERLIN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": true,
+    "name": "JACKASS",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "JENSEN",
+    "role": "MERLIN"
+   },
+   {
+    "name": "PERLOJR",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "name": "RICHARD",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "RICHARD": true,
+    "PERLOJR": true
+   },
+   {
+    "MERYL": true,
+    "RICHARD": true,
+    "PERLOJR": false
+   },
+   {
+    "JENSEN": true,
+    "RICHARD": true,
+    "IMMERLIN": true
+   },
+   {
+    "JENSEN": true,
+    "IMMERLIN": true,
+    "RICHARD": true,
+    "MERYL": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "assassinated": "MERYL"
  },
  "timeCreated": {
   "_seconds": 1585365696,
@@ -215,12 +211,12 @@
  },
  "players": [
   {
-   "name": "JENSEN",
-   "uid": "Eu4a5j79TMWWqQteW5LTu4p8knF2"
+   "uid": "Eu4a5j79TMWWqQteW5LTu4p8knF2",
+   "name": "JENSEN"
   },
   {
-   "name": "PERLOJR",
-   "uid": "XNFmc2W9XeU9XDRIjYjmHsJ5Axg1"
+   "uid": "XNFmc2W9XeU9XDRIjYjmHsJ5Axg1",
+   "name": "PERLOJR"
   },
   {
    "name": "MERYL",
@@ -231,16 +227,20 @@
    "name": "JACKASS"
   },
   {
-   "uid": "ptD3XzbG13c81o00yLcrzPrrqxE2",
-   "name": "RICHARD"
+   "name": "RICHARD",
+   "uid": "ptD3XzbG13c81o00yLcrzPrrqxE2"
   },
   {
    "name": "IMMERLIN",
    "uid": "zGbaJi6VDkNiNU6GJj5yNKLedBr2"
   },
   {
-   "uid": "iwPWy9ndarVsQsCRNZ97iQSFIZU2",
-   "name": "BRENDA"
+   "name": "BRENDA",
+   "uid": "iwPWy9ndarVsQsCRNZ97iQSFIZU2"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1585366089,
+  "_nanoseconds": 364697000
+ }
 }

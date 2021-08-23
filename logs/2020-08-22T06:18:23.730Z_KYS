@@ -1,4 +1,84 @@
 {
+ "outcome": {
+  "votes": [
+   {
+    "KAUSHAL": true,
+    "KLAY": true,
+    "BRYANT": true
+   },
+   {
+    "KLAY": false,
+    "BRYANT": true,
+    "ROHAN": true,
+    "KAUSHAL": true
+   },
+   {
+    "AMEYA": true,
+    "ROHAN": false,
+    "PRIDHVI": true,
+    "BRYANT": true
+   },
+   {
+    "AMEYA": true,
+    "PRIDHVI": true,
+    "SHRAVAN": true,
+    "KLAY": false,
+    "NICK": false
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "BRYANT",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "SHRAVAN",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "PRIDHVI"
+   },
+   {
+    "name": "KAUSHAL",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "ROHAN"
+   },
+   {
+    "role": "MORDRED",
+    "name": "KLAY",
+    "assassin": false
+   },
+   {
+    "name": "NICK",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "name": "AMEYA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ]
+ },
+ "timeFinished": {
+  "_seconds": 1598078361,
+  "_nanoseconds": 900000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
    "name": "SHRAVAN",
@@ -9,8 +89,8 @@
    "uid": "bPC4ngKgF1UioBVRuUmIGyPEOw03"
   },
   {
-   "name": "ROHAN",
-   "uid": "kxOTeulhGKcu2MOCO9lYm5giHP82"
+   "uid": "kxOTeulhGKcu2MOCO9lYm5giHP82",
+   "name": "ROHAN"
   },
   {
    "name": "KAUSHAL",
@@ -21,31 +101,35 @@
    "uid": "U6scF13Z1JREsmyEZfa2cjw35qB3"
   },
   {
-   "uid": "V4SAGCzS9KMfXt2eiWuWhKXSMm12",
-   "name": "KLAY"
+   "name": "KLAY",
+   "uid": "V4SAGCzS9KMfXt2eiWuWhKXSMm12"
   },
   {
    "uid": "4GfCahioxqeJie6psB9eYJTCG793",
    "name": "PRIDHVI"
   },
   {
-   "uid": "9zncAWQsozR4bbicTwcmgc58tT13",
-   "name": "AMEYA"
+   "name": "AMEYA",
+   "uid": "9zncAWQsozR4bbicTwcmgc58tT13"
   }
  ],
  "timeCreated": {
   "_seconds": 1598077103,
   "_nanoseconds": 730000000
  },
- "timeFinished": {
-  "_seconds": 1598078361,
-  "_nanoseconds": 900000000
- },
  "missions": [
   {
+   "team": [
+    "KAUSHAL",
+    "BRYANT",
+    "KLAY"
+   ],
+   "numFails": 0,
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "KAUSHAL",
      "votes": [
       "ROHAN",
       "SHRAVAN",
@@ -60,31 +144,19 @@
       "BRYANT",
       "KLAY"
      ],
+     "proposer": "KAUSHAL",
      "state": "APPROVED"
     }
-   ],
-   "team": [
-    "KAUSHAL",
-    "BRYANT",
-    "KLAY"
-   ],
-   "teamSize": 3,
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1
+   ]
   },
   {
    "teamSize": 4,
    "state": "FAIL",
-   "team": [
-    "BRYANT",
-    "KAUSHAL",
-    "KLAY",
-    "ROHAN"
-   ],
    "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "BRYANT",
      "votes": [
       "AMEYA",
@@ -95,7 +167,6 @@
       "NICK",
       "ROHAN"
      ],
-     "state": "APPROVED",
      "team": [
       "BRYANT",
       "KAUSHAL",
@@ -104,19 +175,14 @@
      ]
     }
    ],
-   "numFails": 1
+   "team": [
+    "BRYANT",
+    "KAUSHAL",
+    "KLAY",
+    "ROHAN"
+   ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
-   "state": "FAIL",
-   "team": [
-    "PRIDHVI",
-    "BRYANT",
-    "ROHAN",
-    "AMEYA"
-   ],
-   "numFails": 1,
    "proposals": [
     {
      "team": [
@@ -134,13 +200,14 @@
      "proposer": "KLAY"
     },
     {
+     "proposer": "PRIDHVI",
+     "state": "APPROVED",
      "team": [
       "PRIDHVI",
       "BRYANT",
       "ROHAN",
       "AMEYA"
      ],
-     "state": "APPROVED",
      "votes": [
       "ROHAN",
       "KLAY",
@@ -149,13 +216,24 @@
       "BRYANT",
       "AMEYA",
       "SHRAVAN"
-     ],
-     "proposer": "PRIDHVI"
+     ]
     }
-   ]
+   ],
+   "teamSize": 4,
+   "state": "FAIL",
+   "numFails": 1,
+   "team": [
+    "PRIDHVI",
+    "BRYANT",
+    "ROHAN",
+    "AMEYA"
+   ],
+   "failsRequired": 1
   },
   {
    "failsRequired": 2,
+   "state": "FAIL",
+   "teamSize": 5,
    "team": [
     "PRIDHVI",
     "AMEYA",
@@ -163,11 +241,9 @@
     "KLAY",
     "NICK"
    ],
-   "numFails": 2,
-   "state": "FAIL",
-   "teamSize": 5,
    "proposals": [
     {
+     "proposer": "AMEYA",
      "votes": [
       "NICK",
       "AMEYA",
@@ -175,100 +251,24 @@
       "KLAY",
       "SHRAVAN"
      ],
-     "proposer": "AMEYA",
+     "state": "APPROVED",
      "team": [
       "PRIDHVI",
       "AMEYA",
       "SHRAVAN",
       "KLAY",
       "NICK"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ]
+   ],
+   "numFails": 2
   },
   {
+   "state": "PENDING",
    "team": [],
-   "teamSize": 5,
    "proposals": [],
    "failsRequired": 1,
-   "state": "PENDING"
+   "teamSize": 5
   }
- ],
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "roles": [
-   {
-    "name": "BRYANT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "SHRAVAN",
-    "assassin": false
-   },
-   {
-    "name": "PRIDHVI",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "KAUSHAL",
-    "role": "MERLIN"
-   },
-   {
-    "role": "MORGANA",
-    "name": "ROHAN",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "KLAY"
-   },
-   {
-    "name": "NICK",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "AMEYA"
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "KAUSHAL": true,
-    "BRYANT": true,
-    "KLAY": true
-   },
-   {
-    "KLAY": false,
-    "BRYANT": true,
-    "ROHAN": true,
-    "KAUSHAL": true
-   },
-   {
-    "BRYANT": true,
-    "AMEYA": true,
-    "ROHAN": false,
-    "PRIDHVI": true
-   },
-   {
-    "KLAY": false,
-    "NICK": false,
-    "SHRAVAN": true,
-    "PRIDHVI": true,
-    "AMEYA": true
-   }
-  ]
- }
+ ]
 }

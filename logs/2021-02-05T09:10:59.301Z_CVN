@@ -1,37 +1,107 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "votes": [
+   {
+    "MICHA": true,
+    "SALIM": true
+   },
+   {
+    "JULIJA": true,
+    "HANS": true,
+    "LUCA": true
+   },
+   {
+    "HANS": true,
+    "JULIJA": false,
+    "LUCA": true
+   },
+   {
+    "MICHA": false,
+    "RICKO": true,
+    "MARCO": false,
+    "SALIM": true
+   },
+   {
+    "HANS": true,
+    "RICKO": true,
+    "LUCA": true,
+    "MARCO": false
+   }
+  ],
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "name": "MICHA",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "name": "MARCO",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "RICKO",
+    "role": "MERLIN"
+   },
+   {
+    "name": "HANS",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "SALIM",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "LUCA"
+   },
+   {
+    "name": "JULIJA",
+    "assassin": false,
+    "role": "EVIL MINION"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null
+ },
  "players": [
   {
-   "uid": "MvaYIb604MfhLZjydq0dRwAQqNE3",
-   "name": "MICHA"
+   "name": "MICHA",
+   "uid": "MvaYIb604MfhLZjydq0dRwAQqNE3"
   },
   {
-   "name": "HANS",
-   "uid": "3TKeaFvMlIQoXQOd9VoQVuoZP7H2"
+   "uid": "3TKeaFvMlIQoXQOd9VoQVuoZP7H2",
+   "name": "HANS"
   },
   {
    "uid": "qjhXL50hbdWDd23y6LDuRgW1UQq1",
    "name": "MARCO"
   },
   {
-   "uid": "OHCAEduoeygWuwlQ0M2QY3eU3ms2",
-   "name": "LUCA"
+   "name": "LUCA",
+   "uid": "OHCAEduoeygWuwlQ0M2QY3eU3ms2"
   },
   {
    "name": "RICKO",
    "uid": "mqlkx80ktSXWqFTkXbCP7vcqkZ72"
   },
   {
-   "name": "SALIM",
-   "uid": "y7MQUQ0YzJYxrHVbaUjI7EktIR93"
+   "uid": "y7MQUQ0YzJYxrHVbaUjI7EktIR93",
+   "name": "SALIM"
   },
   {
    "uid": "wg7BzTyLLkaGt3wlVma229eYXsn1",
    "name": "JULIJA"
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1612516259,
   "_nanoseconds": 301000000
@@ -42,14 +112,19 @@
  },
  "missions": [
   {
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 2,
    "team": [
     "SALIM",
     "MICHA"
    ],
-   "teamSize": 2,
-   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "SALIM",
+      "MICHA"
+     ],
      "votes": [
       "MICHA",
       "MARCO",
@@ -57,50 +132,54 @@
       "RICKO",
       "HANS"
      ],
-     "proposer": "MARCO",
      "state": "APPROVED",
-     "team": [
-      "SALIM",
-      "MICHA"
-     ]
+     "proposer": "MARCO"
     }
    ],
-   "state": "SUCCESS",
    "numFails": 0
   },
   {
+   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "LUCA",
-     "team": [
-      "LUCA",
-      "HANS",
-      "JULIJA"
-     ],
      "votes": [
       "JULIJA",
       "RICKO",
       "LUCA",
       "MICHA"
+     ],
+     "proposer": "LUCA",
+     "team": [
+      "LUCA",
+      "HANS",
+      "JULIJA"
      ]
     }
    ],
-   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "LUCA",
     "HANS",
     "JULIJA"
    ],
-   "teamSize": 3,
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
+   "team": [
+    "HANS",
+    "LUCA",
+    "JULIJA"
+   ],
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "HANS",
+      "LUCA",
+      "JULIJA"
+     ],
      "proposer": "RICKO",
      "votes": [
       "LUCA",
@@ -110,28 +189,18 @@
       "MARCO",
       "HANS",
       "JULIJA"
-     ],
-     "team": [
-      "HANS",
-      "LUCA",
-      "JULIJA"
      ]
     }
    ],
+   "numFails": 1,
    "failsRequired": 1,
-   "team": [
-    "HANS",
-    "LUCA",
-    "JULIJA"
-   ],
-   "teamSize": 3,
-   "numFails": 1
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
-   "teamSize": 4,
-   "failsRequired": 2,
    "proposals": [
     {
+     "proposer": "SALIM",
      "votes": [
       "JULIJA",
       "RICKO",
@@ -139,53 +208,53 @@
       "MARCO",
       "SALIM"
      ],
-     "state": "APPROVED",
      "team": [
       "MICHA",
       "MARCO",
       "SALIM",
       "RICKO"
      ],
-     "proposer": "SALIM"
+     "state": "APPROVED"
     }
    ],
-   "state": "FAIL",
    "team": [
     "MICHA",
     "MARCO",
     "SALIM",
     "RICKO"
    ],
-   "numFails": 2
+   "failsRequired": 2,
+   "teamSize": 4,
+   "numFails": 2,
+   "state": "FAIL"
   },
   {
    "teamSize": 4,
-   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "HANS",
     "LUCA",
     "RICKO",
     "MARCO"
    ],
-   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
+     "votes": [
+      "MARCO",
+      "JULIJA"
+     ],
+     "proposer": "JULIJA",
      "team": [
       "MICHA",
       "MARCO",
       "JULIJA",
       "LUCA"
-     ],
-     "proposer": "JULIJA",
-     "votes": [
-      "MARCO",
-      "JULIJA"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "REJECTED",
-     "proposer": "MICHA",
      "team": [
       "SALIM",
       "MICHA",
@@ -194,16 +263,11 @@
      ],
      "votes": [
       "MICHA"
-     ]
+     ],
+     "proposer": "MICHA"
     },
     {
-     "proposer": "HANS",
-     "team": [
-      "HANS",
-      "LUCA",
-      "RICKO",
-      "MARCO"
-     ],
+     "state": "APPROVED",
      "votes": [
       "LUCA",
       "HANS",
@@ -211,80 +275,16 @@
       "MICHA",
       "MARCO"
      ],
-     "state": "APPROVED"
+     "team": [
+      "HANS",
+      "LUCA",
+      "RICKO",
+      "MARCO"
+     ],
+     "proposer": "HANS"
     }
    ],
    "state": "FAIL"
   }
- ],
- "outcome": {
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "name": "MICHA",
-    "assassin": true
-   },
-   {
-    "name": "MARCO",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "name": "RICKO",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "HANS",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "SALIM",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "LUCA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "JULIJA",
-    "role": "EVIL MINION"
-   }
-  ],
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "SALIM": true,
-    "MICHA": true
-   },
-   {
-    "LUCA": true,
-    "HANS": true,
-    "JULIJA": true
-   },
-   {
-    "LUCA": true,
-    "HANS": true,
-    "JULIJA": false
-   },
-   {
-    "RICKO": true,
-    "MICHA": false,
-    "SALIM": true,
-    "MARCO": false
-   },
-   {
-    "RICKO": true,
-    "MARCO": false,
-    "HANS": true,
-    "LUCA": true
-   }
-  ],
-  "assassinated": null
- }
+ ]
 }

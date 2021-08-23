@@ -1,6 +1,66 @@
 {
- "options": {
-  "inGameLog": false
+ "timeFinished": {
+  "_seconds": 1586755871,
+  "_nanoseconds": 814687000
+ },
+ "outcome": {
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "name": "BC",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "LEO"
+   },
+   {
+    "name": "PAUL",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "TIFF"
+   },
+   {
+    "name": "JAC",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "JUSTIN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "assassinated": "BC",
+  "votes": [
+   {
+    "TIFF": true,
+    "JAC": true
+   },
+   {
+    "TIFF": true,
+    "LEO": true,
+    "JUSTIN": true
+   },
+   {
+    "LEO": true,
+    "JAC": false,
+    "PAUL": true,
+    "JUSTIN": true
+   },
+   {
+    "BC": true,
+    "LEO": true,
+    "PAUL": true
+   }
+  ],
+  "state": "EVIL_WIN"
  },
  "timeCreated": {
   "_seconds": 1586753728,
@@ -8,16 +68,16 @@
  },
  "players": [
   {
-   "name": "BC",
-   "uid": "fsnVaIOi0ZNvfyPuvbrzHbEe6P43"
+   "uid": "fsnVaIOi0ZNvfyPuvbrzHbEe6P43",
+   "name": "BC"
   },
   {
    "name": "LEO",
    "uid": "14SZosBUQnOo3bSLCx1YqzWOlEG3"
   },
   {
-   "uid": "CeRLpinBZJPdnYyFxuovL18uahD3",
-   "name": "PAUL"
+   "name": "PAUL",
+   "uid": "CeRLpinBZJPdnYyFxuovL18uahD3"
   },
   {
    "name": "TIFF",
@@ -28,22 +88,27 @@
    "uid": "mFyxua3yLnfQkrLaEMh5cqQ4DgX2"
   },
   {
-   "name": "JUSTIN",
-   "uid": "JrRcfBaqQObmwV6S4nABrotY92V2"
+   "uid": "JrRcfBaqQObmwV6S4nABrotY92V2",
+   "name": "JUSTIN"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
    "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 2,
    "team": [
     "JAC",
     "TIFF"
    ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "JAC",
      "team": [
       "JAC",
       "TIFF"
@@ -54,59 +119,47 @@
       "PAUL",
       "TIFF",
       "JAC"
-     ],
-     "proposer": "JAC"
+     ]
     }
-   ],
-   "numFails": 0
+   ]
   },
   {
-   "teamSize": 3,
    "team": [
     "LEO",
     "TIFF",
     "JUSTIN"
    ],
-   "state": "SUCCESS",
-   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "JUSTIN",
-     "team": [
-      "LEO",
-      "TIFF",
-      "JUSTIN"
-     ],
      "votes": [
       "BC",
       "LEO",
       "TIFF",
       "JAC",
       "JUSTIN"
-     ]
+     ],
+     "team": [
+      "LEO",
+      "TIFF",
+      "JUSTIN"
+     ],
+     "proposer": "JUSTIN",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
-   "numFails": 1,
-   "teamSize": 4,
-   "state": "FAIL",
-   "team": [
-    "JAC",
-    "JUSTIN",
-    "PAUL",
-    "LEO"
-   ],
-   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "BC",
      "votes": [
       "BC"
      ],
-     "proposer": "BC",
-     "state": "REJECTED",
      "team": [
       "TIFF",
       "JAC",
@@ -115,11 +168,11 @@
      ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "JAC",
       "LEO"
      ],
+     "state": "REJECTED",
      "proposer": "LEO",
      "team": [
       "LEO",
@@ -129,14 +182,14 @@
      ]
     },
     {
-     "proposer": "PAUL",
+     "state": "REJECTED",
      "team": [
       "BC",
       "LEO",
       "PAUL",
       "JAC"
      ],
-     "state": "REJECTED",
+     "proposer": "PAUL",
      "votes": [
       "JAC",
       "LEO",
@@ -149,17 +202,16 @@
       "LEO",
       "TIFF"
      ],
-     "proposer": "TIFF",
      "team": [
       "LEO",
       "PAUL",
       "BC",
       "TIFF"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "TIFF"
     },
     {
-     "proposer": "JAC",
      "votes": [
       "BC",
       "LEO",
@@ -168,6 +220,7 @@
       "JAC",
       "JUSTIN"
      ],
+     "proposer": "JAC",
      "team": [
       "JAC",
       "JUSTIN",
@@ -176,43 +229,53 @@
      ],
      "state": "APPROVED"
     }
-   ]
+   ],
+   "numFails": 1,
+   "team": [
+    "JAC",
+    "JUSTIN",
+    "PAUL",
+    "LEO"
+   ],
+   "teamSize": 4,
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
    "teamSize": 3,
-   "numFails": 0,
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "JUSTIN",
      "state": "REJECTED",
+     "votes": [
+      "TIFF",
+      "JUSTIN"
+     ],
      "team": [
       "LEO",
       "JAC",
       "JUSTIN"
-     ],
-     "proposer": "JUSTIN",
-     "votes": [
-      "TIFF",
-      "JUSTIN"
      ]
     },
     {
+     "team": [
+      "BC",
+      "LEO",
+      "PAUL"
+     ],
      "votes": [
       "BC",
       "LEO",
       "PAUL",
       "JUSTIN"
      ],
-     "team": [
-      "BC",
-      "LEO",
-      "PAUL"
-     ],
      "state": "APPROVED",
      "proposer": "BC"
     }
    ],
+   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "BC",
     "LEO",
@@ -220,74 +283,11 @@
    ]
   },
   {
-   "teamSize": 4,
-   "failsRequired": 1,
-   "team": [],
    "proposals": [],
-   "state": "PENDING"
+   "team": [],
+   "failsRequired": 1,
+   "state": "PENDING",
+   "teamSize": 4
   }
- ],
- "timeFinished": {
-  "_seconds": 1586755871,
-  "_nanoseconds": 814687000
- },
- "outcome": {
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
-  "roles": [
-   {
-    "name": "BC",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "LEO",
-    "assassin": false
-   },
-   {
-    "name": "PAUL",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "name": "TIFF",
-    "role": "MORGANA"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "JAC"
-   },
-   {
-    "name": "JUSTIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "assassinated": "BC",
-  "votes": [
-   {
-    "JAC": true,
-    "TIFF": true
-   },
-   {
-    "LEO": true,
-    "JUSTIN": true,
-    "TIFF": true
-   },
-   {
-    "PAUL": true,
-    "LEO": true,
-    "JUSTIN": true,
-    "JAC": false
-   },
-   {
-    "BC": true,
-    "PAUL": true,
-    "LEO": true
-   }
-  ]
- }
+ ]
 }

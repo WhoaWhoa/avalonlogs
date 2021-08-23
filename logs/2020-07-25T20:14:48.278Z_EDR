@@ -1,4 +1,77 @@
 {
+ "timeFinished": {
+  "_seconds": 1595709112,
+  "_nanoseconds": 722000000
+ },
+ "timeCreated": {
+  "_seconds": 1595708088,
+  "_nanoseconds": 278000000
+ },
+ "outcome": {
+  "assassinated": "ALEX",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "ALEX": true,
+    "RALEY": true
+   },
+   {
+    "JAMES": true,
+    "ALEX": true,
+    "RALEY": false
+   },
+   {
+    "ALEX": true,
+    "KEATON": true,
+    "RONAN": true,
+    "RALEY": false
+   },
+   {
+    "JAMES": true,
+    "KEATON": true,
+    "ALEX": true
+   },
+   {
+    "BRYANTO": true,
+    "KEATON": true,
+    "JAMES": true,
+    "ALEX": true
+   }
+  ],
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "name": "BRYANTO",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "JAMES",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "ALEX",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "KEATON"
+   },
+   {
+    "assassin": false,
+    "name": "RONAN",
+    "role": "MORDRED"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "RALEY"
+   }
+  ]
+ },
  "players": [
   {
    "uid": "nonUxwXYG2THQGwyvL7TFCfuwzJ2",
@@ -9,8 +82,8 @@
    "uid": "A9I5LS482AeqlP2bBDyp65WCJAz1"
   },
   {
-   "name": "RONAN",
-   "uid": "rfROSU4LS5RI497x6boFBDoqYU73"
+   "uid": "rfROSU4LS5RI497x6boFBDoqYU73",
+   "name": "RONAN"
   },
   {
    "name": "KEATON",
@@ -21,89 +94,21 @@
    "name": "ALEX"
   },
   {
-   "name": "RALEY",
-   "uid": "T23k64DDKYPArt7X4Dp4GzsM3QQ2"
+   "uid": "T23k64DDKYPArt7X4Dp4GzsM3QQ2",
+   "name": "RALEY"
   }
  ],
- "timeFinished": {
-  "_seconds": 1595709112,
-  "_nanoseconds": 722000000
- },
- "timeCreated": {
-  "_seconds": 1595708088,
-  "_nanoseconds": 278000000
- },
- "outcome": {
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "RALEY": true,
-    "ALEX": true
-   },
-   {
-    "RALEY": false,
-    "JAMES": true,
-    "ALEX": true
-   },
-   {
-    "RALEY": false,
-    "KEATON": true,
-    "ALEX": true,
-    "RONAN": true
-   },
-   {
-    "ALEX": true,
-    "JAMES": true,
-    "KEATON": true
-   },
-   {
-    "BRYANTO": true,
-    "KEATON": true,
-    "ALEX": true,
-    "JAMES": true
-   }
-  ],
-  "roles": [
-   {
-    "role": "MERLIN",
-    "name": "BRYANTO",
-    "assassin": false
-   },
-   {
-    "name": "JAMES",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ALEX"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "KEATON"
-   },
-   {
-    "role": "MORDRED",
-    "name": "RONAN",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "RALEY"
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "ALEX"
- },
  "missions": [
   {
-   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "RALEY",
+    "ALEX"
+   ],
    "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "RALEY",
      "votes": [
       "KEATON",
       "RONAN",
@@ -115,30 +120,16 @@
       "RALEY",
       "ALEX"
      ],
-     "state": "APPROVED",
-     "proposer": "RALEY"
+     "state": "APPROVED"
     }
    ],
-   "numFails": 0,
-   "team": [
-    "RALEY",
-    "ALEX"
-   ],
-   "teamSize": 2
+   "teamSize": 2,
+   "failsRequired": 1
   },
   {
-   "state": "FAIL",
    "numFails": 1,
-   "team": [
-    "JAMES",
-    "ALEX",
-    "RALEY"
-   ],
-   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "BRYANTO",
-     "state": "REJECTED",
      "votes": [
       "BRYANTO"
      ],
@@ -146,9 +137,13 @@
       "BRYANTO",
       "ALEX",
       "JAMES"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "BRYANTO"
     },
     {
+     "proposer": "JAMES",
+     "state": "APPROVED",
      "votes": [
       "JAMES",
       "ALEX",
@@ -156,8 +151,6 @@
       "RONAN",
       "RALEY"
      ],
-     "proposer": "JAMES",
-     "state": "APPROVED",
      "team": [
       "JAMES",
       "ALEX",
@@ -165,48 +158,51 @@
      ]
     }
    ],
-   "teamSize": 3
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "JAMES",
+    "ALEX",
+    "RALEY"
+   ]
   },
   {
-   "state": "FAIL",
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "RONAN",
-      "KEATON",
-      "ALEX",
-      "RALEY"
-     ],
-     "votes": [
-      "RONAN",
-      "RALEY",
-      "ALEX",
-      "KEATON"
-     ],
-     "proposer": "RONAN"
-    }
-   ],
    "team": [
     "RONAN",
     "KEATON",
     "ALEX",
     "RALEY"
    ],
+   "numFails": 1,
+   "state": "FAIL",
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "RONAN",
+      "RALEY",
+      "ALEX",
+      "KEATON"
+     ],
+     "team": [
+      "RONAN",
+      "KEATON",
+      "ALEX",
+      "RALEY"
+     ],
+     "proposer": "RONAN"
+    }
+   ],
    "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 1
+   "teamSize": 4
   },
   {
-   "team": [
-    "KEATON",
-    "JAMES",
-    "ALEX"
-   ],
+   "numFails": 0,
+   "teamSize": 3,
    "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "KEATON",
      "state": "APPROVED",
      "votes": [
       "KEATON",
@@ -219,42 +215,46 @@
       "KEATON",
       "JAMES",
       "ALEX"
-     ]
+     ],
+     "proposer": "KEATON"
     }
    ],
-   "numFails": 0,
-   "teamSize": 3,
-   "failsRequired": 1
+   "failsRequired": 1,
+   "team": [
+    "KEATON",
+    "JAMES",
+    "ALEX"
+   ]
   },
   {
-   "state": "SUCCESS",
    "team": [
     "ALEX",
     "KEATON",
     "JAMES",
     "BRYANTO"
    ],
+   "teamSize": 4,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "ALEX",
-     "votes": [
-      "ALEX",
-      "KEATON",
-      "RALEY",
-      "BRYANTO"
-     ],
+     "state": "APPROVED",
      "team": [
       "ALEX",
       "KEATON",
       "JAMES",
       "BRYANTO"
      ],
-     "state": "APPROVED"
+     "votes": [
+      "ALEX",
+      "KEATON",
+      "RALEY",
+      "BRYANTO"
+     ],
+     "proposer": "ALEX"
     }
    ],
-   "failsRequired": 1,
    "numFails": 0,
-   "teamSize": 4
+   "failsRequired": 1
   }
  ],
  "options": {

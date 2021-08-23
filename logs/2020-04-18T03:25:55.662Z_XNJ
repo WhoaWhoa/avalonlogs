@@ -1,14 +1,128 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "TOMMY": true,
+    "AL": true
+   },
+   {
+    "TOMMY": true,
+    "ILEANA": true,
+    "AL": true
+   },
+   {
+    "TOMMY": true,
+    "ALEJANDRO": true,
+    "AL": false
+   },
+   {
+    "DAYANA": false,
+    "AL": false,
+    "ALEJANDRO": true,
+    "DANNY": true
+   },
+   {
+    "TOMMY": true,
+    "DAYANA": false,
+    "DANNY": true,
+    "KAREN": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "name": "ILEANA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "TOMMY"
+   },
+   {
+    "name": "AL",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "DAYANA",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "ALEJANDRO",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "DANNY"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "KAREN"
+   }
+  ],
+  "assassinated": null
+ },
+ "players": [
+  {
+   "uid": "yFVB9oNaddS93y4hpO1S314w82C2",
+   "name": "ILEANA"
+  },
+  {
+   "uid": "ug2Z3eGpttalUMWgZZKyDfzh4g12",
+   "name": "KAREN"
+  },
+  {
+   "name": "TOMMY",
+   "uid": "QOzpgOjFxyL9rWT0v5Vd6O6tAPf1"
+  },
+  {
+   "uid": "KscppRqEaGUtNCT8ds7HKXWGheQ2",
+   "name": "ALEJANDRO"
+  },
+  {
+   "uid": "ngKX2HakezPFLvdNC4qYJv3nFiB2",
+   "name": "DAYANA"
+  },
+  {
+   "name": "AL",
+   "uid": "pX5XTYx9R3Qyn1xIxCQWLavkeWX2"
+  },
+  {
+   "uid": "VREjPH4zDhRSWigHyRdH5dGb2yC2",
+   "name": "DANNY"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1587180955,
+  "_nanoseconds": 855000000
+ },
+ "timeCreated": {
+  "_seconds": 1587180355,
+  "_nanoseconds": 662000000
+ },
  "missions": [
   {
+   "state": "SUCCESS",
    "team": [
     "TOMMY",
     "AL"
    ],
+   "numFails": 0,
    "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "KAREN",
      "votes": [
       "DAYANA",
       "DANNY",
@@ -16,30 +130,24 @@
       "TOMMY",
       "AL"
      ],
+     "state": "APPROVED",
      "team": [
       "TOMMY",
       "AL"
-     ],
-     "proposer": "KAREN"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
    "team": [
     "AL",
     "TOMMY",
     "ILEANA"
    ],
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "TOMMY",
+     "state": "APPROVED",
      "votes": [
       "KAREN",
       "TOMMY",
@@ -47,29 +155,21 @@
       "DAYANA",
       "DANNY"
      ],
-     "state": "APPROVED",
      "team": [
       "AL",
       "TOMMY",
       "ILEANA"
-     ]
+     ],
+     "proposer": "TOMMY"
     }
-   ]
-  },
-  {
-   "state": "FAIL",
-   "team": [
-    "TOMMY",
-    "ALEJANDRO",
-    "AL"
    ],
    "failsRequired": 1,
    "teamSize": 3,
-   "numFails": 1,
+   "numFails": 0
+  },
+  {
    "proposals": [
     {
-     "proposer": "ALEJANDRO",
-     "state": "APPROVED",
      "votes": [
       "DAYANA",
       "ALEJANDRO",
@@ -80,30 +180,39 @@
       "TOMMY",
       "ALEJANDRO",
       "AL"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "ALEJANDRO"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "TOMMY",
+    "ALEJANDRO",
+    "AL"
+   ],
+   "numFails": 1,
+   "teamSize": 3
   },
   {
    "proposals": [
     {
-     "proposer": "DAYANA",
-     "votes": [
-      "ILEANA",
-      "AL",
-      "DAYANA"
-     ],
      "team": [
       "TOMMY",
       "AL",
       "DAYANA",
       "ILEANA"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "ILEANA",
+      "AL",
+      "DAYANA"
+     ],
+     "proposer": "DAYANA"
     },
     {
-     "state": "APPROVED",
-     "proposer": "AL",
      "votes": [
       "DANNY",
       "ILEANA",
@@ -115,161 +224,52 @@
       "AL",
       "DANNY",
       "ALEJANDRO"
-     ]
+     ],
+     "proposer": "AL",
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 2,
    "teamSize": 4,
-   "state": "FAIL",
-   "numFails": 2,
    "team": [
     "DAYANA",
     "AL",
     "DANNY",
     "ALEJANDRO"
-   ]
+   ],
+   "numFails": 2,
+   "state": "FAIL"
   },
   {
+   "failsRequired": 1,
+   "teamSize": 4,
    "team": [
     "TOMMY",
     "KAREN",
     "DANNY",
     "DAYANA"
    ],
-   "teamSize": 4,
-   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
-     "proposer": "DANNY",
      "team": [
       "TOMMY",
       "KAREN",
       "DANNY",
       "DAYANA"
      ],
+     "proposer": "DANNY",
+     "state": "APPROVED",
      "votes": [
       "DANNY",
       "KAREN",
       "ILEANA",
       "TOMMY",
       "AL"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 1
+   "state": "FAIL"
   }
- ],
- "players": [
-  {
-   "name": "ILEANA",
-   "uid": "yFVB9oNaddS93y4hpO1S314w82C2"
-  },
-  {
-   "uid": "ug2Z3eGpttalUMWgZZKyDfzh4g12",
-   "name": "KAREN"
-  },
-  {
-   "uid": "QOzpgOjFxyL9rWT0v5Vd6O6tAPf1",
-   "name": "TOMMY"
-  },
-  {
-   "uid": "KscppRqEaGUtNCT8ds7HKXWGheQ2",
-   "name": "ALEJANDRO"
-  },
-  {
-   "name": "DAYANA",
-   "uid": "ngKX2HakezPFLvdNC4qYJv3nFiB2"
-  },
-  {
-   "name": "AL",
-   "uid": "pX5XTYx9R3Qyn1xIxCQWLavkeWX2"
-  },
-  {
-   "name": "DANNY",
-   "uid": "VREjPH4zDhRSWigHyRdH5dGb2yC2"
-  }
- ],
- "outcome": {
-  "votes": [
-   {
-    "AL": true,
-    "TOMMY": true
-   },
-   {
-    "ILEANA": true,
-    "AL": true,
-    "TOMMY": true
-   },
-   {
-    "AL": false,
-    "ALEJANDRO": true,
-    "TOMMY": true
-   },
-   {
-    "ALEJANDRO": true,
-    "DAYANA": false,
-    "AL": false,
-    "DANNY": true
-   },
-   {
-    "DANNY": true,
-    "TOMMY": true,
-    "DAYANA": false,
-    "KAREN": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "ILEANA",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "TOMMY",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "AL",
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "DAYANA"
-   },
-   {
-    "assassin": false,
-    "name": "ALEJANDRO",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "DANNY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "KAREN",
-    "assassin": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "message": "Three failed missions"
- },
- "timeFinished": {
-  "_seconds": 1587180955,
-  "_nanoseconds": 855000000
- },
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1587180355,
-  "_nanoseconds": 662000000
- }
+ ]
 }

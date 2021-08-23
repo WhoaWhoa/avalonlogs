@@ -1,14 +1,101 @@
 {
+ "players": [
+  {
+   "uid": "w6SIgBFvBDNOEcgaLpkccA4CC3K3",
+   "name": "TINA"
+  },
+  {
+   "name": "JENNA",
+   "uid": "u9QPwqYkeJVZntf6PRp8OqJjkqj2"
+  },
+  {
+   "name": "RONA",
+   "uid": "hPd4GDOHCqS4xmX2E41U4YZFATz1"
+  },
+  {
+   "name": "KAR",
+   "uid": "6cDvbZKFzKVCvR42hEGS8rx4B2D3"
+  },
+  {
+   "uid": "fSm6FZLOmdaon1h2FtBBBPpuLpo1",
+   "name": "ALICE"
+  },
+  {
+   "name": "TOBY",
+   "uid": "boU490NnWVST9a98HR680j33UV23"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1585091198,
   "_nanoseconds": 142000000
  },
+ "outcome": {
+  "roles": [
+   {
+    "name": "TOBY",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "RONA"
+   },
+   {
+    "name": "KAR",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "TINA",
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "name": "ALICE",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "JENNA"
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "ALICE",
+  "votes": [
+   {
+    "KAR": false,
+    "TINA": true
+   },
+   {
+    "ALICE": true,
+    "JENNA": true,
+    "RONA": true
+   },
+   {
+    "JENNA": true,
+    "ALICE": true,
+    "TOBY": true,
+    "RONA": true
+   },
+   {
+    "RONA": true,
+    "ALICE": true,
+    "JENNA": true
+   }
+  ],
+  "message": "Three successful missions"
+ },
  "missions": [
   {
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
      "proposer": "RONA",
+     "state": "REJECTED",
      "team": [
       "RONA",
       "KAR"
@@ -18,48 +105,48 @@
      ]
     },
     {
-     "proposer": "KAR",
-     "votes": [
-      "KAR"
-     ],
      "team": [
       "KAR",
       "TINA"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "KAR"
+     ],
+     "proposer": "KAR"
     },
     {
-     "proposer": "ALICE",
-     "state": "REJECTED",
+     "votes": [
+      "JENNA",
+      "ALICE"
+     ],
      "team": [
       "ALICE",
       "JENNA"
      ],
-     "votes": [
-      "JENNA",
-      "ALICE"
-     ]
+     "proposer": "ALICE",
+     "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
-     "proposer": "TOBY",
      "votes": [
       "TOBY",
       "RONA",
       "ALICE"
      ],
+     "proposer": "TOBY",
+     "state": "REJECTED",
      "team": [
       "TOBY",
       "ALICE"
      ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "TINA",
       "KAR"
      ],
      "proposer": "TINA",
-     "state": "APPROVED",
      "votes": [
       "ALICE",
       "JENNA",
@@ -70,37 +157,37 @@
      ]
     }
    ],
-   "state": "FAIL",
-   "teamSize": 2,
    "team": [
     "TINA",
     "KAR"
    ],
-   "numFails": 1,
+   "teamSize": 2,
    "failsRequired": 1
   },
   {
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "votes": [
-      "JENNA",
-      "RONA"
-     ],
-     "state": "REJECTED",
      "proposer": "JENNA",
+     "state": "REJECTED",
      "team": [
       "JENNA",
       "RONA",
       "ALICE"
+     ],
+     "votes": [
+      "JENNA",
+      "RONA"
      ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "JENNA",
       "RONA",
       "ALICE"
      ],
+     "state": "REJECTED",
      "team": [
       "JENNA",
       "RONA",
@@ -109,16 +196,16 @@
      "proposer": "RONA"
     },
     {
+     "proposer": "KAR",
+     "state": "REJECTED",
      "team": [
       "KAR",
       "ALICE",
       "JENNA"
      ],
-     "proposer": "KAR",
      "votes": [
       "KAR"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "votes": [
@@ -141,52 +228,25 @@
     "RONA",
     "JENNA"
    ],
-   "numFails": 0,
-   "failsRequired": 1,
    "teamSize": 3,
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
-   "team": [
-    "JENNA",
-    "RONA",
-    "ALICE",
-    "TOBY"
-   ],
-   "failsRequired": 1,
-   "teamSize": 4,
-   "state": "SUCCESS",
    "proposals": [
     {
-     "votes": [
-      "TOBY"
-     ],
-     "proposer": "TOBY",
      "team": [
       "TOBY",
       "RONA",
       "ALICE",
       "KAR"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "TOBY",
+     "votes": [
+      "TOBY"
+     ]
     },
     {
-     "team": [
-      "JENNA",
-      "RONA",
-      "ALICE",
-      "TINA"
-     ],
-     "proposer": "TINA",
-     "votes": [
-      "TINA"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "votes": [
-      "TINA"
-     ],
      "team": [
       "JENNA",
       "RONA",
@@ -194,26 +254,51 @@
       "TINA"
      ],
      "state": "REJECTED",
-     "proposer": "JENNA"
+     "votes": [
+      "TINA"
+     ],
+     "proposer": "TINA"
     },
     {
-     "state": "APPROVED",
+     "state": "REJECTED",
      "team": [
       "JENNA",
       "RONA",
       "ALICE",
-      "TOBY"
+      "TINA"
      ],
+     "proposer": "JENNA",
+     "votes": [
+      "TINA"
+     ]
+    },
+    {
      "proposer": "RONA",
      "votes": [
       "ALICE",
       "JENNA",
       "RONA",
       "TINA"
-     ]
+     ],
+     "team": [
+      "JENNA",
+      "RONA",
+      "ALICE",
+      "TOBY"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "numFails": 0
+   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "JENNA",
+    "RONA",
+    "ALICE",
+    "TOBY"
+   ],
+   "teamSize": 4
   },
   {
    "state": "SUCCESS",
@@ -222,7 +307,6 @@
     "JENNA",
     "RONA"
    ],
-   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -230,12 +314,12 @@
       "TINA"
      ],
      "proposer": "KAR",
-     "state": "REJECTED",
      "team": [
       "ALICE",
       "JENNA",
       "KAR"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -243,7 +327,6 @@
       "JENNA",
       "RONA"
      ],
-     "state": "APPROVED",
      "votes": [
       "JENNA",
       "RONA",
@@ -251,105 +334,22 @@
       "TINA",
       "ALICE"
      ],
+     "state": "APPROVED",
      "proposer": "ALICE"
     }
    ],
-   "teamSize": 3,
-   "failsRequired": 1
-  },
-  {
-   "teamSize": 4,
    "failsRequired": 1,
-   "team": [],
+   "teamSize": 3,
+   "numFails": 0
+  },
+  {
    "proposals": [],
-   "state": "PENDING"
+   "failsRequired": 1,
+   "state": "PENDING",
+   "teamSize": 4,
+   "team": []
   }
  ],
- "players": [
-  {
-   "name": "TINA",
-   "uid": "w6SIgBFvBDNOEcgaLpkccA4CC3K3"
-  },
-  {
-   "name": "JENNA",
-   "uid": "u9QPwqYkeJVZntf6PRp8OqJjkqj2"
-  },
-  {
-   "uid": "hPd4GDOHCqS4xmX2E41U4YZFATz1",
-   "name": "RONA"
-  },
-  {
-   "uid": "6cDvbZKFzKVCvR42hEGS8rx4B2D3",
-   "name": "KAR"
-  },
-  {
-   "uid": "fSm6FZLOmdaon1h2FtBBBPpuLpo1",
-   "name": "ALICE"
-  },
-  {
-   "name": "TOBY",
-   "uid": "boU490NnWVST9a98HR680j33UV23"
-  }
- ],
- "outcome": {
-  "roles": [
-   {
-    "role": "PERCIVAL",
-    "name": "TOBY",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "RONA",
-    "role": "MERLIN"
-   },
-   {
-    "name": "KAR",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "TINA"
-   },
-   {
-    "name": "ALICE",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "JENNA",
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "state": "GOOD_WIN",
-  "assassinated": "ALICE",
-  "votes": [
-   {
-    "KAR": false,
-    "TINA": true
-   },
-   {
-    "ALICE": true,
-    "RONA": true,
-    "JENNA": true
-   },
-   {
-    "TOBY": true,
-    "ALICE": true,
-    "RONA": true,
-    "JENNA": true
-   },
-   {
-    "RONA": true,
-    "JENNA": true,
-    "ALICE": true
-   }
-  ],
-  "message": "Three successful missions"
- },
  "timeFinished": {
   "_seconds": 1585092502,
   "_nanoseconds": 831042000

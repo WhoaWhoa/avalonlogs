@@ -1,4 +1,7 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
   "votes": [
    {
@@ -6,9 +9,9 @@
     "NICK": true
    },
    {
-    "KOLAR": true,
+    "PATRICK": false,
     "NICK": true,
-    "PATRICK": false
+    "KOLAR": true
    },
    {
     "INGO": true,
@@ -17,19 +20,19 @@
     "KOLAR": true
    },
    {
-    "KOLAR": true,
     "PATRICK": false,
-    "INGO": true
+    "INGO": true,
+    "KOLAR": true
    },
    {
-    "CHRISTOPH": true,
-    "NICK": true,
+    "KOLAR": true,
     "MARKUS": true,
-    "KOLAR": true
+    "CHRISTOPH": true,
+    "NICK": true
    }
   ],
-  "assassinated": "NICK",
   "state": "GOOD_WIN",
+  "assassinated": "NICK",
   "roles": [
    {
     "assassin": false,
@@ -42,9 +45,9 @@
     "name": "INGO"
    },
    {
+    "name": "PATRICK",
     "assassin": false,
-    "role": "MORGANA",
-    "name": "PATRICK"
+    "role": "MORGANA"
    },
    {
     "assassin": false,
@@ -52,128 +55,141 @@
     "name": "MARKUS"
    },
    {
-    "name": "NICK",
     "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "NICK"
    },
    {
+    "assassin": false,
     "name": "CHRISTOPH",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    }
   ],
   "message": "Three successful missions"
  },
+ "timeCreated": {
+  "_seconds": 1589657117,
+  "_nanoseconds": 850000000
+ },
  "missions": [
   {
+   "numFails": 0,
    "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "PATRICK",
     "NICK"
    ],
-   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "proposer": "NICK",
-     "state": "REJECTED",
+     "votes": [
+      "NICK"
+     ],
      "team": [
       "NICK",
       "CHRISTOPH"
      ],
-     "votes": [
-      "NICK"
-     ]
+     "proposer": "NICK",
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
+     "team": [
+      "PATRICK",
+      "NICK"
+     ],
+     "proposer": "CHRISTOPH",
      "votes": [
       "INGO",
       "NICK",
       "CHRISTOPH",
       "KOLAR"
-     ],
-     "proposer": "CHRISTOPH",
-     "state": "APPROVED",
-     "team": [
-      "PATRICK",
-      "NICK"
      ]
     }
    ],
-   "teamSize": 2
+   "failsRequired": 1
   },
   {
-   "numFails": 1,
-   "proposals": [
-    {
-     "votes": [
-      "MARKUS",
-      "NICK",
-      "CHRISTOPH",
-      "KOLAR"
-     ],
-     "team": [
-      "PATRICK",
-      "NICK",
-      "KOLAR"
-     ],
-     "state": "APPROVED",
-     "proposer": "KOLAR"
-    }
-   ],
    "team": [
     "PATRICK",
     "NICK",
     "KOLAR"
    ],
    "failsRequired": 1,
+   "proposals": [
+    {
+     "team": [
+      "PATRICK",
+      "NICK",
+      "KOLAR"
+     ],
+     "proposer": "KOLAR",
+     "state": "APPROVED",
+     "votes": [
+      "MARKUS",
+      "NICK",
+      "CHRISTOPH",
+      "KOLAR"
+     ]
+    }
+   ],
+   "numFails": 1,
    "teamSize": 3,
    "state": "FAIL"
   },
   {
-   "numFails": 0,
    "state": "SUCCESS",
+   "team": [
+    "PATRICK",
+    "CHRISTOPH",
+    "INGO",
+    "KOLAR"
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
      "proposer": "MARKUS",
-     "votes": [
-      "KOLAR",
-      "MARKUS"
-     ],
      "team": [
       "MARKUS",
       "PATRICK",
       "INGO",
       "KOLAR"
      ],
+     "votes": [
+      "KOLAR",
+      "MARKUS"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "votes": [],
+     "proposer": "INGO",
+     "state": "REJECTED",
+     "team": [
+      "PATRICK",
+      "NICK",
+      "CHRISTOPH",
+      "MARKUS"
+     ]
+    },
+    {
+     "votes": [
+      "PATRICK",
+      "INGO"
+     ],
+     "team": [
+      "PATRICK",
+      "NICK",
+      "CHRISTOPH",
+      "MARKUS"
+     ],
+     "proposer": "PATRICK",
      "state": "REJECTED"
     },
     {
      "state": "REJECTED",
-     "team": [
-      "PATRICK",
-      "NICK",
-      "CHRISTOPH",
-      "MARKUS"
-     ],
-     "votes": [],
-     "proposer": "INGO"
-    },
-    {
-     "proposer": "PATRICK",
-     "state": "REJECTED",
-     "team": [
-      "PATRICK",
-      "NICK",
-      "CHRISTOPH",
-      "MARKUS"
-     ],
-     "votes": [
-      "PATRICK",
-      "INGO"
-     ]
-    },
-    {
+     "proposer": "NICK",
      "team": [
       "PATRICK",
       "NICK",
@@ -184,12 +200,15 @@
       "MARKUS",
       "NICK",
       "CHRISTOPH"
-     ],
-     "state": "REJECTED",
-     "proposer": "NICK"
+     ]
     },
     {
-     "proposer": "CHRISTOPH",
+     "team": [
+      "PATRICK",
+      "CHRISTOPH",
+      "INGO",
+      "KOLAR"
+     ],
      "votes": [
       "PATRICK",
       "MARKUS",
@@ -197,33 +216,17 @@
       "CHRISTOPH",
       "KOLAR"
      ],
-     "team": [
-      "PATRICK",
-      "CHRISTOPH",
-      "INGO",
-      "KOLAR"
-     ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "CHRISTOPH"
     }
    ],
-   "teamSize": 4,
-   "failsRequired": 1,
-   "team": [
-    "PATRICK",
-    "CHRISTOPH",
-    "INGO",
-    "KOLAR"
-   ]
+   "teamSize": 4
   },
   {
-   "team": [
-    "INGO",
-    "KOLAR",
-    "PATRICK"
-   ],
    "state": "FAIL",
-   "numFails": 1,
+   "failsRequired": 1,
    "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
      "team": [
@@ -232,14 +235,15 @@
       "INGO"
      ],
      "proposer": "KOLAR",
+     "state": "REJECTED",
      "votes": [
       "PATRICK",
       "MARKUS",
       "KOLAR"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "APPROVED",
      "team": [
       "INGO",
       "KOLAR",
@@ -252,28 +256,38 @@
       "CHRISTOPH",
       "KOLAR"
      ],
-     "state": "APPROVED",
      "proposer": "MARKUS"
     }
    ],
-   "failsRequired": 1
+   "team": [
+    "INGO",
+    "KOLAR",
+    "PATRICK"
+   ]
   },
   {
    "state": "SUCCESS",
+   "team": [
+    "NICK",
+    "CHRISTOPH",
+    "KOLAR",
+    "MARKUS"
+   ],
    "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "INGO",
      "state": "REJECTED",
-     "votes": [
-      "INGO"
-     ],
      "team": [
       "INGO",
       "MARKUS",
       "KOLAR",
       "CHRISTOPH"
      ],
-     "proposer": "INGO"
+     "votes": [
+      "INGO"
+     ]
     },
     {
      "votes": [
@@ -289,44 +303,37 @@
      ]
     },
     {
+     "proposer": "NICK",
      "votes": [
       "MARKUS",
       "NICK",
       "CHRISTOPH",
       "KOLAR"
      ],
-     "state": "APPROVED",
      "team": [
       "NICK",
       "CHRISTOPH",
       "KOLAR",
       "MARKUS"
      ],
-     "proposer": "NICK"
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "NICK",
-    "CHRISTOPH",
-    "KOLAR",
-    "MARKUS"
-   ],
-   "teamSize": 4,
    "failsRequired": 1
   }
  ],
- "timeCreated": {
-  "_seconds": 1589657117,
-  "_nanoseconds": 850000000
+ "timeFinished": {
+  "_seconds": 1589658980,
+  "_nanoseconds": 79000000
  },
  "players": [
   {
-   "uid": "PYYzqvbAyGeFXfpEIFus8sRMaWP2",
-   "name": "PATRICK"
+   "name": "PATRICK",
+   "uid": "PYYzqvbAyGeFXfpEIFus8sRMaWP2"
   },
   {
-   "uid": "3BZDbZZUidhTK3mWnTiu3F3bNXI3",
-   "name": "NICK"
+   "name": "NICK",
+   "uid": "3BZDbZZUidhTK3mWnTiu3F3bNXI3"
   },
   {
    "name": "CHRISTOPH",
@@ -344,12 +351,5 @@
    "name": "INGO",
    "uid": "ACKpLvD5HMNJPjbaoVuC4C7gdNA2"
   }
- ],
- "timeFinished": {
-  "_seconds": 1589658980,
-  "_nanoseconds": 79000000
- },
- "options": {
-  "inGameLog": false
- }
+ ]
 }

@@ -1,15 +1,12 @@
 {
- "options": {
-  "inGameLog": false
- },
  "players": [
   {
    "name": "MICHELLE",
    "uid": "hMyvLCmwHkSrIfCOJDjVh7YHxAs2"
   },
   {
-   "uid": "l7AjzdjRx7ddnDaboyCFfVwu3eI3",
-   "name": "SAM"
+   "name": "SAM",
+   "uid": "l7AjzdjRx7ddnDaboyCFfVwu3eI3"
   },
   {
    "uid": "SdwcAFqwB1Qwrji2oL4UwVVtHws1",
@@ -20,26 +17,25 @@
    "uid": "dp0J2fUvQ9gj7wNGpwtQ37d6C222"
   },
   {
-   "name": "CAM",
-   "uid": "sJqbVrNk4zLNAbpws0zUH9DUIgB2"
+   "uid": "sJqbVrNk4zLNAbpws0zUH9DUIgB2",
+   "name": "CAM"
   }
  ],
  "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
+  "assassinated": "BRIAN",
   "votes": [
    {
-    "SIMONE": true,
-    "CAM": true
-   },
-   {
-    "BRIAN": true,
-    "MICHELLE": false,
+    "CAM": true,
     "SIMONE": true
    },
    {
-    "MICHELLE": true,
-    "SAM": true
+    "SIMONE": true,
+    "MICHELLE": false,
+    "BRIAN": true
+   },
+   {
+    "SAM": true,
+    "MICHELLE": true
    },
    {
     "MICHELLE": false,
@@ -47,47 +43,44 @@
     "SAM": false
    },
    {
-    "BRIAN": true,
     "SIMONE": true,
+    "BRIAN": true,
     "CAM": true
    }
   ],
   "roles": [
    {
-    "assassin": false,
     "name": "SAM",
+    "assassin": false,
     "role": "MORGANA"
    },
    {
+    "role": "PERCIVAL",
     "name": "SIMONE",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "MERLIN",
-    "name": "BRIAN",
     "assassin": false
    },
    {
     "assassin": false,
+    "name": "BRIAN",
+    "role": "MERLIN"
+   },
+   {
     "name": "CAM",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "MICHELLE",
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "MICHELLE"
+    "role": "EVIL MINION"
    }
   ],
-  "assassinated": "BRIAN"
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated"
  },
  "timeCreated": {
   "_seconds": 1602987871,
   "_nanoseconds": 174000000
- },
- "timeFinished": {
-  "_seconds": 1602988501,
-  "_nanoseconds": 229000000
  },
  "missions": [
   {
@@ -95,7 +88,8 @@
     "CAM",
     "SIMONE"
    ],
-   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
      "votes": [
@@ -114,44 +108,43 @@
     }
    ],
    "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0
+   "state": "SUCCESS"
   },
   {
+   "teamSize": 3,
    "team": [
     "MICHELLE",
     "SIMONE",
     "BRIAN"
    ],
    "failsRequired": 1,
-   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "MICHELLE",
      "team": [
       "MICHELLE",
       "SIMONE",
       "BRIAN"
      ],
+     "state": "APPROVED",
      "votes": [
       "BRIAN",
       "CAM",
       "MICHELLE",
       "SIMONE",
       "SAM"
-     ],
-     "proposer": "MICHELLE"
+     ]
     }
    ],
-   "teamSize": 3,
+   "numFails": 1,
    "state": "FAIL"
   },
   {
    "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "SAM",
+     "state": "APPROVED",
      "votes": [
       "SAM",
       "SIMONE",
@@ -165,37 +158,45 @@
      ]
     }
    ],
+   "teamSize": 2,
    "state": "SUCCESS",
    "numFails": 0,
    "team": [
     "SAM",
     "MICHELLE"
-   ],
-   "teamSize": 2
+   ]
   },
   {
+   "team": [
+    "SIMONE",
+    "SAM",
+    "MICHELLE"
+   ],
+   "teamSize": 3,
+   "state": "FAIL",
+   "numFails": 2,
    "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "BRIAN",
+     "votes": [
+      "BRIAN"
+     ],
+     "state": "REJECTED",
      "team": [
       "SIMONE",
       "CAM",
       "BRIAN"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "BRIAN"
-     ],
-     "proposer": "BRIAN"
+     ]
     },
     {
+     "state": "APPROVED",
+     "proposer": "SIMONE",
      "team": [
       "SIMONE",
       "SAM",
       "MICHELLE"
      ],
-     "state": "APPROVED",
-     "proposer": "SIMONE",
      "votes": [
       "BRIAN",
       "SAM",
@@ -203,42 +204,41 @@
       "CAM"
      ]
     }
-   ],
-   "numFails": 2,
-   "teamSize": 3,
-   "state": "FAIL",
-   "team": [
-    "SIMONE",
-    "SAM",
-    "MICHELLE"
    ]
   },
   {
    "teamSize": 3,
-   "team": [
-    "CAM",
-    "BRIAN",
-    "SIMONE"
-   ],
    "proposals": [
     {
-     "proposer": "CAM",
-     "votes": [
+     "team": [
       "CAM",
       "BRIAN",
       "SIMONE"
      ],
      "state": "APPROVED",
-     "team": [
+     "proposer": "CAM",
+     "votes": [
       "CAM",
       "BRIAN",
       "SIMONE"
      ]
     }
    ],
-   "numFails": 0,
+   "team": [
+    "CAM",
+    "BRIAN",
+    "SIMONE"
+   ],
    "state": "SUCCESS",
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 0
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1602988501,
+  "_nanoseconds": 229000000
+ },
+ "options": {
+  "inGameLog": false
+ }
 }

@@ -1,5 +1,44 @@
 {
  "outcome": {
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "name": "TIM",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "name": "MOCHI",
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "CASEY",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "name": "COLIN",
+    "role": "OBERON"
+   },
+   {
+    "name": "GID",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "name": "JESS",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "RENINI"
+   }
+  ],
+  "message": "Three failed missions",
   "votes": [
    {
     "COLIN": true,
@@ -7,71 +46,28 @@
    },
    {
     "COLIN": false,
-    "GID": true,
-    "CASEY": true
+    "CASEY": true,
+    "GID": true
    },
    {
     "COLIN": false,
-    "GID": true,
-    "MOCHI": true
+    "MOCHI": true,
+    "GID": true
    },
    {
+    "RENINI": true,
     "MOCHI": true,
     "CASEY": true,
-    "TIM": true,
-    "RENINI": true
+    "TIM": true
    },
    {
-    "CASEY": false,
     "TIM": true,
     "RENINI": true,
+    "CASEY": false,
     "MOCHI": true
    }
   ],
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "TIM"
-   },
-   {
-    "name": "MOCHI",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "name": "CASEY",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "OBERON",
-    "name": "COLIN"
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "GID"
-   },
-   {
-    "assassin": false,
-    "name": "JESS",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "RENINI",
-    "assassin": false
-   }
-  ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
   "assassinated": null
- },
- "timeFinished": {
-  "_seconds": 1585977752,
-  "_nanoseconds": 28937000
  },
  "timeCreated": {
   "_seconds": 1585977408,
@@ -79,10 +75,9 @@
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "MOCHI",
       "CASEY",
@@ -90,25 +85,38 @@
       "GID",
       "JESS"
      ],
-     "state": "APPROVED",
-     "proposer": "COLIN",
      "team": [
       "COLIN",
       "GID"
-     ]
+     ],
+     "proposer": "COLIN"
     }
    ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "COLIN",
     "GID"
    ],
-   "numFails": 0,
-   "state": "SUCCESS"
+   "teamSize": 2,
+   "numFails": 0
   },
   {
+   "numFails": 1,
+   "teamSize": 3,
+   "team": [
+    "COLIN",
+    "GID",
+    "CASEY"
+   ],
    "proposals": [
     {
-     "proposer": "GID",
+     "team": [
+      "COLIN",
+      "GID",
+      "CASEY"
+     ],
+     "state": "APPROVED",
      "votes": [
       "GID",
       "JESS",
@@ -116,34 +124,22 @@
       "CASEY",
       "COLIN"
      ],
-     "team": [
-      "COLIN",
-      "GID",
-      "CASEY"
-     ],
-     "state": "APPROVED"
+     "proposer": "GID"
     }
    ],
-   "teamSize": 3,
-   "state": "FAIL",
    "failsRequired": 1,
-   "team": [
-    "COLIN",
-    "GID",
-    "CASEY"
-   ],
-   "numFails": 1
+   "state": "FAIL"
   },
   {
    "failsRequired": 1,
-   "teamSize": 3,
-   "state": "FAIL",
    "team": [
     "COLIN",
     "GID",
     "MOCHI"
    ],
    "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -152,15 +148,14 @@
       "CASEY"
      ],
      "state": "REJECTED",
+     "proposer": "CASEY",
      "votes": [
       "MOCHI",
       "CASEY",
       "JESS"
-     ],
-     "proposer": "CASEY"
+     ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "COLIN",
       "GID",
@@ -172,14 +167,13 @@
       "COLIN",
       "GID"
      ],
+     "state": "APPROVED",
      "proposer": "JESS"
     }
    ]
   },
   {
    "failsRequired": 2,
-   "state": "SUCCESS",
-   "teamSize": 4,
    "team": [
     "RENINI",
     "TIM",
@@ -189,13 +183,6 @@
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "RENINI",
-      "TIM",
-      "CASEY",
-      "MOCHI"
-     ],
-     "proposer": "RENINI",
      "votes": [
       "TIM",
       "MOCHI",
@@ -204,23 +191,32 @@
       "GID",
       "JESS",
       "RENINI"
+     ],
+     "proposer": "RENINI",
+     "team": [
+      "RENINI",
+      "TIM",
+      "CASEY",
+      "MOCHI"
      ]
     }
    ],
-   "numFails": 0
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 4
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
-   "team": [
-    "RENINI",
-    "MOCHI",
-    "TIM",
-    "CASEY"
-   ],
    "proposals": [
     {
-     "state": "APPROVED",
+     "votes": [
+      "TIM",
+      "MOCHI",
+      "CASEY",
+      "COLIN",
+      "GID",
+      "JESS",
+      "RENINI"
+     ],
      "team": [
       "RENINI",
       "MOCHI",
@@ -228,19 +224,19 @@
       "CASEY"
      ],
      "proposer": "MOCHI",
-     "votes": [
-      "TIM",
-      "MOCHI",
-      "CASEY",
-      "COLIN",
-      "GID",
-      "JESS",
-      "RENINI"
-     ]
+     "state": "APPROVED"
     }
    ],
+   "numFails": 1,
+   "failsRequired": 1,
    "state": "FAIL",
-   "numFails": 1
+   "teamSize": 4,
+   "team": [
+    "RENINI",
+    "MOCHI",
+    "TIM",
+    "CASEY"
+   ]
   }
  ],
  "players": [
@@ -249,20 +245,20 @@
    "uid": "kCt7hnrAfeU7XEeFrfZRwxkPytX2"
   },
   {
-   "uid": "f46hrrHShIgGipLo06rAKFkN3142",
-   "name": "RENINI"
+   "name": "RENINI",
+   "uid": "f46hrrHShIgGipLo06rAKFkN3142"
   },
   {
-   "uid": "NCFB9cPIsnX3xtNmnsAdXUVpRUn2",
-   "name": "MOCHI"
+   "name": "MOCHI",
+   "uid": "NCFB9cPIsnX3xtNmnsAdXUVpRUn2"
   },
   {
    "name": "TIM",
    "uid": "18woXz2FfeQdASbbUrspRCvQHUi1"
   },
   {
-   "name": "COLIN",
-   "uid": "bh3gKSmGgfWDgCvKWeruOH5bVmy1"
+   "uid": "bh3gKSmGgfWDgCvKWeruOH5bVmy1",
+   "name": "COLIN"
   },
   {
    "uid": "XBPGIBk6ujUBMBaqT9b9l2fGAtI2",
@@ -272,5 +268,9 @@
    "name": "CASEY",
    "uid": "6LUPzKtivbMjFWVn0OR7rohoo5a2"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1585977752,
+  "_nanoseconds": 28937000
+ }
 }

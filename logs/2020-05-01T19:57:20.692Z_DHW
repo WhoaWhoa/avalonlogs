@@ -38,16 +38,10 @@
  },
  "missions": [
   {
-   "teamSize": 2,
    "failsRequired": 1,
-   "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "PAUL",
-      "BHATLA"
-     ],
      "votes": [
       "PAUL",
       "SHREYA",
@@ -56,9 +50,15 @@
       "MOUBANI",
       "BHATLA"
      ],
-     "proposer": "PAUL"
+     "team": [
+      "PAUL",
+      "BHATLA"
+     ],
+     "proposer": "PAUL",
+     "state": "APPROVED"
     }
    ],
+   "numFails": 0,
    "state": "SUCCESS",
    "team": [
     "PAUL",
@@ -66,41 +66,40 @@
    ]
   },
   {
+   "numFails": 1,
+   "failsRequired": 1,
    "state": "FAIL",
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "ANKITH",
-      "PAUL",
-      "SHREYA"
-     ],
-     "proposer": "ANKITH",
-     "votes": [
-      "ANKITH",
-      "MOUBANI",
-      "PAUL",
-      "SHREYA"
-     ]
-    }
-   ],
-   "teamSize": 3,
    "team": [
     "ANKITH",
     "PAUL",
     "SHREYA"
    ],
-   "failsRequired": 1,
-   "numFails": 1
-  },
-  {
-   "team": [
-    "SONALI",
-    "MOUBANI",
-    "PARROT"
-   ],
    "proposals": [
     {
+     "votes": [
+      "ANKITH",
+      "MOUBANI",
+      "PAUL",
+      "SHREYA"
+     ],
+     "proposer": "ANKITH",
+     "team": [
+      "ANKITH",
+      "PAUL",
+      "SHREYA"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "teamSize": 3
+  },
+  {
+   "numFails": 1,
+   "state": "FAIL",
+   "proposals": [
+    {
+     "proposer": "SHREYA",
+     "state": "APPROVED",
      "votes": [
       "SONALI",
       "ANKITH",
@@ -111,43 +110,44 @@
       "SONALI",
       "MOUBANI",
       "PARROT"
-     ],
-     "state": "APPROVED",
-     "proposer": "SHREYA"
+     ]
     }
    ],
+   "team": [
+    "SONALI",
+    "MOUBANI",
+    "PARROT"
+   ],
    "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
-   "state": "FAIL"
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
-   "failsRequired": 2,
    "teamSize": 4,
+   "state": "FAIL",
+   "team": [
+    "ANKITH",
+    "PAUL",
+    "MOUBANI",
+    "BHATLA"
+   ],
+   "numFails": 2,
    "proposals": [
     {
+     "proposer": "PARROT",
+     "state": "REJECTED",
      "team": [
       "BHATLA",
       "PARROT",
       "SONALI",
       "ANKITH"
      ],
-     "state": "REJECTED",
      "votes": [
       "BHATLA",
       "PARROT"
-     ],
-     "proposer": "PARROT"
+     ]
     },
     {
      "state": "APPROVED",
-     "team": [
-      "ANKITH",
-      "PAUL",
-      "MOUBANI",
-      "BHATLA"
-     ],
      "votes": [
       "MOUBANI",
       "BHATLA",
@@ -155,79 +155,62 @@
       "SHREYA",
       "ANKITH"
      ],
-     "proposer": "MOUBANI"
+     "proposer": "MOUBANI",
+     "team": [
+      "ANKITH",
+      "PAUL",
+      "MOUBANI",
+      "BHATLA"
+     ]
     }
    ],
-   "numFails": 2,
-   "team": [
-    "ANKITH",
-    "PAUL",
-    "MOUBANI",
-    "BHATLA"
-   ]
+   "failsRequired": 2
   },
   {
-   "state": "PENDING",
+   "proposals": [],
    "teamSize": 4,
+   "state": "PENDING",
    "failsRequired": 1,
-   "team": [],
-   "proposals": []
+   "team": []
   }
  ],
+ "timeCreated": {
+  "_seconds": 1588363040,
+  "_nanoseconds": 692000000
+ },
  "outcome": {
-  "votes": [
-   {
-    "PAUL": true,
-    "BHATLA": true
-   },
-   {
-    "PAUL": false,
-    "ANKITH": true,
-    "SHREYA": true
-   },
-   {
-    "PARROT": true,
-    "MOUBANI": false,
-    "SONALI": true
-   },
-   {
-    "ANKITH": true,
-    "MOUBANI": false,
-    "BHATLA": true,
-    "PAUL": false
-   }
-  ],
   "state": "EVIL_WIN",
+  "assassinated": null,
   "roles": [
    {
-    "name": "PAUL",
     "role": "EVIL MINION",
-    "assassin": true
+    "assassin": true,
+    "name": "PAUL"
    },
    {
-    "role": "EVIL MINION",
     "name": "SHREYA",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "MERLIN",
+    "name": "PARROT",
     "assassin": false
    },
    {
     "assassin": false,
-    "role": "MERLIN",
-    "name": "PARROT"
+    "role": "LOYAL FOLLOWER",
+    "name": "SONALI"
    },
    {
-    "name": "SONALI",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
     "name": "ANKITH",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
    },
    {
     "name": "MOUBANI",
-    "role": "EVIL MINION",
-    "assassin": false
+    "assassin": false,
+    "role": "EVIL MINION"
    },
    {
     "name": "BHATLA",
@@ -235,11 +218,28 @@
     "role": "LOYAL FOLLOWER"
    }
   ],
-  "assassinated": null,
-  "message": "Three failed missions"
- },
- "timeCreated": {
-  "_seconds": 1588363040,
-  "_nanoseconds": 692000000
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "BHATLA": true,
+    "PAUL": true
+   },
+   {
+    "ANKITH": true,
+    "SHREYA": true,
+    "PAUL": false
+   },
+   {
+    "PARROT": true,
+    "MOUBANI": false,
+    "SONALI": true
+   },
+   {
+    "BHATLA": true,
+    "ANKITH": true,
+    "MOUBANI": false,
+    "PAUL": false
+   }
+  ]
  }
 }

@@ -1,16 +1,57 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1595134562,
+  "_nanoseconds": 629000000
+ },
  "outcome": {
-  "state": "GOOD_WIN",
-  "roles": [
+  "message": "Three successful missions",
+  "votes": [
    {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "NINO"
+    "ALAN": true,
+    "JANET": true,
+    "CINDY": true
    },
    {
-    "assassin": false,
+    "ALAN": true,
+    "JANET": true,
+    "CINDY": false,
+    "LOYAL": true
+   },
+   {
+    "KEVIN": true,
+    "JANET": true,
+    "ALAN": true,
+    "NINO": false
+   },
+   {
+    "CATHY": true,
+    "KEVIN": true,
+    "ASHLEY": true,
+    "JANET": true,
+    "ALAN": true
+   },
+   {
+    "KEVIN": true,
+    "ALAN": true,
+    "ASHLEY": true,
+    "JANET": true,
+    "CATHY": true
+   }
+  ],
+  "assassinated": "CATHY",
+  "roles": [
+   {
+    "name": "NINO",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "name": "LOYAL",
     "role": "MORGANA",
-    "name": "LOYAL"
+    "assassin": false
    },
    {
     "name": "JANET",
@@ -18,83 +59,52 @@
     "assassin": false
    },
    {
+    "assassin": false,
     "name": "ASHLEY",
-    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
+    "name": "ALAN",
     "role": "MERLIN",
-    "name": "ALAN"
-   },
-   {
-    "name": "CINDY",
-    "assassin": false,
-    "role": "OBERON"
-   },
-   {
-    "name": "CATHY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "KEVIN",
     "assassin": false
+   },
+   {
+    "role": "OBERON",
+    "name": "CINDY",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "CATHY"
+   },
+   {
+    "assassin": false,
+    "name": "KEVIN",
+    "role": "PERCIVAL"
    }
   ],
-  "votes": [
-   {
-    "JANET": true,
-    "CINDY": true,
-    "ALAN": true
-   },
-   {
-    "JANET": true,
-    "LOYAL": true,
-    "CINDY": false,
-    "ALAN": true
-   },
-   {
-    "NINO": false,
-    "JANET": true,
-    "ALAN": true,
-    "KEVIN": true
-   },
-   {
-    "ASHLEY": true,
-    "JANET": true,
-    "CATHY": true,
-    "ALAN": true,
-    "KEVIN": true
-   },
-   {
-    "KEVIN": true,
-    "JANET": true,
-    "CATHY": true,
-    "ALAN": true,
-    "ASHLEY": true
-   }
-  ],
-  "assassinated": "CATHY",
-  "message": "Three successful missions"
- },
- "timeFinished": {
-  "_seconds": 1595136371,
-  "_nanoseconds": 429000000
+  "state": "GOOD_WIN"
  },
  "missions": [
   {
+   "state": "SUCCESS",
+   "team": [
+    "JANET",
+    "ALAN",
+    "CINDY"
+   ],
    "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "JANET",
      "team": [
       "JANET",
       "ALAN",
       "CINDY"
      ],
-     "state": "APPROVED",
      "votes": [
       "CATHY",
       "NINO",
@@ -107,18 +117,13 @@
      ]
     }
    ],
-   "team": [
-    "JANET",
-    "ALAN",
-    "CINDY"
-   ],
-   "state": "SUCCESS",
-   "teamSize": 3,
    "failsRequired": 1
   },
   {
+   "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "LOYAL",
       "ASHLEY",
@@ -135,14 +140,12 @@
       "ALAN",
       "CINDY"
      ],
-     "proposer": "LOYAL",
-     "state": "APPROVED"
+     "proposer": "LOYAL"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "numFails": 1,
    "teamSize": 4,
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "LOYAL",
     "JANET",
@@ -151,13 +154,19 @@
    ]
   },
   {
+   "teamSize": 4,
    "state": "FAIL",
    "failsRequired": 1,
-   "teamSize": 4,
    "proposals": [
     {
      "proposer": "NINO",
      "state": "APPROVED",
+     "team": [
+      "JANET",
+      "ALAN",
+      "NINO",
+      "KEVIN"
+     ],
      "votes": [
       "KEVIN",
       "ALAN",
@@ -167,12 +176,6 @@
       "CINDY",
       "LOYAL",
       "NINO"
-     ],
-     "team": [
-      "JANET",
-      "ALAN",
-      "NINO",
-      "KEVIN"
      ]
     }
    ],
@@ -185,17 +188,13 @@
    "numFails": 1
   },
   {
+   "failsRequired": 2,
    "state": "SUCCESS",
-   "numFails": 0,
+   "teamSize": 5,
    "proposals": [
     {
-     "team": [
-      "ALAN",
-      "KEVIN",
-      "ASHLEY",
-      "CATHY",
-      "JANET"
-     ],
+     "state": "APPROVED",
+     "proposer": "ALAN",
      "votes": [
       "ALAN",
       "LOYAL",
@@ -206,11 +205,15 @@
       "KEVIN",
       "CATHY"
      ],
-     "state": "APPROVED",
-     "proposer": "ALAN"
+     "team": [
+      "ALAN",
+      "KEVIN",
+      "ASHLEY",
+      "CATHY",
+      "JANET"
+     ]
     }
    ],
-   "failsRequired": 2,
    "team": [
     "ALAN",
     "KEVIN",
@@ -218,10 +221,9 @@
     "CATHY",
     "JANET"
    ],
-   "teamSize": 5
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
    "team": [
     "ALAN",
     "ASHLEY",
@@ -246,34 +248,39 @@
       "CATHY",
       "JANET"
      ],
-     "state": "APPROVED",
-     "proposer": "CINDY"
+     "proposer": "CINDY",
+     "state": "APPROVED"
     }
    ],
    "state": "SUCCESS",
-   "teamSize": 5
+   "teamSize": 5,
+   "failsRequired": 1
   }
  ],
+ "timeFinished": {
+  "_seconds": 1595136371,
+  "_nanoseconds": 429000000
+ },
  "players": [
   {
-   "uid": "oUbh0cbD3dS4GAEzbDoU6qfEEO73",
-   "name": "ASHLEY"
+   "name": "ASHLEY",
+   "uid": "oUbh0cbD3dS4GAEzbDoU6qfEEO73"
   },
   {
-   "uid": "c8AL0Gy5vPUsFpW1yXNE04LiMJB2",
-   "name": "JANET"
+   "name": "JANET",
+   "uid": "c8AL0Gy5vPUsFpW1yXNE04LiMJB2"
   },
   {
    "name": "LOYAL",
    "uid": "5ROZzXe2h0QLOYLTi2uNvytkqPp2"
   },
   {
-   "uid": "o0J4MjCZwlbJ7YDGCkZ7UERLSN83",
-   "name": "NINO"
+   "name": "NINO",
+   "uid": "o0J4MjCZwlbJ7YDGCkZ7UERLSN83"
   },
   {
-   "uid": "BSV8PXzydYaXtBuMWGVGx0eYPL02",
-   "name": "ALAN"
+   "name": "ALAN",
+   "uid": "BSV8PXzydYaXtBuMWGVGx0eYPL02"
   },
   {
    "name": "CINDY",
@@ -284,15 +291,8 @@
    "uid": "lckLRrCDaSeHjYoj6wuNDLDq7uu1"
   },
   {
-   "name": "CATHY",
-   "uid": "9lEDnYZldlPbAqymqmKdhmK0KLH2"
+   "uid": "9lEDnYZldlPbAqymqmKdhmK0KLH2",
+   "name": "CATHY"
   }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1595134562,
-  "_nanoseconds": 629000000
- }
+ ]
 }

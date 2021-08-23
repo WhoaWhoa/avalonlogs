@@ -1,12 +1,107 @@
 {
+ "timeFinished": {
+  "_seconds": 1594526542,
+  "_nanoseconds": 873000000
+ },
+ "players": [
+  {
+   "name": "RUST",
+   "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3"
+  },
+  {
+   "name": "RAYA",
+   "uid": "X8WTjomlxzPri8T9ltn0aFIpzVC3"
+  },
+  {
+   "uid": "KH4ZmjI5XOUYu4rOwmw4oDElxue2",
+   "name": "METH"
+  },
+  {
+   "uid": "l7l07v1E3Gc06hvPX1Jt0GKfH8E2",
+   "name": "DORSPLEEN"
+  },
+  {
+   "uid": "1MbncmMJqjYjX0UKL4IDMyU5x0m1",
+   "name": "DIMPY"
+  },
+  {
+   "name": "GIGGLES",
+   "uid": "ERyQcl16HGQPkTh9RpRl6dKKOnH2"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1594525265,
+  "_nanoseconds": 10000000
+ },
+ "outcome": {
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "METH": false,
+    "DORSPLEEN": true
+   },
+   {
+    "RUST": true,
+    "DIMPY": true,
+    "RAYA": true
+   },
+   {
+    "RUST": false,
+    "DORSPLEEN": true,
+    "RAYA": true,
+    "DIMPY": true
+   },
+   {
+    "DIMPY": true,
+    "RAYA": true,
+    "RUST": false
+   }
+  ],
+  "roles": [
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "RUST"
+   },
+   {
+    "name": "METH",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "DIMPY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "GIGGLES",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "DORSPLEEN"
+   },
+   {
+    "role": "MERLIN",
+    "name": "RAYA",
+    "assassin": false
+   }
+  ]
+ },
  "missions": [
   {
-   "state": "FAIL",
    "team": [
     "METH",
     "DORSPLEEN"
    ],
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
      "proposer": "DORSPLEEN",
@@ -14,20 +109,24 @@
       "METH",
       "DORSPLEEN"
      ],
+     "state": "APPROVED",
      "votes": [
       "METH",
       "DIMPY",
       "GIGGLES",
       "DORSPLEEN",
       "RAYA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 1
+   "numFails": 1,
+   "teamSize": 2,
+   "state": "FAIL"
   },
   {
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "RUST",
     "RAYA",
@@ -36,32 +135,32 @@
    "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "GIGGLES",
+      "DIMPY",
+      "RUST"
+     ],
+     "proposer": "DIMPY",
      "votes": [
       "RAYA",
       "DIMPY",
       "DORSPLEEN"
      ],
-     "state": "REJECTED",
-     "proposer": "DIMPY",
-     "team": [
-      "GIGGLES",
-      "DIMPY",
-      "RUST"
-     ]
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "GIGGLES",
+      "DORSPLEEN",
+      "DIMPY"
+     ],
+     "state": "REJECTED",
      "team": [
       "GIGGLES",
       "DIMPY",
       "RAYA"
      ],
-     "state": "REJECTED",
-     "proposer": "GIGGLES",
-     "votes": [
-      "GIGGLES",
-      "DORSPLEEN",
-      "DIMPY"
-     ]
+     "proposer": "GIGGLES"
     },
     {
      "proposer": "RUST",
@@ -78,86 +177,71 @@
      ],
      "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "teamSize": 3
+   ]
   },
   {
-   "team": [
-    "DIMPY",
-    "RUST",
-    "RAYA",
-    "DORSPLEEN"
-   ],
-   "failsRequired": 1,
    "teamSize": 4,
    "state": "FAIL",
+   "failsRequired": 1,
    "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "DORSPLEEN"
-     ],
      "team": [
       "GIGGLES",
       "DIMPY",
       "RAYA",
       "DORSPLEEN"
      ],
-     "proposer": "RAYA"
+     "proposer": "RAYA",
+     "state": "REJECTED",
+     "votes": [
+      "DORSPLEEN"
+     ]
     },
     {
-     "votes": [
-      "METH",
-      "RAYA"
-     ],
      "state": "REJECTED",
-     "proposer": "METH",
      "team": [
       "RUST",
       "METH",
       "RAYA",
       "DIMPY"
+     ],
+     "proposer": "METH",
+     "votes": [
+      "METH",
+      "RAYA"
      ]
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "DIMPY",
-      "RUST",
-      "RAYA",
-      "DORSPLEEN"
-     ],
      "votes": [
       "DORSPLEEN",
       "RAYA",
       "RUST",
       "DIMPY"
      ],
-     "proposer": "DORSPLEEN"
+     "state": "APPROVED",
+     "proposer": "DORSPLEEN",
+     "team": [
+      "DIMPY",
+      "RUST",
+      "RAYA",
+      "DORSPLEEN"
+     ]
     }
+   ],
+   "team": [
+    "DIMPY",
+    "RUST",
+    "RAYA",
+    "DORSPLEEN"
    ]
   },
   {
    "numFails": 1,
    "teamSize": 3,
    "state": "FAIL",
-   "failsRequired": 1,
-   "team": [
-    "RUST",
-    "RAYA",
-    "DIMPY"
-   ],
    "proposals": [
     {
-     "team": [
-      "RUST",
-      "RAYA",
-      "DIMPY"
-     ],
-     "state": "APPROVED",
      "votes": [
       "RUST",
       "METH",
@@ -166,112 +250,28 @@
       "DORSPLEEN",
       "RAYA"
      ],
+     "state": "APPROVED",
+     "team": [
+      "RUST",
+      "RAYA",
+      "DIMPY"
+     ],
      "proposer": "DIMPY"
     }
+   ],
+   "failsRequired": 1,
+   "team": [
+    "RUST",
+    "RAYA",
+    "DIMPY"
    ]
   },
   {
-   "proposals": [],
    "teamSize": 4,
    "failsRequired": 1,
+   "proposals": [],
    "team": [],
    "state": "PENDING"
   }
- ],
- "timeFinished": {
-  "_seconds": 1594526542,
-  "_nanoseconds": 873000000
- },
- "players": [
-  {
-   "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3",
-   "name": "RUST"
-  },
-  {
-   "name": "RAYA",
-   "uid": "X8WTjomlxzPri8T9ltn0aFIpzVC3"
-  },
-  {
-   "name": "METH",
-   "uid": "KH4ZmjI5XOUYu4rOwmw4oDElxue2"
-  },
-  {
-   "name": "DORSPLEEN",
-   "uid": "l7l07v1E3Gc06hvPX1Jt0GKfH8E2"
-  },
-  {
-   "name": "DIMPY",
-   "uid": "1MbncmMJqjYjX0UKL4IDMyU5x0m1"
-  },
-  {
-   "name": "GIGGLES",
-   "uid": "ERyQcl16HGQPkTh9RpRl6dKKOnH2"
-  }
- ],
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "DORSPLEEN": true,
-    "METH": false
-   },
-   {
-    "DIMPY": true,
-    "RUST": true,
-    "RAYA": true
-   },
-   {
-    "DORSPLEEN": true,
-    "RAYA": true,
-    "DIMPY": true,
-    "RUST": false
-   },
-   {
-    "RAYA": true,
-    "DIMPY": true,
-    "RUST": false
-   }
-  ],
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "RUST",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "METH"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "DIMPY",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "GIGGLES",
-    "assassin": false
-   },
-   {
-    "name": "DORSPLEEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "RAYA",
-    "role": "MERLIN"
-   }
-  ],
-  "assassinated": null
- },
- "timeCreated": {
-  "_seconds": 1594525265,
-  "_nanoseconds": 10000000
- }
+ ]
 }

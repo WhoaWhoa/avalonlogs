@@ -1,35 +1,32 @@
 {
- "timeFinished": {
-  "_seconds": 1586009655,
-  "_nanoseconds": 633363000
- },
  "outcome": {
-  "assassinated": null,
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
   "roles": [
    {
-    "role": "MORDRED",
     "name": "KPNOVA",
+    "role": "MORDRED",
     "assassin": true
    },
    {
     "name": "SUZIE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "HEO",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
    },
    {
-    "role": "MERLIN",
+    "name": "HEO",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
     "assassin": false,
+    "role": "MERLIN",
     "name": "VY"
    },
    {
+    "name": "SHIN",
     "role": "MORGANA",
-    "assassin": false,
-    "name": "SHIN"
+    "assassin": false
    },
    {
     "name": "THI",
@@ -39,38 +36,33 @@
   ],
   "votes": [
    {
-    "SHIN": true,
-    "HEO": true
-   },
-   {
-    "KPNOVA": true,
-    "THI": true,
-    "VY": true
+    "HEO": true,
+    "SHIN": true
    },
    {
     "VY": true,
     "THI": true,
-    "KPNOVA": false,
-    "SUZIE": true
+    "KPNOVA": true
    },
    {
     "SUZIE": true,
-    "THI": true,
-    "SHIN": false
+    "KPNOVA": false,
+    "VY": true,
+    "THI": true
    },
    {
-    "KPNOVA": false,
+    "SHIN": false,
+    "SUZIE": true,
+    "THI": true
+   },
+   {
     "HEO": true,
     "SHIN": false,
+    "KPNOVA": false,
     "THI": true
    }
   ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN"
- },
- "timeCreated": {
-  "_seconds": 1586009113,
-  "_nanoseconds": 323000000
+  "assassinated": null
  },
  "players": [
   {
@@ -94,40 +86,46 @@
    "uid": "VIFHrTqaDzNkeXJ6RabdjNXjsg93"
   },
   {
-   "name": "KPNOVA",
-   "uid": "3VZdinfngaY8UuH7VPEvO2dzsNx2"
+   "uid": "3VZdinfngaY8UuH7VPEvO2dzsNx2",
+   "name": "KPNOVA"
   }
  ],
+ "timeCreated": {
+  "_seconds": 1586009113,
+  "_nanoseconds": 323000000
+ },
+ "timeFinished": {
+  "_seconds": 1586009655,
+  "_nanoseconds": 633363000
+ },
  "missions": [
   {
-   "teamSize": 2,
-   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "SHIN",
-      "HEO"
-     ],
      "votes": [
       "HEO",
       "VY",
       "SHIN",
       "KPNOVA"
      ],
+     "state": "APPROVED",
      "proposer": "SHIN",
-     "state": "APPROVED"
+     "team": [
+      "SHIN",
+      "HEO"
+     ]
     }
    ],
-   "state": "SUCCESS",
+   "numFails": 0,
    "failsRequired": 1,
+   "teamSize": 2,
    "team": [
     "SHIN",
     "HEO"
    ]
   },
   {
-   "failsRequired": 1,
-   "numFails": 0,
    "team": [
     "VY",
     "THI",
@@ -135,53 +133,55 @@
    ],
    "proposals": [
     {
-     "team": [
-      "VY",
-      "THI",
-      "KPNOVA"
-     ],
      "state": "APPROVED",
-     "proposer": "VY",
      "votes": [
       "VY",
       "THI",
       "KPNOVA",
       "SUZIE"
+     ],
+     "team": [
+      "VY",
+      "THI",
+      "KPNOVA"
+     ],
+     "proposer": "VY"
+    }
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 3
+  },
+  {
+   "state": "FAIL",
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "team": [
+      "VY",
+      "KPNOVA",
+      "THI",
+      "SUZIE"
+     ],
+     "proposer": "KPNOVA",
+     "votes": [
+      "SUZIE",
+      "VY",
+      "THI",
+      "KPNOVA"
      ]
     }
    ],
-   "teamSize": 3,
-   "state": "SUCCESS"
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 4,
-   "state": "FAIL",
    "team": [
     "VY",
     "KPNOVA",
     "THI",
     "SUZIE"
    ],
-   "proposals": [
-    {
-     "votes": [
-      "SUZIE",
-      "VY",
-      "THI",
-      "KPNOVA"
-     ],
-     "proposer": "KPNOVA",
-     "state": "APPROVED",
-     "team": [
-      "VY",
-      "KPNOVA",
-      "THI",
-      "SUZIE"
-     ]
-    }
-   ],
-   "numFails": 1
+   "numFails": 1,
+   "teamSize": 4
   },
   {
    "team": [
@@ -189,16 +189,19 @@
     "THI",
     "SHIN"
    ],
+   "teamSize": 3,
+   "failsRequired": 1,
    "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "SUZIE",
       "THI",
       "SHIN"
      ],
      "proposer": "SUZIE",
+     "state": "APPROVED",
      "votes": [
       "VY",
       "SHIN",
@@ -207,41 +210,38 @@
       "SUZIE"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 3
+   ]
   },
   {
+   "failsRequired": 1,
    "state": "FAIL",
-   "teamSize": 4,
-   "proposals": [
-    {
-     "team": [
-      "KPNOVA",
-      "HEO",
-      "SHIN",
-      "THI"
-     ],
-     "proposer": "THI",
-     "votes": [
-      "HEO",
-      "VY",
-      "SHIN",
-      "THI",
-      "KPNOVA"
-     ],
-     "state": "APPROVED"
-    }
-   ],
    "team": [
     "KPNOVA",
     "HEO",
     "SHIN",
     "THI"
    ],
+   "teamSize": 4,
    "numFails": 2,
-   "failsRequired": 1
+   "proposals": [
+    {
+     "proposer": "THI",
+     "state": "APPROVED",
+     "team": [
+      "KPNOVA",
+      "HEO",
+      "SHIN",
+      "THI"
+     ],
+     "votes": [
+      "HEO",
+      "VY",
+      "SHIN",
+      "THI",
+      "KPNOVA"
+     ]
+    }
+   ]
   }
  ]
 }

@@ -1,39 +1,106 @@
 {
+ "timeFinished": {
+  "_seconds": 1607055945,
+  "_nanoseconds": 651000000
+ },
  "options": {
   "inGameLog": false
  },
+ "timeCreated": {
+  "_seconds": 1607055025,
+  "_nanoseconds": 168000000
+ },
+ "players": [
+  {
+   "name": "DAVID",
+   "uid": "oXYMWdGfqTUdh0obOlr1jDy4myE2"
+  },
+  {
+   "uid": "y7Z94s64vBegmWVCSdhJHwzOv5D3",
+   "name": "SARAH"
+  },
+  {
+   "uid": "njE9lR462eaewWEceR23nr32CNx2",
+   "name": "NATE"
+  },
+  {
+   "name": "MARY",
+   "uid": "2iLS2EXvRSZzYKSkNYpuvtRac533"
+  },
+  {
+   "uid": "1vkpZc0CupeI1Qigif8tWxMfZAf1",
+   "name": "CONNOR"
+  },
+  {
+   "uid": "2XMJDJfWrDbgcCD91QCVSWc3Bmg2",
+   "name": "MADISON"
+  },
+  {
+   "name": "BILLY",
+   "uid": "jqZOuUki3Jdn9c23JQE5Xw1ZMHP2"
+  }
+ ],
  "outcome": {
   "assassinated": "NATE",
   "state": "GOOD_WIN",
+  "votes": [
+   {
+    "MARY": true,
+    "NATE": true
+   },
+   {
+    "NATE": true,
+    "CONNOR": true,
+    "MARY": false
+   },
+   {
+    "SARAH": true,
+    "DAVID": true,
+    "MADISON": true
+   },
+   {
+    "MADISON": true,
+    "SARAH": false,
+    "BILLY": false,
+    "DAVID": true
+   },
+   {
+    "NATE": true,
+    "CONNOR": true,
+    "DAVID": true,
+    "MADISON": true
+   }
+  ],
+  "message": "Three successful missions",
   "roles": [
    {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "CONNOR"
-   },
-   {
-    "assassin": false,
-    "name": "DAVID",
-    "role": "MERLIN"
-   },
-   {
-    "role": "MORGANA",
-    "name": "SARAH",
-    "assassin": false
-   },
-   {
-    "name": "MADISON",
+    "name": "CONNOR",
     "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "BILLY"
+    "name": "DAVID",
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
-    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "SARAH",
+    "role": "MORGANA"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MADISON",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "BILLY",
+    "assassin": true
+   },
+   {
     "name": "NATE",
+    "role": "PERCIVAL",
     "assassin": false
    },
    {
@@ -41,48 +108,12 @@
     "role": "MORDRED",
     "assassin": false
    }
-  ],
-  "votes": [
-   {
-    "NATE": true,
-    "MARY": true
-   },
-   {
-    "CONNOR": true,
-    "NATE": true,
-    "MARY": false
-   },
-   {
-    "MADISON": true,
-    "DAVID": true,
-    "SARAH": true
-   },
-   {
-    "SARAH": false,
-    "MADISON": true,
-    "BILLY": false,
-    "DAVID": true
-   },
-   {
-    "MADISON": true,
-    "DAVID": true,
-    "NATE": true,
-    "CONNOR": true
-   }
-  ],
-  "message": "Three successful missions"
+  ]
  },
  "missions": [
   {
-   "numFails": 0,
-   "teamSize": 2,
-   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "NATE",
-      "MARY"
-     ],
      "proposer": "MARY",
      "votes": [
       "SARAH",
@@ -93,24 +124,26 @@
       "BILLY",
       "MARY"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "NATE",
+      "MARY"
+     ]
     }
    ],
    "team": [
     "NATE",
     "MARY"
    ],
-   "state": "SUCCESS"
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
    "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "CONNOR",
-      "NATE",
-      "MARY"
-     ],
      "state": "APPROVED",
      "proposer": "CONNOR",
      "votes": [
@@ -121,35 +154,32 @@
       "CONNOR",
       "MARY",
       "SARAH"
+     ],
+     "team": [
+      "CONNOR",
+      "NATE",
+      "MARY"
      ]
     }
    ],
-   "failsRequired": 1,
    "team": [
     "CONNOR",
     "NATE",
     "MARY"
    ],
+   "numFails": 1,
    "state": "FAIL",
-   "numFails": 1
+   "failsRequired": 1
   },
   {
-   "numFails": 0,
    "team": [
     "MADISON",
     "SARAH",
     "DAVID"
    ],
-   "teamSize": 3,
    "state": "SUCCESS",
-   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "MADISON",
-      "SARAH",
-      "DAVID"
-     ],
      "proposer": "MADISON",
      "state": "APPROVED",
      "votes": [
@@ -159,22 +189,23 @@
       "DAVID",
       "MADISON",
       "CONNOR"
+     ],
+     "team": [
+      "MADISON",
+      "SARAH",
+      "DAVID"
      ]
     }
-   ]
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "teamSize": 4,
-   "team": [
-    "DAVID",
-    "SARAH",
-    "MADISON",
-    "BILLY"
-   ],
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "BILLY",
+     "state": "APPROVED",
      "votes": [
       "SARAH",
       "BILLY",
@@ -190,25 +221,21 @@
     }
    ],
    "state": "FAIL",
+   "team": [
+    "DAVID",
+    "SARAH",
+    "MADISON",
+    "BILLY"
+   ],
    "failsRequired": 2,
-   "numFails": 2
+   "numFails": 2,
+   "teamSize": 4
   },
   {
-   "team": [
-    "NATE",
-    "DAVID",
-    "MADISON",
-    "CONNOR"
-   ],
+   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "NATE",
-      "DAVID",
-      "MADISON",
-      "CONNOR"
-     ],
      "votes": [
       "DAVID",
       "MADISON",
@@ -217,51 +244,24 @@
       "SARAH",
       "NATE"
      ],
-     "proposer": "DAVID"
+     "team": [
+      "NATE",
+      "DAVID",
+      "MADISON",
+      "CONNOR"
+     ],
+     "proposer": "DAVID",
+     "state": "APPROVED"
     }
    ],
-   "numFails": 0,
-   "teamSize": 4,
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "team": [
+    "NATE",
+    "DAVID",
+    "MADISON",
+    "CONNOR"
+   ],
+   "teamSize": 4
   }
- ],
- "timeFinished": {
-  "_seconds": 1607055945,
-  "_nanoseconds": 651000000
- },
- "players": [
-  {
-   "uid": "oXYMWdGfqTUdh0obOlr1jDy4myE2",
-   "name": "DAVID"
-  },
-  {
-   "uid": "y7Z94s64vBegmWVCSdhJHwzOv5D3",
-   "name": "SARAH"
-  },
-  {
-   "name": "NATE",
-   "uid": "njE9lR462eaewWEceR23nr32CNx2"
-  },
-  {
-   "name": "MARY",
-   "uid": "2iLS2EXvRSZzYKSkNYpuvtRac533"
-  },
-  {
-   "name": "CONNOR",
-   "uid": "1vkpZc0CupeI1Qigif8tWxMfZAf1"
-  },
-  {
-   "name": "MADISON",
-   "uid": "2XMJDJfWrDbgcCD91QCVSWc3Bmg2"
-  },
-  {
-   "name": "BILLY",
-   "uid": "jqZOuUki3Jdn9c23JQE5Xw1ZMHP2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1607055025,
-  "_nanoseconds": 168000000
- }
+ ]
 }

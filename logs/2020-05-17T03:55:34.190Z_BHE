@@ -1,34 +1,28 @@
 {
+ "players": [
+  {
+   "name": "MAFAZLA",
+   "uid": "aZqL41Bbh3RbhHBKbl58qifvaV23"
+  },
+  {
+   "name": "RAHUL",
+   "uid": "7QifjUCY46TIhGd8uMfK41WSrIo1"
+  },
+  {
+   "name": "SAAD",
+   "uid": "X2mcyKLMPMQhWx17AwSBOdLjAr63"
+  },
+  {
+   "name": "RAAS",
+   "uid": "oJoeG2DBmBcntH1iFhM8MdYn3ox2"
+  },
+  {
+   "uid": "EizqnPS6PpbD6SLC66oODsd8jHN2",
+   "name": "ZAIN"
+  }
+ ],
  "outcome": {
-  "assassinated": null,
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "MAFAZLA"
-   },
-   {
-    "assassin": false,
-    "name": "RAHUL",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "SAAD",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "RAAS",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "ZAIN",
-    "assassin": false
-   }
-  ],
+  "state": "EVIL_WIN",
   "votes": [
    {
     "RAAS": true,
@@ -44,89 +38,117 @@
     "RAAS": true
    },
    {
-    "ZAIN": true,
     "RAAS": true,
+    "ZAIN": true,
     "MAFAZLA": false
    }
   ],
-  "state": "EVIL_WIN"
+  "roles": [
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "MAFAZLA"
+   },
+   {
+    "name": "RAHUL",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "SAAD"
+   },
+   {
+    "name": "RAAS",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "ZAIN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions"
  },
  "missions": [
   {
-   "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "RAAS",
+    "RAHUL"
+   ],
    "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "ZAIN",
+     "state": "REJECTED",
      "team": [
       "RAAS",
       "ZAIN"
      ],
+     "proposer": "ZAIN",
      "votes": [
       "ZAIN"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "votes": [
-      "MAFAZLA"
-     ],
+     "state": "REJECTED",
      "team": [
       "MAFAZLA",
       "RAHUL"
      ],
      "proposer": "MAFAZLA",
-     "state": "REJECTED"
+     "votes": [
+      "MAFAZLA"
+     ]
     },
     {
      "team": [
       "RAHUL",
       "SAAD"
      ],
-     "state": "REJECTED",
      "votes": [
       "SAAD"
      ],
-     "proposer": "RAHUL"
+     "proposer": "RAHUL",
+     "state": "REJECTED"
     },
     {
      "state": "REJECTED",
+     "proposer": "SAAD",
+     "votes": [
+      "SAAD"
+     ],
      "team": [
       "SAAD",
       "RAAS"
-     ],
-     "votes": [
-      "SAAD"
-     ],
-     "proposer": "SAAD"
+     ]
     },
     {
-     "state": "APPROVED",
+     "team": [
+      "RAAS",
+      "RAHUL"
+     ],
      "proposer": "RAAS",
+     "state": "APPROVED",
      "votes": [
       "MAFAZLA",
       "RAHUL",
       "SAAD",
       "RAAS",
       "ZAIN"
-     ],
-     "team": [
-      "RAAS",
-      "RAHUL"
      ]
     }
-   ],
-   "numFails": 0,
-   "teamSize": 2,
-   "team": [
-    "RAAS",
-    "RAHUL"
    ]
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
    "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "MAFAZLA",
     "RAHUL",
@@ -135,11 +157,11 @@
    "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "proposer": "ZAIN",
      "votes": [
       "ZAIN"
      ],
+     "state": "REJECTED",
      "team": [
       "ZAIN",
       "RAHUL",
@@ -147,14 +169,14 @@
      ]
     },
     {
+     "state": "APPROVED",
      "proposer": "MAFAZLA",
-     "votes": [
+     "team": [
       "MAFAZLA",
       "RAHUL",
       "RAAS"
      ],
-     "state": "APPROVED",
-     "team": [
+     "votes": [
       "MAFAZLA",
       "RAHUL",
       "RAAS"
@@ -163,12 +185,8 @@
    ]
   },
   {
-   "numFails": 1,
-   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "RAHUL",
      "votes": [
       "MAFAZLA",
       "RAHUL",
@@ -176,6 +194,8 @@
       "RAAS",
       "ZAIN"
      ],
+     "proposer": "RAHUL",
+     "state": "APPROVED",
      "team": [
       "RAAS",
       "RAHUL"
@@ -183,25 +203,20 @@
     }
    ],
    "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 2,
    "team": [
     "RAAS",
     "RAHUL"
    ],
-   "teamSize": 2
+   "numFails": 1
   },
   {
    "numFails": 1,
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "RAAS",
-    "ZAIN",
-    "MAFAZLA"
-   ],
-   "teamSize": 3,
    "proposals": [
     {
      "state": "REJECTED",
+     "proposer": "SAAD",
      "votes": [
       "SAAD"
      ],
@@ -209,8 +224,7 @@
       "MAFAZLA",
       "SAAD",
       "RAAS"
-     ],
-     "proposer": "SAAD"
+     ]
     },
     {
      "votes": [
@@ -218,55 +232,41 @@
       "MAFAZLA",
       "RAAS"
      ],
+     "state": "APPROVED",
      "team": [
       "RAAS",
       "ZAIN",
       "MAFAZLA"
      ],
-     "proposer": "RAAS",
-     "state": "APPROVED"
+     "proposer": "RAAS"
     }
-   ]
-  },
-  {
+   ],
+   "state": "FAIL",
+   "team": [
+    "RAAS",
+    "ZAIN",
+    "MAFAZLA"
+   ],
    "teamSize": 3,
-   "proposals": [],
-   "failsRequired": 1,
+   "failsRequired": 1
+  },
+  {
+   "team": [],
    "state": "PENDING",
-   "team": []
+   "proposals": [],
+   "teamSize": 3,
+   "failsRequired": 1
   }
  ],
- "players": [
-  {
-   "uid": "aZqL41Bbh3RbhHBKbl58qifvaV23",
-   "name": "MAFAZLA"
-  },
-  {
-   "uid": "7QifjUCY46TIhGd8uMfK41WSrIo1",
-   "name": "RAHUL"
-  },
-  {
-   "uid": "X2mcyKLMPMQhWx17AwSBOdLjAr63",
-   "name": "SAAD"
-  },
-  {
-   "name": "RAAS",
-   "uid": "oJoeG2DBmBcntH1iFhM8MdYn3ox2"
-  },
-  {
-   "uid": "EizqnPS6PpbD6SLC66oODsd8jHN2",
-   "name": "ZAIN"
-  }
- ],
- "options": {
-  "inGameLog": false
+ "timeCreated": {
+  "_seconds": 1589687734,
+  "_nanoseconds": 190000000
  },
  "timeFinished": {
   "_seconds": 1589687970,
   "_nanoseconds": 114000000
  },
- "timeCreated": {
-  "_seconds": 1589687734,
-  "_nanoseconds": 190000000
+ "options": {
+  "inGameLog": false
  }
 }

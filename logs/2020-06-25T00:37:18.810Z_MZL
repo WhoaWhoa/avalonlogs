@@ -1,13 +1,102 @@
 {
- "timeFinished": {
-  "_seconds": 1593047485,
-  "_nanoseconds": 428000000
+ "outcome": {
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "name": "ADRIAN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "JEREMY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "THOMSON",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ED",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "name": "ERIC",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "NICHOLAS"
+   },
+   {
+    "assassin": false,
+    "name": "EDISON",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "VAL",
+    "role": "MORDRED",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "name": "KELVIN",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "NICHOLAS": true,
+    "KELVIN": true,
+    "VAL": true
+   },
+   {
+    "EDISON": true,
+    "KELVIN": false,
+    "ED": true,
+    "VAL": true
+   },
+   {
+    "ADRIAN": true,
+    "VAL": true,
+    "THOMSON": true,
+    "KELVIN": false
+   },
+   {
+    "THOMSON": true,
+    "ERIC": true,
+    "JEREMY": true,
+    "NICHOLAS": true,
+    "ADRIAN": true
+   },
+   {
+    "ADRIAN": true,
+    "THOMSON": true,
+    "JEREMY": true,
+    "NICHOLAS": true,
+    "ERIC": true
+   }
+  ],
+  "assassinated": "ADRIAN"
  },
  "missions": [
   {
+   "team": [
+    "VAL",
+    "KELVIN",
+    "NICHOLAS"
+   ],
+   "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "VAL",
      "votes": [
       "KELVIN",
       "JEREMY",
@@ -22,24 +111,25 @@
       "VAL",
       "KELVIN",
       "NICHOLAS"
-     ],
-     "proposer": "VAL"
+     ]
     }
    ],
-   "numFails": 0,
-   "teamSize": 3,
-   "failsRequired": 1,
-   "team": [
-    "VAL",
-    "KELVIN",
-    "NICHOLAS"
-   ],
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
+   "teamSize": 4,
+   "numFails": 1,
+   "team": [
+    "KELVIN",
+    "VAL",
+    "EDISON",
+    "ED"
+   ],
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "EDISON",
      "votes": [
       "JEREMY",
       "ED",
@@ -47,27 +137,20 @@
       "EDISON",
       "VAL"
      ],
+     "proposer": "EDISON",
+     "state": "APPROVED",
      "team": [
       "KELVIN",
       "VAL",
       "EDISON",
       "ED"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "team": [
-    "KELVIN",
-    "VAL",
-    "EDISON",
-    "ED"
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "teamSize": 4,
-   "numFails": 1
+   ]
   },
   {
+   "state": "FAIL",
+   "teamSize": 4,
    "proposals": [
     {
      "state": "APPROVED",
@@ -88,44 +171,17 @@
      "proposer": "THOMSON"
     }
    ],
+   "numFails": 1,
    "team": [
     "VAL",
     "KELVIN",
     "THOMSON",
     "ADRIAN"
    ],
-   "numFails": 1,
-   "state": "FAIL",
-   "teamSize": 4,
    "failsRequired": 1
   },
   {
-   "numFails": 0,
-   "proposals": [
-    {
-     "proposer": "ADRIAN",
-     "votes": [
-      "JEREMY",
-      "THOMSON",
-      "ED",
-      "ERIC",
-      "NICHOLAS",
-      "EDISON",
-      "VAL",
-      "KELVIN"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "THOMSON",
-      "ADRIAN",
-      "JEREMY",
-      "NICHOLAS",
-      "ERIC"
-     ]
-    }
-   ],
    "teamSize": 5,
-   "state": "SUCCESS",
    "team": [
     "THOMSON",
     "ADRIAN",
@@ -133,10 +189,42 @@
     "NICHOLAS",
     "ERIC"
    ],
-   "failsRequired": 2
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "JEREMY",
+      "THOMSON",
+      "ED",
+      "ERIC",
+      "NICHOLAS",
+      "EDISON",
+      "VAL",
+      "KELVIN"
+     ],
+     "team": [
+      "THOMSON",
+      "ADRIAN",
+      "JEREMY",
+      "NICHOLAS",
+      "ERIC"
+     ],
+     "proposer": "ADRIAN"
+    }
+   ],
+   "failsRequired": 2,
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
-   "teamSize": 5,
+   "team": [
+    "NICHOLAS",
+    "THOMSON",
+    "ADRIAN",
+    "ERIC",
+    "JEREMY"
+   ],
+   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -146,29 +234,34 @@
       "ERIC",
       "ADRIAN"
      ],
+     "state": "REJECTED",
      "votes": [
       "THOMSON",
       "ERIC"
      ],
-     "state": "REJECTED",
      "proposer": "ED"
     },
     {
-     "proposer": "ERIC",
-     "state": "REJECTED",
      "votes": [
       "ERIC",
       "VAL"
      ],
+     "state": "REJECTED",
      "team": [
       "ERIC",
       "KELVIN",
       "VAL",
       "ED",
       "ADRIAN"
-     ]
+     ],
+     "proposer": "ERIC"
     },
     {
+     "state": "REJECTED",
+     "votes": [
+      "ERIC",
+      "VAL"
+     ],
      "proposer": "JEREMY",
      "team": [
       "JEREMY",
@@ -176,40 +269,26 @@
       "THOMSON",
       "EDISON",
       "NICHOLAS"
-     ],
-     "votes": [
-      "ERIC",
-      "VAL"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "proposer": "KELVIN",
      "state": "REJECTED",
+     "proposer": "KELVIN",
+     "team": [
+      "NICHOLAS",
+      "JEREMY",
+      "ADRIAN",
+      "ERIC",
+      "KELVIN"
+     ],
      "votes": [
       "JEREMY",
       "ERIC",
       "VAL",
       "KELVIN"
-     ],
-     "team": [
-      "NICHOLAS",
-      "JEREMY",
-      "ADRIAN",
-      "ERIC",
-      "KELVIN"
      ]
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "NICHOLAS",
-      "THOMSON",
-      "ADRIAN",
-      "ERIC",
-      "JEREMY"
-     ],
-     "proposer": "NICHOLAS",
      "votes": [
       "JEREMY",
       "THOMSON",
@@ -218,110 +297,34 @@
       "EDISON",
       "VAL",
       "KELVIN"
-     ]
+     ],
+     "team": [
+      "NICHOLAS",
+      "THOMSON",
+      "ADRIAN",
+      "ERIC",
+      "JEREMY"
+     ],
+     "state": "APPROVED",
+     "proposer": "NICHOLAS"
     }
    ],
-   "team": [
-    "NICHOLAS",
-    "THOMSON",
-    "ADRIAN",
-    "ERIC",
-    "JEREMY"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1
+   "teamSize": 5,
+   "failsRequired": 1,
+   "state": "SUCCESS"
   }
  ],
- "outcome": {
-  "message": "Three successful missions",
-  "assassinated": "ADRIAN",
-  "votes": [
-   {
-    "NICHOLAS": true,
-    "VAL": true,
-    "KELVIN": true
-   },
-   {
-    "KELVIN": false,
-    "EDISON": true,
-    "ED": true,
-    "VAL": true
-   },
-   {
-    "ADRIAN": true,
-    "VAL": true,
-    "THOMSON": true,
-    "KELVIN": false
-   },
-   {
-    "ERIC": true,
-    "THOMSON": true,
-    "JEREMY": true,
-    "NICHOLAS": true,
-    "ADRIAN": true
-   },
-   {
-    "NICHOLAS": true,
-    "JEREMY": true,
-    "ERIC": true,
-    "ADRIAN": true,
-    "THOMSON": true
-   }
-  ],
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "name": "ADRIAN",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "JEREMY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "THOMSON",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "ED"
-   },
-   {
-    "name": "ERIC",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "NICHOLAS",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "EDISON",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "VAL",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "role": "MORGANA",
-    "name": "KELVIN",
-    "assassin": false
-   }
-  ]
+ "timeFinished": {
+  "_seconds": 1593047485,
+  "_nanoseconds": 428000000
+ },
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
-   "name": "KELVIN",
-   "uid": "tQpgKDFOxBgz3AqqpGqocau1S0a2"
+   "uid": "tQpgKDFOxBgz3AqqpGqocau1S0a2",
+   "name": "KELVIN"
   },
   {
    "name": "NICHOLAS",
@@ -332,35 +335,32 @@
    "uid": "wC6JSv620SYj4va4EDqrncEH2Jb2"
   },
   {
-   "uid": "1jHHwUGEfQTY3fFz6iZTZXiiXI33",
-   "name": "EDISON"
+   "name": "EDISON",
+   "uid": "1jHHwUGEfQTY3fFz6iZTZXiiXI33"
   },
   {
-   "name": "THOMSON",
-   "uid": "O78yb4V9GnNff9YuBn8IRotwtf02"
+   "uid": "O78yb4V9GnNff9YuBn8IRotwtf02",
+   "name": "THOMSON"
   },
   {
    "uid": "jYAPv4IuMHcFuPCIWvpnB8CS0Nw2",
    "name": "ADRIAN"
   },
   {
-   "uid": "NjO3LVMDZATAl8KKfGOIv0Ywm663",
-   "name": "ED"
+   "name": "ED",
+   "uid": "NjO3LVMDZATAl8KKfGOIv0Ywm663"
   },
   {
    "name": "ERIC",
    "uid": "R6ELkgSybDVmdN2AvuTxtHhQpQg2"
   },
   {
-   "uid": "7t2CYSdOQNW7QKmOtgCvVjUv32K3",
-   "name": "JEREMY"
+   "name": "JEREMY",
+   "uid": "7t2CYSdOQNW7QKmOtgCvVjUv32K3"
   }
  ],
  "timeCreated": {
   "_seconds": 1593045438,
   "_nanoseconds": 810000000
- },
- "options": {
-  "inGameLog": false
  }
 }

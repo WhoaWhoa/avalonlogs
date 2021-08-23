@@ -1,37 +1,7 @@
 {
- "timeFinished": {
-  "_seconds": 1587947527,
-  "_nanoseconds": 513000000
- },
  "outcome": {
-  "votes": [
-   {
-    "LOHIT": true,
-    "JEAN": true,
-    "LYDIA": true
-   },
-   {
-    "BENJI": false,
-    "JEAN": true,
-    "JIM": true,
-    "AMANDA": true
-   },
-   {
-    "LYDIA": false,
-    "JIM": true,
-    "AMANDA": true,
-    "JEAN": true
-   },
-   {
-    "LYDIA": false,
-    "JEAN": true,
-    "JIM": true,
-    "LOHIT": false,
-    "ET": true
-   }
-  ],
-  "state": "EVIL_WIN",
   "message": "Three failed missions",
+  "assassinated": null,
   "roles": [
    {
     "name": "LUKE",
@@ -39,8 +9,8 @@
     "assassin": false
    },
    {
-    "role": "MERLIN",
     "name": "AMANDA",
+    "role": "MERLIN",
     "assassin": false
    },
    {
@@ -49,9 +19,9 @@
     "name": "LYDIA"
    },
    {
+    "name": "BENJI",
     "role": "EVIL MINION",
-    "assassin": true,
-    "name": "BENJI"
+    "assassin": true
    },
    {
     "assassin": false,
@@ -59,27 +29,53 @@
     "role": "EVIL MINION"
    },
    {
-    "assassin": false,
     "name": "JEAN",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "JIM",
     "role": "PERCIVAL",
+    "name": "JIM",
     "assassin": false
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "ANDREW",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "name": "ET",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "ET"
    }
   ],
-  "assassinated": null
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "LYDIA": true,
+    "JEAN": true,
+    "LOHIT": true
+   },
+   {
+    "AMANDA": true,
+    "JIM": true,
+    "BENJI": false,
+    "JEAN": true
+   },
+   {
+    "JIM": true,
+    "LYDIA": false,
+    "AMANDA": true,
+    "JEAN": true
+   },
+   {
+    "ET": true,
+    "JIM": true,
+    "LOHIT": false,
+    "LYDIA": false,
+    "JEAN": true
+   }
+  ]
  },
  "players": [
   {
@@ -87,24 +83,24 @@
    "uid": "gAvGJDQufoXHm8Wk4pceuTHzUva2"
   },
   {
-   "uid": "PphtkevnhCXLwYUn5EIguvBBKQx2",
-   "name": "ET"
+   "name": "ET",
+   "uid": "PphtkevnhCXLwYUn5EIguvBBKQx2"
   },
   {
-   "name": "BENJI",
-   "uid": "HdjU4bNbFogNHH9cU2gWmMTFSXy1"
+   "uid": "HdjU4bNbFogNHH9cU2gWmMTFSXy1",
+   "name": "BENJI"
   },
   {
    "uid": "0JHTg7ZXCBXtOUop3x2FaKZtnNq1",
    "name": "JIM"
   },
   {
-   "uid": "nmJI7ofkNlbxH4hhwPTkPtfiniH3",
-   "name": "ANDREW"
+   "name": "ANDREW",
+   "uid": "nmJI7ofkNlbxH4hhwPTkPtfiniH3"
   },
   {
-   "name": "JEAN",
-   "uid": "DlYMaDuIBzacCoYeNseAG6aI5Tn2"
+   "uid": "DlYMaDuIBzacCoYeNseAG6aI5Tn2",
+   "name": "JEAN"
   },
   {
    "name": "LUKE",
@@ -115,16 +111,17 @@
    "name": "LOHIT"
   },
   {
-   "name": "AMANDA",
-   "uid": "PO3iXJBUY2Q6F3mB4NMARR5CkHX2"
+   "uid": "PO3iXJBUY2Q6F3mB4NMARR5CkHX2",
+   "name": "AMANDA"
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "timeCreated": {
   "_seconds": 1587946689,
   "_nanoseconds": 222000000
+ },
+ "timeFinished": {
+  "_seconds": 1587947527,
+  "_nanoseconds": 513000000
  },
  "missions": [
   {
@@ -133,13 +130,12 @@
     "JEAN",
     "LOHIT"
    ],
-   "teamSize": 3,
    "state": "SUCCESS",
    "numFails": 0,
-   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "LOHIT",
      "votes": [
       "LYDIA",
       "BENJI",
@@ -151,10 +147,11 @@
       "LYDIA",
       "JEAN",
       "LOHIT"
-     ],
-     "proposer": "LOHIT"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
    "team": [
@@ -164,15 +161,11 @@
     "JIM"
    ],
    "numFails": 1,
+   "teamSize": 4,
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "votes": [
-      "AMANDA",
-      "BENJI",
-      "JEAN",
-      "JIM",
-      "ET"
-     ],
      "team": [
       "BENJI",
       "AMANDA",
@@ -180,23 +173,37 @@
       "JIM"
      ],
      "proposer": "AMANDA",
+     "votes": [
+      "AMANDA",
+      "BENJI",
+      "JEAN",
+      "JIM",
+      "ET"
+     ],
      "state": "APPROVED"
     }
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 4
+   ]
   },
   {
+   "team": [
+    "LYDIA",
+    "JEAN",
+    "JIM",
+    "AMANDA"
+   ],
+   "failsRequired": 1,
+   "teamSize": 4,
+   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "LYDIA",
       "JEAN",
       "JIM",
       "AMANDA"
      ],
-     "state": "APPROVED",
      "proposer": "LYDIA",
      "votes": [
       "JEAN",
@@ -206,40 +213,10 @@
       "BENJI"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "team": [
-    "LYDIA",
-    "JEAN",
-    "JIM",
-    "AMANDA"
-   ],
-   "state": "FAIL",
-   "teamSize": 4
+   ]
   },
   {
-   "state": "FAIL",
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "LYDIA",
-      "JEAN",
-      "LOHIT",
-      "ET",
-      "JIM"
-     ],
-     "votes": [
-      "LUKE",
-      "AMANDA",
-      "BENJI",
-      "LOHIT",
-      "ET"
-     ],
-     "proposer": "ET"
-    }
-   ],
+   "teamSize": 5,
    "numFails": 2,
    "failsRequired": 2,
    "team": [
@@ -249,14 +226,37 @@
     "ET",
     "JIM"
    ],
-   "teamSize": 5
+   "state": "FAIL",
+   "proposals": [
+    {
+     "team": [
+      "LYDIA",
+      "JEAN",
+      "LOHIT",
+      "ET",
+      "JIM"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "LUKE",
+      "AMANDA",
+      "BENJI",
+      "LOHIT",
+      "ET"
+     ],
+     "proposer": "ET"
+    }
+   ]
   },
   {
-   "teamSize": 5,
    "state": "PENDING",
+   "proposals": [],
    "failsRequired": 1,
-   "team": [],
-   "proposals": []
+   "teamSize": 5,
+   "team": []
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ }
 }

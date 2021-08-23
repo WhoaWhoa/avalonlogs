@@ -1,25 +1,54 @@
 {
  "outcome": {
+  "votes": [
+   {
+    "SAM": true,
+    "EDISON": true,
+    "KELVIN": true
+   },
+   {
+    "KELVIN": false,
+    "SAM": true,
+    "ASTON": true,
+    "EDISON": true
+   },
+   {
+    "SAM": true,
+    "ASTON": true,
+    "STEPH": true,
+    "THOMSON": true
+   },
+   {
+    "STEPH": true,
+    "SAM": true,
+    "ASTON": true,
+    "NICHOLAS": true,
+    "THOMSON": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
+  "assassinated": "STEPH",
   "roles": [
    {
-    "role": "LOYAL FOLLOWER",
     "name": "THOMSON",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "name": "STEPH",
-    "assassin": false
-   },
-   {
     "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "ERIC"
+    "assassin": false
    },
    {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "STEPH"
+   },
+   {
+    "name": "ERIC",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
     "name": "NICHOLAS",
-    "role": "EVIL MINION",
-    "assassin": true
+    "role": "EVIL MINION"
    },
    {
     "name": "EDISON",
@@ -27,74 +56,81 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "assassin": false,
     "name": "VAL",
-    "role": "EVIL MINION",
-    "assassin": false
+    "role": "EVIL MINION"
    },
    {
-    "name": "KELVIN",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "KELVIN"
    },
    {
     "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "SAM"
-   },
-   {
-    "name": "ASTON",
-    "role": "PERCIVAL",
+    "name": "SAM",
     "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "ASTON",
+    "role": "PERCIVAL"
    }
-  ],
-  "message": "Merlin assassinated",
-  "assassinated": "STEPH",
-  "votes": [
-   {
-    "EDISON": true,
-    "KELVIN": true,
-    "SAM": true
-   },
-   {
-    "SAM": true,
-    "ASTON": true,
-    "KELVIN": false,
-    "EDISON": true
-   },
-   {
-    "SAM": true,
-    "THOMSON": true,
-    "ASTON": true,
-    "STEPH": true
-   },
-   {
-    "STEPH": true,
-    "NICHOLAS": true,
-    "THOMSON": true,
-    "SAM": true,
-    "ASTON": true
-   }
-  ],
-  "state": "EVIL_WIN"
+  ]
  },
- "timeFinished": {
-  "_seconds": 1595466629,
-  "_nanoseconds": 306000000
- },
+ "players": [
+  {
+   "uid": "65JVZ1IEnCU2lDZAad1taZnkbFb2",
+   "name": "NICHOLAS"
+  },
+  {
+   "uid": "wC6JSv620SYj4va4EDqrncEH2Jb2",
+   "name": "VAL"
+  },
+  {
+   "uid": "1jHHwUGEfQTY3fFz6iZTZXiiXI33",
+   "name": "EDISON"
+  },
+  {
+   "uid": "PyFnZWgR6pYN1SgJ1k5nRikqbIq2",
+   "name": "SAM"
+  },
+  {
+   "name": "KELVIN",
+   "uid": "tQpgKDFOxBgz3AqqpGqocau1S0a2"
+  },
+  {
+   "uid": "mzNKoIt7o2gmdzkxYu68nXIRrJi2",
+   "name": "ASTON"
+  },
+  {
+   "uid": "O78yb4V9GnNff9YuBn8IRotwtf02",
+   "name": "THOMSON"
+  },
+  {
+   "name": "ERIC",
+   "uid": "4I4pfoqbS0ZrY0GXWbhVQ9lA49y2"
+  },
+  {
+   "uid": "cLBxKWEF0ZV0yqQdCnBXXhe6Pof2",
+   "name": "STEPH"
+  }
+ ],
  "missions": [
   {
-   "numFails": 0,
-   "teamSize": 3,
-   "state": "SUCCESS",
    "team": [
     "KELVIN",
     "SAM",
     "EDISON"
    ],
-   "failsRequired": 1,
    "proposals": [
     {
      "proposer": "KELVIN",
+     "team": [
+      "KELVIN",
+      "SAM",
+      "EDISON"
+     ],
+     "state": "APPROVED",
      "votes": [
       "NICHOLAS",
       "EDISON",
@@ -105,29 +141,33 @@
       "THOMSON",
       "STEPH",
       "ERIC"
-     ],
-     "team": [
-      "KELVIN",
-      "SAM",
-      "EDISON"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ]
+   ],
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
-   "numFails": 1,
    "team": [
     "ASTON",
     "KELVIN",
     "SAM",
     "EDISON"
    ],
-   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1,
    "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "ASTON",
+      "KELVIN",
+      "SAM",
+      "EDISON"
+     ],
+     "proposer": "ASTON",
      "votes": [
       "ERIC",
       "NICHOLAS",
@@ -138,22 +178,24 @@
       "ASTON",
       "THOMSON"
      ],
-     "team": [
-      "ASTON",
-      "KELVIN",
-      "SAM",
-      "EDISON"
-     ],
-     "proposer": "ASTON"
+     "state": "APPROVED"
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
+   "team": [
+    "STEPH",
+    "THOMSON",
+    "ASTON",
+    "SAM"
+   ],
+   "teamSize": 4,
+   "numFails": 0,
    "state": "SUCCESS",
    "proposals": [
     {
+     "state": "REJECTED",
      "proposer": "THOMSON",
      "votes": [
       "THOMSON",
@@ -165,24 +207,24 @@
       "EDISON",
       "ERIC",
       "STEPH"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "proposer": "ERIC",
      "votes": [
       "ERIC",
       "SAM"
      ],
+     "proposer": "ERIC",
+     "state": "REJECTED",
      "team": [
       "KELVIN",
       "SAM",
       "EDISON",
       "ERIC"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "proposer": "STEPH",
      "state": "APPROVED",
      "team": [
       "STEPH",
@@ -190,7 +232,6 @@
       "ASTON",
       "SAM"
      ],
-     "proposer": "STEPH",
      "votes": [
       "KELVIN",
       "SAM",
@@ -203,26 +244,11 @@
      ]
     }
    ],
-   "numFails": 0,
-   "teamSize": 4,
-   "team": [
-    "STEPH",
-    "THOMSON",
-    "ASTON",
-    "SAM"
-   ]
+   "failsRequired": 1
   },
   {
-   "failsRequired": 2,
    "proposals": [
     {
-     "team": [
-      "NICHOLAS",
-      "SAM",
-      "ASTON",
-      "THOMSON",
-      "STEPH"
-     ],
      "proposer": "NICHOLAS",
      "state": "APPROVED",
      "votes": [
@@ -235,64 +261,34 @@
       "NICHOLAS",
       "EDISON",
       "VAL"
+     ],
+     "team": [
+      "NICHOLAS",
+      "SAM",
+      "ASTON",
+      "THOMSON",
+      "STEPH"
      ]
     }
    ],
+   "teamSize": 5,
+   "failsRequired": 2,
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "NICHOLAS",
     "SAM",
     "ASTON",
     "THOMSON",
     "STEPH"
-   ],
-   "teamSize": 5,
-   "numFails": 0,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "proposals": [],
    "teamSize": 5,
+   "team": [],
    "failsRequired": 1,
    "state": "PENDING",
-   "team": []
-  }
- ],
- "players": [
-  {
-   "name": "NICHOLAS",
-   "uid": "65JVZ1IEnCU2lDZAad1taZnkbFb2"
-  },
-  {
-   "name": "VAL",
-   "uid": "wC6JSv620SYj4va4EDqrncEH2Jb2"
-  },
-  {
-   "uid": "1jHHwUGEfQTY3fFz6iZTZXiiXI33",
-   "name": "EDISON"
-  },
-  {
-   "name": "SAM",
-   "uid": "PyFnZWgR6pYN1SgJ1k5nRikqbIq2"
-  },
-  {
-   "uid": "tQpgKDFOxBgz3AqqpGqocau1S0a2",
-   "name": "KELVIN"
-  },
-  {
-   "uid": "mzNKoIt7o2gmdzkxYu68nXIRrJi2",
-   "name": "ASTON"
-  },
-  {
-   "name": "THOMSON",
-   "uid": "O78yb4V9GnNff9YuBn8IRotwtf02"
-  },
-  {
-   "name": "ERIC",
-   "uid": "4I4pfoqbS0ZrY0GXWbhVQ9lA49y2"
-  },
-  {
-   "name": "STEPH",
-   "uid": "cLBxKWEF0ZV0yqQdCnBXXhe6Pof2"
+   "proposals": []
   }
  ],
  "options": {
@@ -301,5 +297,9 @@
  "timeCreated": {
   "_seconds": 1595465883,
   "_nanoseconds": 329000000
+ },
+ "timeFinished": {
+  "_seconds": 1595466629,
+  "_nanoseconds": 306000000
  }
 }

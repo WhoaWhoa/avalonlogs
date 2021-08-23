@@ -1,35 +1,104 @@
 {
+ "timeFinished": {
+  "_seconds": 1596919351,
+  "_nanoseconds": 245000000
+ },
+ "outcome": {
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "PETER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "MARIUS",
+    "assassin": false
+   },
+   {
+    "name": "FAHEEM",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "PETERGGGGG",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MORDRED",
+    "name": "DREVIL",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "JONATHAN"
+   }
+  ],
+  "votes": [
+   {
+    "DREVIL": true,
+    "FAHEEM": true
+   },
+   {
+    "PETERGGGGG": true,
+    "PETER": true,
+    "JONATHAN": true
+   },
+   {
+    "PETERGGGGG": true,
+    "PETER": true,
+    "JONATHAN": true,
+    "DREVIL": false
+   },
+   {
+    "JONATHAN": true,
+    "MARIUS": true,
+    "PETERGGGGG": true
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "PETER",
+  "state": "GOOD_WIN"
+ },
+ "timeCreated": {
+  "_seconds": 1596917031,
+  "_nanoseconds": 157000000
+ },
  "missions": [
   {
    "state": "SUCCESS",
-   "teamSize": 2,
+   "team": [
+    "DREVIL",
+    "FAHEEM"
+   ],
    "proposals": [
     {
-     "votes": [
-      "PETER",
-      "JONATHAN"
-     ],
      "team": [
       "PETER",
       "JONATHAN"
      ],
      "proposer": "PETERGGGGG",
+     "votes": [
+      "PETER",
+      "JONATHAN"
+     ],
      "state": "REJECTED"
     },
     {
      "state": "REJECTED",
-     "votes": [
-      "FAHEEM",
-      "MARIUS"
-     ],
+     "proposer": "MARIUS",
      "team": [
       "MARIUS",
       "FAHEEM"
      ],
-     "proposer": "MARIUS"
+     "votes": [
+      "FAHEEM",
+      "MARIUS"
+     ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "PETERGGGGG",
       "JONATHAN"
@@ -38,10 +107,10 @@
      "team": [
       "JONATHAN",
       "PETERGGGGG"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "proposer": "FAHEEM",
      "team": [
       "FAHEEM",
       "PETER"
@@ -51,10 +120,10 @@
       "MARIUS",
       "PETER"
      ],
+     "proposer": "FAHEEM",
      "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
      "proposer": "DREVIL",
      "team": [
       "DREVIL",
@@ -66,44 +135,35 @@
       "JONATHAN",
       "PETERGGGGG",
       "PETER"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "DREVIL",
-    "FAHEEM"
-   ],
+   "failsRequired": 1,
    "numFails": 0,
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
-   "team": [
-    "PETERGGGGG",
-    "PETER",
-    "JONATHAN"
-   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 3,
    "failsRequired": 1,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "PETER",
+      "JONATHAN",
+      "PETERGGGGG"
+     ],
      "team": [
       "PETER",
       "JONATHAN",
       "DREVIL"
      ],
-     "proposer": "PETER",
-     "votes": [
-      "PETER",
-      "JONATHAN",
-      "PETERGGGGG"
-     ]
+     "state": "REJECTED",
+     "proposer": "PETER"
     },
     {
-     "team": [
-      "PETERGGGGG",
-      "PETER",
-      "JONATHAN"
-     ],
      "votes": [
       "PETER",
       "PETERGGGGG",
@@ -111,33 +171,48 @@
       "DREVIL"
      ],
      "proposer": "PETERGGGGG",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "PETERGGGGG",
+      "PETER",
+      "JONATHAN"
+     ]
     }
    ],
-   "teamSize": 3,
-   "numFails": 0,
-   "state": "SUCCESS"
+   "team": [
+    "PETERGGGGG",
+    "PETER",
+    "JONATHAN"
+   ]
   },
   {
    "state": "FAIL",
    "numFails": 1,
-   "teamSize": 4,
+   "team": [
+    "DREVIL",
+    "PETER",
+    "PETERGGGGG",
+    "JONATHAN"
+   ],
    "failsRequired": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "MARIUS",
       "PETER",
       "FAHEEM",
       "PETERGGGGG"
      ],
+     "proposer": "MARIUS",
+     "state": "REJECTED",
      "votes": [
       "MARIUS"
-     ],
-     "proposer": "MARIUS"
+     ]
     },
     {
+     "proposer": "JONATHAN",
+     "state": "REJECTED",
      "votes": [
       "PETER",
       "DREVIL",
@@ -148,12 +223,9 @@
       "PETERGGGGG",
       "PETER",
       "DREVIL"
-     ],
-     "proposer": "JONATHAN",
-     "state": "REJECTED"
+     ]
     },
     {
-     "proposer": "FAHEEM",
      "state": "REJECTED",
      "team": [
       "FAHEEM",
@@ -161,6 +233,7 @@
       "PETER",
       "PETERGGGGG"
      ],
+     "proposer": "FAHEEM",
      "votes": []
     },
     {
@@ -168,16 +241,18 @@
       "DREVIL",
       "JONATHAN"
      ],
-     "proposer": "DREVIL",
      "state": "REJECTED",
      "team": [
       "DREVIL",
       "PETER",
       "PETERGGGGG",
       "JONATHAN"
-     ]
+     ],
+     "proposer": "DREVIL"
     },
     {
+     "proposer": "PETER",
+     "state": "APPROVED",
      "votes": [
       "DREVIL",
       "PETERGGGGG",
@@ -185,8 +260,6 @@
       "JONATHAN",
       "PETER"
      ],
-     "state": "APPROVED",
-     "proposer": "PETER",
      "team": [
       "DREVIL",
       "PETER",
@@ -194,39 +267,26 @@
       "JONATHAN"
      ]
     }
-   ],
-   "team": [
-    "DREVIL",
-    "PETER",
-    "PETERGGGGG",
-    "JONATHAN"
    ]
   },
   {
-   "teamSize": 3,
-   "team": [
-    "JONATHAN",
-    "MARIUS",
-    "PETERGGGGG"
-   ],
-   "numFails": 0,
    "state": "SUCCESS",
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "MARIUS",
-      "JONATHAN"
-     ],
      "state": "REJECTED",
      "team": [
       "PETERGGGGG",
       "JONATHAN",
       "MARIUS"
      ],
+     "votes": [
+      "MARIUS",
+      "JONATHAN"
+     ],
      "proposer": "PETERGGGGG"
     },
     {
-     "state": "REJECTED",
      "team": [
       "MARIUS",
       "JONATHAN",
@@ -236,45 +296,45 @@
      "votes": [
       "FAHEEM",
       "MARIUS"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
      "proposer": "JONATHAN",
+     "team": [
+      "JONATHAN",
+      "MARIUS",
+      "PETERGGGGG"
+     ],
+     "state": "APPROVED",
      "votes": [
       "PETERGGGGG",
       "PETER",
       "JONATHAN",
       "MARIUS"
-     ],
-     "team": [
-      "JONATHAN",
-      "MARIUS",
-      "PETERGGGGG"
      ]
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "team": [
+    "JONATHAN",
+    "MARIUS",
+    "PETERGGGGG"
+   ],
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
    "proposals": [],
-   "team": [],
+   "failsRequired": 1,
    "teamSize": 4,
-   "state": "PENDING"
+   "state": "PENDING",
+   "team": []
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1596919351,
-  "_nanoseconds": 245000000
- },
  "players": [
   {
-   "uid": "k04SqWCeh7VKNbhWUUKOMzYepxK2",
-   "name": "FAHEEM"
+   "name": "FAHEEM",
+   "uid": "k04SqWCeh7VKNbhWUUKOMzYepxK2"
   },
   {
    "uid": "B19DtdmNnKhmAD5EdnZuYGRrbeu2",
@@ -297,67 +357,7 @@
    "uid": "fC3nxlydfgUBI3dqICJECt1AkQU2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1596917031,
-  "_nanoseconds": 157000000
- },
- "outcome": {
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "PETER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MARIUS"
-   },
-   {
-    "name": "FAHEEM",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "PETERGGGGG",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "DREVIL",
-    "role": "MORDRED",
-    "assassin": true
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "JONATHAN"
-   }
-  ],
-  "votes": [
-   {
-    "DREVIL": true,
-    "FAHEEM": true
-   },
-   {
-    "PETER": true,
-    "PETERGGGGG": true,
-    "JONATHAN": true
-   },
-   {
-    "JONATHAN": true,
-    "PETERGGGGG": true,
-    "DREVIL": false,
-    "PETER": true
-   },
-   {
-    "MARIUS": true,
-    "PETERGGGGG": true,
-    "JONATHAN": true
-   }
-  ],
-  "assassinated": "PETER",
-  "state": "GOOD_WIN",
-  "message": "Three successful missions"
+ "options": {
+  "inGameLog": false
  }
 }

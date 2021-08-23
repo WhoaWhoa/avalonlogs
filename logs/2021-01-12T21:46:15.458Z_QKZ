@@ -1,14 +1,50 @@
 {
+ "players": [
+  {
+   "name": "ABBY",
+   "uid": "hchNElALnOQG5cjcP0pDy8belK62"
+  },
+  {
+   "uid": "zvcVHIYIDvfZonG3pAiHPOeHE282",
+   "name": "LUKE"
+  },
+  {
+   "name": "MATT",
+   "uid": "uIbfoYpUZXZ5IF2IZGOMw8dJtRe2"
+  },
+  {
+   "name": "ANNIE",
+   "uid": "T3wHCGn1fNQu9BmQoOGWRQxBT1s2"
+  },
+  {
+   "uid": "PId7jBZXU0Xs76vmnDKQKKnw9Gg2",
+   "name": "HOLLY"
+  },
+  {
+   "name": "ALI",
+   "uid": "2gHqMpDTN2Y0K9niwz3FtSsTeTx2"
+  },
+  {
+   "uid": "ws696x3ECDchHLYtqjGXmLyR7LF3",
+   "name": "RUBY"
+  },
+  {
+   "name": "LILY",
+   "uid": "y4HABKKNHFN2VFlH8ezAlUxZr7Z2"
+  }
+ ],
  "missions": [
   {
+   "failsRequired": 1,
+   "team": [
+    "LUKE",
+    "MATT",
+    "ALI"
+   ],
+   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "LUKE",
-     "team": [
-      "LUKE",
-      "MATT",
-      "ALI"
-     ],
+     "state": "APPROVED",
      "votes": [
       "ANNIE",
       "LILY",
@@ -19,33 +55,31 @@
       "RUBY",
       "HOLLY"
      ],
-     "state": "APPROVED"
+     "proposer": "LUKE",
+     "team": [
+      "LUKE",
+      "MATT",
+      "ALI"
+     ]
     }
    ],
-   "team": [
-    "LUKE",
-    "MATT",
-    "ALI"
-   ],
    "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1,
-   "teamSize": 3
+   "numFails": 0
   },
   {
    "numFails": 1,
    "failsRequired": 1,
+   "team": [
+    "MATT",
+    "LUKE",
+    "ALI",
+    "RUBY"
+   ],
    "teamSize": 4,
-   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "MATT",
-      "LUKE",
-      "ALI",
-      "RUBY"
-     ],
      "state": "APPROVED",
+     "proposer": "MATT",
      "votes": [
       "LUKE",
       "ALI",
@@ -56,15 +90,15 @@
       "HOLLY",
       "RUBY"
      ],
-     "proposer": "MATT"
+     "team": [
+      "MATT",
+      "LUKE",
+      "ALI",
+      "RUBY"
+     ]
     }
    ],
-   "team": [
-    "MATT",
-    "LUKE",
-    "ALI",
-    "RUBY"
-   ]
+   "state": "FAIL"
   },
   {
    "team": [
@@ -73,11 +107,19 @@
     "LILY",
     "HOLLY"
    ],
-   "teamSize": 4,
+   "state": "FAIL",
+   "failsRequired": 1,
    "numFails": 1,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "ANNIE",
+     "team": [
+      "ANNIE",
+      "ABBY",
+      "LILY",
+      "HOLLY"
+     ],
      "votes": [
       "ANNIE",
       "RUBY",
@@ -85,20 +127,36 @@
       "ALI",
       "LILY",
       "ABBY"
-     ],
-     "proposer": "ANNIE",
-     "team": [
-      "ANNIE",
-      "ABBY",
-      "LILY",
-      "HOLLY"
      ]
     }
    ],
-   "state": "FAIL",
-   "failsRequired": 1
+   "teamSize": 4
   },
   {
+   "teamSize": 5,
+   "proposals": [
+    {
+     "votes": [
+      "RUBY",
+      "LILY",
+      "ABBY",
+      "ALI",
+      "ANNIE",
+      "LUKE",
+      "HOLLY"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "HOLLY",
+      "ALI",
+      "ABBY",
+      "LUKE",
+      "LILY"
+     ],
+     "proposer": "HOLLY"
+    }
+   ],
+   "failsRequired": 2,
    "state": "SUCCESS",
    "team": [
     "HOLLY",
@@ -107,35 +165,9 @@
     "LUKE",
     "LILY"
    ],
-   "teamSize": 5,
-   "failsRequired": 2,
-   "numFails": 1,
-   "proposals": [
-    {
-     "proposer": "HOLLY",
-     "state": "APPROVED",
-     "team": [
-      "HOLLY",
-      "ALI",
-      "ABBY",
-      "LUKE",
-      "LILY"
-     ],
-     "votes": [
-      "RUBY",
-      "LILY",
-      "ABBY",
-      "ALI",
-      "ANNIE",
-      "LUKE",
-      "HOLLY"
-     ]
-    }
-   ]
+   "numFails": 1
   },
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "numFails": 0,
    "team": [
     "LILY",
@@ -144,24 +176,26 @@
     "MATT",
     "LUKE"
    ],
+   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "ALI",
+     "votes": [
+      "ANNIE",
+      "RUBY",
+      "LILY"
+     ],
+     "state": "REJECTED",
      "team": [
       "ANNIE",
       "ALI",
       "MATT",
       "ABBY",
       "LILY"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "ANNIE",
-      "RUBY",
-      "LILY"
-     ],
-     "proposer": "ALI"
+     ]
     },
     {
+     "proposer": "RUBY",
      "votes": [
       "ANNIE",
       "ABBY",
@@ -174,10 +208,16 @@
       "ABBY",
       "ALI",
       "MATT"
-     ],
-     "proposer": "RUBY"
+     ]
     },
     {
+     "team": [
+      "LILY",
+      "ALI",
+      "HOLLY",
+      "MATT",
+      "LUKE"
+     ],
      "proposer": "LILY",
      "state": "APPROVED",
      "votes": [
@@ -186,119 +226,79 @@
       "MATT",
       "LUKE",
       "LILY"
-     ],
-     "team": [
-      "LILY",
-      "ALI",
-      "HOLLY",
-      "MATT",
-      "LUKE"
      ]
     }
    ],
+   "failsRequired": 1,
    "teamSize": 5
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "timeCreated": {
   "_seconds": 1610487975,
   "_nanoseconds": 458000000
  },
- "options": {
-  "inGameLog": false
- },
- "players": [
-  {
-   "name": "ABBY",
-   "uid": "hchNElALnOQG5cjcP0pDy8belK62"
-  },
-  {
-   "uid": "zvcVHIYIDvfZonG3pAiHPOeHE282",
-   "name": "LUKE"
-  },
-  {
-   "uid": "uIbfoYpUZXZ5IF2IZGOMw8dJtRe2",
-   "name": "MATT"
-  },
-  {
-   "name": "ANNIE",
-   "uid": "T3wHCGn1fNQu9BmQoOGWRQxBT1s2"
-  },
-  {
-   "uid": "PId7jBZXU0Xs76vmnDKQKKnw9Gg2",
-   "name": "HOLLY"
-  },
-  {
-   "uid": "2gHqMpDTN2Y0K9niwz3FtSsTeTx2",
-   "name": "ALI"
-  },
-  {
-   "name": "RUBY",
-   "uid": "ws696x3ECDchHLYtqjGXmLyR7LF3"
-  },
-  {
-   "name": "LILY",
-   "uid": "y4HABKKNHFN2VFlH8ezAlUxZr7Z2"
-  }
- ],
  "timeFinished": {
   "_seconds": 1610488653,
   "_nanoseconds": 261000000
  },
  "outcome": {
-  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
   "votes": [
    {
+    "MATT": true,
+    "LUKE": true,
+    "ALI": true
+   },
+   {
+    "RUBY": false,
     "MATT": true,
     "ALI": true,
     "LUKE": true
    },
    {
-    "MATT": true,
-    "RUBY": false,
-    "LUKE": true,
-    "ALI": true
-   },
-   {
-    "HOLLY": true,
     "ANNIE": false,
-    "LILY": true,
-    "ABBY": true
+    "ABBY": true,
+    "HOLLY": true,
+    "LILY": true
    },
    {
     "ALI": true,
-    "LUKE": true,
     "HOLLY": true,
+    "LUKE": true,
     "LILY": true,
     "ABBY": false
    },
    {
-    "LUKE": true,
-    "HOLLY": true,
     "LILY": true,
+    "LUKE": true,
+    "MATT": true,
     "ALI": true,
-    "MATT": true
+    "HOLLY": true
    }
   ],
   "roles": [
    {
+    "assassin": false,
     "role": "MERLIN",
-    "name": "LILY",
-    "assassin": false
+    "name": "LILY"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "HOLLY"
    },
    {
     "assassin": false,
-    "name": "HOLLY",
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
     "name": "MATT",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "ALI",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
@@ -306,9 +306,9 @@
     "role": "MORGANA"
    },
    {
-    "role": "EVIL MINION",
+    "name": "ANNIE",
     "assassin": true,
-    "name": "ANNIE"
+    "role": "EVIL MINION"
    },
    {
     "role": "EVIL MINION",
@@ -321,7 +321,7 @@
     "role": "LOYAL FOLLOWER"
    }
   ],
-  "assassinated": "LILY",
-  "message": "Merlin assassinated"
+  "state": "EVIL_WIN",
+  "assassinated": "LILY"
  }
 }

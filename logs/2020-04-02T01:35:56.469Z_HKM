@@ -1,9 +1,39 @@
 {
  "outcome": {
+  "votes": [
+   {
+    "ETHAN": true,
+    "THOMSON": true
+   },
+   {
+    "THOMSON": true,
+    "ADR": true,
+    "ETHAN": true
+   },
+   {
+    "KELVIN": true,
+    "THOMSON": true,
+    "ASTON": false,
+    "ETHAN": true
+   },
+   {
+    "ASTON": false,
+    "KELVIN": true,
+    "THOMSON": true
+   },
+   {
+    "SAM": false,
+    "THOMSON": true,
+    "KELVIN": true,
+    "ETHAN": true
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
   "roles": [
    {
-    "role": "MORDRED",
     "name": "SAM",
+    "role": "MORDRED",
     "assassin": true
    },
    {
@@ -18,12 +48,12 @@
    },
    {
     "role": "LOYAL FOLLOWER",
-    "name": "ETHAN",
-    "assassin": false
+    "assassin": false,
+    "name": "ETHAN"
    },
    {
-    "role": "MORGANA",
     "assassin": false,
+    "role": "MORGANA",
     "name": "ASTON"
    },
    {
@@ -32,75 +62,11 @@
     "role": "MERLIN"
    }
   ],
-  "assassinated": null,
-  "votes": [
-   {
-    "ETHAN": true,
-    "THOMSON": true
-   },
-   {
-    "ADR": true,
-    "THOMSON": true,
-    "ETHAN": true
-   },
-   {
-    "THOMSON": true,
-    "KELVIN": true,
-    "ASTON": false,
-    "ETHAN": true
-   },
-   {
-    "ASTON": false,
-    "THOMSON": true,
-    "KELVIN": true
-   },
-   {
-    "KELVIN": true,
-    "ETHAN": true,
-    "SAM": false,
-    "THOMSON": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Three failed missions"
+  "assassinated": null
  },
- "timeFinished": {
-  "_seconds": 1585791891,
-  "_nanoseconds": 149533000
- },
- "timeCreated": {
-  "_seconds": 1585791356,
-  "_nanoseconds": 469000000
- },
- "players": [
-  {
-   "uid": "nT71S6SUocgr40Las43Ra1X7LTF3",
-   "name": "KELVIN"
-  },
-  {
-   "name": "ASTON",
-   "uid": "uOAShplm33Sm4Jf0zEyyrmMJ0hm1"
-  },
-  {
-   "name": "SAM",
-   "uid": "IgHTN0zhTSdrSy8UQIShbS1qtFc2"
-  },
-  {
-   "uid": "PNxYt83wKtVYPSb6hzjb1fAv0O12",
-   "name": "THOMSON"
-  },
-  {
-   "uid": "NiPctZkYl4NfERf1jQREzCS9l6q2",
-   "name": "ETHAN"
-  },
-  {
-   "name": "ADR",
-   "uid": "3ag3hq2fJhcP47haVWoQJessYnd2"
-  }
- ],
  "missions": [
   {
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "ETHAN",
     "THOMSON"
@@ -108,6 +74,10 @@
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "ETHAN",
+      "THOMSON"
+     ],
      "proposer": "ETHAN",
      "votes": [
       "ADR",
@@ -116,27 +86,16 @@
       "KELVIN",
       "ETHAN",
       "ASTON"
-     ],
-     "team": [
-      "ETHAN",
-      "THOMSON"
      ]
     }
    ],
-   "numFails": 0,
    "teamSize": 2,
-   "state": "SUCCESS"
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 3,
-   "team": [
-    "ADR",
-    "ETHAN",
-    "THOMSON"
-   ],
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
@@ -155,12 +114,25 @@
      ],
      "proposer": "ADR"
     }
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "team": [
+    "ADR",
+    "ETHAN",
+    "THOMSON"
    ]
   },
   {
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "ETHAN",
+      "THOMSON",
+      "ASTON",
+      "KELVIN"
+     ],
      "votes": [
       "ETHAN",
       "ASTON",
@@ -169,68 +141,55 @@
       "KELVIN"
      ],
      "proposer": "KELVIN",
-     "team": [
-      "ETHAN",
-      "THOMSON",
-      "ASTON",
-      "KELVIN"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "state": "FAIL",
-   "numFails": 1,
    "team": [
     "ETHAN",
     "THOMSON",
     "ASTON",
     "KELVIN"
    ],
+   "teamSize": 4,
    "failsRequired": 1,
-   "teamSize": 4
+   "numFails": 1
   },
   {
-   "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 1,
-   "team": [
-    "THOMSON",
-    "ASTON",
-    "KELVIN"
-   ],
    "proposals": [
     {
-     "votes": [
-      "ETHAN"
-     ],
      "proposer": "ASTON",
      "team": [
       "ADR",
       "ETHAN",
       "ASTON"
      ],
+     "votes": [
+      "ETHAN"
+     ],
      "state": "REJECTED"
     },
     {
+     "proposer": "SAM",
      "state": "REJECTED",
-     "votes": [
-      "ASTON",
-      "ADR",
-      "SAM"
-     ],
      "team": [
       "SAM",
       "KELVIN",
       "ADR"
      ],
-     "proposer": "SAM"
+     "votes": [
+      "ASTON",
+      "ADR",
+      "SAM"
+     ]
     },
     {
+     "state": "APPROVED",
+     "proposer": "THOMSON",
      "team": [
       "THOMSON",
       "ASTON",
       "KELVIN"
      ],
-     "state": "APPROVED",
      "votes": [
       "KELVIN",
       "ETHAN",
@@ -238,14 +197,39 @@
       "ADR",
       "SAM",
       "THOMSON"
-     ],
-     "proposer": "THOMSON"
+     ]
     }
    ],
-   "state": "FAIL"
+   "team": [
+    "THOMSON",
+    "ASTON",
+    "KELVIN"
+   ],
+   "state": "FAIL",
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
-   "teamSize": 4,
+   "proposals": [
+    {
+     "team": [
+      "THOMSON",
+      "SAM",
+      "KELVIN",
+      "ETHAN"
+     ],
+     "state": "APPROVED",
+     "proposer": "ETHAN",
+     "votes": [
+      "ADR",
+      "SAM",
+      "KELVIN",
+      "ETHAN",
+      "ASTON"
+     ]
+    }
+   ],
    "team": [
     "THOMSON",
     "SAM",
@@ -255,25 +239,41 @@
    "numFails": 1,
    "state": "FAIL",
    "failsRequired": 1,
-   "proposals": [
-    {
-     "proposer": "ETHAN",
-     "votes": [
-      "ADR",
-      "SAM",
-      "KELVIN",
-      "ETHAN",
-      "ASTON"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "THOMSON",
-      "SAM",
-      "KELVIN",
-      "ETHAN"
-     ]
-    }
-   ]
+   "teamSize": 4
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1585791891,
+  "_nanoseconds": 149533000
+ },
+ "timeCreated": {
+  "_seconds": 1585791356,
+  "_nanoseconds": 469000000
+ },
+ "players": [
+  {
+   "uid": "nT71S6SUocgr40Las43Ra1X7LTF3",
+   "name": "KELVIN"
+  },
+  {
+   "uid": "uOAShplm33Sm4Jf0zEyyrmMJ0hm1",
+   "name": "ASTON"
+  },
+  {
+   "uid": "IgHTN0zhTSdrSy8UQIShbS1qtFc2",
+   "name": "SAM"
+  },
+  {
+   "name": "THOMSON",
+   "uid": "PNxYt83wKtVYPSb6hzjb1fAv0O12"
+  },
+  {
+   "uid": "NiPctZkYl4NfERf1jQREzCS9l6q2",
+   "name": "ETHAN"
+  },
+  {
+   "name": "ADR",
+   "uid": "3ag3hq2fJhcP47haVWoQJessYnd2"
   }
  ]
 }

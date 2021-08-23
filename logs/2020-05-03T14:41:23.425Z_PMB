@@ -1,15 +1,48 @@
 {
  "outcome": {
-  "roles": [
+  "votes": [
    {
-    "assassin": false,
-    "name": "PATRICK",
-    "role": "OBERON"
+    "DAVID": true,
+    "TISCH": true,
+    "PATRICK": false
    },
    {
-    "assassin": true,
+    "DANIL": false,
+    "ADRIAN": true,
+    "FILIP": true,
+    "TISCH": true
+   },
+   {
+    "FILIP": true,
+    "TISCH": true,
+    "ADRIAN": true,
+    "DAVID": true
+   },
+   {
+    "TISCH": true,
+    "FILIP": true,
+    "DAVID": true,
+    "JAKUB": true,
+    "ADRIAN": true
+   },
+   {
+    "FILIP": true,
+    "DAVID": true,
+    "TISCH": true,
+    "JAKUB": true,
+    "ADRIAN": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "OBERON",
+    "assassin": false,
+    "name": "PATRICK"
+   },
+   {
     "name": "STEPHAN",
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
     "name": "DANIL",
@@ -17,19 +50,19 @@
     "assassin": false
    },
    {
-    "name": "FILIP",
     "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "FILIP"
    },
    {
-    "name": "DAVID",
     "assassin": false,
+    "name": "DAVID",
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MERLIN",
+    "name": "TISCH",
     "assassin": false,
-    "name": "TISCH"
+    "role": "MERLIN"
    },
    {
     "role": "LOYAL FOLLOWER",
@@ -38,50 +71,13 @@
    },
    {
     "role": "LOYAL FOLLOWER",
-    "name": "ADRIAN",
-    "assassin": false
+    "assassin": false,
+    "name": "ADRIAN"
    }
   ],
-  "votes": [
-   {
-    "PATRICK": false,
-    "DAVID": true,
-    "TISCH": true
-   },
-   {
-    "FILIP": true,
-    "ADRIAN": true,
-    "DANIL": false,
-    "TISCH": true
-   },
-   {
-    "DAVID": true,
-    "ADRIAN": true,
-    "TISCH": true,
-    "FILIP": true
-   },
-   {
-    "TISCH": true,
-    "FILIP": true,
-    "JAKUB": true,
-    "DAVID": true,
-    "ADRIAN": true
-   },
-   {
-    "FILIP": true,
-    "TISCH": true,
-    "JAKUB": true,
-    "ADRIAN": true,
-    "DAVID": true
-   }
-  ],
+  "assassinated": "DAVID",
   "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "assassinated": "DAVID"
- },
- "timeCreated": {
-  "_seconds": 1588516883,
-  "_nanoseconds": 425000000
+  "message": "Three successful missions"
  },
  "players": [
   {
@@ -105,8 +101,8 @@
    "name": "FILIP"
   },
   {
-   "name": "DANIL",
-   "uid": "afmfuudxelN6oPc9BcAl11Vkyrr1"
+   "uid": "afmfuudxelN6oPc9BcAl11Vkyrr1",
+   "name": "DANIL"
   },
   {
    "uid": "TwFm8xxaEjhPgLZRgVRRsD5TaJ02",
@@ -120,60 +116,56 @@
  "options": {
   "inGameLog": false
  },
- "timeFinished": {
-  "_seconds": 1588521382,
-  "_nanoseconds": 413000000
- },
  "missions": [
   {
-   "numFails": 1,
-   "state": "FAIL",
-   "team": [
-    "TISCH",
-    "DAVID",
-    "PATRICK"
-   ],
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "DAVID"
-     ],
+     "proposer": "JAKUB",
      "team": [
       "JAKUB",
       "ADRIAN",
       "DANIL"
      ],
-     "state": "REJECTED",
-     "proposer": "JAKUB"
+     "votes": [
+      "DAVID"
+     ],
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "DAVID",
+      "TISCH",
+      "STEPHAN"
+     ],
+     "state": "REJECTED",
      "team": [
       "TISCH",
       "DAVID",
       "DANIL"
      ],
-     "votes": [
-      "DAVID",
-      "TISCH",
-      "STEPHAN"
-     ],
-     "state": "REJECTED",
      "proposer": "TISCH"
     },
     {
-     "votes": [
-      "JAKUB",
-      "STEPHAN"
-     ],
-     "proposer": "STEPHAN",
-     "state": "REJECTED",
      "team": [
       "DAVID",
       "PATRICK",
       "FILIP"
-     ]
+     ],
+     "proposer": "STEPHAN",
+     "votes": [
+      "JAKUB",
+      "STEPHAN"
+     ],
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
+     "team": [
+      "TISCH",
+      "DAVID",
+      "PATRICK"
+     ],
      "votes": [
       "STEPHAN",
       "DAVID",
@@ -181,37 +173,37 @@
       "JAKUB",
       "ADRIAN"
      ],
-     "state": "APPROVED",
-     "team": [
-      "TISCH",
-      "DAVID",
-      "PATRICK"
-     ],
      "proposer": "DAVID"
     }
    ],
+   "team": [
+    "TISCH",
+    "DAVID",
+    "PATRICK"
+   ],
+   "state": "FAIL",
    "failsRequired": 1,
-   "teamSize": 3
+   "numFails": 1
   },
   {
    "numFails": 1,
-   "state": "FAIL",
    "teamSize": 4,
    "proposals": [
     {
+     "votes": [
+      "TISCH"
+     ],
+     "state": "REJECTED",
      "team": [
       "PATRICK",
       "TISCH",
       "DANIL",
       "ADRIAN"
      ],
-     "votes": [
-      "TISCH"
-     ],
-     "state": "REJECTED",
      "proposer": "PATRICK"
     },
     {
+     "state": "REJECTED",
      "team": [
       "FILIP",
       "DAVID",
@@ -219,16 +211,15 @@
       "ADRIAN"
      ],
      "proposer": "FILIP",
-     "votes": [],
-     "state": "REJECTED"
+     "votes": []
     },
     {
+     "proposer": "DANIL",
+     "state": "REJECTED",
      "votes": [
       "STEPHAN",
       "TISCH"
      ],
-     "proposer": "DANIL",
-     "state": "REJECTED",
      "team": [
       "DANIL",
       "TISCH",
@@ -237,12 +228,8 @@
      ]
     },
     {
-     "team": [
-      "DANIL",
-      "FILIP",
-      "TISCH",
-      "ADRIAN"
-     ],
+     "proposer": "ADRIAN",
+     "state": "APPROVED",
      "votes": [
       "STEPHAN",
       "DANIL",
@@ -251,52 +238,65 @@
       "TISCH",
       "ADRIAN"
      ],
-     "proposer": "ADRIAN",
-     "state": "APPROVED"
+     "team": [
+      "DANIL",
+      "FILIP",
+      "TISCH",
+      "ADRIAN"
+     ]
     }
    ],
+   "failsRequired": 1,
    "team": [
     "DANIL",
     "FILIP",
     "TISCH",
     "ADRIAN"
    ],
-   "failsRequired": 1
+   "state": "FAIL"
   },
   {
+   "team": [
+    "DAVID",
+    "ADRIAN",
+    "FILIP",
+    "TISCH"
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "JAKUB",
-     "votes": [],
      "team": [
       "JAKUB",
       "DANIL",
       "DAVID",
       "ADRIAN"
-     ]
+     ],
+     "votes": [],
+     "proposer": "JAKUB",
+     "state": "REJECTED"
     },
     {
-     "votes": [],
+     "proposer": "TISCH",
+     "state": "REJECTED",
      "team": [
       "TISCH",
       "DAVID",
       "JAKUB",
       "DANIL"
      ],
-     "proposer": "TISCH",
-     "state": "REJECTED"
+     "votes": []
     },
     {
-     "proposer": "STEPHAN",
      "state": "REJECTED",
-     "votes": [],
      "team": [
       "ADRIAN",
       "TISCH",
       "DAVID",
       "JAKUB"
-     ]
+     ],
+     "proposer": "STEPHAN",
+     "votes": []
     },
     {
      "votes": [
@@ -306,65 +306,21 @@
       "DAVID",
       "TISCH"
      ],
-     "state": "APPROVED",
-     "proposer": "DAVID",
      "team": [
       "DAVID",
       "ADRIAN",
       "FILIP",
       "TISCH"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "DAVID"
     }
-   ],
-   "team": [
-    "DAVID",
-    "ADRIAN",
-    "FILIP",
-    "TISCH"
    ],
    "teamSize": 4,
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0
+   "state": "SUCCESS"
   },
   {
-   "numFails": 0,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "team": [
-      "PATRICK",
-      "FILIP",
-      "DANIL",
-      "ADRIAN",
-      "JAKUB"
-     ],
-     "votes": [
-      "PATRICK"
-     ],
-     "proposer": "PATRICK"
-    },
-    {
-     "state": "APPROVED",
-     "team": [
-      "TISCH",
-      "DAVID",
-      "ADRIAN",
-      "JAKUB",
-      "FILIP"
-     ],
-     "proposer": "FILIP",
-     "votes": [
-      "FILIP",
-      "DAVID",
-      "TISCH",
-      "JAKUB",
-      "ADRIAN",
-      "PATRICK",
-      "STEPHAN"
-     ]
-    }
-   ],
+   "state": "SUCCESS",
    "team": [
     "TISCH",
     "DAVID",
@@ -372,24 +328,54 @@
     "JAKUB",
     "FILIP"
    ],
-   "failsRequired": 2,
-   "state": "SUCCESS",
-   "teamSize": 5
-  },
-  {
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 5,
-   "team": [
-    "ADRIAN",
-    "FILIP",
-    "DAVID",
-    "TISCH",
-    "JAKUB"
-   ],
-   "numFails": 0,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "PATRICK",
+     "team": [
+      "PATRICK",
+      "FILIP",
+      "DANIL",
+      "ADRIAN",
+      "JAKUB"
+     ],
+     "votes": [
+      "PATRICK"
+     ]
+    },
+    {
+     "votes": [
+      "FILIP",
+      "DAVID",
+      "TISCH",
+      "JAKUB",
+      "ADRIAN",
+      "PATRICK",
+      "STEPHAN"
+     ],
+     "team": [
+      "TISCH",
+      "DAVID",
+      "ADRIAN",
+      "JAKUB",
+      "FILIP"
+     ],
+     "proposer": "FILIP",
+     "state": "APPROVED"
+    }
+   ],
+   "failsRequired": 2,
+   "teamSize": 5,
+   "numFails": 0
+  },
+  {
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "votes": [
+      "DANIL",
+      "PATRICK"
+     ],
      "team": [
       "DANIL",
       "ADRIAN",
@@ -397,22 +383,9 @@
       "TISCH",
       "DAVID"
      ],
-     "state": "REJECTED",
-     "proposer": "DANIL",
-     "votes": [
-      "DANIL",
-      "PATRICK"
-     ]
+     "proposer": "DANIL"
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "ADRIAN",
-      "FILIP",
-      "DAVID",
-      "TISCH",
-      "JAKUB"
-     ],
      "votes": [
       "JAKUB",
       "ADRIAN",
@@ -422,9 +395,36 @@
       "DAVID",
       "TISCH"
      ],
-     "proposer": "ADRIAN"
+     "proposer": "ADRIAN",
+     "state": "APPROVED",
+     "team": [
+      "ADRIAN",
+      "FILIP",
+      "DAVID",
+      "TISCH",
+      "JAKUB"
+     ]
     }
-   ]
+   ],
+   "team": [
+    "ADRIAN",
+    "FILIP",
+    "DAVID",
+    "TISCH",
+    "JAKUB"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 5,
+   "failsRequired": 1
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1588516883,
+  "_nanoseconds": 425000000
+ },
+ "timeFinished": {
+  "_seconds": 1588521382,
+  "_nanoseconds": 413000000
+ }
 }

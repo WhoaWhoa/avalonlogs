@@ -1,66 +1,40 @@
 {
  "outcome": {
-  "votes": [
-   {
-    "GOOD": true,
-    "RB": true,
-    "CKN": true
-   },
-   {
-    "DAVID": true,
-    "JON": true,
-    "CKN": false,
-    "MICHELLE": true
-   },
-   {
-    "DAVID": false,
-    "ANGELA": true,
-    "BRANDON": true,
-    "OLGA": true
-   },
-   {
-    "JON": false,
-    "CKN": false,
-    "BRANDON": true,
-    "HARRISON": true,
-    "MICHELLE": false
-   }
-  ],
   "roles": [
    {
     "name": "HARRISON",
-    "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "assassin": false
    },
    {
-    "name": "JON",
+    "role": "MORDRED",
     "assassin": false,
-    "role": "MORDRED"
+    "name": "JON"
    },
    {
     "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "RB"
+    "name": "RB",
+    "assassin": false
    },
    {
-    "name": "DAVID",
     "assassin": false,
+    "name": "DAVID",
     "role": "EVIL MINION"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "OLGA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "name": "BRANDON",
     "role": "MERLIN",
+    "name": "BRANDON",
     "assassin": false
    },
    {
+    "assassin": false,
     "name": "MICHELLE",
-    "role": "EVIL MINION",
-    "assassin": false
+    "role": "EVIL MINION"
    },
    {
     "name": "ANGELA",
@@ -68,32 +42,108 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "GOOD"
    },
    {
-    "name": "CKN",
     "assassin": true,
+    "name": "CKN",
     "role": "EVIL MINION"
    }
   ],
+  "assassinated": null,
   "message": "Three failed missions",
   "state": "EVIL_WIN",
-  "assassinated": null
+  "votes": [
+   {
+    "RB": true,
+    "GOOD": true,
+    "CKN": true
+   },
+   {
+    "CKN": false,
+    "DAVID": true,
+    "MICHELLE": true,
+    "JON": true
+   },
+   {
+    "BRANDON": true,
+    "OLGA": true,
+    "ANGELA": true,
+    "DAVID": false
+   },
+   {
+    "CKN": false,
+    "MICHELLE": false,
+    "BRANDON": true,
+    "JON": false,
+    "HARRISON": true
+   }
+  ]
  },
+ "players": [
+  {
+   "name": "BRANDON",
+   "uid": "Wl6jNQaBgjddQIs7CJxE59u5YI12"
+  },
+  {
+   "uid": "JuqF5khXYVeFEoWYWucITGF3wm12",
+   "name": "RB"
+  },
+  {
+   "uid": "UsvGWpcWhTQlftlP8SDlShejIau1",
+   "name": "JON"
+  },
+  {
+   "name": "OLGA",
+   "uid": "u0MzhMLAfuRslJPU4qT4QoA7HYt2"
+  },
+  {
+   "uid": "Kli1BwTLHDd4vHsRhdSZVrHONXu2",
+   "name": "DAVID"
+  },
+  {
+   "uid": "wyWYBT3o7ZdloCv3we32sCTWf5e2",
+   "name": "ANGELA"
+  },
+  {
+   "name": "HARRISON",
+   "uid": "rcXUtMoZuyXQeMShyEgPbuYC6bJ2"
+  },
+  {
+   "uid": "2U3cJZfbUAPHdqHGIN9ymchUudo2",
+   "name": "MICHELLE"
+  },
+  {
+   "name": "GOOD",
+   "uid": "zaBF0LTwHQgR6ROlZ2gfxjMAL4p1"
+  },
+  {
+   "uid": "EPU0saNA3SbZfFAoNFo4ZHf1W5f2",
+   "name": "CKN"
+  }
+ ],
  "missions": [
   {
-   "numFails": 0,
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "team": [
+    "RB",
+    "GOOD",
+    "CKN"
+   ],
    "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "RB",
       "GOOD",
       "CKN"
      ],
+     "proposer": "RB",
+     "state": "APPROVED",
      "votes": [
       "HARRISON",
       "JON",
@@ -103,29 +153,19 @@
       "ANGELA",
       "GOOD",
       "CKN"
-     ],
-     "proposer": "RB"
+     ]
     }
-   ],
-   "teamSize": 3,
-   "team": [
-    "RB",
-    "GOOD",
-    "CKN"
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
-   "state": "FAIL",
+   "numFails": 1,
    "teamSize": 4,
-   "failsRequired": 1,
    "team": [
     "JON",
     "CKN",
     "MICHELLE",
     "DAVID"
    ],
-   "numFails": 1,
    "proposals": [
     {
      "votes": [
@@ -145,11 +185,14 @@
      "state": "APPROVED",
      "proposer": "JON"
     }
-   ]
+   ],
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
    "state": "FAIL",
    "failsRequired": 1,
+   "teamSize": 4,
    "numFails": 1,
    "team": [
     "DAVID",
@@ -157,9 +200,9 @@
     "BRANDON",
     "ANGELA"
    ],
-   "teamSize": 4,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "CKN",
       "OLGA",
@@ -171,17 +214,9 @@
       "BRANDON",
       "ANGELA"
      ],
-     "state": "REJECTED",
      "proposer": "OLGA"
     },
     {
-     "team": [
-      "DAVID",
-      "OLGA",
-      "BRANDON",
-      "ANGELA"
-     ],
-     "proposer": "DAVID",
      "state": "APPROVED",
      "votes": [
       "RB",
@@ -192,30 +227,27 @@
       "CKN",
       "HARRISON",
       "JON"
-     ]
+     ],
+     "team": [
+      "DAVID",
+      "OLGA",
+      "BRANDON",
+      "ANGELA"
+     ],
+     "proposer": "DAVID"
     }
    ]
   },
   {
    "failsRequired": 2,
-   "teamSize": 5,
-   "team": [
-    "CKN",
-    "MICHELLE",
-    "HARRISON",
-    "JON",
-    "BRANDON"
-   ],
-   "numFails": 3,
-   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "ANGELA",
      "votes": [
       "HARRISON",
       "ANGELA",
       "GOOD"
      ],
-     "state": "REJECTED",
      "team": [
       "ANGELA",
       "MICHELLE",
@@ -223,9 +255,10 @@
       "RB",
       "BRANDON"
      ],
-     "proposer": "ANGELA"
+     "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
      "team": [
       "BRANDON",
       "HARRISON",
@@ -238,45 +271,51 @@
       "HARRISON",
       "ANGELA",
       "GOOD"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "proposer": "MICHELLE",
      "votes": [
       "HARRISON",
       "JON",
       "MICHELLE",
       "ANGELA"
      ],
-     "proposer": "MICHELLE",
+     "state": "REJECTED",
      "team": [
       "GOOD",
       "MICHELLE",
       "JON",
       "OLGA",
       "ANGELA"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "REJECTED",
-     "team": [
-      "GOOD",
-      "HARRISON",
-      "BRANDON",
-      "JON",
-      "ANGELA"
-     ],
      "votes": [
       "HARRISON",
       "DAVID",
       "BRANDON",
       "GOOD"
      ],
-     "proposer": "GOOD"
+     "state": "REJECTED",
+     "proposer": "GOOD",
+     "team": [
+      "GOOD",
+      "HARRISON",
+      "BRANDON",
+      "JON",
+      "ANGELA"
+     ]
     },
     {
-     "state": "APPROVED",
+     "team": [
+      "CKN",
+      "MICHELLE",
+      "HARRISON",
+      "JON",
+      "BRANDON"
+     ],
+     "proposer": "CKN",
      "votes": [
       "RB",
       "DAVID",
@@ -289,23 +328,26 @@
       "HARRISON",
       "JON"
      ],
-     "team": [
-      "CKN",
-      "MICHELLE",
-      "HARRISON",
-      "JON",
-      "BRANDON"
-     ],
-     "proposer": "CKN"
+     "state": "APPROVED"
     }
+   ],
+   "numFails": 3,
+   "teamSize": 5,
+   "state": "FAIL",
+   "team": [
+    "CKN",
+    "MICHELLE",
+    "HARRISON",
+    "JON",
+    "BRANDON"
    ]
   },
   {
-   "proposals": [],
-   "team": [],
-   "teamSize": 5,
+   "state": "PENDING",
    "failsRequired": 1,
-   "state": "PENDING"
+   "teamSize": 5,
+   "team": [],
+   "proposals": []
   }
  ],
  "timeCreated": {
@@ -316,48 +358,6 @@
   "_seconds": 1587182492,
   "_nanoseconds": 950000000
  },
- "players": [
-  {
-   "uid": "Wl6jNQaBgjddQIs7CJxE59u5YI12",
-   "name": "BRANDON"
-  },
-  {
-   "name": "RB",
-   "uid": "JuqF5khXYVeFEoWYWucITGF3wm12"
-  },
-  {
-   "name": "JON",
-   "uid": "UsvGWpcWhTQlftlP8SDlShejIau1"
-  },
-  {
-   "uid": "u0MzhMLAfuRslJPU4qT4QoA7HYt2",
-   "name": "OLGA"
-  },
-  {
-   "uid": "Kli1BwTLHDd4vHsRhdSZVrHONXu2",
-   "name": "DAVID"
-  },
-  {
-   "name": "ANGELA",
-   "uid": "wyWYBT3o7ZdloCv3we32sCTWf5e2"
-  },
-  {
-   "uid": "rcXUtMoZuyXQeMShyEgPbuYC6bJ2",
-   "name": "HARRISON"
-  },
-  {
-   "uid": "2U3cJZfbUAPHdqHGIN9ymchUudo2",
-   "name": "MICHELLE"
-  },
-  {
-   "uid": "zaBF0LTwHQgR6ROlZ2gfxjMAL4p1",
-   "name": "GOOD"
-  },
-  {
-   "name": "CKN",
-   "uid": "EPU0saNA3SbZfFAoNFo4ZHf1W5f2"
-  }
- ],
  "options": {
   "inGameLog": false
  }

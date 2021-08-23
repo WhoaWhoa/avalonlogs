@@ -1,10 +1,76 @@
 {
+ "players": [
+  {
+   "name": "JORHAY",
+   "uid": "89esFGN9ybXVUSN5FyNkVXCOXyh2"
+  },
+  {
+   "uid": "AR0pTefi0nbCK25MypCJmqJNrDu2",
+   "name": "TIM"
+  },
+  {
+   "uid": "xX3jwagV6jfJwlitdbjw7D8VmCp1",
+   "name": "CHREES"
+  },
+  {
+   "name": "JEFF",
+   "uid": "uvgOSdIBaYMWOkqgqxjJaQnX2R73"
+  },
+  {
+   "name": "DAVID",
+   "uid": "fHMm09XffufzZrK76LNl1MBESGK2"
+  },
+  {
+   "name": "KRISTINE",
+   "uid": "6tnErUwuWdREsJ57seMhjkfsRbn1"
+  },
+  {
+   "name": "ANNIE",
+   "uid": "Tg2qFCxcUmWS6twsbtoiKxHZO9n1"
+  },
+  {
+   "name": "MERYL",
+   "uid": "GHSlFiNmIRf6hPJHjvdoeLVtCOE2"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1594003231,
+  "_nanoseconds": 381000000
+ },
  "outcome": {
+  "votes": [
+   {
+    "JEFF": true,
+    "KRISTINE": true,
+    "ANNIE": true
+   },
+   {
+    "TIM": true,
+    "DAVID": true,
+    "KRISTINE": true,
+    "ANNIE": false
+   },
+   {
+    "JEFF": true,
+    "ANNIE": false,
+    "TIM": true,
+    "JORHAY": true
+   },
+   {
+    "KRISTINE": true,
+    "TIM": false,
+    "JORHAY": true,
+    "CHREES": false,
+    "DAVID": true
+   }
+  ],
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
   "roles": [
    {
     "name": "JEFF",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": true,
@@ -13,23 +79,23 @@
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "KRISTINE"
+    "name": "KRISTINE",
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "role": "OBERON",
     "name": "ANNIE",
-    "assassin": false,
-    "role": "OBERON"
+    "assassin": false
    },
    {
-    "name": "MERYL",
     "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "name": "MERYL"
    },
    {
-    "name": "TIM",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "TIM"
    },
    {
     "name": "DAVID",
@@ -37,55 +103,27 @@
     "assassin": false
    },
    {
-    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "name": "JORHAY"
+    "name": "JORHAY",
+    "role": "LOYAL FOLLOWER"
    }
   ],
-  "assassinated": null,
-  "votes": [
-   {
-    "ANNIE": true,
-    "JEFF": true,
-    "KRISTINE": true
-   },
-   {
-    "KRISTINE": true,
-    "DAVID": true,
-    "TIM": true,
-    "ANNIE": false
-   },
-   {
-    "JEFF": true,
-    "TIM": true,
-    "JORHAY": true,
-    "ANNIE": false
-   },
-   {
-    "CHREES": false,
-    "JORHAY": true,
-    "TIM": false,
-    "KRISTINE": true,
-    "DAVID": true
-   }
-  ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN"
+  "assassinated": null
+ },
+ "timeCreated": {
+  "_seconds": 1594002687,
+  "_nanoseconds": 925000000
  },
  "missions": [
   {
-   "teamSize": 3,
-   "numFails": 0,
-   "team": [
-    "KRISTINE",
-    "ANNIE",
-    "JEFF"
-   ],
-   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "KRISTINE",
+      "ANNIE",
+      "JEFF"
+     ],
      "proposer": "KRISTINE",
-     "state": "APPROVED",
      "votes": [
       "JEFF",
       "CHREES",
@@ -96,25 +134,30 @@
       "DAVID",
       "JORHAY"
      ],
-     "team": [
-      "KRISTINE",
-      "ANNIE",
-      "JEFF"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "team": [
+    "KRISTINE",
+    "ANNIE",
+    "JEFF"
+   ],
+   "numFails": 0,
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "ANNIE",
     "KRISTINE",
     "DAVID",
     "TIM"
    ],
-   "failsRequired": 1,
    "teamSize": 4,
-   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "votes": [
@@ -135,11 +178,10 @@
      "proposer": "ANNIE",
      "state": "APPROVED"
     }
-   ],
-   "state": "FAIL"
+   ]
   },
   {
-   "failsRequired": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -148,16 +190,17 @@
       "KRISTINE",
       "MERYL"
      ],
-     "state": "REJECTED",
-     "proposer": "MERYL",
      "team": [
       "CHREES",
       "DAVID",
       "KRISTINE",
       "JORHAY"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "MERYL"
     },
     {
+     "state": "APPROVED",
      "votes": [
       "JORHAY",
       "JEFF",
@@ -168,7 +211,6 @@
       "TIM",
       "DAVID"
      ],
-     "state": "APPROVED",
      "team": [
       "ANNIE",
       "TIM",
@@ -178,27 +220,26 @@
      "proposer": "JORHAY"
     }
    ],
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "ANNIE",
     "TIM",
     "JORHAY",
     "JEFF"
-   ],
-   "numFails": 1,
-   "state": "FAIL",
-   "teamSize": 4
+   ]
   },
   {
-   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "TIM",
      "votes": [
       "DAVID",
       "CHREES",
       "KRISTINE"
      ],
+     "proposer": "TIM",
+     "state": "REJECTED",
      "team": [
       "CHREES",
       "TIM",
@@ -208,6 +249,7 @@
      ]
     },
     {
+     "proposer": "CHREES",
      "votes": [
       "DAVID",
       "JORHAY",
@@ -215,7 +257,6 @@
       "KRISTINE",
       "MERYL"
      ],
-     "proposer": "CHREES",
      "state": "APPROVED",
      "team": [
       "CHREES",
@@ -226,6 +267,8 @@
      ]
     }
    ],
+   "numFails": 2,
+   "teamSize": 5,
    "team": [
     "CHREES",
     "KRISTINE",
@@ -233,61 +276,18 @@
     "TIM",
     "DAVID"
    ],
-   "numFails": 2,
-   "teamSize": 5,
-   "failsRequired": 2
+   "failsRequired": 2,
+   "state": "FAIL"
   },
   {
-   "proposals": [],
-   "teamSize": 5,
-   "team": [],
    "state": "PENDING",
-   "failsRequired": 1
+   "failsRequired": 1,
+   "proposals": [],
+   "team": [],
+   "teamSize": 5
   }
  ],
- "timeCreated": {
-  "_seconds": 1594002687,
-  "_nanoseconds": 925000000
- },
  "options": {
   "inGameLog": false
- },
- "players": [
-  {
-   "name": "JORHAY",
-   "uid": "89esFGN9ybXVUSN5FyNkVXCOXyh2"
-  },
-  {
-   "name": "TIM",
-   "uid": "AR0pTefi0nbCK25MypCJmqJNrDu2"
-  },
-  {
-   "name": "CHREES",
-   "uid": "xX3jwagV6jfJwlitdbjw7D8VmCp1"
-  },
-  {
-   "name": "JEFF",
-   "uid": "uvgOSdIBaYMWOkqgqxjJaQnX2R73"
-  },
-  {
-   "name": "DAVID",
-   "uid": "fHMm09XffufzZrK76LNl1MBESGK2"
-  },
-  {
-   "uid": "6tnErUwuWdREsJ57seMhjkfsRbn1",
-   "name": "KRISTINE"
-  },
-  {
-   "uid": "Tg2qFCxcUmWS6twsbtoiKxHZO9n1",
-   "name": "ANNIE"
-  },
-  {
-   "name": "MERYL",
-   "uid": "GHSlFiNmIRf6hPJHjvdoeLVtCOE2"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1594003231,
-  "_nanoseconds": 381000000
  }
 }

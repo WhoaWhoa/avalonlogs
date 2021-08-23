@@ -1,13 +1,32 @@
 {
- "timeCreated": {
-  "_seconds": 1600893663,
-  "_nanoseconds": 405000000
- },
  "outcome": {
+  "votes": [
+   {
+    "EMMA": true,
+    "CAITLIN": true
+   },
+   {
+    "CAITLIN": true,
+    "CHANCE": false,
+    "EMMA": true
+   },
+   {
+    "EM": true,
+    "EVR": true,
+    "EMMA": true,
+    "CAITLIN": true
+   },
+   {
+    "EMMA": true,
+    "EM": true,
+    "EVR": true
+   }
+  ],
+  "state": "GOOD_WIN",
   "roles": [
    {
-    "name": "EVR",
     "assassin": false,
+    "name": "EVR",
     "role": "LOYAL FOLLOWER"
    },
    {
@@ -17,18 +36,18 @@
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "CAITLIN"
+    "name": "CAITLIN",
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "role": "EVIL MINION",
-    "name": "EMILY"
+    "name": "EMILY",
+    "assassin": false
    },
    {
     "role": "LOYAL FOLLOWER",
-    "name": "EM",
-    "assassin": false
+    "assassin": false,
+    "name": "EM"
    },
    {
     "role": "MERLIN",
@@ -36,79 +55,27 @@
     "assassin": false
    }
   ],
-  "votes": [
-   {
-    "CAITLIN": true,
-    "EMMA": true
-   },
-   {
-    "EMMA": true,
-    "CAITLIN": true,
-    "CHANCE": false
-   },
-   {
-    "CAITLIN": true,
-    "EM": true,
-    "EMMA": true,
-    "EVR": true
-   },
-   {
-    "EVR": true,
-    "EM": true,
-    "EMMA": true
-   }
-  ],
   "message": "Three successful missions",
-  "state": "GOOD_WIN",
   "assassinated": "CAITLIN"
- },
- "options": {
-  "inGameLog": false
  },
  "timeFinished": {
   "_seconds": 1600894651,
   "_nanoseconds": 92000000
  },
- "players": [
-  {
-   "uid": "HKUvz7HRfThN2eR7Sac4UX65Ebx2",
-   "name": "EM"
-  },
-  {
-   "name": "EMMA",
-   "uid": "tdhvhYhY3SNEe7YB77XhGDiXfN32"
-  },
-  {
-   "uid": "8HtoB38aVzgpu8TbYrcTNXgNcnH2",
-   "name": "CAITLIN"
-  },
-  {
-   "name": "EMILY",
-   "uid": "gFLM4ibY7OWqK3dSBNt3QEc5fMi1"
-  },
-  {
-   "uid": "AYduZA0CIkRkgOL9sJTzBLQHlP33",
-   "name": "EVR"
-  },
-  {
-   "name": "CHANCE",
-   "uid": "opdNVZQxV1h1y4LqsItI1AmFbfD2"
-  }
- ],
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
-   "numFails": 0,
    "teamSize": 2,
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "CAITLIN",
      "team": [
       "EMMA",
       "CAITLIN"
      ],
-     "state": "APPROVED",
-     "proposer": "CAITLIN",
      "votes": [
       "EMILY",
       "CHANCE",
@@ -119,43 +86,53 @@
      ]
     }
    ],
+   "failsRequired": 1,
    "team": [
     "EMMA",
     "CAITLIN"
-   ]
+   ],
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
+   "team": [
+    "CAITLIN",
+    "EMMA",
+    "CHANCE"
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "CAITLIN",
       "CHANCE",
       "EVR",
       "EMILY"
      ],
+     "proposer": "EMILY",
      "team": [
       "CAITLIN",
       "EMMA",
       "CHANCE"
-     ],
-     "state": "APPROVED",
-     "proposer": "EMILY"
+     ]
     }
    ],
-   "team": [
-    "CAITLIN",
-    "EMMA",
-    "CHANCE"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
-   "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
+   "team": [
+    "EVR",
+    "CAITLIN",
+    "EMMA",
+    "EM"
+   ],
+   "state": "SUCCESS",
+   "teamSize": 4,
    "failsRequired": 1,
    "numFails": 0,
-   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -165,23 +142,16 @@
       "CAITLIN",
       "EMMA"
      ],
+     "proposer": "EVR",
+     "state": "APPROVED",
      "team": [
       "EVR",
       "CAITLIN",
       "EMMA",
       "EM"
-     ],
-     "proposer": "EVR",
-     "state": "APPROVED"
+     ]
     }
-   ],
-   "team": [
-    "EVR",
-    "CAITLIN",
-    "EMMA",
-    "EM"
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
    "proposals": [
@@ -192,13 +162,19 @@
       "EMMA"
      ],
      "proposer": "CHANCE",
+     "state": "REJECTED",
      "votes": [
       "EMILY",
       "CHANCE"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "team": [
+      "EM",
+      "EMMA",
+      "EVR"
+     ],
+     "state": "APPROVED",
      "votes": [
       "CAITLIN",
       "EMMA",
@@ -206,31 +182,55 @@
       "EM",
       "EVR"
      ],
-     "team": [
-      "EM",
-      "EMMA",
-      "EVR"
-     ],
-     "proposer": "EM",
-     "state": "APPROVED"
+     "proposer": "EM"
     }
    ],
    "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS",
    "team": [
     "EM",
     "EMMA",
     "EVR"
    ],
-   "numFails": 0,
    "teamSize": 3
   },
   {
-   "team": [],
+   "failsRequired": 1,
    "state": "PENDING",
    "proposals": [],
-   "failsRequired": 1,
+   "team": [],
    "teamSize": 4
   }
- ]
+ ],
+ "players": [
+  {
+   "name": "EM",
+   "uid": "HKUvz7HRfThN2eR7Sac4UX65Ebx2"
+  },
+  {
+   "uid": "tdhvhYhY3SNEe7YB77XhGDiXfN32",
+   "name": "EMMA"
+  },
+  {
+   "uid": "8HtoB38aVzgpu8TbYrcTNXgNcnH2",
+   "name": "CAITLIN"
+  },
+  {
+   "uid": "gFLM4ibY7OWqK3dSBNt3QEc5fMi1",
+   "name": "EMILY"
+  },
+  {
+   "uid": "AYduZA0CIkRkgOL9sJTzBLQHlP33",
+   "name": "EVR"
+  },
+  {
+   "uid": "opdNVZQxV1h1y4LqsItI1AmFbfD2",
+   "name": "CHANCE"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1600893663,
+  "_nanoseconds": 405000000
+ }
 }

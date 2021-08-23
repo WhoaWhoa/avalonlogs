@@ -1,10 +1,14 @@
 {
- "options": {
-  "inGameLog": false
+ "timeCreated": {
+  "_seconds": 1599881835,
+  "_nanoseconds": 727000000
  },
  "timeFinished": {
   "_seconds": 1599883497,
   "_nanoseconds": 844000000
+ },
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
@@ -16,8 +20,8 @@
    "uid": "11rZd85dM6O53ourLEgexCK37Tn2"
   },
   {
-   "name": "BLITZ",
-   "uid": "pIjSItKivKMn77h7ZckVCClmZIx2"
+   "uid": "pIjSItKivKMn77h7ZckVCClmZIx2",
+   "name": "BLITZ"
   },
   {
    "uid": "C3vcoe5NzNdrsBuJnZatM3PTnsh2",
@@ -32,9 +36,73 @@
    "uid": "DqxUUlW7puW3czqsCW1dYTg5Lsj2"
   }
  ],
+ "outcome": {
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "CCPDELENDA",
+    "assassin": false
+   },
+   {
+    "name": "MARE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "ELLIE",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "ANDREW"
+   },
+   {
+    "assassin": false,
+    "name": "MEGAN",
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MERLIN",
+    "name": "BLITZ",
+    "assassin": false
+   }
+  ],
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "BLITZ": true,
+    "ELLIE": false
+   },
+   {
+    "CCPDELENDA": true,
+    "MARE": true,
+    "ANDREW": false
+   },
+   {
+    "BLITZ": true,
+    "MEGAN": true,
+    "MARE": true,
+    "CCPDELENDA": true
+   },
+   {
+    "BLITZ": true,
+    "MEGAN": true,
+    "CCPDELENDA": true
+   },
+   {
+    "BLITZ": true,
+    "CCPDELENDA": true,
+    "MEGAN": true,
+    "MARE": true
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "CCPDELENDA"
+ },
  "missions": [
   {
-   "numFails": 1,
    "state": "FAIL",
    "proposals": [
     {
@@ -47,38 +115,35 @@
       "MARE",
       "ANDREW"
      ],
+     "proposer": "ELLIE",
      "team": [
       "ELLIE",
       "BLITZ"
-     ],
-     "proposer": "ELLIE"
+     ]
     }
    ],
    "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 1,
    "team": [
     "ELLIE",
     "BLITZ"
-   ],
-   "teamSize": 2
+   ]
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "ANDREW",
-    "CCPDELENDA",
-    "MARE"
-   ],
-   "teamSize": 3,
+   "numFails": 1,
    "state": "FAIL",
+   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "ELLIE",
       "MARE",
       "MEGAN",
       "CCPDELENDA"
      ],
-     "state": "APPROVED",
      "team": [
       "ANDREW",
       "CCPDELENDA",
@@ -87,11 +152,15 @@
      "proposer": "CCPDELENDA"
     }
    ],
-   "numFails": 1
+   "team": [
+    "ANDREW",
+    "CCPDELENDA",
+    "MARE"
+   ]
   },
   {
-   "numFails": 0,
    "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "BLITZ",
     "MEGAN",
@@ -100,50 +169,44 @@
    ],
    "proposals": [
     {
-     "proposer": "MARE",
      "votes": [
       "CCPDELENDA",
       "ELLIE"
      ],
-     "state": "REJECTED",
      "team": [
       "MARE",
       "ELLIE",
       "MEGAN",
       "CCPDELENDA"
-     ]
+     ],
+     "proposer": "MARE",
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "ANDREW"
-     ],
+     "proposer": "ANDREW",
      "team": [
       "MEGAN",
       "MARE",
       "ANDREW",
       "BLITZ"
      ],
-     "state": "REJECTED",
-     "proposer": "ANDREW"
+     "votes": [
+      "ANDREW"
+     ],
+     "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
+     "proposer": "MEGAN",
+     "votes": [],
      "team": [
       "ANDREW",
       "MEGAN",
       "CCPDELENDA",
       "MARE"
-     ],
-     "votes": [],
-     "state": "REJECTED",
-     "proposer": "MEGAN"
+     ]
     },
     {
-     "votes": [
-      "BLITZ",
-      "CCPDELENDA",
-      "MARE",
-      "MEGAN"
-     ],
      "state": "APPROVED",
      "team": [
       "BLITZ",
@@ -151,60 +214,68 @@
       "CCPDELENDA",
       "MARE"
      ],
-     "proposer": "BLITZ"
+     "proposer": "BLITZ",
+     "votes": [
+      "BLITZ",
+      "CCPDELENDA",
+      "MARE",
+      "MEGAN"
+     ]
     }
    ],
-   "teamSize": 4,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "teamSize": 4
   },
   {
-   "numFails": 0,
-   "teamSize": 3,
+   "proposals": [
+    {
+     "proposer": "ELLIE",
+     "votes": [
+      "CCPDELENDA",
+      "ELLIE",
+      "MARE",
+      "ANDREW",
+      "MEGAN"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "MEGAN",
+      "BLITZ",
+      "CCPDELENDA"
+     ]
+    }
+   ],
    "team": [
     "MEGAN",
     "BLITZ",
     "CCPDELENDA"
    ],
-   "state": "SUCCESS",
    "failsRequired": 1,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "MEGAN",
-      "BLITZ",
-      "CCPDELENDA"
-     ],
-     "votes": [
-      "CCPDELENDA",
-      "ELLIE",
-      "MARE",
-      "ANDREW",
-      "MEGAN"
-     ],
-     "proposer": "ELLIE"
-    }
-   ]
+   "numFails": 0,
+   "teamSize": 3,
+   "state": "SUCCESS"
   },
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
+     "votes": [
+      "BLITZ",
+      "CCPDELENDA",
+      "ANDREW",
+      "MARE",
+      "ELLIE",
+      "MEGAN"
+     ],
      "team": [
       "MARE",
       "CCPDELENDA",
       "MEGAN",
       "BLITZ"
      ],
-     "proposer": "CCPDELENDA",
-     "votes": [
-      "BLITZ",
-      "CCPDELENDA",
-      "ANDREW",
-      "MARE",
-      "ELLIE",
-      "MEGAN"
-     ]
+     "state": "APPROVED",
+     "proposer": "CCPDELENDA"
     }
    ],
    "team": [
@@ -213,79 +284,8 @@
     "MEGAN",
     "BLITZ"
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "state": "SUCCESS",
-   "numFails": 0
+   "teamSize": 4
   }
- ],
- "timeCreated": {
-  "_seconds": 1599881835,
-  "_nanoseconds": 727000000
- },
- "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "CCPDELENDA",
-  "votes": [
-   {
-    "BLITZ": true,
-    "ELLIE": false
-   },
-   {
-    "CCPDELENDA": true,
-    "ANDREW": false,
-    "MARE": true
-   },
-   {
-    "CCPDELENDA": true,
-    "MEGAN": true,
-    "BLITZ": true,
-    "MARE": true
-   },
-   {
-    "BLITZ": true,
-    "MEGAN": true,
-    "CCPDELENDA": true
-   },
-   {
-    "BLITZ": true,
-    "MARE": true,
-    "MEGAN": true,
-    "CCPDELENDA": true
-   }
-  ],
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "CCPDELENDA"
-   },
-   {
-    "assassin": false,
-    "name": "MARE",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "ELLIE"
-   },
-   {
-    "name": "ANDREW",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "MEGAN",
-    "assassin": false
-   },
-   {
-    "name": "BLITZ",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ]
- }
+ ]
 }

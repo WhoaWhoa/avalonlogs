@@ -2,117 +2,17 @@
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1591329531,
-  "_nanoseconds": 950000000
- },
- "outcome": {
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "HONORIUS"
-   },
-   {
-    "role": "MORDRED",
-    "name": "DAVID",
-    "assassin": false
-   },
-   {
-    "name": "JASON",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "MICHELLE"
-   },
-   {
-    "assassin": false,
-    "name": "FEMI",
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "TED"
-   },
-   {
-    "name": "GALAHAD",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "DMONEY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "HAGEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "QUEENMICH",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "GALAHAD": true,
-    "DAVID": true,
-    "FEMI": true
-   },
-   {
-    "GALAHAD": true,
-    "QUEENMICH": true,
-    "DAVID": true,
-    "FEMI": true
-   },
-   {
-    "QUEENMICH": true,
-    "DAVID": false,
-    "FEMI": true,
-    "GALAHAD": true
-   },
-   {
-    "DAVID": false,
-    "TED": true,
-    "GALAHAD": true,
-    "DMONEY": true,
-    "JASON": false
-   },
-   {
-    "FEMI": true,
-    "DMONEY": true,
-    "TED": true,
-    "QUEENMICH": true,
-    "DAVID": false
-   }
-  ],
-  "assassinated": null
- },
- "timeFinished": {
-  "_seconds": 1591334812,
-  "_nanoseconds": 175000000
- },
  "missions": [
   {
    "numFails": 0,
-   "teamSize": 3,
+   "team": [
+    "DAVID",
+    "FEMI",
+    "GALAHAD"
+   ],
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "FEMI",
-     "team": [
-      "DAVID",
-      "FEMI",
-      "GALAHAD"
-     ],
-     "state": "APPROVED",
      "votes": [
       "DMONEY",
       "QUEENMICH",
@@ -120,18 +20,29 @@
       "MICHELLE",
       "FEMI",
       "GALAHAD"
+     ],
+     "proposer": "FEMI",
+     "state": "APPROVED",
+     "team": [
+      "DAVID",
+      "FEMI",
+      "GALAHAD"
      ]
     }
    ],
-   "team": [
-    "DAVID",
-    "FEMI",
-    "GALAHAD"
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
+   "teamSize": 4,
+   "state": "SUCCESS",
+   "team": [
+    "QUEENMICH",
+    "FEMI",
+    "DAVID",
+    "GALAHAD"
+   ],
+   "numFails": 0,
    "failsRequired": 1,
    "proposals": [
     {
@@ -141,22 +52,15 @@
       "DMONEY",
       "MICHELLE"
      ],
+     "proposer": "HAGEN",
      "votes": [
       "HAGEN",
       "HONORIUS",
       "JASON"
      ],
-     "proposer": "HAGEN",
      "state": "REJECTED"
     },
     {
-     "proposer": "QUEENMICH",
-     "team": [
-      "QUEENMICH",
-      "FEMI",
-      "DAVID",
-      "GALAHAD"
-     ],
      "state": "APPROVED",
      "votes": [
       "JASON",
@@ -165,18 +69,16 @@
       "GALAHAD",
       "DMONEY",
       "QUEENMICH"
-     ]
+     ],
+     "team": [
+      "QUEENMICH",
+      "FEMI",
+      "DAVID",
+      "GALAHAD"
+     ],
+     "proposer": "QUEENMICH"
     }
-   ],
-   "team": [
-    "QUEENMICH",
-    "FEMI",
-    "DAVID",
-    "GALAHAD"
-   ],
-   "state": "SUCCESS",
-   "teamSize": 4,
-   "numFails": 0
+   ]
   },
   {
    "team": [
@@ -185,6 +87,7 @@
     "DAVID",
     "FEMI"
    ],
+   "teamSize": 4,
    "state": "FAIL",
    "proposals": [
     {
@@ -199,22 +102,20 @@
       "JASON",
       "MICHELLE"
      ],
-     "state": "APPROVED",
      "team": [
       "GALAHAD",
       "QUEENMICH",
       "DAVID",
       "FEMI"
      ],
-     "proposer": "GALAHAD"
+     "proposer": "GALAHAD",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
    "numFails": 1,
-   "teamSize": 4
+   "failsRequired": 1
   },
   {
-   "numFails": 2,
    "team": [
     "DAVID",
     "DMONEY",
@@ -222,47 +123,51 @@
     "JASON",
     "TED"
    ],
-   "failsRequired": 2,
-   "teamSize": 5,
    "proposals": [
     {
-     "votes": [
-      "DMONEY",
-      "HAGEN",
-      "HONORIUS",
-      "JASON",
-      "MICHELLE"
-     ],
-     "state": "REJECTED",
-     "proposer": "HONORIUS",
      "team": [
       "MICHELLE",
       "TED",
       "DMONEY",
       "JASON",
       "HAGEN"
+     ],
+     "state": "REJECTED",
+     "proposer": "HONORIUS",
+     "votes": [
+      "DMONEY",
+      "HAGEN",
+      "HONORIUS",
+      "JASON",
+      "MICHELLE"
      ]
     },
     {
-     "state": "REJECTED",
      "proposer": "MICHELLE",
-     "votes": [
-      "HONORIUS",
-      "JASON",
-      "MICHELLE",
-      "FEMI"
-     ],
      "team": [
       "FEMI",
       "DAVID",
       "QUEENMICH",
       "GALAHAD",
       "MICHELLE"
-     ]
+     ],
+     "votes": [
+      "HONORIUS",
+      "JASON",
+      "MICHELLE",
+      "FEMI"
+     ],
+     "state": "REJECTED"
     },
     {
      "proposer": "DAVID",
-     "state": "APPROVED",
+     "team": [
+      "DAVID",
+      "DMONEY",
+      "GALAHAD",
+      "JASON",
+      "TED"
+     ],
      "votes": [
       "DMONEY",
       "HAGEN",
@@ -274,38 +179,18 @@
       "FEMI",
       "TED"
      ],
-     "team": [
-      "DAVID",
-      "DMONEY",
-      "GALAHAD",
-      "JASON",
-      "TED"
-     ]
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 2,
+   "numFails": 2,
+   "teamSize": 5,
    "state": "FAIL"
   },
   {
-   "team": [
-    "TED",
-    "QUEENMICH",
-    "FEMI",
-    "DAVID",
-    "DMONEY"
-   ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 5,
    "proposals": [
     {
-     "team": [
-      "DAVID",
-      "DMONEY",
-      "QUEENMICH",
-      "GALAHAD",
-      "TED"
-     ],
-     "state": "REJECTED",
+     "proposer": "JASON",
      "votes": [
       "JASON",
       "MICHELLE",
@@ -313,9 +198,18 @@
       "DMONEY",
       "HONORIUS"
      ],
-     "proposer": "JASON"
+     "state": "REJECTED",
+     "team": [
+      "DAVID",
+      "DMONEY",
+      "QUEENMICH",
+      "GALAHAD",
+      "TED"
+     ]
     },
     {
+     "proposer": "TED",
+     "state": "APPROVED",
      "team": [
       "TED",
       "QUEENMICH",
@@ -331,50 +225,156 @@
       "FEMI",
       "TED",
       "DMONEY"
-     ],
-     "state": "APPROVED",
-     "proposer": "TED"
+     ]
     }
    ],
-   "state": "FAIL"
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 5,
+   "team": [
+    "TED",
+    "QUEENMICH",
+    "FEMI",
+    "DAVID",
+    "DMONEY"
+   ]
   }
  ],
+ "outcome": {
+  "roles": [
+   {
+    "assassin": true,
+    "name": "HONORIUS",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "DAVID",
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "name": "JASON",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "MICHELLE",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "name": "FEMI",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "TED"
+   },
+   {
+    "role": "MERLIN",
+    "name": "GALAHAD",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "DMONEY",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "HAGEN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "QUEENMICH"
+   }
+  ],
+  "votes": [
+   {
+    "GALAHAD": true,
+    "DAVID": true,
+    "FEMI": true
+   },
+   {
+    "QUEENMICH": true,
+    "GALAHAD": true,
+    "DAVID": true,
+    "FEMI": true
+   },
+   {
+    "QUEENMICH": true,
+    "FEMI": true,
+    "GALAHAD": true,
+    "DAVID": false
+   },
+   {
+    "DMONEY": true,
+    "TED": true,
+    "GALAHAD": true,
+    "DAVID": false,
+    "JASON": false
+   },
+   {
+    "FEMI": true,
+    "DAVID": false,
+    "DMONEY": true,
+    "QUEENMICH": true,
+    "TED": true
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null,
+  "state": "EVIL_WIN"
+ },
+ "timeCreated": {
+  "_seconds": 1591329531,
+  "_nanoseconds": 950000000
+ },
+ "timeFinished": {
+  "_seconds": 1591334812,
+  "_nanoseconds": 175000000
+ },
  "players": [
   {
-   "uid": "Kli1BwTLHDd4vHsRhdSZVrHONXu2",
-   "name": "DAVID"
+   "name": "DAVID",
+   "uid": "Kli1BwTLHDd4vHsRhdSZVrHONXu2"
   },
   {
    "uid": "U3ja71r6gbWrqpZKXN8yaTj9sWC2",
    "name": "JASON"
   },
   {
-   "name": "TED",
-   "uid": "Ln97y7ODmTWPB85ux8Z1lUpfWdE2"
+   "uid": "Ln97y7ODmTWPB85ux8Z1lUpfWdE2",
+   "name": "TED"
   },
   {
    "name": "DMONEY",
    "uid": "mAssapiWGkgghklP4wXobd0CVMI3"
   },
   {
-   "uid": "Rltae53q5yOKi5z3SY9n8jLWFCk1",
-   "name": "FEMI"
+   "name": "FEMI",
+   "uid": "Rltae53q5yOKi5z3SY9n8jLWFCk1"
   },
   {
-   "uid": "AVWK3QZefAV695TMw7NGqXtF5p72",
-   "name": "HAGEN"
+   "name": "HAGEN",
+   "uid": "AVWK3QZefAV695TMw7NGqXtF5p72"
   },
   {
    "name": "QUEENMICH",
    "uid": "gzTDuooPsvNKP17Ukcre1x7vgku1"
   },
   {
-   "name": "GALAHAD",
-   "uid": "d4IiodSVkbbhO2u9vYKnFeQDdvW2"
+   "uid": "d4IiodSVkbbhO2u9vYKnFeQDdvW2",
+   "name": "GALAHAD"
   },
   {
-   "name": "HONORIUS",
-   "uid": "kuw9o3c4uRXfuQf6qgGaiNrjKdN2"
+   "uid": "kuw9o3c4uRXfuQf6qgGaiNrjKdN2",
+   "name": "HONORIUS"
   },
   {
    "name": "MICHELLE",

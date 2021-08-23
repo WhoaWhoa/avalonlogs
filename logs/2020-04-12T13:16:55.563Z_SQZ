@@ -1,20 +1,20 @@
 {
- "timeCreated": {
-  "_seconds": 1586697415,
-  "_nanoseconds": 563000000
- },
  "timeFinished": {
   "_seconds": 1586698492,
   "_nanoseconds": 912575000
  },
+ "timeCreated": {
+  "_seconds": 1586697415,
+  "_nanoseconds": 563000000
+ },
  "players": [
   {
-   "uid": "SeupGISRjoSmUxPiGeO69mT6jQo1",
-   "name": "LEO"
+   "name": "LEO",
+   "uid": "SeupGISRjoSmUxPiGeO69mT6jQo1"
   },
   {
-   "uid": "OB3nUSHRnVYuJlEfXV65KPudr2m1",
-   "name": "COCOLOCO"
+   "name": "COCOLOCO",
+   "uid": "OB3nUSHRnVYuJlEfXV65KPudr2m1"
   },
   {
    "name": "WILCENT",
@@ -37,11 +37,82 @@
    "uid": "ZxVxjvXa0CNkCI0y0gN6noqEWCW2"
   }
  ],
+ "outcome": {
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "RICK": true,
+    "WC": true
+   },
+   {
+    "RICK": false,
+    "JUSLEE": true,
+    "WILCENT": true
+   },
+   {
+    "WILCENT": true,
+    "BEEJ": true,
+    "RICK": true
+   },
+   {
+    "LEO": true,
+    "BEEJ": true,
+    "WILCENT": true,
+    "RICK": true
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "LEO",
+  "roles": [
+   {
+    "name": "RICK",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "name": "COCOLOCO",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "name": "WC",
+    "assassin": false
+   },
+   {
+    "name": "LEO",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "JUSLEE",
+    "assassin": true
+   },
+   {
+    "name": "WILCENT",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "BEEJ",
+    "assassin": false,
+    "role": "PERCIVAL"
+   }
+  ]
+ },
  "missions": [
   {
-   "state": "SUCCESS",
+   "team": [
+    "RICK",
+    "WC"
+   ],
    "proposals": [
     {
+     "team": [
+      "RICK",
+      "WC"
+     ],
      "state": "APPROVED",
      "proposer": "COCOLOCO",
      "votes": [
@@ -51,37 +122,27 @@
       "LEO",
       "JUSLEE",
       "BEEJ"
-     ],
-     "team": [
-      "RICK",
-      "WC"
      ]
     }
    ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 2,
-   "team": [
-    "RICK",
-    "WC"
-   ],
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
-   "teamSize": 3,
    "failsRequired": 1,
    "team": [
     "WILCENT",
     "JUSLEE",
     "RICK"
    ],
+   "teamSize": 3,
+   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "WILCENT",
-      "JUSLEE",
-      "RICK"
-     ],
      "votes": [
       "JUSLEE",
       "WILCENT",
@@ -89,57 +150,62 @@
       "RICK",
       "COCOLOCO"
      ],
+     "team": [
+      "WILCENT",
+      "JUSLEE",
+      "RICK"
+     ],
      "proposer": "WILCENT"
     }
-   ],
-   "numFails": 1,
-   "state": "FAIL"
+   ]
   },
   {
+   "teamSize": 3,
+   "team": [
+    "BEEJ",
+    "RICK",
+    "WILCENT"
+   ],
+   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "JUSLEE",
       "WILCENT",
       "BEEJ",
       "RICK"
      ],
-     "proposer": "BEEJ",
      "team": [
       "BEEJ",
       "RICK",
       "WILCENT"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "BEEJ"
     }
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "team": [
-    "BEEJ",
-    "RICK",
-    "WILCENT"
-   ],
-   "teamSize": 3,
-   "failsRequired": 1
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "WC",
-      "RICK",
-      "LEO",
-      "WILCENT"
-     ],
      "state": "REJECTED",
      "votes": [
       "RICK",
       "JUSLEE"
      ],
-     "proposer": "JUSLEE"
+     "proposer": "JUSLEE",
+     "team": [
+      "WC",
+      "RICK",
+      "LEO",
+      "WILCENT"
+     ]
     },
     {
+     "state": "REJECTED",
      "votes": [
       "BEEJ",
       "RICK",
@@ -151,18 +217,17 @@
       "WILCENT",
       "COCOLOCO"
      ],
-     "state": "REJECTED",
      "proposer": "RICK"
     },
     {
      "state": "REJECTED",
+     "proposer": "WC",
      "team": [
       "WC",
       "RICK",
       "COCOLOCO",
       "BEEJ"
      ],
-     "proposer": "WC",
      "votes": [
       "WC",
       "RICK",
@@ -186,8 +251,6 @@
      ]
     }
    ],
-   "numFails": 0,
-   "teamSize": 4,
    "failsRequired": 2,
    "team": [
     "LEO",
@@ -195,78 +258,15 @@
     "WILCENT",
     "RICK"
    ],
-   "state": "SUCCESS"
+   "numFails": 0,
+   "teamSize": 4
   },
   {
-   "state": "PENDING",
-   "failsRequired": 1,
-   "teamSize": 4,
    "team": [],
-   "proposals": []
+   "state": "PENDING",
+   "teamSize": 4,
+   "proposals": [],
+   "failsRequired": 1
   }
- ],
- "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "assassinated": "LEO",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "RICK"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "COCOLOCO"
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "WC"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "LEO",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "JUSLEE",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "WILCENT"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "BEEJ"
-   }
-  ],
-  "votes": [
-   {
-    "WC": true,
-    "RICK": true
-   },
-   {
-    "JUSLEE": true,
-    "WILCENT": true,
-    "RICK": false
-   },
-   {
-    "RICK": true,
-    "BEEJ": true,
-    "WILCENT": true
-   },
-   {
-    "RICK": true,
-    "LEO": true,
-    "WILCENT": true,
-    "BEEJ": true
-   }
-  ]
- }
+ ]
 }

@@ -1,60 +1,63 @@
 {
+ "timeFinished": {
+  "_seconds": 1610230050,
+  "_nanoseconds": 278000000
+ },
  "missions": [
   {
-   "state": "SUCCESS",
    "failsRequired": 1,
+   "numFails": 0,
    "teamSize": 2,
-   "team": [
-    "ED",
-    "BRIAN"
-   ],
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "ED",
-      "BRIAN"
-     ],
      "proposer": "ED",
+     "state": "APPROVED",
      "votes": [
       "MAYKO",
       "BRIAN",
       "ED",
       "FIONA"
+     ],
+     "team": [
+      "ED",
+      "BRIAN"
      ]
     }
    ],
-   "numFails": 0
+   "state": "SUCCESS",
+   "team": [
+    "ED",
+    "BRIAN"
+   ]
   },
   {
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "ED",
       "BRIAN",
       "FIONA"
      ],
-     "state": "REJECTED",
+     "proposer": "BRIAN",
      "votes": [
       "ED",
       "MAYKO",
       "BRIAN"
-     ],
-     "proposer": "BRIAN"
+     ]
     },
     {
      "votes": [
       "MAYKO",
       "FIONA"
      ],
+     "proposer": "MAYKO",
+     "state": "REJECTED",
      "team": [
       "MAYKO",
       "HU",
       "BRUCE"
-     ],
-     "state": "REJECTED",
-     "proposer": "MAYKO"
+     ]
     },
     {
      "team": [
@@ -62,34 +65,33 @@
       "JOE",
       "HU"
      ],
-     "proposer": "FIONA",
+     "state": "APPROVED",
      "votes": [
       "BRIAN",
       "ED",
       "FIONA",
       "JOE"
      ],
-     "state": "APPROVED"
+     "proposer": "FIONA"
     }
    ],
    "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
    "team": [
     "BRIAN",
     "JOE",
     "HU"
    ],
-   "numFails": 1,
-   "state": "FAIL"
+   "teamSize": 3
   },
   {
+   "teamSize": 3,
    "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "HU",
-      "BRIAN",
-      "ED"
-     ],
      "state": "APPROVED",
      "votes": [
       "HU",
@@ -98,12 +100,14 @@
       "FIONA",
       "BRUCE"
      ],
+     "team": [
+      "HU",
+      "BRIAN",
+      "ED"
+     ],
      "proposer": "HU"
     }
    ],
-   "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 1,
    "team": [
     "HU",
     "BRIAN",
@@ -111,15 +115,11 @@
    ]
   },
   {
-   "failsRequired": 2,
-   "team": [
-    "HU",
-    "BRUCE",
-    "JOE",
-    "BRIAN"
-   ],
+   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "BRUCE",
      "team": [
       "HU",
       "BRUCE",
@@ -133,61 +133,27 @@
       "JOE",
       "BRUCE"
      ],
-     "proposer": "BRUCE",
      "state": "APPROVED"
     }
    ],
-   "teamSize": 4,
-   "state": "FAIL",
-   "numFails": 2
+   "failsRequired": 2,
+   "numFails": 2,
+   "team": [
+    "HU",
+    "BRUCE",
+    "JOE",
+    "BRIAN"
+   ]
   },
   {
-   "team": [],
-   "state": "PENDING",
-   "failsRequired": 1,
    "proposals": [],
-   "teamSize": 4
+   "state": "PENDING",
+   "teamSize": 4,
+   "team": [],
+   "failsRequired": 1
   }
  ],
  "outcome": {
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "BRIAN",
-    "assassin": false
-   },
-   {
-    "name": "BRUCE",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "FIONA"
-   },
-   {
-    "assassin": false,
-    "name": "HU",
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MAYKO"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "JOE",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "ED",
-    "role": "MERLIN"
-   }
-  ],
-  "state": "EVIL_WIN",
   "votes": [
    {
     "BRIAN": true,
@@ -199,59 +165,93 @@
     "BRIAN": true
    },
    {
-    "BRIAN": true,
     "ED": true,
+    "BRIAN": true,
     "HU": false
    },
    {
     "HU": false,
-    "BRUCE": false,
+    "BRIAN": true,
     "JOE": true,
-    "BRIAN": true
+    "BRUCE": false
    }
   ],
+  "state": "EVIL_WIN",
   "message": "Three failed missions",
-  "assassinated": null
+  "assassinated": null,
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "BRIAN"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "BRUCE",
+    "assassin": false
+   },
+   {
+    "name": "FIONA",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "HU",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "MAYKO",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "JOE"
+   },
+   {
+    "name": "ED",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ]
  },
  "options": {
   "inGameLog": false
  },
+ "timeCreated": {
+  "_seconds": 1610228512,
+  "_nanoseconds": 990000000
+ },
  "players": [
   {
-   "name": "HU",
-   "uid": "rhReFTrGCIW29G5PPpSOEmovGF02"
+   "uid": "rhReFTrGCIW29G5PPpSOEmovGF02",
+   "name": "HU"
   },
   {
-   "uid": "UDW0LpRg2STjoxnExy4LaQCHg0s1",
-   "name": "BRUCE"
+   "name": "BRUCE",
+   "uid": "UDW0LpRg2STjoxnExy4LaQCHg0s1"
   },
   {
-   "name": "JOE",
-   "uid": "Q5qgYH7iT4NHnj6MNsv7W605RUf1"
+   "uid": "Q5qgYH7iT4NHnj6MNsv7W605RUf1",
+   "name": "JOE"
   },
   {
    "name": "ED",
    "uid": "rrHzMkgG86hvlq4sKzAa4G0NQXb2"
   },
   {
-   "name": "BRIAN",
-   "uid": "zH62FhdO93fgue6xy1GZiX6emJC3"
+   "uid": "zH62FhdO93fgue6xy1GZiX6emJC3",
+   "name": "BRIAN"
   },
   {
-   "uid": "HHItKdP7xvdDetulD1pTHKA1wok2",
-   "name": "MAYKO"
+   "name": "MAYKO",
+   "uid": "HHItKdP7xvdDetulD1pTHKA1wok2"
   },
   {
    "name": "FIONA",
    "uid": "Vk1JynzSSBd8BNIrMQ0M2SlnEv62"
   }
- ],
- "timeCreated": {
-  "_seconds": 1610228512,
-  "_nanoseconds": 990000000
- },
- "timeFinished": {
-  "_seconds": 1610230050,
-  "_nanoseconds": 278000000
- }
+ ]
 }

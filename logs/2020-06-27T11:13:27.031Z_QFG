@@ -1,90 +1,14 @@
 {
- "outcome": {
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
-  "roles": [
-   {
-    "name": "STEPH",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "name": "DANIEL",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "ANNIE"
-   },
-   {
-    "name": "VIC",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "BIGMAN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   }
-  ],
-  "votes": [
-   {
-    "ANNIE": true,
-    "VIC": true
-   },
-   {
-    "STEPH": false,
-    "VIC": true,
-    "BIGMAN": true
-   },
-   {
-    "VIC": true,
-    "DANIEL": true
-   },
-   {
-    "STEPH": false,
-    "DANIEL": false,
-    "VIC": true
-   },
-   {
-    "BIGMAN": true,
-    "VIC": true,
-    "ANNIE": true
-   }
-  ],
-  "assassinated": "ANNIE"
- },
- "timeCreated": {
-  "_seconds": 1593256407,
-  "_nanoseconds": 31000000
- },
- "timeFinished": {
-  "_seconds": 1593257814,
-  "_nanoseconds": 467000000
- },
- "options": {
-  "inGameLog": false
- },
  "missions": [
   {
-   "teamSize": 2,
-   "state": "SUCCESS",
-   "team": [
-    "VIC",
-    "ANNIE"
-   ],
-   "numFails": 0,
-   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "ANNIE",
-     "state": "APPROVED",
      "team": [
       "VIC",
       "ANNIE"
      ],
+     "state": "APPROVED",
+     "proposer": "ANNIE",
      "votes": [
       "VIC",
       "BIGMAN",
@@ -92,14 +16,30 @@
       "ANNIE"
      ]
     }
-   ]
+   ],
+   "team": [
+    "VIC",
+    "ANNIE"
+   ],
+   "numFails": 0,
+   "teamSize": 2,
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
    "numFails": 1,
    "teamSize": 3,
+   "team": [
+    "STEPH",
+    "BIGMAN",
+    "VIC"
+   ],
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "proposer": "BIGMAN",
+     "state": "REJECTED",
      "votes": [
       "BIGMAN",
       "VIC"
@@ -108,8 +48,7 @@
       "VIC",
       "ANNIE",
       "BIGMAN"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "APPROVED",
@@ -127,40 +66,33 @@
      ],
      "proposer": "STEPH"
     }
-   ],
-   "failsRequired": 1,
-   "team": [
-    "STEPH",
-    "BIGMAN",
-    "VIC"
-   ],
-   "state": "FAIL"
+   ]
   },
   {
+   "team": [
+    "VIC",
+    "DANIEL"
+   ],
    "teamSize": 2,
+   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "VIC",
+      "DANIEL"
+     ],
+     "proposer": "VIC",
+     "state": "APPROVED",
      "votes": [
       "DANIEL",
       "VIC",
       "BIGMAN",
       "STEPH"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "VIC",
-      "DANIEL"
-     ],
-     "proposer": "VIC"
+     ]
     }
    ],
-   "failsRequired": 1,
    "state": "SUCCESS",
-   "numFails": 0,
-   "team": [
-    "VIC",
-    "DANIEL"
-   ]
+   "failsRequired": 1
   },
   {
    "team": [
@@ -168,43 +100,45 @@
     "VIC",
     "STEPH"
    ],
-   "numFails": 2,
    "failsRequired": 1,
    "teamSize": 3,
+   "numFails": 2,
    "state": "FAIL",
    "proposals": [
     {
      "proposer": "DANIEL",
-     "team": [
-      "DANIEL",
-      "VIC",
-      "STEPH"
-     ],
      "state": "APPROVED",
      "votes": [
       "STEPH",
       "DANIEL",
       "VIC"
+     ],
+     "team": [
+      "DANIEL",
+      "VIC",
+      "STEPH"
      ]
     }
    ]
   },
   {
-   "numFails": 0,
    "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "ANNIE",
     "BIGMAN",
     "VIC"
    ],
+   "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "ANNIE",
      "team": [
       "ANNIE",
       "BIGMAN",
       "VIC"
      ],
+     "proposer": "ANNIE",
      "votes": [
       "STEPH",
       "ANNIE",
@@ -213,31 +147,97 @@
      ],
      "state": "APPROVED"
     }
-   ],
-   "teamSize": 3,
-   "failsRequired": 1
+   ]
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "ANNIE": true,
+    "VIC": true
+   },
+   {
+    "VIC": true,
+    "BIGMAN": true,
+    "STEPH": false
+   },
+   {
+    "VIC": true,
+    "DANIEL": true
+   },
+   {
+    "DANIEL": false,
+    "VIC": true,
+    "STEPH": false
+   },
+   {
+    "BIGMAN": true,
+    "ANNIE": true,
+    "VIC": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "name": "STEPH",
+    "assassin": true
+   },
+   {
+    "role": "MORDRED",
+    "name": "DANIEL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "ANNIE"
+   },
+   {
+    "name": "VIC",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "BIGMAN",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "ANNIE"
+ },
+ "timeFinished": {
+  "_seconds": 1593257814,
+  "_nanoseconds": 467000000
+ },
+ "timeCreated": {
+  "_seconds": 1593256407,
+  "_nanoseconds": 31000000
+ },
  "players": [
   {
-   "uid": "sYkl4NX5Qocw6LtZlhqOIqnTImp1",
-   "name": "VIC"
+   "name": "VIC",
+   "uid": "sYkl4NX5Qocw6LtZlhqOIqnTImp1"
   },
   {
    "uid": "Os0YDK5gPQPrHfUaAJU21JSCMSA2",
    "name": "DANIEL"
   },
   {
-   "name": "ANNIE",
-   "uid": "iiWMma5wlNS7pXDgn3Oj4DkGkTs1"
+   "uid": "iiWMma5wlNS7pXDgn3Oj4DkGkTs1",
+   "name": "ANNIE"
   },
   {
-   "uid": "ShXjpYUIe3PfaJr35FmXgu6luKj1",
-   "name": "BIGMAN"
+   "name": "BIGMAN",
+   "uid": "ShXjpYUIe3PfaJr35FmXgu6luKj1"
   },
   {
-   "uid": "xRFxBP5Ne9fdVoP27xbFMSQfSEh1",
-   "name": "STEPH"
+   "name": "STEPH",
+   "uid": "xRFxBP5Ne9fdVoP27xbFMSQfSEh1"
   }
  ]
 }

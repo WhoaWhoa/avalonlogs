@@ -1,20 +1,100 @@
 {
+ "outcome": {
+  "roles": [
+   {
+    "name": "KEVIN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "OBERON",
+    "name": "CINDY"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "CATHY"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "LOYAL"
+   },
+   {
+    "name": "ALAN",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "NINA"
+   },
+   {
+    "role": "MORGANA",
+    "name": "ASHLEY",
+    "assassin": false
+   },
+   {
+    "name": "JANET",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "KEVIN": true,
+    "CINDY": true,
+    "LOYAL": true
+   },
+   {
+    "LOYAL": true,
+    "KEVIN": true,
+    "ASHLEY": true,
+    "CINDY": false
+   },
+   {
+    "KEVIN": true,
+    "LOYAL": true,
+    "CINDY": false,
+    "NINA": true
+   },
+   {
+    "CATHY": true,
+    "NINA": true,
+    "JANET": true,
+    "LOYAL": true,
+    "ALAN": false
+   },
+   {
+    "NINA": true,
+    "CATHY": true,
+    "ALAN": false,
+    "LOYAL": true,
+    "KEVIN": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null
+ },
  "players": [
   {
    "name": "KEVIN",
    "uid": "lckLRrCDaSeHjYoj6wuNDLDq7uu1"
   },
   {
-   "uid": "oUbh0cbD3dS4GAEzbDoU6qfEEO73",
-   "name": "ASHLEY"
+   "name": "ASHLEY",
+   "uid": "oUbh0cbD3dS4GAEzbDoU6qfEEO73"
   },
   {
-   "name": "CATHY",
-   "uid": "9lEDnYZldlPbAqymqmKdhmK0KLH2"
+   "uid": "9lEDnYZldlPbAqymqmKdhmK0KLH2",
+   "name": "CATHY"
   },
   {
-   "uid": "BSV8PXzydYaXtBuMWGVGx0eYPL02",
-   "name": "ALAN"
+   "name": "ALAN",
+   "uid": "BSV8PXzydYaXtBuMWGVGx0eYPL02"
   },
   {
    "uid": "5ROZzXe2h0QLOYLTi2uNvytkqPp2",
@@ -33,11 +113,21 @@
    "uid": "r42ghwvuAXYXp5woGW8JjK86C0C3"
   }
  ],
+ "timeFinished": {
+  "_seconds": 1598154763,
+  "_nanoseconds": 65000000
+ },
  "missions": [
   {
-   "failsRequired": 1,
+   "team": [
+    "KEVIN",
+    "CINDY",
+    "LOYAL"
+   ],
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "KEVIN",
      "votes": [
       "ASHLEY",
       "ALAN",
@@ -48,92 +138,95 @@
       "KEVIN",
       "JANET"
      ],
-     "proposer": "KEVIN",
      "team": [
       "KEVIN",
       "CINDY",
       "LOYAL"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "KEVIN",
-    "CINDY",
-    "LOYAL"
-   ],
+   "teamSize": 3,
    "numFails": 0,
-   "teamSize": 3
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
-   "numFails": 1,
+   "state": "FAIL",
    "team": [
     "KEVIN",
     "CINDY",
     "LOYAL",
     "ASHLEY"
    ],
+   "numFails": 1,
    "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "ASHLEY",
-     "votes": [
-      "ALAN",
-      "CINDY",
-      "ASHLEY",
-      "CATHY",
-      "KEVIN",
-      "LOYAL",
-      "JANET"
-     ],
      "team": [
       "KEVIN",
       "CINDY",
       "LOYAL",
       "ASHLEY"
      ],
-     "state": "APPROVED"
-    }
-   ],
-   "state": "FAIL",
-   "failsRequired": 1
-  },
-  {
-   "proposals": [
-    {
-     "proposer": "CATHY",
+     "state": "APPROVED",
      "votes": [
       "ALAN",
-      "LOYAL",
-      "KEVIN",
-      "CATHY",
-      "NINA",
-      "JANET",
-      "ASHLEY",
-      "CINDY"
-     ],
-     "team": [
-      "KEVIN",
-      "LOYAL",
       "CINDY",
-      "NINA"
+      "ASHLEY",
+      "CATHY",
+      "KEVIN",
+      "LOYAL",
+      "JANET"
      ],
-     "state": "APPROVED"
+     "proposer": "ASHLEY"
     }
-   ],
+   ]
+  },
+  {
+   "state": "FAIL",
    "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 4,
    "team": [
     "KEVIN",
     "LOYAL",
     "CINDY",
     "NINA"
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 4
+   "proposals": [
+    {
+     "team": [
+      "KEVIN",
+      "LOYAL",
+      "CINDY",
+      "NINA"
+     ],
+     "proposer": "CATHY",
+     "state": "APPROVED",
+     "votes": [
+      "ALAN",
+      "LOYAL",
+      "KEVIN",
+      "CATHY",
+      "NINA",
+      "JANET",
+      "ASHLEY",
+      "CINDY"
+     ]
+    }
+   ]
   },
   {
+   "failsRequired": 2,
+   "state": "SUCCESS",
+   "team": [
+    "ALAN",
+    "CATHY",
+    "NINA",
+    "LOYAL",
+    "JANET"
+   ],
    "proposals": [
     {
      "votes": [
@@ -146,30 +239,43 @@
       "KEVIN",
       "CINDY"
      ],
-     "proposer": "ALAN",
-     "state": "APPROVED",
      "team": [
       "ALAN",
       "CATHY",
       "NINA",
       "LOYAL",
       "JANET"
+     ],
+     "proposer": "ALAN",
+     "state": "APPROVED"
+    }
+   ],
+   "numFails": 1,
+   "teamSize": 5
+  },
+  {
+   "proposals": [
+    {
+     "votes": [
+      "CINDY",
+      "ASHLEY",
+      "LOYAL",
+      "ALAN",
+      "KEVIN"
+     ],
+     "state": "APPROVED",
+     "proposer": "LOYAL",
+     "team": [
+      "NINA",
+      "CATHY",
+      "LOYAL",
+      "ALAN",
+      "KEVIN"
      ]
     }
    ],
-   "teamSize": 5,
+   "state": "FAIL",
    "numFails": 1,
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "team": [
-    "ALAN",
-    "CATHY",
-    "NINA",
-    "LOYAL",
-    "JANET"
-   ]
-  },
-  {
    "team": [
     "NINA",
     "CATHY",
@@ -178,28 +284,6 @@
     "KEVIN"
    ],
    "teamSize": 5,
-   "state": "FAIL",
-   "proposals": [
-    {
-     "team": [
-      "NINA",
-      "CATHY",
-      "LOYAL",
-      "ALAN",
-      "KEVIN"
-     ],
-     "proposer": "LOYAL",
-     "votes": [
-      "CINDY",
-      "ASHLEY",
-      "LOYAL",
-      "ALAN",
-      "KEVIN"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "numFails": 1,
    "failsRequired": 1
   }
  ],
@@ -209,89 +293,5 @@
  "timeCreated": {
   "_seconds": 1598152145,
   "_nanoseconds": 362000000
- },
- "outcome": {
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "KEVIN",
-    "assassin": false
-   },
-   {
-    "name": "CINDY",
-    "role": "OBERON",
-    "assassin": false
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "CATHY"
-   },
-   {
-    "name": "LOYAL",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ALAN",
-    "role": "MORDRED",
-    "assassin": true
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "NINA"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "ASHLEY"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "JANET",
-    "assassin": false
-   }
-  ],
-  "assassinated": null,
-  "votes": [
-   {
-    "CINDY": true,
-    "KEVIN": true,
-    "LOYAL": true
-   },
-   {
-    "ASHLEY": true,
-    "CINDY": false,
-    "LOYAL": true,
-    "KEVIN": true
-   },
-   {
-    "NINA": true,
-    "LOYAL": true,
-    "KEVIN": true,
-    "CINDY": false
-   },
-   {
-    "LOYAL": true,
-    "JANET": true,
-    "CATHY": true,
-    "NINA": true,
-    "ALAN": false
-   },
-   {
-    "NINA": true,
-    "ALAN": false,
-    "CATHY": true,
-    "LOYAL": true,
-    "KEVIN": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Three failed missions"
- },
- "timeFinished": {
-  "_seconds": 1598154763,
-  "_nanoseconds": 65000000
  }
 }

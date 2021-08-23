@@ -1,6 +1,83 @@
 {
+ "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "assassinated": null,
+  "roles": [
+   {
+    "name": "MERLIM",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "TANHUNG",
+    "role": "MORGANA"
+   },
+   {
+    "role": "MORDRED",
+    "assassin": false,
+    "name": "ISHYISH"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "SOMU"
+   },
+   {
+    "name": "SHREYAS",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "DADI"
+   },
+   {
+    "name": "RUIRUI",
+    "role": "PERCIVAL",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "ISHYISH": false,
+    "SOMU": true
+   },
+   {
+    "SOMU": true,
+    "MERLIM": true,
+    "SHREYAS": true
+   },
+   {
+    "MERLIM": false,
+    "SOMU": true,
+    "SHREYAS": true
+   },
+   {
+    "DADI": true,
+    "SHREYAS": true,
+    "SOMU": true,
+    "RUIRUI": true
+   },
+   {
+    "TANHUNG": false,
+    "RUIRUI": true,
+    "SOMU": true,
+    "DADI": true
+   }
+  ]
+ },
  "missions": [
   {
+   "team": [
+    "ISHYISH",
+    "SOMU"
+   ],
+   "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 2,
    "proposals": [
     {
      "team": [
@@ -8,7 +85,6 @@
       "SOMU"
      ],
      "proposer": "ISHYISH",
-     "state": "APPROVED",
      "votes": [
       "ISHYISH",
       "SOMU",
@@ -17,28 +93,18 @@
       "RUIRUI",
       "MERLIM",
       "TANHUNG"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 2,
-   "team": [
-    "ISHYISH",
-    "SOMU"
-   ],
-   "state": "FAIL"
+   "numFails": 1
   },
   {
-   "numFails": 0,
-   "team": [
-    "MERLIM",
-    "SOMU",
-    "SHREYAS"
-   ],
-   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "DADI",
       "RUIRUI",
@@ -47,19 +113,29 @@
       "SOMU",
       "SHREYAS"
      ],
+     "proposer": "MERLIM",
      "team": [
       "MERLIM",
       "SOMU",
       "SHREYAS"
-     ],
-     "state": "APPROVED",
-     "proposer": "MERLIM"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "team": [
+    "MERLIM",
+    "SOMU",
+    "SHREYAS"
+   ],
+   "teamSize": 3
   },
   {
+   "numFails": 1,
+   "team": [
+    "MERLIM",
+    "SHREYAS",
+    "SOMU"
+   ],
    "proposals": [
     {
      "team": [
@@ -75,84 +151,78 @@
      "proposer": "TANHUNG"
     },
     {
-     "proposer": "SHREYAS",
-     "state": "APPROVED",
      "team": [
       "MERLIM",
       "SHREYAS",
       "SOMU"
      ],
+     "state": "APPROVED",
      "votes": [
       "SHREYAS",
       "DADI",
       "RUIRUI",
       "TANHUNG",
       "SOMU"
-     ]
+     ],
+     "proposer": "SHREYAS"
     }
    ],
-   "numFails": 1,
-   "team": [
-    "MERLIM",
-    "SHREYAS",
-    "SOMU"
-   ],
+   "state": "FAIL",
    "teamSize": 3,
-   "failsRequired": 1,
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
-   "failsRequired": 2,
-   "numFails": 0,
-   "state": "SUCCESS",
    "teamSize": 4,
-   "team": [
-    "SOMU",
-    "SHREYAS",
-    "RUIRUI",
-    "DADI"
-   ],
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
      "proposer": "SOMU",
+     "team": [
+      "SOMU",
+      "SHREYAS",
+      "RUIRUI",
+      "DADI"
+     ],
      "votes": [
       "ISHYISH",
       "SOMU",
       "DADI",
       "RUIRUI",
       "MERLIM"
-     ],
-     "team": [
-      "SOMU",
-      "SHREYAS",
-      "RUIRUI",
-      "DADI"
      ]
     }
-   ]
+   ],
+   "team": [
+    "SOMU",
+    "SHREYAS",
+    "RUIRUI",
+    "DADI"
+   ],
+   "failsRequired": 2
   },
   {
    "state": "FAIL",
-   "teamSize": 4,
-   "failsRequired": 1,
-   "numFails": 1,
    "team": [
     "DADI",
     "SOMU",
     "TANHUNG",
     "RUIRUI"
    ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
      "proposer": "DADI",
+     "state": "APPROVED",
      "votes": [
       "DADI",
       "MERLIM",
       "TANHUNG",
       "ISHYISH"
      ],
-     "state": "APPROVED",
      "team": [
       "DADI",
       "SOMU",
@@ -163,86 +233,13 @@
    ]
   }
  ],
- "options": {
-  "inGameLog": false
+ "timeFinished": {
+  "_seconds": 1591506415,
+  "_nanoseconds": 922000000
  },
  "timeCreated": {
   "_seconds": 1591505792,
   "_nanoseconds": 919000000
- },
- "outcome": {
-  "votes": [
-   {
-    "ISHYISH": false,
-    "SOMU": true
-   },
-   {
-    "SHREYAS": true,
-    "MERLIM": true,
-    "SOMU": true
-   },
-   {
-    "SHREYAS": true,
-    "MERLIM": false,
-    "SOMU": true
-   },
-   {
-    "RUIRUI": true,
-    "SHREYAS": true,
-    "SOMU": true,
-    "DADI": true
-   },
-   {
-    "SOMU": true,
-    "DADI": true,
-    "RUIRUI": true,
-    "TANHUNG": false
-   }
-  ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "MERLIM"
-   },
-   {
-    "name": "TANHUNG",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "MORDRED",
-    "name": "ISHYISH"
-   },
-   {
-    "assassin": false,
-    "name": "SOMU",
-    "role": "MERLIN"
-   },
-   {
-    "name": "SHREYAS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "DADI",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "RUIRUI",
-    "assassin": false
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1591506415,
-  "_nanoseconds": 922000000
  },
  "players": [
   {
@@ -250,28 +247,31 @@
    "uid": "D9P4edHkq0ZUO0Q5HepkHOw9jWU2"
   },
   {
-   "uid": "4rIubwDrfKeZ3d7XBWhRmJkylLc2",
-   "name": "RUIRUI"
+   "name": "RUIRUI",
+   "uid": "4rIubwDrfKeZ3d7XBWhRmJkylLc2"
   },
   {
-   "uid": "Vlxc61ZA8vRZCXGEdE3Nr5KU0y62",
-   "name": "ISHYISH"
+   "name": "ISHYISH",
+   "uid": "Vlxc61ZA8vRZCXGEdE3Nr5KU0y62"
   },
   {
    "uid": "jqC6DNw9QPehrIBORPxDYw1IfwH2",
    "name": "MERLIM"
   },
   {
-   "name": "TANHUNG",
-   "uid": "YFVN16lNL0SgIGALnBsczNv2RgD2"
+   "uid": "YFVN16lNL0SgIGALnBsczNv2RgD2",
+   "name": "TANHUNG"
   },
   {
-   "uid": "A7YjAEzvbWchUA0mXahjFNni5Z33",
-   "name": "SHREYAS"
+   "name": "SHREYAS",
+   "uid": "A7YjAEzvbWchUA0mXahjFNni5Z33"
   },
   {
    "name": "SOMU",
    "uid": "wpe6Yo39PNheuIqhhuAlarR6tGe2"
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ }
 }

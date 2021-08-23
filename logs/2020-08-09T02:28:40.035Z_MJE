@@ -3,98 +3,6 @@
   "_seconds": 1596940120,
   "_nanoseconds": 35000000
  },
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "SIMON",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MAX"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "WILL",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "name": "LES",
-    "role": "MORDRED"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "JEN",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "CALEB"
-   },
-   {
-    "name": "JINA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "LONG",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "name": "ZIDA",
-    "role": "MERLIN"
-   }
-  ],
-  "votes": [
-   {
-    "JINA": true,
-    "LES": false,
-    "MAX": true
-   },
-   {
-    "LONG": true,
-    "SIMON": true,
-    "MAX": true,
-    "LES": true
-   },
-   {
-    "ZIDA": true,
-    "CALEB": true,
-    "LONG": true,
-    "WILL": true
-   },
-   {
-    "CALEB": true,
-    "LONG": false,
-    "WILL": false,
-    "SIMON": true,
-    "ZIDA": true
-   },
-   {
-    "LES": false,
-    "JEN": true,
-    "JINA": true,
-    "LONG": false,
-    "CALEB": true
-   }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1596944852,
-  "_nanoseconds": 978000000
- },
  "missions": [
   {
    "state": "FAIL",
@@ -103,11 +11,10 @@
     "LES",
     "JINA"
    ],
-   "teamSize": 3,
    "failsRequired": 1,
-   "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "SIMON",
       "WILL",
@@ -117,24 +24,35 @@
       "JINA",
       "JEN"
      ],
+     "proposer": "MAX",
      "team": [
       "MAX",
       "LES",
       "JINA"
-     ],
-     "proposer": "MAX",
-     "state": "APPROVED"
+     ]
     }
-   ]
+   ],
+   "numFails": 1,
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "LES",
+    "MAX",
+    "LONG",
+    "SIMON"
+   ],
+   "teamSize": 4,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "JINA",
       "WILL"
      ],
-     "state": "REJECTED",
      "proposer": "JINA",
      "team": [
       "JINA",
@@ -152,28 +70,39 @@
       "JEN",
       "SIMON"
      ],
-     "proposer": "LES",
-     "state": "APPROVED",
      "team": [
       "LES",
       "MAX",
       "LONG",
       "SIMON"
+     ],
+     "state": "APPROVED",
+     "proposer": "LES"
+    }
+   ]
+  },
+  {
+   "numFails": 0,
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "proposer": "LONG",
+     "votes": [
+      "LONG",
+      "WILL",
+      "JEN",
+      "CALEB",
+      "LES"
+     ],
+     "team": [
+      "LONG",
+      "ZIDA",
+      "WILL",
+      "CALEB"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1,
-   "team": [
-    "LES",
-    "MAX",
-    "LONG",
-    "SIMON"
-   ],
-   "teamSize": 4
-  },
-  {
    "team": [
     "LONG",
     "ZIDA",
@@ -181,31 +110,11 @@
     "CALEB"
    ],
    "failsRequired": 1,
-   "numFails": 0,
-   "teamSize": 4,
-   "proposals": [
-    {
-     "proposer": "LONG",
-     "state": "APPROVED",
-     "votes": [
-      "LONG",
-      "WILL",
-      "JEN",
-      "CALEB",
-      "LES"
-     ],
-     "team": [
-      "LONG",
-      "ZIDA",
-      "WILL",
-      "CALEB"
-     ]
-    }
-   ],
-   "state": "SUCCESS"
+   "teamSize": 4
   },
   {
-   "numFails": 2,
+   "state": "FAIL",
+   "failsRequired": 2,
    "team": [
     "CALEB",
     "ZIDA",
@@ -213,9 +122,9 @@
     "LONG",
     "SIMON"
    ],
-   "teamSize": 5,
    "proposals": [
     {
+     "proposer": "SIMON",
      "votes": [
       "SIMON",
       "LES",
@@ -228,11 +137,9 @@
       "ZIDA",
       "JINA"
      ],
-     "proposer": "SIMON",
      "state": "REJECTED"
     },
     {
-     "proposer": "WILL",
      "team": [
       "SIMON",
       "WILL",
@@ -240,10 +147,20 @@
       "JINA",
       "CALEB"
      ],
-     "votes": [],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "WILL",
+     "votes": []
     },
     {
+     "team": [
+      "CALEB",
+      "ZIDA",
+      "WILL",
+      "LONG",
+      "SIMON"
+     ],
+     "proposer": "CALEB",
+     "state": "APPROVED",
      "votes": [
       "WILL",
       "ZIDA",
@@ -254,59 +171,14 @@
       "JEN",
       "LES",
       "CALEB"
-     ],
-     "team": [
-      "CALEB",
-      "ZIDA",
-      "WILL",
-      "LONG",
-      "SIMON"
-     ],
-     "state": "APPROVED",
-     "proposer": "CALEB"
+     ]
     }
    ],
-   "failsRequired": 2,
-   "state": "FAIL"
+   "teamSize": 5,
+   "numFails": 2
   },
   {
-   "teamSize": 5,
-   "proposals": [
-    {
-     "votes": [
-      "ZIDA",
-      "SIMON"
-     ],
-     "team": [
-      "ZIDA",
-      "MAX",
-      "LES",
-      "JEN",
-      "SIMON"
-     ],
-     "proposer": "ZIDA",
-     "state": "REJECTED"
-    },
-    {
-     "proposer": "JEN",
-     "team": [
-      "JINA",
-      "JEN",
-      "LONG",
-      "CALEB",
-      "LES"
-     ],
-     "votes": [
-      "LES",
-      "JINA",
-      "CALEB",
-      "LONG",
-      "WILL",
-      "JEN"
-     ],
-     "state": "APPROVED"
-    }
-   ],
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "JINA",
@@ -315,46 +187,174 @@
     "CALEB",
     "LES"
    ],
-   "numFails": 2,
-   "failsRequired": 1
+   "teamSize": 5,
+   "proposals": [
+    {
+     "team": [
+      "ZIDA",
+      "MAX",
+      "LES",
+      "JEN",
+      "SIMON"
+     ],
+     "votes": [
+      "ZIDA",
+      "SIMON"
+     ],
+     "state": "REJECTED",
+     "proposer": "ZIDA"
+    },
+    {
+     "state": "APPROVED",
+     "proposer": "JEN",
+     "votes": [
+      "LES",
+      "JINA",
+      "CALEB",
+      "LONG",
+      "WILL",
+      "JEN"
+     ],
+     "team": [
+      "JINA",
+      "JEN",
+      "LONG",
+      "CALEB",
+      "LES"
+     ]
+    }
+   ],
+   "numFails": 2
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1596944852,
+  "_nanoseconds": 978000000
+ },
+ "outcome": {
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "LES": false,
+    "JINA": true,
+    "MAX": true
+   },
+   {
+    "MAX": true,
+    "LONG": true,
+    "LES": true,
+    "SIMON": true
+   },
+   {
+    "CALEB": true,
+    "ZIDA": true,
+    "LONG": true,
+    "WILL": true
+   },
+   {
+    "ZIDA": true,
+    "CALEB": true,
+    "WILL": false,
+    "SIMON": true,
+    "LONG": false
+   },
+   {
+    "JINA": true,
+    "LONG": false,
+    "JEN": true,
+    "LES": false,
+    "CALEB": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "SIMON",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "MAX"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "WILL",
+    "assassin": true
+   },
+   {
+    "role": "MORDRED",
+    "assassin": false,
+    "name": "LES"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "JEN",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "CALEB"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "JINA"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "LONG"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "ZIDA"
+   }
+  ],
+  "assassinated": null
+ },
  "players": [
   {
    "uid": "XjNRC3AOPVdXF64YbxI05ZAqKXU2",
    "name": "JEN"
   },
   {
-   "uid": "i0GuZ1hpdMWBzjp9zcingbLTX4E2",
-   "name": "MAX"
+   "name": "MAX",
+   "uid": "i0GuZ1hpdMWBzjp9zcingbLTX4E2"
   },
   {
    "name": "JINA",
    "uid": "7aUliTr46oepOOspk2OMPNXEOe23"
   },
   {
-   "name": "LES",
-   "uid": "OFOtJ6c1oSQXO3tSybBsrxlE6HA2"
+   "uid": "OFOtJ6c1oSQXO3tSybBsrxlE6HA2",
+   "name": "LES"
   },
   {
-   "name": "LONG",
-   "uid": "fkXAhd677lekXNAxDTRvyrb5V9c2"
+   "uid": "fkXAhd677lekXNAxDTRvyrb5V9c2",
+   "name": "LONG"
   },
   {
    "name": "SIMON",
    "uid": "ZIp49Ovt7VWcLpvyRPl4tEamrba2"
   },
   {
-   "name": "WILL",
-   "uid": "Pauy4Wk9z7M8xPFDIWCZYshRXI73"
+   "uid": "Pauy4Wk9z7M8xPFDIWCZYshRXI73",
+   "name": "WILL"
   },
   {
    "uid": "fjQZGtOmRHVfbUPJfemn6Z6rzFk2",
    "name": "CALEB"
   },
   {
-   "name": "ZIDA",
-   "uid": "dTk2QMwO9UV67nan91CHdGwSkz22"
+   "uid": "dTk2QMwO9UV67nan91CHdGwSkz22",
+   "name": "ZIDA"
   }
  ]
 }

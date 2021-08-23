@@ -1,18 +1,20 @@
 {
  "outcome": {
+  "assassinated": null,
+  "message": "Three failed missions",
   "votes": [
    {
     "TARA": true,
     "ALI": true
    },
    {
-    "TARA": true,
     "LUKE": false,
-    "ALI": true
+    "ALI": true,
+    "TARA": true
    },
    {
-    "TOM": true,
-    "SHAL": true
+    "SHAL": true,
+    "TOM": true
    },
    {
     "TARA": false,
@@ -20,72 +22,78 @@
     "SHAL": true
    },
    {
-    "TARA": false,
+    "SHAL": true,
     "TOM": true,
-    "SHAL": true
+    "TARA": false
    }
   ],
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "assassinated": null,
   "roles": [
    {
+    "role": "EVIL MINION",
     "name": "TARA",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "assassin": true
    },
    {
-    "name": "ALI",
     "assassin": false,
+    "name": "ALI",
     "role": "PERCIVAL"
    },
    {
-    "name": "SHAL",
+    "assassin": false,
     "role": "MERLIN",
-    "assassin": false
+    "name": "SHAL"
    },
    {
-    "role": "MORGANA",
+    "assassin": false,
     "name": "LUKE",
-    "assassin": false
+    "role": "MORGANA"
    },
    {
     "assassin": false,
     "role": "LOYAL FOLLOWER",
     "name": "TOM"
    }
-  ]
+  ],
+  "state": "EVIL_WIN"
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0,
    "state": "SUCCESS",
+   "teamSize": 2,
+   "team": [
+    "ALI",
+    "TARA"
+   ],
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "ALI",
+      "TARA"
+     ],
+     "proposer": "ALI",
      "votes": [
       "TARA",
       "ALI",
       "SHAL",
       "LUKE",
       "TOM"
-     ],
-     "state": "APPROVED",
-     "proposer": "ALI",
-     "team": [
-      "ALI",
-      "TARA"
      ]
     }
    ],
-   "team": [
-    "ALI",
-    "TARA"
-   ]
+   "failsRequired": 1
   },
   {
+   "team": [
+    "LUKE",
+    "ALI",
+    "TARA"
+   ],
    "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -102,79 +110,71 @@
       "LUKE"
      ]
     }
-   ],
-   "teamSize": 3,
-   "team": [
-    "LUKE",
-    "ALI",
-    "TARA"
-   ],
-   "failsRequired": 1,
-   "numFails": 1
+   ]
   },
   {
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "TOM",
-      "SHAL"
-     ],
-     "proposer": "SHAL",
      "votes": [
       "ALI",
       "SHAL",
       "LUKE",
       "TOM"
-     ]
+     ],
+     "team": [
+      "TOM",
+      "SHAL"
+     ],
+     "proposer": "SHAL"
     }
    ],
-   "teamSize": 2,
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "TOM",
     "SHAL"
-   ],
-   "numFails": 0
+   ]
   },
   {
-   "state": "FAIL",
-   "numFails": 1,
    "team": [
     "TARA",
     "SHAL",
     "ALI"
    ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "TARA",
-      "ALI",
-      "SHAL",
-      "LUKE"
-     ],
      "team": [
       "TARA",
       "SHAL",
       "ALI"
      ],
+     "proposer": "TARA",
      "state": "APPROVED",
-     "proposer": "TARA"
+     "votes": [
+      "TARA",
+      "ALI",
+      "SHAL",
+      "LUKE"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3
+   "state": "FAIL"
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "SHAL",
+    "TARA",
+    "TOM"
+   ],
    "proposals": [
     {
-     "team": [
-      "SHAL",
-      "TARA",
-      "TOM"
-     ],
      "state": "APPROVED",
      "votes": [
       "TARA",
@@ -182,17 +182,17 @@
       "LUKE",
       "TOM"
      ],
-     "proposer": "TOM"
+     "proposer": "TOM",
+     "team": [
+      "SHAL",
+      "TARA",
+      "TOM"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 1,
-   "team": [
-    "SHAL",
-    "TARA",
-    "TOM"
-   ]
+   "state": "FAIL",
+   "teamSize": 3
   }
  ],
  "players": [
@@ -205,12 +205,12 @@
    "name": "LUKE"
   },
   {
-   "uid": "nAu2yFFWQMfY7ukcnljB7PHRMe73",
-   "name": "SHAL"
+   "name": "SHAL",
+   "uid": "nAu2yFFWQMfY7ukcnljB7PHRMe73"
   },
   {
-   "uid": "W3sTnLnGSDgDI2XBoUfpEKfz8Ht2",
-   "name": "TARA"
+   "name": "TARA",
+   "uid": "W3sTnLnGSDgDI2XBoUfpEKfz8Ht2"
   },
   {
    "name": "TOM",

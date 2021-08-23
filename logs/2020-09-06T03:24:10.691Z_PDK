@@ -1,16 +1,16 @@
 {
  "players": [
   {
-   "name": "ANJANA",
-   "uid": "Ti7Lw9z4gPPdstAPUOy9rKUZFTG3"
+   "uid": "Ti7Lw9z4gPPdstAPUOy9rKUZFTG3",
+   "name": "ANJANA"
   },
   {
    "uid": "FQ3cUynawHWdo4n8dvcMvZRu3ln1",
    "name": "VINCENT"
   },
   {
-   "name": "MIKI",
-   "uid": "QByb7soR6UR2LDFdRTxxUM88A7I2"
+   "uid": "QByb7soR6UR2LDFdRTxxUM88A7I2",
+   "name": "MIKI"
   },
   {
    "name": "NOLA",
@@ -21,9 +21,62 @@
    "uid": "FopJbfigtRdQhr2MoKq4MDwSju32"
   }
  ],
- "timeFinished": {
-  "_seconds": 1599363250,
-  "_nanoseconds": 787000000
+ "outcome": {
+  "votes": [
+   {
+    "VINCENT": false,
+    "NOLAY": true
+   },
+   {
+    "MIKI": true,
+    "ANJANA": true,
+    "NOLA": true
+   },
+   {
+    "VINCENT": false,
+    "NOLA": true
+   },
+   {
+    "MIKI": true,
+    "NOLAY": true,
+    "NOLA": true
+   },
+   {
+    "NOLAY": true,
+    "MIKI": true,
+    "NOLA": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "name": "NOLA",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "name": "VINCENT",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "name": "MIKI",
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "NOLAY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "ANJANA",
+    "role": "EVIL MINION",
+    "assassin": true
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "MIKI"
  },
  "missions": [
   {
@@ -31,11 +84,13 @@
     "NOLAY",
     "VINCENT"
    ],
-   "numFails": 1,
-   "state": "FAIL",
-   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "NOLAY",
+      "VINCENT"
+     ],
+     "state": "APPROVED",
      "votes": [
       "ANJANA",
       "MIKI",
@@ -43,15 +98,13 @@
       "NOLAY",
       "VINCENT"
      ],
-     "team": [
-      "NOLAY",
-      "VINCENT"
-     ],
-     "proposer": "NOLAY",
-     "state": "APPROVED"
+     "proposer": "NOLAY"
     }
    ],
-   "teamSize": 2
+   "state": "FAIL",
+   "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
    "proposals": [
@@ -61,13 +114,13 @@
       "MIKI",
       "NOLA"
      ],
-     "state": "APPROVED",
      "proposer": "ANJANA",
      "votes": [
       "NOLAY",
       "NOLA",
       "ANJANA"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "team": [
@@ -75,73 +128,74 @@
     "MIKI",
     "NOLA"
    ],
-   "teamSize": 3,
-   "state": "SUCCESS",
    "numFails": 0,
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
    "team": [
     "VINCENT",
     "NOLA"
    ],
-   "numFails": 1,
-   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "VINCENT",
-      "NOLA"
-     ],
-     "proposer": "VINCENT",
      "votes": [
       "NOLA",
       "ANJANA",
       "VINCENT"
      ],
+     "team": [
+      "VINCENT",
+      "NOLA"
+     ],
+     "proposer": "VINCENT",
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 2
   },
   {
+   "teamSize": 3,
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "MIKI",
      "votes": [
       "MIKI",
       "NOLAY",
       "NOLA"
      ],
-     "team": [
-      "MIKI",
-      "NOLA",
-      "NOLAY"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "teamSize": 3,
-   "state": "SUCCESS",
-   "team": [
-    "MIKI",
-    "NOLA",
-    "NOLAY"
-   ],
-   "failsRequired": 1,
-   "numFails": 0
-  },
-  {
-   "proposals": [
-    {
-     "proposer": "NOLA",
      "state": "APPROVED",
      "team": [
       "MIKI",
       "NOLA",
       "NOLAY"
      ],
+     "proposer": "MIKI"
+    }
+   ],
+   "team": [
+    "MIKI",
+    "NOLA",
+    "NOLAY"
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 1
+  },
+  {
+   "numFails": 0,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "team": [
+      "MIKI",
+      "NOLA",
+      "NOLAY"
+     ],
+     "proposer": "NOLA",
      "votes": [
       "NOLAY",
       "NOLA",
@@ -149,9 +203,8 @@
      ]
     }
    ],
-   "teamSize": 3,
-   "numFails": 0,
    "state": "SUCCESS",
+   "teamSize": 3,
    "failsRequired": 1,
    "team": [
     "MIKI",
@@ -160,68 +213,15 @@
    ]
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "assassinated": "MIKI",
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "name": "NOLA",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "role": "MORDRED",
-    "name": "VINCENT",
-    "assassin": false
-   },
-   {
-    "name": "MIKI",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "name": "NOLAY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "ANJANA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "NOLAY": true,
-    "VINCENT": false
-   },
-   {
-    "MIKI": true,
-    "ANJANA": true,
-    "NOLA": true
-   },
-   {
-    "NOLA": true,
-    "VINCENT": false
-   },
-   {
-    "MIKI": true,
-    "NOLAY": true,
-    "NOLA": true
-   },
-   {
-    "NOLA": true,
-    "MIKI": true,
-    "NOLAY": true
-   }
-  ]
- },
  "timeCreated": {
   "_seconds": 1599362650,
   "_nanoseconds": 691000000
+ },
+ "timeFinished": {
+  "_seconds": 1599363250,
+  "_nanoseconds": 787000000
+ },
+ "options": {
+  "inGameLog": false
  }
 }

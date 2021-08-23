@@ -1,16 +1,27 @@
 {
+ "timeFinished": {
+  "_seconds": 1587902014,
+  "_nanoseconds": 345000000
+ },
+ "timeCreated": {
+  "_seconds": 1587901660,
+  "_nanoseconds": 917000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
    "name": "SANGEETH",
    "uid": "b1H6y6VtbgPjiNdo0FFASI3Ys6v1"
   },
   {
-   "uid": "mTfvzwri7zbV5E5sBnofQeUDBEF3",
-   "name": "LUL"
+   "name": "LUL",
+   "uid": "mTfvzwri7zbV5E5sBnofQeUDBEF3"
   },
   {
-   "name": "PRIYA",
-   "uid": "rVZRjeAoMzStXBbakcaDjMYGXhK2"
+   "uid": "rVZRjeAoMzStXBbakcaDjMYGXhK2",
+   "name": "PRIYA"
   },
   {
    "name": "THALA",
@@ -26,20 +37,21 @@
   }
  ],
  "outcome": {
+  "message": "Three failed missions",
   "roles": [
    {
-    "assassin": false,
     "name": "PRIYA",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "THALA",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "LUL",
     "assassin": false,
+    "name": "LUL",
     "role": "MERLIN"
    },
    {
@@ -48,78 +60,69 @@
     "name": "URMOM"
    },
    {
+    "name": "GYM",
     "role": "MORDRED",
-    "assassin": true,
-    "name": "GYM"
+    "assassin": true
    },
    {
-    "role": "PERCIVAL",
     "assassin": false,
-    "name": "SANGEETH"
+    "name": "SANGEETH",
+    "role": "PERCIVAL"
    }
   ],
   "votes": [
    {
-    "URMOM": true,
+    "PRIYA": true,
+    "URMOM": true
+   },
+   {
+    "THALA": true,
+    "URMOM": false,
     "PRIYA": true
    },
    {
-    "THALA": true,
+    "SANGEETH": true,
     "PRIYA": true,
-    "URMOM": false
-   },
-   {
-    "PRIYA": true,
-    "GYM": false,
     "THALA": true,
-    "SANGEETH": true
+    "GYM": false
    },
    {
     "LUL": true,
-    "GYM": false,
-    "SANGEETH": true
+    "SANGEETH": true,
+    "GYM": false
    }
   ],
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN"
- },
- "timeCreated": {
-  "_seconds": 1587901660,
-  "_nanoseconds": 917000000
- },
- "options": {
-  "inGameLog": false
+  "state": "EVIL_WIN",
+  "assassinated": null
  },
  "missions": [
   {
-   "numFails": 0,
-   "teamSize": 2,
-   "state": "SUCCESS",
    "team": [
     "PRIYA",
     "URMOM"
    ],
+   "failsRequired": 1,
+   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "PRIYA",
+     "team": [
+      "PRIYA",
+      "URMOM"
+     ],
      "votes": [
       "URMOM",
       "GYM",
       "SANGEETH",
       "PRIYA"
      ],
-     "team": [
-      "PRIYA",
-      "URMOM"
-     ],
-     "proposer": "PRIYA",
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
-   "state": "FAIL",
    "team": [
     "THALA",
     "PRIYA",
@@ -128,14 +131,10 @@
    "numFails": 1,
    "teamSize": 3,
    "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "state": "APPROVED",
-     "team": [
-      "THALA",
-      "PRIYA",
-      "URMOM"
-     ],
      "proposer": "THALA",
      "votes": [
       "URMOM",
@@ -144,6 +143,11 @@
       "PRIYA",
       "THALA",
       "LUL"
+     ],
+     "team": [
+      "THALA",
+      "PRIYA",
+      "URMOM"
      ]
     }
    ]
@@ -155,10 +159,18 @@
     "PRIYA",
     "SANGEETH"
    ],
-   "state": "FAIL",
    "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "URMOM",
+     "team": [
+      "THALA",
+      "GYM",
+      "PRIYA",
+      "SANGEETH"
+     ],
      "votes": [
       "URMOM",
       "GYM",
@@ -166,24 +178,21 @@
       "PRIYA",
       "THALA",
       "LUL"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "THALA",
-      "GYM",
-      "PRIYA",
-      "SANGEETH"
-     ],
-     "proposer": "URMOM"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 4
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
+   "state": "FAIL",
    "failsRequired": 1,
-   "numFails": 1,
    "teamSize": 3,
+   "team": [
+    "SANGEETH",
+    "LUL",
+    "GYM"
+   ],
    "proposals": [
     {
      "votes": [
@@ -191,35 +200,33 @@
       "URMOM"
      ],
      "proposer": "GYM",
-     "state": "REJECTED",
      "team": [
       "PRIYA",
       "THALA",
       "SANGEETH"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "SANGEETH",
-      "PRIYA",
-      "GYM"
-     ],
-     "proposer": "SANGEETH",
      "team": [
       "SANGEETH",
       "LUL",
       "PRIYA"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "SANGEETH",
+      "PRIYA",
+      "GYM"
+     ],
+     "proposer": "SANGEETH"
     },
     {
-     "state": "APPROVED",
      "team": [
       "SANGEETH",
       "LUL",
       "GYM"
      ],
-     "proposer": "LUL",
      "votes": [
       "SANGEETH",
       "PRIYA",
@@ -227,26 +234,19 @@
       "LUL",
       "URMOM",
       "GYM"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "LUL"
     }
    ],
-   "state": "FAIL",
-   "team": [
-    "SANGEETH",
-    "LUL",
-    "GYM"
-   ]
+   "numFails": 1
   },
   {
    "teamSize": 4,
-   "state": "PENDING",
    "team": [],
-   "proposals": [],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "state": "PENDING",
+   "proposals": []
   }
- ],
- "timeFinished": {
-  "_seconds": 1587902014,
-  "_nanoseconds": 345000000
- }
+ ]
 }

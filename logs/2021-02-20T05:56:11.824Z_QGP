@@ -1,16 +1,16 @@
 {
  "players": [
   {
-   "name": "LES",
-   "uid": "OFOtJ6c1oSQXO3tSybBsrxlE6HA2"
+   "uid": "OFOtJ6c1oSQXO3tSybBsrxlE6HA2",
+   "name": "LES"
   },
   {
-   "name": "DINA",
-   "uid": "RFhtdH4xF7O4F1pVhvRiHJ2bAfC3"
+   "uid": "RFhtdH4xF7O4F1pVhvRiHJ2bAfC3",
+   "name": "DINA"
   },
   {
-   "name": "GLO",
-   "uid": "xv0kd1LmqvO40M197NNKSMFvGzJ2"
+   "uid": "xv0kd1LmqvO40M197NNKSMFvGzJ2",
+   "name": "GLO"
   },
   {
    "name": "JEV",
@@ -25,78 +25,41 @@
    "name": "EDGE"
   },
   {
-   "name": "JONO",
-   "uid": "2VkFVVsoMTh2udE1AW72ypJtazP2"
+   "uid": "2VkFVVsoMTh2udE1AW72ypJtazP2",
+   "name": "JONO"
   },
   {
-   "uid": "j50DfyumUFRQ9eXQSHAOwmL9DP03",
-   "name": "ELLEN"
+   "name": "ELLEN",
+   "uid": "j50DfyumUFRQ9eXQSHAOwmL9DP03"
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "outcome": {
-  "votes": [
-   {
-    "IKE": true,
-    "DINA": true,
-    "EDGE": true
-   },
-   {
-    "DINA": true,
-    "JONO": true,
-    "EDGE": true,
-    "IKE": false
-   },
-   {
-    "EDGE": true,
-    "JEV": true,
-    "ELLEN": false,
-    "DINA": true
-   },
-   {
-    "DINA": true,
-    "LES": true,
-    "IKE": true,
-    "JEV": true,
-    "JONO": true
-   },
-   {
-    "LES": true,
-    "DINA": true,
-    "JEV": true,
-    "IKE": false,
-    "JONO": true
-   }
-  ],
-  "state": "EVIL_WIN",
   "message": "Three failed missions",
   "roles": [
    {
-    "assassin": false,
+    "name": "EDGE",
     "role": "LOYAL FOLLOWER",
-    "name": "EDGE"
+    "assassin": false
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "DINA"
+    "name": "DINA",
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MERLIN",
+    "name": "LES",
     "assassin": false,
-    "name": "LES"
+    "role": "MERLIN"
    },
    {
     "role": "EVIL MINION",
-    "name": "ELLEN",
-    "assassin": true
+    "assassin": true,
+    "name": "ELLEN"
    },
    {
-    "assassin": false,
     "name": "GLO",
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": false
    },
    {
     "assassin": false,
@@ -109,20 +72,63 @@
     "assassin": false
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "JONO",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    }
   ],
-  "assassinated": null
+  "votes": [
+   {
+    "EDGE": true,
+    "IKE": true,
+    "DINA": true
+   },
+   {
+    "IKE": false,
+    "DINA": true,
+    "EDGE": true,
+    "JONO": true
+   },
+   {
+    "JEV": true,
+    "EDGE": true,
+    "DINA": true,
+    "ELLEN": false
+   },
+   {
+    "JONO": true,
+    "LES": true,
+    "JEV": true,
+    "IKE": true,
+    "DINA": true
+   },
+   {
+    "DINA": true,
+    "JEV": true,
+    "IKE": false,
+    "LES": true,
+    "JONO": true
+   }
+  ],
+  "assassinated": null,
+  "state": "EVIL_WIN"
  },
  "timeCreated": {
   "_seconds": 1613800571,
   "_nanoseconds": 824000000
  },
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1613802668,
+  "_nanoseconds": 98000000
+ },
  "missions": [
   {
+   "failsRequired": 1,
    "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "EDGE",
     "IKE",
@@ -130,13 +136,6 @@
    ],
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "EDGE",
-      "IKE",
-      "DINA"
-     ],
-     "proposer": "EDGE",
      "votes": [
       "ELLEN",
       "DINA",
@@ -144,19 +143,25 @@
       "JONO",
       "EDGE",
       "JEV"
+     ],
+     "state": "APPROVED",
+     "proposer": "EDGE",
+     "team": [
+      "EDGE",
+      "IKE",
+      "DINA"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "teamSize": 3,
-   "failsRequired": 1
+   "teamSize": 3
   },
   {
    "failsRequired": 1,
+   "numFails": 1,
    "teamSize": 4,
-   "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "JONO",
       "GLO",
@@ -167,42 +172,26 @@
       "JEV",
       "IKE"
      ],
-     "proposer": "JONO",
-     "state": "APPROVED",
      "team": [
       "JONO",
       "EDGE",
       "IKE",
       "DINA"
-     ]
+     ],
+     "proposer": "JONO"
     }
    ],
+   "state": "FAIL",
    "team": [
     "JONO",
     "EDGE",
     "IKE",
     "DINA"
-   ],
-   "numFails": 1
+   ]
   },
   {
-   "team": [
-    "DINA",
-    "JEV",
-    "EDGE",
-    "ELLEN"
-   ],
-   "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "DINA",
-      "JEV",
-      "EDGE",
-      "ELLEN"
-     ],
-     "proposer": "ELLEN",
-     "state": "APPROVED",
      "votes": [
       "ELLEN",
       "JONO",
@@ -212,34 +201,30 @@
       "JEV",
       "LES",
       "EDGE"
-     ]
+     ],
+     "team": [
+      "DINA",
+      "JEV",
+      "EDGE",
+      "ELLEN"
+     ],
+     "proposer": "ELLEN",
+     "state": "APPROVED"
     }
    ],
    "teamSize": 4,
-   "state": "FAIL",
-   "failsRequired": 1
+   "team": [
+    "DINA",
+    "JEV",
+    "EDGE",
+    "ELLEN"
+   ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL"
   },
   {
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "LES",
-      "JEV",
-      "DINA",
-      "IKE",
-      "JONO"
-     ],
-     "votes": [
-      "DINA",
-      "LES",
-      "IKE",
-      "GLO",
-      "JEV"
-     ],
-     "proposer": "LES"
-    }
-   ],
+   "state": "SUCCESS",
    "team": [
     "LES",
     "JEV",
@@ -249,12 +234,40 @@
    ],
    "failsRequired": 2,
    "teamSize": 5,
-   "state": "SUCCESS",
-   "numFails": 0
+   "numFails": 0,
+   "proposals": [
+    {
+     "proposer": "LES",
+     "team": [
+      "LES",
+      "JEV",
+      "DINA",
+      "IKE",
+      "JONO"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "DINA",
+      "LES",
+      "IKE",
+      "GLO",
+      "JEV"
+     ]
+    }
+   ]
   },
   {
-   "teamSize": 5,
+   "numFails": 1,
    "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "DINA",
+    "LES",
+    "JEV",
+    "IKE",
+    "JONO"
+   ],
+   "teamSize": 5,
    "proposals": [
     {
      "proposer": "DINA",
@@ -276,20 +289,7 @@
       "JONO"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "team": [
-    "DINA",
-    "LES",
-    "JEV",
-    "IKE",
-    "JONO"
    ]
   }
- ],
- "timeFinished": {
-  "_seconds": 1613802668,
-  "_nanoseconds": 98000000
- }
+ ]
 }

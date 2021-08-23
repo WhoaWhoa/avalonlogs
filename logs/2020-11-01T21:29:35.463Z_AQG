@@ -2,6 +2,80 @@
  "options": {
   "inGameLog": false
  },
+ "players": [
+  {
+   "uid": "AZ3z34x6ogStcYXzkRVf7bFzjBm1",
+   "name": "ARTEMIS"
+  },
+  {
+   "name": "LAURA",
+   "uid": "TgkqAjPT3ah6jjwpgmvGsJeak1A3"
+  },
+  {
+   "name": "SIMON",
+   "uid": "2vMmmfk6A5MRubOlkAk73b3pkH93"
+  },
+  {
+   "uid": "SVqT5u1ATAdOCmlOnbseDN8SP8P2",
+   "name": "ANDREW"
+  },
+  {
+   "uid": "hl47lNC9xJgZ9GWX3QlGsF5UAqi1",
+   "name": "CLAIRE"
+  }
+ ],
+ "outcome": {
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "assassin": true,
+    "name": "SIMON",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "ANDREW"
+   },
+   {
+    "name": "CLAIRE",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "ARTEMIS"
+   },
+   {
+    "assassin": false,
+    "name": "LAURA",
+    "role": "PERCIVAL"
+   }
+  ],
+  "assassinated": "LAURA",
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "LAURA": true,
+    "ARTEMIS": true
+   },
+   {
+    "SIMON": true,
+    "LAURA": true,
+    "CLAIRE": true
+   },
+   {
+    "SIMON": false,
+    "LAURA": true
+   },
+   {
+    "ANDREW": true,
+    "CLAIRE": true,
+    "LAURA": true
+   }
+  ]
+ },
  "timeCreated": {
   "_seconds": 1604266175,
   "_nanoseconds": 463000000
@@ -10,90 +84,20 @@
   "_seconds": 1604267139,
   "_nanoseconds": 861000000
  },
- "outcome": {
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "ARTEMIS": true,
-    "LAURA": true
-   },
-   {
-    "CLAIRE": true,
-    "SIMON": true,
-    "LAURA": true
-   },
-   {
-    "SIMON": false,
-    "LAURA": true
-   },
-   {
-    "ANDREW": true,
-    "LAURA": true,
-    "CLAIRE": true
-   }
-  ],
-  "assassinated": "LAURA",
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "name": "SIMON",
-    "assassin": true
-   },
-   {
-    "name": "ANDREW",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "CLAIRE"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "ARTEMIS"
-   },
-   {
-    "name": "LAURA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   }
-  ]
- },
- "players": [
-  {
-   "uid": "AZ3z34x6ogStcYXzkRVf7bFzjBm1",
-   "name": "ARTEMIS"
-  },
-  {
-   "uid": "TgkqAjPT3ah6jjwpgmvGsJeak1A3",
-   "name": "LAURA"
-  },
-  {
-   "name": "SIMON",
-   "uid": "2vMmmfk6A5MRubOlkAk73b3pkH93"
-  },
-  {
-   "name": "ANDREW",
-   "uid": "SVqT5u1ATAdOCmlOnbseDN8SP8P2"
-  },
-  {
-   "name": "CLAIRE",
-   "uid": "hl47lNC9xJgZ9GWX3QlGsF5UAqi1"
-  }
- ],
  "missions": [
   {
+   "teamSize": 2,
+   "numFails": 0,
+   "state": "SUCCESS",
    "failsRequired": 1,
    "team": [
     "ARTEMIS",
     "LAURA"
    ],
-   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "ANDREW",
+     "state": "APPROVED",
      "votes": [
       "ANDREW",
       "CLAIRE",
@@ -101,52 +105,50 @@
       "SIMON",
       "LAURA"
      ],
-     "proposer": "ANDREW",
-     "state": "APPROVED",
      "team": [
       "ARTEMIS",
       "LAURA"
      ]
     }
-   ],
-   "numFails": 0,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "teamSize": 3,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "votes": [
-      "CLAIRE",
-      "SIMON",
-      "LAURA"
-     ],
      "team": [
       "CLAIRE",
       "LAURA",
       "SIMON"
      ],
-     "proposer": "CLAIRE",
-     "state": "APPROVED"
+     "votes": [
+      "CLAIRE",
+      "SIMON",
+      "LAURA"
+     ],
+     "state": "APPROVED",
+     "proposer": "CLAIRE"
     }
    ],
-   "failsRequired": 1,
    "numFails": 0,
+   "teamSize": 3,
+   "failsRequired": 1,
    "team": [
     "CLAIRE",
     "LAURA",
     "SIMON"
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
    "team": [
     "LAURA",
     "SIMON"
    ],
+   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "ARTEMIS",
      "votes": [
       "CLAIRE",
       "LAURA",
@@ -156,20 +158,23 @@
      "team": [
       "LAURA",
       "SIMON"
-     ],
-     "proposer": "ARTEMIS"
+     ]
     }
    ],
-   "numFails": 1,
-   "teamSize": 2,
+   "state": "FAIL",
    "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
-   "failsRequired": 1,
+   "team": [
+    "LAURA",
+    "CLAIRE",
+    "ANDREW"
+   ],
    "teamSize": 3,
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
      "team": [
@@ -177,27 +182,22 @@
       "CLAIRE",
       "ANDREW"
      ],
+     "state": "APPROVED",
      "votes": [
       "LAURA",
       "CLAIRE",
       "ANDREW"
      ],
-     "state": "APPROVED",
      "proposer": "LAURA"
     }
-   ],
-   "team": [
-    "LAURA",
-    "CLAIRE",
-    "ANDREW"
    ]
   },
   {
-   "team": [],
-   "failsRequired": 1,
-   "proposals": [],
    "teamSize": 3,
-   "state": "PENDING"
+   "team": [],
+   "state": "PENDING",
+   "proposals": [],
+   "failsRequired": 1
   }
  ]
 }

@@ -3,45 +3,132 @@
   "_seconds": 1584911773,
   "_nanoseconds": 694215000
  },
+ "outcome": {
+  "votes": [
+   {
+    "TINA": true,
+    "BRIAN": true,
+    "KIMBERLY": true
+   },
+   {
+    "TOBY": true,
+    "GOODWIN": false,
+    "TINA": true,
+    "KIMBERLY": true
+   },
+   {
+    "STEVE": true,
+    "ROCIO": true,
+    "KIMBERLY": true,
+    "TINA": true
+   },
+   {
+    "JENNA": true,
+    "TINA": true,
+    "KIMBERLY": true,
+    "STEVE": true,
+    "ROCIO": true
+   }
+  ],
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "role": "OBERON",
+    "assassin": false,
+    "name": "BRIAN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "TOBY"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "TYLER"
+   },
+   {
+    "assassin": false,
+    "name": "TINA",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "GOODWIN",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "name": "ROCIO",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "name": "KIMBERLY",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "MIKE",
+    "assassin": true
+   },
+   {
+    "name": "STEVE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "JENNA"
+   }
+  ],
+  "assassinated": "ROCIO",
+  "state": "GOOD_WIN"
+ },
+ "timeCreated": {
+  "_seconds": 1584909118,
+  "_nanoseconds": 212000000
+ },
  "missions": [
   {
-   "numFails": 0,
    "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS",
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "STEVE",
       "KIMBERLY",
       "TINA"
      ],
      "proposer": "STEVE",
-     "state": "REJECTED",
      "votes": [
       "KIMBERLY",
       "STEVE"
      ]
     },
     {
+     "team": [
+      "MIKE",
+      "TOBY",
+      "BRIAN"
+     ],
      "proposer": "MIKE",
      "votes": [
       "MIKE",
       "BRIAN",
       "TOBY"
      ],
-     "team": [
-      "MIKE",
-      "TOBY",
-      "BRIAN"
-     ],
      "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "TYLER",
       "ROCIO"
      ],
+     "state": "REJECTED",
      "team": [
       "ROCIO",
       "TYLER",
@@ -50,26 +137,19 @@
      "proposer": "ROCIO"
     },
     {
-     "votes": [
-      "ROCIO",
-      "KIMBERLY"
-     ],
-     "proposer": "KIMBERLY",
-     "state": "REJECTED",
      "team": [
       "ROCIO",
       "JENNA",
       "KIMBERLY"
-     ]
+     ],
+     "proposer": "KIMBERLY",
+     "votes": [
+      "ROCIO",
+      "KIMBERLY"
+     ],
+     "state": "REJECTED"
     },
     {
-     "proposer": "TINA",
-     "state": "APPROVED",
-     "team": [
-      "TINA",
-      "KIMBERLY",
-      "BRIAN"
-     ],
      "votes": [
       "GOODWIN",
       "ROCIO",
@@ -81,6 +161,13 @@
       "TOBY",
       "TYLER",
       "TINA"
+     ],
+     "state": "APPROVED",
+     "proposer": "TINA",
+     "team": [
+      "TINA",
+      "KIMBERLY",
+      "BRIAN"
      ]
     }
    ],
@@ -92,15 +179,17 @@
    ]
   },
   {
-   "state": "FAIL",
    "team": [
     "TOBY",
     "TINA",
     "KIMBERLY",
     "GOODWIN"
    ],
+   "numFails": 1,
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "TYLER",
      "team": [
       "TYLER",
       "BRIAN",
@@ -110,29 +199,27 @@
      "votes": [
       "TYLER",
       "STEVE"
-     ],
-     "state": "REJECTED",
-     "proposer": "TYLER"
+     ]
     },
     {
-     "proposer": "JENNA",
-     "state": "REJECTED",
      "team": [
       "JENNA",
       "KIMBERLY",
       "TINA",
       "BRIAN"
      ],
-     "votes": []
+     "votes": [],
+     "proposer": "JENNA",
+     "state": "REJECTED"
     },
     {
-     "proposer": "GOODWIN",
      "team": [
       "GOODWIN",
       "BRIAN",
       "TINA",
       "MIKE"
      ],
+     "proposer": "GOODWIN",
      "state": "REJECTED",
      "votes": [
       "MIKE"
@@ -140,19 +227,19 @@
     },
     {
      "proposer": "BRIAN",
-     "team": [
-      "BRIAN",
-      "TINA",
-      "KIMBERLY",
-      "STEVE"
-     ],
+     "state": "REJECTED",
      "votes": [
       "MIKE",
       "STEVE",
       "JENNA",
       "BRIAN"
      ],
-     "state": "REJECTED"
+     "team": [
+      "BRIAN",
+      "TINA",
+      "KIMBERLY",
+      "STEVE"
+     ]
     },
     {
      "votes": [
@@ -177,27 +264,36 @@
      "state": "APPROVED"
     }
    ],
-   "teamSize": 4,
-   "numFails": 1,
-   "failsRequired": 1
+   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 4
   },
   {
+   "team": [
+    "KIMBERLY",
+    "ROCIO",
+    "STEVE",
+    "TINA"
+   ],
    "proposals": [
     {
-     "votes": [
-      "STEVE"
-     ],
      "team": [
       "TINA",
       "KIMBERLY",
       "BRIAN",
       "STEVE"
      ],
-     "proposer": "STEVE",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "STEVE"
+     ],
+     "proposer": "STEVE"
     },
     {
-     "proposer": "MIKE",
+     "votes": [
+      "MIKE",
+      "TOBY"
+     ],
      "team": [
       "MIKE",
       "TOBY",
@@ -205,17 +301,14 @@
       "BRIAN"
      ],
      "state": "REJECTED",
-     "votes": [
-      "MIKE",
-      "TOBY"
-     ]
+     "proposer": "MIKE"
     },
     {
+     "proposer": "ROCIO",
      "state": "REJECTED",
      "votes": [
       "ROCIO"
      ],
-     "proposer": "ROCIO",
      "team": [
       "KIMBERLY",
       "TINA",
@@ -224,10 +317,7 @@
      ]
     },
     {
-     "votes": [
-      "ROCIO",
-      "KIMBERLY"
-     ],
+     "state": "REJECTED",
      "proposer": "KIMBERLY",
      "team": [
       "KIMBERLY",
@@ -235,9 +325,20 @@
       "STEVE",
       "ROCIO"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "ROCIO",
+      "KIMBERLY"
+     ]
     },
     {
+     "proposer": "TINA",
+     "team": [
+      "KIMBERLY",
+      "ROCIO",
+      "STEVE",
+      "TINA"
+     ],
+     "state": "APPROVED",
      "votes": [
       "MIKE",
       "STEVE",
@@ -248,53 +349,47 @@
       "GOODWIN",
       "ROCIO",
       "KIMBERLY"
-     ],
-     "proposer": "TINA",
-     "team": [
-      "KIMBERLY",
-      "ROCIO",
-      "STEVE",
-      "TINA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
-   "team": [
-    "KIMBERLY",
-    "ROCIO",
-    "STEVE",
-    "TINA"
-   ],
+   "state": "SUCCESS",
    "numFails": 0,
-   "state": "SUCCESS"
+   "failsRequired": 1,
+   "teamSize": 4
   },
   {
-   "numFails": 0,
-   "failsRequired": 2,
    "teamSize": 5,
    "state": "SUCCESS",
+   "failsRequired": 2,
    "proposals": [
     {
-     "votes": [
-      "BRIAN",
-      "TYLER",
-      "TINA",
-      "KIMBERLY",
-      "STEVE"
-     ],
-     "state": "REJECTED",
      "proposer": "TYLER",
+     "state": "REJECTED",
      "team": [
       "ROCIO",
       "STEVE",
       "TYLER",
       "TINA",
       "KIMBERLY"
+     ],
+     "votes": [
+      "BRIAN",
+      "TYLER",
+      "TINA",
+      "KIMBERLY",
+      "STEVE"
      ]
     },
     {
+     "proposer": "JENNA",
+     "team": [
+      "JENNA",
+      "KIMBERLY",
+      "ROCIO",
+      "STEVE",
+      "TINA"
+     ],
+     "state": "APPROVED",
      "votes": [
       "TINA",
       "ROCIO",
@@ -304,15 +399,6 @@
       "BRIAN",
       "TOBY",
       "TYLER"
-     ],
-     "state": "APPROVED",
-     "proposer": "JENNA",
-     "team": [
-      "JENNA",
-      "KIMBERLY",
-      "ROCIO",
-      "STEVE",
-      "TINA"
      ]
     }
    ],
@@ -322,13 +408,14 @@
     "ROCIO",
     "STEVE",
     "TINA"
-   ]
+   ],
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "teamSize": 5,
-   "state": "PENDING",
    "proposals": [],
+   "failsRequired": 1,
+   "state": "PENDING",
+   "teamSize": 5,
    "team": []
   }
  ],
@@ -338,28 +425,28 @@
    "uid": "qj69Px4BbMO6uDkSS4qq8gIytVz1"
   },
   {
-   "name": "TINA",
-   "uid": "DutGXN6eW6SrSwspAF09sorqWv43"
+   "uid": "DutGXN6eW6SrSwspAF09sorqWv43",
+   "name": "TINA"
   },
   {
-   "uid": "JGCLVetGepXx4rLnxA33ErZRAXB2",
-   "name": "TYLER"
+   "name": "TYLER",
+   "uid": "JGCLVetGepXx4rLnxA33ErZRAXB2"
   },
   {
-   "uid": "u9QPwqYkeJVZntf6PRp8OqJjkqj2",
-   "name": "JENNA"
+   "name": "JENNA",
+   "uid": "u9QPwqYkeJVZntf6PRp8OqJjkqj2"
   },
   {
-   "uid": "cHNOoQaxdcToOGCOjVbXrDRiiRs2",
-   "name": "GOODWIN"
+   "name": "GOODWIN",
+   "uid": "cHNOoQaxdcToOGCOjVbXrDRiiRs2"
   },
   {
    "uid": "YckS9udxtgcpWUfqj3t66QdVZmi1",
    "name": "BRIAN"
   },
   {
-   "uid": "zNaikAizAoMuWbr7UTWOyVjSJoi2",
-   "name": "TOBY"
+   "name": "TOBY",
+   "uid": "zNaikAizAoMuWbr7UTWOyVjSJoi2"
   },
   {
    "name": "STEVE",
@@ -370,95 +457,8 @@
    "name": "MIKE"
   },
   {
-   "name": "ROCIO",
-   "uid": "cU2m1wQtIdTmFmwNi4J5MlFh8Wl2"
+   "uid": "cU2m1wQtIdTmFmwNi4J5MlFh8Wl2",
+   "name": "ROCIO"
   }
- ],
- "timeCreated": {
-  "_seconds": 1584909118,
-  "_nanoseconds": 212000000
- },
- "outcome": {
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "assassinated": "ROCIO",
-  "votes": [
-   {
-    "KIMBERLY": true,
-    "TINA": true,
-    "BRIAN": true
-   },
-   {
-    "TOBY": true,
-    "TINA": true,
-    "KIMBERLY": true,
-    "GOODWIN": false
-   },
-   {
-    "TINA": true,
-    "ROCIO": true,
-    "KIMBERLY": true,
-    "STEVE": true
-   },
-   {
-    "ROCIO": true,
-    "TINA": true,
-    "JENNA": true,
-    "KIMBERLY": true,
-    "STEVE": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "BRIAN",
-    "role": "OBERON",
-    "assassin": false
-   },
-   {
-    "name": "TOBY",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "TYLER"
-   },
-   {
-    "name": "TINA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "GOODWIN"
-   },
-   {
-    "name": "ROCIO",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "name": "KIMBERLY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "MIKE"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "STEVE",
-    "assassin": false
-   },
-   {
-    "name": "JENNA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ]
- }
+ ]
 }

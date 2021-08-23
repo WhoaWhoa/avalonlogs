@@ -1,105 +1,141 @@
 {
- "players": [
-  {
-   "name": "LAURA",
-   "uid": "DddGwIPbYTYseSgjSdd1Qbwqm3R2"
-  },
-  {
-   "uid": "V8ryY793JBQm57d7B7ljEdKdiQ72",
-   "name": "FABIENNE"
-  },
-  {
-   "uid": "mrBWU8UQMDRnK01vjUfL8DxG6yj1",
-   "name": "CECILOUVE"
-  },
-  {
-   "name": "CHRISTIAN",
-   "uid": "cSPD8oxmiIao14lQqfGzhbEKN9x1"
-  },
-  {
-   "uid": "gTS5ixzdhtVY6fw6XK6AnEjGrGi1",
-   "name": "REGIS"
-  },
-  {
-   "uid": "SjAwNkIjANUBqwHVK3f5szy8HZp1",
-   "name": "FREDERIC"
-  }
- ],
+ "outcome": {
+  "votes": [
+   {
+    "LAURA": true,
+    "CHRISTIAN": true
+   },
+   {
+    "CHRISTIAN": true,
+    "LAURA": true,
+    "FABIENNE": false
+   },
+   {
+    "CECILOUVE": true,
+    "FABIENNE": false,
+    "CHRISTIAN": true,
+    "FREDERIC": true
+   },
+   {
+    "LAURA": false,
+    "CECILOUVE": true,
+    "REGIS": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "name": "CHRISTIAN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "LAURA",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "REGIS",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "FABIENNE"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "CECILOUVE"
+   },
+   {
+    "assassin": false,
+    "name": "FREDERIC",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions"
+ },
  "timeFinished": {
   "_seconds": 1606052830,
   "_nanoseconds": 192000000
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "LAURA",
+    "CHRISTIAN"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "LAURA",
      "votes": [
       "LAURA",
       "FABIENNE",
       "FREDERIC",
       "CHRISTIAN"
      ],
+     "proposer": "LAURA",
+     "state": "APPROVED",
      "team": [
       "LAURA",
       "CHRISTIAN"
      ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "LAURA",
-    "CHRISTIAN"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
-   "state": "SUCCESS"
+   "teamSize": 2
   },
   {
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "FABIENNE",
+      "LAURA",
+      "CHRISTIAN"
+     ],
+     "proposer": "FABIENNE",
      "votes": [
       "CHRISTIAN",
       "FABIENNE",
       "FREDERIC",
       "LAURA"
-     ],
-     "proposer": "FABIENNE",
-     "team": [
-      "FABIENNE",
-      "LAURA",
-      "CHRISTIAN"
      ]
     }
    ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
    "team": [
     "FABIENNE",
     "LAURA",
     "CHRISTIAN"
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "numFails": 1,
    "teamSize": 3
   },
   {
+   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "FABIENNE",
     "CECILOUVE",
     "FREDERIC",
     "CHRISTIAN"
    ],
-   "state": "FAIL",
+   "teamSize": 4,
+   "numFails": 1,
    "proposals": [
     {
+     "proposer": "CECILOUVE",
      "state": "REJECTED",
      "votes": [
       "FREDERIC",
       "CECILOUVE"
      ],
-     "proposer": "CECILOUVE",
      "team": [
       "CECILOUVE",
       "REGIS",
@@ -121,47 +157,35 @@
      "proposer": "CHRISTIAN"
     },
     {
+     "votes": [],
      "team": [
       "REGIS",
       "CECILOUVE",
       "LAURA",
       "CHRISTIAN"
      ],
-     "state": "REJECTED",
-     "votes": [],
-     "proposer": "REGIS"
+     "proposer": "REGIS",
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
      "team": [
       "FABIENNE",
       "CECILOUVE",
       "FREDERIC",
       "CHRISTIAN"
      ],
+     "proposer": "FREDERIC",
+     "state": "APPROVED",
      "votes": [
       "CECILOUVE",
       "FREDERIC",
       "CHRISTIAN",
       "FABIENNE"
-     ],
-     "proposer": "FREDERIC"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 4
+   ]
   },
   {
-   "team": [
-    "CECILOUVE",
-    "REGIS",
-    "LAURA"
-   ],
-   "teamSize": 3,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1,
    "proposals": [
     {
      "team": [
@@ -179,30 +203,29 @@
     },
     {
      "state": "REJECTED",
-     "proposer": "FABIENNE",
-     "votes": [
-      "FABIENNE"
-     ],
      "team": [
       "FABIENNE",
       "CECILOUVE",
       "CHRISTIAN"
+     ],
+     "proposer": "FABIENNE",
+     "votes": [
+      "FABIENNE"
      ]
     },
     {
-     "state": "REJECTED",
-     "proposer": "CECILOUVE",
      "team": [
       "CECILOUVE",
       "REGIS",
       "FREDERIC"
      ],
+     "state": "REJECTED",
+     "proposer": "CECILOUVE",
      "votes": [
       "CECILOUVE"
      ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "CHRISTIAN",
       "FREDERIC"
@@ -212,9 +235,11 @@
       "CECILOUVE",
       "LAURA"
      ],
+     "state": "REJECTED",
      "proposer": "CHRISTIAN"
     },
     {
+     "proposer": "REGIS",
      "votes": [
       "FREDERIC",
       "FABIENNE",
@@ -223,83 +248,58 @@
       "CHRISTIAN",
       "LAURA"
      ],
+     "state": "APPROVED",
      "team": [
       "CECILOUVE",
       "REGIS",
       "LAURA"
-     ],
-     "state": "APPROVED",
-     "proposer": "REGIS"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
+   "team": [
+    "CECILOUVE",
+    "REGIS",
+    "LAURA"
+   ],
+   "teamSize": 3
   },
   {
-   "proposals": [],
-   "teamSize": 4,
    "state": "PENDING",
-   "team": [],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 4,
+   "proposals": [],
+   "team": []
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "CHRISTIAN": true,
-    "LAURA": true
-   },
-   {
-    "FABIENNE": false,
-    "CHRISTIAN": true,
-    "LAURA": true
-   },
-   {
-    "FABIENNE": false,
-    "FREDERIC": true,
-    "CHRISTIAN": true,
-    "CECILOUVE": true
-   },
-   {
-    "REGIS": true,
-    "CECILOUVE": true,
-    "LAURA": false
-   }
-  ],
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "CHRISTIAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "LAURA",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "REGIS",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "FABIENNE"
-   },
-   {
-    "name": "CECILOUVE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "FREDERIC"
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN"
- },
+ "players": [
+  {
+   "uid": "DddGwIPbYTYseSgjSdd1Qbwqm3R2",
+   "name": "LAURA"
+  },
+  {
+   "uid": "V8ryY793JBQm57d7B7ljEdKdiQ72",
+   "name": "FABIENNE"
+  },
+  {
+   "uid": "mrBWU8UQMDRnK01vjUfL8DxG6yj1",
+   "name": "CECILOUVE"
+  },
+  {
+   "uid": "cSPD8oxmiIao14lQqfGzhbEKN9x1",
+   "name": "CHRISTIAN"
+  },
+  {
+   "name": "REGIS",
+   "uid": "gTS5ixzdhtVY6fw6XK6AnEjGrGi1"
+  },
+  {
+   "name": "FREDERIC",
+   "uid": "SjAwNkIjANUBqwHVK3f5szy8HZp1"
+  }
+ ],
  "options": {
   "inGameLog": false
  },

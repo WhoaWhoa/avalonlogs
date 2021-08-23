@@ -1,32 +1,29 @@
 {
- "options": {
-  "inGameLog": false
- },
  "timeFinished": {
   "_seconds": 1592109045,
   "_nanoseconds": 702000000
  },
  "outcome": {
-  "state": "GOOD_WIN",
+  "message": "Three successful missions",
   "assassinated": "ISHYISH",
   "votes": [
    {
-    "SOMU": true,
-    "TANHUNG": true
+    "TANHUNG": true,
+    "SOMU": true
    },
    {
     "TANHUNG": false,
-    "DADI": true,
-    "MERLIM": true
+    "MERLIM": true,
+    "DADI": true
    },
    {
     "ISHYISH": true,
     "SOMU": true
    },
    {
-    "DADI": true,
     "ISHYISH": true,
-    "SOMU": false
+    "SOMU": false,
+    "DADI": true
    },
    {
     "ISHYISH": true,
@@ -34,42 +31,42 @@
     "MERLIM": true
    }
   ],
-  "message": "Three successful missions",
+  "state": "GOOD_WIN",
   "roles": [
    {
-    "role": "MERLIN",
+    "assassin": false,
     "name": "DADI",
-    "assassin": false
+    "role": "MERLIN"
    },
    {
-    "role": "PERCIVAL",
+    "name": "ISHYISH",
     "assassin": false,
-    "name": "ISHYISH"
+    "role": "PERCIVAL"
    },
    {
-    "assassin": true,
     "name": "SOMU",
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "assassin": true
    },
    {
-    "name": "MERLIM",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "MERLIM"
    },
    {
+    "role": "MORGANA",
     "name": "TANHUNG",
-    "assassin": false,
-    "role": "MORGANA"
+    "assassin": false
    }
   ]
  },
  "missions": [
   {
+   "teamSize": 2,
    "state": "SUCCESS",
-   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "SOMU",
      "state": "APPROVED",
      "votes": [
       "MERLIM",
@@ -78,80 +75,84 @@
       "ISHYISH",
       "SOMU"
      ],
+     "proposer": "SOMU",
      "team": [
       "SOMU",
       "TANHUNG"
      ]
     }
    ],
-   "teamSize": 2,
+   "numFails": 0,
    "team": [
     "SOMU",
     "TANHUNG"
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
+     "team": [
+      "TANHUNG",
+      "MERLIM",
+      "DADI"
+     ],
      "state": "APPROVED",
+     "proposer": "MERLIM",
      "votes": [
       "MERLIM",
       "TANHUNG",
       "DADI",
       "ISHYISH",
       "SOMU"
-     ],
-     "proposer": "MERLIM",
-     "team": [
-      "TANHUNG",
-      "MERLIM",
-      "DADI"
      ]
     }
    ],
+   "teamSize": 3,
+   "state": "FAIL",
    "team": [
     "TANHUNG",
     "MERLIM",
     "DADI"
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1
+   "failsRequired": 1
   },
   {
    "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "ISHYISH",
+    "SOMU"
+   ],
+   "numFails": 0,
    "proposals": [
     {
-     "votes": [
-      "SOMU",
-      "TANHUNG"
-     ],
-     "state": "REJECTED",
      "team": [
       "TANHUNG",
       "DADI"
      ],
-     "proposer": "TANHUNG"
+     "proposer": "TANHUNG",
+     "votes": [
+      "SOMU",
+      "TANHUNG"
+     ],
+     "state": "REJECTED"
     },
     {
-     "votes": [
+     "state": "REJECTED",
+     "team": [
       "DADI",
       "ISHYISH"
      ],
      "proposer": "DADI",
-     "state": "REJECTED",
-     "team": [
+     "votes": [
       "DADI",
       "ISHYISH"
      ]
     },
     {
-     "team": [
-      "ISHYISH",
-      "SOMU"
-     ],
+     "proposer": "ISHYISH",
+     "state": "APPROVED",
      "votes": [
       "SOMU",
       "MERLIM",
@@ -159,78 +160,70 @@
       "DADI",
       "ISHYISH"
      ],
-     "state": "APPROVED",
-     "proposer": "ISHYISH"
-    }
-   ],
-   "state": "SUCCESS",
-   "team": [
-    "ISHYISH",
-    "SOMU"
-   ],
-   "teamSize": 2,
-   "numFails": 0
-  },
-  {
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "TANHUNG",
-      "DADI",
-      "ISHYISH"
-     ],
-     "proposer": "SOMU",
      "team": [
-      "SOMU",
-      "DADI",
-      "ISHYISH"
+      "ISHYISH",
+      "SOMU"
      ]
     }
    ],
+   "state": "SUCCESS"
+  },
+  {
    "team": [
     "SOMU",
     "DADI",
     "ISHYISH"
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
    "teamSize": 3,
-   "numFails": 1
-  },
-  {
-   "numFails": 0,
    "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "DADI",
-    "ISHYISH",
-    "MERLIM"
-   ],
    "proposals": [
     {
+     "votes": [
+      "TANHUNG",
+      "DADI",
+      "ISHYISH"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "SOMU",
+      "DADI",
+      "ISHYISH"
+     ],
+     "proposer": "SOMU"
+    }
+   ],
+   "numFails": 1,
+   "state": "FAIL"
+  },
+  {
+   "teamSize": 3,
+   "proposals": [
+    {
+     "team": [
+      "DADI",
+      "ISHYISH",
+      "MERLIM"
+     ],
+     "proposer": "MERLIM",
      "state": "APPROVED",
      "votes": [
       "DADI",
       "ISHYISH",
       "MERLIM",
       "TANHUNG"
-     ],
-     "team": [
-      "DADI",
-      "ISHYISH",
-      "MERLIM"
-     ],
-     "proposer": "MERLIM"
+     ]
     }
    ],
-   "teamSize": 3
+   "team": [
+    "DADI",
+    "ISHYISH",
+    "MERLIM"
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0
   }
  ],
- "timeCreated": {
-  "_seconds": 1592108751,
-  "_nanoseconds": 692000000
- },
  "players": [
   {
    "uid": "D9P4edHkq0ZUO0Q5HepkHOw9jWU2",
@@ -252,5 +245,12 @@
    "name": "TANHUNG",
    "uid": "YFVN16lNL0SgIGALnBsczNv2RgD2"
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1592108751,
+  "_nanoseconds": 692000000
+ },
+ "options": {
+  "inGameLog": false
+ }
 }

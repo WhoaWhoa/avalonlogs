@@ -1,14 +1,121 @@
 {
+ "players": [
+  {
+   "name": "SOVEREIGN",
+   "uid": "hJiNVPvKNVNZrAynLC7dKKaLkU22"
+  },
+  {
+   "name": "GANSKIES",
+   "uid": "f6AxJ6Tnh8SnMxKKrxFIP0QzLVE3"
+  },
+  {
+   "name": "SWEE",
+   "uid": "JnvFx6wpH8T4LQorOxnu0KTuk1s1"
+  },
+  {
+   "uid": "bHPjqQht3tTIGtpWSbwEdCpmRqJ2",
+   "name": "VIC"
+  },
+  {
+   "name": "PROVIDENCE",
+   "uid": "w2ngiDASElTWBTMXd9fdYpBlSNx1"
+  },
+  {
+   "name": "PHD",
+   "uid": "qPIYra8LXHcID7Vmxts9q32GUGq2"
+  },
+  {
+   "name": "KENT",
+   "uid": "1bJ81Hm1pVgWVQIR92GlUKEx6iH3"
+  }
+ ],
+ "outcome": {
+  "message": "Merlin assassinated",
+  "assassinated": "SOVEREIGN",
+  "votes": [
+   {
+    "SOVEREIGN": true,
+    "VIC": true
+   },
+   {
+    "VIC": false,
+    "SOVEREIGN": true,
+    "PROVIDENCE": true
+   },
+   {
+    "PROVIDENCE": true,
+    "VIC": false,
+    "PHD": true
+   },
+   {
+    "PHD": true,
+    "SOVEREIGN": true,
+    "KENT": true,
+    "SWEE": false
+   },
+   {
+    "PROVIDENCE": true,
+    "KENT": true,
+    "PHD": true,
+    "SOVEREIGN": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "name": "KENT",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "SOVEREIGN",
+    "role": "MERLIN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "PROVIDENCE",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "MORDRED",
+    "name": "VIC"
+   },
+   {
+    "assassin": false,
+    "role": "OBERON",
+    "name": "SWEE"
+   },
+   {
+    "role": "MORGANA",
+    "name": "GANSKIES",
+    "assassin": false
+   },
+   {
+    "name": "PHD",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ]
+ },
  "missions": [
   {
-   "state": "SUCCESS",
    "teamSize": 2,
    "team": [
     "VIC",
     "SOVEREIGN"
    ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "VIC",
+      "SOVEREIGN"
+     ],
+     "proposer": "VIC",
+     "state": "APPROVED",
      "votes": [
       "KENT",
       "SOVEREIGN",
@@ -16,27 +123,14 @@
       "SWEE",
       "GANSKIES",
       "PHD"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "VIC",
-      "SOVEREIGN"
-     ],
-     "proposer": "VIC"
+     ]
     }
    ],
-   "failsRequired": 1,
    "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "numFails": 1,
    "state": "FAIL",
-   "team": [
-    "PROVIDENCE",
-    "SOVEREIGN",
-    "VIC"
-   ],
+   "numFails": 1,
    "teamSize": 3,
    "proposals": [
     {
@@ -45,7 +139,6 @@
       "SOVEREIGN",
       "VIC"
      ],
-     "state": "APPROVED",
      "proposer": "PROVIDENCE",
      "votes": [
       "PHD",
@@ -55,15 +148,28 @@
       "VIC",
       "SWEE",
       "GANSKIES"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "team": [
+    "PROVIDENCE",
+    "SOVEREIGN",
+    "VIC"
+   ],
+   "failsRequired": 1
   },
   {
    "failsRequired": 1,
    "numFails": 1,
    "proposals": [
     {
+     "proposer": "PHD",
+     "team": [
+      "PROVIDENCE",
+      "VIC",
+      "PHD"
+     ],
      "state": "APPROVED",
      "votes": [
       "PHD",
@@ -72,41 +178,29 @@
       "VIC",
       "SWEE",
       "GANSKIES"
-     ],
-     "team": [
-      "PROVIDENCE",
-      "VIC",
-      "PHD"
-     ],
-     "proposer": "PHD"
+     ]
     }
    ],
+   "teamSize": 3,
+   "state": "FAIL",
    "team": [
     "PROVIDENCE",
     "VIC",
     "PHD"
-   ],
-   "teamSize": 3,
-   "state": "FAIL"
+   ]
   },
   {
    "state": "SUCCESS",
-   "team": [
-    "KENT",
-    "SOVEREIGN",
-    "PHD",
-    "SWEE"
-   ],
-   "teamSize": 4,
+   "failsRequired": 2,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "KENT",
       "SOVEREIGN",
       "PHD",
       "SWEE"
      ],
-     "state": "APPROVED",
      "proposer": "KENT",
      "votes": [
       "KENT",
@@ -118,24 +212,27 @@
      ]
     }
    ],
-   "failsRequired": 2,
-   "numFails": 1
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 4,
-   "state": "SUCCESS",
    "team": [
+    "KENT",
     "SOVEREIGN",
     "PHD",
-    "KENT",
-    "PROVIDENCE"
+    "SWEE"
    ],
-   "numFails": 0,
+   "numFails": 1,
+   "teamSize": 4
+  },
+  {
+   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "SOVEREIGN",
      "state": "APPROVED",
+     "proposer": "SOVEREIGN",
+     "team": [
+      "SOVEREIGN",
+      "PHD",
+      "KENT",
+      "PROVIDENCE"
+     ],
      "votes": [
       "KENT",
       "SOVEREIGN",
@@ -144,126 +241,29 @@
       "SWEE",
       "GANSKIES",
       "PHD"
-     ],
-     "team": [
-      "SOVEREIGN",
-      "PHD",
-      "KENT",
-      "PROVIDENCE"
      ]
     }
-   ]
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "team": [
+    "SOVEREIGN",
+    "PHD",
+    "KENT",
+    "PROVIDENCE"
+   ],
+   "failsRequired": 1
   }
  ],
  "options": {
   "inGameLog": false
  },
- "players": [
-  {
-   "name": "SOVEREIGN",
-   "uid": "hJiNVPvKNVNZrAynLC7dKKaLkU22"
-  },
-  {
-   "name": "GANSKIES",
-   "uid": "f6AxJ6Tnh8SnMxKKrxFIP0QzLVE3"
-  },
-  {
-   "uid": "JnvFx6wpH8T4LQorOxnu0KTuk1s1",
-   "name": "SWEE"
-  },
-  {
-   "name": "VIC",
-   "uid": "bHPjqQht3tTIGtpWSbwEdCpmRqJ2"
-  },
-  {
-   "uid": "w2ngiDASElTWBTMXd9fdYpBlSNx1",
-   "name": "PROVIDENCE"
-  },
-  {
-   "uid": "qPIYra8LXHcID7Vmxts9q32GUGq2",
-   "name": "PHD"
-  },
-  {
-   "uid": "1bJ81Hm1pVgWVQIR92GlUKEx6iH3",
-   "name": "KENT"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1590161352,
-  "_nanoseconds": 651000000
- },
  "timeFinished": {
   "_seconds": 1590161697,
   "_nanoseconds": 330000000
  },
- "outcome": {
-  "roles": [
-   {
-    "name": "KENT",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "name": "SOVEREIGN",
-    "role": "MERLIN"
-   },
-   {
-    "name": "PROVIDENCE",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "VIC",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "name": "SWEE",
-    "role": "OBERON",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "GANSKIES"
-   },
-   {
-    "name": "PHD",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   }
-  ],
-  "votes": [
-   {
-    "VIC": true,
-    "SOVEREIGN": true
-   },
-   {
-    "VIC": false,
-    "SOVEREIGN": true,
-    "PROVIDENCE": true
-   },
-   {
-    "PHD": true,
-    "VIC": false,
-    "PROVIDENCE": true
-   },
-   {
-    "SWEE": false,
-    "SOVEREIGN": true,
-    "PHD": true,
-    "KENT": true
-   },
-   {
-    "KENT": true,
-    "PROVIDENCE": true,
-    "SOVEREIGN": true,
-    "PHD": true
-   }
-  ],
-  "assassinated": "SOVEREIGN",
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated"
+ "timeCreated": {
+  "_seconds": 1590161352,
+  "_nanoseconds": 651000000
  }
 }

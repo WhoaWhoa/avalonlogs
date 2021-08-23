@@ -1,27 +1,28 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
   "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "assassinated": "AD",
   "roles": [
    {
-    "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "SAAK",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "role": "MORDRED",
+    "name": "DADI"
+   },
+   {
+    "name": "AD",
+    "role": "MERLIN",
     "assassin": false
    },
    {
-    "name": "DADI",
-    "assassin": true,
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "AD"
-   },
-   {
-    "assassin": false,
     "role": "MORGANA",
+    "assassin": false,
     "name": "NEEHAW"
    },
    {
@@ -30,6 +31,7 @@
     "role": "PERCIVAL"
    }
   ],
+  "assassinated": "AD",
   "votes": [
    {
     "SAAK": true,
@@ -45,106 +47,121 @@
     "DADI": true
    },
    {
-    "AD": true,
+    "DADI": false,
     "MARWA": true,
-    "DADI": false
+    "AD": true
    },
    {
     "MARWA": true,
-    "AD": true,
-    "SAAK": true
+    "SAAK": true,
+    "AD": true
    }
-  ]
+  ],
+  "state": "EVIL_WIN"
  },
- "timeCreated": {
-  "_seconds": 1589696054,
-  "_nanoseconds": 481000000
- },
+ "players": [
+  {
+   "name": "MARWA",
+   "uid": "DhUsOXH1LhSIgj7hiLECw5H0pc23"
+  },
+  {
+   "uid": "VCKDlXqBm8VPlQUs4Cp8VnrzA1F3",
+   "name": "NEEHAW"
+  },
+  {
+   "uid": "D9P4edHkq0ZUO0Q5HepkHOw9jWU2",
+   "name": "DADI"
+  },
+  {
+   "uid": "lLbnA05okrbSr3qNJsd0AKcpQPN2",
+   "name": "SAAK"
+  },
+  {
+   "name": "AD",
+   "uid": "rMFSK1y64ocxqhydlDLxOeMgWfi2"
+  }
+ ],
  "missions": [
   {
-   "team": [
-    "SAAK",
-    "DADI"
-   ],
-   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "SAAK",
-      "DADI"
-     ],
-     "proposer": "SAAK",
-     "state": "APPROVED",
      "votes": [
       "SAAK",
       "DADI",
       "AD",
       "NEEHAW",
       "MARWA"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "SAAK",
+      "DADI"
+     ],
+     "proposer": "SAAK"
     }
    ],
-   "state": "SUCCESS",
+   "team": [
+    "SAAK",
+    "DADI"
+   ],
    "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 2
   },
   {
-   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "AD",
     "SAAK",
     "DADI"
    ],
-   "numFails": 1,
-   "state": "FAIL",
    "proposals": [
     {
-     "votes": [
-      "DADI",
-      "AD",
-      "MARWA"
-     ],
      "team": [
       "AD",
       "SAAK",
       "DADI"
      ],
-     "proposer": "AD",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "votes": [
+      "DADI",
+      "AD",
+      "MARWA"
+     ],
+     "proposer": "AD"
     }
    ],
-   "teamSize": 3
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1
   },
   {
+   "teamSize": 2,
    "numFails": 0,
-   "state": "SUCCESS",
-   "team": [
-    "DADI",
-    "AD"
-   ],
    "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "NEEHAW"
-     ],
-     "team": [
-      "MARWA",
-      "NEEHAW"
-     ],
-     "proposer": "MARWA",
-     "state": "REJECTED"
-    },
-    {
-     "team": [
-      "NEEHAW",
-      "SAAK"
-     ],
      "state": "REJECTED",
      "votes": [
       "NEEHAW"
      ],
-     "proposer": "NEEHAW"
+     "proposer": "MARWA",
+     "team": [
+      "MARWA",
+      "NEEHAW"
+     ]
+    },
+    {
+     "state": "REJECTED",
+     "proposer": "NEEHAW",
+     "votes": [
+      "NEEHAW"
+     ],
+     "team": [
+      "NEEHAW",
+      "SAAK"
+     ]
     },
     {
      "state": "APPROVED",
@@ -161,59 +178,56 @@
      ]
     }
    ],
-   "teamSize": 2
+   "state": "SUCCESS",
+   "team": [
+    "DADI",
+    "AD"
+   ]
   },
   {
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "votes": [
-      "SAAK",
-      "AD"
-     ],
-     "state": "REJECTED",
-     "team": [
-      "SAAK",
-      "MARWA",
-      "AD"
-     ],
-     "proposer": "SAAK"
-    },
-    {
-     "proposer": "AD",
-     "state": "APPROVED",
-     "votes": [
-      "DADI",
-      "AD",
-      "MARWA"
-     ],
-     "team": [
-      "MARWA",
-      "AD",
-      "DADI"
-     ]
-    }
-   ],
-   "state": "FAIL",
    "teamSize": 3,
    "team": [
     "MARWA",
     "AD",
     "DADI"
    ],
-   "numFails": 1
-  },
-  {
-   "team": [
-    "MARWA",
-    "SAAK",
-    "AD"
-   ],
-   "numFails": 0,
-   "state": "SUCCESS",
+   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "SAAK",
+      "MARWA",
+      "AD"
+     ],
+     "votes": [
+      "SAAK",
+      "AD"
+     ],
+     "proposer": "SAAK",
+     "state": "REJECTED"
+    },
+    {
+     "votes": [
+      "DADI",
+      "AD",
+      "MARWA"
+     ],
      "state": "APPROVED",
+     "team": [
+      "MARWA",
+      "AD",
+      "DADI"
+     ],
+     "proposer": "AD"
+    }
+   ],
+   "state": "FAIL"
+  },
+  {
+   "teamSize": 3,
+   "proposals": [
+    {
      "team": [
       "MARWA",
       "SAAK",
@@ -224,40 +238,26 @@
       "SAAK",
       "AD",
       "MARWA"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "failsRequired": 1,
-   "teamSize": 3
+   "state": "SUCCESS",
+   "team": [
+    "MARWA",
+    "SAAK",
+    "AD"
+   ],
+   "numFails": 0
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "timeFinished": {
   "_seconds": 1589696558,
   "_nanoseconds": 962000000
  },
- "players": [
-  {
-   "name": "MARWA",
-   "uid": "DhUsOXH1LhSIgj7hiLECw5H0pc23"
-  },
-  {
-   "uid": "VCKDlXqBm8VPlQUs4Cp8VnrzA1F3",
-   "name": "NEEHAW"
-  },
-  {
-   "uid": "D9P4edHkq0ZUO0Q5HepkHOw9jWU2",
-   "name": "DADI"
-  },
-  {
-   "name": "SAAK",
-   "uid": "lLbnA05okrbSr3qNJsd0AKcpQPN2"
-  },
-  {
-   "name": "AD",
-   "uid": "rMFSK1y64ocxqhydlDLxOeMgWfi2"
-  }
- ]
+ "timeCreated": {
+  "_seconds": 1589696054,
+  "_nanoseconds": 481000000
+ }
 }

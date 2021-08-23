@@ -1,48 +1,26 @@
 {
+ "timeCreated": {
+  "_seconds": 1596427871,
+  "_nanoseconds": 427000000
+ },
  "outcome": {
-  "message": "Three successful missions",
   "state": "GOOD_WIN",
-  "votes": [
-   {
-    "DREW": true,
-    "YB": false
-   },
-   {
-    "CONNOR": true,
-    "ZACH": true,
-    "YB": true
-   },
-   {
-    "ZACH": false,
-    "CONNOR": true
-   },
-   {
-    "DREW": true,
-    "MATT": true,
-    "CONNOR": true
-   },
-   {
-    "DREW": true,
-    "MATT": true,
-    "CONNOR": true
-   }
-  ],
-  "assassinated": "MATT",
+  "message": "Three successful missions",
   "roles": [
    {
     "name": "CONNOR",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
+    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "MATT",
-    "assassin": false
+    "name": "MATT"
    },
    {
     "name": "DREW",
-    "role": "PERCIVAL",
-    "assassin": false
+    "assassin": false,
+    "role": "PERCIVAL"
    },
    {
     "assassin": true,
@@ -50,17 +28,48 @@
     "role": "MORDRED"
    },
    {
+    "assassin": false,
     "name": "YB",
-    "role": "MORGANA",
-    "assassin": false
+    "role": "MORGANA"
    }
-  ]
+  ],
+  "votes": [
+   {
+    "DREW": true,
+    "YB": false
+   },
+   {
+    "CONNOR": true,
+    "YB": true,
+    "ZACH": true
+   },
+   {
+    "CONNOR": true,
+    "ZACH": false
+   },
+   {
+    "DREW": true,
+    "MATT": true,
+    "CONNOR": true
+   },
+   {
+    "MATT": true,
+    "DREW": true,
+    "CONNOR": true
+   }
+  ],
+  "assassinated": "MATT"
  },
  "missions": [
   {
-   "failsRequired": 1,
-   "numFails": 1,
    "state": "FAIL",
+   "teamSize": 2,
+   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "DREW",
+    "YB"
+   ],
    "proposals": [
     {
      "votes": [
@@ -68,39 +77,28 @@
       "YB",
       "CONNOR"
      ],
+     "state": "APPROVED",
      "team": [
       "DREW",
       "YB"
      ],
-     "proposer": "DREW",
-     "state": "APPROVED"
+     "proposer": "DREW"
     }
-   ],
-   "teamSize": 2,
-   "team": [
-    "DREW",
-    "YB"
    ]
   },
   {
-   "numFails": 0,
+   "failsRequired": 1,
    "state": "SUCCESS",
-   "team": [
-    "YB",
-    "CONNOR",
-    "ZACH"
-   ],
-   "teamSize": 3,
    "proposals": [
     {
-     "votes": [],
      "team": [
       "ZACH",
       "YB",
       "DREW"
      ],
+     "proposer": "ZACH",
      "state": "REJECTED",
-     "proposer": "ZACH"
+     "votes": []
     },
     {
      "team": [
@@ -108,83 +106,90 @@
       "MATT",
       "ZACH"
      ],
-     "state": "REJECTED",
      "votes": [
       "CONNOR"
      ],
+     "state": "REJECTED",
      "proposer": "CONNOR"
     },
     {
-     "votes": [
-      "MATT",
-      "DREW"
-     ],
+     "state": "REJECTED",
+     "proposer": "MATT",
      "team": [
       "MATT",
       "DREW",
       "ZACH"
      ],
-     "state": "REJECTED",
-     "proposer": "MATT"
+     "votes": [
+      "MATT",
+      "DREW"
+     ]
     },
     {
+     "team": [
+      "YB",
+      "CONNOR",
+      "ZACH"
+     ],
      "proposer": "YB",
      "state": "APPROVED",
      "votes": [
       "YB",
       "MATT",
       "ZACH"
-     ],
-     "team": [
-      "YB",
-      "CONNOR",
-      "ZACH"
      ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "numFails": 0,
+   "team": [
+    "YB",
+    "CONNOR",
+    "ZACH"
+   ]
   },
   {
+   "numFails": 1,
    "state": "FAIL",
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "CONNOR",
+      "ZACH"
+     ],
+     "proposer": "DREW",
      "state": "REJECTED",
      "votes": [
       "DREW",
       "CONNOR"
-     ],
+     ]
+    },
+    {
      "team": [
       "CONNOR",
       "ZACH"
      ],
-     "proposer": "DREW"
-    },
-    {
-     "state": "APPROVED",
      "votes": [
       "DREW",
       "CONNOR",
       "YB",
       "ZACH"
      ],
-     "team": [
-      "CONNOR",
-      "ZACH"
-     ],
-     "proposer": "ZACH"
+     "proposer": "ZACH",
+     "state": "APPROVED"
     }
    ],
+   "teamSize": 2,
    "team": [
     "CONNOR",
     "ZACH"
-   ],
-   "numFails": 1,
-   "failsRequired": 1
+   ]
   },
   {
    "state": "SUCCESS",
    "teamSize": 3,
+   "numFails": 0,
    "team": [
     "CONNOR",
     "MATT",
@@ -193,17 +198,17 @@
    "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "CONNOR",
-      "MATT",
-      "DREW"
-     ],
+     "proposer": "CONNOR",
      "votes": [
       "CONNOR",
       "DREW"
      ],
-     "proposer": "CONNOR",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "team": [
+      "CONNOR",
+      "MATT",
+      "DREW"
+     ]
     },
     {
      "votes": [
@@ -219,54 +224,49 @@
      "state": "APPROVED",
      "proposer": "MATT"
     }
-   ],
-   "numFails": 0
+   ]
   },
   {
-   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "YB",
-     "state": "REJECTED",
-     "votes": [
-      "ZACH",
-      "YB"
-     ],
      "team": [
       "YB",
       "CONNOR",
       "MATT"
-     ]
+     ],
+     "votes": [
+      "ZACH",
+      "YB"
+     ],
+     "proposer": "YB",
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
+     "votes": [
+      "MATT",
+      "CONNOR",
+      "DREW"
+     ],
      "team": [
       "DREW",
       "CONNOR",
       "MATT"
      ],
-     "state": "APPROVED",
-     "proposer": "DREW",
-     "votes": [
-      "MATT",
-      "CONNOR",
-      "DREW"
-     ]
+     "proposer": "DREW"
     }
    ],
-   "state": "SUCCESS",
    "team": [
     "DREW",
     "CONNOR",
     "MATT"
    ],
    "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 3
   }
  ],
- "timeCreated": {
-  "_seconds": 1596427871,
-  "_nanoseconds": 427000000
- },
  "players": [
   {
    "name": "CONNOR",
@@ -281,19 +281,19 @@
    "uid": "dBbDTVYBVOX3bdMaEHBbhW01IIB3"
   },
   {
-   "name": "DREW",
-   "uid": "WNEw31ozPgP0GMZ3QUAX3OHAaNs1"
+   "uid": "WNEw31ozPgP0GMZ3QUAX3OHAaNs1",
+   "name": "DREW"
   },
   {
    "name": "ZACH",
    "uid": "bH4tIAsGmEO9QIrWbxqrS211mdW2"
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1596429351,
   "_nanoseconds": 382000000
- },
- "options": {
-  "inGameLog": false
  }
 }

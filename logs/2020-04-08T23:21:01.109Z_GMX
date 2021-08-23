@@ -1,69 +1,38 @@
 {
  "players": [
   {
-   "name": "HELEB",
-   "uid": "NlzVvrWfIDPgfBkRFKFhCNBd7Na2"
+   "uid": "NlzVvrWfIDPgfBkRFKFhCNBd7Na2",
+   "name": "HELEB"
   },
   {
-   "uid": "qVpNVKharfh0VAUsOP94hdRppNv2",
-   "name": "TIM"
+   "name": "TIM",
+   "uid": "qVpNVKharfh0VAUsOP94hdRppNv2"
   },
   {
-   "uid": "pBLWs5tGylaoDdhR4sJW4a8FzaG2",
-   "name": "HNG"
+   "name": "HNG",
+   "uid": "pBLWs5tGylaoDdhR4sJW4a8FzaG2"
   },
   {
-   "name": "KATE",
-   "uid": "pXlzqx0cCve1Ze7g7EUWfeAC0Dd2"
+   "uid": "pXlzqx0cCve1Ze7g7EUWfeAC0Dd2",
+   "name": "KATE"
   },
   {
    "uid": "DBliuCLsHgWcprmk6olfl1LBUxh1",
    "name": "AMO"
   }
  ],
- "timeFinished": {
-  "_seconds": 1586388325,
-  "_nanoseconds": 305935000
- },
  "outcome": {
-  "state": "GOOD_WIN",
   "message": "Three successful missions",
-  "roles": [
-   {
-    "role": "MORGANA",
-    "name": "KATE",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "name": "HELEB",
-    "assassin": false
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "TIM",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "AMO",
-    "assassin": true
-   },
-   {
-    "name": "HNG",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   }
-  ],
+  "state": "GOOD_WIN",
   "votes": [
    {
-    "HNG": true,
-    "TIM": true
+    "TIM": true,
+    "HNG": true
    },
    {
-    "TIM": true,
     "KATE": false,
-    "HNG": true
+    "HNG": true,
+    "TIM": true
    },
    {
     "TIM": true,
@@ -75,12 +44,43 @@
     "AMO": false
    },
    {
-    "TIM": true,
     "HELEB": true,
-    "HNG": true
+    "HNG": true,
+    "TIM": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "KATE"
+   },
+   {
+    "name": "HELEB",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "TIM",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "AMO",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "HNG",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    }
   ],
   "assassinated": "TIM"
+ },
+ "timeFinished": {
+  "_seconds": 1586388325,
+  "_nanoseconds": 305935000
  },
  "timeCreated": {
   "_seconds": 1586388061,
@@ -88,14 +88,15 @@
  },
  "missions": [
   {
+   "failsRequired": 1,
    "team": [
     "HNG",
     "TIM"
    ],
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "HNG",
      "votes": [
       "AMO",
       "HNG",
@@ -103,38 +104,37 @@
       "HELEB",
       "TIM"
      ],
+     "proposer": "HNG",
      "team": [
       "HNG",
       "TIM"
      ]
     }
    ],
-   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 2,
-   "failsRequired": 1
+   "teamSize": 2
   },
   {
-   "numFails": 1,
-   "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "KATE",
-      "TIM",
-      "HNG"
-     ],
      "votes": [
       "HELEB",
       "HNG",
       "KATE"
      ],
+     "proposer": "KATE",
      "state": "APPROVED",
-     "proposer": "KATE"
+     "team": [
+      "KATE",
+      "TIM",
+      "HNG"
+     ]
     }
    ],
+   "numFails": 1,
+   "teamSize": 3,
    "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "KATE",
     "TIM",
@@ -142,14 +142,6 @@
    ]
   },
   {
-   "team": [
-    "TIM",
-    "AMO"
-   ],
-   "numFails": 0,
-   "teamSize": 2,
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "proposals": [
     {
      "votes": [
@@ -158,14 +150,22 @@
       "AMO",
       "HNG"
      ],
-     "proposer": "AMO",
      "state": "APPROVED",
+     "proposer": "AMO",
      "team": [
       "TIM",
       "AMO"
      ]
     }
-   ]
+   ],
+   "numFails": 0,
+   "team": [
+    "TIM",
+    "AMO"
+   ],
+   "failsRequired": 1,
+   "teamSize": 2,
+   "state": "SUCCESS"
   },
   {
    "state": "FAIL",
@@ -175,35 +175,34 @@
     "AMO"
    ],
    "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "HELEB",
-     "votes": [
-      "HELEB",
-      "TIM",
-      "AMO"
-     ],
      "team": [
       "HELEB",
       "TIM",
       "AMO"
      ],
-     "state": "APPROVED"
+     "votes": [
+      "HELEB",
+      "TIM",
+      "AMO"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3
+   ]
   },
   {
-   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "TIM",
      "team": [
       "TIM",
       "HELEB",
       "HNG"
      ],
-     "proposer": "TIM",
      "state": "APPROVED",
      "votes": [
       "HELEB",
@@ -212,14 +211,15 @@
      ]
     }
    ],
+   "failsRequired": 1,
    "team": [
     "TIM",
     "HELEB",
     "HNG"
    ],
-   "failsRequired": 1,
    "numFails": 0,
-   "teamSize": 3
+   "teamSize": 3,
+   "state": "SUCCESS"
   }
  ]
 }

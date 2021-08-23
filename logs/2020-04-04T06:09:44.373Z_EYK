@@ -1,13 +1,90 @@
 {
- "timeCreated": {
-  "_seconds": 1585980584,
-  "_nanoseconds": 373000000
+ "outcome": {
+  "message": "Three failed missions",
+  "roles": [
+   {
+    "role": "MERLIN",
+    "name": "MOCHI",
+    "assassin": false
+   },
+   {
+    "role": "OBERON",
+    "assassin": false,
+    "name": "CASEY"
+   },
+   {
+    "role": "MORDRED",
+    "assassin": true,
+    "name": "COLIN"
+   },
+   {
+    "name": "GID",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "name": "JESS",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "RPUNICORN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "RENINI",
+    "assassin": false
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null,
+  "votes": [
+   {
+    "CASEY": false,
+    "JESS": true
+   },
+   {
+    "CASEY": true,
+    "COLIN": false,
+    "RENINI": true
+   },
+   {
+    "RENINI": true,
+    "COLIN": true,
+    "JESS": true
+   },
+   {
+    "MOCHI": true,
+    "JESS": true,
+    "RENINI": true,
+    "COLIN": false
+   },
+   {
+    "JESS": true,
+    "COLIN": false,
+    "RPUNICORN": true,
+    "RENINI": true
+   }
+  ]
  },
  "missions": [
   {
+   "state": "FAIL",
+   "team": [
+    "CASEY",
+    "JESS"
+   ],
    "teamSize": 2,
    "proposals": [
     {
+     "team": [
+      "CASEY",
+      "JESS"
+     ],
+     "proposer": "RENINI",
+     "state": "APPROVED",
      "votes": [
       "MOCHI",
       "CASEY",
@@ -16,30 +93,22 @@
       "JESS",
       "RPUNICORN",
       "RENINI"
-     ],
-     "team": [
-      "CASEY",
-      "JESS"
-     ],
-     "proposer": "RENINI",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "team": [
-    "CASEY",
-    "JESS"
-   ],
-   "numFails": 1,
-   "state": "FAIL",
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
-   "teamSize": 3,
    "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1,
    "proposals": [
     {
+     "team": [
+      "CASEY",
+      "RENINI",
+      "COLIN"
+     ],
+     "proposer": "CASEY",
      "state": "APPROVED",
      "votes": [
       "MOCHI",
@@ -48,23 +117,28 @@
       "JESS",
       "RPUNICORN",
       "RENINI"
-     ],
-     "team": [
-      "CASEY",
-      "RENINI",
-      "COLIN"
-     ],
-     "proposer": "CASEY"
+     ]
     }
    ],
+   "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "CASEY",
     "RENINI",
     "COLIN"
-   ]
+   ],
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "RENINI",
+    "COLIN",
+    "JESS"
+   ],
    "teamSize": 3,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -75,31 +149,29 @@
       "COLIN",
       "GID"
      ],
+     "state": "APPROVED",
      "team": [
       "RENINI",
       "COLIN",
       "JESS"
      ],
-     "proposer": "JESS",
-     "state": "APPROVED"
+     "proposer": "JESS"
     }
-   ],
-   "numFails": 0,
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "RENINI",
-    "COLIN",
-    "JESS"
    ]
   },
   {
-   "numFails": 1,
    "failsRequired": 2,
+   "numFails": 1,
    "state": "SUCCESS",
+   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "MOCHI",
+     "team": [
+      "COLIN",
+      "RENINI",
+      "JESS",
+      "MOCHI"
+     ],
      "state": "APPROVED",
      "votes": [
       "MOCHI",
@@ -110,12 +182,7 @@
       "RPUNICORN",
       "RENINI"
      ],
-     "team": [
-      "COLIN",
-      "RENINI",
-      "JESS",
-      "MOCHI"
-     ]
+     "proposer": "MOCHI"
     }
    ],
    "team": [
@@ -123,11 +190,10 @@
     "RENINI",
     "JESS",
     "MOCHI"
-   ],
-   "teamSize": 4
+   ]
   },
   {
-   "failsRequired": 1,
+   "state": "FAIL",
    "numFails": 1,
    "team": [
     "RPUNICORN",
@@ -137,14 +203,7 @@
    ],
    "proposals": [
     {
-     "votes": [
-      "CASEY",
-      "COLIN",
-      "GID",
-      "JESS",
-      "RPUNICORN",
-      "RENINI"
-     ],
+     "proposer": "RPUNICORN",
      "team": [
       "RPUNICORN",
       "COLIN",
@@ -152,33 +211,48 @@
       "JESS"
      ],
      "state": "APPROVED",
-     "proposer": "RPUNICORN"
+     "votes": [
+      "CASEY",
+      "COLIN",
+      "GID",
+      "JESS",
+      "RPUNICORN",
+      "RENINI"
+     ]
     }
    ],
-   "teamSize": 4,
-   "state": "FAIL"
+   "failsRequired": 1,
+   "teamSize": 4
   }
  ],
+ "timeFinished": {
+  "_seconds": 1585980855,
+  "_nanoseconds": 313004000
+ },
+ "timeCreated": {
+  "_seconds": 1585980584,
+  "_nanoseconds": 373000000
+ },
  "players": [
   {
-   "name": "GID",
-   "uid": "XBPGIBk6ujUBMBaqT9b9l2fGAtI2"
+   "uid": "XBPGIBk6ujUBMBaqT9b9l2fGAtI2",
+   "name": "GID"
   },
   {
-   "uid": "bh3gKSmGgfWDgCvKWeruOH5bVmy1",
-   "name": "COLIN"
+   "name": "COLIN",
+   "uid": "bh3gKSmGgfWDgCvKWeruOH5bVmy1"
   },
   {
-   "name": "RENINI",
-   "uid": "f46hrrHShIgGipLo06rAKFkN3142"
+   "uid": "f46hrrHShIgGipLo06rAKFkN3142",
+   "name": "RENINI"
   },
   {
    "uid": "6LUPzKtivbMjFWVn0OR7rohoo5a2",
    "name": "CASEY"
   },
   {
-   "uid": "kCt7hnrAfeU7XEeFrfZRwxkPytX2",
-   "name": "JESS"
+   "name": "JESS",
+   "uid": "kCt7hnrAfeU7XEeFrfZRwxkPytX2"
   },
   {
    "name": "MOCHI",
@@ -188,79 +262,5 @@
    "uid": "AQsdBBBLHWOCJiAzKJCTeWEErTx2",
    "name": "RPUNICORN"
   }
- ],
- "timeFinished": {
-  "_seconds": 1585980855,
-  "_nanoseconds": 313004000
- },
- "outcome": {
-  "roles": [
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "MOCHI"
-   },
-   {
-    "role": "OBERON",
-    "name": "CASEY",
-    "assassin": false
-   },
-   {
-    "name": "COLIN",
-    "role": "MORDRED",
-    "assassin": true
-   },
-   {
-    "role": "MORGANA",
-    "name": "GID",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "JESS",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "RPUNICORN",
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "RENINI"
-   }
-  ],
-  "assassinated": null,
-  "votes": [
-   {
-    "CASEY": false,
-    "JESS": true
-   },
-   {
-    "CASEY": true,
-    "RENINI": true,
-    "COLIN": false
-   },
-   {
-    "COLIN": true,
-    "RENINI": true,
-    "JESS": true
-   },
-   {
-    "RENINI": true,
-    "COLIN": false,
-    "JESS": true,
-    "MOCHI": true
-   },
-   {
-    "RENINI": true,
-    "RPUNICORN": true,
-    "JESS": true,
-    "COLIN": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Three failed missions"
- }
+ ]
 }

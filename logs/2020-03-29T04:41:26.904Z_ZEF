@@ -3,14 +3,14 @@
   "message": "Three missions succeeded",
   "roles": [
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "MADHU"
+    "name": "MADHU",
+    "assassin": false
    },
    {
+    "role": "EVIL MINION",
     "assassin": false,
-    "name": "NEEL",
-    "role": "EVIL MINION"
+    "name": "NEEL"
    },
    {
     "name": "DIVYA",
@@ -18,9 +18,9 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "assassin": false,
     "name": "DOKSI",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
@@ -28,9 +28,9 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "role": "EVIL MINION",
-    "name": "D"
+    "name": "D",
+    "assassin": false
    },
    {
     "name": "PRIYA",
@@ -38,13 +38,13 @@
     "assassin": false
    },
    {
+    "name": "PAVAN",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "PAVAN"
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "EVIL MINION",
     "name": "DADDY",
+    "role": "EVIL MINION",
     "assassin": false
    }
   ],
@@ -52,31 +52,35 @@
   "state": "GOOD_WIN",
   "votes": [
    {
+    "DOKSI": true,
     "NEEL": true,
-    "PAVAN": true,
-    "DOKSI": true
+    "PAVAN": true
    },
    {
-    "DADDY": true,
+    "DIVYA": true,
     "MADHU": true,
     "PRIYA": true,
-    "DIVYA": true
+    "DADDY": true
    },
    {
-    "PRIYA": true,
-    "DADDY": true,
+    "DOKSIREAL": true,
     "MADHU": true,
-    "DOKSIREAL": true
+    "PRIYA": true,
+    "DADDY": true
    }
   ]
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "team": [
+    "NEEL",
+    "DOKSI",
+    "PAVAN"
+   ],
    "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "NEEL",
-     "state": "APPROVED",
      "votes": [
       "MADHU",
       "NEEL",
@@ -91,38 +95,27 @@
       "NEEL",
       "DOKSI",
       "PAVAN"
-     ]
+     ],
+     "proposer": "NEEL",
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "NEEL",
-    "DOKSI",
-    "PAVAN"
-   ],
-   "teamSize": 3,
    "numFails": 0,
-   "failsRequired": 1
+   "teamSize": 3
   },
   {
-   "numFails": 0,
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "teamSize": 4,
+   "failsRequired": 1,
    "team": [
     "MADHU",
     "PRIYA",
     "DIVYA",
     "DADDY"
    ],
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
-     "proposer": "MADHU",
-     "team": [
-      "MADHU",
-      "PRIYA",
-      "DIVYA",
-      "DADDY"
-     ],
      "state": "APPROVED",
      "votes": [
       "PRIYA",
@@ -131,11 +124,20 @@
       "NEEL",
       "DIVYA",
       "D"
-     ]
+     ],
+     "team": [
+      "MADHU",
+      "PRIYA",
+      "DIVYA",
+      "DADDY"
+     ],
+     "proposer": "MADHU"
     }
    ]
   },
   {
+   "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "DOKSIREAL",
     "PRIYA",
@@ -143,10 +145,16 @@
     "DADDY"
    ],
    "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "DOKSIREAL",
+      "PRIYA",
+      "MADHU",
+      "DADDY"
+     ],
      "state": "APPROVED",
+     "proposer": "DOKSIREAL",
      "votes": [
       "DADDY",
       "MADHU",
@@ -154,42 +162,34 @@
       "DOKSI",
       "DOKSIREAL",
       "PRIYA"
-     ],
-     "proposer": "DOKSIREAL",
-     "team": [
-      "DOKSIREAL",
-      "PRIYA",
-      "MADHU",
-      "DADDY"
      ]
     }
    ],
-   "state": "SUCCESS",
    "teamSize": 4
   },
   {
-   "proposals": [],
-   "teamSize": 5,
+   "failsRequired": 2,
    "state": "PENDING",
+   "teamSize": 5,
    "team": [],
-   "failsRequired": 2
+   "proposals": []
   },
   {
-   "teamSize": 5,
-   "state": "PENDING",
-   "proposals": [],
    "team": [],
-   "failsRequired": 1
+   "teamSize": 5,
+   "failsRequired": 1,
+   "proposals": [],
+   "state": "PENDING"
   }
  ],
  "players": [
   {
-   "uid": "ROGiPUxLkhdJE2ylE3dqNsSv4Av2",
-   "name": "DOKSI"
+   "name": "DOKSI",
+   "uid": "ROGiPUxLkhdJE2ylE3dqNsSv4Av2"
   },
   {
-   "uid": "TZ5ANgmBz7fnHjFNiZR9xJEH3Ys2",
-   "name": "PAVAN"
+   "name": "PAVAN",
+   "uid": "TZ5ANgmBz7fnHjFNiZR9xJEH3Ys2"
   },
   {
    "name": "D",
@@ -204,28 +204,28 @@
    "name": "NEEL"
   },
   {
-   "uid": "6rOI6anzyqcOYxZB1psXrvicuzn2",
-   "name": "MADHU"
+   "name": "MADHU",
+   "uid": "6rOI6anzyqcOYxZB1psXrvicuzn2"
   },
   {
-   "name": "DOKSIREAL",
-   "uid": "qxXZTsUKlASvePlQiKBYg6Igtkt1"
+   "uid": "qxXZTsUKlASvePlQiKBYg6Igtkt1",
+   "name": "DOKSIREAL"
   },
   {
-   "uid": "6M5GUovwmmYakQEYN6fDmdTKmaD3",
-   "name": "DADDY"
+   "name": "DADDY",
+   "uid": "6M5GUovwmmYakQEYN6fDmdTKmaD3"
   },
   {
    "name": "PRIYA",
    "uid": "wFLEZRjZiqMY3HyjPZkVOQMkZ0z1"
   }
  ],
- "timeFinished": {
-  "_seconds": 1585457283,
-  "_nanoseconds": 922240000
- },
  "timeCreated": {
   "_seconds": 1585456886,
   "_nanoseconds": 904000000
+ },
+ "timeFinished": {
+  "_seconds": 1585457283,
+  "_nanoseconds": 922240000
  }
 }

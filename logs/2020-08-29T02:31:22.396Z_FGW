@@ -2,113 +2,53 @@
  "options": {
   "inGameLog": false
  },
- "missions": [
-  {
-   "proposals": [
-    {
-     "votes": [
-      "PIR",
-      "ARTHUR",
-      "OLIVER",
-      "MONK"
-     ],
-     "state": "APPROVED",
-     "proposer": "PIR",
-     "team": [
-      "PIR",
-      "ARTHUR"
-     ]
-    }
-   ],
-   "numFails": 1,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 2,
-   "team": [
-    "PIR",
-    "ARTHUR"
-   ]
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
-   "team": [
-    "OLIVER",
-    "ARTHUR",
-    "EDY"
-   ],
-   "proposals": [
-    {
-     "team": [
-      "OLIVER",
-      "ARTHUR",
-      "EDY"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "EDY",
-      "OLIVER",
-      "MONK",
-      "ARTHUR"
-     ],
-     "proposer": "OLIVER"
-    }
-   ],
-   "state": "FAIL"
-  },
-  {
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "EDY",
-    "OLIVER"
-   ],
-   "teamSize": 2,
-   "numFails": 1,
-   "proposals": [
-    {
-     "team": [
-      "ARTHUR",
-      "MONK"
-     ],
-     "votes": [
-      "ARTHUR",
-      "MONK"
-     ],
-     "state": "REJECTED",
-     "proposer": "ARTHUR"
-    },
-    {
-     "votes": [
-      "EDY",
-      "OLIVER",
-      "PIR"
-     ],
-     "proposer": "EDY",
-     "state": "APPROVED",
-     "team": [
-      "EDY",
-      "OLIVER"
-     ]
-    }
-   ]
-  },
-  {
-   "team": [],
-   "state": "PENDING",
-   "proposals": [],
-   "teamSize": 3,
-   "failsRequired": 1
-  },
-  {
-   "teamSize": 3,
-   "team": [],
-   "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 1
-  }
- ],
+ "outcome": {
+  "roles": [
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "PIR"
+   },
+   {
+    "name": "OLIVER",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "name": "ARTHUR",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "EDY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "MONK",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "ARTHUR": true,
+    "PIR": false
+   },
+   {
+    "ARTHUR": true,
+    "EDY": true,
+    "OLIVER": false
+   },
+   {
+    "EDY": true,
+    "OLIVER": false
+   }
+  ]
+ },
  "players": [
   {
    "name": "PIR",
@@ -131,59 +71,119 @@
    "name": "MONK"
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "PIR": false,
-    "ARTHUR": true
-   },
-   {
-    "ARTHUR": true,
-    "OLIVER": false,
-    "EDY": true
-   },
-   {
-    "OLIVER": false,
-    "EDY": true
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null,
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "PIR"
-   },
-   {
-    "assassin": false,
-    "name": "OLIVER",
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ARTHUR"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "EDY",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "name": "MONK",
-    "assassin": false
-   }
-  ]
+ "missions": [
+  {
+   "failsRequired": 1,
+   "teamSize": 2,
+   "proposals": [
+    {
+     "proposer": "PIR",
+     "votes": [
+      "PIR",
+      "ARTHUR",
+      "OLIVER",
+      "MONK"
+     ],
+     "team": [
+      "PIR",
+      "ARTHUR"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "state": "FAIL",
+   "team": [
+    "PIR",
+    "ARTHUR"
+   ],
+   "numFails": 1
+  },
+  {
+   "teamSize": 3,
+   "team": [
+    "OLIVER",
+    "ARTHUR",
+    "EDY"
+   ],
+   "numFails": 1,
+   "proposals": [
+    {
+     "votes": [
+      "EDY",
+      "OLIVER",
+      "MONK",
+      "ARTHUR"
+     ],
+     "proposer": "OLIVER",
+     "team": [
+      "OLIVER",
+      "ARTHUR",
+      "EDY"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "failsRequired": 1,
+   "state": "FAIL"
+  },
+  {
+   "numFails": 1,
+   "teamSize": 2,
+   "proposals": [
+    {
+     "team": [
+      "ARTHUR",
+      "MONK"
+     ],
+     "votes": [
+      "ARTHUR",
+      "MONK"
+     ],
+     "state": "REJECTED",
+     "proposer": "ARTHUR"
+    },
+    {
+     "state": "APPROVED",
+     "proposer": "EDY",
+     "votes": [
+      "EDY",
+      "OLIVER",
+      "PIR"
+     ],
+     "team": [
+      "EDY",
+      "OLIVER"
+     ]
+    }
+   ],
+   "team": [
+    "EDY",
+    "OLIVER"
+   ],
+   "state": "FAIL",
+   "failsRequired": 1
+  },
+  {
+   "proposals": [],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "PENDING",
+   "team": []
+  },
+  {
+   "state": "PENDING",
+   "team": [],
+   "failsRequired": 1,
+   "proposals": [],
+   "teamSize": 3
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1598668556,
+  "_nanoseconds": 515000000
  },
  "timeCreated": {
   "_seconds": 1598668282,
   "_nanoseconds": 396000000
- },
- "timeFinished": {
-  "_seconds": 1598668556,
-  "_nanoseconds": 515000000
  }
 }

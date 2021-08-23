@@ -2,23 +2,8 @@
  "missions": [
   {
    "teamSize": 3,
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "CHEEKS",
-    "BILLY",
-    "MARY"
-   ],
    "proposals": [
     {
-     "proposer": "CHEEKS",
-     "state": "APPROVED",
-     "team": [
-      "CHEEKS",
-      "BILLY",
-      "MARY"
-     ],
      "votes": [
       "NATE",
       "CONNOR",
@@ -30,16 +15,45 @@
       "BILLY",
       "MIKE",
       "CHEEKS"
-     ]
+     ],
+     "state": "APPROVED",
+     "team": [
+      "CHEEKS",
+      "BILLY",
+      "MARY"
+     ],
+     "proposer": "CHEEKS"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "CHEEKS",
+    "BILLY",
+    "MARY"
+   ],
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
+   "state": "FAIL",
    "teamSize": 4,
+   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "MIKE",
+    "CHEEKS",
+    "MARY",
+    "BILLY"
+   ],
    "proposals": [
     {
-     "proposer": "MIKE",
+     "state": "APPROVED",
+     "team": [
+      "MIKE",
+      "CHEEKS",
+      "MARY",
+      "BILLY"
+     ],
      "votes": [
       "CONNOR",
       "DAVID",
@@ -52,34 +66,30 @@
       "BETTY",
       "VANDOD"
      ],
-     "state": "APPROVED",
-     "team": [
-      "MIKE",
-      "CHEEKS",
-      "MARY",
-      "BILLY"
-     ]
+     "proposer": "MIKE"
     }
-   ],
-   "state": "FAIL",
-   "team": [
-    "MIKE",
-    "CHEEKS",
-    "MARY",
-    "BILLY"
-   ],
-   "numFails": 1
+   ]
   },
   {
+   "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "LILVICKY",
     "BILLY",
     "MARY",
     "NATE"
    ],
+   "teamSize": 4,
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "LILVICKY",
+     "team": [
+      "LILVICKY",
+      "BILLY",
+      "MARY",
+      "NATE"
+     ],
      "votes": [
       "DAVID",
       "CHEEKS",
@@ -90,23 +100,12 @@
       "NATE",
       "LILVICKY",
       "BETTY"
-     ],
-     "team": [
-      "LILVICKY",
-      "BILLY",
-      "MARY",
-      "NATE"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1,
-   "teamSize": 4
+   "state": "SUCCESS"
   },
   {
-   "numFails": 2,
    "team": [
     "VANDOD",
     "MARY",
@@ -114,10 +113,13 @@
     "LILVICKY",
     "NATE"
    ],
+   "numFails": 2,
    "teamSize": 5,
-   "failsRequired": 2,
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "VANDOD",
+     "state": "APPROVED",
      "votes": [
       "CONNOR",
       "CHEEKS",
@@ -130,8 +132,6 @@
       "MIKE",
       "BILLY"
      ],
-     "proposer": "VANDOD",
-     "state": "APPROVED",
      "team": [
       "VANDOD",
       "MARY",
@@ -141,29 +141,11 @@
      ]
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 2
   },
   {
-   "teamSize": 5,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "team": [
-    "CONNOR",
-    "LILVICKY",
-    "BILLY",
-    "CHEEKS",
-    "MARY"
-   ],
    "proposals": [
     {
-     "proposer": "NATE",
-     "team": [
-      "CONNOR",
-      "LILVICKY",
-      "BILLY",
-      "CHEEKS",
-      "MARY"
-     ],
      "votes": [
       "DAVID",
       "BILLY",
@@ -174,10 +156,28 @@
       "CHEEKS",
       "CONNOR"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "CONNOR",
+      "LILVICKY",
+      "BILLY",
+      "CHEEKS",
+      "MARY"
+     ],
+     "proposer": "NATE"
     }
    ],
-   "numFails": 2
+   "teamSize": 5,
+   "numFails": 2,
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "CONNOR",
+    "LILVICKY",
+    "BILLY",
+    "CHEEKS",
+    "MARY"
+   ]
   }
  ],
  "options": {
@@ -188,81 +188,49 @@
   "_nanoseconds": 913000000
  },
  "outcome": {
-  "votes": [
-   {
-    "CHEEKS": true,
-    "BILLY": true,
-    "MARY": true
-   },
-   {
-    "BILLY": false,
-    "CHEEKS": true,
-    "MARY": true,
-    "MIKE": true
-   },
-   {
-    "MARY": true,
-    "BILLY": true,
-    "LILVICKY": true,
-    "NATE": true
-   },
-   {
-    "VANDOD": true,
-    "BILLY": false,
-    "LILVICKY": true,
-    "NATE": false,
-    "MARY": true
-   },
-   {
-    "BILLY": false,
-    "MARY": true,
-    "CHEEKS": false,
-    "LILVICKY": true,
-    "CONNOR": true
-   }
-  ],
+  "state": "EVIL_WIN",
   "assassinated": null,
   "message": "Three failed missions",
   "roles": [
    {
-    "assassin": false,
     "name": "MIKE",
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "assassin": false
    },
    {
     "name": "LILVICKY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "CONNOR",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": true,
-    "role": "EVIL MINION",
-    "name": "BILLY"
+    "name": "BILLY",
+    "role": "EVIL MINION"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "VANDOD",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
    },
    {
-    "assassin": false,
     "name": "BETTY",
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
+    "name": "MARY",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MARY"
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "name": "DAVID",
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": false
    },
    {
     "name": "CHEEKS",
@@ -275,7 +243,39 @@
     "role": "MORGANA"
    }
   ],
-  "state": "EVIL_WIN"
+  "votes": [
+   {
+    "BILLY": true,
+    "MARY": true,
+    "CHEEKS": true
+   },
+   {
+    "MIKE": true,
+    "CHEEKS": true,
+    "MARY": true,
+    "BILLY": false
+   },
+   {
+    "MARY": true,
+    "BILLY": true,
+    "NATE": true,
+    "LILVICKY": true
+   },
+   {
+    "MARY": true,
+    "VANDOD": true,
+    "BILLY": false,
+    "NATE": false,
+    "LILVICKY": true
+   },
+   {
+    "MARY": true,
+    "BILLY": false,
+    "LILVICKY": true,
+    "CONNOR": true,
+    "CHEEKS": false
+   }
+  ]
  },
  "timeCreated": {
   "_seconds": 1608784166,
@@ -283,12 +283,12 @@
  },
  "players": [
   {
-   "name": "MARY",
-   "uid": "2iLS2EXvRSZzYKSkNYpuvtRac533"
+   "uid": "2iLS2EXvRSZzYKSkNYpuvtRac533",
+   "name": "MARY"
   },
   {
-   "name": "BILLY",
-   "uid": "jqZOuUki3Jdn9c23JQE5Xw1ZMHP2"
+   "uid": "jqZOuUki3Jdn9c23JQE5Xw1ZMHP2",
+   "name": "BILLY"
   },
   {
    "name": "CHEEKS",
@@ -299,16 +299,16 @@
    "uid": "minpF1nFlmagKLIc1MU2nsG6FTo2"
   },
   {
-   "uid": "RbBznkdQa9M9U8Q7iQZORSR7yfP2",
-   "name": "LILVICKY"
+   "name": "LILVICKY",
+   "uid": "RbBznkdQa9M9U8Q7iQZORSR7yfP2"
   },
   {
    "name": "VANDOD",
    "uid": "wnoNZsJyqkYxzetUjgDM8WC9xbE3"
   },
   {
-   "uid": "njE9lR462eaewWEceR23nr32CNx2",
-   "name": "NATE"
+   "name": "NATE",
+   "uid": "njE9lR462eaewWEceR23nr32CNx2"
   },
   {
    "name": "DAVID",

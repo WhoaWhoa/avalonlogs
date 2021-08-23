@@ -1,33 +1,11 @@
 {
+ "timeFinished": {
+  "_seconds": 1586524826,
+  "_nanoseconds": 812111000
+ },
  "outcome": {
-  "votes": [
-   {
-    "GCAR": true,
-    "ZAC": true
-   },
-   {
-    "ZAC": false,
-    "FAV": true,
-    "GCAR": true
-   },
-   {
-    "GCAR": true,
-    "KIM": false,
-    "ZAC": false
-   },
-   {
-    "VENICE": true,
-    "FAV": true,
-    "VETO": false,
-    "JINGLES": true
-   },
-   {
-    "JINGLES": true,
-    "VENICE": true,
-    "GCAR": true,
-    "VETO": false
-   }
-  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
   "roles": [
    {
     "name": "FAV",
@@ -40,46 +18,77 @@
     "role": "MERLIN"
    },
    {
+    "role": "MORDRED",
     "name": "KIM",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "JINGLES",
-    "role": "LOYAL FOLLOWER",
     "assassin": false
    },
    {
-    "name": "VENICE",
     "assassin": false,
+    "name": "JINGLES",
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
-    "name": "VETO",
-    "role": "EVIL MINION"
+    "role": "LOYAL FOLLOWER",
+    "name": "VENICE",
+    "assassin": false
    },
    {
-    "name": "ZAC",
     "role": "EVIL MINION",
-    "assassin": true
+    "assassin": false,
+    "name": "VETO"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "ZAC"
    }
   ],
-  "state": "EVIL_WIN",
   "assassinated": null,
-  "message": "Three failed missions"
+  "votes": [
+   {
+    "GCAR": true,
+    "ZAC": true
+   },
+   {
+    "ZAC": false,
+    "FAV": true,
+    "GCAR": true
+   },
+   {
+    "KIM": false,
+    "GCAR": true,
+    "ZAC": false
+   },
+   {
+    "VENICE": true,
+    "FAV": true,
+    "VETO": false,
+    "JINGLES": true
+   },
+   {
+    "VETO": false,
+    "GCAR": true,
+    "VENICE": true,
+    "JINGLES": true
+   }
+  ]
  },
- "timeFinished": {
-  "_seconds": 1586524826,
-  "_nanoseconds": 812111000
+ "timeCreated": {
+  "_seconds": 1586524464,
+  "_nanoseconds": 504000000
  },
  "missions": [
   {
-   "numFails": 0,
-   "failsRequired": 1,
+   "team": [
+    "ZAC",
+    "GCAR"
+   ],
    "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
+     "proposer": "ZAC",
      "state": "APPROVED",
      "votes": [
       "FAV",
@@ -93,27 +102,24 @@
      "team": [
       "ZAC",
       "GCAR"
-     ],
-     "proposer": "ZAC"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "ZAC",
-    "GCAR"
-   ]
+   "state": "SUCCESS"
   },
   {
+   "teamSize": 3,
    "state": "FAIL",
-   "failsRequired": 1,
    "team": [
     "ZAC",
     "FAV",
     "GCAR"
    ],
    "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
      "proposer": "FAV",
      "votes": [
       "FAV",
@@ -124,58 +130,55 @@
       "VETO",
       "ZAC"
      ],
-     "state": "APPROVED",
      "team": [
       "ZAC",
       "FAV",
       "GCAR"
      ]
     }
-   ],
-   "teamSize": 3
+   ]
   },
   {
-   "team": [
-    "KIM",
-    "ZAC",
-    "GCAR"
-   ],
-   "failsRequired": 1,
+   "numFails": 2,
    "proposals": [
     {
+     "proposer": "KIM",
      "votes": [
       "GCAR",
       "KIM",
       "VENICE",
       "VETO"
      ],
-     "proposer": "KIM",
-     "state": "APPROVED",
      "team": [
       "KIM",
       "ZAC",
       "GCAR"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "numFails": 2,
    "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "KIM",
+    "ZAC",
+    "GCAR"
+   ],
    "teamSize": 3
   },
   {
+   "failsRequired": 2,
+   "state": "SUCCESS",
    "team": [
     "VENICE",
     "VETO",
     "JINGLES",
     "FAV"
    ],
-   "numFails": 1,
-   "teamSize": 4,
-   "failsRequired": 2,
-   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "JINGLES",
      "votes": [
       "VENICE",
       "ZAC",
@@ -184,7 +187,6 @@
       "KIM",
       "JINGLES"
      ],
-     "proposer": "JINGLES",
      "team": [
       "VENICE",
       "VETO",
@@ -192,13 +194,21 @@
       "FAV"
      ]
     }
-   ]
+   ],
+   "numFails": 1,
+   "teamSize": 4
   },
   {
-   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "JINGLES",
+      "GCAR",
+      "VENICE",
+      "VETO"
+     ],
      "votes": [
       "GCAR",
       "KIM",
@@ -206,15 +216,10 @@
       "VENICE",
       "VETO"
      ],
-     "proposer": "GCAR",
-     "team": [
-      "JINGLES",
-      "GCAR",
-      "VENICE",
-      "VETO"
-     ]
+     "proposer": "GCAR"
     }
    ],
+   "state": "FAIL",
    "team": [
     "JINGLES",
     "GCAR",
@@ -222,14 +227,13 @@
     "VETO"
    ],
    "failsRequired": 1,
-   "numFails": 1,
    "teamSize": 4
   }
  ],
  "players": [
   {
-   "uid": "tirYzsqIneNxtVrvQicveyzGR7E2",
-   "name": "ZAC"
+   "name": "ZAC",
+   "uid": "tirYzsqIneNxtVrvQicveyzGR7E2"
   },
   {
    "name": "FAV",
@@ -244,20 +248,16 @@
    "uid": "M6o1OtE23ncbmnzvt0JXRBUjUFR2"
   },
   {
-   "uid": "3Ncl2cPihRexYgqKgsfyJ8LtNb63",
-   "name": "GCAR"
+   "name": "GCAR",
+   "uid": "3Ncl2cPihRexYgqKgsfyJ8LtNb63"
   },
   {
    "uid": "cOl08TAyXydiHweJ8Uwrl5G67I93",
    "name": "VENICE"
   },
   {
-   "uid": "EB07BNXSbIeTWCK8MT2eHL3a0Tc2",
-   "name": "VETO"
+   "name": "VETO",
+   "uid": "EB07BNXSbIeTWCK8MT2eHL3a0Tc2"
   }
- ],
- "timeCreated": {
-  "_seconds": 1586524464,
-  "_nanoseconds": 504000000
- }
+ ]
 }

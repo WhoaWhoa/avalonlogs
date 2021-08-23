@@ -1,35 +1,24 @@
 {
- "players": [
-  {
-   "name": "BRENT",
-   "uid": "FqM4nppwHLMuUr7lUN0qjZ8u4db2"
-  },
-  {
-   "name": "EMMA",
-   "uid": "ceUcXyDbrCfgKdWvwzp27GhPS1K2"
-  },
-  {
-   "uid": "AhsotrQ677MLw8IldgNuiV0Cthq1",
-   "name": "NICK"
-  },
-  {
-   "name": "MADELINE",
-   "uid": "Mfm6s9wWsaO2KFrDtQ5Fa1203UJ2"
-  },
-  {
-   "name": "MEG",
-   "uid": "q742I8gbrsQR52QwreUV4lKMZdB2"
-  },
-  {
-   "name": "KAYDEN",
-   "uid": "qqk1yv5MnQeyKuAlz1is6HwYj7D3"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1586221947,
-  "_nanoseconds": 646640000
- },
  "outcome": {
+  "votes": [
+   {
+    "KAYDEN": true,
+    "EMMA": true
+   },
+   {
+    "MEG": true,
+    "KAYDEN": true,
+    "EMMA": true
+   },
+   {
+    "EMMA": true,
+    "KAYDEN": true,
+    "MADELINE": true,
+    "MEG": true
+   }
+  ],
+  "assassinated": "EMMA",
+  "state": "GOOD_WIN",
   "message": "Three successful missions",
   "roles": [
    {
@@ -38,57 +27,38 @@
     "assassin": false
    },
    {
-    "assassin": false,
+    "role": "LOYAL FOLLOWER",
     "name": "EMMA",
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "role": "MORDRED",
+    "assassin": true,
     "name": "MADELINE",
-    "assassin": true
+    "role": "MORDRED"
    },
    {
-    "assassin": false,
     "name": "MEG",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
-    "name": "NICK",
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "name": "NICK"
    },
    {
+    "role": "MORGANA",
     "name": "BRENT",
-    "assassin": false,
-    "role": "MORGANA"
+    "assassin": false
    }
-  ],
-  "assassinated": "EMMA",
-  "votes": [
-   {
-    "EMMA": true,
-    "KAYDEN": true
-   },
-   {
-    "EMMA": true,
-    "KAYDEN": true,
-    "MEG": true
-   },
-   {
-    "EMMA": true,
-    "MADELINE": true,
-    "KAYDEN": true,
-    "MEG": true
-   }
-  ],
-  "state": "GOOD_WIN"
- },
- "timeCreated": {
-  "_seconds": 1586221454,
-  "_nanoseconds": 990000000
+  ]
  },
  "missions": [
   {
+   "state": "SUCCESS",
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 2,
    "team": [
     "EMMA",
     "KAYDEN"
@@ -96,79 +66,73 @@
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "EMMA",
+     "votes": [
+      "KAYDEN",
+      "EMMA",
+      "MADELINE",
+      "MEG",
+      "BRENT"
+     ],
      "team": [
       "EMMA",
       "KAYDEN"
-     ],
-     "votes": [
-      "KAYDEN",
-      "EMMA",
-      "MADELINE",
-      "MEG",
-      "BRENT"
-     ],
-     "proposer": "EMMA"
+     ]
     }
-   ],
-   "numFails": 0,
-   "teamSize": 2,
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
-   "failsRequired": 1,
-   "numFails": 0,
-   "proposals": [
-    {
-     "votes": [
-      "EMMA",
-      "MADELINE",
-      "MEG",
-      "BRENT"
-     ],
-     "proposer": "NICK",
-     "team": [
-      "EMMA",
-      "KAYDEN",
-      "MEG"
-     ],
-     "state": "APPROVED"
-    }
-   ],
+   "state": "SUCCESS",
    "team": [
     "EMMA",
     "KAYDEN",
     "MEG"
    ],
-   "teamSize": 3,
-   "state": "SUCCESS"
+   "failsRequired": 1,
+   "numFails": 0,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "proposer": "NICK",
+     "votes": [
+      "EMMA",
+      "MADELINE",
+      "MEG",
+      "BRENT"
+     ],
+     "team": [
+      "EMMA",
+      "KAYDEN",
+      "MEG"
+     ]
+    }
+   ],
+   "teamSize": 3
   },
   {
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "MEG",
     "MADELINE",
     "EMMA",
     "KAYDEN"
    ],
-   "teamSize": 4,
-   "numFails": 0,
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "MADELINE",
-      "MEG",
-      "BRENT"
-     ],
-     "proposer": "MADELINE",
      "team": [
       "EMMA",
       "NICK",
       "MEG",
       "MADELINE"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "MADELINE",
+     "votes": [
+      "MADELINE",
+      "MEG",
+      "BRENT"
+     ]
     },
     {
      "votes": [
@@ -186,21 +150,57 @@
      "proposer": "MEG",
      "state": "APPROVED"
     }
-   ]
+   ],
+   "teamSize": 4,
+   "numFails": 0
   },
   {
-   "proposals": [],
-   "team": [],
    "teamSize": 3,
    "failsRequired": 1,
-   "state": "PENDING"
+   "proposals": [],
+   "state": "PENDING",
+   "team": []
   },
   {
    "state": "PENDING",
    "teamSize": 4,
+   "team": [],
    "failsRequired": 1,
-   "proposals": [],
-   "team": []
+   "proposals": []
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1586221454,
+  "_nanoseconds": 990000000
+ },
+ "players": [
+  {
+   "name": "BRENT",
+   "uid": "FqM4nppwHLMuUr7lUN0qjZ8u4db2"
+  },
+  {
+   "uid": "ceUcXyDbrCfgKdWvwzp27GhPS1K2",
+   "name": "EMMA"
+  },
+  {
+   "name": "NICK",
+   "uid": "AhsotrQ677MLw8IldgNuiV0Cthq1"
+  },
+  {
+   "uid": "Mfm6s9wWsaO2KFrDtQ5Fa1203UJ2",
+   "name": "MADELINE"
+  },
+  {
+   "uid": "q742I8gbrsQR52QwreUV4lKMZdB2",
+   "name": "MEG"
+  },
+  {
+   "name": "KAYDEN",
+   "uid": "qqk1yv5MnQeyKuAlz1is6HwYj7D3"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586221947,
+  "_nanoseconds": 646640000
+ }
 }

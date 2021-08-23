@@ -1,34 +1,65 @@
 {
- "players": [
-  {
-   "uid": "ebMquQOdtTMLSdIpWoPeJUt6bwI2",
-   "name": "SUV"
-  },
-  {
-   "name": "ANIRVIN",
-   "uid": "ImJazsDeEYb3yN0qUKPFw4CUDm73"
-  },
-  {
-   "name": "SHRIYA",
-   "uid": "hATZjJlLGWZc5hnygH1A3fjuJyv2"
-  },
-  {
-   "name": "MOO",
-   "uid": "6EpKQ5HRZAfN9RCylP5gYnj510P2"
-  },
-  {
-   "name": "ANANTH",
-   "uid": "mRGve9HweDPnMvu5gksBukF1TDJ2"
-  }
- ],
+ "outcome": {
+  "roles": [
+   {
+    "role": "MERLIN",
+    "name": "ANANTH",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "SUV",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "MORGANA",
+    "name": "ANIRVIN",
+    "assassin": false
+   },
+   {
+    "name": "MOO",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "SHRIYA",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "SUV": true,
+    "SHRIYA": true
+   },
+   {
+    "ANANTH": true,
+    "ANIRVIN": false,
+    "MOO": true
+   },
+   {
+    "MOO": true,
+    "ANANTH": true
+   },
+   {
+    "MOO": true,
+    "SUV": false,
+    "ANANTH": true
+   },
+   {
+    "ANANTH": true,
+    "SUV": false,
+    "SHRIYA": true
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null,
+  "state": "EVIL_WIN"
+ },
  "missions": [
   {
    "proposals": [
     {
-     "team": [
-      "SHRIYA",
-      "SUV"
-     ],
      "votes": [
       "ANANTH",
       "SUV",
@@ -36,20 +67,27 @@
       "MOO",
       "SHRIYA"
      ],
-     "proposer": "SHRIYA",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "SHRIYA",
+      "SUV"
+     ],
+     "proposer": "SHRIYA"
     }
    ],
+   "failsRequired": 1,
    "teamSize": 2,
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "SHRIYA",
     "SUV"
-   ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "state": "SUCCESS"
+   ]
   },
   {
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
      "state": "APPROVED",
@@ -58,18 +96,15 @@
       "ANIRVIN",
       "ANANTH"
      ],
+     "proposer": "MOO",
      "votes": [
       "SUV",
       "ANIRVIN",
       "MOO",
       "SHRIYA"
-     ],
-     "proposer": "MOO"
+     ]
     }
    ],
-   "numFails": 1,
-   "teamSize": 3,
-   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "MOO",
@@ -79,34 +114,47 @@
   },
   {
    "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "ANANTH",
-      "MOO"
-     ],
      "votes": [
       "ANANTH",
       "MOO",
       "SHRIYA"
      ],
-     "proposer": "ANANTH"
+     "team": [
+      "ANANTH",
+      "MOO"
+     ],
+     "proposer": "ANANTH",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 2,
    "team": [
     "ANANTH",
     "MOO"
-   ],
-   "state": "SUCCESS",
-   "teamSize": 2
+   ]
   },
   {
    "numFails": 1,
+   "teamSize": 3,
+   "failsRequired": 1,
+   "team": [
+    "SUV",
+    "MOO",
+    "ANANTH"
+   ],
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "SUV",
+      "MOO",
+      "ANANTH"
+     ],
+     "proposer": "SUV",
      "votes": [
       "ANANTH",
       "SUV",
@@ -114,25 +162,12 @@
       "MOO",
       "SHRIYA"
      ],
-     "team": [
-      "SUV",
-      "MOO",
-      "ANANTH"
-     ],
-     "proposer": "SUV"
+     "state": "APPROVED"
     }
-   ],
-   "team": [
-    "SUV",
-    "MOO",
-    "ANANTH"
-   ],
-   "teamSize": 3,
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
-   "failsRequired": 1,
+   "teamSize": 3,
    "state": "FAIL",
    "numFails": 1,
    "team": [
@@ -140,28 +175,27 @@
     "SHRIYA",
     "ANANTH"
    ],
-   "teamSize": 3,
    "proposals": [
     {
+     "proposer": "ANIRVIN",
+     "state": "REJECTED",
      "votes": [
       "ANIRVIN",
       "MOO"
      ],
-     "proposer": "ANIRVIN",
      "team": [
       "ANIRVIN",
       "SHRIYA",
       "MOO"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "SUV",
       "ANIRVIN",
       "SHRIYA"
      ],
+     "state": "APPROVED",
      "team": [
       "SUV",
       "SHRIYA",
@@ -169,75 +203,41 @@
      ],
      "proposer": "SHRIYA"
     }
-   ]
+   ],
+   "failsRequired": 1
   }
  ],
  "timeCreated": {
   "_seconds": 1595835199,
   "_nanoseconds": 115000000
  },
- "timeFinished": {
-  "_seconds": 1595835513,
-  "_nanoseconds": 852000000
- },
+ "players": [
+  {
+   "uid": "ebMquQOdtTMLSdIpWoPeJUt6bwI2",
+   "name": "SUV"
+  },
+  {
+   "uid": "ImJazsDeEYb3yN0qUKPFw4CUDm73",
+   "name": "ANIRVIN"
+  },
+  {
+   "name": "SHRIYA",
+   "uid": "hATZjJlLGWZc5hnygH1A3fjuJyv2"
+  },
+  {
+   "uid": "6EpKQ5HRZAfN9RCylP5gYnj510P2",
+   "name": "MOO"
+  },
+  {
+   "uid": "mRGve9HweDPnMvu5gksBukF1TDJ2",
+   "name": "ANANTH"
+  }
+ ],
  "options": {
   "inGameLog": false
  },
- "outcome": {
-  "votes": [
-   {
-    "SHRIYA": true,
-    "SUV": true
-   },
-   {
-    "ANIRVIN": false,
-    "MOO": true,
-    "ANANTH": true
-   },
-   {
-    "MOO": true,
-    "ANANTH": true
-   },
-   {
-    "MOO": true,
-    "SUV": false,
-    "ANANTH": true
-   },
-   {
-    "SUV": false,
-    "ANANTH": true,
-    "SHRIYA": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "ANANTH",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "SUV",
-    "assassin": true
-   },
-   {
-    "role": "MORGANA",
-    "assassin": false,
-    "name": "ANIRVIN"
-   },
-   {
-    "assassin": false,
-    "name": "MOO",
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "SHRIYA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "message": "Three failed missions"
+ "timeFinished": {
+  "_seconds": 1595835513,
+  "_nanoseconds": 852000000
  }
 }

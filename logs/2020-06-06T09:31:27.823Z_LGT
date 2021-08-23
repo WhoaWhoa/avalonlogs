@@ -1,10 +1,77 @@
 {
- "options": {
-  "inGameLog": false
- },
  "timeFinished": {
   "_seconds": 1591436572,
   "_nanoseconds": 581000000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "JR": true,
+    "TRU": true
+   },
+   {
+    "TRU": true,
+    "RANJ": true,
+    "JR": false
+   },
+   {
+    "DYAN": true,
+    "TRU": true,
+    "JR": true
+   },
+   {
+    "TRU": false,
+    "DYAN": false,
+    "JOY": true,
+    "JR": false
+   },
+   {
+    "ROCH": true,
+    "JOY": true,
+    "ET": true,
+    "RANJ": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "JOY"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "ROCH"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "DYAN"
+   },
+   {
+    "name": "TRU",
+    "role": "MORGANA",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "ET",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JR",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "RANJ",
+    "assassin": false,
+    "role": "MERLIN"
+   }
+  ],
+  "assassinated": "RANJ",
+  "state": "EVIL_WIN"
  },
  "players": [
   {
@@ -16,16 +83,16 @@
    "uid": "IBBFrH9I5wQQmw2HygZnAI8cnYW2"
   },
   {
-   "uid": "szWrGgLZmnhRtkCaBusb4sQlsq53",
-   "name": "JOY"
+   "name": "JOY",
+   "uid": "szWrGgLZmnhRtkCaBusb4sQlsq53"
   },
   {
    "uid": "YQwifetWzwV6rauQGuFFg7cEvPE2",
    "name": "ET"
   },
   {
-   "uid": "zS4r1VtzaHM2Sz0ShBpIgeSjE9V2",
-   "name": "TRU"
+   "name": "TRU",
+   "uid": "zS4r1VtzaHM2Sz0ShBpIgeSjE9V2"
   },
   {
    "name": "ROCH",
@@ -36,17 +103,17 @@
    "uid": "y8pVAGtFbAgpLJQ36APJ9P4g0uX2"
   }
  ],
+ "timeCreated": {
+  "_seconds": 1591435887,
+  "_nanoseconds": 823000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
-   "state": "SUCCESS",
-   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "TRU",
-      "JR"
-     ],
-     "proposer": "JR",
      "votes": [
       "JOY",
       "ROCH",
@@ -56,33 +123,36 @@
       "JR",
       "RANJ"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "JR",
+     "team": [
+      "TRU",
+      "JR"
+     ]
     }
    ],
    "numFails": 0,
+   "teamSize": 2,
+   "failsRequired": 1,
    "team": [
     "TRU",
     "JR"
    ],
-   "failsRequired": 1
+   "state": "SUCCESS"
   },
   {
    "failsRequired": 1,
-   "teamSize": 3,
-   "team": [
-    "TRU",
-    "JR",
-    "RANJ"
-   ],
    "numFails": 1,
+   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "RANJ",
      "team": [
       "TRU",
       "JR",
       "RANJ"
      ],
+     "state": "APPROVED",
      "votes": [
       "ROCH",
       "TRU",
@@ -91,44 +161,48 @@
       "RANJ",
       "JOY"
      ],
-     "state": "APPROVED"
+     "proposer": "RANJ"
     }
    ],
-   "state": "FAIL"
+   "team": [
+    "TRU",
+    "JR",
+    "RANJ"
+   ]
   },
   {
+   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "team": [
+    "JR",
+    "TRU",
+    "DYAN"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "DYAN",
+     "state": "APPROVED",
      "votes": [
       "DYAN",
       "TRU",
       "JR",
       "RANJ"
      ],
-     "state": "APPROVED",
-     "proposer": "DYAN",
      "team": [
       "JR",
       "TRU",
       "DYAN"
      ]
     }
-   ],
-   "numFails": 0,
-   "teamSize": 3,
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "JR",
-    "TRU",
-    "DYAN"
    ]
   },
   {
-   "teamSize": 4,
-   "failsRequired": 2,
    "numFails": 3,
+   "teamSize": 4,
    "state": "FAIL",
+   "failsRequired": 2,
    "team": [
     "DYAN",
     "TRU",
@@ -137,6 +211,8 @@
    ],
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "JOY",
      "votes": [
       "JR",
       "RANJ",
@@ -145,20 +221,19 @@
       "DYAN",
       "TRU"
      ],
-     "proposer": "JOY",
      "team": [
       "DYAN",
       "TRU",
       "JR",
       "JOY"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ]
   },
   {
-   "numFails": 0,
    "teamSize": 4,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -167,13 +242,13 @@
       "RANJ",
       "ROCH"
      ],
-     "proposer": "ET",
      "state": "REJECTED",
      "votes": [
       "DYAN",
       "JR",
       "RANJ"
-     ]
+     ],
+     "proposer": "ET"
     },
     {
      "team": [
@@ -183,111 +258,36 @@
       "ET"
      ],
      "state": "REJECTED",
+     "proposer": "TRU",
      "votes": [
       "TRU"
-     ],
-     "proposer": "TRU"
+     ]
     },
     {
-     "state": "APPROVED",
-     "team": [
-      "ROCH",
-      "RANJ",
-      "ET",
-      "JOY"
-     ],
      "proposer": "ROCH",
+     "state": "APPROVED",
      "votes": [
       "ROCH",
       "DYAN",
       "ET",
       "RANJ",
       "JOY"
+     ],
+     "team": [
+      "ROCH",
+      "RANJ",
+      "ET",
+      "JOY"
      ]
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "ROCH",
     "RANJ",
     "ET",
     "JOY"
-   ]
+   ],
+   "numFails": 0
   }
- ],
- "outcome": {
-  "message": "Merlin assassinated",
-  "votes": [
-   {
-    "TRU": true,
-    "JR": true
-   },
-   {
-    "JR": false,
-    "RANJ": true,
-    "TRU": true
-   },
-   {
-    "TRU": true,
-    "JR": true,
-    "DYAN": true
-   },
-   {
-    "JR": false,
-    "JOY": true,
-    "TRU": false,
-    "DYAN": false
-   },
-   {
-    "JOY": true,
-    "ET": true,
-    "RANJ": true,
-    "ROCH": true
-   }
-  ],
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "JOY"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "ROCH",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "DYAN"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "TRU"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "ET"
-   },
-   {
-    "name": "JR",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "RANJ",
-    "role": "MERLIN"
-   }
-  ],
-  "assassinated": "RANJ",
-  "state": "EVIL_WIN"
- },
- "timeCreated": {
-  "_seconds": 1591435887,
-  "_nanoseconds": 823000000
- }
+ ]
 }

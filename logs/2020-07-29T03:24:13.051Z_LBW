@@ -1,16 +1,15 @@
 {
  "outcome": {
-  "assassinated": "JINA",
   "roles": [
    {
-    "assassin": false,
     "name": "LES",
+    "assassin": false,
     "role": "PERCIVAL"
    },
    {
-    "assassin": false,
+    "name": "KAROLINE",
     "role": "MORDRED",
-    "name": "KAROLINE"
+    "assassin": false
    },
    {
     "name": "RACHEL",
@@ -18,74 +17,74 @@
     "role": "EVIL MINION"
    },
    {
-    "assassin": false,
     "name": "LONG",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "role": "MERLIN",
-    "name": "CALEB"
-   },
-   {
-    "name": "MINI",
-    "role": "LOYAL FOLLOWER",
+    "name": "CALEB",
     "assassin": false
    },
    {
-    "name": "JP",
+    "name": "MINI",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "JP"
    },
    {
     "name": "JINA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    }
   ],
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "assassinated": "JINA",
   "votes": [
    {
     "LONG": true,
-    "CALEB": true,
-    "KAROLINE": false
+    "KAROLINE": false,
+    "CALEB": true
    },
    {
-    "MINI": true,
     "LONG": true,
+    "MINI": true,
     "LES": true,
     "JINA": true
    },
    {
-    "LES": true,
-    "MINI": true,
-    "JINA": true,
-    "LONG": true
-   },
-   {
-    "LES": true,
-    "JINA": true,
     "LONG": true,
     "MINI": true,
-    "KAROLINE": false
+    "JINA": true,
+    "LES": true
+   },
+   {
+    "MINI": true,
+    "LONG": true,
+    "KAROLINE": false,
+    "JINA": true,
+    "LES": true
    }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN"
+  ]
  },
  "missions": [
   {
+   "failsRequired": 1,
    "state": "FAIL",
    "team": [
     "CALEB",
     "KAROLINE",
     "LONG"
    ],
-   "failsRequired": 1,
    "teamSize": 3,
+   "numFails": 1,
    "proposals": [
     {
-     "proposer": "CALEB",
-     "state": "APPROVED",
      "votes": [
       "KAROLINE",
       "RACHEL",
@@ -99,36 +98,37 @@
       "CALEB",
       "KAROLINE",
       "LONG"
-     ]
+     ],
+     "proposer": "CALEB",
+     "state": "APPROVED"
     }
-   ],
-   "numFails": 1
+   ]
   },
   {
-   "numFails": 0,
    "state": "SUCCESS",
-   "teamSize": 4,
-   "failsRequired": 1,
    "team": [
     "LONG",
     "MINI",
     "LES",
     "JINA"
    ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
+     "proposer": "KAROLINE",
+     "state": "REJECTED",
+     "votes": [
+      "CALEB",
+      "MINI",
+      "KAROLINE"
+     ],
      "team": [
       "KAROLINE",
       "MINI",
       "JP",
       "RACHEL"
-     ],
-     "state": "REJECTED",
-     "proposer": "KAROLINE",
-     "votes": [
-      "CALEB",
-      "MINI",
-      "KAROLINE"
      ]
     },
     {
@@ -138,8 +138,8 @@
       "KAROLINE",
       "LES"
      ],
-     "proposer": "LONG",
      "state": "REJECTED",
+     "proposer": "LONG",
      "votes": [
       "LES",
       "LONG",
@@ -148,7 +148,6 @@
     },
     {
      "proposer": "MINI",
-     "state": "APPROVED",
      "team": [
       "LONG",
       "MINI",
@@ -161,43 +160,35 @@
       "MINI",
       "JINA",
       "LES"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ]
   },
   {
-   "teamSize": 4,
-   "numFails": 0,
-   "failsRequired": 1,
    "state": "SUCCESS",
-   "team": [
-    "JINA",
-    "MINI",
-    "LONG",
-    "LES"
-   ],
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "JP",
-      "CALEB"
-     ],
      "team": [
       "MINI",
       "LES",
       "JP",
       "JINA"
      ],
-     "proposer": "JP"
+     "state": "REJECTED",
+     "proposer": "JP",
+     "votes": [
+      "JP",
+      "CALEB"
+     ]
     },
     {
-     "proposer": "RACHEL",
      "state": "REJECTED",
      "votes": [
       "KAROLINE",
       "CALEB"
      ],
+     "proposer": "RACHEL",
      "team": [
       "RACHEL",
       "MINI",
@@ -206,6 +197,12 @@
      ]
     },
     {
+     "team": [
+      "JINA",
+      "MINI",
+      "LONG",
+      "LES"
+     ],
      "votes": [
       "JINA",
       "LES",
@@ -215,23 +212,24 @@
       "JP"
      ],
      "proposer": "JINA",
-     "state": "APPROVED",
-     "team": [
-      "JINA",
-      "MINI",
-      "LONG",
-      "LES"
-     ]
+     "state": "APPROVED"
     }
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 4,
+   "team": [
+    "JINA",
+    "MINI",
+    "LONG",
+    "LES"
    ]
   },
   {
    "state": "SUCCESS",
-   "failsRequired": 2,
+   "teamSize": 5,
    "proposals": [
     {
-     "proposer": "LES",
-     "state": "APPROVED",
      "votes": [
       "JP",
       "JINA",
@@ -240,17 +238,19 @@
       "LONG",
       "MINI"
      ],
+     "proposer": "LES",
      "team": [
       "LES",
       "MINI",
       "JINA",
       "LONG",
       "KAROLINE"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "numFails": 1,
-   "teamSize": 5,
+   "failsRequired": 2,
    "team": [
     "LES",
     "MINI",
@@ -261,9 +261,9 @@
   },
   {
    "teamSize": 5,
-   "team": [],
-   "state": "PENDING",
    "proposals": [],
+   "state": "PENDING",
+   "team": [],
    "failsRequired": 1
   }
  ],
@@ -274,18 +274,14 @@
   "_seconds": 1595993053,
   "_nanoseconds": 51000000
  },
- "timeFinished": {
-  "_seconds": 1595994407,
-  "_nanoseconds": 471000000
- },
  "players": [
   {
    "name": "CALEB",
    "uid": "fjQZGtOmRHVfbUPJfemn6Z6rzFk2"
   },
   {
-   "name": "KAROLINE",
-   "uid": "bnDN3aL0EOcwoRA2zQzFV0xa7r33"
+   "uid": "bnDN3aL0EOcwoRA2zQzFV0xa7r33",
+   "name": "KAROLINE"
   },
   {
    "uid": "fkXAhd677lekXNAxDTRvyrb5V9c2",
@@ -296,12 +292,12 @@
    "name": "MINI"
   },
   {
-   "name": "JP",
-   "uid": "aRRmRdicv9VnUCPGxBXVokC8VTs2"
+   "uid": "aRRmRdicv9VnUCPGxBXVokC8VTs2",
+   "name": "JP"
   },
   {
-   "uid": "Ca3VT5d9X2SOfy4zFq3XplRuVlD3",
-   "name": "RACHEL"
+   "name": "RACHEL",
+   "uid": "Ca3VT5d9X2SOfy4zFq3XplRuVlD3"
   },
   {
    "name": "JINA",
@@ -311,5 +307,9 @@
    "name": "LES",
    "uid": "OFOtJ6c1oSQXO3tSybBsrxlE6HA2"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1595994407,
+  "_nanoseconds": 471000000
+ }
 }

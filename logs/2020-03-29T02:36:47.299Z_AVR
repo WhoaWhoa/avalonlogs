@@ -1,113 +1,39 @@
 {
- "players": [
-  {
-   "name": "OLIV",
-   "uid": "aDYcz61tQLgU9lZrNciYisqQSOY2"
-  },
-  {
-   "uid": "MFFjMfUx7uhcRmNUJVcY5TYloBt1",
-   "name": "BONKA"
-  },
-  {
-   "name": "SARAH",
-   "uid": "eK9Px4sSP5MeEYadkLpCbovRmoB3"
-  },
-  {
-   "name": "MEGAN",
-   "uid": "NYHvUgrdEwSufp9ohu8XLGQCm822"
-  },
-  {
-   "name": "KIMMY",
-   "uid": "Q2eexRLYOON5BQxFL5v8fqKC1Wb2"
-  }
- ],
- "outcome": {
-  "votes": [
-   {
-    "SARAH": false,
-    "KIMMY": true
-   },
-   {
-    "KIMMY": true,
-    "OLIV": true,
-    "MEGAN": false
-   },
-   {
-    "BONKA": true,
-    "KIMMY": true
-   },
-   {
-    "OLIV": true,
-    "KIMMY": true,
-    "BONKA": true
-   },
-   {
-    "KIMMY": true,
-    "BONKA": true,
-    "OLIV": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "MEGAN",
-    "role": "MORGANA"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "BONKA"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "KIMMY"
-   },
-   {
-    "name": "SARAH",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "OLIV"
-   }
-  ],
-  "assassinated": "BONKA"
- },
  "missions": [
   {
-   "numFails": 1,
-   "failsRequired": 1,
    "team": [
     "SARAH",
     "KIMMY"
    ],
-   "state": "FAIL",
-   "teamSize": 2,
+   "numFails": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "SARAH",
+      "KIMMY"
+     ],
+     "proposer": "SARAH",
      "votes": [
       "KIMMY",
       "SARAH",
       "OLIV",
       "MEGAN"
-     ],
-     "team": [
-      "SARAH",
-      "KIMMY"
-     ],
-     "state": "APPROVED",
-     "proposer": "SARAH"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 2,
+   "state": "FAIL"
   },
   {
    "state": "FAIL",
-   "numFails": 1,
+   "team": [
+    "KIMMY",
+    "MEGAN",
+    "OLIV"
+   ],
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -115,6 +41,7 @@
       "MEGAN",
       "OLIV"
      ],
+     "state": "APPROVED",
      "votes": [
       "SARAH",
       "OLIV",
@@ -122,58 +49,43 @@
       "BONKA",
       "KIMMY"
      ],
-     "proposer": "MEGAN",
-     "state": "APPROVED"
+     "proposer": "MEGAN"
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "KIMMY",
-    "MEGAN",
-    "OLIV"
-   ],
-   "teamSize": 3
+   "teamSize": 3,
+   "numFails": 1
   },
   {
-   "team": [
-    "KIMMY",
-    "BONKA"
-   ],
-   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "KIMMY",
      "team": [
       "KIMMY",
       "BONKA"
      ],
+     "proposer": "KIMMY",
+     "state": "APPROVED",
      "votes": [
       "MEGAN",
       "BONKA",
       "KIMMY",
       "SARAH"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "teamSize": 2
+   "teamSize": 2,
+   "numFails": 0,
+   "team": [
+    "KIMMY",
+    "BONKA"
+   ]
   },
   {
-   "teamSize": 3,
-   "team": [
-    "OLIV",
-    "BONKA",
-    "KIMMY"
-   ],
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "OLIV",
-      "BONKA",
-      "KIMMY"
-     ],
+     "state": "APPROVED",
      "votes": [
       "MEGAN",
       "KIMMY",
@@ -181,29 +93,6 @@
       "OLIV"
      ],
      "proposer": "OLIV",
-     "state": "APPROVED"
-    }
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0
-  },
-  {
-   "failsRequired": 1,
-   "team": [
-    "OLIV",
-    "BONKA",
-    "KIMMY"
-   ],
-   "proposals": [
-    {
-     "votes": [
-      "KIMMY",
-      "OLIV",
-      "BONKA"
-     ],
-     "proposer": "BONKA",
-     "state": "APPROVED",
      "team": [
       "OLIV",
       "BONKA",
@@ -211,9 +100,41 @@
      ]
     }
    ],
-   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 3
+   "team": [
+    "OLIV",
+    "BONKA",
+    "KIMMY"
+   ],
+   "teamSize": 3,
+   "failsRequired": 1
+  },
+  {
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "votes": [
+      "KIMMY",
+      "OLIV",
+      "BONKA"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "OLIV",
+      "BONKA",
+      "KIMMY"
+     ],
+     "proposer": "BONKA"
+    }
+   ],
+   "team": [
+    "OLIV",
+    "BONKA",
+    "KIMMY"
+   ],
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "numFails": 0
   }
  ],
  "timeFinished": {
@@ -223,5 +144,84 @@
  "timeCreated": {
   "_seconds": 1585449407,
   "_nanoseconds": 299000000
+ },
+ "players": [
+  {
+   "name": "OLIV",
+   "uid": "aDYcz61tQLgU9lZrNciYisqQSOY2"
+  },
+  {
+   "name": "BONKA",
+   "uid": "MFFjMfUx7uhcRmNUJVcY5TYloBt1"
+  },
+  {
+   "uid": "eK9Px4sSP5MeEYadkLpCbovRmoB3",
+   "name": "SARAH"
+  },
+  {
+   "uid": "NYHvUgrdEwSufp9ohu8XLGQCm822",
+   "name": "MEGAN"
+  },
+  {
+   "name": "KIMMY",
+   "uid": "Q2eexRLYOON5BQxFL5v8fqKC1Wb2"
+  }
+ ],
+ "outcome": {
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "MEGAN",
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "name": "BONKA",
+    "role": "MERLIN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "KIMMY"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "SARAH"
+   },
+   {
+    "name": "OLIV",
+    "role": "PERCIVAL",
+    "assassin": false
+   }
+  ],
+  "assassinated": "BONKA",
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "SARAH": false,
+    "KIMMY": true
+   },
+   {
+    "MEGAN": false,
+    "OLIV": true,
+    "KIMMY": true
+   },
+   {
+    "KIMMY": true,
+    "BONKA": true
+   },
+   {
+    "OLIV": true,
+    "BONKA": true,
+    "KIMMY": true
+   },
+   {
+    "KIMMY": true,
+    "BONKA": true,
+    "OLIV": true
+   }
+  ]
  }
 }

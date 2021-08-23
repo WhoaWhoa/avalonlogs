@@ -1,19 +1,90 @@
 {
+ "outcome": {
+  "message": "Three failed missions",
+  "assassinated": null,
+  "votes": [
+   {
+    "ALBERT": true,
+    "MICHELLLE": true
+   },
+   {
+    "ALLY": true,
+    "ALBERT": true,
+    "MICHELLLE": true
+   },
+   {
+    "ALBERT": false,
+    "MICHELLLE": true,
+    "ALLY": true,
+    "RYAN": true
+   },
+   {
+    "BRANDEN": false,
+    "RYAN": true,
+    "MICHELLLE": true
+   },
+   {
+    "BRANDEN": false,
+    "RYAN": true,
+    "SINU": true,
+    "ALLY": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "RYAN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "BRANDEN",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "name": "SINU",
+    "role": "MERLIN"
+   },
+   {
+    "name": "MICHELLLE",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "ALBERT"
+   },
+   {
+    "name": "ALLY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "state": "EVIL_WIN"
+ },
+ "timeFinished": {
+  "_seconds": 1606644243,
+  "_nanoseconds": 182000000
+ },
  "timeCreated": {
   "_seconds": 1606642305,
   "_nanoseconds": 725000000
  },
  "missions": [
   {
-   "teamSize": 2,
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "ALBERT",
     "MICHELLLE"
    ],
-   "numFails": 0,
+   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "BRANDEN",
      "team": [
       "ALBERT",
       "MICHELLLE"
@@ -23,25 +94,28 @@
       "RYAN",
       "ALBERT",
       "ALLY"
-     ],
-     "state": "APPROVED",
-     "proposer": "BRANDEN"
+     ]
     }
    ],
    "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "numFails": 0,
    "teamSize": 3,
    "team": [
     "ALLY",
     "ALBERT",
     "MICHELLLE"
    ],
+   "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS",
    "proposals": [
     {
+     "team": [
+      "ALLY",
+      "ALBERT",
+      "MICHELLLE"
+     ],
      "votes": [
       "ALBERT",
       "BRANDEN",
@@ -50,24 +124,12 @@
       "RYAN"
      ],
      "state": "APPROVED",
-     "team": [
-      "ALLY",
-      "ALBERT",
-      "MICHELLLE"
-     ],
      "proposer": "ALBERT"
     }
    ]
   },
   {
-   "state": "FAIL",
-   "team": [
-    "ALLY",
-    "ALBERT",
-    "MICHELLLE",
-    "RYAN"
-   ],
-   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -77,30 +139,31 @@
       "ALBERT"
      ],
      "proposer": "ALLY",
+     "state": "APPROVED",
      "team": [
       "ALLY",
       "ALBERT",
       "MICHELLLE",
       "RYAN"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "teamSize": 4,
-   "failsRequired": 1
+   "numFails": 1,
+   "state": "FAIL",
+   "team": [
+    "ALLY",
+    "ALBERT",
+    "MICHELLLE",
+    "RYAN"
+   ],
+   "teamSize": 4
   },
   {
    "state": "FAIL",
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "RYAN",
-     "team": [
-      "RYAN",
-      "MICHELLLE",
-      "BRANDEN"
-     ],
      "votes": [
       "BRANDEN",
       "SINU",
@@ -108,20 +171,66 @@
       "ALBERT",
       "ALLY",
       "RYAN"
-     ]
+     ],
+     "team": [
+      "RYAN",
+      "MICHELLLE",
+      "BRANDEN"
+     ],
+     "proposer": "RYAN"
     }
    ],
+   "teamSize": 3,
    "team": [
     "RYAN",
     "MICHELLLE",
     "BRANDEN"
    ],
-   "failsRequired": 1,
    "numFails": 1
   },
   {
-   "numFails": 1,
    "teamSize": 4,
+   "proposals": [
+    {
+     "proposer": "MICHELLLE",
+     "state": "REJECTED",
+     "votes": [],
+     "team": [
+      "MICHELLLE",
+      "BRANDEN",
+      "ALLY",
+      "ALBERT"
+     ]
+    },
+    {
+     "votes": [],
+     "state": "REJECTED",
+     "team": [
+      "SINU",
+      "BRANDEN",
+      "ALLY",
+      "MICHELLLE"
+     ],
+     "proposer": "SINU"
+    },
+    {
+     "team": [
+      "SINU",
+      "BRANDEN",
+      "RYAN",
+      "ALLY"
+     ],
+     "votes": [
+      "RYAN",
+      "SINU",
+      "BRANDEN",
+      "ALLY"
+     ],
+     "state": "APPROVED",
+     "proposer": "BRANDEN"
+    }
+   ],
+   "numFails": 1,
    "failsRequired": 1,
    "team": [
     "SINU",
@@ -129,68 +238,21 @@
     "RYAN",
     "ALLY"
    ],
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "team": [
-      "MICHELLLE",
-      "BRANDEN",
-      "ALLY",
-      "ALBERT"
-     ],
-     "votes": [],
-     "proposer": "MICHELLLE"
-    },
-    {
-     "state": "REJECTED",
-     "proposer": "SINU",
-     "votes": [],
-     "team": [
-      "SINU",
-      "BRANDEN",
-      "ALLY",
-      "MICHELLLE"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "team": [
-      "SINU",
-      "BRANDEN",
-      "RYAN",
-      "ALLY"
-     ],
-     "votes": [
-      "RYAN",
-      "SINU",
-      "BRANDEN",
-      "ALLY"
-     ],
-     "proposer": "BRANDEN"
-    }
-   ],
    "state": "FAIL"
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1606644243,
-  "_nanoseconds": 182000000
- },
  "players": [
   {
    "name": "ALBERT",
    "uid": "157gZNSdqchRlWTQuHm0KzOOkJG3"
   },
   {
-   "uid": "2YorulrFNHb2MdA2YHOao6nNfS52",
-   "name": "ALLY"
+   "name": "ALLY",
+   "uid": "2YorulrFNHb2MdA2YHOao6nNfS52"
   },
   {
-   "uid": "9AvhmBxoE4exIMcCpQNx8MnuJTO2",
-   "name": "RYAN"
+   "name": "RYAN",
+   "uid": "9AvhmBxoE4exIMcCpQNx8MnuJTO2"
   },
   {
    "name": "MICHELLLE",
@@ -205,69 +267,7 @@
    "name": "BRANDEN"
   }
  ],
- "outcome": {
-  "assassinated": null,
-  "votes": [
-   {
-    "ALBERT": true,
-    "MICHELLLE": true
-   },
-   {
-    "ALLY": true,
-    "ALBERT": true,
-    "MICHELLLE": true
-   },
-   {
-    "ALBERT": false,
-    "ALLY": true,
-    "MICHELLLE": true,
-    "RYAN": true
-   },
-   {
-    "BRANDEN": false,
-    "RYAN": true,
-    "MICHELLLE": true
-   },
-   {
-    "SINU": true,
-    "BRANDEN": false,
-    "ALLY": true,
-    "RYAN": true
-   }
-  ],
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "RYAN",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "BRANDEN"
-   },
-   {
-    "assassin": false,
-    "name": "SINU",
-    "role": "MERLIN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "MICHELLLE"
-   },
-   {
-    "name": "ALBERT",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "ALLY",
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "state": "EVIL_WIN"
+ "options": {
+  "inGameLog": false
  }
 }

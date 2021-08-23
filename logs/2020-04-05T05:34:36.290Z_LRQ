@@ -1,14 +1,18 @@
 {
+ "timeFinished": {
+  "_seconds": 1586065207,
+  "_nanoseconds": 649798000
+ },
  "outcome": {
   "votes": [
    {
-    "ANDREW": true,
-    "ED": true
-   },
-   {
-    "IVANA": true,
     "ED": true,
     "ANDREW": true
+   },
+   {
+    "ED": true,
+    "ANDREW": true,
+    "IVANA": true
    },
    {
     "SNIFFSNIFF": true,
@@ -17,8 +21,6 @@
    }
   ],
   "assassinated": "ED",
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
   "roles": [
    {
     "role": "LOYAL FOLLOWER",
@@ -26,19 +28,19 @@
     "name": "SNIFFSNIFF"
    },
    {
-    "name": "IVANA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "TEDRA",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "name": "JERRY",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "LOYAL FOLLOWER",
+    "name": "IVANA"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "TEDRA",
+    "assassin": false
+   },
+   {
+    "role": "MORGANA",
+    "name": "JERRY",
+    "assassin": false
    },
    {
     "assassin": true,
@@ -46,20 +48,18 @@
     "role": "EVIL MINION"
    },
    {
-    "name": "ANDREW",
     "role": "PERCIVAL",
+    "name": "ANDREW",
     "assassin": false
    },
    {
-    "name": "ED",
     "role": "MERLIN",
+    "name": "ED",
     "assassin": false
    }
-  ]
- },
- "timeFinished": {
-  "_seconds": 1586065207,
-  "_nanoseconds": 649798000
+  ],
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated"
  },
  "timeCreated": {
   "_seconds": 1586064876,
@@ -67,49 +67,47 @@
  },
  "players": [
   {
-   "name": "ANDREW",
-   "uid": "LELyEKUjXNe9ajl1gZMrf2dNaNk2"
+   "uid": "LELyEKUjXNe9ajl1gZMrf2dNaNk2",
+   "name": "ANDREW"
   },
   {
-   "uid": "HooE43lDYxOxTwCHHVhYq9wyOtt1",
-   "name": "BECKA"
+   "name": "BECKA",
+   "uid": "HooE43lDYxOxTwCHHVhYq9wyOtt1"
   },
   {
    "uid": "D9eyIeYgvdN0KSNHDVVHmcVEMy73",
    "name": "ED"
   },
   {
-   "name": "IVANA",
-   "uid": "hiClTskdZpbRjdMU5xI3RHpqU9U2"
+   "uid": "hiClTskdZpbRjdMU5xI3RHpqU9U2",
+   "name": "IVANA"
   },
   {
-   "name": "SNIFFSNIFF",
-   "uid": "fHLM0Y9FTbbLR4UUV7FFxj6LYJY2"
+   "uid": "fHLM0Y9FTbbLR4UUV7FFxj6LYJY2",
+   "name": "SNIFFSNIFF"
   },
   {
-   "uid": "qF4O3Y0Jcqe76aahJ1Dd8FHxob43",
-   "name": "TEDRA"
+   "name": "TEDRA",
+   "uid": "qF4O3Y0Jcqe76aahJ1Dd8FHxob43"
   },
   {
-   "name": "JERRY",
-   "uid": "z1MiuShCdWgGxn5CsIusrXaSxHI2"
+   "uid": "z1MiuShCdWgGxn5CsIusrXaSxHI2",
+   "name": "JERRY"
   }
  ],
  "missions": [
   {
-   "state": "SUCCESS",
-   "teamSize": 2,
    "team": [
     "ED",
     "ANDREW"
    ],
-   "numFails": 0,
    "proposals": [
     {
      "team": [
       "ED",
       "ANDREW"
      ],
+     "proposer": "ED",
      "votes": [
       "BECKA",
       "ANDREW",
@@ -119,15 +117,18 @@
       "TEDRA",
       "JERRY"
      ],
-     "proposer": "ED",
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 2,
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
+   "teamSize": 3,
    "state": "SUCCESS",
-   "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "ANDREW",
     "ED",
@@ -135,6 +136,12 @@
    ],
    "proposals": [
     {
+     "team": [
+      "ANDREW",
+      "ED",
+      "IVANA"
+     ],
+     "state": "APPROVED",
      "votes": [
       "IVANA",
       "TEDRA",
@@ -144,28 +151,12 @@
       "ED",
       "SNIFFSNIFF"
      ],
-     "team": [
-      "ANDREW",
-      "ED",
-      "IVANA"
-     ],
-     "state": "APPROVED",
      "proposer": "IVANA"
     }
    ],
-   "teamSize": 3,
-   "numFails": 0
+   "failsRequired": 1
   },
   {
-   "state": "SUCCESS",
-   "team": [
-    "SNIFFSNIFF",
-    "ED",
-    "ANDREW"
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -184,21 +175,30 @@
      "state": "APPROVED",
      "proposer": "SNIFFSNIFF"
     }
-   ]
-  },
-  {
-   "failsRequired": 2,
-   "proposals": [],
-   "state": "PENDING",
-   "team": [],
-   "teamSize": 4
-  },
-  {
-   "proposals": [],
+   ],
+   "numFails": 0,
    "failsRequired": 1,
-   "state": "PENDING",
+   "team": [
+    "SNIFFSNIFF",
+    "ED",
+    "ANDREW"
+   ],
+   "state": "SUCCESS",
+   "teamSize": 3
+  },
+  {
+   "proposals": [],
    "teamSize": 4,
-   "team": []
+   "team": [],
+   "failsRequired": 2,
+   "state": "PENDING"
+  },
+  {
+   "proposals": [],
+   "team": [],
+   "state": "PENDING",
+   "failsRequired": 1,
+   "teamSize": 4
   }
  ]
 }

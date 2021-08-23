@@ -1,17 +1,15 @@
 {
  "missions": [
   {
-   "teamSize": 2,
+   "numFails": 0,
    "team": [
     "JESS",
     "NANCY"
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "DAVEP",
      "votes": [
       "STACEY",
       "MARK",
@@ -20,22 +18,21 @@
       "JESS",
       "NEEPA"
      ],
+     "proposer": "DAVEP",
      "team": [
       "JESS",
       "NANCY"
      ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 2,
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 3,
-   "state": "FAIL",
    "failsRequired": 1,
+   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "NANCY",
      "votes": [
       "JESS",
       "NEEPA",
@@ -49,7 +46,9 @@
       "DAVEP",
       "ZACH",
       "NEEPA"
-     ]
+     ],
+     "proposer": "NANCY",
+     "state": "APPROVED"
     }
    ],
    "team": [
@@ -57,39 +56,73 @@
     "ZACH",
     "NEEPA"
    ],
-   "numFails": 1
+   "teamSize": 3,
+   "state": "FAIL"
   },
   {
-   "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "NEEPA",
     "DAVEP",
     "JESS"
    ],
    "state": "SUCCESS",
+   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "NEEPA",
+      "DAVEP",
+      "JESS"
+     ],
      "votes": [
       "STACEY",
       "NANCY",
       "JESS",
       "NEEPA"
      ],
-     "proposer": "NEEPA",
-     "team": [
-      "NEEPA",
-      "DAVEP",
-      "JESS"
-     ]
+     "proposer": "NEEPA"
     }
-   ],
-   "numFails": 0,
-   "teamSize": 3
+   ]
   },
   {
+   "proposals": [
+    {
+     "team": [
+      "ZACH",
+      "STACEY",
+      "MARK",
+      "DAVEP"
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "STACEY",
+      "NANCY",
+      "ZACH"
+     ],
+     "proposer": "ZACH"
+    },
+    {
+     "votes": [
+      "STACEY",
+      "DAVEP",
+      "NANCY",
+      "JESS"
+     ],
+     "team": [
+      "STACEY",
+      "JESS",
+      "NEEPA",
+      "ZACH"
+     ],
+     "proposer": "STACEY",
+     "state": "APPROVED"
+    }
+   ],
    "state": "SUCCESS",
-   "teamSize": 4,
+   "failsRequired": 2,
    "team": [
     "STACEY",
     "JESS",
@@ -97,56 +130,22 @@
     "ZACH"
    ],
    "numFails": 1,
-   "failsRequired": 2,
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "votes": [
-      "STACEY",
-      "NANCY",
-      "ZACH"
-     ],
-     "team": [
-      "ZACH",
-      "STACEY",
-      "MARK",
-      "DAVEP"
-     ],
-     "proposer": "ZACH"
-    },
-    {
-     "state": "APPROVED",
-     "proposer": "STACEY",
-     "votes": [
-      "STACEY",
-      "DAVEP",
-      "NANCY",
-      "JESS"
-     ],
-     "team": [
-      "STACEY",
-      "JESS",
-      "NEEPA",
-      "ZACH"
-     ]
-    }
-   ]
+   "teamSize": 4
   },
   {
    "state": "PENDING",
-   "failsRequired": 1,
+   "teamSize": 4,
    "team": [],
-   "proposals": [],
-   "teamSize": 4
+   "failsRequired": 1,
+   "proposals": []
   }
  ],
  "timeCreated": {
   "_seconds": 1588981110,
   "_nanoseconds": 772000000
  },
- "timeFinished": {
-  "_seconds": 1588983472,
-  "_nanoseconds": 689000000
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
@@ -166,23 +165,60 @@
    "name": "MARK"
   },
   {
-   "name": "DAVEP",
-   "uid": "3UC4v4S6t3UBtCBTK61CS7TRxP92"
+   "uid": "3UC4v4S6t3UBtCBTK61CS7TRxP92",
+   "name": "DAVEP"
   },
   {
-   "uid": "hs9FXJR57fOKyAAtlEVKnNtMmHv1",
-   "name": "NANCY"
+   "name": "NANCY",
+   "uid": "hs9FXJR57fOKyAAtlEVKnNtMmHv1"
   },
   {
    "name": "NEEPA",
    "uid": "9UwdrvGHKSa5CCjSSU6OonODapD3"
   }
  ],
- "options": {
-  "inGameLog": false
+ "timeFinished": {
+  "_seconds": 1588983472,
+  "_nanoseconds": 689000000
  },
  "outcome": {
-  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": true,
+    "name": "DAVEP",
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "NANCY",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "ZACH",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "JESS",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "NEEPA"
+   },
+   {
+    "name": "STACEY",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "MARK"
+   }
+  ],
   "assassinated": "MARK",
   "votes": [
    {
@@ -190,59 +226,23 @@
     "NANCY": true
    },
    {
+    "NEEPA": true,
     "ZACH": true,
-    "DAVEP": false,
+    "DAVEP": false
+   },
+   {
+    "DAVEP": true,
+    "JESS": true,
     "NEEPA": true
    },
    {
+    "STACEY": false,
     "NEEPA": true,
-    "DAVEP": true,
-    "JESS": true
-   },
-   {
-    "JESS": true,
     "ZACH": true,
-    "NEEPA": true,
-    "STACEY": false
+    "JESS": true
    }
   ],
-  "message": "Merlin assassinated",
-  "roles": [
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "DAVEP"
-   },
-   {
-    "name": "NANCY",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "ZACH",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "JESS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "NEEPA",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "STACEY",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "MARK",
-    "role": "MERLIN"
-   }
-  ]
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated"
  }
 }

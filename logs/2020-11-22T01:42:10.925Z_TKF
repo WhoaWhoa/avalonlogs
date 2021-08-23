@@ -1,26 +1,84 @@
 {
- "timeFinished": {
-  "_seconds": 1606010798,
-  "_nanoseconds": 276000000
- },
  "options": {
   "inGameLog": false
  },
+ "outcome": {
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "KARLIN": true,
+    "ABBY": true
+   },
+   {
+    "JAMES": true,
+    "ABBY": false,
+    "KARLIN": true
+   },
+   {
+    "CONNOR": false,
+    "SHEY": true,
+    "JAMES": true,
+    "KARLIN": true
+   },
+   {
+    "JAMES": true,
+    "SHEY": true,
+    "AARON": true
+   },
+   {
+    "SHEY": true,
+    "AARON": true,
+    "JAMES": true,
+    "ABBY": false
+   }
+  ],
+  "roles": [
+   {
+    "name": "JAMES",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "AARON"
+   },
+   {
+    "role": "MORGANA",
+    "name": "CONNOR",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "KARLIN"
+   },
+   {
+    "name": "SHEY",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": true,
+    "name": "ABBY",
+    "role": "MORDRED"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null
+ },
  "missions": [
   {
+   "numFails": 0,
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "ABBY",
     "KARLIN"
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "ABBY",
-      "KARLIN"
-     ],
      "proposer": "ABBY",
      "votes": [
       "AARON",
@@ -28,89 +86,80 @@
       "CONNOR",
       "JAMES",
       "KARLIN"
-     ]
+     ],
+     "team": [
+      "ABBY",
+      "KARLIN"
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "numFails": 0,
-   "teamSize": 2
+   ]
   },
   {
-   "numFails": 1,
-   "state": "FAIL",
    "failsRequired": 1,
-   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "JAMES",
-     "team": [
-      "JAMES",
-      "KARLIN",
-      "ABBY"
-     ],
      "votes": [
       "CONNOR",
       "JAMES",
       "AARON",
       "SHEY",
       "ABBY"
-     ]
+     ],
+     "team": [
+      "JAMES",
+      "KARLIN",
+      "ABBY"
+     ],
+     "state": "APPROVED",
+     "proposer": "JAMES"
     }
    ],
+   "numFails": 1,
    "team": [
     "JAMES",
     "KARLIN",
     "ABBY"
-   ]
+   ],
+   "teamSize": 3
   },
   {
-   "failsRequired": 1,
+   "team": [
+    "KARLIN",
+    "JAMES",
+    "SHEY",
+    "CONNOR"
+   ],
+   "state": "FAIL",
    "teamSize": 4,
    "proposals": [
     {
-     "proposer": "KARLIN",
-     "team": [
-      "KARLIN",
-      "JAMES",
-      "SHEY",
-      "CONNOR"
-     ],
-     "state": "APPROVED",
      "votes": [
       "AARON",
       "KARLIN",
       "JAMES",
       "CONNOR",
       "SHEY"
+     ],
+     "proposer": "KARLIN",
+     "state": "APPROVED",
+     "team": [
+      "KARLIN",
+      "JAMES",
+      "SHEY",
+      "CONNOR"
      ]
     }
    ],
    "numFails": 1,
-   "state": "FAIL",
-   "team": [
-    "KARLIN",
-    "JAMES",
-    "SHEY",
-    "CONNOR"
-   ]
+   "failsRequired": 1
   },
   {
-   "team": [
-    "SHEY",
-    "AARON",
-    "JAMES"
-   ],
    "state": "SUCCESS",
-   "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "SHEY",
-      "AARON",
-      "JAMES"
-     ],
+     "proposer": "SHEY",
      "state": "APPROVED",
      "votes": [
       "SHEY",
@@ -118,25 +167,45 @@
       "JAMES",
       "AARON"
      ],
-     "proposer": "SHEY"
+     "team": [
+      "SHEY",
+      "AARON",
+      "JAMES"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "SHEY",
+    "AARON",
+    "JAMES"
+   ],
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 4,
+   "team": [
+    "JAMES",
+    "AARON",
+    "ABBY",
+    "SHEY"
+   ],
    "proposals": [
     {
      "state": "REJECTED",
+     "proposer": "CONNOR",
+     "votes": [
+      "CONNOR"
+     ],
      "team": [
       "CONNOR",
       "SHEY",
       "AARON",
       "JAMES"
-     ],
-     "votes": [
-      "CONNOR"
-     ],
-     "proposer": "CONNOR"
+     ]
     },
     {
      "votes": [
@@ -144,14 +213,14 @@
       "SHEY",
       "KARLIN"
      ],
-     "proposer": "AARON",
-     "state": "REJECTED",
      "team": [
       "AARON",
       "SHEY",
       "JAMES",
       "KARLIN"
-     ]
+     ],
+     "proposer": "AARON",
+     "state": "REJECTED"
     },
     {
      "votes": [
@@ -170,81 +239,12 @@
      "state": "APPROVED"
     }
    ],
-   "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 4,
-   "team": [
-    "JAMES",
-    "AARON",
-    "ABBY",
-    "SHEY"
-   ]
+   "state": "FAIL"
   }
  ],
- "outcome": {
-  "roles": [
-   {
-    "assassin": false,
-    "name": "JAMES",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "AARON",
-    "role": "MERLIN"
-   },
-   {
-    "name": "CONNOR",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "KARLIN"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "SHEY",
-    "assassin": false
-   },
-   {
-    "name": "ABBY",
-    "role": "MORDRED",
-    "assassin": true
-   }
-  ],
-  "votes": [
-   {
-    "KARLIN": true,
-    "ABBY": true
-   },
-   {
-    "KARLIN": true,
-    "JAMES": true,
-    "ABBY": false
-   },
-   {
-    "KARLIN": true,
-    "JAMES": true,
-    "SHEY": true,
-    "CONNOR": false
-   },
-   {
-    "JAMES": true,
-    "AARON": true,
-    "SHEY": true
-   },
-   {
-    "SHEY": true,
-    "JAMES": true,
-    "AARON": true,
-    "ABBY": false
-   }
-  ],
-  "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN"
+ "timeFinished": {
+  "_seconds": 1606010798,
+  "_nanoseconds": 276000000
  },
  "timeCreated": {
   "_seconds": 1606009330,
@@ -272,8 +272,8 @@
    "uid": "wQXOXeat5SOhT2nHWp1SrqzBU292"
   },
   {
-   "uid": "evKDRoGMNibWHGjdXUJncUOvYL93",
-   "name": "ABBY"
+   "name": "ABBY",
+   "uid": "evKDRoGMNibWHGjdXUJncUOvYL93"
   }
  ]
 }

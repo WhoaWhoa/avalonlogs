@@ -3,63 +3,6 @@
   "_seconds": 1594434776,
   "_nanoseconds": 100000000
  },
- "outcome": {
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "AKKA": true,
-    "ADVAY": true
-   },
-   {
-    "ADVAY": true,
-    "MANGYA": false,
-    "AKKA": true
-   },
-   {
-    "SHAAN": true,
-    "AKKA": true
-   },
-   {
-    "AKKA": false,
-    "SHAAN": true,
-    "ADI": true
-   },
-   {
-    "ADI": true,
-    "ADVAY": true,
-    "SHAAN": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "ADVAY",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "name": "ADI",
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "AKKA",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "SHAAN"
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "MANGYA"
-   }
-  ],
-  "assassinated": "ADVAY",
-  "message": "Merlin assassinated"
- },
  "players": [
   {
    "name": "ADI",
@@ -82,15 +25,65 @@
    "name": "ADVAY"
   }
  ],
+ "outcome": {
+  "roles": [
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "ADVAY"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "ADI"
+   },
+   {
+    "assassin": false,
+    "name": "AKKA",
+    "role": "MORGANA"
+   },
+   {
+    "name": "SHAAN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "MANGYA",
+    "assassin": true,
+    "role": "MORDRED"
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "ADVAY",
+  "votes": [
+   {
+    "ADVAY": true,
+    "AKKA": true
+   },
+   {
+    "ADVAY": true,
+    "MANGYA": false,
+    "AKKA": true
+   },
+   {
+    "AKKA": true,
+    "SHAAN": true
+   },
+   {
+    "SHAAN": true,
+    "AKKA": false,
+    "ADI": true
+   },
+   {
+    "ADVAY": true,
+    "SHAAN": true,
+    "ADI": true
+   }
+  ],
+  "state": "EVIL_WIN"
+ },
  "missions": [
   {
-   "team": [
-    "AKKA",
-    "ADVAY"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
@@ -107,11 +100,17 @@
      ]
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "team": [
+    "AKKA",
+    "ADVAY"
+   ],
+   "numFails": 0
   },
   {
-   "teamSize": 3,
-   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "votes": [
@@ -121,33 +120,30 @@
       "MANGYA",
       "ADVAY"
      ],
-     "state": "APPROVED",
      "team": [
       "ADVAY",
       "AKKA",
       "MANGYA"
      ],
-     "proposer": "ADVAY"
+     "proposer": "ADVAY",
+     "state": "APPROVED"
     }
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "ADVAY",
     "AKKA",
     "MANGYA"
-   ]
+   ],
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
    "state": "SUCCESS",
    "numFails": 0,
-   "team": [
-    "SHAAN",
-    "AKKA"
-   ],
-   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "ADI",
      "votes": [
       "ADVAY"
      ],
@@ -155,92 +151,96 @@
      "team": [
       "ADI",
       "SHAAN"
-     ],
-     "proposer": "ADI"
+     ]
     },
     {
-     "proposer": "SHAAN",
-     "team": [
-      "SHAAN",
-      "AKKA"
-     ],
      "state": "APPROVED",
+     "proposer": "SHAAN",
      "votes": [
       "ADI",
       "AKKA",
       "SHAAN",
       "MANGYA",
       "ADVAY"
+     ],
+     "team": [
+      "SHAAN",
+      "AKKA"
      ]
     }
    ],
-   "teamSize": 2
+   "teamSize": 2,
+   "team": [
+    "SHAAN",
+    "AKKA"
+   ],
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "AKKA",
     "SHAAN",
     "ADI"
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
    "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "MANGYA"
      ],
+     "proposer": "MANGYA",
      "team": [
       "AKKA",
       "MANGYA",
       "SHAAN"
      ],
-     "proposer": "MANGYA"
+     "state": "REJECTED"
     },
     {
      "proposer": "AKKA",
-     "state": "APPROVED",
+     "team": [
+      "AKKA",
+      "SHAAN",
+      "ADI"
+     ],
      "votes": [
       "ADI",
       "AKKA",
       "MANGYA"
      ],
-     "team": [
-      "AKKA",
-      "SHAAN",
-      "ADI"
-     ]
+     "state": "APPROVED"
     }
-   ],
-   "teamSize": 3
+   ]
   },
   {
-   "numFails": 0,
-   "state": "SUCCESS",
-   "team": [
-    "ADI",
-    "SHAAN",
-    "ADVAY"
-   ],
-   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "ADI",
-      "SHAAN",
-      "ADVAY"
-     ],
+     "proposer": "ADVAY",
      "state": "APPROVED",
      "votes": [
       "ADI",
       "SHAAN",
       "ADVAY"
      ],
-     "proposer": "ADVAY"
+     "team": [
+      "ADI",
+      "SHAAN",
+      "ADVAY"
+     ]
     }
    ],
-   "teamSize": 3
+   "numFails": 0,
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "ADI",
+    "SHAAN",
+    "ADVAY"
+   ]
   }
  ],
  "timeFinished": {

@@ -1,41 +1,106 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1599788547,
+  "_nanoseconds": 54000000
+ },
+ "outcome": {
+  "message": "Three successful missions",
+  "assassinated": "MUSA",
+  "votes": [
+   {
+    "DPB": true,
+    "MUSA": true
+   },
+   {
+    "MEW": false,
+    "JAMIE": true,
+    "EMILY": true
+   },
+   {
+    "MUSA": true,
+    "CHRIS": true,
+    "DPB": false,
+    "MEW": true
+   },
+   {
+    "MUSA": true,
+    "CHRIS": true,
+    "EMILY": true
+   },
+   {
+    "JAMIE": true,
+    "MUSA": true,
+    "CHRIS": true,
+    "EMILY": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "name": "EMILY",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MERLIN",
+    "name": "CHRIS",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "JAMIE",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "DPB"
+   },
+   {
+    "name": "MUSA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": true,
+    "name": "MEW",
+    "role": "EVIL MINION"
+   }
+  ]
+ },
  "players": [
   {
    "name": "MUSA",
    "uid": "mShfSw4mwEf0tbbOf0BmbUDdRq23"
   },
   {
-   "uid": "bHO5ztumnYYHujetywseOekRxFF3",
-   "name": "EMILY"
+   "name": "EMILY",
+   "uid": "bHO5ztumnYYHujetywseOekRxFF3"
   },
   {
-   "uid": "nN5RMHXR8DQYMLua7FiVU6A3r762",
-   "name": "JAMIE"
+   "name": "JAMIE",
+   "uid": "nN5RMHXR8DQYMLua7FiVU6A3r762"
   },
   {
-   "uid": "VBa2966FaybVFfPPWvXIy5XBA3S2",
-   "name": "MEW"
+   "name": "MEW",
+   "uid": "VBa2966FaybVFfPPWvXIy5XBA3S2"
   },
   {
    "uid": "wkMg0TkXecbqWBZi0g08p9hmhjm1",
    "name": "CHRIS"
   },
   {
-   "name": "DPB",
-   "uid": "PFQ0OMcoNOOLVFYAKKegLxrvj0L2"
+   "uid": "PFQ0OMcoNOOLVFYAKKegLxrvj0L2",
+   "name": "DPB"
   }
  ],
  "missions": [
   {
-   "team": [
-    "MUSA",
-    "DPB"
-   ],
-   "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
-     "proposer": "MUSA",
      "team": [
       "MUSA",
       "DPB"
@@ -47,22 +112,24 @@
       "DPB",
       "MUSA"
      ],
+     "proposer": "MUSA",
      "state": "APPROVED"
     }
    ],
+   "numFails": 0,
+   "team": [
+    "MUSA",
+    "DPB"
+   ],
+   "teamSize": 2,
    "state": "SUCCESS",
-   "teamSize": 2
+   "failsRequired": 1
   },
   {
-   "team": [
-    "JAMIE",
-    "MEW",
-    "EMILY"
-   ],
-   "numFails": 1,
-   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "EMILY",
      "votes": [
       "EMILY",
       "MUSA",
@@ -70,8 +137,6 @@
       "JAMIE",
       "MEW"
      ],
-     "state": "APPROVED",
-     "proposer": "EMILY",
      "team": [
       "JAMIE",
       "MEW",
@@ -79,8 +144,15 @@
      ]
     }
    ],
+   "team": [
+    "JAMIE",
+    "MEW",
+    "EMILY"
+   ],
+   "numFails": 1,
+   "state": "FAIL",
    "failsRequired": 1,
-   "state": "FAIL"
+   "teamSize": 3
   },
   {
    "team": [
@@ -89,23 +161,22 @@
     "DPB",
     "CHRIS"
    ],
+   "failsRequired": 1,
    "teamSize": 4,
-   "numFails": 1,
-   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "MEW",
-      "JAMIE",
-      "CHRIS",
-      "DPB"
-     ],
-     "proposer": "JAMIE",
      "state": "REJECTED",
      "votes": [
       "DPB",
       "MEW",
       "JAMIE"
+     ],
+     "proposer": "JAMIE",
+     "team": [
+      "MEW",
+      "JAMIE",
+      "CHRIS",
+      "DPB"
      ]
     },
     {
@@ -116,23 +187,29 @@
       "DPB",
       "CHRIS"
      ],
-     "proposer": "MEW",
      "votes": [
       "MEW",
       "DPB",
       "MUSA",
       "CHRIS"
-     ]
+     ],
+     "proposer": "MEW"
     }
    ],
-   "failsRequired": 1
+   "numFails": 1,
+   "state": "FAIL"
   },
   {
+   "team": [
+    "CHRIS",
+    "MUSA",
+    "EMILY"
+   ],
    "state": "SUCCESS",
    "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "MUSA",
       "EMILY",
@@ -141,27 +218,22 @@
       "MEW",
       "CHRIS"
      ],
+     "proposer": "CHRIS",
+     "state": "APPROVED",
      "team": [
       "CHRIS",
       "MUSA",
       "EMILY"
-     ],
-     "proposer": "CHRIS"
+     ]
     }
    ],
-   "team": [
-    "CHRIS",
-    "MUSA",
-    "EMILY"
-   ],
-   "numFails": 0,
-   "failsRequired": 1
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "numFails": 0,
    "teamSize": 4,
+   "failsRequired": 1,
    "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "MUSA",
     "EMILY",
@@ -176,36 +248,29 @@
       "MUSA",
       "EMILY"
      ],
-     "state": "REJECTED",
      "votes": [
       "MEW",
       "DPB"
      ],
-     "proposer": "DPB"
+     "proposer": "DPB",
+     "state": "REJECTED"
     },
     {
+     "state": "REJECTED",
+     "votes": [
+      "DPB",
+      "MEW"
+     ],
      "team": [
       "MUSA",
       "EMILY",
       "MEW",
       "CHRIS"
      ],
-     "votes": [
-      "DPB",
-      "MEW"
-     ],
-     "proposer": "MUSA",
-     "state": "REJECTED"
+     "proposer": "MUSA"
     },
     {
-     "team": [
-      "MUSA",
-      "EMILY",
-      "JAMIE",
-      "CHRIS"
-     ],
      "state": "APPROVED",
-     "proposer": "EMILY",
      "votes": [
       "MUSA",
       "CHRIS",
@@ -213,83 +278,18 @@
       "EMILY",
       "MEW",
       "JAMIE"
+     ],
+     "proposer": "EMILY",
+     "team": [
+      "MUSA",
+      "EMILY",
+      "JAMIE",
+      "CHRIS"
      ]
     }
    ]
   }
  ],
- "timeCreated": {
-  "_seconds": 1599788547,
-  "_nanoseconds": 54000000
- },
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "votes": [
-   {
-    "DPB": true,
-    "MUSA": true
-   },
-   {
-    "JAMIE": true,
-    "EMILY": true,
-    "MEW": false
-   },
-   {
-    "MUSA": true,
-    "MEW": true,
-    "DPB": false,
-    "CHRIS": true
-   },
-   {
-    "EMILY": true,
-    "CHRIS": true,
-    "MUSA": true
-   },
-   {
-    "EMILY": true,
-    "MUSA": true,
-    "JAMIE": true,
-    "CHRIS": true
-   }
-  ],
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "name": "EMILY",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "name": "CHRIS",
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JAMIE"
-   },
-   {
-    "name": "DPB",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MUSA"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "MEW"
-   }
-  ],
-  "assassinated": "MUSA",
-  "state": "GOOD_WIN"
- },
  "timeFinished": {
   "_seconds": 1599789079,
   "_nanoseconds": 923000000

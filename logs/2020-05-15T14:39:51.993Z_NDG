@@ -1,52 +1,91 @@
 {
- "options": {
-  "inGameLog": false
+ "outcome": {
+  "state": "GOOD_WIN",
+  "votes": [
+   {
+    "LIEN": true,
+    "PENGYU": true,
+    "HY": true
+   },
+   {
+    "LIEN": true,
+    "PENGYU": true,
+    "GRACE": true,
+    "HY": false
+   },
+   {
+    "HY": true,
+    "LIEN": true,
+    "KENNETH": true,
+    "PENGYU": true
+   },
+   {
+    "HY": false,
+    "KENNETH": true,
+    "ANDRE": true,
+    "PENGYU": true,
+    "LIEN": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "LIEN"
+   },
+   {
+    "assassin": false,
+    "name": "IGGY",
+    "role": "MERLIN"
+   },
+   {
+    "assassin": false,
+    "name": "C",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "PAULHO",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "GRACE",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "ANDRE"
+   },
+   {
+    "assassin": false,
+    "name": "PENGYU",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "KENNETH",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MORDRED",
+    "name": "HY"
+   },
+   {
+    "name": "STAN",
+    "role": "EVIL MINION",
+    "assassin": true
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "PAULHO"
  },
- "players": [
-  {
-   "name": "HY",
-   "uid": "UZcNmXwhdldjZgWERoz36oDxjCc2"
-  },
-  {
-   "uid": "Vv792WlFujWbX2vH41Loe31AoBI2",
-   "name": "LIEN"
-  },
-  {
-   "uid": "uSEO1cxkFeSbHA3ogrpFUgxE19U2",
-   "name": "PENGYU"
-  },
-  {
-   "name": "GRACE",
-   "uid": "EXPZINE2yKgIF5vrRyQvTyp2ZL12"
-  },
-  {
-   "uid": "kJt1gKmxKTS9SkOD0XViEnhfo202",
-   "name": "STAN"
-  },
-  {
-   "uid": "BMsFF4rrPAguXyFcgnu3ck3Wi2J2",
-   "name": "KENNETH"
-  },
-  {
-   "name": "ANDRE",
-   "uid": "pCF8TNmDGITApRFiFGF6w5SpWi63"
-  },
-  {
-   "uid": "3eEDTXdJqKhnrsNN1MlO2caq0703",
-   "name": "IGGY"
-  },
-  {
-   "uid": "HvjDf6mL3jhnTYIQWu7ZcGu0jzD2",
-   "name": "PAULHO"
-  },
-  {
-   "uid": "fI12FdyPoHNVuCY1cKE1AQHScqB3",
-   "name": "C"
-  }
- ],
  "missions": [
   {
    "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "LIEN",
     "PENGYU",
@@ -54,13 +93,13 @@
    ],
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "LIEN",
       "PENGYU",
       "HY"
      ],
      "proposer": "LIEN",
+     "state": "APPROVED",
      "votes": [
       "KENNETH",
       "PENGYU",
@@ -75,20 +114,13 @@
      ]
     }
    ],
-   "teamSize": 3,
-   "numFails": 0,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "teamSize": 3
   },
   {
-   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "HY",
-      "PENGYU",
-      "LIEN",
-      "GRACE"
-     ],
+     "state": "APPROVED",
      "votes": [
       "C",
       "PAULHO",
@@ -101,19 +133,25 @@
       "LIEN",
       "IGGY"
      ],
-     "state": "APPROVED",
+     "team": [
+      "HY",
+      "PENGYU",
+      "LIEN",
+      "GRACE"
+     ],
      "proposer": "PENGYU"
     }
    ],
-   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 4,
    "team": [
     "HY",
     "PENGYU",
     "LIEN",
     "GRACE"
    ],
-   "teamSize": 4,
-   "numFails": 1
+   "state": "FAIL"
   },
   {
    "team": [
@@ -122,40 +160,48 @@
     "PENGYU",
     "KENNETH"
    ],
+   "failsRequired": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "GRACE",
-      "PENGYU",
-      "STAN"
-     ],
-     "proposer": "GRACE",
      "team": [
       "GRACE",
       "HY",
       "LIEN",
       "PENGYU"
-     ]
+     ],
+     "votes": [
+      "GRACE",
+      "PENGYU",
+      "STAN"
+     ],
+     "state": "REJECTED",
+     "proposer": "GRACE"
     },
     {
-     "state": "REJECTED",
-     "team": [
-      "STAN",
-      "C",
-      "LIEN",
-      "IGGY"
-     ],
      "votes": [
       "HY",
       "STAN",
       "C",
       "PAULHO"
      ],
-     "proposer": "STAN"
+     "team": [
+      "STAN",
+      "C",
+      "LIEN",
+      "IGGY"
+     ],
+     "proposer": "STAN",
+     "state": "REJECTED"
     },
     {
      "proposer": "KENNETH",
+     "team": [
+      "LIEN",
+      "HY",
+      "PENGYU",
+      "KENNETH"
+     ],
      "state": "APPROVED",
      "votes": [
       "LIEN",
@@ -168,24 +214,13 @@
       "PENGYU",
       "HY",
       "STAN"
-     ],
-     "team": [
-      "LIEN",
-      "HY",
-      "PENGYU",
-      "KENNETH"
      ]
     }
    ],
    "numFails": 0,
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "teamSize": 4
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 2,
-   "numFails": 1,
-   "state": "SUCCESS",
    "team": [
     "HY",
     "LIEN",
@@ -193,6 +228,8 @@
     "ANDRE",
     "KENNETH"
    ],
+   "teamSize": 5,
+   "failsRequired": 2,
    "proposals": [
     {
      "votes": [
@@ -205,116 +242,79 @@
       "PENGYU",
       "HY"
      ],
+     "state": "APPROVED",
+     "proposer": "ANDRE",
      "team": [
       "HY",
       "LIEN",
       "PENGYU",
       "ANDRE",
       "KENNETH"
-     ],
-     "proposer": "ANDRE",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "teamSize": 5
+   "numFails": 1,
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 5,
-   "proposals": [],
-   "team": [],
    "state": "PENDING",
-   "failsRequired": 1
+   "teamSize": 5,
+   "team": [],
+   "failsRequired": 1,
+   "proposals": []
   }
  ],
  "timeCreated": {
   "_seconds": 1589553591,
   "_nanoseconds": 993000000
  },
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1589554083,
   "_nanoseconds": 643000000
  },
- "outcome": {
-  "assassinated": "PAULHO",
-  "votes": [
-   {
-    "HY": true,
-    "PENGYU": true,
-    "LIEN": true
-   },
-   {
-    "HY": false,
-    "PENGYU": true,
-    "GRACE": true,
-    "LIEN": true
-   },
-   {
-    "KENNETH": true,
-    "PENGYU": true,
-    "LIEN": true,
-    "HY": true
-   },
-   {
-    "HY": false,
-    "LIEN": true,
-    "PENGYU": true,
-    "KENNETH": true,
-    "ANDRE": true
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "name": "LIEN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "IGGY"
-   },
-   {
-    "name": "C",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "PAULHO"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "GRACE",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "ANDRE"
-   },
-   {
-    "assassin": false,
-    "name": "PENGYU",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "KENNETH",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "name": "HY",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "name": "STAN",
-    "role": "EVIL MINION"
-   }
-  ]
- }
+ "players": [
+  {
+   "name": "HY",
+   "uid": "UZcNmXwhdldjZgWERoz36oDxjCc2"
+  },
+  {
+   "uid": "Vv792WlFujWbX2vH41Loe31AoBI2",
+   "name": "LIEN"
+  },
+  {
+   "name": "PENGYU",
+   "uid": "uSEO1cxkFeSbHA3ogrpFUgxE19U2"
+  },
+  {
+   "uid": "EXPZINE2yKgIF5vrRyQvTyp2ZL12",
+   "name": "GRACE"
+  },
+  {
+   "name": "STAN",
+   "uid": "kJt1gKmxKTS9SkOD0XViEnhfo202"
+  },
+  {
+   "name": "KENNETH",
+   "uid": "BMsFF4rrPAguXyFcgnu3ck3Wi2J2"
+  },
+  {
+   "name": "ANDRE",
+   "uid": "pCF8TNmDGITApRFiFGF6w5SpWi63"
+  },
+  {
+   "uid": "3eEDTXdJqKhnrsNN1MlO2caq0703",
+   "name": "IGGY"
+  },
+  {
+   "name": "PAULHO",
+   "uid": "HvjDf6mL3jhnTYIQWu7ZcGu0jzD2"
+  },
+  {
+   "name": "C",
+   "uid": "fI12FdyPoHNVuCY1cKE1AQHScqB3"
+  }
+ ]
 }

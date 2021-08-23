@@ -1,28 +1,28 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "timeCreated": {
   "_seconds": 1593983132,
   "_nanoseconds": 444000000
  },
- "options": {
-  "inGameLog": false
- },
  "outcome": {
-  "state": "GOOD_WIN",
+  "message": "Three successful missions",
   "roles": [
    {
-    "role": "EVIL MINION",
     "assassin": false,
-    "name": "DAIRECRAVE"
+    "name": "DAIRECRAVE",
+    "role": "EVIL MINION"
    },
    {
     "role": "EVIL MINION",
-    "assassin": true,
-    "name": "TC"
+    "name": "TC",
+    "assassin": true
    },
    {
+    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "KINGKEV",
-    "assassin": false
+    "name": "KINGKEV"
    },
    {
     "name": "PAUL",
@@ -30,14 +30,14 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "KEEVS",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "KEEVS"
    },
    {
+    "assassin": false,
     "role": "EVIL MINION",
-    "name": "AARON",
-    "assassin": false
+    "name": "AARON"
    },
    {
     "name": "ACRAVEN",
@@ -45,40 +45,50 @@
     "role": "MERLIN"
    }
   ],
-  "message": "Three successful missions",
+  "assassinated": "KINGKEV",
   "votes": [
    {
     "DAIRECRAVE": false,
     "AARON": false
    },
    {
-    "KEEVS": true,
-    "KINGKEV": true,
-    "PAUL": true
-   },
-   {
-    "TC": false,
     "PAUL": true,
+    "KEEVS": true,
     "KINGKEV": true
    },
    {
+    "KINGKEV": true,
+    "TC": false,
+    "PAUL": true
+   },
+   {
+    "KINGKEV": true,
     "KEEVS": true,
     "PAUL": true,
-    "KINGKEV": true,
     "ACRAVEN": true
    },
    {
-    "KEEVS": true,
     "KINGKEV": true,
-    "ACRAVEN": true,
-    "PAUL": true
+    "KEEVS": true,
+    "PAUL": true,
+    "ACRAVEN": true
    }
   ],
-  "assassinated": "KINGKEV"
+  "state": "GOOD_WIN"
+ },
+ "timeFinished": {
+  "_seconds": 1593984198,
+  "_nanoseconds": 771000000
  },
  "missions": [
   {
-   "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "DAIRECRAVE",
+    "AARON"
+   ],
+   "teamSize": 2,
+   "numFails": 2,
    "proposals": [
     {
      "state": "APPROVED",
@@ -86,6 +96,7 @@
       "DAIRECRAVE",
       "AARON"
      ],
+     "proposer": "TC",
      "votes": [
       "TC",
       "KINGKEV",
@@ -93,45 +104,49 @@
       "KEEVS",
       "AARON",
       "ACRAVEN"
-     ],
-     "proposer": "TC"
+     ]
     }
    ],
-   "teamSize": 2,
-   "team": [
-    "DAIRECRAVE",
-    "AARON"
-   ],
-   "numFails": 2,
-   "failsRequired": 1
+   "state": "FAIL"
   },
   {
-   "failsRequired": 1,
+   "team": [
+    "PAUL",
+    "KEEVS",
+    "KINGKEV"
+   ],
+   "state": "SUCCESS",
+   "teamSize": 3,
    "proposals": [
     {
+     "votes": [],
      "proposer": "DAIRECRAVE",
+     "state": "REJECTED",
      "team": [
       "AARON",
       "ACRAVEN",
       "KINGKEV"
-     ],
-     "votes": [],
-     "state": "REJECTED"
+     ]
     },
     {
-     "proposer": "AARON",
-     "state": "REJECTED",
      "votes": [
       "DAIRECRAVE",
       "AARON"
      ],
+     "proposer": "AARON",
      "team": [
       "TC",
       "ACRAVEN",
       "AARON"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
+     "team": [
+      "PAUL",
+      "KEEVS",
+      "KINGKEV"
+     ],
      "votes": [
       "KEEVS",
       "ACRAVEN",
@@ -139,38 +154,24 @@
       "KINGKEV",
       "PAUL"
      ],
-     "proposer": "KEEVS",
      "state": "APPROVED",
-     "team": [
-      "PAUL",
-      "KEEVS",
-      "KINGKEV"
-     ]
+     "proposer": "KEEVS"
     }
    ],
-   "team": [
-    "PAUL",
-    "KEEVS",
-    "KINGKEV"
-   ],
-   "teamSize": 3,
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "state": "FAIL",
-   "numFails": 1,
    "team": [
     "KINGKEV",
     "PAUL",
     "TC"
    ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "ACRAVEN",
-     "state": "REJECTED",
      "votes": [
       "ACRAVEN",
       "KEEVS"
@@ -179,7 +180,9 @@
       "ACRAVEN",
       "KEEVS",
       "KINGKEV"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "ACRAVEN"
     },
     {
      "votes": [
@@ -191,25 +194,19 @@
       "DAIRECRAVE",
       "TC"
      ],
-     "state": "APPROVED",
      "proposer": "KINGKEV",
      "team": [
       "KINGKEV",
       "PAUL",
       "TC"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "numFails": 1
   },
   {
-   "teamSize": 4,
-   "failsRequired": 2,
-   "team": [
-    "PAUL",
-    "KINGKEV",
-    "KEEVS",
-    "ACRAVEN"
-   ],
+   "numFails": 0,
    "proposals": [
     {
      "proposer": "PAUL",
@@ -219,35 +216,41 @@
       "AARON",
       "ACRAVEN"
      ],
-     "state": "APPROVED",
      "team": [
       "PAUL",
       "KINGKEV",
       "KEEVS",
       "ACRAVEN"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "failsRequired": 2,
+   "teamSize": 4,
+   "team": [
+    "PAUL",
+    "KINGKEV",
+    "KEEVS",
+    "ACRAVEN"
+   ],
+   "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
    "teamSize": 4,
    "proposals": [
     {
-     "team": [
-      "DAIRECRAVE",
-      "AARON",
-      "KINGKEV",
-      "TC"
-     ],
-     "proposer": "TC",
      "state": "REJECTED",
      "votes": [
       "TC",
       "AARON",
       "DAIRECRAVE"
+     ],
+     "proposer": "TC",
+     "team": [
+      "DAIRECRAVE",
+      "AARON",
+      "KINGKEV",
+      "TC"
      ]
     },
     {
@@ -265,6 +268,10 @@
      ]
     },
     {
+     "votes": [
+      "DAIRECRAVE",
+      "AARON"
+     ],
      "state": "REJECTED",
      "proposer": "AARON",
      "team": [
@@ -272,21 +279,17 @@
       "AARON",
       "TC",
       "PAUL"
-     ],
-     "votes": [
-      "DAIRECRAVE",
-      "AARON"
      ]
     },
     {
-     "proposer": "KEEVS",
-     "state": "APPROVED",
      "votes": [
       "KINGKEV",
       "PAUL",
       "KEEVS",
       "ACRAVEN"
      ],
+     "state": "APPROVED",
+     "proposer": "KEEVS",
      "team": [
       "KEEVS",
       "PAUL",
@@ -295,6 +298,7 @@
      ]
     }
    ],
+   "numFails": 0,
    "team": [
     "KEEVS",
     "PAUL",
@@ -302,7 +306,7 @@
     "KINGKEV"
    ],
    "state": "SUCCESS",
-   "numFails": 0
+   "failsRequired": 1
   }
  ],
  "players": [
@@ -311,16 +315,16 @@
    "name": "PAUL"
   },
   {
-   "uid": "AdeD32XYxwQdfjP3SWDGpL12pD52",
-   "name": "TC"
+   "name": "TC",
+   "uid": "AdeD32XYxwQdfjP3SWDGpL12pD52"
   },
   {
    "name": "DAIRECRAVE",
    "uid": "xgtLjV3rsgRDIdn2pYN7WIV3Lbi2"
   },
   {
-   "uid": "HWTG4SB2H3c4nvP17G6B1vTJBJP2",
-   "name": "AARON"
+   "name": "AARON",
+   "uid": "HWTG4SB2H3c4nvP17G6B1vTJBJP2"
   },
   {
    "name": "KEEVS",
@@ -331,12 +335,8 @@
    "name": "ACRAVEN"
   },
   {
-   "name": "KINGKEV",
-   "uid": "WIwaMGoz79gyjDYj3hYK3fi0z0a2"
+   "uid": "WIwaMGoz79gyjDYj3hYK3fi0z0a2",
+   "name": "KINGKEV"
   }
- ],
- "timeFinished": {
-  "_seconds": 1593984198,
-  "_nanoseconds": 771000000
- }
+ ]
 }

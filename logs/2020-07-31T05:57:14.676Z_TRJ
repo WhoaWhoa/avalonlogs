@@ -1,51 +1,57 @@
 {
+ "timeCreated": {
+  "_seconds": 1596175034,
+  "_nanoseconds": 676000000
+ },
+ "timeFinished": {
+  "_seconds": 1596176492,
+  "_nanoseconds": 81000000
+ },
  "outcome": {
   "votes": [
    {
     "YUL": true,
-    "POTATO": true,
-    "SOON": true
+    "SOON": true,
+    "POTATO": true
    },
    {
-    "NUJNOW": true,
-    "DOCTORKANG": true,
     "NASTY": true,
+    "NUJNOW": true,
+    "DDDD": true,
+    "DOCTORKANG": true
+   },
+   {
+    "NASTY": true,
+    "DOCTORKANG": false,
+    "NUJNOW": true,
     "DDDD": true
    },
    {
-    "NUJNOW": true,
-    "DOCTORKANG": false,
     "DDDD": true,
-    "NASTY": true
-   },
-   {
+    "DOCTORKANG": false,
     "NUJNOW": false,
-    "DDDD": true,
-    "DOCTORKANG": false,
     "YUL": true,
     "NASTY": true
    },
    {
-    "JUYEONI": true,
+    "DDDD": true,
     "DOCTORKANG": false,
-    "SOON": false,
+    "JUYEONI": true,
     "POTATO": true,
-    "DDDD": true
+    "SOON": false
    }
   ],
   "message": "Three failed missions",
-  "assassinated": null,
-  "state": "EVIL_WIN",
   "roles": [
    {
-    "role": "MERLIN",
     "name": "NASTY",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
     "name": "DDDD",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "JUYEONI",
@@ -53,8 +59,8 @@
     "assassin": false
    },
    {
-    "assassin": true,
     "role": "MORDRED",
+    "assassin": true,
     "name": "DOCTORKANG"
    },
    {
@@ -63,9 +69,9 @@
     "role": "PERCIVAL"
    },
    {
-    "name": "NUJNOW",
     "role": "MORGANA",
-    "assassin": false
+    "assassin": false,
+    "name": "NUJNOW"
    },
    {
     "name": "SOON",
@@ -77,12 +83,14 @@
     "role": "LOYAL FOLLOWER",
     "name": "YUL"
    }
-  ]
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null
  },
  "players": [
   {
-   "name": "DOCTORKANG",
-   "uid": "9Htsa9leN3f5glVEuO2876Cv1ci2"
+   "uid": "9Htsa9leN3f5glVEuO2876Cv1ci2",
+   "name": "DOCTORKANG"
   },
   {
    "name": "NUJNOW",
@@ -97,31 +105,32 @@
    "uid": "YQqi8jMZ2ORvDbjAS0Lp4AxHOt92"
   },
   {
-   "uid": "jU9OONE4T8SRqntvHhdmFr8Jznp1",
-   "name": "JUYEONI"
+   "name": "JUYEONI",
+   "uid": "jU9OONE4T8SRqntvHhdmFr8Jznp1"
   },
   {
-   "uid": "HlVcnl0kEhc3QQXt9d1tV9my6852",
-   "name": "NASTY"
+   "name": "NASTY",
+   "uid": "HlVcnl0kEhc3QQXt9d1tV9my6852"
   },
   {
-   "name": "SOON",
-   "uid": "edi1OD1378cTGcAkJRqghVeLwZu1"
+   "uid": "edi1OD1378cTGcAkJRqghVeLwZu1",
+   "name": "SOON"
   },
   {
    "name": "POTATO",
    "uid": "1FwARpaQA1d1SjKnetNyTT4wD0g1"
   }
  ],
- "timeCreated": {
-  "_seconds": 1596175034,
-  "_nanoseconds": 676000000
- },
  "missions": [
   {
    "failsRequired": 1,
-   "teamSize": 3,
+   "team": [
+    "YUL",
+    "SOON",
+    "POTATO"
+   ],
    "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -134,23 +143,19 @@
       "YUL",
       "DDDD"
      ],
-     "proposer": "SOON",
-     "state": "APPROVED",
      "team": [
       "YUL",
       "SOON",
       "POTATO"
-     ]
+     ],
+     "proposer": "SOON",
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "YUL",
-    "SOON",
-    "POTATO"
-   ],
-   "numFails": 0
+   "teamSize": 3
   },
   {
+   "teamSize": 4,
    "team": [
     "NASTY",
     "NUJNOW",
@@ -158,12 +163,10 @@
     "DOCTORKANG"
    ],
    "numFails": 0,
-   "failsRequired": 1,
-   "teamSize": 4,
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "POTATO",
      "team": [
       "NASTY",
       "NUJNOW",
@@ -179,22 +182,24 @@
       "NASTY",
       "DDDD",
       "POTATO"
-     ]
+     ],
+     "proposer": "POTATO"
     }
    ],
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
+   "numFails": 1,
    "team": [
     "NUJNOW",
     "DOCTORKANG",
     "NASTY",
     "DDDD"
    ],
-   "failsRequired": 1,
-   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "REJECTED",
      "proposer": "DOCTORKANG",
      "team": [
       "DOCTORKANG",
@@ -205,10 +210,15 @@
      "votes": [
       "SOON",
       "NASTY"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "team": [
+      "NUJNOW",
+      "DOCTORKANG",
+      "NASTY",
+      "DDDD"
+     ],
      "votes": [
       "JUYEONI",
       "POTATO",
@@ -219,24 +229,27 @@
       "DOCTORKANG",
       "NASTY"
      ],
-     "team": [
-      "NUJNOW",
-      "DOCTORKANG",
-      "NASTY",
-      "DDDD"
-     ],
      "state": "APPROVED",
      "proposer": "NUJNOW"
     }
    ],
    "teamSize": 4,
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
+   "teamSize": 5,
    "failsRequired": 2,
-   "numFails": 2,
    "proposals": [
     {
+     "team": [
+      "DOCTORKANG",
+      "NUJNOW",
+      "DDDD",
+      "NASTY",
+      "YUL"
+     ],
+     "state": "APPROVED",
+     "proposer": "DDDD",
      "votes": [
       "DOCTORKANG",
       "NUJNOW",
@@ -244,31 +257,20 @@
       "NASTY",
       "SOON",
       "YUL"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "DOCTORKANG",
-      "NUJNOW",
-      "DDDD",
-      "NASTY",
-      "YUL"
-     ],
-     "proposer": "DDDD"
+     ]
     }
    ],
+   "numFails": 2,
+   "state": "FAIL",
    "team": [
     "DOCTORKANG",
     "NUJNOW",
     "DDDD",
     "NASTY",
     "YUL"
-   ],
-   "teamSize": 5,
-   "state": "FAIL"
+   ]
   },
   {
-   "state": "FAIL",
-   "teamSize": 5,
    "team": [
     "POTATO",
     "SOON",
@@ -276,10 +278,14 @@
     "DDDD",
     "DOCTORKANG"
    ],
-   "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 5,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "NASTY",
+      "YUL"
+     ],
      "team": [
       "NASTY",
       "POTATO",
@@ -287,15 +293,11 @@
       "DDDD",
       "YUL"
      ],
-     "votes": [
-      "NASTY",
-      "YUL"
-     ],
+     "state": "REJECTED",
      "proposer": "YUL"
     },
     {
      "state": "REJECTED",
-     "proposer": "JUYEONI",
      "votes": [
       "NUJNOW",
       "YUL"
@@ -306,7 +308,8 @@
       "DDDD",
       "YUL",
       "DOCTORKANG"
-     ]
+     ],
+     "proposer": "JUYEONI"
     },
     {
      "votes": [
@@ -320,19 +323,10 @@
       "NASTY",
       "POTATO"
      ],
-     "state": "REJECTED",
-     "proposer": "NASTY"
+     "proposer": "NASTY",
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "SOON",
-      "JUYEONI",
-      "DDDD",
-      "NUJNOW",
-      "DOCTORKANG",
-      "POTATO"
-     ],
-     "state": "APPROVED",
      "team": [
       "POTATO",
       "SOON",
@@ -340,17 +334,23 @@
       "DDDD",
       "DOCTORKANG"
      ],
-     "proposer": "SOON"
+     "proposer": "SOON",
+     "state": "APPROVED",
+     "votes": [
+      "SOON",
+      "JUYEONI",
+      "DDDD",
+      "NUJNOW",
+      "DOCTORKANG",
+      "POTATO"
+     ]
     }
    ],
-   "numFails": 2
+   "numFails": 2,
+   "failsRequired": 1
   }
  ],
  "options": {
   "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1596176492,
-  "_nanoseconds": 81000000
  }
 }

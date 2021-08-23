@@ -1,48 +1,19 @@
 {
  "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "assassinated": "NINO",
-  "votes": [
-   {
-    "CINDY": true,
-    "MARCUS": true,
-    "CATHY": true
-   },
-   {
-    "CINDY": true,
-    "MARCUS": true,
-    "CATHY": true,
-    "NINO": true
-   },
-   {
-    "MARCUS": true,
-    "CINDY": false,
-    "NINO": true,
-    "CATHY": true
-   },
-   {
-    "JANET": true,
-    "NINO": true,
-    "CINDY": false,
-    "MARCUS": true,
-    "CATHY": true
-   }
-  ],
   "roles": [
    {
     "role": "PERCIVAL",
-    "assassin": false,
-    "name": "KEVIN"
+    "name": "KEVIN",
+    "assassin": false
    },
    {
+    "name": "ASHLEY",
     "role": "MORGANA",
-    "assassin": false,
-    "name": "ASHLEY"
+    "assassin": false
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "JANET",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
    },
    {
@@ -51,44 +22,79 @@
     "assassin": true
    },
    {
-    "name": "NINO",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "NINO"
+   },
+   {
+    "name": "ALAN",
     "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "ALAN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
     "role": "MERLIN",
-    "name": "MARCUS"
+    "name": "MARCUS",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "CATHY",
+    "assassin": false
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "CATHY"
+    "role": "OBERON",
+    "name": "CINDY"
+   }
+  ],
+  "votes": [
+   {
+    "CATHY": true,
+    "MARCUS": true,
+    "CINDY": true
    },
    {
-    "role": "OBERON",
-    "name": "CINDY",
-    "assassin": false
+    "NINO": true,
+    "CATHY": true,
+    "MARCUS": true,
+    "CINDY": true
+   },
+   {
+    "CINDY": false,
+    "CATHY": true,
+    "MARCUS": true,
+    "NINO": true
+   },
+   {
+    "MARCUS": true,
+    "CINDY": false,
+    "JANET": true,
+    "CATHY": true,
+    "NINO": true
    }
-  ]
+  ],
+  "assassinated": "NINO",
+  "message": "Three successful missions",
+  "state": "GOOD_WIN"
+ },
+ "timeCreated": {
+  "_seconds": 1590284564,
+  "_nanoseconds": 605000000
  },
  "timeFinished": {
   "_seconds": 1590286730,
   "_nanoseconds": 835000000
  },
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
-   "state": "SUCCESS",
-   "numFails": 0,
    "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "MARCUS",
      "votes": [
       "MARCUS",
       "CATHY",
@@ -104,20 +110,28 @@
       "MARCUS",
       "CATHY",
       "CINDY"
-     ],
-     "proposer": "MARCUS",
-     "state": "APPROVED"
+     ]
     }
    ],
+   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "MARCUS",
     "CATHY",
     "CINDY"
-   ]
+   ],
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "MARCUS",
+    "CATHY",
+    "CINDY",
+    "NINO"
+   ],
    "numFails": 0,
-   "teamSize": 4,
+   "state": "SUCCESS",
    "proposals": [
     {
      "votes": [
@@ -131,45 +145,27 @@
       "ALAN",
       "MARCUS"
      ],
+     "proposer": "CATHY",
      "team": [
       "MARCUS",
       "CATHY",
       "CINDY",
       "NINO"
      ],
-     "proposer": "CATHY",
      "state": "APPROVED"
     }
    ],
-   "team": [
-    "MARCUS",
-    "CATHY",
-    "CINDY",
-    "NINO"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1
+   "teamSize": 4
   },
   {
-   "numFails": 1,
-   "teamSize": 4,
-   "state": "FAIL",
    "team": [
     "CINDY",
     "CATHY",
     "MARCUS",
     "NINO"
    ],
-   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "CINDY",
-      "CATHY",
-      "MARCUS",
-      "NINO"
-     ],
-     "state": "APPROVED",
      "votes": [
       "NINO",
       "ALAN",
@@ -181,39 +177,51 @@
       "JANET",
       "RM"
      ],
-     "proposer": "CINDY"
+     "team": [
+      "CINDY",
+      "CATHY",
+      "MARCUS",
+      "NINO"
+     ],
+     "proposer": "CINDY",
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 4,
+   "state": "FAIL"
   },
   {
-   "state": "SUCCESS",
+   "team": [
+    "MARCUS",
+    "CATHY",
+    "CINDY",
+    "NINO",
+    "JANET"
+   ],
    "numFails": 1,
-   "teamSize": 5,
    "failsRequired": 2,
+   "teamSize": 5,
    "proposals": [
     {
      "state": "REJECTED",
-     "team": [
-      "NINO",
-      "MARCUS",
-      "CATHY",
-      "CINDY",
-      "KEVIN"
-     ],
      "votes": [
       "CINDY",
       "KEVIN",
       "NINO",
       "MARCUS"
      ],
-     "proposer": "KEVIN"
+     "proposer": "KEVIN",
+     "team": [
+      "NINO",
+      "MARCUS",
+      "CATHY",
+      "CINDY",
+      "KEVIN"
+     ]
     },
     {
-     "votes": [
-      "ASHLEY",
-      "RM"
-     ],
-     "proposer": "ASHLEY",
      "state": "REJECTED",
      "team": [
       "ASHLEY",
@@ -221,17 +229,14 @@
       "CINDY",
       "MARCUS",
       "NINO"
-     ]
+     ],
+     "votes": [
+      "ASHLEY",
+      "RM"
+     ],
+     "proposer": "ASHLEY"
     },
     {
-     "team": [
-      "MARCUS",
-      "CATHY",
-      "CINDY",
-      "NINO",
-      "JANET"
-     ],
-     "proposer": "JANET",
      "votes": [
       "KEVIN",
       "JANET",
@@ -240,41 +245,39 @@
       "MARCUS",
       "CINDY"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "MARCUS",
+      "CATHY",
+      "CINDY",
+      "NINO",
+      "JANET"
+     ],
+     "proposer": "JANET"
     }
    ],
-   "team": [
-    "MARCUS",
-    "CATHY",
-    "CINDY",
-    "NINO",
-    "JANET"
-   ]
+   "state": "SUCCESS"
   },
   {
    "teamSize": 5,
+   "failsRequired": 1,
    "proposals": [],
    "state": "PENDING",
-   "team": [],
-   "failsRequired": 1
+   "team": []
   }
  ],
- "timeCreated": {
-  "_seconds": 1590284564,
-  "_nanoseconds": 605000000
- },
  "players": [
   {
    "name": "ASHLEY",
    "uid": "oUbh0cbD3dS4GAEzbDoU6qfEEO73"
   },
   {
-   "name": "JANET",
-   "uid": "c8AL0Gy5vPUsFpW1yXNE04LiMJB2"
+   "uid": "c8AL0Gy5vPUsFpW1yXNE04LiMJB2",
+   "name": "JANET"
   },
   {
-   "uid": "5ROZzXe2h0QLOYLTi2uNvytkqPp2",
-   "name": "RM"
+   "name": "RM",
+   "uid": "5ROZzXe2h0QLOYLTi2uNvytkqPp2"
   },
   {
    "name": "NINO",
@@ -289,8 +292,8 @@
    "name": "MARCUS"
   },
   {
-   "name": "CATHY",
-   "uid": "9lEDnYZldlPbAqymqmKdhmK0KLH2"
+   "uid": "9lEDnYZldlPbAqymqmKdhmK0KLH2",
+   "name": "CATHY"
   },
   {
    "uid": "r42ghwvuAXYXp5woGW8JjK86C0C3",
@@ -300,8 +303,5 @@
    "name": "KEVIN",
    "uid": "lckLRrCDaSeHjYoj6wuNDLDq7uu1"
   }
- ],
- "options": {
-  "inGameLog": false
- }
+ ]
 }

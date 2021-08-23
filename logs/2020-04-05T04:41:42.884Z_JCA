@@ -1,48 +1,98 @@
 {
- "players": [
-  {
-   "uid": "6JmW72PS2AS0oA63RM1ADcP81033",
-   "name": "DYLAN"
-  },
-  {
-   "name": "TIFFANY",
-   "uid": "7lyaxUwhAaghJ6JLKf5Nu2E9wJI2"
-  },
-  {
-   "name": "DDDDDOUG",
-   "uid": "ZhH28rZ3NgeEMrLH5juowBAafNn1"
-  },
-  {
-   "name": "SEREEN",
-   "uid": "58NpS1ebfXbOh1kYvI3UFKZv4kA2"
-  },
-  {
-   "uid": "XQ2QUmrRumQJo1wXMFF68W32tUC3",
-   "name": "CHEREEN"
-  },
-  {
-   "uid": "5dhshcdNkrR2XAjJVZubCLAkRbx1",
-   "name": "JAKETH"
-  },
-  {
-   "uid": "uEgTljicnLMvo4qzIqD9HEp90E82",
-   "name": "HWHS"
-  },
-  {
-   "uid": "A39mp69ThZMRvayvFSvjrIPOpRs2",
-   "name": "TRIO"
-  }
- ],
+ "timeFinished": {
+  "_seconds": 1586063704,
+  "_nanoseconds": 185077000
+ },
+ "outcome": {
+  "message": "Three successful missions",
+  "assassinated": "TRIO",
+  "votes": [
+   {
+    "TRIO": true,
+    "DYLAN": true,
+    "HWHS": true
+   },
+   {
+    "TRIO": true,
+    "TIFFANY": true,
+    "JAKETH": true,
+    "HWHS": true
+   },
+   {
+    "TRIO": true,
+    "DYLAN": false,
+    "HWHS": true,
+    "TIFFANY": true
+   },
+   {
+    "HWHS": true,
+    "TRIO": true,
+    "TIFFANY": true,
+    "DYLAN": false,
+    "SEREEN": false
+   },
+   {
+    "HWHS": true,
+    "JAKETH": true,
+    "TIFFANY": true,
+    "TRIO": true,
+    "CHEREEN": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "name": "DYLAN",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "CHEREEN"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "JAKETH"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "TRIO",
+    "assassin": false
+   },
+   {
+    "name": "SEREEN",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "HWHS"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "TIFFANY"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "DDDDDOUG"
+   }
+  ]
+ },
  "timeCreated": {
   "_seconds": 1586061702,
   "_nanoseconds": 884000000
  },
  "missions": [
   {
-   "teamSize": 3,
-   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "DYLAN",
+     "state": "APPROVED",
      "votes": [
       "JAKETH",
       "TRIO",
@@ -57,22 +107,30 @@
       "DYLAN",
       "HWHS",
       "TRIO"
-     ],
-     "proposer": "DYLAN",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 3,
    "numFails": 0,
+   "failsRequired": 1,
    "team": [
     "DYLAN",
     "HWHS",
     "TRIO"
-   ]
+   ],
+   "state": "SUCCESS"
   },
   {
+   "teamSize": 4,
    "state": "SUCCESS",
    "numFails": 0,
+   "failsRequired": 1,
+   "team": [
+    "JAKETH",
+    "HWHS",
+    "TRIO",
+    "TIFFANY"
+   ],
    "proposals": [
     {
      "votes": [
@@ -93,30 +151,20 @@
       "TIFFANY"
      ]
     }
-   ],
-   "team": [
-    "JAKETH",
-    "HWHS",
-    "TRIO",
-    "TIFFANY"
-   ],
-   "failsRequired": 1,
-   "teamSize": 4
+   ]
   },
   {
    "teamSize": 4,
-   "failsRequired": 1,
    "team": [
     "HWHS",
     "TRIO",
     "TIFFANY",
     "DYLAN"
    ],
+   "failsRequired": 1,
    "state": "FAIL",
-   "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "HWHS",
       "TRIO",
@@ -132,25 +180,15 @@
       "TIFFANY",
       "DDDDDOUG",
       "DYLAN"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "numFails": 1
   },
   {
-   "team": [
-    "SEREEN",
-    "DYLAN",
-    "TRIO",
-    "HWHS",
-    "TIFFANY"
-   ],
-   "failsRequired": 2,
-   "teamSize": 5,
-   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "SEREEN",
      "votes": [
       "DYLAN",
       "SEREEN",
@@ -164,18 +202,26 @@
       "TRIO",
       "HWHS",
       "TIFFANY"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "SEREEN"
     }
    ],
-   "numFails": 2
+   "team": [
+    "SEREEN",
+    "DYLAN",
+    "TRIO",
+    "HWHS",
+    "TIFFANY"
+   ],
+   "numFails": 2,
+   "state": "FAIL",
+   "failsRequired": 2,
+   "teamSize": 5
   },
   {
-   "teamSize": 5,
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "CHEREEN",
       "JAKETH",
@@ -183,16 +229,19 @@
       "TRIO",
       "TIFFANY"
      ],
-     "proposer": "CHEREEN",
+     "state": "APPROVED",
      "votes": [
       "CHEREEN",
       "JAKETH",
       "SEREEN",
       "HWHS",
       "TIFFANY"
-     ]
+     ],
+     "proposer": "CHEREEN"
     }
    ],
+   "teamSize": 5,
+   "failsRequired": 1,
    "team": [
     "CHEREEN",
     "JAKETH",
@@ -200,91 +249,42 @@
     "TRIO",
     "TIFFANY"
    ],
-   "numFails": 0
+   "numFails": 0,
+   "state": "SUCCESS"
   }
  ],
- "timeFinished": {
-  "_seconds": 1586063704,
-  "_nanoseconds": 185077000
- },
- "outcome": {
-  "message": "Three successful missions",
-  "votes": [
-   {
-    "TRIO": true,
-    "HWHS": true,
-    "DYLAN": true
-   },
-   {
-    "JAKETH": true,
-    "TIFFANY": true,
-    "HWHS": true,
-    "TRIO": true
-   },
-   {
-    "HWHS": true,
-    "TRIO": true,
-    "DYLAN": false,
-    "TIFFANY": true
-   },
-   {
-    "TRIO": true,
-    "SEREEN": false,
-    "HWHS": true,
-    "TIFFANY": true,
-    "DYLAN": false
-   },
-   {
-    "TRIO": true,
-    "CHEREEN": true,
-    "TIFFANY": true,
-    "JAKETH": true,
-    "HWHS": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "DYLAN"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "CHEREEN"
-   },
-   {
-    "name": "JAKETH",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "TRIO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SEREEN",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "HWHS",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "assassin": false,
-    "name": "TIFFANY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "DDDDDOUG"
-   }
-  ],
-  "assassinated": "TRIO",
-  "state": "GOOD_WIN"
- }
+ "players": [
+  {
+   "name": "DYLAN",
+   "uid": "6JmW72PS2AS0oA63RM1ADcP81033"
+  },
+  {
+   "name": "TIFFANY",
+   "uid": "7lyaxUwhAaghJ6JLKf5Nu2E9wJI2"
+  },
+  {
+   "name": "DDDDDOUG",
+   "uid": "ZhH28rZ3NgeEMrLH5juowBAafNn1"
+  },
+  {
+   "uid": "58NpS1ebfXbOh1kYvI3UFKZv4kA2",
+   "name": "SEREEN"
+  },
+  {
+   "uid": "XQ2QUmrRumQJo1wXMFF68W32tUC3",
+   "name": "CHEREEN"
+  },
+  {
+   "name": "JAKETH",
+   "uid": "5dhshcdNkrR2XAjJVZubCLAkRbx1"
+  },
+  {
+   "uid": "uEgTljicnLMvo4qzIqD9HEp90E82",
+   "name": "HWHS"
+  },
+  {
+   "name": "TRIO",
+   "uid": "A39mp69ThZMRvayvFSvjrIPOpRs2"
+  }
+ ]
 }

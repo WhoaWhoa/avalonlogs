@@ -1,128 +1,4 @@
 {
- "timeFinished": {
-  "_seconds": 1589606037,
-  "_nanoseconds": 973000000
- },
- "outcome": {
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "XIANG": true,
-    "HP": true,
-    "FENG": true
-   },
-   {
-    "FENG": false,
-    "HOWARD": true,
-    "XIANG": true,
-    "HP": true
-   },
-   {
-    "HOWARD": true,
-    "NELSON": true,
-    "XIANG": true,
-    "CHERRY": true
-   },
-   {
-    "XIANG": true,
-    "CHERRY": true,
-    "HOWARD": true,
-    "NELSON": true,
-    "FENG": false
-   }
-  ],
-  "roles": [
-   {
-    "name": "TSUENG",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "HP"
-   },
-   {
-    "name": "ROU",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "NELSON"
-   },
-   {
-    "name": "FENG",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "assassin": false,
-    "name": "HOWARD",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "XIANG"
-   },
-   {
-    "name": "CHERRY",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "SUSAN"
-   }
-  ],
-  "assassinated": "NELSON"
- },
- "timeCreated": {
-  "_seconds": 1589605055,
-  "_nanoseconds": 257000000
- },
- "players": [
-  {
-   "uid": "qjDeDxtpggSF9WWbIBj8hkrx8Oe2",
-   "name": "HP"
-  },
-  {
-   "uid": "R4fmZj79uDNSNHMlUvXLOlhN1x82",
-   "name": "SUSAN"
-  },
-  {
-   "uid": "LZGigpMr77hCl5smIMUdylrg96S2",
-   "name": "ROU"
-  },
-  {
-   "name": "XIANG",
-   "uid": "Bk5EH82zTOZV3ZvsqhTGTgty2jJ3"
-  },
-  {
-   "uid": "3BlA7BaJOydU9LsNuqSVlAJAKYK2",
-   "name": "TSUENG"
-  },
-  {
-   "name": "FENG",
-   "uid": "jgTdzzaNJOTb8j2fIvBzP44GSjf1"
-  },
-  {
-   "uid": "CLZ73hWlzJUvwZMxmX40QFFBUZ93",
-   "name": "HOWARD"
-  },
-  {
-   "uid": "OgHLk6FrW2TMiSaFmKoneBcSUh92",
-   "name": "CHERRY"
-  },
-  {
-   "name": "NELSON",
-   "uid": "3JciRBRAQNWIuxSTbBk6G2CQI6U2"
-  }
- ],
  "missions": [
   {
    "team": [
@@ -130,8 +6,9 @@
     "HP",
     "XIANG"
    ],
-   "numFails": 0,
    "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -154,23 +31,28 @@
      "state": "APPROVED"
     }
    ],
-   "teamSize": 3,
    "failsRequired": 1
   },
   {
    "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1,
    "team": [
     "HP",
     "FENG",
     "XIANG",
     "HOWARD"
    ],
-   "teamSize": 4,
-   "numFails": 1,
    "proposals": [
     {
-     "proposer": "HOWARD",
      "state": "APPROVED",
+     "team": [
+      "HP",
+      "FENG",
+      "XIANG",
+      "HOWARD"
+     ],
+     "proposer": "HOWARD",
      "votes": [
       "HOWARD",
       "XIANG",
@@ -181,22 +63,24 @@
       "ROU",
       "NELSON",
       "FENG"
-     ],
-     "team": [
-      "HP",
-      "FENG",
-      "XIANG",
-      "HOWARD"
      ]
     }
    ],
-   "state": "FAIL"
+   "teamSize": 4
   },
   {
+   "team": [
+    "HOWARD",
+    "NELSON",
+    "CHERRY",
+    "XIANG"
+   ],
    "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 4,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "CHERRY",
      "team": [
       "HOWARD",
       "NELSON",
@@ -204,6 +88,7 @@
       "XIANG"
      ],
      "state": "APPROVED",
+     "proposer": "CHERRY",
      "votes": [
       "ROU",
       "NELSON",
@@ -215,28 +100,12 @@
       "TSUENG"
      ]
     }
-   ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "team": [
-    "HOWARD",
-    "NELSON",
-    "CHERRY",
-    "XIANG"
-   ],
-   "teamSize": 4
+   ]
   },
   {
+   "teamSize": 5,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "NELSON",
-      "FENG",
-      "CHERRY",
-      "XIANG",
-      "HOWARD"
-     ],
      "votes": [
       "HP",
       "ROU",
@@ -248,10 +117,18 @@
       "SUSAN",
       "TSUENG"
      ],
-     "proposer": "NELSON"
+     "proposer": "NELSON",
+     "team": [
+      "NELSON",
+      "FENG",
+      "CHERRY",
+      "XIANG",
+      "HOWARD"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "numFails": 1,
+   "failsRequired": 2,
    "team": [
     "NELSON",
     "FENG",
@@ -260,18 +137,141 @@
     "HOWARD"
    ],
    "state": "SUCCESS",
-   "failsRequired": 2,
-   "teamSize": 5
+   "numFails": 1
   },
   {
-   "state": "PENDING",
-   "teamSize": 5,
+   "proposals": [],
    "team": [],
    "failsRequired": 1,
-   "proposals": []
+   "teamSize": 5,
+   "state": "PENDING"
   }
  ],
  "options": {
   "inGameLog": false
- }
+ },
+ "outcome": {
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "TSUENG",
+    "role": "MORGANA"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "HP"
+   },
+   {
+    "name": "ROU",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "NELSON",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "FENG",
+    "assassin": false,
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "HOWARD"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "XIANG"
+   },
+   {
+    "assassin": true,
+    "name": "CHERRY",
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "SUSAN"
+   }
+  ],
+  "assassinated": "NELSON",
+  "votes": [
+   {
+    "FENG": true,
+    "XIANG": true,
+    "HP": true
+   },
+   {
+    "HOWARD": true,
+    "XIANG": true,
+    "FENG": false,
+    "HP": true
+   },
+   {
+    "CHERRY": true,
+    "XIANG": true,
+    "NELSON": true,
+    "HOWARD": true
+   },
+   {
+    "XIANG": true,
+    "FENG": false,
+    "CHERRY": true,
+    "NELSON": true,
+    "HOWARD": true
+   }
+  ],
+  "message": "Three successful missions"
+ },
+ "timeCreated": {
+  "_seconds": 1589605055,
+  "_nanoseconds": 257000000
+ },
+ "timeFinished": {
+  "_seconds": 1589606037,
+  "_nanoseconds": 973000000
+ },
+ "players": [
+  {
+   "name": "HP",
+   "uid": "qjDeDxtpggSF9WWbIBj8hkrx8Oe2"
+  },
+  {
+   "name": "SUSAN",
+   "uid": "R4fmZj79uDNSNHMlUvXLOlhN1x82"
+  },
+  {
+   "name": "ROU",
+   "uid": "LZGigpMr77hCl5smIMUdylrg96S2"
+  },
+  {
+   "uid": "Bk5EH82zTOZV3ZvsqhTGTgty2jJ3",
+   "name": "XIANG"
+  },
+  {
+   "name": "TSUENG",
+   "uid": "3BlA7BaJOydU9LsNuqSVlAJAKYK2"
+  },
+  {
+   "name": "FENG",
+   "uid": "jgTdzzaNJOTb8j2fIvBzP44GSjf1"
+  },
+  {
+   "name": "HOWARD",
+   "uid": "CLZ73hWlzJUvwZMxmX40QFFBUZ93"
+  },
+  {
+   "name": "CHERRY",
+   "uid": "OgHLk6FrW2TMiSaFmKoneBcSUh92"
+  },
+  {
+   "name": "NELSON",
+   "uid": "3JciRBRAQNWIuxSTbBk6G2CQI6U2"
+  }
+ ]
 }

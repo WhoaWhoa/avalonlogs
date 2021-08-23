@@ -1,4 +1,68 @@
 {
+ "outcome": {
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "VIK"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "BHATLA"
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "VINEET",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "YASH"
+   },
+   {
+    "assassin": false,
+    "name": "NIHAL",
+    "role": "MORDRED"
+   },
+   {
+    "name": "SACRO",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "PAULA",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "YASH": true,
+    "PAULA": true
+   },
+   {
+    "PAULA": true,
+    "YASH": true,
+    "SACRO": false
+   },
+   {
+    "PAULA": true,
+    "VINEET": true,
+    "YASH": true
+   },
+   {
+    "VIK": true,
+    "PAULA": true,
+    "VINEET": true,
+    "YASH": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "PAULA"
+ },
  "players": [
   {
    "name": "NIHAL",
@@ -13,8 +77,8 @@
    "uid": "zzdHqS5L3STQcKA3Xzg95mCtyER2"
   },
   {
-   "name": "VIK",
-   "uid": "jeTT4rN5xthZuBUiR4lH0KZKfAk2"
+   "uid": "jeTT4rN5xthZuBUiR4lH0KZKfAk2",
+   "name": "VIK"
   },
   {
    "uid": "MyN4YLaFSNhCYlJ5NpT1P4T3X9n2",
@@ -25,97 +89,30 @@
    "uid": "Nhgq7zGelqdXlzZrV9EgbTulZxc2"
   },
   {
-   "uid": "9c9NGzycawRKrKBEs335OQpfvxu2",
-   "name": "BHATLA"
+   "name": "BHATLA",
+   "uid": "9c9NGzycawRKrKBEs335OQpfvxu2"
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1588392649,
-  "_nanoseconds": 493000000
- },
  "timeFinished": {
   "_seconds": 1588393382,
   "_nanoseconds": 902000000
  },
- "outcome": {
-  "roles": [
-   {
-    "name": "VIK",
-    "role": "MORGANA",
-    "assassin": false
-   },
-   {
-    "name": "BHATLA",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "VINEET",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "YASH",
-    "assassin": false
-   },
-   {
-    "name": "NIHAL",
-    "assassin": false,
-    "role": "MORDRED"
-   },
-   {
-    "name": "SACRO",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "PAULA"
-   }
-  ],
-  "state": "GOOD_WIN",
-  "assassinated": "PAULA",
-  "votes": [
-   {
-    "PAULA": true,
-    "YASH": true
-   },
-   {
-    "PAULA": true,
-    "YASH": true,
-    "SACRO": false
-   },
-   {
-    "PAULA": true,
-    "VINEET": true,
-    "YASH": true
-   },
-   {
-    "VINEET": true,
-    "VIK": true,
-    "YASH": true,
-    "PAULA": true
-   }
-  ],
-  "message": "Three successful missions"
- },
  "missions": [
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
+   "teamSize": 2,
    "team": [
     "YASH",
     "PAULA"
    ],
-   "teamSize": 2,
+   "failsRequired": 1,
    "numFails": 0,
    "proposals": [
     {
+     "proposer": "YASH",
+     "team": [
+      "YASH",
+      "PAULA"
+     ],
      "state": "APPROVED",
      "votes": [
       "YASH",
@@ -124,25 +121,17 @@
       "VIK",
       "BHATLA",
       "VINEET"
-     ],
-     "proposer": "YASH",
-     "team": [
-      "YASH",
-      "PAULA"
      ]
     }
-   ]
+   ],
+   "state": "SUCCESS"
   },
   {
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "proposer": "SACRO",
-     "state": "APPROVED",
-     "team": [
-      "SACRO",
-      "YASH",
-      "PAULA"
-     ],
      "votes": [
       "VIK",
       "BHATLA",
@@ -151,23 +140,41 @@
       "NIHAL",
       "SACRO",
       "PAULA"
+     ],
+     "proposer": "SACRO",
+     "state": "APPROVED",
+     "team": [
+      "SACRO",
+      "YASH",
+      "PAULA"
      ]
     }
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
    "team": [
     "SACRO",
     "YASH",
     "PAULA"
    ],
-   "teamSize": 3,
-   "numFails": 1
+   "failsRequired": 1
   },
   {
-   "numFails": 0,
+   "state": "SUCCESS",
+   "teamSize": 3,
+   "failsRequired": 1,
+   "team": [
+    "PAULA",
+    "YASH",
+    "VINEET"
+   ],
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "PAULA",
+      "YASH",
+      "VINEET"
+     ],
+     "proposer": "VIK",
      "votes": [
       "PAULA",
       "VIK",
@@ -175,40 +182,15 @@
       "VINEET",
       "YASH",
       "NIHAL"
-     ],
-     "team": [
-      "PAULA",
-      "YASH",
-      "VINEET"
-     ],
-     "state": "APPROVED",
-     "proposer": "VIK"
+     ]
     }
    ],
-   "team": [
-    "PAULA",
-    "YASH",
-    "VINEET"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 3
+   "numFails": 0
   },
   {
-   "state": "SUCCESS",
-   "teamSize": 4,
    "failsRequired": 2,
-   "numFails": 0,
-   "team": [
-    "PAULA",
-    "YASH",
-    "VINEET",
-    "VIK"
-   ],
    "proposals": [
     {
-     "proposer": "VINEET",
-     "state": "APPROVED",
      "votes": [
       "VIK",
       "VINEET",
@@ -220,16 +202,34 @@
       "YASH",
       "VINEET",
       "VIK"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "VINEET"
     }
-   ]
+   ],
+   "team": [
+    "PAULA",
+    "YASH",
+    "VINEET",
+    "VIK"
+   ],
+   "state": "SUCCESS",
+   "teamSize": 4,
+   "numFails": 0
   },
   {
-   "teamSize": 4,
    "state": "PENDING",
-   "team": [],
+   "proposals": [],
+   "teamSize": 4,
    "failsRequired": 1,
-   "proposals": []
+   "team": []
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1588392649,
+  "_nanoseconds": 493000000
+ }
 }

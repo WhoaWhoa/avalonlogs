@@ -1,4 +1,30 @@
 {
+ "players": [
+  {
+   "uid": "8hrrQzIPvaPrrH8DJK2cJB5IPwB2",
+   "name": "TOM"
+  },
+  {
+   "name": "SRAMAMU",
+   "uid": "R9f2SKlYaDVIclh13YJR9zotckj2"
+  },
+  {
+   "name": "GOON",
+   "uid": "Vors2zRcNAgS3DPGWvBkp8q0D563"
+  },
+  {
+   "name": "MANAV",
+   "uid": "F6unslwv09NDoUvKhVTiQZccQxy1"
+  },
+  {
+   "name": "PRIDHVI",
+   "uid": "Y9qhPSJrGIhkChdNbIi12f5hvTZ2"
+  },
+  {
+   "name": "SHRI",
+   "uid": "rwkan6Pxo1gxy0L4h1ymiMMsiqL2"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1585894502,
   "_nanoseconds": 554000000
@@ -8,7 +34,6 @@
   "_nanoseconds": 437005000
  },
  "outcome": {
-  "state": "GOOD_WIN",
   "message": "Three successful missions",
   "votes": [
    {
@@ -16,67 +41,66 @@
     "TOM": true
    },
    {
-    "PRIDHVI": true,
-    "TOM": true,
-    "SRAMAMU": true
-   },
-   {
-    "PRIDHVI": true,
     "SRAMAMU": true,
     "TOM": true,
-    "SHRI": false
+    "PRIDHVI": true
+   },
+   {
+    "SRAMAMU": true,
+    "SHRI": false,
+    "PRIDHVI": true,
+    "TOM": true
    },
    {
     "PRIDHVI": true,
-    "MANAV": true,
-    "TOM": true
+    "TOM": true,
+    "MANAV": true
    }
   ],
+  "state": "GOOD_WIN",
   "roles": [
    {
+    "name": "MANAV",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MANAV"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "role": "MORGANA",
-    "assassin": false,
-    "name": "SHRI"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "SRAMAMU"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "GOON",
+    "name": "SHRI",
     "assassin": false
    },
    {
-    "assassin": false,
-    "name": "PRIDHVI",
-    "role": "PERCIVAL"
+    "name": "SRAMAMU",
+    "assassin": true,
+    "role": "EVIL MINION"
    },
    {
     "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "GOON"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "PRIDHVI"
+   },
+   {
+    "role": "MERLIN",
     "name": "TOM",
-    "role": "MERLIN"
+    "assassin": false
    }
   ],
   "assassinated": "MANAV"
  },
  "missions": [
   {
-   "failsRequired": 1,
+   "team": [
+    "TOM",
+    "MANAV"
+   ],
+   "state": "SUCCESS",
    "proposals": [
     {
-     "team": [
-      "TOM",
-      "MANAV"
-     ],
-     "state": "APPROVED",
-     "proposer": "MANAV",
      "votes": [
       "SHRI",
       "SRAMAMU",
@@ -84,18 +108,22 @@
       "PRIDHVI",
       "TOM",
       "MANAV"
+     ],
+     "proposer": "MANAV",
+     "state": "APPROVED",
+     "team": [
+      "TOM",
+      "MANAV"
      ]
     }
    ],
-   "numFails": 0,
    "teamSize": 2,
-   "state": "SUCCESS",
-   "team": [
-    "TOM",
-    "MANAV"
-   ]
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
      "proposer": "PRIDHVI",
@@ -116,54 +144,47 @@
     }
    ],
    "teamSize": 3,
-   "numFails": 0,
    "team": [
     "PRIDHVI",
     "SRAMAMU",
     "TOM"
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "SHRI",
      "votes": [
       "MANAV",
       "SHRI",
       "SRAMAMU",
       "GOON"
      ],
+     "state": "APPROVED",
      "team": [
       "PRIDHVI",
       "SHRI",
       "SRAMAMU",
       "TOM"
-     ]
+     ],
+     "proposer": "SHRI"
     }
    ],
-   "numFails": 1,
-   "state": "FAIL",
-   "teamSize": 4,
    "team": [
     "PRIDHVI",
     "SHRI",
     "SRAMAMU",
     "TOM"
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 4
   },
   {
    "state": "SUCCESS",
-   "teamSize": 3,
    "numFails": 0,
-   "team": [
-    "MANAV",
-    "PRIDHVI",
-    "TOM"
-   ],
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -178,44 +199,23 @@
       "PRIDHVI",
       "TOM"
      ],
-     "state": "APPROVED",
-     "proposer": "TOM"
+     "proposer": "TOM",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1
+   "teamSize": 3,
+   "team": [
+    "MANAV",
+    "PRIDHVI",
+    "TOM"
+   ]
   },
   {
-   "proposals": [],
    "team": [],
    "state": "PENDING",
    "teamSize": 4,
+   "proposals": [],
    "failsRequired": 1
-  }
- ],
- "players": [
-  {
-   "name": "TOM",
-   "uid": "8hrrQzIPvaPrrH8DJK2cJB5IPwB2"
-  },
-  {
-   "name": "SRAMAMU",
-   "uid": "R9f2SKlYaDVIclh13YJR9zotckj2"
-  },
-  {
-   "name": "GOON",
-   "uid": "Vors2zRcNAgS3DPGWvBkp8q0D563"
-  },
-  {
-   "uid": "F6unslwv09NDoUvKhVTiQZccQxy1",
-   "name": "MANAV"
-  },
-  {
-   "name": "PRIDHVI",
-   "uid": "Y9qhPSJrGIhkChdNbIi12f5hvTZ2"
-  },
-  {
-   "name": "SHRI",
-   "uid": "rwkan6Pxo1gxy0L4h1ymiMMsiqL2"
   }
  ]
 }

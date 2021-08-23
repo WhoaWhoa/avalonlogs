@@ -1,55 +1,126 @@
 {
- "outcome": {
-  "message": "Three missions succeeded",
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "JT",
-    "assassin": false
-   },
-   {
-    "name": "GEOFF",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "LT",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "PAT",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "name": "TAYLOR",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ],
-  "votes": [
-   {
-    "LT": true,
-    "TAYLOR": true
-   },
-   {
-    "TAYLOR": true,
-    "LT": true,
-    "PAT": false
-   },
-   {
-    "JT": true,
-    "GEOFF": true
-   },
-   {
-    "GEOFF": true,
-    "JT": true,
-    "TAYLOR": true
-   }
-  ],
-  "state": "GOOD_WIN",
-  "assassinated": null
+ "missions": [
+  {
+   "proposals": [
+    {
+     "team": [
+      "TAYLOR",
+      "LT"
+     ],
+     "proposer": "LT",
+     "state": "APPROVED",
+     "votes": [
+      "TAYLOR",
+      "JT",
+      "LT",
+      "PAT"
+     ]
+    }
+   ],
+   "team": [
+    "TAYLOR",
+    "LT"
+   ],
+   "numFails": 0,
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1
+  },
+  {
+   "state": "FAIL",
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 1,
+   "team": [
+    "LT",
+    "TAYLOR",
+    "PAT"
+   ],
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "PAT",
+      "TAYLOR",
+      "LT"
+     ],
+     "proposer": "TAYLOR",
+     "team": [
+      "LT",
+      "TAYLOR",
+      "PAT"
+     ]
+    }
+   ]
+  },
+  {
+   "teamSize": 2,
+   "team": [
+    "GEOFF",
+    "JT"
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "proposer": "GEOFF",
+     "team": [
+      "GEOFF",
+      "JT"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "GEOFF",
+      "LT",
+      "PAT",
+      "TAYLOR",
+      "JT"
+     ]
+    }
+   ],
+   "numFails": 0
+  },
+  {
+   "team": [
+    "JT",
+    "GEOFF",
+    "TAYLOR"
+   ],
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "team": [
+      "JT",
+      "GEOFF",
+      "TAYLOR"
+     ],
+     "proposer": "JT",
+     "state": "APPROVED",
+     "votes": [
+      "GEOFF",
+      "TAYLOR",
+      "JT"
+     ]
+    }
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "numFails": 0
+  },
+  {
+   "proposals": [],
+   "team": [],
+   "state": "PENDING",
+   "teamSize": 3,
+   "failsRequired": 1
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1593962089,
+  "_nanoseconds": 32000000
+ },
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
@@ -57,12 +128,12 @@
    "name": "LT"
   },
   {
-   "uid": "hXIdpcHBfzXxyJsfp4GJZCfOHan1",
-   "name": "TAYLOR"
+   "name": "TAYLOR",
+   "uid": "hXIdpcHBfzXxyJsfp4GJZCfOHan1"
   },
   {
-   "uid": "HyI2629TaRXlJeeKTnpkyG5Ouvj2",
-   "name": "GEOFF"
+   "name": "GEOFF",
+   "uid": "HyI2629TaRXlJeeKTnpkyG5Ouvj2"
   },
   {
    "name": "JT",
@@ -77,127 +148,56 @@
   "_seconds": 1593962489,
   "_nanoseconds": 473000000
  },
- "timeCreated": {
-  "_seconds": 1593962089,
-  "_nanoseconds": 32000000
- },
- "options": {
-  "inGameLog": false
- },
- "missions": [
-  {
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "TAYLOR",
-    "LT"
-   ],
-   "teamSize": 2,
-   "numFails": 0,
-   "proposals": [
-    {
-     "votes": [
-      "TAYLOR",
-      "JT",
-      "LT",
-      "PAT"
-     ],
-     "team": [
-      "TAYLOR",
-      "LT"
-     ],
-     "state": "APPROVED",
-     "proposer": "LT"
-    }
-   ]
-  },
-  {
-   "team": [
-    "LT",
-    "TAYLOR",
-    "PAT"
-   ],
-   "teamSize": 3,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "PAT",
-      "TAYLOR",
-      "LT"
-     ],
-     "team": [
-      "LT",
-      "TAYLOR",
-      "PAT"
-     ],
-     "proposer": "TAYLOR"
-    }
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1
-  },
-  {
-   "proposals": [
-    {
-     "team": [
-      "GEOFF",
-      "JT"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "GEOFF",
-      "LT",
-      "PAT",
-      "TAYLOR",
-      "JT"
-     ],
-     "proposer": "GEOFF"
-    }
-   ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 2,
-   "team": [
-    "GEOFF",
-    "JT"
-   ],
-   "failsRequired": 1
-  },
-  {
-   "teamSize": 3,
-   "state": "SUCCESS",
-   "team": [
-    "JT",
-    "GEOFF",
-    "TAYLOR"
-   ],
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "GEOFF",
-      "TAYLOR",
-      "JT"
-     ],
-     "proposer": "JT",
-     "team": [
-      "JT",
-      "GEOFF",
-      "TAYLOR"
-     ]
-    }
-   ],
-   "failsRequired": 1,
-   "numFails": 0
-  },
-  {
-   "failsRequired": 1,
-   "team": [],
-   "state": "PENDING",
-   "proposals": [],
-   "teamSize": 3
-  }
- ]
+ "outcome": {
+  "votes": [
+   {
+    "LT": true,
+    "TAYLOR": true
+   },
+   {
+    "PAT": false,
+    "LT": true,
+    "TAYLOR": true
+   },
+   {
+    "GEOFF": true,
+    "JT": true
+   },
+   {
+    "TAYLOR": true,
+    "JT": true,
+    "GEOFF": true
+   }
+  ],
+  "assassinated": null,
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "JT"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "GEOFF"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "LT"
+   },
+   {
+    "name": "PAT",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "TAYLOR",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "message": "Three missions succeeded"
+ }
 }

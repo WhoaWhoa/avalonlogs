@@ -1,25 +1,105 @@
 {
+ "timeCreated": {
+  "_seconds": 1586134161,
+  "_nanoseconds": 9000000
+ },
+ "timeFinished": {
+  "_seconds": 1586134658,
+  "_nanoseconds": 307288000
+ },
+ "outcome": {
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "name": "DIVYA",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "HALJIM",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "DUMB",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "HAL",
+    "assassin": true
+   },
+   {
+    "name": "HALJIN",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "role": "MERLIN",
+    "name": "ABBAS",
+    "assassin": false
+   }
+  ],
+  "votes": [
+   {
+    "HALJIM": false,
+    "DIVYA": true
+   },
+   {
+    "DUMB": true,
+    "ABBAS": true,
+    "HALJIN": true
+   },
+   {
+    "HAL": false,
+    "ABBAS": true,
+    "HALJIN": true,
+    "DUMB": true
+   },
+   {
+    "HALJIN": true,
+    "ABBAS": true,
+    "DUMB": true
+   },
+   {
+    "HALJIN": true,
+    "DUMB": true,
+    "ABBAS": true,
+    "DIVYA": true
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "HALJIN"
+ },
  "missions": [
   {
-   "state": "FAIL",
    "numFails": 1,
+   "team": [
+    "DIVYA",
+    "HALJIM"
+   ],
    "proposals": [
     {
      "state": "REJECTED",
-     "votes": [
-      "HALJIM",
-      "HAL",
-      "DIVYA"
-     ],
      "team": [
       "HALJIM",
       "HALJIN"
      ],
-     "proposer": "HAL"
+     "proposer": "HAL",
+     "votes": [
+      "HALJIM",
+      "HAL",
+      "DIVYA"
+     ]
     },
     {
-     "proposer": "DIVYA",
+     "team": [
+      "DIVYA",
+      "HALJIM"
+     ],
      "state": "APPROVED",
+     "proposer": "DIVYA",
      "votes": [
       "HALJIM",
       "DUMB",
@@ -27,50 +107,37 @@
       "HALJIN",
       "ABBAS",
       "DIVYA"
-     ],
-     "team": [
-      "DIVYA",
-      "HALJIM"
      ]
     }
    ],
-   "team": [
-    "DIVYA",
-    "HALJIM"
-   ],
+   "state": "FAIL",
    "failsRequired": 1,
    "teamSize": 2
   },
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "HALJIN",
     "DUMB",
     "ABBAS"
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "HALJIM",
       "HALJIN",
       "DUMB"
      ],
-     "proposer": "HALJIM",
      "votes": [
       "HALJIM",
       "DUMB"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "HALJIM"
     },
     {
-     "team": [
-      "HALJIN",
-      "DUMB",
-      "ABBAS"
-     ],
      "votes": [
       "HALJIM",
       "DUMB",
@@ -80,33 +147,35 @@
       "DIVYA"
      ],
      "proposer": "HALJIN",
+     "team": [
+      "HALJIN",
+      "DUMB",
+      "ABBAS"
+     ],
      "state": "APPROVED"
     }
-   ]
+   ],
+   "state": "SUCCESS"
   },
   {
-   "team": [
-    "ABBAS",
-    "DUMB",
-    "HALJIN",
-    "HAL"
-   ],
+   "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
+     "votes": [
+      "DUMB"
+     ],
+     "state": "REJECTED",
+     "proposer": "DUMB",
      "team": [
       "DUMB",
       "HALJIN",
       "HALJIM",
       "DIVYA"
-     ],
-     "votes": [
-      "DUMB"
-     ],
-     "state": "REJECTED",
-     "proposer": "DUMB"
+     ]
     },
     {
-     "state": "APPROVED",
      "votes": [
       "HALJIM",
       "HAL",
@@ -114,40 +183,48 @@
       "ABBAS",
       "DIVYA"
      ],
+     "proposer": "ABBAS",
      "team": [
       "ABBAS",
       "DUMB",
       "HALJIN",
       "HAL"
      ],
-     "proposer": "ABBAS"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 1,
-   "state": "FAIL"
+   "team": [
+    "ABBAS",
+    "DUMB",
+    "HALJIN",
+    "HAL"
+   ],
+   "teamSize": 4
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "DUMB",
+    "ABBAS",
+    "HALJIN"
+   ],
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
      "state": "REJECTED",
+     "votes": [
+      "DUMB"
+     ],
+     "proposer": "HAL",
      "team": [
       "HAL",
       "DIVYA",
       "HALJIM"
-     ],
-     "votes": [
-      "DUMB"
-     ],
-     "proposer": "HAL"
+     ]
     },
     {
-     "team": [
-      "DUMB",
-      "ABBAS",
-      "HALJIN"
-     ],
+     "proposer": "DIVYA",
      "votes": [
       "DIVYA",
       "HALJIM",
@@ -155,31 +232,18 @@
       "HALJIN",
       "ABBAS"
      ],
-     "proposer": "DIVYA",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "DUMB",
+      "ABBAS",
+      "HALJIN"
+     ]
     }
    ],
-   "team": [
-    "DUMB",
-    "ABBAS",
-    "HALJIN"
-   ],
-   "teamSize": 3,
-   "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1
+   "state": "SUCCESS"
   },
   {
    "failsRequired": 1,
-   "numFails": 0,
-   "team": [
-    "HALJIN",
-    "DUMB",
-    "ABBAS",
-    "DIVYA"
-   ],
-   "state": "SUCCESS",
-   "teamSize": 4,
    "proposals": [
     {
      "team": [
@@ -196,97 +260,41 @@
      "proposer": "HALJIM"
     },
     {
-     "team": [
-      "HALJIN",
-      "DUMB",
-      "ABBAS",
-      "DIVYA"
-     ],
-     "proposer": "HALJIN",
      "votes": [
       "HAL",
       "HALJIN",
       "ABBAS",
       "DIVYA"
      ],
-     "state": "APPROVED"
+     "proposer": "HALJIN",
+     "state": "APPROVED",
+     "team": [
+      "HALJIN",
+      "DUMB",
+      "ABBAS",
+      "DIVYA"
+     ]
     }
-   ]
+   ],
+   "team": [
+    "HALJIN",
+    "DUMB",
+    "ABBAS",
+    "DIVYA"
+   ],
+   "numFails": 0,
+   "teamSize": 4,
+   "state": "SUCCESS"
   }
  ],
- "outcome": {
-  "votes": [
-   {
-    "DIVYA": true,
-    "HALJIM": false
-   },
-   {
-    "ABBAS": true,
-    "HALJIN": true,
-    "DUMB": true
-   },
-   {
-    "HAL": false,
-    "DUMB": true,
-    "ABBAS": true,
-    "HALJIN": true
-   },
-   {
-    "DUMB": true,
-    "ABBAS": true,
-    "HALJIN": true
-   },
-   {
-    "HALJIN": true,
-    "ABBAS": true,
-    "DIVYA": true,
-    "DUMB": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "name": "DIVYA",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MORGANA",
-    "name": "HALJIM",
-    "assassin": false
-   },
-   {
-    "name": "DUMB",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "HAL",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "HALJIN",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "ABBAS",
-    "role": "MERLIN"
-   }
-  ],
-  "assassinated": "HALJIN",
-  "message": "Three successful missions",
-  "state": "GOOD_WIN"
- },
  "players": [
   {
    "name": "HAL",
    "uid": "JqcOql15ITZek9CoSPGuHw9yvgy2"
   },
   {
-   "uid": "voxrcFJlfoWaG05oO9NY4uD3tyD2",
-   "name": "DIVYA"
+   "name": "DIVYA",
+   "uid": "voxrcFJlfoWaG05oO9NY4uD3tyD2"
   },
   {
    "name": "HALJIM",
@@ -301,16 +309,8 @@
    "name": "DUMB"
   },
   {
-   "uid": "9lVK8EtlRjSBjQ9VeroOmnHHlBi2",
-   "name": "ABBAS"
+   "name": "ABBAS",
+   "uid": "9lVK8EtlRjSBjQ9VeroOmnHHlBi2"
   }
- ],
- "timeFinished": {
-  "_seconds": 1586134658,
-  "_nanoseconds": 307288000
- },
- "timeCreated": {
-  "_seconds": 1586134161,
-  "_nanoseconds": 9000000
- }
+ ]
 }

@@ -1,21 +1,14 @@
 {
- "timeCreated": {
-  "_seconds": 1588381113,
-  "_nanoseconds": 936000000
- },
- "timeFinished": {
-  "_seconds": 1588382124,
-  "_nanoseconds": 914000000
- },
  "missions": [
   {
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "PALAK",
     "SUSHHI"
    ],
-   "state": "SUCCESS",
    "teamSize": 2,
-   "failsRequired": 1,
    "proposals": [
     {
      "proposer": "Y",
@@ -28,24 +21,20 @@
       "ALEKHYA",
       "SUSHHI"
      ],
-     "state": "APPROVED",
      "team": [
       "PALAK",
       "SUSHHI"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "numFails": 0
+   ]
   },
   {
+   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "SUSHHI",
-      "PALAK",
-      "Y"
-     ],
-     "proposer": "SUSHHI",
+     "state": "APPROVED",
      "votes": [
       "SUSHHI",
       "Y",
@@ -54,28 +43,34 @@
       "PALAK",
       "DANIEL"
      ],
-     "state": "APPROVED"
+     "team": [
+      "SUSHHI",
+      "PALAK",
+      "Y"
+     ],
+     "proposer": "SUSHHI"
     }
    ],
    "numFails": 2,
-   "teamSize": 3,
    "team": [
     "SUSHHI",
     "PALAK",
     "Y"
    ],
-   "state": "FAIL",
    "failsRequired": 1
   },
   {
+   "state": "FAIL",
+   "teamSize": 3,
+   "team": [
+    "ALEKHYA",
+    "FRANCES",
+    "DANIEL"
+   ],
+   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "ALEKHYA",
-      "FRANCES",
-      "DANIEL"
-     ],
-     "state": "APPROVED",
      "votes": [
       "FRANCES",
       "PALAK",
@@ -83,37 +78,35 @@
       "Y",
       "MO"
      ],
-     "proposer": "MO"
+     "state": "APPROVED",
+     "proposer": "MO",
+     "team": [
+      "ALEKHYA",
+      "FRANCES",
+      "DANIEL"
+     ]
     }
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 3,
-   "team": [
-    "ALEKHYA",
-    "FRANCES",
-    "DANIEL"
-   ],
-   "numFails": 1
+   ]
   },
   {
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "MO",
       "Y",
       "PALAK",
       "DANIEL"
      ],
+     "proposer": "ALEKHYA",
+     "state": "APPROVED",
      "votes": [
       "Y",
       "MO",
       "PALAK",
       "DANIEL",
       "ALEKHYA"
-     ],
-     "proposer": "ALEKHYA"
+     ]
     }
    ],
    "team": [
@@ -123,20 +116,27 @@
     "DANIEL"
    ],
    "numFails": 3,
-   "state": "FAIL",
-   "teamSize": 4,
-   "failsRequired": 2
+   "failsRequired": 2,
+   "teamSize": 4
   },
   {
    "state": "PENDING",
-   "failsRequired": 1,
-   "team": [],
+   "teamSize": 4,
    "proposals": [],
-   "teamSize": 4
+   "failsRequired": 1,
+   "team": []
   }
  ],
  "options": {
   "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1588381113,
+  "_nanoseconds": 936000000
+ },
+ "timeFinished": {
+  "_seconds": 1588382124,
+  "_nanoseconds": 914000000
  },
  "players": [
   {
@@ -148,8 +148,8 @@
    "uid": "MYefv1dwfzROpfhXKa1yXWDL8gL2"
   },
   {
-   "name": "ALEKHYA",
-   "uid": "2lVp7J5XFwRMujDCMX14pAjpngw1"
+   "uid": "2lVp7J5XFwRMujDCMX14pAjpngw1",
+   "name": "ALEKHYA"
   },
   {
    "name": "FRANCES",
@@ -160,8 +160,8 @@
    "name": "DANIEL"
   },
   {
-   "uid": "aBqytkJnGhgu12UUXE5ylRZfjWR2",
-   "name": "PALAK"
+   "name": "PALAK",
+   "uid": "aBqytkJnGhgu12UUXE5ylRZfjWR2"
   },
   {
    "uid": "jWfTggUXPVM7E9KUdk1MtRVY2lB2",
@@ -169,17 +169,55 @@
   }
  ],
  "outcome": {
-  "message": "Three failed missions",
   "state": "EVIL_WIN",
-  "votes": [
+  "roles": [
    {
-    "PALAK": true,
-    "SUSHHI": true
+    "name": "Y",
+    "assassin": false,
+    "role": "EVIL MINION"
    },
    {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MO"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "FRANCES"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "PALAK",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "DANIEL",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "ALEKHYA",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "SUSHHI",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "message": "Three failed missions",
+  "assassinated": null,
+  "votes": [
+   {
     "SUSHHI": true,
-    "Y": false,
-    "PALAK": false
+    "PALAK": true
+   },
+   {
+    "PALAK": false,
+    "SUSHHI": true,
+    "Y": false
    },
    {
     "DANIEL": false,
@@ -187,49 +225,11 @@
     "ALEKHYA": true
    },
    {
-    "Y": false,
-    "PALAK": false,
     "DANIEL": false,
-    "MO": true
+    "MO": true,
+    "Y": false,
+    "PALAK": false
    }
-  ],
-  "roles": [
-   {
-    "role": "EVIL MINION",
-    "name": "Y",
-    "assassin": false
-   },
-   {
-    "name": "MO",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "FRANCES",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "PALAK",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "DANIEL",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "name": "ALEKHYA",
-    "role": "MERLIN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "SUSHHI"
-   }
-  ],
-  "assassinated": null
+  ]
  }
 }

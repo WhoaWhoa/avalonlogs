@@ -1,10 +1,33 @@
 {
  "outcome": {
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "CHARLES": false,
+    "ALEXIS": true
+   },
+   {
+    "SOLO": true,
+    "HUGO": true,
+    "CHARLES": true
+   },
+   {
+    "CHARLES": true,
+    "CAAAAAAATS": true,
+    "SOLO": true,
+    "HUGO": true
+   },
+   {
+    "HUGO": true,
+    "SOLO": true,
+    "CAAAAAAATS": true
+   }
+  ],
   "roles": [
    {
-    "assassin": false,
     "name": "HUGO",
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
     "name": "SOLO",
@@ -12,51 +35,28 @@
     "assassin": false
    },
    {
-    "assassin": false,
-    "name": "CAAAAAAATS",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MORGANA",
-    "name": "RAYGUN",
-    "assassin": false
-   },
-   {
     "role": "LOYAL FOLLOWER",
-    "name": "ALEXIS",
+    "name": "CAAAAAAATS",
     "assassin": false
    },
    {
-    "role": "MORDRED",
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "RAYGUN"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ALEXIS"
+   },
+   {
     "name": "CHARLES",
-    "assassin": true
+    "assassin": true,
+    "role": "MORDRED"
    }
   ],
-  "assassinated": "SOLO",
-  "votes": [
-   {
-    "CHARLES": false,
-    "ALEXIS": true
-   },
-   {
-    "CHARLES": true,
-    "SOLO": true,
-    "HUGO": true
-   },
-   {
-    "SOLO": true,
-    "CAAAAAAATS": true,
-    "HUGO": true,
-    "CHARLES": true
-   },
-   {
-    "SOLO": true,
-    "HUGO": true,
-    "CAAAAAAATS": true
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN"
+  "state": "GOOD_WIN",
+  "assassinated": "SOLO"
  },
  "options": {
   "inGameLog": false
@@ -67,13 +67,8 @@
     "ALEXIS",
     "CHARLES"
    ],
-   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "ALEXIS",
-      "CHARLES"
-     ],
      "proposer": "ALEXIS",
      "state": "APPROVED",
      "votes": [
@@ -82,63 +77,72 @@
       "RAYGUN",
       "HUGO",
       "SOLO"
+     ],
+     "team": [
+      "ALEXIS",
+      "CHARLES"
      ]
     }
    ],
+   "state": "FAIL",
    "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 1
+   "numFails": 1,
+   "teamSize": 2
   },
   {
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 3,
    "team": [
     "HUGO",
     "SOLO",
     "CHARLES"
    ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "RAYGUN"
-     ],
      "team": [
       "ALEXIS",
       "HUGO",
       "RAYGUN"
      ],
+     "proposer": "SOLO",
      "state": "REJECTED",
-     "proposer": "SOLO"
+     "votes": [
+      "RAYGUN"
+     ]
     },
     {
-     "team": [
-      "HUGO",
-      "SOLO",
-      "CHARLES"
-     ],
+     "state": "APPROVED",
      "votes": [
       "CHARLES",
       "HUGO",
       "RAYGUN",
       "SOLO"
      ],
-     "state": "APPROVED",
+     "team": [
+      "HUGO",
+      "SOLO",
+      "CHARLES"
+     ],
      "proposer": "HUGO"
     }
-   ]
+   ],
+   "state": "SUCCESS"
   },
   {
-   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 4,
    "team": [
     "SOLO",
     "HUGO",
     "CAAAAAAATS",
     "CHARLES"
    ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "SOLO",
       "HUGO",
@@ -148,8 +152,7 @@
      "proposer": "CHARLES",
      "votes": [
       "RAYGUN"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
      "votes": [
@@ -168,38 +171,34 @@
      ],
      "proposer": "CAAAAAAATS"
     }
-   ],
-   "teamSize": 4,
-   "failsRequired": 1,
-   "numFails": 0
+   ]
   },
   {
+   "failsRequired": 1,
+   "numFails": 0,
    "teamSize": 3,
-   "state": "SUCCESS",
    "team": [
     "SOLO",
     "HUGO",
     "CAAAAAAATS"
    ],
-   "numFails": 0,
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "votes": [
-      "RAYGUN",
-      "CAAAAAAATS",
-      "CHARLES"
-     ],
      "team": [
       "CAAAAAAATS",
       "HUGO",
       "CHARLES"
      ],
      "state": "REJECTED",
+     "votes": [
+      "RAYGUN",
+      "CAAAAAAATS",
+      "CHARLES"
+     ],
      "proposer": "RAYGUN"
     },
     {
-     "state": "REJECTED",
      "proposer": "ALEXIS",
      "votes": [
       "ALEXIS"
@@ -208,7 +207,8 @@
       "HUGO",
       "ALEXIS",
       "SOLO"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -216,37 +216,33 @@
       "HUGO",
       "CAAAAAAATS"
      ],
-     "proposer": "SOLO",
      "state": "APPROVED",
      "votes": [
       "HUGO",
       "RAYGUN",
       "CAAAAAAATS",
       "SOLO"
-     ]
+     ],
+     "proposer": "SOLO"
     }
    ]
   },
   {
-   "failsRequired": 1,
-   "team": [],
-   "proposals": [],
    "teamSize": 4,
+   "team": [],
+   "failsRequired": 1,
+   "proposals": [],
    "state": "PENDING"
   }
  ],
- "timeFinished": {
-  "_seconds": 1597198695,
-  "_nanoseconds": 266000000
- },
  "timeCreated": {
   "_seconds": 1597197689,
   "_nanoseconds": 711000000
  },
  "players": [
   {
-   "uid": "1RYO2y1AXjg1c39JkDr17a7Dqiv1",
-   "name": "ALEXIS"
+   "name": "ALEXIS",
+   "uid": "1RYO2y1AXjg1c39JkDr17a7Dqiv1"
   },
   {
    "uid": "wrAHflgj8kTu46wuye8u0EBEfTf1",
@@ -261,12 +257,16 @@
    "name": "CHARLES"
   },
   {
-   "name": "CAAAAAAATS",
-   "uid": "l27YccYUOXPD6hmimcLrx0DT84V2"
+   "uid": "l27YccYUOXPD6hmimcLrx0DT84V2",
+   "name": "CAAAAAAATS"
   },
   {
    "name": "RAYGUN",
    "uid": "gPGqrpYPqTeawakh1s61gHnDoeo2"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1597198695,
+  "_nanoseconds": 266000000
+ }
 }

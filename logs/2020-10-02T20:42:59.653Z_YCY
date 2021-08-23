@@ -1,10 +1,29 @@
 {
+ "timeCreated": {
+  "_seconds": 1601671379,
+  "_nanoseconds": 653000000
+ },
+ "timeFinished": {
+  "_seconds": 1601673173,
+  "_nanoseconds": 754000000
+ },
  "missions": [
   {
-   "teamSize": 3,
    "numFails": 0,
+   "failsRequired": 1,
+   "team": [
+    "DAVIDHAYES",
+    "BRIAN",
+    "GABE"
+   ],
    "proposals": [
     {
+     "team": [
+      "DAVIDHAYES",
+      "BRIAN",
+      "GABE"
+     ],
+     "state": "APPROVED",
      "votes": [
       "DAVIDHAYES",
       "YANNY",
@@ -14,55 +33,40 @@
       "GORD",
       "JOHN"
      ],
-     "state": "APPROVED",
-     "team": [
-      "DAVIDHAYES",
-      "BRIAN",
-      "GABE"
-     ],
      "proposer": "DAVIDHAYES"
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "DAVIDHAYES",
-    "BRIAN",
-    "GABE"
-   ],
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
    "team": [
     "MARK",
     "DAVIDHAYES",
     "YANNY",
     "BRIAN"
    ],
+   "state": "FAIL",
+   "teamSize": 4,
+   "failsRequired": 1,
    "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "LOUIS",
       "EVAN",
       "MARK",
       "BRIAN"
      ],
+     "proposer": "LOUIS",
+     "state": "REJECTED",
      "votes": [
       "YANNY",
       "MARK",
       "DAVIDHAYES"
-     ],
-     "proposer": "LOUIS"
+     ]
     },
     {
-     "team": [
-      "MARK",
-      "DAVIDHAYES",
-      "YANNY",
-      "BRIAN"
-     ],
      "votes": [
       "JOHN",
       "GABE",
@@ -73,13 +77,21 @@
       "MARK"
      ],
      "state": "APPROVED",
+     "team": [
+      "MARK",
+      "DAVIDHAYES",
+      "YANNY",
+      "BRIAN"
+     ],
      "proposer": "MARK"
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 4
+   ]
   },
   {
+   "state": "SUCCESS",
+   "teamSize": 4,
+   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "REJECTED",
@@ -88,13 +100,13 @@
       "GORD",
       "JOHN"
      ],
+     "proposer": "JOHN",
      "team": [
       "JOHN",
       "YANNY",
       "LOUIS",
       "EVAN"
-     ],
-     "proposer": "JOHN"
+     ]
     },
     {
      "votes": [
@@ -118,18 +130,16 @@
      "proposer": "YANNY"
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "team": [
     "LOUIS",
     "JOHN",
     "YANNY",
     "EVAN"
-   ],
-   "numFails": 0,
-   "teamSize": 4
+   ]
   },
   {
+   "state": "FAIL",
+   "failsRequired": 2,
    "team": [
     "LOUIS",
     "JOHN",
@@ -138,15 +148,9 @@
     "EVAN"
    ],
    "numFails": 2,
+   "teamSize": 5,
    "proposals": [
     {
-     "team": [
-      "LOUIS",
-      "JOHN",
-      "YANNY",
-      "BRIAN",
-      "EVAN"
-     ],
      "state": "APPROVED",
      "proposer": "BRIAN",
      "votes": [
@@ -159,25 +163,25 @@
       "GORD",
       "GABE",
       "YANNY"
+     ],
+     "team": [
+      "LOUIS",
+      "JOHN",
+      "YANNY",
+      "BRIAN",
+      "EVAN"
      ]
     }
-   ],
-   "failsRequired": 2,
-   "teamSize": 5,
-   "state": "FAIL"
+   ]
   },
   {
-   "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 5,
-   "state": "FAIL",
    "proposals": [
     {
+     "state": "REJECTED",
+     "proposer": "GABE",
      "votes": [
       "GABE"
      ],
-     "state": "REJECTED",
-     "proposer": "GABE",
      "team": [
       "GABE",
       "DAVIDHAYES",
@@ -195,42 +199,76 @@
       "MARK",
       "GABE"
      ],
-     "proposer": "GORD",
-     "state": "APPROVED",
      "team": [
       "GORD",
       "ERIC",
       "GABE",
       "MARK",
       "EVAN"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "GORD"
     }
    ],
+   "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "GORD",
     "ERIC",
     "GABE",
     "MARK",
     "EVAN"
-   ]
+   ],
+   "teamSize": 5
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "outcome": {
+  "message": "Three failed missions",
   "state": "EVIL_WIN",
-  "assassinated": null,
-  "roles": [
+  "votes": [
    {
-    "name": "GABE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "BRIAN": true,
+    "GABE": true,
+    "DAVIDHAYES": true
    },
    {
-    "assassin": false,
+    "MARK": true,
+    "DAVIDHAYES": false,
+    "YANNY": true,
+    "BRIAN": true
+   },
+   {
+    "EVAN": true,
+    "JOHN": true,
+    "LOUIS": true,
+    "YANNY": true
+   },
+   {
+    "BRIAN": true,
+    "JOHN": false,
+    "EVAN": true,
+    "YANNY": true,
+    "LOUIS": false
+   },
+   {
+    "GORD": false,
+    "ERIC": true,
+    "EVAN": true,
+    "GABE": true,
+    "MARK": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "GABE",
+    "assassin": false
+   },
+   {
+    "name": "GORD",
     "role": "EVIL MINION",
-    "name": "GORD"
+    "assassin": false
    },
    {
     "assassin": false,
@@ -238,124 +276,86 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "EVAN",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "EVAN"
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "ERIC",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ERIC"
-   },
-   {
-    "name": "LOUIS",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
     "role": "EVIL MINION",
-    "name": "JOHN"
+    "name": "LOUIS"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "JOHN",
+    "assassin": false
    },
    {
     "name": "DAVIDHAYES",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": false
    },
    {
-    "assassin": false,
     "name": "YANNY",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
-    "name": "BRIAN",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "BRIAN"
    }
   ],
-  "votes": [
-   {
-    "DAVIDHAYES": true,
-    "GABE": true,
-    "BRIAN": true
-   },
-   {
-    "DAVIDHAYES": false,
-    "YANNY": true,
-    "MARK": true,
-    "BRIAN": true
-   },
-   {
-    "EVAN": true,
-    "YANNY": true,
-    "JOHN": true,
-    "LOUIS": true
-   },
-   {
-    "JOHN": false,
-    "LOUIS": false,
-    "EVAN": true,
-    "YANNY": true,
-    "BRIAN": true
-   },
-   {
-    "EVAN": true,
-    "MARK": true,
-    "GORD": false,
-    "ERIC": true,
-    "GABE": true
-   }
-  ],
-  "message": "Three failed missions"
+  "assassinated": null
+ },
+ "options": {
+  "inGameLog": false
  },
  "players": [
   {
-   "name": "LOUIS",
-   "uid": "FxNVnPh3OQhH9a24DbpHwR8uJLU2"
+   "uid": "FxNVnPh3OQhH9a24DbpHwR8uJLU2",
+   "name": "LOUIS"
   },
   {
    "name": "MARK",
    "uid": "o8RlNNfQuCVVK7HxH0OjsagSEOo2"
   },
   {
-   "name": "JOHN",
-   "uid": "sbo25FQlZGTCEaJOSBGl3evpqCn1"
+   "uid": "sbo25FQlZGTCEaJOSBGl3evpqCn1",
+   "name": "JOHN"
   },
   {
-   "uid": "5wT6hEk7h1OrespCYq34YPAwqdx2",
-   "name": "YANNY"
+   "name": "YANNY",
+   "uid": "5wT6hEk7h1OrespCYq34YPAwqdx2"
   },
   {
-   "uid": "Mn9LujdHh5bjvKudClmogpmmS2x1",
-   "name": "BRIAN"
+   "name": "BRIAN",
+   "uid": "Mn9LujdHh5bjvKudClmogpmmS2x1"
   },
   {
-   "uid": "7YTHrz9p6XXO8n12VKwkFAxBzWX2",
-   "name": "GABE"
+   "name": "GABE",
+   "uid": "7YTHrz9p6XXO8n12VKwkFAxBzWX2"
   },
   {
-   "uid": "IoOtFJFZu9fmYTuF3869Z2ez3Kx1",
-   "name": "GORD"
+   "name": "GORD",
+   "uid": "IoOtFJFZu9fmYTuF3869Z2ez3Kx1"
   },
   {
-   "uid": "sfiXryFW6XZOU9Ea2vAm58pqGrG2",
-   "name": "ERIC"
+   "name": "ERIC",
+   "uid": "sfiXryFW6XZOU9Ea2vAm58pqGrG2"
   },
   {
-   "uid": "KsOnlPTkSagnb6YG3XoxWQ6xTUr1",
-   "name": "EVAN"
+   "name": "EVAN",
+   "uid": "KsOnlPTkSagnb6YG3XoxWQ6xTUr1"
   },
   {
-   "uid": "P4bQinn0dQR6pnBt7P69hSO2i0x1",
-   "name": "DAVIDHAYES"
+   "name": "DAVIDHAYES",
+   "uid": "P4bQinn0dQR6pnBt7P69hSO2i0x1"
   }
- ],
- "timeFinished": {
-  "_seconds": 1601673173,
-  "_nanoseconds": 754000000
- },
- "timeCreated": {
-  "_seconds": 1601671379,
-  "_nanoseconds": 653000000
- }
+ ]
 }

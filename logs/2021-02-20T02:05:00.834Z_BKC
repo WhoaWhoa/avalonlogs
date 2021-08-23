@@ -1,65 +1,44 @@
 {
- "players": [
-  {
-   "name": "ANDY",
-   "uid": "STX8ZzhWG9NBre9apdrwRv9y1Yh2"
-  },
-  {
-   "uid": "Jgktxdu2VlX1aPvCkrAYOgWScdK2",
-   "name": "KYLE"
-  },
-  {
-   "name": "ASHLEY",
-   "uid": "XXJeVenTI6dCTXfNZbsAwzDxqKJ3"
-  },
-  {
-   "uid": "aSMe4quMGDYrRNkvq7eB2WIdIOs2",
-   "name": "FRANK"
-  },
-  {
-   "name": "EMMETT",
-   "uid": "aU3Q8yxP8tXO1HPOQoT2l9uhU0w1"
-  },
-  {
-   "name": "EMMA",
-   "uid": "7tYHlGtE7ufulcJJ7TtsETpquYu1"
-  }
- ],
+ "timeCreated": {
+  "_seconds": 1613786700,
+  "_nanoseconds": 834000000
+ },
  "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
+  "message": "Three failed missions",
   "votes": [
    {
-    "ANDY": true,
-    "FRANK": true
+    "FRANK": true,
+    "ANDY": true
    },
    {
     "ASHLEY": false,
-    "KYLE": true,
-    "ANDY": true
+    "ANDY": true,
+    "KYLE": true
    },
    {
     "EMMETT": true,
-    "FRANK": true,
     "KYLE": false,
+    "FRANK": true,
     "ANDY": true
    },
    {
-    "FRANK": true,
+    "EMMA": true,
     "KYLE": false,
-    "EMMA": true
+    "FRANK": true
    }
   ],
+  "assassinated": null,
+  "state": "EVIL_WIN",
   "roles": [
    {
-    "role": "MERLIN",
     "name": "FRANK",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
-    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "EMMA"
+    "name": "EMMA",
+    "assassin": false
    },
    {
     "name": "EMMETT",
@@ -67,9 +46,9 @@
     "assassin": false
    },
    {
-    "name": "KYLE",
     "assassin": true,
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "name": "KYLE"
    },
    {
     "name": "ASHLEY",
@@ -77,12 +56,11 @@
     "role": "MORGANA"
    },
    {
-    "assassin": false,
     "name": "ANDY",
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "assassin": false
    }
-  ],
-  "message": "Three failed missions"
+  ]
  },
  "timeFinished": {
   "_seconds": 1613787294,
@@ -90,33 +68,41 @@
  },
  "missions": [
   {
-   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "ANDY",
+    "FRANK"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "ANDY",
      "team": [
       "ANDY",
       "FRANK"
      ],
+     "state": "APPROVED",
      "votes": [
       "KYLE",
       "EMMA",
       "ANDY",
       "FRANK",
       "ASHLEY"
-     ]
+     ],
+     "proposer": "ANDY"
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "ANDY",
-    "FRANK"
-   ],
-   "teamSize": 2
+   "numFails": 0
   },
   {
+   "teamSize": 3,
+   "team": [
+    "KYLE",
+    "ASHLEY",
+    "ANDY"
+   ],
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "state": "APPROVED",
@@ -134,67 +120,64 @@
      ]
     }
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "team": [
-    "KYLE",
-    "ASHLEY",
-    "ANDY"
-   ],
-   "numFails": 1,
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "votes": [
-      "ASHLEY",
-      "EMMA"
-     ],
-     "team": [
-      "KYLE",
-      "FRANK",
-      "EMMETT",
-      "EMMA"
-     ],
-     "proposer": "ASHLEY"
-    },
-    {
-     "state": "APPROVED",
-     "votes": [
-      "ASHLEY",
-      "EMMETT",
-      "FRANK",
-      "KYLE",
-      "ANDY",
-      "EMMA"
-     ],
-     "team": [
-      "ANDY",
-      "FRANK",
-      "EMMETT",
-      "KYLE"
-     ],
-     "proposer": "FRANK"
-    }
-   ],
-   "failsRequired": 1,
-   "teamSize": 4,
    "team": [
     "ANDY",
     "FRANK",
     "EMMETT",
     "KYLE"
    ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 4,
    "state": "FAIL",
-   "numFails": 1
-  },
-  {
    "proposals": [
     {
+     "votes": [
+      "ASHLEY",
+      "EMMA"
+     ],
+     "team": [
+      "KYLE",
+      "FRANK",
+      "EMMETT",
+      "EMMA"
+     ],
+     "proposer": "ASHLEY",
+     "state": "REJECTED"
+    },
+    {
      "state": "APPROVED",
-     "proposer": "EMMETT",
+     "proposer": "FRANK",
+     "team": [
+      "ANDY",
+      "FRANK",
+      "EMMETT",
+      "KYLE"
+     ],
+     "votes": [
+      "ASHLEY",
+      "EMMETT",
+      "FRANK",
+      "KYLE",
+      "ANDY",
+      "EMMA"
+     ]
+    }
+   ]
+  },
+  {
+   "numFails": 1,
+   "proposals": [
+    {
+     "team": [
+      "FRANK",
+      "EMMA",
+      "KYLE"
+     ],
+     "state": "APPROVED",
      "votes": [
       "ANDY",
       "FRANK",
@@ -203,36 +186,53 @@
       "ASHLEY",
       "EMMA"
      ],
-     "team": [
-      "FRANK",
-      "EMMA",
-      "KYLE"
-     ]
+     "proposer": "EMMETT"
     }
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1,
    "team": [
     "FRANK",
     "EMMA",
     "KYLE"
    ],
-   "teamSize": 3
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
-   "proposals": [],
-   "team": [],
    "failsRequired": 1,
+   "teamSize": 4,
    "state": "PENDING",
-   "teamSize": 4
+   "team": [],
+   "proposals": []
   }
  ],
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1613786700,
-  "_nanoseconds": 834000000
- }
+ "players": [
+  {
+   "uid": "STX8ZzhWG9NBre9apdrwRv9y1Yh2",
+   "name": "ANDY"
+  },
+  {
+   "name": "KYLE",
+   "uid": "Jgktxdu2VlX1aPvCkrAYOgWScdK2"
+  },
+  {
+   "name": "ASHLEY",
+   "uid": "XXJeVenTI6dCTXfNZbsAwzDxqKJ3"
+  },
+  {
+   "uid": "aSMe4quMGDYrRNkvq7eB2WIdIOs2",
+   "name": "FRANK"
+  },
+  {
+   "name": "EMMETT",
+   "uid": "aU3Q8yxP8tXO1HPOQoT2l9uhU0w1"
+  },
+  {
+   "uid": "7tYHlGtE7ufulcJJ7TtsETpquYu1",
+   "name": "EMMA"
+  }
+ ]
 }

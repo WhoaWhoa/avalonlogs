@@ -1,115 +1,16 @@
 {
- "players": [
-  {
-   "uid": "bwl4leXOtZVLQPYpggi47QuLXae2",
-   "name": "SIV"
-  },
-  {
-   "uid": "Rzsh3K6tBGVLUCYlaRxtRg3VbQc2",
-   "name": "SARAVANA"
-  },
-  {
-   "name": "KAD",
-   "uid": "DbBIg2XWIsMtAnr7sXHH0mIll5L2"
-  },
-  {
-   "name": "SOLAI",
-   "uid": "aVHL9ckXvSSyHnqR5JmQ8ZTNLkU2"
-  },
-  {
-   "name": "KART",
-   "uid": "r2UNR3i017Nrug4nXYcG0na30N83"
-  },
-  {
-   "name": "PUJA",
-   "uid": "0qKpCfzQWtQcmRbqTs60ARAZODQ2"
-  },
-  {
-   "uid": "zsXpfGGoUWev0olIXABjws4KTqv2",
-   "name": "UMA"
-  }
- ],
  "timeFinished": {
   "_seconds": 1586571733,
   "_nanoseconds": 954111000
  },
- "outcome": {
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
-  "assassinated": "SOLAI",
-  "votes": [
-   {
-    "KART": true,
-    "KAD": true
-   },
-   {
-    "KART": true,
-    "KAD": false,
-    "SIV": true
-   },
-   {
-    "KART": true,
-    "SARAVANA": true,
-    "SIV": true
-   },
-   {
-    "SARAVANA": true,
-    "KAD": false,
-    "SOLAI": true,
-    "SIV": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "KART",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "PUJA"
-   },
-   {
-    "name": "SARAVANA",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "SOLAI",
-    "role": "MERLIN"
-   },
-   {
-    "name": "SIV",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "UMA",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "KAD"
-   }
-  ]
- },
- "timeCreated": {
-  "_seconds": 1586571078,
-  "_nanoseconds": 707000000
- },
  "missions": [
   {
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "KAD",
     "KART"
    ],
-   "numFails": 0,
-   "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
      "proposer": "KAD",
@@ -128,14 +29,26 @@
      ]
     }
    ],
-   "failsRequired": 1
+   "teamSize": 2,
+   "state": "SUCCESS"
   },
   {
-   "numFails": 1,
+   "failsRequired": 1,
+   "team": [
+    "KAD",
+    "KART",
+    "SIV"
+   ],
    "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
      "proposer": "SOLAI",
+     "team": [
+      "KAD",
+      "KART",
+      "SIV"
+     ],
      "state": "APPROVED",
      "votes": [
       "SOLAI",
@@ -144,21 +57,10 @@
       "KAD",
       "KART",
       "SARAVANA"
-     ],
-     "team": [
-      "KAD",
-      "KART",
-      "SIV"
      ]
     }
    ],
-   "team": [
-    "KAD",
-    "KART",
-    "SIV"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1
+   "numFails": 1
   },
   {
    "team": [
@@ -166,11 +68,12 @@
     "SARAVANA",
     "SIV"
    ],
+   "teamSize": 3,
    "state": "SUCCESS",
+   "failsRequired": 1,
    "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "PUJA",
       "SARAVANA",
@@ -180,20 +83,20 @@
       "KAD",
       "KART"
      ],
+     "proposer": "KART",
+     "state": "APPROVED",
      "team": [
       "KART",
       "SARAVANA",
       "SIV"
-     ],
-     "proposer": "KART"
+     ]
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3
+   ]
   },
   {
    "teamSize": 4,
-   "failsRequired": 2,
+   "state": "SUCCESS",
+   "numFails": 1,
    "proposals": [
     {
      "votes": [
@@ -215,21 +118,118 @@
      "state": "APPROVED"
     }
    ],
-   "numFails": 1,
-   "state": "SUCCESS",
    "team": [
     "SIV",
     "SARAVANA",
     "KAD",
     "SOLAI"
-   ]
+   ],
+   "failsRequired": 2
   },
   {
+   "teamSize": 4,
    "state": "PENDING",
    "failsRequired": 1,
-   "proposals": [],
-   "teamSize": 4,
-   "team": []
+   "team": [],
+   "proposals": []
+  }
+ ],
+ "outcome": {
+  "assassinated": "SOLAI",
+  "votes": [
+   {
+    "KART": true,
+    "KAD": true
+   },
+   {
+    "KAD": false,
+    "SIV": true,
+    "KART": true
+   },
+   {
+    "SARAVANA": true,
+    "KART": true,
+    "SIV": true
+   },
+   {
+    "SARAVANA": true,
+    "SOLAI": true,
+    "KAD": false,
+    "SIV": true
+   }
+  ],
+  "roles": [
+   {
+    "name": "KART",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "PUJA",
+    "assassin": false
+   },
+   {
+    "name": "SARAVANA",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "SOLAI"
+   },
+   {
+    "assassin": false,
+    "name": "SIV",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "UMA",
+    "role": "EVIL MINION",
+    "assassin": true
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "KAD",
+    "assassin": false
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated"
+ },
+ "timeCreated": {
+  "_seconds": 1586571078,
+  "_nanoseconds": 707000000
+ },
+ "players": [
+  {
+   "name": "SIV",
+   "uid": "bwl4leXOtZVLQPYpggi47QuLXae2"
+  },
+  {
+   "name": "SARAVANA",
+   "uid": "Rzsh3K6tBGVLUCYlaRxtRg3VbQc2"
+  },
+  {
+   "name": "KAD",
+   "uid": "DbBIg2XWIsMtAnr7sXHH0mIll5L2"
+  },
+  {
+   "name": "SOLAI",
+   "uid": "aVHL9ckXvSSyHnqR5JmQ8ZTNLkU2"
+  },
+  {
+   "name": "KART",
+   "uid": "r2UNR3i017Nrug4nXYcG0na30N83"
+  },
+  {
+   "name": "PUJA",
+   "uid": "0qKpCfzQWtQcmRbqTs60ARAZODQ2"
+  },
+  {
+   "name": "UMA",
+   "uid": "zsXpfGGoUWev0olIXABjws4KTqv2"
   }
  ]
 }

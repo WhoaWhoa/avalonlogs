@@ -1,49 +1,47 @@
 {
- "players": [
-  {
-   "name": "AIDS",
-   "uid": "yy6Y5z5mAecNKJPtjPZiS83d7oC3"
-  },
-  {
-   "uid": "um0sC7K3YBRkKpyYBaslGpnTOlD3",
-   "name": "PAT"
-  },
-  {
-   "name": "YELCONFY",
-   "uid": "3ludguR9Ypffu1N5L5N4SAoljBV2"
-  },
-  {
-   "uid": "shA3aDvxHxY38AIOdXIRUt5LC642",
-   "name": "PASTA"
-  },
-  {
-   "name": "COLLINS",
-   "uid": "U277ftPZANdTa82qKCJliXqpTuv1"
-  }
- ],
  "outcome": {
+  "state": "EVIL_WIN",
   "assassinated": "PASTA",
-  "message": "Merlin assassinated",
-  "roles": [
+  "votes": [
    {
-    "name": "YELCONFY",
-    "assassin": false,
-    "role": "EVIL MINION"
+    "PASTA": true,
+    "COLLINS": true
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "COLLINS": true,
+    "YELCONFY": false,
+    "PASTA": true
+   },
+   {
+    "AIDS": true,
+    "PAT": true
+   },
+   {
+    "PAT": true,
+    "AIDS": true,
+    "PASTA": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "YELCONFY"
+   },
+   {
     "name": "PAT",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
    },
    {
     "role": "MERLIN",
-    "assassin": false,
-    "name": "PASTA"
+    "name": "PASTA",
+    "assassin": false
    },
    {
     "name": "COLLINS",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
     "assassin": false,
@@ -51,27 +49,7 @@
     "name": "AIDS"
    }
   ],
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "PASTA": true,
-    "COLLINS": true
-   },
-   {
-    "PASTA": true,
-    "COLLINS": true,
-    "YELCONFY": false
-   },
-   {
-    "AIDS": true,
-    "PAT": true
-   },
-   {
-    "PASTA": true,
-    "PAT": true,
-    "AIDS": true
-   }
-  ]
+  "message": "Merlin assassinated"
  },
  "timeCreated": {
   "_seconds": 1585485650,
@@ -83,9 +61,14 @@
  },
  "missions": [
   {
+   "numFails": 0,
    "state": "SUCCESS",
-   "failsRequired": 1,
+   "team": [
+    "COLLINS",
+    "PASTA"
+   ],
    "teamSize": 2,
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -99,74 +82,70 @@
       "COLLINS",
       "PASTA"
      ],
-     "state": "APPROVED",
-     "proposer": "PASTA"
+     "proposer": "PASTA",
+     "state": "APPROVED"
     }
-   ],
-   "team": [
-    "COLLINS",
-    "PASTA"
-   ],
-   "numFails": 0
+   ]
   },
   {
-   "proposals": [
-    {
-     "votes": [
-      "YELCONFY",
-      "PASTA",
-      "COLLINS",
-      "AIDS"
-     ],
-     "state": "APPROVED",
-     "proposer": "COLLINS",
-     "team": [
-      "COLLINS",
-      "PASTA",
-      "YELCONFY"
-     ]
-    }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL",
    "teamSize": 3,
    "team": [
     "COLLINS",
     "PASTA",
     "YELCONFY"
    ],
-   "numFails": 1
-  },
-  {
-   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "COLLINS",
+     "votes": [
+      "YELCONFY",
+      "PASTA",
+      "COLLINS",
+      "AIDS"
+     ],
+     "team": [
+      "COLLINS",
+      "PASTA",
+      "YELCONFY"
+     ],
+     "state": "APPROVED"
+    }
+   ],
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1
+  },
+  {
+   "failsRequired": 1,
+   "numFails": 0,
+   "proposals": [
+    {
+     "state": "APPROVED",
      "votes": [
       "PASTA",
       "COLLINS",
       "AIDS",
       "PAT"
      ],
+     "proposer": "AIDS",
      "team": [
       "PAT",
       "AIDS"
-     ],
-     "state": "APPROVED",
-     "proposer": "AIDS"
+     ]
     }
    ],
-   "numFails": 0,
-   "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 2,
    "team": [
     "PAT",
     "AIDS"
-   ],
-   "teamSize": 2
+   ]
   },
   {
-   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "PAT",
      "votes": [
       "PASTA",
       "COLLINS",
@@ -174,30 +153,51 @@
       "YELCONFY",
       "PAT"
      ],
+     "state": "APPROVED",
      "team": [
       "AIDS",
       "PAT",
       "PASTA"
-     ],
-     "proposer": "PAT",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
    "teamSize": 3,
    "team": [
     "AIDS",
     "PAT",
     "PASTA"
-   ]
+   ],
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
-   "proposals": [],
-   "team": [],
    "state": "PENDING",
    "failsRequired": 1,
+   "proposals": [],
+   "team": [],
    "teamSize": 3
+  }
+ ],
+ "players": [
+  {
+   "uid": "yy6Y5z5mAecNKJPtjPZiS83d7oC3",
+   "name": "AIDS"
+  },
+  {
+   "name": "PAT",
+   "uid": "um0sC7K3YBRkKpyYBaslGpnTOlD3"
+  },
+  {
+   "name": "YELCONFY",
+   "uid": "3ludguR9Ypffu1N5L5N4SAoljBV2"
+  },
+  {
+   "name": "PASTA",
+   "uid": "shA3aDvxHxY38AIOdXIRUt5LC642"
+  },
+  {
+   "name": "COLLINS",
+   "uid": "U277ftPZANdTa82qKCJliXqpTuv1"
   }
  ]
 }

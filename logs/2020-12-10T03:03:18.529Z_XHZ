@@ -1,22 +1,22 @@
 {
  "outcome": {
+  "message": "Three successful missions",
   "assassinated": "ISAC",
-  "state": "GOOD_WIN",
   "votes": [
    {
     "COOPER": true,
     "GRADY": true
    },
    {
-    "COOPER": true,
     "TISON": true,
-    "ISAC": true
+    "ISAC": true,
+    "COOPER": true
    },
    {
-    "ISAC": true,
-    "COOPER": true,
+    "NATHANIEL": false,
     "TISON": true,
-    "NATHANIEL": false
+    "ISAC": true,
+    "COOPER": true
    },
    {
     "TISON": true,
@@ -24,12 +24,11 @@
     "GRADY": true
    }
   ],
-  "message": "Three successful missions",
   "roles": [
    {
-    "name": "NATE",
     "role": "MORGANA",
-    "assassin": false
+    "assassin": false,
+    "name": "NATE"
    },
    {
     "assassin": false,
@@ -37,14 +36,14 @@
     "name": "GRADY"
    },
    {
-    "name": "NATHANIEL",
+    "assassin": true,
     "role": "MORDRED",
-    "assassin": true
+    "name": "NATHANIEL"
    },
    {
+    "assassin": false,
     "role": "MERLIN",
-    "name": "COOPER",
-    "assassin": false
+    "name": "COOPER"
    },
    {
     "name": "ISAC",
@@ -52,11 +51,12 @@
     "assassin": false
    },
    {
-    "name": "TISON",
     "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "name": "TISON"
    }
-  ]
+  ],
+  "state": "GOOD_WIN"
  },
  "players": [
   {
@@ -76,8 +76,8 @@
    "uid": "LSZi414G65axtsbLxOlyWbq8NKG2"
   },
   {
-   "uid": "maHSJvZscRQSH1IWIT3FMg8fk6W2",
-   "name": "NATHANIEL"
+   "name": "NATHANIEL",
+   "uid": "maHSJvZscRQSH1IWIT3FMg8fk6W2"
   },
   {
    "name": "ISAC",
@@ -86,56 +86,56 @@
  ],
  "missions": [
   {
+   "team": [
+    "COOPER",
+    "GRADY"
+   ],
    "teamSize": 2,
    "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "votes": [
-      "NATHANIEL",
-      "ISAC",
-      "TISON"
-     ],
      "proposer": "ISAC",
-     "team": [
+     "state": "REJECTED",
+     "votes": [
+      "NATHANIEL",
       "ISAC",
       "TISON"
      ],
-     "state": "REJECTED"
-    },
-    {
-     "proposer": "COOPER",
-     "votes": [
-      "COOPER",
-      "NATHANIEL",
-      "NATE"
-     ],
-     "state": "REJECTED",
      "team": [
-      "COOPER",
-      "NATE"
+      "ISAC",
+      "TISON"
      ]
     },
     {
-     "state": "APPROVED",
+     "state": "REJECTED",
+     "votes": [
+      "COOPER",
+      "NATHANIEL",
+      "NATE"
+     ],
+     "team": [
+      "COOPER",
+      "NATE"
+     ],
+     "proposer": "COOPER"
+    },
+    {
      "votes": [
       "COOPER",
       "GRADY",
       "NATHANIEL",
       "NATE"
      ],
+     "proposer": "GRADY",
+     "state": "APPROVED",
      "team": [
       "COOPER",
       "GRADY"
-     ],
-     "proposer": "GRADY"
+     ]
     }
-   ],
-   "team": [
-    "COOPER",
-    "GRADY"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0
+   ]
   },
   {
    "team": [
@@ -143,16 +143,19 @@
     "ISAC",
     "COOPER"
    ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "TISON",
      "votes": [
       "TISON",
       "NATHANIEL",
       "COOPER",
       "ISAC"
      ],
-     "proposer": "TISON",
      "team": [
       "TISON",
       "ISAC",
@@ -160,45 +163,44 @@
      ]
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 3,
-   "failsRequired": 1
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
-   "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "NATHANIEL",
     "TISON",
     "COOPER",
     "ISAC"
    ],
+   "teamSize": 4,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "proposer": "NATE",
-     "team": [
-      "COOPER",
-      "TISON",
-      "NATE",
-      "ISAC"
-     ],
      "state": "REJECTED",
      "votes": [
       "NATHANIEL",
       "NATE",
       "COOPER"
+     ],
+     "team": [
+      "COOPER",
+      "TISON",
+      "NATE",
+      "ISAC"
      ]
     },
     {
-     "proposer": "NATHANIEL",
-     "state": "APPROVED",
      "votes": [
       "ISAC",
       "NATHANIEL",
       "COOPER",
       "TISON"
      ],
+     "state": "APPROVED",
+     "proposer": "NATHANIEL",
      "team": [
       "NATHANIEL",
       "TISON",
@@ -206,57 +208,58 @@
       "ISAC"
      ]
     }
-   ],
-   "teamSize": 4,
-   "failsRequired": 1
+   ]
   },
   {
-   "failsRequired": 1,
    "teamSize": 3,
-   "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "ISAC",
+     "state": "REJECTED",
      "team": [
       "TISON",
       "ISAC",
       "GRADY"
      ],
-     "proposer": "ISAC",
-     "state": "REJECTED",
      "votes": [
       "ISAC",
       "COOPER"
      ]
     },
     {
-     "team": [
-      "COOPER",
-      "GRADY",
-      "TISON"
-     ],
      "proposer": "COOPER",
      "state": "REJECTED",
      "votes": [
       "COOPER",
       "TISON",
       "GRADY"
+     ],
+     "team": [
+      "COOPER",
+      "GRADY",
+      "TISON"
      ]
     },
     {
      "state": "REJECTED",
-     "votes": [
-      "GRADY",
-      "ISAC",
-      "COOPER"
-     ],
      "team": [
       "GRADY",
       "COOPER",
       "ISAC"
      ],
+     "votes": [
+      "GRADY",
+      "ISAC",
+      "COOPER"
+     ],
      "proposer": "GRADY"
     },
     {
+     "team": [
+      "TISON",
+      "COOPER",
+      "GRADY"
+     ],
      "proposer": "TISON",
      "state": "APPROVED",
      "votes": [
@@ -264,29 +267,29 @@
       "GRADY",
       "ISAC",
       "COOPER"
-     ],
-     "team": [
-      "TISON",
-      "COOPER",
-      "GRADY"
      ]
     }
    ],
-   "numFails": 0,
    "team": [
     "TISON",
     "COOPER",
     "GRADY"
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
-   "state": "PENDING",
    "proposals": [],
-   "team": [],
    "teamSize": 4,
-   "failsRequired": 1
+   "state": "PENDING",
+   "failsRequired": 1,
+   "team": []
   }
  ],
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1607571287,
   "_nanoseconds": 584000000
@@ -294,8 +297,5 @@
  "timeCreated": {
   "_seconds": 1607569398,
   "_nanoseconds": 529000000
- },
- "options": {
-  "inGameLog": false
  }
 }

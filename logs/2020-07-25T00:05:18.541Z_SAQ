@@ -1,16 +1,27 @@
 {
+ "timeFinished": {
+  "_seconds": 1595636286,
+  "_nanoseconds": 420000000
+ },
+ "timeCreated": {
+  "_seconds": 1595635518,
+  "_nanoseconds": 541000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
-   "name": "FRANCOIS",
-   "uid": "kKC8GZZ1YnPm7zAjueNuU01toax2"
+   "uid": "kKC8GZZ1YnPm7zAjueNuU01toax2",
+   "name": "FRANCOIS"
   },
   {
    "uid": "RFRPsOFYaeXexViSnJHfHfICb092",
    "name": "JESSICA"
   },
   {
-   "uid": "h38Gd0ACYddHCD2BBzOngni9Hj23",
-   "name": "KATE"
+   "name": "KATE",
+   "uid": "h38Gd0ACYddHCD2BBzOngni9Hj23"
   },
   {
    "name": "JOELLE",
@@ -21,30 +32,25 @@
    "uid": "QHWjhzXADiZBwp9pNlZnmrlLIY73"
   },
   {
-   "uid": "vMh9CfiEKUS6khUdh8kUSo5SL3c2",
-   "name": "ARIANE"
+   "name": "ARIANE",
+   "uid": "vMh9CfiEKUS6khUdh8kUSo5SL3c2"
   },
   {
    "uid": "hTv4X162SmUYwylZvab4Ddz2NMX2",
    "name": "CONOR"
   }
  ],
- "timeCreated": {
-  "_seconds": 1595635518,
-  "_nanoseconds": 541000000
- },
  "outcome": {
-  "state": "EVIL_WIN",
   "message": "Three failed missions",
   "votes": [
    {
-    "JOELLE": true,
-    "ARIANE": true
+    "ARIANE": true,
+    "JOELLE": true
    },
    {
-    "JOELLE": true,
     "JESSICA": false,
-    "KATE": true
+    "KATE": true,
+    "JOELLE": true
    },
    {
     "ARIANE": false,
@@ -52,58 +58,68 @@
     "KATE": true
    },
    {
+    "FRANCOIS": false,
+    "ARIANE": false,
     "CONOR": true,
-    "AMALIA": true,
-    "ARIANE": false,
-    "FRANCOIS": false
+    "AMALIA": true
    }
   ],
+  "state": "EVIL_WIN",
   "roles": [
    {
-    "assassin": false,
     "name": "ARIANE",
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "assassin": false
    },
    {
     "name": "FRANCOIS",
-    "role": "MORDRED",
-    "assassin": false
+    "assassin": false,
+    "role": "MORDRED"
    },
    {
     "name": "AMALIA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "CONOR",
     "assassin": false,
+    "name": "CONOR",
     "role": "PERCIVAL"
    },
    {
-    "assassin": false,
     "name": "KATE",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
     "name": "JOELLE",
-    "role": "MERLIN",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
-    "name": "JESSICA",
     "role": "EVIL MINION",
-    "assassin": true
+    "assassin": true,
+    "name": "JESSICA"
    }
   ],
   "assassinated": null
  },
  "missions": [
   {
-   "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "JOELLE",
+    "ARIANE"
+   ],
+   "numFails": 0,
    "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "JOELLE",
+      "ARIANE"
+     ],
      "votes": [
       "CONOR",
       "JESSICA",
@@ -111,46 +127,34 @@
       "FRANCOIS"
      ],
      "proposer": "CONOR",
-     "team": [
-      "JOELLE",
-      "ARIANE"
-     ]
+     "state": "APPROVED"
     }
-   ],
-   "numFails": 0,
-   "teamSize": 2,
-   "team": [
-    "JOELLE",
-    "ARIANE"
    ]
   },
   {
-   "teamSize": 3,
-   "state": "FAIL",
-   "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "JOELLE",
-      "FRANCOIS",
-      "ARIANE"
-     ],
      "votes": [
       "KATE",
       "FRANCOIS"
      ],
+     "proposer": "FRANCOIS",
      "state": "REJECTED",
-     "proposer": "FRANCOIS"
+     "team": [
+      "JOELLE",
+      "FRANCOIS",
+      "ARIANE"
+     ]
     },
     {
      "state": "APPROVED",
+     "proposer": "JESSICA",
      "votes": [
       "CONOR",
       "KATE",
       "JESSICA",
       "ARIANE"
      ],
-     "proposer": "JESSICA",
      "team": [
       "KATE",
       "JESSICA",
@@ -158,32 +162,26 @@
      ]
     }
    ],
-   "numFails": 1,
    "team": [
     "KATE",
     "JESSICA",
     "JOELLE"
-   ]
+   ],
+   "numFails": 1,
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1
   },
   {
-   "teamSize": 3,
-   "numFails": 1,
-   "state": "FAIL",
-   "team": [
-    "AMALIA",
-    "KATE",
-    "ARIANE"
-   ],
-   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "KATE",
      "team": [
       "AMALIA",
       "KATE",
       "ARIANE"
      ],
-     "proposer": "KATE",
-     "state": "APPROVED",
      "votes": [
       "AMALIA",
       "CONOR",
@@ -193,64 +191,66 @@
       "ARIANE"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "AMALIA",
+    "KATE",
+    "ARIANE"
+   ],
+   "state": "FAIL",
+   "numFails": 1
   },
   {
-   "state": "FAIL",
    "team": [
     "AMALIA",
     "ARIANE",
     "CONOR",
     "FRANCOIS"
    ],
+   "state": "FAIL",
+   "numFails": 2,
    "teamSize": 4,
+   "failsRequired": 2,
    "proposals": [
     {
-     "votes": [
-      "JOELLE"
-     ],
-     "state": "REJECTED",
-     "proposer": "JOELLE",
      "team": [
       "FRANCOIS",
       "AMALIA",
       "JOELLE",
       "CONOR"
-     ]
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "JOELLE"
+     ],
+     "proposer": "JOELLE"
     },
     {
-     "proposer": "AMALIA",
+     "team": [
+      "AMALIA",
+      "ARIANE",
+      "CONOR",
+      "FRANCOIS"
+     ],
+     "state": "APPROVED",
      "votes": [
       "ARIANE",
       "AMALIA",
       "CONOR",
       "JESSICA"
      ],
-     "state": "APPROVED",
-     "team": [
-      "AMALIA",
-      "ARIANE",
-      "CONOR",
-      "FRANCOIS"
-     ]
+     "proposer": "AMALIA"
     }
-   ],
-   "numFails": 2,
-   "failsRequired": 2
+   ]
   },
   {
    "state": "PENDING",
-   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [],
    "team": [],
-   "failsRequired": 1
+   "teamSize": 4
   }
- ],
- "timeFinished": {
-  "_seconds": 1595636286,
-  "_nanoseconds": 420000000
- },
- "options": {
-  "inGameLog": false
- }
+ ]
 }

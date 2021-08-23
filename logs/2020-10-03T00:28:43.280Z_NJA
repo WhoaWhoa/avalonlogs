@@ -1,40 +1,102 @@
 {
- "timeFinished": {
-  "_seconds": 1601686613,
-  "_nanoseconds": 582000000
- },
  "players": [
   {
-   "uid": "LZmGnmKn30hbnSSR9fjqUCPHX4k2",
-   "name": "SARAH"
+   "name": "SARAH",
+   "uid": "LZmGnmKn30hbnSSR9fjqUCPHX4k2"
   },
   {
-   "name": "SOPHEY",
-   "uid": "OewWMpsmUNftybNbKze8SBZ37Q23"
+   "uid": "OewWMpsmUNftybNbKze8SBZ37Q23",
+   "name": "SOPHEY"
   },
   {
-   "uid": "SL1SWGfGKgbFR5j9EY8ACpZJ0pK2",
-   "name": "ALISHA"
+   "name": "ALISHA",
+   "uid": "SL1SWGfGKgbFR5j9EY8ACpZJ0pK2"
   },
   {
    "name": "JESH",
    "uid": "oL1NNpaF4rX3yqz9sny9YKZIBS12"
   },
   {
-   "name": "ANGELL",
-   "uid": "WRDiYfqIoLZLeBm3wOolbmfpFQj1"
+   "uid": "WRDiYfqIoLZLeBm3wOolbmfpFQj1",
+   "name": "ANGELL"
   }
  ],
+ "outcome": {
+  "roles": [
+   {
+    "assassin": false,
+    "name": "JESH",
+    "role": "MERLIN"
+   },
+   {
+    "name": "SOPHEY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "SARAH",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "ANGELL"
+   },
+   {
+    "name": "ALISHA",
+    "role": "EVIL MINION",
+    "assassin": true
+   }
+  ],
+  "votes": [
+   {
+    "ALISHA": true,
+    "SOPHEY": true
+   },
+   {
+    "JESH": true,
+    "ALISHA": false,
+    "SOPHEY": true
+   },
+   {
+    "SOPHEY": true,
+    "ANGELL": false
+   },
+   {
+    "SARAH": true,
+    "SOPHEY": true,
+    "JESH": true
+   },
+   {
+    "JESH": true,
+    "SOPHEY": true,
+    "SARAH": true
+   }
+  ],
+  "assassinated": "JESH",
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated"
+ },
+ "timeFinished": {
+  "_seconds": 1601686613,
+  "_nanoseconds": 582000000
+ },
  "missions": [
   {
    "team": [
     "SOPHEY",
     "ALISHA"
    ],
+   "teamSize": 2,
    "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "SOPHEY",
+      "ALISHA"
+     ],
      "votes": [
       "ANGELL",
       "JESH",
@@ -42,21 +104,18 @@
       "SOPHEY",
       "SARAH"
      ],
-     "proposer": "SOPHEY",
-     "team": [
-      "SOPHEY",
-      "ALISHA"
-     ]
+     "proposer": "SOPHEY"
     }
    ],
-   "state": "SUCCESS",
    "failsRequired": 1,
-   "teamSize": 2
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "ALISHA",
      "team": [
       "ALISHA",
       "JESH",
@@ -69,38 +128,36 @@
       "JESH",
       "ANGELL"
      ],
-     "proposer": "ALISHA",
      "state": "APPROVED"
     }
    ],
+   "numFails": 1,
+   "teamSize": 3,
    "team": [
     "ALISHA",
     "JESH",
     "SOPHEY"
-   ],
-   "numFails": 1,
-   "state": "FAIL",
-   "failsRequired": 1
+   ]
   },
   {
-   "state": "FAIL",
    "proposals": [
     {
-     "votes": [
-      "JESH"
-     ],
-     "state": "REJECTED",
-     "proposer": "JESH",
      "team": [
       "JESH",
       "ANGELL"
-     ]
+     ],
+     "state": "REJECTED",
+     "votes": [
+      "JESH"
+     ],
+     "proposer": "JESH"
     },
     {
      "team": [
       "ANGELL",
       "SOPHEY"
      ],
+     "proposer": "ANGELL",
      "votes": [
       "JESH",
       "ALISHA",
@@ -108,10 +165,10 @@
       "ANGELL",
       "SOPHEY"
      ],
-     "proposer": "ANGELL",
      "state": "APPROVED"
     }
    ],
+   "state": "FAIL",
    "teamSize": 2,
    "failsRequired": 1,
    "team": [
@@ -121,13 +178,10 @@
    "numFails": 1
   },
   {
-   "numFails": 0,
-   "teamSize": 3,
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
      "proposer": "SARAH",
-     "state": "APPROVED",
      "votes": [
       "JESH",
       "SARAH",
@@ -135,6 +189,7 @@
       "SOPHEY",
       "ANGELL"
      ],
+     "state": "APPROVED",
      "team": [
       "SARAH",
       "SOPHEY",
@@ -147,10 +202,14 @@
     "SOPHEY",
     "JESH"
    ],
-   "state": "SUCCESS"
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
+   "teamSize": 3,
+   "numFails": 0,
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -159,85 +218,26 @@
       "ANGELL",
       "SARAH"
      ],
-     "proposer": "SOPHEY",
-     "state": "APPROVED",
      "team": [
       "SARAH",
       "SOPHEY",
       "JESH"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "SOPHEY"
     }
    ],
-   "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 0,
    "team": [
     "SARAH",
     "SOPHEY",
     "JESH"
-   ]
+   ],
+   "state": "SUCCESS"
   }
  ],
  "timeCreated": {
   "_seconds": 1601684923,
   "_nanoseconds": 280000000
- },
- "outcome": {
-  "roles": [
-   {
-    "name": "JESH",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "SOPHEY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "SARAH"
-   },
-   {
-    "name": "ANGELL",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "ALISHA",
-    "assassin": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "SOPHEY": true,
-    "ALISHA": true
-   },
-   {
-    "ALISHA": false,
-    "JESH": true,
-    "SOPHEY": true
-   },
-   {
-    "SOPHEY": true,
-    "ANGELL": false
-   },
-   {
-    "JESH": true,
-    "SOPHEY": true,
-    "SARAH": true
-   },
-   {
-    "JESH": true,
-    "SARAH": true,
-    "SOPHEY": true
-   }
-  ],
-  "assassinated": "JESH"
  },
  "options": {
   "inGameLog": false

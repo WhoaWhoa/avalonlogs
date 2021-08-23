@@ -1,9 +1,32 @@
 {
- "timeCreated": {
-  "_seconds": 1609457470,
-  "_nanoseconds": 450000000
- },
  "outcome": {
+  "message": "Three missions succeeded",
+  "assassinated": null,
+  "votes": [
+   {
+    "CHIMP": true,
+    "NOTGAYBEN": true
+   },
+   {
+    "NOTGAYBEN": true,
+    "CECIL": true,
+    "CHIMP": true
+   },
+   {
+    "CHIMP": true,
+    "BEN": false
+   },
+   {
+    "CHIMP": true,
+    "JHO": false,
+    "NOTGAYBEN": true
+   },
+   {
+    "CHIMP": true,
+    "CECIL": true,
+    "NOTGAYBEN": true
+   }
+  ],
   "state": "GOOD_WIN",
   "roles": [
    {
@@ -12,14 +35,14 @@
     "name": "CECIL"
    },
    {
-    "name": "JHO",
     "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "JHO"
    },
    {
     "role": "LOYAL FOLLOWER",
-    "name": "NOTGAYBEN",
-    "assassin": false
+    "assassin": false,
+    "name": "NOTGAYBEN"
    },
    {
     "name": "BEN",
@@ -27,79 +50,31 @@
     "role": "EVIL MINION"
    },
    {
+    "assassin": false,
     "name": "CHIMP",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    }
-  ],
-  "message": "Three missions succeeded",
-  "votes": [
-   {
-    "NOTGAYBEN": true,
-    "CHIMP": true
-   },
-   {
-    "CHIMP": true,
-    "CECIL": true,
-    "NOTGAYBEN": true
-   },
-   {
-    "CHIMP": true,
-    "BEN": false
-   },
-   {
-    "CHIMP": true,
-    "NOTGAYBEN": true,
-    "JHO": false
-   },
-   {
-    "NOTGAYBEN": true,
-    "CHIMP": true,
-    "CECIL": true
-   }
-  ],
-  "assassinated": null
- },
- "options": {
-  "inGameLog": false
+  ]
  },
  "timeFinished": {
   "_seconds": 1609457873,
   "_nanoseconds": 207000000
  },
- "players": [
-  {
-   "uid": "uqC1lM5D3sNg5hy33jVvpJEkD1j2",
-   "name": "JHO"
-  },
-  {
-   "uid": "Uusz0SJXVjRYV87EyDutAG5dmCy2",
-   "name": "BEN"
-  },
-  {
-   "uid": "sb00iU1QrMY2Ry4weCb9s06vdxi1",
-   "name": "CHIMP"
-  },
-  {
-   "uid": "w9FyhU7ISKgENHbxROMwrWcaADl1",
-   "name": "NOTGAYBEN"
-  },
-  {
-   "name": "CECIL",
-   "uid": "FzNNC02PUXawnwjLhJWGkPx7Lg42"
-  }
- ],
+ "timeCreated": {
+  "_seconds": 1609457470,
+  "_nanoseconds": 450000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
-   "numFails": 0,
    "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "NOTGAYBEN",
-      "CHIMP"
-     ],
      "proposer": "NOTGAYBEN",
      "votes": [
       "JHO",
@@ -107,41 +82,44 @@
       "BEN",
       "NOTGAYBEN",
       "CHIMP"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "NOTGAYBEN",
+      "CHIMP"
      ]
     }
    ],
    "team": [
     "NOTGAYBEN",
     "CHIMP"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1
+   ]
   },
   {
+   "numFails": 0,
    "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "NOTGAYBEN",
     "CHIMP",
     "CECIL"
    ],
-   "numFails": 0,
    "proposals": [
     {
+     "votes": [
+      "NOTGAYBEN",
+      "CECIL",
+      "CHIMP"
+     ],
      "team": [
       "NOTGAYBEN",
       "CHIMP",
       "CECIL"
      ],
      "proposer": "CECIL",
-     "state": "APPROVED",
-     "votes": [
-      "NOTGAYBEN",
-      "CECIL",
-      "CHIMP"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
    "teamSize": 3
   },
   {
@@ -149,37 +127,43 @@
     "CHIMP",
     "BEN"
    ],
-   "numFails": 1,
    "proposals": [
     {
+     "votes": [
+      "JHO",
+      "NOTGAYBEN",
+      "CHIMP"
+     ],
      "team": [
       "CHIMP",
       "BEN"
      ],
      "state": "APPROVED",
-     "proposer": "JHO",
-     "votes": [
-      "JHO",
-      "NOTGAYBEN",
-      "CHIMP"
-     ]
+     "proposer": "JHO"
     }
    ],
-   "teamSize": 2,
+   "state": "FAIL",
    "failsRequired": 1,
-   "state": "FAIL"
+   "numFails": 1,
+   "teamSize": 2
   },
   {
    "failsRequired": 1,
+   "team": [
+    "NOTGAYBEN",
+    "JHO",
+    "CHIMP"
+   ],
+   "numFails": 1,
    "proposals": [
     {
+     "proposer": "BEN",
      "team": [
       "NOTGAYBEN",
       "JHO",
       "CHIMP"
      ],
      "state": "APPROVED",
-     "proposer": "BEN",
      "votes": [
       "BEN",
       "NOTGAYBEN",
@@ -188,18 +172,11 @@
      ]
     }
    ],
-   "numFails": 1,
-   "teamSize": 3,
    "state": "FAIL",
-   "team": [
-    "NOTGAYBEN",
-    "JHO",
-    "CHIMP"
-   ]
+   "teamSize": 3
   },
   {
    "teamSize": 3,
-   "numFails": 0,
    "team": [
     "CHIMP",
     "NOTGAYBEN",
@@ -209,21 +186,44 @@
    "failsRequired": 1,
    "proposals": [
     {
-     "votes": [
-      "NOTGAYBEN",
-      "CHIMP",
-      "BEN",
-      "CECIL"
-     ],
+     "state": "APPROVED",
      "team": [
       "CHIMP",
       "NOTGAYBEN",
       "CECIL"
      ],
      "proposer": "CHIMP",
-     "state": "APPROVED"
+     "votes": [
+      "NOTGAYBEN",
+      "CHIMP",
+      "BEN",
+      "CECIL"
+     ]
     }
-   ]
+   ],
+   "numFails": 0
+  }
+ ],
+ "players": [
+  {
+   "name": "JHO",
+   "uid": "uqC1lM5D3sNg5hy33jVvpJEkD1j2"
+  },
+  {
+   "uid": "Uusz0SJXVjRYV87EyDutAG5dmCy2",
+   "name": "BEN"
+  },
+  {
+   "name": "CHIMP",
+   "uid": "sb00iU1QrMY2Ry4weCb9s06vdxi1"
+  },
+  {
+   "name": "NOTGAYBEN",
+   "uid": "w9FyhU7ISKgENHbxROMwrWcaADl1"
+  },
+  {
+   "uid": "FzNNC02PUXawnwjLhJWGkPx7Lg42",
+   "name": "CECIL"
   }
  ]
 }

@@ -1,16 +1,19 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "players": [
   {
    "uid": "2iLS2EXvRSZzYKSkNYpuvtRac533",
    "name": "MARY"
   },
   {
-   "uid": "orVA7lXLmkhSZIpvAn58U4EZhNJ3",
-   "name": "LEO"
+   "name": "LEO",
+   "uid": "orVA7lXLmkhSZIpvAn58U4EZhNJ3"
   },
   {
-   "uid": "KLTQFwGUZqfk9748sOHa9hX7OaE3",
-   "name": "YPX"
+   "name": "YPX",
+   "uid": "KLTQFwGUZqfk9748sOHa9hX7OaE3"
   },
   {
    "uid": "jCYDnfLe7GYFoytP4V2q2WxnNzA2",
@@ -21,69 +24,50 @@
    "name": "TANYA"
   },
   {
-   "name": "BILLY",
-   "uid": "kYKO6w7qEsPKaAvZOkBZfvyvL2z1"
+   "uid": "kYKO6w7qEsPKaAvZOkBZfvyvL2z1",
+   "name": "BILLY"
   },
   {
    "name": "FRANK",
    "uid": "zQuhjnSi06NwxjA58fquDuheAcC2"
   }
  ],
- "options": {
-  "inGameLog": false
+ "timeFinished": {
+  "_seconds": 1593830452,
+  "_nanoseconds": 373000000
  },
  "outcome": {
-  "votes": [
-   {
-    "LEO": true,
-    "MARY": true
-   },
-   {
-    "MARY": true,
-    "LEO": true,
-    "YPX": true
-   },
-   {
-    "LEO": true,
-    "YPX": false,
-    "MARY": true
-   },
-   {
-    "LEO": true,
-    "TANYA": true,
-    "MARY": true,
-    "BILLY": true
-   }
-  ],
+  "message": "Three successful missions",
+  "assassinated": "FRANK",
   "roles": [
    {
-    "name": "LEO",
     "role": "PERCIVAL",
-    "assassin": false
+    "assassin": false,
+    "name": "LEO"
    },
    {
+    "role": "MORGANA",
     "name": "YPX",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "FRANK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "TANYA",
-    "role": "EVIL MINION",
     "assassin": false
    },
    {
+    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "MARY",
-    "assassin": false
+    "name": "FRANK"
    },
    {
     "assassin": false,
+    "name": "TANYA",
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "MARY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
     "role": "MERLIN",
+    "assassin": false,
     "name": "BILLY"
    },
    {
@@ -92,22 +76,44 @@
     "name": "CYRUS"
    }
   ],
-  "assassinated": "FRANK",
   "state": "GOOD_WIN",
-  "message": "Three successful missions"
+  "votes": [
+   {
+    "MARY": true,
+    "LEO": true
+   },
+   {
+    "LEO": true,
+    "MARY": true,
+    "YPX": true
+   },
+   {
+    "MARY": true,
+    "LEO": true,
+    "YPX": false
+   },
+   {
+    "LEO": true,
+    "BILLY": true,
+    "MARY": true,
+    "TANYA": true
+   }
+  ]
  },
  "timeCreated": {
   "_seconds": 1593829716,
   "_nanoseconds": 234000000
  },
- "timeFinished": {
-  "_seconds": 1593830452,
-  "_nanoseconds": 373000000
- },
  "missions": [
   {
    "proposals": [
     {
+     "state": "APPROVED",
+     "proposer": "LEO",
+     "team": [
+      "MARY",
+      "LEO"
+     ],
      "votes": [
       "LEO",
       "YPX",
@@ -115,27 +121,21 @@
       "TANYA",
       "MARY",
       "BILLY"
-     ],
-     "proposer": "LEO",
-     "state": "APPROVED",
-     "team": [
-      "MARY",
-      "LEO"
      ]
     }
    ],
-   "failsRequired": 1,
-   "numFails": 0,
    "team": [
     "MARY",
     "LEO"
    ],
    "teamSize": 2,
+   "failsRequired": 1,
+   "numFails": 0,
    "state": "SUCCESS"
   },
   {
-   "numFails": 0,
    "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "team": [
@@ -144,7 +144,6 @@
       "YPX"
      ],
      "proposer": "YPX",
-     "state": "APPROVED",
      "votes": [
       "LEO",
       "YPX",
@@ -152,7 +151,8 @@
       "TANYA",
       "MARY",
       "BILLY"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "team": [
@@ -160,17 +160,17 @@
     "MARY",
     "YPX"
    ],
-   "teamSize": 3,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
+   "state": "FAIL",
    "team": [
     "YPX",
     "LEO",
     "MARY"
    ],
-   "state": "FAIL",
-   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
@@ -183,27 +183,19 @@
       "BILLY",
       "CYRUS"
      ],
-     "proposer": "CYRUS",
      "team": [
       "YPX",
       "LEO",
       "MARY"
-     ]
+     ],
+     "proposer": "CYRUS"
     }
    ],
-   "teamSize": 3,
-   "failsRequired": 1
+   "numFails": 1,
+   "teamSize": 3
   },
   {
    "teamSize": 4,
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "team": [
-    "MARY",
-    "LEO",
-    "TANYA",
-    "BILLY"
-   ],
    "numFails": 0,
    "proposals": [
     {
@@ -216,22 +208,30 @@
       "FRANK",
       "TANYA"
      ],
+     "proposer": "TANYA",
      "team": [
       "MARY",
       "LEO",
       "TANYA",
       "BILLY"
-     ],
-     "proposer": "TANYA"
+     ]
     }
+   ],
+   "state": "SUCCESS",
+   "failsRequired": 2,
+   "team": [
+    "MARY",
+    "LEO",
+    "TANYA",
+    "BILLY"
    ]
   },
   {
-   "state": "PENDING",
-   "team": [],
    "teamSize": 4,
    "failsRequired": 1,
-   "proposals": []
+   "proposals": [],
+   "team": [],
+   "state": "PENDING"
   }
  ]
 }

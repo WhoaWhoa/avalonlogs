@@ -1,12 +1,19 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1590725085,
+  "_nanoseconds": 230000000
+ },
  "players": [
   {
    "uid": "uSS8VIF0ROhYEYHk7vKuwXyqHGr2",
    "name": "NATHAN"
   },
   {
-   "uid": "IccTWTXxMHRU3kfuwPtkUFoYkvm1",
-   "name": "CHIRANTH"
+   "name": "CHIRANTH",
+   "uid": "IccTWTXxMHRU3kfuwPtkUFoYkvm1"
   },
   {
    "uid": "i3hDn3AronfHrOhkheysrgm8uYH2",
@@ -17,32 +24,55 @@
    "name": "DANIEL"
   },
   {
-   "uid": "gzN7X2cyX3Wsu7MSobWjRsMVBO53",
-   "name": "ESH"
+   "name": "ESH",
+   "uid": "gzN7X2cyX3Wsu7MSobWjRsMVBO53"
   },
   {
    "name": "NCK",
    "uid": "h0zZpjbFq5ZIQYJyzlQbSRFKYdA3"
   },
   {
-   "name": "LEO",
-   "uid": "CY9B8CyJxwdxj4VS49MfVYbJ9ZI2"
+   "uid": "CY9B8CyJxwdxj4VS49MfVYbJ9ZI2",
+   "name": "LEO"
   }
  ],
- "timeFinished": {
-  "_seconds": 1590725085,
-  "_nanoseconds": 230000000
- },
- "options": {
-  "inGameLog": false
- },
  "outcome": {
   "message": "Merlin assassinated",
+  "state": "EVIL_WIN",
+  "assassinated": "DANIEL",
+  "votes": [
+   {
+    "CHIRANTH": true,
+    "ESH": true
+   },
+   {
+    "DANIEL": true,
+    "NCK": true,
+    "SLEEPY": false
+   },
+   {
+    "NCK": true,
+    "SLEEPY": true,
+    "NATHAN": false
+   },
+   {
+    "LEO": true,
+    "NATHAN": true,
+    "NCK": true,
+    "DANIEL": true
+   },
+   {
+    "CHIRANTH": true,
+    "NCK": true,
+    "DANIEL": true,
+    "LEO": true
+   }
+  ],
   "roles": [
    {
     "name": "DANIEL",
-    "assassin": false,
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "assassin": false
    },
    {
     "name": "NATHAN",
@@ -55,69 +85,40 @@
     "name": "SLEEPY"
    },
    {
-    "name": "ESH",
     "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "CHIRANTH",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "EVIL MINION",
+    "name": "ESH"
    },
    {
     "role": "LOYAL FOLLOWER",
-    "name": "LEO",
-    "assassin": false
+    "assassin": false,
+    "name": "CHIRANTH"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "LEO"
    },
    {
     "name": "NCK",
     "assassin": false,
     "role": "PERCIVAL"
    }
-  ],
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "CHIRANTH": true,
-    "ESH": true
-   },
-   {
-    "DANIEL": true,
-    "SLEEPY": false,
-    "NCK": true
-   },
-   {
-    "NCK": true,
-    "SLEEPY": true,
-    "NATHAN": false
-   },
-   {
-    "DANIEL": true,
-    "NCK": true,
-    "NATHAN": true,
-    "LEO": true
-   },
-   {
-    "LEO": true,
-    "DANIEL": true,
-    "CHIRANTH": true,
-    "NCK": true
-   }
-  ],
-  "assassinated": "DANIEL"
+  ]
  },
  "missions": [
   {
-   "failsRequired": 1,
    "teamSize": 2,
-   "team": [
-    "CHIRANTH",
-    "ESH"
-   ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "numFails": 0,
    "proposals": [
     {
      "proposer": "NATHAN",
+     "team": [
+      "CHIRANTH",
+      "ESH"
+     ],
      "state": "APPROVED",
      "votes": [
       "CHIRANTH",
@@ -125,18 +126,15 @@
       "NATHAN",
       "SLEEPY",
       "ESH"
-     ],
-     "team": [
-      "CHIRANTH",
-      "ESH"
      ]
     }
    ],
-   "state": "SUCCESS"
+   "team": [
+    "CHIRANTH",
+    "ESH"
+   ]
   },
   {
-   "failsRequired": 1,
-   "state": "FAIL",
    "proposals": [
     {
      "state": "REJECTED",
@@ -145,11 +143,11 @@
       "CHIRANTH",
       "LEO"
      ],
+     "proposer": "CHIRANTH",
      "votes": [
       "NATHAN",
       "CHIRANTH"
-     ],
-     "proposer": "CHIRANTH"
+     ]
     },
     {
      "proposer": "SLEEPY",
@@ -167,169 +165,166 @@
      "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3,
    "team": [
     "SLEEPY",
     "DANIEL",
     "NCK"
-   ],
-   "numFails": 1,
-   "teamSize": 3
+   ]
   },
   {
-   "proposals": [
-    {
-     "votes": [
-      "DANIEL",
-      "ESH"
-     ],
-     "state": "REJECTED",
-     "proposer": "DANIEL",
-     "team": [
-      "DANIEL",
-      "NATHAN",
-      "ESH"
-     ]
-    },
-    {
-     "votes": [
-      "NATHAN",
-      "ESH"
-     ],
-     "team": [
-      "ESH",
-      "LEO",
-      "DANIEL"
-     ],
-     "state": "REJECTED",
-     "proposer": "ESH"
-    },
-    {
-     "votes": [
-      "LEO",
-      "NCK",
-      "SLEEPY",
-      "CHIRANTH"
-     ],
-     "proposer": "NCK",
-     "team": [
-      "NCK",
-      "NATHAN",
-      "SLEEPY"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "NCK",
     "NATHAN",
     "SLEEPY"
    ],
-   "numFails": 1,
+   "failsRequired": 1,
    "state": "FAIL",
-   "teamSize": 3
-  },
-  {
-   "failsRequired": 2,
-   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "NCK",
-      "DANIEL"
-     ],
-     "proposer": "LEO",
+     "proposer": "DANIEL",
      "state": "REJECTED",
      "team": [
-      "LEO",
-      "CHIRANTH",
-      "NCK",
-      "DANIEL"
-     ]
-    },
-    {
-     "team": [
-      "NATHAN",
-      "LEO",
       "DANIEL",
-      "CHIRANTH"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "CHIRANTH",
-      "LEO"
-     ],
-     "proposer": "NATHAN"
-    },
-    {
-     "proposer": "CHIRANTH",
-     "state": "REJECTED",
-     "team": [
       "NATHAN",
-      "CHIRANTH",
-      "DANIEL",
-      "SLEEPY"
+      "ESH"
      ],
      "votes": [
-      "CHIRANTH",
+      "DANIEL",
       "ESH"
      ]
     },
     {
+     "proposer": "ESH",
      "team": [
-      "SLEEPY",
+      "ESH",
       "LEO",
-      "NCK",
-      "ESH"
+      "DANIEL"
      ],
      "votes": [
-      "NCK",
-      "SLEEPY",
+      "NATHAN",
       "ESH"
      ],
-     "proposer": "SLEEPY",
      "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
+     "team": [
+      "NCK",
+      "NATHAN",
+      "SLEEPY"
+     ],
+     "proposer": "NCK",
      "votes": [
       "LEO",
       "NCK",
-      "DANIEL",
-      "NATHAN",
       "SLEEPY",
-      "ESH",
       "CHIRANTH"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "DANIEL",
-      "LEO",
-      "NCK",
-      "NATHAN"
-     ],
-     "proposer": "DANIEL"
+     ]
     }
-   ],
+   ]
+  },
+  {
+   "failsRequired": 2,
+   "state": "SUCCESS",
    "team": [
     "DANIEL",
     "LEO",
     "NCK",
     "NATHAN"
    ],
-   "state": "SUCCESS",
-   "teamSize": 4
-  },
-  {
    "teamSize": 4,
-   "team": [
-    "CHIRANTH",
-    "LEO",
-    "DANIEL",
-    "NCK"
-   ],
    "numFails": 0,
    "proposals": [
     {
+     "votes": [
+      "NCK",
+      "DANIEL"
+     ],
+     "team": [
+      "LEO",
+      "CHIRANTH",
+      "NCK",
+      "DANIEL"
+     ],
+     "state": "REJECTED",
+     "proposer": "LEO"
+    },
+    {
+     "votes": [
+      "CHIRANTH",
+      "LEO"
+     ],
+     "team": [
+      "NATHAN",
+      "LEO",
+      "DANIEL",
+      "CHIRANTH"
+     ],
+     "state": "REJECTED",
+     "proposer": "NATHAN"
+    },
+    {
+     "proposer": "CHIRANTH",
+     "team": [
+      "NATHAN",
+      "CHIRANTH",
+      "DANIEL",
+      "SLEEPY"
+     ],
+     "votes": [
+      "CHIRANTH",
+      "ESH"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "proposer": "SLEEPY",
+     "votes": [
+      "NCK",
+      "SLEEPY",
+      "ESH"
+     ],
+     "team": [
+      "SLEEPY",
+      "LEO",
+      "NCK",
+      "ESH"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "state": "APPROVED",
+     "votes": [
+      "LEO",
+      "NCK",
+      "DANIEL",
+      "NATHAN",
+      "SLEEPY",
+      "ESH",
+      "CHIRANTH"
+     ],
+     "proposer": "DANIEL",
+     "team": [
+      "DANIEL",
+      "LEO",
+      "NCK",
+      "NATHAN"
+     ]
+    }
+   ]
+  },
+  {
+   "state": "SUCCESS",
+   "teamSize": 4,
+   "proposals": [
+    {
+     "proposer": "ESH",
      "votes": [
       "ESH"
      ],
@@ -339,23 +334,20 @@
       "SLEEPY",
       "LEO"
      ],
-     "state": "REJECTED",
-     "proposer": "ESH"
+     "state": "REJECTED"
     },
     {
-     "proposer": "NCK",
      "state": "REJECTED",
+     "votes": [],
+     "proposer": "NCK",
      "team": [
       "NCK",
       "DANIEL",
       "CHIRANTH",
       "NATHAN"
-     ],
-     "votes": []
+     ]
     },
     {
-     "state": "REJECTED",
-     "proposer": "LEO",
      "team": [
       "LEO",
       "NATHAN",
@@ -366,42 +358,50 @@
       "CHIRANTH",
       "LEO",
       "ESH"
-     ]
-    },
-    {
-     "votes": [
-      "LEO",
-      "NATHAN",
-      "ESH"
      ],
      "state": "REJECTED",
-     "proposer": "NATHAN",
+     "proposer": "LEO"
+    },
+    {
+     "state": "REJECTED",
      "team": [
       "NATHAN",
       "LEO",
       "DANIEL",
       "SLEEPY"
+     ],
+     "proposer": "NATHAN",
+     "votes": [
+      "LEO",
+      "NATHAN",
+      "ESH"
      ]
     },
     {
-     "proposer": "CHIRANTH",
-     "votes": [
-      "CHIRANTH",
-      "NCK",
-      "LEO",
-      "DANIEL"
-     ],
      "team": [
       "CHIRANTH",
       "LEO",
       "DANIEL",
       "NCK"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "votes": [
+      "CHIRANTH",
+      "NCK",
+      "LEO",
+      "DANIEL"
+     ],
+     "proposer": "CHIRANTH"
     }
    ],
    "failsRequired": 1,
-   "state": "SUCCESS"
+   "numFails": 0,
+   "team": [
+    "CHIRANTH",
+    "LEO",
+    "DANIEL",
+    "NCK"
+   ]
   }
  ],
  "timeCreated": {

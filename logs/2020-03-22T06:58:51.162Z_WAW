@@ -1,113 +1,32 @@
 {
- "outcome": {
-  "message": "Three failed missions",
-  "assassinated": null,
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "DAN"
-   },
-   {
-    "name": "NOTJASON",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "name": "LAM",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "PERCIVAL",
-    "name": "JONAS"
-   },
-   {
-    "name": "CRANKYBERY",
-    "assassin": true,
-    "role": "MORGANA"
-   },
-   {
-    "role": "OBERON",
-    "name": "LONELY",
-    "assassin": false
-   },
-   {
-    "name": "KASO",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "assassin": true,
-    "name": "RIRI"
-   }
-  ],
-  "votes": [
-   {
-    "RIRI": false,
-    "KASO": true,
-    "LAM": true
-   },
-   {
-    "KASO": true,
-    "JONAS": true,
-    "NOTJASON": true,
-    "LONELY": true
-   },
-   {
-    "LONELY": false,
-    "KASO": true,
-    "JONAS": true,
-    "DAN": true
-   },
-   {
-    "DAN": true,
-    "JONAS": true,
-    "RIRI": true,
-    "NOTJASON": true,
-    "LAM": true
-   },
-   {
-    "LAM": true,
-    "NOTJASON": true,
-    "LONELY": false,
-    "RIRI": false,
-    "JONAS": true
-   }
-  ],
-  "state": "EVIL_WIN"
- },
  "timeCreated": {
   "_seconds": 1584860331,
   "_nanoseconds": 162000000
  },
  "missions": [
   {
-   "state": "FAIL",
-   "failsRequired": 1,
    "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "LAM",
     "KASO",
     "RIRI"
    ],
-   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
+     "votes": [
+      "CRANKYBERY"
+     ],
      "team": [
       "JONAS",
       "CRANKYBERY",
       "NOTJASON"
      ],
      "proposer": "JONAS",
-     "votes": [
-      "CRANKYBERY"
-     ]
+     "state": "REJECTED"
     },
     {
+     "proposer": "KASO",
      "votes": [
       "CRANKYBERY",
       "NOTJASON",
@@ -118,10 +37,15 @@
       "JONAS",
       "KASO",
       "LAM"
-     ],
-     "proposer": "KASO"
+     ]
     },
     {
+     "team": [
+      "LAM",
+      "KASO",
+      "RIRI"
+     ],
+     "state": "APPROVED",
      "votes": [
       "CRANKYBERY",
       "LONELY",
@@ -131,46 +55,40 @@
       "NOTJASON",
       "LAM"
      ],
-     "team": [
-      "LAM",
-      "KASO",
-      "RIRI"
-     ],
-     "proposer": "LAM",
-     "state": "APPROVED"
+     "proposer": "LAM"
     }
-   ]
+   ],
+   "teamSize": 3,
+   "state": "FAIL"
   },
   {
-   "team": [
-    "LONELY",
-    "NOTJASON",
-    "JONAS",
-    "KASO"
-   ],
+   "teamSize": 4,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
      "state": "REJECTED",
+     "votes": [
+      "DAN"
+     ],
      "proposer": "NOTJASON",
      "team": [
       "NOTJASON",
       "CRANKYBERY",
       "DAN",
       "JONAS"
-     ],
-     "votes": [
-      "DAN"
      ]
     },
     {
      "proposer": "RIRI",
-     "state": "REJECTED",
      "votes": [
       "JONAS",
       "LONELY",
       "KASO",
       "RIRI"
      ],
+     "state": "REJECTED",
      "team": [
       "NOTJASON",
       "RIRI",
@@ -180,38 +98,37 @@
     },
     {
      "state": "APPROVED",
-     "votes": [
-      "DAN",
-      "LAM",
-      "JONAS",
-      "LONELY",
-      "RIRI"
-     ],
+     "proposer": "LONELY",
      "team": [
       "LONELY",
       "NOTJASON",
       "JONAS",
       "KASO"
      ],
-     "proposer": "LONELY"
+     "votes": [
+      "DAN",
+      "LAM",
+      "JONAS",
+      "LONELY",
+      "RIRI"
+     ]
     }
    ],
-   "teamSize": 4,
-   "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1
+   "team": [
+    "LONELY",
+    "NOTJASON",
+    "JONAS",
+    "KASO"
+   ]
   },
   {
+   "teamSize": 4,
+   "numFails": 1,
    "state": "FAIL",
    "failsRequired": 1,
    "proposals": [
     {
-     "team": [
-      "LONELY",
-      "JONAS",
-      "DAN",
-      "KASO"
-     ],
+     "proposer": "DAN",
      "votes": [
       "JONAS",
       "CRANKYBERY",
@@ -220,30 +137,34 @@
       "RIRI",
       "DAN"
      ],
-     "proposer": "DAN",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "team": [
+      "LONELY",
+      "JONAS",
+      "DAN",
+      "KASO"
+     ]
     }
    ],
-   "teamSize": 4,
    "team": [
     "LONELY",
     "JONAS",
     "DAN",
     "KASO"
-   ],
-   "numFails": 1
+   ]
   },
   {
    "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
      "proposer": "CRANKYBERY",
      "votes": [
       "CRANKYBERY",
       "LONELY",
       "RIRI"
      ],
+     "state": "REJECTED",
      "team": [
       "CRANKYBERY",
       "JONAS",
@@ -253,10 +174,7 @@
      ]
     },
     {
-     "votes": [
-      "JONAS",
-      "RIRI"
-     ],
+     "state": "REJECTED",
      "proposer": "JONAS",
      "team": [
       "JONAS",
@@ -265,7 +183,10 @@
       "RIRI",
       "LONELY"
      ],
-     "state": "REJECTED"
+     "votes": [
+      "JONAS",
+      "RIRI"
+     ]
     },
     {
      "team": [
@@ -275,16 +196,15 @@
       "LONELY",
       "DAN"
      ],
+     "proposer": "KASO",
+     "state": "REJECTED",
      "votes": [
       "KASO",
       "LAM"
-     ],
-     "proposer": "KASO",
-     "state": "REJECTED"
+     ]
     },
     {
      "state": "REJECTED",
-     "proposer": "LAM",
      "team": [
       "LAM",
       "KASO",
@@ -295,7 +215,8 @@
      "votes": [
       "LAM",
       "KASO"
-     ]
+     ],
+     "proposer": "LAM"
     },
     {
      "state": "APPROVED",
@@ -320,22 +241,24 @@
     }
    ],
    "failsRequired": 2,
-   "numFails": 0,
-   "teamSize": 5,
    "team": [
     "NOTJASON",
     "DAN",
     "JONAS",
     "RIRI",
     "LAM"
-   ]
+   ],
+   "teamSize": 5
   },
   {
-   "teamSize": 5,
-   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 2,
    "proposals": [
     {
-     "proposer": "RIRI",
+     "state": "REJECTED",
+     "votes": [
+      "RIRI"
+     ],
      "team": [
       "RIRI",
       "NOTJASON",
@@ -343,14 +266,9 @@
       "JONAS",
       "LONELY"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "RIRI"
-     ]
+     "proposer": "RIRI"
     },
     {
-     "votes": [],
-     "state": "REJECTED",
      "team": [
       "JONAS",
       "KASO",
@@ -358,15 +276,17 @@
       "DAN",
       "LONELY"
      ],
+     "state": "REJECTED",
+     "votes": [],
      "proposer": "LONELY"
     },
     {
+     "state": "REJECTED",
      "votes": [
       "RIRI",
       "CRANKYBERY"
      ],
      "proposer": "DAN",
-     "state": "REJECTED",
      "team": [
       "LONELY",
       "NOTJASON",
@@ -376,20 +296,28 @@
      ]
     },
     {
-     "proposer": "CRANKYBERY",
      "votes": [
       "CRANKYBERY"
      ],
-     "state": "REJECTED",
      "team": [
       "CRANKYBERY",
       "KASO",
       "NOTJASON",
       "LONELY",
       "DAN"
-     ]
+     ],
+     "proposer": "CRANKYBERY",
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "LAM",
+      "JONAS",
+      "CRANKYBERY",
+      "KASO",
+      "RIRI"
+     ],
+     "proposer": "JONAS",
      "team": [
       "NOTJASON",
       "JONAS",
@@ -397,36 +325,108 @@
       "LAM",
       "LONELY"
      ],
-     "state": "APPROVED",
-     "proposer": "JONAS",
-     "votes": [
-      "LAM",
-      "JONAS",
-      "CRANKYBERY",
-      "KASO",
-      "RIRI"
-     ]
+     "state": "APPROVED"
     }
    ],
-   "numFails": 2,
-   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "NOTJASON",
     "JONAS",
     "RIRI",
     "LAM",
     "LONELY"
-   ]
+   ],
+   "teamSize": 5
   }
  ],
+ "outcome": {
+  "message": "Three failed missions",
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "DAN"
+   },
+   {
+    "name": "NOTJASON",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "LAM",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "JONAS",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "CRANKYBERY",
+    "role": "MORGANA",
+    "assassin": true
+   },
+   {
+    "role": "OBERON",
+    "assassin": false,
+    "name": "LONELY"
+   },
+   {
+    "name": "KASO",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "RIRI",
+    "assassin": true,
+    "role": "MORDRED"
+   }
+  ],
+  "assassinated": null,
+  "votes": [
+   {
+    "LAM": true,
+    "RIRI": false,
+    "KASO": true
+   },
+   {
+    "NOTJASON": true,
+    "JONAS": true,
+    "LONELY": true,
+    "KASO": true
+   },
+   {
+    "DAN": true,
+    "JONAS": true,
+    "LONELY": false,
+    "KASO": true
+   },
+   {
+    "LAM": true,
+    "NOTJASON": true,
+    "DAN": true,
+    "RIRI": true,
+    "JONAS": true
+   },
+   {
+    "LAM": true,
+    "NOTJASON": true,
+    "LONELY": false,
+    "JONAS": true,
+    "RIRI": false
+   }
+  ]
+ },
  "timeFinished": {
   "_seconds": 1584862204,
   "_nanoseconds": 124437000
  },
  "players": [
   {
-   "uid": "iNAQcph203MiZYuG34jFCNW2gO63",
-   "name": "CRANKYBERY"
+   "name": "CRANKYBERY",
+   "uid": "iNAQcph203MiZYuG34jFCNW2gO63"
   },
   {
    "name": "JONAS",
@@ -437,8 +437,8 @@
    "uid": "KkkKSlAgHTbUUAaIhEx7oI5ZyKE3"
   },
   {
-   "name": "LAM",
-   "uid": "z14LChGPUbYIncoEJ2caeOyF6xV2"
+   "uid": "z14LChGPUbYIncoEJ2caeOyF6xV2",
+   "name": "LAM"
   },
   {
    "uid": "iWerJ1HfBCaEx4Qe9WB2nTowY9s1",
@@ -453,8 +453,8 @@
    "uid": "Jf3e9BG815MDp0wIbgq39vuIngr1"
   },
   {
-   "uid": "s9xnuvaOmtSkXW8Bm3iaVJAeGCn1",
-   "name": "DAN"
+   "name": "DAN",
+   "uid": "s9xnuvaOmtSkXW8Bm3iaVJAeGCn1"
   }
  ]
 }

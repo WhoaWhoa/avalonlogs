@@ -1,10 +1,15 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1590890240,
+  "_nanoseconds": 168000000
+ },
  "missions": [
   {
-   "team": [
-    "PAUL",
-    "STEVENL"
-   ],
+   "state": "SUCCESS",
+   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
@@ -12,34 +17,10 @@
       "PAUL",
       "STEVENL"
      ],
+     "proposer": "PAUL",
      "votes": [
       "ANDYSON",
       "STEVENL",
-      "STEVEN",
-      "HUY",
-      "PAUL"
-     ],
-     "proposer": "PAUL"
-    }
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 2,
-   "numFails": 0
-  },
-  {
-   "teamSize": 3,
-   "proposals": [
-    {
-     "team": [
-      "PAUL",
-      "STEVENL",
-      "HUY"
-     ],
-     "state": "APPROVED",
-     "proposer": "HUY",
-     "votes": [
-      "WILLIAM",
       "STEVEN",
       "HUY",
       "PAUL"
@@ -48,40 +29,65 @@
    ],
    "team": [
     "PAUL",
-    "STEVENL",
-    "HUY"
+    "STEVENL"
    ],
-   "state": "SUCCESS",
    "failsRequired": 1,
    "numFails": 0
   },
   {
-   "numFails": 1,
-   "failsRequired": 1,
+   "state": "SUCCESS",
+   "team": [
+    "PAUL",
+    "STEVENL",
+    "HUY"
+   ],
+   "teamSize": 3,
+   "numFails": 0,
+   "proposals": [
+    {
+     "votes": [
+      "WILLIAM",
+      "STEVEN",
+      "HUY",
+      "PAUL"
+     ],
+     "proposer": "HUY",
+     "state": "APPROVED",
+     "team": [
+      "PAUL",
+      "STEVENL",
+      "HUY"
+     ]
+    }
+   ],
+   "failsRequired": 1
+  },
+  {
+   "teamSize": 4,
    "team": [
     "ANDYSON",
     "HUY",
     "STEVENL",
     "PAUL"
    ],
-   "teamSize": 4,
+   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "PAUL",
-      "WILLIAM"
-     ],
+     "proposer": "WILLIAM",
      "team": [
       "PAUL",
       "STEVENL",
       "ANDYSON",
       "HUY"
      ],
-     "proposer": "WILLIAM"
+     "state": "REJECTED",
+     "votes": [
+      "PAUL",
+      "WILLIAM"
+     ]
     },
     {
-     "state": "APPROVED",
      "team": [
       "ANDYSON",
       "HUY",
@@ -95,12 +101,15 @@
       "STEVEN",
       "PAUL",
       "ANDYSON"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1
   },
   {
+   "failsRequired": 1,
+   "teamSize": 3,
    "team": [
     "STEVEN",
     "ANDYSON",
@@ -109,7 +118,6 @@
    "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "STEVEN",
       "ANDYSON",
@@ -121,23 +129,23 @@
       "STEVENL",
       "STEVEN",
       "ANDYSON"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 3
+   "state": "SUCCESS"
   },
   {
    "proposals": [],
+   "failsRequired": 1,
    "state": "PENDING",
    "team": [],
-   "failsRequired": 1,
    "teamSize": 4
   }
  ],
- "options": {
-  "inGameLog": false
+ "timeCreated": {
+  "_seconds": 1590889849,
+  "_nanoseconds": 315000000
  },
  "players": [
   {
@@ -153,29 +161,19 @@
    "name": "ANDYSON"
   },
   {
-   "uid": "8d8HSSTFjvVD5kOS3hVejNCC7w52",
-   "name": "STEVEN"
+   "name": "STEVEN",
+   "uid": "8d8HSSTFjvVD5kOS3hVejNCC7w52"
   },
   {
    "uid": "Ui28pY4U8UPeDandhOLdv9VctLt2",
    "name": "STEVENL"
   },
   {
-   "uid": "W1vuHM0YJcXCl9iviX8J3U8ApMP2",
-   "name": "PAUL"
+   "name": "PAUL",
+   "uid": "W1vuHM0YJcXCl9iviX8J3U8ApMP2"
   }
  ],
- "timeFinished": {
-  "_seconds": 1590890240,
-  "_nanoseconds": 168000000
- },
- "timeCreated": {
-  "_seconds": 1590889849,
-  "_nanoseconds": 315000000
- },
  "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
   "votes": [
    {
     "STEVENL": true,
@@ -189,16 +187,15 @@
    {
     "STEVENL": true,
     "HUY": false,
-    "ANDYSON": true,
-    "PAUL": true
-   },
-   {
-    "STEVEN": true,
     "PAUL": true,
     "ANDYSON": true
+   },
+   {
+    "PAUL": true,
+    "ANDYSON": true,
+    "STEVEN": true
    }
   ],
-  "assassinated": "ANDYSON",
   "roles": [
    {
     "role": "EVIL MINION",
@@ -206,30 +203,33 @@
     "assassin": true
    },
    {
-    "name": "STEVENL",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "STEVEN",
     "assassin": false,
-    "role": "MERLIN"
+    "name": "STEVENL",
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MORGANA",
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "STEVEN"
+   },
+   {
     "name": "HUY",
-    "assassin": false
+    "assassin": false,
+    "role": "MORGANA"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "PAUL",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "ANDYSON",
     "role": "LOYAL FOLLOWER",
     "assassin": false
    }
-  ]
+  ],
+  "message": "Three successful missions",
+  "assassinated": "ANDYSON",
+  "state": "GOOD_WIN"
  }
 }

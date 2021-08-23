@@ -1,14 +1,78 @@
 {
+ "players": [
+  {
+   "uid": "P4Fz2ghvQCQK5tWwaYiLkkc2xUg1",
+   "name": "BECHASS"
+  },
+  {
+   "name": "SHOOLTALA",
+   "uid": "Jrn5SOEoTpQUjp2aMf24njhg2pg1"
+  },
+  {
+   "name": "CJ",
+   "uid": "DKSwh8wGqhfHWSZq4MCABkLU19z2"
+  },
+  {
+   "name": "YASI",
+   "uid": "eoxx13cGrkc33ZRPWa71ad0Qsz03"
+  },
+  {
+   "uid": "VTuyFcjanBWQBv1YVZLE6UNDfhn2",
+   "name": "SAMAN"
+  },
+  {
+   "uid": "e6bBAOQwbXQhMXzbldYIo3hiN053",
+   "name": "SHAYANFARA"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1589347031,
   "_nanoseconds": 47000000
  },
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1589348970,
+  "_nanoseconds": 733000000
+ },
  "outcome": {
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "votes": [
+   {
+    "SAMAN": true,
+    "SHAYANFARA": true
+   },
+   {
+    "SHAYANFARA": false,
+    "BECHASS": true,
+    "SAMAN": true
+   },
+   {
+    "BECHASS": true,
+    "SHOOLTALA": true,
+    "CJ": true,
+    "SHAYANFARA": false
+   },
+   {
+    "SAMAN": true,
+    "SHOOLTALA": true,
+    "BECHASS": true
+   },
+   {
+    "SHOOLTALA": true,
+    "CJ": true,
+    "SAMAN": true,
+    "BECHASS": true
+   }
+  ],
+  "assassinated": "BECHASS",
   "roles": [
    {
-    "assassin": false,
     "name": "SAMAN",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "assassin": false,
@@ -21,61 +85,27 @@
     "name": "BECHASS"
    },
    {
-    "assassin": false,
     "name": "SHAYANFARA",
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "assassin": false
    },
    {
-    "role": "EVIL MINION",
+    "name": "YASI",
     "assassin": true,
-    "name": "YASI"
+    "role": "EVIL MINION"
    },
    {
     "assassin": false,
-    "name": "CJ",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "CJ"
    }
-  ],
-  "assassinated": "BECHASS",
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "SAMAN": true,
-    "SHAYANFARA": true
-   },
-   {
-    "SAMAN": true,
-    "SHAYANFARA": false,
-    "BECHASS": true
-   },
-   {
-    "SHAYANFARA": false,
-    "SHOOLTALA": true,
-    "BECHASS": true,
-    "CJ": true
-   },
-   {
-    "SAMAN": true,
-    "BECHASS": true,
-    "SHOOLTALA": true
-   },
-   {
-    "SHOOLTALA": true,
-    "BECHASS": true,
-    "CJ": true,
-    "SAMAN": true
-   }
-  ],
-  "message": "Three successful missions"
+  ]
  },
  "missions": [
   {
-   "state": "SUCCESS",
+   "teamSize": 2,
    "failsRequired": 1,
-   "team": [
-    "SHAYANFARA",
-    "SAMAN"
-   ],
+   "state": "SUCCESS",
    "numFails": 0,
    "proposals": [
     {
@@ -83,6 +113,7 @@
       "SHAYANFARA",
       "SAMAN"
      ],
+     "proposer": "SHAYANFARA",
      "votes": [
       "SAMAN",
       "SHOOLTALA",
@@ -91,24 +122,26 @@
       "YASI",
       "CJ"
      ],
-     "state": "APPROVED",
-     "proposer": "SHAYANFARA"
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 2
+   "team": [
+    "SHAYANFARA",
+    "SAMAN"
+   ]
   },
   {
+   "teamSize": 3,
+   "numFails": 1,
    "team": [
     "BECHASS",
     "SAMAN",
     "SHAYANFARA"
    ],
-   "state": "FAIL",
    "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 1,
    "proposals": [
     {
+     "proposer": "BECHASS",
      "votes": [
       "SHOOLTALA",
       "BECHASS",
@@ -121,20 +154,25 @@
       "BECHASS",
       "SAMAN",
       "SHAYANFARA"
-     ],
-     "proposer": "BECHASS"
+     ]
     }
-   ]
+   ],
+   "state": "FAIL"
   },
   {
+   "numFails": 1,
+   "teamSize": 4,
    "team": [
     "CJ",
     "SHOOLTALA",
     "BECHASS",
     "SHAYANFARA"
    ],
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "SHOOLTALA",
       "SHAYANFARA"
@@ -145,11 +183,16 @@
       "CJ",
       "BECHASS"
      ],
-     "state": "REJECTED",
      "proposer": "SHOOLTALA"
     },
     {
-     "proposer": "CJ",
+     "team": [
+      "CJ",
+      "SHOOLTALA",
+      "BECHASS",
+      "SHAYANFARA"
+     ],
+     "state": "APPROVED",
      "votes": [
       "SHAYANFARA",
       "CJ",
@@ -157,23 +200,17 @@
       "SHOOLTALA",
       "BECHASS"
      ],
-     "state": "APPROVED",
-     "team": [
-      "CJ",
-      "SHOOLTALA",
-      "BECHASS",
-      "SHAYANFARA"
-     ]
+     "proposer": "CJ"
     }
-   ],
-   "teamSize": 4,
-   "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1
+   ]
   },
   {
-   "state": "SUCCESS",
-   "numFails": 0,
+   "failsRequired": 1,
+   "team": [
+    "SAMAN",
+    "BECHASS",
+    "SHOOLTALA"
+   ],
    "teamSize": 3,
    "proposals": [
     {
@@ -189,13 +226,13 @@
      "state": "REJECTED"
     },
     {
+     "proposer": "SAMAN",
+     "state": "APPROVED",
      "team": [
       "SAMAN",
       "BECHASS",
       "SHOOLTALA"
      ],
-     "state": "APPROVED",
-     "proposer": "SAMAN",
      "votes": [
       "SAMAN",
       "SHOOLTALA",
@@ -205,16 +242,19 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "SAMAN",
-    "BECHASS",
-    "SHOOLTALA"
-   ]
+   "state": "SUCCESS",
+   "numFails": 0
   },
   {
-   "teamSize": 4,
    "numFails": 0,
+   "team": [
+    "BECHASS",
+    "SHOOLTALA",
+    "CJ",
+    "SAMAN"
+   ],
+   "teamSize": 4,
+   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -231,6 +271,7 @@
     },
     {
      "state": "APPROVED",
+     "proposer": "BECHASS",
      "votes": [
       "SAMAN",
       "SHOOLTALA",
@@ -243,51 +284,10 @@
       "SHOOLTALA",
       "CJ",
       "SAMAN"
-     ],
-     "proposer": "BECHASS"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "BECHASS",
-    "SHOOLTALA",
-    "CJ",
-    "SAMAN"
-   ],
    "state": "SUCCESS"
-  }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeFinished": {
-  "_seconds": 1589348970,
-  "_nanoseconds": 733000000
- },
- "players": [
-  {
-   "uid": "P4Fz2ghvQCQK5tWwaYiLkkc2xUg1",
-   "name": "BECHASS"
-  },
-  {
-   "uid": "Jrn5SOEoTpQUjp2aMf24njhg2pg1",
-   "name": "SHOOLTALA"
-  },
-  {
-   "uid": "DKSwh8wGqhfHWSZq4MCABkLU19z2",
-   "name": "CJ"
-  },
-  {
-   "name": "YASI",
-   "uid": "eoxx13cGrkc33ZRPWa71ad0Qsz03"
-  },
-  {
-   "uid": "VTuyFcjanBWQBv1YVZLE6UNDfhn2",
-   "name": "SAMAN"
-  },
-  {
-   "uid": "e6bBAOQwbXQhMXzbldYIo3hiN053",
-   "name": "SHAYANFARA"
   }
  ]
 }

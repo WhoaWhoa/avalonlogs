@@ -1,30 +1,63 @@
 {
- "players": [
-  {
-   "uid": "91bJ8OZ9cvglClIeoyoW3qG2ZnX2",
-   "name": "PHONG"
-  },
-  {
-   "name": "ELLIOTT",
-   "uid": "gCtwBMAnXhW3AhOnXHXTyL4rg7s1"
-  },
-  {
-   "uid": "TyFg5WvH7WWDyYJ1BsVeqjATHs83",
-   "name": "SIMON"
-  },
-  {
-   "uid": "wcW0HbOOQ8S3W7Qj8Nm34Phuy9t2",
-   "name": "KYLE"
-  },
-  {
-   "uid": "iuDoyc3t1SgHs9LURMXkNH3K8v93",
-   "name": "GIO"
-  }
- ],
+ "outcome": {
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "GIO": true,
+    "PHONG": true
+   },
+   {
+    "PHONG": true,
+    "GIO": true,
+    "KYLE": true
+   },
+   {
+    "GIO": true,
+    "PHONG": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ELLIOTT"
+   },
+   {
+    "name": "PHONG",
+    "role": "MORDRED",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "SIMON"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "KYLE"
+   },
+   {
+    "assassin": false,
+    "name": "GIO",
+    "role": "MORGANA"
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "SIMON"
+ },
  "missions": [
   {
+   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "GIO",
+    "PHONG"
+   ],
    "proposals": [
     {
+     "proposer": "SIMON",
+     "state": "APPROVED",
      "votes": [
       "GIO",
       "SIMON",
@@ -35,37 +68,22 @@
      "team": [
       "GIO",
       "PHONG"
-     ],
-     "proposer": "SIMON",
-     "state": "APPROVED"
+     ]
     }
    ],
-   "numFails": 0,
-   "failsRequired": 1,
-   "team": [
-    "GIO",
-    "PHONG"
-   ],
    "teamSize": 2,
-   "state": "SUCCESS"
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "numFails": 0,
    "team": [
     "KYLE",
     "GIO",
     "PHONG"
    ],
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "KYLE",
-      "GIO",
-      "PHONG"
-     ],
+     "state": "APPROVED",
      "votes": [
       "KYLE",
       "GIO",
@@ -73,28 +91,33 @@
       "PHONG",
       "SIMON"
      ],
-     "state": "APPROVED",
-     "proposer": "KYLE"
+     "proposer": "KYLE",
+     "team": [
+      "KYLE",
+      "GIO",
+      "PHONG"
+     ]
     }
-   ]
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 2,
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "SIMON",
       "GIO"
      ],
-     "proposer": "GIO",
-     "state": "REJECTED",
      "team": [
       "SIMON",
       "PHONG"
-     ]
+     ],
+     "proposer": "GIO"
     },
     {
-     "proposer": "PHONG",
      "votes": [
       "SIMON",
       "KYLE",
@@ -106,30 +129,32 @@
       "PHONG",
       "GIO"
      ],
+     "proposer": "PHONG",
      "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
    "team": [
     "PHONG",
     "GIO"
    ],
    "numFails": 0,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 2
   },
   {
-   "proposals": [],
    "team": [],
    "state": "PENDING",
-   "teamSize": 3,
-   "failsRequired": 1
+   "proposals": [],
+   "failsRequired": 1,
+   "teamSize": 3
   },
   {
+   "state": "PENDING",
+   "failsRequired": 1,
    "proposals": [],
    "team": [],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "state": "PENDING"
+   "teamSize": 3
   }
  ],
  "options": {
@@ -139,53 +164,28 @@
   "_seconds": 1609042298,
   "_nanoseconds": 389000000
  },
- "outcome": {
-  "votes": [
-   {
-    "PHONG": true,
-    "GIO": true
-   },
-   {
-    "KYLE": true,
-    "GIO": true,
-    "PHONG": true
-   },
-   {
-    "GIO": true,
-    "PHONG": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated",
-  "assassinated": "SIMON",
-  "roles": [
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "ELLIOTT",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "name": "PHONG",
-    "assassin": true
-   },
-   {
-    "name": "SIMON",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "KYLE",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "name": "GIO",
-    "role": "MORGANA",
-    "assassin": false
-   }
-  ]
- },
+ "players": [
+  {
+   "name": "PHONG",
+   "uid": "91bJ8OZ9cvglClIeoyoW3qG2ZnX2"
+  },
+  {
+   "name": "ELLIOTT",
+   "uid": "gCtwBMAnXhW3AhOnXHXTyL4rg7s1"
+  },
+  {
+   "name": "SIMON",
+   "uid": "TyFg5WvH7WWDyYJ1BsVeqjATHs83"
+  },
+  {
+   "name": "KYLE",
+   "uid": "wcW0HbOOQ8S3W7Qj8Nm34Phuy9t2"
+  },
+  {
+   "name": "GIO",
+   "uid": "iuDoyc3t1SgHs9LURMXkNH3K8v93"
+  }
+ ],
  "timeFinished": {
   "_seconds": 1609042541,
   "_nanoseconds": 751000000

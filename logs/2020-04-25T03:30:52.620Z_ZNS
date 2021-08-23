@@ -1,10 +1,44 @@
 {
+ "players": [
+  {
+   "name": "VED",
+   "uid": "kga5ovBVI0UF0GohoZ0cewtChua2"
+  },
+  {
+   "name": "ALICE",
+   "uid": "CP4UjqQmDJbs2K4q4XhyBIk1CfC3"
+  },
+  {
+   "name": "STEV",
+   "uid": "W6Z8jnt5KIOeZCCSO1BSnf25M7i1"
+  },
+  {
+   "uid": "i0ChwySgoXZ9GmzNxiAGDC93O632",
+   "name": "CHRIS"
+  },
+  {
+   "uid": "dWEmd9tAZSfTMKJNijZN9u05DIq2",
+   "name": "OZSEXYMAN"
+  },
+  {
+   "uid": "xSjl6IEjoVenHNzrWpyMAPPRD5i1",
+   "name": "JERRY"
+  },
+  {
+   "name": "SUQI",
+   "uid": "hoMNBUNdwuW1AxgC8AcKVih2OL63"
+  }
+ ],
  "options": {
   "inGameLog": false
  },
+ "timeCreated": {
+  "_seconds": 1587785452,
+  "_nanoseconds": 620000000
+ },
  "outcome": {
-  "state": "EVIL_WIN",
   "assassinated": "CHRIS",
+  "state": "EVIL_WIN",
   "message": "Merlin assassinated",
   "roles": [
    {
@@ -14,13 +48,13 @@
    },
    {
     "name": "OZSEXYMAN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "assassin": false,
     "name": "JERRY",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
     "role": "MORDRED",
@@ -29,12 +63,12 @@
    },
    {
     "name": "VED",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
-    "assassin": false,
     "name": "ALICE",
+    "assassin": false,
     "role": "MORGANA"
    },
    {
@@ -45,8 +79,8 @@
   ],
   "votes": [
    {
-    "JERRY": true,
-    "CHRIS": true
+    "CHRIS": true,
+    "JERRY": true
    },
    {
     "SUQI": true,
@@ -54,28 +88,32 @@
     "CHRIS": true
    },
    {
+    "OZSEXYMAN": true,
     "SUQI": false,
-    "STEV": true,
-    "OZSEXYMAN": true
+    "STEV": true
    },
    {
-    "ALICE": false,
+    "CHRIS": true,
     "SUQI": true,
     "STEV": true,
-    "CHRIS": true
+    "ALICE": false
    }
   ]
  },
+ "timeFinished": {
+  "_seconds": 1587786124,
+  "_nanoseconds": 318000000
+ },
  "missions": [
   {
-   "team": [
-    "CHRIS",
-    "JERRY"
-   ],
-   "numFails": 0,
+   "state": "SUCCESS",
    "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "CHRIS",
+      "JERRY"
+     ],
      "votes": [
       "VED",
       "ALICE",
@@ -85,25 +123,27 @@
       "JERRY",
       "SUQI"
      ],
-     "team": [
-      "CHRIS",
-      "JERRY"
-     ],
-     "proposer": "STEV",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "STEV"
     }
    ],
+   "team": [
+    "CHRIS",
+    "JERRY"
+   ],
    "teamSize": 2,
-   "state": "SUCCESS"
+   "numFails": 0
   },
   {
    "failsRequired": 1,
+   "team": [
+    "CHRIS",
+    "SUQI",
+    "STEV"
+   ],
    "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "CHRIS",
      "votes": [
       "CHRIS",
       "OZSEXYMAN",
@@ -112,6 +152,8 @@
       "ALICE",
       "STEV"
      ],
+     "proposer": "CHRIS",
+     "state": "APPROVED",
      "team": [
       "CHRIS",
       "SUQI",
@@ -119,52 +161,56 @@
      ]
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "CHRIS",
-    "SUQI",
-    "STEV"
-   ]
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
-   "numFails": 1,
-   "state": "FAIL",
-   "teamSize": 3,
    "failsRequired": 1,
    "team": [
     "OZSEXYMAN",
     "STEV",
     "SUQI"
    ],
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "OZSEXYMAN",
-     "state": "APPROVED",
      "team": [
       "OZSEXYMAN",
       "STEV",
       "SUQI"
      ],
+     "state": "APPROVED",
      "votes": [
       "CHRIS",
       "OZSEXYMAN",
       "SUQI",
       "VED",
       "STEV"
-     ]
+     ],
+     "proposer": "OZSEXYMAN"
     }
-   ]
+   ],
+   "numFails": 1,
+   "teamSize": 3
   },
   {
    "state": "SUCCESS",
+   "failsRequired": 2,
+   "numFails": 1,
+   "team": [
+    "SUQI",
+    "CHRIS",
+    "STEV",
+    "ALICE"
+   ],
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "SUQI",
       "VED",
       "STEV"
      ],
-     "state": "REJECTED",
      "team": [
       "JERRY",
       "SUQI",
@@ -174,25 +220,19 @@
      "proposer": "JERRY"
     },
     {
-     "proposer": "SUQI",
+     "state": "REJECTED",
+     "votes": [
+      "OZSEXYMAN"
+     ],
      "team": [
       "SUQI",
       "VED",
       "OZSEXYMAN",
       "STEV"
      ],
-     "votes": [
-      "OZSEXYMAN"
-     ],
-     "state": "REJECTED"
+     "proposer": "SUQI"
     },
     {
-     "team": [
-      "SUQI",
-      "CHRIS",
-      "STEV",
-      "ALICE"
-     ],
      "votes": [
       "VED",
       "ALICE",
@@ -201,64 +241,24 @@
       "OZSEXYMAN",
       "SUQI"
      ],
+     "proposer": "VED",
      "state": "APPROVED",
-     "proposer": "VED"
+     "team": [
+      "SUQI",
+      "CHRIS",
+      "STEV",
+      "ALICE"
+     ]
     }
    ],
-   "team": [
-    "SUQI",
-    "CHRIS",
-    "STEV",
-    "ALICE"
-   ],
-   "failsRequired": 2,
-   "numFails": 1,
    "teamSize": 4
   },
   {
-   "team": [],
+   "state": "PENDING",
    "teamSize": 4,
    "failsRequired": 1,
    "proposals": [],
-   "state": "PENDING"
+   "team": []
   }
- ],
- "timeFinished": {
-  "_seconds": 1587786124,
-  "_nanoseconds": 318000000
- },
- "players": [
-  {
-   "uid": "kga5ovBVI0UF0GohoZ0cewtChua2",
-   "name": "VED"
-  },
-  {
-   "uid": "CP4UjqQmDJbs2K4q4XhyBIk1CfC3",
-   "name": "ALICE"
-  },
-  {
-   "uid": "W6Z8jnt5KIOeZCCSO1BSnf25M7i1",
-   "name": "STEV"
-  },
-  {
-   "name": "CHRIS",
-   "uid": "i0ChwySgoXZ9GmzNxiAGDC93O632"
-  },
-  {
-   "name": "OZSEXYMAN",
-   "uid": "dWEmd9tAZSfTMKJNijZN9u05DIq2"
-  },
-  {
-   "name": "JERRY",
-   "uid": "xSjl6IEjoVenHNzrWpyMAPPRD5i1"
-  },
-  {
-   "uid": "hoMNBUNdwuW1AxgC8AcKVih2OL63",
-   "name": "SUQI"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1587785452,
-  "_nanoseconds": 620000000
- }
+ ]
 }

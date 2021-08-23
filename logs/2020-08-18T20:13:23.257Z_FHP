@@ -1,53 +1,82 @@
 {
- "timeFinished": {
-  "_seconds": 1597782883,
-  "_nanoseconds": 83000000
+ "outcome": {
+  "assassinated": null,
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JOE",
+    "assassin": false
+   },
+   {
+    "name": "GABZ",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "LOZENGE"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "CDOG",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "IMELDA",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "MAISIE",
+    "assassin": false,
+    "role": "EVIL MINION"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "MAISIE": true,
+    "GABZ": true
+   },
+   {
+    "GABZ": true,
+    "IMELDA": true,
+    "LOZENGE": false
+   },
+   {
+    "JOE": true,
+    "IMELDA": true,
+    "MAISIE": false,
+    "CDOG": true
+   },
+   {
+    "LOZENGE": false,
+    "MAISIE": false,
+    "CDOG": true
+   }
+  ],
+  "message": "Three failed missions"
  },
- "players": [
-  {
-   "uid": "xjKxzjgRp3PJEms1qLVMQjKmIxr2",
-   "name": "JOE"
-  },
-  {
-   "name": "IMELDA",
-   "uid": "go7Ty4TWPGQ70BlL3fpZmSCT0t32"
-  },
-  {
-   "name": "LOZENGE",
-   "uid": "cCaavGdZXvYJt0tdJb1vrcm34M12"
-  },
-  {
-   "name": "CDOG",
-   "uid": "k0sXdd6H1TMxBT4mEAhTJIG1BQB2"
-  },
-  {
-   "name": "MAISIE",
-   "uid": "XSn1Q4PvB4RrZQCYZyf1mmIhBzx1"
-  },
-  {
-   "name": "GABZ",
-   "uid": "O5tG971UGMYriQKoqf66MII5S0k1"
-  }
- ],
  "timeCreated": {
   "_seconds": 1597781603,
   "_nanoseconds": 257000000
  },
  "missions": [
   {
+   "state": "SUCCESS",
    "team": [
     "MAISIE",
     "GABZ"
    ],
    "teamSize": 2,
-   "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
      "team": [
       "MAISIE",
       "GABZ"
      ],
+     "proposer": "MAISIE",
      "votes": [
       "GABZ",
       "MAISIE",
@@ -55,83 +84,86 @@
       "LOZENGE",
       "IMELDA"
      ],
-     "proposer": "MAISIE",
      "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS"
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "numFails": 1,
-   "state": "FAIL",
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "proposer": "GABZ",
-     "team": [
-      "GABZ",
-      "JOE",
-      "CDOG"
-     ],
-     "votes": [
-      "CDOG",
-      "IMELDA",
-      "GABZ"
-     ]
-    },
-    {
-     "state": "REJECTED",
-     "proposer": "JOE",
-     "votes": [
-      "GABZ",
-      "CDOG"
-     ],
-     "team": [
-      "GABZ",
-      "CDOG",
-      "IMELDA"
-     ]
-    },
-    {
-     "state": "APPROVED",
-     "proposer": "IMELDA",
-     "votes": [
-      "CDOG",
-      "LOZENGE",
-      "GABZ",
-      "IMELDA"
-     ],
-     "team": [
-      "IMELDA",
-      "LOZENGE",
-      "GABZ"
-     ]
-    }
-   ],
-   "teamSize": 3,
    "team": [
     "IMELDA",
     "LOZENGE",
     "GABZ"
    ],
-   "failsRequired": 1
+   "state": "FAIL",
+   "proposals": [
+    {
+     "votes": [
+      "CDOG",
+      "IMELDA",
+      "GABZ"
+     ],
+     "team": [
+      "GABZ",
+      "JOE",
+      "CDOG"
+     ],
+     "state": "REJECTED",
+     "proposer": "GABZ"
+    },
+    {
+     "team": [
+      "GABZ",
+      "CDOG",
+      "IMELDA"
+     ],
+     "votes": [
+      "GABZ",
+      "CDOG"
+     ],
+     "state": "REJECTED",
+     "proposer": "JOE"
+    },
+    {
+     "team": [
+      "IMELDA",
+      "LOZENGE",
+      "GABZ"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "CDOG",
+      "LOZENGE",
+      "GABZ",
+      "IMELDA"
+     ],
+     "proposer": "IMELDA"
+    }
+   ],
+   "failsRequired": 1,
+   "numFails": 1,
+   "teamSize": 3
   },
   {
+   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "MAISIE",
     "CDOG",
     "IMELDA",
     "JOE"
    ],
+   "numFails": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "LOZENGE",
       "CDOG",
       "MAISIE",
       "JOE"
      ],
-     "state": "REJECTED",
      "proposer": "LOZENGE",
      "votes": [
       "JOE",
@@ -153,13 +185,13 @@
      "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "team": [
       "MAISIE",
       "CDOG",
       "IMELDA",
       "JOE"
      ],
-     "state": "APPROVED",
      "proposer": "MAISIE",
      "votes": [
       "JOE",
@@ -169,20 +201,16 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 1,
-   "state": "FAIL"
+   "teamSize": 4
   },
   {
-   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "LOZENGE",
     "CDOG",
     "MAISIE"
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
    "proposals": [
     {
      "state": "REJECTED",
@@ -198,6 +226,11 @@
      ]
     },
     {
+     "team": [
+      "LOZENGE",
+      "CDOG",
+      "MAISIE"
+     ],
      "votes": [
       "JOE",
       "CDOG",
@@ -205,84 +238,51 @@
       "LOZENGE"
      ],
      "state": "APPROVED",
-     "proposer": "JOE",
-     "team": [
-      "LOZENGE",
-      "CDOG",
-      "MAISIE"
-     ]
+     "proposer": "JOE"
     }
    ],
+   "teamSize": 3,
    "numFails": 2
   },
   {
-   "team": [],
-   "state": "PENDING",
-   "failsRequired": 1,
+   "teamSize": 4,
    "proposals": [],
-   "teamSize": 4
+   "state": "PENDING",
+   "team": [],
+   "failsRequired": 1
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1597782883,
+  "_nanoseconds": 83000000
+ },
+ "players": [
+  {
+   "name": "JOE",
+   "uid": "xjKxzjgRp3PJEms1qLVMQjKmIxr2"
+  },
+  {
+   "name": "IMELDA",
+   "uid": "go7Ty4TWPGQ70BlL3fpZmSCT0t32"
+  },
+  {
+   "uid": "cCaavGdZXvYJt0tdJb1vrcm34M12",
+   "name": "LOZENGE"
+  },
+  {
+   "uid": "k0sXdd6H1TMxBT4mEAhTJIG1BQB2",
+   "name": "CDOG"
+  },
+  {
+   "name": "MAISIE",
+   "uid": "XSn1Q4PvB4RrZQCYZyf1mmIhBzx1"
+  },
+  {
+   "name": "GABZ",
+   "uid": "O5tG971UGMYriQKoqf66MII5S0k1"
   }
  ],
  "options": {
   "inGameLog": false
- },
- "outcome": {
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "name": "JOE",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "GABZ",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "LOZENGE",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "CDOG",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "IMELDA"
-   },
-   {
-    "assassin": false,
-    "name": "MAISIE",
-    "role": "EVIL MINION"
-   }
-  ],
-  "votes": [
-   {
-    "GABZ": true,
-    "MAISIE": true
-   },
-   {
-    "GABZ": true,
-    "IMELDA": true,
-    "LOZENGE": false
-   },
-   {
-    "JOE": true,
-    "CDOG": true,
-    "IMELDA": true,
-    "MAISIE": false
-   },
-   {
-    "CDOG": true,
-    "MAISIE": false,
-    "LOZENGE": false
-   }
-  ],
-  "assassinated": null
  }
 }

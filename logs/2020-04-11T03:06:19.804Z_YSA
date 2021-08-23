@@ -1,48 +1,13 @@
 {
+ "timeCreated": {
+  "_seconds": 1586574379,
+  "_nanoseconds": 804000000
+ },
  "outcome": {
-  "roles": [
-   {
-    "role": "OBERON",
-    "assassin": false,
-    "name": "TARA"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "ALI"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "LUKE"
-   },
-   {
-    "name": "JACK",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "SHAL",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "MORGANA",
-    "name": "TOM"
-   },
-   {
-    "name": "SARAH",
-    "role": "PERCIVAL",
-    "assassin": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "assassinated": null,
   "votes": [
    {
-    "LUKE": true,
-    "ALI": true
+    "ALI": true,
+    "LUKE": true
    },
    {
     "JACK": false,
@@ -55,65 +20,68 @@
     "TARA": false
    },
    {
-    "ALI": true,
     "JACK": true,
+    "SHAL": true,
     "SARAH": true,
-    "SHAL": true
+    "ALI": true
    },
    {
-    "ALI": true,
-    "SHAL": true,
+    "SARAH": true,
     "JACK": false,
-    "SARAH": true
+    "ALI": true,
+    "SHAL": true
    }
   ],
-  "message": "Three failed missions"
+  "roles": [
+   {
+    "assassin": false,
+    "role": "OBERON",
+    "name": "TARA"
+   },
+   {
+    "role": "MERLIN",
+    "name": "ALI",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "LUKE"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "JACK"
+   },
+   {
+    "name": "SHAL",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MORGANA",
+    "name": "TOM",
+    "assassin": false
+   },
+   {
+    "name": "SARAH",
+    "assassin": false,
+    "role": "PERCIVAL"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "assassinated": null
  },
- "timeCreated": {
-  "_seconds": 1586574379,
-  "_nanoseconds": 804000000
- },
- "timeFinished": {
-  "_seconds": 1586574719,
-  "_nanoseconds": 411727000
- },
- "players": [
-  {
-   "name": "TOM",
-   "uid": "DBmJbVJuI3gk5sq6JN0gM9aMNUX2"
-  },
-  {
-   "uid": "Sm6NsXXQGAgOlvNailJabw4sbvE2",
-   "name": "SARAH"
-  },
-  {
-   "name": "TARA",
-   "uid": "PtnYZP937Yaj3BRoOoEibJKvmNq1"
-  },
-  {
-   "name": "SHAL",
-   "uid": "NIAmvvfK4pNNBRZTyluXo7elAnh2"
-  },
-  {
-   "uid": "Yc8SPVfUNcXHAbYoCC1bjj9yQTA2",
-   "name": "JACK"
-  },
-  {
-   "name": "ALI",
-   "uid": "V4YW5XjlPFg1Pj87mv5zDhwWJEO2"
-  },
-  {
-   "uid": "bwGw2zkFfeOH24CRKuunkNjFpOn1",
-   "name": "LUKE"
-  }
- ],
  "missions": [
   {
    "numFails": 0,
-   "teamSize": 2,
    "failsRequired": 1,
+   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "LUKE",
+     "state": "APPROVED",
      "votes": [
       "SARAH",
       "TARA",
@@ -122,40 +90,43 @@
       "SHAL",
       "TOM"
      ],
-     "state": "APPROVED",
      "team": [
       "LUKE",
       "ALI"
-     ],
-     "proposer": "LUKE"
+     ]
     }
    ],
+   "state": "SUCCESS",
    "team": [
     "LUKE",
     "ALI"
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
    "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "SHAL",
+    "JACK",
+    "LUKE"
+   ],
    "proposals": [
     {
-     "team": [
-      "SHAL",
-      "TOM",
-      "TARA"
-     ],
+     "state": "REJECTED",
      "votes": [
       "SHAL",
       "SARAH",
       "ALI"
      ],
-     "state": "REJECTED",
-     "proposer": "TOM"
+     "proposer": "TOM",
+     "team": [
+      "SHAL",
+      "TOM",
+      "TARA"
+     ]
     },
     {
+     "state": "APPROVED",
      "votes": [
       "SARAH",
       "TARA",
@@ -168,21 +139,27 @@
       "JACK",
       "LUKE"
      ],
-     "proposer": "SARAH",
-     "state": "APPROVED"
+     "proposer": "SARAH"
     }
    ],
-   "team": [
-    "SHAL",
-    "JACK",
-    "LUKE"
-   ],
+   "teamSize": 3,
    "numFails": 1
   },
   {
+   "failsRequired": 1,
+   "team": [
+    "TARA",
+    "SHAL",
+    "TOM"
+   ],
    "proposals": [
     {
-     "proposer": "TARA",
+     "state": "APPROVED",
+     "team": [
+      "TARA",
+      "SHAL",
+      "TOM"
+     ],
      "votes": [
       "SHAL",
       "TOM",
@@ -190,25 +167,24 @@
       "TARA",
       "JACK"
      ],
-     "team": [
-      "TARA",
-      "SHAL",
-      "TOM"
-     ],
-     "state": "APPROVED"
+     "proposer": "TARA"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "team": [
-    "TARA",
-    "SHAL",
-    "TOM"
-   ],
    "numFails": 2,
+   "state": "FAIL",
    "teamSize": 3
   },
   {
+   "state": "SUCCESS",
+   "teamSize": 4,
+   "team": [
+    "SARAH",
+    "SHAL",
+    "JACK",
+    "ALI"
+   ],
+   "numFails": 0,
+   "failsRequired": 2,
    "proposals": [
     {
      "state": "APPROVED",
@@ -226,28 +202,10 @@
      ],
      "proposer": "SHAL"
     }
-   ],
-   "team": [
-    "SARAH",
-    "SHAL",
-    "JACK",
-    "ALI"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "teamSize": 4,
-   "numFails": 0
+   ]
   },
   {
    "state": "FAIL",
-   "team": [
-    "JACK",
-    "SHAL",
-    "ALI",
-    "SARAH"
-   ],
-   "numFails": 1,
-   "failsRequired": 1,
    "proposals": [
     {
      "votes": [
@@ -257,17 +215,59 @@
       "ALI",
       "JACK"
      ],
-     "state": "APPROVED",
-     "proposer": "JACK",
      "team": [
       "JACK",
       "SHAL",
       "ALI",
       "SARAH"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "JACK"
     }
    ],
-   "teamSize": 4
+   "numFails": 1,
+   "teamSize": 4,
+   "team": [
+    "JACK",
+    "SHAL",
+    "ALI",
+    "SARAH"
+   ],
+   "failsRequired": 1
   }
- ]
+ ],
+ "players": [
+  {
+   "uid": "DBmJbVJuI3gk5sq6JN0gM9aMNUX2",
+   "name": "TOM"
+  },
+  {
+   "uid": "Sm6NsXXQGAgOlvNailJabw4sbvE2",
+   "name": "SARAH"
+  },
+  {
+   "uid": "PtnYZP937Yaj3BRoOoEibJKvmNq1",
+   "name": "TARA"
+  },
+  {
+   "name": "SHAL",
+   "uid": "NIAmvvfK4pNNBRZTyluXo7elAnh2"
+  },
+  {
+   "uid": "Yc8SPVfUNcXHAbYoCC1bjj9yQTA2",
+   "name": "JACK"
+  },
+  {
+   "name": "ALI",
+   "uid": "V4YW5XjlPFg1Pj87mv5zDhwWJEO2"
+  },
+  {
+   "name": "LUKE",
+   "uid": "bwGw2zkFfeOH24CRKuunkNjFpOn1"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586574719,
+  "_nanoseconds": 411727000
+ }
 }

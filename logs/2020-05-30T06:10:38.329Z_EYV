@@ -1,129 +1,25 @@
 {
- "timeFinished": {
-  "_seconds": 1590819413,
-  "_nanoseconds": 511000000
- },
- "players": [
-  {
-   "name": "AMEYA",
-   "uid": "S7z8EEjepUVBwuJtbPrp8Sq3w873"
-  },
-  {
-   "name": "SHARON",
-   "uid": "QNWqunR9JBQRP09UChJjsLZOyol2"
-  },
-  {
-   "name": "NETORARE",
-   "uid": "MNNO1fRUjSTZcSj9tpZXcZxssmw1"
-  },
-  {
-   "name": "SHITHEAD",
-   "uid": "VGao7tVjILVYaPjVy5AYkpLckx32"
-  },
-  {
-   "name": "EQIU",
-   "uid": "U8nDO26qg9WDIP4SpYP6MsOieHH3"
-  },
-  {
-   "name": "SHAWN",
-   "uid": "N7un5nj5FQaBYtUkaYQMyYAAUfv2"
-  },
-  {
-   "uid": "5l5yOtQYLJQd8yN9RB1REy6KeBo2",
-   "name": "DRISHTANT"
-  }
- ],
- "outcome": {
-  "votes": [
-   {
-    "SHAWN": true,
-    "DRISHTANT": true
-   },
-   {
-    "SHAWN": true,
-    "DRISHTANT": false,
-    "AMEYA": false
-   },
-   {
-    "SHARON": false,
-    "NETORARE": true,
-    "SHAWN": true
-   },
-   {
-    "SHITHEAD": true,
-    "EQIU": true,
-    "NETORARE": true,
-    "SHAWN": true
-   },
-   {
-    "SHAWN": true,
-    "NETORARE": true,
-    "SHITHEAD": true,
-    "EQIU": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "role": "PERCIVAL",
-    "name": "SHITHEAD",
-    "assassin": false
-   },
-   {
-    "role": "MERLIN",
-    "name": "NETORARE",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "name": "DRISHTANT",
-    "role": "MORGANA"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "AMEYA",
-    "assassin": true
-   },
-   {
-    "name": "SHARON",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "name": "EQIU",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "SHAWN",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   }
-  ],
-  "assassinated": "NETORARE",
-  "message": "Merlin assassinated"
- },
  "missions": [
   {
-   "teamSize": 2,
    "team": [
     "DRISHTANT",
     "SHAWN"
    ],
+   "failsRequired": 1,
    "state": "SUCCESS",
    "proposals": [
     {
-     "proposer": "SHAWN",
      "team": [
       "SHAWN",
       "SHITHEAD"
      ],
-     "state": "REJECTED",
      "votes": [
       "SHAWN",
       "SHITHEAD",
       "DRISHTANT"
-     ]
+     ],
+     "proposer": "SHAWN",
+     "state": "REJECTED"
     },
     {
      "proposer": "DRISHTANT",
@@ -143,22 +39,23 @@
      ]
     }
    ],
-   "failsRequired": 1,
+   "teamSize": 2,
    "numFails": 0
   },
   {
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 2,
-   "teamSize": 3,
+   "team": [
+    "AMEYA",
+    "SHAWN",
+    "DRISHTANT"
+   ],
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "AMEYA",
       "SHAWN",
       "DRISHTANT"
      ],
-     "state": "APPROVED",
      "proposer": "AMEYA",
      "votes": [
       "AMEYA",
@@ -169,58 +66,52 @@
      ]
     }
    ],
-   "team": [
-    "AMEYA",
-    "SHAWN",
-    "DRISHTANT"
-   ]
+   "failsRequired": 1,
+   "numFails": 2,
+   "teamSize": 3,
+   "state": "FAIL"
   },
   {
-   "team": [
-    "SHAWN",
-    "SHARON",
-    "NETORARE"
-   ],
+   "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "SHAWN",
-      "SHARON",
-      "NETORARE"
-     ],
+     "proposer": "SHARON",
+     "state": "APPROVED",
      "votes": [
       "AMEYA",
       "SHARON",
       "SHAWN",
       "SHITHEAD"
      ],
-     "state": "APPROVED",
-     "proposer": "SHARON"
+     "team": [
+      "SHAWN",
+      "SHARON",
+      "NETORARE"
+     ]
     }
    ],
-   "numFails": 1,
-   "teamSize": 3,
+   "team": [
+    "SHAWN",
+    "SHARON",
+    "NETORARE"
+   ],
    "state": "FAIL",
+   "teamSize": 3,
    "failsRequired": 1
   },
   {
-   "numFails": 0,
+   "failsRequired": 2,
    "team": [
     "NETORARE",
     "SHITHEAD",
     "EQIU",
     "SHAWN"
    ],
-   "failsRequired": 2,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "NETORARE",
-      "SHITHEAD",
-      "EQIU",
-      "SHAWN"
-     ],
      "votes": [
       "NETORARE",
       "AMEYA",
@@ -228,16 +119,26 @@
       "SHAWN",
       "SHITHEAD"
      ],
-     "proposer": "NETORARE"
+     "state": "APPROVED",
+     "proposer": "NETORARE",
+     "team": [
+      "NETORARE",
+      "SHITHEAD",
+      "EQIU",
+      "SHAWN"
+     ]
     }
-   ],
-   "state": "SUCCESS",
-   "teamSize": 4
+   ]
   },
   {
+   "team": [
+    "NETORARE",
+    "SHITHEAD",
+    "SHAWN",
+    "EQIU"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "SHITHEAD",
       "NETORARE",
@@ -247,25 +148,20 @@
       "EQIU",
       "SHAWN"
      ],
+     "state": "APPROVED",
+     "proposer": "SHITHEAD",
      "team": [
       "NETORARE",
       "SHITHEAD",
       "SHAWN",
       "EQIU"
-     ],
-     "proposer": "SHITHEAD"
+     ]
     }
    ],
-   "team": [
-    "NETORARE",
-    "SHITHEAD",
-    "SHAWN",
-    "EQIU"
-   ],
+   "failsRequired": 1,
    "numFails": 0,
-   "state": "SUCCESS",
    "teamSize": 4,
-   "failsRequired": 1
+   "state": "SUCCESS"
   }
  ],
  "timeCreated": {
@@ -274,5 +170,109 @@
  },
  "options": {
   "inGameLog": false
- }
+ },
+ "outcome": {
+  "votes": [
+   {
+    "SHAWN": true,
+    "DRISHTANT": true
+   },
+   {
+    "DRISHTANT": false,
+    "SHAWN": true,
+    "AMEYA": false
+   },
+   {
+    "SHARON": false,
+    "NETORARE": true,
+    "SHAWN": true
+   },
+   {
+    "NETORARE": true,
+    "SHAWN": true,
+    "SHITHEAD": true,
+    "EQIU": true
+   },
+   {
+    "SHITHEAD": true,
+    "NETORARE": true,
+    "SHAWN": true,
+    "EQIU": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "assassinated": "NETORARE",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "SHITHEAD",
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "NETORARE",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "role": "MORGANA",
+    "name": "DRISHTANT",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "AMEYA"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "SHARON"
+   },
+   {
+    "name": "EQIU",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "SHAWN",
+    "role": "LOYAL FOLLOWER"
+   }
+  ],
+  "state": "EVIL_WIN"
+ },
+ "timeFinished": {
+  "_seconds": 1590819413,
+  "_nanoseconds": 511000000
+ },
+ "players": [
+  {
+   "uid": "S7z8EEjepUVBwuJtbPrp8Sq3w873",
+   "name": "AMEYA"
+  },
+  {
+   "uid": "QNWqunR9JBQRP09UChJjsLZOyol2",
+   "name": "SHARON"
+  },
+  {
+   "name": "NETORARE",
+   "uid": "MNNO1fRUjSTZcSj9tpZXcZxssmw1"
+  },
+  {
+   "name": "SHITHEAD",
+   "uid": "VGao7tVjILVYaPjVy5AYkpLckx32"
+  },
+  {
+   "uid": "U8nDO26qg9WDIP4SpYP6MsOieHH3",
+   "name": "EQIU"
+  },
+  {
+   "name": "SHAWN",
+   "uid": "N7un5nj5FQaBYtUkaYQMyYAAUfv2"
+  },
+  {
+   "uid": "5l5yOtQYLJQd8yN9RB1REy6KeBo2",
+   "name": "DRISHTANT"
+  }
+ ]
 }

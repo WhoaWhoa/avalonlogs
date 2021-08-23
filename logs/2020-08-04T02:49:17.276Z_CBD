@@ -1,65 +1,37 @@
 {
- "timeFinished": {
-  "_seconds": 1596510568,
-  "_nanoseconds": 158000000
- },
- "players": [
-  {
-   "name": "MILLERTIME",
-   "uid": "l8JzD6xjccgDr0LeRniyX7zhlPP2"
-  },
-  {
-   "uid": "KgEg5NvTY6OkEOFw5RNqb6eEAVD3",
-   "name": "EMERSON"
-  },
-  {
-   "uid": "rxsLmVGWOgcjCqKDTokMNyu8k7o2",
-   "name": "VIC"
-  },
-  {
-   "uid": "2kkT3FL8EsOPKj3k1U3nv1g07Ou1",
-   "name": "JACOB"
-  },
-  {
-   "name": "DYLAN",
-   "uid": "pTCUWIjzlkU0QSilgWIS9F1Kucm1"
-  },
-  {
-   "name": "KEON",
-   "uid": "CRAo4cjSqXM6sZ3vr9VK2YLji003"
-  }
- ],
  "timeCreated": {
   "_seconds": 1596509357,
   "_nanoseconds": 276000000
  },
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
-  "message": "Five team proposals in a row rejected",
   "roles": [
    {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "VIC"
-   },
-   {
-    "assassin": true,
-    "name": "EMERSON",
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "KEON"
-   },
-   {
-    "name": "DYLAN",
+    "name": "VIC",
     "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "MILLERTIME",
+    "name": "EMERSON",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "KEON"
+   },
+   {
     "role": "LOYAL FOLLOWER",
+    "name": "DYLAN",
     "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "MILLERTIME"
    },
    {
     "role": "EVIL MINION",
@@ -67,7 +39,6 @@
     "assassin": false
    }
   ],
-  "assassinated": null,
   "state": "EVIL_WIN",
   "votes": [
    {
@@ -80,24 +51,29 @@
     "MILLERTIME": true
    },
    {
-    "KEON": true,
     "DYLAN": true,
-    "EMERSON": false,
-    "VIC": true
+    "VIC": true,
+    "KEON": true,
+    "EMERSON": false
    }
-  ]
+  ],
+  "assassinated": null,
+  "message": "Five team proposals in a row rejected"
  },
  "missions": [
   {
+   "failsRequired": 1,
+   "team": [
+    "KEON",
+    "JACOB"
+   ],
    "teamSize": 2,
+   "numFails": 0,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "KEON",
-      "JACOB"
-     ],
      "proposer": "KEON",
+     "state": "APPROVED",
      "votes": [
       "EMERSON",
       "DYLAN",
@@ -105,24 +81,22 @@
       "VIC",
       "KEON",
       "JACOB"
+     ],
+     "team": [
+      "KEON",
+      "JACOB"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "KEON",
-    "JACOB"
-   ],
-   "numFails": 0
+   ]
   },
   {
    "failsRequired": 1,
-   "numFails": 1,
    "state": "FAIL",
+   "numFails": 1,
    "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "votes": [
       "MILLERTIME",
       "DYLAN",
@@ -130,13 +104,12 @@
       "JACOB",
       "KEON"
      ],
-     "proposer": "MILLERTIME",
      "team": [
       "MILLERTIME",
       "JACOB",
       "DYLAN"
      ],
-     "state": "APPROVED"
+     "proposer": "MILLERTIME"
     }
    ],
    "team": [
@@ -146,30 +119,22 @@
    ]
   },
   {
-   "state": "FAIL",
-   "team": [
-    "VIC",
-    "KEON",
-    "DYLAN",
-    "EMERSON"
-   ],
-   "failsRequired": 1,
-   "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "MILLERTIME",
-      "KEON",
-      "DYLAN"
-     ],
-     "state": "REJECTED",
-     "proposer": "EMERSON",
      "team": [
       "EMERSON",
       "KEON",
       "DYLAN",
       "MILLERTIME"
-     ]
+     ],
+     "proposer": "EMERSON",
+     "votes": [
+      "MILLERTIME",
+      "KEON",
+      "DYLAN"
+     ],
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -178,8 +143,8 @@
       "DYLAN",
       "EMERSON"
      ],
-     "proposer": "VIC",
      "state": "APPROVED",
+     "proposer": "VIC",
      "votes": [
       "KEON",
       "DYLAN",
@@ -188,12 +153,20 @@
      ]
     }
    ],
-   "teamSize": 4
+   "team": [
+    "VIC",
+    "KEON",
+    "DYLAN",
+    "EMERSON"
+   ],
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1
   },
   {
-   "team": [],
-   "teamSize": 3,
    "state": "PENDING",
+   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "votes": [
@@ -208,32 +181,32 @@
      ]
     },
     {
-     "state": "REJECTED",
      "team": [
       "KEON",
       "MILLERTIME",
       "EMERSON"
      ],
-     "proposer": "DYLAN",
+     "state": "REJECTED",
      "votes": [
       "EMERSON",
       "MILLERTIME",
       "DYLAN"
-     ]
+     ],
+     "proposer": "DYLAN"
     },
     {
-     "team": [
-      "KEON",
-      "MILLERTIME",
-      "VIC"
-     ],
-     "proposer": "KEON",
      "votes": [
       "VIC",
       "JACOB",
       "KEON"
      ],
-     "state": "REJECTED"
+     "team": [
+      "KEON",
+      "MILLERTIME",
+      "VIC"
+     ],
+     "state": "REJECTED",
+     "proposer": "KEON"
     },
     {
      "votes": [
@@ -246,35 +219,62 @@
       "EMERSON",
       "KEON"
      ],
-     "proposer": "MILLERTIME",
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "MILLERTIME"
     },
     {
+     "votes": [
+      "EMERSON",
+      "MILLERTIME",
+      "DYLAN"
+     ],
      "team": [
       "EMERSON",
       "MILLERTIME",
       "KEON"
      ],
      "proposer": "EMERSON",
-     "votes": [
-      "EMERSON",
-      "MILLERTIME",
-      "DYLAN"
-     ],
      "state": "REJECTED"
     }
    ],
-   "failsRequired": 1
+   "team": []
   },
   {
-   "team": [],
    "proposals": [],
+   "team": [],
    "failsRequired": 1,
-   "teamSize": 4,
-   "state": "PENDING"
+   "state": "PENDING",
+   "teamSize": 4
   }
  ],
- "options": {
-  "inGameLog": false
- }
+ "timeFinished": {
+  "_seconds": 1596510568,
+  "_nanoseconds": 158000000
+ },
+ "players": [
+  {
+   "uid": "l8JzD6xjccgDr0LeRniyX7zhlPP2",
+   "name": "MILLERTIME"
+  },
+  {
+   "uid": "KgEg5NvTY6OkEOFw5RNqb6eEAVD3",
+   "name": "EMERSON"
+  },
+  {
+   "uid": "rxsLmVGWOgcjCqKDTokMNyu8k7o2",
+   "name": "VIC"
+  },
+  {
+   "name": "JACOB",
+   "uid": "2kkT3FL8EsOPKj3k1U3nv1g07Ou1"
+  },
+  {
+   "uid": "pTCUWIjzlkU0QSilgWIS9F1Kucm1",
+   "name": "DYLAN"
+  },
+  {
+   "uid": "CRAo4cjSqXM6sZ3vr9VK2YLji003",
+   "name": "KEON"
+  }
+ ]
 }

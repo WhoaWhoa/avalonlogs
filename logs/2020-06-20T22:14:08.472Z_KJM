@@ -1,63 +1,65 @@
 {
+ "options": {
+  "inGameLog": false
+ },
  "missions": [
   {
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "AIDAN",
+      "ABBIE",
+      "MARTIN",
+      "CHLOE"
+     ],
+     "proposer": "AIDAN",
+     "team": [
+      "AIDAN",
+      "MARTIN"
+     ]
+    }
+   ],
    "state": "FAIL",
    "team": [
     "AIDAN",
     "MARTIN"
    ],
    "failsRequired": 1,
-   "numFails": 1,
    "teamSize": 2,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "team": [
-      "AIDAN",
-      "MARTIN"
-     ],
-     "votes": [
-      "AIDAN",
-      "ABBIE",
-      "MARTIN",
-      "CHLOE"
-     ],
-     "proposer": "AIDAN"
-    }
-   ]
+   "numFails": 1
   },
   {
    "proposals": [
     {
-     "proposer": "CHLOE",
-     "state": "APPROVED",
+     "team": [
+      "CHLOE",
+      "MARTIN",
+      "OLIVIA"
+     ],
      "votes": [
       "ABBIE",
       "MARTIN",
       "CHLOE",
       "AIDAN"
      ],
-     "team": [
-      "CHLOE",
-      "MARTIN",
-      "OLIVIA"
-     ]
+     "state": "APPROVED",
+     "proposer": "CHLOE"
     }
    ],
-   "teamSize": 3,
    "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3,
+   "state": "SUCCESS",
    "team": [
     "CHLOE",
     "MARTIN",
     "OLIVIA"
-   ],
-   "state": "SUCCESS",
-   "numFails": 0
+   ]
   },
   {
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "ABBIE",
       "MARTIN",
@@ -68,23 +70,23 @@
       "CHLOE",
       "OLIVIA"
      ],
-     "proposer": "MARTIN"
+     "proposer": "MARTIN",
+     "state": "APPROVED"
     }
    ],
+   "state": "SUCCESS",
+   "teamSize": 2,
    "numFails": 0,
    "failsRequired": 1,
-   "state": "SUCCESS",
    "team": [
     "CHLOE",
     "OLIVIA"
-   ],
-   "teamSize": 2
+   ]
   },
   {
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "ABBIE",
-     "state": "REJECTED",
      "team": [
       "ABBIE",
       "MARTIN",
@@ -93,19 +95,21 @@
      "votes": [
       "ABBIE",
       "MARTIN"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "ABBIE"
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "OLIVIA"
-     ],
      "team": [
       "OLIVIA",
       "ABBIE",
       "CHLOE"
      ],
-     "proposer": "OLIVIA"
+     "proposer": "OLIVIA",
+     "state": "REJECTED",
+     "votes": [
+      "OLIVIA"
+     ]
     },
     {
      "votes": [
@@ -113,8 +117,8 @@
       "ABBIE",
       "OLIVIA"
      ],
-     "state": "APPROVED",
      "proposer": "AIDAN",
+     "state": "APPROVED",
      "team": [
       "ABBIE",
       "AIDAN",
@@ -122,18 +126,25 @@
      ]
     }
    ],
+   "numFails": 1,
+   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "ABBIE",
     "AIDAN",
     "CHLOE"
-   ],
-   "state": "FAIL",
-   "teamSize": 3,
-   "failsRequired": 1,
-   "numFails": 1
+   ]
   },
   {
    "failsRequired": 1,
+   "numFails": 1,
+   "team": [
+    "MARTIN",
+    "CHLOE",
+    "OLIVIA"
+   ],
+   "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
      "votes": [
@@ -141,40 +152,54 @@
       "MARTIN",
       "CHLOE"
      ],
-     "state": "APPROVED",
-     "proposer": "CHLOE",
      "team": [
       "MARTIN",
       "CHLOE",
       "OLIVIA"
-     ]
+     ],
+     "proposer": "CHLOE",
+     "state": "APPROVED"
     }
-   ],
-   "team": [
-    "MARTIN",
-    "CHLOE",
-    "OLIVIA"
-   ],
-   "numFails": 1,
-   "state": "FAIL",
-   "teamSize": 3
+   ]
   }
  ],
- "timeFinished": {
-  "_seconds": 1592691575,
-  "_nanoseconds": 8000000
- },
  "outcome": {
-  "roles": [
+  "state": "EVIL_WIN",
+  "votes": [
    {
-    "name": "AIDAN",
-    "role": "MORGANA",
-    "assassin": false
+    "MARTIN": false,
+    "AIDAN": true
    },
    {
+    "OLIVIA": true,
+    "CHLOE": true,
+    "MARTIN": true
+   },
+   {
+    "CHLOE": true,
+    "OLIVIA": true
+   },
+   {
+    "ABBIE": true,
+    "AIDAN": false,
+    "CHLOE": true
+   },
+   {
+    "MARTIN": false,
+    "OLIVIA": true,
+    "CHLOE": true
+   }
+  ],
+  "roles": [
+   {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ABBIE"
+    "role": "MORGANA",
+    "name": "AIDAN"
+   },
+   {
+    "name": "ABBIE",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "MARTIN",
@@ -187,39 +212,17 @@
     "assassin": false
    },
    {
+    "role": "MERLIN",
     "name": "OLIVIA",
-    "assassin": false,
-    "role": "MERLIN"
+    "assassin": false
    }
   ],
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "AIDAN": true,
-    "MARTIN": false
-   },
-   {
-    "MARTIN": true,
-    "CHLOE": true,
-    "OLIVIA": true
-   },
-   {
-    "CHLOE": true,
-    "OLIVIA": true
-   },
-   {
-    "ABBIE": true,
-    "CHLOE": true,
-    "AIDAN": false
-   },
-   {
-    "OLIVIA": true,
-    "CHLOE": true,
-    "MARTIN": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "assassinated": null
+  "assassinated": null,
+  "message": "Three failed missions"
+ },
+ "timeFinished": {
+  "_seconds": 1592691575,
+  "_nanoseconds": 8000000
  },
  "players": [
   {
@@ -227,27 +230,24 @@
    "uid": "sxLISnim3ER9UDMOosxowsX3i4B3"
   },
   {
-   "name": "CHLOE",
-   "uid": "zzfTZcX8XfNJtcW2WKTAkcPl3Cy2"
+   "uid": "zzfTZcX8XfNJtcW2WKTAkcPl3Cy2",
+   "name": "CHLOE"
   },
   {
-   "name": "MARTIN",
-   "uid": "L0Gx6Bis5pcXH1FfGkFIYNHXT9F3"
+   "uid": "L0Gx6Bis5pcXH1FfGkFIYNHXT9F3",
+   "name": "MARTIN"
   },
   {
    "name": "ABBIE",
    "uid": "i57qb0hz6dVqbgoyQU1Hscju7Hz1"
   },
   {
-   "name": "OLIVIA",
-   "uid": "YAmm32ea2gYFft7QcEPnhnglEyw1"
+   "uid": "YAmm32ea2gYFft7QcEPnhnglEyw1",
+   "name": "OLIVIA"
   }
  ],
  "timeCreated": {
   "_seconds": 1592691248,
   "_nanoseconds": 472000000
- },
- "options": {
-  "inGameLog": false
  }
 }

@@ -1,15 +1,74 @@
 {
+ "outcome": {
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "EVAN"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "BEN",
+    "assassin": false
+   },
+   {
+    "name": "YANNY",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "LOUIS",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "NQG",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "BRIAN",
+    "assassin": false
+   }
+  ],
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "YANNY": true,
+    "BEN": true
+   },
+   {
+    "BEN": true,
+    "EVAN": false,
+    "YANNY": true
+   },
+   {
+    "BRIAN": false,
+    "BEN": true,
+    "NQG": true,
+    "YANNY": true
+   },
+   {
+    "BRIAN": false,
+    "NQG": true,
+    "LOUIS": true
+   }
+  ]
+ },
  "missions": [
   {
+   "team": [
+    "BEN",
+    "YANNY"
+   ],
    "teamSize": 2,
    "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "BEN",
-      "YANNY"
-     ],
-     "state": "APPROVED",
      "votes": [
       "EVAN",
       "BEN",
@@ -17,84 +76,86 @@
       "LOUIS",
       "BRIAN"
      ],
-     "proposer": "BEN"
+     "state": "APPROVED",
+     "proposer": "BEN",
+     "team": [
+      "BEN",
+      "YANNY"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "team": [
-    "BEN",
-    "YANNY"
-   ],
-   "numFails": 0
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "team": [
-      "YANNY",
-      "BEN",
-      "EVAN"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "BRIAN",
-      "EVAN",
-      "BEN",
-      "YANNY",
-      "LOUIS"
-     ],
-     "proposer": "EVAN"
-    }
-   ],
-   "teamSize": 3,
    "numFails": 1,
    "team": [
     "YANNY",
     "BEN",
     "EVAN"
    ],
-   "state": "FAIL"
-  },
-  {
-   "teamSize": 4,
-   "numFails": 1,
-   "team": [
-    "YANNY",
-    "BEN",
-    "BRIAN",
-    "NQG"
-   ],
    "proposals": [
     {
-     "proposer": "NQG",
+     "votes": [
+      "BRIAN",
+      "EVAN",
+      "BEN",
+      "YANNY",
+      "LOUIS"
+     ],
+     "team": [
+      "YANNY",
+      "BEN",
+      "EVAN"
+     ],
+     "proposer": "EVAN",
+     "state": "APPROVED"
+    }
+   ],
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1
+  },
+  {
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "teamSize": 4,
+   "proposals": [
+    {
+     "state": "REJECTED",
      "team": [
       "NQG",
       "BRIAN",
       "LOUIS",
       "EVAN"
      ],
-     "state": "REJECTED",
      "votes": [
       "BRIAN"
-     ]
+     ],
+     "proposer": "NQG"
     },
     {
+     "proposer": "LOUIS",
+     "state": "REJECTED",
      "votes": [
       "BRIAN",
       "YANNY",
       "LOUIS"
      ],
-     "state": "REJECTED",
      "team": [
       "LOUIS",
       "YANNY",
       "BEN",
       "BRIAN"
-     ],
-     "proposer": "LOUIS"
+     ]
     },
     {
+     "team": [
+      "YANNY",
+      "BEN",
+      "BRIAN",
+      "NQG"
+     ],
      "votes": [
       "EVAN",
       "BEN",
@@ -102,63 +163,61 @@
       "NQG",
       "BRIAN"
      ],
-     "state": "APPROVED",
-     "team": [
-      "YANNY",
-      "BEN",
-      "BRIAN",
-      "NQG"
-     ],
-     "proposer": "BRIAN"
+     "proposer": "BRIAN",
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   "team": [
+    "YANNY",
+    "BEN",
+    "BRIAN",
+    "NQG"
+   ]
   },
   {
-   "state": "FAIL",
-   "numFails": 1,
    "teamSize": 3,
-   "failsRequired": 1,
+   "numFails": 1,
    "team": [
     "BRIAN",
     "LOUIS",
     "NQG"
    ],
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
+     "votes": [
+      "YANNY"
+     ],
+     "state": "REJECTED",
+     "proposer": "YANNY",
      "team": [
       "NQG",
       "YANNY",
       "BRIAN"
-     ],
-     "state": "REJECTED",
-     "proposer": "YANNY",
-     "votes": [
-      "YANNY"
      ]
     },
     {
-     "votes": [
-      "BEN",
-      "LOUIS",
-      "BRIAN"
-     ],
-     "proposer": "BEN",
      "team": [
       "LOUIS",
       "BEN",
       "BRIAN"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "proposer": "BEN",
+     "votes": [
+      "BEN",
+      "LOUIS",
+      "BRIAN"
+     ]
     },
     {
+     "state": "REJECTED",
      "proposer": "EVAN",
      "votes": [
       "EVAN",
       "YANNY"
      ],
-     "state": "REJECTED",
      "team": [
       "LOUIS",
       "EVAN",
@@ -172,8 +231,8 @@
       "EVAN",
       "YANNY"
      ],
-     "state": "APPROVED",
      "proposer": "NQG",
+     "state": "APPROVED",
      "team": [
       "BRIAN",
       "LOUIS",
@@ -192,28 +251,28 @@
  ],
  "players": [
   {
-   "name": "LOUIS",
-   "uid": "FxNVnPh3OQhH9a24DbpHwR8uJLU2"
+   "uid": "FxNVnPh3OQhH9a24DbpHwR8uJLU2",
+   "name": "LOUIS"
   },
   {
-   "uid": "gDWnsaaToTO3W2wuBJnyv2xC70k1",
-   "name": "BRIAN"
+   "name": "BRIAN",
+   "uid": "gDWnsaaToTO3W2wuBJnyv2xC70k1"
   },
   {
    "name": "YANNY",
    "uid": "5wT6hEk7h1OrespCYq34YPAwqdx2"
   },
   {
-   "name": "BEN",
-   "uid": "Ley1q8PRq5aIZUrF0wptPf66HPn1"
+   "uid": "Ley1q8PRq5aIZUrF0wptPf66HPn1",
+   "name": "BEN"
   },
   {
-   "uid": "dGxWpetP0XNBvHhWS0nICIXeK4Y2",
-   "name": "EVAN"
+   "name": "EVAN",
+   "uid": "dGxWpetP0XNBvHhWS0nICIXeK4Y2"
   },
   {
-   "uid": "sfiXryFW6XZOU9Ea2vAm58pqGrG2",
-   "name": "NQG"
+   "name": "NQG",
+   "uid": "sfiXryFW6XZOU9Ea2vAm58pqGrG2"
   }
  ],
  "timeFinished": {
@@ -226,64 +285,5 @@
  "timeCreated": {
   "_seconds": 1593808825,
   "_nanoseconds": 736000000
- },
- "outcome": {
-  "votes": [
-   {
-    "BEN": true,
-    "YANNY": true
-   },
-   {
-    "YANNY": true,
-    "EVAN": false,
-    "BEN": true
-   },
-   {
-    "YANNY": true,
-    "BRIAN": false,
-    "NQG": true,
-    "BEN": true
-   },
-   {
-    "LOUIS": true,
-    "BRIAN": false,
-    "NQG": true
-   }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "EVAN"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "BEN"
-   },
-   {
-    "assassin": false,
-    "name": "YANNY",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "LOUIS"
-   },
-   {
-    "name": "NQG",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "BRIAN",
-    "assassin": false,
-    "role": "EVIL MINION"
-   }
-  ],
-  "assassinated": null
  }
 }

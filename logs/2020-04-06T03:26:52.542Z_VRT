@@ -1,72 +1,52 @@
 {
- "timeFinished": {
-  "_seconds": 1586144652,
-  "_nanoseconds": 812126000
- },
- "timeCreated": {
-  "_seconds": 1586143612,
-  "_nanoseconds": 542000000
- },
- "players": [
-  {
-   "name": "BRENDAN",
-   "uid": "fYYelbq1pPMGMFsGo5qg9rA52rA2"
-  },
-  {
-   "name": "LYSONDRA",
-   "uid": "Dip2orA6T7N3Iu28XtRC71yvQZ23"
-  },
-  {
-   "uid": "BTb9Q2eCGfMN3El5L3FfeqBqzw12",
-   "name": "ND"
-  },
-  {
-   "uid": "ryTZQ7MsLlTso6llmJyVN5aNrwS2",
-   "name": "ROHIT"
-  },
-  {
-   "uid": "fVO0TXpskNhrsggWYbSgGr9gsmz1",
-   "name": "SARAHB"
-  },
-  {
-   "name": "SARAHK",
-   "uid": "XZsPEH3MPuUvSJqKdDV01cUY9xO2"
-  },
-  {
-   "uid": "vKtAPn0CJMhlXOyn0A81c9GWoIH3",
-   "name": "SIV"
-  },
-  {
-   "uid": "nL1Y8Do7qFdoXW9vDCOiXp3aAL22",
-   "name": "GUS"
-  }
- ],
  "outcome": {
+  "message": "Three failed missions",
+  "assassinated": null,
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "ND": false,
+    "SIV": true,
+    "SARAHB": true
+   },
+   {
+    "ROHIT": false,
+    "SARAHK": true,
+    "LYSONDRA": true,
+    "BRENDAN": true
+   },
+   {
+    "ROHIT": false,
+    "SIV": false,
+    "ND": false,
+    "SARAHK": true
+   }
+  ],
   "roles": [
    {
-    "role": "OBERON",
     "assassin": false,
+    "role": "OBERON",
     "name": "ND"
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "GUS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
     "name": "SARAHK",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
-    "name": "SIV",
     "assassin": false,
-    "role": "MORGANA"
+    "role": "MORGANA",
+    "name": "SIV"
    },
    {
-    "role": "MORDRED",
     "name": "ROHIT",
-    "assassin": true
+    "assassin": true,
+    "role": "MORDRED"
    },
    {
     "role": "PERCIVAL",
@@ -74,83 +54,63 @@
     "assassin": false
    },
    {
-    "role": "MERLIN",
     "name": "BRENDAN",
-    "assassin": false
+    "assassin": false,
+    "role": "MERLIN"
    },
    {
+    "assassin": false,
     "name": "SARAHB",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   }
-  ],
-  "assassinated": null,
-  "state": "EVIL_WIN",
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "SARAHB": true,
-    "ND": false,
-    "SIV": true
-   },
-   {
-    "SARAHK": true,
-    "BRENDAN": true,
-    "LYSONDRA": true,
-    "ROHIT": false
-   },
-   {
-    "ND": false,
-    "SIV": false,
-    "ROHIT": false,
-    "SARAHK": true
+    "role": "LOYAL FOLLOWER"
    }
   ]
  },
  "missions": [
   {
    "teamSize": 3,
+   "state": "FAIL",
    "team": [
     "ND",
     "SARAHB",
     "SIV"
    ],
    "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "SIV",
       "GUS",
       "SARAHK"
      ],
-     "state": "REJECTED",
+     "proposer": "LYSONDRA",
      "votes": [
       "LYSONDRA"
-     ],
-     "proposer": "LYSONDRA"
+     ]
     },
     {
+     "state": "REJECTED",
+     "votes": [
+      "ND",
+      "ROHIT"
+     ],
      "team": [
       "ND",
       "ROHIT",
       "LYSONDRA"
      ],
-     "proposer": "ND",
-     "state": "REJECTED",
-     "votes": [
-      "ND",
-      "ROHIT"
-     ]
+     "proposer": "ND"
     },
     {
+     "state": "REJECTED",
+     "proposer": "ROHIT",
      "votes": [
       "SARAHB",
       "ND",
       "SIV",
       "ROHIT"
      ],
-     "state": "REJECTED",
-     "proposer": "ROHIT",
      "team": [
       "ROHIT",
       "ND",
@@ -163,23 +123,19 @@
       "SARAHB",
       "SIV"
      ],
-     "state": "APPROVED",
-     "proposer": "SARAHB",
      "votes": [
       "LYSONDRA",
       "SARAHB",
       "ND",
       "GUS",
       "SIV"
-     ]
+     ],
+     "proposer": "SARAHB",
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1,
-   "state": "FAIL"
+   ]
   },
   {
-   "teamSize": 4,
-   "numFails": 1,
    "proposals": [
     {
      "proposer": "SARAHK",
@@ -189,15 +145,20 @@
       "ROHIT",
       "BRENDAN"
      ],
-     "state": "REJECTED",
      "team": [
       "SARAHK",
       "BRENDAN",
       "ROHIT",
       "GUS"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
+     "votes": [
+      "ND",
+      "GUS",
+      "SIV"
+     ],
      "proposer": "SIV",
      "team": [
       "SIV",
@@ -205,12 +166,7 @@
       "SARAHK",
       "BRENDAN"
      ],
-     "state": "REJECTED",
-     "votes": [
-      "ND",
-      "GUS",
-      "SIV"
-     ]
+     "state": "REJECTED"
     },
     {
      "team": [
@@ -219,16 +175,23 @@
       "BRENDAN",
       "ROHIT"
      ],
+     "proposer": "GUS",
      "state": "REJECTED",
      "votes": [
       "ROHIT",
       "BRENDAN",
       "ND",
       "GUS"
-     ],
-     "proposer": "GUS"
+     ]
     },
     {
+     "state": "APPROVED",
+     "team": [
+      "BRENDAN",
+      "LYSONDRA",
+      "ROHIT",
+      "SARAHK"
+     ],
      "votes": [
       "ND",
       "GUS",
@@ -237,13 +200,6 @@
       "ROHIT",
       "BRENDAN"
      ],
-     "team": [
-      "BRENDAN",
-      "LYSONDRA",
-      "ROHIT",
-      "SARAHK"
-     ],
-     "state": "APPROVED",
      "proposer": "BRENDAN"
     }
    ],
@@ -254,33 +210,30 @@
     "SARAHK"
    ],
    "failsRequired": 1,
-   "state": "FAIL"
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 4
   },
   {
+   "teamSize": 4,
+   "state": "FAIL",
    "numFails": 3,
-   "team": [
-    "SARAHK",
-    "ROHIT",
-    "SIV",
-    "ND"
-   ],
-   "failsRequired": 1,
    "proposals": [
     {
      "state": "REJECTED",
-     "votes": [
-      "GUS",
-      "LYSONDRA",
-      "SARAHB",
-      "ND"
-     ],
      "team": [
       "LYSONDRA",
       "GUS",
       "SIV",
       "SARAHB"
      ],
-     "proposer": "LYSONDRA"
+     "proposer": "LYSONDRA",
+     "votes": [
+      "GUS",
+      "LYSONDRA",
+      "SARAHB",
+      "ND"
+     ]
     },
     {
      "votes": [
@@ -289,29 +242,29 @@
       "ND"
      ],
      "proposer": "ND",
+     "state": "REJECTED",
      "team": [
       "ND",
       "SIV",
       "BRENDAN",
       "GUS"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "REJECTED",
      "votes": [
       "SIV",
       "ROHIT",
       "LYSONDRA",
       "ND"
      ],
-     "proposer": "ROHIT",
-     "state": "REJECTED",
      "team": [
       "ROHIT",
       "SARAHK",
       "LYSONDRA",
       "ND"
-     ]
+     ],
+     "proposer": "ROHIT"
     },
     {
      "state": "REJECTED",
@@ -331,6 +284,7 @@
     },
     {
      "proposer": "SARAHK",
+     "state": "APPROVED",
      "votes": [
       "GUS",
       "SARAHK",
@@ -341,7 +295,6 @@
       "SARAHB",
       "ND"
      ],
-     "state": "APPROVED",
      "team": [
       "SARAHK",
       "ROHIT",
@@ -350,22 +303,69 @@
      ]
     }
    ],
-   "state": "FAIL",
-   "teamSize": 4
+   "team": [
+    "SARAHK",
+    "ROHIT",
+    "SIV",
+    "ND"
+   ],
+   "failsRequired": 1
   },
   {
-   "failsRequired": 2,
    "teamSize": 5,
+   "proposals": [],
+   "failsRequired": 2,
    "team": [],
-   "state": "PENDING",
-   "proposals": []
+   "state": "PENDING"
   },
   {
-   "state": "PENDING",
-   "team": [],
-   "failsRequired": 1,
    "proposals": [],
-   "teamSize": 5
+   "team": [],
+   "teamSize": 5,
+   "state": "PENDING",
+   "failsRequired": 1
   }
- ]
+ ],
+ "players": [
+  {
+   "uid": "fYYelbq1pPMGMFsGo5qg9rA52rA2",
+   "name": "BRENDAN"
+  },
+  {
+   "name": "LYSONDRA",
+   "uid": "Dip2orA6T7N3Iu28XtRC71yvQZ23"
+  },
+  {
+   "uid": "BTb9Q2eCGfMN3El5L3FfeqBqzw12",
+   "name": "ND"
+  },
+  {
+   "uid": "ryTZQ7MsLlTso6llmJyVN5aNrwS2",
+   "name": "ROHIT"
+  },
+  {
+   "name": "SARAHB",
+   "uid": "fVO0TXpskNhrsggWYbSgGr9gsmz1"
+  },
+  {
+   "uid": "XZsPEH3MPuUvSJqKdDV01cUY9xO2",
+   "name": "SARAHK"
+  },
+  {
+   "uid": "vKtAPn0CJMhlXOyn0A81c9GWoIH3",
+   "name": "SIV"
+  },
+  {
+   "name": "GUS",
+   "uid": "nL1Y8Do7qFdoXW9vDCOiXp3aAL22"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1586143612,
+  "_nanoseconds": 542000000
+ },
+ "timeFinished": {
+  "_seconds": 1586144652,
+  "_nanoseconds": 812126000
+ }
 }

@@ -1,62 +1,107 @@
 {
- "outcome": {
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "ANNI": false,
-    "MARK": true
-   },
-   {
-    "TRISTAN": true,
-    "ANNI": false,
-    "DARCI": true
-   },
-   {
-    "MARK": true,
-    "AIDAN": false,
-    "JEFF": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "name": "DARCI",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "JEFF"
-   },
-   {
-    "name": "MARK",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "NATHAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "AIDAN"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "TRISTAN",
-    "assassin": false
-   },
-   {
-    "name": "ANNI",
-    "assassin": false,
-    "role": "EVIL MINION"
-   }
-  ],
-  "state": "EVIL_WIN",
-  "assassinated": null
- },
+ "missions": [
+  {
+   "state": "FAIL",
+   "numFails": 1,
+   "team": [
+    "ANNI",
+    "MARK"
+   ],
+   "proposals": [
+    {
+     "votes": [
+      "TRISTAN",
+      "ANNI",
+      "DARCI",
+      "JEFF",
+      "MARK",
+      "NATHAN"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "ANNI",
+      "MARK"
+     ],
+     "proposer": "TRISTAN"
+    }
+   ],
+   "failsRequired": 1,
+   "teamSize": 2
+  },
+  {
+   "teamSize": 3,
+   "team": [
+    "DARCI",
+    "TRISTAN",
+    "ANNI"
+   ],
+   "numFails": 1,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "proposals": [
+    {
+     "proposer": "AIDAN",
+     "votes": [
+      "MARK",
+      "NATHAN",
+      "TRISTAN",
+      "DARCI",
+      "JEFF"
+     ],
+     "team": [
+      "DARCI",
+      "TRISTAN",
+      "ANNI"
+     ],
+     "state": "APPROVED"
+    }
+   ]
+  },
+  {
+   "team": [
+    "MARK",
+    "AIDAN",
+    "JEFF"
+   ],
+   "proposals": [
+    {
+     "team": [
+      "MARK",
+      "AIDAN",
+      "JEFF"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "MARK",
+      "NATHAN",
+      "AIDAN",
+      "TRISTAN",
+      "ANNI",
+      "JEFF"
+     ],
+     "proposer": "NATHAN"
+    }
+   ],
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1
+  },
+  {
+   "failsRequired": 2,
+   "teamSize": 4,
+   "proposals": [],
+   "team": [],
+   "state": "PENDING"
+  },
+  {
+   "state": "PENDING",
+   "team": [],
+   "teamSize": 4,
+   "proposals": [],
+   "failsRequired": 1
+  }
+ ],
  "players": [
   {
    "name": "ANNI",
@@ -79,123 +124,78 @@
    "uid": "IOJc6iHrvJWB7I8GtMhQB5hRGeO2"
   },
   {
-   "uid": "5suP4lvkl9Vzr8CtnDKTkvKCliR2",
-   "name": "MARK"
+   "name": "MARK",
+   "uid": "5suP4lvkl9Vzr8CtnDKTkvKCliR2"
   },
   {
-   "uid": "QZAk7lQ0uobIpPeeS6MS22kkCwN2",
-   "name": "JEFF"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1586139832,
-  "_nanoseconds": 177000000
- },
- "missions": [
-  {
-   "failsRequired": 1,
-   "team": [
-    "ANNI",
-    "MARK"
-   ],
-   "teamSize": 2,
-   "state": "FAIL",
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "proposer": "TRISTAN",
-     "team": [
-      "ANNI",
-      "MARK"
-     ],
-     "votes": [
-      "TRISTAN",
-      "ANNI",
-      "DARCI",
-      "JEFF",
-      "MARK",
-      "NATHAN"
-     ]
-    }
-   ],
-   "numFails": 1
-  },
-  {
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "proposer": "AIDAN",
-     "state": "APPROVED",
-     "votes": [
-      "MARK",
-      "NATHAN",
-      "TRISTAN",
-      "DARCI",
-      "JEFF"
-     ],
-     "team": [
-      "DARCI",
-      "TRISTAN",
-      "ANNI"
-     ]
-    }
-   ],
-   "teamSize": 3,
-   "team": [
-    "DARCI",
-    "TRISTAN",
-    "ANNI"
-   ],
-   "numFails": 1,
-   "state": "FAIL"
-  },
-  {
-   "proposals": [
-    {
-     "team": [
-      "MARK",
-      "AIDAN",
-      "JEFF"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "MARK",
-      "NATHAN",
-      "AIDAN",
-      "TRISTAN",
-      "ANNI",
-      "JEFF"
-     ],
-     "proposer": "NATHAN"
-    }
-   ],
-   "teamSize": 3,
-   "numFails": 1,
-   "team": [
-    "MARK",
-    "AIDAN",
-    "JEFF"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1
-  },
-  {
-   "teamSize": 4,
-   "proposals": [],
-   "failsRequired": 2,
-   "state": "PENDING",
-   "team": []
-  },
-  {
-   "teamSize": 4,
-   "team": [],
-   "proposals": [],
-   "state": "PENDING",
-   "failsRequired": 1
+   "name": "JEFF",
+   "uid": "QZAk7lQ0uobIpPeeS6MS22kkCwN2"
   }
  ],
  "timeFinished": {
   "_seconds": 1586140151,
   "_nanoseconds": 592846000
+ },
+ "outcome": {
+  "roles": [
+   {
+    "name": "DARCI",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "JEFF"
+   },
+   {
+    "name": "MARK",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "name": "NATHAN",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "AIDAN"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "TRISTAN"
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "ANNI"
+   }
+  ],
+  "votes": [
+   {
+    "MARK": true,
+    "ANNI": false
+   },
+   {
+    "TRISTAN": true,
+    "ANNI": false,
+    "DARCI": true
+   },
+   {
+    "MARK": true,
+    "AIDAN": false,
+    "JEFF": true
+   }
+  ],
+  "assassinated": null,
+  "message": "Three failed missions",
+  "state": "EVIL_WIN"
+ },
+ "timeCreated": {
+  "_seconds": 1586139832,
+  "_nanoseconds": 177000000
  }
 }

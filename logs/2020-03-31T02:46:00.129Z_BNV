@@ -1,4 +1,83 @@
 {
+ "players": [
+  {
+   "name": "THECOOLKID",
+   "uid": "cSIXMOsorfXVSthj6ZqTluxrSYH2"
+  },
+  {
+   "name": "SAHANA",
+   "uid": "HCuU9ZfUODSdUOgTREEB4DBxor03"
+  },
+  {
+   "uid": "3wq6wB5nUmPSCwGmtyBf8uumBsi2",
+   "name": "SLATYAF"
+  },
+  {
+   "uid": "PxnNzsqMuNaURgEyqSeHxOKJITS2",
+   "name": "BIGBRAIN"
+  },
+  {
+   "name": "MINION",
+   "uid": "01AjMAuWy5ZSXc8S8EBTPEvX0lf1"
+  }
+ ],
+ "outcome": {
+  "assassinated": "SAHANA",
+  "roles": [
+   {
+    "name": "BIGBRAIN",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "SAHANA",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "MINION",
+    "assassin": true
+   },
+   {
+    "name": "THECOOLKID",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "SLATYAF"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Merlin assassinated",
+  "votes": [
+   {
+    "MINION": true,
+    "BIGBRAIN": true
+   },
+   {
+    "BIGBRAIN": true,
+    "MINION": false,
+    "SAHANA": true
+   },
+   {
+    "BIGBRAIN": true,
+    "MINION": false
+   },
+   {
+    "BIGBRAIN": true,
+    "THECOOLKID": true,
+    "SAHANA": true
+   },
+   {
+    "SAHANA": true,
+    "BIGBRAIN": true,
+    "THECOOLKID": true
+   }
+  ]
+ },
  "timeFinished": {
   "_seconds": 1585623052,
   "_nanoseconds": 510449000
@@ -7,78 +86,12 @@
   "_seconds": 1585622760,
   "_nanoseconds": 129000000
  },
- "outcome": {
-  "message": "Merlin assassinated",
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "BIGBRAIN": true,
-    "MINION": true
-   },
-   {
-    "MINION": false,
-    "SAHANA": true,
-    "BIGBRAIN": true
-   },
-   {
-    "MINION": false,
-    "BIGBRAIN": true
-   },
-   {
-    "SAHANA": true,
-    "THECOOLKID": true,
-    "BIGBRAIN": true
-   },
-   {
-    "THECOOLKID": true,
-    "BIGBRAIN": true,
-    "SAHANA": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "BIGBRAIN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "MERLIN",
-    "assassin": false,
-    "name": "SAHANA"
-   },
-   {
-    "name": "MINION",
-    "assassin": true,
-    "role": "EVIL MINION"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "THECOOLKID"
-   },
-   {
-    "name": "SLATYAF",
-    "role": "MORGANA",
-    "assassin": false
-   }
-  ],
-  "assassinated": "SAHANA"
- },
  "missions": [
   {
-   "team": [
-    "BIGBRAIN",
-    "MINION"
-   ],
-   "state": "SUCCESS",
+   "failsRequired": 1,
    "teamSize": 2,
-   "numFails": 0,
    "proposals": [
     {
-     "team": [
-      "BIGBRAIN",
-      "MINION"
-     ],
      "proposer": "BIGBRAIN",
      "state": "APPROVED",
      "votes": [
@@ -86,21 +99,28 @@
       "BIGBRAIN",
       "SAHANA",
       "MINION"
+     ],
+     "team": [
+      "BIGBRAIN",
+      "MINION"
      ]
     }
    ],
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "numFails": 0,
+   "team": [
+    "BIGBRAIN",
+    "MINION"
+   ]
   },
   {
-   "state": "FAIL",
-   "failsRequired": 1,
    "teamSize": 3,
    "team": [
     "BIGBRAIN",
     "SAHANA",
     "MINION"
    ],
-   "numFails": 1,
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
@@ -117,12 +137,15 @@
      ],
      "proposer": "MINION"
     }
-   ]
+   ],
+   "state": "FAIL",
+   "numFails": 1
   },
   {
+   "state": "FAIL",
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "THECOOLKID",
      "votes": [
       "BIGBRAIN",
@@ -132,77 +155,76 @@
      "team": [
       "BIGBRAIN",
       "MINION"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
+   "failsRequired": 1,
    "team": [
     "BIGBRAIN",
     "MINION"
    ],
-   "teamSize": 2,
-   "state": "FAIL",
-   "failsRequired": 1,
    "numFails": 1
   },
   {
-   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "SAHANA",
-      "THECOOLKID",
-      "BIGBRAIN"
-     ],
      "proposer": "SAHANA",
+     "state": "APPROVED",
      "votes": [
       "BIGBRAIN",
       "SAHANA",
       "MINION"
+     ],
+     "team": [
+      "SAHANA",
+      "THECOOLKID",
+      "BIGBRAIN"
      ]
     }
    ],
-   "numFails": 0,
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "SAHANA",
     "THECOOLKID",
     "BIGBRAIN"
    ],
-   "state": "SUCCESS"
+   "teamSize": 3,
+   "numFails": 0
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
    "proposals": [
     {
-     "votes": [
-      "SLATYAF",
-      "MINION"
-     ],
      "proposer": "SLATYAF",
      "state": "REJECTED",
      "team": [
       "SLATYAF",
       "SAHANA",
       "THECOOLKID"
+     ],
+     "votes": [
+      "SLATYAF",
+      "MINION"
      ]
     },
     {
-     "votes": [
-      "BIGBRAIN",
-      "SAHANA",
-      "MINION"
-     ],
-     "state": "APPROVED",
      "team": [
       "BIGBRAIN",
       "SAHANA",
       "THECOOLKID"
      ],
+     "state": "APPROVED",
+     "votes": [
+      "BIGBRAIN",
+      "SAHANA",
+      "MINION"
+     ],
      "proposer": "BIGBRAIN"
     }
    ],
+   "teamSize": 3,
+   "failsRequired": 1,
    "numFails": 0,
    "state": "SUCCESS",
    "team": [
@@ -210,28 +232,6 @@
     "SAHANA",
     "THECOOLKID"
    ]
-  }
- ],
- "players": [
-  {
-   "uid": "cSIXMOsorfXVSthj6ZqTluxrSYH2",
-   "name": "THECOOLKID"
-  },
-  {
-   "name": "SAHANA",
-   "uid": "HCuU9ZfUODSdUOgTREEB4DBxor03"
-  },
-  {
-   "name": "SLATYAF",
-   "uid": "3wq6wB5nUmPSCwGmtyBf8uumBsi2"
-  },
-  {
-   "uid": "PxnNzsqMuNaURgEyqSeHxOKJITS2",
-   "name": "BIGBRAIN"
-  },
-  {
-   "name": "MINION",
-   "uid": "01AjMAuWy5ZSXc8S8EBTPEvX0lf1"
   }
  ]
 }

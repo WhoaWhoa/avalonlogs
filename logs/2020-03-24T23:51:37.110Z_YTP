@@ -1,16 +1,25 @@
 {
+ "timeFinished": {
+  "_seconds": 1585094938,
+  "_nanoseconds": 290737000
+ },
+ "timeCreated": {
+  "_seconds": 1585093897,
+  "_nanoseconds": 110000000
+ },
  "outcome": {
-  "message": "Three successful missions",
+  "assassinated": "TYLER",
   "state": "GOOD_WIN",
+  "message": "Three successful missions",
   "votes": [
    {
-    "ROCKY": true,
-    "ROCIO": true
+    "ROCIO": true,
+    "ROCKY": true
    },
    {
-    "DOM": true,
     "ROCKY": true,
-    "BRIAN": false
+    "BRIAN": false,
+    "DOM": true
    },
    {
     "ROCIO": true,
@@ -19,17 +28,16 @@
    },
    {
     "ROCIO": true,
+    "TYLER": true,
     "STEVE": false,
-    "ROCKY": true,
-    "TYLER": true
+    "ROCKY": true
    }
   ],
-  "assassinated": "TYLER",
   "roles": [
    {
+    "name": "ROCKY",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ROCKY"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "HADES",
@@ -37,13 +45,13 @@
     "role": "MORGANA"
    },
    {
+    "assassin": false,
     "role": "MERLIN",
-    "name": "ROCIO",
-    "assassin": false
+    "name": "ROCIO"
    },
    {
-    "role": "PERCIVAL",
     "assassin": false,
+    "role": "PERCIVAL",
     "name": "DOM"
    },
    {
@@ -58,64 +66,35 @@
    },
    {
     "assassin": false,
-    "name": "TYLER",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "TYLER"
    }
   ]
  },
- "timeFinished": {
-  "_seconds": 1585094938,
-  "_nanoseconds": 290737000
- },
- "players": [
-  {
-   "name": "BRIAN",
-   "uid": "YckS9udxtgcpWUfqj3t66QdVZmi1"
-  },
-  {
-   "uid": "VWM1WaKq6wOmGr3Am8DNBFq4PXB3",
-   "name": "DOM"
-  },
-  {
-   "uid": "TgIdSDP0GPhiZXa373hp7Pf3t612",
-   "name": "HADES"
-  },
-  {
-   "uid": "cU2m1wQtIdTmFmwNi4J5MlFh8Wl2",
-   "name": "ROCIO"
-  },
-  {
-   "uid": "SRmi8qkCH0a2XeZk9QAeO26m3eY2",
-   "name": "STEVE"
-  },
-  {
-   "name": "TYLER",
-   "uid": "JGCLVetGepXx4rLnxA33ErZRAXB2"
-  },
-  {
-   "uid": "yo8EKQ8mcASrypfVLVBlTkttRcA3",
-   "name": "ROCKY"
-  }
- ],
  "missions": [
   {
-   "teamSize": 2,
    "failsRequired": 1,
    "numFails": 0,
+   "team": [
+    "ROCIO",
+    "ROCKY"
+   ],
+   "teamSize": 2,
    "proposals": [
     {
-     "proposer": "ROCKY",
      "votes": [
       "ROCKY",
       "DOM"
      ],
+     "proposer": "ROCKY",
+     "state": "REJECTED",
      "team": [
       "DOM",
       "ROCKY"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
+     "state": "REJECTED",
      "votes": [
       "BRIAN",
       "TYLER"
@@ -124,19 +103,19 @@
       "BRIAN",
       "TYLER"
      ],
-     "proposer": "BRIAN",
-     "state": "REJECTED"
+     "proposer": "BRIAN"
     },
     {
-     "state": "REJECTED",
      "team": [
       "DOM",
       "HADES"
      ],
-     "proposer": "DOM",
-     "votes": []
+     "votes": [],
+     "state": "REJECTED",
+     "proposer": "DOM"
     },
     {
+     "proposer": "HADES",
      "state": "REJECTED",
      "votes": [
       "STEVE"
@@ -144,8 +123,7 @@
      "team": [
       "STEVE",
       "DOM"
-     ],
-     "proposer": "HADES"
+     ]
     },
     {
      "votes": [
@@ -156,28 +134,26 @@
       "HADES",
       "ROCIO"
      ],
-     "proposer": "ROCIO",
      "team": [
       "ROCIO",
       "ROCKY"
      ],
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "ROCIO"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "ROCIO",
-    "ROCKY"
-   ]
+   "state": "SUCCESS"
   },
   {
+   "teamSize": 3,
    "failsRequired": 1,
    "team": [
     "DOM",
     "ROCKY",
     "BRIAN"
    ],
-   "teamSize": 3,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "team": [
@@ -185,15 +161,14 @@
       "ROCIO",
       "STEVE"
      ],
-     "proposer": "STEVE",
-     "state": "REJECTED",
      "votes": [
       "STEVE",
       "DOM"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "STEVE"
     },
     {
-     "proposer": "TYLER",
      "votes": [
       "TYLER"
      ],
@@ -202,29 +177,30 @@
       "ROCIO",
       "ROCKY"
      ],
+     "proposer": "TYLER",
      "state": "REJECTED"
     },
     {
-     "state": "REJECTED",
      "votes": [
       "TYLER",
       "ROCKY",
       "ROCIO"
      ],
+     "proposer": "ROCKY",
+     "state": "REJECTED",
      "team": [
       "ROCKY",
       "ROCIO",
       "TYLER"
-     ],
-     "proposer": "ROCKY"
+     ]
     },
     {
+     "state": "REJECTED",
      "team": [
       "BRIAN",
       "ROCKY",
       "ROCIO"
      ],
-     "state": "REJECTED",
      "votes": [
       "STEVE",
       "BRIAN",
@@ -246,55 +222,50 @@
       "HADES",
       "ROCIO"
      ],
-     "state": "APPROVED",
-     "proposer": "DOM"
+     "proposer": "DOM",
+     "state": "APPROVED"
     }
-   ],
-   "numFails": 1,
-   "state": "FAIL"
+   ]
   },
   {
-   "numFails": 0,
    "state": "SUCCESS",
-   "team": [
-    "ROCIO",
-    "ROCKY",
-    "TYLER"
-   ],
-   "teamSize": 3,
-   "failsRequired": 1,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "HADES",
      "team": [
       "HADES",
       "BRIAN",
       "ROCIO"
      ],
-     "votes": []
+     "state": "REJECTED",
+     "votes": [],
+     "proposer": "HADES"
     },
     {
      "state": "APPROVED",
-     "proposer": "ROCIO",
+     "team": [
+      "ROCIO",
+      "ROCKY",
+      "TYLER"
+     ],
      "votes": [
       "BRIAN",
       "TYLER",
       "ROCKY",
       "ROCIO"
      ],
-     "team": [
-      "ROCIO",
-      "ROCKY",
-      "TYLER"
-     ]
+     "proposer": "ROCIO"
     }
-   ]
+   ],
+   "team": [
+    "ROCIO",
+    "ROCKY",
+    "TYLER"
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3
   },
   {
-   "state": "SUCCESS",
-   "numFails": 1,
-   "teamSize": 4,
    "failsRequired": 2,
    "team": [
     "STEVE",
@@ -302,35 +273,64 @@
     "TYLER",
     "ROCIO"
    ],
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "STEVE",
-      "ROCKY",
-      "TYLER",
-      "ROCIO"
-     ],
      "proposer": "STEVE",
      "votes": [
       "STEVE",
       "TYLER",
       "ROCKY",
       "ROCIO"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "STEVE",
+      "ROCKY",
+      "TYLER",
+      "ROCIO"
      ]
     }
-   ]
+   ],
+   "state": "SUCCESS",
+   "numFails": 1
   },
   {
-   "state": "PENDING",
    "proposals": [],
-   "teamSize": 4,
    "failsRequired": 1,
-   "team": []
+   "teamSize": 4,
+   "team": [],
+   "state": "PENDING"
   }
  ],
- "timeCreated": {
-  "_seconds": 1585093897,
-  "_nanoseconds": 110000000
- }
+ "players": [
+  {
+   "uid": "YckS9udxtgcpWUfqj3t66QdVZmi1",
+   "name": "BRIAN"
+  },
+  {
+   "name": "DOM",
+   "uid": "VWM1WaKq6wOmGr3Am8DNBFq4PXB3"
+  },
+  {
+   "name": "HADES",
+   "uid": "TgIdSDP0GPhiZXa373hp7Pf3t612"
+  },
+  {
+   "uid": "cU2m1wQtIdTmFmwNi4J5MlFh8Wl2",
+   "name": "ROCIO"
+  },
+  {
+   "name": "STEVE",
+   "uid": "SRmi8qkCH0a2XeZk9QAeO26m3eY2"
+  },
+  {
+   "uid": "JGCLVetGepXx4rLnxA33ErZRAXB2",
+   "name": "TYLER"
+  },
+  {
+   "uid": "yo8EKQ8mcASrypfVLVBlTkttRcA3",
+   "name": "ROCKY"
+  }
+ ]
 }

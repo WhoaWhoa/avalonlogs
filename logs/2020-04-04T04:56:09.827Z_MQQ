@@ -5,24 +5,24 @@
  },
  "missions": [
   {
+   "teamSize": 2,
+   "numFails": 0,
    "state": "SUCCESS",
    "failsRequired": 1,
-   "numFails": 0,
-   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "TARA",
       "ALI",
       "SHAL",
       "TOM"
      ],
+     "state": "APPROVED",
+     "proposer": "ALI",
      "team": [
       "ALI",
       "SHAL"
-     ],
-     "proposer": "ALI"
+     ]
     }
    ],
    "team": [
@@ -31,23 +31,18 @@
    ]
   },
   {
-   "state": "FAIL",
    "teamSize": 3,
-   "failsRequired": 1,
-   "team": [
-    "LUKE",
-    "TOM",
-    "SHAL"
-   ],
+   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
-     "proposer": "LUKE",
      "votes": [
       "SHAL",
       "LUKE",
       "TOM"
      ],
      "state": "APPROVED",
+     "proposer": "LUKE",
      "team": [
       "LUKE",
       "TOM",
@@ -55,17 +50,21 @@
      ]
     }
    ],
-   "numFails": 1
+   "failsRequired": 1,
+   "team": [
+    "LUKE",
+    "TOM",
+    "SHAL"
+   ]
   },
   {
-   "failsRequired": 1,
    "state": "FAIL",
-   "teamSize": 2,
    "team": [
     "SHAL",
     "TOM"
    ],
    "numFails": 1,
+   "teamSize": 2,
    "proposals": [
     {
      "votes": [
@@ -73,43 +72,45 @@
       "SHAL",
       "TOM"
      ],
-     "state": "APPROVED",
      "team": [
       "SHAL",
       "TOM"
      ],
-     "proposer": "SHAL"
+     "proposer": "SHAL",
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1
   },
   {
+   "numFails": 1,
    "proposals": [
     {
      "votes": [
       "LUKE",
       "TOM"
      ],
+     "state": "REJECTED",
      "team": [
       "TOM",
       "ALI",
       "LUKE"
      ],
-     "state": "REJECTED",
      "proposer": "TOM"
     },
     {
-     "votes": [
-      "TARA",
-      "LUKE",
-      "TOM"
-     ],
+     "proposer": "TARA",
+     "state": "APPROVED",
      "team": [
       "TARA",
       "SHAL",
       "LUKE"
      ],
-     "proposer": "TARA",
-     "state": "APPROVED"
+     "votes": [
+      "TARA",
+      "LUKE",
+      "TOM"
+     ]
     }
    ],
    "team": [
@@ -118,18 +119,69 @@
     "LUKE"
    ],
    "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 3,
-   "state": "FAIL"
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
    "teamSize": 3,
-   "team": [],
    "failsRequired": 1,
    "state": "PENDING",
+   "team": [],
    "proposals": []
   }
  ],
+ "outcome": {
+  "roles": [
+   {
+    "role": "EVIL MINION",
+    "assassin": true,
+    "name": "TARA"
+   },
+   {
+    "role": "MERLIN",
+    "name": "ALI",
+    "assassin": false
+   },
+   {
+    "name": "SHAL",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "LUKE",
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MORGANA",
+    "assassin": false,
+    "name": "TOM"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "ALI": true,
+    "SHAL": true
+   },
+   {
+    "LUKE": true,
+    "SHAL": true,
+    "TOM": false
+   },
+   {
+    "TOM": false,
+    "SHAL": true
+   },
+   {
+    "TARA": false,
+    "SHAL": true,
+    "LUKE": true
+   }
+  ],
+  "assassinated": null
+ },
  "timeCreated": {
   "_seconds": 1585976169,
   "_nanoseconds": 827000000
@@ -155,57 +207,5 @@
    "name": "TARA",
    "uid": "W3sTnLnGSDgDI2XBoUfpEKfz8Ht2"
   }
- ],
- "outcome": {
-  "message": "Three failed missions",
-  "roles": [
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "TARA"
-   },
-   {
-    "name": "ALI",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "name": "SHAL",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "LUKE",
-    "role": "PERCIVAL"
-   },
-   {
-    "name": "TOM",
-    "role": "MORGANA",
-    "assassin": false
-   }
-  ],
-  "state": "EVIL_WIN",
-  "votes": [
-   {
-    "ALI": true,
-    "SHAL": true
-   },
-   {
-    "SHAL": true,
-    "LUKE": true,
-    "TOM": false
-   },
-   {
-    "SHAL": true,
-    "TOM": false
-   },
-   {
-    "TARA": false,
-    "SHAL": true,
-    "LUKE": true
-   }
-  ],
-  "assassinated": null
- }
+ ]
 }

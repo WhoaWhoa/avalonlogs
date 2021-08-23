@@ -1,12 +1,84 @@
 {
+ "timeFinished": {
+  "_seconds": 1585973845,
+  "_nanoseconds": 237166000
+ },
+ "timeCreated": {
+  "_seconds": 1585973116,
+  "_nanoseconds": 7000000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "RENINI": true,
+    "MOCHI": true
+   },
+   {
+    "RENINI": true,
+    "GID": true,
+    "MOCHI": false
+   },
+   {
+    "TIM": true,
+    "HONEYBUN": true,
+    "RENINI": true
+   },
+   {
+    "HONEYBUN": true,
+    "COLIN": false,
+    "TIM": true,
+    "RENINI": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "TIM",
+    "role": "MERLIN"
+   },
+   {
+    "name": "MOCHI",
+    "assassin": true,
+    "role": "MORDRED"
+   },
+   {
+    "assassin": false,
+    "name": "CASEY",
+    "role": "MORGANA"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "HONEYBUN",
+    "assassin": false
+   },
+   {
+    "role": "OBERON",
+    "name": "COLIN",
+    "assassin": false
+   },
+   {
+    "name": "GID",
+    "role": "PERCIVAL",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "RENINI",
+    "assassin": false
+   }
+  ],
+  "message": "Three successful missions",
+  "assassinated": "GID"
+ },
  "players": [
   {
    "name": "CASEY",
    "uid": "6LUPzKtivbMjFWVn0OR7rohoo5a2"
   },
   {
-   "name": "TIM",
-   "uid": "18woXz2FfeQdASbbUrspRCvQHUi1"
+   "uid": "18woXz2FfeQdASbbUrspRCvQHUi1",
+   "name": "TIM"
   },
   {
    "uid": "NCFB9cPIsnX3xtNmnsAdXUVpRUn2",
@@ -21,30 +93,31 @@
    "uid": "XBPGIBk6ujUBMBaqT9b9l2fGAtI2"
   },
   {
-   "uid": "gkiSYujkARe1ztvl3491ojgHhz93",
-   "name": "HONEYBUN"
+   "name": "HONEYBUN",
+   "uid": "gkiSYujkARe1ztvl3491ojgHhz93"
   },
   {
    "name": "COLIN",
    "uid": "bh3gKSmGgfWDgCvKWeruOH5bVmy1"
   }
  ],
- "timeFinished": {
-  "_seconds": 1585973845,
-  "_nanoseconds": 237166000
- },
  "missions": [
   {
+   "teamSize": 2,
    "team": [
     "MOCHI",
     "RENINI"
    ],
+   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
      "team": [
       "MOCHI",
       "RENINI"
      ],
+     "state": "APPROVED",
      "votes": [
       "TIM",
       "MOCHI",
@@ -54,56 +127,45 @@
       "GID",
       "RENINI"
      ],
-     "proposer": "MOCHI",
-     "state": "APPROVED"
+     "proposer": "MOCHI"
     }
-   ],
-   "teamSize": 2,
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0
+   ]
   },
   {
-   "teamSize": 3,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1,
    "team": [
     "MOCHI",
     "RENINI",
     "GID"
    ],
+   "teamSize": 3,
    "proposals": [
     {
+     "votes": [
+      "TIM",
+      "MOCHI",
+      "CASEY",
+      "COLIN",
+      "HONEYBUN",
+      "GID",
+      "RENINI"
+     ],
      "state": "APPROVED",
      "team": [
       "MOCHI",
       "RENINI",
       "GID"
      ],
-     "votes": [
-      "TIM",
-      "MOCHI",
-      "CASEY",
-      "COLIN",
-      "HONEYBUN",
-      "GID",
-      "RENINI"
-     ],
      "proposer": "RENINI"
     }
-   ]
+   ],
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "RENINI",
-    "HONEYBUN",
-    "TIM"
-   ],
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "RENINI",
       "HONEYBUN",
@@ -116,34 +178,34 @@
       "CASEY",
       "GID"
      ],
-     "state": "APPROVED",
      "proposer": "GID"
     }
    ],
+   "state": "SUCCESS",
    "teamSize": 3,
+   "team": [
+    "RENINI",
+    "HONEYBUN",
+    "TIM"
+   ],
+   "failsRequired": 1,
    "numFails": 0
   },
   {
+   "failsRequired": 2,
+   "state": "SUCCESS",
+   "teamSize": 4,
    "team": [
     "RENINI",
     "HONEYBUN",
     "TIM",
     "COLIN"
    ],
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "teamSize": 4,
    "numFails": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "RENINI",
-      "HONEYBUN",
-      "TIM",
-      "COLIN"
-     ],
      "proposer": "HONEYBUN",
+     "state": "APPROVED",
      "votes": [
       "RENINI",
       "MOCHI",
@@ -151,84 +213,22 @@
       "COLIN",
       "HONEYBUN",
       "GID"
+     ],
+     "team": [
+      "RENINI",
+      "HONEYBUN",
+      "TIM",
+      "COLIN"
      ]
     }
    ]
   },
   {
-   "state": "PENDING",
-   "teamSize": 4,
    "proposals": [],
+   "teamSize": 4,
    "team": [],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "state": "PENDING"
   }
- ],
- "timeCreated": {
-  "_seconds": 1585973116,
-  "_nanoseconds": 7000000
- },
- "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "votes": [
-   {
-    "RENINI": true,
-    "MOCHI": true
-   },
-   {
-    "RENINI": true,
-    "GID": true,
-    "MOCHI": false
-   },
-   {
-    "RENINI": true,
-    "TIM": true,
-    "HONEYBUN": true
-   },
-   {
-    "TIM": true,
-    "HONEYBUN": true,
-    "COLIN": false,
-    "RENINI": true
-   }
-  ],
-  "assassinated": "GID",
-  "roles": [
-   {
-    "role": "MERLIN",
-    "name": "TIM",
-    "assassin": false
-   },
-   {
-    "role": "MORDRED",
-    "assassin": true,
-    "name": "MOCHI"
-   },
-   {
-    "name": "CASEY",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "HONEYBUN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "OBERON",
-    "name": "COLIN"
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "GID"
-   },
-   {
-    "name": "RENINI",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   }
-  ]
- }
+ ]
 }

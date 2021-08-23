@@ -1,58 +1,95 @@
 {
+ "timeCreated": {
+  "_seconds": 1600578956,
+  "_nanoseconds": 669000000
+ },
+ "players": [
+  {
+   "uid": "jzpZGHVfjbS3p6VsfpGY53wN27T2",
+   "name": "EMILY"
+  },
+  {
+   "name": "ALBERT",
+   "uid": "a9zinWFXOuRCFGdnneS5bJQPuRF2"
+  },
+  {
+   "name": "ANDREW",
+   "uid": "L6cFKHEED6YMGL2rnCfSlDbDPxr2"
+  },
+  {
+   "name": "MEGUCHAN",
+   "uid": "DXv2CTdidiP8u6rROMT6ToGAsjc2"
+  },
+  {
+   "name": "ANDRY",
+   "uid": "kjWhpHOyOdXBDAeRChYElLQhYJL2"
+  },
+  {
+   "uid": "Vf7fDfAEQcgXJPWb4qVyr5IsPth2",
+   "name": "WILLA"
+  },
+  {
+   "uid": "o2le7m7rXvQDAWZ9hTXakkMVOZ53",
+   "name": "MIKE"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1600581856,
+  "_nanoseconds": 97000000
+ },
  "options": {
   "inGameLog": false
  },
  "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "assassinated": "ANDRY",
   "votes": [
    {
     "ANDREW": true,
     "MEGUCHAN": true
    },
    {
-    "ANDREW": false,
     "WILLA": true,
-    "MIKE": true
+    "MIKE": true,
+    "ANDREW": false
+   },
+   {
+    "ANDRY": true,
+    "EMILY": true,
+    "WILLA": true
    },
    {
     "ANDRY": true,
     "WILLA": true,
-    "EMILY": true
-   },
-   {
-    "MIKE": true,
     "EMILY": true,
-    "WILLA": true,
-    "ANDRY": true
+    "MIKE": true
    }
   ],
+  "assassinated": "ANDRY",
+  "state": "GOOD_WIN",
   "roles": [
    {
+    "assassin": true,
     "role": "MORDRED",
-    "name": "ANDREW",
-    "assassin": true
+    "name": "ANDREW"
    },
    {
-    "role": "LOYAL FOLLOWER",
+    "name": "WILLA",
     "assassin": false,
-    "name": "WILLA"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ANDRY"
+    "name": "ANDRY",
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "OBERON",
     "name": "MEGUCHAN",
-    "assassin": false
+    "assassin": false,
+    "role": "OBERON"
    },
    {
-    "name": "MIKE",
+    "role": "PERCIVAL",
     "assassin": false,
-    "role": "PERCIVAL"
+    "name": "MIKE"
    },
    {
     "name": "EMILY",
@@ -60,22 +97,19 @@
     "role": "MERLIN"
    },
    {
-    "role": "MORGANA",
     "assassin": false,
+    "role": "MORGANA",
     "name": "ALBERT"
    }
-  ]
+  ],
+  "message": "Three successful missions"
  },
  "missions": [
   {
    "failsRequired": 1,
-   "team": [
-    "ANDREW",
-    "MEGUCHAN"
-   ],
-   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "ANDREW",
      "team": [
       "ANDREW",
       "MEGUCHAN"
@@ -86,22 +120,20 @@
       "MEGUCHAN",
       "WILLA"
      ],
-     "proposer": "ANDREW",
      "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0
+   "numFails": 0,
+   "team": [
+    "ANDREW",
+    "MEGUCHAN"
+   ],
+   "teamSize": 2,
+   "state": "SUCCESS"
   },
   {
-   "team": [
-    "WILLA",
-    "ANDREW",
-    "MIKE"
-   ],
-   "numFails": 1,
    "teamSize": 3,
-   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
      "votes": [
@@ -109,24 +141,24 @@
       "ANDREW",
       "MEGUCHAN"
      ],
-     "state": "REJECTED",
      "team": [
       "ANDREW",
       "MEGUCHAN",
       "WILLA"
      ],
+     "state": "REJECTED",
      "proposer": "MEGUCHAN"
     },
     {
+     "proposer": "ANDRY",
+     "votes": [
+      "ANDRY"
+     ],
+     "state": "REJECTED",
      "team": [
       "ANDRY",
       "ALBERT",
       "MIKE"
-     ],
-     "state": "REJECTED",
-     "proposer": "ANDRY",
-     "votes": [
-      "ANDRY"
      ]
     },
     {
@@ -136,21 +168,27 @@
       "WILLA",
       "ANDREW"
      ],
+     "state": "APPROVED",
      "team": [
       "WILLA",
       "ANDREW",
       "MIKE"
      ],
-     "proposer": "WILLA",
-     "state": "APPROVED"
+     "proposer": "WILLA"
     }
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "state": "FAIL",
+   "team": [
+    "WILLA",
+    "ANDREW",
+    "MIKE"
+   ]
   },
   {
-   "failsRequired": 1,
-   "teamSize": 3,
    "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "EMILY",
     "WILLA",
@@ -158,56 +196,56 @@
    ],
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "MIKE",
-      "EMILY",
-      "WILLA"
-     ],
      "team": [
       "MIKE",
       "EMILY",
       "WILLA"
      ],
-     "proposer": "MIKE"
+     "proposer": "MIKE",
+     "votes": [
+      "MIKE",
+      "EMILY",
+      "WILLA"
+     ],
+     "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
      "votes": [
       "EMILY",
       "ANDRY",
       "WILLA",
       "MIKE"
      ],
-     "proposer": "EMILY",
-     "state": "APPROVED",
      "team": [
       "EMILY",
       "WILLA",
       "ANDRY"
-     ]
+     ],
+     "proposer": "EMILY"
     }
    ],
-   "state": "SUCCESS"
+   "teamSize": 3
   },
   {
-   "failsRequired": 2,
-   "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "MEGUCHAN",
-      "WILLA"
-     ],
-     "state": "REJECTED",
+     "proposer": "ALBERT",
      "team": [
       "ALBERT",
       "WILLA",
       "EMILY",
       "ANDRY"
      ],
-     "proposer": "ALBERT"
+     "votes": [
+      "MEGUCHAN",
+      "WILLA"
+     ],
+     "state": "REJECTED"
     },
     {
+     "proposer": "ANDREW",
+     "state": "REJECTED",
      "votes": [
       "ANDREW"
      ],
@@ -216,9 +254,7 @@
       "WILLA",
       "EMILY",
       "MEGUCHAN"
-     ],
-     "state": "REJECTED",
-     "proposer": "ANDREW"
+     ]
     },
     {
      "state": "REJECTED",
@@ -227,84 +263,48 @@
       "ANDREW",
       "MEGUCHAN"
      ],
-     "proposer": "MEGUCHAN",
      "team": [
       "EMILY",
       "WILLA",
       "ANDRY",
       "MEGUCHAN"
-     ]
+     ],
+     "proposer": "MEGUCHAN"
     },
     {
+     "proposer": "ANDRY",
      "team": [
       "EMILY",
       "ANDRY",
       "WILLA",
       "MIKE"
      ],
-     "state": "APPROVED",
-     "proposer": "ANDRY",
      "votes": [
       "MIKE",
       "WILLA",
       "ANDRY",
       "EMILY"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0,
    "team": [
     "EMILY",
     "ANDRY",
     "WILLA",
     "MIKE"
-   ]
+   ],
+   "failsRequired": 2,
+   "teamSize": 4,
+   "numFails": 0,
+   "state": "SUCCESS"
   },
   {
+   "state": "PENDING",
    "teamSize": 4,
    "proposals": [],
    "failsRequired": 1,
-   "state": "PENDING",
    "team": []
   }
- ],
- "players": [
-  {
-   "name": "EMILY",
-   "uid": "jzpZGHVfjbS3p6VsfpGY53wN27T2"
-  },
-  {
-   "uid": "a9zinWFXOuRCFGdnneS5bJQPuRF2",
-   "name": "ALBERT"
-  },
-  {
-   "uid": "L6cFKHEED6YMGL2rnCfSlDbDPxr2",
-   "name": "ANDREW"
-  },
-  {
-   "uid": "DXv2CTdidiP8u6rROMT6ToGAsjc2",
-   "name": "MEGUCHAN"
-  },
-  {
-   "name": "ANDRY",
-   "uid": "kjWhpHOyOdXBDAeRChYElLQhYJL2"
-  },
-  {
-   "name": "WILLA",
-   "uid": "Vf7fDfAEQcgXJPWb4qVyr5IsPth2"
-  },
-  {
-   "uid": "o2le7m7rXvQDAWZ9hTXakkMVOZ53",
-   "name": "MIKE"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1600578956,
-  "_nanoseconds": 669000000
- },
- "timeFinished": {
-  "_seconds": 1600581856,
-  "_nanoseconds": 97000000
- }
+ ]
 }

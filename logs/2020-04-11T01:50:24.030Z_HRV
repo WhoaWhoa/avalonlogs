@@ -1,83 +1,16 @@
 {
- "timeFinished": {
-  "_seconds": 1586570377,
-  "_nanoseconds": 133951000
- },
- "timeCreated": {
-  "_seconds": 1586569824,
-  "_nanoseconds": 30000000
- },
- "outcome": {
-  "votes": [
-   {
-    "EMILY": true,
-    "FGB": true
-   },
-   {
-    "EMILY": false,
-    "HEATHER": true,
-    "FGB": true
-   },
-   {
-    "HEATHER": true,
-    "BEEKS": true,
-    "FGB": true,
-    "CEL": true
-   },
-   {
-    "HEATHER": true,
-    "BEEKS": true,
-    "FGB": true
-   }
-  ],
-  "assassinated": "FGB",
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "roles": [
-   {
-    "assassin": false,
-    "name": "BAGUETTE",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "EMILY",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "name": "BEEKS",
-    "role": "MERLIN"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "FGB",
-    "assassin": false
-   },
-   {
-    "name": "HEATHER",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "CEL"
-   }
-  ]
- },
  "players": [
   {
    "name": "EMILY",
    "uid": "zFvg8VmzMxVsbq7m5JavJGHuuVT2"
   },
   {
-   "uid": "sorl3xUmL1MFagfhmUUAS3ub7TY2",
-   "name": "BAGUETTE"
+   "name": "BAGUETTE",
+   "uid": "sorl3xUmL1MFagfhmUUAS3ub7TY2"
   },
   {
-   "uid": "mPBsQ0tZYZVytbmrEbs2HXFFtnC3",
-   "name": "BEEKS"
+   "name": "BEEKS",
+   "uid": "mPBsQ0tZYZVytbmrEbs2HXFFtnC3"
   },
   {
    "name": "FGB",
@@ -94,12 +27,9 @@
  ],
  "missions": [
   {
+   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "FGB",
-      "EMILY"
-     ],
      "proposer": "FGB",
      "state": "APPROVED",
      "votes": [
@@ -108,28 +38,29 @@
       "CEL",
       "BAGUETTE",
       "EMILY"
+     ],
+     "team": [
+      "FGB",
+      "EMILY"
      ]
     }
    ],
-   "state": "SUCCESS",
    "failsRequired": 1,
    "team": [
     "FGB",
     "EMILY"
    ],
-   "teamSize": 2,
+   "state": "SUCCESS",
    "numFails": 0
   },
   {
-   "failsRequired": 1,
    "teamSize": 3,
+   "state": "FAIL",
    "team": [
     "HEATHER",
     "FGB",
     "EMILY"
    ],
-   "state": "FAIL",
-   "numFails": 1,
    "proposals": [
     {
      "team": [
@@ -147,66 +78,72 @@
      "proposer": "HEATHER",
      "state": "APPROVED"
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
-   "failsRequired": 1,
-   "teamSize": 4,
    "team": [
     "BEEKS",
     "FGB",
     "HEATHER",
     "CEL"
    ],
-   "numFails": 0,
+   "teamSize": 4,
    "state": "SUCCESS",
+   "failsRequired": 1,
    "proposals": [
     {
-     "proposer": "CEL",
      "state": "REJECTED",
+     "votes": [
+      "CEL",
+      "BAGUETTE",
+      "EMILY"
+     ],
+     "proposer": "CEL",
      "team": [
       "CEL",
       "FGB",
       "BAGUETTE",
       "EMILY"
-     ],
-     "votes": [
-      "CEL",
-      "BAGUETTE",
-      "EMILY"
      ]
     },
     {
+     "state": "REJECTED",
      "team": [
       "CEL",
       "BEEKS",
       "FGB",
       "BAGUETTE"
      ],
+     "proposer": "EMILY",
      "votes": [
       "BAGUETTE",
       "EMILY",
       "CEL"
-     ],
-     "proposer": "EMILY",
-     "state": "REJECTED"
+     ]
     },
     {
-     "team": [
-      "BAGUETTE",
-      "BEEKS",
-      "FGB",
-      "HEATHER"
-     ],
+     "state": "REJECTED",
      "proposer": "BAGUETTE",
      "votes": [
       "BAGUETTE",
       "BEEKS"
      ],
-     "state": "REJECTED"
+     "team": [
+      "BAGUETTE",
+      "BEEKS",
+      "FGB",
+      "HEATHER"
+     ]
     },
     {
-     "state": "APPROVED",
+     "team": [
+      "BEEKS",
+      "FGB",
+      "HEATHER",
+      "CEL"
+     ],
      "proposer": "BEEKS",
      "votes": [
       "FGB",
@@ -215,24 +152,29 @@
       "EMILY",
       "BEEKS"
      ],
-     "team": [
-      "BEEKS",
-      "FGB",
-      "HEATHER",
-      "CEL"
-     ]
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "numFails": 0
   },
   {
+   "teamSize": 3,
+   "team": [
+    "FGB",
+    "HEATHER",
+    "BEEKS"
+   ],
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "FGB",
       "HEATHER",
       "BEEKS"
      ],
-     "state": "APPROVED",
      "votes": [
       "BAGUETTE",
       "BEEKS",
@@ -242,23 +184,81 @@
      ],
      "proposer": "FGB"
     }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
-   "state": "SUCCESS",
-   "team": [
-    "FGB",
-    "HEATHER",
-    "BEEKS"
    ]
   },
   {
    "proposals": [],
    "team": [],
-   "state": "PENDING",
+   "failsRequired": 1,
    "teamSize": 4,
-   "failsRequired": 1
+   "state": "PENDING"
   }
- ]
+ ],
+ "timeFinished": {
+  "_seconds": 1586570377,
+  "_nanoseconds": 133951000
+ },
+ "outcome": {
+  "assassinated": "FGB",
+  "votes": [
+   {
+    "EMILY": true,
+    "FGB": true
+   },
+   {
+    "HEATHER": true,
+    "FGB": true,
+    "EMILY": false
+   },
+   {
+    "HEATHER": true,
+    "BEEKS": true,
+    "FGB": true,
+    "CEL": true
+   },
+   {
+    "FGB": true,
+    "HEATHER": true,
+    "BEEKS": true
+   }
+  ],
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "BAGUETTE"
+   },
+   {
+    "assassin": false,
+    "name": "EMILY",
+    "role": "MORGANA"
+   },
+   {
+    "name": "BEEKS",
+    "assassin": false,
+    "role": "MERLIN"
+   },
+   {
+    "name": "FGB",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "HEATHER",
+    "assassin": false
+   },
+   {
+    "assassin": true,
+    "name": "CEL",
+    "role": "MORDRED"
+   }
+  ]
+ },
+ "timeCreated": {
+  "_seconds": 1586569824,
+  "_nanoseconds": 30000000
+ }
 }

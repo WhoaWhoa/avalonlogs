@@ -1,21 +1,28 @@
 {
+ "timeFinished": {
+  "_seconds": 1592703943,
+  "_nanoseconds": 696000000
+ },
+ "options": {
+  "inGameLog": false
+ },
  "outcome": {
-  "state": "EVIL_WIN",
+  "assassinated": null,
   "votes": [
    {
     "JAMES": true,
     "GEF": true
    },
    {
+    "INGRID": false,
     "GEF": true,
-    "THALIA": true,
-    "INGRID": false
+    "THALIA": true
    },
    {
     "INGRID": false,
+    "THEA": true,
     "JAMES": true,
-    "GEF": true,
-    "THEA": true
+    "GEF": true
    },
    {
     "NYG": true,
@@ -23,57 +30,53 @@
     "JAMES": false
    }
   ],
-  "assassinated": null,
-  "message": "Three failed missions",
   "roles": [
    {
+    "assassin": false,
     "name": "THEA",
-    "role": "MERLIN",
+    "role": "MERLIN"
+   },
+   {
+    "name": "GEF",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
    },
    {
     "assassin": false,
-    "name": "GEF",
+    "name": "INGRID",
+    "role": "MORGANA"
+   },
+   {
+    "assassin": true,
+    "role": "EVIL MINION",
+    "name": "JAMES"
+   },
+   {
+    "name": "THALIA",
+    "assassin": false,
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "MORGANA",
-    "name": "INGRID",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "JAMES",
-    "assassin": true
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "THALIA",
-    "assassin": false
-   },
-   {
     "name": "NYG",
-    "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "assassin": false
    }
-  ]
- },
- "timeCreated": {
-  "_seconds": 1592703343,
-  "_nanoseconds": 461000000
+  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions"
  },
  "players": [
   {
-   "name": "THEA",
-   "uid": "z0NqzrdcNbQ1ppCWYJyYHbrhsoI2"
+   "uid": "z0NqzrdcNbQ1ppCWYJyYHbrhsoI2",
+   "name": "THEA"
   },
   {
-   "uid": "RFJqWpJzyvNc0G8QNUV0fM84zSx2",
-   "name": "JAMES"
+   "name": "JAMES",
+   "uid": "RFJqWpJzyvNc0G8QNUV0fM84zSx2"
   },
   {
-   "name": "THALIA",
-   "uid": "YFuXoSesdxaC7ntzz8nYff5GM3G3"
+   "uid": "YFuXoSesdxaC7ntzz8nYff5GM3G3",
+   "name": "THALIA"
   },
   {
    "uid": "f4TXXkz2p4Y4nLPH8dNYOUQkJam1",
@@ -90,18 +93,16 @@
  ],
  "missions": [
   {
-   "teamSize": 2,
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1,
+   "team": [
+    "GEF",
+    "JAMES"
+   ],
    "proposals": [
     {
      "team": [
       "GEF",
       "JAMES"
      ],
-     "state": "APPROVED",
-     "proposer": "GEF",
      "votes": [
       "THEA",
       "GEF",
@@ -109,74 +110,83 @@
       "INGRID",
       "THALIA",
       "NYG"
-     ]
+     ],
+     "proposer": "GEF",
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "GEF",
-    "JAMES"
-   ]
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 2
   },
   {
+   "failsRequired": 1,
+   "state": "FAIL",
+   "numFails": 1,
+   "teamSize": 3,
    "proposals": [
     {
+     "state": "APPROVED",
      "team": [
       "INGRID",
       "GEF",
       "THALIA"
      ],
-     "proposer": "INGRID",
-     "state": "APPROVED",
      "votes": [
       "GEF",
       "JAMES",
       "THALIA",
       "NYG"
-     ]
+     ],
+     "proposer": "INGRID"
     }
    ],
    "team": [
     "INGRID",
     "GEF",
     "THALIA"
-   ],
-   "teamSize": 3,
-   "state": "FAIL",
-   "numFails": 1,
-   "failsRequired": 1
+   ]
   },
   {
-   "teamSize": 4,
    "proposals": [
     {
+     "votes": [
+      "THEA",
+      "GEF",
+      "JAMES",
+      "INGRID"
+     ],
      "team": [
       "THEA",
       "JAMES",
       "GEF",
       "INGRID"
      ],
-     "proposer": "THEA",
      "state": "APPROVED",
-     "votes": [
-      "THEA",
-      "GEF",
-      "JAMES",
-      "INGRID"
-     ]
+     "proposer": "THEA"
     }
    ],
+   "teamSize": 4,
+   "state": "FAIL",
    "team": [
     "THEA",
     "JAMES",
     "GEF",
     "INGRID"
    ],
-   "state": "FAIL",
    "numFails": 1,
    "failsRequired": 1
   },
   {
-   "failsRequired": 1,
+   "teamSize": 3,
+   "numFails": 1,
+   "team": [
+    "NYG",
+    "JAMES",
+    "THALIA"
+   ],
+   "state": "FAIL",
    "proposals": [
     {
      "votes": [
@@ -185,37 +195,27 @@
       "THALIA",
       "NYG"
      ],
-     "proposer": "JAMES",
-     "state": "APPROVED",
      "team": [
       "NYG",
       "JAMES",
       "THALIA"
-     ]
+     ],
+     "state": "APPROVED",
+     "proposer": "JAMES"
     }
    ],
-   "teamSize": 3,
-   "numFails": 1,
-   "state": "FAIL",
-   "team": [
-    "NYG",
-    "JAMES",
-    "THALIA"
-   ]
+   "failsRequired": 1
   },
   {
    "teamSize": 4,
-   "team": [],
    "failsRequired": 1,
    "proposals": [],
+   "team": [],
    "state": "PENDING"
   }
  ],
- "timeFinished": {
-  "_seconds": 1592703943,
-  "_nanoseconds": 696000000
- },
- "options": {
-  "inGameLog": false
+ "timeCreated": {
+  "_seconds": 1592703343,
+  "_nanoseconds": 461000000
  }
 }

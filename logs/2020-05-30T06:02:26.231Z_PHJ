@@ -1,19 +1,22 @@
 {
- "timeFinished": {
-  "_seconds": 1590819136,
-  "_nanoseconds": 537000000
- },
- "timeCreated": {
-  "_seconds": 1590818546,
-  "_nanoseconds": 231000000
- },
  "missions": [
   {
-   "numFails": 0,
    "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "JERRY",
+    "BOB"
+   ],
+   "teamSize": 2,
+   "state": "SUCCESS",
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "JERRY",
+     "team": [
+      "JERRY",
+      "BOB"
+     ],
      "votes": [
       "BOB",
       "ICEMONEY",
@@ -21,36 +24,20 @@
       "JOSHUA",
       "JUDIII",
       "JERRY"
-     ],
-     "team": [
-      "JERRY",
-      "BOB"
-     ],
-     "proposer": "JERRY"
+     ]
     }
-   ],
-   "state": "SUCCESS",
-   "teamSize": 2,
-   "team": [
-    "JERRY",
-    "BOB"
    ]
   },
   {
+   "failsRequired": 1,
    "team": [
     "KEVIN",
     "JERRY",
     "BOB"
    ],
-   "failsRequired": 1,
-   "numFails": 2,
+   "state": "FAIL",
    "proposals": [
     {
-     "team": [
-      "KEVIN",
-      "JERRY",
-      "BOB"
-     ],
      "proposer": "KEVIN",
      "state": "APPROVED",
      "votes": [
@@ -61,25 +48,27 @@
       "BOB",
       "ICEMONEY",
       "RAY"
+     ],
+     "team": [
+      "KEVIN",
+      "JERRY",
+      "BOB"
      ]
     }
    ],
-   "state": "FAIL",
+   "numFails": 2,
    "teamSize": 3
   },
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "team": [
-    "ICEMONEY",
-    "JOSHUA",
-    "RAY"
-   ],
-   "teamSize": 3,
-   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "ICEMONEY",
+      "JOSHUA",
+      "RAY"
+     ],
+     "proposer": "ICEMONEY",
      "votes": [
       "KEVIN",
       "BOB",
@@ -87,29 +76,32 @@
       "RAY",
       "JOSHUA",
       "JERRY"
-     ],
-     "proposer": "ICEMONEY",
-     "team": [
-      "ICEMONEY",
-      "JOSHUA",
-      "RAY"
      ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "ICEMONEY",
+    "JOSHUA",
+    "RAY"
+   ],
+   "teamSize": 3
   },
   {
    "state": "SUCCESS",
    "failsRequired": 2,
-   "numFails": 0,
    "teamSize": 4,
+   "team": [
+    "JUDIII",
+    "ICEMONEY",
+    "JOSHUA",
+    "RAY"
+   ],
    "proposals": [
     {
-     "team": [
-      "JUDIII",
-      "ICEMONEY",
-      "JOSHUA",
-      "RAY"
-     ],
+     "state": "APPROVED",
      "proposer": "JUDIII",
      "votes": [
       "KEVIN",
@@ -118,52 +110,60 @@
       "JOSHUA",
       "JUDIII"
      ],
-     "state": "APPROVED"
+     "team": [
+      "JUDIII",
+      "ICEMONEY",
+      "JOSHUA",
+      "RAY"
+     ]
     }
    ],
-   "team": [
-    "JUDIII",
-    "ICEMONEY",
-    "JOSHUA",
-    "RAY"
-   ]
+   "numFails": 0
   },
   {
-   "teamSize": 4,
    "state": "PENDING",
-   "failsRequired": 1,
+   "team": [],
    "proposals": [],
-   "team": []
+   "teamSize": 4,
+   "failsRequired": 1
   }
  ],
+ "timeCreated": {
+  "_seconds": 1590818546,
+  "_nanoseconds": 231000000
+ },
+ "timeFinished": {
+  "_seconds": 1590819136,
+  "_nanoseconds": 537000000
+ },
  "outcome": {
+  "message": "Three successful missions",
   "assassinated": "ICEMONEY",
-  "state": "GOOD_WIN",
   "roles": [
    {
-    "name": "BOB",
+    "assassin": false,
     "role": "MORGANA",
-    "assassin": false
+    "name": "BOB"
    },
    {
-    "assassin": false,
+    "name": "ICEMONEY",
     "role": "PERCIVAL",
-    "name": "ICEMONEY"
+    "assassin": false
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "RAY",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
    },
    {
     "assassin": false,
-    "role": "MERLIN",
-    "name": "JOSHUA"
+    "name": "JOSHUA",
+    "role": "MERLIN"
    },
    {
     "name": "JUDIII",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "name": "JERRY",
@@ -171,9 +171,9 @@
     "assassin": false
    },
    {
-    "name": "KEVIN",
     "assassin": true,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "KEVIN"
    }
   ],
   "votes": [
@@ -187,18 +187,18 @@
     "KEVIN": false
    },
    {
-    "JOSHUA": true,
+    "RAY": true,
     "ICEMONEY": true,
-    "RAY": true
+    "JOSHUA": true
    },
    {
-    "JUDIII": true,
-    "JOSHUA": true,
     "RAY": true,
-    "ICEMONEY": true
+    "ICEMONEY": true,
+    "JUDIII": true,
+    "JOSHUA": true
    }
   ],
-  "message": "Three successful missions"
+  "state": "GOOD_WIN"
  },
  "options": {
   "inGameLog": false
@@ -209,16 +209,16 @@
    "uid": "OIldn7FigsR49oZVeoqZCjPfGJt1"
   },
   {
-   "uid": "Ah2fju4v0AXtSnnZwIef7iM7KLg2",
-   "name": "ICEMONEY"
+   "name": "ICEMONEY",
+   "uid": "Ah2fju4v0AXtSnnZwIef7iM7KLg2"
   },
   {
    "uid": "3jYpVJA8jyYDd4Y1wxAlUkNPfPj2",
    "name": "JUDIII"
   },
   {
-   "name": "JOSHUA",
-   "uid": "5H0huIVEGdO0zemg0a4hDmQQbS72"
+   "uid": "5H0huIVEGdO0zemg0a4hDmQQbS72",
+   "name": "JOSHUA"
   },
   {
    "name": "RAY",

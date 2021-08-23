@@ -1,7 +1,30 @@
 {
- "options": {
-  "inGameLog": false
- },
+ "players": [
+  {
+   "name": "JERRY",
+   "uid": "XWzHKSBzEuVXWoyT03d3GxGreEH2"
+  },
+  {
+   "name": "JPAN",
+   "uid": "Tfkds28SE7OCuA5NCxdwN4QDZ1g1"
+  },
+  {
+   "name": "MAL",
+   "uid": "GqgDHzzhRZUBDuQTVqyocktoyn62"
+  },
+  {
+   "uid": "8v7hEQeRTSWlBiECjTpfsyxef743",
+   "name": "NIKKI"
+  },
+  {
+   "name": "AMI",
+   "uid": "VcnWgIIosMZ84x989OdH4rgib5v1"
+  },
+  {
+   "uid": "qnxhb19kxuV55M3z8BjAObjoGP83",
+   "name": "WILL"
+  }
+ ],
  "outcome": {
   "votes": [
    {
@@ -14,29 +37,31 @@
     "WILL": true
    },
    {
+    "AMI": true,
     "WILL": false,
     "JPAN": true,
-    "MAL": true,
-    "AMI": true
+    "MAL": true
    },
    {
-    "MAL": true,
+    "JERRY": true,
     "AMI": true,
-    "JERRY": true
+    "MAL": true
    },
    {
-    "AMI": true,
+    "JERRY": true,
+    "MAL": true,
     "JPAN": true,
-    "MAL": true,
-    "JERRY": true
+    "AMI": true
    }
   ],
+  "assassinated": "JPAN",
+  "state": "GOOD_WIN",
   "message": "Three successful missions",
   "roles": [
    {
+    "assassin": false,
     "name": "AMI",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
     "role": "LOYAL FOLLOWER",
@@ -44,14 +69,14 @@
     "name": "JPAN"
    },
    {
-    "name": "NIKKI",
+    "assassin": false,
     "role": "MORGANA",
-    "assassin": false
+    "name": "NIKKI"
    },
    {
-    "assassin": true,
     "role": "MORDRED",
-    "name": "WILL"
+    "name": "WILL",
+    "assassin": true
    },
    {
     "role": "MERLIN",
@@ -59,16 +84,22 @@
     "name": "MAL"
    },
    {
+    "name": "JERRY",
     "assassin": false,
-    "role": "PERCIVAL",
-    "name": "JERRY"
+    "role": "PERCIVAL"
    }
-  ],
-  "assassinated": "JPAN",
-  "state": "GOOD_WIN"
+  ]
  },
  "missions": [
   {
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "AMI",
+    "NIKKI"
+   ],
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -77,45 +108,9 @@
       "MAL",
       "JERRY"
      ],
+     "state": "APPROVED",
      "proposer": "AMI",
      "team": [
-      "AMI",
-      "NIKKI"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "failsRequired": 1,
-   "numFails": 0,
-   "teamSize": 2,
-   "team": [
-    "AMI",
-    "NIKKI"
-   ],
-   "state": "SUCCESS"
-  },
-  {
-   "failsRequired": 1,
-   "team": [
-    "WILL",
-    "AMI",
-    "NIKKI"
-   ],
-   "state": "FAIL",
-   "numFails": 1,
-   "teamSize": 3,
-   "proposals": [
-    {
-     "team": [
-      "WILL",
-      "AMI",
-      "NIKKI"
-     ],
-     "proposer": "WILL",
-     "state": "APPROVED",
-     "votes": [
-      "WILL",
-      "JERRY",
       "AMI",
       "NIKKI"
      ]
@@ -124,34 +119,50 @@
   },
   {
    "team": [
-    "MAL",
     "WILL",
     "AMI",
-    "JPAN"
+    "NIKKI"
    ],
    "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 1,
    "state": "FAIL",
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "WILL",
+      "AMI",
+      "NIKKI"
+     ],
+     "votes": [
+      "WILL",
+      "JERRY",
+      "AMI",
+      "NIKKI"
+     ],
+     "proposer": "WILL"
+    }
+   ],
+   "numFails": 1,
+   "teamSize": 3
+  },
+  {
+   "proposals": [
+    {
+     "proposer": "JERRY",
+     "votes": [
+      "AMI",
+      "WILL",
+      "JERRY"
+     ],
      "state": "REJECTED",
      "team": [
       "JERRY",
       "MAL",
       "WILL",
       "AMI"
-     ],
-     "votes": [
-      "AMI",
-      "WILL",
-      "JERRY"
-     ],
-     "proposer": "JERRY"
+     ]
     },
     {
-     "proposer": "JPAN",
-     "state": "REJECTED",
      "votes": [
       "MAL",
       "AMI",
@@ -162,50 +173,53 @@
       "MAL",
       "AMI",
       "WILL"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "JPAN"
     },
     {
+     "proposer": "MAL",
+     "team": [
+      "MAL",
+      "WILL",
+      "AMI",
+      "JPAN"
+     ],
+     "state": "APPROVED",
      "votes": [
       "MAL",
       "AMI",
       "JPAN",
       "NIKKI",
       "WILL"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "MAL",
-      "WILL",
-      "AMI",
-      "JPAN"
-     ],
-     "proposer": "MAL"
+     ]
     }
-   ]
+   ],
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
+   "team": [
+    "MAL",
+    "WILL",
+    "AMI",
+    "JPAN"
+   ],
+   "teamSize": 4
   },
   {
-   "team": [
-    "AMI",
-    "MAL",
-    "JERRY"
-   ],
-   "teamSize": 3,
-   "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1,
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "JPAN",
-      "NIKKI"
-     ],
+     "proposer": "NIKKI",
      "team": [
       "JPAN",
       "MAL",
       "AMI"
      ],
-     "proposer": "NIKKI"
+     "state": "REJECTED",
+     "votes": [
+      "JPAN",
+      "NIKKI"
+     ]
     },
     {
      "votes": [
@@ -219,12 +233,41 @@
       "MAL",
       "JERRY"
      ],
-     "state": "APPROVED",
-     "proposer": "AMI"
+     "proposer": "AMI",
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "numFails": 0,
+   "state": "SUCCESS",
+   "failsRequired": 1,
+   "team": [
+    "AMI",
+    "MAL",
+    "JERRY"
+   ],
+   "teamSize": 3
   },
   {
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "team": [
+      "JERRY",
+      "JPAN",
+      "MAL",
+      "AMI"
+     ],
+     "votes": [
+      "AMI",
+      "JPAN",
+      "NIKKI",
+      "MAL",
+      "JERRY"
+     ],
+     "state": "APPROVED",
+     "proposer": "WILL"
+    }
+   ],
    "team": [
     "JERRY",
     "JPAN",
@@ -232,62 +275,19 @@
     "AMI"
    ],
    "failsRequired": 1,
-   "teamSize": 4,
    "numFails": 0,
-   "state": "SUCCESS",
-   "proposals": [
-    {
-     "proposer": "WILL",
-     "team": [
-      "JERRY",
-      "JPAN",
-      "MAL",
-      "AMI"
-     ],
-     "state": "APPROVED",
-     "votes": [
-      "AMI",
-      "JPAN",
-      "NIKKI",
-      "MAL",
-      "JERRY"
-     ]
-    }
-   ]
+   "teamSize": 4
   }
  ],
- "timeCreated": {
-  "_seconds": 1592686088,
-  "_nanoseconds": 180000000
+ "options": {
+  "inGameLog": false
  },
- "players": [
-  {
-   "uid": "XWzHKSBzEuVXWoyT03d3GxGreEH2",
-   "name": "JERRY"
-  },
-  {
-   "name": "JPAN",
-   "uid": "Tfkds28SE7OCuA5NCxdwN4QDZ1g1"
-  },
-  {
-   "name": "MAL",
-   "uid": "GqgDHzzhRZUBDuQTVqyocktoyn62"
-  },
-  {
-   "name": "NIKKI",
-   "uid": "8v7hEQeRTSWlBiECjTpfsyxef743"
-  },
-  {
-   "name": "AMI",
-   "uid": "VcnWgIIosMZ84x989OdH4rgib5v1"
-  },
-  {
-   "uid": "qnxhb19kxuV55M3z8BjAObjoGP83",
-   "name": "WILL"
-  }
- ],
  "timeFinished": {
   "_seconds": 1592687210,
   "_nanoseconds": 352000000
+ },
+ "timeCreated": {
+  "_seconds": 1592686088,
+  "_nanoseconds": 180000000
  }
 }

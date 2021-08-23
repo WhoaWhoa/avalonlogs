@@ -1,35 +1,37 @@
 {
  "outcome": {
+  "state": "EVIL_WIN",
+  "assassinated": "PAUL",
   "votes": [
    {
-    "ANDYSON": true,
-    "TOMDOM": true
+    "TOMDOM": true,
+    "ANDYSON": true
    },
    {
     "MINH": true,
-    "ANDYSON": true,
-    "TOMDOM": false
-   },
-   {
-    "ANDYSON": true,
-    "HUY": true
+    "TOMDOM": false,
+    "ANDYSON": true
    },
    {
     "HUY": true,
-    "ANDYSON": true,
-    "MINH": true
+    "ANDYSON": true
+   },
+   {
+    "MINH": true,
+    "HUY": true,
+    "ANDYSON": true
    }
   ],
-  "assassinated": "PAUL",
+  "message": "Merlin assassinated",
   "roles": [
    {
     "role": "EVIL MINION",
-    "name": "HUY",
-    "assassin": false
+    "assassin": false,
+    "name": "HUY"
    },
    {
-    "name": "TOMDOM",
     "role": "EVIL MINION",
+    "name": "TOMDOM",
     "assassin": true
    },
    {
@@ -38,22 +40,16 @@
     "assassin": false
    },
    {
+    "name": "MINH",
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MINH"
+    "role": "LOYAL FOLLOWER"
    },
    {
     "name": "ANDYSON",
     "assassin": false,
     "role": "LOYAL FOLLOWER"
    }
-  ],
-  "state": "EVIL_WIN",
-  "message": "Merlin assassinated"
- },
- "timeCreated": {
-  "_seconds": 1588248340,
-  "_nanoseconds": 117000000
+  ]
  },
  "players": [
   {
@@ -61,16 +57,16 @@
    "uid": "GYOOGLNl3QhrXCZX93ih4P6iwQk1"
   },
   {
-   "uid": "W1vuHM0YJcXCl9iviX8J3U8ApMP2",
-   "name": "PAUL"
+   "name": "PAUL",
+   "uid": "W1vuHM0YJcXCl9iviX8J3U8ApMP2"
   },
   {
-   "name": "TOMDOM",
-   "uid": "inn5ah7uqhWn1iu0aarJ2l60EPo2"
+   "uid": "inn5ah7uqhWn1iu0aarJ2l60EPo2",
+   "name": "TOMDOM"
   },
   {
-   "uid": "rtlmNnpOZuUiMOE3OxTCzTHWeC82",
-   "name": "MINH"
+   "name": "MINH",
+   "uid": "rtlmNnpOZuUiMOE3OxTCzTHWeC82"
   },
   {
    "uid": "3fcxhGQC1wOZzka10DoufIpU2ho1",
@@ -81,15 +77,26 @@
   "_seconds": 1588248635,
   "_nanoseconds": 948000000
  },
+ "timeCreated": {
+  "_seconds": 1588248340,
+  "_nanoseconds": 117000000
+ },
  "missions": [
   {
+   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "ANDYSON",
+    "TOMDOM"
+   ],
+   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "ANDYSON",
       "TOMDOM"
      ],
+     "state": "APPROVED",
      "votes": [
       "TOMDOM",
       "PAUL",
@@ -99,34 +106,24 @@
      "proposer": "TOMDOM"
     }
    ],
-   "teamSize": 2,
-   "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1,
-   "team": [
-    "ANDYSON",
-    "TOMDOM"
-   ]
+   "failsRequired": 1
   },
   {
-   "numFails": 1,
-   "failsRequired": 1,
-   "teamSize": 3,
    "team": [
     "TOMDOM",
     "ANDYSON",
     "MINH"
    ],
-   "state": "FAIL",
+   "numFails": 1,
    "proposals": [
     {
+     "proposer": "MINH",
+     "state": "APPROVED",
      "team": [
       "TOMDOM",
       "ANDYSON",
       "MINH"
      ],
-     "proposer": "MINH",
-     "state": "APPROVED",
      "votes": [
       "TOMDOM",
       "PAUL",
@@ -134,13 +131,12 @@
       "ANDYSON"
      ]
     }
-   ]
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
-   "team": [
-    "HUY",
-    "ANDYSON"
-   ],
    "state": "SUCCESS",
    "proposals": [
     {
@@ -148,37 +144,8 @@
       "HUY",
       "ANDYSON"
      ],
+     "proposer": "ANDYSON",
      "state": "APPROVED",
-     "votes": [
-      "MINH",
-      "ANDYSON",
-      "HUY"
-     ],
-     "proposer": "ANDYSON"
-    }
-   ],
-   "numFails": 0,
-   "teamSize": 2,
-   "failsRequired": 1
-  },
-  {
-   "numFails": 0,
-   "team": [
-    "ANDYSON",
-    "HUY",
-    "MINH"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "team": [
-      "ANDYSON",
-      "HUY",
-      "MINH"
-     ],
-     "state": "APPROVED",
-     "proposer": "HUY",
      "votes": [
       "MINH",
       "ANDYSON",
@@ -186,14 +153,47 @@
      ]
     }
    ],
-   "teamSize": 3
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "HUY",
+    "ANDYSON"
+   ]
   },
   {
-   "teamSize": 3,
+   "numFails": 0,
    "failsRequired": 1,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "proposer": "HUY",
+     "votes": [
+      "MINH",
+      "ANDYSON",
+      "HUY"
+     ],
+     "team": [
+      "ANDYSON",
+      "HUY",
+      "MINH"
+     ]
+    }
+   ],
+   "teamSize": 3,
+   "state": "SUCCESS",
+   "team": [
+    "ANDYSON",
+    "HUY",
+    "MINH"
+   ]
+  },
+  {
    "proposals": [],
    "team": [],
-   "state": "PENDING"
+   "state": "PENDING",
+   "failsRequired": 1,
+   "teamSize": 3
   }
  ],
  "options": {

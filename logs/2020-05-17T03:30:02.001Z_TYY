@@ -1,49 +1,82 @@
 {
- "options": {
-  "inGameLog": false
+ "outcome": {
+  "message": "Three failed missions",
+  "votes": [
+   {
+    "ASHLEY": true,
+    "NINO": true,
+    "MARCUS": true
+   },
+   {
+    "NINO": true,
+    "ALAN": false,
+    "MARCUS": true,
+    "ASHLEY": true
+   },
+   {
+    "CATHY": false,
+    "MARCUS": true,
+    "NINO": true,
+    "ASHLEY": true
+   },
+   {
+    "JANET": true,
+    "CINDY": true,
+    "ALAN": false,
+    "KEVIN": false,
+    "ASHLEY": true
+   }
+  ],
+  "state": "EVIL_WIN",
+  "roles": [
+   {
+    "assassin": false,
+    "name": "JANET",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "ALAN",
+    "assassin": true
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "CATHY",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "MARCUS",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "name": "RM",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "CINDY"
+   },
+   {
+    "assassin": false,
+    "name": "ASHLEY",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "KEVIN"
+   },
+   {
+    "assassin": false,
+    "name": "NINO",
+    "role": "MERLIN"
+   }
+  ],
+  "assassinated": null
  },
- "timeFinished": {
-  "_seconds": 1589687716,
-  "_nanoseconds": 841000000
- },
- "players": [
-  {
-   "uid": "BSV8PXzydYaXtBuMWGVGx0eYPL02",
-   "name": "ALAN"
-  },
-  {
-   "name": "CATHY",
-   "uid": "9lEDnYZldlPbAqymqmKdhmK0KLH2"
-  },
-  {
-   "uid": "c8AL0Gy5vPUsFpW1yXNE04LiMJB2",
-   "name": "JANET"
-  },
-  {
-   "name": "RM",
-   "uid": "5ROZzXe2h0QLOYLTi2uNvytkqPp2"
-  },
-  {
-   "uid": "r42ghwvuAXYXp5woGW8JjK86C0C3",
-   "name": "CINDY"
-  },
-  {
-   "name": "KEVIN",
-   "uid": "lckLRrCDaSeHjYoj6wuNDLDq7uu1"
-  },
-  {
-   "uid": "oUbh0cbD3dS4GAEzbDoU6qfEEO73",
-   "name": "ASHLEY"
-  },
-  {
-   "name": "NINO",
-   "uid": "o0J4MjCZwlbJ7YDGCkZ7UERLSN83"
-  },
-  {
-   "uid": "GrouzuIWiGfIh1kiaWeynTsdmWo1",
-   "name": "MARCUS"
-  }
- ],
  "missions": [
   {
    "teamSize": 3,
@@ -52,11 +85,12 @@
     "NINO",
     "ASHLEY"
    ],
-   "failsRequired": 1,
    "state": "SUCCESS",
+   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "MARCUS",
      "votes": [
       "NINO",
       "JANET",
@@ -73,16 +107,19 @@
       "NINO",
       "ASHLEY"
      ],
-     "proposer": "MARCUS"
+     "state": "APPROVED"
     }
-   ],
-   "numFails": 0
+   ]
   },
   {
-   "failsRequired": 1,
+   "team": [
+    "MARCUS",
+    "NINO",
+    "ASHLEY",
+    "ALAN"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "ALAN",
      "team": [
       "MARCUS",
@@ -100,32 +137,36 @@
       "JANET",
       "ALAN",
       "CATHY"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
-   "teamSize": 4,
-   "team": [
-    "MARCUS",
-    "NINO",
-    "ASHLEY",
-    "ALAN"
-   ],
-   "state": "FAIL",
-   "numFails": 1
-  },
-  {
    "state": "FAIL",
    "teamSize": 4,
    "failsRequired": 1,
+   "numFails": 1
+  },
+  {
+   "teamSize": 4,
+   "numFails": 1,
    "team": [
     "CATHY",
     "MARCUS",
     "ASHLEY",
     "NINO"
    ],
-   "numFails": 1,
+   "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
+     "proposer": "CATHY",
+     "state": "APPROVED",
+     "team": [
+      "CATHY",
+      "MARCUS",
+      "ASHLEY",
+      "NINO"
+     ],
      "votes": [
       "JANET",
       "CATHY",
@@ -135,19 +176,12 @@
       "ASHLEY",
       "KEVIN",
       "NINO"
-     ],
-     "state": "APPROVED",
-     "proposer": "CATHY",
-     "team": [
-      "CATHY",
-      "MARCUS",
-      "ASHLEY",
-      "NINO"
      ]
     }
    ]
   },
   {
+   "state": "FAIL",
    "team": [
     "ALAN",
     "JANET",
@@ -155,12 +189,10 @@
     "CINDY",
     "ASHLEY"
    ],
-   "failsRequired": 2,
-   "numFails": 2,
    "proposals": [
     {
-     "proposer": "JANET",
      "state": "APPROVED",
+     "proposer": "JANET",
      "team": [
       "ALAN",
       "JANET",
@@ -179,97 +211,65 @@
      ]
     }
    ],
-   "state": "FAIL",
-   "teamSize": 5
+   "numFails": 2,
+   "teamSize": 5,
+   "failsRequired": 2
   },
   {
-   "team": [],
-   "failsRequired": 1,
-   "teamSize": 5,
    "state": "PENDING",
-   "proposals": []
+   "proposals": [],
+   "teamSize": 5,
+   "team": [],
+   "failsRequired": 1
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1589687716,
+  "_nanoseconds": 841000000
+ },
+ "options": {
+  "inGameLog": false
+ },
+ "players": [
+  {
+   "name": "ALAN",
+   "uid": "BSV8PXzydYaXtBuMWGVGx0eYPL02"
+  },
+  {
+   "name": "CATHY",
+   "uid": "9lEDnYZldlPbAqymqmKdhmK0KLH2"
+  },
+  {
+   "uid": "c8AL0Gy5vPUsFpW1yXNE04LiMJB2",
+   "name": "JANET"
+  },
+  {
+   "uid": "5ROZzXe2h0QLOYLTi2uNvytkqPp2",
+   "name": "RM"
+  },
+  {
+   "uid": "r42ghwvuAXYXp5woGW8JjK86C0C3",
+   "name": "CINDY"
+  },
+  {
+   "uid": "lckLRrCDaSeHjYoj6wuNDLDq7uu1",
+   "name": "KEVIN"
+  },
+  {
+   "name": "ASHLEY",
+   "uid": "oUbh0cbD3dS4GAEzbDoU6qfEEO73"
+  },
+  {
+   "uid": "o0J4MjCZwlbJ7YDGCkZ7UERLSN83",
+   "name": "NINO"
+  },
+  {
+   "uid": "GrouzuIWiGfIh1kiaWeynTsdmWo1",
+   "name": "MARCUS"
   }
  ],
  "timeCreated": {
   "_seconds": 1589686202,
   "_nanoseconds": 1000000
- },
- "outcome": {
-  "assassinated": null,
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
-  "roles": [
-   {
-    "name": "JANET",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": true,
-    "name": "ALAN",
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "CATHY",
-    "assassin": false,
-    "role": "EVIL MINION"
-   },
-   {
-    "name": "MARCUS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "RM",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "CINDY"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ASHLEY"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": false,
-    "name": "KEVIN"
-   },
-   {
-    "name": "NINO",
-    "role": "MERLIN",
-    "assassin": false
-   }
-  ],
-  "votes": [
-   {
-    "NINO": true,
-    "ASHLEY": true,
-    "MARCUS": true
-   },
-   {
-    "NINO": true,
-    "MARCUS": true,
-    "ASHLEY": true,
-    "ALAN": false
-   },
-   {
-    "CATHY": false,
-    "ASHLEY": true,
-    "MARCUS": true,
-    "NINO": true
-   },
-   {
-    "CINDY": true,
-    "KEVIN": false,
-    "JANET": true,
-    "ASHLEY": true,
-    "ALAN": false
-   }
-  ]
  }
 }

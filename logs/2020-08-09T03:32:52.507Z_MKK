@@ -1,46 +1,57 @@
 {
+ "players": [
+  {
+   "name": "SHIZ",
+   "uid": "DEXlTETp8gYIUJRdL8jH6CpoFM02"
+  },
+  {
+   "uid": "CwgOF859jbTyvQtyso4TkXXS7653",
+   "name": "ANDY"
+  },
+  {
+   "name": "ELYSA",
+   "uid": "UX529m2beHalDaz359c3OmdrWQq1"
+  },
+  {
+   "name": "JESSICA",
+   "uid": "TSz8iuc30rNnCOO4z4fAkmnGKkq2"
+  },
+  {
+   "name": "DAVID",
+   "uid": "oUfSw7dKorfiO8iihyiE7EBxXDk2"
+  },
+  {
+   "uid": "ztO0hvw2GOg7ducZ62HKr6pYJJ22",
+   "name": "MARIA"
+  },
+  {
+   "name": "CHRISTIANO",
+   "uid": "Q8zb8HAyppOV9TiXDvAL7RRoABG2"
+  },
+  {
+   "uid": "46IwSEVFWMP2bLNdta5vIZpNrJA2",
+   "name": "TESS"
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
  "timeFinished": {
   "_seconds": 1596946777,
   "_nanoseconds": 256000000
  },
  "outcome": {
-  "message": "Three failed missions",
-  "votes": [
-   {
-    "JESSICA": true,
-    "DAVID": true,
-    "SHIZ": true
-   },
-   {
-    "JESSICA": true,
-    "CHRISTIANO": true,
-    "DAVID": false,
-    "SHIZ": true
-   },
-   {
-    "CHRISTIANO": true,
-    "SHIZ": true,
-    "MARIA": false,
-    "JESSICA": true
-   },
-   {
-    "ANDY": false,
-    "SHIZ": true,
-    "CHRISTIANO": true,
-    "MARIA": false,
-    "ELYSA": true
-   }
-  ],
+  "state": "EVIL_WIN",
   "roles": [
    {
-    "assassin": false,
+    "name": "TESS",
     "role": "LOYAL FOLLOWER",
-    "name": "TESS"
+    "assassin": false
    },
    {
     "role": "MORDRED",
-    "name": "MARIA",
-    "assassin": false
+    "assassin": false,
+    "name": "MARIA"
    },
    {
     "name": "DAVID",
@@ -64,54 +75,43 @@
    },
    {
     "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ELYSA"
+    "name": "ELYSA",
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "SHIZ",
     "assassin": false,
-    "role": "MERLIN",
-    "name": "SHIZ"
+    "role": "MERLIN"
    }
   ],
   "assassinated": null,
-  "state": "EVIL_WIN"
- },
- "players": [
-  {
-   "name": "SHIZ",
-   "uid": "DEXlTETp8gYIUJRdL8jH6CpoFM02"
-  },
-  {
-   "uid": "CwgOF859jbTyvQtyso4TkXXS7653",
-   "name": "ANDY"
-  },
-  {
-   "name": "ELYSA",
-   "uid": "UX529m2beHalDaz359c3OmdrWQq1"
-  },
-  {
-   "uid": "TSz8iuc30rNnCOO4z4fAkmnGKkq2",
-   "name": "JESSICA"
-  },
-  {
-   "name": "DAVID",
-   "uid": "oUfSw7dKorfiO8iihyiE7EBxXDk2"
-  },
-  {
-   "name": "MARIA",
-   "uid": "ztO0hvw2GOg7ducZ62HKr6pYJJ22"
-  },
-  {
-   "uid": "Q8zb8HAyppOV9TiXDvAL7RRoABG2",
-   "name": "CHRISTIANO"
-  },
-  {
-   "uid": "46IwSEVFWMP2bLNdta5vIZpNrJA2",
-   "name": "TESS"
-  }
- ],
- "options": {
-  "inGameLog": false
+  "votes": [
+   {
+    "DAVID": true,
+    "JESSICA": true,
+    "SHIZ": true
+   },
+   {
+    "CHRISTIANO": true,
+    "SHIZ": true,
+    "JESSICA": true,
+    "DAVID": false
+   },
+   {
+    "JESSICA": true,
+    "MARIA": false,
+    "SHIZ": true,
+    "CHRISTIANO": true
+   },
+   {
+    "ANDY": false,
+    "SHIZ": true,
+    "MARIA": false,
+    "CHRISTIANO": true,
+    "ELYSA": true
+   }
+  ],
+  "message": "Three failed missions"
  },
  "timeCreated": {
   "_seconds": 1596943972,
@@ -119,15 +119,9 @@
  },
  "missions": [
   {
-   "team": [
-    "JESSICA",
-    "DAVID",
-    "SHIZ"
-   ],
    "proposals": [
     {
      "state": "APPROVED",
-     "proposer": "JESSICA",
      "team": [
       "JESSICA",
       "DAVID",
@@ -141,25 +135,30 @@
       "MARIA",
       "ELYSA",
       "ANDY"
-     ]
+     ],
+     "proposer": "JESSICA"
     }
    ],
+   "numFails": 0,
    "teamSize": 3,
-   "state": "SUCCESS",
    "failsRequired": 1,
-   "numFails": 0
-  },
-  {
    "team": [
     "JESSICA",
     "DAVID",
-    "SHIZ",
-    "CHRISTIANO"
+    "SHIZ"
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
+   "state": "SUCCESS"
+  },
+  {
    "proposals": [
     {
+     "team": [
+      "JESSICA",
+      "DAVID",
+      "SHIZ",
+      "CHRISTIANO"
+     ],
+     "state": "APPROVED",
      "proposer": "DAVID",
      "votes": [
       "DAVID",
@@ -170,54 +169,46 @@
       "TESS",
       "ELYSA",
       "SHIZ"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "JESSICA",
-      "DAVID",
-      "SHIZ",
-      "CHRISTIANO"
      ]
     }
    ],
+   "team": [
+    "JESSICA",
+    "DAVID",
+    "SHIZ",
+    "CHRISTIANO"
+   ],
+   "failsRequired": 1,
    "teamSize": 4,
+   "state": "FAIL",
    "numFails": 1
   },
   {
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1,
-   "teamSize": 4,
    "team": [
     "CHRISTIANO",
     "SHIZ",
     "JESSICA",
     "MARIA"
    ],
+   "numFails": 1,
    "proposals": [
     {
+     "state": "REJECTED",
      "team": [
       "MARIA",
       "CHRISTIANO",
       "JESSICA",
       "SHIZ"
      ],
-     "state": "REJECTED",
+     "proposer": "MARIA",
      "votes": [
       "MARIA",
       "ELYSA",
       "SHIZ",
       "JESSICA"
-     ],
-     "proposer": "MARIA"
+     ]
     },
     {
-     "team": [
-      "CHRISTIANO",
-      "SHIZ",
-      "JESSICA",
-      "MARIA"
-     ],
      "votes": [
       "CHRISTIANO",
       "SHIZ",
@@ -227,13 +218,21 @@
       "TESS",
       "MARIA"
      ],
+     "proposer": "CHRISTIANO",
      "state": "APPROVED",
-     "proposer": "CHRISTIANO"
+     "team": [
+      "CHRISTIANO",
+      "SHIZ",
+      "JESSICA",
+      "MARIA"
+     ]
     }
-   ]
+   ],
+   "state": "FAIL",
+   "teamSize": 4,
+   "failsRequired": 1
   },
   {
-   "numFails": 2,
    "team": [
     "ANDY",
     "CHRISTIANO",
@@ -242,11 +241,13 @@
     "SHIZ"
    ],
    "state": "FAIL",
+   "teamSize": 5,
+   "numFails": 2,
+   "failsRequired": 2,
    "proposals": [
     {
-     "votes": [
-      "TESS"
-     ],
+     "state": "REJECTED",
+     "proposer": "TESS",
      "team": [
       "DAVID",
       "TESS",
@@ -254,27 +255,35 @@
       "CHRISTIANO",
       "SHIZ"
      ],
-     "state": "REJECTED",
-     "proposer": "TESS"
+     "votes": [
+      "TESS"
+     ]
     },
     {
+     "state": "REJECTED",
+     "proposer": "SHIZ",
      "votes": [
       "ELYSA",
       "TESS",
       "MARIA",
       "SHIZ"
      ],
-     "state": "REJECTED",
      "team": [
       "SHIZ",
       "CHRISTIANO",
       "ELYSA",
       "MARIA",
       "JESSICA"
-     ],
-     "proposer": "SHIZ"
+     ]
     },
     {
+     "team": [
+      "ANDY",
+      "CHRISTIANO",
+      "ELYSA",
+      "MARIA",
+      "SHIZ"
+     ],
      "votes": [
       "DAVID",
       "ELYSA",
@@ -285,25 +294,16 @@
       "SHIZ"
      ],
      "proposer": "ANDY",
-     "state": "APPROVED",
-     "team": [
-      "ANDY",
-      "CHRISTIANO",
-      "ELYSA",
-      "MARIA",
-      "SHIZ"
-     ]
+     "state": "APPROVED"
     }
-   ],
-   "teamSize": 5,
-   "failsRequired": 2
+   ]
   },
   {
-   "teamSize": 5,
+   "proposals": [],
    "failsRequired": 1,
+   "teamSize": 5,
    "state": "PENDING",
-   "team": [],
-   "proposals": []
+   "team": []
   }
  ]
 }

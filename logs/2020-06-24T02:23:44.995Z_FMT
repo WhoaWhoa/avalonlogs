@@ -1,12 +1,18 @@
 {
+ "timeFinished": {
+  "_seconds": 1592966836,
+  "_nanoseconds": 526000000
+ },
  "missions": [
   {
-   "team": [
-    "SHAAN",
-    "MACE"
-   ],
+   "failsRequired": 1,
    "proposals": [
     {
+     "state": "APPROVED",
+     "team": [
+      "SHAAN",
+      "MACE"
+     ],
      "votes": [
       "JOE",
       "SEYMOUR",
@@ -15,48 +21,54 @@
       "STEVE",
       "SHAAN"
      ],
-     "team": [
-      "SHAAN",
-      "MACE"
-     ],
-     "state": "APPROVED",
      "proposer": "MACE"
     }
    ],
-   "failsRequired": 1,
    "teamSize": 2,
+   "state": "SUCCESS",
    "numFails": 0,
-   "state": "SUCCESS"
-  },
-  {
    "team": [
     "SHAAN",
-    "MACE",
-    "NARUTO"
-   ],
+    "MACE"
+   ]
+  },
+  {
    "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
-     "votes": [
-      "SEYMOUR",
-      "MACE",
-      "NARUTO",
-      "SHAAN"
-     ],
      "proposer": "NARUTO",
      "team": [
       "SHAAN",
       "MACE",
       "NARUTO"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "SEYMOUR",
+      "MACE",
+      "NARUTO",
+      "SHAAN"
      ]
     }
    ],
-   "state": "FAIL",
    "numFails": 1,
-   "failsRequired": 1
+   "failsRequired": 1,
+   "team": [
+    "SHAAN",
+    "MACE",
+    "NARUTO"
+   ]
   },
   {
+   "state": "FAIL",
+   "team": [
+    "SEYMOUR",
+    "STEVE",
+    "SHAAN",
+    "MACE"
+   ],
+   "teamSize": 4,
    "proposals": [
     {
      "votes": [
@@ -64,8 +76,8 @@
       "STEVE",
       "SHAAN"
      ],
-     "proposer": "JOE",
      "state": "REJECTED",
+     "proposer": "JOE",
      "team": [
       "JOE",
       "SHAAN",
@@ -74,8 +86,6 @@
      ]
     },
     {
-     "proposer": "SEYMOUR",
-     "state": "APPROVED",
      "votes": [
       "JOE",
       "SEYMOUR",
@@ -83,42 +93,32 @@
       "STEVE",
       "SHAAN"
      ],
+     "state": "APPROVED",
      "team": [
       "SEYMOUR",
       "STEVE",
       "SHAAN",
       "MACE"
-     ]
+     ],
+     "proposer": "SEYMOUR"
     }
    ],
-   "teamSize": 4,
-   "team": [
-    "SEYMOUR",
-    "STEVE",
-    "SHAAN",
-    "MACE"
-   ],
    "failsRequired": 1,
-   "numFails": 1,
-   "state": "FAIL"
+   "numFails": 1
   },
   {
-   "state": "FAIL",
-   "team": [
-    "SEYMOUR",
-    "STEVE",
-    "JOE"
-   ],
    "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "SEYMOUR",
       "MACE",
       "STEVE"
      ],
      "proposer": "STEVE",
+     "state": "REJECTED",
      "team": [
       "SEYMOUR",
       "STEVE",
@@ -127,18 +127,17 @@
     },
     {
      "state": "REJECTED",
-     "proposer": "SHAAN",
+     "votes": [
+      "SHAAN"
+     ],
      "team": [
       "MACE",
       "SHAAN",
       "STEVE"
      ],
-     "votes": [
-      "SHAAN"
-     ]
+     "proposer": "SHAAN"
     },
     {
-     "state": "APPROVED",
      "votes": [
       "JOE",
       "SEYMOUR",
@@ -147,31 +146,31 @@
       "STEVE",
       "SHAAN"
      ],
+     "proposer": "MACE",
      "team": [
       "SEYMOUR",
       "STEVE",
       "JOE"
      ],
-     "proposer": "MACE"
+     "state": "APPROVED"
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 3
+   "team": [
+    "SEYMOUR",
+    "STEVE",
+    "JOE"
+   ],
+   "state": "FAIL"
   },
   {
+   "state": "PENDING",
    "teamSize": 4,
    "team": [],
    "failsRequired": 1,
-   "state": "PENDING",
    "proposals": []
   }
  ],
- "options": {
-  "inGameLog": false
- },
  "outcome": {
-  "message": "Three failed missions",
-  "assassinated": null,
   "state": "EVIL_WIN",
   "votes": [
    {
@@ -179,47 +178,49 @@
     "MACE": true
    },
    {
-    "NARUTO": false,
     "MACE": true,
+    "NARUTO": false,
     "SHAAN": true
    },
    {
+    "STEVE": true,
     "SEYMOUR": false,
     "SHAAN": true,
-    "STEVE": true,
     "MACE": true
    },
    {
-    "STEVE": true,
     "SEYMOUR": false,
+    "STEVE": true,
     "JOE": true
    }
   ],
+  "message": "Three failed missions",
+  "assassinated": null,
   "roles": [
    {
+    "assassin": false,
     "name": "JOE",
-    "role": "PERCIVAL",
+    "role": "PERCIVAL"
+   },
+   {
+    "role": "MORDRED",
+    "name": "SEYMOUR",
+    "assassin": true
+   },
+   {
+    "assassin": false,
+    "name": "MACE",
+    "role": "MERLIN"
+   },
+   {
+    "name": "NARUTO",
+    "role": "MORGANA",
     "assassin": false
    },
    {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "SEYMOUR"
-   },
-   {
-    "role": "MERLIN",
     "assassin": false,
-    "name": "MACE"
-   },
-   {
-    "assassin": false,
-    "name": "NARUTO",
-    "role": "MORGANA"
-   },
-   {
-    "name": "STEVE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "name": "STEVE"
    },
    {
     "role": "LOYAL FOLLOWER",
@@ -228,10 +229,17 @@
    }
   ]
  },
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1592965424,
+  "_nanoseconds": 995000000
+ },
  "players": [
   {
-   "uid": "ee6eyUB14aNrfwxfgS3EpXKkJ4r1",
-   "name": "SEYMOUR"
+   "name": "SEYMOUR",
+   "uid": "ee6eyUB14aNrfwxfgS3EpXKkJ4r1"
   },
   {
    "uid": "vYmfMH8wMERnwcDVMbDmZt7cFu13",
@@ -242,24 +250,16 @@
    "name": "SHAAN"
   },
   {
-   "uid": "STYYW1bvydOViACtN0rY8luDtp93",
-   "name": "MACE"
+   "name": "MACE",
+   "uid": "STYYW1bvydOViACtN0rY8luDtp93"
   },
   {
-   "uid": "q6uWKml1ghaACq7cDrKUkppHZk22",
-   "name": "NARUTO"
+   "name": "NARUTO",
+   "uid": "q6uWKml1ghaACq7cDrKUkppHZk22"
   },
   {
-   "name": "JOE",
-   "uid": "ODlRpf7bJ6bRYHqjxNrRIEBrtPl2"
+   "uid": "ODlRpf7bJ6bRYHqjxNrRIEBrtPl2",
+   "name": "JOE"
   }
- ],
- "timeFinished": {
-  "_seconds": 1592966836,
-  "_nanoseconds": 526000000
- },
- "timeCreated": {
-  "_seconds": 1592965424,
-  "_nanoseconds": 995000000
- }
+ ]
 }

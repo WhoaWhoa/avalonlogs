@@ -1,24 +1,24 @@
 {
  "players": [
   {
-   "name": "SLIU",
-   "uid": "p91lXvRxnEUp4tMbXWAZ8LVymqQ2"
+   "uid": "p91lXvRxnEUp4tMbXWAZ8LVymqQ2",
+   "name": "SLIU"
   },
   {
    "name": "RYAN",
    "uid": "CdZxJpisS2Yo13uSl1gI7JaehyA2"
   },
   {
-   "name": "CHLOE",
-   "uid": "lI8rFOSA6MTebEoLldIuAuJYJU03"
+   "uid": "lI8rFOSA6MTebEoLldIuAuJYJU03",
+   "name": "CHLOE"
   },
   {
    "name": "DO",
    "uid": "pzyi6sEGANNWGXNAfkoTsSAm6jH2"
   },
   {
-   "uid": "ETSDsbTLzMeAH699whnDxiakPlo2",
-   "name": "LILY"
+   "name": "LILY",
+   "uid": "ETSDsbTLzMeAH699whnDxiakPlo2"
   },
   {
    "name": "SARA",
@@ -29,58 +29,51 @@
    "uid": "Z0keEdE25UOAxGImOXN18dHRJuT2"
   }
  ],
- "timeFinished": {
-  "_seconds": 1607151724,
-  "_nanoseconds": 759000000
- },
- "timeCreated": {
-  "_seconds": 1607150614,
-  "_nanoseconds": 57000000
- },
  "outcome": {
-  "message": "Three successful missions",
-  "assassinated": "RYAN",
   "roles": [
    {
-    "name": "DO",
     "role": "MERLIN",
+    "name": "DO",
     "assassin": false
    },
    {
-    "name": "CHLOE",
     "assassin": false,
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "name": "CHLOE"
    },
    {
-    "assassin": false,
     "role": "PERCIVAL",
-    "name": "LILY"
+    "name": "LILY",
+    "assassin": false
    },
    {
-    "assassin": true,
+    "role": "EVIL MINION",
     "name": "SARA",
-    "role": "EVIL MINION"
+    "assassin": true
    },
    {
-    "role": "MORGANA",
     "assassin": false,
+    "role": "MORGANA",
     "name": "GRACE"
    },
    {
-    "name": "SLIU",
     "assassin": false,
+    "name": "SLIU",
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "LOYAL FOLLOWER",
     "name": "RYAN",
-    "assassin": false
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
    }
   ],
+  "assassinated": "RYAN",
+  "state": "GOOD_WIN",
+  "message": "Three successful missions",
   "votes": [
    {
-    "RYAN": true,
-    "SARA": true
+    "SARA": true,
+    "RYAN": true
    },
    {
     "GRACE": true,
@@ -88,33 +81,39 @@
     "SLIU": true
    },
    {
+    "GRACE": false,
     "SARA": false,
-    "SLIU": true,
-    "GRACE": false
+    "SLIU": true
    },
    {
-    "LILY": true,
     "RYAN": true,
+    "DO": true,
     "CHLOE": false,
-    "DO": true
+    "LILY": true
    }
-  ],
-  "state": "GOOD_WIN"
+  ]
  },
- "options": {
-  "inGameLog": false
+ "timeFinished": {
+  "_seconds": 1607151724,
+  "_nanoseconds": 759000000
  },
  "missions": [
   {
+   "state": "SUCCESS",
    "team": [
     "RYAN",
     "SARA"
    ],
    "failsRequired": 1,
-   "teamSize": 2,
    "numFails": 0,
+   "teamSize": 2,
    "proposals": [
     {
+     "proposer": "RYAN",
+     "team": [
+      "RYAN",
+      "SARA"
+     ],
      "votes": [
       "SARA",
       "SLIU",
@@ -122,62 +121,51 @@
       "LILY",
       "RYAN"
      ],
-     "team": [
-      "RYAN",
-      "SARA"
-     ],
-     "state": "APPROVED",
-     "proposer": "RYAN"
+     "state": "APPROVED"
     }
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
-   "team": [
-    "SARA",
-    "SLIU",
-    "GRACE"
-   ],
+   "failsRequired": 1,
    "teamSize": 3,
-   "state": "SUCCESS",
    "proposals": [
     {
      "proposer": "CHLOE",
+     "votes": [
+      "CHLOE"
+     ],
+     "state": "REJECTED",
      "team": [
       "SARA",
       "RYAN",
       "DO"
-     ],
-     "state": "REJECTED",
-     "votes": [
-      "CHLOE"
      ]
     },
     {
-     "state": "REJECTED",
-     "votes": [
-      "DO",
-      "LILY"
-     ],
-     "proposer": "DO",
      "team": [
       "SARA",
       "SLIU",
       "DO"
+     ],
+     "proposer": "DO",
+     "state": "REJECTED",
+     "votes": [
+      "DO",
+      "LILY"
      ]
     },
     {
-     "team": [
-      "LILY",
-      "DO",
-      "SLIU"
-     ],
+     "state": "REJECTED",
+     "proposer": "LILY",
      "votes": [
       "DO",
       "LILY"
      ],
-     "state": "REJECTED",
-     "proposer": "LILY"
+     "team": [
+      "LILY",
+      "DO",
+      "SLIU"
+     ]
     },
     {
      "team": [
@@ -185,58 +173,63 @@
       "SLIU",
       "GRACE"
      ],
-     "proposer": "SARA",
+     "state": "APPROVED",
      "votes": [
       "RYAN",
       "GRACE",
       "CHLOE",
       "SARA"
      ],
-     "state": "APPROVED"
+     "proposer": "SARA"
     }
    ],
    "numFails": 0,
-   "failsRequired": 1
+   "state": "SUCCESS",
+   "team": [
+    "SARA",
+    "SLIU",
+    "GRACE"
+   ]
   },
   {
-   "numFails": 2,
-   "teamSize": 3,
-   "state": "FAIL",
-   "failsRequired": 1,
    "team": [
     "GRACE",
     "SARA",
     "SLIU"
    ],
+   "numFails": 2,
+   "teamSize": 3,
+   "state": "FAIL",
+   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "GRACE",
+     "team": [
+      "GRACE",
+      "SARA",
+      "SLIU"
+     ],
      "votes": [
       "SARA",
       "GRACE",
       "RYAN",
       "CHLOE"
      ],
-     "team": [
-      "GRACE",
-      "SARA",
-      "SLIU"
-     ]
+     "proposer": "GRACE",
+     "state": "APPROVED"
     }
    ]
   },
   {
+   "state": "SUCCESS",
    "team": [
     "RYAN",
     "CHLOE",
     "DO",
     "LILY"
    ],
-   "numFails": 1,
-   "failsRequired": 2,
    "proposals": [
     {
+     "proposer": "SLIU",
      "state": "APPROVED",
      "team": [
       "RYAN",
@@ -244,7 +237,6 @@
       "DO",
       "LILY"
      ],
-     "proposer": "SLIU",
      "votes": [
       "RYAN",
       "LILY",
@@ -255,15 +247,23 @@
      ]
     }
    ],
+   "failsRequired": 2,
    "teamSize": 4,
-   "state": "SUCCESS"
+   "numFails": 1
   },
   {
-   "proposals": [],
+   "team": [],
    "state": "PENDING",
-   "failsRequired": 1,
    "teamSize": 4,
-   "team": []
+   "failsRequired": 1,
+   "proposals": []
   }
- ]
+ ],
+ "timeCreated": {
+  "_seconds": 1607150614,
+  "_nanoseconds": 57000000
+ },
+ "options": {
+  "inGameLog": false
+ }
 }

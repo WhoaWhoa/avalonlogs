@@ -1,110 +1,108 @@
 {
+ "timeCreated": {
+  "_seconds": 1612671678,
+  "_nanoseconds": 229000000
+ },
  "outcome": {
   "message": "Three failed missions",
-  "assassinated": null,
   "roles": [
    {
-    "role": "MORGANA",
+    "name": "SANJ",
     "assassin": false,
-    "name": "SANJ"
+    "role": "MORGANA"
    },
    {
     "assassin": false,
-    "name": "ALEX",
-    "role": "MERLIN"
+    "role": "MERLIN",
+    "name": "ALEX"
    },
    {
-    "name": "KGB",
+    "role": "PERCIVAL",
     "assassin": false,
-    "role": "PERCIVAL"
+    "name": "KGB"
    },
    {
     "name": "PDEXT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "role": "EVIL MINION",
-    "name": "MATT",
-    "assassin": true
+    "assassin": true,
+    "name": "MATT"
    },
    {
-    "name": "TESSA",
     "role": "LOYAL FOLLOWER",
+    "name": "TESSA",
     "assassin": false
    }
   ],
   "state": "EVIL_WIN",
+  "assassinated": null,
   "votes": [
    {
-    "SANJ": true,
-    "KGB": true
+    "KGB": true,
+    "SANJ": true
    },
    {
-    "TESSA": true,
+    "PDEXT": true,
     "MATT": false,
-    "PDEXT": true
+    "TESSA": true
    },
    {
-    "TESSA": true,
     "MATT": false,
     "ALEX": true,
+    "TESSA": true,
     "KGB": true
    },
    {
     "PDEXT": true,
-    "SANJ": false,
-    "KGB": true
+    "KGB": true,
+    "SANJ": false
    }
   ]
  },
+ "timeFinished": {
+  "_seconds": 1612672796,
+  "_nanoseconds": 951000000
+ },
  "players": [
   {
-   "uid": "RhEbWzkZRePMekReAhgvYnVbDa93",
-   "name": "SANJ"
+   "name": "SANJ",
+   "uid": "RhEbWzkZRePMekReAhgvYnVbDa93"
   },
   {
-   "name": "PDEXT",
-   "uid": "G4Km2o8souOwoYTHpyDIYSIIZlq1"
+   "uid": "G4Km2o8souOwoYTHpyDIYSIIZlq1",
+   "name": "PDEXT"
   },
   {
    "uid": "1gn2CkngGsWQPQgnjFNqvWbxGHy2",
    "name": "ALEX"
   },
   {
-   "uid": "c65QLoUEV5NxT5zbwu0t1eiY6C93",
-   "name": "MATT"
+   "name": "MATT",
+   "uid": "c65QLoUEV5NxT5zbwu0t1eiY6C93"
   },
   {
    "name": "KGB",
    "uid": "M92ECvoiKJXwJnhmyUwN0ocjuk02"
   },
   {
-   "uid": "yTbhBVnpZQP7I5jVvixxYUZ2A9T2",
-   "name": "TESSA"
+   "name": "TESSA",
+   "uid": "yTbhBVnpZQP7I5jVvixxYUZ2A9T2"
   }
  ],
- "timeCreated": {
-  "_seconds": 1612671678,
-  "_nanoseconds": 229000000
- },
- "timeFinished": {
-  "_seconds": 1612672796,
-  "_nanoseconds": 951000000
- },
- "options": {
-  "inGameLog": false
- },
  "missions": [
   {
+   "teamSize": 2,
    "failsRequired": 1,
-   "team": [
-    "KGB",
-    "SANJ"
-   ],
-   "numFails": 0,
    "proposals": [
     {
+     "proposer": "KGB",
+     "team": [
+      "KGB",
+      "SANJ"
+     ],
      "state": "APPROVED",
      "votes": [
       "ALEX",
@@ -112,61 +110,57 @@
       "SANJ",
       "PDEXT",
       "TESSA"
-     ],
-     "proposer": "KGB",
-     "team": [
-      "KGB",
-      "SANJ"
      ]
     }
    ],
-   "teamSize": 2,
+   "team": [
+    "KGB",
+    "SANJ"
+   ],
+   "numFails": 0,
    "state": "SUCCESS"
   },
   {
    "state": "FAIL",
-   "teamSize": 3,
+   "numFails": 1,
+   "team": [
+    "TESSA",
+    "MATT",
+    "PDEXT"
+   ],
    "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
+     "team": [
+      "TESSA",
+      "MATT",
+      "PDEXT"
+     ],
+     "proposer": "TESSA",
      "votes": [
       "MATT",
       "TESSA",
       "SANJ",
       "PDEXT"
      ],
-     "team": [
-      "TESSA",
-      "MATT",
-      "PDEXT"
-     ],
-     "proposer": "TESSA"
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "TESSA",
-    "MATT",
-    "PDEXT"
-   ],
-   "numFails": 1
+   "teamSize": 3
   },
   {
-   "state": "FAIL",
    "failsRequired": 1,
+   "state": "FAIL",
    "team": [
     "ALEX",
     "KGB",
     "MATT",
     "TESSA"
    ],
+   "numFails": 1,
    "teamSize": 4,
    "proposals": [
     {
-     "votes": [
-      "SANJ",
-      "PDEXT"
-     ],
      "proposer": "SANJ",
      "team": [
       "SANJ",
@@ -174,17 +168,21 @@
       "ALEX",
       "PDEXT"
      ],
-     "state": "REJECTED"
+     "state": "REJECTED",
+     "votes": [
+      "SANJ",
+      "PDEXT"
+     ]
     },
     {
-     "proposer": "PDEXT",
+     "state": "REJECTED",
      "team": [
       "PDEXT",
       "SANJ",
       "KGB",
       "TESSA"
      ],
-     "state": "REJECTED",
+     "proposer": "PDEXT",
      "votes": [
       "SANJ",
       "PDEXT"
@@ -203,59 +201,61 @@
       "MATT",
       "TESSA"
      ],
-     "proposer": "ALEX",
-     "state": "APPROVED"
+     "state": "APPROVED",
+     "proposer": "ALEX"
     }
-   ],
-   "numFails": 1
+   ]
   },
   {
-   "failsRequired": 1,
+   "team": [
+    "KGB",
+    "SANJ",
+    "PDEXT"
+   ],
    "state": "FAIL",
+   "teamSize": 3,
    "numFails": 1,
    "proposals": [
     {
-     "votes": [
-      "MATT",
-      "SANJ"
-     ],
      "state": "REJECTED",
      "proposer": "MATT",
      "team": [
       "KGB",
       "MATT",
       "ALEX"
+     ],
+     "votes": [
+      "MATT",
+      "SANJ"
      ]
     },
     {
-     "team": [
-      "KGB",
-      "SANJ",
-      "PDEXT"
-     ],
      "proposer": "KGB",
+     "state": "APPROVED",
      "votes": [
       "PDEXT",
       "KGB",
       "MATT",
       "SANJ"
      ],
-     "state": "APPROVED"
+     "team": [
+      "KGB",
+      "SANJ",
+      "PDEXT"
+     ]
     }
    ],
-   "team": [
-    "KGB",
-    "SANJ",
-    "PDEXT"
-   ],
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
-   "team": [],
-   "teamSize": 4,
+   "state": "PENDING",
    "proposals": [],
+   "team": [],
    "failsRequired": 1,
-   "state": "PENDING"
+   "teamSize": 4
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ }
 }

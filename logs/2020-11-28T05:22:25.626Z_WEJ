@@ -1,41 +1,43 @@
 {
+ "players": [
+  {
+   "uid": "PS1ny6F7dmT3QqGw9DhtjZcRUqI3",
+   "name": "COOPER"
+  },
+  {
+   "name": "MITCH",
+   "uid": "RkJp9AtzP0hcmcC17xoHfpkp2t53"
+  },
+  {
+   "uid": "7bI9u7AjgqcIDAuFHHYtwh1s5Uj1",
+   "name": "TESS"
+  },
+  {
+   "uid": "UNAwOHGTLXQSgM3dkVdMJE9k9y22",
+   "name": "GRADY"
+  },
+  {
+   "uid": "l3kqiUZiImNES181MqDpggoIw1I2",
+   "name": "POOPA"
+  },
+  {
+   "uid": "18mcnIvtDJfyRV6lDijsc89a4bz1",
+   "name": "PINEAPPLE"
+  },
+  {
+   "uid": "tHJXIlmOwGSVwmWe8ZCzRwWu1cW2",
+   "name": "MACK"
+  },
+  {
+   "name": "JASON",
+   "uid": "NSEPetV9qQhJIsaRxY8bb9LK7QS2"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1606542517,
+  "_nanoseconds": 255000000
+ },
  "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": null,
-  "votes": [
-   {
-    "GRADY": true,
-    "COOPER": false,
-    "TESS": true
-   },
-   {
-    "POOPA": true,
-    "JASON": true,
-    "PINEAPPLE": true,
-    "MITCH": true
-   },
-   {
-    "PINEAPPLE": false,
-    "TESS": true,
-    "POOPA": true,
-    "GRADY": true
-   },
-   {
-    "PINEAPPLE": true,
-    "JASON": true,
-    "MITCH": true,
-    "POOPA": true,
-    "GRADY": true
-   },
-   {
-    "JASON": true,
-    "MACK": true,
-    "MITCH": false,
-    "PINEAPPLE": false,
-    "POOPA": true
-   }
-  ],
-  "message": "Three failed missions",
   "roles": [
    {
     "name": "MITCH",
@@ -43,9 +45,9 @@
     "assassin": false
    },
    {
+    "name": "TESS",
     "assassin": false,
-    "role": "MERLIN",
-    "name": "TESS"
+    "role": "MERLIN"
    },
    {
     "name": "POOPA",
@@ -53,49 +55,74 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "LOYAL FOLLOWER",
-    "name": "GRADY",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "MACK",
-    "assassin": false
-   },
-   {
     "assassin": false,
-    "role": "MORDRED",
-    "name": "PINEAPPLE"
+    "name": "GRADY",
+    "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "MACK",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "MORDRED",
+    "name": "PINEAPPLE",
+    "assassin": false
+   },
+   {
+    "assassin": true,
     "name": "COOPER",
-    "role": "EVIL MINION",
-    "assassin": true
+    "role": "EVIL MINION"
    },
    {
     "assassin": false,
     "name": "JASON",
     "role": "LOYAL FOLLOWER"
    }
-  ]
+  ],
+  "assassinated": null,
+  "votes": [
+   {
+    "GRADY": true,
+    "TESS": true,
+    "COOPER": false
+   },
+   {
+    "JASON": true,
+    "POOPA": true,
+    "PINEAPPLE": true,
+    "MITCH": true
+   },
+   {
+    "TESS": true,
+    "POOPA": true,
+    "GRADY": true,
+    "PINEAPPLE": false
+   },
+   {
+    "PINEAPPLE": true,
+    "GRADY": true,
+    "JASON": true,
+    "MITCH": true,
+    "POOPA": true
+   },
+   {
+    "MACK": true,
+    "POOPA": true,
+    "JASON": true,
+    "PINEAPPLE": false,
+    "MITCH": false
+   }
+  ],
+  "state": "EVIL_WIN",
+  "message": "Three failed missions"
  },
  "missions": [
   {
-   "failsRequired": 1,
    "teamSize": 3,
-   "team": [
-    "COOPER",
-    "TESS",
-    "GRADY"
-   ],
+   "numFails": 1,
    "proposals": [
     {
-     "team": [
-      "COOPER",
-      "TESS",
-      "GRADY"
-     ],
-     "proposer": "COOPER",
      "state": "APPROVED",
      "votes": [
       "PINEAPPLE",
@@ -105,17 +132,36 @@
       "TESS",
       "GRADY",
       "JASON"
-     ]
+     ],
+     "team": [
+      "COOPER",
+      "TESS",
+      "GRADY"
+     ],
+     "proposer": "COOPER"
     }
    ],
-   "state": "FAIL",
-   "numFails": 1
+   "failsRequired": 1,
+   "team": [
+    "COOPER",
+    "TESS",
+    "GRADY"
+   ],
+   "state": "FAIL"
   },
   {
+   "numFails": 0,
+   "team": [
+    "MITCH",
+    "JASON",
+    "POOPA",
+    "PINEAPPLE"
+   ],
    "teamSize": 4,
+   "failsRequired": 1,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
      "proposer": "MITCH",
      "votes": [
       "POOPA",
@@ -131,23 +177,18 @@
       "JASON",
       "POOPA",
       "PINEAPPLE"
-     ]
+     ],
+     "state": "APPROVED"
     }
-   ],
-   "team": [
-    "MITCH",
-    "JASON",
-    "POOPA",
-    "PINEAPPLE"
-   ],
-   "numFails": 0,
-   "failsRequired": 1,
-   "state": "SUCCESS"
+   ]
   },
   {
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "TESS",
      "votes": [
       "TESS",
       "POOPA",
@@ -160,23 +201,30 @@
       "GRADY",
       "POOPA",
       "PINEAPPLE"
-     ],
-     "proposer": "TESS"
+     ]
     }
    ],
+   "failsRequired": 1,
+   "teamSize": 4,
    "team": [
     "TESS",
     "GRADY",
     "POOPA",
     "PINEAPPLE"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 4,
-   "numFails": 1
+   ]
   },
   {
+   "failsRequired": 2,
    "numFails": 0,
+   "team": [
+    "MITCH",
+    "JASON",
+    "POOPA",
+    "PINEAPPLE",
+    "GRADY"
+   ],
+   "state": "SUCCESS",
+   "teamSize": 5,
    "proposals": [
     {
      "state": "APPROVED",
@@ -196,19 +244,12 @@
       "GRADY"
      ]
     }
-   ],
-   "state": "SUCCESS",
-   "teamSize": 5,
-   "team": [
-    "MITCH",
-    "JASON",
-    "POOPA",
-    "PINEAPPLE",
-    "GRADY"
-   ],
-   "failsRequired": 2
+   ]
   },
   {
+   "failsRequired": 1,
+   "numFails": 2,
+   "state": "FAIL",
    "teamSize": 5,
    "team": [
     "POOPA",
@@ -217,12 +258,9 @@
     "PINEAPPLE",
     "MACK"
    ],
-   "state": "FAIL",
-   "failsRequired": 1,
    "proposals": [
     {
      "proposer": "POOPA",
-     "state": "APPROVED",
      "votes": [
       "MACK",
       "POOPA",
@@ -231,6 +269,7 @@
       "JASON",
       "MITCH"
      ],
+     "state": "APPROVED",
      "team": [
       "POOPA",
       "MITCH",
@@ -239,48 +278,9 @@
       "MACK"
      ]
     }
-   ],
-   "numFails": 2
+   ]
   }
  ],
- "players": [
-  {
-   "name": "COOPER",
-   "uid": "PS1ny6F7dmT3QqGw9DhtjZcRUqI3"
-  },
-  {
-   "name": "MITCH",
-   "uid": "RkJp9AtzP0hcmcC17xoHfpkp2t53"
-  },
-  {
-   "name": "TESS",
-   "uid": "7bI9u7AjgqcIDAuFHHYtwh1s5Uj1"
-  },
-  {
-   "uid": "UNAwOHGTLXQSgM3dkVdMJE9k9y22",
-   "name": "GRADY"
-  },
-  {
-   "name": "POOPA",
-   "uid": "l3kqiUZiImNES181MqDpggoIw1I2"
-  },
-  {
-   "name": "PINEAPPLE",
-   "uid": "18mcnIvtDJfyRV6lDijsc89a4bz1"
-  },
-  {
-   "name": "MACK",
-   "uid": "tHJXIlmOwGSVwmWe8ZCzRwWu1cW2"
-  },
-  {
-   "uid": "NSEPetV9qQhJIsaRxY8bb9LK7QS2",
-   "name": "JASON"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1606542517,
-  "_nanoseconds": 255000000
- },
  "options": {
   "inGameLog": false
  },

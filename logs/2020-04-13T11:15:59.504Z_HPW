@@ -1,50 +1,35 @@
 {
- "players": [
-  {
-   "uid": "4C5j2CXoL3VUDeraoWO2WYEh93h2",
-   "name": "KEVLAR"
-  },
-  {
-   "uid": "d7nNTCgjkqPpmbML5O0EsKkVth22",
-   "name": "PRISCA"
-  },
-  {
-   "name": "MATT",
-   "uid": "3Z1CTAyJMWTIqDM8qDDApr2QqHs1"
-  },
-  {
-   "name": "JOSH",
-   "uid": "GHGEMKxFbOWvb9IPudtfy5e1Isi1"
-  },
-  {
-   "name": "SAC",
-   "uid": "VZOdIZRhT6gIEsGXPjlYzAf0JKM2"
-  },
-  {
-   "name": "DAN",
-   "uid": "LwGYTJa1ahWwsaM61nAOwKTBJsY2"
-  }
- ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1586776559,
-  "_nanoseconds": 504000000
- },
- "timeFinished": {
-  "_seconds": 1586777317,
-  "_nanoseconds": 56255000
- },
  "outcome": {
-  "message": "Three successful missions",
-  "assassinated": "MATT",
   "state": "GOOD_WIN",
+  "votes": [
+   {
+    "KEVLAR": true,
+    "DAN": true
+   },
+   {
+    "KEVLAR": true,
+    "DAN": true,
+    "PRISCA": false
+   },
+   {
+    "MATT": true,
+    "SAC": true,
+    "JOSH": true,
+    "KEVLAR": true
+   },
+   {
+    "JOSH": true,
+    "SAC": true,
+    "KEVLAR": true
+   }
+  ],
+  "assassinated": "MATT",
+  "message": "Three successful missions",
   "roles": [
    {
+    "role": "LOYAL FOLLOWER",
     "name": "JOSH",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
     "name": "KEVLAR",
@@ -57,55 +42,61 @@
     "name": "PRISCA"
    },
    {
+    "role": "EVIL MINION",
     "name": "DAN",
-    "assassin": true,
-    "role": "EVIL MINION"
+    "assassin": true
    },
    {
+    "role": "LOYAL FOLLOWER",
     "name": "MATT",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
+    "assassin": false,
     "role": "MERLIN",
-    "assassin": false,
     "name": "SAC"
-   }
-  ],
-  "votes": [
-   {
-    "KEVLAR": true,
-    "DAN": true
-   },
-   {
-    "PRISCA": false,
-    "KEVLAR": true,
-    "DAN": true
-   },
-   {
-    "JOSH": true,
-    "MATT": true,
-    "SAC": true,
-    "KEVLAR": true
-   },
-   {
-    "JOSH": true,
-    "KEVLAR": true,
-    "SAC": true
    }
   ]
  },
+ "options": {
+  "inGameLog": false
+ },
+ "timeCreated": {
+  "_seconds": 1586776559,
+  "_nanoseconds": 504000000
+ },
  "missions": [
   {
-   "teamSize": 2,
    "team": [
     "DAN",
     "KEVLAR"
    ],
-   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
+     "proposer": "DAN",
+     "team": [
+      "DAN",
+      "KEVLAR"
+     ],
+     "votes": [
+      "SAC",
+      "JOSH",
+      "KEVLAR",
+      "PRISCA",
+      "DAN",
+      "MATT"
+     ]
+    }
+   ],
+   "numFails": 0,
+   "teamSize": 2,
+   "state": "SUCCESS",
+   "failsRequired": 1
+  },
+  {
+   "proposals": [
+    {
      "votes": [
       "SAC",
       "JOSH",
@@ -114,55 +105,35 @@
       "DAN",
       "MATT"
      ],
+     "state": "APPROVED",
+     "proposer": "KEVLAR",
      "team": [
+      "KEVLAR",
       "DAN",
-      "KEVLAR"
-     ],
-     "proposer": "DAN"
+      "PRISCA"
+     ]
     }
    ],
-   "failsRequired": 1,
-   "state": "SUCCESS"
-  },
-  {
+   "teamSize": 3,
+   "state": "FAIL",
+   "numFails": 1,
    "team": [
     "KEVLAR",
     "DAN",
     "PRISCA"
    ],
-   "proposals": [
-    {
-     "votes": [
-      "SAC",
-      "JOSH",
-      "KEVLAR",
-      "PRISCA",
-      "DAN",
-      "MATT"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "KEVLAR",
-      "DAN",
-      "PRISCA"
-     ],
-     "proposer": "KEVLAR"
-    }
-   ],
-   "numFails": 1,
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 3
+   "failsRequired": 1
   },
   {
+   "state": "SUCCESS",
    "failsRequired": 1,
+   "teamSize": 4,
    "team": [
     "MATT",
     "KEVLAR",
     "JOSH",
     "SAC"
    ],
-   "teamSize": 4,
    "numFails": 0,
    "proposals": [
     {
@@ -185,31 +156,23 @@
       "JOSH",
       "SAC"
      ],
+     "state": "APPROVED",
      "votes": [
       "PRISCA",
       "DAN",
       "MATT",
       "SAC"
      ],
-     "proposer": "MATT",
-     "state": "APPROVED"
+     "proposer": "MATT"
     }
-   ],
-   "state": "SUCCESS"
+   ]
   },
   {
    "state": "SUCCESS",
-   "numFails": 0,
-   "failsRequired": 1,
-   "team": [
-    "JOSH",
-    "SAC",
-    "KEVLAR"
-   ],
    "teamSize": 3,
    "proposals": [
     {
-     "proposer": "JOSH",
+     "state": "APPROVED",
      "votes": [
       "SAC",
       "JOSH",
@@ -223,16 +186,53 @@
       "SAC",
       "KEVLAR"
      ],
-     "state": "APPROVED"
+     "proposer": "JOSH"
     }
-   ]
+   ],
+   "team": [
+    "JOSH",
+    "SAC",
+    "KEVLAR"
+   ],
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
+   "team": [],
    "state": "PENDING",
-   "proposals": [],
-   "failsRequired": 1,
    "teamSize": 4,
-   "team": []
+   "proposals": [],
+   "failsRequired": 1
   }
- ]
+ ],
+ "players": [
+  {
+   "uid": "4C5j2CXoL3VUDeraoWO2WYEh93h2",
+   "name": "KEVLAR"
+  },
+  {
+   "name": "PRISCA",
+   "uid": "d7nNTCgjkqPpmbML5O0EsKkVth22"
+  },
+  {
+   "name": "MATT",
+   "uid": "3Z1CTAyJMWTIqDM8qDDApr2QqHs1"
+  },
+  {
+   "uid": "GHGEMKxFbOWvb9IPudtfy5e1Isi1",
+   "name": "JOSH"
+  },
+  {
+   "uid": "VZOdIZRhT6gIEsGXPjlYzAf0JKM2",
+   "name": "SAC"
+  },
+  {
+   "name": "DAN",
+   "uid": "LwGYTJa1ahWwsaM61nAOwKTBJsY2"
+  }
+ ],
+ "timeFinished": {
+  "_seconds": 1586777317,
+  "_nanoseconds": 56255000
+ }
 }

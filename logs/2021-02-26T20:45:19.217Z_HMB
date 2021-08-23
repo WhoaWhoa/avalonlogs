@@ -1,24 +1,64 @@
 {
- "options": {
-  "inGameLog": false
+ "players": [
+  {
+   "uid": "VTqQvOxZ7xRQuFWSmWiwYZnBfkf2",
+   "name": "KATE"
+  },
+  {
+   "uid": "QuIlP0pln6adHo4tgHpMCzIOebi1",
+   "name": "ASH"
+  },
+  {
+   "name": "SUNNY",
+   "uid": "vvvnsGTaocWp1ck2Xh6cj0jVVrr2"
+  },
+  {
+   "uid": "8K78IH8QsKNeZ0AvKC8Wf9p9As62",
+   "name": "ALYSHA"
+  },
+  {
+   "name": "DAVID",
+   "uid": "UGfEziow5BbMpbJ47cPF1kitOma2"
+  },
+  {
+   "uid": "cA7saclPV6QKkIhewvt9u6uY6fI2",
+   "name": "JA"
+  },
+  {
+   "uid": "1giTjUc7nOOnGa3E5mE5q2SylqF2",
+   "name": "JASMINE"
+  },
+  {
+   "uid": "w2XsD0wW4sNo7IbNX6geLNbEY0i2",
+   "name": "NIKHIL"
+  },
+  {
+   "uid": "VojvATbGACfxG3flLfwqZ57ZYJC2",
+   "name": "GOSUKE"
+  }
+ ],
+ "timeCreated": {
+  "_seconds": 1614372319,
+  "_nanoseconds": 217000000
  },
  "outcome": {
+  "message": "Three successful missions",
   "votes": [
    {
     "ALYSHA": true,
-    "JA": true,
-    "JASMINE": true
-   },
-   {
-    "ALYSHA": true,
-    "JA": true,
     "JASMINE": true,
-    "KATE": true
+    "JA": true
    },
    {
     "KATE": true,
-    "ASH": true,
+    "JA": true,
+    "JASMINE": true,
+    "ALYSHA": true
+   },
+   {
     "ALYSHA": true,
+    "ASH": true,
+    "KATE": true,
     "DAVID": true
    }
   ],
@@ -29,9 +69,9 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "assassin": false,
     "role": "LOYAL FOLLOWER",
-    "name": "NIKHIL",
-    "assassin": false
+    "name": "NIKHIL"
    },
    {
     "name": "JASMINE",
@@ -39,37 +79,36 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "name": "JA",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "DAVID",
-    "assassin": true
-   },
-   {
     "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "GOSUKE"
+    "assassin": false
+   },
+   {
+    "name": "DAVID",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "GOSUKE",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "name": "ASH",
-    "role": "EVIL MINION",
-    "assassin": false
-   },
-   {
-    "name": "KATE",
-    "role": "MERLIN",
-    "assassin": false
-   },
-   {
-    "name": "SUNNY",
     "assassin": false,
     "role": "EVIL MINION"
+   },
+   {
+    "assassin": false,
+    "name": "KATE",
+    "role": "MERLIN"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "SUNNY"
    }
   ],
-  "message": "Three successful missions",
   "state": "GOOD_WIN",
   "assassinated": "JA"
  },
@@ -79,6 +118,7 @@
  },
  "missions": [
   {
+   "state": "SUCCESS",
    "teamSize": 3,
    "proposals": [
     {
@@ -88,7 +128,6 @@
       "ALYSHA",
       "JA"
      ],
-     "state": "APPROVED",
      "votes": [
       "ALYSHA",
       "NIKHIL",
@@ -96,7 +135,8 @@
       "JA",
       "DAVID",
       "GOSUKE"
-     ]
+     ],
+     "state": "APPROVED"
     }
    ],
    "team": [
@@ -104,38 +144,38 @@
     "ALYSHA",
     "JA"
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "failsRequired": 1
+   "failsRequired": 1,
+   "numFails": 0
   },
   {
-   "teamSize": 4,
    "state": "SUCCESS",
+   "teamSize": 4,
    "failsRequired": 1,
+   "numFails": 0,
    "team": [
     "JASMINE",
     "ALYSHA",
     "JA",
     "KATE"
    ],
-   "numFails": 0,
    "proposals": [
     {
-     "state": "REJECTED",
      "team": [
       "NIKHIL",
       "ALYSHA",
       "ASH",
       "DAVID"
      ],
+     "state": "REJECTED",
+     "proposer": "NIKHIL",
      "votes": [
       "GOSUKE",
       "NIKHIL",
       "SUNNY"
-     ],
-     "proposer": "NIKHIL"
+     ]
     },
     {
+     "state": "REJECTED",
      "votes": [
       "GOSUKE",
       "NIKHIL"
@@ -146,7 +186,6 @@
       "NIKHIL",
       "GOSUKE"
      ],
-     "state": "REJECTED",
      "proposer": "GOSUKE"
     },
     {
@@ -172,18 +211,8 @@
    ]
   },
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "numFails": 0,
    "proposals": [
     {
-     "votes": [
-      "GOSUKE",
-      "DAVID",
-      "SUNNY",
-      "NIKHIL",
-      "ASH"
-     ],
      "state": "APPROVED",
      "team": [
       "ASH",
@@ -191,72 +220,43 @@
       "DAVID",
       "KATE"
      ],
+     "votes": [
+      "GOSUKE",
+      "DAVID",
+      "SUNNY",
+      "NIKHIL",
+      "ASH"
+     ],
      "proposer": "ASH"
     }
    ],
-   "teamSize": 4,
+   "numFails": 0,
+   "state": "SUCCESS",
    "team": [
     "ASH",
     "ALYSHA",
     "DAVID",
     "KATE"
-   ]
+   ],
+   "teamSize": 4,
+   "failsRequired": 1
   },
   {
+   "team": [],
+   "failsRequired": 2,
+   "proposals": [],
+   "teamSize": 5,
+   "state": "PENDING"
+  },
+  {
+   "team": [],
    "teamSize": 5,
    "state": "PENDING",
    "proposals": [],
-   "team": [],
-   "failsRequired": 2
-  },
-  {
-   "proposals": [],
-   "team": [],
-   "state": "PENDING",
-   "failsRequired": 1,
-   "teamSize": 5
+   "failsRequired": 1
   }
  ],
- "players": [
-  {
-   "name": "KATE",
-   "uid": "VTqQvOxZ7xRQuFWSmWiwYZnBfkf2"
-  },
-  {
-   "uid": "QuIlP0pln6adHo4tgHpMCzIOebi1",
-   "name": "ASH"
-  },
-  {
-   "name": "SUNNY",
-   "uid": "vvvnsGTaocWp1ck2Xh6cj0jVVrr2"
-  },
-  {
-   "name": "ALYSHA",
-   "uid": "8K78IH8QsKNeZ0AvKC8Wf9p9As62"
-  },
-  {
-   "name": "DAVID",
-   "uid": "UGfEziow5BbMpbJ47cPF1kitOma2"
-  },
-  {
-   "uid": "cA7saclPV6QKkIhewvt9u6uY6fI2",
-   "name": "JA"
-  },
-  {
-   "uid": "1giTjUc7nOOnGa3E5mE5q2SylqF2",
-   "name": "JASMINE"
-  },
-  {
-   "name": "NIKHIL",
-   "uid": "w2XsD0wW4sNo7IbNX6geLNbEY0i2"
-  },
-  {
-   "name": "GOSUKE",
-   "uid": "VojvATbGACfxG3flLfwqZ57ZYJC2"
-  }
- ],
- "timeCreated": {
-  "_seconds": 1614372319,
-  "_nanoseconds": 217000000
+ "options": {
+  "inGameLog": false
  }
 }

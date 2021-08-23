@@ -3,23 +3,16 @@
   "_seconds": 1585087775,
   "_nanoseconds": 980391000
  },
- "timeCreated": {
-  "_seconds": 1585087054,
-  "_nanoseconds": 523000000
- },
  "outcome": {
-  "state": "GOOD_WIN",
-  "assassinated": "ALISHA",
-  "message": "Three successful missions",
   "votes": [
    {
     "SOPHEY": true,
     "ALISHA": true
    },
    {
+    "ANGELL": false,
     "SOPHEY": true,
-    "JUN": true,
-    "ANGELL": false
+    "JUN": true
    },
    {
     "SARAH": true,
@@ -33,31 +26,34 @@
   ],
   "roles": [
    {
-    "assassin": false,
     "name": "SOPHEY",
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "assassin": false
    },
    {
-    "name": "SARAH",
     "assassin": false,
+    "name": "SARAH",
     "role": "MERLIN"
    },
    {
-    "role": "MORGANA",
+    "name": "JUN",
     "assassin": false,
-    "name": "JUN"
+    "role": "MORGANA"
    },
    {
-    "assassin": true,
     "name": "ANGELL",
-    "role": "EVIL MINION"
+    "role": "EVIL MINION",
+    "assassin": true
    },
    {
     "role": "LOYAL FOLLOWER",
-    "name": "ALISHA",
-    "assassin": false
+    "assassin": false,
+    "name": "ALISHA"
    }
-  ]
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "ALISHA",
+  "message": "Three successful missions"
  },
  "players": [
   {
@@ -65,32 +61,36 @@
    "uid": "IEMkBScSSLMnUhFT8YRBwJRzy5w2"
   },
   {
-   "uid": "zdTad4Djy8fFhpViARvvj4aRFsJ2",
-   "name": "ANGELL"
+   "name": "ANGELL",
+   "uid": "zdTad4Djy8fFhpViARvvj4aRFsJ2"
   },
   {
    "name": "SOPHEY",
    "uid": "HA94qkJ2IAfSMXcZEqx5pVtvH263"
   },
   {
-   "uid": "GzKS0NMVuHSyJwfuriDMiZIhD6U2",
-   "name": "ALISHA"
+   "name": "ALISHA",
+   "uid": "GzKS0NMVuHSyJwfuriDMiZIhD6U2"
   },
   {
-   "uid": "mptOXTDcbGhV34KC4QBcWSxT3Vz2",
-   "name": "JUN"
+   "name": "JUN",
+   "uid": "mptOXTDcbGhV34KC4QBcWSxT3Vz2"
   }
  ],
+ "timeCreated": {
+  "_seconds": 1585087054,
+  "_nanoseconds": 523000000
+ },
  "missions": [
   {
-   "failsRequired": 1,
+   "numFails": 0,
+   "state": "SUCCESS",
+   "team": [
+    "ALISHA",
+    "SOPHEY"
+   ],
    "proposals": [
     {
-     "state": "APPROVED",
-     "team": [
-      "ALISHA",
-      "SOPHEY"
-     ],
      "proposer": "ALISHA",
      "votes": [
       "ANGELL",
@@ -98,29 +98,29 @@
       "SOPHEY",
       "SARAH",
       "JUN"
-     ]
+     ],
+     "team": [
+      "ALISHA",
+      "SOPHEY"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "state": "SUCCESS",
-   "team": [
-    "ALISHA",
-    "SOPHEY"
-   ],
-   "numFails": 0,
+   "failsRequired": 1,
    "teamSize": 2
   },
   {
+   "team": [
+    "JUN",
+    "SOPHEY",
+    "ANGELL"
+   ],
+   "teamSize": 3,
+   "failsRequired": 1,
    "numFails": 1,
    "state": "FAIL",
-   "teamSize": 3,
    "proposals": [
     {
-     "team": [
-      "JUN",
-      "SOPHEY",
-      "ANGELL"
-     ],
-     "proposer": "JUN",
      "state": "APPROVED",
      "votes": [
       "JUN",
@@ -128,14 +128,14 @@
       "ALISHA",
       "SOPHEY",
       "SARAH"
+     ],
+     "proposer": "JUN",
+     "team": [
+      "JUN",
+      "SOPHEY",
+      "ANGELL"
      ]
     }
-   ],
-   "failsRequired": 1,
-   "team": [
-    "JUN",
-    "SOPHEY",
-    "ANGELL"
    ]
   },
   {
@@ -143,11 +143,11 @@
     "SARAH",
     "ALISHA"
    ],
-   "numFails": 0,
    "teamSize": 2,
    "state": "SUCCESS",
    "proposals": [
     {
+     "proposer": "SARAH",
      "votes": [
       "ANGELL",
       "ALISHA",
@@ -158,61 +158,61 @@
      "state": "APPROVED",
      "team": [
       "SARAH",
-      "ALISHA"
-     ],
-     "proposer": "SARAH"
-    }
-   ],
-   "failsRequired": 1
-  },
-  {
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "votes": [
-      "JUN",
-      "ANGELL"
-     ],
-     "team": [
-      "ANGELL",
-      "SARAH",
-      "JUN"
-     ],
-     "proposer": "ANGELL"
-    },
-    {
-     "proposer": "SOPHEY",
-     "state": "APPROVED",
-     "team": [
-      "ALISHA",
-      "SOPHEY",
-      "SARAH"
-     ],
-     "votes": [
-      "SOPHEY",
-      "SARAH",
-      "JUN",
-      "ANGELL",
       "ALISHA"
      ]
     }
    ],
-   "numFails": 0,
    "failsRequired": 1,
+   "numFails": 0
+  },
+  {
    "teamSize": 3,
+   "proposals": [
+    {
+     "team": [
+      "ANGELL",
+      "SARAH",
+      "JUN"
+     ],
+     "votes": [
+      "JUN",
+      "ANGELL"
+     ],
+     "state": "REJECTED",
+     "proposer": "ANGELL"
+    },
+    {
+     "votes": [
+      "SOPHEY",
+      "SARAH",
+      "JUN",
+      "ANGELL",
+      "ALISHA"
+     ],
+     "state": "APPROVED",
+     "proposer": "SOPHEY",
+     "team": [
+      "ALISHA",
+      "SOPHEY",
+      "SARAH"
+     ]
+    }
+   ],
    "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "ALISHA",
     "SOPHEY",
     "SARAH"
-   ]
+   ],
+   "numFails": 0
   },
   {
+   "teamSize": 3,
+   "failsRequired": 1,
    "state": "PENDING",
    "team": [],
-   "teamSize": 3,
-   "proposals": [],
-   "failsRequired": 1
+   "proposals": []
   }
  ]
 }

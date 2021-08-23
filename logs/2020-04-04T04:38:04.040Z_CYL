@@ -1,4 +1,69 @@
 {
+ "outcome": {
+  "message": "Merlin assassinated",
+  "assassinated": "BUGGIE",
+  "state": "EVIL_WIN",
+  "votes": [
+   {
+    "ME": true,
+    "SARAHAHAHA": true
+   },
+   {
+    "ME": true,
+    "NRGZ": true,
+    "SARAHAHAHA": true
+   },
+   {
+    "BUGGIE": true,
+    "SARAHAHAHA": false,
+    "JERLIN": true,
+    "PETER": true
+   },
+   {
+    "ME": false,
+    "NRGZ": true,
+    "SARAHAHAHA": true
+   },
+   {
+    "BUGGIE": true,
+    "NRGZ": true,
+    "PETER": true,
+    "JERLIN": true
+   }
+  ],
+  "roles": [
+   {
+    "role": "MORDRED",
+    "name": "SARAHAHAHA",
+    "assassin": true
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "NRGZ",
+    "assassin": false
+   },
+   {
+    "name": "JERLIN",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "assassin": false,
+    "role": "MORGANA",
+    "name": "ME"
+   },
+   {
+    "assassin": false,
+    "name": "PETER",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "MERLIN",
+    "name": "BUGGIE",
+    "assassin": false
+   }
+  ]
+ },
  "timeFinished": {
   "_seconds": 1585975900,
   "_nanoseconds": 439575000
@@ -9,84 +74,86 @@
  },
  "missions": [
   {
-   "proposals": [
-    {
-     "votes": [
-      "SARAHAHAHA",
-      "NRGZ",
-      "JERLIN",
-      "ME"
-     ],
-     "proposer": "SARAHAHAHA",
-     "state": "APPROVED",
-     "team": [
-      "SARAHAHAHA",
-      "ME"
-     ]
-    }
-   ],
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 2,
    "team": [
     "SARAHAHAHA",
     "ME"
-   ]
-  },
-  {
-   "failsRequired": 1,
-   "teamSize": 3,
-   "numFails": 0,
-   "state": "SUCCESS",
+   ],
    "proposals": [
     {
-     "team": [
-      "NRGZ",
-      "SARAHAHAHA",
-      "ME"
-     ],
-     "state": "APPROVED",
-     "proposer": "NRGZ",
+     "proposer": "SARAHAHAHA",
      "votes": [
       "SARAHAHAHA",
       "NRGZ",
       "JERLIN",
       "ME"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "SARAHAHAHA",
+      "ME"
      ]
     }
    ],
+   "numFails": 0,
+   "teamSize": 2,
+   "failsRequired": 1,
+   "state": "SUCCESS"
+  },
+  {
+   "state": "SUCCESS",
    "team": [
     "NRGZ",
     "SARAHAHAHA",
     "ME"
-   ]
+   ],
+   "proposals": [
+    {
+     "team": [
+      "NRGZ",
+      "SARAHAHAHA",
+      "ME"
+     ],
+     "state": "APPROVED",
+     "votes": [
+      "SARAHAHAHA",
+      "NRGZ",
+      "JERLIN",
+      "ME"
+     ],
+     "proposer": "NRGZ"
+    }
+   ],
+   "numFails": 0,
+   "teamSize": 3,
+   "failsRequired": 1
   },
   {
+   "teamSize": 4,
+   "state": "FAIL",
    "proposals": [
     {
      "proposer": "BUGGIE",
      "state": "REJECTED",
+     "votes": [
+      "BUGGIE",
+      "SARAHAHAHA"
+     ],
      "team": [
       "BUGGIE",
       "NRGZ",
       "SARAHAHAHA",
       "PETER"
-     ],
-     "votes": [
-      "BUGGIE",
-      "SARAHAHAHA"
      ]
     },
     {
      "state": "APPROVED",
-     "proposer": "PETER",
      "team": [
       "BUGGIE",
       "PETER",
       "JERLIN",
       "SARAHAHAHA"
      ],
+     "proposer": "PETER",
      "votes": [
       "ME",
       "PETER",
@@ -95,41 +162,34 @@
      ]
     }
    ],
-   "teamSize": 4,
+   "numFails": 1,
+   "failsRequired": 1,
    "team": [
     "BUGGIE",
     "PETER",
     "JERLIN",
     "SARAHAHAHA"
-   ],
-   "state": "FAIL",
-   "failsRequired": 1,
-   "numFails": 1
+   ]
   },
   {
-   "team": [
-    "SARAHAHAHA",
-    "ME",
-    "NRGZ"
-   ],
-   "failsRequired": 1,
+   "numFails": 1,
+   "state": "FAIL",
    "proposals": [
     {
-     "proposer": "JERLIN",
+     "state": "REJECTED",
      "team": [
       "JERLIN",
       "PETER",
       "SARAHAHAHA"
      ],
+     "proposer": "JERLIN",
      "votes": [
       "SARAHAHAHA",
       "JERLIN",
       "PETER"
-     ],
-     "state": "REJECTED"
+     ]
     },
     {
-     "state": "REJECTED",
      "votes": [
       "ME",
       "SARAHAHAHA"
@@ -139,9 +199,15 @@
       "SARAHAHAHA",
       "BUGGIE"
      ],
-     "proposer": "ME"
+     "proposer": "ME",
+     "state": "REJECTED"
     },
     {
+     "team": [
+      "SARAHAHAHA",
+      "ME",
+      "NRGZ"
+     ],
      "proposer": "SARAHAHAHA",
      "votes": [
       "SARAHAHAHA",
@@ -149,115 +215,49 @@
       "JERLIN",
       "ME"
      ],
-     "state": "APPROVED",
-     "team": [
-      "SARAHAHAHA",
-      "ME",
-      "NRGZ"
-     ]
+     "state": "APPROVED"
     }
    ],
    "teamSize": 3,
-   "numFails": 1,
-   "state": "FAIL"
+   "failsRequired": 1,
+   "team": [
+    "SARAHAHAHA",
+    "ME",
+    "NRGZ"
+   ]
   },
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
    "numFails": 0,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "proposer": "NRGZ",
-     "team": [
-      "JERLIN",
-      "PETER",
-      "BUGGIE",
-      "NRGZ"
-     ],
-     "votes": [
-      "NRGZ",
-      "JERLIN",
-      "ME",
-      "PETER",
-      "BUGGIE"
-     ]
-    }
-   ],
+   "failsRequired": 1,
+   "teamSize": 4,
    "team": [
     "JERLIN",
     "PETER",
     "BUGGIE",
     "NRGZ"
    ],
-   "teamSize": 4
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "votes": [
+      "NRGZ",
+      "JERLIN",
+      "ME",
+      "PETER",
+      "BUGGIE"
+     ],
+     "team": [
+      "JERLIN",
+      "PETER",
+      "BUGGIE",
+      "NRGZ"
+     ],
+     "proposer": "NRGZ"
+    }
+   ],
+   "state": "SUCCESS"
   }
  ],
- "outcome": {
-  "state": "EVIL_WIN",
-  "assassinated": "BUGGIE",
-  "votes": [
-   {
-    "ME": true,
-    "SARAHAHAHA": true
-   },
-   {
-    "NRGZ": true,
-    "ME": true,
-    "SARAHAHAHA": true
-   },
-   {
-    "JERLIN": true,
-    "PETER": true,
-    "SARAHAHAHA": false,
-    "BUGGIE": true
-   },
-   {
-    "SARAHAHAHA": true,
-    "ME": false,
-    "NRGZ": true
-   },
-   {
-    "JERLIN": true,
-    "NRGZ": true,
-    "PETER": true,
-    "BUGGIE": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "roles": [
-   {
-    "assassin": true,
-    "role": "MORDRED",
-    "name": "SARAHAHAHA"
-   },
-   {
-    "name": "NRGZ",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "JERLIN",
-    "role": "PERCIVAL",
-    "assassin": false
-   },
-   {
-    "name": "ME",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "name": "PETER",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "BUGGIE",
-    "role": "MERLIN"
-   }
-  ]
- },
  "players": [
   {
    "uid": "uBIDCqRDtfbgwDHP8uQqbfXTXaK2",
@@ -268,20 +268,20 @@
    "uid": "ntX7FbJkgQgwQZQyh3QQKOOvsXY2"
   },
   {
-   "uid": "1ezUz2aAZ5UEKDD41zR3vfUjwMH3",
-   "name": "PETER"
+   "name": "PETER",
+   "uid": "1ezUz2aAZ5UEKDD41zR3vfUjwMH3"
   },
   {
    "uid": "f9GbIgZD8fQxgwXQb3JOi24UvRh2",
    "name": "JERLIN"
   },
   {
-   "uid": "iY8oPllGTWW11QsugmUvnxrz6xL2",
-   "name": "ME"
+   "name": "ME",
+   "uid": "iY8oPllGTWW11QsugmUvnxrz6xL2"
   },
   {
-   "name": "SARAHAHAHA",
-   "uid": "iGAwcfpgobUY6Trz29GkrPytJGs1"
+   "uid": "iGAwcfpgobUY6Trz29GkrPytJGs1",
+   "name": "SARAHAHAHA"
   }
  ]
 }

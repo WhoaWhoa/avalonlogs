@@ -2,9 +2,18 @@
  "missions": [
   {
    "failsRequired": 1,
-   "numFails": 0,
+   "teamSize": 2,
+   "team": [
+    "SIMON",
+    "EUG"
+   ],
    "proposals": [
     {
+     "team": [
+      "SIMON",
+      "EUG"
+     ],
+     "proposer": "EUG",
      "state": "APPROVED",
      "votes": [
       "LES",
@@ -14,25 +23,30 @@
       "JOSH",
       "SIMON",
       "JEV"
-     ],
-     "team": [
-      "SIMON",
-      "EUG"
-     ],
-     "proposer": "EUG"
+     ]
     }
    ],
-   "teamSize": 2,
-   "team": [
-    "SIMON",
-    "EUG"
-   ],
+   "numFails": 0,
    "state": "SUCCESS"
   },
   {
+   "team": [
+    "JOSH",
+    "EUG",
+    "SIMON"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 3,
+   "failsRequired": 1,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "JOSH",
+      "EUG",
+      "SIMON"
+     ],
      "votes": [
       "MICAH",
       "JEV",
@@ -42,28 +56,18 @@
       "JOSH",
       "SIMON"
      ],
-     "team": [
-      "JOSH",
-      "EUG",
-      "SIMON"
-     ],
      "proposer": "JOSH"
     }
-   ],
+   ]
+  },
+  {
    "failsRequired": 1,
-   "state": "SUCCESS",
-   "teamSize": 3,
+   "numFails": 1,
    "team": [
-    "JOSH",
+    "MICAH",
     "EUG",
     "SIMON"
    ],
-   "numFails": 0
-  },
-  {
-   "teamSize": 3,
-   "failsRequired": 1,
-   "state": "FAIL",
    "proposals": [
     {
      "team": [
@@ -71,7 +75,6 @@
       "EUG",
       "SIMON"
      ],
-     "proposer": "MICAH",
      "votes": [
       "GLO",
       "MICAH",
@@ -80,29 +83,26 @@
       "LES",
       "JOSH"
      ],
+     "proposer": "MICAH",
      "state": "APPROVED"
     }
    ],
-   "numFails": 1,
-   "team": [
-    "MICAH",
-    "EUG",
-    "SIMON"
-   ]
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
+   "failsRequired": 2,
    "numFails": 1,
+   "teamSize": 4,
+   "state": "SUCCESS",
    "team": [
     "EUG",
     "SIMON",
     "JOSH",
     "JEV"
    ],
-   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "SIMON",
      "team": [
       "EUG",
       "SIMON",
@@ -116,73 +116,59 @@
       "JOSH",
       "SIMON",
       "EUG"
-     ]
+     ],
+     "proposer": "SIMON",
+     "state": "APPROVED"
     }
-   ],
-   "teamSize": 4,
-   "failsRequired": 2
+   ]
   },
   {
    "team": [],
-   "teamSize": 4,
-   "failsRequired": 1,
+   "proposals": [],
    "state": "PENDING",
-   "proposals": []
+   "teamSize": 4,
+   "failsRequired": 1
   }
  ],
+ "timeCreated": {
+  "_seconds": 1610678319,
+  "_nanoseconds": 701000000
+ },
+ "timeFinished": {
+  "_seconds": 1610678814,
+  "_nanoseconds": 491000000
+ },
  "outcome": {
-  "votes": [
-   {
-    "EUG": true,
-    "SIMON": true
-   },
-   {
-    "EUG": true,
-    "SIMON": true,
-    "JOSH": true
-   },
-   {
-    "SIMON": true,
-    "MICAH": false,
-    "EUG": true
-   },
-   {
-    "JOSH": true,
-    "JEV": false,
-    "EUG": true,
-    "SIMON": true
-   }
-  ],
   "roles": [
    {
-    "name": "EUG",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "SIMON",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
     "role": "LOYAL FOLLOWER",
-    "name": "GLO",
-    "assassin": false
+    "name": "EUG"
    },
    {
-    "role": "EVIL MINION",
-    "name": "LES",
-    "assassin": false
-   },
-   {
-    "role": "EVIL MINION",
     "assassin": false,
-    "name": "JEV"
+    "name": "SIMON",
+    "role": "LOYAL FOLLOWER"
    },
    {
-    "role": "EVIL MINION",
-    "name": "MICAH",
+    "name": "GLO",
+    "role": "LOYAL FOLLOWER",
     "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "EVIL MINION",
+    "name": "LES"
+   },
+   {
+    "name": "JEV",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "MICAH",
+    "role": "EVIL MINION"
    },
    {
     "assassin": false,
@@ -190,18 +176,36 @@
     "name": "JOSH"
    }
   ],
-  "assassinated": null,
+  "message": "Three missions succeeded",
   "state": "GOOD_WIN",
-  "message": "Three missions succeeded"
- },
- "timeFinished": {
-  "_seconds": 1610678814,
-  "_nanoseconds": 491000000
+  "votes": [
+   {
+    "EUG": true,
+    "SIMON": true
+   },
+   {
+    "SIMON": true,
+    "JOSH": true,
+    "EUG": true
+   },
+   {
+    "EUG": true,
+    "SIMON": true,
+    "MICAH": false
+   },
+   {
+    "JOSH": true,
+    "EUG": true,
+    "JEV": false,
+    "SIMON": true
+   }
+  ],
+  "assassinated": null
  },
  "players": [
   {
-   "uid": "QfiqVStvDVVX4rBTbGBKeYZiops1",
-   "name": "JEV"
+   "name": "JEV",
+   "uid": "QfiqVStvDVVX4rBTbGBKeYZiops1"
   },
   {
    "name": "GLO",
@@ -212,16 +216,16 @@
    "uid": "OFOtJ6c1oSQXO3tSybBsrxlE6HA2"
   },
   {
-   "name": "EUG",
-   "uid": "knJ0QjWkN5hepgCs64xGiwEKZJZ2"
+   "uid": "knJ0QjWkN5hepgCs64xGiwEKZJZ2",
+   "name": "EUG"
   },
   {
    "name": "JOSH",
    "uid": "RnUPThHABiMu56UDrH1vBLH9yKC3"
   },
   {
-   "uid": "nkFMYeRVXlfw2YET4wvKZUURM7v1",
-   "name": "MICAH"
+   "name": "MICAH",
+   "uid": "nkFMYeRVXlfw2YET4wvKZUURM7v1"
   },
   {
    "uid": "ZIp49Ovt7VWcLpvyRPl4tEamrba2",
@@ -230,9 +234,5 @@
  ],
  "options": {
   "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1610678319,
-  "_nanoseconds": 701000000
  }
 }

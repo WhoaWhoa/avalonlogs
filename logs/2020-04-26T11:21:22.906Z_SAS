@@ -1,111 +1,68 @@
 {
+ "players": [
+  {
+   "name": "DANH",
+   "uid": "CHhKI7wK5DaKiCy0VE5yOFUVedn1"
+  },
+  {
+   "uid": "QxGcR1nfl4YpvEFzx2OHpboGOMD3",
+   "name": "JDUB"
+  },
+  {
+   "name": "MATT",
+   "uid": "ycWdoX3Os8OUyJBzPYEJOCQdT512"
+  },
+  {
+   "uid": "dkTSmpGLhRf7P5E6vpYvykKnDtO2",
+   "name": "SAS"
+  },
+  {
+   "name": "GAB",
+   "uid": "gzRlXYlcEcQPDV3eMF8JyF8Ju8C2"
+  },
+  {
+   "name": "LISA",
+   "uid": "nyzpnTiXHCQ0mIlZl7bcyxGNJAH3"
+  },
+  {
+   "uid": "L23uxVDnzOPpOzNOvyV2m9LWsiZ2",
+   "name": "JESS"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1587900082,
   "_nanoseconds": 906000000
  },
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "assassinated": "LISA",
-  "votes": [
-   {
-    "MATT": true,
-    "JDUB": true
-   },
-   {
-    "JDUB": false,
-    "MATT": true,
-    "LISA": true
-   },
-   {
-    "JESS": true,
-    "LISA": true,
-    "GAB": false
-   },
-   {
-    "MATT": true,
-    "DANH": true,
-    "JESS": true,
-    "SAS": true
-   },
-   {
-    "JESS": true,
-    "LISA": true,
-    "DANH": true,
-    "MATT": true
-   }
-  ],
-  "message": "Three successful missions",
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "GAB"
-   },
-   {
-    "role": "MORGANA",
-    "name": "JDUB",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "assassin": false,
-    "name": "DANH"
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "MATT"
-   },
-   {
-    "name": "LISA",
-    "assassin": false,
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "SAS",
-    "assassin": false
-   },
-   {
-    "name": "JESS",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   }
-  ]
- },
  "missions": [
   {
-   "numFails": 0,
-   "team": [
-    "MATT",
-    "JDUB"
-   ],
-   "state": "SUCCESS",
-   "failsRequired": 1,
-   "teamSize": 2,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "MATT",
       "JDUB"
      ],
+     "state": "APPROVED",
+     "proposer": "MATT",
      "votes": [
       "LISA",
       "SAS",
       "JESS",
       "GAB",
       "JDUB"
-     ],
-     "proposer": "MATT"
+     ]
     }
-   ]
+   ],
+   "failsRequired": 1,
+   "team": [
+    "MATT",
+    "JDUB"
+   ],
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 2
   },
   {
-   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "LISA",
     "MATT",
@@ -113,9 +70,9 @@
    ],
    "numFails": 1,
    "teamSize": 3,
+   "state": "FAIL",
    "proposals": [
     {
-     "state": "APPROVED",
      "votes": [
       "JDUB",
       "DANH",
@@ -123,25 +80,26 @@
       "SAS",
       "JESS"
      ],
+     "proposer": "SAS",
      "team": [
       "LISA",
       "MATT",
       "JDUB"
      ],
-     "proposer": "SAS"
+     "state": "APPROVED"
     }
-   ],
-   "failsRequired": 1
+   ]
   },
   {
-   "failsRequired": 1,
-   "team": [
-    "GAB",
-    "LISA",
-    "JESS"
-   ],
    "proposals": [
     {
+     "proposer": "GAB",
+     "team": [
+      "GAB",
+      "LISA",
+      "JESS"
+     ],
+     "state": "APPROVED",
      "votes": [
       "SAS",
       "JESS",
@@ -149,28 +107,31 @@
       "DANH",
       "MATT",
       "LISA"
-     ],
-     "proposer": "GAB",
-     "state": "APPROVED",
-     "team": [
-      "GAB",
-      "LISA",
-      "JESS"
      ]
     }
    ],
    "state": "FAIL",
+   "numFails": 1,
    "teamSize": 3,
-   "numFails": 1
+   "team": [
+    "GAB",
+    "LISA",
+    "JESS"
+   ],
+   "failsRequired": 1
   },
   {
+   "failsRequired": 2,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "team": [
+    "JESS",
+    "DANH",
+    "MATT",
+    "SAS"
+   ],
    "proposals": [
     {
-     "votes": [
-      "SAS",
-      "JDUB",
-      "LISA"
-     ],
      "team": [
       "MATT",
       "LISA",
@@ -178,6 +139,11 @@
       "SAS"
      ],
      "state": "REJECTED",
+     "votes": [
+      "SAS",
+      "JDUB",
+      "LISA"
+     ],
      "proposer": "LISA"
     },
     {
@@ -189,91 +155,125 @@
       "JESS",
       "JDUB"
      ],
-     "proposer": "JESS",
      "state": "APPROVED",
      "team": [
       "JESS",
       "DANH",
       "MATT",
       "SAS"
-     ]
+     ],
+     "proposer": "JESS"
     }
    ],
-   "state": "SUCCESS",
-   "numFails": 0,
-   "teamSize": 4,
-   "failsRequired": 2,
-   "team": [
-    "JESS",
-    "DANH",
-    "MATT",
-    "SAS"
-   ]
+   "teamSize": 4
   },
   {
    "teamSize": 4,
    "state": "SUCCESS",
-   "team": [
-    "DANH",
-    "JESS",
-    "MATT",
-    "LISA"
-   ],
-   "numFails": 0,
-   "failsRequired": 1,
    "proposals": [
     {
-     "state": "APPROVED",
      "team": [
       "DANH",
       "JESS",
       "MATT",
       "LISA"
      ],
-     "proposer": "DANH",
      "votes": [
       "GAB",
       "DANH",
       "MATT",
       "LISA",
       "JESS"
-     ]
+     ],
+     "proposer": "DANH",
+     "state": "APPROVED"
     }
-   ]
+   ],
+   "team": [
+    "DANH",
+    "JESS",
+    "MATT",
+    "LISA"
+   ],
+   "failsRequired": 1,
+   "numFails": 0
   }
  ],
  "timeFinished": {
   "_seconds": 1587901431,
   "_nanoseconds": 112000000
  },
- "players": [
-  {
-   "uid": "CHhKI7wK5DaKiCy0VE5yOFUVedn1",
-   "name": "DANH"
-  },
-  {
-   "uid": "QxGcR1nfl4YpvEFzx2OHpboGOMD3",
-   "name": "JDUB"
-  },
-  {
-   "uid": "ycWdoX3Os8OUyJBzPYEJOCQdT512",
-   "name": "MATT"
-  },
-  {
-   "uid": "dkTSmpGLhRf7P5E6vpYvykKnDtO2",
-   "name": "SAS"
-  },
-  {
-   "uid": "gzRlXYlcEcQPDV3eMF8JyF8Ju8C2",
-   "name": "GAB"
-  },
-  {
-   "uid": "nyzpnTiXHCQ0mIlZl7bcyxGNJAH3",
-   "name": "LISA"
-  },
-  {
-   "name": "JESS",
-   "uid": "L23uxVDnzOPpOzNOvyV2m9LWsiZ2"
-  }
- ]
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "roles": [
+   {
+    "name": "GAB",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "JDUB",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "DANH",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "name": "MATT",
+    "role": "MERLIN"
+   },
+   {
+    "role": "PERCIVAL",
+    "assassin": false,
+    "name": "LISA"
+   },
+   {
+    "name": "SAS",
+    "assassin": false,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "JESS",
+    "assassin": false
+   }
+  ],
+  "state": "GOOD_WIN",
+  "assassinated": "LISA",
+  "votes": [
+   {
+    "JDUB": true,
+    "MATT": true
+   },
+   {
+    "MATT": true,
+    "LISA": true,
+    "JDUB": false
+   },
+   {
+    "JESS": true,
+    "GAB": false,
+    "LISA": true
+   },
+   {
+    "SAS": true,
+    "MATT": true,
+    "DANH": true,
+    "JESS": true
+   },
+   {
+    "JESS": true,
+    "MATT": true,
+    "DANH": true,
+    "LISA": true
+   }
+  ],
+  "message": "Three successful missions"
+ }
 }

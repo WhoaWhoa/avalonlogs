@@ -1,33 +1,38 @@
 {
+ "timeCreated": {
+  "_seconds": 1589754170,
+  "_nanoseconds": 217000000
+ },
  "outcome": {
+  "message": "Three missions succeeded",
+  "assassinated": null,
   "votes": [
    {
-    "KIM": true,
-    "SNEAKYP": true
+    "SNEAKYP": true,
+    "KIM": true
    },
    {
+    "KIM": true,
     "SNEAKYP": false,
+    "BIGRIG": true
+   },
+   {
+    "DIDDY": true,
     "BIGRIG": true,
-    "KIM": true
+    "KIM": true,
+    "EMMOORE": true
    },
    {
     "KIM": true,
-    "BIGRIG": true,
     "EMMOORE": true,
-    "DIDDY": true
-   },
-   {
-    "BIGRIG": true,
-    "EMMOORE": true,
-    "KIM": true
+    "BIGRIG": true
    }
   ],
-  "assassinated": null,
   "roles": [
    {
     "name": "EMMOORE",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
     "name": "DIDDY",
@@ -35,14 +40,14 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "name": "BIGRIG",
+    "role": "LOYAL FOLLOWER",
     "assassin": false,
-    "role": "LOYAL FOLLOWER"
+    "name": "BIGRIG"
    },
    {
-    "name": "SNEAKYP",
+    "role": "EVIL MINION",
     "assassin": false,
-    "role": "EVIL MINION"
+    "name": "SNEAKYP"
    },
    {
     "assassin": false,
@@ -50,25 +55,53 @@
     "name": "KIM"
    },
    {
-    "role": "EVIL MINION",
+    "assassin": false,
     "name": "LAUREN",
-    "assassin": false
+    "role": "EVIL MINION"
    }
   ],
-  "message": "Three missions succeeded",
   "state": "GOOD_WIN"
  },
+ "timeFinished": {
+  "_seconds": 1589755492,
+  "_nanoseconds": 69000000
+ },
+ "players": [
+  {
+   "uid": "5hROyvloIEhZWAMNzv826suvHOn2",
+   "name": "LAUREN"
+  },
+  {
+   "uid": "azbhdcn5VLWXhlLeoeFm2B3wzaG2",
+   "name": "KIM"
+  },
+  {
+   "name": "SNEAKYP",
+   "uid": "rQDKD5iBJEeAu5EPFUiFJy9x8Io1"
+  },
+  {
+   "uid": "oC9gpsCCJkdROtGQQOW94wWR7Fj2",
+   "name": "DIDDY"
+  },
+  {
+   "uid": "CQrctm7X9QSbLjCT8GujujUaHex1",
+   "name": "EMMOORE"
+  },
+  {
+   "name": "BIGRIG",
+   "uid": "fpbALL87XCSa7JWhmd0PtEOztp62"
+  }
+ ],
  "options": {
   "inGameLog": false
  },
- "timeCreated": {
-  "_seconds": 1589754170,
-  "_nanoseconds": 217000000
- },
  "missions": [
   {
-   "state": "SUCCESS",
-   "failsRequired": 1,
+   "team": [
+    "SNEAKYP",
+    "KIM"
+   ],
+   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -79,53 +112,49 @@
       "LAUREN",
       "EMMOORE"
      ],
-     "proposer": "SNEAKYP",
-     "state": "APPROVED",
      "team": [
       "SNEAKYP",
       "KIM"
-     ]
+     ],
+     "proposer": "SNEAKYP",
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "SNEAKYP",
-    "KIM"
-   ],
-   "teamSize": 2,
-   "numFails": 0
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 2
   },
   {
-   "failsRequired": 1,
    "team": [
     "KIM",
     "SNEAKYP",
     "BIGRIG"
    ],
-   "numFails": 1,
+   "state": "FAIL",
    "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
-     "team": [
-      "EMMOORE",
-      "BIGRIG",
-      "KIM"
-     ],
      "votes": [
       "DIDDY",
       "KIM",
       "EMMOORE"
      ],
-     "proposer": "DIDDY"
+     "proposer": "DIDDY",
+     "state": "REJECTED",
+     "team": [
+      "EMMOORE",
+      "BIGRIG",
+      "KIM"
+     ]
     },
     {
-     "proposer": "EMMOORE",
      "team": [
       "KIM",
       "SNEAKYP",
       "BIGRIG"
      ],
      "state": "APPROVED",
+     "proposer": "EMMOORE",
      "votes": [
       "EMMOORE",
       "DIDDY",
@@ -135,13 +164,19 @@
      ]
     }
    ],
-   "state": "FAIL"
+   "failsRequired": 1,
+   "numFails": 1
   },
   {
-   "failsRequired": 1,
+   "team": [
+    "KIM",
+    "DIDDY",
+    "EMMOORE",
+    "BIGRIG"
+   ],
+   "teamSize": 4,
    "proposals": [
     {
-     "proposer": "BIGRIG",
      "state": "APPROVED",
      "team": [
       "KIM",
@@ -154,28 +189,15 @@
       "BIGRIG",
       "KIM",
       "EMMOORE"
-     ]
+     ],
+     "proposer": "BIGRIG"
     }
    ],
+   "numFails": 0,
    "state": "SUCCESS",
-   "teamSize": 4,
-   "team": [
-    "KIM",
-    "DIDDY",
-    "EMMOORE",
-    "BIGRIG"
-   ],
-   "numFails": 0
+   "failsRequired": 1
   },
   {
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "EMMOORE",
-    "BIGRIG",
-    "KIM"
-   ],
-   "teamSize": 3,
    "numFails": 0,
    "proposals": [
     {
@@ -193,6 +215,11 @@
      ]
     },
     {
+     "team": [
+      "EMMOORE",
+      "BIGRIG",
+      "KIM"
+     ],
      "votes": [
       "EMMOORE",
       "DIDDY",
@@ -200,51 +227,24 @@
       "KIM"
      ],
      "proposer": "KIM",
-     "state": "APPROVED",
-     "team": [
-      "EMMOORE",
-      "BIGRIG",
-      "KIM"
-     ]
+     "state": "APPROVED"
     }
-   ]
-  },
-  {
-   "state": "PENDING",
-   "proposals": [],
-   "teamSize": 4,
+   ],
+   "team": [
+    "EMMOORE",
+    "BIGRIG",
+    "KIM"
+   ],
+   "state": "SUCCESS",
    "failsRequired": 1,
-   "team": []
-  }
- ],
- "timeFinished": {
-  "_seconds": 1589755492,
-  "_nanoseconds": 69000000
- },
- "players": [
-  {
-   "name": "LAUREN",
-   "uid": "5hROyvloIEhZWAMNzv826suvHOn2"
+   "teamSize": 3
   },
   {
-   "name": "KIM",
-   "uid": "azbhdcn5VLWXhlLeoeFm2B3wzaG2"
-  },
-  {
-   "name": "SNEAKYP",
-   "uid": "rQDKD5iBJEeAu5EPFUiFJy9x8Io1"
-  },
-  {
-   "name": "DIDDY",
-   "uid": "oC9gpsCCJkdROtGQQOW94wWR7Fj2"
-  },
-  {
-   "name": "EMMOORE",
-   "uid": "CQrctm7X9QSbLjCT8GujujUaHex1"
-  },
-  {
-   "uid": "fpbALL87XCSa7JWhmd0PtEOztp62",
-   "name": "BIGRIG"
+   "proposals": [],
+   "team": [],
+   "state": "PENDING",
+   "teamSize": 4,
+   "failsRequired": 1
   }
  ]
 }

@@ -1,15 +1,13 @@
 {
- "timeFinished": {
-  "_seconds": 1609044130,
-  "_nanoseconds": 920000000
- },
  "missions": [
   {
-   "failsRequired": 1,
+   "state": "SUCCESS",
    "team": [
     "RODOLFO",
     "BOB"
    ],
+   "failsRequired": 1,
+   "teamSize": 2,
    "proposals": [
     {
      "state": "APPROVED",
@@ -29,16 +27,22 @@
      "proposer": "RODOLFO"
     }
    ],
-   "numFails": 0,
-   "state": "SUCCESS",
-   "teamSize": 2
+   "numFails": 0
   },
   {
-   "state": "FAIL",
-   "failsRequired": 1,
-   "teamSize": 3,
+   "numFails": 1,
+   "team": [
+    "BOB",
+    "RODOLFO",
+    "ARMIL"
+   ],
    "proposals": [
     {
+     "team": [
+      "BOB",
+      "RODOLFO",
+      "ARMIL"
+     ],
      "votes": [
       "RODOLFO",
       "FAO",
@@ -48,23 +52,14 @@
       "ARMIL"
      ],
      "state": "APPROVED",
-     "team": [
-      "BOB",
-      "RODOLFO",
-      "ARMIL"
-     ],
      "proposer": "BOB"
     }
    ],
-   "team": [
-    "BOB",
-    "RODOLFO",
-    "ARMIL"
-   ],
-   "numFails": 1
+   "failsRequired": 1,
+   "state": "FAIL",
+   "teamSize": 3
   },
   {
-   "numFails": 0,
    "proposals": [
     {
      "team": [
@@ -72,16 +67,14 @@
       "GLADIS",
       "BOB"
      ],
-     "state": "REJECTED",
+     "proposer": "ARMIL",
      "votes": [
       "GLADIS",
       "ARMIL"
      ],
-     "proposer": "ARMIL"
+     "state": "REJECTED"
     },
     {
-     "state": "APPROVED",
-     "proposer": "ANDRE",
      "votes": [
       "ARMIL",
       "RODOLFO",
@@ -89,6 +82,8 @@
       "FAO",
       "BIAAA"
      ],
+     "proposer": "ANDRE",
+     "state": "APPROVED",
      "team": [
       "ANDRE",
       "ARMIL",
@@ -96,68 +91,141 @@
      ]
     }
    ],
-   "teamSize": 3,
    "team": [
     "ANDRE",
     "ARMIL",
     "BIAAA"
    ],
    "state": "SUCCESS",
+   "teamSize": 3,
+   "numFails": 0,
    "failsRequired": 1
   },
   {
-   "proposals": [
-    {
-     "state": "REJECTED",
-     "team": [
-      "FAO",
-      "ANDRE",
-      "ARMIL",
-      "BIAAA"
-     ],
-     "votes": [
-      "ARMIL",
-      "ANDRE",
-      "BIAAA"
-     ],
-     "proposer": "FAO"
-    },
-    {
-     "proposer": "BIAAA",
-     "state": "APPROVED",
-     "votes": [
-      "BIAAA",
-      "GLADIS",
-      "ANDRE",
-      "ARMIL"
-     ],
-     "team": [
-      "ANDRE",
-      "ARMIL",
-      "BIAAA",
-      "GLADIS"
-     ]
-    }
-   ],
+   "numFails": 1,
+   "failsRequired": 2,
    "team": [
     "ANDRE",
     "ARMIL",
     "BIAAA",
     "GLADIS"
    ],
-   "numFails": 1,
-   "failsRequired": 2,
    "teamSize": 4,
+   "proposals": [
+    {
+     "votes": [
+      "ARMIL",
+      "ANDRE",
+      "BIAAA"
+     ],
+     "state": "REJECTED",
+     "proposer": "FAO",
+     "team": [
+      "FAO",
+      "ANDRE",
+      "ARMIL",
+      "BIAAA"
+     ]
+    },
+    {
+     "proposer": "BIAAA",
+     "team": [
+      "ANDRE",
+      "ARMIL",
+      "BIAAA",
+      "GLADIS"
+     ],
+     "votes": [
+      "BIAAA",
+      "GLADIS",
+      "ANDRE",
+      "ARMIL"
+     ],
+     "state": "APPROVED"
+    }
+   ],
    "state": "SUCCESS"
   },
   {
-   "team": [],
-   "proposals": [],
-   "failsRequired": 1,
    "state": "PENDING",
-   "teamSize": 4
+   "proposals": [],
+   "teamSize": 4,
+   "failsRequired": 1,
+   "team": []
   }
  ],
+ "outcome": {
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "role": "MERLIN",
+    "assassin": false,
+    "name": "BOB"
+   },
+   {
+    "role": "EVIL MINION",
+    "name": "FAO",
+    "assassin": false
+   },
+   {
+    "name": "BIAAA",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "ANDRE"
+   },
+   {
+    "name": "GLADIS",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "MORDRED",
+    "name": "RODOLFO",
+    "assassin": false
+   },
+   {
+    "role": "PERCIVAL",
+    "name": "ARMIL",
+    "assassin": false
+   }
+  ],
+  "assassinated": "ANDRE",
+  "votes": [
+   {
+    "RODOLFO": true,
+    "BOB": true
+   },
+   {
+    "ARMIL": true,
+    "RODOLFO": false,
+    "BOB": true
+   },
+   {
+    "ARMIL": true,
+    "BIAAA": true,
+    "ANDRE": true
+   },
+   {
+    "ANDRE": true,
+    "GLADIS": false,
+    "ARMIL": true,
+    "BIAAA": true
+   }
+  ],
+  "message": "Three successful missions"
+ },
+ "timeFinished": {
+  "_seconds": 1609044130,
+  "_nanoseconds": 920000000
+ },
+ "timeCreated": {
+  "_seconds": 1609042246,
+  "_nanoseconds": 261000000
+ },
  "players": [
   {
    "name": "ANDRE",
@@ -168,16 +236,16 @@
    "uid": "LvkLrXTiWXMCkHUrL7llGFQ87R43"
   },
   {
-   "uid": "4pQDBAqi6MRwldaIUkGSS7lL8GA2",
-   "name": "BIAAA"
+   "name": "BIAAA",
+   "uid": "4pQDBAqi6MRwldaIUkGSS7lL8GA2"
   },
   {
-   "name": "GLADIS",
-   "uid": "HNEdwg2cvicz69ryGsMgq50CCEj1"
+   "uid": "HNEdwg2cvicz69ryGsMgq50CCEj1",
+   "name": "GLADIS"
   },
   {
-   "uid": "zKWeZdCrJtaQwdEJ2IgydC865Bn1",
-   "name": "RODOLFO"
+   "name": "RODOLFO",
+   "uid": "zKWeZdCrJtaQwdEJ2IgydC865Bn1"
   },
   {
    "name": "BOB",
@@ -190,73 +258,5 @@
  ],
  "options": {
   "inGameLog": false
- },
- "outcome": {
-  "votes": [
-   {
-    "RODOLFO": true,
-    "BOB": true
-   },
-   {
-    "RODOLFO": false,
-    "ARMIL": true,
-    "BOB": true
-   },
-   {
-    "ANDRE": true,
-    "ARMIL": true,
-    "BIAAA": true
-   },
-   {
-    "ANDRE": true,
-    "GLADIS": false,
-    "BIAAA": true,
-    "ARMIL": true
-   }
-  ],
-  "roles": [
-   {
-    "assassin": false,
-    "name": "BOB",
-    "role": "MERLIN"
-   },
-   {
-    "assassin": false,
-    "name": "FAO",
-    "role": "EVIL MINION"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "BIAAA",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "ANDRE"
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "GLADIS"
-   },
-   {
-    "name": "RODOLFO",
-    "role": "MORDRED",
-    "assassin": false
-   },
-   {
-    "role": "PERCIVAL",
-    "assassin": false,
-    "name": "ARMIL"
-   }
-  ],
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "assassinated": "ANDRE"
- },
- "timeCreated": {
-  "_seconds": 1609042246,
-  "_nanoseconds": 261000000
  }
 }

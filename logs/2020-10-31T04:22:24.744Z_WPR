@@ -1,30 +1,29 @@
 {
- "timeFinished": {
-  "_seconds": 1604119262,
-  "_nanoseconds": 377000000
+ "timeCreated": {
+  "_seconds": 1604118144,
+  "_nanoseconds": 744000000
  },
  "outcome": {
-  "message": "Three failed missions",
   "roles": [
    {
-    "role": "PERCIVAL",
+    "assassin": false,
     "name": "KARAN",
-    "assassin": false
+    "role": "PERCIVAL"
    },
    {
-    "name": "MARLIN",
+    "role": "MORDRED",
     "assassin": true,
-    "role": "MORDRED"
+    "name": "MARLIN"
    },
    {
-    "role": "OBERON",
     "name": "ANIKETH",
+    "role": "OBERON",
     "assassin": false
    },
    {
+    "assassin": false,
     "name": "BANANA",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
+    "role": "LOYAL FOLLOWER"
    },
    {
     "assassin": false,
@@ -32,13 +31,13 @@
     "role": "LOYAL FOLLOWER"
    },
    {
-    "assassin": false,
     "name": "CHAI",
-    "role": "LOYAL FOLLOWER"
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
    },
    {
-    "role": "MORGANA",
     "name": "PK",
+    "role": "MORGANA",
     "assassin": false
    },
    {
@@ -53,40 +52,44 @@
    }
   ],
   "state": "EVIL_WIN",
-  "assassinated": null,
   "votes": [
    {
     "MARLIN": true,
-    "BANANA": true,
-    "AVI": true
-   },
-   {
-    "PK": false,
-    "BANANA": true,
-    "MARLIN": true,
-    "AVI": true
-   },
-   {
     "AVI": true,
-    "METH": true,
+    "BANANA": true
+   },
+   {
+    "MARLIN": true,
+    "BANANA": true,
+    "PK": false,
+    "AVI": true
+   },
+   {
     "ANIKETH": false,
-    "PK": false
+    "METH": true,
+    "PK": false,
+    "AVI": true
+   },
+   {
+    "AVISINGH": true,
+    "CHAI": true,
+    "MARLIN": true,
+    "BANANA": true,
+    "KARAN": true
    },
    {
     "CHAI": true,
-    "AVISINGH": true,
     "BANANA": true,
     "KARAN": true,
-    "MARLIN": true
-   },
-   {
-    "CHAI": true,
-    "MARLIN": false,
-    "KARAN": true,
     "METH": true,
-    "BANANA": true
+    "MARLIN": false
    }
-  ]
+  ],
+  "message": "Three failed missions",
+  "assassinated": null
+ },
+ "options": {
+  "inGameLog": false
  },
  "missions": [
   {
@@ -97,9 +100,16 @@
     "BANANA"
    ],
    "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
      "proposer": "AVISINGH",
+     "team": [
+      "MARLIN",
+      "AVI",
+      "BANANA"
+     ],
+     "state": "APPROVED",
      "votes": [
       "MARLIN",
       "AVISINGH",
@@ -108,28 +118,22 @@
       "ANIKETH",
       "BANANA",
       "AVI"
-     ],
-     "team": [
-      "MARLIN",
-      "AVI",
-      "BANANA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
-   "teamSize": 3,
    "numFails": 0
   },
   {
+   "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "KARAN",
      "team": [
       "MARLIN",
       "AVI",
       "BANANA",
       "PK"
      ],
-     "proposer": "KARAN",
      "state": "APPROVED",
      "votes": [
       "METH",
@@ -140,26 +144,17 @@
      ]
     }
    ],
-   "failsRequired": 1,
-   "state": "FAIL",
-   "numFails": 1,
+   "teamSize": 4,
    "team": [
     "MARLIN",
     "AVI",
     "BANANA",
     "PK"
    ],
-   "teamSize": 4
+   "numFails": 1,
+   "state": "FAIL"
   },
   {
-   "teamSize": 4,
-   "team": [
-    "METH",
-    "AVI",
-    "PK",
-    "ANIKETH"
-   ],
-   "numFails": 2,
    "proposals": [
     {
      "votes": [
@@ -178,6 +173,14 @@
      "state": "REJECTED"
     },
     {
+     "state": "APPROVED",
+     "proposer": "METH",
+     "team": [
+      "METH",
+      "AVI",
+      "PK",
+      "ANIKETH"
+     ],
      "votes": [
       "BANANA",
       "ANIKETH",
@@ -186,21 +189,24 @@
       "PK",
       "METH",
       "AVI"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "METH",
-      "AVI",
-      "PK",
-      "ANIKETH"
-     ],
-     "proposer": "METH"
+     ]
     }
    ],
-   "state": "FAIL",
-   "failsRequired": 1
+   "team": [
+    "METH",
+    "AVI",
+    "PK",
+    "ANIKETH"
+   ],
+   "numFails": 2,
+   "teamSize": 4,
+   "failsRequired": 1,
+   "state": "FAIL"
   },
   {
+   "failsRequired": 2,
+   "numFails": 0,
+   "teamSize": 5,
    "team": [
     "MARLIN",
     "CHAI",
@@ -208,13 +214,18 @@
     "KARAN",
     "BANANA"
    ],
-   "teamSize": 5,
    "state": "SUCCESS",
-   "failsRequired": 2,
-   "numFails": 0,
    "proposals": [
     {
      "state": "APPROVED",
+     "team": [
+      "MARLIN",
+      "CHAI",
+      "AVISINGH",
+      "KARAN",
+      "BANANA"
+     ],
+     "proposer": "MARLIN",
      "votes": [
       "BANANA",
       "AVISINGH",
@@ -224,22 +235,22 @@
       "ANIKETH",
       "KARAN",
       "MARLIN"
-     ],
-     "team": [
-      "MARLIN",
-      "CHAI",
-      "AVISINGH",
-      "KARAN",
-      "BANANA"
-     ],
-     "proposer": "MARLIN"
+     ]
     }
    ]
   },
   {
+   "teamSize": 5,
    "state": "FAIL",
    "failsRequired": 1,
-   "teamSize": 5,
+   "numFails": 1,
+   "team": [
+    "BANANA",
+    "METH",
+    "KARAN",
+    "MARLIN",
+    "CHAI"
+   ],
    "proposals": [
     {
      "state": "REJECTED",
@@ -248,23 +259,17 @@
       "AVI",
       "CHAI"
      ],
+     "proposer": "AVI",
      "team": [
       "MARLIN",
       "CHAI",
       "BANANA",
       "AVI",
       "AVISINGH"
-     ],
-     "proposer": "AVI"
+     ]
     },
     {
-     "votes": [
-      "CHAI",
-      "BANANA",
-      "PK",
-      "MARLIN",
-      "KARAN"
-     ],
+     "state": "APPROVED",
      "team": [
       "BANANA",
       "METH",
@@ -272,63 +277,58 @@
       "MARLIN",
       "CHAI"
      ],
-     "state": "APPROVED",
-     "proposer": "BANANA"
+     "proposer": "BANANA",
+     "votes": [
+      "CHAI",
+      "BANANA",
+      "PK",
+      "MARLIN",
+      "KARAN"
+     ]
     }
-   ],
-   "team": [
-    "BANANA",
-    "METH",
-    "KARAN",
-    "MARLIN",
-    "CHAI"
-   ],
-   "numFails": 1
+   ]
   }
  ],
  "players": [
   {
-   "name": "MARLIN",
-   "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3"
+   "uid": "XEF7htVWhSUvAdmJuNmB1PdIAjH3",
+   "name": "MARLIN"
   },
   {
-   "name": "AVI",
-   "uid": "bFTTuhvrzTWkpx2y2tA2VEo4OHx2"
+   "uid": "bFTTuhvrzTWkpx2y2tA2VEo4OHx2",
+   "name": "AVI"
   },
   {
-   "uid": "weox9NOyNDZiyKTtPDAXxvazdFV2",
-   "name": "BANANA"
+   "name": "BANANA",
+   "uid": "weox9NOyNDZiyKTtPDAXxvazdFV2"
   },
   {
-   "uid": "MZNNYGz2dyObT9G5nUSdpYmwN652",
-   "name": "PK"
+   "name": "PK",
+   "uid": "MZNNYGz2dyObT9G5nUSdpYmwN652"
   },
   {
-   "uid": "kSuFqj5ueWZYlfFBbfhTiidBQZd2",
-   "name": "CHAI"
+   "name": "CHAI",
+   "uid": "kSuFqj5ueWZYlfFBbfhTiidBQZd2"
   },
   {
    "name": "AVISINGH",
    "uid": "gx0GNqbfVCTGyTSfSzc6XELipsf1"
   },
   {
-   "name": "KARAN",
-   "uid": "1yawy0IzcvTwYGbNSNefkUZnxej1"
+   "uid": "1yawy0IzcvTwYGbNSNefkUZnxej1",
+   "name": "KARAN"
   },
   {
-   "uid": "mhGqERYygScqJ0S29jQ3yK7o2ku2",
-   "name": "ANIKETH"
+   "name": "ANIKETH",
+   "uid": "mhGqERYygScqJ0S29jQ3yK7o2ku2"
   },
   {
    "uid": "KH4ZmjI5XOUYu4rOwmw4oDElxue2",
    "name": "METH"
   }
  ],
- "options": {
-  "inGameLog": false
- },
- "timeCreated": {
-  "_seconds": 1604118144,
-  "_nanoseconds": 744000000
+ "timeFinished": {
+  "_seconds": 1604119262,
+  "_nanoseconds": 377000000
  }
 }

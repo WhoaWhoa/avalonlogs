@@ -1,11 +1,38 @@
 {
+ "players": [
+  {
+   "name": "SAAK",
+   "uid": "lLbnA05okrbSr3qNJsd0AKcpQPN2"
+  },
+  {
+   "uid": "rMFSK1y64ocxqhydlDLxOeMgWfi2",
+   "name": "AD"
+  },
+  {
+   "name": "MARWA",
+   "uid": "DhUsOXH1LhSIgj7hiLECw5H0pc23"
+  },
+  {
+   "name": "DADI",
+   "uid": "D9P4edHkq0ZUO0Q5HepkHOw9jWU2"
+  },
+  {
+   "name": "NEEHAW",
+   "uid": "VCKDlXqBm8VPlQUs4Cp8VnrzA1F3"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1591601067,
   "_nanoseconds": 926000000
  },
  "missions": [
   {
+   "failsRequired": 1,
    "teamSize": 2,
+   "team": [
+    "MARWA",
+    "AD"
+   ],
    "proposals": [
     {
      "team": [
@@ -13,36 +40,24 @@
       "AD"
      ],
      "proposer": "MARWA",
+     "state": "APPROVED",
      "votes": [
       "AD",
       "SAAK",
       "DADI",
       "NEEHAW",
       "MARWA"
-     ],
-     "state": "APPROVED"
+     ]
     }
    ],
    "numFails": 0,
-   "failsRequired": 1,
-   "team": [
-    "MARWA",
-    "AD"
-   ],
    "state": "SUCCESS"
   },
   {
-   "failsRequired": 1,
    "numFails": 1,
-   "teamSize": 3,
-   "team": [
-    "DADI",
-    "MARWA",
-    "SAAK"
-   ],
    "proposals": [
     {
-     "state": "APPROVED",
+     "proposer": "DADI",
      "votes": [
       "AD",
       "SAAK",
@@ -54,39 +69,45 @@
       "MARWA",
       "SAAK"
      ],
-     "proposer": "DADI"
+     "state": "APPROVED"
     }
    ],
-   "state": "FAIL"
+   "state": "FAIL",
+   "failsRequired": 1,
+   "team": [
+    "DADI",
+    "MARWA",
+    "SAAK"
+   ],
+   "teamSize": 3
   },
   {
-   "numFails": 1,
-   "failsRequired": 1,
-   "state": "FAIL",
-   "teamSize": 2,
-   "team": [
-    "NEEHAW",
-    "AD"
-   ],
    "proposals": [
     {
+     "proposer": "NEEHAW",
+     "state": "APPROVED",
+     "team": [
+      "NEEHAW",
+      "AD"
+     ],
      "votes": [
       "AD",
       "SAAK",
       "NEEHAW",
       "MARWA"
-     ],
-     "team": [
-      "NEEHAW",
-      "AD"
-     ],
-     "state": "APPROVED",
-     "proposer": "NEEHAW"
+     ]
     }
+   ],
+   "state": "FAIL",
+   "numFails": 1,
+   "failsRequired": 1,
+   "teamSize": 2,
+   "team": [
+    "NEEHAW",
+    "AD"
    ]
   },
   {
-   "numFails": 0,
    "proposals": [
     {
      "votes": [
@@ -103,27 +124,27 @@
      "proposer": "SAAK"
     }
    ],
-   "state": "SUCCESS",
-   "teamSize": 3,
    "team": [
     "SAAK",
     "DADI",
     "NEEHAW"
    ],
-   "failsRequired": 1
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "numFails": 0,
+   "teamSize": 3
   },
   {
-   "team": [
-    "SAAK",
-    "DADI",
-    "NEEHAW"
-   ],
-   "teamSize": 3,
-   "numFails": 0,
-   "state": "SUCCESS",
    "failsRequired": 1,
+   "numFails": 0,
+   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "SAAK",
+      "DADI",
+      "NEEHAW"
+     ],
      "votes": [
       "AD",
       "SAAK",
@@ -131,28 +152,55 @@
       "MARWA"
      ],
      "state": "APPROVED",
-     "team": [
-      "SAAK",
-      "DADI",
-      "NEEHAW"
-     ],
      "proposer": "AD"
     }
+   ],
+   "state": "SUCCESS",
+   "team": [
+    "SAAK",
+    "DADI",
+    "NEEHAW"
    ]
   }
  ],
  "options": {
   "inGameLog": false
  },
+ "timeFinished": {
+  "_seconds": 1591601758,
+  "_nanoseconds": 643000000
+ },
  "outcome": {
-  "state": "GOOD_WIN",
-  "message": "Three successful missions",
-  "assassinated": "SAAK",
+  "votes": [
+   {
+    "MARWA": true,
+    "AD": true
+   },
+   {
+    "SAAK": true,
+    "MARWA": false,
+    "DADI": true
+   },
+   {
+    "NEEHAW": true,
+    "AD": false
+   },
+   {
+    "NEEHAW": true,
+    "SAAK": true,
+    "DADI": true
+   },
+   {
+    "NEEHAW": true,
+    "DADI": true,
+    "SAAK": true
+   }
+  ],
   "roles": [
    {
-    "name": "MARWA",
     "assassin": true,
-    "role": "MORDRED"
+    "role": "MORDRED",
+    "name": "MARWA"
    },
    {
     "assassin": false,
@@ -160,71 +208,23 @@
     "role": "MORGANA"
    },
    {
-    "assassin": false,
+    "name": "SAAK",
     "role": "LOYAL FOLLOWER",
-    "name": "SAAK"
+    "assassin": false
    },
    {
+    "name": "DADI",
     "assassin": false,
-    "role": "MERLIN",
-    "name": "DADI"
+    "role": "MERLIN"
    },
    {
-    "assassin": false,
+    "role": "PERCIVAL",
     "name": "NEEHAW",
-    "role": "PERCIVAL"
+    "assassin": false
    }
   ],
-  "votes": [
-   {
-    "MARWA": true,
-    "AD": true
-   },
-   {
-    "MARWA": false,
-    "DADI": true,
-    "SAAK": true
-   },
-   {
-    "NEEHAW": true,
-    "AD": false
-   },
-   {
-    "SAAK": true,
-    "DADI": true,
-    "NEEHAW": true
-   },
-   {
-    "NEEHAW": true,
-    "SAAK": true,
-    "DADI": true
-   }
-  ]
- },
- "players": [
-  {
-   "name": "SAAK",
-   "uid": "lLbnA05okrbSr3qNJsd0AKcpQPN2"
-  },
-  {
-   "name": "AD",
-   "uid": "rMFSK1y64ocxqhydlDLxOeMgWfi2"
-  },
-  {
-   "name": "MARWA",
-   "uid": "DhUsOXH1LhSIgj7hiLECw5H0pc23"
-  },
-  {
-   "uid": "D9P4edHkq0ZUO0Q5HepkHOw9jWU2",
-   "name": "DADI"
-  },
-  {
-   "name": "NEEHAW",
-   "uid": "VCKDlXqBm8VPlQUs4Cp8VnrzA1F3"
-  }
- ],
- "timeFinished": {
-  "_seconds": 1591601758,
-  "_nanoseconds": 643000000
+  "message": "Three successful missions",
+  "assassinated": "SAAK",
+  "state": "GOOD_WIN"
  }
 }

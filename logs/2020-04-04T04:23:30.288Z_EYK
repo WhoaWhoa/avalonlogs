@@ -1,15 +1,20 @@
 {
+ "timeFinished": {
+  "_seconds": 1585974570,
+  "_nanoseconds": 29521000
+ },
  "outcome": {
+  "message": "Three failed missions",
   "roles": [
    {
-    "role": "MORGANA",
+    "assassin": false,
     "name": "TIM",
-    "assassin": false
+    "role": "MORGANA"
    },
    {
-    "role": "MORDRED",
     "assassin": true,
-    "name": "MOCHI"
+    "name": "MOCHI",
+    "role": "MORDRED"
    },
    {
     "assassin": false,
@@ -17,91 +22,59 @@
     "role": "LOYAL FOLLOWER"
    },
    {
+    "name": "HONEYBUN",
     "assassin": false,
-    "role": "MERLIN",
-    "name": "HONEYBUN"
+    "role": "MERLIN"
    },
    {
     "name": "COLIN",
-    "assassin": false,
-    "role": "PERCIVAL"
+    "role": "PERCIVAL",
+    "assassin": false
    },
    {
-    "assassin": false,
+    "role": "LOYAL FOLLOWER",
     "name": "GID",
-    "role": "LOYAL FOLLOWER"
+    "assassin": false
    },
    {
-    "name": "RENINI",
     "assassin": false,
+    "name": "RENINI",
     "role": "OBERON"
    }
   ],
-  "assassinated": null,
-  "message": "Three failed missions",
-  "state": "EVIL_WIN",
   "votes": [
    {
     "HONEYBUN": true,
     "CASEY": true
    },
    {
-    "RENINI": false,
     "CASEY": true,
-    "HONEYBUN": true
-   },
-   {
-    "GID": true,
     "RENINI": false,
     "HONEYBUN": true
    },
    {
+    "RENINI": false,
+    "HONEYBUN": true,
+    "GID": true
+   },
+   {
+    "COLIN": true,
     "TIM": false,
-    "CASEY": true,
     "MOCHI": false,
-    "COLIN": true
+    "CASEY": true
    }
-  ]
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": null
  },
- "players": [
-  {
-   "name": "COLIN",
-   "uid": "bh3gKSmGgfWDgCvKWeruOH5bVmy1"
-  },
-  {
-   "name": "TIM",
-   "uid": "18woXz2FfeQdASbbUrspRCvQHUi1"
-  },
-  {
-   "uid": "6LUPzKtivbMjFWVn0OR7rohoo5a2",
-   "name": "CASEY"
-  },
-  {
-   "name": "HONEYBUN",
-   "uid": "gkiSYujkARe1ztvl3491ojgHhz93"
-  },
-  {
-   "name": "RENINI",
-   "uid": "f46hrrHShIgGipLo06rAKFkN3142"
-  },
-  {
-   "uid": "XBPGIBk6ujUBMBaqT9b9l2fGAtI2",
-   "name": "GID"
-  },
-  {
-   "name": "MOCHI",
-   "uid": "NCFB9cPIsnX3xtNmnsAdXUVpRUn2"
-  }
- ],
  "missions": [
   {
+   "state": "SUCCESS",
    "failsRequired": 1,
+   "teamSize": 2,
    "proposals": [
     {
-     "team": [
-      "HONEYBUN",
-      "CASEY"
-     ],
+     "state": "APPROVED",
      "votes": [
       "TIM",
       "MOCHI",
@@ -109,30 +82,27 @@
       "HONEYBUN",
       "GID"
      ],
-     "state": "APPROVED",
+     "team": [
+      "HONEYBUN",
+      "CASEY"
+     ],
      "proposer": "HONEYBUN"
     }
    ],
-   "teamSize": 2,
    "team": [
     "HONEYBUN",
     "CASEY"
    ],
-   "numFails": 0,
-   "state": "SUCCESS"
+   "numFails": 0
   },
   {
-   "state": "FAIL",
-   "team": [
-    "HONEYBUN",
-    "RENINI",
-    "CASEY"
-   ],
    "numFails": 1,
    "failsRequired": 1,
    "teamSize": 3,
    "proposals": [
     {
+     "proposer": "RENINI",
+     "state": "APPROVED",
      "votes": [
       "GID",
       "MOCHI",
@@ -140,74 +110,78 @@
       "HONEYBUN",
       "COLIN"
      ],
-     "state": "APPROVED",
      "team": [
       "HONEYBUN",
       "RENINI",
       "CASEY"
-     ],
-     "proposer": "RENINI"
-    }
-   ]
-  },
-  {
-   "numFails": 1,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "TIM",
-      "MOCHI",
-      "CASEY",
-      "HONEYBUN",
-      "GID"
-     ],
-     "proposer": "GID",
-     "team": [
-      "HONEYBUN",
-      "RENINI",
-      "GID"
      ]
     }
    ],
+   "state": "FAIL",
+   "team": [
+    "HONEYBUN",
+    "RENINI",
+    "CASEY"
+   ]
+  },
+  {
    "failsRequired": 1,
-   "teamSize": 3,
    "team": [
     "HONEYBUN",
     "RENINI",
     "GID"
    ],
-   "state": "FAIL"
-  },
-  {
-   "failsRequired": 2,
    "state": "FAIL",
-   "teamSize": 4,
-   "team": [
-    "MOCHI",
-    "COLIN",
-    "CASEY",
-    "TIM"
-   ],
-   "numFails": 2,
+   "teamSize": 3,
    "proposals": [
     {
+     "team": [
+      "HONEYBUN",
+      "RENINI",
+      "GID"
+     ],
+     "proposer": "GID",
      "votes": [
       "TIM",
       "MOCHI",
       "CASEY",
       "HONEYBUN",
-      "COLIN"
+      "GID"
      ],
+     "state": "APPROVED"
+    }
+   ],
+   "numFails": 1
+  },
+  {
+   "state": "FAIL",
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "proposer": "MOCHI",
      "team": [
       "MOCHI",
       "COLIN",
       "CASEY",
       "TIM"
      ],
-     "proposer": "MOCHI",
-     "state": "APPROVED"
+     "votes": [
+      "TIM",
+      "MOCHI",
+      "CASEY",
+      "HONEYBUN",
+      "COLIN"
+     ]
     }
+   ],
+   "teamSize": 4,
+   "numFails": 2,
+   "failsRequired": 2,
+   "team": [
+    "MOCHI",
+    "COLIN",
+    "CASEY",
+    "TIM"
    ]
   },
   {
@@ -218,10 +192,36 @@
    "failsRequired": 1
   }
  ],
- "timeFinished": {
-  "_seconds": 1585974570,
-  "_nanoseconds": 29521000
- },
+ "players": [
+  {
+   "uid": "bh3gKSmGgfWDgCvKWeruOH5bVmy1",
+   "name": "COLIN"
+  },
+  {
+   "uid": "18woXz2FfeQdASbbUrspRCvQHUi1",
+   "name": "TIM"
+  },
+  {
+   "name": "CASEY",
+   "uid": "6LUPzKtivbMjFWVn0OR7rohoo5a2"
+  },
+  {
+   "name": "HONEYBUN",
+   "uid": "gkiSYujkARe1ztvl3491ojgHhz93"
+  },
+  {
+   "uid": "f46hrrHShIgGipLo06rAKFkN3142",
+   "name": "RENINI"
+  },
+  {
+   "name": "GID",
+   "uid": "XBPGIBk6ujUBMBaqT9b9l2fGAtI2"
+  },
+  {
+   "name": "MOCHI",
+   "uid": "NCFB9cPIsnX3xtNmnsAdXUVpRUn2"
+  }
+ ],
  "timeCreated": {
   "_seconds": 1585974210,
   "_nanoseconds": 288000000

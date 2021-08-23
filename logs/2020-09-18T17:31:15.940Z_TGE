@@ -1,93 +1,16 @@
 {
- "options": {
-  "inGameLog": false
- },
- "outcome": {
-  "assassinated": "BRIAN",
-  "votes": [
-   {
-    "BRIAN": true,
-    "STANLEY": true
-   },
-   {
-    "ARRAN": true,
-    "BRIAN": true,
-    "STANLEY": false
-   },
-   {
-    "LUKE": true,
-    "STANLEY": false,
-    "KEVIN": true
-   },
-   {
-    "BRIAN": true,
-    "LUKE": true,
-    "KEVIN": true,
-    "ARRAN": true
-   },
-   {
-    "ARRAN": true,
-    "BRIAN": true,
-    "KEVIN": true,
-    "LUKE": true
-   }
-  ],
-  "message": "Merlin assassinated",
-  "roles": [
-   {
-    "name": "ARRAN",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "EDISON",
-    "role": "EVIL MINION",
-    "assassin": true
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "VERA",
-    "assassin": false
-   },
-   {
-    "name": "STANLEY",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "assassin": false,
-    "name": "KEVIN",
-    "role": "PERCIVAL"
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "LUKE",
-    "assassin": false
-   },
-   {
-    "name": "BRIAN",
-    "assassin": false,
-    "role": "MERLIN"
-   }
-  ],
-  "state": "EVIL_WIN"
- },
- "timeFinished": {
-  "_seconds": 1600451398,
-  "_nanoseconds": 76000000
- },
  "missions": [
   {
    "teamSize": 2,
-   "failsRequired": 1,
+   "numFails": 0,
    "proposals": [
     {
+     "proposer": "STANLEY",
+     "state": "APPROVED",
      "team": [
       "BRIAN",
       "STANLEY"
      ],
-     "proposer": "STANLEY",
-     "state": "APPROVED",
      "votes": [
       "EDISON",
       "STANLEY",
@@ -96,25 +19,26 @@
      ]
     }
    ],
+   "state": "SUCCESS",
+   "failsRequired": 1,
    "team": [
     "BRIAN",
     "STANLEY"
-   ],
-   "numFails": 0,
-   "state": "SUCCESS"
+   ]
   },
   {
    "numFails": 1,
-   "state": "FAIL",
+   "teamSize": 3,
    "team": [
     "ARRAN",
     "BRIAN",
     "STANLEY"
    ],
-   "teamSize": 3,
+   "state": "FAIL",
    "failsRequired": 1,
    "proposals": [
     {
+     "proposer": "EDISON",
      "state": "REJECTED",
      "team": [
       "BRIAN",
@@ -124,50 +48,56 @@
      "votes": [
       "LUKE",
       "ARRAN"
-     ],
-     "proposer": "EDISON"
+     ]
     },
     {
-     "proposer": "KEVIN",
      "state": "REJECTED",
-     "votes": [
-      "ARRAN",
-      "KEVIN"
-     ],
      "team": [
       "EDISON",
       "KEVIN",
       "STANLEY"
-     ]
+     ],
+     "votes": [
+      "ARRAN",
+      "KEVIN"
+     ],
+     "proposer": "KEVIN"
     },
     {
      "state": "APPROVED",
+     "proposer": "ARRAN",
+     "team": [
+      "ARRAN",
+      "BRIAN",
+      "STANLEY"
+     ],
      "votes": [
       "ARRAN",
       "BRIAN",
       "STANLEY",
       "VERA",
       "LUKE"
-     ],
-     "proposer": "ARRAN",
-     "team": [
-      "ARRAN",
-      "BRIAN",
-      "STANLEY"
      ]
     }
    ]
   },
   {
+   "team": [
+    "STANLEY",
+    "LUKE",
+    "KEVIN"
+   ],
+   "numFails": 1,
    "teamSize": 3,
    "failsRequired": 1,
+   "state": "FAIL",
    "proposals": [
     {
+     "state": "REJECTED",
      "votes": [
       "BRIAN",
       "KEVIN"
      ],
-     "state": "REJECTED",
      "proposer": "BRIAN",
      "team": [
       "BRIAN",
@@ -176,8 +106,6 @@
      ]
     },
     {
-     "state": "REJECTED",
-     "proposer": "LUKE",
      "votes": [
       "VERA",
       "LUKE"
@@ -186,47 +114,43 @@
       "BRIAN",
       "LUKE",
       "STANLEY"
-     ]
+     ],
+     "state": "REJECTED",
+     "proposer": "LUKE"
     },
     {
-     "state": "REJECTED",
+     "votes": [
+      "LUKE",
+      "KEVIN",
+      "VERA"
+     ],
      "team": [
       "KEVIN",
       "BRIAN",
       "VERA"
      ],
-     "votes": [
-      "LUKE",
-      "KEVIN",
-      "VERA"
-     ],
-     "proposer": "VERA"
+     "proposer": "VERA",
+     "state": "REJECTED"
     },
     {
-     "votes": [
-      "LUKE",
-      "KEVIN",
-      "STANLEY",
-      "ARRAN"
-     ],
      "team": [
       "STANLEY",
       "LUKE",
       "KEVIN"
      ],
      "state": "APPROVED",
+     "votes": [
+      "LUKE",
+      "KEVIN",
+      "STANLEY",
+      "ARRAN"
+     ],
      "proposer": "STANLEY"
     }
-   ],
-   "team": [
-    "STANLEY",
-    "LUKE",
-    "KEVIN"
-   ],
-   "state": "FAIL",
-   "numFails": 1
+   ]
   },
   {
+   "failsRequired": 2,
    "team": [
     "KEVIN",
     "BRIAN",
@@ -234,52 +158,52 @@
     "ARRAN"
    ],
    "numFails": 0,
-   "state": "SUCCESS",
    "teamSize": 4,
+   "state": "SUCCESS",
    "proposals": [
     {
-     "state": "REJECTED",
-     "votes": [
-      "EDISON",
-      "VERA"
-     ],
      "team": [
       "EDISON",
       "VERA",
       "KEVIN",
       "ARRAN"
      ],
+     "votes": [
+      "EDISON",
+      "VERA"
+     ],
+     "state": "REJECTED",
      "proposer": "EDISON"
     },
     {
-     "team": [
-      "KEVIN",
-      "BRIAN",
-      "LUKE",
-      "ARRAN"
-     ],
-     "proposer": "KEVIN",
-     "state": "APPROVED",
      "votes": [
       "KEVIN",
       "ARRAN",
       "VERA",
       "LUKE",
       "BRIAN"
+     ],
+     "proposer": "KEVIN",
+     "state": "APPROVED",
+     "team": [
+      "KEVIN",
+      "BRIAN",
+      "LUKE",
+      "ARRAN"
      ]
     }
-   ],
-   "failsRequired": 2
+   ]
   },
   {
-   "team": [
-    "ARRAN",
-    "KEVIN",
-    "BRIAN",
-    "LUKE"
-   ],
+   "teamSize": 4,
    "proposals": [
     {
+     "team": [
+      "ARRAN",
+      "KEVIN",
+      "BRIAN",
+      "LUKE"
+     ],
      "state": "APPROVED",
      "votes": [
       "ARRAN",
@@ -288,45 +212,118 @@
       "BRIAN",
       "LUKE"
      ],
-     "proposer": "ARRAN",
-     "team": [
-      "ARRAN",
-      "KEVIN",
-      "BRIAN",
-      "LUKE"
-     ]
+     "proposer": "ARRAN"
     }
    ],
-   "state": "SUCCESS",
    "failsRequired": 1,
+   "state": "SUCCESS",
    "numFails": 0,
-   "teamSize": 4
+   "team": [
+    "ARRAN",
+    "KEVIN",
+    "BRIAN",
+    "LUKE"
+   ]
   }
  ],
  "timeCreated": {
   "_seconds": 1600450275,
   "_nanoseconds": 940000000
  },
+ "timeFinished": {
+  "_seconds": 1600451398,
+  "_nanoseconds": 76000000
+ },
+ "outcome": {
+  "votes": [
+   {
+    "BRIAN": true,
+    "STANLEY": true
+   },
+   {
+    "BRIAN": true,
+    "ARRAN": true,
+    "STANLEY": false
+   },
+   {
+    "STANLEY": false,
+    "KEVIN": true,
+    "LUKE": true
+   },
+   {
+    "KEVIN": true,
+    "ARRAN": true,
+    "BRIAN": true,
+    "LUKE": true
+   },
+   {
+    "ARRAN": true,
+    "KEVIN": true,
+    "BRIAN": true,
+    "LUKE": true
+   }
+  ],
+  "message": "Merlin assassinated",
+  "roles": [
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "ARRAN"
+   },
+   {
+    "name": "EDISON",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "name": "VERA",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "name": "STANLEY",
+    "role": "MORGANA"
+   },
+   {
+    "assassin": false,
+    "role": "PERCIVAL",
+    "name": "KEVIN"
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "LUKE"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "BRIAN"
+   }
+  ],
+  "state": "EVIL_WIN",
+  "assassinated": "BRIAN"
+ },
  "players": [
   {
-   "name": "KEVIN",
-   "uid": "NeQnJgjAvrNX7S3GxPyMvKeCZTA3"
+   "uid": "NeQnJgjAvrNX7S3GxPyMvKeCZTA3",
+   "name": "KEVIN"
   },
   {
-   "name": "ARRAN",
-   "uid": "hFIHZ8cbi4TiY5uM53lswZe4OxB3"
+   "uid": "hFIHZ8cbi4TiY5uM53lswZe4OxB3",
+   "name": "ARRAN"
   },
   {
-   "name": "BRIAN",
-   "uid": "AwXIOWpeehSLQzNXKakZijDwVjm2"
+   "uid": "AwXIOWpeehSLQzNXKakZijDwVjm2",
+   "name": "BRIAN"
   },
   {
    "uid": "oioHvvzUgnQPT5GTw8a94GoSv7Z2",
    "name": "LUKE"
   },
   {
-   "uid": "GxiKlnfaKEXh72GmdtHvy7vL1Yk2",
-   "name": "VERA"
+   "name": "VERA",
+   "uid": "GxiKlnfaKEXh72GmdtHvy7vL1Yk2"
   },
   {
    "name": "STANLEY",
@@ -336,5 +333,8 @@
    "name": "EDISON",
    "uid": "XyIokpKkB6YiDLw82AwABdIK47I2"
   }
- ]
+ ],
+ "options": {
+  "inGameLog": false
+ }
 }

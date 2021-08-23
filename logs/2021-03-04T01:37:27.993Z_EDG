@@ -1,7 +1,88 @@
 {
- "timeCreated": {
-  "_seconds": 1614821847,
-  "_nanoseconds": 993000000
+ "players": [
+  {
+   "name": "JOANNA",
+   "uid": "tXM3tq11wrhy6mqizuRNiNu1cRZ2"
+  },
+  {
+   "uid": "Oz1QlJSqHScHLjwOSq4QOYqYQXi2",
+   "name": "A"
+  },
+  {
+   "uid": "r0Y9B7krxnT7KcVzL5FDJXT9IZk1",
+   "name": "TRJ"
+  },
+  {
+   "uid": "ei8UW6z3FbRoNEwBxTz5bSLRDc73",
+   "name": "THANNY"
+  },
+  {
+   "name": "JESS",
+   "uid": "AMTGjwN9MsOIpisk9EnNwkCxfZL2"
+  },
+  {
+   "uid": "fHqwaidrF5Wu7ZO74ODayn7KjeN2",
+   "name": "MING"
+  }
+ ],
+ "outcome": {
+  "message": "Three successful missions",
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "A",
+    "assassin": false
+   },
+   {
+    "assassin": false,
+    "role": "LOYAL FOLLOWER",
+    "name": "TRJ"
+   },
+   {
+    "name": "JOANNA",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "MING"
+   },
+   {
+    "name": "JESS",
+    "role": "MERLIN",
+    "assassin": false
+   },
+   {
+    "name": "THANNY",
+    "role": "LOYAL FOLLOWER",
+    "assassin": false
+   }
+  ],
+  "assassinated": "TRJ",
+  "votes": [
+   {
+    "A": true,
+    "JESS": true
+   },
+   {
+    "JOANNA": true,
+    "A": true,
+    "MING": true
+   },
+   {
+    "JOANNA": true,
+    "A": true,
+    "MING": false,
+    "JESS": true
+   },
+   {
+    "TRJ": true,
+    "JESS": true,
+    "A": true
+   }
+  ]
  },
  "timeFinished": {
   "_seconds": 1614822990,
@@ -9,81 +90,62 @@
  },
  "missions": [
   {
+   "numFails": 0,
    "teamSize": 2,
+   "team": [
+    "JESS",
+    "A"
+   ],
    "state": "SUCCESS",
    "proposals": [
     {
-     "state": "APPROVED",
-     "proposer": "JESS",
-     "team": [
-      "JESS",
-      "A"
-     ],
      "votes": [
       "THANNY",
       "A",
       "JESS",
       "TRJ",
       "JOANNA"
-     ]
+     ],
+     "proposer": "JESS",
+     "team": [
+      "JESS",
+      "A"
+     ],
+     "state": "APPROVED"
     }
    ],
-   "team": [
-    "JESS",
-    "A"
-   ],
-   "failsRequired": 1,
-   "numFails": 0
+   "failsRequired": 1
   },
   {
-   "numFails": 0,
+   "state": "SUCCESS",
    "teamSize": 3,
    "team": [
     "JOANNA",
     "MING",
     "A"
    ],
-   "failsRequired": 1,
    "proposals": [
     {
+     "team": [
+      "JOANNA",
+      "MING",
+      "A"
+     ],
+     "proposer": "MING",
+     "state": "APPROVED",
      "votes": [
       "THANNY",
       "MING",
       "JOANNA",
       "TRJ"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "JOANNA",
-      "MING",
-      "A"
-     ],
-     "proposer": "MING"
-    }
-   ],
-   "state": "SUCCESS"
-  },
-  {
-   "state": "FAIL",
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "votes": [
-      "MING",
-      "JOANNA",
-      "THANNY",
-      "A"
-     ],
-     "proposer": "JOANNA",
-     "team": [
-      "JOANNA",
-      "A",
-      "JESS",
-      "MING"
      ]
     }
    ],
-   "numFails": 1,
+   "failsRequired": 1,
+   "numFails": 0
+  },
+  {
+   "teamSize": 4,
    "team": [
     "JOANNA",
     "A",
@@ -91,7 +153,26 @@
     "MING"
    ],
    "failsRequired": 1,
-   "teamSize": 4
+   "numFails": 1,
+   "state": "FAIL",
+   "proposals": [
+    {
+     "votes": [
+      "MING",
+      "JOANNA",
+      "THANNY",
+      "A"
+     ],
+     "team": [
+      "JOANNA",
+      "A",
+      "JESS",
+      "MING"
+     ],
+     "state": "APPROVED",
+     "proposer": "JOANNA"
+    }
+   ]
   },
   {
    "team": [
@@ -99,27 +180,25 @@
     "A",
     "JESS"
    ],
-   "teamSize": 3,
    "failsRequired": 1,
    "numFails": 0,
-   "state": "SUCCESS",
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
+     "proposer": "A",
      "votes": [
       "TRJ",
       "JESS",
       "MING"
      ],
-     "proposer": "A",
      "team": [
       "THANNY",
       "TRJ",
       "MING"
-     ]
+     ],
+     "state": "REJECTED"
     },
     {
-     "proposer": "TRJ",
      "votes": [
       "A",
       "THANNY",
@@ -128,109 +207,30 @@
       "TRJ",
       "MING"
      ],
+     "state": "APPROVED",
+     "proposer": "TRJ",
      "team": [
       "TRJ",
       "A",
       "JESS"
-     ],
-     "state": "APPROVED"
+     ]
     }
-   ]
+   ],
+   "state": "SUCCESS"
   },
   {
-   "teamSize": 4,
-   "failsRequired": 1,
    "proposals": [],
    "team": [],
+   "failsRequired": 1,
+   "teamSize": 4,
    "state": "PENDING"
   }
  ],
- "players": [
-  {
-   "uid": "tXM3tq11wrhy6mqizuRNiNu1cRZ2",
-   "name": "JOANNA"
-  },
-  {
-   "name": "A",
-   "uid": "Oz1QlJSqHScHLjwOSq4QOYqYQXi2"
-  },
-  {
-   "name": "TRJ",
-   "uid": "r0Y9B7krxnT7KcVzL5FDJXT9IZk1"
-  },
-  {
-   "uid": "ei8UW6z3FbRoNEwBxTz5bSLRDc73",
-   "name": "THANNY"
-  },
-  {
-   "uid": "AMTGjwN9MsOIpisk9EnNwkCxfZL2",
-   "name": "JESS"
-  },
-  {
-   "uid": "fHqwaidrF5Wu7ZO74ODayn7KjeN2",
-   "name": "MING"
-  }
- ],
+ "timeCreated": {
+  "_seconds": 1614821847,
+  "_nanoseconds": 993000000
+ },
  "options": {
   "inGameLog": false
- },
- "outcome": {
-  "votes": [
-   {
-    "JESS": true,
-    "A": true
-   },
-   {
-    "A": true,
-    "JOANNA": true,
-    "MING": true
-   },
-   {
-    "JESS": true,
-    "JOANNA": true,
-    "MING": false,
-    "A": true
-   },
-   {
-    "TRJ": true,
-    "JESS": true,
-    "A": true
-   }
-  ],
-  "roles": [
-   {
-    "name": "A",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "name": "TRJ",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "role": "EVIL MINION",
-    "assassin": true,
-    "name": "JOANNA"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "MING",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "MERLIN",
-    "name": "JESS"
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "THANNY"
-   }
-  ],
-  "assassinated": "TRJ",
-  "message": "Three successful missions",
-  "state": "GOOD_WIN"
  }
 }

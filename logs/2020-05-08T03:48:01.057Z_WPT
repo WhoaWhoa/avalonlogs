@@ -1,86 +1,356 @@
 {
- "outcome": {
-  "state": "GOOD_WIN",
-  "votes": [
-   {
-    "AFFINE": true,
-    "KLAUDIA": true
-   },
-   {
-    "KLAUDIA": true,
-    "GOODWIN": false,
-    "AFFINE": true
-   },
-   {
-    "GOODWIN": false,
-    "ADAM": true,
-    "KEVIN": false
-   },
-   {
-    "KLAUDIA": true,
-    "NIKHIL": true,
-    "AFFINE": true,
-    "LIONHAT": true
-   },
-   {
-    "NIKHIL": true,
-    "LIONHAT": true,
-    "KLAUDIA": true,
-    "ADAM": true
-   }
-  ],
-  "message": "Three successful missions",
-  "assassinated": "NIKHIL",
-  "roles": [
-   {
-    "name": "AFFINE",
-    "assassin": false,
-    "role": "MORGANA"
-   },
-   {
-    "role": "PERCIVAL",
-    "name": "KLAUDIA",
-    "assassin": false
-   },
-   {
-    "assassin": true,
-    "role": "EVIL MINION",
-    "name": "GOODWIN"
-   },
-   {
-    "assassin": false,
-    "name": "NIKHIL",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "name": "ADAM",
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "name": "LIONHAT",
-    "assassin": false,
-    "role": "MERLIN"
-   },
-   {
-    "role": "OBERON",
-    "name": "KEVIN",
-    "assassin": false
-   }
-  ]
+ "missions": [
+  {
+   "team": [
+    "AFFINE",
+    "KLAUDIA"
+   ],
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "votes": [
+      "KLAUDIA",
+      "NIKHIL"
+     ],
+     "proposer": "KLAUDIA",
+     "team": [
+      "KLAUDIA",
+      "NIKHIL"
+     ]
+    },
+    {
+     "team": [
+      "KEVIN",
+      "KLAUDIA"
+     ],
+     "proposer": "KEVIN",
+     "state": "REJECTED",
+     "votes": [
+      "KEVIN",
+      "KLAUDIA"
+     ]
+    },
+    {
+     "team": [
+      "GOODWIN",
+      "KLAUDIA"
+     ],
+     "proposer": "GOODWIN",
+     "state": "REJECTED",
+     "votes": [
+      "KLAUDIA",
+      "GOODWIN"
+     ]
+    },
+    {
+     "proposer": "AFFINE",
+     "votes": [
+      "GOODWIN",
+      "KEVIN",
+      "AFFINE",
+      "KLAUDIA"
+     ],
+     "state": "APPROVED",
+     "team": [
+      "AFFINE",
+      "KLAUDIA"
+     ]
+    }
+   ],
+   "numFails": 0,
+   "failsRequired": 1,
+   "teamSize": 2
+  },
+  {
+   "state": "FAIL",
+   "failsRequired": 1,
+   "numFails": 1,
+   "team": [
+    "KLAUDIA",
+    "GOODWIN",
+    "AFFINE"
+   ],
+   "teamSize": 3,
+   "proposals": [
+    {
+     "proposer": "ADAM",
+     "state": "REJECTED",
+     "votes": [
+      "ADAM"
+     ],
+     "team": [
+      "KLAUDIA",
+      "AFFINE",
+      "ADAM"
+     ]
+    },
+    {
+     "state": "REJECTED",
+     "proposer": "LIONHAT",
+     "votes": [
+      "LIONHAT"
+     ],
+     "team": [
+      "LIONHAT",
+      "KLAUDIA",
+      "AFFINE"
+     ]
+    },
+    {
+     "state": "REJECTED",
+     "votes": [
+      "NIKHIL",
+      "LIONHAT",
+      "KEVIN"
+     ],
+     "proposer": "NIKHIL",
+     "team": [
+      "NIKHIL",
+      "KLAUDIA",
+      "KEVIN"
+     ]
+    },
+    {
+     "proposer": "KLAUDIA",
+     "state": "APPROVED",
+     "team": [
+      "KLAUDIA",
+      "GOODWIN",
+      "AFFINE"
+     ],
+     "votes": [
+      "AFFINE",
+      "KLAUDIA",
+      "GOODWIN",
+      "ADAM"
+     ]
+    }
+   ]
+  },
+  {
+   "state": "FAIL",
+   "proposals": [
+    {
+     "votes": [],
+     "state": "REJECTED",
+     "proposer": "KEVIN",
+     "team": [
+      "KEVIN",
+      "GOODWIN",
+      "ADAM"
+     ]
+    },
+    {
+     "votes": [],
+     "state": "REJECTED",
+     "team": [
+      "GOODWIN",
+      "KEVIN",
+      "NIKHIL"
+     ],
+     "proposer": "GOODWIN"
+    },
+    {
+     "proposer": "AFFINE",
+     "state": "REJECTED",
+     "votes": [
+      "AFFINE"
+     ],
+     "team": [
+      "AFFINE",
+      "LIONHAT",
+      "NIKHIL"
+     ]
+    },
+    {
+     "state": "APPROVED",
+     "votes": [
+      "KEVIN",
+      "AFFINE",
+      "GOODWIN",
+      "ADAM"
+     ],
+     "proposer": "ADAM",
+     "team": [
+      "GOODWIN",
+      "KEVIN",
+      "ADAM"
+     ]
+    }
+   ],
+   "numFails": 2,
+   "failsRequired": 1,
+   "teamSize": 3,
+   "team": [
+    "GOODWIN",
+    "KEVIN",
+    "ADAM"
+   ]
+  },
+  {
+   "state": "SUCCESS",
+   "team": [
+    "KLAUDIA",
+    "LIONHAT",
+    "AFFINE",
+    "NIKHIL"
+   ],
+   "teamSize": 4,
+   "numFails": 0,
+   "failsRequired": 2,
+   "proposals": [
+    {
+     "state": "REJECTED",
+     "team": [
+      "AFFINE",
+      "KLAUDIA",
+      "NIKHIL",
+      "LIONHAT"
+     ],
+     "proposer": "LIONHAT",
+     "votes": [
+      "LIONHAT",
+      "KEVIN"
+     ]
+    },
+    {
+     "team": [
+      "KLAUDIA",
+      "NIKHIL",
+      "ADAM",
+      "AFFINE"
+     ],
+     "votes": [
+      "ADAM"
+     ],
+     "proposer": "NIKHIL",
+     "state": "REJECTED"
+    },
+    {
+     "state": "APPROVED",
+     "team": [
+      "KLAUDIA",
+      "LIONHAT",
+      "AFFINE",
+      "NIKHIL"
+     ],
+     "proposer": "KLAUDIA",
+     "votes": [
+      "AFFINE",
+      "KLAUDIA",
+      "NIKHIL",
+      "ADAM",
+      "LIONHAT",
+      "KEVIN"
+     ]
+    }
+   ]
+  },
+  {
+   "state": "SUCCESS",
+   "proposals": [
+    {
+     "votes": [
+      "KLAUDIA"
+     ],
+     "proposer": "KEVIN",
+     "team": [
+      "AFFINE",
+      "KLAUDIA",
+      "NIKHIL",
+      "KEVIN"
+     ],
+     "state": "REJECTED"
+    },
+    {
+     "votes": [
+      "GOODWIN"
+     ],
+     "state": "REJECTED",
+     "team": [
+      "GOODWIN",
+      "KLAUDIA",
+      "NIKHIL",
+      "LIONHAT"
+     ],
+     "proposer": "GOODWIN"
+    },
+    {
+     "votes": [
+      "AFFINE"
+     ],
+     "team": [
+      "LIONHAT",
+      "NIKHIL",
+      "KLAUDIA",
+      "AFFINE"
+     ],
+     "state": "REJECTED",
+     "proposer": "AFFINE"
+    },
+    {
+     "votes": [
+      "AFFINE",
+      "ADAM"
+     ],
+     "team": [
+      "KLAUDIA",
+      "ADAM",
+      "NIKHIL",
+      "AFFINE"
+     ],
+     "proposer": "ADAM",
+     "state": "REJECTED"
+    },
+    {
+     "state": "APPROVED",
+     "proposer": "LIONHAT",
+     "team": [
+      "LIONHAT",
+      "NIKHIL",
+      "KLAUDIA",
+      "ADAM"
+     ],
+     "votes": [
+      "KLAUDIA",
+      "NIKHIL",
+      "ADAM",
+      "LIONHAT",
+      "AFFINE"
+     ]
+    }
+   ],
+   "teamSize": 4,
+   "failsRequired": 1,
+   "numFails": 0,
+   "team": [
+    "LIONHAT",
+    "NIKHIL",
+    "KLAUDIA",
+    "ADAM"
+   ]
+  }
+ ],
+ "options": {
+  "inGameLog": false
+ },
+ "timeFinished": {
+  "_seconds": 1588911138,
+  "_nanoseconds": 351000000
  },
  "players": [
   {
-   "name": "ADAM",
-   "uid": "5Nl0zBHVy1V9rmkYhtGINyXaWaj1"
+   "uid": "5Nl0zBHVy1V9rmkYhtGINyXaWaj1",
+   "name": "ADAM"
   },
   {
    "name": "LIONHAT",
    "uid": "N2eGAYseOoexJ5gjmpWtb0tXdYI3"
   },
   {
-   "uid": "V3CYobIAZwWneimGk4cLt7fQYEB3",
-   "name": "NIKHIL"
+   "name": "NIKHIL",
+   "uid": "V3CYobIAZwWneimGk4cLt7fQYEB3"
   },
   {
    "name": "KLAUDIA",
@@ -99,348 +369,78 @@
    "name": "AFFINE"
   }
  ],
- "timeFinished": {
-  "_seconds": 1588911138,
-  "_nanoseconds": 351000000
+ "outcome": {
+  "state": "GOOD_WIN",
+  "roles": [
+   {
+    "name": "AFFINE",
+    "assassin": false,
+    "role": "MORGANA"
+   },
+   {
+    "name": "KLAUDIA",
+    "assassin": false,
+    "role": "PERCIVAL"
+   },
+   {
+    "name": "GOODWIN",
+    "assassin": true,
+    "role": "EVIL MINION"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "assassin": false,
+    "name": "NIKHIL"
+   },
+   {
+    "assassin": false,
+    "name": "ADAM",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "assassin": false,
+    "role": "MERLIN",
+    "name": "LIONHAT"
+   },
+   {
+    "assassin": false,
+    "name": "KEVIN",
+    "role": "OBERON"
+   }
+  ],
+  "assassinated": "NIKHIL",
+  "votes": [
+   {
+    "AFFINE": true,
+    "KLAUDIA": true
+   },
+   {
+    "GOODWIN": false,
+    "AFFINE": true,
+    "KLAUDIA": true
+   },
+   {
+    "ADAM": true,
+    "GOODWIN": false,
+    "KEVIN": false
+   },
+   {
+    "LIONHAT": true,
+    "NIKHIL": true,
+    "AFFINE": true,
+    "KLAUDIA": true
+   },
+   {
+    "NIKHIL": true,
+    "ADAM": true,
+    "KLAUDIA": true,
+    "LIONHAT": true
+   }
+  ],
+  "message": "Three successful missions"
  },
  "timeCreated": {
   "_seconds": 1588909681,
   "_nanoseconds": 57000000
- },
- "options": {
-  "inGameLog": false
- },
- "missions": [
-  {
-   "team": [
-    "AFFINE",
-    "KLAUDIA"
-   ],
-   "teamSize": 2,
-   "failsRequired": 1,
-   "numFails": 0,
-   "proposals": [
-    {
-     "proposer": "KLAUDIA",
-     "votes": [
-      "KLAUDIA",
-      "NIKHIL"
-     ],
-     "team": [
-      "KLAUDIA",
-      "NIKHIL"
-     ],
-     "state": "REJECTED"
-    },
-    {
-     "team": [
-      "KEVIN",
-      "KLAUDIA"
-     ],
-     "votes": [
-      "KEVIN",
-      "KLAUDIA"
-     ],
-     "proposer": "KEVIN",
-     "state": "REJECTED"
-    },
-    {
-     "team": [
-      "GOODWIN",
-      "KLAUDIA"
-     ],
-     "votes": [
-      "KLAUDIA",
-      "GOODWIN"
-     ],
-     "state": "REJECTED",
-     "proposer": "GOODWIN"
-    },
-    {
-     "votes": [
-      "GOODWIN",
-      "KEVIN",
-      "AFFINE",
-      "KLAUDIA"
-     ],
-     "team": [
-      "AFFINE",
-      "KLAUDIA"
-     ],
-     "proposer": "AFFINE",
-     "state": "APPROVED"
-    }
-   ],
-   "state": "SUCCESS"
-  },
-  {
-   "team": [
-    "KLAUDIA",
-    "GOODWIN",
-    "AFFINE"
-   ],
-   "state": "FAIL",
-   "numFails": 1,
-   "proposals": [
-    {
-     "team": [
-      "KLAUDIA",
-      "AFFINE",
-      "ADAM"
-     ],
-     "proposer": "ADAM",
-     "state": "REJECTED",
-     "votes": [
-      "ADAM"
-     ]
-    },
-    {
-     "team": [
-      "LIONHAT",
-      "KLAUDIA",
-      "AFFINE"
-     ],
-     "votes": [
-      "LIONHAT"
-     ],
-     "state": "REJECTED",
-     "proposer": "LIONHAT"
-    },
-    {
-     "proposer": "NIKHIL",
-     "votes": [
-      "NIKHIL",
-      "LIONHAT",
-      "KEVIN"
-     ],
-     "state": "REJECTED",
-     "team": [
-      "NIKHIL",
-      "KLAUDIA",
-      "KEVIN"
-     ]
-    },
-    {
-     "votes": [
-      "AFFINE",
-      "KLAUDIA",
-      "GOODWIN",
-      "ADAM"
-     ],
-     "state": "APPROVED",
-     "team": [
-      "KLAUDIA",
-      "GOODWIN",
-      "AFFINE"
-     ],
-     "proposer": "KLAUDIA"
-    }
-   ],
-   "failsRequired": 1,
-   "teamSize": 3
-  },
-  {
-   "numFails": 2,
-   "teamSize": 3,
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "votes": [],
-     "proposer": "KEVIN",
-     "state": "REJECTED",
-     "team": [
-      "KEVIN",
-      "GOODWIN",
-      "ADAM"
-     ]
-    },
-    {
-     "proposer": "GOODWIN",
-     "state": "REJECTED",
-     "team": [
-      "GOODWIN",
-      "KEVIN",
-      "NIKHIL"
-     ],
-     "votes": []
-    },
-    {
-     "state": "REJECTED",
-     "votes": [
-      "AFFINE"
-     ],
-     "proposer": "AFFINE",
-     "team": [
-      "AFFINE",
-      "LIONHAT",
-      "NIKHIL"
-     ]
-    },
-    {
-     "votes": [
-      "KEVIN",
-      "AFFINE",
-      "GOODWIN",
-      "ADAM"
-     ],
-     "team": [
-      "GOODWIN",
-      "KEVIN",
-      "ADAM"
-     ],
-     "proposer": "ADAM",
-     "state": "APPROVED"
-    }
-   ],
-   "state": "FAIL",
-   "team": [
-    "GOODWIN",
-    "KEVIN",
-    "ADAM"
-   ]
-  },
-  {
-   "team": [
-    "KLAUDIA",
-    "LIONHAT",
-    "AFFINE",
-    "NIKHIL"
-   ],
-   "proposals": [
-    {
-     "proposer": "LIONHAT",
-     "state": "REJECTED",
-     "team": [
-      "AFFINE",
-      "KLAUDIA",
-      "NIKHIL",
-      "LIONHAT"
-     ],
-     "votes": [
-      "LIONHAT",
-      "KEVIN"
-     ]
-    },
-    {
-     "state": "REJECTED",
-     "votes": [
-      "ADAM"
-     ],
-     "proposer": "NIKHIL",
-     "team": [
-      "KLAUDIA",
-      "NIKHIL",
-      "ADAM",
-      "AFFINE"
-     ]
-    },
-    {
-     "votes": [
-      "AFFINE",
-      "KLAUDIA",
-      "NIKHIL",
-      "ADAM",
-      "LIONHAT",
-      "KEVIN"
-     ],
-     "proposer": "KLAUDIA",
-     "team": [
-      "KLAUDIA",
-      "LIONHAT",
-      "AFFINE",
-      "NIKHIL"
-     ],
-     "state": "APPROVED"
-    }
-   ],
-   "teamSize": 4,
-   "state": "SUCCESS",
-   "failsRequired": 2,
-   "numFails": 0
-  },
-  {
-   "failsRequired": 1,
-   "state": "SUCCESS",
-   "team": [
-    "LIONHAT",
-    "NIKHIL",
-    "KLAUDIA",
-    "ADAM"
-   ],
-   "numFails": 0,
-   "proposals": [
-    {
-     "proposer": "KEVIN",
-     "state": "REJECTED",
-     "team": [
-      "AFFINE",
-      "KLAUDIA",
-      "NIKHIL",
-      "KEVIN"
-     ],
-     "votes": [
-      "KLAUDIA"
-     ]
-    },
-    {
-     "votes": [
-      "GOODWIN"
-     ],
-     "team": [
-      "GOODWIN",
-      "KLAUDIA",
-      "NIKHIL",
-      "LIONHAT"
-     ],
-     "state": "REJECTED",
-     "proposer": "GOODWIN"
-    },
-    {
-     "state": "REJECTED",
-     "votes": [
-      "AFFINE"
-     ],
-     "team": [
-      "LIONHAT",
-      "NIKHIL",
-      "KLAUDIA",
-      "AFFINE"
-     ],
-     "proposer": "AFFINE"
-    },
-    {
-     "state": "REJECTED",
-     "votes": [
-      "AFFINE",
-      "ADAM"
-     ],
-     "team": [
-      "KLAUDIA",
-      "ADAM",
-      "NIKHIL",
-      "AFFINE"
-     ],
-     "proposer": "ADAM"
-    },
-    {
-     "state": "APPROVED",
-     "proposer": "LIONHAT",
-     "votes": [
-      "KLAUDIA",
-      "NIKHIL",
-      "ADAM",
-      "LIONHAT",
-      "AFFINE"
-     ],
-     "team": [
-      "LIONHAT",
-      "NIKHIL",
-      "KLAUDIA",
-      "ADAM"
-     ]
-    }
-   ],
-   "teamSize": 4
-  }
- ]
+ }
 }

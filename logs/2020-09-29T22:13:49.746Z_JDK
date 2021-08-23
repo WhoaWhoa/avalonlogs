@@ -1,9 +1,75 @@
 {
+ "options": {
+  "inGameLog": false
+ },
+ "outcome": {
+  "state": "GOOD_WIN",
+  "message": "Three missions succeeded",
+  "assassinated": null,
+  "votes": [
+   {
+    "MUUSH": true,
+    "HAROLD": true
+   },
+   {
+    "HAROLD": true,
+    "ASH": true,
+    "MUUSH": true
+   },
+   {
+    "MUUSH": true,
+    "GREG": false,
+    "ASH": true,
+    "HAROLD": true
+   },
+   {
+    "HAROLD": true,
+    "ASH": true,
+    "MUUSH": true
+   }
+  ],
+  "roles": [
+   {
+    "assassin": false,
+    "name": "HAROLD",
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "LOYAL FOLLOWER",
+    "name": "FAYEZ",
+    "assassin": false
+   },
+   {
+    "name": "ASH",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   },
+   {
+    "role": "EVIL MINION",
+    "assassin": false,
+    "name": "BK"
+   },
+   {
+    "name": "GREG",
+    "role": "EVIL MINION",
+    "assassin": false
+   },
+   {
+    "name": "MUUSH",
+    "assassin": false,
+    "role": "LOYAL FOLLOWER"
+   }
+  ]
+ },
  "missions": [
   {
-   "numFails": 0,
    "proposals": [
     {
+     "team": [
+      "MUUSH",
+      "HAROLD"
+     ],
+     "proposer": "MUUSH",
      "state": "APPROVED",
      "votes": [
       "HAROLD",
@@ -12,59 +78,55 @@
       "GREG",
       "MUUSH",
       "FAYEZ"
-     ],
-     "proposer": "MUUSH",
-     "team": [
-      "MUUSH",
-      "HAROLD"
      ]
     }
    ],
-   "failsRequired": 1,
-   "teamSize": 2,
    "team": [
     "MUUSH",
     "HAROLD"
    ],
-   "state": "SUCCESS"
+   "numFails": 0,
+   "failsRequired": 1,
+   "state": "SUCCESS",
+   "teamSize": 2
   },
   {
-   "numFails": 0,
-   "teamSize": 3,
+   "state": "SUCCESS",
    "failsRequired": 1,
+   "teamSize": 3,
    "proposals": [
     {
-     "state": "REJECTED",
      "votes": [
       "BK",
       "FAYEZ",
       "GREG"
      ],
-     "proposer": "FAYEZ",
      "team": [
       "FAYEZ",
       "MUUSH",
       "GREG"
-     ]
+     ],
+     "proposer": "FAYEZ",
+     "state": "REJECTED"
     },
     {
      "state": "APPROVED",
+     "team": [
+      "HAROLD",
+      "MUUSH",
+      "ASH"
+     ],
+     "proposer": "HAROLD",
      "votes": [
       "ASH",
       "FAYEZ",
       "GREG",
       "HAROLD",
       "MUUSH"
-     ],
-     "team": [
-      "HAROLD",
-      "MUUSH",
-      "ASH"
-     ],
-     "proposer": "HAROLD"
+     ]
     }
    ],
-   "state": "SUCCESS",
+   "numFails": 0,
    "team": [
     "HAROLD",
     "MUUSH",
@@ -72,22 +134,25 @@
    ]
   },
   {
+   "numFails": 1,
+   "teamSize": 4,
    "proposals": [
     {
-     "state": "REJECTED",
-     "proposer": "BK",
-     "votes": [
-      "BK",
-      "FAYEZ"
-     ],
      "team": [
       "BK",
       "HAROLD",
       "MUUSH",
       "FAYEZ"
-     ]
+     ],
+     "votes": [
+      "BK",
+      "FAYEZ"
+     ],
+     "state": "REJECTED",
+     "proposer": "BK"
     },
     {
+     "proposer": "GREG",
      "state": "REJECTED",
      "votes": [
       "GREG"
@@ -97,85 +162,78 @@
       "BK",
       "HAROLD",
       "FAYEZ"
-     ],
-     "proposer": "GREG"
+     ]
     },
     {
-     "proposer": "ASH",
-     "state": "APPROVED",
+     "team": [
+      "ASH",
+      "MUUSH",
+      "HAROLD",
+      "GREG"
+     ],
      "votes": [
       "BK",
       "FAYEZ",
       "HAROLD",
       "ASH"
      ],
-     "team": [
-      "ASH",
-      "MUUSH",
-      "HAROLD",
-      "GREG"
-     ]
+     "state": "APPROVED",
+     "proposer": "ASH"
     }
    ],
-   "numFails": 1,
-   "teamSize": 4,
-   "state": "FAIL",
+   "failsRequired": 1,
    "team": [
     "ASH",
     "MUUSH",
     "HAROLD",
     "GREG"
    ],
-   "failsRequired": 1
+   "state": "FAIL"
   },
   {
-   "failsRequired": 1,
-   "proposals": [
-    {
-     "state": "APPROVED",
-     "proposer": "MUUSH",
-     "votes": [
-      "FAYEZ",
-      "ASH",
-      "MUUSH",
-      "HAROLD"
-     ],
-     "team": [
-      "MUUSH",
-      "HAROLD",
-      "ASH"
-     ]
-    }
-   ],
    "team": [
     "MUUSH",
     "HAROLD",
     "ASH"
    ],
    "numFails": 0,
+   "proposals": [
+    {
+     "state": "APPROVED",
+     "team": [
+      "MUUSH",
+      "HAROLD",
+      "ASH"
+     ],
+     "proposer": "MUUSH",
+     "votes": [
+      "FAYEZ",
+      "ASH",
+      "MUUSH",
+      "HAROLD"
+     ]
+    }
+   ],
    "teamSize": 3,
-   "state": "SUCCESS"
+   "state": "SUCCESS",
+   "failsRequired": 1
   },
   {
    "state": "PENDING",
+   "proposals": [],
    "teamSize": 4,
    "failsRequired": 1,
-   "team": [],
-   "proposals": []
+   "team": []
   }
  ],
- "timeFinished": {
-  "_seconds": 1601418549,
-  "_nanoseconds": 445000000
- },
  "players": [
   {
    "name": "HAROLD",
    "uid": "q9fsaqIVuWc1gPS7dSkf8LBPrJX2"
   },
   {
-   "uid": "MwLYFLq8mlVHNrkdV0kkYguszFB3",
-   "name": "BK"
+   "name": "BK",
+   "uid": "MwLYFLq8mlVHNrkdV0kkYguszFB3"
   },
   {
    "name": "GREG",
@@ -194,70 +252,12 @@
    "name": "FAYEZ"
   }
  ],
- "options": {
-  "inGameLog": false
+ "timeFinished": {
+  "_seconds": 1601418549,
+  "_nanoseconds": 445000000
  },
  "timeCreated": {
   "_seconds": 1601417629,
   "_nanoseconds": 746000000
- },
- "outcome": {
-  "message": "Three missions succeeded",
-  "state": "GOOD_WIN",
-  "roles": [
-   {
-    "name": "HAROLD",
-    "role": "LOYAL FOLLOWER",
-    "assassin": false
-   },
-   {
-    "role": "LOYAL FOLLOWER",
-    "name": "FAYEZ",
-    "assassin": false
-   },
-   {
-    "name": "ASH",
-    "assassin": false,
-    "role": "LOYAL FOLLOWER"
-   },
-   {
-    "assassin": false,
-    "role": "EVIL MINION",
-    "name": "BK"
-   },
-   {
-    "role": "EVIL MINION",
-    "name": "GREG",
-    "assassin": false
-   },
-   {
-    "assassin": false,
-    "role": "LOYAL FOLLOWER",
-    "name": "MUUSH"
-   }
-  ],
-  "votes": [
-   {
-    "MUUSH": true,
-    "HAROLD": true
-   },
-   {
-    "MUUSH": true,
-    "HAROLD": true,
-    "ASH": true
-   },
-   {
-    "HAROLD": true,
-    "GREG": false,
-    "MUUSH": true,
-    "ASH": true
-   },
-   {
-    "ASH": true,
-    "HAROLD": true,
-    "MUUSH": true
-   }
-  ],
-  "assassinated": null
  }
 }
