@@ -1,4 +1,4 @@
-# avalonlogs
+# Avalon: The Resistance Logs
 
 https://avalongame.online/ is a site that allows friends to play Avalon: The Resistance in person or via videoconference.
 
