@@ -1,7 +1,7 @@
 # avalonlogs
 
-A JSON-formatted repository of thousands of games of Avalon: The Resistance
-played in person or via videoconference between people who know each other.
+https://avalongame.online/ is a site that allows friends to play Avalon: The Resistance in person or via videoconference.
+
+This repository contains JSON-formatted logs of thousands of games from the site.
 
 The log file format is not documented here, but is self-explanatory.
-
